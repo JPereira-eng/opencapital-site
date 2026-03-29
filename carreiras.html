@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carreiras: Open Capital Advisory & Consultancy</title>
+  <meta name="description" content="Procuramos pessoas que acreditam que o acesso a capital de qualidade pode transformar empresas. Junta-te à equipa Open Capital.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+
+    /* ─── RESET & VARIABLES ──────────────────────── */
+    :root {
+      --navy:       #1A3A5C;
+      --navy-deep:  #0D1F33;
+      --gold:       #C9A96E;
+      --white:      #FFFFFF;
+      --grey-light: #E5E5E5;
+      --grey-mid:   #7A7A7A;
+      --grey-dark:  #2A2A2A;
+      --font: 'Montserrat', sans-serif;
+      --transition: all 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --shadow: 0 8px 40px rgba(26,58,92,0.10);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:var(--font); background:var(--white); color:var(--grey-dark); -webkit-font-smoothing:antialiased; }
+
+    /* ─── TYPOGRAPHY ─────────────────────────────── */
+    .t-eyebrow { font-size:14px; font-weight:600; letter-spacing:0.30em; text-transform:uppercase; color:var(--gold); }
+    .t-h1      { font-size:54px; font-weight:700; letter-spacing:-0.01em; color:var(--navy); line-height:1.05; }
+    .t-h2      { font-size:36px; font-weight:600; letter-spacing:0.01em;  color:var(--navy); line-height:1.15; }
+    .t-h3      { font-size:28px; font-weight:500; letter-spacing:0.03em;  color:var(--navy); }
+    .t-h4      { font-size:19px; font-weight:500; letter-spacing:0.07em;  color:var(--navy); }
+    .t-tagline { font-size:24px; font-weight:100; letter-spacing:0.14em;  color:var(--navy); }
+    .t-body    { font-size:18px; font-weight:400; color:var(--grey-dark); line-height:1.85; max-width:580px; }
+    .t-small   { font-size:15px; font-weight:300; letter-spacing:0.04em;  color:var(--grey-mid); }
+
+    /* ─── NAVBAR ─────────────────────────────────── */
+    .navbar {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 48px; height:74px;
+      position:fixed; top:0; left:0; right:0; z-index:200;
+      background:var(--navy);
+      border-bottom:1px solid rgba(255,255,255,0.07);
+      transition:var(--transition);
+    }
+    .navbar.scrolled {
+      background:rgba(255,255,255,0.97);
+      backdrop-filter:blur(20px);
+      -webkit-backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--grey-light);
+    }
+    .nav-logo { display:flex; align-items:center; text-decoration:none; flex-shrink:0; }
+    .nav-logo-img { height:57px; width:auto; display:block; filter:brightness(0) invert(1); transition:var(--transition); }
+    .navbar.scrolled .nav-logo-img { filter:none; }
+    .nav-logo-fallback { display:none; align-items:center; gap:10px; }
+    .nav-logo-fallback .nav-mark { width:36px; height:36px; border:1px solid rgba(255,255,255,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:var(--gold); }
+    .navbar.scrolled .nav-logo-fallback .nav-mark { border-color:var(--navy); color:var(--navy); }
+    .nav-logo-fallback .nav-wordmark { display:flex; flex-direction:column; gap:2px; }
+    .nav-logo-fallback .nav-name { font-size:14px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--white); }
+    .nav-logo-fallback .nav-sub  { font-size:9px; font-weight:300; letter-spacing:0.20em; text-transform:uppercase; color:rgba(255,255,255,0.32); }
+    .navbar.scrolled .nav-logo-fallback .nav-name { color:var(--navy); }
+    .navbar.scrolled .nav-logo-fallback .nav-sub  { color:var(--grey-mid); }
+    .nav-links { display:flex; align-items:center; gap:24px; list-style:none; margin-left:auto; }
+    .nav-links a {
+      font-size:15px; font-weight:500; letter-spacing:0.08em; text-transform:none;
+      color:rgba(255,255,255,0.68); text-decoration:none;
+      transition:var(--transition); position:relative; padding-bottom:3px; white-space:nowrap;
+    }
+    .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold); transition:width 0.3s ease; }
+    .nav-links a:hover { color:var(--white); }
+    .nav-links a:hover::after, .nav-links a.active::after { width:100%; }
+    .nav-links a.active { color:var(--white); }
+    .navbar.scrolled .nav-links a { color:var(--grey-dark); }
+    .navbar.scrolled .nav-links a:hover, .navbar.scrolled .nav-links a.active { color:var(--navy); }
+    .nav-badge {
+      font-size:10px; font-weight:600; letter-spacing:0.06em; text-transform:none;
+      color:var(--gold); border:1px solid var(--gold); padding:1px 4px;
+      margin-left:3px; vertical-align:super; line-height:1;
+    }
+    .nav-dropdown { position:relative; }
+    .nav-dropdown > a::after { content:''; }
+    .nav-dropdown-arrow { display:inline-block; margin-left:5px; width:6px; height:6px; border-right:1px solid currentColor; border-bottom:1px solid currentColor; transform:rotate(45deg) translateY(-2px); transition:transform 0.25s ease; vertical-align:middle; opacity:0.6; }
+    .nav-dropdown:hover .nav-dropdown-arrow { transform:rotate(-135deg) translateY(-2px); opacity:1; }
+    .nav-dropdown-menu { position:absolute; top:calc(100% + 14px); left:50%; transform:translateX(-50%) translateY(-6px); background:var(--white); border:1px solid var(--grey-light); min-width:160px; opacity:0; visibility:hidden; transition:opacity 0.22s ease, transform 0.22s ease; box-shadow:var(--shadow); z-index:200; }
+    .nav-dropdown:hover .nav-dropdown-menu { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
+    .nav-dropdown-menu a { display:block; padding:12px 20px; font-size:13px; font-weight:500; letter-spacing:0.05em; text-transform:none; color:var(--grey-dark); text-decoration:none; border-bottom:1px solid var(--grey-light); transition:var(--transition); white-space:nowrap; }
+    .nav-dropdown-menu a:last-child { border-bottom:none; }
+    .nav-dropdown-menu a:hover { color:var(--navy); background:#FAFAFA; padding-left:24px; }
+    .nav-dropdown-menu a::after { display:none !important; }
+    .navbar:not(.scrolled) .nav-dropdown-menu { background:var(--navy-deep); border-color:rgba(255,255,255,0.08); }
+    .navbar:not(.scrolled) .nav-dropdown-menu a { color:rgba(255,255,255,0.60); border-color:rgba(255,255,255,0.06); }
+    .navbar:not(.scrolled) .nav-dropdown-menu a:hover { color:var(--white); background:rgba(255,255,255,0.05); }
+    .nav-cta {
+      font-size:16px; font-weight:600; letter-spacing:0.08em; text-transform:none;
+      color:var(--white); text-decoration:none;
+      border:1px solid rgba(255,255,255,0.28); padding:9px 18px;
+      margin-left:28px; transition:var(--transition); white-space:nowrap;
+    }
+    .nav-cta:hover { border-color:var(--white); background:rgba(255,255,255,0.08); }
+    .navbar.scrolled .nav-cta { color:var(--navy); border-color:var(--navy); }
+    .navbar.scrolled .nav-cta:hover { background:var(--navy); color:var(--white); }
+    .nav-hamburger {
+      display:none; flex-direction:column; gap:5px; cursor:pointer;
+      padding:4px; background:none; border:none;
+    }
+    .nav-hamburger span { display:block; width:22px; height:1px; background:var(--white); transition:var(--transition); }
+    .navbar.scrolled .nav-hamburger span { background:var(--navy); }
+    .nav-mobile-menu {
+      display:none; position:fixed; top:74px; left:0; right:0;
+      background:var(--navy); padding:24px 32px 32px;
+      border-bottom:1px solid rgba(255,255,255,0.07); z-index:199;
+    }
+    .nav-mobile-menu.open { display:block; }
+    .nav-mobile-menu a {
+      display:block; font-size:15px; font-weight:500; letter-spacing:0.05em;
+      text-transform:none; color:rgba(255,255,255,0.7); text-decoration:none;
+      padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.06); transition:var(--transition);
+    }
+    .nav-mobile-menu a:hover { color:var(--white); }
+    .nav-mobile-cta {
+      display:inline-block !important; margin-top:22px; font-size:14px;
+      font-weight:600; color:var(--white) !important;
+      border:1px solid rgba(255,255,255,0.28); padding:12px 24px;
+    }
+    @media(max-width:768px) {
+      .nav-links { display:none; }
+      .nav-cta { display:none; }
+      .nav-hamburger { display:flex; }
+    }
+
+    /* ─── BUTTONS ────────────────────────────────── */
+    .btn {
+      display:inline-flex; align-items:center; gap:8px;
+      font-family:var(--font); font-size:14px; font-weight:600;
+      letter-spacing:0.26em; text-transform:uppercase;
+      border:none; cursor:pointer; transition:var(--transition); text-decoration:none;
+    }
+    .btn-primary { background:var(--navy); color:var(--white); padding:16px 38px; }
+    .btn-primary:hover { background:#0F2A45; box-shadow:0 6px 20px rgba(26,58,92,0.22); transform:translateY(-1px); }
+    .btn-outline { background:transparent; color:var(--navy); padding:15px 37px; border:1px solid var(--navy); }
+    .btn-outline:hover { background:var(--navy); color:var(--white); }
+    .btn-ghost { background:transparent; color:var(--white); padding:15px 37px; border:1px solid rgba(255,255,255,0.28); }
+    .btn-ghost:hover { border-color:var(--white); background:rgba(255,255,255,0.07); }
+
+    /* ─── HERO ───────────────────────────────────── */
+    .hero {
+      background:var(--navy);
+      padding:120px 80px 64px;
+      position:relative; overflow:hidden;
+    }
+    .hero-gold-bar {
+      position:absolute; left:0; top:0; bottom:0; width:4px;
+      background:linear-gradient(to bottom, var(--gold) 0%, rgba(201,169,110,0.3) 60%, transparent 100%);
+      z-index:2;
+    }
+    .hero-inner { position:relative; z-index:1; max-width:680px; }
+    .breadcrumb {
+      display:flex; align-items:center; gap:8px;
+      font-size:13px; font-weight:400; letter-spacing:0.06em;
+      color:rgba(255,255,255,0.38); margin-bottom:32px;
+    }
+    .breadcrumb a { color:rgba(255,255,255,0.38); text-decoration:none; transition:var(--transition); }
+    .breadcrumb a:hover { color:rgba(255,255,255,0.7); }
+    .breadcrumb-sep { color:rgba(255,255,255,0.20); }
+    .breadcrumb-current { color:rgba(255,255,255,0.55); }
+    .hero-gold-line {
+      width:1px; height:44px; background:var(--gold);
+      margin-bottom:28px;
+    }
+    .hero-eyebrow {
+      font-size:14px; font-weight:600; letter-spacing:0.34em;
+      text-transform:uppercase; color:var(--gold); margin-bottom:16px;
+    }
+    .hero-h1 {
+      font-size:58px; font-weight:700; color:var(--white);
+      line-height:1.06; letter-spacing:-0.015em; margin-bottom:20px;
+    }
+    .hero-sub {
+      font-size:19px; font-weight:300; color:rgba(255,255,255,0.52);
+      line-height:1.9; max-width:540px; letter-spacing:0.02em; margin-bottom:48px;
+    }
+    .hero-scroll-cta {
+      position:absolute; bottom:32px; left:50%; transform:translateX(-50%);
+      display:flex; flex-direction:column; align-items:center; gap:10px;
+      text-decoration:none; transition:var(--transition);
+    }
+    .hero-scroll-label {
+      font-size:12px; font-weight:600; letter-spacing:0.08em;
+      text-transform:uppercase; color:var(--gold);
+    }
+    .hero-scroll-arrow {
+      width:20px; height:20px; color:var(--gold);
+      animation:scrollBounce 2s ease-in-out infinite;
+    }
+    @keyframes scrollBounce {
+      0%, 100% { transform:translateY(0); opacity:1; }
+      50% { transform:translateY(6px); opacity:0.6; }
+    }
+    .hero-scroll-cta:hover .hero-scroll-arrow { animation:scrollBounce 1.2s ease-in-out infinite; }
+
+    /* ─── SECTION: PORQUÊ A OPEN CAPITAL ─────────── */
+    .section-why {
+      padding:96px 80px;
+      background:var(--white);
+    }
+    .why-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:80px;
+      max-width:1200px;
+      margin:0 auto;
+      align-items:start;
+    }
+    .why-left { }
+    .why-left .t-eyebrow { margin-bottom:16px; }
+    .why-left .t-h2 { margin-bottom:28px; }
+    .why-left p {
+      font-size:18px; font-weight:400; color:var(--grey-dark);
+      line-height:1.85; max-width:480px; margin-bottom:20px;
+    }
+    .perks-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+    .perk-card {
+      background:var(--white);
+      border:1px solid var(--grey-light);
+      border-left:2px solid var(--gold);
+      padding:28px 24px;
+      transition:var(--transition);
+    }
+    .perk-card:hover {
+      box-shadow:var(--shadow);
+      transform:translateY(-2px);
+    }
+    .perk-icon {
+      width:32px; height:32px; margin-bottom:16px;
+    }
+    .perk-title {
+      font-size:16px; font-weight:600; letter-spacing:0.04em;
+      color:var(--navy); margin-bottom:8px;
+    }
+    .perk-desc {
+      font-size:15px; font-weight:300; color:var(--grey-mid);
+      line-height:1.8;
+    }
+
+    /* ─── SECTION: POSIÇÕES EM ABERTO ────────────── */
+    .section-jobs {
+      padding:96px 80px;
+      background:#FAFAFA;
+    }
+    .jobs-header { max-width:1200px; margin:0 auto 48px; }
+    .jobs-header .t-eyebrow { margin-bottom:14px; }
+    .jobs-header .t-h2 { }
+    .jobs-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:28px;
+      max-width:1200px;
+      margin:0 auto 48px;
+    }
+    .job-card {
+      background:var(--white);
+      border:1px solid var(--grey-light);
+      padding:36px 32px 32px;
+      position:relative; overflow:hidden;
+      transition:var(--transition);
+      display:flex; flex-direction:column;
+    }
+    .job-card::before {
+      content:''; position:absolute; top:0; left:0;
+      width:0; height:2px; background:var(--gold);
+      transition:width 0.4s ease;
+    }
+    .job-card:hover { box-shadow:var(--shadow); transform:translateY(-3px); }
+    .job-card:hover::before { width:100%; }
+    .job-card-tags {
+      display:flex; align-items:center; justify-content:space-between;
+      margin-bottom:20px;
+    }
+    .job-tag {
+      font-size:10px; font-weight:500; letter-spacing:0.16em;
+      text-transform:uppercase; padding:5px 12px;
+    }
+    .job-tag-dept {
+      background:rgba(201,169,110,0.10); color:#9A7040;
+      border:1px solid var(--gold);
+    }
+    .job-tag-type {
+      background:transparent; color:var(--navy);
+      border:1px solid var(--navy);
+    }
+    .job-title {
+      font-size:20px; font-weight:600; color:var(--navy);
+      line-height:1.3; margin-bottom:10px;
+    }
+    .job-location {
+      display:flex; align-items:center; gap:6px;
+      font-size:13px; font-weight:400; letter-spacing:0.03em;
+      color:var(--grey-mid); margin-bottom:18px;
+    }
+    .job-location svg { flex-shrink:0; }
+    .job-desc {
+      font-size:15px; font-weight:300; color:var(--grey-mid);
+      line-height:1.8; margin-bottom:28px; flex:1;
+    }
+    .job-link {
+      font-size:13px; font-weight:600; letter-spacing:0.22em;
+      text-transform:uppercase; color:var(--gold);
+      text-decoration:none; transition:var(--transition);
+      display:inline-flex; align-items:center; gap:6px;
+      align-self:flex-start; background:none; border:none;
+      cursor:pointer; padding:0; font-family:var(--font);
+    }
+    .job-link:hover { color:var(--navy); }
+    .job-link::after { content:' →'; font-weight:300; font-size:14px; }
+
+    /* ─── MODAL CANDIDATURA ───────────────────────── */
+    .apply-overlay {
+      position:fixed; inset:0; background:rgba(13,31,51,0.72);
+      backdrop-filter:blur(4px); z-index:900;
+      display:flex; align-items:center; justify-content:center;
+      opacity:0; visibility:hidden; transition:opacity 0.3s ease, visibility 0.3s ease;
+      padding:24px;
+    }
+    .apply-overlay.open { opacity:1; visibility:visible; }
+    .apply-modal {
+      background:var(--white); width:100%; max-width:560px;
+      max-height:90vh; overflow-y:auto;
+      position:relative;
+      transform:translateY(20px); transition:transform 0.3s ease;
+    }
+    .apply-overlay.open .apply-modal { transform:translateY(0); }
+    .apply-modal-header {
+      background:var(--navy); padding:32px 40px 28px;
+      position:relative;
+    }
+    .apply-modal-eyebrow {
+      font-size:11px; font-weight:600; letter-spacing:0.28em;
+      text-transform:uppercase; color:var(--gold); margin-bottom:10px;
+    }
+    .apply-modal-title {
+      font-size:22px; font-weight:600; color:var(--white); line-height:1.3;
+    }
+    .apply-modal-close {
+      position:absolute; top:20px; right:20px;
+      background:none; border:none; cursor:pointer;
+      color:rgba(255,255,255,0.4); transition:var(--transition);
+      display:flex; align-items:center; justify-content:center;
+      width:32px; height:32px;
+    }
+    .apply-modal-close:hover { color:var(--white); }
+    .apply-modal-body { padding:36px 40px 40px; }
+    .apply-form-row { margin-bottom:22px; }
+    .apply-form-row-2 {
+      display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:22px;
+    }
+    .apply-label {
+      display:block; font-size:10px; font-weight:600;
+      letter-spacing:0.22em; text-transform:uppercase;
+      color:var(--grey-mid); margin-bottom:8px;
+    }
+    .apply-input, .apply-textarea {
+      width:100%; padding:12px 15px;
+      font-family:var(--font); font-size:14px; font-weight:300;
+      color:var(--grey-dark); background:var(--white);
+      border:1px solid var(--grey-light); outline:none;
+      transition:var(--transition); border-radius:0;
+    }
+    .apply-input:focus, .apply-textarea:focus {
+      border-color:var(--navy); box-shadow:0 0 0 3px rgba(26,58,92,0.05);
+    }
+    .apply-textarea { resize:vertical; min-height:110px; line-height:1.7; }
+    .apply-file-wrap {
+      border:1px dashed var(--grey-light); padding:18px 20px;
+      display:flex; align-items:center; gap:14px;
+      cursor:pointer; transition:var(--transition);
+    }
+    .apply-file-wrap:hover { border-color:var(--navy); }
+    .apply-file-wrap input[type="file"] { display:none; }
+    .apply-file-icon { flex-shrink:0; color:var(--grey-mid); }
+    .apply-file-label {
+      font-size:13px; font-weight:400; color:var(--grey-mid); line-height:1.5;
+    }
+    .apply-file-label strong { display:block; color:var(--grey-dark); font-weight:500; font-size:14px; }
+    .apply-submit {
+      width:100%; padding:16px; margin-top:28px;
+      font-family:var(--font); font-size:13px; font-weight:600;
+      letter-spacing:0.26em; text-transform:uppercase;
+      background:var(--navy); color:var(--white);
+      border:none; cursor:pointer; transition:var(--transition);
+    }
+    .apply-submit:hover { background:#0F2A45; }
+    .apply-success {
+      display:none; text-align:center; padding:48px 40px;
+    }
+    .apply-success-icon { color:var(--gold); margin-bottom:20px; }
+    .apply-success h3 {
+      font-size:22px; font-weight:600; color:var(--navy); margin-bottom:12px;
+    }
+    .apply-success p {
+      font-size:15px; font-weight:300; color:var(--grey-mid); line-height:1.8;
+    }
+    .jobs-spontaneous {
+      max-width:1200px; margin:0 auto;
+      text-align:center;
+      padding:32px 40px;
+      border:1px solid var(--grey-light);
+      background:var(--white);
+    }
+    .jobs-spontaneous p {
+      font-size:16px; font-weight:300; color:var(--grey-mid);
+      line-height:1.8;
+    }
+    .jobs-spontaneous a {
+      color:var(--navy); font-weight:500; text-decoration:none;
+      border-bottom:1px solid var(--gold); transition:var(--transition);
+    }
+    .jobs-spontaneous a:hover { color:var(--gold); }
+
+    /* ─── SECTION: PROCESSO ──────────────────────── */
+    .section-process {
+      padding:96px 80px;
+      background:var(--navy);
+      position:relative; overflow:hidden;
+    }
+    .section-process::before {
+      content:'';
+      position:absolute; left:0; top:0; bottom:0; width:4px;
+      background:linear-gradient(to bottom, var(--gold) 0%, rgba(201,169,110,0.2) 70%, transparent 100%);
+    }
+    .process-header {
+      max-width:1200px; margin:0 auto 64px;
+    }
+    .process-header .t-eyebrow { margin-bottom:14px; }
+    .process-header .process-h2 {
+      font-size:36px; font-weight:600; letter-spacing:0.01em;
+      color:var(--white); line-height:1.15;
+    }
+    .steps-grid {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:2px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+    .step {
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.07);
+      padding:40px 32px;
+      position:relative;
+      transition:var(--transition);
+    }
+    .step:hover {
+      background:rgba(255,255,255,0.07);
+    }
+    .step-number {
+      font-size:42px; font-weight:700; letter-spacing:-0.02em;
+      color:rgba(201,169,110,0.20); line-height:1;
+      margin-bottom:20px; display:block;
+    }
+    .step-title {
+      font-size:17px; font-weight:600; letter-spacing:0.04em;
+      color:var(--white); margin-bottom:12px;
+    }
+    .step-desc {
+      font-size:15px; font-weight:300; color:rgba(255,255,255,0.48);
+      line-height:1.8;
+    }
+    .step-connector {
+      position:absolute; top:40px; right:-1px;
+      width:1px; height:32px;
+      background:linear-gradient(to bottom, var(--gold), transparent);
+      display:none;
+    }
+
+    /* ─── FOOTER ─────────────────────────────────── */
+    .footer { background:var(--navy-deep); padding:56px 80px 34px; }
+    .footer-grid {
+      display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr;
+      gap:44px; margin-bottom:40px; padding-bottom:40px;
+      border-bottom:1px solid rgba(255,255,255,0.07);
+    }
+    .f-logo-img { height:57px; width:auto; display:block; filter:brightness(0) invert(1); }
+    .f-desc {
+      font-size:15px; font-weight:300; color:rgba(255,255,255,0.36);
+      line-height:1.85; margin-top:18px; max-width:260px;
+    }
+    .f-tagline {
+      font-size:16px; font-weight:100; letter-spacing:0.14em;
+      color:var(--gold); margin-top:12px;
+    }
+    .f-col-label {
+      font-size:11px; font-weight:600; letter-spacing:0.28em;
+      text-transform:uppercase; color:rgba(255,255,255,0.24); margin-bottom:16px;
+    }
+    .f-links { list-style:none; }
+    .f-links li { margin-bottom:9px; }
+    .f-links a {
+      font-size:15px; font-weight:300; color:rgba(255,255,255,0.48);
+      text-decoration:none; transition:var(--transition); letter-spacing:0.03em;
+    }
+    .f-links a:hover { color:var(--white); }
+    .f-badge {
+      font-size:9px; font-weight:600; letter-spacing:0.1em;
+      color:var(--gold); border:1px solid rgba(201,169,110,0.45);
+      padding:1px 5px; margin-left:5px; vertical-align:middle;
+    }
+    .footer-bottom {
+      display:flex; justify-content:space-between; align-items:center;
+      flex-wrap:wrap; gap:10px;
+    }
+    .f-copy { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:0.05em; }
+    .f-legal a {
+      font-size:14px; font-weight:300; color:rgba(255,255,255,0.18);
+      text-decoration:none; letter-spacing:0.05em; transition:var(--transition);
+    }
+    .f-legal a:hover { color:rgba(255,255,255,0.45); }
+
+    /* ─── SCROLL REVEAL ──────────────────────────── */
+    .reveal {
+      opacity:0;
+      transform:translateY(24px);
+      transition:opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity:1;
+      transform:translateY(0);
+    }
+    .reveal-delay-1 { transition-delay:0.1s; }
+    .reveal-delay-2 { transition-delay:0.2s; }
+    .reveal-delay-3 { transition-delay:0.3s; }
+    .reveal-delay-4 { transition-delay:0.4s; }
+
+    /* ─── RESPONSIVE ─────────────────────────────── */
+    @media(max-width:1024px) {
+      .why-grid { grid-template-columns:1fr; gap:56px; }
+      .jobs-grid { grid-template-columns:1fr 1fr; }
+      .steps-grid { grid-template-columns:1fr 1fr; }
+      .footer-grid { grid-template-columns:1fr 1fr; }
+    }
+    @media(max-width:768px) {
+      .hero { padding:100px 32px 56px; }
+      .hero-h1 { font-size:38px; }
+      .hero-sub { font-size:16px; }
+      .section-why { padding:64px 32px; }
+      .section-jobs { padding:64px 32px; }
+      .section-process { padding:64px 32px; }
+      .perks-grid { grid-template-columns:1fr; }
+      .jobs-grid { grid-template-columns:1fr; }
+      .steps-grid { grid-template-columns:1fr; }
+      .footer { padding:48px 32px 28px; }
+      .footer-grid { grid-template-columns:1fr; gap:32px; }
+      .footer-bottom { flex-direction:column; align-items:flex-start; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ─── NAVBAR ──────────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="solucoes.html">Biblioteca</a></li>
+      <li><a href="conhecimento.html">Conhecimento</a></li>
+      <li><a href="capital-simulator.html">Capital Simulator <sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="tech2business.html">Tech2Business <sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades <span class="nav-dropdown-arrow"></span></a>
+        <div class="nav-dropdown-menu">
+          <a href="parceiros.html">Parceiros</a>
+          <a href="carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/tech2business" target="_blank" class="nav-cta">Contactar</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="solucoes.html">Biblioteca</a>
+    <a href="conhecimento.html">Conhecimento</a>
+    <a href="capital-simulator.html">Capital Simulator <span class="nav-badge">em breve</span></a>
+    <a href="tech2business.html">Tech2Business <span class="nav-badge">em breve</span></a>
+    <a href="sobre-nos.html">Sobre Nós</a>
+    <a href="parceiros.html">Parceiros</a>
+    <a href="carreiras.html">Carreiras</a>
+    <a href="mailto:hello@opencapital.pt" class="nav-mobile-cta">Contactar</a>
+  </div>
+
+  <!-- ─── HERO ────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Carreiras</span>
+      </nav>
+      <div class="hero-eyebrow">Trabalha connosco</div>
+      <h1 class="hero-h1">Carreiras</h1>
+      <p class="hero-sub">Procuramos pessoas que acreditam que o acesso a capital de qualidade pode transformar empresas. Se partilhas esta convicção, queremos conhecer-te.</p>
+    </div>
+    <a href="#section-jobs" class="hero-scroll-cta">
+      <span class="hero-scroll-label">Ver vagas</span>
+      <svg class="hero-scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </a>
+  </section>
+
+  <!-- ─── SECTION 2: PORQUÊ A OPEN CAPITAL ─────────── -->
+  <section class="section-why">
+    <div class="why-grid">
+      <div class="why-left reveal">
+        <div class="t-eyebrow" style="margin-bottom:16px;">A nossa cultura</div>
+        <h2 class="t-h2" style="margin-bottom:28px;">Um lugar para crescer com propósito</h2>
+        <p>Somos uma equipa pequena mas ambiciosa. Cada pessoa tem impacto direto nos resultados dos clientes: não existe trabalho invisível nem contribuições diluídas em hierarquias longas.</p>
+        <p>Valorizamos pensamento rigoroso, curiosidade intelectual e uma genuína vontade de resolver problemas complexos. Não fazemos hierarquia por razões de estatuto: fazemos resultados.</p>
+      </div>
+      <div class="why-right">
+        <div class="perks-grid">
+
+          <div class="perk-card reveal reveal-delay-1">
+            <svg class="perk-icon" viewBox="0 0 32 32" fill="none" stroke="var(--navy)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="16" cy="16" r="13"/>
+              <path d="M16 9 L16 16 L21 19"/>
+            </svg>
+            <div class="perk-title">Impacto real</div>
+            <div class="perk-desc">Trabalhas diretamente em projetos que moldam o futuro de empresas reais. Sem trabalho de bastidores sem visibilidade.</div>
+          </div>
+
+          <div class="perk-card reveal reveal-delay-2">
+            <svg class="perk-icon" viewBox="0 0 32 32" fill="none" stroke="var(--navy)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4,24 12,14 18,19 28,8"/>
+              <polyline points="22,8 28,8 28,14"/>
+            </svg>
+            <div class="perk-title">Crescimento acelerado</div>
+            <div class="perk-desc">Numa equipa pequena, evoluís mais rápido. A responsabilidade e a aprendizagem chegam cedo.</div>
+          </div>
+
+          <div class="perk-card reveal reveal-delay-3">
+            <svg class="perk-icon" viewBox="0 0 32 32" fill="none" stroke="var(--navy)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="10" r="4"/>
+              <circle cx="22" cy="10" r="4"/>
+              <path d="M4 26 C4 20 8 17 12 17"/>
+              <path d="M20 17 C24 17 28 20 28 26"/>
+              <path d="M12 17 C14 17 16 17 18 17"/>
+            </svg>
+            <div class="perk-title">Mentoria próxima</div>
+            <div class="perk-desc">Acompanhamento direto de seniores com experiência em banca, consultoria e gestão de empresas.</div>
+          </div>
+
+          <div class="perk-card reveal reveal-delay-4">
+            <svg class="perk-icon" viewBox="0 0 32 32" fill="none" stroke="var(--navy)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="16" cy="16" r="13"/>
+              <path d="M16 3 C16 3 10 8 10 16 C10 24 16 29 16 29"/>
+              <path d="M16 3 C16 3 22 8 22 16 C22 24 16 29 16 29"/>
+              <line x1="3" y1="16" x2="29" y2="16"/>
+            </svg>
+            <div class="perk-title">Projeto ambicioso</div>
+            <div class="perk-desc">Fazemos parte de um ecossistema europeu de financiamento em rápida evolução. O mercado está a crescer: e nós também.</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SECTION 3: POSIÇÕES EM ABERTO ─────────────── -->
+  <section class="section-jobs" id="section-jobs">
+    <div class="jobs-header reveal">
+      <div class="t-eyebrow" style="margin-bottom:14px;">Oportunidades</div>
+      <h2 class="t-h2">Posições em aberto</h2>
+    </div>
+
+    <div class="jobs-grid">
+
+      <!-- Job 1 -->
+      <div class="job-card reveal reveal-delay-1">
+        <div class="job-card-tags">
+          <span class="job-tag job-tag-dept">Financiamento</span>
+          <span class="job-tag job-tag-type">Full-time</span>
+        </div>
+        <div class="job-title">Técnico de Candidaturas &amp; Incentivos</div>
+        <div class="job-location">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 1C5.24 1 3 3.24 3 6c0 4.25 5 9 5 9s5-4.75 5-9c0-2.76-2.24-5-5-5z"/>
+            <circle cx="8" cy="6" r="1.5"/>
+          </svg>
+          Lisboa · Híbrido
+        </div>
+        <p class="job-desc">Responsável pela instrução e acompanhamento de candidaturas a fundos europeus e incentivos nacionais, nomeadamente Portugal 2030, PRR e sistemas de incentivos IAPMEI. Procuramos perfil com experiência em financiamento comunitário e atenção ao detalhe.</p>
+        <button class="job-link" onclick="openApply('Técnico de Candidaturas & Incentivos')">Candidatar-me</button>
+      </div>
+
+      <!-- Job 2 -->
+      <div class="job-card reveal reveal-delay-2">
+        <div class="job-card-tags">
+          <span class="job-tag job-tag-dept">Advisory</span>
+          <span class="job-tag job-tag-type">Full-time</span>
+        </div>
+        <div class="job-title">Consultor Júnior</div>
+        <div class="job-location">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 1C5.24 1 3 3.24 3 6c0 4.25 5 9 5 9s5-4.75 5-9c0-2.76-2.24-5-5-5z"/>
+            <circle cx="8" cy="6" r="1.5"/>
+          </svg>
+          Lisboa · Híbrido
+        </div>
+        <p class="job-desc">Integração na equipa de advisory para apoio a clientes nas áreas de financiamento, fiscalidade e estratégia de capital. Orientado para recém-licenciados ou perfis com até 2 anos de experiência em consultoria, banca ou finanças empresariais.</p>
+        <button class="job-link" onclick="openApply('Consultor Júnior')">Candidatar-me</button>
+      </div>
+
+    </div>
+
+    <div class="jobs-spontaneous reveal">
+      <p>Não encontrou o que procurava? Envie-nos uma candidatura espontânea para <a href="mailto:hello@opencapital.pt">hello@opencapital.pt</a>: guardamos todos os perfis interessantes.</p>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ──────────────────────────────────── -->
+  <footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img"
+          onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="solucoes.html">Portugal 2030</a></li>
+        <li><a href="solucoes.html">Fundos de Investimento</a></li>
+        <li><a href="solucoes.html">Benefícios Fiscais</a></li>
+        <li><a href="solucoes.html">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="conhecimento.html">Conhecimento</a></li>
+        <li><a href="parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="sobre-nos.html">Equipa</a></li>
+        <li><a href="carreiras.html">Carreiras</a></li>
+        <li><a href="#contactar">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">© 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+  <!-- ─── JAVASCRIPT ──────────────────────────────── -->
+  <script>
+    // Navbar scroll behaviour
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+    // Close mobile menu when a link is clicked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // Smooth scroll lento para "Ver vagas"
+    const scrollCta = document.querySelector('.hero-scroll-cta');
+    if (scrollCta) {
+      scrollCta.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(scrollCta.getAttribute('href'));
+        if (target) {
+          const start = window.scrollY;
+          const end = target.offsetTop - 100;
+          const distance = end - start;
+          const duration = 2000; // 2 segundos para scroll mais lento
+          let startTime = null;
+
+          const animate = (currentTime) => {
+            if (startTime === null) startTime = currentTime;
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easeInOutCubic = progress < 0.5
+              ? 4 * progress * progress * progress
+             : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+            window.scrollTo(0, start + distance * easeInOutCubic);
+            if (progress < 1) requestAnimationFrame(animate);
+          };
+          requestAnimationFrame(animate);
+        }
+      });
+    }
+
+    // Modal candidatura
+    function openApply(jobTitle) {
+      document.getElementById('applyJobTitle').textContent = jobTitle;
+      document.getElementById('applyJobInput').value = jobTitle;
+      document.getElementById('applyOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeApply() {
+      document.getElementById('applyOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('applyOverlay').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('applyOverlay')) closeApply();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeApply();
+      });
+      document.getElementById('applyFileBtn').addEventListener('click', () => {
+        document.getElementById('applyFileInput').click();
+      });
+      document.getElementById('applyFileInput').addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          document.getElementById('applyFileName').textContent = file.name;
+        }
+      });
+      document.getElementById('applyForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        document.getElementById('applyForm').style.display = 'none';
+        document.getElementById('applySuccess').style.display = 'block';
+      });
+    });
+  </script>
+
+  <!-- ─── MODAL CANDIDATURA ──────────────────────── -->
+  <div class="apply-overlay" id="applyOverlay">
+    <div class="apply-modal">
+      <div class="apply-modal-header">
+        <div class="apply-modal-eyebrow">Candidatura</div>
+        <div class="apply-modal-title" id="applyJobTitle"></div>
+        <button class="apply-modal-close" onclick="closeApply()" aria-label="Fechar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="apply-modal-body">
+        <form id="applyForm">
+          <input type="hidden" id="applyJobInput" name="vaga">
+          <div class="apply-form-row-2">
+            <div>
+              <label class="apply-label" for="applyNome">Nome completo *</label>
+              <input class="apply-input" id="applyNome" name="nome" type="text" placeholder="O seu nome" required>
+            </div>
+            <div>
+              <label class="apply-label" for="applyTelefone">Telefone</label>
+              <input class="apply-input" id="applyTelefone" name="telefone" type="tel" placeholder="+351 9xx xxx xxx">
+            </div>
+          </div>
+          <div class="apply-form-row">
+            <label class="apply-label" for="applyEmail">Email *</label>
+            <input class="apply-input" id="applyEmail" name="email" type="email" placeholder="email@exemplo.com" required>
+          </div>
+          <div class="apply-form-row">
+            <label class="apply-label" for="applyLinkedin">LinkedIn</label>
+            <input class="apply-input" id="applyLinkedin" name="linkedin" type="url" placeholder="linkedin.com/in/seuperfil">
+          </div>
+          <div class="apply-form-row">
+            <label class="apply-label" for="applyMotivacao">Carta de motivação *</label>
+            <textarea class="apply-textarea" id="applyMotivacao" name="motivacao" placeholder="Porque quer juntar-se à Open Capital? O que traz de diferente?" required></textarea>
+          </div>
+          <div class="apply-form-row">
+            <label class="apply-label">Curriculum Vitae *</label>
+            <div class="apply-file-wrap" id="applyFileBtn">
+              <svg class="apply-file-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="12" y1="18" x2="12" y2="12"/>
+                <line x1="9" y1="15" x2="15" y2="15"/>
+              </svg>
+              <div class="apply-file-label">
+                <strong id="applyFileName">Selecionar ficheiro</strong>
+                PDF, DOC ou DOCX · máx. 5 MB
+              </div>
+              <input type="file" id="applyFileInput" name="cv" accept=".pdf,.doc,.docx" required>
+            </div>
+          </div>
+          <button type="submit" class="apply-submit">Enviar candidatura</button>
+        </form>
+        <div class="apply-success" id="applySuccess">
+          <svg class="apply-success-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="8 12 11 15 16 9"/>
+          </svg>
+          <h3>Candidatura recebida</h3>
+          <p>Obrigado pelo interesse em juntar-se à Open Capital.<br>Analisamos todas as candidaturas em 5 dias úteis e entraremos em contacto caso o seu perfil avance para a fase seguinte.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

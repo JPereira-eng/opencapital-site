@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conhecimento | Open Capital Advisory & Consultancy</title>
+  <meta name="description" content="Análise, perspetiva e guias práticos sobre capital, financiamento e crescimento empresarial.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:       #1A3A5C;
+      --navy-deep:  #0D1F33;
+      --gold:       #C9A96E;
+      --white:      #FFFFFF;
+      --grey-light: #E5E5E5;
+      --grey-mid:   #7A7A7A;
+      --grey-dark:  #2A2A2A;
+      --font:       'Montserrat', sans-serif;
+      --transition: all 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --shadow:     0 8px 40px rgba(26,58,92,0.10);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:var(--font); background:var(--white); color:var(--grey-dark); -webkit-font-smoothing:antialiased; }
+
+    /* ───────────────────────────────
+       NAVBAR
+    ─────────────────────────────── */
+    .navbar {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 48px; height:74px; position:fixed; top:0; left:0; right:0;
+      z-index:200; background:var(--navy);
+      border-bottom:1px solid rgba(255,255,255,0.07);
+      transition:var(--transition);
+    }
+    .navbar.scrolled {
+      background:rgba(255,255,255,0.97);
+      backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--grey-light);
+    }
+    .nav-logo { display:flex; align-items:center; text-decoration:none; flex-shrink:0; }
+    .nav-logo-img {
+      height:57px; width:auto; display:block;
+      filter:brightness(0) invert(1); transition:var(--transition);
+    }
+    .navbar.scrolled .nav-logo-img { filter:none; }
+    .nav-logo-fallback { display:none; align-items:center; gap:10px; }
+    .nav-logo-fallback .nav-mark { width:36px; height:36px; border:1px solid rgba(255,255,255,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:var(--gold); }
+    .navbar.scrolled .nav-logo-fallback .nav-mark { border-color:var(--navy); color:var(--navy); }
+    .nav-logo-fallback .nav-wordmark { display:flex; flex-direction:column; gap:2px; }
+    .nav-logo-fallback .nav-name { font-size:14px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--white); }
+    .nav-logo-fallback .nav-sub  { font-size:9px; font-weight:300; letter-spacing:0.20em; text-transform:uppercase; color:rgba(255,255,255,0.32); }
+    .navbar.scrolled .nav-logo-fallback .nav-name { color:var(--navy); }
+    .navbar.scrolled .nav-logo-fallback .nav-sub  { color:var(--grey-mid); }
+
+    .nav-links { display:flex; align-items:center; gap:24px; list-style:none; margin-left:auto; }
+    .nav-links a {
+      font-size:15px; font-weight:500; letter-spacing:0.08em;
+      text-transform:none; color:rgba(255,255,255,0.68);
+      text-decoration:none; transition:var(--transition);
+      position:relative; padding-bottom:3px; white-space:nowrap;
+    }
+    .nav-links a::after {
+      content:''; position:absolute; bottom:0; left:0;
+      width:0; height:1px; background:var(--gold); transition:width 0.3s ease;
+    }
+    .nav-links a:hover { color:var(--white); }
+    .nav-links a:hover::after, .nav-links a.active::after { width:100%; }
+    .nav-links a.active { color:var(--white); }
+    .navbar.scrolled .nav-links a { color:var(--grey-dark); }
+    .navbar.scrolled .nav-links a:hover,
+    .navbar.scrolled .nav-links a.active { color:var(--navy); }
+
+    .nav-badge {
+      font-size:10px; font-weight:600; letter-spacing:0.06em;
+      text-transform:none; color:var(--gold); border:1px solid var(--gold);
+      padding:1px 4px; margin-left:3px; vertical-align:super; line-height:1;
+    }
+
+    .nav-dropdown { position:relative; }
+    .nav-dropdown > a::after { content:''; }
+    .nav-dropdown-arrow { display:inline-block; margin-left:5px; width:6px; height:6px; border-right:1px solid currentColor; border-bottom:1px solid currentColor; transform:rotate(45deg) translateY(-2px); transition:transform 0.25s ease; vertical-align:middle; opacity:0.6; }
+    .nav-dropdown:hover .nav-dropdown-arrow { transform:rotate(-135deg) translateY(-2px); opacity:1; }
+    .nav-dropdown-menu { position:absolute; top:calc(100% + 14px); left:50%; transform:translateX(-50%) translateY(-6px); background:var(--white); border:1px solid var(--grey-light); min-width:160px; opacity:0; visibility:hidden; transition:opacity 0.22s ease, transform 0.22s ease; box-shadow:var(--shadow); z-index:200; }
+    .nav-dropdown:hover .nav-dropdown-menu { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
+    .nav-dropdown-menu a { display:block; padding:12px 20px; font-size:13px; font-weight:500; letter-spacing:0.05em; text-transform:none; color:var(--grey-dark); text-decoration:none; border-bottom:1px solid var(--grey-light); transition:var(--transition); white-space:nowrap; }
+    .nav-dropdown-menu a:last-child { border-bottom:none; }
+    .nav-dropdown-menu a:hover { color:var(--navy); background:#FAFAFA; padding-left:24px; }
+    .nav-dropdown-menu a::after { display:none !important; }
+    .navbar:not(.scrolled) .nav-dropdown-menu { background:var(--navy-deep); border-color:rgba(255,255,255,0.08); }
+    .navbar:not(.scrolled) .nav-dropdown-menu a { color:rgba(255,255,255,0.60); border-color:rgba(255,255,255,0.06); }
+    .navbar:not(.scrolled) .nav-dropdown-menu a:hover { color:var(--white); background:rgba(255,255,255,0.05); }
+
+    .nav-cta {
+      font-size:16px; font-weight:600; letter-spacing:0.08em;
+      text-transform:none; color:var(--white); text-decoration:none;
+      border:1px solid rgba(255,255,255,0.28); padding:9px 18px;
+      margin-left:28px; transition:var(--transition); white-space:nowrap;
+    }
+    .nav-cta:hover { border-color:var(--white); background:rgba(255,255,255,0.08); }
+    .navbar.scrolled .nav-cta { color:var(--navy); border-color:var(--navy); }
+    .navbar.scrolled .nav-cta:hover { background:var(--navy); color:var(--white); }
+
+    .nav-hamburger {
+      display:none; flex-direction:column; gap:5px; cursor:pointer;
+      padding:4px; background:none; border:none;
+    }
+    .nav-hamburger span {
+      display:block; width:22px; height:1px;
+      background:var(--white); transition:var(--transition);
+    }
+    .navbar.scrolled .nav-hamburger span { background:var(--navy); }
+
+    .nav-mobile-menu {
+      display:none; position:fixed; top:74px; left:0; right:0;
+      background:var(--navy); padding:24px 32px 32px;
+      border-bottom:1px solid rgba(255,255,255,0.07); z-index:199;
+    }
+    .nav-mobile-menu.open { display:block; }
+    .nav-mobile-menu a {
+      display:block; font-size:15px; font-weight:500; letter-spacing:0.05em;
+      text-transform:none; color:rgba(255,255,255,0.7); text-decoration:none;
+      padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.06);
+      transition:var(--transition);
+    }
+    .nav-mobile-menu a:hover { color:var(--white); }
+    .nav-mobile-cta {
+      display:inline-block !important; margin-top:22px; font-size:14px;
+      font-weight:600; color:var(--white) !important;
+      border:1px solid rgba(255,255,255,0.28); padding:12px 24px;
+    }
+
+    /* ───────────────────────────────
+       HERO
+    ─────────────────────────────── */
+    .hero-compact {
+      background:var(--navy); padding:110px 80px 52px;
+      position:relative; overflow:hidden; min-height:260px;
+      display:flex; flex-direction:column; justify-content:center;
+    }
+    .hero-compact::before {
+      content:''; position:absolute; top:-120px; right:-100px;
+      width:420px; height:420px; border-radius:50%;
+      background:radial-gradient(circle, rgba(201,169,110,0.07) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .breadcrumb {
+      display:flex; align-items:center; gap:8px;
+      font-size:12px; font-weight:400; letter-spacing:0.12em;
+      color:rgba(255,255,255,0.30); text-transform:none;
+      margin-bottom:28px;
+    }
+    .breadcrumb a {
+      color:rgba(255,255,255,0.30); text-decoration:none;
+      transition:var(--transition);
+    }
+    .breadcrumb a:hover { color:rgba(255,255,255,0.60); }
+    .breadcrumb-sep { font-size:10px; opacity:0.5; }
+    .breadcrumb-current { color:rgba(255,255,255,0.55); }
+
+    .hero-line {
+      width:1px; height:44px;
+      background:linear-gradient(to bottom, var(--gold), transparent);
+      margin-bottom:20px;
+    }
+    .hero-eyebrow {
+      font-size:11px; font-weight:600; letter-spacing:0.34em;
+      text-transform:uppercase; color:var(--gold); margin-bottom:16px;
+    }
+    .hero-h1 {
+      font-size:54px; font-weight:700; color:var(--white);
+      line-height:1.05; letter-spacing:-0.01em; margin-bottom:16px;
+    }
+    .hero-sub {
+      font-size:19px; font-weight:300; color:rgba(255,255,255,0.48);
+      line-height:1.75; max-width:520px; letter-spacing:0.02em;
+    }
+
+    /* ───────────────────────────────
+       FEATURED ARTICLE
+    ─────────────────────────────── */
+    .featured-section { padding:60px 80px 0; background:var(--white); }
+
+    .featured-card {
+      display:grid; grid-template-columns:1.4fr 1fr;
+      border:1px solid var(--grey-light); overflow:hidden; cursor:pointer;
+    }
+    .featured-left {
+      background:var(--navy); padding:52px 48px;
+      position:relative; overflow:hidden;
+    }
+    .featured-left::before {
+      content:''; position:absolute; top:-60px; right:-60px;
+      width:280px; height:280px; border-radius:50%;
+      background:radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%);
+    }
+    .featured-eyebrow {
+      font-size:11px; font-weight:600; letter-spacing:0.28em;
+      text-transform:uppercase; color:var(--gold); margin-bottom:20px;
+    }
+    .featured-title {
+      font-size:30px; font-weight:600; color:var(--white);
+      line-height:1.2; margin-bottom:18px; letter-spacing:-0.01em;
+    }
+    .featured-excerpt {
+      font-size:17px; font-weight:300; color:rgba(255,255,255,0.48);
+      line-height:1.85; margin-bottom:32px;
+    }
+    .featured-meta {
+      font-size:12px; font-weight:400; letter-spacing:0.10em;
+      color:rgba(255,255,255,0.28); text-transform:uppercase; margin-bottom:28px;
+    }
+    .featured-link {
+      font-size:12px; font-weight:600; letter-spacing:0.22em;
+      text-transform:uppercase; color:var(--gold); text-decoration:none;
+      display:inline-flex; align-items:center; gap:10px; transition:var(--transition);
+    }
+    .featured-link:hover { gap:16px; }
+
+    .featured-right {
+      background:var(--white); padding:52px 44px;
+      display:flex; flex-direction:column; justify-content:center;
+    }
+    .featured-num {
+      font-size:96px; font-weight:700; color:var(--grey-light);
+      line-height:1; margin-bottom:24px; letter-spacing:-0.03em;
+    }
+    .featured-preview-title {
+      font-size:14px; font-weight:600; letter-spacing:0.12em;
+      text-transform:uppercase; color:var(--grey-mid); margin-bottom:16px;
+    }
+    .featured-bullets { list-style:none; display:flex; flex-direction:column; gap:12px; }
+    .featured-bullets li {
+      display:flex; align-items:flex-start; gap:12px;
+      font-size:16px; font-weight:300; color:var(--grey-dark); line-height:1.6;
+    }
+    .featured-bullets li::before {
+      content:''; width:5px; height:5px; border:1px solid var(--gold);
+      transform:rotate(45deg); flex-shrink:0; margin-top:7px;
+    }
+
+    /* ───────────────────────────────
+       FILTER BAR
+    ─────────────────────────────── */
+    .filter-bar {
+      position:sticky; top:74px; z-index:150;
+      background:var(--white); border-bottom:1px solid var(--grey-light);
+      padding:0 80px;
+    }
+    .filter-inner {
+      display:flex; align-items:center; justify-content:space-between;
+      height:56px; max-width:none;
+    }
+    .filter-tabs { display:flex; align-items:center; gap:4px; }
+    .filter-btn {
+      font-family:var(--font); font-size:12px; font-weight:500;
+      letter-spacing:0.12em; text-transform:uppercase; color:var(--grey-mid);
+      background:transparent; border:1px solid transparent;
+      padding:6px 14px; cursor:pointer; transition:var(--transition); white-space:nowrap;
+    }
+    .filter-btn:hover { color:var(--navy); border-color:var(--grey-light); }
+    .filter-btn.active { background:var(--navy); color:var(--white); border-color:var(--navy); }
+    .filter-count { font-size:12px; font-weight:300; color:var(--grey-mid); }
+
+    /* ───────────────────────────────
+       ARTICLE GRID
+    ─────────────────────────────── */
+    .articles-section { padding:48px 80px 96px; background:var(--white); }
+    .articles-grid {
+      display:grid; grid-template-columns:repeat(3, 1fr);
+      gap:1px; background:var(--grey-light); border:1px solid var(--grey-light);
+    }
+
+    .article-card {
+      background:var(--white); padding:36px 32px;
+      display:flex; flex-direction:column;
+      position:relative; overflow:hidden; transition:var(--transition); cursor:pointer;
+    }
+    .article-card::before {
+      content:''; position:absolute; top:0; left:0;
+      width:0; height:2px; background:var(--gold); transition:width 0.4s ease;
+    }
+    .article-card:hover {
+      box-shadow:var(--shadow); transform:translateY(-2px); z-index:2;
+    }
+    .article-card:hover::before { width:100%; }
+    .article-card.hidden { display:none; }
+
+    .article-card-header {
+      display:flex; align-items:center; justify-content:space-between;
+      margin-bottom:16px;
+    }
+    .art-cat-badge {
+      font-size:10px; font-weight:600; letter-spacing:0.16em;
+      text-transform:uppercase; padding:4px 10px;
+    }
+    .cat-financiamento { background:rgba(26,58,92,0.08); color:var(--navy); }
+    .cat-fiscalidade   { background:rgba(42,42,42,0.06); color:var(--grey-dark); }
+    .cat-estrategia    { background:rgba(201,169,110,0.10); color:#8A6535; }
+    .cat-inovacao      { background:rgba(26,58,92,0.05); color:var(--navy); border:1px solid rgba(26,58,92,0.15); }
+    .cat-mercados      { background:rgba(201,169,110,0.08); color:#8A6535; border:1px solid rgba(201,169,110,0.2); }
+    .cat-opiniao       { background:transparent; color:var(--gold); border:1px solid rgba(201,169,110,0.4); }
+
+    .art-read-time {
+      font-size:11px; font-weight:300; color:var(--grey-mid); letter-spacing:0.06em;
+    }
+    .article-card-title {
+      font-size:20px; font-weight:600; color:var(--navy);
+      line-height:1.3; margin-bottom:12px; flex:0;
+    }
+    .article-card-excerpt {
+      font-size:15px; font-weight:300; color:var(--grey-mid);
+      line-height:1.75; margin-bottom:20px; flex:1;
+    }
+    .article-card-footer {
+      display:flex; align-items:center; justify-content:space-between;
+      padding-top:16px; border-top:1px solid var(--grey-light);
+    }
+    .art-date {
+      font-size:12px; font-weight:300; color:var(--grey-mid); letter-spacing:0.06em;
+    }
+    .art-link {
+      font-size:11px; font-weight:600; letter-spacing:0.18em;
+      text-transform:uppercase; color:var(--navy); text-decoration:none;
+      transition:var(--transition); display:inline-flex; align-items:center; gap:6px;
+    }
+    .art-link::after { content:'→'; font-weight:300; }
+    .art-link:hover { color:var(--gold); }
+
+    .article-card.type-opiniao { border-left:3px solid rgba(201,169,110,0.4); }
+
+    /* ───────────────────────────────
+       SCROLL REVEAL
+    ─────────────────────────────── */
+    .reveal { opacity:0; transform:translateY(24px); transition:opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    /* ───────────────────────────────
+       FOOTER
+    ─────────────────────────────── */
+    .footer { background:var(--navy-deep); padding:56px 80px 34px; }
+    .footer-grid {
+      display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr;
+      gap:44px; margin-bottom:40px; padding-bottom:40px;
+      border-bottom:1px solid rgba(255,255,255,0.07);
+    }
+    .f-logo-img { height:57px; width:auto; display:block; filter:brightness(0) invert(1); opacity:0.85; }
+    .f-desc {
+      font-size:15px; font-weight:300; color:rgba(255,255,255,0.36);
+      line-height:1.85; margin-top:18px; max-width:260px;
+    }
+    .f-tagline {
+      font-size:16px; font-weight:100; letter-spacing:0.14em;
+      color:var(--gold); margin-top:12px;
+    }
+    .f-col-label {
+      font-size:11px; font-weight:600; letter-spacing:0.28em;
+      text-transform:uppercase; color:rgba(255,255,255,0.24); margin-bottom:16px;
+    }
+    .f-links { list-style:none; }
+    .f-links li { margin-bottom:10px; }
+    .f-links a {
+      font-size:15px; font-weight:300; color:rgba(255,255,255,0.48);
+      text-decoration:none; transition:var(--transition);
+    }
+    .f-links a:hover { color:var(--white); }
+    .f-badge {
+      font-size:9px; font-weight:600; color:var(--gold);
+      border:1px solid rgba(201,169,110,0.45); padding:1px 5px;
+      margin-left:5px; vertical-align:middle;
+    }
+    .footer-bottom {
+      display:flex; justify-content:space-between; align-items:center;
+      flex-wrap:wrap; gap:10px;
+    }
+    .f-copy {
+      font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:0.05em;
+    }
+    .f-legal { display:flex; gap:20px; }
+    .f-legal a {
+      font-size:14px; font-weight:300; color:rgba(255,255,255,0.18);
+      text-decoration:none; transition:var(--transition);
+    }
+    .f-legal a:hover { color:rgba(255,255,255,0.45); }
+
+    /* ───────────────────────────────
+       RESPONSIVE
+    ─────────────────────────────── */
+    @media (max-width:1100px) {
+      .articles-grid { grid-template-columns:repeat(2, 1fr); }
+      .footer-grid { grid-template-columns:1fr 1fr; }
+    }
+
+    @media (max-width:768px) {
+      .navbar { padding:0 24px; }
+      .nav-links, .nav-cta { display:none; }
+      .nav-hamburger { display:flex; }
+
+      .hero-compact { padding:100px 24px 52px; }
+      .hero-h1 { font-size:34px; }
+      .hero-sub { font-size:16px; }
+
+      .featured-section { padding:40px 24px 0; }
+      .featured-card { grid-template-columns:1fr; }
+      .featured-right { display:none; }
+
+      .filter-bar { padding:0 24px; overflow-x:auto; }
+      .filter-inner { justify-content:flex-start; gap:12px; }
+      .filter-tabs { gap:4px; overflow-x:auto; padding-bottom:4px; }
+      .filter-count { white-space:nowrap; flex-shrink:0; margin-left:auto; }
+
+      .articles-section { padding:32px 24px 64px; }
+      .articles-grid { grid-template-columns:1fr; }
+
+      .footer { padding:48px 24px 28px; }
+      .footer-grid { grid-template-columns:1fr; gap:32px; }
+      .footer-bottom { flex-direction:column; align-items:flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════
+       NAVBAR
+  ════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img
+      src="logo_opencapital_azul_semfundo.png"
+      alt="Open Capital"
+      class="nav-logo-img"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="nav-logo-fallback">
+      <div class="nav-mark">OC</div>
+      <div class="nav-wordmark">
+        <span class="nav-name">Open Capital</span>
+        <span class="nav-sub">Advisory &amp; Consultancy</span>
+      </div>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="solucoes.html">Biblioteca</a></li>
+    <li><a href="conhecimento.html">Conhecimento</a></li>
+    <li><a href="capital-simulator.html">Capital Simulator<span class="nav-badge">em breve</span></a></li>
+    <li><a href="tech2business.html">Tech2Business<span class="nav-badge">em breve</span></a></li>
+    <li><a href="sobre-nos.html">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades <span class="nav-dropdown-arrow"></span></a>
+      <div class="nav-dropdown-menu">
+        <a href="parceiros.html">Parceiros</a>
+        <a href="carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+
+  <a href="https://calendly.com/tech2business" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="solucoes.html">Biblioteca</a>
+  <a href="conhecimento.html">Conhecimento</a>
+  <a href="capital-simulator.html">Capital Simulator<span class="nav-badge">em breve</span></a>
+  <a href="tech2business.html">Tech2Business<span class="nav-badge">em breve</span></a>
+  <a href="sobre-nos.html">Sobre Nós</a>
+  <a href="parceiros.html">Parceiros</a>
+  <a href="carreiras.html" style="padding-left:28px; font-size:11px; opacity:0.7;">Carreiras</a>
+  <a href="#contactar" class="nav-mobile-cta">Contactar</a>
+</div>
+
+  <!-- ═══════════════════════════
+       HERO COMPACT
+  ════════════════════════════ -->
+  <section class="hero-compact">
+    <nav class="breadcrumb">
+      <a href="index.html">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Conhecimento</span>
+    </nav>
+    <div class="hero-eyebrow">Análise & perspetiva</div>
+    <h1 class="hero-h1">Conhecimento</h1>
+    <p class="hero-sub">Análise, perspetiva e guias práticos sobre capital, financiamento e crescimento empresarial.</p>
+  </section>
+
+  <!-- ═══════════════════════════
+       FEATURED ARTICLE
+  ════════════════════════════ -->
+  <section class="featured-section">
+    <div class="featured-card reveal" id="featuredCard">
+      <!-- Left: navy panel -->
+      <div class="featured-left">
+        <div class="featured-eyebrow">Artigo em destaque</div>
+        <h2 class="featured-title">Como preparar uma candidatura Portugal 2030 que seja aprovada</h2>
+        <p class="featured-excerpt">A maioria das candidaturas rejeitadas não falha por falta de mérito do projeto, falha por erros técnicos e narrativas inconsistentes. Um guia prático para evitar os erros mais comuns.</p>
+        <div class="featured-meta">Financiamento &nbsp;·&nbsp; 8 min de leitura &nbsp;·&nbsp; Março 2026</div>
+        <a href="conhecimento/como-preparar-candidatura-portugal-2030.html" class="featured-link">
+          Ler artigo
+          <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 5h14M11 1l4 4-4 4" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      <!-- Right: white panel -->
+      <div class="featured-right">
+        <div class="featured-num">01</div>
+        <div class="featured-preview-title">Neste artigo</div>
+        <ul class="featured-bullets">
+          <li>Como estruturar o modelo económico-financeiro para maximizar a pontuação</li>
+          <li>Os 5 erros mais comuns que levam ao indeferimento liminar</li>
+          <li>A documentação que ninguém lembra de preparar com antecedência</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       FILTER BAR
+  ════════════════════════════ -->
+  <div class="filter-bar" id="filterBar">
+    <div class="filter-inner">
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="todos" onclick="filterCards('todos')">Todos</button>
+        <button class="filter-btn" data-filter="financiamento" onclick="filterCards('financiamento')">Financiamento</button>
+        <button class="filter-btn" data-filter="fiscalidade" onclick="filterCards('fiscalidade')">Fiscalidade</button>
+        <button class="filter-btn" data-filter="estrategia" onclick="filterCards('estrategia')">Estratégia</button>
+        <button class="filter-btn" data-filter="inovacao" onclick="filterCards('inovacao')">Inovação</button>
+        <button class="filter-btn" data-filter="mercados" onclick="filterCards('mercados')">Mercados</button>
+        <button class="filter-btn" data-filter="opiniao" onclick="filterCards('opiniao')">Opinião</button>
+      </div>
+      <span class="filter-count" id="filterCount">6 artigos</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════
+       ARTICLE GRID
+  ════════════════════════════ -->
+  <section class="articles-section">
+    <div class="articles-grid" id="articlesGrid">
+
+      <!-- Article 1: Financiamento -->
+      <article class="article-card reveal"
+               data-category="financiamento"
+               data-href="conhecimento/como-preparar-candidatura-portugal-2030.html">
+        <div class="article-card-header">
+          <span class="art-cat-badge cat-financiamento">Financiamento</span>
+          <span class="art-read-time">8 min</span>
+        </div>
+        <h3 class="article-card-title">Como preparar uma candidatura Portugal 2030 que seja aprovada</h3>
+        <p class="article-card-excerpt">A maioria das candidaturas rejeitadas não falha por falta de mérito, falha por erros técnicos e narrativas inconsistentes. Um guia prático.</p>
+        <div class="article-card-footer">
+          <span class="art-date">Março 2026</span>
+          <a href="conhecimento/como-preparar-candidatura-portugal-2030.html" class="art-link">Ler</a>
+        </div>
+      </article>
+
+      <!-- Article 2: Opinião -->
+      <article class="article-card type-opiniao reveal"
+               data-category="opiniao"
+               data-href="conhecimento/capital-europeu-disponivel-problema-execucao.html">
+        <div class="article-card-header">
+          <span class="art-cat-badge cat-opiniao">Opinião</span>
+          <span class="art-read-time">4 min</span>
+        </div>
+        <h3 class="article-card-title">O capital europeu está disponível. O problema é sempre a execução.</h3>
+        <p class="article-card-excerpt">Portugal tem acesso a dezenas de milhares de milhões em fundos europeus. Mas a maioria das empresas continua sem saber como aceder, ou desiste a meio.</p>
+        <div class="article-card-footer">
+          <span class="art-date">Março 2026</span>
+          <a href="conhecimento/capital-europeu-disponivel-problema-execucao.html" class="art-link">Ler</a>
+        </div>
+      </article>
+
+      <!-- Article 3: Fiscalidade -->
+      <article class="article-card reveal"
+               data-category="fiscalidade"
+               data-href="conhecimento/sifide-ii-beneficio-fiscal.html">
+        <div class="article-card-header">
+          <span class="art-cat-badge cat-fiscalidade">Fiscalidade</span>
+          <span class="art-read-time">6 min</span>
+        </div>
+        <h3 class="article-card-title">SIFIDE II: o benefício fiscal que 70% das empresas inovadoras não aproveitam</h3>
+        <p class="article-card-excerpt">Se a sua empresa tem despesas em I&D e não submete ao SIFIDE II, está a deixar dinheiro na mesa, provavelmente dezenas de milhares de euros por ano.</p>
+        <div class="article-card-footer">
+          <span class="art-date">Fevereiro 2026</span>
+          <a href="conhecimento/sifide-ii-beneficio-fiscal.html" class="art-link">Ler</a>
+        </div>
+      </article>
+
+      <!-- Article 4: Mercados -->
+      <article class="article-card reveal"
+               data-category="mercados"
+               data-href="conhecimento/venture-capital-portugal.html">
+        <div class="article-card-header">
+          <span class="art-cat-badge cat-mercados">Mercados</span>
+          <span class="art-read-time">5 min</span>
+        </div>
+        <h3 class="article-card-title">Venture Capital em Portugal: o que mudou e para onde vai o mercado</h3>
+        <p class="article-card-excerpt">O ecossistema de capital de risco português cresceu significativamente. Uma análise do que mudou, quem são os players e o que esperar a seguir.</p>
+        <div class="article-card-footer">
+          <span class="art-date">Fevereiro 2026</span>
+          <a href="conhecimento/venture-capital-portugal.html" class="art-link">Ler</a>
+        </div>
+      </article>
+
+      <!-- Article 5: Estratégia -->
+      <article class="article-card reveal"
+               data-category="estrategia"
+               data-href="conhecimento/quando-captar-investimento.html">
+        <div class="article-card-header">
+          <span class="art-cat-badge cat-estrategia">Estratégia</span>
+          <span class="art-read-time">5 min</span>
+        </div>
+        <h3 class="article-card-title">Quando (e quando não) captar investimento externo</h3>
+        <p class="article-card-excerpt">Nem sempre captar investimento é a decisão certa. Há momentos em que o financiamento público ou o autofinanciamento são superiores.</p>
+        <div class="article-card-footer">
+          <span class="art-date">Janeiro 2026</span>
+          <a href="conhecimento/quando-captar-investimento.html" class="art-link">Ler</a>
+        </div>
+      </article>
+
+      <!-- Article 6: Inovação -->
+      <article class="article-card reveal"
+               data-category="inovacao"
+               data-href="conhecimento/id-empresarial-vantagem-fiscal.html">
+        <div class="article-card-header">
+          <span class="art-cat-badge cat-inovacao">Inovação</span>
+          <span class="art-read-time">7 min</span>
+        </div>
+        <h3 class="article-card-title">I&D empresarial: como transformar despesa em vantagem fiscal</h3>
+        <p class="article-card-excerpt">Portugal tem um dos regimes fiscais mais favoráveis à I&D da Europa. SIFIDE II, RFAI e Patent Box, usados em conjunto, podem representar uma poupança significativa.</p>
+        <div class="article-card-footer">
+          <span class="art-date">Janeiro 2026</span>
+          <a href="conhecimento/id-empresarial-vantagem-fiscal.html" class="art-link">Ler</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       FOOTER
+  ════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img"
+          onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="solucoes.html">Portugal 2030</a></li>
+        <li><a href="solucoes.html">Fundos de Investimento</a></li>
+        <li><a href="solucoes.html">Benefícios Fiscais</a></li>
+        <li><a href="solucoes.html">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="conhecimento.html">Conhecimento</a></li>
+        <li><a href="parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="sobre-nos.html">Equipa</a></li>
+        <li><a href="carreiras.html">Carreiras</a></li>
+        <li><a href="#contactar">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">© 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+  <!-- ═══════════════════════════
+       JAVASCRIPT
+  ════════════════════════════ -->
+  <script>
+    // ── Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    // ── Hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    // ── Filter cards
+    function filterCards(cat) {
+      const cards = document.querySelectorAll('.article-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+      const countEl = document.getElementById('filterCount');
+
+      buttons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === cat);
+      });
+
+      let visible = 0;
+      cards.forEach(card => {
+        const cardCat = card.dataset.category;
+        if (cat === 'todos' || cardCat === cat) {
+          card.classList.remove('hidden');
+          visible++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      countEl.textContent = visible + (visible === 1 ? ' artigo': ' artigos');
+    }
+
+    // ── Card click navigation
+    document.querySelectorAll('.article-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (!e.target.closest('a')) {
+          const href = card.dataset.href;
+          if (href) window.location.href = href;
+        }
+      });
+    });
+
+    // ── Featured card click
+    const featuredCard = document.getElementById('featuredCard');
+    if (featuredCard) {
+      featuredCard.addEventListener('click', (e) => {
+        if (!e.target.closest('a')) {
+          window.location.href = 'conhecimento/como-preparar-candidatura-portugal-2030.html';
+        }
+      });
+    }
+
+    // ── Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>

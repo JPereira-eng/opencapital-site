@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for file:*)",
+      "Bash(do echo:*)",
+      "Read(//c/Users/Utilizador/Desktop/opencapital-website/**)",
+      "Bash(done)",
+      "Bash(sed -i 's|<a href=\"\"sobre-nos.html\"\" class=\"\"active\"\">Sobre Nós</a>|<a href=\"\"#\"\">A Empresa <span class=\"\"nav-dropdown-arrow\"\"></span></a>|g' carreiras.html sobre-nos.html)",
+      "Bash(sed -i 's|<a href=\"\"carreiras.html\"\" class=\"\"active\"\">Carreiras</a>|<a href=\"\"carreiras.html\"\">Carreiras</a>|g' carreiras.html)",
+      "Bash(powershell -Command \"$dir = ''C:\\\\Users\\\\Utilizador\\\\Desktop\\\\opencapital-website''; Get-ChildItem -Path $dir -Recurse -Filter ''*.html'' | ForEach-Object { $content = Get-Content $_FullName -Raw -Encoding UTF8; $new = $content -replace '' : '', '': ''; if \\($content -ne $new\\) { Set-Content -Path $_FullName -Value $new -NoNewline -Encoding UTF8; Write-Host $_Name } }\")",
+      "Bash(grep -n \"→\\\\|&rarr;\" /c/Users/Utilizador/Desktop/opencapital-website/*.html)"
+    ]
+  }
+}

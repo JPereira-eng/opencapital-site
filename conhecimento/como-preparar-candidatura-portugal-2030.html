@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como preparar uma candidatura Portugal 2030 que seja aprovada: Open Capital</title>
+  <meta name="description" content="A maioria das candidaturas rejeitadas não falha por falta de mérito do projeto. Falha por erros técnicos e narrativas inconsistentes. Um guia prático para evitar os erros mais comuns.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:#1A3A5C; --navy-deep:#0D1F33; --gold:#C9A96E;
+      --white:#FFFFFF; --grey-light:#E5E5E5; --grey-mid:#7A7A7A;
+      --grey-dark:#2A2A2A; --font:'Montserrat',sans-serif;
+      --transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);
+      --shadow:0 8px 40px rgba(26,58,92,0.10);
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+
+    /* NAVBAR */
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+
+    /* ARTICLE HERO */
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);}
+    .hero-gold-line{width:1px;height:44px;background:linear-gradient(to bottom,var(--gold),transparent);margin-bottom:20px;}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+
+    /* BACK BAR */
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+
+    /* ARTICLE LAYOUT */
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;max-width:1160px;margin:0 auto;padding:72px 80px 96px;align-items:start;}
+
+    /* BODY TYPOGRAPHY */
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+
+    /* LISTS */
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{display:flex;align-items:flex-start;gap:14px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);flex-shrink:0;margin-top:8px;}
+
+    /* STEPS */
+    .art-steps{display:flex;flex-direction:column;gap:0;margin:20px 0;}
+    .art-step{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--grey-light);}
+    .art-step:first-child{padding-top:0;}
+    .art-step:last-child{border-bottom:none;padding-bottom:0;}
+    .art-step-num{font-size:11px;font-weight:700;color:var(--gold);border:1px solid rgba(201,169,110,0.35);width:30px;height:30px;min-width:30px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px;}
+    .art-step-title{font-size:17px;font-weight:600;color:var(--navy);margin-bottom:6px;}
+    .art-step-text{font-size:16px;font-weight:300;color:var(--grey-mid);line-height:1.75;}
+
+    /* HIGHLIGHT BOX */
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+
+    /* STATS ROW */
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+
+    /* DIVIDER */
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+
+    /* SIDEBAR */
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+
+    /* SCROLL REVEAL */
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .reveal-d1{transition-delay:0.1s;}
+    .reveal-d2{transition-delay:0.2s;}
+
+    /* FOOTER */
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);opacity:0.85;}
+    .f-desc{font-size:15px;font-weight:300;color:rgba(255,255,255,0.36);line-height:1.85;margin-top:18px;max-width:260px;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}
+      .article-sidebar{position:static;}
+    }
+    @media(max-width:768px){
+      .navbar{padding:0 24px;}
+      .nav-links,.nav-cta{display:none;}
+      .nav-hamburger{display:flex;}
+      .article-hero{padding:120px 24px 56px;}
+      .article-title{font-size:34px;}
+      .article-standfirst{font-size:17px;}
+      .article-layout{padding:36px 24px 60px;gap:36px;}
+      .back-bar{padding:12px 24px;}
+      .stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}
+      .footer{padding:40px 24px 28px;}
+      .footer-grid{grid-template-columns:1fr;gap:32px;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img" onerror="this.style.display='none'">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../solucoes.html">Soluções</a></li>
+      <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades <span class="nav-dropdown-arrow"></span></a>
+        <div class="nav-dropdown-menu">
+          <a href="../parceiros.html">Parceiros</a>
+          <a href="../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="../index.html#contactar" class="nav-cta">Contactar</a>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../conhecimento.html">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Candidatura Portugal 2030</span>
+      </nav>
+      <div class="hero-gold-line"></div>
+      <span class="hero-cat-badge">Financiamento · Guia Prático</span>
+      <h1 class="article-title">Como preparar uma candidatura Portugal 2030 que seja aprovada</h1>
+      <p class="article-standfirst">A maioria das candidaturas rejeitadas não falha por falta de mérito do projeto: falha por erros técnicos e narrativas inconsistentes. Um guia prático para evitar os erros mais comuns.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Financiamento</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Março 2026</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>8 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Open Capital</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACK BAR -->
+  <div class="back-bar">
+    <a href="../conhecimento.html" class="back-link">← Voltar ao Conhecimento</a>
+  </div>
+
+  <!-- ARTICLE LAYOUT -->
+  <div class="article-layout">
+
+    <!-- ARTICLE BODY -->
+    <article class="article-body">
+
+      <div class="article-section reveal">
+        <p>Portugal 2030 é o maior programa de apoio ao investimento empresarial da história recente do país. Com mais de 23 mil milhões de euros alocados até 2030, representa uma oportunidade genuína para empresas que queiram crescer, inovar ou reposicionar-se estrategicamente. E no entanto, as taxas de rejeição mantêm-se persistentemente elevadas: mesmo em projetos com mérito real.</p>
+        <p>O problema raramente é o projeto em si. É a candidatura. Mais especificamente, é a incapacidade de traduzir um bom projeto numa narrativa técnica coerente, sustentada por um modelo financeiro sólido e documentação completa. Este guia não existe para convencer ninguém de que o Portugal 2030 é para a sua empresa: isso é outra conversa. Existe para ajudar quem já decidiu avançar a fazê-lo bem.</p>
+      </div>
+
+      <!-- STATS ROW -->
+      <div class="stats-row cols-4 reveal reveal-d1">
+        <div class="stat-cell">
+          <div class="stat-num">~35<sup>%</sup></div>
+          <div class="stat-label">Taxa média de rejeição nas candidaturas elegíveis</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">6–8</div>
+          <div class="stat-label">Semanas mínimas para preparar uma candidatura sólida</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">90<sup>d</sup></div>
+          <div class="stat-label">Prazo médio de avaliação após submissão</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">23<sup>MM€</sup></div>
+          <div class="stat-label">Total alocado ao Portugal 2030 em Portugal</div>
+        </div>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <!-- SECTION 1 -->
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Passo 1</div>
+        <h2>Antes de começar: verificar elegibilidade de forma rigorosa</h2>
+        <p>A primeira fonte de rejeição é a mais evitável: candidaturas submetidas por entidades que simplesmente não preenchem os critérios de elegibilidade base. As regras variam por aviso, mas há um conjunto de verificações que devem ser feitas antes de qualquer outro passo.</p>
+        <div class="art-steps">
+          <div class="art-step">
+            <div class="art-step-num">01</div>
+            <div>
+              <div class="art-step-title">CAE elegível para o aviso específico</div>
+              <div class="art-step-text">Cada aviso de candidatura define os CAEs (Classificação Portuguesa das Atividades Económicas) que considera elegíveis. O CAE principal da empresa: e eventualmente os secundários: devem constar dessa lista. Não assuma que uma atividade "próxima" é suficiente.</div>
+            </div>
+          </div>
+          <div class="art-step">
+            <div class="art-step-num">02</div>
+            <div>
+              <div class="art-step-title">Dimensão da empresa: PME ou grande empresa?</div>
+              <div class="art-step-text">A maioria dos avisos é dirigida a PMEs (menos de 250 trabalhadores, volume de negócios até 50M€ ou balanço até 43M€). Verifique também os critérios de autonomia e parceiros vinculados: empresas com participações cruzadas podem perder o estatuto de PME sem o saber.</div>
+            </div>
+          </div>
+          <div class="art-step">
+            <div class="art-step-num">03</div>
+            <div>
+              <div class="art-step-title">Situação fiscal e contributiva regularizada</div>
+              <div class="art-step-text">Não é negociável. A empresa (e em muitos casos os sócios individualmente) não pode ter dívidas ao Fisco ou à Segurança Social. Certidões negativas de dívida devem ser obtidas: e mantidas válidas: ao longo de todo o processo.</div>
+            </div>
+          </div>
+          <div class="art-step">
+            <div class="art-step-num">04</div>
+            <div>
+              <div class="art-step-title">Investimento mínimo elegível e localização</div>
+              <div class="art-step-text">Os avisos definem investimentos mínimos: tipicamente entre 25.000€ e 100.000€ para PMEs, dependendo do instrumento. A localização do investimento também influencia as taxas de apoio: regiões menos desenvolvidas (Norte interior, Alentejo, Açores) têm incentivos superiores.</div>
+            </div>
+          </div>
+          <div class="art-step">
+            <div class="art-step-num">05</div>
+            <div>
+              <div class="art-step-title">Historial de apoios anteriores e cumulação</div>
+              <div class="art-step-text">Existe um limite ao volume de apoios que uma empresa pode receber sob a regra de minimis. Se a empresa já beneficiou de outros apoios públicos nos últimos três exercícios fiscais, este cálculo é obrigatório antes de avançar.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <!-- SECTION 2 -->
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Passo 2</div>
+        <h2>O modelo financeiro: o que os avaliadores realmente procuram</h2>
+        <p>O modelo financeiro é o coração técnico da candidatura. É também onde a maioria das candidaturas mediocres se expõe. Não se trata de apresentar bons números: trata-se de apresentar números coerentes, rastreáveis e defensáveis.</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">Princípio fundamental</div>
+          <div class="art-highlight-text">O avaliador não está a tentar perceber se o seu negócio é bom. Está a verificar se as projeções financeiras são internamente consistentes e se o investimento proposto tem capacidade de gerar os impactos declarados. Uma empresa com crescimento de 400% numa linha e custos inalterados vai ser rejeitada, independentemente do restante.</div>
+        </div>
+
+        <p>Um modelo financeiro robusto para Portugal 2030 deve incluir:</p>
+        <ul class="art-list">
+          <li>Demonstrações financeiras históricas dos últimos 2–3 anos (balanço, resultados, cash flow): com explanação de desvios relevantes</li>
+          <li>Projeções a 3 anos com pressupostos explícitos linha a linha: crescimento de volume, evolução de preços, estrutura de custos, capex previsto fora do projeto</li>
+          <li>Análise de sensibilidade a pelo menos dois cenários negativos: o avaliador quer ver que o projeto sobrevive a uma contração de 15–20% nas receitas projetadas</li>
+          <li>Demonstração de viabilidade económica sem o apoio: o projeto não pode ser apresentado como só viável com subsídio; deve ser viável com o apoio como catalisador</li>
+          <li>Coerência entre o plano de investimento, o plano de financiamento e as projeções de resultados: os três têm de contar a mesma história</li>
+        </ul>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <!-- SECTION 3 -->
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Passo 3</div>
+        <h2>A narrativa do projeto: diagnóstico → investimento → impacto</h2>
+        <p>O formulário de candidatura pede uma descrição do projeto. O que a maioria das empresas entrega é uma descrição da empresa: o que faz, quantos anos tem, quantos clientes serve. Isso não é uma narrativa de projeto.</p>
+        <p>Uma narrativa eficaz segue uma lógica causal: identifica um problema ou oportunidade concretos (diagnóstico), descreve exatamente o que vai ser adquirido ou implementado (investimento), e demonstra: com números: como esse investimento vai alterar a situação de partida (impacto).</p>
+
+        <div class="art-steps">
+          <div class="art-step">
+            <div class="art-step-num">D</div>
+            <div>
+              <div class="art-step-title">Diagnóstico: o ponto de partida honesto</div>
+              <div class="art-step-text">Qual é o constrangimento atual? Capacidade produtiva insuficiente? Processo manual que limita escala? Ausência de capacidade de I&D? O diagnóstico deve ser específico e quantificado. "A empresa enfrenta pressão crescente" não é um diagnóstico. "A capacidade instalada de produção é de 4.200 unidades/mês, com procura atual de 5.800 unidades/mês" é um diagnóstico.</div>
+            </div>
+          </div>
+          <div class="art-step">
+            <div class="art-step-num">I</div>
+            <div>
+              <div class="art-step-title">Investimento: o quê, o porquê, o quanto</div>
+              <div class="art-step-text">Descreva cada componente de investimento com precisão: o que é, qual o fornecedor previsto, qual o custo unitário, porque é que este equipamento/serviço específico resolve o problema identificado. Listas genéricas de "equipamento informático" sem especificação são sinal de candidatura pouco preparada.</div>
+            </div>
+          </div>
+          <div class="art-step">
+            <div class="art-step-num">R</div>
+            <div>
+              <div class="art-step-title">Resultados: indicadores concretos e mensuráveis</div>
+              <div class="art-step-text">Cada aviso define indicadores de resultado obrigatórios (emprego criado, volume de negócios, exportações, produtividade). Estes indicadores têm de ser propostos pela empresa como metas e serão acompanhados durante o período de monitorização pós-aprovação. Proponha metas ambiciosas mas reais: metas impossíveis são tão prejudiciais quanto metas negligenciáveis.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <!-- SECTION 4 -->
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Passo 4</div>
+        <h2>Os documentos que ninguém prepara com antecedência</h2>
+        <p>A candidatura técnica pode ser excelente: e a submissão pode falhar ou atrasar por falta de documentação de suporte. Esta é a lista dos documentos que consistentemente chegam em cima da hora (ou não chegam):</p>
+
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Certidão permanente atualizada</strong> da empresa: muitas têm a certidão caducada ou com informação desatualizada sobre a gerência</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Declaração de não incumprimento</strong> em projetos anteriores co-financiados: obrigatória mesmo que a empresa nunca tenha recebido apoios</li>
+          <li><strong style="color:var(--navy);font-weight:600;">IES (Informação Empresarial Simplificada)</strong> dos últimos 2–3 anos, submetida e validada: não basta ter as contas feitas internamente</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Orçamentos de pelo menos 3 fornecedores</strong> para cada componente de investimento acima de determinado limiar: e a justificação da escolha do fornecedor selecionado</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Declaração de situação regularizada</strong> perante o IEFP (Instituto do Emprego), quando aplicável</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Licenças e autorizações</strong> de operação relevantes para a atividade: construção, ambiente, segurança alimentar conforme o setor</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Estatuto de PME certificado</strong> e válido: emitido pelo IAPMEI, tem de estar atualizado no momento da submissão</li>
+        </ul>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">Nota prática</div>
+          <div class="art-highlight-text">Recomendamos criar uma pasta de documentação de empresa permanentemente atualizada, independente de qualquer candidatura. Certidões, IES, estatuto PME, declarações de não dívida: mantê-los atuais é uma boa prática de gestão, não apenas uma necessidade pontual de candidatura.</div>
+        </div>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <!-- SECTION 5 -->
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Passo 5</div>
+        <h2>Gestão pós-aprovação: tão importante quanto a candidatura</h2>
+        <p>Um erro frequente é tratar a aprovação como o fim do processo. É o início de um período de gestão igualmente exigente. O Portugal 2030 opera em regime de reembolso: a empresa financia o investimento com recursos próprios ou crédito, e solicita o reembolso subsequente ao organismo gestor.</p>
+        <p>Isto implica três realidades que devem ser incorporadas no planeamento financeiro desde o início:</p>
+
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Tesouraria para financiar o investimento antes do reembolso</strong>: os reembolsos podem demorar entre 3 e 9 meses após a submissão do pedido de pagamento</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Sistema de arquivo e rastreabilidade documental</strong>: cada despesa elegível tem de ser comprovada com fatura, comprovativo de pagamento e, em muitos casos, evidência de utilização efetiva</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Cumprimento dos indicadores contratados</strong>: o não cumprimento das metas de resultado pode implicar reembolso parcial ou total do apoio recebido, com juros</li>
+        </ul>
+
+        <p>A gestão do projeto aprovado requer um interlocutor interno dedicado: ou um parceiro externo que assuma esse papel: durante toda a fase de execução e monitorização.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <!-- SECTION 6 -->
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Passo 6</div>
+        <h2>Cronograma realista: da decisão à submissão</h2>
+        <p>Ouvimos frequentemente que uma empresa "precisa de submeter numa candidatura que fecha em três semanas". Em casos simples, pode ser suficiente. Na maioria das situações reais, não é.</p>
+
+        <div class="art-steps">
+          <div class="art-step">
+            <div class="art-step-num">S1</div>
+            <div>
+              <div class="art-step-title">Semanas 1–2: diagnóstico e elegibilidade</div>
+              <div class="art-step-text">Verificação rigorosa de elegibilidade, levantamento do estado documental da empresa, identificação de lacunas, leitura detalhada do aviso e regulamento específico de aplicação.</div>
+            </div>
+          </div>
+          <div class="art-step">
+            <div class="art-step-num">S2</div>
+            <div>
+              <div class="art-step-title">Semanas 2–4: modelo financeiro e narrativa</div>
+              <div class="art-step-text">Construção do modelo financeiro com pressupostos detalhados, recolha de orçamentos de fornecedores, desenvolvimento da narrativa do projeto com estrutura diagnóstico → investimento → impacto.</div>
+            </div>
+          </div>
+          <div class="art-step">
+            <div class="art-step-num">S3</div>
+            <div>
+              <div class="art-step-title">Semanas 4–6: documentação e revisão</div>
+              <div class="art-step-text">Compilação de toda a documentação de suporte, atualização de certidões e declarações, revisão cruzada de consistência entre formulário, modelo financeiro e documentação, testes no sistema de submissão.</div>
+            </div>
+          </div>
+          <div class="art-step">
+            <div class="art-step-num">S4</div>
+            <div>
+              <div class="art-step-title">Semanas 6–8: submissão e acompanhamento</div>
+              <div class="art-step-text">Submissão formal com buffer de tempo para resolver problemas técnicos ou pedidos de esclarecimento. Nunca submeter nas últimas horas do prazo: os sistemas sobrecarregam e documentos podem não ser processados corretamente.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <!-- CLOSING NOTE -->
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>A candidatura é um reflexo da qualidade de gestão da empresa</h2>
+        <p>Há uma correlação que não é coincidência: as empresas que preparam candidaturas Portugal 2030 sólidas são, geralmente, as que têm melhor gestão financeira e estratégica. A candidatura exige exatamente o mesmo que uma boa gestão exige: clareza sobre onde se está, para onde se vai, e como se vai lá chegar.</p>
+        <p>O processo é trabalhoso. Mas o exercício de construir um modelo financeiro robusto, de articular com precisão o diagnóstico do negócio e de projetar o impacto de um investimento específico: isso tem valor independente do resultado da candidatura. É, em si mesmo, um exercício de planeamento estratégico.</p>
+        <p>Na Open Capital, apoiamos empresas em todo o ciclo: da avaliação de elegibilidade à gestão pós-aprovação. Se está a considerar avançar com uma candidatura Portugal 2030 e quer uma avaliação honesta da viabilidade, fale connosco.</p>
+      </div>
+
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="article-sidebar">
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Categoria</div>
+          <div class="sidebar-info-val">Financiamento</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Tipo</div>
+          <div class="sidebar-info-val">Guia Prático</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Publicado</div>
+          <div class="sidebar-info-val">Março 2026</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Leitura</div>
+          <div class="sidebar-info-val">8 minutos</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Autor</div>
+          <div class="sidebar-info-val">Open Capital</div>
+        </div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
+        <div class="sidebar-cta-text">Avaliamos a elegibilidade do seu projeto e acompanhamos todo o processo de candidatura Portugal 2030: da análise inicial à submissão e gestão pós-aprovação.</div>
+        <a href="../index.html#contactar" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="capital-europeu-disponivel-problema-execucao.html" class="related-item">
+          <span class="related-item-title">O capital europeu está disponível. O problema é sempre a execução.</span>
+          <span class="related-item-arrow">→</span>
+        </a>
+        <a href="id-empresarial-vantagem-fiscal.html" class="related-item">
+          <span class="related-item-title">I&D empresarial: como transformar despesa em vantagem fiscal</span>
+          <span class="related-item-arrow">→</span>
+        </a>
+        <a href="../instrumentos/portugal-2030.html" class="related-item">
+          <span class="related-item-title">Instrumento Portugal 2030</span>
+          <span class="related-item-arrow">→</span>
+        </a>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+        <p class="f-desc">Assessoria estratégica em financiamento, fiscalidade e investimento. Ajudamos empresas a aceder ao capital certo, no momento certo.</p>
+        <p class="f-tagline">Capital, made clear.</p>
+      </div>
+      <div>
+        <div class="f-col-label">Soluções</div>
+        <ul class="f-links">
+          <li><a href="../solucoes.html">Portugal 2030</a></li>
+          <li><a href="../solucoes.html">Fundos de Investimento</a></li>
+          <li><a href="../solucoes.html">Benefícios Fiscais</a></li>
+          <li><a href="../solucoes.html">Prémios de Inovação</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Plataforma</div>
+        <ul class="f-links">
+          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../conhecimento.html">Conhecimento</a></li>
+          <li><a href="../parceiros.html">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Empresa</div>
+        <ul class="f-links">
+          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="../sobre-nos.html">Equipa</a></li>
+          <li><a href="../carreiras.html">Carreiras</a></li>
+          <li><a href="../index.html#contactar">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">© 2025 Open Capital Advisory &amp; Consultancy</span>
+      <div class="f-legal">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    document.getElementById('hamburger').addEventListener('click', () => { document.getElementById('mobileMenu') && document.getElementById('mobileMenu').classList.toggle('open'); });
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1308 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soluções | Open Capital Advisory & Consultancy</title>
+  <meta name="description" content="Biblioteca completa de instrumentos de financiamento, fiscalidade e investimento disponíveis em Portugal. Mais de 18 instrumentos organizados por categoria.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+
+    /* ─── RESET & VARIABLES ──────────────────────── */
+    :root {
+      --navy:       #1A3A5C;
+      --navy-deep:  #0D1F33;
+      --gold:       #C9A96E;
+      --white:      #FFFFFF;
+      --grey-light: #E5E5E5;
+      --grey-mid:   #7A7A7A;
+      --grey-dark:  #2A2A2A;
+      --font: 'Montserrat', sans-serif;
+      --transition: all 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --shadow: 0 8px 40px rgba(26,58,92,0.10);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:var(--font); background:var(--white); color:var(--grey-dark); -webkit-font-smoothing:antialiased; }
+
+    /* ─── TYPOGRAPHY ─────────────────────────────── */
+    .t-eyebrow { font-size:14px; font-weight:600; letter-spacing:0.30em; text-transform:uppercase; color:var(--gold); }
+    .t-h1      { font-size:54px; font-weight:700; letter-spacing:-0.01em; color:var(--navy); line-height:1.05; }
+    .t-h2      { font-size:36px; font-weight:600; letter-spacing:0.01em;  color:var(--navy); line-height:1.15; }
+    .t-h3      { font-size:28px; font-weight:500; letter-spacing:0.03em;  color:var(--navy); }
+    .t-tagline { font-size:24px; font-weight:100; letter-spacing:0.14em;  color:var(--navy); }
+    .t-body    { font-size:18px; font-weight:400; color:var(--grey-dark); line-height:1.85; max-width:580px; }
+    .t-small   { font-size:15px; font-weight:300; letter-spacing:0.04em;  color:var(--grey-mid); }
+
+    /* ─── NAVBAR ─────────────────────────────────── */
+    .navbar {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 48px; height:74px;
+      position:fixed; top:0; left:0; right:0; z-index:200;
+      background:var(--navy);
+      border-bottom:1px solid rgba(255,255,255,0.07);
+      transition:var(--transition);
+    }
+    .navbar.scrolled {
+      background:rgba(255,255,255,0.97);
+      backdrop-filter:blur(20px);
+      -webkit-backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--grey-light);
+    }
+    .nav-logo { display:flex; align-items:center; text-decoration:none; }
+    .nav-logo-img { height:57px; width:auto; display:block; filter:brightness(0) invert(1); transition:var(--transition); }
+    .navbar.scrolled .nav-logo-img { filter:none; }
+    .nav-logo-fallback { display:none; align-items:center; gap:10px; }
+    .nav-logo-fallback .nav-mark { width:36px; height:36px; border:1px solid rgba(255,255,255,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:var(--gold); }
+    .navbar.scrolled .nav-logo-fallback .nav-mark { border-color:var(--navy); color:var(--navy); }
+    .nav-logo-fallback .nav-wordmark { display:flex; flex-direction:column; gap:2px; }
+    .nav-logo-fallback .nav-name { font-size:14px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--white); }
+    .nav-logo-fallback .nav-sub  { font-size:9px; font-weight:300; letter-spacing:0.20em; text-transform:uppercase; color:rgba(255,255,255,0.32); }
+    .navbar.scrolled .nav-logo-fallback .nav-name { color:var(--navy); }
+    .navbar.scrolled .nav-logo-fallback .nav-sub  { color:var(--grey-mid); }
+
+    .nav-links { display:flex; align-items:center; gap:24px; list-style:none; margin-left:auto; }
+    .nav-links a {
+      font-size:15px; font-weight:500; letter-spacing:0.08em; text-transform:none;
+      color:rgba(255,255,255,0.68); text-decoration:none;
+      transition:var(--transition); position:relative; padding-bottom:3px; white-space:nowrap;
+    }
+    .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold); transition:width 0.3s ease; }
+    .nav-links a:hover { color:var(--white); }
+    .nav-links a:hover::after,
+    .nav-links a.active::after { width:100%; }
+    .nav-links a.active { color:var(--white); }
+    .navbar.scrolled .nav-links a { color:var(--grey-dark); }
+    .navbar.scrolled .nav-links a:hover,
+    .navbar.scrolled .nav-links a.active { color:var(--navy); }
+
+    .nav-badge {
+      font-size:10px; font-weight:600; letter-spacing:0.06em; text-transform:none;
+      color:var(--gold); border:1px solid var(--gold);
+      padding:1px 4px; margin-left:3px;
+      vertical-align:super; line-height:1;
+    }
+
+    /* Dropdown */
+    .nav-dropdown { position:relative; }
+    .nav-dropdown > a::after { content:''; }
+    .nav-dropdown-arrow {
+      display:inline-block; margin-left:5px;
+      width:6px; height:6px;
+      border-right:1px solid currentColor; border-bottom:1px solid currentColor;
+      transform:rotate(45deg) translateY(-2px);
+      transition:transform 0.25s ease;
+      vertical-align:middle; opacity:0.6;
+    }
+    .nav-dropdown:hover .nav-dropdown-arrow { transform:rotate(-135deg) translateY(-2px); opacity:1; }
+    .nav-dropdown-menu {
+      position:absolute; top:calc(100% + 14px); left:50%;
+      transform:translateX(-50%) translateY(-6px);
+      background:var(--white); border:1px solid var(--grey-light);
+      min-width:160px; opacity:0; visibility:hidden;
+      transition:opacity 0.22s ease, transform 0.22s ease;
+      box-shadow:var(--shadow); z-index:200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu {
+      opacity:1; visibility:visible;
+      transform:translateX(-50%) translateY(0);
+    }
+    .nav-dropdown-menu a {
+      display:block; padding:12px 20px;
+      font-size:13px; font-weight:500; letter-spacing:0.05em; text-transform:none;
+      color:var(--grey-dark); text-decoration:none;
+      border-bottom:1px solid var(--grey-light);
+      transition:var(--transition); white-space:nowrap;
+    }
+    .nav-dropdown-menu a:last-child { border-bottom:none; }
+    .nav-dropdown-menu a:hover { color:var(--navy); background:#FAFAFA; padding-left:24px; }
+    .nav-dropdown-menu a::after { display:none !important; }
+    .navbar:not(.scrolled) .nav-dropdown-menu { background:var(--navy-deep); border-color:rgba(255,255,255,0.08); }
+    .navbar:not(.scrolled) .nav-dropdown-menu a { color:rgba(255,255,255,0.60); border-color:rgba(255,255,255,0.06); }
+    .navbar:not(.scrolled) .nav-dropdown-menu a:hover { color:var(--white); background:rgba(255,255,255,0.05); }
+
+    .nav-cta {
+      font-size:16px; font-weight:600; letter-spacing:0.08em; text-transform:none;
+      color:var(--white); text-decoration:none;
+      border:1px solid rgba(255,255,255,0.28); padding:9px 18px;
+      margin-left:28px; transition:var(--transition); white-space:nowrap;
+    }
+    .nav-cta:hover { border-color:var(--white); background:rgba(255,255,255,0.08); }
+    .navbar.scrolled .nav-cta { color:var(--navy); border-color:var(--navy); }
+    .navbar.scrolled .nav-cta:hover { background:var(--navy); color:var(--white); }
+
+    /* Hamburger */
+    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
+    .nav-hamburger span { display:block; width:22px; height:1px; background:var(--white); transition:var(--transition); }
+    .navbar.scrolled .nav-hamburger span { background:var(--navy); }
+
+    /* Mobile menu */
+    .nav-mobile-menu { display:none; position:fixed; top:74px; left:0; right:0; background:var(--navy-deep); padding:24px 32px 32px; border-bottom:1px solid rgba(255,255,255,0.07); z-index:199; }
+    .nav-mobile-menu.open { display:block; }
+    .nav-mobile-menu a { display:block; font-size:15px; font-weight:500; letter-spacing:0.05em; color:rgba(255,255,255,0.7); text-decoration:none; padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.06); transition:var(--transition); }
+    .nav-mobile-menu a:hover { color:var(--white); }
+    .nav-mobile-cta { display:inline-block !important; margin-top:22px; font-size:14px; font-weight:600; letter-spacing:0.08em; color:var(--white) !important; text-decoration:none; border:1px solid rgba(255,255,255,0.28); padding:12px 24px; transition:var(--transition); }
+
+    /* ─── SCROLL REVEAL ──────────────────────────── */
+    .reveal { opacity:0; transform:translateY(22px); transition:opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal-d1 { transition-delay:0.06s; }
+    .reveal-d2 { transition-delay:0.12s; }
+    .reveal-d3 { transition-delay:0.18s; }
+    .reveal-d4 { transition-delay:0.24s; }
+    .reveal-d5 { transition-delay:0.30s; }
+    .reveal-d6 { transition-delay:0.36s; }
+
+    /* ─── PAGE HERO ───────────────────────────────── */
+    .page-hero {
+      background:var(--navy);
+      padding:130px 80px 60px;
+      position:relative; overflow:hidden;
+      min-height:280px;
+      display:flex; flex-direction:column; justify-content:flex-end;
+    }
+    .page-hero::before {
+      content:'';
+      position:absolute; top:-120px; right:-120px;
+      width:440px; height:440px; border-radius:50%;
+      background:radial-gradient(circle, rgba(201,169,110,0.07) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .page-hero::after {
+      content:'';
+      position:absolute; bottom:0; left:0; right:0;
+      height:1px; background:rgba(255,255,255,0.06);
+    }
+    .hero-breadcrumb {
+      font-size:12px; font-weight:400; letter-spacing:0.14em;
+      color:rgba(255,255,255,0.32); margin-bottom:28px;
+      display:flex; align-items:center; gap:8px;
+    }
+    .hero-breadcrumb a { color:rgba(255,255,255,0.32); text-decoration:none; transition:var(--transition); }
+    .hero-breadcrumb a:hover { color:rgba(255,255,255,0.65); }
+    .hero-breadcrumb span { color:rgba(255,255,255,0.18); }
+    .hero-line { width:1px; height:44px; background:linear-gradient(to bottom, var(--gold), transparent); margin-bottom:22px; }
+    .hero-eyebrow { font-size:14px; font-weight:600; letter-spacing:0.34em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    .hero-h1 { font-size:54px; font-weight:700; color:var(--white); line-height:1.07; letter-spacing:-0.01em; margin-bottom:16px; max-width:680px; }
+    .hero-sub { font-size:19px; font-weight:300; color:rgba(255,255,255,0.44); line-height:1.75; max-width:520px; letter-spacing:0.02em; }
+
+    /* ─── FILTER BAR ──────────────────────────────── */
+    .filter-bar {
+      position:sticky; top:74px; z-index:150;
+      background:var(--white);
+      border-bottom:1px solid var(--grey-light);
+      padding:0 80px;
+    }
+    .filter-inner {
+      display:flex; align-items:center; justify-content:space-between;
+      gap:20px; height:60px;
+      max-width:1200px; margin:0 auto;
+    }
+    .filter-tabs { display:flex; align-items:center; gap:6px; }
+    .filter-btn {
+      font-family:var(--font); font-size:12px; font-weight:500;
+      letter-spacing:0.12em; text-transform:uppercase;
+      color:var(--grey-mid); background:transparent;
+      border:1px solid transparent; padding:7px 16px;
+      cursor:pointer; transition:var(--transition); white-space:nowrap;
+    }
+    .filter-btn:hover { color:var(--navy); border-color:var(--grey-light); }
+    .filter-btn.active { background:var(--navy); color:var(--white); border-color:var(--navy); }
+
+    .filter-right { display:flex; align-items:center; gap:20px; flex-shrink:0; }
+    .filter-count { font-size:12px; font-weight:300; color:var(--grey-mid); white-space:nowrap; }
+
+    .filter-search { display:flex; align-items:center; }
+    .filter-search input {
+      font-family:var(--font); font-size:13px; font-weight:300;
+      color:var(--grey-dark); background:transparent;
+      border:none; border-bottom:1px solid var(--grey-light);
+      padding:6px 12px 6px 0; outline:none; width:200px;
+      transition:var(--transition);
+    }
+    .filter-search input:focus { border-bottom-color:var(--navy); }
+    .filter-search input::placeholder { color:var(--grey-light); font-size:13px; }
+
+    /* ─── INSTRUMENTS SECTION ─────────────────────── */
+    .instruments-section { padding:60px 80px; background:var(--white); }
+    .instruments-grid {
+      display:grid; grid-template-columns:repeat(3,1fr);
+      gap:1px; background:var(--grey-light);
+      border:1px solid var(--grey-light);
+      max-width:1200px; margin:0 auto;
+    }
+    .instrument-card {
+      background:var(--white); padding:36px 32px;
+      position:relative; overflow:hidden;
+      cursor:pointer; transition:var(--transition);
+      display:flex; flex-direction:column;
+    }
+    .instrument-card::before {
+      content:''; position:absolute; top:0; left:0;
+      width:0; height:2px; background:var(--gold);
+      transition:width 0.4s ease;
+    }
+    .instrument-card:hover { box-shadow:var(--shadow); transform:translateY(-2px); z-index:2; }
+    .instrument-card:hover::before { width:100%; }
+    .instrument-card.hidden { display:none; }
+
+    .card-header { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:20px; gap:10px; }
+    .cat-badge { font-size:10px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; padding:4px 10px; flex-shrink:0; }
+    .cat-nr     { background:rgba(26,58,92,0.08); color:var(--navy); }
+    .cat-priv   { background:rgba(201,169,110,0.12); color:#8A6535; }
+    .cat-div    { background:rgba(42,42,42,0.06); color:var(--grey-dark); }
+    .cat-hib    { background:rgba(26,58,92,0.05); color:var(--navy); border:1px solid rgba(26,58,92,0.15); }
+    .cat-fiscal { background:rgba(201,169,110,0.08); color:#8A6535; border:1px solid rgba(201,169,110,0.2); }
+    .cat-outros { background:rgba(122,122,122,0.08); color:var(--grey-mid); border:1px solid rgba(122,122,122,0.15); }
+
+    .status-pill { font-size:9px; font-weight:500; letter-spacing:0.10em; text-transform:uppercase; color:var(--grey-mid); white-space:nowrap; flex-shrink:0; }
+    .status-open { color:var(--gold); }
+
+    .card-title { font-size:20px; font-weight:600; color:var(--navy); line-height:1.25; margin-bottom:8px; }
+    .card-tagline { font-size:14px; font-weight:300; color:var(--grey-mid); line-height:1.6; margin-bottom:20px; flex:1; }
+    .card-divider { height:1px; background:var(--grey-light); margin-bottom:16px; }
+    .card-highlights { display:flex; flex-direction:column; gap:10px; margin-bottom:24px; }
+    .card-highlight { display:flex; align-items:center; gap:10px; font-size:13px; font-weight:300; color:var(--grey-dark); }
+    .card-highlight-dot { width:4px; height:4px; background:var(--gold); flex-shrink:0; }
+    .card-cta {
+      font-size:11px; font-weight:600; letter-spacing:0.20em; text-transform:uppercase;
+      color:var(--navy); text-decoration:none;
+      display:inline-flex; align-items:center; gap:8px;
+      background:none; border:none; cursor:pointer;
+      font-family:var(--font); padding:0; transition:var(--transition);
+      margin-top:auto;
+    }
+    .card-cta::after { content:'→'; font-weight:300; font-size:13px; transition:var(--transition); }
+    .card-cta:hover { color:var(--gold); }
+
+    /* No results */
+    .no-results { display:none; grid-column:1/-1; padding:80px 40px; text-align:center; background:var(--white); }
+    .no-results.visible { display:block; }
+    .no-results-text { font-size:16px; font-weight:300; color:var(--grey-mid); letter-spacing:0.04em; }
+
+    /* card click navigation */
+    .instrument-card { cursor:pointer; }
+
+    /* ─── FOOTER ──────────────────────────────────── */
+    .footer { background:var(--navy-deep); padding:56px 80px 34px; }
+    .footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr; gap:44px; margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.07); }
+
+    .f-logo-img { height:57px; width:auto; display:block; filter:brightness(0) invert(1); opacity:0.85; }
+    .f-desc    { font-size:15px; font-weight:300; color:rgba(255,255,255,0.36); line-height:1.85; margin-top:16px; max-width:248px; }
+    .f-tagline { font-size:15px; font-weight:100; letter-spacing:0.14em; color:var(--gold); margin-top:12px; }
+
+    .f-col-label { font-size:9px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:rgba(255,255,255,0.24); margin-bottom:16px; }
+    .f-links { list-style:none; padding:0; }
+    .f-links li { margin-bottom:9px; }
+    .f-links a  { font-size:15px; font-weight:300; color:rgba(255,255,255,0.48); text-decoration:none; transition:var(--transition); letter-spacing:0.03em; }
+    .f-links a:hover { color:var(--white); }
+    .f-badge { font-size:7px; font-weight:600; letter-spacing:0.1em; color:var(--gold); border:1px solid rgba(201,169,110,0.45); padding:1px 5px; margin-left:5px; vertical-align:middle; }
+
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+    .f-copy { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:0.05em; }
+    .f-legal { display:flex; gap:20px; }
+    .f-legal a { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); text-decoration:none; letter-spacing:0.05em; transition:var(--transition); }
+    .f-legal a:hover { color:rgba(255,255,255,0.45); }
+
+    /* ─── RESPONSIVE ──────────────────────────────── */
+    @media (max-width: 1100px) {
+      .filter-tabs { flex-wrap:wrap; }
+      .instruments-grid { grid-template-columns:repeat(2,1fr); }
+    }
+    @media (max-width: 1024px) {
+      .footer-grid { grid-template-columns:1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .navbar { padding:0 24px; }
+      .nav-links { display:none; }
+      .nav-cta { display:none; }
+      .nav-hamburger { display:flex; }
+
+      .page-hero { padding:120px 24px 52px; }
+      .hero-h1 { font-size:36px; }
+      .hero-sub { font-size:16px; }
+
+      .filter-bar { padding:0 24px; }
+      .filter-inner { height:auto; padding:12px 0; flex-direction:column; align-items:flex-start; gap:10px; }
+      .filter-right { width:100%; justify-content:space-between; }
+      .filter-btn { font-size:11px; padding:6px 12px; }
+      .filter-search input { width:140px; }
+      .filter-count { display:none; }
+
+      .instruments-section { padding:32px 20px; }
+      .instruments-grid { grid-template-columns:1fr; }
+      .instrument-card { padding:28px 24px; }
+
+      .modal-body { padding:28px 24px 36px; }
+      .modal-hero { padding:36px 24px 32px; }
+      .modal-title { font-size:26px; }
+      .modal-footer { padding:20px 24px; flex-direction:column; align-items:flex-start; }
+      .modal-status { margin-left:0; }
+
+      .footer { padding:40px 24px 28px; }
+      .footer-grid { grid-template-columns:1fr; gap:32px; }
+    }
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <img
+      src="logo_opencapital_azul_semfundo.png"
+      alt="Open Capital"
+      class="nav-logo-img"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="nav-logo-fallback">
+      <div class="nav-mark">OC</div>
+      <div class="nav-wordmark">
+        <span class="nav-name">Open Capital</span>
+        <span class="nav-sub">Advisory &amp; Consultancy</span>
+      </div>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="solucoes.html">Biblioteca</a></li>
+    <li><a href="conhecimento.html">Conhecimento</a></li>
+    <li><a href="capital-simulator.html">Capital Simulator<span class="nav-badge">em breve</span></a></li>
+    <li><a href="tech2business.html">Tech2Business<span class="nav-badge">em breve</span></a></li>
+    <li><a href="sobre-nos.html">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades <span class="nav-dropdown-arrow"></span></a>
+      <div class="nav-dropdown-menu">
+        <a href="parceiros.html">Parceiros</a>
+        <a href="carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+
+  <a href="https://calendly.com/tech2business" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="solucoes.html">Biblioteca</a>
+  <a href="conhecimento.html">Conhecimento</a>
+  <a href="capital-simulator.html">Capital Simulator<span class="nav-badge">em breve</span></a>
+  <a href="tech2business.html">Tech2Business<span class="nav-badge">em breve</span></a>
+  <a href="sobre-nos.html">Sobre Nós</a>
+  <a href="parceiros.html">Parceiros</a>
+  <a href="carreiras.html" style="padding-left:28px; font-size:11px; opacity:0.7;">Carreiras</a>
+  <a href="#contactar" class="nav-mobile-cta">Contactar</a>
+</div>
+
+  <!-- ─── PAGE HERO ──────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="hero-breadcrumb">
+      <a href="index.html">Início</a>
+      <span>/</span>
+      <span style="color:rgba(255,255,255,0.55);">Biblioteca</span>
+    </div>
+    <p class="hero-eyebrow">Biblioteca de Instrumentos</p>
+    <h1 class="hero-h1">Capital disponível para a sua empresa.</h1>
+    <p class="hero-sub">Mais de 18 instrumentos de financiamento, fiscalidade e investimento, organizados por categoria.</p>
+  </section>
+
+  <!-- ─── FILTER BAR ────────────────────────────────── -->
+  <div class="filter-bar" id="filterBar">
+    <div class="filter-inner">
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all" onclick="filterCards('all')">Todos</button>
+        <button class="filter-btn" data-filter="nr" onclick="filterCards('nr')">Não Reembolsável</button>
+        <button class="filter-btn" data-filter="priv" onclick="filterCards('priv')">Investimento Privado</button>
+        <button class="filter-btn" data-filter="div" onclick="filterCards('div')">Dívida</button>
+        <button class="filter-btn" data-filter="hib" onclick="filterCards('hib')">Híbridos</button>
+        <button class="filter-btn" data-filter="fiscal" onclick="filterCards('fiscal')">Incentivos Fiscais</button>
+        <button class="filter-btn" data-filter="outros" onclick="filterCards('outros')">Outros</button>
+      </div>
+      <div class="filter-right">
+        <span class="filter-count" id="filterCount">18 instrumentos</span>
+        <div class="filter-search">
+          <input type="text" id="searchInput" placeholder="Pesquisar..." oninput="searchCards(this.value)" aria-label="Pesquisar instrumentos">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── INSTRUMENTS GRID ──────────────────────────── -->
+  <section class="instruments-section">
+    <div class="instruments-grid" id="instrumentsGrid">
+
+      <!-- 01 · Portugal 2030 -->
+      <div class="instrument-card reveal reveal-d1" data-category="nr" data-id="pt2030" data-href="instrumentos/portugal-2030.html">
+        <div class="card-header">
+          <span class="cat-badge cat-nr">Não Reembolsável</span>
+          <span class="status-pill status-open">Avisos regulares</span>
+        </div>
+        <h3 class="card-title">Portugal 2030</h3>
+        <p class="card-tagline">Quadro comunitário 2021-2027 para competitividade e coesão</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>Até €2.5M por projeto</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>PMEs · Grandes empresas · Entidades públicas</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- 02 · PRR -->
+      <div class="instrument-card reveal reveal-d2" data-category="nr" data-id="prr" data-href="instrumentos/prr.html">
+        <div class="card-header">
+          <span class="cat-badge cat-nr">Não Reembolsável</span>
+          <span class="status-pill status-open">Até 2026</span>
+        </div>
+        <h3 class="card-title">PRR</h3>
+        <p class="card-tagline">Plano de Recuperação e Resiliência da União Europeia</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>€16.6B para Portugal</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>Empresas · Setor público · Municípios</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- 03 · COMPETE 2030 -->
+      <div class="instrument-card reveal reveal-d3" data-category="nr" data-id="compete2030" data-href="instrumentos/compete-2030.html">
+        <div class="card-header">
+          <span class="cat-badge cat-nr">Não Reembolsável</span>
+          <span class="status-pill">Avisos periódicos</span>
+        </div>
+        <h3 class="card-title">COMPETE 2030</h3>
+        <p class="card-tagline">Programa Operacional para competitividade e internacionalização empresarial</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>Até €2.5M de incentivo</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>PMEs exportadoras · Empresas inovadoras</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- 04 · Horizonte Europa -->
+      <div class="instrument-card reveal reveal-d4" data-category="nr" data-id="horizonte-europa" data-href="instrumentos/horizonte-europa.html">
+        <div class="card-header">
+          <span class="cat-badge cat-nr">Não Reembolsável</span>
+          <span class="status-pill status-open">Calls abertas</span>
+        </div>
+        <h3 class="card-title">Horizonte Europa</h3>
+        <p class="card-tagline">O maior programa de I&amp;D da União Europeia: €95.5B até 2027</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>Até €17.5M por empresa (EIC)</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>Consórcios · PMEs inovadoras · Investigadores</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- 05 · Banco de Fomento -->
+      <div class="instrument-card reveal reveal-d5" data-category="div" data-id="banco-fomento" data-href="instrumentos/banco-fomento.html">
+        <div class="card-header">
+          <span class="cat-badge cat-div">Dívida</span>
+          <span class="status-pill status-open">Contínuo</span>
+        </div>
+        <h3 class="card-title">Banco de Fomento</h3>
+        <p class="card-tagline">Linhas de crédito bonificado para PMEs e mid-caps portuguesas</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>€25K a €15M por operação</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>PMEs · Mid-Caps · Situação fiscal regularizada</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- 06 · Venture Capital -->
+      <div class="instrument-card reveal reveal-d6" data-category="priv" data-id="venture-capital" data-href="instrumentos/venture-capital.html">
+        <div class="card-header">
+          <span class="cat-badge cat-priv">Investimento Privado</span>
+          <span class="status-pill status-open">Mercado ativo</span>
+        </div>
+        <h3 class="card-title">Venture Capital</h3>
+        <p class="card-tagline">Capital de risco para startups e empresas em crescimento acelerado</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>Seed €100K–€1M · Series A €1M–€5M</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>Startups · Scale-ups · Modelo escalável</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- 07 · Private Equity -->
+      <div class="instrument-card reveal reveal-d1" data-category="priv" data-id="private-equity" data-href="instrumentos/private-equity.html">
+        <div class="card-header">
+          <span class="cat-badge cat-priv">Investimento Privado</span>
+          <span class="status-pill">Processo 6–18 meses</span>
+        </div>
+        <h3 class="card-title">Private Equity</h3>
+        <p class="card-tagline">Investimento em empresas estabelecidas para expansão, aquisição ou transformação</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>€3M–€50M de equity</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>Empresas maduras · EBITDA positivo · Expansão</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- 08 · Business Angels -->
+      <div class="instrument-card reveal reveal-d2" data-category="priv" data-id="business-angels" data-href="instrumentos/business-angels.html">
+        <div class="card-header">
+          <span class="cat-badge cat-priv">Investimento Privado</span>
+          <span class="status-pill status-open">Contínuo</span>
+        </div>
+        <h3 class="card-title">Business Angels Portugal</h3>
+        <p class="card-tagline">Investidores individuais para fases early-stage: capital + mentoria + rede</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>€25K–€500K por ronda</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>Startups early-stage · Pré-seed · Seed</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- 09 · Equity Crowdfunding -->
+      <div class="instrument-card reveal reveal-d3" data-category="priv" data-id="crowdfunding" data-href="instrumentos/crowdfunding.html">
+        <div class="card-header">
+          <span class="cat-badge cat-priv">Investimento Privado</span>
+          <span class="status-pill status-open">Contínuo</span>
+        </div>
+        <h3 class="card-title">Equity Crowdfunding</h3>
+        <p class="card-tagline">Financiamento coletivo via plataformas reguladas pela CMVM</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>€50K–€2M por campanha</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>PMEs · Startups com tração · Audiência estabelecida</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- 10 · SIFIDE II -->
+      <div class="instrument-card reveal reveal-d4" data-category="fiscal" data-id="sifide2" data-href="instrumentos/sifide-2.html">
+        <div class="card-header">
+          <span class="cat-badge cat-fiscal">Incentivos Fiscais</span>
+          <span class="status-pill">Candidaturas anuais</span>
+        </div>
+        <h3 class="card-title">SIFIDE II</h3>
+        <p class="card-tagline">Crédito fiscal sobre despesas de I&amp;D: até 82.5% de dedução ao IRC</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>32.5% base + 50% incremental</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>Empresas com IRC · Despesas de I&amp;D elegíveis</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- 11 · RFAI -->
+      <div class="instrument-card reveal reveal-d5" data-category="fiscal" data-id="rfai" data-href="instrumentos/rfai.html">
+        <div class="card-header">
+          <span class="cat-badge cat-fiscal">Incentivos Fiscais</span>
+          <span class="status-pill status-open">Regime permanente</span>
+        </div>
+        <h3 class="card-title">RFAI</h3>
+        <p class="card-tagline">Dedução ao IRC por investimento em ativos fixos em regiões elegíveis</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>25% dedução até €15M investidos</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>Investimento em ativos fixos · IRC a pagar</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- 12 · DLRR -->
+      <div class="instrument-card reveal reveal-d6" data-category="fiscal" data-id="dlrr" data-href="instrumentos/dlrr.html">
+        <div class="card-header">
+          <span class="cat-badge cat-fiscal">Incentivos Fiscais</span>
+          <span class="status-pill status-open">Regime permanente</span>
+        </div>
+        <h3 class="card-title">DLRR</h3>
+        <p class="card-tagline">Incentivo fiscal à capitalização interna de PMEs: lucros reinvestidos</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>10% dedução sobre lucros reinvestidos</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>PMEs e Small Mid Caps · Lucros reinvestidos em 4 anos</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- 13 · Patent Box -->
+      <div class="instrument-card reveal reveal-d1" data-category="fiscal" data-id="patent-box" data-href="instrumentos/patent-box.html">
+        <div class="card-header">
+          <span class="cat-badge cat-fiscal">Incentivos Fiscais</span>
+          <span class="status-pill status-open">Regime permanente</span>
+        </div>
+        <h3 class="card-title">Patent Box / Regime PI</h3>
+        <p class="card-tagline">50% dos rendimentos de propriedade intelectual excluídos de IRC</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>50% exclusão de tributação</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>PI registada · Desenvolvida internamente · Royalties</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- 14 · Prémios de Inovação -->
+      <div class="instrument-card reveal reveal-d2" data-category="nr" data-id="premios-inovacao" data-href="instrumentos/premios-inovacao.html">
+        <div class="card-header">
+          <span class="cat-badge cat-nr">Não Reembolsável</span>
+          <span class="status-pill">Calendário anual</span>
+        </div>
+        <h3 class="card-title">Prémios de Inovação</h3>
+        <p class="card-tagline">Reconhecimento, visibilidade e dotações financeiras para empresas inovadoras</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>€10K–€500K de dotação</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>PMEs inovadoras · Startups · Todos os setores</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- 15 · EIC Accelerator -->
+      <div class="instrument-card reveal reveal-d3" data-category="hib" data-id="eic-accelerator" data-href="instrumentos/eic-accelerator.html">
+        <div class="card-header">
+          <span class="cat-badge cat-hib">Híbridos</span>
+          <span class="status-pill status-open">Calls abertas</span>
+        </div>
+        <h3 class="card-title">EIC Accelerator</h3>
+        <p class="card-tagline">O programa europeu para inovação disruptiva de alto risco: até €17.5M</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>Grant até €2.5M + Equity até €15M</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>PMEs europeia · TRL 5-9 · Impacto global</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- 16 · Vouchers IAPMEI -->
+      <div class="instrument-card reveal reveal-d4" data-category="nr" data-id="vouchers-inovacao" data-href="instrumentos/vouchers-inovacao.html">
+        <div class="card-header">
+          <span class="cat-badge cat-nr">Não Reembolsável</span>
+          <span class="status-pill">Avisos periódicos</span>
+        </div>
+        <h3 class="card-title">Vouchers de Inovação IAPMEI</h3>
+        <p class="card-tagline">Financiamento de pequenos projetos de inovação com entidades do sistema científico</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>€5K–€25K por voucher</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>PMEs · Parceria com SCTN · Co-financiamento 75–85%</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- 17 · AICEP -->
+      <div class="instrument-card reveal reveal-d5" data-category="nr" data-id="aicep" data-href="instrumentos/aicep.html">
+        <div class="card-header">
+          <span class="cat-badge cat-nr">Não Reembolsável</span>
+          <span class="status-pill status-open">Contínuo</span>
+        </div>
+        <h3 class="card-title">AICEP: Internacionalização</h3>
+        <p class="card-tagline">Apoios à exportação, prospeção e estabelecimento em mercados externos</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>Até €200K por projeto</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>Empresas exportadoras · Feiras internacionais · Prospeção</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- 18 · SAI -->
+      <div class="instrument-card reveal reveal-d6" data-category="nr" data-id="sai" data-href="instrumentos/sai.html">
+        <div class="card-header">
+          <span class="cat-badge cat-nr">Não Reembolsável</span>
+          <span class="status-pill">Avisos PT2030</span>
+        </div>
+        <h3 class="card-title">SAI: Sistema de Apoio à Internacionalização</h3>
+        <p class="card-tagline">Financiamento PT2030 para projetos estruturados de exportação e presença externa</p>
+        <div class="card-divider"></div>
+        <div class="card-highlights">
+          <div class="card-highlight"><span class="card-highlight-dot"></span>Até €200K · Co-financiamento 60%</div>
+          <div class="card-highlight"><span class="card-highlight-dot"></span>PMEs exportadoras · Novos mercados · Estrutura comercial externa</div>
+        </div>
+        <span class="card-cta">Ver artigo</span>
+      </div>
+
+      <!-- No results message -->
+      <div class="no-results" id="noResults">
+        <p class="no-results-text">Nenhum instrumento encontrado. Tente outro termo de pesquisa.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─────────────────────────────────────── -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img"
+          onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="solucoes.html">Portugal 2030</a></li>
+        <li><a href="solucoes.html">Fundos de Investimento</a></li>
+        <li><a href="solucoes.html">Benefícios Fiscais</a></li>
+        <li><a href="solucoes.html">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="conhecimento.html">Conhecimento</a></li>
+        <li><a href="parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="sobre-nos.html">Equipa</a></li>
+        <li><a href="carreiras.html">Carreiras</a></li>
+        <li><a href="#contactar">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">© 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+  <!-- ─── JAVASCRIPT ────────────────────────────────── -->
+  <script>
+    /* ─────────────────────────────────────────────────
+       INSTRUMENTS DATA
+    ───────────────────────────────────────────────── */
+    const INSTRUMENTS = {
+      'pt2030': {
+        catLabel: 'Não Reembolsável',
+        title: 'Portugal 2030',
+        tagline: 'Quadro comunitário 2021-2027 para competitividade e coesão',
+        status: 'Avisos regulares',
+        h1: 'Até €2.5M / projeto',
+        h2: 'PMEs · Grandes empresas · Entidades públicas',
+        desc: 'O Portugal 2030 é o principal instrumento de política pública 2021-2027, com €23 mil milhões para Portugal. Articula FEDER, FSE+ e Fundo de Coesão com objetivos de transição digital, transição climática e coesão territorial.',
+        eligibility: [
+          'PMEs e grandes empresas com investimento elegível',
+          'Startups e scale-ups em setores prioritários',
+          'Entidades do sistema de investigação e inovação',
+          'Municípios e entidades do setor público'
+        ],
+        amount: 'Incentivo não reembolsável: 45%–85% do investimento elegível. Montante por projeto: tipicamente €100K–€2.5M.',
+        howTo: [
+          'Criar conta em iPortalMais (balcao.portugal2030.pt)',
+          'Verificar elegibilidade e aviso aplicável',
+          'Preparar candidatura com plano de negócios e modelo financeiro',
+          'Submeter candidatura e aguardar avaliação (3–6 meses)'
+        ],
+        deadline: 'Avisos abertos regularmente: consultar balcão PT2030'
+      },
+      'prr': {
+        catLabel: 'Não Reembolsável',
+        title: 'PRR',
+        tagline: 'Plano de Recuperação e Resiliência da União Europeia',
+        status: 'Até 2026',
+        h1: '€16.6B para Portugal',
+        h2: 'Empresas · Setor público · Municípios',
+        desc: 'O PRR mobiliza €16.6 mil milhões para Portugal até 2026, focados em três dimensões: resiliência, transição climática e transição digital. Inclui componentes de apoio direto a empresas: digitalização, eficiência energética, qualificação e capitalização.',
+        eligibility: [
+          'Empresas de todos os setores em projetos de digitalização',
+          'Iniciativas de transição energética e eficiência',
+          'Entidades públicas em projetos de saúde, educação e habitação',
+          'PMEs em programas de capitalização e internacionalização'
+        ],
+        amount: 'Variável por aviso: de €50K a €10M por projeto. Mix de incentivos reembolsáveis e não reembolsáveis consoante tipologia.',
+        howTo: [
+          'Identificar a componente e aviso relevante para o seu setor',
+          'Candidatura via sistemas sectoriais (IAPMEI, DGE, DRE)',
+          'Preparação de plano de investimento e indicadores de impacto',
+          'Submissão dentro dos prazos por aviso'
+        ],
+        deadline: 'Avisos ativos até 2026: prazos variáveis por componente'
+      },
+      'compete2030': {
+        catLabel: 'Não Reembolsável',
+        title: 'COMPETE 2030',
+        tagline: 'Programa Operacional para competitividade e internacionalização empresarial',
+        status: 'Avisos periódicos',
+        h1: 'Até €2.5M de incentivo',
+        h2: 'PMEs exportadoras · Empresas inovadoras',
+        desc: 'O COMPETE 2030, no âmbito do Portugal 2030, apoia projetos de inovação produtiva, qualificação de PMEs, internacionalização e digitalização. Gerido pelo IAPMEI e AICEP, é o principal programa de apoio à competitividade empresarial.',
+        eligibility: [
+          'PMEs com CAE elegível e atividade económica em Portugal',
+          'Projetos de investimento em capacidade produtiva ou inovação',
+          'Empresas exportadoras ou com plano de internacionalização',
+          'Projetos de digitalização empresarial'
+        ],
+        amount: 'Co-financiamento de 45%–70% do investimento elegível. Incentivo máximo: €2.5M por projeto. Investimento mínimo elegível geralmente >€200K.',
+        howTo: [
+          'Verificar elegibilidade da empresa e do investimento',
+          'Aguardar abertura de aviso específico (balcão PT2030)',
+          'Preparar candidatura com plano de negócios e modelo financeiro',
+          'Submeter via iPortalMais com documentação completa'
+        ],
+        deadline: 'Avisos periódicos: verificar balcão PT2030'
+      },
+      'horizonte-europa': {
+        catLabel: 'Não Reembolsável',
+        title: 'Horizonte Europa',
+        tagline: 'O maior programa de I&D da União Europeia: €95.5B até 2027',
+        status: 'Calls abertas',
+        h1: 'Até €17.5M por empresa (EIC)',
+        h2: 'Consórcios · PMEs inovadoras · Investigadores',
+        desc: 'O Horizonte Europa financia investigação e inovação de excelência. Inclui o Conselho Europeu de Investigação (ERC), ações Marie Skłodowska-Curie, clusters temáticos e o European Innovation Council (EIC) para inovação disruptiva e startups de alto impacto.',
+        eligibility: [
+          'Consórcios com ≥3 entidades de ≥3 países membros da UE',
+          'PMEs inovadoras (via EIC Accelerator: candidatura individual)',
+          'Investigadores e grupos de investigação (via ERC e MSCA)',
+          'Startups deeptech com potencial de escala global'
+        ],
+        amount: 'EIC Pathfinder: €500K–€4M. EIC Accelerator Grant: até €2.5M (70% custos). EIC Accelerator Equity: até €15M. Colaborativos: 70%–100% dos custos diretos elegíveis.',
+        howTo: [
+          'Identificar o instrumento adequado (EIC, cluster temático, ERC)',
+          'Registar entidade no Funding & Tenders Portal (ec.europa.eu)',
+          'Preparar proposta com parceiros europeus se necessário',
+          'Submeter na call aberta: avaliação competitiva internacional'
+        ],
+        deadline: 'Calls por área: verificar EIC Work Programme anual'
+      },
+      'banco-fomento': {
+        catLabel: 'Dívida',
+        title: 'Banco de Fomento',
+        tagline: 'Linhas de crédito bonificado para PMEs e mid-caps portuguesas',
+        status: 'Contínuo',
+        h1: '€25K a €15M por operação',
+        h2: 'PMEs · Mid-Caps · Situação fiscal regularizada',
+        desc: 'O Banco de Fomento canaliza recursos do Estado e fundos europeus para financiar empresas através de bancos parceiros, com condições mais favoráveis que o mercado: taxas reduzidas, maiores prazos e períodos de carência mais longos.',
+        eligibility: [
+          'PMEs e Mid-Caps (até 3.000 trabalhadores) com sede em Portugal',
+          'Situação fiscal e contributiva regularizada',
+          'Projetos de investimento produtivo, internacionalização ou capitalização',
+          'Sem processo de insolvência ou reestruturação pendente'
+        ],
+        amount: '€25K a €15M por operação de crédito. Taxas de juro abaixo do mercado (Euribor + spread reduzido). Prazos até 12 anos com carência de capital até 3 anos.',
+        howTo: [
+          'Contactar um dos bancos parceiros (CGD, BPI, Millennium, Santander, Novo Banco)',
+          'Apresentar projeto de investimento e demonstrações financeiras',
+          'O banco avalia e estrutura a operação com garantia do Banco de Fomento',
+          'Formalização do contrato de crédito'
+        ],
+        deadline: 'Linhas contínuas: consultar banco parceiro para disponibilidade'
+      },
+      'venture-capital': {
+        catLabel: 'Investimento Privado',
+        title: 'Venture Capital',
+        tagline: 'Capital de risco para startups e empresas em crescimento acelerado',
+        status: 'Mercado ativo',
+        h1: 'Seed €100K–€1M · Series A €1M–€5M',
+        h2: 'Startups · Scale-ups · Modelo escalável',
+        desc: 'O Venture Capital é capital próprio investido em empresas com elevado potencial de crescimento. Em troca de participação, os fundos trazem capital, rede e expertise. Portugal tem um ecossistema crescente com fundos como Armilar, Indico Capital, Shilling e vários fundos europeus ativos.',
+        eligibility: [
+          'Startup ou scale-up com modelo de negócio escalável',
+          'Potencial de mercado endereçável significativo (>€500M)',
+          'Equipa fundadora com track record ou expertise diferenciadora',
+          'Tecnologia, IP ou posição competitiva defensável'
+        ],
+        amount: 'Pre-seed/Seed: €100K–€1M. Series A: €1M–€5M. Series B+: >€5M. Diluição típica: 10%–25% por ronda.',
+        howTo: [
+          'Preparar pitch deck, executive summary e modelo financeiro',
+          'Identificar fundos alinhados com setor, fase e geografia',
+          'Processo de due diligence (financeira, técnica, legal: 3–6 meses)',
+          'Negociação de term sheet e estrutura de governance'
+        ],
+        deadline: 'Processo 3–9 meses: mercado ativo continuamente'
+      },
+      'private-equity': {
+        catLabel: 'Investimento Privado',
+        title: 'Private Equity',
+        tagline: 'Investimento em empresas estabelecidas para expansão, aquisição ou transformação',
+        status: 'Processo 6–18 meses',
+        h1: '€3M–€50M de equity',
+        h2: 'Empresas maduras · EBITDA positivo · Expansão',
+        desc: 'O Private Equity investe em empresas com cash flows positivos para financiar crescimento acelerado, aquisições, internacionalização ou transformação. Pode envolver participações de controlo ou minoritárias significativas, com horizon de 4–7 anos.',
+        eligibility: [
+          'Empresa com EBITDA positivo (mínimo €500K–€1M)',
+          'Setor com potencial de consolidação ou internacionalização',
+          'Acionistas abertos a parceiro financeiro com assento no Conselho',
+          'Enterprise Value entre €5M e €200M'
+        ],
+        amount: 'Equity investido: €3M–€50M. EV implícito: €5M–€200M. Estrutura: equity puro, ou combinado com dívida (leveraged).',
+        howTo: [
+          'Preparar Information Memorandum (IM) confidencial',
+          'Identificar e contactar fundos com mandato relevante',
+          'Processo de data room e due diligence aprofundada',
+          'Negociação de SPA, shareholders agreement e estrutura pós-investimento'
+        ],
+        deadline: 'Processo típico 6–18 meses da abordagem inicial ao closing'
+      },
+      'business-angels': {
+        catLabel: 'Investimento Privado',
+        title: 'Business Angels Portugal',
+        tagline: 'Investidores individuais para fases early-stage: capital + mentoria + rede',
+        status: 'Contínuo',
+        h1: '€25K–€500K por ronda',
+        h2: 'Startups early-stage · Pré-seed · Seed',
+        desc: 'Os Business Angels são investidores individuais que investem nas fases mais precoces. Em Portugal, a SPBAN (Sociedade Portuguesa de Business Angels) e redes como a FNABA facilitam o match. Para além do capital, trazem experiência sectorial, rede e mentoria operacional.',
+        eligibility: [
+          'Startups em fase de ideia, MVP ou primeiras vendas',
+          'Fundadores com capacidade demonstrável de execução',
+          'Modelo de negócio com potencial de crescimento escalável',
+          'Abertura a partilha de equity e envolvimento do investidor'
+        ],
+        amount: '€25K–€500K por ronda. Estrutura: equity direta, SAFE ou convertível. Valorização pré-money geralmente €200K–€2M em pré-seed.',
+        howTo: [
+          'Preparar pitch deck de 10–12 slides e executive summary de 1 página',
+          'Candidatar-se a eventos e redes de BAs (SPBAN, Beta-i, Startup Lisboa)',
+          'Participar em aceleradoras que facilitem acesso a investidores',
+          'Processo de due diligence simplificado: term sheet e acordo de investimento'
+        ],
+        deadline: 'Contínuo: principais eventos: primavera e outono'
+      },
+      'crowdfunding': {
+        catLabel: 'Investimento Privado',
+        title: 'Equity Crowdfunding',
+        tagline: 'Financiamento coletivo via plataformas reguladas pela CMVM',
+        status: 'Contínuo',
+        h1: '€50K–€2M por campanha',
+        h2: 'PMEs · Startups com tração · Audiência estabelecida',
+        desc: 'O equity crowdfunding permite a PMEs e startups captar capital de uma base alargada de investidores, via plataformas licenciadas pela CMVM. Em Portugal, regulado pelo DL 61/2018. Plataformas como a CrowdWorks ou Seedrs (UE) permitem campanhas públicas com alta visibilidade.',
+        eligibility: [
+          'PMEs ou startups com produto/serviço com tração validada',
+          'Capacidade de comunicar e mobilizar uma audiência',
+          'Estrutura societária compatível com múltiplos acionistas',
+          'Projeto aprovado pela plataforma de crowdfunding'
+        ],
+        amount: 'Tipicamente €50K–€2M por campanha. Comissão da plataforma: 5%–8% do montante captado. Duração da campanha: 30–90 dias.',
+        howTo: [
+          'Candidatar-se a uma plataforma licenciada pela CMVM',
+          'Preparar dossier de empresa, projeções e pitch de campanha',
+          'Obter aprovação da plataforma e definir condições (valorização, equity)',
+          'Lançar campanha pública e mobilizar rede de contactos'
+        ],
+        deadline: 'Contínuo: sujeito a aprovação da plataforma (4–8 semanas)'
+      },
+      'sifide2': {
+        catLabel: 'Incentivos Fiscais',
+        title: 'SIFIDE II',
+        tagline: 'Crédito fiscal sobre despesas de I&D: até 82.5% de dedução ao IRC',
+        status: 'Candidaturas anuais',
+        h1: '32.5% base + 50% incremental',
+        h2: 'Empresas com IRC · Despesas de I&D elegíveis',
+        desc: 'O SIFIDE II (Sistema de Incentivos Fiscais à I&D Empresarial II) permite às empresas deduzir ao IRC uma percentagem das suas despesas em I&D. A taxa base é de 32.5%; a taxa incremental de 50% aplica-se ao aumento das despesas face à média dos 2 anos anteriores.',
+        eligibility: [
+          'Empresas com sede ou estabelecimento estável em Portugal',
+          'Despesas em I&D elegíveis: pessoal, equipamento, subcontratação, registo PI',
+          'Atividades de I&D reconhecidas como tal pela ANI',
+          'IRC positivo ou prejuízo reportável (dedução válida por 8 anos)'
+        ],
+        amount: 'Taxa base: 32.5% das despesas de I&D. Taxa incremental: 50% do aumento vs. média 2 anos anteriores. Limite anual: €1.5M (excesso reportável 8 anos). Poupança potencial: dezenas a centenas de milhares de euros por ano.',
+        howTo: [
+          'Identificar e documentar as despesas de I&D elegíveis do exercício',
+          'Submeter candidatura à ANI (1 julho – 30 setembro do ano seguinte)',
+          'Obter certificado da ANI com despesas reconhecidas',
+          'Declarar o benefício na Mod. 22 de IRC (campo específico SIFIDE)'
+        ],
+        deadline: 'Candidaturas anuais à ANI: 1 julho a 30 setembro'
+      },
+      'rfai': {
+        catLabel: 'Incentivos Fiscais',
+        title: 'RFAI',
+        tagline: 'Dedução ao IRC por investimento em ativos fixos em regiões elegíveis',
+        status: 'Regime permanente',
+        h1: '25% dedução até €15M investidos',
+        h2: 'Investimento em ativos fixos · IRC a pagar',
+        desc: 'O RFAI (Regime Fiscal para o Investimento) permite deduzir ao IRC uma percentagem do investimento realizado em ativos fixos tangíveis e intangíveis, afetos a atividades elegíveis. Cumulável com outros benefícios, sujeito a limites de auxílio de Estado.',
+        eligibility: [
+          'Empresas nos setores elegíveis (excluídos: financeiro, construção imobiliária)',
+          'Investimento em ativos fixos novos em Portugal',
+          'Manutenção dos postos de trabalho e dos ativos por ≥5 anos',
+          'Sem limitações fiscais ou deduções que reduzam o benefício'
+        ],
+        amount: '25% dedução ao IRC para investimentos até €15M realizados no período. 10% para o investimento que exceder €15M. Limite: 50% da coleta de IRC de cada exercício (excesso reportável).',
+        howTo: [
+          'Documentar o investimento realizado em ativos fixos elegíveis',
+          'Verificar CAE da empresa e região de instalação',
+          'Reconhecimento automático: dedução na Mod. 22 de IRC',
+          'Manter os ativos por mínimo 5 anos após o investimento'
+        ],
+        deadline: 'Regime permanente: aplicável na declaração anual de IRC'
+      },
+      'dlrr': {
+        catLabel: 'Incentivos Fiscais',
+        title: 'DLRR',
+        tagline: 'Incentivo fiscal à capitalização interna de PMEs: lucros reinvestidos',
+        status: 'Regime permanente',
+        h1: '10% dedução sobre lucros reinvestidos',
+        h2: 'PMEs e Small Mid Caps · Lucros reinvestidos em 4 anos',
+        desc: 'A DLRR (Dedução por Lucros Retidos e Reinvestidos) permite às PMEs e Small Mid Caps deduzir ao IRC 10% dos lucros que sejam retidos e reinvestidos em ativos elegíveis, promovendo o autofinanciamento e a capitalização interna.',
+        eligibility: [
+          'PMEs e Small Mid Caps (até 500 trabalhadores)',
+          'Lucros retidos reinvestidos em ativos elegíveis no prazo de 4 anos',
+          'Constituição de reserva especial indisponível',
+          'Sem impedimentos fiscais ou contributivos relevantes'
+        ],
+        amount: '10% dedução ao IRC sobre o montante de lucros retidos e reinvestidos. Limite máximo acumulado: €12.5M de dedução. Benefício efetivo: ~2.5% do lucro reinvestido em IRC poupado.',
+        howTo: [
+          'Calcular os lucros elegíveis para retenção e reinvestimento',
+          'Constituir reserva especial indisponível na contabilidade',
+          'Identificar ativos elegíveis para reinvestimento nos 4 anos seguintes',
+          'Declarar na Mod. 22 de IRC e manter documentação de suporte'
+        ],
+        deadline: 'Regime permanente: verificar elegibilidade com revisão do IRC'
+      },
+      'patent-box': {
+        catLabel: 'Incentivos Fiscais',
+        title: 'Patent Box / Regime PI',
+        tagline: '50% dos rendimentos de propriedade intelectual excluídos de IRC',
+        status: 'Regime permanente',
+        h1: '50% exclusão de tributação',
+        h2: 'PI registada · Desenvolvida internamente · Royalties',
+        desc: 'O Patent Box (Regime da PI) permite excluir de tributação em IRC 50% dos rendimentos positivos derivados de ativos de propriedade intelectual qualificados: patentes, modelos de utilidade, programas de computador e outros registados. Incentiva a criação e exploração de PI em Portugal.',
+        eligibility: [
+          'Empresa com ativos de PI qualificada registados',
+          'PI desenvolvida internamente ou com ≤30% de outsourcing a entidades relacionadas',
+          'Rendimentos de licenciamento, cedência ou alienação de PI',
+          'Documentação do nexo causal entre I&D realizado e PI detida'
+        ],
+        amount: '50% dos rendimentos líquidos de PI qualificada excluídos de IRC e Derrama. Poupança efetiva: 10.5%–12% dos rendimentos de PI (dependendo da taxa de IRC aplicável).',
+        howTo: [
+          'Inventariar os ativos de PI qualificada detidos pela empresa',
+          'Documentar os rendimentos derivados dessa PI (royalties, licenças)',
+          'Calcular o rácio nexo entre I&D interno e PI total',
+          'Exercer opção na Mod. 22 de IRC com documentação de suporte adequada'
+        ],
+        deadline: 'Regime permanente: opção exercida na declaração anual'
+      },
+      'premios-inovacao': {
+        catLabel: 'Não Reembolsável',
+        title: 'Prémios de Inovação',
+        tagline: 'Reconhecimento, visibilidade e dotações financeiras para empresas inovadoras',
+        status: 'Calendário anual',
+        h1: '€10K–€500K de dotação',
+        h2: 'PMEs inovadoras · Startups · Todos os setores',
+        desc: 'Portugal e a UE oferecem um ecossistema rico de prémios que reconhecem inovação empresarial. Desde o Prémio PME Inovação COTEC até ao European Innovation Prize da Comissão Europeia. Para além da dotação financeira, os prémios conferem visibilidade, credibilidade e acesso a redes premium.',
+        eligibility: [
+          'PMEs com atividade de inovação demonstrável (produto, processo ou modelo)',
+          'Startups em fase de crescimento com impacto comprovado',
+          'Empresas de qualquer setor: critérios variam por prémio',
+          'Histórico de resultados financeiros geralmente exigido'
+        ],
+        amount: 'Dotações: €10K–€500K consoante o prémio. Valor intangível: visibilidade media, redes de contacto e credencial de qualidade para investidores e clientes.',
+        howTo: [
+          'Mapear o calendário anual de prémios relevantes para o setor',
+          'Preparar dossier de inovação com evidências de impacto',
+          'Desenvolver narrativa de candidatura adaptada a cada júri',
+          'Apresentação em formato pitch ou escrito consoante o prémio'
+        ],
+        deadline: 'Principais prémios: março–outubro, calendário anual por prémio'
+      },
+      'eic-accelerator': {
+        catLabel: 'Híbridos',
+        title: 'EIC Accelerator',
+        tagline: 'O programa europeu para inovação disruptiva de alto risco: até €17.5M',
+        status: 'Calls abertas',
+        h1: 'Grant até €2.5M + Equity até €15M',
+        h2: 'PMEs europeia · TRL 5-9 · Impacto global',
+        desc: 'O EIC Accelerator (European Innovation Council) é o programa de referência da UE para PMEs com inovações de alto impacto e alto risco. Combina um grant a fundo perdido com um componente de equity via EIC Fund, criando um dos maiores pacotes de apoio à inovação empresarial na Europa.',
+        eligibility: [
+          'PME registada num Estado-membro da UE ou país associado',
+          'Inovação de produto/serviço com TRL entre 5 e 9',
+          'Potencial de criar mercados ou disrupcionar setores existentes',
+          'Equipa com capacidade de escalar europeia e/ou globalmente'
+        ],
+        amount: 'Grant: até €2.5M (70% dos custos elegíveis, não reembolsável). Equity: até €15M via EIC Fund (participação minoritária). Total máximo: €17.5M por empresa.',
+        howTo: [
+          'Candidatura via Funding & Tenders Portal (passo 1: short application)',
+          'Se aprovado: full application com pitch deck e business plan detalhado',
+          'Entrevista presencial em Bruxelas com júri internacional',
+          'Taxa de sucesso global ~5%: requer preparação intensiva'
+        ],
+        deadline: 'Calls anuais com deadlines em janeiro, maio e outubro'
+      },
+      'vouchers-inovacao': {
+        catLabel: 'Não Reembolsável',
+        title: 'Vouchers de Inovação IAPMEI',
+        tagline: 'Financiamento de pequenos projetos de inovação com entidades do sistema científico',
+        status: 'Avisos periódicos',
+        h1: '€5K–€25K por voucher',
+        h2: 'PMEs · Parceria com SCTN · Co-financiamento 75–85%',
+        desc: 'Os Vouchers de Inovação do IAPMEI apoiam PMEs no acesso a serviços de inovação, digitalização e consultoria especializada, em parceria com entidades do Sistema Científico e Tecnológico Nacional (universidades, laboratórios, centros de interface).',
+        eligibility: [
+          'PMEs com CAE elegível registadas em Portugal',
+          'Projeto desenvolvido em parceria com entidade do SCTN',
+          'Sem outro apoio público para o mesmo projeto',
+          'Situação fiscal e contributiva regularizada'
+        ],
+        amount: '€5K–€25K por voucher. Co-financiamento de 75%–85% das despesas elegíveis. Candidato suporta os restantes 15%–25%.',
+        howTo: [
+          'Identificar entidade do SCTN parceira para o projeto',
+          'Aguardar abertura de aviso no site do IAPMEI',
+          'Submeter candidatura conjunta empresa + entidade SCTN',
+          'Após aprovação, executar projeto e apresentar relatório final'
+        ],
+        deadline: 'Avisos periódicos: verificar iapmei.pt regularmente'
+      },
+      'aicep': {
+        catLabel: 'Não Reembolsável',
+        title: 'AICEP: Internacionalização',
+        tagline: 'Apoios à exportação, prospeção e estabelecimento em mercados externos',
+        status: 'Contínuo',
+        h1: 'Até €200K por projeto',
+        h2: 'Empresas exportadoras · Feiras internacionais · Prospeção',
+        desc: 'A AICEP Portugal Global é a agência de promoção externa e de investimento. Disponibiliza apoios à participação em feiras internacionais, missões empresariais, prospeção de mercados e desenvolvimento de projetos de exportação. Articula com o PT2030 para projetos de maior dimensão.',
+        eligibility: [
+          'Empresas portuguesas com produto/serviço exportável',
+          'Volume de negócios mínimo variável por instrumento (geralmente >€500K)',
+          'Estratégia de internacionalização definida e documentada',
+          'CAE elegível para o instrumento específico'
+        ],
+        amount: 'Participação em feiras: até €25K/evento. Missões empresariais: até €15K. Projetos de internacionalização (PT2030): até €200K–€1M. Co-financiamento: 40%–70%.',
+        howTo: [
+          'Registo no portal da AICEP (aicep.pt)',
+          'Identificar instrumento adequado ao momento da internacionalização',
+          'Contactar delegação AICEP no mercado-alvo para apoio local',
+          'Submeter candidatura ao instrumento específico com plano de internacionalização'
+        ],
+        deadline: 'Contínuo: algumas componentes com avisos específicos PT2030'
+      },
+      'sai': {
+        catLabel: 'Não Reembolsável',
+        title: 'SAI: Sistema de Apoio à Internacionalização',
+        tagline: 'Financiamento PT2030 para projetos estruturados de exportação e presença externa',
+        status: 'Avisos PT2030',
+        h1: 'Até €200K · Co-financiamento 60%',
+        h2: 'PMEs exportadoras · Novos mercados · Estrutura comercial externa',
+        desc: 'O SAI, no âmbito do PT2030, financia projetos de internacionalização de PMEs, desde certificações e prospeção de mercados até ao estabelecimento de estruturas comerciais no exterior. É o instrumento mais estruturado para empresas com ambição de crescimento internacional sustentado.',
+        eligibility: [
+          'PMEs com CAE elegível e histórico de exportações (ou plano concreto)',
+          'Projetos com impacto em novos mercados ou novos clientes externos',
+          'Investimento mínimo elegível tipicamente >€50K',
+          'Plano de internacionalização fundamentado e exequível'
+        ],
+        amount: 'Até €200K de incentivo por projeto. Co-financiamento até 60% das despesas elegíveis. Despesas elegíveis: prospeção, certificações, participação em feiras, escritórios externos, e-commerce internacional.',
+        howTo: [
+          'Preparar plano de internacionalização com mercados-alvo definidos',
+          'Aguardar abertura de aviso SAI no balcão PT2030',
+          'Submeter candidatura via iPortalMais em articulação com a AICEP',
+          'Após aprovação, executar projeto com reporte de indicadores de exportação'
+        ],
+        deadline: 'Avisos PT2030: verificar balcao.portugal2030.pt'
+      }
+    };
+
+    /* ─────────────────────────────────────────────────
+       STATE
+    ───────────────────────────────────────────────── */
+    let activeFilter = 'all';
+    let activeSearch = '';
+
+    /* ─────────────────────────────────────────────────
+       FILTER
+    ───────────────────────────────────────────────── */
+    function filterCards(cat) {
+      activeFilter = cat;
+      document.querySelectorAll('.filter-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.dataset.filter === cat);
+      });
+      applyFilters();
+    }
+
+    /* ─────────────────────────────────────────────────
+       SEARCH
+    ───────────────────────────────────────────────── */
+    function searchCards(query) {
+      activeSearch = query.toLowerCase().trim();
+      applyFilters();
+    }
+
+    /* ─────────────────────────────────────────────────
+       APPLY FILTERS
+    ───────────────────────────────────────────────── */
+    function applyFilters() {
+      var cards = document.querySelectorAll('.instrument-card');
+      var visibleCount = 0;
+
+      cards.forEach(function(card) {
+        var catMatch = activeFilter === 'all' || card.dataset.category === activeFilter;
+        var searchMatch = true;
+
+        if (activeSearch) {
+          var title = card.querySelector('.card-title').textContent.toLowerCase();
+          var tagline = card.querySelector('.card-tagline').textContent.toLowerCase();
+          searchMatch = title.includes(activeSearch) || tagline.includes(activeSearch);
+        }
+
+        var visible = catMatch && searchMatch;
+        card.classList.toggle('hidden', !visible);
+        if (visible) visibleCount++;
+      });
+
+      updateCount(visibleCount);
+      var noResults = document.getElementById('noResults');
+      noResults.classList.toggle('visible', visibleCount === 0);
+    }
+
+    /* ─────────────────────────────────────────────────
+       UPDATE COUNT
+    ───────────────────────────────────────────────── */
+    function updateCount(count) {
+      var el = document.getElementById('filterCount');
+      el.textContent = count === 1 ? '1 instrumento': count + ' instrumentos';
+    }
+
+    /* ─────────────────────────────────────────────────
+       CARD CLICK · navigate to article page
+    ───────────────────────────────────────────────── */
+    document.querySelectorAll('.instrument-card[data-href]').forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        if (!e.target.closest('button') && !e.target.closest('a')) {
+          window.location.href = card.dataset.href;
+        }
+      });
+    });
+
+    /* ─────────────────────────────────────────────────
+       NAVBAR SCROLL
+    ───────────────────────────────────────────────── */
+    var navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', function() {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* ─────────────────────────────────────────────────
+       HAMBURGER
+    ───────────────────────────────────────────────── */
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', function() {
+      mobileMenu.classList.toggle('open');
+    });
+
+    /* ─────────────────────────────────────────────────
+       INTERSECTION OBSERVER · SCROLL REVEAL
+    ───────────────────────────────────────────────── */
+    var revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.06, rootMargin: '0px 0px -32px 0px' });
+      revealEls.forEach(function(el) { observer.observe(el); });
+    } else {
+      revealEls.forEach(function(el) { el.classList.add('visible'); });
+    }
+
+  </script>
+</body>
+</html>

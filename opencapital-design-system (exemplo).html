@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Capital : Design System v1.1</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:       #1A3A5C;
+    --navy-deep:  #0D1F33;
+    --gold:       #C9A96E;
+    --white:      #FFFFFF;
+    --grey-light: #E5E5E5;
+    --grey-mid:   #7A7A7A;
+    --grey-dark:  #2A2A2A;
+    --font: 'Montserrat', sans-serif;
+    --transition: all 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --shadow: 0 8px 40px rgba(26,58,92,0.10);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:var(--font); background:var(--white); color:var(--grey-dark); -webkit-font-smoothing:antialiased; }
+
+  /* SCAFFOLD */
+  .ds-header { background:var(--navy); padding:80px 48px; text-align:center; position:relative; overflow:hidden; }
+  .ds-header::after { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 65% 50%, rgba(201,169,110,0.07) 0%, transparent 65%); pointer-events:none; }
+  .ds-header-label { font-size:9px; font-weight:600; letter-spacing:0.32em; text-transform:uppercase; color:var(--gold); margin-bottom:18px; }
+  .ds-header h1 { font-size:36px; font-weight:200; letter-spacing:0.20em; text-transform:uppercase; color:var(--white); margin-bottom:10px; }
+  .ds-header p { font-size:10px; font-weight:300; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.32); }
+
+  .ds-page { max-width:1160px; margin:0 auto; padding:80px 40px; }
+  .ds-section { margin-bottom:96px; }
+  .ds-label { font-size:9px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:var(--gold); margin-bottom:6px; }
+  .ds-heading { font-size:20px; font-weight:300; letter-spacing:0.06em; color:var(--navy); margin-bottom:36px; padding-bottom:18px; border-bottom:1px solid var(--grey-light); }
+  .ds-note { font-size:10px; font-weight:300; color:var(--grey-mid); font-style:italic; margin-bottom:14px; }
+
+  /* 01 COLOURS */
+  .color-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(148px,1fr)); gap:14px; }
+  .swatch { border:1px solid var(--grey-light); overflow:hidden; }
+  .swatch-block { height:84px; }
+  .swatch-info { padding:12px 14px; background:var(--white); }
+  .swatch-name { font-size:10px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--grey-dark); margin-bottom:3px; }
+  .swatch-hex { font-size:11px; font-weight:300; color:var(--grey-mid); font-family:monospace; margin-bottom:4px; }
+  .swatch-role { font-size:9px; font-weight:300; color:var(--grey-mid); line-height:1.5; }
+
+  /* 02 TYPE */
+  .type-row { margin-bottom:32px; padding-bottom:32px; border-bottom:1px solid var(--grey-light); }
+  .type-row:last-child { border-bottom:none; }
+  .type-spec { font-size:9px; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
+  .t-eyebrow { font-size:10px; font-weight:600; letter-spacing:0.30em; text-transform:uppercase; color:var(--gold); }
+  .t-h1 { font-size:54px; font-weight:700; letter-spacing:-0.01em; color:var(--navy); line-height:1.05; }
+  .t-h2 { font-size:36px; font-weight:600; letter-spacing:0.01em; color:var(--navy); line-height:1.15; }
+  .t-h3 { font-size:22px; font-weight:500; letter-spacing:0.03em; color:var(--navy); }
+  .t-h4 { font-size:15px; font-weight:500; letter-spacing:0.07em; color:var(--navy); }
+  .t-tagline { font-size:19px; font-weight:100; letter-spacing:0.14em; color:var(--navy); }
+  .t-body { font-size:14px; font-weight:400; color:var(--grey-dark); line-height:1.85; max-width:580px; }
+  .t-small { font-size:12px; font-weight:300; color:var(--grey-mid); letter-spacing:0.04em; }
+
+  /* 03 NAVBAR */
+  .navbar { display:flex; align-items:center; justify-content:space-between; padding:0 40px; height:74px; background:var(--white); border-bottom:1px solid var(--grey-light); }
+  .navbar-dark { background:var(--navy); border-bottom:1px solid rgba(255,255,255,0.07); }
+  .nav-logo { display:flex; align-items:center; text-decoration:none; }
+  .nav-mark { width:36px; height:36px; border:1px solid var(--grey-light); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:600; letter-spacing:0.06em; color:var(--navy); flex-shrink:0; }
+  .nav-mark-light { border-color:rgba(255,255,255,0.2); color:var(--gold); }
+  .nav-sep { width:1px; height:30px; background:var(--grey-light); margin:0 14px; flex-shrink:0; }
+  .nav-sep-light { background:rgba(255,255,255,0.15); }
+  .nav-wordmark { display:flex; flex-direction:column; gap:2px; }
+  .nav-name { font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--navy); }
+  .nav-name-light { color:var(--white); }
+  .nav-sub { font-size:7px; font-weight:300; letter-spacing:0.20em; text-transform:uppercase; color:var(--grey-mid); }
+  .nav-sub-light { color:rgba(255,255,255,0.32); }
+  .nav-links { display:flex; align-items:center; gap:24px; list-style:none; }
+  .nav-links a { font-size:9px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:var(--grey-dark); text-decoration:none; transition:var(--transition); position:relative; padding-bottom:3px; white-space:nowrap; }
+  .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold); transition:width 0.3s ease; }
+  .nav-links a:hover { color:var(--navy); }
+  .nav-links a:hover::after { width:100%; }
+  .nav-links-light a { color:rgba(255,255,255,0.58); }
+  .nav-links-light a:hover { color:var(--white); }
+  .nav-badge { font-size:7px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); border:1px solid var(--gold); padding:1px 4px; margin-left:4px; vertical-align:middle; }
+  .nav-cta { font-size:9px; font-weight:600; letter-spacing:0.20em; text-transform:uppercase; color:var(--navy); text-decoration:none; border:1px solid var(--navy); padding:9px 18px; transition:var(--transition); white-space:nowrap; }
+  .nav-cta:hover { background:var(--navy); color:var(--white); }
+  .nav-cta-light { color:var(--white); border-color:rgba(255,255,255,0.28); }
+  .nav-cta-light:hover { border-color:var(--white); background:rgba(255,255,255,0.08); }
+
+  /* 04 BUTTONS */
+  .btn-row { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+  .btn { display:inline-flex; align-items:center; gap:8px; font-family:var(--font); font-size:9px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; border:none; cursor:pointer; transition:var(--transition); text-decoration:none; }
+  .btn-primary { background:var(--navy); color:var(--white); padding:14px 30px; }
+  .btn-primary:hover { background:#0F2A45; box-shadow:0 6px 20px rgba(26,58,92,0.22); transform:translateY(-1px); }
+  .btn-outline { background:transparent; color:var(--navy); padding:13px 29px; border:1px solid var(--navy); }
+  .btn-outline:hover { background:var(--navy); color:var(--white); }
+  .btn-gold { background:var(--gold); color:var(--white); padding:14px 30px; }
+  .btn-gold:hover { background:#B8945A; box-shadow:0 6px 20px rgba(201,169,110,0.28); transform:translateY(-1px); }
+  .btn-ghost { background:transparent; color:var(--white); padding:13px 29px; border:1px solid rgba(255,255,255,0.28); }
+  .btn-ghost:hover { border-color:var(--white); background:rgba(255,255,255,0.07); }
+  .btn-text { background:transparent; color:var(--navy); padding:6px 0; font-size:9px; }
+  .btn-text::after { content:' →'; font-weight:300; font-size:12px; }
+  .btn-text:hover { color:var(--gold); }
+  .on-dark { background:var(--navy); padding:32px 36px; display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-top:16px; }
+
+  /* 05 CARDS */
+  .cards-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .card { background:var(--white); border:1px solid var(--grey-light); padding:34px 30px; position:relative; overflow:hidden; transition:var(--transition); }
+  .card::before { content:''; position:absolute; top:0; left:0; width:0; height:2px; background:var(--gold); transition:width 0.4s ease; }
+  .card:hover { box-shadow:var(--shadow); transform:translateY(-3px); }
+  .card:hover::before { width:100%; }
+  .card-icon { margin-bottom:18px; }
+  .card-eyebrow { font-size:8px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+  .card-title { font-size:16px; font-weight:600; color:var(--navy); line-height:1.35; margin-bottom:10px; }
+  .card-body { font-size:13px; font-weight:300; color:var(--grey-mid); line-height:1.75; margin-bottom:22px; }
+  .card-link { font-size:9px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--navy); text-decoration:none; transition:var(--transition); }
+  .card-link:hover { color:var(--gold); }
+  .card-navy { background:var(--navy); border-color:transparent; }
+  .card-navy .card-title { color:var(--white); }
+  .card-navy .card-body { color:rgba(255,255,255,0.48); }
+  .card-navy .card-link { color:var(--gold); }
+  .card-navy::before { background:var(--gold); }
+  .card-grey { background:#FAFAFA; }
+
+  /* 06 DIVIDERS */
+  .div-std { height:1px; background:var(--grey-light); margin:20px 0; }
+  .div-gold { height:1px; background:linear-gradient(to right, transparent, var(--gold) 40%, transparent); margin:20px 0; }
+  .div-ornament { display:flex; align-items:center; gap:14px; margin:28px 0; }
+  .div-ornament::before, .div-ornament::after { content:''; flex:1; height:1px; background:var(--grey-light); }
+  .div-diamond { width:5px; height:5px; border:1px solid var(--gold); transform:rotate(45deg); flex-shrink:0; }
+
+  /* 07 TAGS */
+  .tags-row { display:flex; flex-wrap:wrap; gap:8px; }
+  .tag { font-size:8px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; padding:5px 12px; transition:var(--transition); cursor:pointer; }
+  .tag-navy { background:rgba(26,58,92,0.07); color:var(--navy); border:1px solid transparent; }
+  .tag-navy:hover { border-color:var(--navy); }
+  .tag-gold { background:rgba(201,169,110,0.10); color:#9A7040; border:1px solid transparent; }
+  .tag-gold:hover { border-color:var(--gold); }
+  .tag-outline { background:transparent; color:var(--grey-mid); border:1px solid var(--grey-light); }
+  .tag-outline:hover { border-color:var(--grey-mid); color:var(--grey-dark); }
+  .tag-soon { background:transparent; color:var(--gold); border:1px solid var(--gold); }
+
+  /* 08 FORMS */
+  .two-col { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+  .form-group { margin-bottom:18px; }
+  .form-label { display:block; font-size:8px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--grey-mid); margin-bottom:8px; }
+  .form-input { width:100%; padding:12px 15px; font-family:var(--font); font-size:13px; font-weight:300; color:var(--grey-dark); background:var(--white); border:1px solid var(--grey-light); outline:none; transition:var(--transition); border-radius:0; }
+  .form-input::placeholder { color:var(--grey-light); }
+  .form-input:focus { border-color:var(--navy); box-shadow:0 0 0 3px rgba(26,58,92,0.05); }
+
+  /* 09 HERO */
+  .hero { background:var(--navy); padding:100px 80px 72px; position:relative; overflow:hidden; min-height:520px; display:flex; flex-direction:column; justify-content:center; }
+  .hero::before { content:''; position:absolute; top:-160px; right:-160px; width:520px; height:520px; border-radius:50%; background:radial-gradient(circle, rgba(201,169,110,0.07) 0%, transparent 70%); pointer-events:none; }
+  .hero-line { width:1px; height:44px; background:linear-gradient(to bottom, var(--gold), transparent); margin-bottom:26px; }
+  .hero-eyebrow { font-size:9px; font-weight:600; letter-spacing:0.32em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; }
+  .hero-h1 { font-size:54px; font-weight:700; color:var(--white); line-height:1.07; letter-spacing:-0.01em; margin-bottom:22px; max-width:660px; }
+  .hero-h1 span { color:var(--gold); font-weight:100; }
+  .hero-sub { font-size:13px; font-weight:300; color:rgba(255,255,255,0.48); line-height:1.85; max-width:440px; margin-bottom:40px; letter-spacing:0.02em; }
+  .hero-actions { display:flex; gap:12px; }
+  .hero-metrics { display:flex; gap:44px; margin-top:52px; padding-top:32px; border-top:1px solid rgba(255,255,255,0.07); }
+  .metric-num { font-size:30px; font-weight:700; color:var(--white); line-height:1; margin-bottom:5px; }
+  .metric-num sup { color:var(--gold); font-size:16px; font-weight:300; }
+  .metric-label { font-size:8px; font-weight:400; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.32); }
+  .scroll-ind { position:absolute; bottom:32px; left:80px; display:flex; align-items:center; gap:12px; }
+  .scroll-line { width:34px; height:1px; background:var(--gold); opacity:0.55; }
+  .scroll-txt { font-size:8px; font-weight:500; letter-spacing:0.28em; text-transform:uppercase; color:rgba(255,255,255,0.22); }
+
+  /* 10 FOOTER */
+  .footer { background:var(--navy-deep); padding:56px 80px 34px; }
+  .footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr; gap:44px; margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.07); }
+  .f-logo-row { display:flex; align-items:center; gap:12px; }
+  .f-circle { width:32px; height:32px; border:1px solid rgba(201,169,110,0.35); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:600; letter-spacing:0.05em; color:var(--gold); }
+  .f-name { font-size:11px; font-weight:600; letter-spacing:0.20em; text-transform:uppercase; color:var(--white); }
+  .f-sub { font-size:7px; font-weight:300; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.26); }
+  .f-desc { font-size:11px; font-weight:300; color:rgba(255,255,255,0.36); line-height:1.85; margin-top:16px; max-width:248px; }
+  .f-tagline { font-size:12px; font-weight:100; letter-spacing:0.14em; color:var(--gold); margin-top:12px; }
+  .f-col-label { font-size:8px; font-weight:600; letter-spacing:0.26em; text-transform:uppercase; color:rgba(255,255,255,0.24); margin-bottom:16px; }
+  .f-links { list-style:none; }
+  .f-links li { margin-bottom:9px; }
+  .f-links a { font-size:11px; font-weight:300; color:rgba(255,255,255,0.48); text-decoration:none; transition:var(--transition); letter-spacing:0.03em; }
+  .f-links a:hover { color:var(--white); }
+  .f-badge { font-size:7px; font-weight:600; letter-spacing:0.1em; color:var(--gold); border:1px solid rgba(201,169,110,0.45); padding:1px 5px; margin-left:5px; vertical-align:middle; }
+  .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+  .f-copy { font-size:10px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:0.05em; }
+  .f-legal { display:flex; gap:18px; }
+  .f-legal a { font-size:10px; font-weight:300; color:rgba(255,255,255,0.18); text-decoration:none; letter-spacing:0.05em; transition:var(--transition); }
+  .f-legal a:hover { color:rgba(255,255,255,0.45); }
+</style>
+</head>
+<body>
+
+<div class="ds-header">
+  <p class="ds-header-label">Design System · v1.1 · Montserrat only · Cores corrigidas</p>
+  <h1>Open Capital</h1>
+  <p>Brand Identity & Component Library</p>
+</div>
+
+<div class="ds-page">
+
+  <!-- 01 COLOURS -->
+  <div class="ds-section">
+    <p class="ds-label">01</p>
+    <h2 class="ds-heading">Paleta de Cores</h2>
+    <div class="color-grid">
+      <div class="swatch"><div class="swatch-block" style="background:#1A3A5C"></div><div class="swatch-info"><div class="swatch-name">Deep Navy</div><div class="swatch-hex">#1A3A5C</div><div class="swatch-role">Primária · Hero BG · Headings · Estrutura</div></div></div>
+      <div class="swatch"><div class="swatch-block" style="background:#0D1F33"></div><div class="swatch-info"><div class="swatch-name">Navy Deep</div><div class="swatch-hex">#0D1F33</div><div class="swatch-role">Footer · profundidade</div></div></div>
+      <div class="swatch"><div class="swatch-block" style="background:#C9A96E"></div><div class="swatch-info"><div class="swatch-name">Soft Gold</div><div class="swatch-hex">#C9A96E</div><div class="swatch-role">Accent · usar com parcimónia</div></div></div>
+      <div class="swatch"><div class="swatch-block" style="background:#FFFFFF;border:1px solid #E5E5E5;"></div><div class="swatch-info"><div class="swatch-name">White</div><div class="swatch-hex">#FFFFFF</div><div class="swatch-role">Background principal de secções</div></div></div>
+      <div class="swatch"><div class="swatch-block" style="background:#E5E5E5"></div><div class="swatch-info"><div class="swatch-name">Light Grey</div><div class="swatch-hex">#E5E5E5</div><div class="swatch-role">Separadores · bordas · UI</div></div></div>
+      <div class="swatch"><div class="swatch-block" style="background:#7A7A7A"></div><div class="swatch-info"><div class="swatch-name">Mid Grey</div><div class="swatch-hex">#7A7A7A</div><div class="swatch-role">Texto secundário · captions</div></div></div>
+      <div class="swatch"><div class="swatch-block" style="background:#2A2A2A"></div><div class="swatch-info"><div class="swatch-name">Dark Grey</div><div class="swatch-hex">#2A2A2A</div><div class="swatch-role">Body text · texto corrido</div></div></div>
+    </div>
+  </div>
+
+  <!-- 02 TIPO -->
+  <div class="ds-section">
+    <p class="ds-label">02</p>
+    <h2 class="ds-heading">Tipografia : Montserrat (fonte única)</h2>
+    <div class="type-row"><div class="type-spec">Eyebrow / Label : Montserrat SemiBold 600 · 9–10px · tracking 0.28–0.32em · uppercase</div><div class="t-eyebrow">Capital & Financiamento · Advisory & Consultancy</div></div>
+    <div class="type-row"><div class="type-spec">H1 / Hero : Montserrat Bold 700 · 54–68px · tracking −0.01em</div><div class="t-h1">Capital, made clear.</div></div>
+    <div class="type-row"><div class="type-spec">H2 : Montserrat SemiBold 600 · 36px</div><div class="t-h2">Soluções de Capital & Financiamento</div></div>
+    <div class="type-row"><div class="type-spec">H3 : Montserrat Medium 500 · 22px</div><div class="t-h3">Estratégia Financeira & Fiscal</div></div>
+    <div class="type-row"><div class="type-spec">H4 / Subheading : Montserrat Medium 500 · 15px · tracking 0.07em</div><div class="t-h4">Portugal 2030 · Incentivos ao Investimento</div></div>
+    <div class="type-row"><div class="type-spec">Tagline : Montserrat Thin 100 · 19px · tracking 0.14em</div><div class="t-tagline">Menos burocracia. Mais clareza. Mais crescimento.</div></div>
+    <div class="type-row"><div class="type-spec">Body : Montserrat Regular 400 · 14px · line-height 1.85</div><div class="t-body">Num contexto onde o acesso a capital é frequentemente complexo, opaco e exigente em recursos, a Open Capital simplifica o processo : trazendo clareza, confiança e capacidade de execução.</div></div>
+    <div class="type-row"><div class="type-spec">Small / Caption : Montserrat Light 300 · 12px · tracking 0.04em</div><div class="t-small">Portugal 2030 · Fundos de Investimento · Benefícios Fiscais · Prémios de Inovação</div></div>
+  </div>
+
+  <!-- 03 NAVBAR -->
+  <div class="ds-section">
+    <p class="ds-label">03</p>
+    <h2 class="ds-heading">Navbar : duas variantes</h2>
+    <p class="ds-note">Variante clara : páginas com fundo branco</p>
+    <nav class="navbar" style="margin-bottom:20px;">
+      <a href="#" class="nav-logo">
+        <span class="nav-mark">OC</span>
+        <span class="nav-sep"></span>
+        <span class="nav-wordmark"><span class="nav-name">Open Capital</span><span class="nav-sub">Advisory & Consultancy</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#">Soluções</a></li>
+        <li><a href="#">Conhecimento</a></li>
+        <li><a href="#">Capital Simulator <span class="nav-badge">Em breve</span></a></li>
+        <li><a href="#">Tech2Business <span class="nav-badge">Em breve</span></a></li>
+        <li><a href="#">Parceiros</a></li>
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="#">Carreiras</a></li>
+      </ul>
+      <a href="#" class="nav-cta">Contactar</a>
+    </nav>
+    <p class="ds-note">Variante escura : hero sections com fundo Navy</p>
+    <nav class="navbar navbar-dark">
+      <a href="#" class="nav-logo">
+        <span class="nav-mark nav-mark-light">OC</span>
+        <span class="nav-sep nav-sep-light"></span>
+        <span class="nav-wordmark"><span class="nav-name nav-name-light">Open Capital</span><span class="nav-sub nav-sub-light">Advisory & Consultancy</span></span>
+      </a>
+      <ul class="nav-links nav-links-light">
+        <li><a href="#">Soluções</a></li>
+        <li><a href="#">Conhecimento</a></li>
+        <li><a href="#">Capital Simulator <span class="nav-badge">Em breve</span></a></li>
+        <li><a href="#">Tech2Business <span class="nav-badge">Em breve</span></a></li>
+        <li><a href="#">Parceiros</a></li>
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="#">Carreiras</a></li>
+      </ul>
+      <a href="#" class="nav-cta nav-cta-light">Contactar</a>
+    </nav>
+    <p class="ds-note" style="margin-top:10px;">⚠️ "OC" será substituído pelo logótipo real nas páginas.</p>
+  </div>
+
+  <!-- 04 BOTÕES -->
+  <div class="ds-section">
+    <p class="ds-label">04</p>
+    <h2 class="ds-heading">Botões & CTAs</h2>
+    <p class="ds-note">Fundo claro</p>
+    <div class="btn-row">
+      <button class="btn btn-primary">Explorar Soluções</button>
+      <button class="btn btn-outline">Ver Soluções</button>
+      <button class="btn btn-gold">Contactar</button>
+      <button class="btn btn-text">Saber mais</button>
+    </div>
+    <div class="on-dark">
+      <p class="ds-note" style="width:100%;color:rgba(255,255,255,0.28);margin:0 0 8px;">Fundo Navy</p>
+      <button class="btn btn-primary">Explorar Soluções</button>
+      <button class="btn btn-ghost">Conhecer a Open Capital</button>
+      <button class="btn btn-gold">Contactar</button>
+      <button class="btn btn-text" style="color:rgba(255,255,255,0.45);">Saber mais</button>
+    </div>
+  </div>
+
+  <!-- 05 CARDS -->
+  <div class="ds-section">
+    <p class="ds-label">05</p>
+    <h2 class="ds-heading">Cards : três estilos</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><rect x="1" y="1" width="32" height="32" stroke="#E5E5E5" stroke-width="1"/><path d="M9 17 L17 9 L25 17 L17 25 Z" stroke="#1A3A5C" stroke-width="1.2" fill="none"/><circle cx="17" cy="17" r="2.5" fill="#C9A96E"/></svg></div>
+        <div class="card-eyebrow">Capital & Financiamento</div>
+        <div class="card-title">Estruturação de Financiamento Público</div>
+        <div class="card-body">Identificamos e estruturamos o acesso ao capital mais adequado a cada fase de crescimento da empresa.</div>
+        <a href="#" class="card-link">Saber mais →</a>
+      </div>
+      <div class="card card-navy">
+        <div class="card-icon"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><rect x="1" y="1" width="32" height="32" stroke="rgba(201,169,110,0.35)" stroke-width="1"/><path d="M9 17 L14 22 L25 11" stroke="#C9A96E" stroke-width="1.2" fill="none" stroke-linecap="round"/></svg></div>
+        <div class="card-eyebrow">Portugal 2030</div>
+        <div class="card-title">Programas de Incentivo ao Investimento</div>
+        <div class="card-body">Apoio completo na estruturação, candidatura e acompanhamento de projetos elegíveis aos fundos europeus.</div>
+        <a href="#" class="card-link">Explorar →</a>
+      </div>
+      <div class="card card-grey">
+        <div class="card-icon"><svg width="34" height="34" viewBox="0 0 34 34" fill="none"><circle cx="17" cy="17" r="15" stroke="#E5E5E5" stroke-width="1"/><path d="M17 6 L20 13 L28 13 L22 18 L24 26 L17 21 L10 26 L12 18 L6 13 L14 13 Z" stroke="#C9A96E" stroke-width="1" fill="none" stroke-linejoin="round"/></svg></div>
+        <div class="card-eyebrow">Inovação & I&D</div>
+        <div class="card-title">Prémios de Inovação</div>
+        <div class="card-body">Transformamos projetos em candidaturas estruturadas com elevada probabilidade de aprovação.</div>
+        <a href="#" class="card-link">Saber mais →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 06 DIVIDERS -->
+  <div class="ds-section">
+    <p class="ds-label">06</p>
+    <h2 class="ds-heading">Separadores & Ornamentos</h2>
+    <p class="ds-note">Standard</p><div class="div-std"></div>
+    <p class="ds-note">Gold gradient</p><div class="div-gold"></div>
+    <p class="ds-note">Diamond ornament</p><div class="div-ornament"><span class="div-diamond"></span></div>
+  </div>
+
+  <!-- 07 TAGS -->
+  <div class="ds-section">
+    <p class="ds-label">07</p>
+    <h2 class="ds-heading">Tags & Badges</h2>
+    <div class="tags-row">
+      <span class="tag tag-navy">Portugal 2030</span>
+      <span class="tag tag-navy">Inovação</span>
+      <span class="tag tag-navy">Estratégia</span>
+      <span class="tag tag-gold">Destaque</span>
+      <span class="tag tag-outline">Benefícios Fiscais</span>
+      <span class="tag tag-outline">Internacionalização</span>
+      <span class="tag tag-soon">Em breve</span>
+    </div>
+  </div>
+
+  <!-- 08 FORMS -->
+  <div class="ds-section">
+    <p class="ds-label">08</p>
+    <h2 class="ds-heading">Formulários</h2>
+    <div class="two-col">
+      <div>
+        <p class="ds-note">Fundo branco</p>
+        <div class="form-group"><label class="form-label">Nome da Empresa</label><input class="form-input" type="text" placeholder="Ex: Empresa, Lda."></div>
+        <div class="form-group"><label class="form-label">Email de Contacto</label><input class="form-input" type="email" placeholder="email@empresa.pt"></div>
+        <button class="btn btn-primary" style="margin-top:6px;">Submeter</button>
+      </div>
+      <div style="background:var(--navy);padding:28px;">
+        <p class="ds-note" style="color:rgba(255,255,255,0.28);">Fundo Navy</p>
+        <div class="form-group"><label class="form-label" style="color:rgba(255,255,255,0.35);">Nome da Empresa</label><input class="form-input" type="text" placeholder="Ex: Empresa, Lda." style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.12);color:var(--white);"></div>
+        <div class="form-group"><label class="form-label" style="color:rgba(255,255,255,0.35);">Email de Contacto</label><input class="form-input" type="email" placeholder="email@empresa.pt" style="background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.12);color:var(--white);"></div>
+        <button class="btn btn-gold" style="margin-top:6px;">Submeter</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 09 HERO -->
+  <div class="ds-section">
+    <p class="ds-label">09</p>
+    <h2 class="ds-heading">Hero Section : Preview</h2>
+    <div class="hero">
+      <div class="hero-line"></div>
+      <p class="hero-eyebrow">Advisory & Consultancy · Portugal</p>
+      <h1 class="hero-h1">Transformamos ambição<br>em crescimento <span>estruturado.</span></h1>
+      <p class="hero-sub">Simplificamos o acesso a capital e transformamos processos complexos em caminhos claros, executáveis e orientados a resultados.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary">Explorar Soluções</button>
+        <button class="btn btn-ghost">Conhecer a Open Capital</button>
+      </div>
+      <div class="hero-metrics">
+        <div><div class="metric-num">5<sup>+</sup></div><div class="metric-label">Áreas de Atuação</div></div>
+        <div><div class="metric-num">360<sup>°</sup></div><div class="metric-label">Execução Integrada</div></div>
+        <div><div class="metric-num">2</div><div class="metric-label">Ferramentas AI &nbsp;<span class="nav-badge">Em breve</span></div></div>
+      </div>
+      <div class="scroll-ind"><div class="scroll-line"></div><span class="scroll-txt">Scroll</span></div>
+    </div>
+  </div>
+
+  <!-- 10 FOOTER -->
+  <div class="ds-section">
+    <p class="ds-label">10</p>
+    <h2 class="ds-heading">Footer</h2>
+    <div class="footer">
+      <div class="footer-grid">
+        <div>
+          <div class="f-logo-row">
+            <div class="f-circle">OC</div>
+            <div><div class="f-name">Open Capital</div><div class="f-sub">Advisory & Consultancy</div></div>
+          </div>
+          <p class="f-desc">Simplificamos o acesso a capital e transformamos processos complexos em caminhos claros, executáveis e orientados a resultados.</p>
+          <div class="f-tagline">Capital, made clear.</div>
+        </div>
+        <div>
+          <div class="f-col-label">Soluções</div>
+          <ul class="f-links"><li><a href="#">Portugal 2030</a></li><li><a href="#">Fundos de Investimento</a></li><li><a href="#">Benefícios Fiscais</a></li><li><a href="#">Prémios de Inovação</a></li></ul>
+        </div>
+        <div>
+          <div class="f-col-label">Plataforma</div>
+          <ul class="f-links"><li><a href="#">Capital Simulator <span class="f-badge">Em breve</span></a></li><li><a href="#">Tech2Business <span class="f-badge">Em breve</span></a></li><li><a href="#">Conhecimento</a></li><li><a href="#">Parceiros</a></li></ul>
+        </div>
+        <div>
+          <div class="f-col-label">Empresa</div>
+          <ul class="f-links"><li><a href="#">Sobre Nós</a></li><li><a href="#">Equipa</a></li><li><a href="#">Carreiras</a></li><li><a href="#">Contacto</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="f-copy">© 2009 Open Capital Advisory & Consultancy. Todos os direitos reservados.</div>
+        <div class="f-legal"><a href="#">Privacidade</a><a href="#">Termos</a><a href="#">Cookies</a></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
