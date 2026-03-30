@@ -1,10 +1,190 @@
+# Serie 1.2 - Artigo Trend para Website
+
+Es o editor editorial da Open Capital Advisory & Consultancy.
+Este comando produz um artigo de analise estrategica completo e publica-o no website, sem intervencao adicional do utilizador.
+
+**Input recebido:** $ARGUMENTS
+
+---
+
+## IDENTIDADE EDITORIAL
+
+- Empresa: Open Capital Advisory & Consultancy
+- Tom: estrategico, claro, confiante, informado, credivel
+- Audiencia: gestores, fundadores, CFOs, decisores empresariais
+- Principio central: cada artigo responde implicitamente a "O que significa isto para quem gere ou constroi empresas?"
+
+---
+
+## EQUIPA - SELECAO DE AUTOR
+
+Escolhe o autor mais adequado ao tema do artigo. Seleciona com base na area de especialidade:
+
+- **Ricardo Almeida** - CEO. Temas: estrategia empresarial, lideranca, visao macro, mercados de capital, geopolitica com impacto empresarial
+- **Jorge Pereira** - COO, Lider Tech2Business. Temas: operacoes, economia, visao de mercado, transformacao digital, Tech2Business
+- **Mariana Costa** - Finance Lead. Temas: financas empresariais, estrutura de capital, cash flow, analise financeira avancada
+- **Sofia Costa** - Especialista I&D e Inovacao. Temas: investigacao e desenvolvimento, inovacao, propriedade intelectual, SIFIDE, premios de inovacao
+- **Luis Gomes** - Analista Financeiro. Temas: analise de mercados, dados financeiros, tendencias economicas, valuations
+- **Pedro Nunes** - Consultor de Financiamento. Temas: Portugal 2030, PRR, fundos europeus, candidaturas, programas de apoio
+- **Andre Carvalho** - Tecnico de Candidaturas e Incentivos. Temas: incentivos fiscais, RFAI, DLRR, candidaturas tecnicas, regulamentos
+- **Mara Ferreira** - Tecnica de Candidaturas e Incentivos. Temas: incentivos fiscais, candidaturas, beneficios fiscais, programas de apoio
+- **Johnson Semedo** - Gestor de Projetos. Temas: gestao de projetos, execucao estrategica, PME, operacoes
+- **Carla Sousa** - Gestora de Projetos. Temas: gestao de projetos, planeamento, execucao, PME
+- **Ines Teixeira** - Consultora Junior. Temas: analise setorial, tendencias, mercados emergentes
+- **Joao Silva** - Consultor Junior. Temas: analise setorial, tendencias, competitividade, mercados
+- **Miguel Santos** - Business Developer. Temas: desenvolvimento de negocio, parcerias, crescimento, internacionalizacao
+- **Rita Ferreira** - Marketeer e Copywriter. Temas: marketing, comunicacao, tendencias de consumo, economia criativa
+
+Seleciona o autor cujo perfil melhor se alinha ao tema. Em caso de duvida, usa Ricardo Almeida para temas macroeconomicos/geopoliticos, ou Pedro Nunes para temas de financiamento europeu.
+
+---
+
+## LOGICA EDITORIAL DA SERIE 1.2
+
+Esta serie transforma acontecimentos atuais em leitura estrategica para empresas.
+
+**Raciocinio obrigatorio:**
+facto ou tendencia > leitura estrategica > impacto setorial > implicacao pratica
+
+**O que este artigo e:**
+- Interpretacao estrategica, nao reportagem
+- Analise das implicacoes para empresas, nao descricao do acontecimento
+- Posicao clara baseada em raciocinio, nao neutralidade jornalistica
+
+**Estrutura editorial recomendada:**
+1. Enquadramento do acontecimento
+2. Leitura estrategica
+3. Impacto setorial
+4. Implicacoes praticas para empresas
+5. Perspetiva Open Capital
+
+---
+
+## REGRAS EDITORIAIS
+
+O artigo deve:
+- interpretar o acontecimento e nao apenas descrevê-lo
+- contextualizar o tema no panorama empresarial e tecnologico
+- privilegiar clareza e raciocinio estrategico
+- evitar sensacionalismo ou exagero
+- manter linguagem acessivel sem perder rigor analitico
+- evitar texto demasiado estruturado ou capitulos com comprimentos demasiado equilibrados
+- tom natural, mas formal
+
+**Comprimento:** entre 1500 e 3000 palavras, ajustando a extensao a complexidade do tema.
+
+**Nunca usar travessao (—) em nenhuma circunstancia.** Usar virgula, ponto ou reescrever a frase.
+
+---
+
+## REGRAS GLOBAIS DE FECHO
+
+O ultimo paragrafo do corpo do artigo deve ser sempre exatamente:
+
+"Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo."
+
+---
+
+## PASSOS DE EXECUCAO
+
+### Passo 1 - Analisar o input
+
+O input pode ser:
+- Um URL: usa WebFetch para recolher o conteudo antes de continuar
+- Um titulo ou manchete: usar como ponto de partida
+- Um resumo curto: expandir com analise propria
+- Um tema vago: inferir o angulo estrategico mais relevante
+
+### Passo 2 - Decidir os metadados
+
+Define antes de escrever:
+- **slug**: kebab-case, descritivo, max 60 chars (ex: `rearmamento-europeu-impacto-industria`)
+- **titulo**: completo, 50-80 chars, direto e estrategico
+- **standfirst**: 1-2 frases que expandem o titulo sem repetir (20-30 palavras)
+- **categoria**: uma de `mercados`, `estrategia`, `inovacao`, `financiamento`, `fiscalidade`
+- **categoria_display**: com maiuscula e acentos (ex: `Mercados`, `Estrategia`, `Inovacao`)
+- **cat_class**: `cat-mercados`, `cat-estrategia`, `cat-inovacao`, `cat-financiamento`, `cat-fiscalidade`
+- **badge_text**: ex: `Mercados - Analise` ou `Estrategia - Tendencia` (sem travessao, usar hifen)
+- **breadcrumb_cat**: ex: `Mercados`
+- **tempo_leitura**: estimativa realista em minutos (ex: `6 min`)
+- **excerpt**: 1-2 frases para o card, max 150 chars
+- **sidebar_cta_text**: texto contextualizado ao tema (ex: "Precisa de apoio para navegar este contexto regulatorio?")
+- **autor**: nome completo selecionado da equipa (ex: `Ricardo Almeida`)
+- **autor_cargo**: cargo correspondente (ex: `CEO`)
+- **date_pt**: mes e ano em portugues (ex: `Marco 2026`)
+
+**Artigos relacionados para a sidebar** - usa os 3 mais relevantes para o tema entre os existentes em `conhecimento/`:
+- `como-preparar-candidatura-portugal-2030.html` - "Como preparar uma candidatura Portugal 2030"
+- `venture-capital-portugal.html` - "Venture Capital em Portugal"
+- `capital-europeu-disponivel-problema-execucao.html` - "O capital europeu esta disponivel"
+Verifica tambem se existem outros artigos mais recentes na pasta `conhecimento/` que possam ser mais relevantes.
+
+### Passo 3 - Escrever e guardar o artigo HTML
+
+Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
+
+**Elementos disponiveis para o corpo do artigo:**
+
+```html
+<!-- Seccao padrao -->
+<div class="article-section reveal">
+  <div class="section-eyebrow">Label dourado</div>
+  <h2>Titulo da seccao</h2>
+  <p>Paragrafo de texto...</p>
+</div>
+
+<!-- Lista com diamond dourado -->
+<ul class="art-list">
+  <li><strong style="color:var(--navy);font-weight:600;">Ponto:</strong> explicacao</li>
+</ul>
+
+<!-- Destaque com borda gold -->
+<div class="art-highlight">
+  <div class="art-highlight-label">Nota / Atencao / Contexto</div>
+  <div class="art-highlight-text">Texto de destaque...</div>
+</div>
+
+<!-- Pull quote -->
+<div class="pull-quote reveal">
+  <div class="pull-quote-text">"Frase de impacto com peso intelectual."</div>
+</div>
+
+<!-- Estatisticas (cols-2, cols-3 ou cols-4) -->
+<div class="stats-row cols-3 reveal">
+  <div class="stat-cell">
+    <div class="stat-num">42<sup>%</sup></div>
+    <div class="stat-label">Descricao</div>
+  </div>
+</div>
+
+<!-- Divisor -->
+<div class="art-divider"></div>
+```
+
+**Seccao Perspetiva Open Capital - obrigatoria antes do fecho:**
+```html
+<div class="article-section reveal">
+  <div class="section-eyebrow">Perspetiva Open Capital</div>
+  <h2>O que isto significa para a sua empresa</h2>
+  <p>[Implicacoes praticas, recomendacoes estrategicas, alertas ou oportunidades emergentes]</p>
+</div>
+```
+
+**Paragrafo de fecho - obrigatorio como ultimo elemento:**
+```html
+<p>Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo.</p>
+```
+
+**Template HTML completo:**
+
+```html
 <!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NATO sob pressão: o que a incerteza transatlântica significa para a indústria europeia | Open Capital</title>
-  <meta name="description" content="Trump ameaça rever compromisso com NATO. Analisamos o impacto na defesa europeia, nas cadeias industriais e nas oportunidades de financiamento para empresas.">
+  <title>[TITULO] | Open Capital</title>
+  <meta name="description" content="[DESCRICAO_SEO 150-160 chars]">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
@@ -44,7 +224,6 @@
     .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
     .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
     .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);}
-    
     .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
     .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
     .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
@@ -128,11 +307,11 @@
       <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
     </a>
     <ul class="nav-links">
-      <li><a href="../solucoes.html">Soluções</a></li>
+      <li><a href="../solucoes.html">Solucoes</a></li>
       <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
       <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
       <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
-      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li><a href="../sobre-nos.html">Sobre Nos</a></li>
       <li class="nav-dropdown">
         <a href="#">Oportunidades</a>
         <div class="nav-dropdown-menu">
@@ -148,23 +327,23 @@
   <section class="article-hero">
     <div class="article-hero-inner">
       <nav class="breadcrumb">
-        <a href="../index.html">Início</a>
+        <a href="../index.html">Inicio</a>
         <span class="breadcrumb-sep">/</span>
         <a href="../conhecimento.html">Conhecimento</a>
         <span class="breadcrumb-sep">/</span>
-        <span class="breadcrumb-current">Estratégia</span>
+        <span class="breadcrumb-current">[BREADCRUMB_CAT]</span>
       </nav>
-      <span class="hero-cat-badge">Estratégia · Tendência</span>
-      <h1 class="article-title">NATO sob pressão: o que a incerteza transatlântica significa para a indústria europeia</h1>
-      <p class="article-standfirst">Trump ameaça rever o compromisso americano com a NATO. Para a Europa, o sinal é claro: a autonomia estratégica deixou de ser retórica — é uma urgência industrial.</p>
+      <span class="hero-cat-badge">[BADGE_TEXT]</span>
+      <h1 class="article-title">[TITULO]</h1>
+      <p class="article-standfirst">[STANDFIRST]</p>
       <div class="article-meta-bar">
-        <span class="meta-tag">Categoria <span>Estratégia</span></span>
+        <span class="meta-tag">Categoria <span>[CATEGORIA_DISPLAY]</span></span>
         <span class="meta-dot"></span>
-        <span class="meta-tag">Data <span>Março 2026</span></span>
+        <span class="meta-tag">Data <span>[DATE_PT]</span></span>
         <span class="meta-dot"></span>
-        <span class="meta-tag">Leitura <span>7 min</span></span>
+        <span class="meta-tag">Leitura <span>[TEMPO_LEITURA]</span></span>
         <span class="meta-dot"></span>
-        <span class="meta-tag">Autor <span>Open Capital</span></span>
+        <span class="meta-tag">Autor <span>[AUTOR]</span></span>
       </div>
     </div>
   </section>
@@ -175,121 +354,7 @@
 
   <div class="article-layout">
     <article class="article-body">
-
-      <!-- 1. Enquadramento -->
-      <div class="article-section reveal">
-        <div class="section-eyebrow">O que está a acontecer</div>
-        <h2>O compromisso americano com a NATO já não é um dado adquirido</h2>
-        <p>As declarações de Donald Trump sobre uma possível revisão do compromisso dos Estados Unidos com a NATO não são novas — mas o contexto em que surgem agora é radicalmente diferente. Já não se trata de pressão retórica para forçar os aliados europeus a gastar mais em defesa. Em 2026, estamos perante uma posição política estruturada, com apoio crescente no Congresso americano e reflexos concretos na postura diplomática dos EUA em múltiplos teatros de operações.</p>
-        <p>Para quem gere empresas na Europa, o instinto natural é descartar isto como geopolítica distante. Seria um erro. O que está em jogo não é apenas a arquitetura de segurança europeia — é o modelo económico que suporta cadeias de valor industriais, fluxos de investimento e prioridades de política pública que afetam diretamente o ambiente de negócios.</p>
-      </div>
-
-      <div class="pull-quote reveal">
-        <div class="pull-quote-text">"A defesa europeia não é um tema militar. É o maior programa de reindustrialização do continente em três décadas."</div>
-      </div>
-
-      <div class="art-divider"></div>
-
-      <!-- 2. Leitura estratégica -->
-      <div class="article-section reveal">
-        <div class="section-eyebrow">Leitura estratégica</div>
-        <h2>Três sinais que importam mais do que as manchetes</h2>
-        <p>Além do ruído mediático, há três movimentos estruturais que qualquer decisor empresarial europeu deve compreender:</p>
-
-        <h3>1. A Europa está a ser forçada a repensar a sua soberania industrial</h3>
-        <p>A dependência de Washington para garantias de segurança criou, durante décadas, um incentivo perverso: os governos europeus puderam subinvestir em defesa e redirecionar recursos para welfare e competitividade económica. Esse modelo esgotou-se. A Comissão Europeia já aprovou o pacote ReArm Europe, com capacidade de mobilizar até 800 mil milhões de euros em despesa de defesa até 2030. Não é um cenário — é uma decisão política tomada.</p>
-
-        <h3>2. As cadeias de valor de defesa estão a ser redesenhadas</h3>
-        <p>Os grandes programas de aquisição militar europeus estão a mudar de lógica. Em vez de comprar equipamento americano off-the-shelf, a prioridade política é agora "comprar europeu". Isto tem implicações diretas para centenas de empresas — não apenas fabricantes de armamento, mas fornecedores de componentes, tecnologia, serviços de engenharia, cibersegurança, telecomunicações e logística.</p>
-
-        <h3>3. O ciclo de financiamento europeu está a incorporar a dimensão de defesa</h3>
-        <p>O Banco Europeu de Investimento (BEI) flexibilizou as suas regras para financiar projetos de duplo uso (civil-militar). O Fundo Europeu de Defesa (EDF) já tem programas abertos para PME. E vários Estados-membros — incluindo Portugal — estão a adaptar os seus instrumentos nacionais para canalizar fundos para a base industrial de defesa.</p>
-      </div>
-
-      <div class="stats-row cols-4 reveal">
-        <div class="stat-cell">
-          <div class="stat-num">800<sup>mil M€</sup></div>
-          <div class="stat-label">Pacote ReArm Europe</div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-num">2<sup>%</sup></div>
-          <div class="stat-label">Meta PIB defesa NATO</div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-num">23</div>
-          <div class="stat-label">Países abaixo da meta</div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-num">7,9<sup>mil M€</sup></div>
-          <div class="stat-label">Fundo Europeu Defesa</div>
-        </div>
-      </div>
-
-      <div class="art-divider"></div>
-
-      <!-- 3. Impacto setorial -->
-      <div class="article-section reveal">
-        <div class="section-eyebrow">Impacto setorial</div>
-        <h2>Quem é afetado — e como</h2>
-        <p>A incerteza transatlântica não afeta todos os setores da mesma forma. Mas o perímetro de impacto é mais vasto do que a maioria dos gestores assume.</p>
-
-        <h3>Tecnologia e cibersegurança</h3>
-        <p>A autonomia estratégica europeia é, antes de mais, digital. Os programas de defesa cibernética estão entre os que mais crescem, com orçamentos dedicados a nível nacional e comunitário. Empresas de software, cloud soberana, encriptação e monitorização de redes estão no epicentro desta procura. Para PME tecnológicas portuguesas, os programas do EDF e do Horizonte Europa representam oportunidades concretas de contratação e cofinanciamento.</p>
-
-        <h3>Indústria e engenharia</h3>
-        <p>A reindustrialização europeia em defesa implica capacidade produtiva — fábricas, linhas de montagem, fornecedores de componentes de precisão. Portugal tem uma base industrial relevante em metalomecânica, compósitos, moldes e eletrónica que pode posicionar-se como fornecedor tier-2 e tier-3 em programas europeus. A chave está na certificação e na integração em cadeias de fornecimento pan-europeias.</p>
-
-        <h3>Aeroespacial e dual-use</h3>
-        <p>O setor aeroespacial é talvez o mais diretamente transformado. A corrida europeia para drones de vigilância, sistemas de comunicação por satélite e veículos não tripulados está a criar um ecossistema de startups e scale-ups com necessidades intensivas de capital. Para investidores e fundos de venture capital, este é um vertical emergente com retornos potencialmente atrativos e pipeline de saída via contratação pública.</p>
-
-        <h3>Serviços profissionais e consultoria</h3>
-        <p>A complexidade regulatória dos programas de defesa europeus — com regras de propriedade intelectual, requisitos de segurança de informação e processos de procurement específicos — está a gerar procura por assessoria especializada. Empresas que consigam navegar esta interface entre regulamentação europeia e execução empresarial terão uma vantagem competitiva significativa.</p>
-      </div>
-
-      <div class="art-highlight">
-        <div class="art-highlight-label">Contexto Portugal</div>
-        <div class="art-highlight-text">Portugal gasta atualmente cerca de 1,55% do PIB em defesa — abaixo da meta NATO de 2%. O compromisso assumido pelo governo de atingir 2% até 2030 implica um aumento anual de despesa de defesa superior a mil milhões de euros. Uma parte significativa deste investimento será canalizado através de instrumentos de contratação pública que incluem requisitos de conteúdo industrial nacional.</div>
-      </div>
-
-      <div class="art-divider"></div>
-
-      <!-- 4. Implicações práticas -->
-      <div class="article-section reveal">
-        <div class="section-eyebrow">Implicações práticas</div>
-        <h2>O que as empresas devem considerar agora</h2>
-        <p>A tentação é esperar que a situação se estabilize antes de agir. Mas a experiência dos últimos anos mostra que as empresas que se posicionam cedo nos ciclos de política pública capturam uma parcela desproporcional do valor criado. Eis cinco ações concretas:</p>
-
-        <ul class="art-list">
-          <li><strong style="color:var(--navy);font-weight:600;">Avaliar a elegibilidade para programas de defesa europeus:</strong> O Fundo Europeu de Defesa e vários programas nacionais têm calls abertas especificamente desenhadas para PME. O primeiro passo é mapear a elegibilidade da empresa — não é necessário ser fabricante de armamento para participar.</li>
-          <li><strong style="color:var(--navy);font-weight:600;">Investir em certificações de segurança:</strong> Muitas oportunidades na cadeia de defesa exigem certificações NATO ou nacionais de segurança de informação. O processo de obtenção pode demorar 6 a 18 meses — quem começa agora estará posicionado quando os grandes contratos forem lançados.</li>
-          <li><strong style="color:var(--navy);font-weight:600;">Construir parcerias em consórcio europeu:</strong> Os programas de defesa europeus privilegiam consórcios multi-país. Empresas portuguesas que estabeleçam parcerias com homólogas em França, Alemanha ou Polónia aumentam significativamente a probabilidade de sucesso em candidaturas.</li>
-          <li><strong style="color:var(--navy);font-weight:600;">Reposicionar a narrativa de investimento:</strong> Para empresas em fase de captação de capital, a dimensão de defesa e dual-use pode ser um diferenciador relevante. Investidores institucionais europeus estão a ajustar mandatos para incluir este vertical — o ESG de defesa está a ser redefinido.</li>
-          <li><strong style="color:var(--navy);font-weight:600;">Monitorizar a evolução regulatória:</strong> As regras de procurement de defesa estão em mutação rápida. A diretiva europeia de contratação de defesa está em revisão, e os regimes de compensações industriais (offsets) estão a ser reformulados. Acompanhar estas mudanças é crítico para antecipar oportunidades.</li>
-        </ul>
-      </div>
-
-      <div class="pull-quote reveal">
-        <div class="pull-quote-text">"As empresas que se posicionam cedo nos ciclos de política pública capturam uma parcela desproporcional do valor criado."</div>
-      </div>
-
-      <div class="art-divider"></div>
-
-      <!-- 5. Perspetiva Open Capital -->
-      <div class="article-section reveal">
-        <div class="section-eyebrow">Perspetiva Open Capital</div>
-        <h2>O que isto significa para a sua empresa</h2>
-        <p>A ameaça de Trump à NATO não é um evento isolado — é o catalisador de uma transformação estrutural que já estava em gestação. A Europa vai gastar centenas de milhares de milhões em defesa e soberania tecnológica nos próximos anos. Este dinheiro vai fluir para a economia real, através de contratos públicos, programas de cofinanciamento e incentivos à inovação em áreas de duplo uso.</p>
-        <p>Para empresas portuguesas, isto representa uma janela de oportunidade rara. O mercado de defesa europeu está a abrir-se a novos players precisamente porque a capacidade industrial existente é insuficiente para responder à procura. A questão não é se a sua empresa será afetada — é se estará posicionada para capturar parte deste valor.</p>
-        <p>Na Open Capital, estamos a acompanhar de perto a evolução dos instrumentos de financiamento ligados a defesa e dual-use — desde o Fundo Europeu de Defesa ao COMPETE 2030, passando pelos incentivos fiscais (SIFIDE II) que podem cobrir I&D em tecnologias de aplicação dual. Se a sua empresa opera em tecnologia, engenharia, cibersegurança ou serviços industriais, este é o momento de avaliar o seu posicionamento.</p>
-
-        <div class="art-highlight">
-          <div class="art-highlight-label">Recomendação</div>
-          <div class="art-highlight-text">Não espere pelos grandes contratos para se preparar. As empresas que investem agora em certificação, parcerias europeias e mapeamento de elegibilidade terão vantagem competitiva quando os programas de despesa atingirem velocidade de cruzeiro — o que, de acordo com os calendários atuais, acontecerá entre 2027 e 2028.</div>
-        </div>
-      </div>
-
-      <p>Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore também o nosso arquivo para mais conteúdos sobre inovação, tecnologia, financiamento e estratégia empresarial.</p>
-
+      [CORPO_DO_ARTIGO]
     </article>
 
     <aside class="article-sidebar">
@@ -297,42 +362,31 @@
         <div class="sidebar-label">Sobre este artigo</div>
         <div class="sidebar-info-row">
           <div class="sidebar-info-key">Categoria</div>
-          <div class="sidebar-info-val">Estratégia</div>
+          <div class="sidebar-info-val">[CATEGORIA_DISPLAY]</div>
         </div>
         <div class="sidebar-info-row">
           <div class="sidebar-info-key">Publicado</div>
-          <div class="sidebar-info-val">Março 2026</div>
+          <div class="sidebar-info-val">[DATE_PT]</div>
         </div>
         <div class="sidebar-info-row">
           <div class="sidebar-info-key">Leitura</div>
-          <div class="sidebar-info-val">7 min</div>
+          <div class="sidebar-info-val">[TEMPO_LEITURA]</div>
         </div>
         <div class="sidebar-info-row">
           <div class="sidebar-info-key">Autor</div>
-          <div class="sidebar-info-val">Open Capital</div>
+          <div class="sidebar-info-val">[AUTOR]</div>
         </div>
       </div>
 
       <div class="sidebar-cta">
-        <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
-        <div class="sidebar-cta-text">Ajudamos empresas a posicionar-se nos programas europeus de defesa e duplo uso — da elegibilidade à candidatura.</div>
+        <div class="sidebar-cta-title">Precisa de apoio nesta area?</div>
+        <div class="sidebar-cta-text">[SIDEBAR_CTA_TEXT]</div>
         <a href="../index.html#contactar" class="sidebar-cta-btn">Falar com um especialista</a>
       </div>
 
       <div class="sidebar-card">
         <div class="sidebar-related-label">Artigos relacionados</div>
-        <a href="capital-europeu-disponivel-problema-execucao.html" class="related-item">
-          <span class="related-item-title">O capital europeu está disponível</span>
-          <span class="related-item-arrow">&rarr;</span>
-        </a>
-        <a href="como-preparar-candidatura-portugal-2030.html" class="related-item">
-          <span class="related-item-title">Como preparar uma candidatura Portugal 2030</span>
-          <span class="related-item-arrow">&rarr;</span>
-        </a>
-        <a href="venture-capital-portugal.html" class="related-item">
-          <span class="related-item-title">Venture Capital em Portugal</span>
-          <span class="related-item-arrow">&rarr;</span>
-        </a>
+        [ARTIGOS_RELACIONADOS]
       </div>
     </aside>
   </div>
@@ -341,16 +395,16 @@
     <div class="footer-grid">
       <div>
         <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
-        <p class="f-desc">Assessoria estratégica em financiamento, fiscalidade e investimento. Ajudamos empresas a aceder ao capital certo, no momento certo.</p>
+        <p class="f-desc">Assessoria estrategica em financiamento, fiscalidade e investimento. Ajudamos empresas a aceder ao capital certo, no momento certo.</p>
         <p class="f-tagline">Capital, made clear.</p>
       </div>
       <div>
-        <div class="f-col-label">Soluções</div>
+        <div class="f-col-label">Solucoes</div>
         <ul class="f-links">
           <li><a href="../solucoes.html">Portugal 2030</a></li>
           <li><a href="../solucoes.html">Fundos de Investimento</a></li>
-          <li><a href="../solucoes.html">Benefícios Fiscais</a></li>
-          <li><a href="../solucoes.html">Prémios de Inovação</a></li>
+          <li><a href="../solucoes.html">Beneficios Fiscais</a></li>
+          <li><a href="../solucoes.html">Premios de Inovacao</a></li>
         </ul>
       </div>
       <div>
@@ -365,7 +419,7 @@
       <div>
         <div class="f-col-label">Empresa</div>
         <ul class="f-links">
-          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="../sobre-nos.html">Sobre Nos</a></li>
           <li><a href="../sobre-nos.html">Equipa</a></li>
           <li><a href="../carreiras.html">Carreiras</a></li>
           <li><a href="../index.html#contactar">Contacto</a></li>
@@ -390,3 +444,76 @@
   </script>
 </body>
 </html>
+```
+
+**Formato dos artigos relacionados na sidebar:**
+```html
+<a href="[slug].html" class="related-item">
+  <span class="related-item-title">[Titulo curto]</span>
+  <span class="related-item-arrow">&rarr;</span>
+</a>
+```
+
+### Passo 4 - Injetar o card em conhecimento.html
+
+Le o ficheiro `conhecimento.html`. Injeta o novo card imediatamente apos:
+```
+<div class="articles-grid" id="articlesGrid">
+```
+
+**Formato do card:**
+```html
+
+      <!-- Article: [TITULO] -->
+      <article class="article-card reveal"
+               data-category="[CATEGORIA]"
+               data-href="conhecimento/[SLUG].html">
+        <div class="article-card-header">
+          <span class="art-cat-badge [CAT_CLASS]">[CATEGORIA_DISPLAY]</span>
+          <span class="art-read-time">[TEMPO_LEITURA]</span>
+        </div>
+        <h3 class="article-card-title">[TITULO]</h3>
+        <p class="article-card-excerpt">[EXCERPT]</p>
+        <div class="article-card-footer">
+          <span class="art-date">[DATE_PT]</span>
+          <a href="conhecimento/[SLUG].html" class="art-link">Ler</a>
+        </div>
+      </article>
+```
+
+Depois de injetar, atualiza o contador: encontra `id="filterCount">X artigos</span>` e substitui X por X+1.
+
+### Passo 5 - Atualizar destaques editoriais em index.html
+
+Le o ficheiro `index.html`. Localiza a seccao `id="conhecimento"`.
+
+Atualiza os 3 destaques com os artigos mais recentes publicados em `conhecimento/` (o artigo que acabaste de publicar entra sempre como destaque principal):
+
+**Destaque principal** (`.article-featured`): o artigo recem publicado.
+**Artigos laterais** (`.article-side`): os 2 artigos publicados anteriormente mais relevantes.
+
+Para cada destaque, atualiza:
+- O titulo
+- O excerpt/descricao
+- A categoria e data
+- O href do link para o artigo correto (ex: `conhecimento/[slug].html`)
+- Manter os SVG placeholder existentes (nao os alteres enquanto nao houver imagens reais)
+
+### Passo 6 - Deploy
+
+```bash
+git add conhecimento/[SLUG].html conhecimento.html index.html
+git commit -m "artigo trend: [TITULO]"
+git push
+```
+
+Se o git push falhar, reporta o erro. Nao tentas novamente automaticamente.
+
+### Passo 7 - Confirmar
+
+Apos deploy com sucesso, informa:
+- Titulo do artigo publicado
+- Autor selecionado e respetivo cargo
+- URL relativo: `conhecimento/[slug].html`
+- Confirmacao de que os destaques do index.html foram atualizados
+- Netlify fara o deploy automaticamente via push

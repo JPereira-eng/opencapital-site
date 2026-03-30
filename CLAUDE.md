@@ -516,6 +516,8 @@ opencapital-website/
 - No Bootstrap, Tailwind or any CSS framework
 - No filled icons, colour gradients, or rounded playful icon styles
 - No uppercase nav links
+- No `hero-gold-line` element in any page or article
+- No em dashes (—) in any text output, ever — use a comma, period, or rewrite the sentence
 
 ---
 
