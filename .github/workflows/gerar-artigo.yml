@@ -1,0 +1,57 @@
+name: Gerar Artigo
+
+on:
+  workflow_dispatch:
+    inputs:
+      topic_or_url:
+        description: 'Tema do artigo ou URL (PDF/notícia)'
+        required: true
+        type: string
+      category:
+        description: 'Categoria (Financiamento Público, Investimento Privado, Fiscal, Inovação, Estratégia)'
+        required: false
+        type: string
+        default: 'Financiamento Público'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Configure git
+        run: |
+          git config --global user.email "claude-agent@opencapital.dev"
+          git config --global user.name "Claude Agent"
+
+      - name: Generate article
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TOPIC_OR_URL: ${{ github.event.inputs.topic_or_url }}
+          CATEGORY: ${{ github.event.inputs.category }}
+        run: |
+          node scripts/gerar-artigo.js "$TOPIC_OR_URL" "$CATEGORY"
+
+      - name: Commit and push
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git add -A
+          git commit -m "🤖 Auto-generated article via Claude Agent" || true
+          git push origin main
+
+      - name: Notify deployment
+        run: |
+          echo "✅ Article generated and pushed to GitHub"
+          echo "🚀 Netlify deployment triggered automatically"
