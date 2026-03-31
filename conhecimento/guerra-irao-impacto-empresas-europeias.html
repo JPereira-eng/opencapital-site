@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guerra no Irão: o que muda para as empresas europeias | Open Capital</title>
+  <meta name="description" content="O conflito no Golfo Pérsico redesenha custos de energia, cadeias de abastecimento e prioridades estratégicas. Uma análise para decisores empresariais.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;max-width:1160px;margin:0 auto;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{display:flex;align-items:flex-start;gap:14px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);flex-shrink:0;margin-top:8px;}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);opacity:0.85;}
+    .f-desc{font-size:15px;font-weight:300;color:rgba(255,255,255,0.36);line-height:1.85;margin-top:18px;max-width:260px;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../solucoes.html">Soluções</a></li>
+      <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades</a>
+        <div class="nav-dropdown-menu">
+          <a href="../parceiros.html">Parceiros</a>
+          <a href="../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="../index.html#contactar" class="nav-cta">Contactar</a>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../conhecimento.html">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Mercados</span>
+      </nav>
+      <span class="hero-cat-badge">Mercados - Análise</span>
+      <h1 class="article-title">Guerra no Irão: o que muda para as empresas europeias</h1>
+      <p class="article-standfirst">O conflito no Golfo Pérsico redesenha custos de energia, cadeias de abastecimento e prioridades estratégicas. Uma leitura para decisores.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Mercados</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Abril 2026</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>8 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Ricardo Almeida</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Contexto</div>
+        <h2>Um mês de conflito, um ano de consequências</h2>
+        <p>Na madrugada de 28 de fevereiro de 2026, os Estados Unidos e Israel lançaram uma ofensiva militar coordenada contra o Irão. A operação, batizada de "Leão Rugidor" por Israel e "Fúria Épica" pelo Pentágono, atingiu instalações nucleares, centros de comando e dezenas de figuras do regime iraniano. Em poucas horas, o Médio Oriente entrou numa nova fase de instabilidade, e os mercados globais reagiram de imediato.</p>
+        <p>Um mês depois, o conflito não mostra sinais de desescalada. A resposta iraniana foi rápida e geograficamente ampla, com ataques a Israel e a países do Golfo que albergam bases americanas. A Europa, apanhada entre a pressão dos EUA para apoiar a operação e a sua própria vulnerabilidade energética, fragmentou-se. França, Itália e Espanha rejeitaram publicamente as operações militares. As divisões transatlânticas, que já vinham a agravar-se com o rearmamento europeu, atingiram um novo patamar.</p>
+        <p>Para quem gere empresas na Europa, o enquadramento geopolítico pode parecer distante. Não é. Este conflito altera variáveis concretas: custos de energia, fluxos comerciais, taxas de juro, decisões de investimento. O que se segue é uma leitura dessas variáveis, com foco no que importa para gestores e decisores.</p>
+      </div>
+
+      <div class="stats-row cols-4 reveal">
+        <div class="stat-cell">
+          <div class="stat-num">100<sup>+</sup></div>
+          <div class="stat-label">USD/barril Brent</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">20<sup>M</sup></div>
+          <div class="stat-label">Barris/dia via Ormuz</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">39<sup>%</sup></div>
+          <div class="stat-label">Subida Brent em 2 semanas</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">1.4<sup>%</sup></div>
+          <div class="stat-label">PIB mundial 2026 (prev.)</div>
+        </div>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Energia</div>
+        <h2>O Estreito de Ormuz e o preço de tudo</h2>
+        <p>Antes do conflito, cerca de 20 milhões de barris de petróleo e derivados transitavam diariamente pelo Estreito de Ormuz. Esse fluxo, segundo a Agência Internacional de Energia, reduziu-se a valores residuais. A IEA descreveu a situação como "a maior disrupção de oferta da história do mercado petrolífero global".</p>
+        <p>O Brent, que negociava a aproximadamente 65 dólares por barril antes da escalada, ultrapassou os 100 dólares. Em cenário de fecho prolongado do Estreito, projeções da Oxford Economics apontam para valores próximos dos 170 dólares, o que representaria uma contração de cerca de 10% no consumo global de crude. A Arábia Saudita pode redirecionar entre 2 e 4 milhões de barris por dia através de pipelines alternativos, mas o défice residual aproxima-se dos 15 milhões de barris diários.</p>
+        <p>O gás natural europeu reagiu de forma ainda mais agressiva. Os contratos de referência nos Países Baixos subiram quase 50% na primeira semana, chegando a 47,93 euros por megawatt-hora. A Europa começou 2026 com reservas de gás significativamente abaixo dos anos anteriores: 46 mil milhões de metros cúbicos no final de fevereiro, contra 60 mil milhões em 2025 e 77 mil milhões em 2024.</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">Ponto critico</div>
+          <div class="art-highlight-text">A convergência de um choque petrolífero com reservas de gás historicamente baixas coloca a Europa numa posição de vulnerabilidade energética sem precedente recente. Empresas com elevada intensidade energética enfrentam um duplo impacto nos custos operacionais.</div>
+        </div>
+
+        <p>Para Portugal, há nuances relevantes. O ministro da Economia sublinhou que o país "resiste hoje melhor do que no passado" porque 70% da eletricidade consumida tem origem renovável. Mas a dependência de importações de combustíveis minerais, que em 2025 ascenderam a quase dez mil milhões de euros, permanece um ponto fraco estrutural. O gasóleo já subiu mais de 23 cêntimos por litro e a gasolina 7 cêntimos, com tendência de agravamento. Empresas industriais e de logística sentem o impacto diretamente nas margens.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Cadeias de abastecimento</div>
+        <h2>Quando o Golfo fecha, o mundo abranda</h2>
+        <p>O impacto não se limita à energia. Pelo Estreito de Ormuz transita entre 20% e 30% das exportações globais de fertilizantes. O Qatar suspendeu a produção na sua maior fábrica de ureia. Os preços do fertilizante dispararam 19% numa semana, com efeitos em cascata no setor agroalimentar.</p>
+        <p>Ataques iranianos com drones atingiram navios comerciais na região, alterando radicalmente os cálculos de risco do setor segurador marítimo. Com cerca de 200 navios retidos ou a desviar rotas, os tempos de entrega e os custos de transporte marítimo aumentaram de forma substancial. Para empresas europeias dependentes de componentes ou matérias-primas asiáticas, isto traduz-se em atrasos, roturas de stock e renegociação de contratos.</p>
+
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Energia:</strong> crude acima dos 100 USD/barril, gás natural europeu +50%, custos de eletricidade a subir em toda a cadeia</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Fertilizantes:</strong> +19% numa semana, pressão direta sobre custos agrícolas e alimentares</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Transporte marítimo:</strong> desvios de rotas, prémios de seguro elevados, atrasos de semanas em entregas críticas</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Tecnologia:</strong> dois centros de dados AWS nos Emirados e um no Bahrein foram atingidos, expondo a fragilidade de infraestrutura digital concentrada em zonas de conflito</li>
+        </ul>
+
+        <p>O World Economic Forum estima que as disrupções nas cadeias de abastecimento atingirão a Europa de forma plena em abril. Para PMEs com cadeias de fornecimento longas, o momento de reavaliar a dependência de rotas que passam pelo Golfo é agora, não quando as roturas se materializarem nos armazéns.</p>
+      </div>
+
+      <div class="pull-quote reveal">
+        <div class="pull-quote-text">"A maior disrupção de oferta da história do mercado petrolífero global."</div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Macroeconomia</div>
+        <h2>Recessão, inflação, ou ambas</h2>
+        <p>As projeções macroeconómicas deterioraram-se rapidamente. A Oxford Economics reviu o crescimento do PIB mundial para 2026 para 1,4%, com recuperação modesta para 2,1% em 2027. Os Estados Unidos e a maioria das economias avançadas deverão entrar em recessão técnica. O crescimento chinês cai para 3,4%.</p>
+        <p>Na zona euro, o cenário é particularmente desafiante. A subida dos custos energéticos inverte a trajetória de desinflação que marcou o segundo semestre de 2025. O BCE enfrenta um dilema clássico de estagflação: subir juros para conter a inflação agrava a desaceleração, reduzi-los para estimular o crescimento alimenta a espiral de preços. Nos mercados financeiros, o MSCI All-Country World Index caiu mais de 5% nas duas primeiras semanas do conflito. As yields das obrigações soberanas subiram, pressionadas por expectativas de inflação e aumento da despesa militar.</p>
+
+        <div class="stats-row cols-3 reveal">
+          <div class="stat-cell">
+            <div class="stat-num">5<sup>%+</sup></div>
+            <div class="stat-label">Queda MSCI World</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">50<sup>%</sup></div>
+            <div class="stat-label">Subida gás natural EU</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">0.3<sup>pp</sup></div>
+            <div class="stat-label">Impacto PIB por cada +10 USD/barril</div>
+          </div>
+        </div>
+
+        <p>Para Portugal, o Presidente da CIP alertou que os efeitos económicos negativos já se sentem e que se intensificarão nos próximos trimestres. O governo projetava um crescimento de 2,3% para 2026, mas o desempenho real de 2025 ficou nos 1,9% e a nova conjuntura torna essa meta praticamente inalcançável. Setores como turismo, transportes e manufatura industrial são os mais expostos.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Europa</div>
+        <h2>A fratura transatlântica e o seu custo empresarial</h2>
+        <p>O conflito expôs uma divergência profunda entre os EUA e os seus aliados europeus. Donald Trump acusou os membros da NATO de serem "pouco prestáveis". A França, a Itália e a Espanha recusaram apoiar as operações militares. A Alemanha manteve uma posição ambígua. Esta fratura não é apenas política. Tem consequências económicas concretas.</p>
+        <p>Para empresas europeias que operam nos mercados americanos, ou que dependem de relações comerciais transatlânticas, a instabilidade diplomática traduz-se em incerteza regulatória e risco de retaliação económica. A experiência das tarifas de 2025 mostrou que as disputas geopolíticas podem converter-se rapidamente em barreiras comerciais.</p>
+        <p>Ao mesmo tempo, a pressão para aumentar a despesa militar europeia, já acelerada pelo rearmamento pós-Ucrânia, ganha nova urgência. Isto pode significar reafetação de orçamentos públicos, com menos recursos para programas de apoio empresarial, ou, pelo contrário, oportunidades para empresas nos setores de defesa, cibersegurança e infraestrutura crítica. O enquadramento depende do setor em que se opera.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Setores</div>
+        <h2>Quem perde, quem se adapta, quem ganha</h2>
+        <p>O impacto é desigual. Vale a pena distinguir entre setores diretamente expostos e os que podem encontrar oportunidades no novo contexto.</p>
+
+        <h3>Setores sob pressão</h3>
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Logística e transportes:</strong> custos de combustível e seguros marítimos em máximos, margens comprimidas, necessidade de renegociar contratos com clientes</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Indústria transformadora:</strong> custos energéticos e de matérias-primas a subir, pressão sobre preços de venda que nem sempre é possível repercutir</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Agroalimentar:</strong> fertilizantes mais caros, custos de ração animal em alta, pressão inflacionária sobre toda a cadeia alimentar</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Turismo:</strong> combustível de aviação mais caro, potencial desvio de rotas, redução do poder de compra dos turistas europeus</li>
+        </ul>
+
+        <h3>Setores com oportunidade</h3>
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Energias renováveis:</strong> a crise reforça o argumento económico, não apenas ambiental, da transição energética. Portugal, com 70% de eletricidade renovável, está relativamente bem posicionado</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Defesa e cibersegurança:</strong> aumento da despesa militar europeia cria procura para empresas de tecnologia, comunicações seguras e infraestrutura crítica</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Nearshoring e produção local:</strong> cada disrupção no Golfo reforça o incentivo para encurtar cadeias de fornecimento. Empresas que produzem na Europa ou para o mercado europeu ganham relevância</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Consultoria e assessoria financeira:</strong> em contextos de incerteza, a procura por aconselhamento estratégico, acesso a financiamento alternativo e reestruturação financeira aumenta</li>
+        </ul>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>O que isto significa para a sua empresa</h2>
+        <p>A tentação, em momentos de crise geopolítica, é esperar que a situação se resolva. A experiência mostra que raramente se resolve rapidamente, e que as empresas que reagem cedo ficam melhor posicionadas do que as que esperam.</p>
+        <p>Há três áreas onde recomendamos ação imediata.</p>
+        <p>Primeiro, a revisão de custos energéticos. Empresas que ainda não fixaram contratos de energia para o segundo semestre devem fazê-lo agora. A volatilidade tende a agravar-se, e a capacidade de negociação diminui à medida que a pressão aumenta no sistema. Para empresas industriais, vale a pena reavaliar investimentos em eficiência energética, que podem ser parcialmente financiados por programas como o Portugal 2030.</p>
+        <p>Segundo, a diversificação de fornecedores. Se a sua cadeia de abastecimento depende de rotas que passam pelo Golfo, este é o momento de mapear alternativas. O nearshoring não é apenas uma tendência. Neste contexto, é uma estratégia de sobrevivência operacional.</p>
+        <p>Terceiro, o acesso a financiamento. Em cenários de recessão e subida de juros, o acesso a capital torna-se mais difícil e mais caro. Empresas que têm projetos de investimento em pipeline devem antecipar candidaturas a fundos europeus, incentivos fiscais e linhas de crédito bonificadas. O timing é crítico. Os programas do Portugal 2030, os benefícios do SIFIDE II para empresas com I&D, e as linhas do Banco de Fomento continuam disponíveis, mas a janela de condições favoráveis pode encurtar-se.</p>
+        <p>A guerra no Irão não é um problema distante. É uma variável que já está nos seus custos, nas suas margens e nas decisões que vai tomar nos próximos trimestres. A clareza sobre o que está a mudar, e a rapidez na resposta, fazem a diferença entre empresas que atravessam a turbulência e empresas que ficam presas nela.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <p>Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore também o nosso arquivo para mais conteúdos sobre inovação, tecnologia, ciência aplicada e empreendedorismo.</p>
+      </div>
+
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Categoria</div>
+          <div class="sidebar-info-val">Mercados</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Publicado</div>
+          <div class="sidebar-info-val">Abril 2026</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Leitura</div>
+          <div class="sidebar-info-val">8 min</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Autor</div>
+          <div class="sidebar-info-val">Ricardo Almeida</div>
+        </div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
+        <div class="sidebar-cta-text">Ajudamos a sua empresa a navegar contextos de incerteza, otimizar custos e aceder ao financiamento certo.</div>
+        <a href="../index.html#contactar" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="venture-capital-portugal.html" class="related-item">
+          <span class="related-item-title">Venture Capital em Portugal</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="capital-europeu-disponivel-problema-execucao.html" class="related-item">
+          <span class="related-item-title">O capital europeu está disponível</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="como-preparar-candidatura-portugal-2030.html" class="related-item">
+          <span class="related-item-title">Candidatura Portugal 2030</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+        <p class="f-desc">Assessoria estratégica em financiamento, fiscalidade e investimento. Ajudamos empresas a aceder ao capital certo, no momento certo.</p>
+        <p class="f-tagline">Capital, made clear.</p>
+      </div>
+      <div>
+        <div class="f-col-label">Soluções</div>
+        <ul class="f-links">
+          <li><a href="../solucoes.html">Portugal 2030</a></li>
+          <li><a href="../solucoes.html">Fundos de Investimento</a></li>
+          <li><a href="../solucoes.html">Benefícios Fiscais</a></li>
+          <li><a href="../solucoes.html">Prémios de Inovação</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Plataforma</div>
+        <ul class="f-links">
+          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../conhecimento.html">Conhecimento</a></li>
+          <li><a href="../parceiros.html">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Empresa</div>
+        <ul class="f-links">
+          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="../sobre-nos.html">Equipa</a></li>
+          <li><a href="../carreiras.html">Carreiras</a></li>
+          <li><a href="../index.html#contactar">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">&copy; 2025 Open Capital Advisory &amp; Consultancy</span>
+      <div class="f-legal">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
