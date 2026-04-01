@@ -330,8 +330,8 @@ Cria `conhecimento/[slug].html`.
     .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
     .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
     .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
-    .sidebar-author-inner{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;}
-    .sidebar-author-photo{width:128px;height:128px;object-fit:cover;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
     .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
     .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
     .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
