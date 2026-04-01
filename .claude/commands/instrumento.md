@@ -314,8 +314,8 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
     .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
     .section-text:last-child{margin-bottom:0;}
     .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
-    .article-list li{display:flex;align-items:flex-start;gap:14px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
-    .article-list li::before{content:'';width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);flex-shrink:0;margin-top:8px;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
     .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
     .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
     .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
@@ -345,8 +345,8 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
     .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
     .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
     .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
-    .sidebar-author-inner{display:flex;align-items:center;gap:16px;}
-    .sidebar-author-photo{width:64px;height:64px;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-inner{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;}
+    .sidebar-author-photo{width:128px;height:128px;object-fit:cover;}
     .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
     .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
     .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}

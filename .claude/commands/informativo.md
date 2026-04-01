@@ -124,11 +124,12 @@ O input pode conter um tema e uma ou varias fontes: URLs, PDFs, texto copiado, n
 **Para PDFs ou texto copiado:** le o conteudo integralmente antes de escrever.
 **Para temas sem fontes externas:** usa conhecimento interno para produzir um artigo rigoroso.
 
-**Imagem de capa (opcional):**
-- Verifica se o utilizador anexou uma imagem NESTA MENSAGEM (junto ao input da skill). NAO uses imagens de mensagens anteriores ou de outros artigos.
-- Se ha imagem anexada nesta mensagem: le o file path da imagem anexada. Apos gerar o slug no Passo 2, copia o ficheiro para `assets/articles/[SLUG].jpg` usando Bash (`cp "[PATH_DA_IMAGEM_ANEXADA]" "assets/articles/[SLUG].jpg"`). Define `IMAGEM_SRC = "assets/articles/[SLUG].jpg"`.
-- Se NAO ha imagem anexada nesta mensagem: `IMAGEM_SRC` fica vazio e usa-se o placeholder SVG.
-- IMPORTANTE: nunca reutilizes paths de imagens de artigos anteriores. Cada artigo tem a sua propria imagem ou usa placeholder.
+**Imagem de capa (REGRA CRITICA):**
+- Verifica se o utilizador anexou uma imagem NESTA MENSAGEM (junto ao input da skill).
+- Uma imagem anexada aparece como um file path (ex: `/tmp/...`, `C:\Users\...`) visivel no conteudo da mensagem do utilizador. Se nao ha nenhum file path de imagem na mensagem atual, NAO ha imagem.
+- Se ha imagem anexada nesta mensagem: copia para `assets/articles/[SLUG].jpg` usando Bash (`cp "[PATH_VISIVEL_NA_MENSAGEM]" "assets/articles/[SLUG].jpg"`). Define `IMAGEM_SRC = "../assets/articles/[SLUG].jpg"`.
+- Se NAO ha imagem nesta mensagem: `IMAGEM_SRC` fica vazio. Usa placeholder SVG ou nao inclui imagem.
+- **PROIBIDO:** nunca reutilizar paths de imagens de artigos anteriores, nunca usar imagens de mensagens anteriores na conversa, nunca inventar ou assumir paths de imagem. Se nao viste um path de imagem NESTA MENSAGEM, nao ha imagem.
 
 Nao comeces a escrever enquanto nao tiveres processado todas as fontes fornecidas.
 
@@ -148,7 +149,7 @@ Nao comeces a escrever enquanto nao tiveres processado todas as fontes fornecida
 - **autor**: nome completo selecionado da equipa
 - **autor_cargo**: cargo correspondente
 - **date_pt**: mes e ano em portugues (ex: `Marco 2026`)
-- **imagem** (opcional): se imagem foi anexada NESTA MENSAGEM, apos definir o slug usa Bash (`cp "[PATH_DA_IMAGEM_ANEXADA]" "assets/articles/[SLUG].jpg"`) e define `IMAGEM_SRC = "assets/articles/[SLUG].jpg"`. Se nao houver imagem nesta mensagem, `IMAGEM_SRC` fica vazio. Nunca reutilizar imagens de artigos anteriores.
+- **imagem** (opcional): se imagem foi anexada NESTA MENSAGEM (file path visivel), copia para `assets/articles/[SLUG].jpg` e define `IMAGEM_SRC = "../assets/articles/[SLUG].jpg"`. Sem imagem nesta mensagem = sem imagem. Nunca reutilizar paths anteriores.
 
 **Artigos relacionados para a sidebar:** verifica o que existe em `conhecimento/` e usa os 3 mais relevantes para o tema. Artigos disponiveis:
 - `como-preparar-candidatura-portugal-2030.html` - "Como preparar uma candidatura Portugal 2030"
@@ -280,8 +281,8 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa.
     .article-body p:last-child{margin-bottom:0;}
     .article-section{margin-bottom:52px;}
     .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
-    .art-list li{display:flex;align-items:flex-start;gap:14px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
-    .art-list li::before{content:'';width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);flex-shrink:0;margin-top:8px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
     .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
     .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
     .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
@@ -302,14 +303,13 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa.
     .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
     .art-table tr:last-child td{border-bottom:none;}
     .art-table td strong{font-weight:600;color:var(--navy);}
-    .article-cover{padding:0 80px;}
-    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
     .article-sidebar{position:sticky;top:100px;}
     .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
     .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
     .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
-    .sidebar-author-inner{display:flex;align-items:center;gap:16px;}
-    .sidebar-author-photo{width:64px;height:64px;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-inner{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;}
+    .sidebar-author-photo{width:128px;height:128px;object-fit:cover;}
     .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
     .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
     .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
@@ -350,7 +350,7 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa.
     .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
     .f-legal a:hover{color:rgba(255,255,255,0.45);}
     @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
-    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover{padding:0 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
   </style>
 </head>
 <body>
@@ -404,14 +404,12 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa.
     <a href="../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
   </div>
 
-  <!-- Se IMAGEM_SRC tiver valor, incluir: -->
-  <div class="article-cover">
-    <img src="[IMAGEM_SRC]" alt="[TITULO]" class="article-cover-img">
-  </div>
-  <!-- Se IMAGEM_SRC estiver vazio, nao incluir o div article-cover -->
-
   <div class="article-layout">
     <article class="article-body">
+      <!-- Se IMAGEM_SRC tiver valor, incluir como primeiro elemento do article-body: -->
+      <img src="[IMAGEM_SRC]" alt="[TITULO]" class="article-cover-img">
+      <!-- Se IMAGEM_SRC estiver vazio, nao incluir a tag img -->
+
       [CORPO_DO_ARTIGO]
     </article>
     <aside class="article-sidebar">
