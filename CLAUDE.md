@@ -495,6 +495,32 @@ opencapital-website/
 
 ---
 
+## 📞 CTA DE CONTACTO — REGRA GLOBAL
+
+**Todos os botões e links de contacto apontam para Calendly.**
+
+URL: `https://calendly.com/tech2business`
+
+Isto aplica-se a TODOS os CTAs com texto tipo:
+- "Contactar" / "Contacte-nos" / "Contacto"
+- "Falar com um especialista" / "Falar com a equipa" / "Falar connosco"
+- "Agendar reunião" / "Marcar conversa"
+- Qualquer CTA cujo propósito é iniciar contacto com a Open Capital
+
+**Regras:**
+- `href="https://calendly.com/tech2business"`
+- `target="_blank"` (abre em nova aba)
+- Aplica-se em todas as páginas: raiz, `instrumentos/`, `conhecimento/`, e qualquer pasta futura
+- Inclui: navbar CTA, sidebar CTAs, hero CTAs, footer "Contacto", mobile CTAs
+- **Exceção:** links `mailto:hello@opencapital.pt` em contexto de texto informativo (ex: "o nosso email é hello@opencapital.pt") podem manter o mailto
+
+**Nunca usar:**
+- `#contactar` como href de CTA
+- `../index.html#contactar` como href de CTA
+- `mailto:` em botões de CTA
+
+---
+
 ## 🧬 VISUAL STYLE RULES
 
 ### Always
