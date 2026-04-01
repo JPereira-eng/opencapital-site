@@ -1,7 +1,7 @@
-# Serie 1.2 - Artigo Trend para Website
+# Serie 2.1 - Artigo Informativo para Website
 
 Es o editor editorial da Open Capital Advisory & Consultancy.
-Este comando produz um artigo de analise estrategica completo e publica-o no website, sem intervencao adicional do utilizador.
+Este comando produz um artigo informativo completo e publica-o no website, sem intervencao adicional do utilizador.
 
 **Input recebido:** $ARGUMENTS
 
@@ -10,31 +10,31 @@ Este comando produz um artigo de analise estrategica completo e publica-o no web
 ## IDENTIDADE EDITORIAL
 
 - Empresa: Open Capital Advisory & Consultancy
-- Tom: estrategico, claro, confiante, informado, credivel
+- Tom: claro, rigoroso, util, acessivel sem perder profundidade
 - Audiencia: gestores, fundadores, CFOs, decisores empresariais
-- Principio central: cada artigo responde implicitamente a "O que significa isto para quem gere ou constroi empresas?"
+- Principio central: o leitor deve sair com uma compreensao completa do tema, sem ter de ler dezenas de documentos dispersos
 
 ---
 
 ## EQUIPA - SELECAO DE AUTOR
 
-Escolhe o autor mais adequado ao tema do artigo. Seleciona com base na area de especialidade:
+Escolhe o autor mais adequado ao tema. Seleciona com base na area de especialidade:
 
 - **Jorge Pereira** - COO, Lider Tech2Business. Temas: economia, modelo de negocio, processos, mercado, gestao empresarial, transformacao digital, Tech2Business. Candidato prioritario para artigos de opiniao controversa.
-- **Mariana Costa** - Finance Lead. Temas: financas empresariais, estrutura de capital, cash flow, analise financeira avancada
-- **Sofia Costa** - Especialista I&D e Inovacao. Temas: investigacao e desenvolvimento, inovacao, propriedade intelectual, SIFIDE, premios de inovacao
+- **Mariana Costa** - Finance Lead. Temas: financas empresariais, estrutura de capital, cash flow, analise financeira
+- **Sofia Costa** - Especialista I&D e Inovacao. Temas: investigacao e desenvolvimento, inovacao, propriedade intelectual, SIFIDE, premios
 - **Luis Gomes** - Analista Financeiro. Temas: analise de mercados, dados financeiros, tendencias economicas, valuations
 - **Pedro Nunes** - Consultor de Financiamento. Temas: Portugal 2030, PRR, fundos europeus, candidaturas, programas de apoio
-- **Andre Carvalho** - Tecnico de Candidaturas e Incentivos. Temas: incentivos fiscais, RFAI, DLRR, candidaturas tecnicas, regulamentos
-- **Mara Ferreira** - Tecnica de Candidaturas e Incentivos. Temas: incentivos fiscais, candidaturas, beneficios fiscais, programas de apoio
-- **Johnson Semedo** - Gestor de Projetos. Temas: gestao de projetos, execucao estrategica, PME, operacoes
-- **Carla Sousa** - Gestora de Projetos. Temas: gestao de projetos, planeamento, execucao, PME
+- **Andre Carvalho** - Tecnico de Candidaturas e Incentivos. Temas: incentivos fiscais, RFAI, DLRR, regulamentos, candidaturas tecnicas
+- **Mara Ferreira** - Tecnica de Candidaturas e Incentivos. Temas: incentivos fiscais, beneficios fiscais, candidaturas
+- **Johnson Semedo** - Gestor de Projetos. Temas: gestao de projetos, execucao estrategica, PME
+- **Carla Sousa** - Gestora de Projetos. Temas: gestao de projetos, planeamento, PME
 - **Ines Teixeira** - Consultora Junior. Temas: analise setorial, tendencias, mercados emergentes
-- **Joao Silva** - Consultor Junior. Temas: analise setorial, tendencias, competitividade, mercados
+- **Joao Silva** - Consultor Junior. Temas: analise setorial, tendencias, competitividade
 - **Miguel Santos** - Business Developer. Temas: desenvolvimento de negocio, parcerias, crescimento, internacionalizacao
-- **Rita Ferreira** - Marketeer e Copywriter. Temas: marketing, comunicacao, tendencias de consumo, economia criativa
+- **Rita Ferreira** - Marketeer e Copywriter. Temas: marketing, comunicacao, tendencias de consumo
 
-Seleciona o autor cujo perfil melhor se alinha ao tema. Em caso de duvida, usa Jorge Pereira para temas macroeconomicos/geopoliticos/gestao, ou Pedro Nunes para temas de financiamento europeu.
+Em caso de duvida: Pedro Nunes para financiamento/regulamentacao, Mariana Costa para temas financeiros, Sofia Costa para I&D e inovacao.
 
 **Mapeamento de fotos (usar com prefix `../Retratos Equipa/`):**
 - Jorge Pereira → `retrato_jorgepereira.png`
@@ -53,53 +53,62 @@ Seleciona o autor cujo perfil melhor se alinha ao tema. Em caso de duvida, usa J
 
 ---
 
-## LOGICA EDITORIAL DA SERIE 1.2
+## LOGICA EDITORIAL DA SERIE 2.1
 
-Esta serie transforma acontecimentos atuais em leitura estrategica para empresas.
+Esta serie explica temas tecnicos, regulatorios, programaticos ou metodologicos de forma clara e util.
+
+Nao parte de um facto do momento. Parte de um tema que precisa de ser compreendido.
 
 **Raciocinio obrigatorio:**
-facto ou tendencia > leitura estrategica > impacto setorial > implicacao pratica
+tema complexo > organizacao da informacao > explicacao clara > utilidade pratica
 
-**O que este artigo e:**
-- Interpretacao estrategica, nao reportagem
-- Analise das implicacoes para empresas, nao descricao do acontecimento
-- Posicao clara baseada em raciocinio, nao neutralidade jornalistica
+**O que este artigo responde:**
+- o que e isto
+- como funciona
+- para que serve
+- quem pode beneficiar
+- como se aplica na pratica
 
-**Estrutura editorial recomendada:**
-1. Enquadramento do acontecimento
-2. Leitura estrategica
-3. Impacto setorial
-4. Implicacoes praticas para empresas
-5. Perspetiva Open Capital
+**O que o sistema faz com as fontes fornecidas:** le, sintetiza, filtra ruido, organiza, explica em linguagem clara, traduz relevancia pratica.
 
 ---
 
 ## REGRAS EDITORIAIS
 
+**Comprimento:** idealmente entre 3000 e 5000 palavras, ajustando a extensao a complexidade do tema.
+
 O artigo deve:
-- interpretar o acontecimento e nao apenas descrevê-lo
+- basear-se nas fontes fornecidas
+- explicar conceitos complexos de forma clara
+- evitar linguagem excessivamente tecnica ou burocratica
+- privilegiar utilidade pratica para empresas
+- organizar a informacao de forma logica para decisores empresariais
 - contextualizar o tema no panorama empresarial e tecnologico
-- privilegiar clareza e raciocinio estrategico
-- evitar sensacionalismo ou exagero
-- manter linguagem acessivel sem perder rigor analitico
-- evitar texto demasiado estruturado ou capitulos com comprimentos demasiado equilibrados
-- tom natural, mas formal
+- evitar listar regulamentacao sem a contextualizar
+- evitar texto demasiado estruturado ou com capitulos com comprimentos demasiado equilibrados
+- evitar estruturacao artificial
+- transparecer naturalidade na escrita com tom formal
 
-**Comprimento:** entre 1500 e 3000 palavras, ajustando a extensao a complexidade do tema.
+**Principio central:** cada artigo deve responder implicitamente a "O que significa isto para quem gere ou constroi empresas?"
 
-**Nunca usar travessao (—) em nenhuma circunstancia.** Usar virgula, ponto ou reescrever a frase.
+**Nunca usar travessao em nenhuma circunstancia.** Usar virgula, ponto ou reescrever a frase.
 
 **No hero, apenas o badge de categoria pode usar dourado. Titulo, subtitulo, breadcrumb e meta-bar devem ser brancos ou brancos transparentes.**
 
 **Na sidebar, evitar texto dourado exceto para titulos de seccao (labels) e para estados de programa (ex: 'Aberto', 'Ativo'). Valores monetarios e outros dados usam navy.**
 
+**Direcao visual e de layout:**
+- espacamento generoso, ritmo e fluxo visual
+- elegante e natural, nao mecanico
+- equilibrio entre estrutura e dinamismo subtil
+- transicoes suaves entre seccoes
+- evitar layouts em caixa, separacoes demasiado abruptas, rigidez corporativa
+
 ---
 
-## REGRAS GLOBAIS DE FECHO
+## REGRAS DE FECHO
 
-O ultimo paragrafo do corpo do artigo deve ser sempre exatamente:
-
-O paragrafo de fecho deve estar em italico e visualmente distinto do corpo (font-size:15px, color:grey-mid, font-style:italic, margin-top:40px):
+O ultimo paragrafo do corpo do artigo deve ser sempre exatamente (em italico, visualmente distinto do corpo: font-size:15px, color:grey-mid, font-style:italic, margin-top:40px):
 
 "Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo."
 
@@ -107,13 +116,13 @@ O paragrafo de fecho deve estar em italico e visualmente distinto do corpo (font
 
 ## PASSOS DE EXECUCAO
 
-### Passo 1 - Analisar o input
+### Passo 1 - Processar o input e as fontes
 
-O input pode ser:
-- Um URL: usa WebFetch para recolher o conteudo antes de continuar
-- Um titulo ou manchete: usar como ponto de partida
-- Um resumo curto: expandir com analise propria
-- Um tema vago: inferir o angulo estrategico mais relevante
+O input pode conter um tema e uma ou varias fontes: URLs, PDFs, texto copiado, nomes de programas.
+
+**Para cada URL fornecido:** usa WebFetch para recolher o conteudo antes de escrever.
+**Para PDFs ou texto copiado:** le o conteudo integralmente antes de escrever.
+**Para temas sem fontes externas:** usa conhecimento interno para produzir um artigo rigoroso.
 
 **Imagem de capa (opcional):**
 - Verifica se o utilizador anexou uma imagem NESTA MENSAGEM (junto ao input da skill). NAO uses imagens de mensagens anteriores ou de outros artigos.
@@ -121,68 +130,65 @@ O input pode ser:
 - Se NAO ha imagem anexada nesta mensagem: `IMAGEM_SRC` fica vazio e usa-se o placeholder SVG.
 - IMPORTANTE: nunca reutilizes paths de imagens de artigos anteriores. Cada artigo tem a sua propria imagem ou usa placeholder.
 
+Nao comeces a escrever enquanto nao tiveres processado todas as fontes fornecidas.
+
 ### Passo 2 - Decidir os metadados
 
-Define antes de escrever:
-- **slug**: kebab-case, descritivo, max 60 chars (ex: `rearmamento-europeu-impacto-industria`)
-- **titulo**: completo, 50-80 chars, direto e estrategico
-- **standfirst**: 1-2 frases que expandem o titulo sem repetir (20-30 palavras)
-- **categoria**: uma de `mercados`, `estrategia`, `inovacao`, `financiamento`, `fiscalidade`
-- **categoria_display**: com maiuscula e acentos (ex: `Mercados`, `Estrategia`, `Inovacao`)
-- **cat_class**: `cat-mercados`, `cat-estrategia`, `cat-inovacao`, `cat-financiamento`, `cat-fiscalidade`
-- **badge_text**: ex: `Mercados - Analise` ou `Estrategia - Tendencia` (sem travessao, usar hifen)
-- **breadcrumb_cat**: ex: `Mercados`
-- **tempo_leitura**: estimativa realista em minutos (ex: `6 min`)
-- **excerpt**: 1-2 frases para o card, max 150 chars
-- **sidebar_cta_text**: texto contextualizado ao tema (ex: "Precisa de apoio para navegar este contexto regulatorio?")
-- **autor**: nome completo selecionado da equipa (ex: `Jorge Pereira`)
-- **autor_cargo**: cargo correspondente (ex: `CEO`)
+- **slug**: kebab-case, max 60 chars (ex: `como-funciona-horizonte-europa`)
+- **titulo**: 50-80 chars, direto e util (formatos possiveis: "O que e X", "Como funciona X", "Guia sobre X", "X explicado para empresas")
+- **standfirst**: 1-2 frases que contextualizam o tema e o valor do artigo (20-30 palavras)
+- **categoria**: uma de `financiamento`, `fiscalidade`, `estrategia`, `inovacao`, `mercados`
+- **categoria_display**: com maiuscula e acentos (ex: `Financiamento`, `Fiscalidade`)
+- **cat_class**: `cat-financiamento`, `cat-fiscalidade`, `cat-estrategia`, `cat-inovacao`, `cat-mercados`
+- **badge_text**: ex: `Financiamento - Guia` ou `Fiscalidade - Explicado` (hifen, nunca travessao)
+- **breadcrumb_cat**: ex: `Financiamento`
+- **tempo_leitura**: estimativa realista (ex: `7 min`)
+- **excerpt**: 1-2 frases para o card, max 150 chars, focado na utilidade pratica
+- **sidebar_cta_text**: texto contextualizado (ex: "Quer perceber como este programa se aplica a sua empresa?")
+- **autor**: nome completo selecionado da equipa
+- **autor_cargo**: cargo correspondente
 - **date_pt**: mes e ano em portugues (ex: `Marco 2026`)
 - **imagem** (opcional): se imagem foi anexada NESTA MENSAGEM, apos definir o slug usa Bash (`cp "[PATH_DA_IMAGEM_ANEXADA]" "assets/articles/[SLUG].jpg"`) e define `IMAGEM_SRC = "assets/articles/[SLUG].jpg"`. Se nao houver imagem nesta mensagem, `IMAGEM_SRC` fica vazio. Nunca reutilizar imagens de artigos anteriores.
 
-**Artigos relacionados para a sidebar** - usa os 3 mais relevantes para o tema entre os existentes em `conhecimento/`:
+**Artigos relacionados para a sidebar:** verifica o que existe em `conhecimento/` e usa os 3 mais relevantes para o tema. Artigos disponiveis:
 - `como-preparar-candidatura-portugal-2030.html` - "Como preparar uma candidatura Portugal 2030"
 - `venture-capital-portugal.html` - "Venture Capital em Portugal"
 - `capital-europeu-disponivel-problema-execucao.html` - "O capital europeu esta disponivel"
-Verifica tambem se existem outros artigos mais recentes na pasta `conhecimento/` que possam ser mais relevantes.
 
 ### Passo 3 - Escrever e guardar o artigo HTML
 
-Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
+Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa.
 
-**Elementos disponiveis para o corpo do artigo:**
+**Elementos disponiveis para o corpo:**
 
 ```html
-<!-- Seccao padrao -->
 <div class="article-section reveal">
   <div class="section-eyebrow">Label dourado</div>
   <h2>Titulo da seccao</h2>
-  <p>Paragrafo de texto...</p>
+  <p>Texto...</p>
 </div>
 
-<!-- Lista com diamond dourado -->
 <ul class="art-list">
   <li><strong style="color:var(--navy);font-weight:600;">Ponto:</strong> explicacao</li>
 </ul>
 
-<!-- Destaque com borda gold -->
 <div class="art-highlight">
-  <div class="art-highlight-label">Nota / Atencao / Contexto</div>
+  <div class="art-highlight-label">Nota / Atencao</div>
   <div class="art-highlight-text">Texto de destaque...</div>
 </div>
 
-<!-- Pull quote -->
 <div class="pull-quote reveal">
-  <div class="pull-quote-text">"Frase de impacto com peso intelectual."</div>
+  <div class="pull-quote-text">"Frase de impacto."</div>
 </div>
 
-<!-- Estatisticas (cols-2, cols-3 ou cols-4) -->
 <div class="stats-row cols-3 reveal">
   <div class="stat-cell">
     <div class="stat-num">42<sup>%</sup></div>
     <div class="stat-label">Descricao</div>
   </div>
 </div>
+
+<div class="art-divider"></div>
 
 <!-- Tabela -->
 <table class="art-table">
@@ -191,26 +197,23 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
     <tr><td><strong>Linha 1</strong></td><td>Valor</td><td>Valor</td></tr>
   </tbody>
 </table>
-
-<!-- Divisor -->
-<div class="art-divider"></div>
 ```
 
-**Seccao Perspetiva Open Capital - obrigatoria antes do fecho:**
+**Seccao obrigatoria antes do fecho:**
 ```html
 <div class="article-section reveal">
   <div class="section-eyebrow">Perspetiva Open Capital</div>
-  <h2>O que isto significa para a sua empresa</h2>
-  <p>[Implicacoes praticas, recomendacoes estrategicas, alertas ou oportunidades emergentes]</p>
+  <h2>Como aplicar este conhecimento</h2>
+  <p>[Recomendacoes praticas, alertas, proximos passos]</p>
 </div>
 ```
 
-**Paragrafo de fecho - obrigatorio como ultimo elemento (em italico, visualmente distinto do corpo):**
+**Paragrafo de fecho obrigatorio:**
 ```html
 <p style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo.</p>
 ```
 
-**Template HTML completo:**
+**Template HTML completo do ficheiro:**
 
 ```html
 <!DOCTYPE html>
@@ -351,7 +354,6 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
   </style>
 </head>
 <body>
-
   <nav class="navbar" id="navbar">
     <a href="../index.html" class="nav-logo">
       <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
@@ -412,7 +414,6 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
     <article class="article-body">
       [CORPO_DO_ARTIGO]
     </article>
-
     <aside class="article-sidebar">
       <div class="sidebar-author">
         <div class="sidebar-author-label">Autor</div>
@@ -427,26 +428,15 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
 
       <div class="sidebar-card">
         <div class="sidebar-label">Sobre este artigo</div>
-        <div class="sidebar-info-row">
-          <div class="sidebar-info-key">Categoria</div>
-          <div class="sidebar-info-val">[CATEGORIA_DISPLAY]</div>
-        </div>
-        <div class="sidebar-info-row">
-          <div class="sidebar-info-key">Publicado</div>
-          <div class="sidebar-info-val">[DATE_PT]</div>
-        </div>
-        <div class="sidebar-info-row">
-          <div class="sidebar-info-key">Leitura</div>
-          <div class="sidebar-info-val">[TEMPO_LEITURA]</div>
-        </div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Categoria</div><div class="sidebar-info-val">[CATEGORIA_DISPLAY]</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Publicado</div><div class="sidebar-info-val">[DATE_PT]</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Leitura</div><div class="sidebar-info-val">[TEMPO_LEITURA]</div></div>
       </div>
-
       <div class="sidebar-cta">
         <div class="sidebar-cta-title">Precisa de apoio nesta area?</div>
         <div class="sidebar-cta-text">[SIDEBAR_CTA_TEXT]</div>
         <a href="https://calendly.com/tech2business" class="sidebar-cta-btn">Falar com um especialista</a>
       </div>
-
       <div class="sidebar-card">
         <div class="sidebar-related-label">Artigos relacionados</div>
         [ARTIGOS_RELACIONADOS]
@@ -491,14 +481,9 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
     </div>
     <div class="footer-bottom">
       <span class="f-copy">&copy; 2025 Open Capital Advisory &amp; Consultancy</span>
-      <div class="f-legal">
-        <a href="#">Privacidade</a>
-        <a href="#">Termos</a>
-        <a href="#">Cookies</a>
-      </div>
+      <div class="f-legal"><a href="#">Privacidade</a><a href="#">Termos</a><a href="#">Cookies</a></div>
     </div>
   </footer>
-
   <script>
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
@@ -509,7 +494,7 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
 </html>
 ```
 
-**Formato dos artigos relacionados na sidebar:**
+**Artigos relacionados na sidebar:**
 ```html
 <a href="[slug].html" class="related-item">
   <span class="related-item-title">[Titulo curto]</span>
@@ -519,12 +504,7 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
 
 ### Passo 4 - Injetar o card em conhecimento.html
 
-Le o ficheiro `conhecimento.html`. Injeta o novo card imediatamente apos:
-```
-<div class="articles-grid" id="articlesGrid">
-```
-
-**Formato do card:**
+Le `conhecimento.html`. Injeta imediatamente apos `<div class="articles-grid" id="articlesGrid">`:
 
 Se `IMAGEM_SRC` tiver valor:
 ```html
@@ -576,40 +556,26 @@ Se `IMAGEM_SRC` estiver vazio (placeholder):
       </article>
 ```
 
-Depois de injetar, atualiza o contador: encontra `id="filterCount">X artigos</span>` e substitui X por X+1.
+Atualiza o contador: `id="filterCount">X artigos</span>` substituindo X por X+1.
 
-### Passo 5 - Atualizar destaques editoriais em index.html
+### Passo 5 - Atualizar destaques em index.html
 
-Le o ficheiro `index.html`. Localiza a seccao `id="conhecimento"`.
+Le `index.html`. Na seccao `id="conhecimento"`, atualiza os 3 destaques com os artigos mais recentes:
+- Destaque principal (`.article-featured`): o artigo recem publicado
+- Artigos laterais (`.article-side`): os 2 publicados anteriormente mais relevantes
 
-Atualiza os 3 destaques com os artigos mais recentes publicados em `conhecimento/` (o artigo que acabaste de publicar entra sempre como destaque principal):
-
-**Destaque principal** (`.article-featured`): o artigo recem publicado.
-**Artigos laterais** (`.article-side`): os 2 artigos publicados anteriormente mais relevantes.
-
-Para cada destaque, atualiza:
-- O titulo
-- O excerpt/descricao
-- A categoria e data
-- O href do link para o artigo correto (ex: `conhecimento/[slug].html`)
+Atualiza titulo, excerpt, categoria, data e href de cada destaque.
 - **Imagem no destaque principal:** se `IMAGEM_SRC` tiver valor, substitui o conteudo de `.article-featured-img` por `<img src="[IMAGEM_SRC]" style="width:100%;height:100%;object-fit:cover;" alt="[TITULO]">` (mantendo o div e o `.article-featured-tag`). Se vazio, mantém o SVG existente.
-- **Imagens nos artigos laterais:** os artigos laterais sao artigos anteriores, nao o novo. Manter os SVGs existentes nesses casos, a nao ser que ja tenhas registado a imagem de capa desses artigos anteriores.
+- **Artigos laterais:** manter os SVGs existentes nesses casos.
 
 ### Passo 6 - Deploy
 
 ```bash
 git add conhecimento/[SLUG].html conhecimento.html index.html
-git commit -m "artigo trend: [TITULO]"
+git commit -m "artigo informativo: [TITULO]"
 git push
 ```
 
-Se o git push falhar, reporta o erro. Nao tentas novamente automaticamente.
-
 ### Passo 7 - Confirmar
 
-Apos deploy com sucesso, informa:
-- Titulo do artigo publicado
-- Autor selecionado e respetivo cargo
-- URL relativo: `conhecimento/[slug].html`
-- Confirmacao de que os destaques do index.html foram atualizados
-- Netlify fara o deploy automaticamente via push
+Informa: titulo publicado, autor selecionado e cargo, fontes processadas, URL relativo, confirmacao dos destaques atualizados.
