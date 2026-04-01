@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SI Base Territorial (Alentejo 2030): Open Capital</title>
+  <meta name="description" content="Guia completo ao Sistema de Incentivos de Base Territorial do Alentejo 2030: apoio a fundo perdido para micro e pequenas empresas no Alentejo, com taxas ate 60%.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+
+    /* ─── RESET & VARIABLES ──────────────────────── */
+    :root {
+      --navy:       #1A3A5C;
+      --navy-deep:  #0D1F33;
+      --gold:       #C9A96E;
+      --white:      #FFFFFF;
+      --grey-light: #E5E5E5;
+      --grey-mid:   #7A7A7A;
+      --grey-dark:  #2A2A2A;
+      --font: 'Montserrat', sans-serif;
+      --transition: all 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --shadow: 0 8px 40px rgba(26,58,92,0.10);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:var(--font); background:var(--white); color:var(--grey-dark); -webkit-font-smoothing:antialiased; }
+
+    /* ─── TYPOGRAPHY ─────────────────────────────── */
+    .t-eyebrow { font-size:14px; font-weight:600; letter-spacing:0.30em; text-transform:uppercase; color:var(--gold); }
+    .t-h2      { font-size:36px; font-weight:600; letter-spacing:0.01em; color:var(--navy); line-height:1.15; }
+    .t-h3      { font-size:28px; font-weight:500; letter-spacing:0.03em; color:var(--navy); }
+    .t-body    { font-size:18px; font-weight:400; color:var(--grey-dark); line-height:1.85; }
+    .t-small   { font-size:15px; font-weight:300; letter-spacing:0.04em; color:var(--grey-mid); }
+
+    /* ─── NAVBAR ─────────────────────────────────── */
+    .navbar {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 48px; height:74px;
+      position:fixed; top:0; left:0; right:0; z-index:200;
+      background:var(--navy);
+      border-bottom:1px solid rgba(255,255,255,0.07);
+      transition:var(--transition);
+    }
+    .navbar.scrolled {
+      background:rgba(255,255,255,0.97);
+      backdrop-filter:blur(20px);
+      -webkit-backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--grey-light);
+    }
+    .nav-logo { display:flex; align-items:center; text-decoration:none; flex-shrink:0; }
+    .nav-logo-img { height:57px; width:auto; display:block; filter:brightness(0) invert(1); transition:var(--transition); }
+    .navbar.scrolled .nav-logo-img { filter:none; }
+    .nav-links { display:flex; align-items:center; gap:24px; list-style:none; margin-left:auto; }
+    .nav-links a { font-size:15px; font-weight:500; letter-spacing:0.08em; text-transform:none; color:rgba(255,255,255,0.68); text-decoration:none; transition:var(--transition); position:relative; padding-bottom:3px; white-space:nowrap; }
+    .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold); transition:width 0.3s ease; }
+    .nav-links a:hover { color:var(--white); }
+    .nav-links a:hover::after { width:100%; }
+    .nav-links a.active { color:var(--white); }
+    .nav-links a.active::after { width:100%; }
+    .navbar.scrolled .nav-links a { color:var(--grey-dark); }
+    .navbar.scrolled .nav-links a:hover, .navbar.scrolled .nav-links a.active { color:var(--navy); }
+    .nav-badge { font-size:10px; font-weight:600; letter-spacing:0.06em; text-transform:none; color:var(--gold); border:1px solid var(--gold); padding:1px 4px; margin-left:3px; vertical-align:super; line-height:1; }
+    .nav-dropdown { position:relative; }
+    .nav-dropdown-menu { position:absolute; top:calc(100% + 8px); right:0; background:var(--white); border:1px solid var(--grey-light); min-width:160px; box-shadow:var(--shadow); display:none; z-index:100; }
+    .nav-dropdown:hover .nav-dropdown-menu { display:block; }
+    .nav-dropdown-menu a { display:block; font-size:13px; font-weight:500; letter-spacing:0.05em; text-transform:none; color:var(--grey-dark); padding:11px 18px; text-decoration:none; transition:var(--transition); border-bottom:1px solid var(--grey-light); white-space:nowrap; }
+    .nav-dropdown-menu a:last-child { border-bottom:none; }
+    .nav-dropdown-menu a:hover { color:var(--navy); background:#FAFAFA; }
+    .nav-dropdown-menu a::after { display:none !important; }
+    .nav-cta { font-size:16px; font-weight:600; letter-spacing:0.08em; text-transform:none; color:var(--white); text-decoration:none; border:1px solid rgba(255,255,255,0.28); padding:9px 18px; margin-left:28px; transition:var(--transition); white-space:nowrap; }
+    .nav-cta:hover { border-color:var(--white); background:rgba(255,255,255,0.08); }
+    .navbar.scrolled .nav-cta { color:var(--navy); border-color:var(--navy); }
+    .navbar.scrolled .nav-cta:hover { background:var(--navy); color:var(--white); }
+    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
+    .nav-hamburger span { display:block; width:22px; height:1px; background:var(--white); transition:var(--transition); }
+    .navbar.scrolled .nav-hamburger span { background:var(--navy); }
+    .nav-mobile-menu { display:none; position:fixed; top:74px; left:0; right:0; background:var(--navy); padding:24px 32px 32px; border-bottom:1px solid rgba(255,255,255,0.07); z-index:199; }
+    .nav-mobile-menu.open { display:block; }
+    .nav-mobile-menu a { display:block; font-size:15px; font-weight:500; letter-spacing:0.05em; text-transform:none; color:rgba(255,255,255,0.7); text-decoration:none; padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.06); transition:var(--transition); }
+    .nav-mobile-menu a:hover { color:var(--white); }
+    .nav-mobile-cta { display:inline-block !important; margin-top:22px; font-size:14px; font-weight:600; color:var(--white) !important; border:1px solid rgba(255,255,255,0.28); padding:12px 24px; }
+
+    /* ─── SCROLL REVEAL ──────────────────────────── */
+    .reveal { opacity:0; transform:translateY(18px); transition:opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal-d1 { transition-delay:0.10s; }
+    .reveal-d2 { transition-delay:0.20s; }
+    .reveal-d3 { transition-delay:0.30s; }
+
+    /* ─── ARTICLE HERO ───────────────────────────── */
+    .article-hero {
+      background:var(--navy); padding:160px 80px 80px;
+      position:relative; overflow:hidden;
+    }
+    .article-hero::before {
+      content:''; position:absolute; top:-120px; right:-120px;
+      width:480px; height:480px; border-radius:50%;
+      background:radial-gradient(circle, rgba(201,169,110,0.07) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .article-hero-inner { position:relative; z-index:1; max-width:860px; }
+
+    /* Breadcrumb */
+    .breadcrumb { display:flex; align-items:center; gap:10px; margin-bottom:44px; flex-wrap:wrap; }
+    .breadcrumb a { font-size:13px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.32); text-decoration:none; transition:var(--transition); }
+    .breadcrumb a:hover { color:rgba(255,255,255,0.7); }
+    .breadcrumb-sep { font-size:13px; color:rgba(255,255,255,0.16); }
+    .breadcrumb-current { font-size:13px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); }
+
+    .hero-cat { font-size:12px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:var(--gold); margin-bottom:18px; display:inline-block; border:1px solid rgba(201,169,110,0.35); padding:5px 14px; }
+    .hero-title { font-size:54px; font-weight:700; color:var(--white); line-height:1.06; letter-spacing:-0.015em; margin-bottom:18px; }
+    .hero-tagline { font-size:20px; font-weight:300; color:rgba(255,255,255,0.52); line-height:1.7; max-width:600px; margin-bottom:36px; }
+
+    /* Status + meta bar */
+    .hero-meta { display:flex; align-items:center; gap:24px; flex-wrap:wrap; padding-top:28px; border-top:1px solid rgba(255,255,255,0.08); }
+    .meta-item { display:flex; flex-direction:column; gap:4px; }
+    .meta-label { font-size:10px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.28); }
+    .meta-value { font-size:15px; font-weight:500; color:var(--white); }
+    .meta-value.gold { color:var(--gold); }
+    .meta-sep { width:1px; height:36px; background:rgba(255,255,255,0.10); }
+
+    /* ─── ARTICLE LAYOUT ─────────────────────────── */
+    .article-layout {
+      display:grid;
+      grid-template-columns:1fr 320px;
+      gap:64px;
+      max-width:1200px;
+      margin:0 auto;
+      padding:80px 80px 96px;
+      align-items:start;
+    }
+
+    /* ─── ARTICLE BODY ───────────────────────────── */
+    .article-section { margin-bottom:56px; }
+    .article-section:last-child { margin-bottom:0; }
+
+    .section-eyebrow { font-size:11px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+    .section-h2 { font-size:28px; font-weight:600; color:var(--navy); line-height:1.2; margin-bottom:20px; }
+    .section-text { font-size:18px; font-weight:300; color:var(--grey-dark); line-height:1.9; margin-bottom:20px; }
+    .section-text:last-child { margin-bottom:0; }
+
+    /* Bullet list */
+    .article-list { list-style:none; padding:0; display:flex; flex-direction:column; gap:12px; margin:20px 0; }
+    .article-list li { display:flex; align-items:flex-start; gap:14px; font-size:17px; font-weight:300; color:var(--grey-dark); line-height:1.75; }
+    .article-list li::before { content:''; width:5px; height:5px; border:1px solid var(--gold); transform:rotate(45deg); flex-shrink:0; margin-top:8px; }
+
+    /* Highlight box */
+    .highlight-box { background:#FAFAFA; border-left:3px solid var(--gold); padding:24px 28px; margin:28px 0; }
+    .highlight-box-title { font-size:12px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
+    .highlight-box-text { font-size:17px; font-weight:300; color:var(--grey-dark); line-height:1.8; }
+
+    /* Alert box */
+    .alert-box { background:rgba(201,169,110,0.06); border:1px solid rgba(201,169,110,0.25); padding:24px 28px; margin:28px 0; }
+    .alert-box-title { font-size:12px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+    .alert-box-text { font-size:17px; font-weight:300; color:var(--grey-dark); line-height:1.8; }
+
+    /* Stats row */
+    .stats-row { display:grid; grid-template-columns:repeat(4, 1fr); gap:1px; background:var(--grey-light); border:1px solid var(--grey-light); margin:28px 0; }
+    .stat-cell { background:var(--white); padding:24px 20px; }
+    .stat-num { font-size:28px; font-weight:700; color:var(--navy); line-height:1; margin-bottom:6px; }
+    .stat-num sup { color:var(--gold); font-size:14px; font-weight:300; }
+    .stat-label { font-size:11px; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--grey-mid); }
+
+    /* Steps */
+    .steps-list { display:flex; flex-direction:column; gap:0; margin:20px 0; }
+    .step-item { display:flex; align-items:flex-start; gap:20px; padding:20px 0; border-bottom:1px solid var(--grey-light); }
+    .step-item:first-child { padding-top:0; }
+    .step-item:last-child { border-bottom:none; padding-bottom:0; }
+    .step-num { font-size:11px; font-weight:700; color:var(--gold); border:1px solid rgba(201,169,110,0.4); width:32px; height:32px; min-width:32px; display:flex; align-items:center; justify-content:center; flex-shrink:0; letter-spacing:0; margin-top:2px; }
+    .step-title { font-size:17px; font-weight:600; color:var(--navy); margin-bottom:6px; }
+    .step-desc { font-size:16px; font-weight:300; color:var(--grey-mid); line-height:1.75; }
+
+    /* Rate table */
+    .rate-table { width:100%; border-collapse:collapse; margin:24px 0; }
+    .rate-table th { font-size:11px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--grey-mid); text-align:left; padding:12px 16px; border-bottom:2px solid var(--navy); }
+    .rate-table td { font-size:16px; font-weight:400; color:var(--grey-dark); padding:14px 16px; border-bottom:1px solid var(--grey-light); }
+    .rate-table td:last-child { font-weight:600; color:var(--navy); }
+    .rate-table tr:last-child td { border-bottom:none; }
+    .rate-table .highlight-row td { background:rgba(201,169,110,0.05); }
+
+    /* Divider */
+    .art-divider { height:1px; background:var(--grey-light); margin:48px 0; }
+    .art-divider-gold { height:1px; background:linear-gradient(to right, var(--gold), transparent); margin:48px 0; }
+
+    /* ─── SIDEBAR ─────────────────────────────────── */
+    .article-sidebar { position:sticky; top:100px; }
+    .sidebar-card { border:1px solid var(--grey-light); padding:28px; margin-bottom:20px; position:relative; overflow:hidden; }
+    .sidebar-card::before { content:''; position:absolute; top:0; left:0; width:100%; height:2px; background:var(--gold); }
+    .sidebar-card-label { font-size:11px; font-weight:600; letter-spacing:0.26em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    .sidebar-fact { display:flex; flex-direction:column; gap:3px; padding:12px 0; border-bottom:1px solid var(--grey-light); }
+    .sidebar-fact:last-child { border-bottom:none; padding-bottom:0; }
+    .sidebar-fact-key { font-size:11px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:var(--grey-mid); }
+    .sidebar-fact-val { font-size:16px; font-weight:600; color:var(--navy); }
+    .sidebar-fact-val.val-gold { color:var(--gold); }
+
+    /* Sidebar CTA */
+    .sidebar-cta { background:var(--navy); padding:28px; }
+    .sidebar-cta-title { font-size:18px; font-weight:600; color:var(--white); line-height:1.3; margin-bottom:10px; }
+    .sidebar-cta-text { font-size:15px; font-weight:300; color:rgba(255,255,255,0.52); line-height:1.7; margin-bottom:20px; }
+    .sidebar-cta-btn { display:block; text-align:center; font-family:var(--font); font-size:13px; font-weight:600; letter-spacing:0.20em; text-transform:uppercase; color:var(--white); background:var(--gold); text-decoration:none; padding:14px 20px; transition:var(--transition); }
+    .sidebar-cta-btn:hover { background:#B8945A; }
+
+    /* Related instruments */
+    .sidebar-related-title { font-size:11px; font-weight:600; letter-spacing:0.26em; text-transform:uppercase; color:var(--grey-mid); margin-bottom:14px; }
+    .related-link { display:flex; align-items:center; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--grey-light); text-decoration:none; transition:var(--transition); }
+    .related-link:last-child { border-bottom:none; }
+    .related-link-name { font-size:15px; font-weight:500; color:var(--navy); transition:var(--transition); }
+    .related-link:hover .related-link-name { color:var(--gold); }
+    .related-link-arrow { font-size:14px; font-weight:300; color:var(--grey-mid); transition:var(--transition); }
+    .related-link:hover .related-link-arrow { color:var(--gold); transform:translateX(3px); }
+
+    /* ─── BACK TO CATALOG ────────────────────────── */
+    .back-bar { background:#FAFAFA; border-top:1px solid var(--grey-light); border-bottom:1px solid var(--grey-light); padding:16px 80px; }
+    .back-link { font-size:13px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--grey-mid); text-decoration:none; display:inline-flex; align-items:center; gap:10px; transition:var(--transition); }
+    .back-link:hover { color:var(--navy); }
+
+    /* ─── FOOTER ─────────────────────────────────── */
+    .footer { background:var(--navy-deep); padding:56px 80px 34px; }
+    .footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr; gap:44px; margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.07); }
+    .f-logo-img { height:57px; width:auto; display:block; filter:brightness(0) invert(1); opacity:0.85; }
+    .f-desc    { font-size:15px; font-weight:300; color:rgba(255,255,255,0.36); line-height:1.85; margin-top:18px; max-width:260px; }
+    .f-tagline { font-size:16px; font-weight:100; letter-spacing:0.14em; color:var(--gold); margin-top:12px; }
+    .f-col-label { font-size:11px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:rgba(255,255,255,0.24); margin-bottom:16px; }
+    .f-links { list-style:none; }
+    .f-links li { margin-bottom:10px; }
+    .f-links a  { font-size:15px; font-weight:300; color:rgba(255,255,255,0.48); text-decoration:none; transition:var(--transition); }
+    .f-links a:hover { color:var(--white); }
+    .f-badge { font-size:9px; font-weight:600; color:var(--gold); border:1px solid rgba(201,169,110,0.45); padding:1px 5px; margin-left:5px; vertical-align:middle; }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+    .f-copy    { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:0.05em; }
+    .f-legal   { display:flex; gap:20px; }
+    .f-legal a { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); text-decoration:none; transition:var(--transition); }
+    .f-legal a:hover { color:rgba(255,255,255,0.45); }
+
+    /* ─── RESPONSIVE ─────────────────────────────── */
+    @media (max-width:1024px) {
+      .article-layout { grid-template-columns:1fr; padding:60px 48px 80px; }
+      .article-sidebar { position:static; }
+    }
+    @media (max-width:768px) {
+      .navbar { padding:0 24px; }
+      .nav-links, .nav-cta { display:none; }
+      .nav-hamburger { display:flex; }
+      .article-hero { padding:120px 28px 60px; }
+      .hero-title { font-size:34px; }
+      .article-layout { padding:40px 24px 60px; }
+      .stats-row { grid-template-columns:1fr 1fr; }
+      .rate-table { font-size:14px; }
+      .rate-table th, .rate-table td { padding:10px 10px; }
+      .back-bar { padding:14px 24px; }
+      .footer { padding:40px 24px 28px; }
+      .footer-grid { grid-template-columns:1fr; gap:32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img"
+         onerror="this.style.display='none'">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../solucoes.html" class="active">Soluções</a></li>
+    <li><a href="../conhecimento.html">Conhecimento</a></li>
+    <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades <span class="nav-dropdown-arrow"></span></a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros.html">Parceiros</a>
+        <a href="../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="../index.html#contactar" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../solucoes.html">Soluções</a>
+  <a href="../conhecimento.html">Conhecimento</a>
+  <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos.html">Sobre Nós</a>
+  <a href="../parceiros.html">Parceiros</a>
+  <a href="../carreiras.html">Carreiras</a>
+  <a href="../index.html#contactar" class="nav-mobile-cta">Contactar</a>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     ARTICLE HERO
+════════════════════════════════════════ -->
+<section class="article-hero">
+  <div class="article-hero-inner">
+
+    <div class="breadcrumb">
+      <a href="../index.html">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../solucoes.html">Soluções</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">SI Base Territorial</span>
+    </div>
+
+    <p class="hero-cat">Financiamento Público</p>
+    <h1 class="hero-title">SI Base Territorial<br>Alentejo 2030</h1>
+    <p class="hero-tagline">
+      Apoio a fundo perdido para criação, expansão ou modernização de micro e pequenas empresas no Alentejo, com foco no emprego local e na fixação de população.
+    </p>
+
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotação do aviso</span>
+        <span class="meta-value gold">€5.000.000</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Investimento elegível</span>
+        <span class="meta-value">€15K a €300K</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Co-financiamento</span>
+        <span class="meta-value">40% a 60%</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value gold">Aberto (até 01/09/2026)</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     BACK TO CATALOG
+════════════════════════════════════════ -->
+<div class="back-bar">
+  <a href="../solucoes.html" class="back-link">
+    <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M5 1L1 5L5 9" stroke="#7A7A7A" stroke-width="1.2"/><line x1="1" y1="5" x2="13" y2="5" stroke="#7A7A7A" stroke-width="1.2"/></svg>
+    Voltar ao catálogo de instrumentos
+  </a>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     ARTICLE CONTENT + SIDEBAR
+════════════════════════════════════════ -->
+<div class="article-layout">
+
+  <!-- ── MAIN CONTENT ───────────────────── -->
+  <article class="article-body">
+
+    <!-- Visão Geral -->
+    <div class="article-section reveal">
+      <p class="section-eyebrow">Visão Geral</p>
+      <h2 class="section-h2">O que é o SI Base Territorial?</h2>
+      <p class="section-text">
+        O Sistema de Incentivos de Base Territorial (aviso ALT2030-2026-16) é uma linha de apoio do Programa Regional do Alentejo 2030, cofinanciada pelo FEDER, que visa apoiar investimentos de pequena dimensão para criar, expandir ou modernizar micro e pequenas empresas na região do Alentejo.
+      </p>
+      <p class="section-text">
+        O foco do programa é claro: dinamizar as economias locais, promover a manutenção do emprego e a fixação de população em territórios de menor densidade. São particularmente valorizados projetos de modernização do comércio e serviços de proximidade, restauração e indústria local.
+      </p>
+
+      <div class="stats-row">
+        <div class="stat-cell">
+          <div class="stat-num">€5<sup>M</sup></div>
+          <div class="stat-label">Dotação FEDER</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">60<sup>%</sup></div>
+          <div class="stat-label">Taxa máxima</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">€300<sup>K</sup></div>
+          <div class="stat-label">Investimento máximo</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">24</div>
+          <div class="stat-label">Meses de execução</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <!-- Duas ações -->
+    <div class="article-section reveal">
+      <p class="section-eyebrow">Tipologias de Projeto</p>
+      <h2 class="section-h2">Que tipo de projetos são apoiados?</h2>
+      <p class="section-text">
+        O aviso abrange dois tipos de ação, consoante a maturidade da empresa:
+      </p>
+
+      <ul class="article-list">
+        <li><strong>Criação de empresa:</strong> empresas com menos de 3 anos de atividade à data de submissão da candidatura, focadas em estratégias de investimento para arranque do negócio.</li>
+        <li><strong>Expansão ou modernização:</strong> empresas com pelo menos 3 anos de atividade, através do aumento de produção, integração em cadeias de valor, expansão de redes empresariais ou outros projetos de ganhos de escala.</li>
+      </ul>
+
+      <div class="highlight-box">
+        <p class="highlight-box-title">Setores elegíveis</p>
+        <p class="highlight-box-text">
+          Comércio por grosso e a retalho (divisões 46 e 47, com exceções) · Serviços de proximidade (TI, arquitetura, engenharia, veterinária, saúde humana, ação social, fitness, reparações, serviços pessoais) · Restauração (divisão 56) · Indústrias transformadoras locais (divisões 10 a 33, exceto tabaco), enquadradas nos domínios "Digitalização da Economia" ou "Circularidade da Economia" da RIS3 Alentejo.
+        </p>
+      </div>
+
+      <div class="alert-box">
+        <p class="alert-box-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#C9A96E" stroke-width="1.2"/><line x1="8" y1="4" x2="8" y2="9" stroke="#C9A96E" stroke-width="1.2"/><circle cx="8" cy="11.5" r="0.7" fill="#C9A96E"/></svg>
+          Atividades excluídas
+        </p>
+        <p class="alert-box-text">
+          Não são elegíveis operações em atividades financeiras e de seguros, defesa, lotarias e jogos de aposta, nem setores de produção primária agrícola/pesca (salvo exceções com contabilidade por centro de custos).
+        </p>
+      </div>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <!-- Elegibilidade -->
+    <div class="article-section reveal">
+      <p class="section-eyebrow">Elegibilidade</p>
+      <h2 class="section-h2">Quem pode candidatar-se?</h2>
+      <p class="section-text">
+        O aviso destina-se exclusivamente a micro e pequenas empresas localizadas na região NUTS II do Alentejo. Para ser elegível, a empresa deve cumprir, à data de candidatura:
+      </p>
+
+      <ul class="article-list">
+        <li>Deter estatuto certificado de micro ou pequena empresa (emitido pelo IAPMEI)</li>
+        <li>Ter pelo menos uma prestação de contas válida (IES entregue)</li>
+        <li>Ter contabilidade organizada</li>
+        <li>Rácio de autonomia financeira igual ou superior a 0,15</li>
+        <li>Exportações não superiores a 5% do volume de negócios total (ou inferiores a €1M)</li>
+        <li>Mínimo de 1 posto de trabalho (ETI) localizado na região do Alentejo</li>
+        <li>Sem operações aprovadas e não concluídas ao abrigo dos Sistemas de Incentivos do Portugal 2030 para o mesmo estabelecimento</li>
+      </ul>
+
+      <div class="highlight-box">
+        <p class="highlight-box-title">Limite por empresa</p>
+        <p class="highlight-box-text">
+          Cada empresa pode submeter apenas 1 candidatura neste aviso. O investimento diz respeito a um único estabelecimento.
+        </p>
+      </div>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <!-- Taxas e Financiamento -->
+    <div class="article-section reveal">
+      <p class="section-eyebrow">Financiamento</p>
+      <h2 class="section-h2">Quanto se pode obter?</h2>
+      <p class="section-text">
+        O apoio é concedido sob a forma de subvenção não reembolsável (fundo perdido), enquadrado no regime de auxílios de minimis. A taxa de financiamento depende da localização do investimento:
+      </p>
+
+      <table class="rate-table">
+        <thead>
+          <tr>
+            <th>Localização</th>
+            <th>Taxa base</th>
+            <th>Majoração</th>
+            <th>Taxa máxima</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td>Alto Alentejo (baixa densidade)</td>
+            <td>50%</td>
+            <td>+10 p.p.</td>
+            <td>60%</td>
+          </tr>
+          <tr>
+            <td>Restante Alentejo (baixa densidade)</td>
+            <td>50%</td>
+            <td>n.a.</td>
+            <td>50%</td>
+          </tr>
+          <tr>
+            <td>Territórios não classificados como baixa densidade</td>
+            <td>40%</td>
+            <td>n.a.</td>
+            <td>40%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="section-text">
+        O investimento elegível deve situar-se entre €15.000 e €300.000 em custo total. Não são elegíveis quaisquer custos incorridos antes da data de candidatura.
+      </p>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <!-- Despesas Elegíveis -->
+    <div class="article-section reveal">
+      <p class="section-eyebrow">Despesas Elegíveis</p>
+      <h2 class="section-h2">O que pode ser financiado?</h2>
+
+      <ul class="article-list">
+        <li><strong>Ativos corpóreos:</strong> máquinas, equipamentos, equipamentos informáticos e respetivo software. Em casos justificados, veículos não movidos a combustíveis fósseis.</li>
+        <li><strong>Obras e remodelações:</strong> construção de edifícios, obras de adaptação e remodelação, até 60% dos custos diretos elegíveis.</li>
+        <li><strong>Ativos incorpóreos:</strong> patentes, licenças, conhecimentos técnicos e software especializado.</li>
+        <li><strong>Serviços de consultoria:</strong> auditorias, certificações, planos de marketing, serviços de engenharia. Limitados a 5% dos custos diretos.</li>
+        <li><strong>Certificação e marcas:</strong> custos de certificação de produtos, processos ou serviços e registo de marcas.</li>
+        <li><strong>Custos indiretos:</strong> taxa fixa de 5% sobre os custos diretos elegíveis (sem necessidade de justificação documental).</li>
+      </ul>
+
+      <div class="highlight-box">
+        <p class="highlight-box-title">Limites a reter</p>
+        <p class="highlight-box-text">
+          Obras e construções: máximo 60% dos custos diretos · Consultoria e marketing: máximo 5% dos custos diretos · Contabilistas/revisores para validação de despesa: máximo €1.000 · Despesas com preparação da candidatura: não elegíveis.
+        </p>
+      </div>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <!-- Processo de Candidatura -->
+    <div class="article-section reveal">
+      <p class="section-eyebrow">Processo</p>
+      <h2 class="section-h2">Como candidatar-se, passo a passo</h2>
+
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <div class="step-title">Registar-se no Balcão dos Fundos</div>
+            <p class="step-desc">Criar conta e autenticar-se em balcaofundosue.pt. Na área reservada, completar os dados de caracterização da entidade.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <div class="step-title">Preparar a documentação</div>
+            <p class="step-desc">Reunir: memória descritiva (máx. 15 páginas), certidão permanente, IES, certificado PME, folhas de remunerações, comprovativo de fontes de financiamento e auto-avaliação DNSH.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <div class="step-title">Elaborar a memória descritiva</div>
+            <p class="step-desc">Deve incluir: enquadramento na tipologia de ação, justificação do investimento, objetivos e resultados esperados, caracterização técnica com orçamento detalhado e cronograma de execução.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <div class="step-title">Submeter a candidatura online</div>
+            <p class="step-desc">Preencher o formulário de candidatura no Balcão dos Fundos e anexar toda a documentação. Prazo limite: 01 de setembro de 2026 (18h).</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">05</div>
+          <div class="step-content">
+            <div class="step-title">Aguardar análise e decisão</div>
+            <p class="step-desc">As candidaturas são hierarquizadas por Mérito do Projeto (MP) e decididas em 60 dias úteis após o fecho do concurso. Decisão comunicada via Balcão dos Fundos e notificação eletrónica.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">06</div>
+          <div class="step-content">
+            <div class="step-title">Assinar o Termo de Aceitação e executar</div>
+            <p class="step-desc">Após aprovação, assinar digitalmente o Termo de Aceitação em 30 dias. Executar o projeto dentro de 24 meses, submetendo pedidos de reembolso com base em despesas realizadas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <!-- Critérios de Seleção -->
+    <div class="article-section reveal">
+      <p class="section-eyebrow">Avaliação</p>
+      <h2 class="section-h2">Como é avaliada a candidatura?</h2>
+      <p class="section-text">
+        O Mérito do Projeto (MP) é calculado pela fórmula ponderada abaixo. São elegíveis os projetos com MP igual ou superior a 3,00.
+      </p>
+
+      <table class="rate-table">
+        <thead>
+          <tr>
+            <th>Critério</th>
+            <th>O que avalia</th>
+            <th>Peso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>A. Adequação à Estratégia</strong></td>
+            <td>Alinhamento com a RIS3 Alentejo e contributo para indicadores do programa</td>
+            <td>30%</td>
+          </tr>
+          <tr>
+            <td><strong>B. Qualidade</strong></td>
+            <td>Coerência do plano de investimentos e caráter inovador da operação</td>
+            <td>30%</td>
+          </tr>
+          <tr>
+            <td><strong>C. Capacidade de Execução</strong></td>
+            <td>Viabilidade técnica, sustentabilidade financeira e recursos humanos</td>
+            <td>10%</td>
+          </tr>
+          <tr>
+            <td><strong>D. Impacto</strong></td>
+            <td>Contributo para emprego qualificado, diversificação económica e igualdade de género</td>
+            <td>30%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="highlight-box">
+        <p class="highlight-box-title">Critério de desempate</p>
+        <p class="highlight-box-text">
+          Em caso de empate no MP, prevalece a pontuação obtida no critério B (Qualidade). Se persistir o empate, prevalece a data e hora de submissão da candidatura.
+        </p>
+      </div>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <!-- Perspetiva Open Capital -->
+    <div class="article-section reveal">
+      <p class="section-eyebrow">Perspetiva Open Capital</p>
+      <h2 class="section-h2">O que observamos na prática</h2>
+      <p class="section-text">
+        Instrumentos de base territorial têm características próprias que os distinguem dos sistemas de incentivos tradicionais. Seguem alguns pontos-chave:
+      </p>
+
+      <ul class="article-list">
+        <li><strong>Dotação limitada, concorrência elevada.</strong> Com apenas €5M disponíveis, a seleção é rigorosa. Investir na qualidade da memória descritiva e no detalhe do orçamento é determinante.</li>
+        <li><strong>A narrativa territorial conta.</strong> Explicar como o projeto fixa população, mantém emprego ou diversifica a economia local é tão importante quanto a viabilidade financeira.</li>
+        <li><strong>Alinhamento com a RIS3 Alentejo é pontuado duplamente.</strong> Projetos alinhados com dois ou mais domínios da EREI recebem pontuação máxima no critério A1. Vale a pena investir nessa justificação.</li>
+        <li><strong>Inovação é medida de forma relativa.</strong> Não é necessário um produto disruptivo. Diferenciar a oferta a nível local ou regional já pontua 4 a 5 no critério B2.</li>
+        <li><strong>Submeta cedo, mas prepare-se antes.</strong> O concurso fecha a 01/09/2026, a data de submissão serve como critério de desempate. Comece a reunir documentação com antecedência.</li>
+        <li><strong>Atenção às penalizações por incumprimento.</strong> O Grau de Cumprimento dos indicadores é avaliado no encerramento. Se for inferior a 85%, a taxa de financiamento é reduzida. Abaixo de 40%, o apoio pode ser revogado.</li>
+      </ul>
+    </div>
+
+  </article>
+
+  <!-- ── SIDEBAR ─────────────────────────── -->
+  <aside class="article-sidebar">
+
+    <!-- Factos rápidos -->
+    <div class="sidebar-card reveal">
+      <p class="sidebar-card-label">Factos Rápidos</p>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Dotação FEDER</span>
+        <span class="sidebar-fact-val val-gold">€5.000.000</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Investimento</span>
+        <span class="sidebar-fact-val">€15.000 a €300.000</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Taxa máxima</span>
+        <span class="sidebar-fact-val">Até 60%</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Forma de apoio</span>
+        <span class="sidebar-fact-val">Subvenção (fundo perdido)</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Região</span>
+        <span class="sidebar-fact-val">NUTS II Alentejo</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Elegibilidade</span>
+        <span class="sidebar-fact-val">Micro e pequenas empresas</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Candidaturas</span>
+        <span class="sidebar-fact-val">27/03 a 01/09/2026</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Código do aviso</span>
+        <span class="sidebar-fact-val">ALT2030-2026-16</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Estado</span>
+        <span class="sidebar-fact-val val-gold">Aberto</span>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="sidebar-cta reveal reveal-d1">
+      <p class="sidebar-cta-title">Tem uma micro ou pequena empresa no Alentejo?</p>
+      <p class="sidebar-cta-text">Avaliamos a elegibilidade do seu projeto e ajudamos a estruturar uma candidatura competitiva.</p>
+      <a href="../index.html#contactar" class="sidebar-cta-btn">Falar com um especialista</a>
+    </div>
+
+    <!-- Instrumentos relacionados -->
+    <div style="margin-top:28px;" class="reveal reveal-d2">
+      <p class="sidebar-related-title">Instrumentos relacionados</p>
+      <a href="portugal-2030.html" class="related-link">
+        <span class="related-link-name">Portugal 2030</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="compete-2030.html" class="related-link">
+        <span class="related-link-name">COMPETE 2030</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="rfai.html" class="related-link">
+        <span class="related-link-name">RFAI</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="dlrr.html" class="related-link">
+        <span class="related-link-name">DLRR</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="banco-fomento.html" class="related-link">
+        <span class="related-link-name">Banco de Fomento</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+    </div>
+
+  </aside>
+
+</div>
+
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img"
+           onerror="this.style.display='none'">
+      <p class="f-desc">Parceiro estratégico especializado na estruturação, acesso e execução de soluções de capital para empresas em crescimento.</p>
+      <p class="f-tagline">Capital, made clear.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Soluções</p>
+      <ul class="f-links">
+        <li><a href="../solucoes.html#capital">Portugal 2030</a></li>
+        <li><a href="../solucoes.html#fiscal">Benefícios Fiscais</a></li>
+        <li><a href="../solucoes.html#inovacao">I&amp;D &amp; Tecnologia</a></li>
+        <li><a href="../solucoes.html#execucao">Gestão de Projetos</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">em breve</span></a></li>
+        <li><a href="../tech2business.html">Tech2Business <span class="f-badge">em breve</span></a></li>
+        <li><a href="../conhecimento.html">Conhecimento</a></li>
+        <li><a href="../parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="../sobre-nos.html">Equipa</a></li>
+        <li><a href="../carreiras.html">Carreiras</a></li>
+        <li><a href="../index.html#contactar">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">© 2025 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // Hamburger
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
