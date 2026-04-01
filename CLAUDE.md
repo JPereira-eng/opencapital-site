@@ -491,7 +491,7 @@ opencapital-website/
 - SVG icons: inline, monoline, geometric, no fills
 - No external CSS libraries (no Bootstrap, Tailwind, etc.)
 - No JS frameworks (no React, Vue, etc.)
-- Deployment: Netlify (drag & drop)
+- Deployment: Netlify (continuous deployment from `main` branch on GitHub)
 
 ---
 
@@ -570,6 +570,23 @@ Midjourney prompt base:
 - [ ] Hover states on all interactive elements
 - [ ] Scroll reveal animations on sections below the fold
 - [ ] Mobile responsive (breakpoint: 768px)
+
+---
+
+## 🚀 AUTO-DEPLOY RULE
+
+**Every skill/command that creates or modifies site files MUST auto-deploy at the end.**
+
+After completing any skill (e.g. `/trend`, `/instrumento`, or any future command), follow these steps automatically without asking the user:
+
+1. `git add` the specific files created or modified by the skill
+2. `git commit` with a descriptive message (in Portuguese, lowercase, following the repo's commit style)
+3. If on `main`: `git push origin main`
+4. If on a worktree/branch: `git checkout main && git merge <branch> && git push origin main`
+
+This ensures Netlify deploys every change immediately. Never skip this step. Never ask "should I commit?" or "should I push?" after a skill completes.
+
+If a push fails (e.g. conflict), inform the user and attempt to resolve.
 
 ---
 
