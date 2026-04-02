@@ -55,37 +55,43 @@ Seleciona o autor cujo perfil melhor se alinha ao tema. Em caso de duvida, usa J
 
 ## LOGICA EDITORIAL DA SERIE 1.2
 
-Esta serie transforma acontecimentos atuais em leitura estrategica para empresas.
+Esta serie combina dois registos distintos: jornalismo de factos + analise estrategica com opiniao clara.
 
 **Raciocinio obrigatorio:**
-facto ou tendencia > leitura estrategica > impacto setorial > implicacao pratica
+factos apresentados com rigor noticioso > leitura estrategica > impacto setorial > conclusao analitica com posicao clara
 
-**O que este artigo e:**
-- Interpretacao estrategica, nao reportagem
-- Analise das implicacoes para empresas, nao descricao do acontecimento
-- Posicao clara baseada em raciocinio, nao neutralidade jornalistica
+**Os dois registos do artigo:**
 
-**Estrutura editorial recomendada:**
-1. Enquadramento do acontecimento
-2. Leitura estrategica
-3. Impacto setorial
-4. Implicacoes praticas para empresas
-5. Perspetiva Open Capital
+**Registo 1 — Noticioso (para a parte dos factos):**
+Quando o artigo apresenta o que aconteceu, os dados, os numeros, as declaracoes, o contexto, o tom e jornalistico e direto. Frases curtas. Factos antes da interpretacao. O leitor deve perceber o que se passou antes de perceber o que significa.
+
+**Registo 2 — Analitico/opiniao (para a interpretacao e conclusao):**
+Quando o artigo interpreta, extrai implicacoes ou conclui, o tom muda: mais fluido, mais pessoal, mais assertivo. Posicao clara. Sem neutralidade artificial. O autor tem uma perspetiva e defende-a. As partes analiticas e de opiniao nao devem ter estruturacao excessiva: sem topicos, sem bullets, sem titulos de seccao desnecessarios. Texto corrido, raciocinio em paragrafos.
+
+**Estrutura editorial — principios, nao template rigido:**
+- Entrada noticiosa: o que aconteceu, com dados e factos
+- Transicao para analise: o que isto significa
+- Impacto setorial: pode usar tabelas, topicos ou stats quando os factos o justificam
+- Recomendacoes praticas: pode ter estruturacao (listas, tabelas) se for util
+- Conclusao analitica/opiniao: texto corrido, posicao clara, sem estruturacao
+
+**Os capitulos devem ser propositadamente desequilibrados.** Alguns sao curtos e densos. Outros sao longos e fluidos. Nao ha simetria artificial entre seccoes.
 
 ---
 
 ## REGRAS EDITORIAIS
 
 O artigo deve:
-- interpretar o acontecimento e nao apenas descrevê-lo
-- contextualizar o tema no panorama empresarial e tecnologico
+- abrir com registo noticioso antes de passar para analise
+- interpretar os factos com posicao clara, nao neutralidade
+- contextualizar no panorama empresarial e tecnologico
 - privilegiar clareza e raciocinio estrategico
 - evitar sensacionalismo ou exagero
 - manter linguagem acessivel sem perder rigor analitico
-- evitar texto demasiado estruturado ou capitulos com comprimentos demasiado equilibrados
-- tom natural, mas formal
+- usar estruturacao (tabelas, topicos, bullets) apenas nas partes de factos, dados e recomendacoes; as partes analiticas e de opiniao sao texto corrido
+- capitulos deliberadamente desequilibrados em tamanho
 
-**Comprimento:** entre 1500 e 3000 palavras, ajustando a extensao a complexidade do tema.
+**Comprimento:** entre 2500 e 4000 palavras. O artigo deve ser longo o suficiente para tratar o tema com profundidade real.
 
 **Nunca usar travessao (—) em nenhuma circunstancia.** Usar virgula, ponto ou reescrever a frase.
 
