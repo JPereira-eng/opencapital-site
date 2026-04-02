@@ -89,7 +89,6 @@ Cada instrumento e diferente. O Claude tem liberdade para decidir a estrutura ed
 - Listas com bullet diamond dourado
 - Caixas de destaque (highlight-box) com borda gold
 - Grelha de estatisticas (stats-row) em 2, 3 ou 4 colunas
-- Passos numerados (steps-list) para processos de candidatura
 - Tabelas de comparacao (ex: taxas por escalao, fases de investimento)
 - Exemplos de calculo (ex: "uma empresa com 500K em I&D poupa X")
 - Diagramas SVG inline simples (timelines, funis, matrizes) em navy/gold, monoline
@@ -97,6 +96,9 @@ Cada instrumento e diferente. O Claude tem liberdade para decidir a estrutura ed
 - Seccao "Para que tipo de empresa?"
 - Avisos e alertas (ex: "Prazo a fechar em X", "Novo aviso aberto")
 - Comparacao com instrumentos similares
+
+**PROIBIDO:**
+- Nunca incluir seccoes tipo "Passo a passo", "Guia de processo", "Como candidatar-se passo a passo", "Steps", ou qualquer lista numerada de etapas sequenciais de candidatura. O artigo nao e um manual de instrucoes. E uma ficha editorial analitica.
 
 **Principios de escolha por tipo de instrumento:**
 - Instrumentos fiscais (SIFIDE, RFAI, DLRR): incluir exemplos de calculo e tabelas de taxas
@@ -404,11 +406,11 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
     <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
   </a>
   <ul class="nav-links">
-    <li><a href="../solucoes.html" class="active">Solucoes</a></li>
+    <li><a href="../solucoes.html" class="active">Soluções</a></li>
     <li><a href="../conhecimento.html">Conhecimento</a></li>
     <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
     <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
-    <li><a href="../sobre-nos.html">Sobre Nos</a></li>
+    <li><a href="../sobre-nos.html">Sobre Nós</a></li>
     <li class="nav-dropdown">
       <a href="#">Oportunidades</a>
       <div class="nav-dropdown-menu">
@@ -421,11 +423,11 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
   <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-mobile-menu" id="mobileMenu">
-  <a href="../solucoes.html">Solucoes</a>
+  <a href="../solucoes.html">Soluções</a>
   <a href="../conhecimento.html">Conhecimento</a>
   <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
   <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
-  <a href="../sobre-nos.html">Sobre Nos</a>
+  <a href="../sobre-nos.html">Sobre Nós</a>
   <a href="../parceiros.html">Parceiros</a>
   <a href="../carreiras.html">Carreiras</a>
   <a href="https://calendly.com/tech2business" class="nav-mobile-cta">Contactar</a>
@@ -434,9 +436,9 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
 <section class="article-hero">
   <div class="article-hero-inner">
     <nav class="breadcrumb">
-      <a href="../index.html">Inicio</a>
+      <a href="../index.html">Início</a>
       <span class="breadcrumb-sep">/</span>
-      <a href="../solucoes.html">Solucoes</a>
+      <a href="../solucoes.html">Soluções</a>
       <span class="breadcrumb-sep">/</span>
       <span class="breadcrumb-current">[NOME_INSTRUMENTO]</span>
     </nav>
@@ -468,7 +470,7 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
 </section>
 
 <div class="back-bar">
-  <a href="../solucoes.html" class="back-link">&larr; Voltar ao catalogo de instrumentos</a>
+  <a href="../solucoes.html" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
 </div>
 
 <div class="article-layout">
@@ -510,7 +512,7 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
   <div class="footer-grid">
     <div>
       <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
-      <p class="f-desc">Assessoria estrategica em financiamento, fiscalidade e investimento. Ajudamos empresas a aceder ao capital certo, no momento certo.</p>
+      <p class="f-desc">Assessoria estratégica em financiamento, fiscalidade e investimento. Ajudamos empresas a aceder ao capital certo, no momento certo.</p>
       <p class="f-tagline">Capital, made clear.</p>
     </div>
     <div>
@@ -518,8 +520,8 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
       <ul class="f-links">
         <li><a href="../solucoes.html">Portugal 2030</a></li>
         <li><a href="../solucoes.html">Fundos de Investimento</a></li>
-        <li><a href="../solucoes.html">Beneficios Fiscais</a></li>
-        <li><a href="../solucoes.html">Premios de Inovacao</a></li>
+        <li><a href="../solucoes.html">Benefícios Fiscais</a></li>
+        <li><a href="../solucoes.html">Prémios de Inovação</a></li>
       </ul>
     </div>
     <div>
@@ -534,7 +536,7 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
     <div>
       <div class="f-col-label">Empresa</div>
       <ul class="f-links">
-        <li><a href="../sobre-nos.html">Sobre Nos</a></li>
+        <li><a href="../sobre-nos.html">Sobre Nós</a></li>
         <li><a href="../sobre-nos.html">Equipa</a></li>
         <li><a href="../carreiras.html">Carreiras</a></li>
         <li><a href="https://calendly.com/tech2business">Contacto</a></li>
@@ -603,4 +605,4 @@ Apos deploy com sucesso, informa:
 - Nome do instrumento publicado
 - Autor selecionado e respetivo cargo
 - URL relativo: `instrumentos/[slug].html`
-- Netlify fara o deploy automaticamente via push
+- GitHub Pages fara o deploy automaticamente via push

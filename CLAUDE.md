@@ -7,6 +7,21 @@ Reference file for visual output: `assets/design-system.html`
 
 ---
 
+## ⚠️ REGRA CRÍTICA — SKILLS & AGENTS
+
+**Sempre que um ficheiro em `.claude/commands/` (skills) ou agentes for criado ou modificado, fazer imediatamente commit + push ao GitHub.**
+
+Duas pessoas trabalham no mesmo repositório em computadores diferentes. Se as skills ficarem apenas locais, a outra pessoa usa versões desatualizadas.
+
+Procedimento:
+1. `git add .claude/commands/[ficheiro]`
+2. `git commit -m "skill: [descrição da alteração]"`
+3. `git push` (se rejeitado: `git stash && git pull --rebase && git stash pop && git push`)
+
+Fazer isto sem que o utilizador peça. É uma instrução permanente.
+
+---
+
 ## 🏢 BRAND
 
 **Name:** Open Capital Advisory & Consultancy
@@ -491,7 +506,7 @@ opencapital-website/
 - SVG icons: inline, monoline, geometric, no fills
 - No external CSS libraries (no Bootstrap, Tailwind, etc.)
 - No JS frameworks (no React, Vue, etc.)
-- Deployment: Netlify (continuous deployment from `main` branch on GitHub)
+- Deployment: GitHub Pages (continuous deployment from `main` branch, DNS via Cloudflare)
 
 ---
 
@@ -610,7 +625,7 @@ After completing any skill (e.g. `/trend`, `/instrumento`, or any future command
 3. If on `main`: `git push origin main`
 4. If on a worktree/branch: `git checkout main && git merge <branch> && git push origin main`
 
-This ensures Netlify deploys every change immediately. Never skip this step. Never ask "should I commit?" or "should I push?" after a skill completes.
+This ensures GitHub Pages deploys every change immediately. Never skip this step. Never ask "should I commit?" or "should I push?" after a skill completes.
 
 If a push fails (e.g. conflict), inform the user and attempt to resolve.
 
