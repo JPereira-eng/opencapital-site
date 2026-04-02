@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fragmentação global: o fim da globalização eficiente? | Open Capital</title>
+  <meta name="description" content="A ordem comercial que sustentou décadas de crescimento está a reorganizar-se. Análise estratégica sobre o impacto da desglobalização nas empresas europeias.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:36px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../solucoes.html">Soluções</a></li>
+      <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades</a>
+        <div class="nav-dropdown-menu">
+          <a href="../parceiros.html">Parceiros</a>
+          <a href="../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/tech2business" class="nav-cta">Contactar</a>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../conhecimento.html">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Estratégia</span>
+      </nav>
+      <span class="hero-cat-badge">Estratégia - Tendência</span>
+      <h1 class="article-title">Fragmentação global: o fim da globalização eficiente?</h1>
+      <p class="article-standfirst">A ordem comercial que sustentou décadas de crescimento está a reorganizar-se. O que significa isso para quem gere empresas na Europa?</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Estratégia</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Abril 2026</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>8 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Jorge Pereira</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+      <img src="../assets/articles/fragmentacao-global-fim-globalizacao-eficiente.jpg" alt="Fragmentação global: o fim da globalização eficiente?" class="article-cover-img">
+
+      <!-- Secção 1: Enquadramento -->
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Enquadramento</div>
+        <h2>O sistema que conhecíamos já não existe</h2>
+        <p>Durante quatro décadas, o comércio global funcionou sobre um pressuposto simples: produzir onde é mais barato, vender onde há mais procura, mover tudo pelo caminho mais curto. Este modelo gerou uma eficiência sem precedentes. Reduziu custos, acelerou o crescimento e criou cadeias de valor que atravessavam continentes com precisão quase cirúrgica.</p>
+        <p>Esse pressuposto está a colapsar. Não por uma crise pontual, mas por uma reconfiguração estrutural da ordem económica. Tarifas punitivas, sanções cruzadas, bloqueios tecnológicos, guerras de recursos, nacionalizações de facto e uma crescente desconfiança entre blocos económicos estão a redesenhar o mapa do comércio mundial. O resultado não é uma recessão clássica. É algo mais profundo: a substituição da eficiência pela segurança como princípio organizador da economia global.</p>
+        <p>Para as empresas europeias, e em particular para as PME portuguesas com exposição internacional, a questão já não é teórica. A fragmentação está a acontecer, e os seus efeitos já se sentem em custos de matérias-primas, prazos de entrega, acesso a componentes e capacidade de planeamento.</p>
+      </div>
+
+      <div class="stats-row cols-4 reveal">
+        <div class="stat-cell">
+          <div class="stat-num">3.000<sup>+</sup></div>
+          <div class="stat-label">Restrições comerciais ativas (2025)</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">47<sup>%</sup></div>
+          <div class="stat-label">Aumento de barreiras desde 2019</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">2,3<sup>x</sup></div>
+          <div class="stat-label">Crescimento do nearshoring na UE</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">18<sup>%</sup></div>
+          <div class="stat-label">Queda no comércio EUA-China (2023-25)</div>
+        </div>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <!-- Secção 2: Leitura estratégica -->
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Leitura estratégica</div>
+        <h2>Da globalização linear à economia de blocos</h2>
+        <p>O que está em curso não é protecionismo no sentido clássico do termo. É uma reorganização do comércio mundial em torno de blocos de confiança. Os Estados Unidos reforçam relações comerciais preferenciais com aliados geopolíticos. A China constrói redes paralelas com o Sul Global. A Europa, presa entre ambos, tenta definir uma posição de autonomia estratégica que lhe permita manter acesso a ambos os lados sem depender excessivamente de nenhum.</p>
+        <p>Esta transição tem um nome no jargão dos economistas: friend-shoring. Em termos práticos, significa que a pergunta "onde é mais eficiente produzir?" foi substituída por "onde é mais seguro produzir?". E a resposta a essa pergunta muda radicalmente as cadeias de valor.</p>
+
+        <div class="pull-quote reveal">
+          <div class="pull-quote-text">"A eficiência global não desapareceu. Foi reclassificada como um risco."</div>
+        </div>
+
+        <p>O problema é que segurança e eficiência raramente coexistem. Cada camada de redundância acrescenta custo. Cada fornecedor alternativo reduz a escala. Cada decisão de relocalizar produção implica investimento, tempo e perda temporária de competitividade. Para empresas que construíram os seus modelos sobre margens apertadas e logística global otimizada, esta realidade é particularmente difícil de absorver.</p>
+      </div>
+
+      <!-- Secção 3: O mapa da fragmentação -->
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Cartografia</div>
+        <h2>Os três eixos da fragmentação</h2>
+        <p>A desglobalização não acontece de forma uniforme. Manifesta-se em três eixos distintos, cada um com implicações diferentes para as empresas.</p>
+
+        <h3>1. Fragmentação comercial</h3>
+        <p>Tarifas, quotas e barreiras regulatórias estão a segmentar mercados que antes eram acessíveis. O caso mais visível é o desacoplamento tecnológico entre os EUA e a China, mas os efeitos estendem-se muito além dos semicondutores. A agricultura, o automóvel, a energia e os serviços financeiros enfrentam restrições crescentes que tornam o comércio transfronteiriço mais caro, mais lento e menos previsível.</p>
+
+        <h3>2. Fragmentação tecnológica</h3>
+        <p>O conceito de "splinternet" já não é ficção. Existem hoje dois ecossistemas tecnológicos paralelos em formação: um centrado nos EUA e outro na China. Standards de telecomunicações, protocolos de dados, normas de inteligência artificial e até infraestrutura de cloud computing estão a divergir. Para empresas que operam em mercados internacionais, isto significa potencialmente duplicar investimentos em conformidade tecnológica.</p>
+
+        <h3>3. Fragmentação financeira</h3>
+        <p>A utilização do dólar como instrumento de pressão geopolítica acelerou a criação de sistemas de pagamento alternativos. O CIPS chinês, os acordos de swap bilateral e as experiências com moedas digitais de bancos centrais estão a criar um sistema financeiro fragmentado. Para empresas com operações internacionais, a gestão cambial e o acesso a financiamento em determinados mercados tornam-se significativamente mais complexos.</p>
+      </div>
+
+      <div class="art-highlight reveal">
+        <div class="art-highlight-label">Contexto europeu</div>
+        <div class="art-highlight-text">A União Europeia respondeu com o European Chips Act, o Critical Raw Materials Act e o Net-Zero Industry Act. Mas a execução tem sido lenta e a coordenação entre Estados-membros, irregular. Portugal, com uma economia aberta e fortemente dependente de exportações intra-UE, está exposto tanto aos benefícios como aos riscos desta resposta europeia.</div>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <!-- Secção 4: Impacto setorial -->
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Impacto setorial</div>
+        <h2>Quem ganha, quem perde, quem se adapta</h2>
+        <p>A fragmentação não afeta todos os setores da mesma forma. Alguns estão a ser profundamente reestruturados, enquanto outros encontram oportunidades na reconfiguração.</p>
+      </div>
+
+      <table class="art-table reveal">
+        <thead>
+          <tr>
+            <th>Setor</th>
+            <th>Exposição</th>
+            <th>Tendência</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Indústria automóvel</strong></td>
+            <td>Muito alta</td>
+            <td>Relocalização parcial de componentes, custos crescentes em baterias e semicondutores</td>
+          </tr>
+          <tr>
+            <td><strong>Tecnologia / Software</strong></td>
+            <td>Alta</td>
+            <td>Duplicação de standards, restrições de exportação em IA, fragmentação de cloud</td>
+          </tr>
+          <tr>
+            <td><strong>Agroalimentar</strong></td>
+            <td>Moderada</td>
+            <td>Benefício parcial com nearshoring europeu, pressão em inputs importados (fertilizantes, energia)</td>
+          </tr>
+          <tr>
+            <td><strong>Energia</strong></td>
+            <td>Muito alta</td>
+            <td>Aceleração da transição, novos corredores de fornecimento, volatilidade de preços</td>
+          </tr>
+          <tr>
+            <td><strong>Serviços profissionais</strong></td>
+            <td>Moderada-baixa</td>
+            <td>Procura crescente por advisory em compliance, risco geopolítico e reestruturação de supply chain</td>
+          </tr>
+          <tr>
+            <td><strong>Turismo e hospitalidade</strong></td>
+            <td>Baixa-moderada</td>
+            <td>Reconfiguração de fluxos turísticos, dependência de conectividade aérea com mercados-chave</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="article-section reveal">
+        <p>Para PME industriais portuguesas, o impacto é particularmente assimétrico. Empresas que fornecem componentes para cadeias europeias podem beneficiar do nearshoring. Empresas que dependem de matérias-primas importadas de fora da UE enfrentam custos crescentes e prazos imprevisíveis. Em ambos os casos, a capacidade de adaptação depende de uma variável crítica: o acesso a informação estratégica atempada.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <!-- Secção 5: A armadilha da neutralidade -->
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Análise</div>
+        <h2>A armadilha da neutralidade europeia</h2>
+        <p>A Europa tenta navegar a fragmentação sem se comprometer totalmente com nenhum bloco. Esta posição de aparente equilíbrio tem custos reais. Quando os EUA impõem tarifas sobre aço e alumínio, as empresas europeias sofrem. Quando a China restringe exportações de terras raras, as cadeias industriais europeias ficam vulneráveis. Quando ambos os lados exigem compliance com os seus standards tecnológicos, o custo de conformidade duplica.</p>
+        <p>Para as empresas, a lição é clara: não existe neutralidade na fragmentação. Existe apenas a escolha entre posicionamento deliberado e exposição passiva. As empresas que mapeiam a sua dependência geopolítica e tomam decisões de diversificação informadas estão melhor preparadas do que as que assumem que o status quo vai manter-se.</p>
+
+        <div class="pull-quote reveal">
+          <div class="pull-quote-text">"Na economia de blocos, a inércia é o risco mais subestimado."</div>
+        </div>
+      </div>
+
+      <!-- Secção 6: Implicações práticas -->
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Implicações práticas</div>
+        <h2>O que fazer agora, concretamente</h2>
+        <p>A fragmentação global não é um cenário hipotético para 2030. É o ambiente operacional de hoje. As empresas que reconhecem isto e ajustam as suas operações ganham resiliência. As que ignoram ficam vulneráveis ao próximo choque.</p>
+
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Auditar a cadeia de fornecimento:</strong> Identificar os pontos de dependência crítica. Qual a percentagem de inputs que vem de um único país? De um único fornecedor? Qual o tempo de substituição em caso de disrupção?</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Diversificar por geografia e por bloco:</strong> O objetivo não é eliminar fornecedores internacionais, mas reduzir a concentração. Um segundo fornecedor na UE ou na vizinhança europeia pode custar 10-15% mais, mas elimina um risco existencial.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Monitorizar o ambiente regulatório:</strong> As regras estão a mudar com uma frequência sem precedentes. Novas tarifas, novos requisitos de due diligence, novas restrições de exportação. Empresas sem capacidade de monitorização regulatória estão a operar às cegas.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Repensar a estrutura de capital:</strong> A fragmentação aumenta a necessidade de capital de maneio. Stocks mais altos, prazos de pagamento mais longos, investimento em redundância. As empresas precisam de rever as suas necessidades de financiamento à luz desta nova realidade.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Posicionar-se como fornecedor europeu fiável:</strong> O nearshoring cria oportunidade para empresas que consigam posicionar-se como alternativa europeia credível a fornecedores asiáticos. Isto exige investimento em qualidade, certificação e capacidade produtiva.</li>
+        </ul>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <!-- Perspetiva Open Capital -->
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>O que isto significa para a sua empresa</h2>
+        <p>A fragmentação global não é uma notícia para acompanhar ao longe. É uma mudança estrutural que já está a afetar margens, prazos e decisões de investimento em milhares de empresas europeias. Para quem gere uma PME ou uma mid-cap em Portugal, a questão prática é de posicionamento: as empresas que compreendem o novo mapa geoeconómico e ajustam proativamente as suas operações vão capturar as oportunidades que emergem da reconfiguração, desde contratos de nearshoring até novos programas de financiamento europeu orientados para autonomia estratégica.</p>
+        <p>Portugal tem características que podem ser vantajosas neste contexto: localização atlântica com acesso a mercados americanos e africanos, integração plena no mercado único europeu, custos competitivos dentro da zona euro e um ecossistema de PME industriais com flexibilidade para se adaptar. Mas estas vantagens só se materializam com informação, planeamento e acesso ao capital certo.</p>
+        <p>Na Open Capital, acompanhamos esta reconfiguração e trabalhamos com empresas para identificar exposição geopolítica, mapear oportunidades de financiamento europeu ligadas à autonomia estratégica e estruturar operações que transformem a fragmentação de ameaça em vantagem competitiva.</p>
+      </div>
+
+      <p style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore também o nosso arquivo para mais conteúdos sobre inovação, tecnologia, ciência aplicada e empreendedorismo.</p>
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../Retratos Equipa/retrato_jorgepereira.png" alt="Jorge Pereira" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Jorge Pereira</div>
+            <div class="sidebar-author-role">COO & Líder Tech2Business</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Categoria</div>
+          <div class="sidebar-info-val">Estratégia</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Publicado</div>
+          <div class="sidebar-info-val">Abril 2026</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Leitura</div>
+          <div class="sidebar-info-val">8 min</div>
+        </div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
+        <div class="sidebar-cta-text">A sua empresa depende de cadeias de valor internacionais? Podemos ajudar a mapear riscos e identificar oportunidades neste novo contexto.</div>
+        <a href="https://calendly.com/tech2business" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="guerra-irao-impacto-empresas-europeias.html" class="related-item">
+          <span class="related-item-title">Guerra no Irão: o que muda para as empresas europeias</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="capital-europeu-disponivel-problema-execucao.html" class="related-item">
+          <span class="related-item-title">O capital europeu está disponível. O problema é a execução.</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="venture-capital-portugal.html" class="related-item">
+          <span class="related-item-title">Venture Capital em Portugal</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo-row">
+          <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+        </div>
+        <p class="f-tagline">Capital, made clear.</p>
+      </div>
+      <div>
+        <div class="f-col-label">Biblioteca</div>
+        <ul class="f-links">
+          <li><a href="../solucoes.html">Portugal 2030</a></li>
+          <li><a href="../solucoes.html">Fundos de Investimento</a></li>
+          <li><a href="../solucoes.html">Benefícios Fiscais</a></li>
+          <li><a href="../solucoes.html">Prémios de Inovação</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Plataforma</div>
+        <ul class="f-links">
+          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../conhecimento.html">Conhecimento</a></li>
+          <li><a href="../parceiros.html">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Empresa</div>
+        <ul class="f-links">
+          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="../sobre-nos.html">Equipa</a></li>
+          <li><a href="../carreiras.html">Carreiras</a></li>
+          <li><a href="https://calendly.com/tech2business">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">&copy; 2025 Open Capital Advisory &amp; Consultancy</span>
+      <div class="f-legal">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
