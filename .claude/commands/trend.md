@@ -460,7 +460,7 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
         <p class="f-tagline">Capital, made clear.</p>
       </div>
       <div>
-        <div class="f-col-label">Solucoes</div>
+        <div class="f-col-label">Soluções</div>
         <ul class="f-links">
           <li><a href="../solucoes.html">Portugal 2030</a></li>
           <li><a href="../solucoes.html">Fundos de Investimento</a></li>

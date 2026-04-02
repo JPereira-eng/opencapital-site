@@ -381,11 +381,11 @@ Cria `conhecimento/[slug].html`.
       <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
     </a>
     <ul class="nav-links">
-      <li><a href="../solucoes.html">Solucoes</a></li>
+      <li><a href="../solucoes.html">Soluções</a></li>
       <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
       <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
       <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
-      <li><a href="../sobre-nos.html">Sobre Nos</a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
       <li class="nav-dropdown">
         <a href="#">Oportunidades</a>
         <div class="nav-dropdown-menu">
@@ -401,7 +401,7 @@ Cria `conhecimento/[slug].html`.
   <section class="article-hero">
     <div class="article-hero-inner">
       <nav class="breadcrumb">
-        <a href="../index.html">Inicio</a>
+        <a href="../index.html">Início</a>
         <span class="breadcrumb-sep">/</span>
         <a href="../conhecimento.html">Conhecimento</a>
         <span class="breadcrumb-sep">/</span>
@@ -468,16 +468,16 @@ Cria `conhecimento/[slug].html`.
     <div class="footer-grid">
       <div>
         <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
-        <p class="f-desc">Assessoria estrategica em financiamento, fiscalidade e investimento. Ajudamos empresas a aceder ao capital certo, no momento certo.</p>
+        <p class="f-desc">Assessoria estratégica em financiamento, fiscalidade e investimento. Ajudamos empresas a aceder ao capital certo, no momento certo.</p>
         <p class="f-tagline">Capital, made clear.</p>
       </div>
       <div>
-        <div class="f-col-label">Solucoes</div>
+        <div class="f-col-label">Soluções</div>
         <ul class="f-links">
           <li><a href="../solucoes.html">Portugal 2030</a></li>
           <li><a href="../solucoes.html">Fundos de Investimento</a></li>
-          <li><a href="../solucoes.html">Beneficios Fiscais</a></li>
-          <li><a href="../solucoes.html">Premios de Inovacao</a></li>
+          <li><a href="../solucoes.html">Benefícios Fiscais</a></li>
+          <li><a href="../solucoes.html">Prémios de Inovação</a></li>
         </ul>
       </div>
       <div>
@@ -492,7 +492,7 @@ Cria `conhecimento/[slug].html`.
       <div>
         <div class="f-col-label">Empresa</div>
         <ul class="f-links">
-          <li><a href="../sobre-nos.html">Sobre Nos</a></li>
+          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
           <li><a href="../sobre-nos.html">Equipa</a></li>
           <li><a href="../carreiras.html">Carreiras</a></li>
           <li><a href="https://calendly.com/tech2business">Contacto</a></li>
