@@ -20,19 +20,20 @@ Este comando produz um artigo completo sobre um instrumento de financiamento, fi
 
 Escolhe o autor mais adequado ao tipo de instrumento. Seleciona com base na area de especialidade:
 
-- **Jorge Pereira** - COO, Lider Tech2Business. Temas: economia, modelo de negocio, processos, mercado, gestao empresarial, transformacao digital, Tech2Business. Candidato prioritario para artigos de opiniao controversa.
-- **Mariana Costa** - Finance Lead. Temas: financas empresariais, estrutura de capital, cash flow, analise financeira avancada
-- **Sofia Costa** - Especialista I&D e Inovacao. Temas: investigacao e desenvolvimento, inovacao, propriedade intelectual, SIFIDE, premios de inovacao
-- **Luis Gomes** - Analista Financeiro. Temas: analise de mercados, dados financeiros, tendencias economicas, valuations
-- **Pedro Nunes** - Consultor de Financiamento. Temas: Portugal 2030, PRR, fundos europeus, candidaturas, programas de apoio
-- **Andre Carvalho** - Tecnico de Candidaturas e Incentivos. Temas: incentivos fiscais, RFAI, DLRR, candidaturas tecnicas, regulamentos
-- **Mara Ferreira** - Tecnica de Candidaturas e Incentivos. Temas: incentivos fiscais, candidaturas, beneficios fiscais, programas de apoio
-- **Johnson Semedo** - Gestor de Projetos. Temas: gestao de projetos, execucao estrategica, PME, operacoes
-- **Carla Sousa** - Gestora de Projetos. Temas: gestao de projetos, planeamento, execucao, PME
-- **Ines Teixeira** - Consultora Junior. Temas: analise setorial, tendencias, mercados emergentes
-- **Joao Silva** - Consultor Junior. Temas: analise setorial, tendencias, competitividade, mercados
-- **Miguel Santos** - Business Developer. Temas: desenvolvimento de negocio, parcerias, crescimento, internacionalizacao
-- **Rita Ferreira** - Marketeer e Copywriter. Temas: marketing, comunicacao, tendencias de consumo, economia criativa
+- **Mariana Costa** - Finance Lead. Temas: estrutura de capital e financiamento privado, cash flow e tesouraria empresarial, analise financeira e valuation, planeamento financeiro, relacao com investidores
+- **Sofia Costa** - Especialista I&D e Inovacao. Temas: investigacao e desenvolvimento, SIFIDE II e incentivos fiscais a I&D, propriedade intelectual e patentes, premios de inovacao, ecossistema de startups e inovacao tecnologica
+- **Luis Gomes** - Analista Financeiro. Temas: analise de mercados financeiros e de capitais, tendencias economicas com base em dados, valuations e metricas de performance, indicadores macroeconomicos, benchmarking sectorial
+- **Pedro Nunes** - Consultor de Financiamento. Temas: Portugal 2030, PRR, COMPETE 2030, Horizonte Europa, fundos europeus estruturais, candidaturas a programas de apoio publico, elegibilidade e regulamentacao de fundos
+- **Andre Carvalho** - Tecnico de Candidaturas e Incentivos. Temas: RFAI, DLRR, CFI, regulamentacao tecnica de incentivos fiscais ao investimento, processos de candidatura e aprovacao, interpretacao de regulamentos e despachos
+- **Mara Ferreira** - Tecnica de Candidaturas e Incentivos. Temas: beneficios fiscais para empresas, programas IAPMEI e vouchers de inovacao, elegibilidade e conformidade de candidaturas, SIFIDE em contexto de processo
+- **Johnson Semedo** - Gestor de Projetos. Temas: execucao operacional de projetos, gestao de PME, processos internos e eficiencia operacional, implementacao de estrategia no terreno
+- **Carla Sousa** - Gestora de Projetos. Temas: planeamento e monitorizacao de projetos, reporting e controlo, execucao em contexto de financiamento publico, organizacoes em crescimento
+- **Ines Teixeira** - Consultora Junior. Temas: analise setorial e mapeamento de mercado, tendencias emergentes e novos setores, investigacao e sintese de dados
+- **Joao Silva** - Consultor Junior. Temas: competitividade empresarial e benchmarking sectorial, tendencias de mercado, posicionamento estrategico de empresas
+- **Miguel Santos** - Business Developer. Temas: internacionalizacao de empresas, desenvolvimento de parcerias estrategicas, expansao para novos mercados, crescimento comercial e atracao de investimento
+- **Rita Ferreira** - Marketeer e Copywriter. Temas: marketing e comunicacao empresarial, economia criativa, tendencias de consumo e comportamento do mercado, posicionamento e notoriedade de marca
+
+**Jorge Pereira nao pode ser selecionado para artigos de instrumento.** Os instrumentos sao fichas tecnicas de referencia que requerem especialistas com conhecimento direto do instrumento. Jorge Pereira nao e especialista em nenhum instrumento de financiamento, fiscal ou de investimento.
 
 Orientacoes de selecao por tipo de instrumento:
 - Fundos europeus (Portugal 2030, PRR, COMPETE, Horizonte Europa): Pedro Nunes

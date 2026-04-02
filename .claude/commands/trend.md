@@ -20,21 +20,21 @@ Este comando produz um artigo de analise estrategica completo e publica-o no web
 
 Escolhe o autor mais adequado ao tema do artigo. Seleciona com base na area de especialidade:
 
-- **Jorge Pereira** - COO, Lider Tech2Business. Temas: economia, modelo de negocio, processos, mercado, gestao empresarial, transformacao digital, Tech2Business. Candidato prioritario para artigos de opiniao controversa.
-- **Mariana Costa** - Finance Lead. Temas: financas empresariais, estrutura de capital, cash flow, analise financeira avancada
-- **Sofia Costa** - Especialista I&D e Inovacao. Temas: investigacao e desenvolvimento, inovacao, propriedade intelectual, SIFIDE, premios de inovacao
-- **Luis Gomes** - Analista Financeiro. Temas: analise de mercados, dados financeiros, tendencias economicas, valuations
-- **Pedro Nunes** - Consultor de Financiamento. Temas: Portugal 2030, PRR, fundos europeus, candidaturas, programas de apoio
-- **Andre Carvalho** - Tecnico de Candidaturas e Incentivos. Temas: incentivos fiscais, RFAI, DLRR, candidaturas tecnicas, regulamentos
-- **Mara Ferreira** - Tecnica de Candidaturas e Incentivos. Temas: incentivos fiscais, candidaturas, beneficios fiscais, programas de apoio
-- **Johnson Semedo** - Gestor de Projetos. Temas: gestao de projetos, execucao estrategica, PME, operacoes
-- **Carla Sousa** - Gestora de Projetos. Temas: gestao de projetos, planeamento, execucao, PME
-- **Ines Teixeira** - Consultora Junior. Temas: analise setorial, tendencias, mercados emergentes
-- **Joao Silva** - Consultor Junior. Temas: analise setorial, tendencias, competitividade, mercados
-- **Miguel Santos** - Business Developer. Temas: desenvolvimento de negocio, parcerias, crescimento, internacionalizacao
-- **Rita Ferreira** - Marketeer e Copywriter. Temas: marketing, comunicacao, tendencias de consumo, economia criativa
+- **Jorge Pereira** - COO, Lider Tech2Business. Temas: macroeconomia e geopolitica com impacto empresarial, estrategia empresarial e modelos de negocio, transformacao digital e IA aplicada a negocios (Tech2Business), lideranca e cultura organizacional, empreendedorismo e construcao de empresas, ecossistema empresarial portugues e europeu
+- **Mariana Costa** - Finance Lead. Temas: estrutura de capital e financiamento privado, cash flow e tesouraria empresarial, analise financeira e valuation, planeamento financeiro, relacao com investidores
+- **Sofia Costa** - Especialista I&D e Inovacao. Temas: investigacao e desenvolvimento, SIFIDE II e incentivos fiscais a I&D, propriedade intelectual e patentes, premios de inovacao, ecossistema de startups e inovacao tecnologica
+- **Luis Gomes** - Analista Financeiro. Temas: analise de mercados financeiros e de capitais, tendencias economicas com base em dados, valuations e metricas de performance, indicadores macroeconomicos, benchmarking sectorial
+- **Pedro Nunes** - Consultor de Financiamento. Temas: Portugal 2030, PRR, COMPETE 2030, Horizonte Europa, fundos europeus estruturais, candidaturas a programas de apoio publico, elegibilidade e regulamentacao de fundos
+- **Andre Carvalho** - Tecnico de Candidaturas e Incentivos. Temas: RFAI, DLRR, CFI, regulamentacao tecnica de incentivos fiscais ao investimento, processos de candidatura e aprovacao, interpretacao de regulamentos e despachos
+- **Mara Ferreira** - Tecnica de Candidaturas e Incentivos. Temas: beneficios fiscais para empresas, programas IAPMEI e vouchers de inovacao, elegibilidade e conformidade de candidaturas, SIFIDE em contexto de processo
+- **Johnson Semedo** - Gestor de Projetos. Temas: execucao operacional de projetos, gestao de PME, processos internos e eficiencia operacional, implementacao de estrategia no terreno
+- **Carla Sousa** - Gestora de Projetos. Temas: planeamento e monitorizacao de projetos, reporting e controlo, execucao em contexto de financiamento publico, organizacoes em crescimento
+- **Ines Teixeira** - Consultora Junior. Temas: analise setorial e mapeamento de mercado, tendencias emergentes e novos setores, investigacao e sintese de dados
+- **Joao Silva** - Consultor Junior. Temas: competitividade empresarial e benchmarking sectorial, tendencias de mercado, posicionamento estrategico de empresas
+- **Miguel Santos** - Business Developer. Temas: internacionalizacao de empresas, desenvolvimento de parcerias estrategicas, expansao para novos mercados, crescimento comercial e atracao de investimento
+- **Rita Ferreira** - Marketeer e Copywriter. Temas: marketing e comunicacao empresarial, economia criativa, tendencias de consumo e comportamento do mercado, posicionamento e notoriedade de marca
 
-Seleciona o autor cujo perfil melhor se alinha ao tema. Em caso de duvida, usa Jorge Pereira para temas macroeconomicos/geopoliticos/gestao, ou Pedro Nunes para temas de financiamento europeu.
+Seleciona o autor cujo perfil melhor se alinha ao tema do artigo. Nao ha fallback automatico: escolher sempre o autor mais especifico para o tema concreto. Se o tema e de macroeconomia ou geopolitica com impacto empresarial, estrategia, transformacao digital ou empreendedorismo: Jorge Pereira. Se e de analise financeira, dados de mercado, valuations ou indicadores economicos: Luis Gomes. Se e de financiamento europeu, candidaturas ou regulamentacao de fundos: Pedro Nunes. Se e de incentivos fiscais ao investimento: Andre Carvalho. Se e de beneficios fiscais ou programas de apoio IAPMEI: Mara Ferreira. Se e de I&D ou inovacao tecnologica: Sofia Costa. Se e setorial ou de tendencias de mercado: Ines Teixeira ou Joao Silva. Se e de internacionalizacao ou parcerias: Miguel Santos.
 
 **Mapeamento de fotos (usar com prefix `../Retratos Equipa/`):**
 - Jorge Pereira → `retrato_jorgepereira.png`
