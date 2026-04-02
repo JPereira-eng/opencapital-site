@@ -563,59 +563,31 @@ Cria `conhecimento/[slug].html`.
 
 ### Passo 4 - Injetar card em conhecimento.html
 
-Le `conhecimento.html`. Injeta imediatamente apos `<div class="articles-grid" id="articlesGrid">`:
+Le `conhecimento.html`. Injeta imediatamente apos `<div class="articles-grid" id="articlesGrid">`.
 
-Se `IMAGEM_SRC` tiver valor:
+**Cards de opiniao usam layout editorial com foto do autor em full-bleed e overlay gradient.**
+
+A foto do autor e determinada pelo mapeamento de fotos definido na seccao EQUIPA acima.
+
 ```html
 
       <!-- Article: [TITULO] -->
       <article class="article-card type-opiniao reveal"
                data-category="opiniao"
                data-href="conhecimento/[SLUG].html">
-        <div class="article-card-img">
-          <img src="[IMAGEM_SRC]" alt="[TITULO]">
-        </div>
-        <div class="article-card-body">
-          <div class="article-card-header">
-            <span class="art-cat-badge cat-opiniao">Opiniao</span>
-            <span class="art-read-time">[TEMPO_LEITURA]</span>
+        <img src="Retratos Equipa/[AUTOR_FOTO]" alt="[AUTOR]" class="opiniao-card-photo">
+        <div class="opiniao-card-overlay">
+          <div class="opiniao-card-meta">
+            <span class="opiniao-card-author">[AUTOR]</span>
+            <span class="opiniao-card-badge">Opinião</span>
           </div>
-          <h3 class="article-card-title">[TITULO]</h3>
-          <p class="article-card-excerpt">[EXCERPT]</p>
-          <div class="article-card-footer">
-            <span class="art-date">[DATE_PT]</span>
-            <a href="conhecimento/[SLUG].html" class="art-link">Ler</a>
-          </div>
+          <h3 class="opiniao-card-title">[TITULO]</h3>
+          <span class="opiniao-card-cta">Ler artigo</span>
         </div>
       </article>
 ```
 
-Se `IMAGEM_SRC` estiver vazio (placeholder):
-```html
-
-      <!-- Article: [TITULO] -->
-      <article class="article-card type-opiniao reveal"
-               data-category="opiniao"
-               data-href="conhecimento/[SLUG].html">
-        <div class="article-card-img">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" stroke="rgba(201,169,110,0.18)" stroke-width="1"/><polyline points="8,38 18,22 28,30 40,12" stroke="rgba(201,169,110,0.55)" stroke-width="1.2" fill="none"/><circle cx="18" cy="22" r="2" fill="rgba(201,169,110,0.4)"/><circle cx="40" cy="12" r="2" fill="rgba(201,169,110,0.4)"/></svg>
-        </div>
-        <div class="article-card-body">
-          <div class="article-card-header">
-            <span class="art-cat-badge cat-opiniao">Opiniao</span>
-            <span class="art-read-time">[TEMPO_LEITURA]</span>
-          </div>
-          <h3 class="article-card-title">[TITULO]</h3>
-          <p class="article-card-excerpt">[EXCERPT]</p>
-          <div class="article-card-footer">
-            <span class="art-date">[DATE_PT]</span>
-            <a href="conhecimento/[SLUG].html" class="art-link">Ler</a>
-          </div>
-        </div>
-      </article>
-```
-
-Nota: artigos de opiniao usam a classe `type-opiniao` no article e `cat-opiniao` no badge.
+Nota: os cards de opiniao NAO usam `.article-card-img` nem `.article-card-body` (estes sao ocultados por CSS). O layout visual vem de `.opiniao-card-photo` + `.opiniao-card-overlay`.
 
 Atualiza o contador: `id="filterCount">X artigos</span>` substituindo X por X+1.
 

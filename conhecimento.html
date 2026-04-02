@@ -338,7 +338,50 @@
     .art-link::after { content:'→'; font-weight:300; }
     .art-link:hover { color:var(--gold); }
 
-    .article-card.type-opiniao { border-left:3px solid rgba(201,169,110,0.4); }
+    /* Opinion card — author photo overlay layout */
+    .article-card.type-opiniao {
+      border-left:none;
+      padding:0;
+      position:relative;
+      min-height:400px;
+    }
+    .article-card.type-opiniao .article-card-img,
+    .article-card.type-opiniao .article-card-body { display:none; }
+
+    .opiniao-card-photo {
+      position:absolute; top:0; left:0;
+      width:100%; height:100%;
+      object-fit:cover; object-position:top center;
+    }
+    .opiniao-card-overlay {
+      position:absolute; bottom:0; left:0; right:0;
+      padding:120px 32px 28px;
+      background:linear-gradient(to bottom, transparent 0%, rgba(13,31,51,0.92) 55%);
+      display:flex; flex-direction:column; justify-content:flex-end;
+    }
+    .opiniao-card-meta {
+      display:flex; justify-content:space-between; align-items:center;
+      margin-bottom:10px;
+    }
+    .opiniao-card-author {
+      font-size:14px; font-weight:600; color:rgba(255,255,255,0.85);
+      letter-spacing:0.04em;
+    }
+    .opiniao-card-badge {
+      font-size:10px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase;
+      color:var(--gold); border:1px solid rgba(201,169,110,0.4);
+      padding:4px 10px; flex-shrink:0;
+    }
+    .opiniao-card-title {
+      font-size:20px; font-weight:600; color:var(--white);
+      line-height:1.3; margin-bottom:16px;
+    }
+    .opiniao-card-cta {
+      font-size:11px; font-weight:600; letter-spacing:0.20em; text-transform:uppercase;
+      color:var(--gold); transition:var(--transition);
+    }
+    .opiniao-card-cta::after { content:'→'; font-weight:300; font-size:13px; margin-left:6px; }
+    .article-card.type-opiniao:hover .opiniao-card-cta { color:var(--white); }
 
     /* ───────────────────────────────
        SCROLL REVEAL
@@ -555,20 +598,14 @@
       <article class="article-card type-opiniao reveal"
                data-category="opiniao"
                data-href="conhecimento/automatizar-ineficiencia-escalar-erro.html">
-        <div class="article-card-img">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" stroke="rgba(201,169,110,0.18)" stroke-width="1"/><polyline points="8,38 18,22 28,30 40,12" stroke="rgba(201,169,110,0.55)" stroke-width="1.2" fill="none"/><circle cx="18" cy="22" r="2" fill="rgba(201,169,110,0.4)"/><circle cx="40" cy="12" r="2" fill="rgba(201,169,110,0.4)"/></svg>
-        </div>
-        <div class="article-card-body">
-          <div class="article-card-header">
-            <span class="art-cat-badge cat-opiniao">Opinião</span>
-            <span class="art-read-time">7 min</span>
+        <img src="Retratos Equipa/retrato_jorgepereira.png" alt="Jorge Pereira" class="opiniao-card-photo">
+        <div class="opiniao-card-overlay">
+          <div class="opiniao-card-meta">
+            <span class="opiniao-card-author">Jorge Pereira</span>
+            <span class="opiniao-card-badge">Opinião</span>
           </div>
-          <h3 class="article-card-title">A sua empresa não está a inovar. Está a automatizar o caos.</h3>
-          <p class="article-card-excerpt">Automatizar processos partidos não é transformação digital. É escalar o erro com mais velocidade e menos visibilidade.</p>
-          <div class="article-card-footer">
-            <span class="art-date">Abril 2026</span>
-            <a href="conhecimento/automatizar-ineficiencia-escalar-erro.html" class="art-link">Ler</a>
-          </div>
+          <h3 class="opiniao-card-title">A sua empresa não está a inovar. Está a automatizar o caos.</h3>
+          <span class="opiniao-card-cta">Ler artigo</span>
         </div>
       </article>
 
@@ -618,20 +655,14 @@
       <article class="article-card type-opiniao reveal"
                data-category="opiniao"
                data-href="conhecimento/ia-vai-matar-profissao-contabilista.html">
-        <div class="article-card-img">
-          <img src="assets/articles/ia-vai-matar-profissao-contabilista.jpg" alt="A IA vai matar a profissão de contabilista. E ainda bem.">
-        </div>
-        <div class="article-card-body">
-          <div class="article-card-header">
-            <span class="art-cat-badge cat-opiniao">Opinião</span>
-            <span class="art-read-time">7 min</span>
+        <img src="Retratos Equipa/retrato_jorgepereira.png" alt="Jorge Pereira" class="opiniao-card-photo">
+        <div class="opiniao-card-overlay">
+          <div class="opiniao-card-meta">
+            <span class="opiniao-card-author">Jorge Pereira</span>
+            <span class="opiniao-card-badge">Opinião</span>
           </div>
-          <h3 class="article-card-title">A IA vai matar a profissão de contabilista. E ainda bem.</h3>
-          <p class="article-card-excerpt">A contabilidade tradicional está condenada. A questão não é se os contabilistas perdem o emprego, é se merecem mantê-lo.</p>
-          <div class="article-card-footer">
-            <span class="art-date">Abril 2026</span>
-            <a href="conhecimento/ia-vai-matar-profissao-contabilista.html" class="art-link">Ler</a>
-          </div>
+          <h3 class="opiniao-card-title">A IA vai matar a profissão de contabilista. E ainda bem.</h3>
+          <span class="opiniao-card-cta">Ler artigo</span>
         </div>
       </article>
 
@@ -681,20 +712,14 @@
       <article class="article-card type-opiniao reveal"
                data-category="opiniao"
                data-href="conhecimento/capital-europeu-disponivel-problema-execucao.html">
-        <div class="article-card-img">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" stroke="rgba(201,169,110,0.18)" stroke-width="1"/><polyline points="8,38 18,22 28,30 40,12" stroke="rgba(201,169,110,0.55)" stroke-width="1.2" fill="none"/><circle cx="18" cy="22" r="2" fill="rgba(201,169,110,0.4)"/><circle cx="40" cy="12" r="2" fill="rgba(201,169,110,0.4)"/></svg>
-        </div>
-        <div class="article-card-body">
-          <div class="article-card-header">
-            <span class="art-cat-badge cat-opiniao">Opinião</span>
-            <span class="art-read-time">4 min</span>
+        <img src="Retratos Equipa/retrato_jorgepereira.png" alt="Jorge Pereira" class="opiniao-card-photo">
+        <div class="opiniao-card-overlay">
+          <div class="opiniao-card-meta">
+            <span class="opiniao-card-author">Jorge Pereira</span>
+            <span class="opiniao-card-badge">Opinião</span>
           </div>
-          <h3 class="article-card-title">O capital europeu está disponível. O problema é sempre a execução.</h3>
-          <p class="article-card-excerpt">Portugal tem acesso a dezenas de milhares de milhões em fundos europeus. Mas a maioria das empresas continua sem saber como aceder, ou desiste a meio.</p>
-          <div class="article-card-footer">
-            <span class="art-date">Março 2026</span>
-            <a href="conhecimento/capital-europeu-disponivel-problema-execucao.html" class="art-link">Ler</a>
-          </div>
+          <h3 class="opiniao-card-title">O capital europeu está disponível. O problema é sempre a execução.</h3>
+          <span class="opiniao-card-cta">Ler artigo</span>
         </div>
       </article>
 
