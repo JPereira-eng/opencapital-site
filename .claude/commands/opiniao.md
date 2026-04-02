@@ -127,6 +127,41 @@ O artigo deve evitar:
 
 ---
 
+## REGRAS DE NATURALIDADE LINGUISTICA
+
+O artigo nao pode parecer gerado por IA. Estas regras reforçam e especificam o que a logica editorial desta serie ja exige.
+
+**1. Assimetria deliberada.**
+Seccoes com comprimentos muito diferentes. Um argumento pode ocupar meio artigo. Outro pode ter dois paragrafos. Simetria e sinal de IA.
+
+**2. Nao repetir o que acabou de ser dito.**
+Proibido comecar paragrafos a resumir o paragrafo anterior. Cada paragrafo avanca o argumento, nao o confirma.
+
+**3. Variar conectores e estrutura de frases.**
+Proibido usar: "Alem disso", "Por outro lado", "Em conclusao", "Neste contexto", "E importante referir que", "Vale a pena notar que", "De facto", "Importa sublinhar". A opiniao nao precisa de conectores de transicao escolar. Muda de ideia sem aviso. O leitor acompanha.
+
+**4. Variar o comprimento de frases e paragrafos.**
+Frases longas para raciocinio. Frases curtas para enfase. O ritmo e uma ferramenta retorica.
+
+**5. Posicao sem equilibrio artificial.**
+Ja e principio desta serie. Reforco: nunca apresentar lados como equivalentes se o autor acha que nao sao. O contra-argumento existe para ser refutado, nao para ser validado.
+
+**6. Naturalidade de voz. Nao informalidade.**
+A opiniao pode ter personalidade sem perder o registo premium da Open Capital. Uma pergunta retorica, uma ironia controlada, uma afirmacao curta e definitiva apos um paragrafo longo. Voz humana nao e voz casual.
+
+**7. Especificidade retorica.**
+Proibido: "muitas empresas fazem isto", "varios estudos indicam", "e cada vez mais evidente". Argumentar com exemplos nomeados, numeros verificaveis, situacoes reconheciveis. A opiniao ganha forca com especificidade.
+
+**8. Ancorar o argumento em situacoes concretas.**
+A tese abstrata precisa de um momento concreto, um caso, uma empresa, um gestor. O leitor identifica-se com o especifico, nao com o geral.
+
+**9. Nao ser pedagogico.**
+Este artigo nao ensina. Provoca, argumenta, conclui. Quem quer a definicao basica de um conceito pode procura-la noutro sitio. O artigo pressupoe que o leitor ja sabe o suficiente para ser interpelado.
+
+**Excecao permanente:** O paragrafo de fecho ("Achou o artigo relevante?...") e um elemento de marca fixo e nao esta sujeito a estas regras.
+
+---
+
 ## REGRAS DE FECHO
 
 O ultimo paragrafo do corpo do artigo deve ser sempre exatamente (em italico, visualmente distinto do corpo: font-size:15px, color:grey-mid, font-style:italic, margin-top:40px):

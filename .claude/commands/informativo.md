@@ -106,6 +106,41 @@ O artigo deve:
 
 ---
 
+## REGRAS DE NATURALIDADE LINGUISTICA
+
+O artigo nao pode parecer gerado por IA. Estas regras garantem que a escrita tem textura, irregularidade e voz humana.
+
+**1. Evitar simetria artificial entre seccoes.**
+Capitulos nao precisam de ter o mesmo tamanho, o mesmo numero de paragrafos, ou a mesma estrutura interna. Alguns sao curtos e densos. Outros sao longos e fluidos. Assimetria e credibilidade.
+
+**2. Nao repetir o que acabou de ser dito.**
+Proibido comecar paragrafos a resumir o paragrafo anterior. Cada paragrafo avanca a ideia, nao a confirma.
+
+**3. Variar conectores e estrutura de frases.**
+Proibido usar: "Alem disso", "Por outro lado", "Em conclusao", "Neste contexto", "E importante referir que", "Vale a pena notar que", "De facto", "Importa sublinhar". Substituir por construcoes diretas ou por mudanca de ritmo.
+
+**4. Variar o comprimento de frases e paragrafos.**
+Misturar frases longas e analiticas com frases curtas e assertivas. Um paragrafo pode ter duas frases. Outro pode ter seis. A irregularidade e intencional.
+
+**5. Ter perspetiva. Nao ser neutro artificialmente.**
+Mesmo num artigo informativo, o autor pode ter uma leitura sobre o tema. Nao e preciso apresentar todos os aspectos como igualmente relevantes. A selecao e organizacao da informacao ja e em si uma perspetiva.
+
+**6. Naturalidade de voz. Nao informalidade.**
+Manter o registo formal e premium da Open Capital, mas permitir construcoes que soam a voz humana: uma pergunta retorica ocasional, uma frase incompleta para enfase, uma observacao colateral inesperada. A formalidade nao e rigidez.
+
+**7. Especificidade em vez de generalidade.**
+Proibido: "muitas empresas", "varios estudos mostram", "e cada vez mais evidente que". Substituir por numeros concretos, nomes de setores, exemplos reais ou hipoteticos especificos e reconheciveis.
+
+**8. Ancorar o raciocinio em situacoes concretas.**
+Sempre que possivel, ilustrar com uma empresa, um gestor numa decisao, um cenario reconhecivel para o leitor. O abstrato so e util depois do concreto.
+
+**9. Nao patronizar. Mas nao assumir familiaridade tecnica.**
+O leitor e um gestor inteligente que provavelmente nao conhece o instrumento ou conceito em detalhe. Explicar o que precisa de ser explicado, com clareza e sem condescendencia. Nao repetir o que qualquer adulto sabe. Mas nao saltar passos tecnicos que o leitor genuinamente nao conhece.
+
+**Excecao permanente:** O paragrafo de fecho ("Achou o artigo relevante?...") e um elemento de marca fixo e nao esta sujeito a estas regras.
+
+---
+
 ## REGRAS DE FECHO
 
 O ultimo paragrafo do corpo do artigo deve ser sempre exatamente (em italico, visualmente distinto do corpo: font-size:15px, color:grey-mid, font-style:italic, margin-top:40px):

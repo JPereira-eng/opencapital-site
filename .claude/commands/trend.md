@@ -101,6 +101,41 @@ O artigo deve:
 
 ---
 
+## REGRAS DE NATURALIDADE LINGUISTICA
+
+O artigo nao pode parecer gerado por IA. Estas regras garantem que a escrita tem textura, irregularidade e voz humana.
+
+**1. Evitar simetria artificial entre seccoes.**
+Capitulos nao precisam de ter o mesmo tamanho, o mesmo numero de paragrafos, ou a mesma estrutura interna. Assimetria e credibilidade. (Esta regra ja esta na logica editorial da serie — reforcar aqui.)
+
+**2. Nao repetir o que acabou de ser dito.**
+Proibido comecar paragrafos a resumir o paragrafo anterior. Cada paragrafo avanca a ideia, nao a confirma.
+
+**3. Variar conectores e estrutura de frases.**
+Proibido usar: "Alem disso", "Por outro lado", "Em conclusao", "Neste contexto", "E importante referir que", "Vale a pena notar que", "De facto", "Importa sublinhar". Substituir por construcoes diretas ou por mudanca de ritmo: frase curta apos paragrafo longo, pergunta retorica, afirmacao sem introducao.
+
+**4. Variar o comprimento de frases e paragrafos.**
+Misturar frases longas e analiticas com frases curtas e assertivas. Um paragrafo pode ter duas frases. Outro pode ter seis. A irregularidade e intencional.
+
+**5. Posicao clara. Neutralidade so no registo noticioso.**
+No registo noticioso, a neutralidade e intencional e correta. No registo analitico e de conclusao, proibida. O autor tem uma leitura do que aconteceu e defende-a.
+
+**6. Naturalidade de voz. Nao informalidade.**
+Manter o registo formal e premium da Open Capital, mas permitir construcoes que soam a voz humana: uma pergunta retorica ocasional, uma frase incompleta para enfase, uma observacao colateral inesperada. A formalidade nao e rigidez.
+
+**7. Especificidade em vez de generalidade.**
+Proibido: "muitas empresas", "varios estudos mostram", "e cada vez mais evidente que". Substituir por numeros concretos, nomes de setores, exemplos reais ou hipoteticos especificos e reconheciveis.
+
+**8. Ancorar o raciocinio em situacoes concretas.**
+Sempre que possivel, ilustrar com uma empresa, um gestor numa decisao, um cenario reconhecivel para o leitor. O abstrato so e util depois do concreto.
+
+**9. Nao ser didatico.**
+O leitor e um gestor ou decisor que ja sabe o que e inflacao, o que e o BCE, o que e um fundo europeu. Nao explicar o que se pressupoe que ele sabe. Ir direto ao que ele nao sabe: a implicacao, o impacto, a leitura estrategica.
+
+**Excecao permanente:** O paragrafo de fecho ("Achou o artigo relevante?...") e um elemento de marca fixo e nao esta sujeito a estas regras.
+
+---
+
 ## REGRAS GLOBAIS DE FECHO
 
 O ultimo paragrafo do corpo do artigo deve ser sempre exatamente:
