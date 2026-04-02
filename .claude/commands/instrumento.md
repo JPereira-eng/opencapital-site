@@ -589,19 +589,77 @@ Usa `val-gold` apenas para estados de programa (ex: "Aberto", "Ativo", "Em candi
 </a>
 ```
 
-### Passo 4 - Deploy
+### Passo 4 - Injetar card em solucoes.html
 
-Nao e necessario injetar card em solucoes.html. Os cards ja existem com `data-href` configurado para cada instrumento.
+Cada instrumento novo precisa de um card no catalogo. Executar SEMPRE este passo.
+
+**Determinar `card_category` e `cat_label`:**
+- Fundo perdido / subsidio / premio / voucher: `nr` · "Nao Reembolsavel"
+- Emprestimo / linha de credito / garantia bancaria: `div` · "Divida"
+- VC / PE / business angels / crowdfunding: `priv` · "Investimento Privado"
+- Componente reembolsavel + nao reembolsavel: `hib` · "Hibridos"
+- Deducao de IRC / beneficio fiscal ao investimento: `fiscal` · "Incentivos Fiscais"
+- Outro (internacionalizacao, apoio tecnico, etc.): `outros` · "Outros"
+
+**Determinar estado (comparar com a data de hoje):**
+- Ha prazo de candidatura e ainda nao passou: `status-open` · "Aberto ate DD/MM/AAAA"
+- Ha prazo de candidatura e ja passou: `status-closed` · "Fechado"
+- Sem prazo ou instrumento de candidatura continua: `status-cont` · "Continuo"
+
+**Construir os dois highlights do card:**
+- Highlight 1: dotacao total ou beneficio maximo (ex: "€10K a €300K · Co-financiamento a 65%")
+- Highlight 2: elegibilidade resumida (ex: "Micro e pequenas empresas · 11 municipios · FTJ")
+
+**Injetar o card com Node.js:**
 
 ```bash
-git add instrumentos/[SLUG].html
+node -e "
+const fs = require('fs');
+let html = fs.readFileSync('solucoes.html', 'utf8');
+
+const newCard = \`
+      <div class=\"instrument-card reveal reveal-d1\" data-category=\"[CAT]\" data-id=\"[SLUG]\" data-href=\"instrumentos/[SLUG].html\">
+        <div class=\"card-header\">
+          <span class=\"cat-badge cat-[CAT]\">[CAT_LABEL]</span>
+          <span class=\"status-pill [STATUS_CLASS]\">[STATUS_TEXT]</span>
+        </div>
+        <h3 class=\"card-title\">[NOME_INSTRUMENTO]</h3>
+        <p class=\"card-tagline\">[CARD_TAGLINE]</p>
+        <div class=\"card-divider\"></div>
+        <div class=\"card-highlights\">
+          <div class=\"card-highlight\"><span class=\"card-highlight-dot\"></span>[HIGHLIGHT_1]</div>
+          <div class=\"card-highlight\"><span class=\"card-highlight-dot\"></span>[HIGHLIGHT_2]</div>
+        </div>
+        <span class=\"card-cta\">Ver artigo</span>
+      </div>
+\`;
+
+// Inserir antes do primeiro card da mesma categoria, ou antes do comentario No results
+const catPattern = new RegExp('(<div class=\"instrument-card[^\"]*\"[^>]*data-category=\"[CAT]\")', '');
+if (catPattern.test(html)) {
+  html = html.replace(catPattern, newCard + '\$1');
+} else {
+  html = html.replace('      <!-- No results message -->', newCard + '      <!-- No results message -->');
+}
+
+fs.writeFileSync('solucoes.html', html, 'utf8');
+console.log('Card inserido em solucoes.html');
+"
+```
+
+Substituir todos os placeholders `[CAT]`, `[SLUG]`, `[CAT_LABEL]`, `[STATUS_CLASS]`, `[STATUS_TEXT]`, `[NOME_INSTRUMENTO]`, `[CARD_TAGLINE]`, `[HIGHLIGHT_1]`, `[HIGHLIGHT_2]` com os valores reais antes de executar.
+
+### Passo 5 - Deploy
+
+```bash
+git add instrumentos/[SLUG].html solucoes.html
 git commit -m "instrumento: [NOME_INSTRUMENTO]"
 git push
 ```
 
 Se o git push falhar, reporta o erro. Nao tentes novamente automaticamente.
 
-### Passo 5 - Confirmar
+### Passo 6 - Confirmar
 
 Apos deploy com sucesso, informa:
 - Nome do instrumento publicado
