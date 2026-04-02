@@ -106,10 +106,10 @@ O artigo deve:
 O artigo nao pode parecer gerado por IA. Estas regras garantem que a escrita tem textura, irregularidade e voz humana.
 
 **1. Evitar simetria artificial entre seccoes.**
-Capitulos nao precisam de ter o mesmo tamanho, o mesmo numero de paragrafos, ou a mesma estrutura interna. Assimetria e credibilidade. (Esta regra ja esta na logica editorial da serie — reforcar aqui.)
+Capitulos nao precisam de ter o mesmo tamanho, o mesmo numero de paragrafos, ou a mesma estrutura interna. Assimetria e credibilidade. Nao seguir sempre a estrutura intro→desenvolvimento→conclusao. Misturar ideias de forma natural quando fizer sentido: uma conclusao parcial pode aparecer a meio, uma questao pode abrir uma seccao sem a fechar imediatamente.
 
 **2. Nao repetir o que acabou de ser dito.**
-Proibido comecar paragrafos a resumir o paragrafo anterior. Cada paragrafo avanca a ideia, nao a confirma.
+Proibido comecar paragrafos a resumir o paragrafo anterior. Cada paragrafo avanca a ideia, nao a confirma. Proibido tambem repetir a mesma ideia com sinonimos diferentes dentro do mesmo texto. Cortar redundancias activamente: se uma frase nao acrescenta informacao nova, nao existe.
 
 **3. Variar conectores e estrutura de frases.**
 Proibido usar: "Alem disso", "Por outro lado", "Em conclusao", "Neste contexto", "E importante referir que", "Vale a pena notar que", "De facto", "Importa sublinhar". Substituir por construcoes diretas ou por mudanca de ritmo: frase curta apos paragrafo longo, pergunta retorica, afirmacao sem introducao.
@@ -130,7 +130,10 @@ Proibido: "muitas empresas", "varios estudos mostram", "e cada vez mais evidente
 Sempre que possivel, ilustrar com uma empresa, um gestor numa decisao, um cenario reconhecivel para o leitor. O abstrato so e util depois do concreto.
 
 **9. Nao ser didatico.**
-O leitor e um gestor ou decisor que ja sabe o que e inflacao, o que e o BCE, o que e um fundo europeu. Nao explicar o que se pressupoe que ele sabe. Ir direto ao que ele nao sabe: a implicacao, o impacto, a leitura estrategica.
+O leitor e um gestor ou decisor que ja sabe o que e inflacao, o que e o BCE, o que e um fundo europeu. Nao explicar o que se pressupoe que ele sabe. Ir direto ao que ele nao sabe: a implicacao, o impacto, a leitura estrategica. Evitar listas excessivas se nao forem necessarias: um paragrafo de texto corrido e quase sempre mais eficaz do que uma lista de cinco pontos.
+
+**Regra geral:**
+Se o texto parecer demasiado limpo, simetrico ou "certinho", reescrever para o tornar mais natural, imperfeito e humano. O objetivo nao e perfeicao formal. E credibilidade.
 
 **Excecao permanente:** O paragrafo de fecho ("Achou o artigo relevante?...") e um elemento de marca fixo e nao esta sujeito a estas regras.
 

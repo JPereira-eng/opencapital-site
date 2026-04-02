@@ -111,10 +111,10 @@ O artigo deve:
 O artigo nao pode parecer gerado por IA. Estas regras garantem que a escrita tem textura, irregularidade e voz humana.
 
 **1. Evitar simetria artificial entre seccoes.**
-Capitulos nao precisam de ter o mesmo tamanho, o mesmo numero de paragrafos, ou a mesma estrutura interna. Alguns sao curtos e densos. Outros sao longos e fluidos. Assimetria e credibilidade.
+Capitulos nao precisam de ter o mesmo tamanho, o mesmo numero de paragrafos, ou a mesma estrutura interna. Alguns sao curtos e densos. Outros sao longos e fluidos. Assimetria e credibilidade. Nao seguir sempre a estrutura intro→desenvolvimento→conclusao. Misturar ideias de forma natural quando fizer sentido: uma observacao pratica pode aparecer no meio de uma explicacao tecnica, sem anuncio.
 
 **2. Nao repetir o que acabou de ser dito.**
-Proibido comecar paragrafos a resumir o paragrafo anterior. Cada paragrafo avanca a ideia, nao a confirma.
+Proibido comecar paragrafos a resumir o paragrafo anterior. Cada paragrafo avanca a ideia, nao a confirma. Proibido repetir a mesma ideia com sinonimos diferentes. Cortar redundancias activamente: se uma frase nao acrescenta informacao nova, nao existe.
 
 **3. Variar conectores e estrutura de frases.**
 Proibido usar: "Alem disso", "Por outro lado", "Em conclusao", "Neste contexto", "E importante referir que", "Vale a pena notar que", "De facto", "Importa sublinhar". Substituir por construcoes diretas ou por mudanca de ritmo.
@@ -135,7 +135,10 @@ Proibido: "muitas empresas", "varios estudos mostram", "e cada vez mais evidente
 Sempre que possivel, ilustrar com uma empresa, um gestor numa decisao, um cenario reconhecivel para o leitor. O abstrato so e util depois do concreto.
 
 **9. Nao patronizar. Mas nao assumir familiaridade tecnica.**
-O leitor e um gestor inteligente que provavelmente nao conhece o instrumento ou conceito em detalhe. Explicar o que precisa de ser explicado, com clareza e sem condescendencia. Nao repetir o que qualquer adulto sabe. Mas nao saltar passos tecnicos que o leitor genuinamente nao conhece.
+O leitor e um gestor inteligente que provavelmente nao conhece o instrumento ou conceito em detalhe. Explicar o que precisa de ser explicado, com clareza e sem condescendencia. Nao repetir o que qualquer adulto sabe. Mas nao saltar passos tecnicos que o leitor genuinamente nao conhece. Evitar listas excessivas: usar listas quando a informacao e genuinamente enumeravel; preferir texto corrido quando o raciocinio tem fluxo.
+
+**Regra geral:**
+Se o texto parecer demasiado limpo, simetrico ou "certinho", reescrever para o tornar mais natural, imperfeito e humano. O objetivo nao e perfeicao formal. E clareza real e credibilidade.
 
 **Excecao permanente:** O paragrafo de fecho ("Achou o artigo relevante?...") e um elemento de marca fixo e nao esta sujeito a estas regras.
 

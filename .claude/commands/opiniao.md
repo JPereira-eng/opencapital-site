@@ -132,10 +132,10 @@ O artigo deve evitar:
 O artigo nao pode parecer gerado por IA. Estas regras reforçam e especificam o que a logica editorial desta serie ja exige.
 
 **1. Assimetria deliberada.**
-Seccoes com comprimentos muito diferentes. Um argumento pode ocupar meio artigo. Outro pode ter dois paragrafos. Simetria e sinal de IA.
+Seccoes com comprimentos muito diferentes. Um argumento pode ocupar meio artigo. Outro pode ter dois paragrafos. Simetria e sinal de IA. Nao seguir sempre a estrutura intro→desenvolvimento→conclusao. Uma tese pode ser apresentada a meio. Uma conclusao pode ser antecipada. Misturar ideias de forma natural quando fizer sentido.
 
 **2. Nao repetir o que acabou de ser dito.**
-Proibido comecar paragrafos a resumir o paragrafo anterior. Cada paragrafo avanca o argumento, nao o confirma.
+Proibido comecar paragrafos a resumir o paragrafo anterior. Cada paragrafo avanca o argumento, nao o confirma. Proibido repetir a mesma ideia com sinonimos diferentes. Cortar redundancias activamente: se uma frase nao acrescenta nada, nao existe.
 
 **3. Variar conectores e estrutura de frases.**
 Proibido usar: "Alem disso", "Por outro lado", "Em conclusao", "Neste contexto", "E importante referir que", "Vale a pena notar que", "De facto", "Importa sublinhar". A opiniao nao precisa de conectores de transicao escolar. Muda de ideia sem aviso. O leitor acompanha.
@@ -156,7 +156,10 @@ Proibido: "muitas empresas fazem isto", "varios estudos indicam", "e cada vez ma
 A tese abstrata precisa de um momento concreto, um caso, uma empresa, um gestor. O leitor identifica-se com o especifico, nao com o geral.
 
 **9. Nao ser pedagogico.**
-Este artigo nao ensina. Provoca, argumenta, conclui. Quem quer a definicao basica de um conceito pode procura-la noutro sitio. O artigo pressupoe que o leitor ja sabe o suficiente para ser interpelado.
+Este artigo nao ensina. Provoca, argumenta, conclui. Quem quer a definicao basica de um conceito pode procura-la noutro sitio. O artigo pressupoe que o leitor ja sabe o suficiente para ser interpelado. Evitar listas excessivas: a opiniao vive no paragrafo, nao no bullet point.
+
+**Regra geral:**
+Se o texto parecer demasiado limpo, simetrico ou "certinho", reescrever para o tornar mais natural, imperfeito e humano. O objetivo nao e perfeicao formal. E credibilidade e voz propria.
 
 **Excecao permanente:** O paragrafo de fecho ("Achou o artigo relevante?...") e um elemento de marca fixo e nao esta sujeito a estas regras.
 
