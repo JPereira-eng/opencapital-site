@@ -287,15 +287,40 @@
     .carousel-slides { position:relative; }
     .carousel-slide {
       display:none;
-      grid-template-columns:1fr 1fr; gap:0;
-      min-height:320px;
+      min-height:420px;
     }
-    .carousel-slide.active { display:grid; }
+    .carousel-slide.active { display:block; }
 
-    /* Left · editorial */
-    .carousel-left {
-      padding:64px 60px 64px 0;
-      border-right:1px solid var(--grey-light);
+    /* Whole slide is a clickable link · split 50/50 */
+    .carousel-link {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:0;
+      min-height:420px;
+      text-decoration:none;
+      color:inherit;
+      transition:var(--transition);
+    }
+
+    /* Left · article cover image (full-bleed) */
+    .carousel-image {
+      position:relative;
+      overflow:hidden;
+      background:#FAFAFA;
+    }
+    .carousel-image img {
+      width:100%; height:100%;
+      object-fit:cover;
+      display:block;
+      transition:transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .carousel-link:hover .carousel-image img {
+      transform:scale(1.04);
+    }
+
+    /* Right · editorial content */
+    .carousel-content {
+      padding:64px 0 64px 60px;
       display:flex; flex-direction:column; justify-content:center;
     }
     .carousel-type {
@@ -310,55 +335,37 @@
       text-transform:uppercase; color:var(--gold);
     }
     .carousel-headline {
-      font-size:26px; font-weight:600; color:var(--navy);
-      line-height:1.25; letter-spacing:-0.01em; margin-bottom:16px;
+      font-size:28px; font-weight:600; color:var(--navy);
+      line-height:1.22; letter-spacing:-0.01em; margin-bottom:18px;
+      transition:var(--transition);
     }
+    .carousel-link:hover .carousel-headline { color:#0F2A45; }
     .carousel-headline em { font-style:normal; color:var(--gold); font-weight:300; }
     .carousel-excerpt {
-      font-size:18px; font-weight:300; color:var(--grey-mid);
-      line-height:1.9; margin-bottom:32px; max-width:420px;
+      font-size:17px; font-weight:300; color:var(--grey-mid);
+      line-height:1.85; margin-bottom:28px; max-width:460px;
+    }
+    .carousel-meta {
+      display:flex; align-items:center; gap:14px; margin-bottom:22px;
+      padding-top:18px; border-top:1px solid var(--grey-light); max-width:460px;
+    }
+    .carousel-meta-author {
+      font-size:13px; font-weight:600; color:var(--navy); letter-spacing:0.02em;
+    }
+    .carousel-meta-dot {
+      width:3px; height:3px; background:var(--grey-light); border-radius:50%;
+    }
+    .carousel-meta-date {
+      font-size:12px; font-weight:300; color:var(--grey-mid); letter-spacing:0.04em;
     }
     .carousel-cta {
       font-size:10px; font-weight:600; letter-spacing:0.22em;
-      text-transform:uppercase; color:var(--navy); text-decoration:none;
+      text-transform:uppercase; color:var(--navy);
       display:inline-flex; align-items:center; gap:8px; transition:var(--transition);
     }
     .carousel-cta::after { content:'→'; font-weight:300; transition:var(--transition); }
-    .carousel-cta:hover { color:var(--gold); }
-    .carousel-cta:hover::after { transform:translateX(4px); }
-
-    /* Right · visual/instrument */
-    .carousel-right {
-      padding:64px 0 64px 60px;
-      display:flex; flex-direction:column; justify-content:center;
-    }
-    .carousel-instrument {
-      background:var(--navy); padding:40px 36px;
-      position:relative; overflow:hidden;
-      flex:1; display:flex; flex-direction:column; justify-content:center;
-    }
-    .carousel-instrument::before {
-      content:''; position:absolute; top:0; left:0;
-      width:100%; height:2px; background:var(--gold);
-    }
-    .carousel-instrument-label {
-      font-size:9px; font-weight:600; letter-spacing:0.28em;
-      text-transform:uppercase; color:var(--gold); margin-bottom:16px;
-    }
-    .carousel-instrument-title {
-      font-size:20px; font-weight:600; color:var(--white);
-      line-height:1.3; margin-bottom:12px;
-    }
-    .carousel-instrument-desc {
-      font-size:18px; font-weight:300; color:rgba(255,255,255,0.48);
-      line-height:1.85; margin-bottom:28px;
-    }
-    .carousel-instrument-link {
-      font-size:10px; font-weight:600; letter-spacing:0.22em;
-      text-transform:uppercase; color:var(--gold); text-decoration:none;
-      display:inline-flex; align-items:center; gap:8px; transition:var(--transition);
-    }
-    .carousel-instrument-link:hover { color:var(--white); }
+    .carousel-link:hover .carousel-cta { color:var(--gold); }
+    .carousel-link:hover .carousel-cta::after { transform:translateX(4px); }
 
     /* Carousel controls */
     .carousel-controls {
@@ -468,62 +475,96 @@
     .tool-btn    { padding:13px 22px; font-family:var(--font); font-size:9px; font-weight:600; letter-spacing:0.20em; text-transform:uppercase; background:var(--gold); color:var(--white); border:none; cursor:pointer; transition:var(--transition); white-space:nowrap; }
     .tool-btn:hover { background:#B8945A; }
 
-    /* ─── CONHECIMENTO ───────────────────────────── */
-    .knowledge-grid {
-      display:grid; grid-template-columns:1.5fr 1fr; gap:24px; margin-top:56px;
+    /* ─── BIBLIOTECA · INSTRUMENTOS EM DESTAQUE ─── */
+    .library-intro {
+      max-width:760px; margin-top:18px;
+      font-size:17px; font-weight:300; color:var(--grey-mid);
+      line-height:1.85;
     }
-    .knowledge-side { display:flex; flex-direction:column; gap:18px; }
+    .library-meta {
+      display:flex; align-items:center; gap:14px;
+      margin-top:24px;
+    }
+    .library-total {
+      font-size:11px; font-weight:600; letter-spacing:0.22em;
+      text-transform:uppercase; color:var(--gold);
+      border:1px solid var(--gold); padding:6px 14px;
+    }
+    .library-meta-line { flex:1; height:1px; background:var(--grey-light); }
 
-    /* Featured article */
-    .article-featured {
-      border:1px solid var(--grey-light); position:relative;
-      overflow:hidden; transition:var(--transition);
+    .library-featured-label {
+      font-size:11px; font-weight:600; letter-spacing:0.28em;
+      text-transform:uppercase; color:var(--grey-mid);
+      margin-top:48px; margin-bottom:18px;
     }
-    .article-featured::before { content:''; position:absolute; top:0; left:0; width:0; height:2px; background:var(--gold); transition:width 0.4s ease; }
-    .article-featured:hover { box-shadow:var(--shadow); }
-    .article-featured:hover::before { width:100%; }
-    .article-featured-img {
-      height:260px; overflow:hidden;
-      background:linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
-      display:flex; align-items:center; justify-content:center; position:relative;
-    }
-    .article-featured-img-inner { display:flex; align-items:center; justify-content:center; width:100%; height:100%; }
-    .article-featured-tag {
-      position:absolute; top:20px; left:20px;
-      font-size:8px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase;
-      color:var(--gold); border:1px solid rgba(201,169,110,0.4); padding:4px 10px;
-      background:rgba(13,31,51,0.7);
-    }
-    .article-featured-content { padding:36px 32px; }
-    .article-featured-meta { display:flex; align-items:center; gap:14px; margin-bottom:14px; }
-    .article-cat  { font-size:9px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); }
-    .article-date { font-size:10px; font-weight:300; color:var(--grey-mid); }
-    .article-featured-title { font-size:22px; font-weight:600; color:var(--navy); line-height:1.3; margin-bottom:14px; }
-    .article-featured-excerpt { font-size:18px; font-weight:300; color:var(--grey-mid); line-height:1.9; margin-bottom:24px; }
-    .article-link { font-size:10px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--navy); text-decoration:none; transition:var(--transition); display:inline-flex; align-items:center; gap:8px; }
-    .article-link::after { content:'→'; font-weight:300; transition:var(--transition); }
-    .article-link:hover { color:var(--gold); }
-    .article-link:hover::after { transform:translateX(4px); }
 
-    /* Side article cards */
-    .article-side {
-      border:1px solid var(--grey-light); position:relative;
-      overflow:hidden; transition:var(--transition); flex:1;
+    .library-featured-grid {
+      display:grid; grid-template-columns:repeat(3, 1fr);
+      gap:1px; background:var(--grey-light);
+      border:1px solid var(--grey-light);
+    }
+    .library-featured-grid .instrument-card {
+      background:var(--white); padding:36px 32px;
+      position:relative; overflow:hidden;
+      cursor:pointer; transition:var(--transition);
       display:flex; flex-direction:column;
+      text-decoration:none;
     }
-    .article-side::before { content:''; position:absolute; top:0; left:0; width:0; height:2px; background:var(--gold); transition:width 0.4s ease; }
-    .article-side:hover { box-shadow:var(--shadow); transform:translateY(-2px); }
-    .article-side:hover::before { width:100%; }
-    .article-side-img {
-      height:130px;
-      display:flex; align-items:center; justify-content:center;
+    .library-featured-grid .instrument-card::before {
+      content:''; position:absolute; top:0; left:0;
+      width:0; height:2px; background:var(--gold);
+      transition:width 0.4s ease;
     }
-    .article-side-content { padding:24px 24px 24px; flex:1; display:flex; flex-direction:column; }
-    .article-side-meta { display:flex; align-items:center; gap:10px; margin-bottom:10px; }
-    .article-side-title { font-size:15px; font-weight:600; color:var(--navy); line-height:1.35; margin-bottom:12px; flex:1; }
-    .article-side-link { font-size:9px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--navy); text-decoration:none; transition:var(--transition); display:inline-flex; align-items:center; gap:6px; }
-    .article-side-link::after { content:'→'; font-weight:300; }
-    .article-side-link:hover { color:var(--gold); }
+    .library-featured-grid .instrument-card:hover { box-shadow:var(--shadow); transform:translateY(-2px); z-index:2; }
+    .library-featured-grid .instrument-card:hover::before { width:100%; }
+
+    .library-featured-grid .card-header { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:20px; gap:10px; }
+    .library-featured-grid .cat-badge { font-size:10px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; padding:4px 10px; flex-shrink:0; }
+    .library-featured-grid .cat-nr     { background:rgba(26,58,92,0.08); color:var(--navy); }
+    .library-featured-grid .cat-priv   { background:rgba(201,169,110,0.12); color:#8A6535; }
+    .library-featured-grid .cat-div    { background:rgba(42,42,42,0.06); color:var(--grey-dark); }
+    .library-featured-grid .cat-hib    { background:rgba(26,58,92,0.05); color:var(--navy); border:1px solid rgba(26,58,92,0.15); }
+    .library-featured-grid .cat-fiscal { background:rgba(201,169,110,0.08); color:#8A6535; border:1px solid rgba(201,169,110,0.2); }
+    .library-featured-grid .cat-outros { background:rgba(122,122,122,0.08); color:var(--grey-mid); border:1px solid rgba(122,122,122,0.15); }
+
+    .library-featured-grid .status-pill { font-size:9px; font-weight:500; letter-spacing:0.10em; text-transform:uppercase; color:var(--grey-mid); white-space:nowrap; flex-shrink:0; }
+    .library-featured-grid .status-open   { color:#2E7D52; font-weight:600; }
+    .library-featured-grid .status-cont   { color:#2E7D52; font-weight:600; }
+    .library-featured-grid .status-closed { color:#A63228; font-weight:600; }
+
+    .library-featured-grid .card-title { font-size:20px; font-weight:600; color:var(--navy); line-height:1.25; margin-bottom:8px; }
+    .library-featured-grid .card-tagline { font-size:14px; font-weight:300; color:var(--grey-mid); line-height:1.6; margin-bottom:20px; flex:1; }
+    .library-featured-grid .card-divider { height:1px; background:var(--grey-light); margin-bottom:16px; }
+    .library-featured-grid .card-highlights { display:flex; flex-direction:column; gap:10px; margin-bottom:24px; }
+    .library-featured-grid .card-highlight { display:flex; align-items:center; gap:10px; font-size:13px; font-weight:300; color:var(--grey-dark); }
+    .library-featured-grid .card-highlight-dot { width:4px; height:4px; background:var(--gold); flex-shrink:0; }
+    .library-featured-grid .card-cta {
+      font-size:11px; font-weight:600; letter-spacing:0.20em; text-transform:uppercase;
+      color:var(--navy); text-decoration:none;
+      display:inline-flex; align-items:center; gap:8px;
+      background:none; border:none; cursor:pointer;
+      font-family:var(--font); padding:0; transition:var(--transition);
+      margin-top:auto;
+    }
+    .library-featured-grid .card-cta::after { content:'→'; font-weight:300; font-size:13px; transition:var(--transition); }
+    .library-featured-grid .instrument-card:hover .card-cta { color:var(--gold); }
+
+    .library-see-all {
+      display:flex; justify-content:flex-end;
+      margin-top:28px;
+    }
+    .library-see-all a {
+      font-size:12px; font-weight:600; letter-spacing:0.22em;
+      text-transform:uppercase; color:var(--navy);
+      text-decoration:none; display:inline-flex; align-items:center; gap:10px;
+      transition:var(--transition);
+    }
+    .library-see-all a::after { content:'→'; font-weight:300; font-size:14px; transition:var(--transition); }
+    .library-see-all a:hover { color:var(--gold); }
+    .library-see-all a:hover::after { transform:translateX(5px); }
+
+    @media (max-width:1024px) { .library-featured-grid { grid-template-columns:repeat(2, 1fr); } }
+    @media (max-width:640px)  { .library-featured-grid { grid-template-columns:1fr; } }
 
     /* ─── PARCEIROS CTA ──────────────────────────── */
     .partners-cta { background:var(--navy); overflow:hidden; }
@@ -604,8 +645,7 @@
       .cap-sim-section { padding:80px 48px; }
       .t2b-section { padding:80px 48px; }
       .carousel-inner { padding:0 48px; }
-      .carousel-left { padding:56px 48px 56px 0; }
-      .carousel-right { padding:56px 0 56px 48px; }
+      .carousel-content { padding:56px 0 56px 48px; }
       .partners-left { padding:80px 48px 80px 48px; }
       .partners-right { padding:80px 48px; }
       .footer { padding:56px 48px 34px; }
@@ -616,11 +656,10 @@
       .hero-inner { grid-template-columns:1fr; }
       .hero-visual { display:none; }
       .hero-circle-1, .hero-circle-2, .hero-circle-3 { display:none; }
-      .carousel-slide.active { grid-template-columns:1fr; }
-      .carousel-left { border-right:none; border-bottom:1px solid var(--grey-light); padding:48px 0; }
-      .carousel-right { padding:48px 0; }
+      .carousel-link { grid-template-columns:1fr; }
+      .carousel-image { min-height:280px; }
+      .carousel-content { padding:48px 0; }
       .tool-split-inner { grid-template-columns:1fr; gap:40px; }
-      .knowledge-grid { grid-template-columns:1fr; }
       .partners-cta-grid { grid-template-columns:1fr; }
       .partners-left::after { display:none; }
       .partners-right { padding:48px 48px 80px; }
@@ -756,88 +795,96 @@
   <div class="carousel-inner">
     <div class="carousel-slides" id="carouselSlides">
 
-      <!-- Slide 1 · Editorial -->
+      <!-- Slide 1 · Horizonte Europa -->
       <div class="carousel-slide active">
-        <div class="carousel-left">
-          <div class="carousel-type">
-            <div class="carousel-type-dot"></div>
-            <span class="carousel-type-label">Destaque Editorial</span>
+        <a href="conhecimento/como-funciona-horizonte-europa.html" class="carousel-link">
+          <div class="carousel-image">
+            <img src="assets/articles/como-funciona-horizonte-europa.png" alt="Como funciona o Horizonte Europa">
           </div>
-          <h2 class="carousel-headline">Portugal 2030: <em>€23 mil milhões</em> e as oportunidades que a sua empresa não pode ignorar.</h2>
-          <p class="carousel-excerpt">O novo quadro comunitário está em marcha. Saiba quais os programas prioritários, como se candidatar e que sectores têm acesso prioritário ao financiamento europeu.</p>
-          <a href="conhecimento.html" class="carousel-cta">Ler análise completa</a>
-        </div>
-        <div class="carousel-right">
-          <div class="carousel-instrument">
-            <div class="carousel-instrument-label">Instrumento em Destaque</div>
-            <div class="carousel-instrument-title">Portugal 2030: Fundo de Competitividade e Internacionalização</div>
-            <p class="carousel-instrument-desc">Até 45% de taxa de co-financiamento para projetos de inovação, digitalização e internacionalização de PMEs.</p>
-            <a href="solucoes.html#capital" class="carousel-instrument-link">Saber mais →</a>
+          <div class="carousel-content">
+            <div class="carousel-type">
+              <div class="carousel-type-dot"></div>
+              <span class="carousel-type-label">Financiamento</span>
+            </div>
+            <h2 class="carousel-headline">Como funciona o Horizonte Europa: <em>guia para empresas</em>.</h2>
+            <p class="carousel-excerpt">95,5 mil milhões de euros para I&amp;D e inovação. O que é o Horizonte Europa, como funciona e que oportunidades cria para empresas portuguesas.</p>
+            <div class="carousel-meta">
+              <span class="carousel-meta-author">Open Capital</span>
+              <span class="carousel-meta-dot"></span>
+              <span class="carousel-meta-date">Abril 2026</span>
+            </div>
+            <span class="carousel-cta">Ler artigo</span>
           </div>
-        </div>
+        </a>
       </div>
 
-      <!-- Slide 2 · Instrumento -->
+      <!-- Slide 2 · Fragmentação global -->
       <div class="carousel-slide">
-        <div class="carousel-left">
-          <div class="carousel-type">
-            <div class="carousel-type-dot"></div>
-            <span class="carousel-type-label">Análise de Mercado</span>
+        <a href="conhecimento/fragmentacao-global-fim-globalizacao-eficiente.html" class="carousel-link">
+          <div class="carousel-image">
+            <img src="assets/articles/fragmentacao-global-fim-globalizacao-eficiente.avif" alt="Fragmentação global: o fim da globalização eficiente?">
           </div>
-          <h2 class="carousel-headline">SIFIDE II: O benefício fiscal que <em>73% das PMEs elegíveis</em> ainda não utiliza.</h2>
-          <p class="carousel-excerpt">O regime de incentivo fiscal à I&D pode representar uma dedução de até 82,5% das despesas elegíveis em sede de IRC. Descubra se a sua empresa é elegível.</p>
-          <a href="conhecimento.html" class="carousel-cta">Ver análise</a>
-        </div>
-        <div class="carousel-right">
-          <div class="carousel-instrument">
-            <div class="carousel-instrument-label">Instrumento em Destaque</div>
-            <div class="carousel-instrument-title">Benefícios Fiscais: SIFIDE II &amp; RFAI</div>
-            <p class="carousel-instrument-desc">Optimização da carga fiscal através de regimes de incentivo à investigação, inovação e ao investimento produtivo.</p>
-            <a href="solucoes.html#fiscal" class="carousel-instrument-link">Saber mais →</a>
+          <div class="carousel-content">
+            <div class="carousel-type">
+              <div class="carousel-type-dot"></div>
+              <span class="carousel-type-label">Estratégia</span>
+            </div>
+            <h2 class="carousel-headline">Fragmentação global: <em>o fim da globalização eficiente?</em></h2>
+            <p class="carousel-excerpt">As cadeias de valor estão a reorganizar-se. O que isto significa para empresas portuguesas que dependem de fornecedores e mercados internacionais.</p>
+            <div class="carousel-meta">
+              <span class="carousel-meta-author">Open Capital</span>
+              <span class="carousel-meta-dot"></span>
+              <span class="carousel-meta-date">Abril 2026</span>
+            </div>
+            <span class="carousel-cta">Ler artigo</span>
           </div>
-        </div>
+        </a>
       </div>
 
-      <!-- Slide 3 · Capital de Risco -->
+      <!-- Slide 3 · IA e contabilistas -->
       <div class="carousel-slide">
-        <div class="carousel-left">
-          <div class="carousel-type">
-            <div class="carousel-type-dot"></div>
-            <span class="carousel-type-label">Guia Prático</span>
+        <a href="conhecimento/ia-vai-matar-profissao-contabilista.html" class="carousel-link">
+          <div class="carousel-image">
+            <img src="assets/articles/ia-vai-matar-profissao-contabilista.jpg" alt="A IA vai matar a profissão de contabilista">
           </div>
-          <h2 class="carousel-headline">Capital de Risco: <em>Como preparar a sua empresa</em> para o primeiro round de investimento.</h2>
-          <p class="carousel-excerpt">Do pitch deck ao term sheet, um guia estruturado para fundadores que procuram capital privado em fases de crescimento acelerado.</p>
-          <a href="conhecimento.html" class="carousel-cta">Ler guia</a>
-        </div>
-        <div class="carousel-right">
-          <div class="carousel-instrument">
-            <div class="carousel-instrument-label">Instrumento em Destaque</div>
-            <div class="carousel-instrument-title">Capital de Risco &amp; Fundos de Investimento</div>
-            <p class="carousel-instrument-desc">Preparação, estruturação e acompanhamento de processos de captação de capital privado: VC, PE e investidores estratégicos.</p>
-            <a href="solucoes.html#capital" class="carousel-instrument-link">Saber mais →</a>
+          <div class="carousel-content">
+            <div class="carousel-type">
+              <div class="carousel-type-dot"></div>
+              <span class="carousel-type-label">Opinião</span>
+            </div>
+            <h2 class="carousel-headline">A IA vai matar a profissão de contabilista. <em>E ainda bem.</em></h2>
+            <p class="carousel-excerpt">A automação não é uma ameaça à contabilidade. É uma oportunidade para libertar profissionais de tarefas que nunca deviam ter sido feitas por humanos.</p>
+            <div class="carousel-meta">
+              <span class="carousel-meta-author">Jorge Pereira</span>
+              <span class="carousel-meta-dot"></span>
+              <span class="carousel-meta-date">Abril 2026</span>
+            </div>
+            <span class="carousel-cta">Ler artigo</span>
           </div>
-        </div>
+        </a>
       </div>
 
-      <!-- Slide 4 · Tendência -->
+      <!-- Slide 4 · Guerra no Irão -->
       <div class="carousel-slide">
-        <div class="carousel-left">
-          <div class="carousel-type">
-            <div class="carousel-type-dot"></div>
-            <span class="carousel-type-label">Tendência</span>
+        <a href="conhecimento/guerra-irao-impacto-empresas-europeias.html" class="carousel-link">
+          <div class="carousel-image">
+            <img src="assets/articles/guerra-irao.jpg" alt="Guerra no Irão: o que muda para as empresas europeias">
           </div>
-          <h2 class="carousel-headline">Financiamento europeu em 2025: <em>os erros mais comuns</em> e como os evitar.</h2>
-          <p class="carousel-excerpt">Candidaturas rejeitadas, projetos mal estruturados, despesas não elegíveis: analisamos os padrões de erro e como construir um projeto financiável de raiz.</p>
-          <a href="conhecimento.html" class="carousel-cta">Ler análise</a>
-        </div>
-        <div class="carousel-right">
-          <div class="carousel-instrument">
-            <div class="carousel-instrument-label">Instrumento em Destaque</div>
-            <div class="carousel-instrument-title">Gestão &amp; Execução de Projetos Financiados</div>
-            <p class="carousel-instrument-desc">Acompanhamento integral: da candidatura ao encerramento, com coordenação técnica, financeira e articulação com entidades.</p>
-            <a href="solucoes.html#execucao" class="carousel-instrument-link">Saber mais →</a>
+          <div class="carousel-content">
+            <div class="carousel-type">
+              <div class="carousel-type-dot"></div>
+              <span class="carousel-type-label">Mercados</span>
+            </div>
+            <h2 class="carousel-headline">Guerra no Irão: <em>o que muda</em> para as empresas europeias.</h2>
+            <p class="carousel-excerpt">O conflito no Golfo Pérsico redesenha custos de energia e cadeias de abastecimento. O que significa para quem gere empresas na Europa.</p>
+            <div class="carousel-meta">
+              <span class="carousel-meta-author">Open Capital</span>
+              <span class="carousel-meta-dot"></span>
+              <span class="carousel-meta-date">Abril 2026</span>
+            </div>
+            <span class="carousel-cta">Ler artigo</span>
           </div>
-        </div>
+        </a>
       </div>
 
     </div><!-- /slides -->
@@ -1080,71 +1127,35 @@
 </section>
 
 <!-- ════════════════════════════════════════
-     CONHECIMENTO · DESTAQUE + LATERAIS
+     BIBLIOTECA · INSTRUMENTOS EM DESTAQUE
 ════════════════════════════════════════ -->
-<section class="section" id="conhecimento">
+<section class="section" id="biblioteca-destaque">
   <div class="section-inner">
 
-    <div class="reveal" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px; margin-bottom:56px;">
-      <div>
-        <p class="t-eyebrow" style="margin-bottom:14px;">Conhecimento</p>
-        <h2 class="t-h2">Análise &amp; Perspetiva</h2>
-      </div>
-      <a href="conhecimento.html" class="btn btn-outline">Ver Todos os Artigos</a>
+    <div class="reveal">
+      <p class="t-eyebrow" style="margin-bottom:14px;">Biblioteca de Instrumentos</p>
+      <h2 class="t-h2">Toda a oferta de capital, num só lugar.</h2>
     </div>
 
-    <div class="knowledge-grid">
+    <p class="library-intro reveal reveal-d1">
+      Reunimos numa biblioteca em permanente atualização todos os instrumentos de financiamento, investimento e benefícios fiscais disponíveis para empresas portuguesas. Fundos europeus e nacionais, capital privado, dívida bancária e incentivos fiscais, organizados de forma simples e prática para que encontre rapidamente o que se aplica ao seu projeto.
+    </p>
 
-      <!-- Artigo em destaque -->
-      <div class="article-featured reveal">
-        <div class="article-featured-img">
-          <img src="assets/articles/como-funciona-horizonte-europa.png" style="width:100%;height:100%;object-fit:cover;" alt="Como funciona o Horizonte Europa: guia para empresas">
-          <div class="article-featured-tag">Destaque</div>
-        </div>
-        <div class="article-featured-content">
-          <div class="article-featured-meta">
-            <span class="article-cat">Financiamento</span>
-            <span class="article-date">Abr 2026</span>
-          </div>
-          <h3 class="article-featured-title">Como funciona o Horizonte Europa: guia para empresas</h3>
-          <p class="article-featured-excerpt">95,5 mil milhões de euros para I&D e inovação. O que é o Horizonte Europa, como funciona e que oportunidades cria para empresas portuguesas.</p>
-          <a href="conhecimento/como-funciona-horizonte-europa.html" class="article-link">Ler artigo completo</a>
-        </div>
-      </div>
-
-      <!-- Artigos laterais -->
-      <div class="knowledge-side">
-
-        <div class="article-side reveal reveal-d2">
-          <div class="article-side-img" style="background:linear-gradient(135deg, #2A2A2A 0%, #1A1A1A 100%);">
-            <img src="assets/articles/fragmentacao-global-fim-globalizacao-eficiente.avif" style="width:100%;height:100%;object-fit:cover;" alt="Fragmentação global: o fim da globalização eficiente?">
-          </div>
-          <div class="article-side-content">
-            <div class="article-side-meta">
-              <span class="article-cat">Estratégia</span>
-              <span class="article-date">Abr 2026</span>
-            </div>
-            <h4 class="article-side-title">Fragmentação global: o fim da globalização eficiente?</h4>
-            <a href="conhecimento/fragmentacao-global-fim-globalizacao-eficiente.html" class="article-side-link">Ler artigo</a>
-          </div>
-        </div>
-
-        <div class="article-side reveal reveal-d3">
-          <div class="article-side-img" style="background:linear-gradient(135deg, #2A2A2A 0%, #1A1A1A 100%);">
-            <img src="assets/articles/ia-vai-matar-profissao-contabilista.jpg" style="width:100%;height:100%;object-fit:cover;" alt="A IA vai matar a profissão de contabilista. E ainda bem.">
-          </div>
-          <div class="article-side-content">
-            <div class="article-side-meta">
-              <span class="article-cat">Opinião</span>
-              <span class="article-date">Abr 2026</span>
-            </div>
-            <h4 class="article-side-title">A IA vai matar a profissão de contabilista. E ainda bem.</h4>
-            <a href="conhecimento/ia-vai-matar-profissao-contabilista.html" class="article-side-link">Ler artigo</a>
-          </div>
-        </div>
-
-      </div>
+    <div class="library-meta reveal reveal-d2">
+      <span class="library-total" id="libraryTotal">— instrumentos</span>
+      <span class="library-meta-line"></span>
     </div>
+
+    <p class="library-featured-label reveal reveal-d2">Em destaque agora</p>
+
+    <div class="library-featured-grid reveal reveal-d3" id="libraryFeaturedGrid">
+      <!-- Cards populated dynamically from solucoes.html via JS -->
+    </div>
+
+    <div class="library-see-all reveal reveal-d3">
+      <a href="solucoes.html">Ver biblioteca completa</a>
+    </div>
+
   </div>
 </section>
 
@@ -1404,6 +1415,46 @@
   document.getElementById('carouselPrev').addEventListener('click', () => { goTo(current - 1); startAuto(); });
   dots.forEach(dot => dot.addEventListener('click', () => { goTo(parseInt(dot.dataset.target)); startAuto(); }));
   startAuto();
+
+  /* ─── BIBLIOTECA · DESTAQUES + CONTAGEM TOTAL ─── */
+  /* Le solucoes.html, conta total de cards e clona os marcados data-featured */
+  fetch('solucoes.html')
+    .then(r => r.ok ? r.text() : Promise.reject(r.status))
+    .then(html => {
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      const allCards = doc.querySelectorAll('.instrument-card[data-category]');
+      const totalEl = document.getElementById('libraryTotal');
+      if (totalEl) {
+        const n = allCards.length;
+        totalEl.textContent = n + (n === 1 ? ' instrumento na biblioteca' : ' instrumentos na biblioteca');
+      }
+      const featured = doc.querySelectorAll('.instrument-card[data-featured="true"]');
+      const grid = document.getElementById('libraryFeaturedGrid');
+      if (grid && featured.length > 0) {
+        grid.innerHTML = '';
+        featured.forEach(card => {
+          const clone = card.cloneNode(true);
+          // remover classes reveal/hidden e tornar clicavel via tag <a>
+          clone.classList.remove('reveal','reveal-d1','reveal-d2','reveal-d3','hidden');
+          const href = clone.dataset.href;
+          if (href) {
+            const wrapper = document.createElement('a');
+            wrapper.href = href;
+            wrapper.style.textDecoration = 'none';
+            wrapper.style.color = 'inherit';
+            wrapper.style.display = 'contents';
+            wrapper.appendChild(clone);
+            grid.appendChild(wrapper);
+          } else {
+            grid.appendChild(clone);
+          }
+        });
+      }
+    })
+    .catch(() => {
+      const totalEl = document.getElementById('libraryTotal');
+      if (totalEl) totalEl.textContent = 'Biblioteca em expansão';
+    });
 
   /* ─── SCROLL REVEAL ──────────────────────────── */
   const observer = new IntersectionObserver((entries) => {
