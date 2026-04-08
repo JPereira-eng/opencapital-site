@@ -274,123 +274,172 @@
     }
 
     /* ─── CAROUSEL ───────────────────────────────── */
+    /* ─── CARROSSEL EDITORIAL · 3 CARDS VISIVEIS ─── */
     .carousel-section {
       background:var(--white);
       border-top:1px solid var(--grey-light);
-      position:relative; overflow:hidden;
+      padding:96px 0 80px;
     }
-    .carousel-inner {
+    .carousel-header {
+      max-width:1200px; margin:0 auto 44px;
+      padding:0 80px;
+      display:flex; align-items:flex-end; justify-content:space-between;
+      flex-wrap:wrap; gap:20px;
+    }
+    .carousel-header-text { max-width:640px; }
+    .carousel-header-link {
+      font-size:12px; font-weight:600; letter-spacing:0.22em;
+      text-transform:uppercase; color:var(--navy);
+      text-decoration:none; display:inline-flex; align-items:center; gap:10px;
+      transition:var(--transition);
+    }
+    .carousel-header-link::after { content:'→'; font-weight:300; font-size:14px; transition:var(--transition); }
+    .carousel-header-link:hover { color:var(--gold); }
+    .carousel-header-link:hover::after { transform:translateX(5px); }
+
+    .carousel-viewport {
       max-width:1200px; margin:0 auto;
       padding:0 80px;
-      position:relative;
-    }
-    .carousel-slides { position:relative; }
-    .carousel-slide {
-      display:none;
-      min-height:420px;
-    }
-    .carousel-slide.active { display:block; }
-
-    /* Whole slide is a clickable link · split 50/50 */
-    .carousel-link {
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:0;
-      min-height:420px;
-      text-decoration:none;
-      color:inherit;
-      transition:var(--transition);
-    }
-
-    /* Left · article cover image (full-bleed) */
-    .carousel-image {
-      position:relative;
       overflow:hidden;
-      background:#FAFAFA;
+      position:relative;
     }
-    .carousel-image img {
-      width:100%; height:100%;
-      object-fit:cover;
+    .carousel-track {
+      display:flex; gap:24px;
+      will-change:transform;
+    }
+    .carousel-track .article-card {
+      flex:0 0 calc((100% - 48px) / 3);
+      min-width:0;
+    }
+
+    /* article-card styles inherited from conhecimento.html */
+    .carousel-section .article-card {
+      background:var(--white); padding:0;
+      display:flex; flex-direction:column;
+      position:relative; overflow:hidden;
+      transition:var(--transition); cursor:pointer;
+      border:1px solid var(--grey-light);
+      text-decoration:none; color:inherit;
+    }
+    .carousel-section .article-card::before {
+      content:''; position:absolute; top:0; left:0;
+      width:0; height:2px; background:var(--gold);
+      transition:width 0.4s ease; z-index:2;
+    }
+    .carousel-section .article-card:hover {
+      box-shadow:var(--shadow); transform:translateY(-2px); z-index:2;
+    }
+    .carousel-section .article-card:hover::before { width:100%; }
+
+    .carousel-section .article-card-img {
+      height:200px; overflow:hidden; flex-shrink:0;
+      background:linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+      display:flex; align-items:center; justify-content:center; position:relative;
+    }
+    .carousel-section .article-card-img img {
+      width:100%; height:100%; object-fit:cover; object-position:center;
       display:block;
-      transition:transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
-    .carousel-link:hover .carousel-image img {
-      transform:scale(1.04);
+    .carousel-section .article-card-body {
+      padding:28px 32px; display:flex; flex-direction:column; flex:1;
     }
-
-    /* Right · editorial content */
-    .carousel-content {
-      padding:64px 0 64px 60px;
-      display:flex; flex-direction:column; justify-content:center;
-    }
-    .carousel-type {
-      display:inline-flex; align-items:center; gap:10px; margin-bottom:28px;
-    }
-    .carousel-type-dot {
-      width:5px; height:5px; border:1px solid var(--gold);
-      transform:rotate(45deg); flex-shrink:0;
-    }
-    .carousel-type-label {
-      font-size:9px; font-weight:600; letter-spacing:0.28em;
-      text-transform:uppercase; color:var(--gold);
-    }
-    .carousel-headline {
-      font-size:28px; font-weight:600; color:var(--navy);
-      line-height:1.22; letter-spacing:-0.01em; margin-bottom:18px;
-      transition:var(--transition);
-    }
-    .carousel-link:hover .carousel-headline { color:#0F2A45; }
-    .carousel-headline em { font-style:normal; color:var(--gold); font-weight:300; }
-    .carousel-excerpt {
-      font-size:17px; font-weight:300; color:var(--grey-mid);
-      line-height:1.85; margin-bottom:28px; max-width:460px;
-    }
-    .carousel-meta {
-      display:flex; align-items:center; gap:14px; margin-bottom:22px;
-      padding-top:18px; border-top:1px solid var(--grey-light); max-width:460px;
-    }
-    .carousel-meta-author {
-      font-size:13px; font-weight:600; color:var(--navy); letter-spacing:0.02em;
-    }
-    .carousel-meta-dot {
-      width:3px; height:3px; background:var(--grey-light); border-radius:50%;
-    }
-    .carousel-meta-date {
-      font-size:12px; font-weight:300; color:var(--grey-mid); letter-spacing:0.04em;
-    }
-    .carousel-cta {
-      font-size:10px; font-weight:600; letter-spacing:0.22em;
-      text-transform:uppercase; color:var(--navy);
-      display:inline-flex; align-items:center; gap:8px; transition:var(--transition);
-    }
-    .carousel-cta::after { content:'→'; font-weight:300; transition:var(--transition); }
-    .carousel-link:hover .carousel-cta { color:var(--gold); }
-    .carousel-link:hover .carousel-cta::after { transform:translateX(4px); }
-
-    /* Carousel controls */
-    .carousel-controls {
+    .carousel-section .article-card-header {
       display:flex; align-items:center; justify-content:space-between;
-      padding:18px 80px;
-      background:var(--navy);
-      border-top:2px solid var(--gold);
+      margin-bottom:16px;
     }
-    .carousel-dots { display:flex; gap:10px; align-items:center; }
-    .carousel-dot {
-      width:5px; height:5px; border:1px solid rgba(201,169,110,0.4);
-      transform:rotate(45deg); cursor:pointer;
-      transition:var(--transition); background:transparent; flex-shrink:0;
+    .carousel-section .art-cat-badge {
+      font-size:10px; font-weight:600; letter-spacing:0.16em;
+      text-transform:uppercase; padding:4px 10px;
     }
-    .carousel-dot.active { background:var(--gold); border-color:var(--gold); }
-    .carousel-arrows { display:flex; gap:8px; }
+    .carousel-section .cat-financiamento { background:rgba(26,58,92,0.08); color:var(--navy); }
+    .carousel-section .cat-fiscalidade   { background:rgba(42,42,42,0.06); color:var(--grey-dark); }
+    .carousel-section .cat-estrategia    { background:rgba(201,169,110,0.10); color:#8A6535; }
+    .carousel-section .cat-inovacao      { background:rgba(26,58,92,0.05); color:var(--navy); border:1px solid rgba(26,58,92,0.15); }
+    .carousel-section .cat-mercados      { background:rgba(201,169,110,0.08); color:#8A6535; border:1px solid rgba(201,169,110,0.2); }
+    .carousel-section .cat-opiniao       { background:transparent; color:var(--gold); border:1px solid rgba(201,169,110,0.4); }
+
+    .carousel-section .art-read-time {
+      font-size:11px; font-weight:300; color:var(--grey-mid); letter-spacing:0.06em;
+    }
+    .carousel-section .article-card-title {
+      font-size:19px; font-weight:600; color:var(--navy);
+      line-height:1.3; margin-bottom:12px;
+    }
+    .carousel-section .article-card-excerpt {
+      font-size:14px; font-weight:300; color:var(--grey-mid);
+      line-height:1.75; margin-bottom:20px; flex:1;
+    }
+    .carousel-section .article-card-footer {
+      display:flex; align-items:center; justify-content:space-between;
+      padding-top:16px; border-top:1px solid var(--grey-light);
+    }
+    .carousel-section .art-date {
+      font-size:12px; font-weight:300; color:var(--grey-mid); letter-spacing:0.06em;
+    }
+    .carousel-section .art-link {
+      font-size:11px; font-weight:600; letter-spacing:0.18em;
+      text-transform:uppercase; color:var(--navy); text-decoration:none;
+      transition:var(--transition); display:inline-flex; align-items:center; gap:6px;
+    }
+    .carousel-section .art-link::after { content:'→'; font-weight:300; }
+    .carousel-section .article-card:hover .art-link { color:var(--gold); }
+
+    /* Opinion card variant */
+    .carousel-section .article-card.type-opiniao {
+      padding:0; min-height:380px;
+      border:1px solid var(--grey-light);
+    }
+    .carousel-section .article-card.type-opiniao .article-card-img,
+    .carousel-section .article-card.type-opiniao .article-card-body { display:none; }
+    .carousel-section .opiniao-card-photo {
+      position:absolute; top:0; left:0;
+      width:100%; height:100%;
+      object-fit:cover; object-position:top center;
+    }
+    .carousel-section .opiniao-card-overlay {
+      position:absolute; bottom:0; left:0; right:0;
+      padding:120px 28px 26px;
+      background:linear-gradient(to bottom, transparent 0%, rgba(13,31,51,0.92) 55%);
+      display:flex; flex-direction:column; justify-content:flex-end;
+    }
+    .carousel-section .opiniao-card-meta {
+      display:flex; justify-content:space-between; align-items:center;
+      margin-bottom:10px;
+    }
+    .carousel-section .opiniao-card-author {
+      font-size:13px; font-weight:600; color:rgba(255,255,255,0.85); letter-spacing:0.04em;
+    }
+    .carousel-section .opiniao-card-badge {
+      font-size:10px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase;
+      color:var(--gold); border:1px solid rgba(201,169,110,0.4);
+      padding:4px 10px; flex-shrink:0;
+    }
+    .carousel-section .opiniao-card-title {
+      font-size:18px; font-weight:600; color:var(--white);
+      line-height:1.3; margin-bottom:14px;
+    }
+    .carousel-section .opiniao-card-cta {
+      font-size:11px; font-weight:600; letter-spacing:0.20em; text-transform:uppercase;
+      color:var(--gold); transition:var(--transition);
+    }
+    .carousel-section .opiniao-card-cta::after { content:'→'; font-weight:300; font-size:13px; margin-left:6px; }
+
+    /* Controls — minimal, below the track */
+    .carousel-controls {
+      max-width:1200px; margin:48px auto 0;
+      padding:0 80px;
+      display:flex; align-items:center; justify-content:center; gap:28px;
+    }
     .carousel-arrow {
-      width:36px; height:36px; border:1px solid rgba(255,255,255,0.15);
+      width:40px; height:40px; border:1px solid var(--grey-light);
       display:flex; align-items:center; justify-content:center;
       cursor:pointer; transition:var(--transition); background:transparent;
-      font-size:14px; color:rgba(255,255,255,0.6);
+      font-size:14px; color:var(--grey-mid);
     }
-    .carousel-arrow:hover { border-color:var(--gold); color:var(--gold); }
+    .carousel-arrow:hover { border-color:var(--navy); color:var(--navy); }
     .carousel-progress {
-      font-size:10px; font-weight:500; letter-spacing:0.14em; color:rgba(255,255,255,0.35);
+      font-size:11px; font-weight:500; letter-spacing:0.18em;
+      color:var(--grey-mid); min-width:70px; text-align:center;
     }
     .carousel-progress span { color:var(--gold); font-weight:600; }
 
@@ -635,8 +684,11 @@
       .section { padding:80px 48px; }
       .cap-sim-section { padding:80px 48px; }
       .t2b-section { padding:80px 48px; }
-      .carousel-inner { padding:0 48px; }
-      .carousel-content { padding:56px 0 56px 48px; }
+      .carousel-section { padding:80px 0 64px; }
+      .carousel-header { padding:0 48px; }
+      .carousel-viewport { padding:0 48px; }
+      .carousel-controls { padding:0 48px; }
+      .carousel-track .article-card { flex:0 0 calc((100% - 24px) / 2); }
       .partners-left { padding:80px 48px 80px 48px; }
       .partners-right { padding:80px 48px; }
       .footer { padding:56px 48px 34px; }
@@ -647,9 +699,6 @@
       .hero-inner { grid-template-columns:1fr; }
       .hero-visual { display:none; }
       .hero-circle-1, .hero-circle-2, .hero-circle-3 { display:none; }
-      .carousel-link { grid-template-columns:1fr; }
-      .carousel-image { min-height:280px; }
-      .carousel-content { padding:48px 0; }
       .tool-split-inner { grid-template-columns:1fr; gap:40px; }
       .partners-cta-grid { grid-template-columns:1fr; }
       .partners-left::after { display:none; }
@@ -665,7 +714,10 @@
       .metric-num { font-size:28px; }
       .hero-scroll { display:none; }
       .section { padding:64px 28px; }
-      .carousel-inner { padding:0 28px; }
+      .carousel-header { padding:0 28px; }
+      .carousel-viewport { padding:0 28px; }
+      .carousel-controls { padding:0 28px; }
+      .carousel-track .article-card { flex:0 0 100%; }
       .areas-grid { grid-template-columns:1fr; }
       .cap-sim-section { padding:64px 28px; }
       .t2b-section { padding:64px 28px; }
@@ -780,126 +832,190 @@
 
 
 <!-- ════════════════════════════════════════
-     CARROSSEL EDITORIAL
+     CARROSSEL EDITORIAL · 3 CARDS
 ════════════════════════════════════════ -->
-<div class="carousel-section">
-  <div class="carousel-inner">
-    <div class="carousel-slides" id="carouselSlides">
+<section class="carousel-section" id="destaques-editoriais">
 
-      <!-- Slide 1 · Horizonte Europa -->
-      <div class="carousel-slide active">
-        <a href="conhecimento/como-funciona-horizonte-europa.html" class="carousel-link">
-          <div class="carousel-image">
-            <img src="assets/articles/como-funciona-horizonte-europa.png" alt="Como funciona o Horizonte Europa">
-          </div>
-          <div class="carousel-content">
-            <div class="carousel-type">
-              <div class="carousel-type-dot"></div>
-              <span class="carousel-type-label">Financiamento</span>
-            </div>
-            <h2 class="carousel-headline">Como funciona o Horizonte Europa: <em>guia para empresas</em>.</h2>
-            <p class="carousel-excerpt">95,5 mil milhões de euros para I&amp;D e inovação. O que é o Horizonte Europa, como funciona e que oportunidades cria para empresas portuguesas.</p>
-            <div class="carousel-meta">
-              <span class="carousel-meta-author">Open Capital</span>
-              <span class="carousel-meta-dot"></span>
-              <span class="carousel-meta-date">Abril 2026</span>
-            </div>
-            <span class="carousel-cta">Ler artigo</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Slide 2 · Fragmentação global -->
-      <div class="carousel-slide">
-        <a href="conhecimento/fragmentacao-global-fim-globalizacao-eficiente.html" class="carousel-link">
-          <div class="carousel-image">
-            <img src="assets/articles/fragmentacao-global-fim-globalizacao-eficiente.avif" alt="Fragmentação global: o fim da globalização eficiente?">
-          </div>
-          <div class="carousel-content">
-            <div class="carousel-type">
-              <div class="carousel-type-dot"></div>
-              <span class="carousel-type-label">Estratégia</span>
-            </div>
-            <h2 class="carousel-headline">Fragmentação global: <em>o fim da globalização eficiente?</em></h2>
-            <p class="carousel-excerpt">As cadeias de valor estão a reorganizar-se. O que isto significa para empresas portuguesas que dependem de fornecedores e mercados internacionais.</p>
-            <div class="carousel-meta">
-              <span class="carousel-meta-author">Open Capital</span>
-              <span class="carousel-meta-dot"></span>
-              <span class="carousel-meta-date">Abril 2026</span>
-            </div>
-            <span class="carousel-cta">Ler artigo</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Slide 3 · IA e contabilistas -->
-      <div class="carousel-slide">
-        <a href="conhecimento/ia-vai-matar-profissao-contabilista.html" class="carousel-link">
-          <div class="carousel-image">
-            <img src="assets/articles/ia-vai-matar-profissao-contabilista.jpg" alt="A IA vai matar a profissão de contabilista">
-          </div>
-          <div class="carousel-content">
-            <div class="carousel-type">
-              <div class="carousel-type-dot"></div>
-              <span class="carousel-type-label">Opinião</span>
-            </div>
-            <h2 class="carousel-headline">A IA vai matar a profissão de contabilista. <em>E ainda bem.</em></h2>
-            <p class="carousel-excerpt">A automação não é uma ameaça à contabilidade. É uma oportunidade para libertar profissionais de tarefas que nunca deviam ter sido feitas por humanos.</p>
-            <div class="carousel-meta">
-              <span class="carousel-meta-author">Jorge Pereira</span>
-              <span class="carousel-meta-dot"></span>
-              <span class="carousel-meta-date">Abril 2026</span>
-            </div>
-            <span class="carousel-cta">Ler artigo</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Slide 4 · Guerra no Irão -->
-      <div class="carousel-slide">
-        <a href="conhecimento/guerra-irao-impacto-empresas-europeias.html" class="carousel-link">
-          <div class="carousel-image">
-            <img src="assets/articles/guerra-irao.jpg" alt="Guerra no Irão: o que muda para as empresas europeias">
-          </div>
-          <div class="carousel-content">
-            <div class="carousel-type">
-              <div class="carousel-type-dot"></div>
-              <span class="carousel-type-label">Mercados</span>
-            </div>
-            <h2 class="carousel-headline">Guerra no Irão: <em>o que muda</em> para as empresas europeias.</h2>
-            <p class="carousel-excerpt">O conflito no Golfo Pérsico redesenha custos de energia e cadeias de abastecimento. O que significa para quem gere empresas na Europa.</p>
-            <div class="carousel-meta">
-              <span class="carousel-meta-author">Open Capital</span>
-              <span class="carousel-meta-dot"></span>
-              <span class="carousel-meta-date">Abril 2026</span>
-            </div>
-            <span class="carousel-cta">Ler artigo</span>
-          </div>
-        </a>
-      </div>
-
-    </div><!-- /slides -->
-
-  </div><!-- /carousel-inner -->
-
-  <!-- Controls · full width -->
-  <div class="carousel-controls">
-    <div class="carousel-dots">
-      <div class="carousel-dot active" data-target="0"></div>
-      <div class="carousel-dot" data-target="1"></div>
-      <div class="carousel-dot" data-target="2"></div>
-      <div class="carousel-dot" data-target="3"></div>
+  <div class="carousel-header reveal">
+    <div class="carousel-header-text">
+      <p class="t-eyebrow" style="margin-bottom:14px;">Em destaque</p>
+      <h2 class="t-h2">Análise, perspetiva, contexto.</h2>
     </div>
-    <div class="carousel-progress">
-      <span id="carouselCurrent">01</span> / 04
-    </div>
-    <div class="carousel-arrows">
-      <button class="carousel-arrow" id="carouselPrev" aria-label="Anterior">&#8592;</button>
-      <button class="carousel-arrow" id="carouselNext" aria-label="Seguinte">&#8594;</button>
-    </div>
+    <a href="conhecimento.html" class="carousel-header-link">Ver todos os artigos</a>
   </div>
 
-</div>
+  <div class="carousel-viewport" id="carouselViewport">
+    <div class="carousel-track" id="carouselTrack">
+
+      <!-- 1 · Horizonte Europa -->
+      <a href="conhecimento/como-funciona-horizonte-europa.html" class="article-card">
+        <div class="article-card-img">
+          <img src="assets/articles/como-funciona-horizonte-europa.png" alt="Como funciona o Horizonte Europa: guia para empresas">
+        </div>
+        <div class="article-card-body">
+          <div class="article-card-header">
+            <span class="art-cat-badge cat-financiamento">Financiamento</span>
+            <span class="art-read-time">9 min</span>
+          </div>
+          <h3 class="article-card-title">Como funciona o Horizonte Europa: guia para empresas</h3>
+          <p class="article-card-excerpt">95,5 mil milhões de euros para I&amp;D e inovação. O que é o Horizonte Europa, como funciona e que oportunidades cria para empresas portuguesas.</p>
+          <div class="article-card-footer">
+            <span class="art-date">Abril 2026</span>
+            <span class="art-link">Ler</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 2 · IA e contabilistas (Opinião) -->
+      <a href="conhecimento/ia-vai-matar-profissao-contabilista.html" class="article-card type-opiniao">
+        <img src="Retratos Equipa/retrato_jorgepereira.png" alt="Jorge Pereira" class="opiniao-card-photo">
+        <div class="opiniao-card-overlay">
+          <div class="opiniao-card-meta">
+            <span class="opiniao-card-author">Jorge Pereira</span>
+            <span class="opiniao-card-badge">Opinião</span>
+          </div>
+          <h3 class="opiniao-card-title">A IA vai matar a profissão de contabilista. E ainda bem.</h3>
+          <span class="opiniao-card-cta">Ler artigo</span>
+        </div>
+      </a>
+
+      <!-- 3 · Fragmentação global -->
+      <a href="conhecimento/fragmentacao-global-fim-globalizacao-eficiente.html" class="article-card">
+        <div class="article-card-img">
+          <img src="assets/articles/fragmentacao-global-fim-globalizacao-eficiente.avif" alt="Fragmentação global: o fim da globalização eficiente?">
+        </div>
+        <div class="article-card-body">
+          <div class="article-card-header">
+            <span class="art-cat-badge cat-estrategia">Estratégia</span>
+            <span class="art-read-time">10 min</span>
+          </div>
+          <h3 class="article-card-title">Fragmentação global: o fim da globalização eficiente?</h3>
+          <p class="article-card-excerpt">Nearshoring, tarifas e blocos rivais. A globalização eficiente acabou. O que significa para quem gere empresas em Portugal?</p>
+          <div class="article-card-footer">
+            <span class="art-date">Abril 2026</span>
+            <span class="art-link">Ler</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 4 · Candidatura PT2030 -->
+      <a href="conhecimento/como-preparar-candidatura-portugal-2030.html" class="article-card">
+        <div class="article-card-img">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" stroke="rgba(201,169,110,0.18)" stroke-width="1"/><polyline points="8,38 18,22 28,30 40,12" stroke="rgba(201,169,110,0.55)" stroke-width="1.2" fill="none"/><circle cx="18" cy="22" r="2" fill="rgba(201,169,110,0.4)"/><circle cx="40" cy="12" r="2" fill="rgba(201,169,110,0.4)"/></svg>
+        </div>
+        <div class="article-card-body">
+          <div class="article-card-header">
+            <span class="art-cat-badge cat-financiamento">Financiamento</span>
+            <span class="art-read-time">8 min</span>
+          </div>
+          <h3 class="article-card-title">Como preparar uma candidatura Portugal 2030 que seja aprovada</h3>
+          <p class="article-card-excerpt">A maioria das candidaturas rejeitadas não falha por falta de mérito, falha por erros técnicos e narrativas inconsistentes. Um guia prático.</p>
+          <div class="article-card-footer">
+            <span class="art-date">Março 2026</span>
+            <span class="art-link">Ler</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 5 · Capital europeu (Opinião · Miguel) -->
+      <a href="conhecimento/capital-europeu-disponivel-problema-execucao.html" class="article-card type-opiniao">
+        <img src="Retratos Equipa/retrato_miguelsantos.png" alt="Miguel Santos" class="opiniao-card-photo">
+        <div class="opiniao-card-overlay">
+          <div class="opiniao-card-meta">
+            <span class="opiniao-card-author">Miguel Santos</span>
+            <span class="opiniao-card-badge">Opinião</span>
+          </div>
+          <h3 class="opiniao-card-title">O capital europeu está disponível. O problema é sempre a execução.</h3>
+          <span class="opiniao-card-cta">Ler artigo</span>
+        </div>
+      </a>
+
+      <!-- 6 · Guerra no Irão -->
+      <a href="conhecimento/guerra-irao-impacto-empresas-europeias.html" class="article-card">
+        <div class="article-card-img">
+          <img src="assets/articles/guerra-irao.jpg" alt="Guerra no Irão: o que muda para as empresas europeias">
+        </div>
+        <div class="article-card-body">
+          <div class="article-card-header">
+            <span class="art-cat-badge cat-mercados">Mercados</span>
+            <span class="art-read-time">8 min</span>
+          </div>
+          <h3 class="article-card-title">Guerra no Irão: o que muda para as empresas europeias</h3>
+          <p class="article-card-excerpt">O conflito no Golfo Pérsico redesenha custos de energia e cadeias de abastecimento. O que significa para quem gere empresas na Europa.</p>
+          <div class="article-card-footer">
+            <span class="art-date">Abril 2026</span>
+            <span class="art-link">Ler</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 7 · SIFIDE II -->
+      <a href="conhecimento/sifide-ii-beneficio-fiscal.html" class="article-card">
+        <div class="article-card-img">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" stroke="rgba(201,169,110,0.18)" stroke-width="1"/><polyline points="8,38 18,22 28,30 40,12" stroke="rgba(201,169,110,0.55)" stroke-width="1.2" fill="none"/><circle cx="18" cy="22" r="2" fill="rgba(201,169,110,0.4)"/><circle cx="40" cy="12" r="2" fill="rgba(201,169,110,0.4)"/></svg>
+        </div>
+        <div class="article-card-body">
+          <div class="article-card-header">
+            <span class="art-cat-badge cat-fiscalidade">Fiscalidade</span>
+            <span class="art-read-time">6 min</span>
+          </div>
+          <h3 class="article-card-title">SIFIDE II: o benefício fiscal que 70% das empresas inovadoras não aproveitam</h3>
+          <p class="article-card-excerpt">Se a sua empresa tem despesas em I&amp;D e não submete ao SIFIDE II, está a deixar dinheiro na mesa, provavelmente dezenas de milhares de euros por ano.</p>
+          <div class="article-card-footer">
+            <span class="art-date">Fevereiro 2026</span>
+            <span class="art-link">Ler</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 8 · Venture Capital -->
+      <a href="conhecimento/venture-capital-portugal.html" class="article-card">
+        <div class="article-card-img">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" stroke="rgba(201,169,110,0.18)" stroke-width="1"/><polyline points="8,38 18,22 28,30 40,12" stroke="rgba(201,169,110,0.55)" stroke-width="1.2" fill="none"/><circle cx="18" cy="22" r="2" fill="rgba(201,169,110,0.4)"/><circle cx="40" cy="12" r="2" fill="rgba(201,169,110,0.4)"/></svg>
+        </div>
+        <div class="article-card-body">
+          <div class="article-card-header">
+            <span class="art-cat-badge cat-mercados">Mercados</span>
+            <span class="art-read-time">5 min</span>
+          </div>
+          <h3 class="article-card-title">Venture Capital em Portugal: o que mudou e para onde vai o mercado</h3>
+          <p class="article-card-excerpt">O ecossistema de capital de risco português cresceu significativamente. Uma análise do que mudou, quem são os players e o que esperar a seguir.</p>
+          <div class="article-card-footer">
+            <span class="art-date">Fevereiro 2026</span>
+            <span class="art-link">Ler</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 9 · I&D empresarial -->
+      <a href="conhecimento/id-empresarial-vantagem-fiscal.html" class="article-card">
+        <div class="article-card-img">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" stroke="rgba(201,169,110,0.18)" stroke-width="1"/><polyline points="8,38 18,22 28,30 40,12" stroke="rgba(201,169,110,0.55)" stroke-width="1.2" fill="none"/><circle cx="18" cy="22" r="2" fill="rgba(201,169,110,0.4)"/><circle cx="40" cy="12" r="2" fill="rgba(201,169,110,0.4)"/></svg>
+        </div>
+        <div class="article-card-body">
+          <div class="article-card-header">
+            <span class="art-cat-badge cat-inovacao">Inovação</span>
+            <span class="art-read-time">7 min</span>
+          </div>
+          <h3 class="article-card-title">I&amp;D empresarial: como transformar despesa em vantagem fiscal</h3>
+          <p class="article-card-excerpt">Portugal tem um dos regimes fiscais mais favoráveis à I&amp;D da Europa. SIFIDE II, RFAI e Patent Box, usados em conjunto, podem representar uma poupança significativa.</p>
+          <div class="article-card-footer">
+            <span class="art-date">Janeiro 2026</span>
+            <span class="art-link">Ler</span>
+          </div>
+        </div>
+      </a>
+
+    </div><!-- /track -->
+  </div><!-- /viewport -->
+
+  <div class="carousel-controls">
+    <button class="carousel-arrow" id="carouselPrev" aria-label="Anterior">&#8592;</button>
+    <div class="carousel-progress"><span id="carouselCurrent">01</span> / 09</div>
+    <button class="carousel-arrow" id="carouselNext" aria-label="Seguinte">&#8594;</button>
+  </div>
+
+</section>
 
 
 <!-- ════════════════════════════════════════
@@ -1376,31 +1492,88 @@
     a.addEventListener('click', () => mobileMenu.classList.remove('open'))
   );
 
-  /* ─── CAROUSEL ───────────────────────────────── */
-  const slides   = document.querySelectorAll('.carousel-slide');
-  const dots     = document.querySelectorAll('.carousel-dot');
-  const counter  = document.getElementById('carouselCurrent');
-  let current    = 0;
-  let autoTimer;
+  /* ─── CARROSSEL EDITORIAL · 3 CARDS · LOOP INFINITO SUAVE ─── */
+  (function() {
+    const track    = document.getElementById('carouselTrack');
+    const viewport = document.getElementById('carouselViewport');
+    const counter  = document.getElementById('carouselCurrent');
+    const btnPrev  = document.getElementById('carouselPrev');
+    const btnNext  = document.getElementById('carouselNext');
+    if (!track || !viewport) return;
 
-  function goTo(index) {
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = (index + slides.length) % slides.length;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
-    counter.textContent = String(current + 1).padStart(2, '0');
-  }
+    const totalCards = track.children.length;
+    let logicalIndex = 0;
+    let isAnimating  = false;
+    let autoTimer    = null;
+    const AUTO_DELAY = 5500;
+    const TRANSITION = 'transform 1s cubic-bezier(0.65, 0, 0.35, 1)';
 
-  function startAuto() {
-    clearInterval(autoTimer);
-    autoTimer = setInterval(() => goTo(current + 1), 6000);
-  }
+    function getStep() {
+      const firstCard = track.firstElementChild;
+      if (!firstCard) return 0;
+      const cardWidth = firstCard.getBoundingClientRect().width;
+      const styles = getComputedStyle(track);
+      const gap = parseFloat(styles.columnGap || styles.gap || 0) || 0;
+      return cardWidth + gap;
+    }
 
-  document.getElementById('carouselNext').addEventListener('click', () => { goTo(current + 1); startAuto(); });
-  document.getElementById('carouselPrev').addEventListener('click', () => { goTo(current - 1); startAuto(); });
-  dots.forEach(dot => dot.addEventListener('click', () => { goTo(parseInt(dot.dataset.target)); startAuto(); }));
-  startAuto();
+    function updateCounter() {
+      counter.textContent = String((logicalIndex % totalCards) + 1).padStart(2, '0');
+    }
+
+    function next() {
+      if (isAnimating) return;
+      isAnimating = true;
+      const step = getStep();
+      track.style.transition = TRANSITION;
+      track.style.transform  = `translateX(-${step}px)`;
+      track.addEventListener('transitionend', function handler() {
+        track.removeEventListener('transitionend', handler);
+        track.style.transition = 'none';
+        track.appendChild(track.firstElementChild);
+        track.style.transform = 'translateX(0)';
+        // force reflow
+        void track.offsetWidth;
+        logicalIndex = (logicalIndex + 1) % totalCards;
+        updateCounter();
+        isAnimating = false;
+      }, { once: true });
+    }
+
+    function prev() {
+      if (isAnimating) return;
+      isAnimating = true;
+      // mover ultimo card para o inicio sem animacao
+      track.style.transition = 'none';
+      const step = getStep();
+      track.insertBefore(track.lastElementChild, track.firstElementChild);
+      track.style.transform = `translateX(-${step}px)`;
+      void track.offsetWidth;
+      // animar de volta ao 0
+      track.style.transition = TRANSITION;
+      track.style.transform  = 'translateX(0)';
+      track.addEventListener('transitionend', function handler() {
+        track.removeEventListener('transitionend', handler);
+        logicalIndex = (logicalIndex - 1 + totalCards) % totalCards;
+        updateCounter();
+        isAnimating = false;
+      }, { once: true });
+    }
+
+    function startAuto() {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(next, AUTO_DELAY);
+    }
+    function stopAuto() { clearInterval(autoTimer); }
+
+    btnNext.addEventListener('click', () => { next(); startAuto(); });
+    btnPrev.addEventListener('click', () => { prev(); startAuto(); });
+    viewport.addEventListener('mouseenter', stopAuto);
+    viewport.addEventListener('mouseleave', startAuto);
+
+    updateCounter();
+    startAuto();
+  })();
 
   /* ─── BIBLIOTECA · DESTAQUES + CONTAGEM TOTAL ─── */
   /* Le solucoes.html, conta total de cards e clona os marcados data-featured */
