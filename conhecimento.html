@@ -176,69 +176,6 @@
     }
 
     /* ───────────────────────────────
-       FEATURED ARTICLE
-    ─────────────────────────────── */
-    .featured-section { padding:60px 80px 0; background:var(--white); }
-
-    .featured-card {
-      display:grid; grid-template-columns:1.4fr 1fr;
-      border:1px solid var(--grey-light); overflow:hidden; cursor:pointer;
-    }
-    .featured-left {
-      background:var(--navy); padding:52px 48px;
-      position:relative; overflow:hidden;
-    }
-    .featured-left::before {
-      content:''; position:absolute; top:-60px; right:-60px;
-      width:280px; height:280px; border-radius:50%;
-      background:radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%);
-    }
-    .featured-eyebrow {
-      font-size:11px; font-weight:600; letter-spacing:0.28em;
-      text-transform:uppercase; color:var(--gold); margin-bottom:20px;
-    }
-    .featured-title {
-      font-size:30px; font-weight:600; color:var(--white);
-      line-height:1.2; margin-bottom:18px; letter-spacing:-0.01em;
-    }
-    .featured-excerpt {
-      font-size:17px; font-weight:300; color:rgba(255,255,255,0.48);
-      line-height:1.85; margin-bottom:32px;
-    }
-    .featured-meta {
-      font-size:12px; font-weight:400; letter-spacing:0.10em;
-      color:rgba(255,255,255,0.28); text-transform:uppercase; margin-bottom:28px;
-    }
-    .featured-link {
-      font-size:12px; font-weight:600; letter-spacing:0.22em;
-      text-transform:uppercase; color:var(--gold); text-decoration:none;
-      display:inline-flex; align-items:center; gap:10px; transition:var(--transition);
-    }
-    .featured-link:hover { gap:16px; }
-
-    .featured-right {
-      background:var(--white); padding:52px 44px;
-      display:flex; flex-direction:column; justify-content:center;
-    }
-    .featured-num {
-      font-size:96px; font-weight:700; color:var(--grey-light);
-      line-height:1; margin-bottom:24px; letter-spacing:-0.03em;
-    }
-    .featured-preview-title {
-      font-size:14px; font-weight:600; letter-spacing:0.12em;
-      text-transform:uppercase; color:var(--grey-mid); margin-bottom:16px;
-    }
-    .featured-bullets { list-style:none; display:flex; flex-direction:column; gap:12px; }
-    .featured-bullets li {
-      display:flex; align-items:flex-start; gap:12px;
-      font-size:16px; font-weight:300; color:var(--grey-dark); line-height:1.6;
-    }
-    .featured-bullets li::before {
-      content:''; width:5px; height:5px; border:1px solid var(--gold);
-      transform:rotate(45deg); flex-shrink:0; margin-top:7px;
-    }
-
-    /* ───────────────────────────────
        FILTER BAR
     ─────────────────────────────── */
     .filter-bar {
@@ -454,10 +391,6 @@
       .hero-h1 { font-size:34px; }
       .hero-sub { font-size:16px; }
 
-      .featured-section { padding:40px 24px 0; }
-      .featured-card { grid-template-columns:1fr; }
-      .featured-right { display:none; }
-
       .filter-bar { padding:0 24px; overflow-x:auto; }
       .filter-inner { justify-content:flex-start; gap:12px; }
       .filter-tabs { gap:4px; overflow-x:auto; padding-bottom:4px; }
@@ -537,37 +470,6 @@
     <div class="hero-eyebrow">Análise & perspetiva</div>
     <h1 class="hero-h1">Conhecimento</h1>
     <p class="hero-sub">Análise, perspetiva e guias práticos sobre capital, financiamento e crescimento empresarial.</p>
-  </section>
-
-  <!-- ═══════════════════════════
-       FEATURED ARTICLE
-  ════════════════════════════ -->
-  <section class="featured-section">
-    <div class="featured-card reveal" id="featuredCard">
-      <!-- Left: navy panel -->
-      <div class="featured-left">
-        <div class="featured-eyebrow">Artigo em destaque</div>
-        <h2 class="featured-title">Como preparar uma candidatura Portugal 2030 que seja aprovada</h2>
-        <p class="featured-excerpt">A maioria das candidaturas rejeitadas não falha por falta de mérito do projeto, falha por erros técnicos e narrativas inconsistentes. Um guia prático para evitar os erros mais comuns.</p>
-        <div class="featured-meta">Financiamento &nbsp;·&nbsp; 8 min de leitura &nbsp;·&nbsp; Março 2026</div>
-        <a href="conhecimento/como-preparar-candidatura-portugal-2030.html" class="featured-link">
-          Ler artigo
-          <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 5h14M11 1l4 4-4 4" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
-      <!-- Right: white panel -->
-      <div class="featured-right">
-        <div class="featured-num">01</div>
-        <div class="featured-preview-title">Neste artigo</div>
-        <ul class="featured-bullets">
-          <li>Como estruturar o modelo económico-financeiro para maximizar a pontuação</li>
-          <li>Os 5 erros mais comuns que levam ao indeferimento liminar</li>
-          <li>A documentação que ninguém lembra de preparar com antecedência</li>
-        </ul>
-      </div>
-    </div>
   </section>
 
   <!-- ═══════════════════════════
@@ -914,16 +816,6 @@
         }
       });
     });
-
-    // ── Featured card click
-    const featuredCard = document.getElementById('featuredCard');
-    if (featuredCard) {
-      featuredCard.addEventListener('click', (e) => {
-        if (!e.target.closest('a')) {
-          window.location.href = 'conhecimento/como-preparar-candidatura-portugal-2030.html';
-        }
-      });
-    }
 
     // ── Scroll reveal
     const revealObserver = new IntersectionObserver((entries) => {
