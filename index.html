@@ -550,18 +550,9 @@
     .library-featured-grid .instrument-card:hover .card-cta { color:var(--gold); }
 
     .library-see-all {
-      display:flex; justify-content:flex-end;
-      margin-top:28px;
+      display:flex; justify-content:center;
+      margin-top:48px;
     }
-    .library-see-all a {
-      font-size:12px; font-weight:600; letter-spacing:0.22em;
-      text-transform:uppercase; color:var(--navy);
-      text-decoration:none; display:inline-flex; align-items:center; gap:10px;
-      transition:var(--transition);
-    }
-    .library-see-all a::after { content:'→'; font-weight:300; font-size:14px; transition:var(--transition); }
-    .library-see-all a:hover { color:var(--gold); }
-    .library-see-all a:hover::after { transform:translateX(5px); }
 
     @media (max-width:1024px) { .library-featured-grid { grid-template-columns:repeat(2, 1fr); } }
     @media (max-width:640px)  { .library-featured-grid { grid-template-columns:1fr; } }
@@ -1153,7 +1144,7 @@
     </div>
 
     <div class="library-see-all reveal reveal-d3">
-      <a href="solucoes.html">Ver biblioteca completa</a>
+      <a href="solucoes.html" class="btn btn-outline">Ver biblioteca completa</a>
     </div>
 
   </div>
