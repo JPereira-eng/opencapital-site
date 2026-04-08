@@ -18,36 +18,24 @@ Este comando produz um artigo de opiniao forte, controverso e bem argumentado, e
 
 ## EQUIPA - SELECAO DE AUTOR
 
-Esta serie exige vozes com autoridade e posicao clara. Preferencia por perfis seniors:
+Esta serie usa apenas quatro vozes editoriais. Selecionar o autor cujo dominio tematico melhor corresponde ao tema do artigo. Nao ha fallback: se o tema nao se enquadrar claramente num autor, reformular o angulo do artigo ate encaixar num dos quatro perfis.
 
-- **Jorge Pereira** - COO, Lider Tech2Business. Temas: macroeconomia e geopolitica com impacto empresarial, estrategia empresarial e modelos de negocio, transformacao digital e IA aplicada a negocios (Tech2Business), lideranca e cultura organizacional, empreendedorismo e construcao de empresas, ecossistema empresarial portugues e europeu
-- **Mariana Costa** - Finance Lead. Temas: estrutura de capital e financiamento privado, cash flow e tesouraria empresarial, analise financeira e valuation, planeamento financeiro, relacao com investidores
-- **Sofia Costa** - Especialista I&D e Inovacao. Temas: investigacao e desenvolvimento, SIFIDE II e incentivos fiscais a I&D, propriedade intelectual e patentes, premios de inovacao, ecossistema de startups e inovacao tecnologica
-- **Luis Gomes** - Analista Financeiro. Temas: analise de mercados financeiros e de capitais, tendencias economicas com base em dados, valuations e metricas de performance, indicadores macroeconomicos, benchmarking sectorial
-- **Pedro Nunes** - Consultor de Financiamento. Temas: Portugal 2030, PRR, COMPETE 2030, Horizonte Europa, fundos europeus estruturais, candidaturas a programas de apoio publico, elegibilidade e regulamentacao de fundos
-- **Andre Carvalho** - Tecnico de Candidaturas e Incentivos. Temas: RFAI, DLRR, CFI, regulamentacao tecnica de incentivos fiscais ao investimento, processos de candidatura e aprovacao, interpretacao de regulamentos e despachos
-- **Mara Ferreira** - Tecnica de Candidaturas e Incentivos. Temas: beneficios fiscais para empresas, programas IAPMEI e vouchers de inovacao, elegibilidade e conformidade de candidaturas, SIFIDE em contexto de processo
-- **Johnson Semedo** - Gestor de Projetos. Temas: execucao operacional de projetos, gestao de PME, processos internos e eficiencia operacional, implementacao de estrategia no terreno
-- **Carla Sousa** - Gestora de Projetos. Temas: planeamento e monitorizacao de projetos, reporting e controlo, execucao em contexto de financiamento publico, organizacoes em crescimento
-- **Ines Teixeira** - Consultora Junior. Temas: analise setorial e mapeamento de mercado, tendencias emergentes e novos setores, investigacao e sintese de dados
-- **Joao Silva** - Consultor Junior. Temas: competitividade empresarial e benchmarking sectorial, tendencias de mercado, posicionamento estrategico de empresas
-- **Miguel Santos** - Business Developer. Temas: internacionalizacao de empresas, desenvolvimento de parcerias estrategicas, expansao para novos mercados, crescimento comercial e atracao de investimento
-- **Rita Ferreira** - Marketeer e Copywriter. Temas: marketing e comunicacao empresarial, economia criativa, tendencias de consumo e comportamento do mercado, posicionamento e notoriedade de marca
+- **Jorge Pereira** - COO, Lider Tech2Business. Temas: macroeconomia e geopolitica com impacto empresarial, estrategia empresarial e modelos de negocio, transformacao digital e IA aplicada a negocios, lideranca e cultura organizacional, empreendedorismo e construcao de empresas, ecossistema empresarial portugues e europeu
+- **Mariana Costa** - Finance Lead. Temas: estrutura de capital e decisoes de financiamento, valuation e metricas financeiras, relacao com investidores, cash flow e tesouraria, acesso a capital privado, opiniao sobre mercados financeiros e financiamento empresarial
+- **Miguel Santos** - Business Developer. Temas: internacionalizacao de empresas, expansao para novos mercados, desenvolvimento de parcerias estrategicas, atracao de investimento estrangeiro, competitividade internacional das empresas portuguesas, crescimento comercial
+- **Rita Ferreira** - Marketeer e Copywriter. Temas: posicionamento e notoriedade de marca, marketing empresarial e comunicacao estrategica, economia criativa, tendencias de consumo e comportamento do mercado, reputacao e percepcao de valor
 
-Para temas de estrategia empresarial, macroeconomia, transformacao digital, empreendedorismo e ecossistema empresarial: Jorge Pereira e o autor natural. Para temas com especialista tecnico claro: incentivos fiscais ao investimento (RFAI, DLRR, CFI) → Andre Carvalho ou Mara Ferreira; I&D e inovacao → Sofia Costa; fundos europeus e politica de apoio publico → Pedro Nunes; analise financeira e mercados de capital → Mariana Costa ou Luis Gomes; internacionalizacao → Miguel Santos. Quando o tema de opiniao e de gestao, economia ou ecossistema empresarial sem especialidade tecnica especifica: Jorge Pereira.
+**Logica de selecao por tema:**
+- Estrategia, macro, digital, lideranca, empreendedorismo → Jorge Pereira
+- Capital, financiamento, valuation, investidores, mercados financeiros → Mariana Costa
+- Internacionalizacao, novos mercados, parcerias, investimento estrangeiro → Miguel Santos
+- Marca, comunicacao, marketing, consumo, economia criativa → Rita Ferreira
+
+Se o tema for ambiguo entre dois autores, escolher o que tem angulo mais forte e original para defender a tese. Nao ha fallback nem autor por omissao.
 
 **Mapeamento de fotos (usar com prefix `../Retratos Equipa/`):**
 - Jorge Pereira → `retrato_jorgepereira.png`
 - Mariana Costa → `retrato_marianacosta.png`
-- Sofia Costa → `retrato_sofiacosta.png`
-- Luis Gomes → `retrato_luísgomes.png`
-- Pedro Nunes → `retrato_pedronunes.png`
-- Andre Carvalho → `retrato_andrecarvalho.png`
-- Mara Ferreira → `retrato_maraferreira.png`
-- Johnson Semedo → `retrato_Johnson Semedo.png`
-- Carla Sousa → `retrato_carlasousa.png`
-- Ines Teixeira → `retrato_inêsteixeira.png`
-- Joao Silva → `retrato_joaosilva.png`
 - Miguel Santos → `retrato_miguelsantos.png`
 - Rita Ferreira → `retrato_ritaferreira.png`
 
