@@ -562,6 +562,7 @@ A foto do autor e determinada pelo mapeamento de fotos definido na seccao EQUIPA
       <!-- Article: [TITULO] -->
       <article class="article-card type-opiniao reveal"
                data-category="opiniao"
+               data-featured="true"
                data-href="conhecimento/[SLUG].html">
         <img src="Retratos Equipa/[AUTOR_FOTO]" alt="[AUTOR]" class="opiniao-card-photo">
         <div class="opiniao-card-overlay">
@@ -579,20 +580,24 @@ Nota: os cards de opiniao NAO usam `.article-card-img` nem `.article-card-body` 
 
 Atualiza o contador: `id="filterCount">X artigos</span>` substituindo X por X+1.
 
-### Passo 5 - Atualizar destaques em index.html
+### Passo 5 - Gerir destaques do carrossel (single source of truth)
 
-Le `index.html`. Na seccao `id="conhecimento"`, atualiza os 3 destaques com os artigos mais recentes. Destaque principal: este artigo. Artigos laterais: os 2 anteriores mais relevantes. Atualiza titulo, excerpt, categoria, data e href.
-- **Imagem no destaque principal:** se `IMAGEM_SRC` tiver valor, substitui o conteudo de `.article-featured-img` por `<img src="[IMAGEM_SRC]" style="width:100%;height:100%;object-fit:cover;" alt="[TITULO]">` (mantendo o div e o `.article-featured-tag`). Se vazio, mantém o SVG existente.
-- **Artigos laterais:** manter os SVGs existentes nesses casos.
+**Arquitectura:** o carrossel editorial na homepage (`index.html`) faz `fetch('conhecimento.html')` e clona automaticamente todos os cards marcados com `data-featured="true"`. Nao ha duplicacao de HTML.
+
+**Regra:** manter entre 9 e 12 artigos em destaque em simultaneo.
+
+1. O novo artigo ja foi injectado com `data-featured="true"` no Passo 4.
+2. Contar quantos cards tem `data-featured="true"` em `conhecimento.html`. Se > 12, remover o atributo dos mais antigos (em baixo na lista) ate ficar com 12.
+3. Nao tocar em `index.html`. O carrossel actualiza-se sozinho.
 
 ### Passo 6 - Deploy
 
 ```bash
-git add conhecimento/[SLUG].html conhecimento.html index.html
+git add conhecimento/[SLUG].html conhecimento.html
 git commit -m "artigo opiniao: [TITULO]"
 git push
 ```
 
 ### Passo 7 - Confirmar
 
-Informa: titulo publicado, autor selecionado e cargo, URL relativo, confirmacao dos destaques atualizados.
+Informa: titulo publicado, autor selecionado e cargo, URL relativo, confirmacao de que o card foi marcado como `data-featured="true"` (carrossel actualiza-se automaticamente).

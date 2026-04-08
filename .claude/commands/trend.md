@@ -575,6 +575,7 @@ Se `IMAGEM_SRC` tiver valor:
       <!-- Article: [TITULO] -->
       <article class="article-card reveal"
                data-category="[CATEGORIA]"
+               data-featured="true"
                data-href="conhecimento/[SLUG].html">
         <div class="article-card-img">
           <img src="[IMAGEM_SRC]" alt="[TITULO]">
@@ -600,6 +601,7 @@ Se `IMAGEM_SRC` estiver vazio (placeholder):
       <!-- Article: [TITULO] -->
       <article class="article-card reveal"
                data-category="[CATEGORIA]"
+               data-featured="true"
                data-href="conhecimento/[SLUG].html">
         <div class="article-card-img">
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" stroke="rgba(201,169,110,0.18)" stroke-width="1"/><polyline points="8,38 18,22 28,30 40,12" stroke="rgba(201,169,110,0.55)" stroke-width="1.2" fill="none"/><circle cx="18" cy="22" r="2" fill="rgba(201,169,110,0.4)"/><circle cx="40" cy="12" r="2" fill="rgba(201,169,110,0.4)"/></svg>
@@ -621,27 +623,26 @@ Se `IMAGEM_SRC` estiver vazio (placeholder):
 
 Depois de injetar, atualiza o contador: encontra `id="filterCount">X artigos</span>` e substitui X por X+1.
 
-### Passo 5 - Atualizar destaques editoriais em index.html
+### Passo 5 - Gerir destaques do carrossel (single source of truth)
 
-Le o ficheiro `index.html`. Localiza a seccao `id="conhecimento"`.
+**Arquitectura:** o carrossel editorial na homepage (`index.html`) faz `fetch('conhecimento.html')` e clona automaticamente todos os cards marcados com `data-featured="true"`. Nao ha duplicacao de HTML. O unico ficheiro a editar e `conhecimento.html`.
 
-Atualiza os 3 destaques com os artigos mais recentes publicados em `conhecimento/` (o artigo que acabaste de publicar entra sempre como destaque principal):
+**Regra:** manter entre 9 e 12 artigos em destaque em simultaneo.
 
-**Destaque principal** (`.article-featured`): o artigo recem publicado.
-**Artigos laterais** (`.article-side`): os 2 artigos publicados anteriormente mais relevantes.
+**Accoes obrigatorias:**
 
-Para cada destaque, atualiza:
-- O titulo
-- O excerpt/descricao
-- A categoria e data
-- O href do link para o artigo correto (ex: `conhecimento/[slug].html`)
-- **Imagem no destaque principal:** se `IMAGEM_SRC` tiver valor, substitui o conteudo de `.article-featured-img` por `<img src="[IMAGEM_SRC]" style="width:100%;height:100%;object-fit:cover;" alt="[TITULO]">` (mantendo o div e o `.article-featured-tag`). Se vazio, mantém o SVG existente.
-- **Imagens nos artigos laterais:** os artigos laterais sao artigos anteriores, nao o novo. Manter os SVGs existentes nesses casos, a nao ser que ja tenhas registado a imagem de capa desses artigos anteriores.
+1. **O novo artigo ja foi injectado com `data-featured="true"`** no Passo 4, logo ja esta em destaque.
+
+2. **Contar quantos cards tem `data-featured="true"`** em `conhecimento.html`:
+   - Se o total for <= 12, nao remover nada.
+   - Se o total for > 12, remover o atributo `data-featured="true"` dos cards mais antigos ate ficar com 12. "Mais antigo" = o que aparece mais em baixo na lista (a lista em `conhecimento.html` esta ordenada do mais recente para o mais antigo).
+
+3. **Nao tocar em `index.html`.** O carrossel actualiza-se sozinho no proximo load.
 
 ### Passo 6 - Deploy
 
 ```bash
-git add conhecimento/[SLUG].html conhecimento.html index.html
+git add conhecimento/[SLUG].html conhecimento.html
 git commit -m "artigo trend: [TITULO]"
 git push
 ```
@@ -654,5 +655,5 @@ Apos deploy com sucesso, informa:
 - Titulo do artigo publicado
 - Autor selecionado e respetivo cargo
 - URL relativo: `conhecimento/[slug].html`
-- Confirmacao de que os destaques do index.html foram atualizados
+- Confirmacao de que o card foi marcado como `data-featured="true"` (carrossel actualiza-se automaticamente)
 - GitHub Pages fara o deploy automaticamente via push

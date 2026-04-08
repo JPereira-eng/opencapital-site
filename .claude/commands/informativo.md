@@ -549,6 +549,7 @@ Se `IMAGEM_SRC` tiver valor:
       <!-- Article: [TITULO] -->
       <article class="article-card reveal"
                data-category="[CATEGORIA]"
+               data-featured="true"
                data-href="conhecimento/[SLUG].html">
         <div class="article-card-img">
           <img src="[IMAGEM_SRC]" alt="[TITULO]">
@@ -574,6 +575,7 @@ Se `IMAGEM_SRC` estiver vazio (placeholder):
       <!-- Article: [TITULO] -->
       <article class="article-card reveal"
                data-category="[CATEGORIA]"
+               data-featured="true"
                data-href="conhecimento/[SLUG].html">
         <div class="article-card-img">
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" stroke="rgba(201,169,110,0.18)" stroke-width="1"/><polyline points="8,38 18,22 28,30 40,12" stroke="rgba(201,169,110,0.55)" stroke-width="1.2" fill="none"/><circle cx="18" cy="22" r="2" fill="rgba(201,169,110,0.4)"/><circle cx="40" cy="12" r="2" fill="rgba(201,169,110,0.4)"/></svg>
@@ -595,24 +597,24 @@ Se `IMAGEM_SRC` estiver vazio (placeholder):
 
 Atualiza o contador: `id="filterCount">X artigos</span>` substituindo X por X+1.
 
-### Passo 5 - Atualizar destaques em index.html
+### Passo 5 - Gerir destaques do carrossel (single source of truth)
 
-Le `index.html`. Na seccao `id="conhecimento"`, atualiza os 3 destaques com os artigos mais recentes:
-- Destaque principal (`.article-featured`): o artigo recem publicado
-- Artigos laterais (`.article-side`): os 2 publicados anteriormente mais relevantes
+**Arquitectura:** o carrossel editorial na homepage (`index.html`) faz `fetch('conhecimento.html')` e clona automaticamente todos os cards marcados com `data-featured="true"`. Nao ha duplicacao de HTML.
 
-Atualiza titulo, excerpt, categoria, data e href de cada destaque.
-- **Imagem no destaque principal:** se `IMAGEM_SRC` tiver valor, substitui o conteudo de `.article-featured-img` por `<img src="[IMAGEM_SRC]" style="width:100%;height:100%;object-fit:cover;" alt="[TITULO]">` (mantendo o div e o `.article-featured-tag`). Se vazio, mantém o SVG existente.
-- **Artigos laterais:** manter os SVGs existentes nesses casos.
+**Regra:** manter entre 9 e 12 artigos em destaque em simultaneo.
+
+1. O novo artigo ja foi injectado com `data-featured="true"` no Passo 4.
+2. Contar quantos cards tem `data-featured="true"` em `conhecimento.html`. Se > 12, remover o atributo dos mais antigos (em baixo na lista) ate ficar com 12.
+3. Nao tocar em `index.html`. O carrossel actualiza-se sozinho.
 
 ### Passo 6 - Deploy
 
 ```bash
-git add conhecimento/[SLUG].html conhecimento.html index.html
+git add conhecimento/[SLUG].html conhecimento.html
 git commit -m "artigo informativo: [TITULO]"
 git push
 ```
 
 ### Passo 7 - Confirmar
 
-Informa: titulo publicado, autor selecionado e cargo, fontes processadas, URL relativo, confirmacao dos destaques atualizados.
+Informa: titulo publicado, autor selecionado e cargo, fontes processadas, URL relativo, confirmacao de que o card foi marcado como `data-featured="true"` (carrossel actualiza-se automaticamente).
