@@ -5,37 +5,13 @@
     "created": "2026-04-09"
   },
   "stats": {
-    "total_published": 10,
-    "total_in_queue": 5,
+    "total_published": 12,
+    "total_in_queue": 3,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-09",
     "sources_checked_this_week": ["portugal-2030", "compete-2030", "eic-accelerator"]
   },
   "queue": [
-    {
-      "id": "step-scale-up-eic",
-      "name": "EIC STEP Scale Up",
-      "source_id": "eic-accelerator",
-      "detected_date": "2026-04-09",
-      "deadline": "2026-05-06",
-      "budget": null,
-      "regulation_url": "https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en",
-      "pdf_url": null,
-      "priority_score": 115,
-      "status": "pending"
-    },
-    {
-      "id": "siac-digitalizacao-transformacao-digital",
-      "name": "SIAC Digitalização - Transformação Digital das Empresas",
-      "source_id": "compete-2030",
-      "detected_date": "2026-04-09",
-      "deadline": "2026-05-29",
-      "budget": null,
-      "regulation_url": "https://www.compete2030.gov.pt/avisos/siac-digitalizacao-transformacao-digital-da-empresas_compete2030-2026-3/",
-      "pdf_url": null,
-      "priority_score": 65,
-      "status": "pending"
-    },
     {
       "id": "siac-acoes-coletivas-internacionalizacao",
       "name": "SIAC Ações Coletivas - Internacionalização",
@@ -149,6 +125,24 @@
       "id": "eic-accelerator-2026",
       "source": "eic-accelerator",
       "file": "instrumentos/eic-accelerator-2026.html",
+      "published_date": "2026-04-09",
+      "detected_date": "2026-04-09",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-09"
+    },
+    {
+      "id": "step-scale-up-eic",
+      "source": "eic-accelerator",
+      "file": "instrumentos/step-scale-up-eic.html",
+      "published_date": "2026-04-09",
+      "detected_date": "2026-04-09",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-09"
+    },
+    {
+      "id": "siac-digitalizacao-transformacao-digital",
+      "source": "compete-2030",
+      "file": "instrumentos/siac-digitalizacao-transformacao-digital.html",
       "published_date": "2026-04-09",
       "detected_date": "2026-04-09",
       "current_state": "aberto",
