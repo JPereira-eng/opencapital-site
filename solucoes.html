@@ -206,27 +206,29 @@
     /* Search row */
     .filter-search-row {
       display:flex; align-items:center; justify-content:center;
-      gap:16px; padding:20px 0 16px;
+      gap:16px; padding:18px 0 14px;
       max-width:1200px; margin:0 auto;
       border-bottom:1px solid var(--grey-light);
     }
     .search-wrapper {
-      flex:1; max-width:520px; position:relative;
+      flex:1; max-width:560px; position:relative;
+      display:flex; align-items:center;
+      border:1px solid var(--grey-light);
+      background:#FAFAFA;
+      transition:var(--transition);
     }
+    .search-wrapper:focus-within { border-color:var(--navy); background:var(--white); box-shadow:0 0 0 3px rgba(26,58,92,0.05); }
+    .search-icon-left {
+      flex-shrink:0; width:18px; height:18px; color:var(--grey-mid);
+      margin:0 12px 0 14px; transition:var(--transition);
+    }
+    .search-wrapper:focus-within .search-icon-left { color:var(--navy); }
     .search-input {
-      width:100%; font-family:var(--font); font-size:16px; font-weight:300;
-      letter-spacing:0.03em; color:var(--grey-dark); background:transparent;
-      border:none; border-bottom:1px solid var(--grey-light);
-      outline:none; padding:8px 36px 8px 0; transition:var(--transition);
+      flex:1; font-family:var(--font); font-size:15px; font-weight:400;
+      letter-spacing:0.02em; color:var(--grey-dark); background:transparent;
+      border:none; outline:none; padding:11px 14px 11px 0;
     }
-    .search-input::placeholder { color:var(--grey-light); font-weight:200; letter-spacing:0.04em; }
-    .search-input:focus { border-bottom-color:var(--navy); }
-    .search-icon {
-      position:absolute; right:0; top:50%; transform:translateY(-50%);
-      width:18px; height:18px; color:var(--grey-light);
-      transition:var(--transition); pointer-events:none;
-    }
-    .search-input:focus ~ .search-icon { color:var(--navy); }
+    .search-input::placeholder { color:var(--grey-mid); font-weight:300; letter-spacing:0.04em; }
     .filter-count {
       font-size:12px; font-weight:300; color:var(--grey-mid);
       white-space:nowrap; letter-spacing:0.04em;
@@ -454,10 +456,10 @@
     <!-- Pesquisa -->
     <div class="filter-search-row">
       <div class="search-wrapper">
-        <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar por nome, tipo, programa..." autocomplete="off" oninput="searchCards(this.value)">
-        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <svg class="search-icon-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/>
         </svg>
+        <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar por nome, tipo, programa..." autocomplete="off" oninput="searchCards(this.value)">
       </div>
       <span class="filter-count" id="filterCount"></span>
     </div>
