@@ -152,7 +152,7 @@ Define antes de escrever:
 - **categoria_card**: codigo para o filtro em solucoes.html — uma de: `nr` (Nao Reembolsavel), `priv` (Investimento Privado), `div` (Divida), `hib` (Hibridos), `fiscal` (Incentivos Fiscais), `outros` (Outros)
 - **estado**: uma de: `aberto`, `fechado`, `previsto`
 - **fonte**: codigo da fonte/programa — uma de: `pt2030`, `ani`, `iapmei`, `bfomento`, `aicep`, `at`, `pventures`, `compete`, `prr`, `ue`
-- **beneficiario**: lista separada por virgulas dos tipos elegiveis — combinacao de: `startup`, `micro`, `pme`, `grande-empresa`, `associacao`, `municipio`, `universidade`
+- **beneficiario**: lista separada por virgulas dos tipos elegiveis — combinacao de: `empresa` (qualquer tipo de empresa), `entidade-publica` (municipios, autarquias, entidades publicas), `associacao` (associacoes, entidades sem fins lucrativos), `ensino-investigacao` (universidades, centros de investigacao), `empreendedor` (empreendedores individuais, pre-incorporacao)
 - **regiao**: lista separada por virgulas das regioes onde o instrumento esta disponivel. Se o instrumento e nacional, listar TODAS as regioes: `norte,centro,lisboa,alentejo,algarve,acores,madeira`. Se e regional, listar apenas as regioes cobertas (ex: `norte,centro`). Nunca usar "nacional" ou "multi-regiao" como valor.
 - **hero_tagline**: 1 frase clara sobre o instrumento, max 20 palavras (ex: "O incentivo fiscal que transforma investimento em I&D em poupanca imediata de IRC.")
 - **meta_fact_1_label** + **meta_fact_1_valor**: dado chave 1 (ex: Dotacao: €23 mil milhoes)
