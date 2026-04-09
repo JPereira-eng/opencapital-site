@@ -372,31 +372,40 @@ Adicionar o card do novo instrumento ao grid em `solucoes.html`, imediatamente a
 
 ## PASSO 6 — Deploy
 
+**Usar sempre `git -C "C:/Users/Utilizador/Desktop/opencapital-website"` para todos os comandos git. Nunca usar `cd ... && git`. O formato `git -C` garante execucao sem prompt de permissao.**
+
+Se foi criado 1 artigo:
 ```bash
-git add instrumentos/[slug].html solucoes.html registry.json
-git commit -m "instrumento: [nome do instrumento] ([fonte])"
-git push origin main
+git -C "C:/Users/Utilizador/Desktop/opencapital-website" add instrumentos/[slug].html solucoes.html registry.json
+git -C "C:/Users/Utilizador/Desktop/opencapital-website" commit -m "instrumento: [nome do instrumento] ([fonte])"
+git -C "C:/Users/Utilizador/Desktop/opencapital-website" push origin main
 ```
 
 Se foram criados 2 artigos:
 ```bash
-git add instrumentos/*.html solucoes.html registry.json
-git commit -m "radar: [nome1] + [nome2]"
-git push origin main
+git -C "C:/Users/Utilizador/Desktop/opencapital-website" add instrumentos/[slug1].html instrumentos/[slug2].html solucoes.html registry.json
+git -C "C:/Users/Utilizador/Desktop/opencapital-website" commit -m "radar: [nome1] + [nome2]"
+git -C "C:/Users/Utilizador/Desktop/opencapital-website" push origin main
 ```
 
 Se houve state updates sem artigos novos:
 ```bash
-git add instrumentos/[slug1].html instrumentos/[slug2].html solucoes.html registry.json
-git commit -m "radar: estado atualizado [slug1] (fechado), [slug2] (prazo estendido)"
-git push origin main
+git -C "C:/Users/Utilizador/Desktop/opencapital-website" add instrumentos/[slug1].html instrumentos/[slug2].html solucoes.html registry.json
+git -C "C:/Users/Utilizador/Desktop/opencapital-website" commit -m "radar: estado atualizado [slug1] (fechado), [slug2] (prazo estendido)"
+git -C "C:/Users/Utilizador/Desktop/opencapital-website" push origin main
 ```
 
 Se houve apenas scan sem novidades:
 ```bash
-git add registry.json
-git commit -m "radar: scan [fonte1], [fonte2], [fonte3], sem novidades"
-git push origin main
+git -C "C:/Users/Utilizador/Desktop/opencapital-website" add registry.json
+git -C "C:/Users/Utilizador/Desktop/opencapital-website" commit -m "radar: scan [fonte1], [fonte2], [fonte3], sem novidades"
+git -C "C:/Users/Utilizador/Desktop/opencapital-website" push origin main
+```
+
+Se o push falhar:
+```bash
+git -C "C:/Users/Utilizador/Desktop/opencapital-website" pull --rebase origin main
+git -C "C:/Users/Utilizador/Desktop/opencapital-website" push origin main
 ```
 
 ---
