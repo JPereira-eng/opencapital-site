@@ -1,4 +1,36 @@
 {
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch",
+      "WebSearch",
+      "Edit",
+      "Write(**/*.html)",
+      "Write(**/sources.json)",
+      "Write(**/registry.json)",
+      "Bash(pdftotext *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "Bash(git status*)",
+      "Bash(git log *)",
+      "Bash(git diff *)",
+      "Bash(head *)",
+      "Bash(wc *)",
+      "Bash(ls *)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(git reset --hard *)",
+      "Bash(git push --force *)",
+      "Bash(git rebase *)",
+      "Bash(git checkout -- *)",
+      "Bash(git clean *)"
+    ]
+  },
   "hooks": {
     "PreToolUse": [
       {

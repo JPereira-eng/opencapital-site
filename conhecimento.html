@@ -176,27 +176,43 @@
     }
 
     /* ───────────────────────────────
-       FILTER BAR
+       SEARCH BAR
     ─────────────────────────────── */
-    .filter-bar {
+    .search-bar {
       position:sticky; top:74px; z-index:150;
       background:var(--white); border-bottom:1px solid var(--grey-light);
       padding:0 80px;
     }
-    .filter-inner {
-      display:flex; align-items:center; justify-content:space-between;
-      height:56px; max-width:none;
+    .search-inner {
+      display:flex; align-items:center; justify-content:center;
+      height:64px; max-width:640px; margin:0 auto;
+      gap:16px;
     }
-    .filter-tabs { display:flex; align-items:center; gap:4px; }
-    .filter-btn {
-      font-family:var(--font); font-size:12px; font-weight:500;
-      letter-spacing:0.12em; text-transform:uppercase; color:var(--grey-mid);
-      background:transparent; border:1px solid transparent;
-      padding:6px 14px; cursor:pointer; transition:var(--transition); white-space:nowrap;
+    .search-icon {
+      flex-shrink:0; width:18px; height:18px; color:var(--grey-mid);
+      transition:var(--transition);
     }
-    .filter-btn:hover { color:var(--navy); border-color:var(--grey-light); }
-    .filter-btn.active { background:var(--navy); color:var(--white); border-color:var(--navy); }
-    .filter-count { font-size:12px; font-weight:300; color:var(--grey-mid); }
+    .search-input {
+      flex:1; font-family:var(--font); font-size:16px; font-weight:300;
+      letter-spacing:0.03em; color:var(--grey-dark); background:transparent;
+      border:none; outline:none; padding:0;
+    }
+    .search-input::placeholder { color:var(--grey-light); font-weight:200; letter-spacing:0.06em; }
+    .search-input:focus ~ .search-icon,
+    .search-bar:focus-within .search-icon { color:var(--navy); }
+    .search-bar:focus-within { border-bottom-color:var(--navy); }
+    .search-count {
+      flex-shrink:0; font-size:12px; font-weight:300; color:var(--grey-mid);
+      white-space:nowrap; min-width:70px; text-align:right;
+    }
+    .search-clear {
+      flex-shrink:0; font-family:var(--font); font-size:11px; font-weight:500;
+      letter-spacing:0.10em; text-transform:uppercase; color:var(--grey-mid);
+      background:transparent; border:1px solid var(--grey-light); padding:4px 10px;
+      cursor:pointer; transition:var(--transition); display:none;
+    }
+    .search-clear:hover { color:var(--navy); border-color:var(--navy); }
+    .search-clear.visible { display:block; }
 
     /* ───────────────────────────────
        ARTICLE GRID
@@ -391,10 +407,9 @@
       .hero-h1 { font-size:34px; }
       .hero-sub { font-size:16px; }
 
-      .filter-bar { padding:0 24px; overflow-x:auto; }
-      .filter-inner { justify-content:flex-start; gap:12px; }
-      .filter-tabs { gap:4px; overflow-x:auto; padding-bottom:4px; }
-      .filter-count { white-space:nowrap; flex-shrink:0; margin-left:auto; }
+      .search-bar { padding:0 24px; }
+      .search-inner { max-width:100%; }
+      .search-input { font-size:15px; }
 
       .articles-section { padding:32px 24px 64px; }
       .articles-grid { grid-template-columns:1fr; }
@@ -473,20 +488,16 @@
   </section>
 
   <!-- ═══════════════════════════
-       FILTER BAR
+       SEARCH BAR
   ════════════════════════════ -->
-  <div class="filter-bar" id="filterBar">
-    <div class="filter-inner">
-      <div class="filter-tabs">
-        <button class="filter-btn active" data-filter="todos" onclick="filterCards('todos')">Todos</button>
-        <button class="filter-btn" data-filter="financiamento" onclick="filterCards('financiamento')">Financiamento</button>
-        <button class="filter-btn" data-filter="fiscalidade" onclick="filterCards('fiscalidade')">Fiscalidade</button>
-        <button class="filter-btn" data-filter="estrategia" onclick="filterCards('estrategia')">Estratégia</button>
-        <button class="filter-btn" data-filter="inovacao" onclick="filterCards('inovacao')">Inovação</button>
-        <button class="filter-btn" data-filter="mercados" onclick="filterCards('mercados')">Mercados</button>
-        <button class="filter-btn" data-filter="opiniao" onclick="filterCards('opiniao')">Opinião</button>
-      </div>
-      <span class="filter-count" id="filterCount">14 artigos</span>
+  <div class="search-bar" id="searchBar">
+    <div class="search-inner">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/>
+      </svg>
+      <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar artigos, temas, autores..." autocomplete="off">
+      <span class="search-count" id="searchCount"></span>
+      <button class="search-clear" id="searchClear" onclick="clearSearch()">Limpar</button>
     </div>
   </div>
 
@@ -852,28 +863,46 @@
       mobileMenu.classList.toggle('open');
     });
 
-    // ── Filter cards
-    function filterCards(cat) {
-      const cards = document.querySelectorAll('.article-card');
-      const buttons = document.querySelectorAll('.filter-btn');
-      const countEl = document.getElementById('filterCount');
+    // ── Search articles
+    var searchInput = document.getElementById('searchInput');
+    var searchCount = document.getElementById('searchCount');
+    var searchClear = document.getElementById('searchClear');
+    var allCards = document.querySelectorAll('.article-card');
+    var totalArticles = allCards.length;
 
-      buttons.forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.filter === cat);
+    searchCount.textContent = totalArticles + ' artigos';
+
+    searchInput.addEventListener('input', function() {
+      var query = this.value.toLowerCase().trim();
+      searchClear.classList.toggle('visible', query.length > 0);
+
+      var visible = 0;
+      allCards.forEach(function(card) {
+        var title = card.querySelector('.article-card-title');
+        var excerpt = card.querySelector('.article-card-excerpt');
+        var cat = card.querySelector('.art-cat-badge');
+        var author = card.querySelector('.art-author');
+        var text = '';
+        if (title) text += title.textContent.toLowerCase() + ' ';
+        if (excerpt) text += excerpt.textContent.toLowerCase() + ' ';
+        if (cat) text += cat.textContent.toLowerCase() + ' ';
+        if (author) text += author.textContent.toLowerCase() + ' ';
+        var match = query.length === 0 || text.indexOf(query) !== -1;
+        card.classList.toggle('hidden', !match);
+        if (match) visible++;
       });
 
-      let visible = 0;
-      cards.forEach(card => {
-        const cardCat = card.dataset.category;
-        if (cat === 'todos' || cardCat === cat) {
-          card.classList.remove('hidden');
-          visible++;
-        } else {
-          card.classList.add('hidden');
-        }
-      });
+      if (query.length === 0) {
+        searchCount.textContent = totalArticles + ' artigos';
+      } else {
+        searchCount.textContent = visible + ' de ' + totalArticles;
+      }
+    });
 
-      countEl.textContent = visible + (visible === 1 ? ' artigo': ' artigos');
+    function clearSearch() {
+      searchInput.value = '';
+      searchInput.dispatchEvent(new Event('input'));
+      searchInput.focus();
     }
 
     // ── Card click navigation
