@@ -26,7 +26,8 @@
       "Bash(awk *)",
       "Bash(head *)",
       "Bash(wc *)",
-      "Bash(ls *)"
+      "Bash(ls *)",
+      "Bash(rm *.lock)"
     ],
     "deny": []
   },
