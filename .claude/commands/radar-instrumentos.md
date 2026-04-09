@@ -20,9 +20,9 @@ Le o `registry.json` e conta os items na `queue`. Decide o modo:
 
 | Fila | Modo | Acao |
 |---|---|---|
-| < 5 items | **Normal** | Scan de fontes + criar 1 artigo da fila |
-| 5-9 items | **Intensivo** | Sem scan, criar 2 artigos da fila |
-| >= 10 items | **Urgente** | Sem scan, criar 2 artigos da fila |
+| < 5 items | **Normal** | Scan de fontes + state updates (max 3) + criar 1 artigo da fila |
+| 5-9 items | **Intensivo** | Sem scan, sem state updates, criar 2 artigos da fila |
+| >= 10 items | **Urgente** | Sem scan, sem state updates, criar 2 artigos da fila |
 
 ---
 
@@ -34,7 +34,8 @@ Le o `registry.json` e conta os items na `queue`. Decide o modo:
 3. Contar items na queue
 4. Decidir o modo (Normal / Intensivo / Urgente)
 5. Se modo Normal: identificar quais fontes verificar (ver Passo 2)
-6. Se modo Intensivo/Urgente: saltar para Passo 4 (criar artigos)
+6. Se modo Normal: apos scan, aplicar state updates (ver Passo 3B)
+7. Se modo Intensivo/Urgente: saltar para Passo 4 (criar artigos)
 ```
 
 ---
@@ -47,7 +48,7 @@ Verificar no maximo **3 fontes por execucao**.
 1. Fontes com `priority: "high"` que nao foram verificadas ha mais de 7 dias
 2. Fontes com `priority: "medium"` que nao foram verificadas ha mais de 14 dias
 3. Fontes com `priority: "low"` que nao foram verificadas ha mais de 30 dias
-4. Se nenhuma fonte precisa de verificacao: saltar para Passo 4
+4. Se nenhuma fonte precisa de verificacao: saltar para Passo 3B (state updates)
 
 Consultar `registry.json > source_last_checked` para saber a ultima vez que cada fonte foi verificada.
 
@@ -77,13 +78,22 @@ Para cada um, extrai:
 - URL do PDF do regulamento (se disponivel)
 ```
 
-### 3b. Comparar com publicados
+### 3b. Comparar com publicados e detectar alteracoes de estado
 
-Para cada instrumento detectado:
+Para cada instrumento detectado na pagina da fonte:
+
+**Novos instrumentos:**
 1. Gerar um `id` slug (kebab-case do nome)
 2. Verificar se ja existe em `registry.json > published` (comparar por `id`)
-3. Se ja existe: ignorar
+3. Se ja existe: verificar alteracoes de estado (ver abaixo)
 4. Se e novo: adicionar a `queue`
+
+**Alteracoes de estado (instrumentos ja publicados):**
+Para cada instrumento que ja existe em `published`, comparar os dados atuais da fonte com os dados do artigo:
+1. **Estado mudou** (ex: aberto → fechado, previsto → aberto): registar em `state_updates` queue
+2. **Prazo alterado** (extensao ou antecipacao): registar em `state_updates` queue
+3. **Dotacao alterada** (aumento ou reducao): registar em `state_updates` queue
+4. Se nada mudou: ignorar
 
 ### 3c. Adicionar a fila
 
@@ -125,6 +135,104 @@ Para cada instrumento novo, adicionar ao array `queue` do `registry.json`:
 ### 3e. Guardar registry.json
 
 Atualizar `stats.sources_checked_this_week` com as fontes verificadas.
+
+---
+
+## PASSO 3B — Atualizar estados de instrumentos publicados
+
+Este passo executa-se **apenas em modo Normal**, apos o scan de fontes.
+Maximo de **3 state updates por execucao** (para caber no budget de tokens).
+
+### 3B.1 Identificar instrumentos com estado alterado
+
+Durante o Passo 3b, os instrumentos com alteracoes foram registados em `state_updates`.
+Se `state_updates` esta vazio, saltar para Passo 4.
+
+Cada entrada em `state_updates` tem:
+```json
+{
+  "id": "slug-do-instrumento",
+  "changes": {
+    "estado": { "old": "aberto", "new": "fechado" },
+    "deadline": { "old": "2026-09-30", "new": null },
+    "budget": { "old": "2.000.000 EUR", "new": "3.500.000 EUR" }
+  }
+}
+```
+
+Ordenar por prioridade:
+1. Mudanca de estado (aberto → fechado) — mais urgente
+2. Mudanca de prazo — urgente
+3. Mudanca de dotacao — informativo
+
+Se mais de 3 updates pendentes, processar os 3 mais urgentes. Os restantes ficam para a proxima run.
+
+### 3B.2 Atualizar o artigo HTML
+
+Para cada instrumento a atualizar, ler o ficheiro `instrumentos/[slug].html` e aplicar as alteracoes:
+
+**Se o estado mudou (ex: aberto → fechado):**
+- Hero meta-bar: alterar o valor do item "Estado" (ex: "Aberto ate 30/09/2026" → "Fechado")
+- Hero meta-bar: alterar a classe CSS do status (ex: `status-open` → `status-closed`)
+- Sidebar "Factos Rapidos": atualizar o campo de estado
+- Se fechou: adicionar aviso no topo do artigo:
+```html
+<div class="instrument-closed-notice">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="0.5" fill="#C9A96E"/></svg>
+  <span>Este instrumento encontra-se <strong>encerrado</strong>. As candidaturas ja nao estao abertas.</span>
+</div>
+```
+```css
+.instrument-closed-notice {
+  display:flex; align-items:center; gap:12px;
+  background:rgba(201,169,110,0.07); border-left:3px solid var(--gold);
+  padding:16px 24px; margin-bottom:32px;
+  font-size:15px; font-weight:400; color:var(--grey-dark);
+}
+```
+
+**Se o prazo mudou:**
+- Hero meta-bar: atualizar o valor do prazo
+- Sidebar "Factos Rapidos": atualizar o prazo
+- Se o prazo foi estendido: adicionar nota no artigo "Prazo estendido ate [nova data]"
+
+**Se a dotacao mudou:**
+- Hero meta-bar: atualizar o valor da dotacao
+- Sidebar "Factos Rapidos": atualizar a dotacao
+
+### 3B.3 Atualizar o card em solucoes.html
+
+Para cada instrumento atualizado, encontrar o card correspondente em `solucoes.html` por `data-id="[slug]"`:
+
+**Se o estado mudou:**
+- Alterar `data-estado` no card (ex: `data-estado="aberto"` → `data-estado="fechado"`)
+- Alterar a `status-pill`: classe e texto
+  - `<span class="status-pill status-open">Aberto ate [DATA]</span>` → `<span class="status-pill status-closed">Fechado</span>`
+
+**Se o prazo mudou:**
+- Alterar o texto da `status-pill` com a nova data (ex: "Aberto ate 31/12/2026")
+
+**Se a dotacao mudou:**
+- Alterar o `hl-value` correspondente no card
+
+### 3B.4 Atualizar registry.json
+
+Adicionar ou atualizar o campo `state_history` para cada instrumento em `published`:
+```json
+{
+  "id": "slug-do-instrumento",
+  "source": "compete-2030",
+  "file": "instrumentos/slug.html",
+  "published_date": "2026-04-01",
+  "detected_date": "2026-04-01",
+  "current_state": "fechado",
+  "last_state_check": "2026-04-09",
+  "state_history": [
+    { "date": "2026-04-01", "state": "aberto", "note": "publicacao inicial" },
+    { "date": "2026-04-09", "state": "fechado", "note": "candidaturas encerradas" }
+  ]
+}
+```
 
 ---
 
@@ -222,7 +330,7 @@ Adicionar o card do novo instrumento ao grid em `solucoes.html`, imediatamente a
 
 ## PASSO 5 — Atualizar registry.json
 
-Para cada artigo criado:
+### Para cada artigo criado:
 
 1. Remover da `queue`
 2. Adicionar a `published`:
@@ -232,11 +340,21 @@ Para cada artigo criado:
   "source": "[source_id]",
   "file": "instrumentos/[slug].html",
   "published_date": "[data_hoje]",
-  "detected_date": "[data_detecao]"
+  "detected_date": "[data_detecao]",
+  "current_state": "aberto",
+  "last_state_check": "[data_hoje]"
 }
 ```
 3. Atualizar `stats.total_published` (+1 por artigo)
 4. Atualizar `stats.total_in_queue` (novo tamanho da fila)
+
+### Para cada state update aplicado:
+
+1. Atualizar o registo em `published` com:
+   - `current_state`: novo estado
+   - `last_state_check`: data de hoje
+   - `state_history`: adicionar nova entrada
+2. Atualizar `stats.total_state_updates` (+1 por update)
 
 ---
 
@@ -255,10 +373,17 @@ git commit -m "radar: [nome1] + [nome2]"
 git push origin main
 ```
 
-Se houve apenas scan sem artigos novos:
+Se houve state updates sem artigos novos:
+```bash
+git add instrumentos/[slug1].html instrumentos/[slug2].html solucoes.html registry.json
+git commit -m "radar: estado atualizado [slug1] (fechado), [slug2] (prazo estendido)"
+git push origin main
+```
+
+Se houve apenas scan sem novidades:
 ```bash
 git add registry.json
-git commit -m "radar: scan [fonte1], [fonte2], [fonte3] — sem novidades"
+git commit -m "radar: scan [fonte1], [fonte2], [fonte3], sem novidades"
 git push origin main
 ```
 
@@ -268,8 +393,9 @@ git push origin main
 
 1. **Nunca duplicar artigos.** Verificar sempre `registry.json > published` antes de criar.
 2. **Nunca exceder 2 artigos por execucao.** Se a fila tem 10 items, criar 2 e guardar os restantes.
-3. **Nunca modificar artigos existentes.** O agente so cria novos artigos.
-4. **Nunca remover cards de solucoes.html.** So adicionar.
+3. **Nunca exceder 3 state updates por execucao.** Se ha mais updates pendentes, processar 3 e guardar os restantes.
+4. **Modificar artigos existentes APENAS para state updates.** Alteracoes permitidas: estado (aberto/fechado/previsto), prazo, dotacao, e aviso de encerramento. Nunca reescrever o conteudo editorial do artigo.
+5. **Nunca remover cards de solucoes.html.** So adicionar ou atualizar estado/prazo/dotacao.
 5. **Se WebFetch falhar para uma fonte:** registar o erro em `source_last_checked` com nota de falha e continuar para a proxima fonte. Nao parar a execucao.
 6. **Se pdftotext falhar:** usar apenas o conteudo disponivel via WebFetch (pagina HTML). O artigo pode ser menos detalhado mas deve ser publicado.
 7. **Se o git push falhar:** tentar `git pull --rebase && git push`. Se falhar novamente, guardar as alteracoes locais e reportar.
@@ -281,9 +407,10 @@ git push origin main
 ```
 1. Ler registry.json + sources.json
 2. Decidir modo (Normal/Intensivo/Urgente)
-3. [Normal] Scan 3 fontes → detectar novos → adicionar a fila
-4. Criar 1-2 artigos da fila (por prioridade)
-5. Atualizar registry.json
-6. git commit + push
-7. Reportar: "Scan: [fontes]. Novos: [N]. Criados: [N]. Fila: [N]."
+3. [Normal] Scan 3 fontes → detectar novos → adicionar a fila → detectar state changes
+4. [Normal] Aplicar ate 3 state updates (artigo + card + registry)
+5. Criar 1-2 artigos da fila (por prioridade)
+6. Atualizar registry.json
+7. git commit + push
+8. Reportar: "Scan: [fontes]. Novos: [N]. Criados: [N]. Updates: [N]. Fila: [N]."
 ```
