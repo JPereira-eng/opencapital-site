@@ -5,12 +5,122 @@
     "created": "2026-04-09"
   },
   "stats": {
-    "total_published": 5,
-    "total_in_queue": 0,
-    "last_full_cycle": null,
-    "sources_checked_this_week": []
+    "total_published": 6,
+    "total_in_queue": 9,
+    "total_state_updates": 0,
+    "last_full_cycle": "2026-04-09",
+    "sources_checked_this_week": ["portugal-2030", "compete-2030", "eic-accelerator"]
   },
-  "queue": [],
+  "queue": [
+    {
+      "id": "step-inovacao-produtiva-energia",
+      "name": "STEP Inovação Produtiva - Energia",
+      "source_id": "compete-2030",
+      "detected_date": "2026-04-09",
+      "deadline": "2026-04-30",
+      "budget": null,
+      "regulation_url": "https://www.compete2030.gov.pt/avisos/step-inovacao-produtiva-energia_compete2030-2026-2/",
+      "pdf_url": null,
+      "priority_score": 115,
+      "status": "pending"
+    },
+    {
+      "id": "step-idi-empresarial-energia",
+      "name": "STEP I&D&I Empresarial - Energia",
+      "source_id": "compete-2030",
+      "detected_date": "2026-04-09",
+      "deadline": "2026-04-30",
+      "budget": null,
+      "regulation_url": "https://www.compete2030.gov.pt/avisos/step-idi-empresarial-energia_compete2030-2026-1/",
+      "pdf_url": null,
+      "priority_score": 115,
+      "status": "pending"
+    },
+    {
+      "id": "step-idi-empresarial-digital-biotecnologia",
+      "name": "STEP I&D&I Empresarial - Digital e Biotecnologia",
+      "source_id": "compete-2030",
+      "detected_date": "2026-04-09",
+      "deadline": "2026-04-30",
+      "budget": null,
+      "regulation_url": "https://www.compete2030.gov.pt/avisos/step-idi-empresarial-digital-e-biotecnologia-operacoes_mpr-2026-2/",
+      "pdf_url": null,
+      "priority_score": 115,
+      "status": "pending"
+    },
+    {
+      "id": "eic-accelerator-2026",
+      "name": "EIC Accelerator 2026",
+      "source_id": "eic-accelerator",
+      "detected_date": "2026-04-09",
+      "deadline": "2026-05-06",
+      "budget": null,
+      "regulation_url": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
+      "pdf_url": null,
+      "priority_score": 115,
+      "status": "pending"
+    },
+    {
+      "id": "step-scale-up-eic",
+      "name": "EIC STEP Scale Up",
+      "source_id": "eic-accelerator",
+      "detected_date": "2026-04-09",
+      "deadline": "2026-05-06",
+      "budget": null,
+      "regulation_url": "https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en",
+      "pdf_url": null,
+      "priority_score": 115,
+      "status": "pending"
+    },
+    {
+      "id": "siac-digitalizacao-transformacao-digital",
+      "name": "SIAC Digitalização - Transformação Digital das Empresas",
+      "source_id": "compete-2030",
+      "detected_date": "2026-04-09",
+      "deadline": "2026-05-29",
+      "budget": null,
+      "regulation_url": "https://www.compete2030.gov.pt/avisos/siac-digitalizacao-transformacao-digital-da-empresas_compete2030-2026-3/",
+      "pdf_url": null,
+      "priority_score": 65,
+      "status": "pending"
+    },
+    {
+      "id": "siac-acoes-coletivas-internacionalizacao",
+      "name": "SIAC Ações Coletivas - Internacionalização",
+      "source_id": "compete-2030",
+      "detected_date": "2026-04-09",
+      "deadline": "2026-05-29",
+      "budget": null,
+      "regulation_url": "https://www.compete2030.gov.pt/avisos/siac-acoes-coletivas-internacionalizacao_compete2030-2025-8/",
+      "pdf_url": null,
+      "priority_score": 65,
+      "status": "pending"
+    },
+    {
+      "id": "sitce-descarbonizacao-eficiencia-energetica",
+      "name": "SITCE Descarbonização e Eficiência Energética",
+      "source_id": "compete-2030",
+      "detected_date": "2026-04-09",
+      "deadline": "2026-05-29",
+      "budget": null,
+      "regulation_url": "https://www.compete2030.gov.pt/avisos/sitce-descarbonizacao-e-eficiencia-energetica-mpr-2026-01/",
+      "pdf_url": null,
+      "priority_score": 65,
+      "status": "pending"
+    },
+    {
+      "id": "sice-internacionalizacao-pme",
+      "name": "SICE Internacionalização das PME - Operações em conjunto",
+      "source_id": "compete-2030",
+      "detected_date": "2026-04-09",
+      "deadline": "2026-06-30",
+      "budget": null,
+      "regulation_url": "https://www.compete2030.gov.pt/avisos/sice-internacionalizacao-das-pme-operacoes-em-conjunto-mpr-2025-14/",
+      "pdf_url": null,
+      "priority_score": 35,
+      "status": "pending"
+    }
+  ],
   "published": [
     {
       "id": "si-base-territorial",
@@ -46,7 +156,20 @@
       "file": "instrumentos/portugal-2030.html",
       "published_date": "2026-03-22",
       "detected_date": "2026-03-22"
+    },
+    {
+      "id": "step-inovacao-produtiva-digital-biotecnologia",
+      "source": "compete-2030",
+      "file": "instrumentos/step-inovacao-produtiva-digital-biotecnologia.html",
+      "published_date": "2026-04-09",
+      "detected_date": "2026-04-09",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-09"
     }
   ],
-  "source_last_checked": {}
+  "source_last_checked": {
+    "portugal-2030": "2026-04-09",
+    "compete-2030": "2026-04-09",
+    "eic-accelerator": "2026-04-09"
+  }
 }
