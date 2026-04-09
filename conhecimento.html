@@ -176,52 +176,6 @@
     }
 
     /* ───────────────────────────────
-       SEARCH HERO
-    ─────────────────────────────── */
-    .search-hero {
-      background:var(--navy); padding:48px 80px 44px; text-align:center;
-    }
-    .search-label {
-      font-size:11px; font-weight:600; letter-spacing:0.30em;
-      text-transform:uppercase; color:var(--gold); margin-bottom:20px;
-    }
-    .search-wrapper {
-      max-width:600px; margin:0 auto; position:relative;
-    }
-    .search-input {
-      width:100%; font-family:var(--font); font-size:18px; font-weight:300;
-      letter-spacing:0.03em; color:var(--white); background:transparent;
-      border:none; border-bottom:1px solid rgba(255,255,255,0.20);
-      outline:none; padding:12px 40px 12px 0;
-      transition:var(--transition);
-    }
-    .search-input::placeholder { color:rgba(255,255,255,0.28); font-weight:200; letter-spacing:0.06em; }
-    .search-input:focus { border-bottom-color:var(--gold); }
-    .search-icon {
-      position:absolute; right:0; top:50%; transform:translateY(-50%);
-      width:20px; height:20px; color:rgba(255,255,255,0.28);
-      transition:var(--transition); pointer-events:none;
-    }
-    .search-input:focus ~ .search-icon { color:var(--gold); }
-    .search-meta {
-      display:flex; align-items:center; justify-content:center;
-      gap:16px; margin-top:16px;
-    }
-    .search-count {
-      font-size:13px; font-weight:300; color:rgba(255,255,255,0.36);
-      letter-spacing:0.04em;
-    }
-    .search-clear {
-      font-family:var(--font); font-size:11px; font-weight:500;
-      letter-spacing:0.10em; text-transform:uppercase;
-      color:rgba(255,255,255,0.36); background:transparent;
-      border:1px solid rgba(255,255,255,0.12); padding:4px 12px;
-      cursor:pointer; transition:var(--transition); display:none;
-    }
-    .search-clear:hover { color:var(--white); border-color:rgba(255,255,255,0.36); }
-    .search-clear.visible { display:inline-block; }
-
-    /* ───────────────────────────────
        FILTER BAR
     ─────────────────────────────── */
     .filter-bar {
@@ -230,30 +184,19 @@
       padding:0 80px;
     }
     .filter-inner {
-      display:flex; align-items:center; justify-content:center;
-      height:52px; gap:16px;
+      display:flex; align-items:center; justify-content:space-between;
+      height:56px; max-width:none;
     }
-    .filter-select {
-      font-family:var(--font); font-size:11px; font-weight:500;
-      letter-spacing:0.08em; text-transform:uppercase;
-      color:var(--grey-mid); background:var(--white);
-      border:1px solid var(--grey-light); border-radius:0;
-      padding:6px 28px 6px 12px; cursor:pointer;
-      -webkit-appearance:none; -moz-appearance:none; appearance:none;
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%237A7A7A'/%3E%3C/svg%3E");
-      background-repeat:no-repeat; background-position:right 10px center;
-      transition:var(--transition);
+    .filter-tabs { display:flex; align-items:center; gap:4px; }
+    .filter-btn {
+      font-family:var(--font); font-size:12px; font-weight:500;
+      letter-spacing:0.12em; text-transform:uppercase; color:var(--grey-mid);
+      background:transparent; border:1px solid transparent;
+      padding:6px 14px; cursor:pointer; transition:var(--transition); white-space:nowrap;
     }
-    .filter-select:focus { outline:none; border-color:var(--navy); }
-    .filter-select.has-value { color:var(--navy); border-color:var(--navy); font-weight:600; }
-    .filter-clear {
-      font-family:var(--font); font-size:11px; font-weight:500;
-      letter-spacing:0.08em; text-transform:uppercase; color:var(--grey-mid);
-      background:transparent; border:none; cursor:pointer;
-      transition:var(--transition); padding:6px 0; display:none;
-    }
-    .filter-clear:hover { color:var(--navy); }
-    .filter-clear.visible { display:block; }
+    .filter-btn:hover { color:var(--navy); border-color:var(--grey-light); }
+    .filter-btn.active { background:var(--navy); color:var(--white); border-color:var(--navy); }
+    .filter-count { font-size:12px; font-weight:300; color:var(--grey-mid); }
 
     /* ───────────────────────────────
        ARTICLE GRID
@@ -448,11 +391,10 @@
       .hero-h1 { font-size:34px; }
       .hero-sub { font-size:16px; }
 
-      .search-hero { padding:36px 24px 32px; }
-      .search-input { font-size:16px; }
-      .filter-bar { padding:0 24px; }
-      .filter-inner { gap:8px; flex-wrap:wrap; height:auto; padding:10px 0; }
-      .filter-select { font-size:10px; padding:5px 24px 5px 8px; }
+      .filter-bar { padding:0 24px; overflow-x:auto; }
+      .filter-inner { justify-content:flex-start; gap:12px; }
+      .filter-tabs { gap:4px; overflow-x:auto; padding-bottom:4px; }
+      .filter-count { white-space:nowrap; flex-shrink:0; margin-left:auto; }
 
       .articles-section { padding:32px 24px 64px; }
       .articles-grid { grid-template-columns:1fr; }
@@ -531,37 +473,20 @@
   </section>
 
   <!-- ═══════════════════════════
-       SEARCH HERO
-  ════════════════════════════ -->
-  <div class="search-hero">
-    <div class="search-label">Explorar</div>
-    <div class="search-wrapper">
-      <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar artigos, temas, autores..." autocomplete="off">
-      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/>
-      </svg>
-    </div>
-    <div class="search-meta">
-      <span class="search-count" id="searchCount"></span>
-      <button class="search-clear" id="searchClear" onclick="clearSearch()">Limpar</button>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════
        FILTER BAR
   ════════════════════════════ -->
   <div class="filter-bar" id="filterBar">
     <div class="filter-inner">
-      <select class="filter-select" id="filterCategory" onchange="applyFilters()">
-        <option value="all">Categoria</option>
-        <option value="financiamento">Financiamento</option>
-        <option value="fiscalidade">Fiscalidade</option>
-        <option value="estrategia">Estratégia</option>
-        <option value="inovacao">Inovação</option>
-        <option value="mercados">Mercados</option>
-        <option value="opiniao">Opinião</option>
-      </select>
-      <button class="filter-clear" id="filterClearBtn" onclick="clearFilters()">Limpar filtros</button>
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="todos" onclick="filterCards('todos')">Todos</button>
+        <button class="filter-btn" data-filter="financiamento" onclick="filterCards('financiamento')">Financiamento</button>
+        <button class="filter-btn" data-filter="fiscalidade" onclick="filterCards('fiscalidade')">Fiscalidade</button>
+        <button class="filter-btn" data-filter="estrategia" onclick="filterCards('estrategia')">Estratégia</button>
+        <button class="filter-btn" data-filter="inovacao" onclick="filterCards('inovacao')">Inovação</button>
+        <button class="filter-btn" data-filter="mercados" onclick="filterCards('mercados')">Mercados</button>
+        <button class="filter-btn" data-filter="opiniao" onclick="filterCards('opiniao')">Opinião</button>
+      </div>
+      <span class="filter-count" id="filterCount">14 artigos</span>
     </div>
   </div>
 
@@ -927,66 +852,28 @@
       mobileMenu.classList.toggle('open');
     });
 
-    // ── Search + Filter articles
-    var searchInput = document.getElementById('searchInput');
-    var searchCount = document.getElementById('searchCount');
-    var searchClear = document.getElementById('searchClear');
-    var filterCategory = document.getElementById('filterCategory');
-    var filterClearBtn = document.getElementById('filterClearBtn');
-    var allCards = document.querySelectorAll('.article-card');
-    var totalArticles = allCards.length;
+    // ── Filter cards
+    function filterCards(cat) {
+      const cards = document.querySelectorAll('.article-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+      const countEl = document.getElementById('filterCount');
 
-    searchCount.textContent = totalArticles + ' artigos';
-
-    function applyFilters() {
-      var query = searchInput.value.toLowerCase().trim();
-      var cat = filterCategory.value;
-      var hasFilter = cat !== 'all';
-      var hasSearch = query.length > 0;
-
-      searchClear.classList.toggle('visible', hasSearch);
-      filterCategory.classList.toggle('has-value', hasFilter);
-      filterClearBtn.classList.toggle('visible', hasFilter);
-
-      var visible = 0;
-      allCards.forEach(function(card) {
-        var catMatch = cat === 'all' || card.dataset.category === cat;
-        var searchMatch = true;
-        if (hasSearch) {
-          var title = card.querySelector('.article-card-title');
-          var excerpt = card.querySelector('.article-card-excerpt');
-          var badge = card.querySelector('.art-cat-badge');
-          var author = card.querySelector('.art-author');
-          var text = '';
-          if (title) text += title.textContent.toLowerCase() + ' ';
-          if (excerpt) text += excerpt.textContent.toLowerCase() + ' ';
-          if (badge) text += badge.textContent.toLowerCase() + ' ';
-          if (author) text += author.textContent.toLowerCase() + ' ';
-          searchMatch = text.indexOf(query) !== -1;
-        }
-        var show = catMatch && searchMatch;
-        card.classList.toggle('hidden', !show);
-        if (show) visible++;
+      buttons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === cat);
       });
 
-      if (!hasSearch && !hasFilter) {
-        searchCount.textContent = totalArticles + ' artigos';
-      } else {
-        searchCount.textContent = visible + ' de ' + totalArticles;
-      }
-    }
+      let visible = 0;
+      cards.forEach(card => {
+        const cardCat = card.dataset.category;
+        if (cat === 'todos' || cardCat === cat) {
+          card.classList.remove('hidden');
+          visible++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
 
-    searchInput.addEventListener('input', applyFilters);
-
-    function clearSearch() {
-      searchInput.value = '';
-      applyFilters();
-      searchInput.focus();
-    }
-
-    function clearFilters() {
-      filterCategory.value = 'all';
-      applyFilters();
+      countEl.textContent = visible + (visible === 1 ? ' artigo': ' artigos');
     }
 
     // ── Card click navigation

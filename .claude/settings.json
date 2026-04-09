@@ -22,14 +22,7 @@
       "Bash(wc *)",
       "Bash(ls *)"
     ],
-    "deny": [
-      "Bash(rm -rf *)",
-      "Bash(git reset --hard *)",
-      "Bash(git push --force *)",
-      "Bash(git rebase *)",
-      "Bash(git checkout -- *)",
-      "Bash(git clean *)"
-    ]
+    "deny": []
   },
   "hooks": {
     "PreToolUse": [

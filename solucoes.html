@@ -217,7 +217,41 @@
       line-height:1.85; letter-spacing:0.01em;
     }
 
-    /* ─── FILTER BAR ──────────────────────────────── */
+    /* ─── SEARCH HERO ─────────────────────────────── */
+    .search-hero {
+      background:var(--navy); padding:44px 80px 40px; text-align:center;
+    }
+    .search-label {
+      font-size:11px; font-weight:600; letter-spacing:0.30em;
+      text-transform:uppercase; color:var(--gold); margin-bottom:18px;
+    }
+    .search-wrapper {
+      max-width:560px; margin:0 auto; position:relative;
+    }
+    .search-input {
+      width:100%; font-family:var(--font); font-size:18px; font-weight:300;
+      letter-spacing:0.03em; color:var(--white); background:transparent;
+      border:none; border-bottom:1px solid rgba(255,255,255,0.20);
+      outline:none; padding:12px 40px 12px 0; transition:var(--transition);
+    }
+    .search-input::placeholder { color:rgba(255,255,255,0.28); font-weight:200; letter-spacing:0.06em; }
+    .search-input:focus { border-bottom-color:var(--gold); }
+    .search-icon {
+      position:absolute; right:0; top:50%; transform:translateY(-50%);
+      width:20px; height:20px; color:rgba(255,255,255,0.28);
+      transition:var(--transition); pointer-events:none;
+    }
+    .search-input:focus ~ .search-icon { color:var(--gold); }
+    .search-meta {
+      display:flex; align-items:center; justify-content:center;
+      gap:16px; margin-top:14px;
+    }
+    .search-count {
+      font-size:13px; font-weight:300; color:rgba(255,255,255,0.36);
+      letter-spacing:0.04em;
+    }
+
+    /* ─── FILTER BAR (single row of dropdowns) ──── */
     .filter-bar {
       position:sticky; top:74px; z-index:150;
       background:var(--white);
@@ -225,39 +259,9 @@
       padding:0 80px;
     }
     .filter-inner {
-      display:flex; align-items:center; justify-content:space-between;
-      gap:12px; min-height:52px; padding:8px 0;
+      display:flex; align-items:center; justify-content:center;
+      gap:10px; height:52px;
       max-width:1200px; margin:0 auto;
-    }
-    .filter-tabs { display:flex; align-items:center; gap:4px; flex-wrap:wrap; flex:1; min-width:0; }
-    .filter-btn {
-      font-family:var(--font); font-size:11px; font-weight:500;
-      letter-spacing:0.10em; text-transform:uppercase;
-      color:var(--grey-mid); background:transparent;
-      border:1px solid transparent; padding:6px 13px;
-      cursor:pointer; transition:var(--transition); white-space:nowrap;
-    }
-    .filter-btn:hover { color:var(--navy); border-color:var(--grey-light); }
-    .filter-btn.active { background:var(--navy); color:var(--white); border-color:var(--navy); }
-
-    .filter-right { display:flex; align-items:center; gap:16px; flex-shrink:0; }
-    .filter-count { font-size:12px; font-weight:300; color:var(--grey-mid); white-space:nowrap; }
-
-    .filter-search { display:flex; align-items:center; }
-    .filter-search input {
-      font-family:var(--font); font-size:13px; font-weight:300;
-      color:var(--grey-dark); background:transparent;
-      border:none; border-bottom:1px solid var(--grey-light);
-      padding:6px 12px 6px 0; outline:none; width:200px;
-      transition:var(--transition);
-    }
-    .filter-search input:focus { border-bottom-color:var(--navy); }
-    .filter-search input::placeholder { color:var(--grey-light); font-size:13px; }
-
-    /* ─── FILTER ROW SECONDARY (dropdowns) ──────── */
-    .filter-row-secondary {
-      min-height:44px; padding:6px 0;
-      border-top:1px solid var(--grey-light);
     }
     .filter-selects { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
     .filter-select {
@@ -370,7 +374,8 @@
 
     /* ─── RESPONSIVE ──────────────────────────────── */
     @media (max-width: 1100px) {
-      .filter-tabs { flex-wrap:wrap; }
+      .search-hero { padding:36px 24px 32px; }
+      .search-input { font-size:16px; }
       .instruments-grid { grid-template-columns:repeat(2,1fr); }
     }
     @media (max-width: 1024px) {
@@ -391,13 +396,7 @@
       .intro-text { font-size:15px; line-height:1.75; }
 
       .filter-bar { padding:0 24px; }
-      .filter-inner { height:auto; padding:12px 0; flex-direction:column; align-items:flex-start; gap:10px; }
-      .filter-right { width:100%; justify-content:space-between; }
-      .filter-btn { font-size:11px; padding:6px 12px; }
-      .filter-search input { width:140px; }
-      .filter-count { display:none; }
-      .filter-row-secondary { height:auto; padding:10px 0; }
-      .filter-selects { gap:6px; }
+      .filter-inner { height:auto; padding:10px 0; flex-wrap:wrap; justify-content:flex-start; gap:6px; }
       .filter-select { font-size:10px; padding:5px 24px 5px 8px; }
 
       .instruments-section { padding:32px 20px; }
@@ -482,37 +481,41 @@
     </div>
   </section>
 
-  <!-- ─── FILTER BAR ────────────────────────────────── -->
-  <div class="filter-bar" id="filterBar">
-    <!-- Linha 1: Categoria (botões) + contagem + pesquisa -->
-    <div class="filter-inner">
-      <div class="filter-tabs">
-        <button class="filter-btn active" data-filter="all" onclick="filterCards('all')">Todos</button>
-        <button class="filter-btn" data-filter="nr" onclick="filterCards('nr')">Não Reembolsável</button>
-        <button class="filter-btn" data-filter="priv" onclick="filterCards('priv')">Investimento Privado</button>
-        <button class="filter-btn" data-filter="div" onclick="filterCards('div')">Dívida</button>
-        <button class="filter-btn" data-filter="hib" onclick="filterCards('hib')">Híbridos</button>
-        <button class="filter-btn" data-filter="fiscal" onclick="filterCards('fiscal')">Incentivos Fiscais</button>
-        <button class="filter-btn" data-filter="outros" onclick="filterCards('outros')">Outros</button>
-      </div>
-      <div class="filter-right">
-        <span class="filter-count" id="filterCount"></span>
-        <div class="filter-search">
-          <input type="text" id="searchInput" placeholder="Pesquisar..." oninput="searchCards(this.value)" aria-label="Pesquisar instrumentos">
-        </div>
-      </div>
+  <!-- ─── SEARCH HERO ───────────────────────────────── -->
+  <div class="search-hero">
+    <div class="search-label">Encontrar instrumentos</div>
+    <div class="search-wrapper">
+      <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar por nome, tipo, programa..." autocomplete="off" oninput="searchCards(this.value)">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/>
+      </svg>
     </div>
-    <!-- Linha 2: Filtros secundários (dropdowns) -->
-    <div class="filter-inner filter-row-secondary">
+    <div class="search-meta">
+      <span class="search-count" id="filterCount"></span>
+    </div>
+  </div>
+
+  <!-- ─── FILTER BAR (dropdowns) ───────────────────── -->
+  <div class="filter-bar" id="filterBar">
+    <div class="filter-inner">
       <div class="filter-selects">
+        <select class="filter-select" id="filterCategory" onchange="filterCards(this.value)">
+          <option value="all">Categoria</option>
+          <option value="nr">Não Reembolsável</option>
+          <option value="priv">Investimento Privado</option>
+          <option value="div">Dívida</option>
+          <option value="hib">Híbridos</option>
+          <option value="fiscal">Incentivos Fiscais</option>
+          <option value="outros">Outros</option>
+        </select>
         <select class="filter-select" id="filterEstado" onchange="applyFilters()">
-          <option value="all">Estado: Todos</option>
+          <option value="all">Estado</option>
           <option value="aberto">Aberto</option>
           <option value="fechado">Fechado</option>
           <option value="previsto">Previsto</option>
         </select>
         <select class="filter-select" id="filterFonte" onchange="applyFilters()">
-          <option value="all">Fonte: Todas</option>
+          <option value="all">Fonte</option>
           <option value="pt2030">Portugal 2030</option>
           <option value="ani">ANI</option>
           <option value="iapmei">IAPMEI</option>
@@ -525,7 +528,7 @@
           <option value="ue">União Europeia</option>
         </select>
         <select class="filter-select" id="filterBeneficiario" onchange="applyFilters()">
-          <option value="all">Beneficiário: Todos</option>
+          <option value="all">Beneficiário</option>
           <option value="startup">Startups</option>
           <option value="micro">Microempresas</option>
           <option value="pme">PME</option>
@@ -535,7 +538,7 @@
           <option value="universidade">Universidades</option>
         </select>
         <select class="filter-select" id="filterRegiao" onchange="applyFilters()">
-          <option value="all">Região: Todas</option>
+          <option value="all">Região</option>
           <option value="norte">Norte</option>
           <option value="centro">Centro</option>
           <option value="lisboa">Lisboa</option>
@@ -1102,9 +1105,8 @@
     ───────────────────────────────────────────────── */
     function filterCards(cat) {
       activeCategory = cat;
-      document.querySelectorAll('.filter-btn').forEach(function(btn) {
-        btn.classList.toggle('active', btn.dataset.filter === cat);
-      });
+      var sel = document.getElementById('filterCategory');
+      if (sel) sel.classList.toggle('has-value', cat !== 'all');
       applyFilters();
     }
 
@@ -1122,10 +1124,8 @@
     function clearAllFilters() {
       activeCategory = 'all';
       activeSearch = '';
-      document.querySelectorAll('.filter-btn').forEach(function(btn) {
-        btn.classList.toggle('active', btn.dataset.filter === 'all');
-      });
       document.getElementById('searchInput').value = '';
+      document.getElementById('filterCategory').value = 'all';
       document.getElementById('filterEstado').value = 'all';
       document.getElementById('filterFonte').value = 'all';
       document.getElementById('filterBeneficiario').value = 'all';
@@ -1138,7 +1138,7 @@
        SELECT STYLES — highlight quando tem valor activo
     ───────────────────────────────────────────────── */
     function updateSelectStyles() {
-      ['filterEstado','filterFonte','filterBeneficiario','filterRegiao'].forEach(function(id) {
+      ['filterCategory','filterEstado','filterFonte','filterBeneficiario','filterRegiao'].forEach(function(id) {
         var el = document.getElementById(id);
         el.classList.toggle('has-value', el.value !== 'all');
       });
