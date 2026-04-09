@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEP - Inovação Produtiva - Energia | Open Capital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #1A3A5C;
+      --navy-deep: #0D1F33;
+      --gold: #C9A96E;
+      --white: #FFFFFF;
+      --grey-light: #E5E5E5;
+      --grey-mid: #7A7A7A;
+      --grey-dark: #2A2A2A;
+      --font: 'Montserrat', sans-serif;
+      --transition: all 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --shadow: 0 8px 40px rgba(26,58,92,0.10);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:var(--font); background:var(--white); color:var(--grey-dark); -webkit-font-smoothing:antialiased; }
+
+    .t-eyebrow { font-size:14px; font-weight:600; letter-spacing:0.30em; text-transform:uppercase; color:var(--gold); }
+    .t-h1 { font-size:54px; font-weight:700; letter-spacing:-0.01em; color:var(--navy); line-height:1.05; }
+    .t-h2 { font-size:36px; font-weight:600; letter-spacing:0.01em; color:var(--navy); line-height:1.15; }
+    .t-h3 { font-size:28px; font-weight:500; letter-spacing:0.03em; color:var(--navy); }
+    .t-h4 { font-size:19px; font-weight:500; letter-spacing:0.07em; color:var(--navy); }
+    .t-body { font-size:18px; font-weight:400; color:var(--grey-dark); line-height:1.85; max-width:580px; }
+    .t-small { font-size:15px; font-weight:300; letter-spacing:0.04em; color:var(--grey-mid); }
+
+    .navbar { display:flex; align-items:center; justify-content:space-between; padding:0 40px; height:74px; background:var(--white); border-bottom:1px solid var(--grey-light); position:sticky; top:0; z-index:1000; }
+    .nav-logo-img { height:57px; width:auto; }
+    .nav-links { display:flex; align-items:center; gap:24px; list-style:none; margin-left:auto; }
+    .nav-links a { font-size:15px; font-weight:500; letter-spacing:0.08em; color:var(--grey-dark); text-decoration:none; position:relative; padding-bottom:3px; white-space:nowrap; transition:var(--transition); }
+    .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold); transition:width 0.3s ease; }
+    .nav-links a:hover { color:var(--navy); }
+    .nav-links a:hover::after { width:100%; }
+    .nav-links a.active { color:var(--navy); }
+    .nav-links a.active::after { width:100%; }
+    .nav-cta { font-size:16px; font-weight:600; letter-spacing:0.08em; color:var(--navy); text-decoration:none; border:1px solid var(--navy); padding:9px 18px; margin-left:28px; transition:var(--transition); white-space:nowrap; }
+    .nav-cta:hover { background:var(--navy); color:var(--white); }
+
+    .hero { background:var(--navy); padding:0 8%; min-height:60vh; position:relative; overflow:hidden; display:flex; align-items:center; }
+    .hero-gold-bar { position:absolute; left:0; top:0; bottom:0; width:4px; background:linear-gradient(to bottom, var(--gold) 0%, rgba(201,169,110,0.3) 60%, transparent 100%); z-index:2; }
+    .hero-inner { position:relative; z-index:1; width:100%; max-width:700px; padding:100px 0 60px; }
+    .hero-eyebrow { font-size:14px; font-weight:600; letter-spacing:0.34em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; }
+    .hero-h1 { font-size:54px; font-weight:700; color:var(--white); line-height:1.06; letter-spacing:-0.015em; margin-bottom:20px; }
+    .hero-sub { font-size:19px; font-weight:300; color:rgba(255,255,255,0.58); line-height:1.9; max-width:500px; margin-bottom:40px; }
+
+    .hero-metabar { display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; margin-top:40px; }
+    .hero-meta { background:rgba(255,255,255,0.05); border-left:3px solid var(--gold); padding:16px; }
+    .hero-meta-label { font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.36); margin-bottom:6px; }
+    .hero-meta-value { font-size:15px; font-weight:500; color:var(--white); line-height:1.5; }
+
+    .back-bar { background:#F5F5F5; padding:16px 8%; border-bottom:1px solid var(--grey-light); }
+    .back-link { font-size:14px; font-weight:500; letter-spacing:0.06em; color:var(--navy); text-decoration:none; transition:var(--transition); }
+    .back-link:hover { color:var(--gold); }
+
+    .article-layout { display:grid; grid-template-columns:1fr 320px; gap:64px; max-width:1200px; margin:0 auto; padding:80px 80px 96px; align-items:start; }
+    article { grid-column:1; }
+
+    .article-sidebar { position:sticky; top:100px; }
+
+    article section { margin-bottom:80px; }
+    article h2 { margin-bottom:24px; }
+    article p { margin-bottom:20px; }
+    article ul { margin-left:24px; margin-bottom:20px; }
+    article li { margin-bottom:12px; line-height:1.85; }
+
+    .highlight-box { background:rgba(201,169,110,0.07); border-left:3px solid var(--gold); padding:24px; margin:32px 0; }
+    .highlight-box-title { font-size:16px; font-weight:600; color:var(--navy); margin-bottom:12px; }
+    .highlight-box p { margin:0; }
+
+    .stats-row { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; margin:32px 0; }
+    .stat { text-align:center; }
+    .stat-value { font-size:32px; font-weight:700; color:var(--navy); margin-bottom:8px; }
+    .stat-label { font-size:14px; font-weight:500; color:var(--grey-mid); }
+
+    .steps-list { counter-reset:step-counter; margin:32px 0; }
+    .step { display:flex; gap:24px; margin-bottom:32px; }
+    .step-num { counter-increment:step-counter; content:counter(step-counter); font-size:28px; font-weight:700; color:var(--gold); flex-shrink:0; }
+    .step-content { flex:1; }
+    .step h4 { margin-bottom:8px; }
+    .step p { margin:0; color:var(--grey-mid); }
+
+    .card { background:var(--white); border:1px solid var(--grey-light); padding:32px; margin-bottom:24px; position:relative; overflow:hidden; }
+    .card::before { content:''; position:absolute; top:0; left:0; width:0; height:2px; background:var(--gold); transition:width 0.4s ease; }
+    .card:hover { box-shadow:var(--shadow); }
+    .card:hover::before { width:100%; }
+
+    .card-title { font-size:19px; font-weight:600; color:var(--navy); margin-bottom:16px; }
+    .card-body { font-size:15px; color:var(--grey-dark); line-height:1.85; }
+    .card-body strong { color:var(--navy); }
+
+    .btn { display:inline-block; font-size:14px; font-weight:600; letter-spacing:0.26em; text-transform:uppercase; border:none; cursor:pointer; transition:var(--transition); text-decoration:none; padding:16px 38px; }
+    .btn-primary { background:var(--navy); color:var(--white); }
+    .btn-primary:hover { background:#0F2A45; box-shadow:0 6px 20px rgba(26,58,92,0.22); }
+    .btn-outline { background:transparent; color:var(--navy); border:1px solid var(--navy); padding:15px 37px; }
+    .btn-outline:hover { background:var(--navy); color:var(--white); }
+
+    .sidebar-card { background:var(--white); border:1px solid var(--grey-light); padding:28px; margin-bottom:32px; }
+    .sidebar-card-title { font-size:16px; font-weight:600; color:var(--navy); margin-bottom:20px; }
+    .sidebar-fact { display:flex; flex-direction:column; gap:8px; padding-bottom:16px; border-bottom:1px solid var(--grey-light); margin-bottom:16px; }
+    .sidebar-fact:last-child { border:none; margin:0; }
+    .sidebar-fact-label { font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); }
+    .sidebar-fact-value { font-size:14px; font-weight:500; color:var(--grey-dark); line-height:1.5; }
+
+    .footer { background:var(--navy-deep); padding:56px 80px 34px; }
+    .footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr; gap:44px; margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.07); }
+    .f-desc { font-size:15px; font-weight:300; color:rgba(255,255,255,0.36); line-height:1.85; margin-top:18px; max-width:260px; }
+    .f-tagline { font-size:16px; font-weight:100; letter-spacing:0.14em; color:var(--gold); margin-top:12px; }
+    .f-col-label { font-size:11px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:rgba(255,255,255,0.24); margin-bottom:16px; }
+    .f-links { list-style:none; }
+    .f-links li { margin-bottom:9px; }
+    .f-links a { font-size:15px; font-weight:300; color:rgba(255,255,255,0.48); text-decoration:none; transition:var(--transition); letter-spacing:0.03em; }
+    .f-links a:hover { color:var(--white); }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+    .f-copy { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:0.05em; }
+    .f-legal { list-style:none; display:flex; gap:20px; }
+    .f-legal a { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); text-decoration:none; letter-spacing:0.05em; transition:var(--transition); }
+    .f-legal a:hover { color:rgba(255,255,255,0.45); }
+
+    @media (max-width:1024px) {
+      .article-layout { grid-template-columns:1fr; }
+      .article-sidebar { position:static; }
+      .hero-metabar { grid-template-columns:repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    <ul class="nav-links">
+      <li><a href="../solucoes.html">Soluções</a></li>
+      <li><a href="../conhecimento.html">Conhecimento</a></li>
+      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge" style="font-size:10px; font-weight:600; letter-spacing:0.06em; color:var(--gold); border:1px solid var(--gold); padding:1px 4px; margin-left:3px; vertical-align:super; line-height:1;">em breve</sup></a></li>
+      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge" style="font-size:10px; font-weight:600; letter-spacing:0.06em; color:var(--gold); border:1px solid var(--gold); padding:1px 4px; margin-left:3px; vertical-align:super; line-height:1;">em breve</sup></a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li><a href="../parceiros.html">Oportunidades</a></li>
+    </ul>
+    <a href="https://calendly.com/tech2business" target="_blank" class="nav-cta">Contactar</a>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-gold-bar"></div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Fundos Europeus</p>
+      <h1 class="hero-h1">STEP Inovação Produtiva – Energia</h1>
+      <p class="hero-sub">Financiamento para tecnologias críticas e cadeias de abastecimento resilientes no sector energético.</p>
+      <div class="hero-metabar">
+        <div class="hero-meta">
+          <div class="hero-meta-label">Dotação</div>
+          <div class="hero-meta-value">€300M</div>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-label">Financiamento</div>
+          <div class="hero-meta-value">Até 70%</div>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-label">Elegibilidade</div>
+          <div class="hero-meta-value">Empresas (qualquer tamanho)</div>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-label">Estado</div>
+          <div class="hero-meta-value" style="color:#4ABA68;">Aberto até 30/04</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="back-bar">
+    <a href="../solucoes.html" class="back-link">← Voltar ao catálogo de instrumentos</a>
+  </div>
+
+  <div class="article-layout">
+    <article>
+      <section>
+        <h2 class="t-h2">Visão Geral</h2>
+        <p class="t-body">O STEP - Inovação Produtiva é um instrumento do COMPETE 2030 que financia investimentos em tecnologias críticas e cadeias de abastecimento resilientes. Focado no sector energético, apoia empresas na produção de componentes, matérias-primas e serviços estratégicos para a transição energética europeia.</p>
+        <p class="t-body">Este aviso integra a Estratégia Europeia de Techtwin, alinhando Portugal com objectivos de soberania tecnológica e segurança energética da União Europeia.</p>
+      </section>
+
+      <section>
+        <h2 class="t-h2">Quem Pode Candidatar-se</h2>
+        <div class="highlight-box">
+          <div class="highlight-box-title">Beneficiários Elegíveis</div>
+          <p>Empresas de qualquer dimensão, natureza e sob qualquer forma jurídica, que tenham contabilidade organizada e cumpram requisitos legais aplicáveis.</p>
+        </div>
+        <h3 class="t-h3">Tipos de Empresa</h3>
+        <ul class="t-body">
+          <li><strong>Micro e pequenas empresas (PME)</strong> — com até 250 colaboradores</li>
+          <li><strong>Médias empresas</strong> — com até 3.000 colaboradores</li>
+          <li><strong>Grandes empresas</strong> — acima de 3.000 colaboradores</li>
+          <li><strong>Startups e spin-offs</strong> — requisitos especiais para constituição recente</li>
+        </ul>
+        <h3 class="t-h3">Requisitos Obrigatórios</h3>
+        <ul class="t-body">
+          <li>Contabilidade organizada e regularizada</li>
+          <li>Estar em situação regular perante a Segurança Social e Fisco</li>
+          <li>Estar formalizada como entidade legal (não é elegível pré-constituição)</li>
+          <li>Ter sede ou estabelecimento em Portugal ou UE</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="t-h2">Despesas Elegíveis</h2>
+        <p class="t-body">O instrumento financia investimentos produtivos inovadores em:</p>
+        <ul class="t-body">
+          <li><strong>Tecnologias críticas</strong> — listadas no Anexo E (semicondutores, baterias, terras raras)</li>
+          <li><strong>Componentes especializados</strong> — para produção energética renovável ou eficiência</li>
+          <li><strong>Matérias-primas críticas</strong> — com origem segura na cadeia UE</li>
+          <li><strong>Serviços críticos</strong> — I&D, gestão da cadeia de abastecimento</li>
+          <li><strong>Infra-estrutura de produção</strong> — novos equipamentos, instalações, sistemas de controlo</li>
+        </ul>
+        <div class="highlight-box">
+          <div class="highlight-box-title">Nota Importante</div>
+          <p>As operações devem corresponder a um dos seguintes tipos de investimento: (i) investimento inicial num novo estabelecimento; (ii) diversificação para novos produtos; (iii) mudança fundamental nos processos de produção.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="t-h2">Taxas de Financiamento</h2>
+        <div class="stats-row">
+          <div class="stat">
+            <div class="stat-value">70%</div>
+            <div class="stat-label">Financiamento Máximo em Equivalente de Subvenção</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">30%</div>
+            <div class="stat-label">Cofinanciamento Mínimo (Entidade + Outros)</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">€5M - €25M</div>
+            <div class="stat-label">Investimento Elegível Indicativo</div>
+          </div>
+        </div>
+        <p class="t-body">A taxa de 70% em equivalente de subvenção bruta pode ser concedida na forma de subvenção, empréstimo bonificado ou combinação de instrumentos financeiros. O cofinanciamento pode ser suportado pela própria empresa ou por terceiros (bancos, investidores).</p>
+      </section>
+
+      <section>
+        <h2 class="t-h2">Abrangência Geográfica</h2>
+        <p class="t-body">O aviso está aberto a operações localizadas em regiões NUTS II do Continente:</p>
+        <ul class="t-body">
+          <li><strong>Norte</strong> — Porto, Aveiro, Castelo Branco, Guarda</li>
+          <li><strong>Centro</strong> — Leiria, Viseu, Covilhã</li>
+          <li><strong>Alentejo</strong> — Portalegre, Evora, Beja</li>
+        </ul>
+        <div class="highlight-box">
+          <div class="highlight-box-title">Regiões Prioritárias</div>
+          <p>Operações em regiões de menor densidade económica (Alentejo, Interior) podem beneficiar de majorações na taxa de financiamento.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="t-h2">Prazos e Calendário</h2>
+        <div class="highlight-box">
+          <div class="highlight-box-title">Período de Candidatura</div>
+          <p><strong>30 de janeiro a 30 de abril de 2026</strong> (17h00 de Portugal continental)</p>
+        </div>
+        <p class="t-body">As candidaturas são feitas em contínuo até ao encerramento do aviso. Não há fases de pré-selecção, mas recomenda-se apresentação mais cedo (primeiros meses) para maior flexibilidade na negociação de condições.</p>
+      </section>
+
+      <section>
+        <h2 class="t-h2">Como Candidatar-se</h2>
+        <ol style="margin:32px 0; margin-left:24px;">
+          <li style="margin-bottom:20px; line-height:1.85;"><strong>Registe-se no Portal de Candidaturas do COMPETE 2030</strong> (compete2030.gov.pt) com credenciais de Chave Móvel Digital ou certificado digital</li>
+          <li style="margin-bottom:20px; line-height:1.85;"><strong>Prepare a documentação técnica</strong> — plano de negócio, demonstração de mercado, tabela financeira de 5 anos, curriculum da equipa</li>
+          <li style="margin-bottom:20px; line-height:1.85;"><strong>Elabore a candidatura online</strong> — preenchimento do formulário de candidatura com dados do projeto, beneficiários, investimento total</li>
+          <li style="margin-bottom:20px; line-height:1.85;"><strong>Submeta a candidatura</strong> — upload de documentos PDF assinados, confirmação de entrega</li>
+          <li style="margin-bottom:20px; line-height:1.85;"><strong>Acompanhe a avaliação</strong> — resposta prevista no prazo de 120 dias após encerramento do aviso</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2 class="t-h2">Critérios de Avaliação</h2>
+        <p class="t-body">As candidaturas são avaliadas com base em:</p>
+        <ul class="t-body">
+          <li><strong>Contributo para soberania tecnológica</strong> — produção de tecnologias críticas em Portugal/UE</li>
+          <li><strong>Viabilidade económica</strong> — sustentabilidade financeira do projeto e da empresa</li>
+          <li><strong>Impacto da inovação</strong> — nível de inovação tecnológica e processual</li>
+          <li><strong>Potencial de crescimento</strong> — criação de emprego, valor acrescentado, exportações</li>
+          <li><strong>Transição verde</strong> — alinhamento com objetivos de neutralidade carbónica europeia</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="t-h2">Dúvidas Frequentes</h2>
+        <div class="card">
+          <div class="card-title">Qual é o investimento mínimo?</div>
+          <div class="card-body">Não existe um limite mínimo obrigatório, mas o investimento indicativo é entre €5M e €25M. Projetos menores podem ser elegíveis mas com menor prioridade de avaliação.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Posso candidatar-me se tenho falta de pagamento?</div>
+          <div class="card-body">Não. A empresa deve estar em situação regular com Fisco e Segurança Social à data de submissão da candidatura. Débitos suspensos podem ser contornáveis com plano de pagamento aceite.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">O cofinanciamento tem de ser obtido antes de candidatar?</div>
+          <div class="card-body">Não é obrigatório, mas recomenda-se ter demonstração de capacidade de financiamento. Muitos aprovados apresentam apenas cartas de princípio de banco.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Se estou na Madeira ou Açores, posso candidatar-me?</div>
+          <div class="card-body">Este aviso é exclusivo do Continente. Madeira e Açores têm avisos específicos do COMPETE 2030 com regras diferenciadas.</div>
+        </div>
+      </section>
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Factos Rápidos</div>
+        <div class="sidebar-fact">
+          <div class="sidebar-fact-label">Dotação</div>
+          <div class="sidebar-fact-value">€300.000.000</div>
+        </div>
+        <div class="sidebar-fact">
+          <div class="sidebar-fact-label">Financiamento Máximo</div>
+          <div class="sidebar-fact-value">70% (equivalente de subvenção)</div>
+        </div>
+        <div class="sidebar-fact">
+          <div class="sidebar-fact-label">Investimento Típico</div>
+          <div class="sidebar-fact-value">€5M a €25M</div>
+        </div>
+        <div class="sidebar-fact">
+          <div class="sidebar-fact-label">Período de Candidatura</div>
+          <div class="sidebar-fact-value">30/01 a 30/04/2026</div>
+        </div>
+        <div class="sidebar-fact">
+          <div class="sidebar-fact-label">Regiões Elegíveis</div>
+          <div class="sidebar-fact-value">Norte, Centro, Alentejo</div>
+        </div>
+        <div class="sidebar-fact">
+          <div class="sidebar-fact-label">Beneficiários</div>
+          <div class="sidebar-fact-value">Empresas (qualquer tamanho)</div>
+        </div>
+        <div class="sidebar-fact">
+          <div class="sidebar-fact-label">Estado</div>
+          <div class="sidebar-fact-value">Aberto</div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Próximos Passos</div>
+        <p style="font-size:15px; color:var(--grey-dark); margin-bottom:16px;">Quer candidatar-se? Contacte os nossos especialistas em financiamento europeu para análise de elegibilidade e preparação de candidatura.</p>
+        <a href="https://calendly.com/tech2business" target="_blank" class="btn btn-primary" style="width:100%; text-align:center;">Agendar Reunião</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Instrumentos Relacionados</div>
+        <ul style="list-style:none; font-size:14px;">
+          <li style="margin-bottom:12px;"><a href="compete-2030.html" style="color:var(--navy); text-decoration:none; font-weight:500;">COMPETE 2030 (Visão Geral)</a></li>
+          <li style="margin-bottom:12px;"><a href="step-idi-empresarial-energia.html" style="color:var(--navy); text-decoration:none; font-weight:500;">STEP I&D&I Empresarial – Energia</a></li>
+          <li style="margin-bottom:12px;"><a href="pt2030.html" style="color:var(--navy); text-decoration:none; font-weight:500;">Portugal 2030 (Fundos UE)</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" style="height:57px; width:auto; filter:brightness(0) invert(1);">
+        <p class="f-desc">Tornamos o capital mais claro e acessível para empresas que querem crescer.</p>
+        <p class="f-tagline">Capital, made clear.</p>
+      </div>
+      <div>
+        <p class="f-col-label">Soluções</p>
+        <ul class="f-links">
+          <li><a href="../solucoes.html">Biblioteca de Instrumentos</a></li>
+          <li><a href="../solucoes.html">Fundos de Investimento</a></li>
+          <li><a href="../solucoes.html">Benefícios Fiscais</a></li>
+          <li><a href="../solucoes.html">Prémios de Inovação</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="f-col-label">Plataforma</p>
+        <ul class="f-links">
+          <li><a href="../capital-simulator.html">Capital Simulator</a></li>
+          <li><a href="../tech2business.html">Tech2Business</a></li>
+          <li><a href="../conhecimento.html">Conhecimento</a></li>
+          <li><a href="../parceiros.html">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="f-col-label">Empresa</p>
+        <ul class="f-links">
+          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="../sobre-nos.html">Equipa</a></li>
+          <li><a href="../sobre-nos.html">Carreiras</a></li>
+          <li><a href="https://calendly.com/tech2business" target="_blank">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="f-copy">© 2025 Open Capital Advisory & Consultancy. Todos os direitos reservados.</p>
+      <ul class="f-legal">
+        <li><a href="#">Privacidade</a></li>
+        <li><a href="#">Termos</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
