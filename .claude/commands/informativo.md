@@ -34,7 +34,18 @@ Escolhe o autor mais adequado ao tema. Seleciona com base na area de especialida
 - **Miguel Santos** - Business Developer. Temas: internacionalizacao de empresas, desenvolvimento de parcerias estrategicas, expansao para novos mercados, crescimento comercial e atracao de investimento
 - **Rita Ferreira** - Marketeer e Copywriter. Temas: marketing e comunicacao empresarial, economia criativa, tendencias de consumo e comportamento do mercado, posicionamento e notoriedade de marca
 
-Seleciona o autor cujo perfil melhor se alinha ao tema. Nao ha fallback: escolher sempre o mais especifico para o tema concreto. Se o tema e de financiamento por divida, linhas de credito, Banco de Fomento ou financiamento reembolsavel: Pedro Nunes. Se e de premios de inovacao, vouchers IAPMEI, beneficios fiscais, SIFIDE, RFAI ou DLRR: Andre Carvalho. Se e de fundos europeus, candidaturas, incentivos nao reembolsaveis (PT2030, PRR, COMPETE, Horizonte Europa): Mara Ferreira. Se e de I&D, inovacao tecnologica ou SIFIDE: Sofia Costa. Se e de analise financeira, estrutura de capital ou valuation: Mariana Costa. Se e de tendencias economicas, dados de mercado ou benchmarking: Luis Gomes. Se e de estrategia empresarial, transformacao digital, macroeconomia com impacto empresarial ou empreendedorismo: Jorge Pereira. Se e de analise setorial ou tendencias de mercado: Ines Teixeira ou Joao Silva. Se e de internacionalizacao ou parcerias: Miguel Santos.
+Seleciona o autor cujo perfil melhor se alinha ao tema. Nao ha fallback: escolher sempre o mais especifico para o tema concreto.
+
+Regras de routing — aplicar pela ordem indicada, parar na primeira que encaixar:
+1. Se o tema e especificamente sobre transformacao digital, inteligencia artificial aplicada a negocios, Tech2Business, lideranca organizacional ou cultura de empresa, ou construcao de startups/empreendedorismo tecnologico: **Jorge Pereira**.
+2. Se o tema e de macroeconomia, geopolitica com impacto empresarial, analise de conjuntura economica, mercados financeiros, indicadores economicos, valuations ou benchmarking sectorial com dados: **Luis Gomes**.
+3. Se o tema e de tendencias sectoriais, competitividade de mercado, mapeamento de ecossistema empresarial, posicionamento estrategico de empresas ou analise de novos setores (sem foco em dados macroeconomicos): **Ines Teixeira** ou **Joao Silva**.
+4. Se o tema e de analise financeira, estrutura de capital, cash flow, tesouraria ou relacao com investidores privados: **Mariana Costa**.
+5. Se o tema e de financiamento por divida, linhas de credito, Banco de Fomento ou financiamento reembolsavel: **Pedro Nunes**.
+6. Se o tema e de premios de inovacao, vouchers IAPMEI, beneficios fiscais, SIFIDE, RFAI ou DLRR: **Andre Carvalho**.
+7. Se o tema e de fundos europeus, candidaturas, incentivos nao reembolsaveis (PT2030, PRR, COMPETE, Horizonte Europa): **Mara Ferreira**.
+8. Se o tema e de I&D, inovacao tecnologica ou propriedade intelectual: **Sofia Costa**.
+9. Se o tema e de internacionalizacao, expansao para novos mercados ou parcerias estrategicas: **Miguel Santos**.
 
 **Mapeamento de fotos (usar com prefix `../Retratos Equipa/`):**
 - Jorge Pereira → `retrato_jorgepereira.png`
