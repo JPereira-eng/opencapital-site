@@ -23,9 +23,9 @@ Escolhe o autor mais adequado ao tipo de instrumento. Seleciona com base na area
 - **Mariana Costa** - Finance Lead. Temas: estrutura de capital e financiamento privado, cash flow e tesouraria empresarial, analise financeira e valuation, planeamento financeiro, relacao com investidores
 - **Sofia Costa** - Especialista I&D e Inovacao. Temas: investigacao e desenvolvimento, SIFIDE II e incentivos fiscais a I&D, propriedade intelectual e patentes, premios de inovacao, ecossistema de startups e inovacao tecnologica
 - **Luis Gomes** - Analista Financeiro. Temas: analise de mercados financeiros e de capitais, tendencias economicas com base em dados, valuations e metricas de performance, indicadores macroeconomicos, benchmarking sectorial
-- **Pedro Nunes** - Consultor de Financiamento. Temas: Portugal 2030, PRR, COMPETE 2030, Horizonte Europa, fundos europeus estruturais, candidaturas a programas de apoio publico, elegibilidade e regulamentacao de fundos
-- **Andre Carvalho** - Tecnico de Candidaturas e Incentivos. Temas: RFAI, DLRR, CFI, regulamentacao tecnica de incentivos fiscais ao investimento, processos de candidatura e aprovacao, interpretacao de regulamentos e despachos
-- **Mara Ferreira** - Tecnica de Candidaturas e Incentivos. Temas: beneficios fiscais para empresas, programas IAPMEI e vouchers de inovacao, elegibilidade e conformidade de candidaturas, SIFIDE em contexto de processo
+- **Pedro Nunes** - Consultor de Financiamento. Temas: financiamento por divida, linhas de credito empresariais, Banco de Fomento, financiamento reembolsavel, emprestimos bancarios, capital de divida, garantias e colaterais
+- **Andre Carvalho** - Tecnico de Candidaturas e Incentivos. Temas: premios de inovacao, vouchers e programas IAPMEI, beneficios fiscais para empresas, SIFIDE II, RFAI, DLRR, CFI, incentivos fiscais ao investimento, elegibilidade e conformidade fiscal
+- **Mara Ferreira** - Tecnica de Candidaturas e Incentivos. Temas: Portugal 2030, PRR, COMPETE 2030, Horizonte Europa, fundos europeus estruturais, candidaturas a programas de apoio publico, incentivos nao reembolsaveis, elegibilidade e regulamentacao de fundos, processos de candidatura e aprovacao
 - **Johnson Semedo** - Gestor de Projetos. Temas: execucao operacional de projetos, gestao de PME, processos internos e eficiencia operacional, implementacao de estrategia no terreno
 - **Carla Sousa** - Gestora de Projetos. Temas: planeamento e monitorizacao de projetos, reporting e controlo, execucao em contexto de financiamento publico, organizacoes em crescimento
 - **Ines Teixeira** - Consultora Junior. Temas: analise setorial e mapeamento de mercado, tendencias emergentes e novos setores, investigacao e sintese de dados
@@ -35,14 +35,13 @@ Escolhe o autor mais adequado ao tipo de instrumento. Seleciona com base na area
 
 **Jorge Pereira nao pode ser selecionado para artigos de instrumento.** Os instrumentos sao fichas tecnicas de referencia que requerem especialistas com conhecimento direto do instrumento. Jorge Pereira nao e especialista em nenhum instrumento de financiamento, fiscal ou de investimento.
 
-Orientacoes de selecao por tipo de instrumento:
-- Fundos europeus (Portugal 2030, PRR, COMPETE, Horizonte Europa): Pedro Nunes
-- Incentivos fiscais (SIFIDE, RFAI, DLRR, Patent Box): Andre Carvalho ou Mara Ferreira
-- I&D e inovacao (SIFIDE, premios, EIC): Sofia Costa
-- Investimento privado (VC, PE, Business Angels, Crowdfunding): Luis Gomes ou Mariana Costa
-- Instrumentos bancarios e garantias (Banco de Fomento): Mariana Costa
-- Internacionalizacao e atracao de investimento (AICEP, SAI): Miguel Santos
-- Vouchers e apoios operacionais (IAPMEI, vouchers): Andre Carvalho
+Orientacoes de selecao por tipo de instrumento — aplicar pela ordem indicada, parar na primeira que encaixar:
+1. Fundos europeus e candidaturas nao reembolsaveis (Portugal 2030, PRR, COMPETE 2030, Horizonte Europa, EIC Accelerator): **Mara Ferreira**
+2. Incentivos fiscais ao investimento (RFAI, DLRR, CFI, Patent Box): **Andre Carvalho**
+3. Premios de inovacao e vouchers (SIFIDE II, premios, vouchers IAPMEI): **Andre Carvalho** (se foco fiscal) ou **Sofia Costa** (se foco I&D/tecnologico)
+4. Instrumentos de divida e credito (Banco de Fomento, linhas de credito, garantias): **Pedro Nunes**
+5. Investimento privado (Venture Capital, Private Equity, Business Angels, Crowdfunding): **Luis Gomes** ou **Mariana Costa**
+6. Internacionalizacao e atracao de investimento (AICEP, SAI): **Miguel Santos**
 
 **Mapeamento de fotos (usar com prefix `../Retratos Equipa/`):**
 - Jorge Pereira → `retrato_jorgepereira.png`
