@@ -304,6 +304,8 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
     .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
     .meta-value{font-size:15px;font-weight:500;color:var(--white);}
     .meta-value.gold{color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
     .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
 
     /* BACK BAR */
@@ -364,6 +366,8 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
     .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
     .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
     .sidebar-fact-val.val-gold{color:var(--gold);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
     .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
     .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
     .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
@@ -583,7 +587,17 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
   <div class="sidebar-fact-val">PME e grandes empresas</div>
 </div>
 ```
-Usa `val-gold` apenas para estados de programa (ex: "Aberto", "Ativo", "Em candidatura"). NAO usar `val-gold` para valores monetarios, dotacoes ou taxas. Valores monetarios e outros dados usam `sidebar-fact-val` simples (cor navy).
+NAO usar `val-gold` para valores monetarios, dotacoes ou taxas. Valores monetarios e outros dados usam `sidebar-fact-val` simples (cor navy).
+
+**Para estados de programa na sidebar, usar as classes de cor consistentes com os cards da Biblioteca:**
+- Estado aberto: `<div class="sidebar-fact-val val-open">Aberto ate DD/MM/AAAA</div>` (verde #2E7D52)
+- Estado fechado: `<div class="sidebar-fact-val val-closed">Fechado</div>` (vermelho #A63228)
+- Nunca usar `val-gold` para estados. O dourado e reservado para labels de seccao.
+
+**Para estados no hero meta-bar, usar as mesmas classes:**
+- `<span class="meta-value status-open">Aberto ate DD/MM/AAAA</span>` (verde #2E7D52)
+- `<span class="meta-value status-closed">Fechado</span>` (vermelho #A63228)
+- Nunca usar `gold` class para o estado no hero.
 
 **Formato dos instrumentos relacionados na sidebar:**
 ```html
