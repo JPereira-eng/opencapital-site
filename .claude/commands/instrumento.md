@@ -306,6 +306,7 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
     .meta-value.gold{color:var(--white);}
     .meta-value.status-open{color:#2E7D52;font-weight:600;}
     .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-value.status-cont{color:#2E7D52;font-weight:600;}
     .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
 
     /* BACK BAR */
@@ -368,6 +369,7 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
     .sidebar-fact-val.val-gold{color:var(--gold);}
     .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
     .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-fact-val.val-cont{color:#2E7D52;font-weight:600;}
     .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
     .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
     .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
@@ -592,11 +594,13 @@ NAO usar `val-gold` para valores monetarios, dotacoes ou taxas. Valores monetari
 **Para estados de programa na sidebar, usar as classes de cor consistentes com os cards da Biblioteca:**
 - Estado aberto: `<div class="sidebar-fact-val val-open">Aberto ate DD/MM/AAAA</div>` (verde #2E7D52)
 - Estado fechado: `<div class="sidebar-fact-val val-closed">Fechado</div>` (vermelho #A63228)
+- Candidatura continua: `<div class="sidebar-fact-val val-cont">Candidatura Contínua</div>` (verde #2E7D52) — para instrumentos sem prazo fixo
 - Nunca usar `val-gold` para estados. O dourado e reservado para labels de seccao.
 
 **Para estados no hero meta-bar, usar as mesmas classes:**
 - `<span class="meta-value status-open">Aberto ate DD/MM/AAAA</span>` (verde #2E7D52)
 - `<span class="meta-value status-closed">Fechado</span>` (vermelho #A63228)
+- `<span class="meta-value status-cont">Candidatura Contínua</span>` (verde #2E7D52) — para instrumentos sem prazo fixo (EIC, candidatura permanente, etc.)
 - Nunca usar `gold` class para o estado no hero.
 
 **Formato dos instrumentos relacionados na sidebar:**
