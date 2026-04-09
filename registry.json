@@ -5,11 +5,11 @@
     "created": "2026-04-09"
   },
   "stats": {
-    "total_published": 12,
+    "total_published": 13,
     "total_in_queue": 3,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-09",
-    "sources_checked_this_week": ["portugal-2030", "compete-2030", "eic-accelerator"]
+    "sources_checked_this_week": ["portugal-2030", "compete-2030", "eic-accelerator", "ani", "iapmei", "prr"]
   },
   "queue": [
     {
@@ -25,18 +25,6 @@
       "status": "pending"
     },
     {
-      "id": "sitce-descarbonizacao-eficiencia-energetica",
-      "name": "SITCE Descarbonização e Eficiência Energética",
-      "source_id": "compete-2030",
-      "detected_date": "2026-04-09",
-      "deadline": "2026-05-29",
-      "budget": null,
-      "regulation_url": "https://www.compete2030.gov.pt/avisos/sitce-descarbonizacao-e-eficiencia-energetica-mpr-2026-01/",
-      "pdf_url": null,
-      "priority_score": 65,
-      "status": "pending"
-    },
-    {
       "id": "sice-internacionalizacao-pme",
       "name": "SICE Internacionalização das PME - Operações em conjunto",
       "source_id": "compete-2030",
@@ -46,6 +34,18 @@
       "regulation_url": "https://www.compete2030.gov.pt/avisos/sice-internacionalizacao-das-pme-operacoes-em-conjunto-mpr-2025-14/",
       "pdf_url": null,
       "priority_score": 35,
+      "status": "pending"
+    },
+    {
+      "id": "siid-internacionalizacao-id-horizonte-europa",
+      "name": "SIID - Internacionalização da I&D para Operações com Selo de Excelência (Horizonte Europa)",
+      "source_id": "ani",
+      "detected_date": "2026-04-09",
+      "deadline": null,
+      "budget": null,
+      "regulation_url": "https://www.ani.pt/pt/financiamento/",
+      "pdf_url": null,
+      "priority_score": 20,
       "status": "pending"
     }
   ],
@@ -147,11 +147,23 @@
       "detected_date": "2026-04-09",
       "current_state": "aberto",
       "last_state_check": "2026-04-09"
+    },
+    {
+      "id": "sitce-descarbonizacao-eficiencia-energetica",
+      "source": "compete-2030",
+      "file": "instrumentos/sitce-descarbonizacao-eficiencia-energetica.html",
+      "published_date": "2026-04-09",
+      "detected_date": "2026-04-09",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-09"
     }
   ],
   "source_last_checked": {
     "portugal-2030": "2026-04-09",
     "compete-2030": "2026-04-09",
-    "eic-accelerator": "2026-04-09"
+    "eic-accelerator": "2026-04-09",
+    "ani": "2026-04-09",
+    "iapmei": "2026-04-09",
+    "prr": "2026-04-09"
   }
 }
