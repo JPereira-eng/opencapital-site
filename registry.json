@@ -5,23 +5,23 @@
     "created": "2026-04-09"
   },
   "stats": {
-    "total_published": 13,
-    "total_in_queue": 3,
+    "total_published": 14,
+    "total_in_queue": 6,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-09",
-    "sources_checked_this_week": ["portugal-2030", "compete-2030", "eic-accelerator", "ani", "iapmei", "prr"]
+    "sources_checked_this_week": ["portugal-2030", "compete-2030", "eic-accelerator", "ani", "iapmei", "prr", "norte-2030"]
   },
   "queue": [
     {
-      "id": "siac-acoes-coletivas-internacionalizacao",
-      "name": "SIAC Ações Coletivas - Internacionalização",
-      "source_id": "compete-2030",
+      "id": "eic-pathfinder-2026",
+      "name": "EIC Pathfinder 2026 (Open + Challenges)",
+      "source_id": "eic-accelerator",
       "detected_date": "2026-04-09",
-      "deadline": "2026-05-29",
-      "budget": null,
-      "regulation_url": "https://www.compete2030.gov.pt/avisos/siac-acoes-coletivas-internacionalizacao_compete2030-2025-8/",
+      "deadline": "2026-05-12",
+      "budget": "262000000 EUR",
+      "regulation_url": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-pathfinder_en",
       "pdf_url": null,
-      "priority_score": 65,
+      "priority_score": 95,
       "status": "pending"
     },
     {
@@ -37,6 +37,30 @@
       "status": "pending"
     },
     {
+      "id": "eic-transition-2026",
+      "name": "EIC Transition 2026",
+      "source_id": "eic-accelerator",
+      "detected_date": "2026-04-09",
+      "deadline": "2026-09-16",
+      "budget": "100000000 EUR",
+      "regulation_url": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-transition_en",
+      "pdf_url": null,
+      "priority_score": 45,
+      "status": "pending"
+    },
+    {
+      "id": "norte2030-infraestruturas-acolhimento-empresarial",
+      "name": "Norte 2030 - Infraestruturas e Equipamentos de Apoio à Competitividade",
+      "source_id": "norte-2030",
+      "detected_date": "2026-04-09",
+      "deadline": "2026-06-30",
+      "budget": null,
+      "regulation_url": "https://www.norte2030.pt/concursos/",
+      "pdf_url": null,
+      "priority_score": 25,
+      "status": "pending"
+    },
+    {
       "id": "siid-internacionalizacao-id-horizonte-europa",
       "name": "SIID - Internacionalização da I&D para Operações com Selo de Excelência (Horizonte Europa)",
       "source_id": "ani",
@@ -46,6 +70,18 @@
       "regulation_url": "https://www.ani.pt/pt/financiamento/",
       "pdf_url": null,
       "priority_score": 20,
+      "status": "pending"
+    },
+    {
+      "id": "norte2030-siid-vinnovate",
+      "name": "SIID I&D Empresarial - Projetos Demonstradores - Vinnovate 2025 (Norte 2030)",
+      "source_id": "norte-2030",
+      "detected_date": "2026-04-09",
+      "deadline": "2026-12-02",
+      "budget": null,
+      "regulation_url": "https://www.norte2030.pt/concursos/",
+      "pdf_url": null,
+      "priority_score": 5,
       "status": "pending"
     }
   ],
@@ -156,6 +192,15 @@
       "detected_date": "2026-04-09",
       "current_state": "aberto",
       "last_state_check": "2026-04-09"
+    },
+    {
+      "id": "siac-acoes-coletivas-internacionalizacao",
+      "source": "compete-2030",
+      "file": "instrumentos/siac-acoes-coletivas-internacionalizacao.html",
+      "published_date": "2026-04-09",
+      "detected_date": "2026-04-09",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-09"
     }
   ],
   "source_last_checked": {
@@ -164,6 +209,7 @@
     "eic-accelerator": "2026-04-09",
     "ani": "2026-04-09",
     "iapmei": "2026-04-09",
-    "prr": "2026-04-09"
+    "prr": "2026-04-09",
+    "norte-2030": "2026-04-09"
   }
 }
