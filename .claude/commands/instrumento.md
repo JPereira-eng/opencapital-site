@@ -149,6 +149,11 @@ Define antes de escrever:
 - **slug**: kebab-case, descritivo (ex: `sifide-2`, `rfai`, `horizonte-europa`, `business-angels`)
 - **nome_instrumento**: nome completo e oficial (ex: `SIFIDE II`, `Portugal 2030`, `EIC Accelerator`)
 - **categoria_badge**: uma de `Financiamento Publico`, `Investimento Privado`, `Fiscal`, `Inovacao`, `Estrategia`
+- **categoria_card**: codigo para o filtro em solucoes.html — uma de: `nr` (Nao Reembolsavel), `priv` (Investimento Privado), `div` (Divida), `hib` (Hibridos), `fiscal` (Incentivos Fiscais), `outros` (Outros)
+- **estado**: uma de: `aberto`, `fechado`, `previsto`
+- **entidade**: codigo da entidade fonte — uma de: `pt2030`, `ani`, `iapmei`, `bfomento`, `aicep`, `at`, `pventures`, `compete`, `prr`, `ue`
+- **tipo_org**: lista separada por virgulas dos tipos de organizacao elegiveis — combinacao de: `startup`, `micro`, `pme`, `grande-empresa`, `associacao`, `municipio`, `universidade`
+- **regiao**: lista separada por virgulas das regioes — combinacao de: `nacional`, `norte`, `centro`, `lisboa`, `alentejo`, `algarve`, `acores`, `madeira`, `multi-regiao`
 - **hero_tagline**: 1 frase clara sobre o instrumento, max 20 palavras (ex: "O incentivo fiscal que transforma investimento em I&D em poupanca imediata de IRC.")
 - **meta_fact_1_label** + **meta_fact_1_valor**: dado chave 1 (ex: Dotacao: €23 mil milhoes)
 - **meta_fact_2_label** + **meta_fact_2_valor**: dado chave 2 (ex: Beneficio maximo: 82.5% das despesas)
@@ -617,7 +622,7 @@ const fs = require('fs');
 let html = fs.readFileSync('solucoes.html', 'utf8');
 
 const newCard = \`
-      <div class=\"instrument-card reveal reveal-d1\" data-category=\"[CAT]\" data-id=\"[SLUG]\" data-href=\"instrumentos/[SLUG].html\">
+      <div class=\"instrument-card reveal reveal-d1\" data-category=\"[CAT]\" data-estado=\"[ESTADO]\" data-entidade=\"[ENTIDADE]\" data-tipo-org=\"[TIPO_ORG]\" data-regiao=\"[REGIAO]\" data-id=\"[SLUG]\" data-href=\"instrumentos/[SLUG].html\">
         <div class=\"card-header\">
           <span class=\"cat-badge cat-[CAT]\">[CAT_LABEL]</span>
           <span class=\"status-pill [STATUS_CLASS]\">[STATUS_TEXT]</span>
@@ -646,7 +651,13 @@ console.log('Card inserido em solucoes.html');
 "
 ```
 
-Substituir todos os placeholders `[CAT]`, `[SLUG]`, `[CAT_LABEL]`, `[STATUS_CLASS]`, `[STATUS_TEXT]`, `[NOME_INSTRUMENTO]`, `[CARD_TAGLINE]`, `[HIGHLIGHT_1]`, `[HIGHLIGHT_2]` com os valores reais antes de executar.
+Substituir todos os placeholders com os valores reais antes de executar:
+- `[CAT]` — valor de `categoria_card` (nr, priv, div, hib, fiscal, outros)
+- `[ESTADO]` — valor de `estado` (aberto, fechado, previsto)
+- `[ENTIDADE]` — valor de `entidade` (pt2030, ani, iapmei, bfomento, aicep, at, pventures, compete, prr, ue)
+- `[TIPO_ORG]` — valor de `tipo_org` (ex: "micro,pme" ou "startup,pme,grande-empresa")
+- `[REGIAO]` — valor de `regiao` (ex: "nacional" ou "norte,centro")
+- `[SLUG]`, `[CAT_LABEL]`, `[STATUS_CLASS]`, `[STATUS_TEXT]`, `[NOME_INSTRUMENTO]`, `[CARD_TAGLINE]`, `[HIGHLIGHT_1]`, `[HIGHLIGHT_2]`
 
 ### Passo 5 - Deploy
 

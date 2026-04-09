@@ -226,21 +226,21 @@
     }
     .filter-inner {
       display:flex; align-items:center; justify-content:space-between;
-      gap:20px; height:60px;
+      gap:12px; min-height:52px; padding:8px 0;
       max-width:1200px; margin:0 auto;
     }
-    .filter-tabs { display:flex; align-items:center; gap:6px; }
+    .filter-tabs { display:flex; align-items:center; gap:4px; flex-wrap:wrap; flex:1; min-width:0; }
     .filter-btn {
-      font-family:var(--font); font-size:12px; font-weight:500;
-      letter-spacing:0.12em; text-transform:uppercase;
+      font-family:var(--font); font-size:11px; font-weight:500;
+      letter-spacing:0.10em; text-transform:uppercase;
       color:var(--grey-mid); background:transparent;
-      border:1px solid transparent; padding:7px 16px;
+      border:1px solid transparent; padding:6px 13px;
       cursor:pointer; transition:var(--transition); white-space:nowrap;
     }
     .filter-btn:hover { color:var(--navy); border-color:var(--grey-light); }
     .filter-btn.active { background:var(--navy); color:var(--white); border-color:var(--navy); }
 
-    .filter-right { display:flex; align-items:center; gap:20px; flex-shrink:0; }
+    .filter-right { display:flex; align-items:center; gap:16px; flex-shrink:0; }
     .filter-count { font-size:12px; font-weight:300; color:var(--grey-mid); white-space:nowrap; }
 
     .filter-search { display:flex; align-items:center; }
@@ -253,6 +253,37 @@
     }
     .filter-search input:focus { border-bottom-color:var(--navy); }
     .filter-search input::placeholder { color:var(--grey-light); font-size:13px; }
+
+    /* ─── FILTER ROW SECONDARY (dropdowns) ──────── */
+    .filter-row-secondary {
+      min-height:44px; padding:6px 0;
+      border-top:1px solid var(--grey-light);
+    }
+    .filter-selects { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+    .filter-select {
+      font-family:var(--font); font-size:11px; font-weight:500;
+      letter-spacing:0.08em; text-transform:uppercase;
+      color:var(--grey-mid); background:var(--white);
+      border:1px solid var(--grey-light); border-radius:0;
+      padding:6px 28px 6px 12px; cursor:pointer;
+      transition:var(--transition);
+      -webkit-appearance:none; -moz-appearance:none; appearance:none;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpolyline points='1,1 5,5 9,1' fill='none' stroke='%237A7A7A' stroke-width='1'/%3E%3C/svg%3E");
+      background-repeat:no-repeat; background-position:right 10px center;
+    }
+    .filter-select:hover { border-color:var(--navy); color:var(--navy); }
+    .filter-select:focus { outline:none; border-color:var(--navy); color:var(--navy); }
+    .filter-select.has-value { color:var(--navy); border-color:var(--navy); font-weight:600; }
+    .filter-clear {
+      font-family:var(--font); font-size:11px; font-weight:400;
+      letter-spacing:0.06em; color:var(--grey-mid);
+      background:transparent; border:none; cursor:pointer;
+      transition:var(--transition); padding:6px 0;
+      text-decoration:underline; text-underline-offset:3px;
+      white-space:nowrap;
+    }
+    .filter-clear:hover { color:var(--navy); }
+    .filter-clear.hidden { display:none; }
 
     /* ─── INSTRUMENTS SECTION ─────────────────────── */
     .instruments-section { padding:60px 80px; background:var(--white); }
@@ -365,6 +396,9 @@
       .filter-btn { font-size:11px; padding:6px 12px; }
       .filter-search input { width:140px; }
       .filter-count { display:none; }
+      .filter-row-secondary { height:auto; padding:10px 0; }
+      .filter-selects { gap:6px; }
+      .filter-select { font-size:10px; padding:5px 24px 5px 8px; }
 
       .instruments-section { padding:32px 20px; }
       .instruments-grid { grid-template-columns:1fr; }
@@ -450,6 +484,7 @@
 
   <!-- ─── FILTER BAR ────────────────────────────────── -->
   <div class="filter-bar" id="filterBar">
+    <!-- Linha 1: Categoria (botões) + contagem + pesquisa -->
     <div class="filter-inner">
       <div class="filter-tabs">
         <button class="filter-btn active" data-filter="all" onclick="filterCards('all')">Todos</button>
@@ -461,11 +496,58 @@
         <button class="filter-btn" data-filter="outros" onclick="filterCards('outros')">Outros</button>
       </div>
       <div class="filter-right">
-        <span class="filter-count" id="filterCount">18 instrumentos</span>
+        <span class="filter-count" id="filterCount"></span>
         <div class="filter-search">
           <input type="text" id="searchInput" placeholder="Pesquisar..." oninput="searchCards(this.value)" aria-label="Pesquisar instrumentos">
         </div>
       </div>
+    </div>
+    <!-- Linha 2: Filtros secundários (dropdowns) -->
+    <div class="filter-inner filter-row-secondary">
+      <div class="filter-selects">
+        <select class="filter-select" id="filterEstado" onchange="applyFilters()">
+          <option value="all">Estado: Todos</option>
+          <option value="aberto">Aberto</option>
+          <option value="fechado">Fechado</option>
+          <option value="previsto">Previsto</option>
+        </select>
+        <select class="filter-select" id="filterEntidade" onchange="applyFilters()">
+          <option value="all">Entidade: Todas</option>
+          <option value="pt2030">Portugal 2030</option>
+          <option value="ani">ANI</option>
+          <option value="iapmei">IAPMEI</option>
+          <option value="bfomento">Banco de Fomento</option>
+          <option value="aicep">AICEP</option>
+          <option value="at">Autoridade Tributária</option>
+          <option value="pventures">Portugal Ventures</option>
+          <option value="compete">COMPETE 2030</option>
+          <option value="prr">PRR</option>
+          <option value="ue">União Europeia</option>
+        </select>
+        <select class="filter-select" id="filterTipoOrg" onchange="applyFilters()">
+          <option value="all">Organização: Todas</option>
+          <option value="startup">Startups</option>
+          <option value="micro">Microempresas</option>
+          <option value="pme">PME</option>
+          <option value="grande-empresa">Grandes Empresas</option>
+          <option value="associacao">Associações</option>
+          <option value="municipio">Municípios</option>
+          <option value="universidade">Universidades</option>
+        </select>
+        <select class="filter-select" id="filterRegiao" onchange="applyFilters()">
+          <option value="all">Região: Todas</option>
+          <option value="nacional">Nacional</option>
+          <option value="norte">Norte</option>
+          <option value="centro">Centro</option>
+          <option value="lisboa">Lisboa</option>
+          <option value="alentejo">Alentejo</option>
+          <option value="algarve">Algarve</option>
+          <option value="acores">Açores</option>
+          <option value="madeira">Madeira</option>
+          <option value="multi-regiao">Multi-região</option>
+        </select>
+      </div>
+      <button class="filter-clear" id="filterClear" onclick="clearAllFilters()">Limpar filtros</button>
     </div>
   </div>
 
@@ -473,7 +555,7 @@
   <section class="instruments-section" id="instrumentos">
     <div class="instruments-grid" id="instrumentsGrid">
 
-      <div class="instrument-card reveal reveal-d1" data-category="nr" data-id="si-base-territorial" data-featured="true" data-href="instrumentos/si-base-territorial.html">
+      <div class="instrument-card reveal reveal-d1" data-category="nr" data-estado="aberto" data-entidade="pt2030" data-tipo-org="micro,pme" data-regiao="alentejo" data-id="si-base-territorial" data-featured="true" data-href="instrumentos/si-base-territorial.html">
         <div class="card-header">
           <span class="cat-badge cat-nr">Não Reembolsável</span>
           <span class="status-pill status-open">Aberto até 01/09/2026</span>
@@ -488,7 +570,7 @@
         <span class="card-cta">Ver artigo</span>
       </div>
 
-      <div class="instrument-card reveal reveal-d2" data-category="nr" data-id="sibt-medio-tejo" data-featured="true" data-href="instrumentos/sibt-medio-tejo.html">
+      <div class="instrument-card reveal reveal-d2" data-category="nr" data-estado="aberto" data-entidade="pt2030" data-tipo-org="micro,pme" data-regiao="centro" data-id="sibt-medio-tejo" data-featured="true" data-href="instrumentos/sibt-medio-tejo.html">
         <div class="card-header">
           <span class="cat-badge cat-nr">Não Reembolsável</span>
           <span class="status-pill status-open">Aberto até 30/09/2026</span>
@@ -503,7 +585,7 @@
         <span class="card-cta">Ver artigo</span>
       </div>
 
-      <div class="instrument-card reveal reveal-d3" data-category="nr" data-id="mar2030-pesca-madeira" data-featured="true" data-href="instrumentos/mar-2030-compensacao-pesca-madeira.html">
+      <div class="instrument-card reveal reveal-d3" data-category="nr" data-estado="aberto" data-entidade="pt2030" data-tipo-org="micro,pme,grande-empresa" data-regiao="madeira" data-id="mar2030-pesca-madeira" data-featured="true" data-href="instrumentos/mar-2030-compensacao-pesca-madeira.html">
         <div class="card-header">
           <span class="cat-badge cat-nr">Não Reembolsável</span>
           <span class="status-pill status-open">Aberto até 29/05/2026</span>
@@ -518,7 +600,7 @@
         <span class="card-cta">Ver artigo</span>
       </div>
 
-      <div class="instrument-card reveal reveal-d1" data-category="nr" data-id="corredores-verdes-centro" data-href="instrumentos/corredores-verdes-centro.html">
+      <div class="instrument-card reveal reveal-d1" data-category="nr" data-estado="aberto" data-entidade="pt2030" data-tipo-org="municipio" data-regiao="centro" data-id="corredores-verdes-centro" data-href="instrumentos/corredores-verdes-centro.html">
         <div class="card-header">
           <span class="cat-badge cat-nr">Não Reembolsável</span>
           <span class="status-pill status-open">Aberto até 30/09/2026</span>
@@ -1012,16 +1094,16 @@
     };
 
     /* ─────────────────────────────────────────────────
-       STATE
+       STATE — filtros multi-dimensão
     ───────────────────────────────────────────────── */
-    let activeFilter = 'all';
+    let activeCategory = 'all';
     let activeSearch = '';
 
     /* ─────────────────────────────────────────────────
-       FILTER
+       FILTER — categoria (botões)
     ───────────────────────────────────────────────── */
     function filterCards(cat) {
-      activeFilter = cat;
+      activeCategory = cat;
       document.querySelectorAll('.filter-btn').forEach(function(btn) {
         btn.classList.toggle('active', btn.dataset.filter === cat);
       });
@@ -1037,28 +1119,91 @@
     }
 
     /* ─────────────────────────────────────────────────
-       APPLY FILTERS
+       CLEAR ALL FILTERS
+    ───────────────────────────────────────────────── */
+    function clearAllFilters() {
+      activeCategory = 'all';
+      activeSearch = '';
+      document.querySelectorAll('.filter-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.dataset.filter === 'all');
+      });
+      document.getElementById('searchInput').value = '';
+      document.getElementById('filterEstado').value = 'all';
+      document.getElementById('filterEntidade').value = 'all';
+      document.getElementById('filterTipoOrg').value = 'all';
+      document.getElementById('filterRegiao').value = 'all';
+      updateSelectStyles();
+      applyFilters();
+    }
+
+    /* ─────────────────────────────────────────────────
+       SELECT STYLES — highlight quando tem valor activo
+    ───────────────────────────────────────────────── */
+    function updateSelectStyles() {
+      ['filterEstado','filterEntidade','filterTipoOrg','filterRegiao'].forEach(function(id) {
+        var el = document.getElementById(id);
+        el.classList.toggle('has-value', el.value !== 'all');
+      });
+      // Mostrar/ocultar botão limpar
+      var anyActive = activeCategory !== 'all' || activeSearch ||
+        document.getElementById('filterEstado').value !== 'all' ||
+        document.getElementById('filterEntidade').value !== 'all' ||
+        document.getElementById('filterTipoOrg').value !== 'all' ||
+        document.getElementById('filterRegiao').value !== 'all';
+      document.getElementById('filterClear').classList.toggle('hidden', !anyActive);
+    }
+
+    /* ─────────────────────────────────────────────────
+       APPLY FILTERS — cruzamento de todas as dimensões
     ───────────────────────────────────────────────── */
     function applyFilters() {
       var cards = document.querySelectorAll('.instrument-card');
       var visibleCount = 0;
 
-      cards.forEach(function(card) {
-        var catMatch = activeFilter === 'all' || card.dataset.category === activeFilter;
-        var searchMatch = true;
+      var fEstado = document.getElementById('filterEstado').value;
+      var fEntidade = document.getElementById('filterEntidade').value;
+      var fTipoOrg = document.getElementById('filterTipoOrg').value;
+      var fRegiao = document.getElementById('filterRegiao').value;
 
+      cards.forEach(function(card) {
+        // 1. Categoria (botões)
+        var catMatch = activeCategory === 'all' || card.dataset.category === activeCategory;
+
+        // 2. Estado
+        var estadoMatch = fEstado === 'all' || card.dataset.estado === fEstado;
+
+        // 3. Entidade
+        var entidadeMatch = fEntidade === 'all' || card.dataset.entidade === fEntidade;
+
+        // 4. Tipo de organização (multi-valor: "micro,pme")
+        var tipoOrgMatch = fTipoOrg === 'all';
+        if (!tipoOrgMatch && card.dataset.tipoOrg) {
+          tipoOrgMatch = card.dataset.tipoOrg.split(',').indexOf(fTipoOrg) !== -1;
+        }
+
+        // 5. Região (multi-valor possível: "norte,centro")
+        var regiaoMatch = fRegiao === 'all';
+        if (!regiaoMatch && card.dataset.regiao) {
+          regiaoMatch = card.dataset.regiao.split(',').indexOf(fRegiao) !== -1;
+        }
+
+        // 6. Pesquisa texto
+        var searchMatch = true;
         if (activeSearch) {
           var title = card.querySelector('.card-title').textContent.toLowerCase();
           var tagline = card.querySelector('.card-tagline').textContent.toLowerCase();
-          searchMatch = title.includes(activeSearch) || tagline.includes(activeSearch);
+          var highlights = card.querySelector('.card-highlights');
+          var highlightText = highlights ? highlights.textContent.toLowerCase() : '';
+          searchMatch = title.includes(activeSearch) || tagline.includes(activeSearch) || highlightText.includes(activeSearch);
         }
 
-        var visible = catMatch && searchMatch;
+        var visible = catMatch && estadoMatch && entidadeMatch && tipoOrgMatch && regiaoMatch && searchMatch;
         card.classList.toggle('hidden', !visible);
         if (visible) visibleCount++;
       });
 
       updateCount(visibleCount);
+      updateSelectStyles();
       var noResults = document.getElementById('noResults');
       noResults.classList.toggle('visible', visibleCount === 0);
     }
@@ -1070,6 +1215,13 @@
       var el = document.getElementById('filterCount');
       el.textContent = count === 1 ? '1 instrumento': count + ' instrumentos';
     }
+
+    /* ─── Contagem inicial ao carregar ─── */
+    (function() {
+      var total = document.querySelectorAll('.instrument-card').length;
+      updateCount(total);
+      document.getElementById('filterClear').classList.add('hidden');
+    })();
 
     /* ─────────────────────────────────────────────────
        CARD CLICK · navigate to article page
