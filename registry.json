@@ -5,37 +5,13 @@
     "created": "2026-04-09"
   },
   "stats": {
-    "total_published": 8,
-    "total_in_queue": 7,
+    "total_published": 10,
+    "total_in_queue": 5,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-09",
     "sources_checked_this_week": ["portugal-2030", "compete-2030", "eic-accelerator"]
   },
   "queue": [
-    {
-      "id": "step-idi-empresarial-digital-biotecnologia",
-      "name": "STEP I&D&I Empresarial - Digital e Biotecnologia",
-      "source_id": "compete-2030",
-      "detected_date": "2026-04-09",
-      "deadline": "2026-04-30",
-      "budget": null,
-      "regulation_url": "https://www.compete2030.gov.pt/avisos/step-idi-empresarial-digital-e-biotecnologia-operacoes_mpr-2026-2/",
-      "pdf_url": null,
-      "priority_score": 115,
-      "status": "pending"
-    },
-    {
-      "id": "eic-accelerator-2026",
-      "name": "EIC Accelerator 2026",
-      "source_id": "eic-accelerator",
-      "detected_date": "2026-04-09",
-      "deadline": "2026-05-06",
-      "budget": null,
-      "regulation_url": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
-      "pdf_url": null,
-      "priority_score": 115,
-      "status": "pending"
-    },
     {
       "id": "step-scale-up-eic",
       "name": "EIC STEP Scale Up",
@@ -155,6 +131,24 @@
       "id": "step-idi-empresarial-energia",
       "source": "compete-2030",
       "file": "instrumentos/step-idi-empresarial-energia.html",
+      "published_date": "2026-04-09",
+      "detected_date": "2026-04-09",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-09"
+    },
+    {
+      "id": "step-idi-empresarial-digital-biotecnologia",
+      "source": "compete-2030",
+      "file": "instrumentos/step-idi-empresarial-digital-biotecnologia.html",
+      "published_date": "2026-04-09",
+      "detected_date": "2026-04-09",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-09"
+    },
+    {
+      "id": "eic-accelerator-2026",
+      "source": "eic-accelerator",
+      "file": "instrumentos/eic-accelerator-2026.html",
       "published_date": "2026-04-09",
       "detected_date": "2026-04-09",
       "current_state": "aberto",
