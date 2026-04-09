@@ -5,9 +5,8 @@
     "created": "2026-04-09"
   },
   "stats": {
-    "total_published": 16,
+    "total_published": 12,
     "total_in_queue": 4,
-
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-09",
     "sources_checked_this_week": ["portugal-2030", "compete-2030", "eic-accelerator", "ani", "iapmei", "prr", "norte-2030"]
@@ -63,34 +62,6 @@
     }
   ],
   "published": [
-    {
-      "id": "si-base-territorial",
-      "source": "pt2030",
-      "file": "instrumentos/si-base-territorial.html",
-      "published_date": "2026-03-28",
-      "detected_date": "2026-03-28"
-    },
-    {
-      "id": "sibt-medio-tejo",
-      "source": "pt2030",
-      "file": "instrumentos/sibt-medio-tejo.html",
-      "published_date": "2026-04-01",
-      "detected_date": "2026-04-01"
-    },
-    {
-      "id": "mar2030-pesca-madeira",
-      "source": "pt2030",
-      "file": "instrumentos/mar-2030-compensacao-pesca-madeira.html",
-      "published_date": "2026-04-03",
-      "detected_date": "2026-04-03"
-    },
-    {
-      "id": "corredores-verdes-centro",
-      "source": "pt2030",
-      "file": "instrumentos/corredores-verdes-centro.html",
-      "published_date": "2026-04-07",
-      "detected_date": "2026-04-07"
-    },
     {
       "id": "portugal-2030",
       "source": "pt2030",
