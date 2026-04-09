@@ -155,9 +155,8 @@
     /* ─── PAGE HERO ───────────────────────────────── */
     .page-hero {
       background:var(--navy);
-      padding:130px 80px 60px;
+      padding:120px 80px 44px;
       position:relative; overflow:hidden;
-      min-height:280px;
       display:flex; flex-direction:column; justify-content:flex-end;
     }
     .page-hero::before {
@@ -184,26 +183,6 @@
     .hero-eyebrow { font-size:14px; font-weight:600; letter-spacing:0.34em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
     .hero-h1 { font-size:54px; font-weight:700; color:var(--white); line-height:1.07; letter-spacing:-0.01em; margin-bottom:16px; max-width:680px; }
     .hero-sub { font-size:20px; font-weight:300; color:rgba(255,255,255,0.62); line-height:1.6; max-width:580px; letter-spacing:0.02em; }
-    .hero-actions { display:flex; gap:14px; align-items:center; margin-top:32px; flex-wrap:wrap; }
-    .hero-cta-primary {
-      display:inline-flex; align-items:center; gap:10px;
-      font-size:13px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase;
-      background:var(--gold); color:var(--white);
-      padding:15px 30px; text-decoration:none;
-      transition:var(--transition);
-    }
-    .hero-cta-primary span { font-size:15px; letter-spacing:0; transition:transform 0.3s ease; }
-    .hero-cta-primary:hover { background:#B8945A; transform:translateY(-1px); box-shadow:0 6px 20px rgba(201,169,110,0.28); }
-    .hero-cta-primary:hover span { transform:translateY(3px); }
-    .hero-cta-ghost {
-      display:inline-flex; align-items:center;
-      font-size:13px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase;
-      background:transparent; color:var(--white);
-      border:1px solid rgba(255,255,255,0.32);
-      padding:14px 29px; text-decoration:none;
-      transition:var(--transition);
-    }
-    .hero-cta-ghost:hover { border-color:var(--white); background:rgba(255,255,255,0.07); }
 
     /* ─── INTRO BLOCK ─────────────────────────────── */
     .intro-block { background:var(--white); padding:64px 80px 24px; }
@@ -383,8 +362,7 @@
       .page-hero { padding:120px 24px 52px; }
       .hero-h1 { font-size:36px; }
       .hero-sub { font-size:16px; }
-      .hero-actions { gap:10px; margin-top:24px; }
-      .hero-cta-primary, .hero-cta-ghost { padding:13px 22px; font-size:12px; letter-spacing:0.18em; }
+      .page-hero { padding:100px 24px 36px; }
       .intro-block { padding:40px 24px 8px; }
       .intro-text { font-size:15px; line-height:1.75; }
 
@@ -469,10 +447,6 @@
     <p class="hero-eyebrow">Biblioteca de Instrumentos</p>
     <h1 class="hero-h1">Capital disponível para a sua empresa.</h1>
     <p class="hero-sub">Todo o capital ao alcance da sua empresa, num só lugar.</p>
-    <div class="hero-actions">
-      <a href="#instrumentos" class="hero-cta-primary">Ver instrumentos <span>↓</span></a>
-      <a href="https://calendly.com/tech2business" target="_blank" class="hero-cta-ghost">Falar connosco</a>
-    </div>
   </section>
 
   <!-- ─── FILTER SECTION (search + dropdowns) ─────── -->

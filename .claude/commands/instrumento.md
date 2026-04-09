@@ -411,7 +411,7 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
     <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
   </a>
   <ul class="nav-links">
-    <li><a href="../solucoes.html" class="active">Soluções</a></li>
+    <li><a href="../solucoes.html" class="active">Biblioteca</a></li>
     <li><a href="../conhecimento.html">Conhecimento</a></li>
     <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
     <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
@@ -428,7 +428,7 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
   <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-mobile-menu" id="mobileMenu">
-  <a href="../solucoes.html">Soluções</a>
+  <a href="../solucoes.html">Biblioteca</a>
   <a href="../conhecimento.html">Conhecimento</a>
   <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
   <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
@@ -443,7 +443,7 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
     <nav class="breadcrumb">
       <a href="../index.html">Início</a>
       <span class="breadcrumb-sep">/</span>
-      <a href="../solucoes.html">Soluções</a>
+      <a href="../solucoes.html">Biblioteca</a>
       <span class="breadcrumb-sep">/</span>
       <span class="breadcrumb-current">[NOME_INSTRUMENTO]</span>
     </nav>
