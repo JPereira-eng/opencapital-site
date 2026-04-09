@@ -238,7 +238,19 @@ Adicionar ou atualizar o campo `state_history` para cada instrumento em `publish
 
 ## PASSO 4 — Criar artigos da fila
 
-### 4a. Selecionar artigos da fila
+### 4a. Ler obrigatoriamente a skill de instrumento
+
+**ANTES de escrever qualquer artigo, ler o ficheiro `.claude/commands/instrumento.md`.**
+
+Este ficheiro contém o template HTML completo, as classes CSS obrigatórias, a estrutura da navbar, do hero, da sidebar e do footer. Nunca escrever um artigo sem ter lido este ficheiro nesta execução — o contexto de conversas anteriores não é suficiente.
+
+```
+Read .claude/commands/instrumento.md
+```
+
+Só avançar para os passos seguintes depois de ter o template em contexto ativo.
+
+### 4b. Selecionar artigos da fila
 
 Ordenar a `queue` por `priority_score` (descendente).
 
