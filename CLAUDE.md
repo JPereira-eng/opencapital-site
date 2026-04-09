@@ -324,7 +324,7 @@ Logo (→ index.html) · Soluções · Conhecimento · Capital Simulator `em bre
 ```
 
 ### Footer columns
-- **Col 1 (2.2fr):** Logo (57px) + description + tagline "Capital, made clear."
+- **Col 1 (2.2fr):** Logo (72px, `.f-logo-img`) + description + tagline "O capital de que a sua empresa precisa."
 - **Col 2:** Soluções — Portugal 2030 · Fundos de Investimento · Benefícios Fiscais · Prémios de Inovação
 - **Col 3:** Plataforma — Capital Simulator `em breve` · Tech2Business `em breve` · Conhecimento · Parceiros
 - **Col 4:** Empresa — Sobre Nós · Equipa · Carreiras · Contacto

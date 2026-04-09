@@ -391,7 +391,7 @@ Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
     .footer{background:var(--navy-deep);padding:56px 80px 34px;}
     .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
     .f-logo-row{display:flex;align-items:center;}
-    .f-logo-img{height:36px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
     .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
     .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
     .f-links{list-style:none;}
