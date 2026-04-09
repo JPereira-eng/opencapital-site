@@ -3,461 +3,475 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STEP - I&D&I Empresarial - Energia | Open Capital</title>
+  <title>STEP I&D&I Empresarial – Energia: Open Capital</title>
+  <meta name="description" content="Guia completo ao STEP I&D&I Empresarial Energia: €86M FEDER para investigação e inovação em tecnologias energéticas TRL 4-7. Elegibilidade, taxas e candidatura.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --navy: #1A3A5C;
-      --navy-deep: #0D1F33;
-      --gold: #C9A96E;
-      --white: #FFFFFF;
-      --grey-light: #E5E5E5;
-      --grey-mid: #7A7A7A;
-      --grey-dark: #2A2A2A;
-      --font: 'Montserrat', sans-serif;
-      --transition: all 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      --shadow: 0 8px 40px rgba(26,58,92,0.10);
-    }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:var(--font); background:var(--white); color:var(--grey-dark); -webkit-font-smoothing:antialiased; }
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
 
-    .t-eyebrow { font-size:14px; font-weight:600; letter-spacing:0.30em; text-transform:uppercase; color:var(--gold); }
-    .t-h1 { font-size:54px; font-weight:700; letter-spacing:-0.01em; color:var(--navy); line-height:1.05; }
-    .t-h2 { font-size:36px; font-weight:600; letter-spacing:0.01em; color:var(--navy); line-height:1.15; }
-    .t-h3 { font-size:28px; font-weight:500; letter-spacing:0.03em; color:var(--navy); }
-    .t-h4 { font-size:19px; font-weight:500; letter-spacing:0.07em; color:var(--navy); }
-    .t-body { font-size:18px; font-weight:400; color:var(--grey-dark); line-height:1.85; max-width:580px; }
-    .t-small { font-size:15px; font-weight:300; letter-spacing:0.04em; color:var(--grey-mid); }
+    /* NAVBAR */
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
 
-    .navbar { display:flex; align-items:center; justify-content:space-between; padding:0 40px; height:74px; background:var(--white); border-bottom:1px solid var(--grey-light); position:sticky; top:0; z-index:1000; }
-    .nav-logo-img { height:57px; width:auto; }
-    .nav-links { display:flex; align-items:center; gap:24px; list-style:none; margin-left:auto; }
-    .nav-links a { font-size:15px; font-weight:500; letter-spacing:0.08em; color:var(--grey-dark); text-decoration:none; position:relative; padding-bottom:3px; white-space:nowrap; transition:var(--transition); }
-    .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold); transition:width 0.3s ease; }
-    .nav-links a:hover { color:var(--navy); }
-    .nav-links a:hover::after { width:100%; }
-    .nav-links a.active { color:var(--navy); }
-    .nav-links a.active::after { width:100%; }
-    .nav-cta { font-size:16px; font-weight:600; letter-spacing:0.08em; color:var(--navy); text-decoration:none; border:1px solid var(--navy); padding:9px 18px; margin-left:28px; transition:var(--transition); white-space:nowrap; }
-    .nav-cta:hover { background:var(--navy); color:var(--white); }
+    /* ARTICLE HERO */
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
 
-    .hero { background:var(--navy); padding:0 8%; min-height:60vh; position:relative; overflow:hidden; display:flex; align-items:center; }
-    .hero-gold-bar { position:absolute; left:0; top:0; bottom:0; width:4px; background:linear-gradient(to bottom, var(--gold) 0%, rgba(201,169,110,0.3) 60%, transparent 100%); z-index:2; }
-    .hero-inner { position:relative; z-index:1; width:100%; max-width:700px; padding:100px 0 60px; }
-    .hero-eyebrow { font-size:14px; font-weight:600; letter-spacing:0.34em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; }
-    .hero-h1 { font-size:54px; font-weight:700; color:var(--white); line-height:1.06; letter-spacing:-0.015em; margin-bottom:20px; }
-    .hero-sub { font-size:19px; font-weight:300; color:rgba(255,255,255,0.58); line-height:1.9; max-width:500px; margin-bottom:40px; }
+    /* BACK BAR */
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
 
-    .hero-metabar { display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; margin-top:40px; }
-    .hero-meta { background:rgba(255,255,255,0.05); border-left:3px solid var(--gold); padding:16px; }
-    .hero-meta-label { font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.36); margin-bottom:6px; }
-    .hero-meta-value { font-size:15px; font-weight:500; color:var(--white); line-height:1.5; }
+    /* ARTICLE LAYOUT */
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-body{}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
 
-    .back-bar { background:#F5F5F5; padding:16px 8%; border-bottom:1px solid var(--grey-light); }
-    .back-link { font-size:14px; font-weight:500; letter-spacing:0.06em; color:var(--navy); text-decoration:none; transition:var(--transition); }
-    .back-link:hover { color:var(--gold); }
+    /* SIDEBAR */
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);}
 
-    .article-layout { display:grid; grid-template-columns:1fr 320px; gap:64px; max-width:1200px; margin:0 auto; padding:80px 80px 96px; align-items:start; }
-    article { grid-column:1; }
+    /* SCROLL REVEAL */
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
 
-    .article-sidebar { position:sticky; top:100px; }
+    /* FOOTER */
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:36px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
 
-    article section { margin-bottom:80px; }
-    article h2 { margin-bottom:24px; }
-    article p { margin-bottom:20px; }
-    article ul { margin-left:24px; margin-bottom:20px; }
-    article li { margin-bottom:12px; line-height:1.85; }
-
-    .highlight-box { background:rgba(201,169,110,0.07); border-left:3px solid var(--gold); padding:24px; margin:32px 0; }
-    .highlight-box-title { font-size:16px; font-weight:600; color:var(--navy); margin-bottom:12px; }
-    .highlight-box p { margin:0; }
-
-    .stats-row { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; margin:32px 0; }
-    .stat { text-align:center; }
-    .stat-value { font-size:32px; font-weight:700; color:var(--navy); margin-bottom:8px; }
-    .stat-label { font-size:14px; font-weight:500; color:var(--grey-mid); }
-
-    .trl-scale { margin:32px 0; padding:20px; background:#F5F5F5; border-left:3px solid var(--gold); }
-    .trl-row { display:flex; margin-bottom:16px; }
-    .trl-badge { background:var(--navy); color:var(--white); padding:4px 8px; font-size:12px; font-weight:600; margin-right:16px; min-width:40px; text-align:center; }
-    .trl-desc { flex:1; font-size:14px; color:var(--grey-dark); line-height:1.6; }
-
-    .card { background:var(--white); border:1px solid var(--grey-light); padding:32px; margin-bottom:24px; position:relative; overflow:hidden; }
-    .card::before { content:''; position:absolute; top:0; left:0; width:0; height:2px; background:var(--gold); transition:width 0.4s ease; }
-    .card:hover { box-shadow:var(--shadow); }
-    .card:hover::before { width:100%; }
-
-    .card-title { font-size:19px; font-weight:600; color:var(--navy); margin-bottom:16px; }
-    .card-body { font-size:15px; color:var(--grey-dark); line-height:1.85; }
-    .card-body strong { color:var(--navy); }
-
-    .btn { display:inline-block; font-size:14px; font-weight:600; letter-spacing:0.26em; text-transform:uppercase; border:none; cursor:pointer; transition:var(--transition); text-decoration:none; padding:16px 38px; }
-    .btn-primary { background:var(--navy); color:var(--white); }
-    .btn-primary:hover { background:#0F2A45; box-shadow:0 6px 20px rgba(26,58,92,0.22); }
-    .btn-outline { background:transparent; color:var(--navy); border:1px solid var(--navy); padding:15px 37px; }
-    .btn-outline:hover { background:var(--navy); color:var(--white); }
-
-    .sidebar-card { background:var(--white); border:1px solid var(--grey-light); padding:28px; margin-bottom:32px; }
-    .sidebar-card-title { font-size:16px; font-weight:600; color:var(--navy); margin-bottom:20px; }
-    .sidebar-fact { display:flex; flex-direction:column; gap:8px; padding-bottom:16px; border-bottom:1px solid var(--grey-light); margin-bottom:16px; }
-    .sidebar-fact:last-child { border:none; margin:0; }
-    .sidebar-fact-label { font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); }
-    .sidebar-fact-value { font-size:14px; font-weight:500; color:var(--grey-dark); line-height:1.5; }
-
-    .footer { background:var(--navy-deep); padding:56px 80px 34px; }
-    .footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr; gap:44px; margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.07); }
-    .f-desc { font-size:15px; font-weight:300; color:rgba(255,255,255,0.36); line-height:1.85; margin-top:18px; max-width:260px; }
-    .f-tagline { font-size:16px; font-weight:100; letter-spacing:0.14em; color:var(--gold); margin-top:12px; }
-    .f-col-label { font-size:11px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:rgba(255,255,255,0.24); margin-bottom:16px; }
-    .f-links { list-style:none; }
-    .f-links li { margin-bottom:9px; }
-    .f-links a { font-size:15px; font-weight:300; color:rgba(255,255,255,0.48); text-decoration:none; transition:var(--transition); letter-spacing:0.03em; }
-    .f-links a:hover { color:var(--white); }
-    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
-    .f-copy { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:0.05em; }
-    .f-legal { list-style:none; display:flex; gap:20px; }
-    .f-legal a { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); text-decoration:none; letter-spacing:0.05em; transition:var(--transition); }
-    .f-legal a:hover { color:rgba(255,255,255,0.45); }
-
-    @media (max-width:1024px) {
-      .article-layout { grid-template-columns:1fr; }
-      .article-sidebar { position:static; }
-      .hero-metabar { grid-template-columns:repeat(2, 1fr); }
-    }
+    /* RESPONSIVE */
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
   </style>
 </head>
 <body>
-  <nav class="navbar">
+
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">
     <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
-    <ul class="nav-links">
-      <li><a href="../solucoes.html">Soluções</a></li>
-      <li><a href="../conhecimento.html">Conhecimento</a></li>
-      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge" style="font-size:10px; font-weight:600; letter-spacing:0.06em; color:var(--gold); border:1px solid var(--gold); padding:1px 4px; margin-left:3px; vertical-align:super; line-height:1;">em breve</sup></a></li>
-      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge" style="font-size:10px; font-weight:600; letter-spacing:0.06em; color:var(--gold); border:1px solid var(--gold); padding:1px 4px; margin-left:3px; vertical-align:super; line-height:1;">em breve</sup></a></li>
-      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
-      <li><a href="../parceiros.html">Oportunidades</a></li>
-    </ul>
-    <a href="https://calendly.com/tech2business" target="_blank" class="nav-cta">Contactar</a>
-  </nav>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../solucoes.html" class="active">Biblioteca</a></li>
+    <li><a href="../conhecimento.html">Conhecimento</a></li>
+    <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros.html">Parceiros</a>
+        <a href="../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/tech2business" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../solucoes.html">Biblioteca</a>
+  <a href="../conhecimento.html">Conhecimento</a>
+  <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos.html">Sobre Nós</a>
+  <a href="../parceiros.html">Parceiros</a>
+  <a href="../carreiras.html">Carreiras</a>
+  <a href="https://calendly.com/tech2business" class="nav-mobile-cta">Contactar</a>
+</div>
 
-  <div class="hero">
-    <div class="hero-gold-bar"></div>
-    <div class="hero-inner">
-      <p class="hero-eyebrow">Fundos Europeus</p>
-      <h1 class="hero-h1">STEP I&D&I Empresarial – Energia</h1>
-      <p class="hero-sub">Financiamento para investigação, desenvolvimento e inovação em tecnologias energéticas avançadas.</p>
-      <div class="hero-metabar">
-        <div class="hero-meta">
-          <div class="hero-meta-label">Dotação</div>
-          <div class="hero-meta-value">€86.25M</div>
-        </div>
-        <div class="hero-meta">
-          <div class="hero-meta-label">Financiamento</div>
-          <div class="hero-meta-value">Até 80%</div>
-        </div>
-        <div class="hero-meta">
-          <div class="hero-meta-label">Elegibilidade</div>
-          <div class="hero-meta-value">Empresa + Investigação</div>
-        </div>
-        <div class="hero-meta">
-          <div class="hero-meta-label">Estado</div>
-          <div class="hero-meta-value" style="color:#4ABA68;">Aberto até 30/04</div>
-        </div>
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../index.html">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../solucoes.html">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">STEP I&D&I Empresarial – Energia</span>
+    </nav>
+    <p class="hero-cat">Financiamento Público</p>
+    <h1 class="hero-title">STEP I&D&I Empresarial – Energia</h1>
+    <p class="hero-tagline">€86 milhões para investigação, desenvolvimento e inovação em tecnologias energéticas avançadas, do laboratório à demonstração em ambiente real.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotação</span>
+        <span class="meta-value">€86.250.000</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Financiamento máximo</span>
+        <span class="meta-value">Até 80% (I&D) / 85% ENESII</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Elegibilidade</span>
+        <span class="meta-value">Empresas e entidades I&D</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-open">Aberto até 30/04/2026</span>
       </div>
     </div>
   </div>
+</section>
 
-  <div class="back-bar">
-    <a href="../solucoes.html" class="back-link">← Voltar ao catálogo de instrumentos</a>
-  </div>
+<div class="back-bar">
+  <a href="../solucoes.html" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
 
-  <div class="article-layout">
-    <article>
-      <section>
-        <h2 class="t-h2">Visão Geral</h2>
-        <p class="t-body">O STEP - I&D&I Empresarial complementa o STEP Inovação Produtiva, focando na fase de pesquisa, desenvolvimento e demonstração de tecnologias energéticas de maturidade elevada (TRL 4 ou superior).</p>
-        <p class="t-body">Financia projetos colaborativos entre empresas e entidades de investigação, acelerando a transição para soluções energéticas sustentáveis e críticas para a segurança europeia.</p>
-        <div class="highlight-box">
-          <div class="highlight-box-title">Foco Principal</div>
-          <p>Projetos com maturidade tecnológica a partir do nível 4 (prototipagem inicial) até ao nível 7 (demonstração piloto em ambiente real). Complementa-se com investimento produtivo posterior.</p>
-        </div>
-      </section>
+<div class="article-layout">
+  <article class="article-body">
 
-      <section>
-        <h2 class="t-h2">Quem Pode Candidatar-se</h2>
-        <div class="highlight-box">
-          <div class="highlight-box-title">Tipos de Beneficiários</div>
-          <p>Empresas de qualquer dimensão E entidades não empresariais do sistema de investigação e inovação (ENESII).</p>
-        </div>
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O Instrumento</div>
+      <h2 class="section-h2">O que é o STEP I&D&I Empresarial Energia</h2>
+      <p class="section-text">O STEP I&D&I Empresarial Energia é um aviso do COMPETE 2030 dedicado à componente de investigação e inovação dentro da Strategic Technologies for Europe Platform. Enquanto o STEP Inovação Produtiva financia a produção, este aviso financia o desenvolvimento das tecnologias antes de chegarem à linha de produção.</p>
+      <p class="section-text">O foco está em projetos com maturidade tecnológica entre TRL 4 e TRL 7, o que cobre desde a prototipagem laboratorial até à demonstração piloto em ambiente real. É o instrumento certo para empresas e consórcios que estão a desenvolver novas soluções energéticas e precisam de validar tecnologia antes de investir em produção.</p>
+    </div>
 
-        <h3 class="t-h3">Beneficiários Empresariais</h3>
-        <ul class="t-body">
-          <li><strong>PME</strong> — micro, pequenas e médias empresas</li>
-          <li><strong>Grandes empresas</strong> — acima de 3.000 colaboradores</li>
-          <li><strong>Small Mid Caps</strong> — empresas cotadas com <500M EUR faturação anual</li>
-          <li><strong>Não-PME de investigação</strong> — empresas especializadas em I&D</li>
-        </ul>
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Maturidade tecnológica</div>
+      <h2 class="section-h2">Onde entra este instrumento na escala TRL</h2>
+      <p class="section-text">A escala Technology Readiness Level (TRL) mede o grau de maturidade de uma tecnologia, de 1 (princípio científico) a 9 (sistema em operação comercial). Este aviso cobre exclusivamente os níveis intermédios:</p>
 
-        <h3 class="t-h3">Beneficiários de Investigação</h3>
-        <ul class="t-body">
-          <li><strong>Universidades</strong> — públicas e privadas com estatuto acreditado</li>
-          <li><strong>Centros de investigação</strong> — laboratórios associados, entidades RJIES</li>
-          <li><strong>Spin-offs académicos</strong> — entidades recém-constituídas a partir de universidades</li>
-          <li><strong>Organismos públicos de pesquisa</strong> — INESC, LNEC, IP e similares</li>
-        </ul>
+      <table class="art-table">
+        <thead>
+          <tr><th>Nível TRL</th><th>Descrição</th><th>Elegível</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>TRL 4</strong></td><td>Tecnologia validada em laboratório</td><td>Sim</td></tr>
+          <tr><td><strong>TRL 5</strong></td><td>Tecnologia validada em ambiente relevante</td><td>Sim</td></tr>
+          <tr><td><strong>TRL 6</strong></td><td>Demonstração em ambiente representativo</td><td>Sim</td></tr>
+          <tr><td><strong>TRL 7</strong></td><td>Demonstração piloto em ambiente real</td><td>Sim</td></tr>
+          <tr><td>TRL 1-3</td><td>Investigação básica e aplicada</td><td>Não</td></tr>
+          <tr><td>TRL 8-9</td><td>Sistema certificado e em operação</td><td>Não (ver STEP Inovação Produtiva)</td></tr>
+        </tbody>
+      </table>
 
-        <h3 class="t-h3">Requisitos de Candidatura</h3>
-        <ul class="t-body">
-          <li>Constituição formalizada (não elegível pré-incorporação)</li>
-          <li>Situação regular com Fisco e Segurança Social</li>
-          <li>Contabilidade organizada</li>
-          <li><strong>Mínimo de 2 beneficiários</strong> (cooperação empresa-investigação fortemente incentivada)</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="t-h2">Despesas Elegíveis</h2>
-        <p class="t-body">O instrumento financia atividades de I&D de elevada maturidade, especificamente:</p>
-
-        <h3 class="t-h3">Atividades Científicas</h3>
-        <ul class="t-body">
-          <li><strong>Investigação Aplicada</strong> — pesquisa direcionada para solução de problema energético específico</li>
-          <li><strong>Desenvolvimento Experimental</strong> — criação de protótipos funcionais, validação de conceitos</li>
-          <li><strong>Testes e Demonstração</strong> — operação de protótipos em ambiente controlado ou real</li>
-        </ul>
-
-        <h3 class="t-h3">Investimentos Produtivos Complementares</h3>
-        <ul class="t-body">
-          <li>Equipamento de laboratório especializado</li>
-          <li>Infraestrutura de testes (células de combustível, painéis, baterias, etc.)</li>
-          <li>Instalações de demonstração à escala piloto</li>
-          <li>Software e licenças de simulação</li>
-        </ul>
-
-        <h3 class="t-h3">Custos Elegíveis</h3>
-        <ul class="t-body">
-          <li>Pessoal científico e técnico (até 80% do custo total)</li>
-          <li>Subcontratação de serviços de I&D a terceiros</li>
-          <li>Materiais consumíveis especializados</li>
-          <li>Disseminação e publicação de resultados</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="t-h2">Níveis de Maturidade Tecnológica (TRL)</h2>
-        <p class="t-body">Este instrumento aceita projetos em diferentes fases de maturidade:</p>
-
-        <div class="trl-scale">
-          <div class="trl-row">
-            <div class="trl-badge">TRL 4</div>
-            <div class="trl-desc"><strong>Tecnologia Validada em Laboratório</strong> — prototipagem inicial, comprovação de princípios</div>
-          </div>
-          <div class="trl-row">
-            <div class="trl-badge">TRL 5</div>
-            <div class="trl-desc"><strong>Tecnologia Validada em Ambiente Relevante</strong> — prototipagem avançada, teste em condições simuladas</div>
-          </div>
-          <div class="trl-row">
-            <div class="trl-badge">TRL 6</div>
-            <div class="trl-desc"><strong>Demonstração num Ambiente Representativo</strong> — prototipagem de pré-produção, ambiente relevante</div>
-          </div>
-          <div class="trl-row">
-            <div class="trl-badge">TRL 7</div>
-            <div class="trl-desc"><strong>Demonstração Piloto em Ambiente Real</strong> — protótipo funcionando em escala reduzida, ambiente real</div>
-          </div>
-        </div>
-
-        <div class="highlight-box">
-          <div class="highlight-box-title">Nota sobre TRL 8-9</div>
-          <p>Tecnologias já em fase comercial (TRL 8-9) não são elegíveis. Use o STEP Inovação Produtiva se o projeto é de investimento em produção.</p>
-        </div>
-      </section>
-
-      <section>
-        <h2 class="t-h2">Taxas de Financiamento</h2>
-        <div class="stats-row">
-          <div class="stat">
-            <div class="stat-value">80%</div>
-            <div class="stat-label">Taxa Máxima (Componente I&D)</div>
-          </div>
-          <div class="stat">
-            <div class="stat-value">85%</div>
-            <div class="stat-label">Taxa para ENESII</div>
-          </div>
-          <div class="stat">
-            <div class="stat-value">€1M - €8M</div>
-            <div class="stat-label">Orçamento Típico por Projeto</div>
-          </div>
-        </div>
-
-        <h3 class="t-h3">Componentes de Financiamento</h3>
-        <ul class="t-body">
-          <li><strong>Componente I&D (80%)</strong> — investigação e desenvolvimento experimental</li>
-          <li><strong>Componente Inovação Produtiva (variável)</strong> — sujeita a limites de auxílio estatal regional</li>
-          <li><strong>Cofinanciamento (20%+)</strong> — pode ser privado ou de outras fontes públicas</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="t-h2">Abrangência Geográfica</h2>
-        <p class="t-body">Operações localizadas em regiões NUTS II do Continente português:</p>
-        <ul class="t-body">
-          <li><strong>Norte</strong> — Porto, Braga, Aveiro, Vila Real, Bragança</li>
-          <li><strong>Centro</strong> — Covilhã, Guarda, Leiria, Viseu</li>
-          <li><strong>Alentejo</strong> — Évora, Beja, Portalegre</li>
-        </ul>
-        <p class="t-body">As entidades de investigação podem estar sediadas em qualquer região. O requisito geográfico aplica-se principalmente à localização do beneficiário empresarial.</p>
-      </section>
-
-      <section>
-        <h2 class="t-h2">Prazos e Calendário</h2>
-        <div class="highlight-box">
-          <div class="highlight-box-title">Período de Candidatura</div>
-          <p><strong>30 de janeiro a 30 de abril de 2026</strong> (17h00 de Portugal continental)</p>
-        </div>
-        <p class="t-body">Candidaturas em contínuo. Recomenda-se apresentação antecipada para maior flexibilidade na negociação. Tempo de avaliação indicativo: 120 dias após encerramento do aviso.</p>
-      </section>
-
-      <section>
-        <h2 class="t-h2">Processo de Candidatura</h2>
-        <ol style="margin:32px 0; margin-left:24px;">
-          <li style="margin-bottom:20px; line-height:1.85;"><strong>Formar consórcio</strong> — agrupar empresa(s) + entidade(s) de investigação. Cada membro prepara os seus dados.</li>
-          <li style="margin-bottom:20px; line-height:1.85;"><strong>Registo no Portal COMPETE 2030</strong> — credenciais de Chave Móvel Digital ou certificado digital</li>
-          <li style="margin-bottom:20px; line-height:1.85;"><strong>Documentação técnica</strong> — descrição de I&D, estado da arte, diagrama de Gantt, resultados esperados</li>
-          <li style="margin-bottom:20px; line-height:1.85;"><strong>Plano financeiro</strong> — orçamento por WP (work package), cronograma de despesas, cofinanciamento</li>
-          <li style="margin-bottom:20px; line-height:1.85;"><strong>Submissão online</strong> — upload de documentos assinados, confirmação de entrega</li>
-          <li style="margin-bottom:20px; line-height:1.85;"><strong>Avaliação técnica</strong> — análise de impacto, qualidade científica, viabilidade e capacidade</li>
-        </ol>
-      </section>
-
-      <section>
-        <h2 class="t-h2">Critérios de Avaliação</h2>
-        <p class="t-body">A avaliação centra-se em:</p>
-        <ul class="t-body">
-          <li><strong>Excelência Científica</strong> (30%) — inovação, qualidade metodológica, originalidade</li>
-          <li><strong>Impacto e Relevância</strong> (35%) — contributo para soberania tecnológica, objetivos climáticos europeus</li>
-          <li><strong>Qualidade da Implementação</strong> (25%) — capacidade técnica da equipa, gestão de projeto, cronograma realista</li>
-          <li><strong>Viabilidade Comercial</strong> (10%) — potencial de transferência para produtos/serviços, plano de disseminação</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="t-h2">Dúvidas Frequentes</h2>
-        <div class="card">
-          <div class="card-title">Qual é a duração típica do projeto?</div>
-          <div class="card-body">Entre 24 e 48 meses. Projetos mais curtos (18 meses) podem ser aceites se justificados por maturidade elevada. Projetos muito longos (>48 meses) têm menor prioridade.</div>
-        </div>
-        <div class="card">
-          <div class="card-title">É obrigatório ter uma universidade no consórcio?</div>
-          <div class="card-body">Fortemente recomendado, mas não obrigatório. Projetos 100% empresariais com I&D interno podem ser elegíveis se demonstrarem capacidade científica equivalente.</div>
-        </div>
-        <div class="card">
-          <div class="card-title">Posso candidatar-me apenas com investigação (sem empresa)?</div>
-          <div class="card-body">Não. É obrigatório ter pelo menos uma empresa no consórcio. Pode ser uma PME ou start-up, mas a componente de exploração/comercialização é requisito do instrumento.</div>
-        </div>
-        <div class="card">
-          <div class="card-title">Como se calcula o orçamento para pessoal científico?</div>
-          <div class="card-body">Até 80% do custo de pessoal pode ser financiado. Costuma-se aplicar uma taxa horária (ex: €100/hora para investigador sénior) e multiplicar pelos meses de dedicação ao projeto.</div>
-        </div>
-        <div class="card">
-          <div class="card-title">Posso incluir subcontratação a consultoria?</div>
-          <div class="card-body">Sim, até um limite de 25% do orçamento total. Deve justificar-se por competências específicas não disponíveis internamente.</div>
-        </div>
-      </section>
-    </article>
-
-    <aside class="article-sidebar">
-      <div class="sidebar-card">
-        <div class="sidebar-card-title">Factos Rápidos</div>
-        <div class="sidebar-fact">
-          <div class="sidebar-fact-label">Dotação</div>
-          <div class="sidebar-fact-value">€86.250.000</div>
-        </div>
-        <div class="sidebar-fact">
-          <div class="sidebar-fact-label">Financiamento Máximo</div>
-          <div class="sidebar-fact-value">80% (I&D) / 85% (ENESII)</div>
-        </div>
-        <div class="sidebar-fact">
-          <div class="sidebar-fact-label">Orçamento Típico</div>
-          <div class="sidebar-fact-value">€1M a €8M</div>
-        </div>
-        <div class="sidebar-fact">
-          <div class="sidebar-fact-label">Duração Típica</div>
-          <div class="sidebar-fact-value">24 a 48 meses</div>
-        </div>
-        <div class="sidebar-fact">
-          <div class="sidebar-fact-label">Período de Candidatura</div>
-          <div class="sidebar-fact-value">30/01 a 30/04/2026</div>
-        </div>
-        <div class="sidebar-fact">
-          <div class="sidebar-fact-label">Maturidade (TRL)</div>
-          <div class="sidebar-fact-value">TRL 4 a 7</div>
-        </div>
-        <div class="sidebar-fact">
-          <div class="sidebar-fact-label">Estado</div>
-          <div class="sidebar-fact-value">Aberto</div>
-        </div>
-      </div>
-
-      <div class="sidebar-card">
-        <div class="sidebar-card-title">Próximos Passos</div>
-        <p style="font-size:15px; color:var(--grey-dark); margin-bottom:16px;">Tem um projeto de I&D em energias? Contacte-nos para análise de elegibilidade, formação de consórcio e preparação da candidatura.</p>
-        <a href="https://calendly.com/tech2business" target="_blank" class="btn btn-primary" style="width:100%; text-align:center;">Agendar Reunião</a>
-      </div>
-
-      <div class="sidebar-card">
-        <div class="sidebar-card-title">Instrumentos Relacionados</div>
-        <ul style="list-style:none; font-size:14px;">
-          <li style="margin-bottom:12px;"><a href="step-inovacao-produtiva-energia.html" style="color:var(--navy); text-decoration:none; font-weight:500;">STEP Inovação Produtiva – Energia</a></li>
-          <li style="margin-bottom:12px;"><a href="compete-2030.html" style="color:var(--navy); text-decoration:none; font-weight:500;">COMPETE 2030 (Visão Geral)</a></li>
-          <li style="margin-bottom:12px;"><a href="horizonte-europa.html" style="color:var(--navy); text-decoration:none; font-weight:500;">Horizonte Europa - Cluster Energia</a></li>
-        </ul>
-      </div>
-    </aside>
-  </div>
-
-  <footer class="footer">
-    <div class="footer-grid">
-      <div>
-        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" style="height:57px; width:auto; filter:brightness(0) invert(1);">
-        <p class="f-desc">Tornamos o capital mais claro e acessível para empresas que querem crescer.</p>
-        <p class="f-tagline">Capital, made clear.</p>
-      </div>
-      <div>
-        <p class="f-col-label">Soluções</p>
-        <ul class="f-links">
-          <li><a href="../solucoes.html">Biblioteca de Instrumentos</a></li>
-          <li><a href="../solucoes.html">Fundos de Investimento</a></li>
-          <li><a href="../solucoes.html">Benefícios Fiscais</a></li>
-          <li><a href="../solucoes.html">Prémios de Inovação</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="f-col-label">Plataforma</p>
-        <ul class="f-links">
-          <li><a href="../capital-simulator.html">Capital Simulator</a></li>
-          <li><a href="../tech2business.html">Tech2Business</a></li>
-          <li><a href="../conhecimento.html">Conhecimento</a></li>
-          <li><a href="../parceiros.html">Parceiros</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="f-col-label">Empresa</p>
-        <ul class="f-links">
-          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
-          <li><a href="../sobre-nos.html">Equipa</a></li>
-          <li><a href="../sobre-nos.html">Carreiras</a></li>
-          <li><a href="https://calendly.com/tech2business" target="_blank">Contacto</a></li>
-        </ul>
+      <div class="highlight-box">
+        <div class="highlight-box-title">Complementaridade com o STEP Inovação Produtiva</div>
+        <div class="highlight-box-text">Os dois avisos são complementares por design. Uma empresa pode usar o STEP I&D&I para levar uma tecnologia de TRL 5 a TRL 7 e, concluído esse ciclo, candidatar-se ao STEP Inovação Produtiva para a fase de produção industrial (TRL 8-9).</div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p class="f-copy">© 2025 Open Capital Advisory & Consultancy. Todos os direitos reservados.</p>
-      <ul class="f-legal">
-        <li><a href="#">Privacidade</a></li>
-        <li><a href="#">Termos</a></li>
-        <li><a href="#">Cookies</a></li>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Quem pode candidatar</div>
+      <h2 class="section-h2">Beneficiários elegíveis</h2>
+      <p class="section-text">O aviso está aberto a dois tipos de entidades, que podem candidatar-se individualmente ou em consórcio:</p>
+
+      <div class="stats-row reveal" style="grid-template-columns:repeat(3,1fr);">
+        <div class="stat-cell">
+          <div class="stat-num">80<sup>%</sup></div>
+          <div class="stat-label">Financiamento máximo (empresas)</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">85<sup>%</sup></div>
+          <div class="stat-label">Financiamento máximo (ENESII)</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">€86<sup>M</sup></div>
+          <div class="stat-label">Dotação total (FEDER/PITD)</div>
+        </div>
+      </div>
+
+      <p class="section-text">Empresas elegíveis:</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">PME</strong> (micro, pequenas e médias empresas): financiamento até 80% na componente I&D</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Grandes empresas e Small Mid Caps</strong>: elegíveis mas com taxas potencialmente inferiores consoante a região</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Empresas não-PME de base tecnológica</strong>: elegíveis com demonstração de capacidade I&D interna</li>
+      </ul>
+
+      <p class="section-text">Entidades não empresariais do sistema de I&I (ENESII):</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Universidades públicas e privadas</strong> com estatuto de ensino superior acreditado</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Laboratórios associados e centros de I&D</strong> integrados no sistema científico nacional</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Organismos públicos de investigação</strong> (LNEC, INESC, IP e similares)</li>
+      </ul>
+
+      <div class="highlight-box">
+        <div class="highlight-box-title">Consórcio empresarial obrigatório</div>
+        <div class="highlight-box-text">O aviso exige a presença de pelo menos uma empresa no consórcio. Candidaturas exclusivamente académicas não são elegíveis. A empresa deve demonstrar intenção de exploração comercial dos resultados.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O que financia</div>
+      <h2 class="section-h2">Despesas elegíveis</h2>
+      <p class="section-text">O aviso financia as atividades de I&D e os investimentos produtivos complementares, divididos em duas componentes:</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Investigação aplicada:</strong> pesquisa direcionada para resolução de problema energético concreto, com maturidade TRL 4</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Desenvolvimento experimental:</strong> criação de protótipos, testes em ambiente controlado e demonstração piloto (TRL 5-7)</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Pessoal científico e técnico:</strong> até 80% do orçamento total pode cobrir custos de RH dedicados ao projeto</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Equipamento de laboratório:</strong> instrumentação, sensores, bancos de teste específicos para a tecnologia em desenvolvimento</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Subcontratação I&D:</strong> serviços de terceiros até 25% do orçamento total</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Disseminação de resultados:</strong> publicações científicas, patentes, participação em conferências</li>
       </ul>
     </div>
-  </footer>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Avaliação</div>
+      <h2 class="section-h2">Como são avaliados os projetos</h2>
+      <p class="section-text">A avaliação incide sobre quatro dimensões principais, com pesos indicativos:</p>
+
+      <table class="art-table">
+        <thead>
+          <tr><th>Dimensão</th><th>Peso</th><th>O que avaliam</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Excelência científica</strong></td><td>30%</td><td>Inovação, qualidade metodológica, estado da arte</td></tr>
+          <tr><td><strong>Impacto e relevância</strong></td><td>35%</td><td>Contributo para soberania energética europeia e objetivos climáticos</td></tr>
+          <tr><td><strong>Qualidade da implementação</strong></td><td>25%</td><td>Capacidade técnica da equipa, cronograma, gestão de risco</td></tr>
+          <tr><td><strong>Viabilidade comercial</strong></td><td>10%</td><td>Potencial de transferência para produto, plano de disseminação</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">O STEP I&D&I Empresarial Energia é um instrumento com excelente relação dotação/competitividade. Com €86M para todo o aviso e projetos tipicamente entre €1M e €8M, o número de aprovações esperado é reduzido, o que implica um processo de seleção exigente.</p>
+      <p class="section-text">A chave está na demonstração de impacto concreto para a soberania energética europeia. Projetos que se limitem a "desenvolver tecnologia interessante" sem ligar explicitamente ao mapa de tecnologias críticas da UE têm menor probabilidade de aprovação. O argumento de impacto deve ser construído desde o primeiro parágrafo da candidatura.</p>
+      <p class="section-text">Outro ponto crítico é a composição do consórcio. Consórcios com uma empresa forte combinada com um centro de I&D de reputação reconhecida tendem a pontuar melhor na dimensão de "qualidade da implementação". A Open Capital recomenda investir tempo na seleção do parceiro académico certo, e não apenas em qualquer universidade disponível.</p>
+      <p class="section-text" style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore também o nosso arquivo para mais conteúdos sobre inovação, tecnologia, ciência aplicada e empreendedorismo.</p>
+    </div>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Dotação</div>
+        <div class="sidebar-fact-val">€86.250.000</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Financiamento máximo</div>
+        <div class="sidebar-fact-val">80% (I&D) / 85% (ENESII)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Maturidade elegível</div>
+        <div class="sidebar-fact-val">TRL 4 a TRL 7</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">COMPETE 2030 (FEDER/PITD)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Candidatura</div>
+        <div class="sidebar-fact-val">30/01 a 30/04/2026</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Regiões</div>
+        <div class="sidebar-fact-val">Norte, Centro, Alentejo</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-open">Aberto até 30/04/2026</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Tem um projeto de I&D em energias? Avaliamos elegibilidade e ajudamos a construir o consórcio certo.</div>
+      <a href="https://calendly.com/tech2business" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="step-inovacao-produtiva-energia.html" class="related-link">
+        <span class="related-link-name">STEP Inovação Produtiva – Energia</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="step-inovacao-produtiva-digital-biotecnologia.html" class="related-link">
+        <span class="related-link-name">STEP I&D&I – Digital e Biotecnologia</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="portugal-2030.html" class="related-link">
+        <span class="related-link-name">Portugal 2030</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <div class="f-col-label">Biblioteca</div>
+      <ul class="f-links">
+        <li><a href="../solucoes.html">Portugal 2030</a></li>
+        <li><a href="../solucoes.html">Fundos de Investimento</a></li>
+        <li><a href="../solucoes.html">Benefícios Fiscais</a></li>
+        <li><a href="../solucoes.html">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Plataforma</div>
+      <ul class="f-links">
+        <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../conhecimento.html">Conhecimento</a></li>
+        <li><a href="../parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Empresa</div>
+      <ul class="f-links">
+        <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="../sobre-nos.html">Equipa</a></li>
+        <li><a href="../carreiras.html">Carreiras</a></li>
+        <li><a href="https://calendly.com/tech2business">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2025 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
