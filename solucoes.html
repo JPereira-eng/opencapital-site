@@ -511,8 +511,8 @@
           <option value="fechado">Fechado</option>
           <option value="previsto">Previsto</option>
         </select>
-        <select class="filter-select" id="filterEntidade" onchange="applyFilters()">
-          <option value="all">Entidade: Todas</option>
+        <select class="filter-select" id="filterFonte" onchange="applyFilters()">
+          <option value="all">Fonte: Todas</option>
           <option value="pt2030">Portugal 2030</option>
           <option value="ani">ANI</option>
           <option value="iapmei">IAPMEI</option>
@@ -524,8 +524,8 @@
           <option value="prr">PRR</option>
           <option value="ue">União Europeia</option>
         </select>
-        <select class="filter-select" id="filterTipoOrg" onchange="applyFilters()">
-          <option value="all">Organização: Todas</option>
+        <select class="filter-select" id="filterBeneficiario" onchange="applyFilters()">
+          <option value="all">Beneficiário: Todos</option>
           <option value="startup">Startups</option>
           <option value="micro">Microempresas</option>
           <option value="pme">PME</option>
@@ -536,7 +536,6 @@
         </select>
         <select class="filter-select" id="filterRegiao" onchange="applyFilters()">
           <option value="all">Região: Todas</option>
-          <option value="nacional">Nacional</option>
           <option value="norte">Norte</option>
           <option value="centro">Centro</option>
           <option value="lisboa">Lisboa</option>
@@ -544,7 +543,6 @@
           <option value="algarve">Algarve</option>
           <option value="acores">Açores</option>
           <option value="madeira">Madeira</option>
-          <option value="multi-regiao">Multi-região</option>
         </select>
       </div>
       <button class="filter-clear" id="filterClear" onclick="clearAllFilters()">Limpar filtros</button>
@@ -555,7 +553,7 @@
   <section class="instruments-section" id="instrumentos">
     <div class="instruments-grid" id="instrumentsGrid">
 
-      <div class="instrument-card reveal reveal-d1" data-category="nr" data-estado="aberto" data-entidade="pt2030" data-tipo-org="micro,pme" data-regiao="alentejo" data-id="si-base-territorial" data-featured="true" data-href="instrumentos/si-base-territorial.html">
+      <div class="instrument-card reveal reveal-d1" data-category="nr" data-estado="aberto" data-fonte="pt2030" data-beneficiario="micro,pme" data-regiao="alentejo" data-id="si-base-territorial" data-featured="true" data-href="instrumentos/si-base-territorial.html">
         <div class="card-header">
           <span class="cat-badge cat-nr">Não Reembolsável</span>
           <span class="status-pill status-open">Aberto até 01/09/2026</span>
@@ -570,7 +568,7 @@
         <span class="card-cta">Ver artigo</span>
       </div>
 
-      <div class="instrument-card reveal reveal-d2" data-category="nr" data-estado="aberto" data-entidade="pt2030" data-tipo-org="micro,pme" data-regiao="centro" data-id="sibt-medio-tejo" data-featured="true" data-href="instrumentos/sibt-medio-tejo.html">
+      <div class="instrument-card reveal reveal-d2" data-category="nr" data-estado="aberto" data-fonte="pt2030" data-beneficiario="micro,pme" data-regiao="centro" data-id="sibt-medio-tejo" data-featured="true" data-href="instrumentos/sibt-medio-tejo.html">
         <div class="card-header">
           <span class="cat-badge cat-nr">Não Reembolsável</span>
           <span class="status-pill status-open">Aberto até 30/09/2026</span>
@@ -585,7 +583,7 @@
         <span class="card-cta">Ver artigo</span>
       </div>
 
-      <div class="instrument-card reveal reveal-d3" data-category="nr" data-estado="aberto" data-entidade="pt2030" data-tipo-org="micro,pme,grande-empresa" data-regiao="madeira" data-id="mar2030-pesca-madeira" data-featured="true" data-href="instrumentos/mar-2030-compensacao-pesca-madeira.html">
+      <div class="instrument-card reveal reveal-d3" data-category="nr" data-estado="aberto" data-fonte="pt2030" data-beneficiario="micro,pme,grande-empresa" data-regiao="madeira" data-id="mar2030-pesca-madeira" data-featured="true" data-href="instrumentos/mar-2030-compensacao-pesca-madeira.html">
         <div class="card-header">
           <span class="cat-badge cat-nr">Não Reembolsável</span>
           <span class="status-pill status-open">Aberto até 29/05/2026</span>
@@ -600,7 +598,7 @@
         <span class="card-cta">Ver artigo</span>
       </div>
 
-      <div class="instrument-card reveal reveal-d1" data-category="nr" data-estado="aberto" data-entidade="pt2030" data-tipo-org="municipio" data-regiao="centro" data-id="corredores-verdes-centro" data-href="instrumentos/corredores-verdes-centro.html">
+      <div class="instrument-card reveal reveal-d1" data-category="nr" data-estado="aberto" data-fonte="pt2030" data-beneficiario="municipio" data-regiao="centro" data-id="corredores-verdes-centro" data-href="instrumentos/corredores-verdes-centro.html">
         <div class="card-header">
           <span class="cat-badge cat-nr">Não Reembolsável</span>
           <span class="status-pill status-open">Aberto até 30/09/2026</span>
@@ -1129,8 +1127,8 @@
       });
       document.getElementById('searchInput').value = '';
       document.getElementById('filterEstado').value = 'all';
-      document.getElementById('filterEntidade').value = 'all';
-      document.getElementById('filterTipoOrg').value = 'all';
+      document.getElementById('filterFonte').value = 'all';
+      document.getElementById('filterBeneficiario').value = 'all';
       document.getElementById('filterRegiao').value = 'all';
       updateSelectStyles();
       applyFilters();
@@ -1140,15 +1138,15 @@
        SELECT STYLES — highlight quando tem valor activo
     ───────────────────────────────────────────────── */
     function updateSelectStyles() {
-      ['filterEstado','filterEntidade','filterTipoOrg','filterRegiao'].forEach(function(id) {
+      ['filterEstado','filterFonte','filterBeneficiario','filterRegiao'].forEach(function(id) {
         var el = document.getElementById(id);
         el.classList.toggle('has-value', el.value !== 'all');
       });
       // Mostrar/ocultar botão limpar
       var anyActive = activeCategory !== 'all' || activeSearch ||
         document.getElementById('filterEstado').value !== 'all' ||
-        document.getElementById('filterEntidade').value !== 'all' ||
-        document.getElementById('filterTipoOrg').value !== 'all' ||
+        document.getElementById('filterFonte').value !== 'all' ||
+        document.getElementById('filterBeneficiario').value !== 'all' ||
         document.getElementById('filterRegiao').value !== 'all';
       document.getElementById('filterClear').classList.toggle('hidden', !anyActive);
     }
@@ -1161,8 +1159,8 @@
       var visibleCount = 0;
 
       var fEstado = document.getElementById('filterEstado').value;
-      var fEntidade = document.getElementById('filterEntidade').value;
-      var fTipoOrg = document.getElementById('filterTipoOrg').value;
+      var fFonte = document.getElementById('filterFonte').value;
+      var fBeneficiario = document.getElementById('filterBeneficiario').value;
       var fRegiao = document.getElementById('filterRegiao').value;
 
       cards.forEach(function(card) {
@@ -1173,12 +1171,12 @@
         var estadoMatch = fEstado === 'all' || card.dataset.estado === fEstado;
 
         // 3. Entidade
-        var entidadeMatch = fEntidade === 'all' || card.dataset.entidade === fEntidade;
+        var fonteMatch = fFonte === 'all' || card.dataset.fonte === fFonte;
 
-        // 4. Tipo de organização (multi-valor: "micro,pme")
-        var tipoOrgMatch = fTipoOrg === 'all';
-        if (!tipoOrgMatch && card.dataset.tipoOrg) {
-          tipoOrgMatch = card.dataset.tipoOrg.split(',').indexOf(fTipoOrg) !== -1;
+        // 4. Beneficiário (multi-valor: "micro,pme")
+        var beneficiarioMatch = fBeneficiario === 'all';
+        if (!beneficiarioMatch && card.dataset.beneficiario) {
+          beneficiarioMatch = card.dataset.beneficiario.split(',').indexOf(fBeneficiario) !== -1;
         }
 
         // 5. Região (multi-valor possível: "norte,centro")
@@ -1197,7 +1195,7 @@
           searchMatch = title.includes(activeSearch) || tagline.includes(activeSearch) || highlightText.includes(activeSearch);
         }
 
-        var visible = catMatch && estadoMatch && entidadeMatch && tipoOrgMatch && regiaoMatch && searchMatch;
+        var visible = catMatch && estadoMatch && fonteMatch && beneficiarioMatch && regiaoMatch && searchMatch;
         card.classList.toggle('hidden', !visible);
         if (visible) visibleCount++;
       });

@@ -151,9 +151,9 @@ Define antes de escrever:
 - **categoria_badge**: uma de `Financiamento Publico`, `Investimento Privado`, `Fiscal`, `Inovacao`, `Estrategia`
 - **categoria_card**: codigo para o filtro em solucoes.html — uma de: `nr` (Nao Reembolsavel), `priv` (Investimento Privado), `div` (Divida), `hib` (Hibridos), `fiscal` (Incentivos Fiscais), `outros` (Outros)
 - **estado**: uma de: `aberto`, `fechado`, `previsto`
-- **entidade**: codigo da entidade fonte — uma de: `pt2030`, `ani`, `iapmei`, `bfomento`, `aicep`, `at`, `pventures`, `compete`, `prr`, `ue`
-- **tipo_org**: lista separada por virgulas dos tipos de organizacao elegiveis — combinacao de: `startup`, `micro`, `pme`, `grande-empresa`, `associacao`, `municipio`, `universidade`
-- **regiao**: lista separada por virgulas das regioes — combinacao de: `nacional`, `norte`, `centro`, `lisboa`, `alentejo`, `algarve`, `acores`, `madeira`, `multi-regiao`
+- **fonte**: codigo da fonte/programa — uma de: `pt2030`, `ani`, `iapmei`, `bfomento`, `aicep`, `at`, `pventures`, `compete`, `prr`, `ue`
+- **beneficiario**: lista separada por virgulas dos tipos elegiveis — combinacao de: `startup`, `micro`, `pme`, `grande-empresa`, `associacao`, `municipio`, `universidade`
+- **regiao**: lista separada por virgulas das regioes onde o instrumento esta disponivel. Se o instrumento e nacional, listar TODAS as regioes: `norte,centro,lisboa,alentejo,algarve,acores,madeira`. Se e regional, listar apenas as regioes cobertas (ex: `norte,centro`). Nunca usar "nacional" ou "multi-regiao" como valor.
 - **hero_tagline**: 1 frase clara sobre o instrumento, max 20 palavras (ex: "O incentivo fiscal que transforma investimento em I&D em poupanca imediata de IRC.")
 - **meta_fact_1_label** + **meta_fact_1_valor**: dado chave 1 (ex: Dotacao: €23 mil milhoes)
 - **meta_fact_2_label** + **meta_fact_2_valor**: dado chave 2 (ex: Beneficio maximo: 82.5% das despesas)
@@ -622,7 +622,7 @@ const fs = require('fs');
 let html = fs.readFileSync('solucoes.html', 'utf8');
 
 const newCard = \`
-      <div class=\"instrument-card reveal reveal-d1\" data-category=\"[CAT]\" data-estado=\"[ESTADO]\" data-entidade=\"[ENTIDADE]\" data-tipo-org=\"[TIPO_ORG]\" data-regiao=\"[REGIAO]\" data-id=\"[SLUG]\" data-href=\"instrumentos/[SLUG].html\">
+      <div class=\"instrument-card reveal reveal-d1\" data-category=\"[CAT]\" data-estado=\"[ESTADO]\" data-fonte=\"[FONTE]\" data-beneficiario=\"[BENEFICIARIO]\" data-regiao=\"[REGIAO]\" data-id=\"[SLUG]\" data-href=\"instrumentos/[SLUG].html\">
         <div class=\"card-header\">
           <span class=\"cat-badge cat-[CAT]\">[CAT_LABEL]</span>
           <span class=\"status-pill [STATUS_CLASS]\">[STATUS_TEXT]</span>
@@ -654,9 +654,9 @@ console.log('Card inserido em solucoes.html');
 Substituir todos os placeholders com os valores reais antes de executar:
 - `[CAT]` — valor de `categoria_card` (nr, priv, div, hib, fiscal, outros)
 - `[ESTADO]` — valor de `estado` (aberto, fechado, previsto)
-- `[ENTIDADE]` — valor de `entidade` (pt2030, ani, iapmei, bfomento, aicep, at, pventures, compete, prr, ue)
-- `[TIPO_ORG]` — valor de `tipo_org` (ex: "micro,pme" ou "startup,pme,grande-empresa")
-- `[REGIAO]` — valor de `regiao` (ex: "nacional" ou "norte,centro")
+- `[FONTE]` — valor de `fonte` (pt2030, ani, iapmei, bfomento, aicep, at, pventures, compete, prr, ue)
+- `[BENEFICIARIO]` — valor de `beneficiario` (ex: "micro,pme" ou "startup,pme,grande-empresa")
+- `[REGIAO]` — valor de `regiao` (ex: "norte,centro" ou todas as 7 regioes se nacional)
 - `[SLUG]`, `[CAT_LABEL]`, `[STATUS_CLASS]`, `[STATUS_TEXT]`, `[NOME_INSTRUMENTO]`, `[CARD_TAGLINE]`, `[HIGHLIGHT_1]`, `[HIGHLIGHT_2]`
 
 ### Passo 5 - Deploy
