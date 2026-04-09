@@ -5,25 +5,14 @@
     "created": "2026-04-09"
   },
   "stats": {
-    "total_published": 14,
-    "total_in_queue": 6,
+    "total_published": 16,
+    "total_in_queue": 4,
+
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-09",
     "sources_checked_this_week": ["portugal-2030", "compete-2030", "eic-accelerator", "ani", "iapmei", "prr", "norte-2030"]
   },
   "queue": [
-    {
-      "id": "eic-pathfinder-2026",
-      "name": "EIC Pathfinder 2026 (Open + Challenges)",
-      "source_id": "eic-accelerator",
-      "detected_date": "2026-04-09",
-      "deadline": "2026-05-12",
-      "budget": "262000000 EUR",
-      "regulation_url": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-pathfinder_en",
-      "pdf_url": null,
-      "priority_score": 95,
-      "status": "pending"
-    },
     {
       "id": "sice-internacionalizacao-pme",
       "name": "SICE Internacionalização das PME - Operações em conjunto",
@@ -34,18 +23,6 @@
       "regulation_url": "https://www.compete2030.gov.pt/avisos/sice-internacionalizacao-das-pme-operacoes-em-conjunto-mpr-2025-14/",
       "pdf_url": null,
       "priority_score": 35,
-      "status": "pending"
-    },
-    {
-      "id": "eic-transition-2026",
-      "name": "EIC Transition 2026",
-      "source_id": "eic-accelerator",
-      "detected_date": "2026-04-09",
-      "deadline": "2026-09-16",
-      "budget": "100000000 EUR",
-      "regulation_url": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-transition_en",
-      "pdf_url": null,
-      "priority_score": 45,
       "status": "pending"
     },
     {
@@ -197,6 +174,24 @@
       "id": "siac-acoes-coletivas-internacionalizacao",
       "source": "compete-2030",
       "file": "instrumentos/siac-acoes-coletivas-internacionalizacao.html",
+      "published_date": "2026-04-09",
+      "detected_date": "2026-04-09",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-09"
+    },
+    {
+      "id": "eic-pathfinder-2026",
+      "source": "eic-accelerator",
+      "file": "instrumentos/eic-pathfinder-2026.html",
+      "published_date": "2026-04-09",
+      "detected_date": "2026-04-09",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-09"
+    },
+    {
+      "id": "eic-transition-2026",
+      "source": "eic-accelerator",
+      "file": "instrumentos/eic-transition-2026.html",
       "published_date": "2026-04-09",
       "detected_date": "2026-04-09",
       "current_state": "aberto",
