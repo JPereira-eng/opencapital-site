@@ -5,10 +5,36 @@ A tua missao e monitorizar fontes de financiamento, detectar novos instrumentos,
 
 ---
 
+## PASSO 0 — CONFIGURACAO DE AMBIENTE
+
+**Executar antes de qualquer outra operacao.**
+
+```bash
+if [ -d "C:/Users/Utilizador/Desktop/opencapital-website" ]; then
+  echo "AMBIENTE: LOCAL"
+else
+  echo "AMBIENTE: REMOTO"
+fi
+```
+
+**Se LOCAL:** usar `C:/Users/Utilizador/Desktop/opencapital-website` como base (`$REPO`) em todos os caminhos e comandos git desta execucao.
+
+**Se REMOTO:**
+1. Clonar o repositorio:
+```bash
+git clone https://github.com/JPereira-eng/opencapital-site.git /tmp/opencapital
+```
+2. Usar `/tmp/opencapital` como `$REPO` em todos os caminhos e comandos git desta execucao.
+3. No final, apos o push com sucesso, limpar: `rm -rf /tmp/opencapital`
+
+Todos os caminhos de ficheiros e comandos `git -C` nas instrucoes seguintes referem-se a `$REPO`.
+
+---
+
 ## FICHEIROS DE ESTADO
 
-- **`sources.json`** — lista de 35 fontes com URLs e metodo de acesso
-- **`registry.json`** — estado do agente: fila, publicados, ultima verificacao
+- **`$REPO/sources.json`** — lista de 85 fontes com URLs e metodo de acesso
+- **`$REPO/registry.json`** — estado do agente: fila, publicados, ultima verificacao
 
 Le ambos no inicio de cada execucao.
 
@@ -386,38 +412,45 @@ Adicionar o card do novo instrumento ao grid em `solucoes.html`, imediatamente a
 
 **Usar sempre `git -C "C:/Users/Utilizador/Desktop/opencapital-website"` para todos os comandos git. Nunca usar `cd ... && git`. O formato `git -C` garante execucao sem prompt de permissao.**
 
+**Usar sempre `git -C "$REPO"` (ver Passo 0 para o valor de $REPO).**
+
 Se foi criado 1 artigo:
 ```bash
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" add instrumentos/[slug].html solucoes.html registry.json
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" commit -m "instrumento: [nome do instrumento] ([fonte])"
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" push origin main
+git -C "$REPO" add instrumentos/[slug].html solucoes.html registry.json
+git -C "$REPO" commit -m "instrumento: [nome do instrumento] ([fonte])"
+git -C "$REPO" push origin main
 ```
 
 Se foram criados 2 artigos:
 ```bash
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" add instrumentos/[slug1].html instrumentos/[slug2].html solucoes.html registry.json
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" commit -m "radar: [nome1] + [nome2]"
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" push origin main
+git -C "$REPO" add instrumentos/[slug1].html instrumentos/[slug2].html solucoes.html registry.json
+git -C "$REPO" commit -m "radar: [nome1] + [nome2]"
+git -C "$REPO" push origin main
 ```
 
 Se houve state updates sem artigos novos:
 ```bash
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" add instrumentos/[slug1].html instrumentos/[slug2].html solucoes.html registry.json
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" commit -m "radar: estado atualizado [slug1] (fechado), [slug2] (prazo estendido)"
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" push origin main
+git -C "$REPO" add instrumentos/[slug1].html instrumentos/[slug2].html solucoes.html registry.json
+git -C "$REPO" commit -m "radar: estado atualizado [slug1] (fechado), [slug2] (prazo estendido)"
+git -C "$REPO" push origin main
 ```
 
 Se houve apenas scan sem novidades:
 ```bash
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" add registry.json
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" commit -m "radar: scan [fonte1], [fonte2], [fonte3], sem novidades"
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" push origin main
+git -C "$REPO" add registry.json
+git -C "$REPO" commit -m "radar: scan [fonte1], [fonte2], [fonte3], sem novidades"
+git -C "$REPO" push origin main
 ```
 
 Se o push falhar:
 ```bash
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" pull --rebase origin main
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" push origin main
+git -C "$REPO" pull --rebase origin main
+git -C "$REPO" push origin main
+```
+
+Se ambiente REMOTO, apos push com sucesso:
+```bash
+rm -rf /tmp/opencapital
 ```
 
 ---

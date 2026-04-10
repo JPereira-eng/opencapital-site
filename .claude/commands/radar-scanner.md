@@ -7,11 +7,37 @@ A tua missao e navegar fontes de financiamento, descobrir novos instrumentos, de
 
 ---
 
+## PASSO 0 — CONFIGURACAO DE AMBIENTE
+
+**Executar antes de qualquer outra operacao.**
+
+```bash
+if [ -d "C:/Users/Utilizador/Desktop/opencapital-website" ]; then
+  echo "AMBIENTE: LOCAL"
+else
+  echo "AMBIENTE: REMOTO"
+fi
+```
+
+**Se LOCAL:** usar `C:/Users/Utilizador/Desktop/opencapital-website` como base (`$REPO`) em todos os caminhos e comandos git desta execucao.
+
+**Se REMOTO:**
+1. Clonar o repositorio:
+```bash
+git clone https://github.com/JPereira-eng/opencapital-site.git /tmp/opencapital
+```
+2. Usar `/tmp/opencapital` como `$REPO` em todos os caminhos e comandos git desta execucao.
+3. No final, apos o push com sucesso, limpar: `rm -rf /tmp/opencapital`
+
+Todos os caminhos de ficheiros e comandos `git -C` nas instrucoes seguintes referem-se a `$REPO`.
+
+---
+
 ## FICHEIROS DE ESTADO
 
-- **`sources.json`** — lista de 88 fontes com URLs, metodo de acesso e prioridade
-- **`registry.json`** — estado do agente: fila, publicados, ultima verificacao
-- **`regulamentos/`** — pasta onde os textos extraidos sao guardados
+- **`$REPO/sources.json`** — lista de 85 fontes com URLs, metodo de acesso e prioridade
+- **`$REPO/registry.json`** — estado do agente: fila, publicados, ultima verificacao
+- **`$REPO/regulamentos/`** — pasta onde os textos extraidos sao guardados
 
 Le `sources.json` e `registry.json` no inicio de cada execucao.
 
@@ -258,24 +284,29 @@ Se encontrar uma nova fonte potencial:
 
 ## PASSO FINAL — Deploy
 
-**Usar sempre `git -C "C:/Users/Utilizador/Desktop/opencapital-website"` para todos os comandos git.**
+**Usar sempre `git -C "$REPO"` para todos os comandos git (ver Passo 0 para o valor de $REPO).**
 
 ```bash
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" add registry.json regulamentos/
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" commit -m "scanner: [resumo das acoes]"
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" push origin main
+git -C "$REPO" add registry.json regulamentos/
+git -C "$REPO" commit -m "scanner: [resumo das acoes]"
+git -C "$REPO" push origin main
 ```
 
 Exemplos de mensagens de commit:
 - `scanner: scan compete-2030 + norte-2030, 3 novos na fila`
 - `scanner: download 2 regulamentos (step-energia, siac-digital)`
 - `scanner: monitor 3 instrumentos, siac-digital fechado`
-- `scanner: scan 5 fontes + download 2 + monitor 1`
+- `scanner: scan 8 fontes + download 3 + monitor 2`
 
 Se o push falhar:
 ```bash
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" pull --rebase origin main
-git -C "C:/Users/Utilizador/Desktop/opencapital-website" push origin main
+git -C "$REPO" pull --rebase origin main
+git -C "$REPO" push origin main
+```
+
+Se ambiente REMOTO, apos push com sucesso:
+```bash
+rm -rf /tmp/opencapital
 ```
 
 ---
