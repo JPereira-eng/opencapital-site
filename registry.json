@@ -5,8 +5,8 @@
     "created": "2026-04-09"
   },
   "stats": {
-    "total_published": 13,
-    "total_in_queue": 10,
+    "total_published": 15,
+    "total_in_queue": 8,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-10",
     "sources_checked_this_week": [
@@ -55,19 +55,6 @@
       "download_error": "SSL cert error via WebFetch - requer Chrome MCP - tentativa 2026-04-10"
     },
     {
-      "id": "siid-internacionalizacao-id-horizonte-europa",
-      "name": "SIID - Internacionalização da I&D para Operações com Selo de Excelência (Horizonte Europa)",
-      "source_id": "ani",
-      "detected_date": "2026-04-09",
-      "deadline": null,
-      "budget": null,
-      "regulation_url": "https://www.ani.pt/pt/financiamento/",
-      "pdf_url": "https://portugal2030.pt/wp-content/uploads/sites/3/2024/11/MPR-2024-13_SIID_Internacionalizacao-ID_Selo-de-Excelencia_Accelarator-e-Transition.pdf",
-      "regulation_local": "regulamentos/ani/siid-internacionalizacao-id-horizonte-europa.txt",
-      "priority_score": 20,
-      "status": "pending"
-    },
-    {
       "id": "programa-consolidar-bpf",
       "name": "Programa Consolidar BPF — Capitalização e Resiliência Empresarial",
       "source_id": "banco-fomento",
@@ -80,20 +67,6 @@
       "priority_score": 15,
       "status": "pending",
       "download_error": "SSL cert error via WebFetch - requer Chrome MCP - tentativa 2026-04-10"
-    },
-    {
-      "id": "norte2030-siid-vinnovate",
-      "name": "SIID I&D Empresarial - Projetos Demonstradores - Vinnovate 2025 (Norte 2030)",
-      "source_id": "norte-2030",
-      "detected_date": "2026-04-09",
-      "deadline": "2025-12-02",
-      "budget": null,
-      "regulation_url": "https://www.norte2030.pt/concursos/",
-      "pdf_url": "https://www.norte2030.pt/app/uploads/2025/11/Aviso_PR-Norte2030_VInnovate_2025_Publicacao.pdf",
-      "regulation_local": "regulamentos/norte-2030/norte2030-siid-vinnovate.txt",
-      "priority_score": 5,
-      "status": "pending",
-      "notes": "Call ja fechada (dez 2025). Artigo documenta programa para futuras edicoes."
     },
     {
       "id": "horizon-cl4-2026-data-ai",
@@ -294,6 +267,26 @@
       "current_state": "aberto",
       "last_state_check": "2026-04-09",
       "regulation_local": null
+    },
+    {
+      "id": "siid-internacionalizacao-id-horizonte-europa",
+      "source": "ani",
+      "file": "instrumentos/siid-internacionalizacao-id-horizonte-europa.html",
+      "published_date": "2026-04-10",
+      "detected_date": "2026-04-09",
+      "current_state": "fechado",
+      "last_state_check": "2026-04-10",
+      "regulation_local": "regulamentos/ani/siid-internacionalizacao-id-horizonte-europa.txt"
+    },
+    {
+      "id": "norte2030-siid-vinnovate",
+      "source": "norte-2030",
+      "file": "instrumentos/norte2030-siid-vinnovate.html",
+      "published_date": "2026-04-10",
+      "detected_date": "2026-04-09",
+      "current_state": "fechado",
+      "last_state_check": "2026-04-10",
+      "regulation_local": "regulamentos/norte-2030/norte2030-siid-vinnovate.txt"
     }
   ],
   "source_last_checked": {
