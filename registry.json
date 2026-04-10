@@ -9,6 +9,7 @@
     "total_in_queue": 8,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-10",
+    "last_scanner_run": "2026-04-10",
     "sources_checked_this_week": [
       "portugal-2030",
       "compete-2030",
@@ -75,9 +76,9 @@
       "detected_date": "2026-04-10",
       "deadline": "2026-04-15",
       "budget": null,
-      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals_en",
+      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals/developing-agile-and-secure-single-market-and-infrastructure-data-services-and-trustworthy_en",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/hadea/horizon-cl4-2026-data-ai.txt",
       "priority_score": 115,
       "status": "pending",
       "notes": "HORIZON-CL4-2026-04. Prazo muito proximo — artigo documenta programa para proxima edicao."
@@ -89,9 +90,9 @@
       "detected_date": "2026-04-10",
       "deadline": "2026-04-16",
       "budget": null,
-      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals/horizon-europe-health-2026-calls_en",
+      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals/horizon-europe-health-2026-calls-destination-ensuring-equal-access-innovative-sustainable-and-high_en",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/hadea/horizon-hlth-2026-healthcare.txt",
       "priority_score": 115,
       "status": "pending",
       "notes": "HORIZON-HLTH-2026-01-CARE."
@@ -105,7 +106,7 @@
       "budget": null,
       "regulation_url": "https://hadea.ec.europa.eu/calls-proposals/submarine-cable-repair-capacities_en",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/hadea/cef-digital-2026-cabo-submarino.txt",
       "priority_score": 115,
       "status": "pending",
       "notes": "CEF-DIG-2026-CABLE-REPAIR."
