@@ -9,7 +9,7 @@
     "total_in_queue": 5,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-10",
-    "last_scanner_run": "2026-04-10",
+    "last_scanner_run": "2026-04-11",
     "sources_checked_this_week": [
       "portugal-2030",
       "compete-2030",
@@ -50,10 +50,10 @@
       "budget": "2.560.000.000 EUR",
       "regulation_url": "https://www.bpfomento.pt/pt/catalogo/linha-de-garantia-bpf-investeu-pme-e-small-mid-caps/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/banco-fomento/linha-garantia-bpf-investeu-pme.txt",
       "priority_score": 25,
       "status": "pending",
-      "download_error": "SSL cert error via WebFetch - requer Chrome MCP - tentativa 2026-04-10"
+      "notes": "Extraido via WebSearch + mercal.pt (SSL cert error no BPF direto). Dotacao 2.56B EUR: sustentavel 1.28B, investimento 640M, fundo maneio 640M."
     },
     {
       "id": "programa-consolidar-bpf",
@@ -75,13 +75,13 @@
       "source_id": "hadea",
       "detected_date": "2026-04-10",
       "deadline": "2026-09-03",
-      "budget": null,
+      "budget": "90.970.000 EUR",
       "regulation_url": "https://hadea.ec.europa.eu/calls-proposals/accessing-space-horizon-europe-space-2026-calls_en",
-      "pdf_url": null,
-      "regulation_local": null,
+      "pdf_url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-7-digital-industry-and-space_horizon-2026-2027_en.pdf",
+      "regulation_local": "regulamentos/hadea/horizon-cl4-2026-espaco.txt",
       "priority_score": 35,
       "status": "pending",
-      "notes": "HORIZON-CL4-2026-03 SPACE."
+      "notes": "HORIZON-CL4-2026-03 SPACE. 8 topicos. Topico principal: HORIZON-CL4-2026-SPACE-03-11 (spaceports, 22.59M EUR, 2 projetos). Deadline 3 Set 2026."
     },
     {
       "id": "norte2030-2026-2-ferrovia-linha-vouga",
@@ -89,13 +89,13 @@
       "source_id": "norte-2030",
       "detected_date": "2026-04-10",
       "deadline": "2026-05-29",
-      "budget": null,
-      "regulation_url": "https://www.norte2030.pt/concursos/",
-      "pdf_url": null,
-      "regulation_local": null,
+      "budget": "8.000.000 EUR",
+      "regulation_url": "https://www.norte2030.pt/concurso/ferrovia-intervencoes-na-linha-do-vouga-nuts-ii-norte-norte2030-2026-2/",
+      "pdf_url": "https://www.norte2030.pt/app/uploads/2026/02/NORTE2030-2026-2_Ferrovia-intervencoes-na-Linha-do-Vouga_12-02-2026.pdf",
+      "regulation_local": "regulamentos/norte-2030/norte2030-2026-2-ferrovia-linha-vouga.txt",
       "priority_score": 65,
       "status": "pending",
-      "notes": "NORTE2030-2026-2."
+      "notes": "NORTE2030-2026-2. Beneficiario unico: Infraestruturas de Portugal, SA. FEDER 85%. Modernizacao Linha do Vouga NUTS II Norte."
     }
   ],
   "published": [
