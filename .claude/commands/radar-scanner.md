@@ -183,7 +183,8 @@ Para cada instrumento:
    - O instrumento ainda esta listado como aberto?
    - O prazo mudou?
    - A dotacao mudou?
-   - Ha notas ou alteracoes?
+   - Ha notas ou alertas de alteracao?
+   - Apareceu um novo PDF de regulamento ou adenda? (comparar com `regulation_local` atual)
 
 ### 3.3 Registar alteracoes
 
@@ -205,6 +206,21 @@ Para cada instrumento:
 }
 ```
 
+**Se apareceu novo PDF de regulamento (adenda, retificacao, novo aviso):**
+
+1. Descarregar o novo PDF para `regulamentos/[source_id]/[id]-v2.pdf` (ou `-adenda`, `-retificacao`)
+2. Extrair texto: `pdftotext -enc UTF-8 [novo.pdf] [novo.txt]`
+3. Atualizar `regulation_local` para o novo ficheiro
+4. Registar no item de `published`:
+```json
+{
+  "last_state_check": "2026-04-10",
+  "regulation_local": "regulamentos/compete-2030/step-energia-v2.txt",
+  "regulation_update": { "previous": "regulamentos/compete-2030/step-energia.txt", "new": "regulamentos/compete-2030/step-energia-v2.txt", "detected": "2026-04-10", "note": "adenda publicada" }
+}
+```
+5. A skill `/radar-instrumentos` no Passo 3B sera responsavel por atualizar o conteudo editorial do artigo se necessario.
+
 **Se nada mudou:**
 ```json
 {
@@ -212,7 +228,7 @@ Para cada instrumento:
 }
 ```
 
-As alteracoes de estado NAO sao aplicadas aos artigos HTML nesta skill. A skill `/radar-instrumentos` e que aplica as alteracoes editoriais quando executar o Passo 3B.
+As alteracoes de estado e conteudo NAO sao aplicadas aos artigos HTML nesta skill. A skill `/radar-instrumentos` e que aplica as alteracoes editoriais quando executar o Passo 3B.
 
 ---
 
