@@ -5,8 +5,8 @@
     "created": "2026-04-09"
   },
   "stats": {
-    "total_published": 15,
-    "total_in_queue": 8,
+    "total_published": 18,
+    "total_in_queue": 5,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-10",
     "last_scanner_run": "2026-04-10",
@@ -68,48 +68,6 @@
       "priority_score": 15,
       "status": "pending",
       "download_error": "SSL cert error via WebFetch - requer Chrome MCP - tentativa 2026-04-10"
-    },
-    {
-      "id": "horizon-cl4-2026-data-ai",
-      "name": "Horizonte Europa Cluster 4 — Data Services & AI 2026",
-      "source_id": "hadea",
-      "detected_date": "2026-04-10",
-      "deadline": "2026-04-15",
-      "budget": null,
-      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals/developing-agile-and-secure-single-market-and-infrastructure-data-services-and-trustworthy_en",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/hadea/horizon-cl4-2026-data-ai.txt",
-      "priority_score": 115,
-      "status": "pending",
-      "notes": "HORIZON-CL4-2026-04. Prazo muito proximo — artigo documenta programa para proxima edicao."
-    },
-    {
-      "id": "horizon-hlth-2026-healthcare",
-      "name": "Horizonte Europa Saude 2026 — Healthcare Access",
-      "source_id": "hadea",
-      "detected_date": "2026-04-10",
-      "deadline": "2026-04-16",
-      "budget": null,
-      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals/horizon-europe-health-2026-calls-destination-ensuring-equal-access-innovative-sustainable-and-high_en",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/hadea/horizon-hlth-2026-healthcare.txt",
-      "priority_score": 115,
-      "status": "pending",
-      "notes": "HORIZON-HLTH-2026-01-CARE."
-    },
-    {
-      "id": "cef-digital-2026-cabo-submarino",
-      "name": "CEF Digital 2026 — Capacidades de Reparacao de Cabos Submarinos",
-      "source_id": "hadea",
-      "detected_date": "2026-04-10",
-      "deadline": "2026-05-06",
-      "budget": null,
-      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals/submarine-cable-repair-capacities_en",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/hadea/cef-digital-2026-cabo-submarino.txt",
-      "priority_score": 115,
-      "status": "pending",
-      "notes": "CEF-DIG-2026-CABLE-REPAIR."
     },
     {
       "id": "horizon-cl4-2026-espaco",
@@ -288,6 +246,36 @@
       "current_state": "fechado",
       "last_state_check": "2026-04-10",
       "regulation_local": "regulamentos/norte-2030/norte2030-siid-vinnovate.txt"
+    },
+    {
+      "id": "horizon-cl4-2026-data-ai",
+      "source": "hadea",
+      "file": "instrumentos/horizon-cl4-2026-data-ai.html",
+      "published_date": "2026-04-10",
+      "detected_date": "2026-04-10",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-10",
+      "regulation_local": "regulamentos/hadea/horizon-cl4-2026-data-ai.txt"
+    },
+    {
+      "id": "horizon-hlth-2026-healthcare",
+      "source": "hadea",
+      "file": "instrumentos/horizon-hlth-2026-healthcare.html",
+      "published_date": "2026-04-10",
+      "detected_date": "2026-04-10",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-10",
+      "regulation_local": "regulamentos/hadea/horizon-hlth-2026-healthcare.txt"
+    },
+    {
+      "id": "cef-digital-2026-cabo-submarino",
+      "source": "hadea",
+      "file": "instrumentos/cef-digital-2026-cabo-submarino.html",
+      "published_date": "2026-04-10",
+      "detected_date": "2026-04-10",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-10",
+      "regulation_local": "regulamentos/hadea/cef-digital-2026-cabo-submarino.txt"
     }
   ],
   "source_last_checked": {
