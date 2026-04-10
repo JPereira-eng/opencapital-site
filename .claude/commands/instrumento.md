@@ -35,7 +35,7 @@ Escolhe o autor mais adequado ao tipo de instrumento. Seleciona com base na area
 
 **Jorge Pereira nao pode ser selecionado para artigos de instrumento.** Os instrumentos sao fichas tecnicas de referencia que requerem especialistas com conhecimento direto do instrumento. Jorge Pereira nao e especialista em nenhum instrumento de financiamento, fiscal ou de investimento.
 
-Orientacoes de selecao por tipo de instrumento — aplicar pela ordem indicada, parar na primeira que encaixar:
+Orientacoes de selecao por tipo de instrumento. Aplicar pela ordem indicada, parar na primeira que encaixar:
 1. Fundos europeus e candidaturas nao reembolsaveis (Portugal 2030, PRR, COMPETE 2030, Horizonte Europa, EIC Accelerator): **Mara Ferreira**
 2. Incentivos fiscais ao investimento (RFAI, DLRR, CFI, Patent Box): **Andre Carvalho**
 3. Premios de inovacao e vouchers (SIFIDE II, premios, vouchers IAPMEI): **Andre Carvalho** (se foco fiscal) ou **Sofia Costa** (se foco I&D/tecnologico)
@@ -149,10 +149,10 @@ Define antes de escrever:
 - **slug**: kebab-case, descritivo (ex: `sifide-2`, `rfai`, `horizonte-europa`, `business-angels`)
 - **nome_instrumento**: nome completo e oficial (ex: `SIFIDE II`, `Portugal 2030`, `EIC Accelerator`)
 - **categoria_badge**: uma de `Financiamento Publico`, `Investimento Privado`, `Fiscal`, `Inovacao`, `Estrategia`
-- **categoria_card**: codigo para o filtro em solucoes.html — uma de: `nr` (Nao Reembolsavel), `priv` (Investimento Privado), `div` (Divida), `hib` (Hibridos), `fiscal` (Incentivos Fiscais), `outros` (Outros)
+- **categoria_card**: codigo para o filtro em solucoes.html, uma de: `nr` (Nao Reembolsavel), `priv` (Investimento Privado), `div` (Divida), `hib` (Hibridos), `fiscal` (Incentivos Fiscais), `outros` (Outros)
 - **estado**: uma de: `aberto`, `fechado`, `previsto`
-- **fonte**: codigo da fonte/programa — uma de: `pt2030`, `ani`, `iapmei`, `bfomento`, `aicep`, `at`, `pventures`, `compete`, `prr`, `ue`
-- **beneficiario**: lista separada por virgulas dos tipos elegiveis — combinacao de: `empresa` (qualquer tipo de empresa), `entidade-publica` (municipios, autarquias, entidades publicas), `associacao` (associacoes, entidades sem fins lucrativos), `ensino-investigacao` (universidades, centros de investigacao), `empreendedor` (empreendedores individuais, pre-incorporacao)
+- **fonte**: codigo da fonte/programa, uma de: `pt2030`, `ani`, `iapmei`, `bfomento`, `aicep`, `at`, `pventures`, `compete`, `prr`, `ue`
+- **beneficiario**: lista separada por virgulas dos tipos elegiveis, combinacao de: `empresa` (qualquer tipo de empresa), `entidade-publica` (municipios, autarquias, entidades publicas), `associacao` (associacoes, entidades sem fins lucrativos), `ensino-investigacao` (universidades, centros de investigacao), `empreendedor` (empreendedores individuais, pre-incorporacao)
 - **regiao**: lista separada por virgulas das regioes onde o instrumento esta disponivel. Se o instrumento e nacional, listar TODAS as regioes: `norte,centro,lisboa,alentejo,algarve,acores,madeira`. Se e regional, listar apenas as regioes cobertas (ex: `norte,centro`). Nunca usar "nacional" ou "multi-regiao" como valor.
 - **hero_tagline**: 1 frase clara sobre o instrumento, max 20 palavras (ex: "O incentivo fiscal que transforma investimento em I&D em poupanca imediata de IRC.")
 - **meta_fact_1_label** + **meta_fact_1_valor**: dado chave 1 (ex: Dotacao: €23 mil milhoes)
@@ -594,13 +594,13 @@ NAO usar `val-gold` para valores monetarios, dotacoes ou taxas. Valores monetari
 **Para estados de programa na sidebar, usar as classes de cor consistentes com os cards da Biblioteca:**
 - Estado aberto: `<div class="sidebar-fact-val val-open">Aberto ate DD/MM/AAAA</div>` (verde #2E7D52)
 - Estado fechado: `<div class="sidebar-fact-val val-closed">Fechado</div>` (vermelho #A63228)
-- Candidatura continua: `<div class="sidebar-fact-val val-cont">Candidatura Contínua</div>` (verde #2E7D52) — para instrumentos sem prazo fixo
+- Candidatura continua: `<div class="sidebar-fact-val val-cont">Candidatura Contínua</div>` (verde #2E7D52), para instrumentos sem prazo fixo
 - Nunca usar `val-gold` para estados. O dourado e reservado para labels de seccao.
 
 **Para estados no hero meta-bar, usar as mesmas classes:**
 - `<span class="meta-value status-open">Aberto ate DD/MM/AAAA</span>` (verde #2E7D52)
 - `<span class="meta-value status-closed">Fechado</span>` (vermelho #A63228)
-- `<span class="meta-value status-cont">Candidatura Contínua</span>` (verde #2E7D52) — para instrumentos sem prazo fixo (EIC, candidatura permanente, etc.)
+- `<span class="meta-value status-cont">Candidatura Contínua</span>` (verde #2E7D52), para instrumentos sem prazo fixo (EIC, candidatura permanente, etc.)
 - Nunca usar `gold` class para o estado no hero.
 
 **Formato dos instrumentos relacionados na sidebar:**
@@ -670,11 +670,11 @@ console.log('Card inserido em solucoes.html');
 ```
 
 Substituir todos os placeholders com os valores reais antes de executar:
-- `[CAT]` — valor de `categoria_card` (nr, priv, div, hib, fiscal, outros)
-- `[ESTADO]` — valor de `estado` (aberto, fechado, previsto)
-- `[FONTE]` — valor de `fonte` (pt2030, ani, iapmei, bfomento, aicep, at, pventures, compete, prr, ue)
-- `[BENEFICIARIO]` — valor de `beneficiario` (ex: "micro,pme" ou "startup,pme,grande-empresa")
-- `[REGIAO]` — valor de `regiao` (ex: "norte,centro" ou todas as 7 regioes se nacional)
+- `[CAT]`: valor de `categoria_card` (nr, priv, div, hib, fiscal, outros)
+- `[ESTADO]`: valor de `estado` (aberto, fechado, previsto)
+- `[FONTE]`: valor de `fonte` (pt2030, ani, iapmei, bfomento, aicep, at, pventures, compete, prr, ue)
+- `[BENEFICIARIO]`: valor de `beneficiario` (ex: "micro,pme" ou "startup,pme,grande-empresa")
+- `[REGIAO]`: valor de `regiao` (ex: "norte,centro" ou todas as 7 regioes se nacional)
 - `[SLUG]`, `[CAT_LABEL]`, `[STATUS_CLASS]`, `[STATUS_TEXT]`, `[NOME_INSTRUMENTO]`, `[CARD_TAGLINE]`, `[HIGHLIGHT_1]`, `[HIGHLIGHT_2]`
 
 ### Passo 5 - Deploy

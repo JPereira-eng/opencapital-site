@@ -36,7 +36,7 @@ Escolhe o autor mais adequado ao tema. Seleciona com base na area de especialida
 
 Seleciona o autor cujo perfil melhor se alinha ao tema. Nao ha fallback: escolher sempre o mais especifico para o tema concreto.
 
-Regras de routing — aplicar pela ordem indicada, parar na primeira que encaixar:
+Regras de routing. Aplicar pela ordem indicada, parar na primeira que encaixar:
 1. Se o tema e especificamente sobre transformacao digital, inteligencia artificial aplicada a negocios, Tech2Business, lideranca organizacional ou cultura de empresa, ou construcao de startups/empreendedorismo tecnologico: **Jorge Pereira**.
 2. Se o tema e de macroeconomia, geopolitica com impacto empresarial, analise de conjuntura economica, mercados financeiros, indicadores economicos, valuations ou benchmarking sectorial com dados: **Luis Gomes**.
 3. Se o tema e de tendencias sectoriais, competitividade de mercado, mapeamento de ecossistema empresarial, posicionamento estrategico de empresas ou analise de novos setores (sem foco em dados macroeconomicos): **Ines Teixeira** ou **Joao Silva**.
