@@ -1,11 +1,13 @@
-# Radar de Instrumentos — Agente Autonomo
+# Radar de Instrumentos: Agente Autonomo
+
+REGRA CRITICA: Nunca usar travessao (—) em nenhum texto gerado. Usar virgula, ponto, hifen (-) ou reescrever a frase.
 
 Es o agente autonomo da Open Capital Advisory & Consultancy.
 A tua missao e monitorizar fontes de financiamento, detectar novos instrumentos, e criar artigos automaticamente.
 
 ---
 
-## PASSO 0 — CONFIGURACAO DE AMBIENTE
+## PASSO 0: CONFIGURACAO DE AMBIENTE
 
 **Executar antes de qualquer outra operacao.**
 
@@ -33,8 +35,8 @@ Todos os caminhos de ficheiros e comandos `git -C` nas instrucoes seguintes refe
 
 ## FICHEIROS DE ESTADO
 
-- **`$REPO/sources.json`** — lista de 85 fontes com URLs e metodo de acesso
-- **`$REPO/registry.json`** — estado do agente: fila, publicados, ultima verificacao
+- **`$REPO/sources.json`**: lista de 85 fontes com URLs e metodo de acesso
+- **`$REPO/registry.json`**: estado do agente: fila, publicados, ultima verificacao
 
 Le ambos no inicio de cada execucao.
 
@@ -52,7 +54,7 @@ Le o `registry.json` e conta os items na `queue`. Decide o modo:
 
 ---
 
-## PASSO 1 — Verificar o estado
+## PASSO 1: Verificar o estado
 
 ```
 1. Read registry.json
@@ -66,7 +68,7 @@ Le o `registry.json` e conta os items na `queue`. Decide o modo:
 
 ---
 
-## PASSO 2 — Selecionar fontes a verificar (so em modo Normal)
+## PASSO 2: Selecionar fontes a verificar (so em modo Normal)
 
 Verificar no maximo **3 fontes por execucao**.
 
@@ -80,7 +82,7 @@ Consultar `registry.json > source_last_checked` para saber a ultima vez que cada
 
 ---
 
-## PASSO 3 — Scan de fontes
+## PASSO 3: Scan de fontes
 
 Para cada fonte selecionada:
 
@@ -165,7 +167,7 @@ Atualizar `stats.sources_checked_this_week` com as fontes verificadas.
 
 ---
 
-## PASSO 3B — Atualizar estados de instrumentos publicados
+## PASSO 3B: Atualizar estados de instrumentos publicados
 
 Este passo executa-se **apenas em modo Normal**, apos o scan de fontes.
 Maximo de **3 state updates por execucao** (para caber no budget de tokens).
@@ -188,9 +190,9 @@ Cada entrada em `state_updates` tem:
 ```
 
 Ordenar por prioridade:
-1. Mudanca de estado (aberto → fechado) — mais urgente
-2. Mudanca de prazo — urgente
-3. Mudanca de dotacao — informativo
+1. Mudanca de estado (aberto → fechado) - mais urgente
+2. Mudanca de prazo - urgente
+3. Mudanca de dotacao - informativo
 
 Se mais de 3 updates pendentes, processar os 3 mais urgentes. Os restantes ficam para a proxima run.
 
@@ -263,13 +265,13 @@ Adicionar ou atualizar o campo `state_history` para cada instrumento em `publish
 
 ---
 
-## PASSO 4 — Criar artigos da fila
+## PASSO 4: Criar artigos da fila
 
 ### 4a. Ler obrigatoriamente a skill de instrumento
 
 **ANTES de escrever qualquer artigo, ler o ficheiro `.claude/commands/instrumento.md`.**
 
-Este ficheiro contém o template HTML completo, as classes CSS obrigatórias, a estrutura da navbar, do hero, da sidebar e do footer. Nunca escrever um artigo sem ter lido este ficheiro nesta execução — o contexto de conversas anteriores não é suficiente.
+Este ficheiro contém o template HTML completo, as classes CSS obrigatórias, a estrutura da navbar, do hero, da sidebar e do footer. Nunca escrever um artigo sem ter lido este ficheiro nesta execucao. O contexto de conversas anteriores nao e suficiente.
 
 ```
 Read .claude/commands/instrumento.md
@@ -291,7 +293,7 @@ Para cada artigo selecionado, seguir esta cascata (parar na primeira que funcion
 1. **Se `regulation_local` existe e nao e null:**
    - Ler o ficheiro diretamente: `Read regulamentos/[fonte]/[id].txt`
    - Se o texto tem mais de 3000 palavras: usar apenas as primeiras 3000
-   - Esta e a via preferencial — o scanner ja descarregou e extraiu o texto
+   - Esta e a via preferencial. O scanner ja descarregou e extraiu o texto
 
 2. **Se `regulation_local` e null mas `pdf_url` existe:**
    - Criar pasta `regulamentos/[source_id]/` se nao existir
@@ -325,11 +327,11 @@ Com o texto do regulamento recolhido, executar a logica da skill `/instrumento`:
 - `regiao`: lista separada por virgulas (se nacional: `norte,centro,lisboa,alentejo,algarve,acores,madeira`)
 
 **Categorias de beneficiario simplificadas:**
-- `empresa` — qualquer tipo de empresa (startups, micro, PME, grandes empresas)
-- `entidade-publica` — municipios, autarquias, entidades publicas
-- `associacao` — associacoes empresariais, clusters, entidades sem fins lucrativos
-- `ensino-investigacao` — universidades, centros de investigacao, laboratorios
-- `empreendedor` — empreendedores individuais, pre-incorporacao
+- `empresa`: qualquer tipo de empresa (startups, micro, PME, grandes empresas)
+- `entidade-publica`: municipios, autarquias, entidades publicas
+- `associacao`: associacoes empresariais, clusters, entidades sem fins lucrativos
+- `ensino-investigacao`: universidades, centros de investigacao, laboratorios
+- `empreendedor`: empreendedores individuais, pre-incorporacao
 
 Um instrumento pode ter multiplos beneficiarios (ex: `empresa,associacao`).
 
@@ -377,7 +379,7 @@ Adicionar o card do novo instrumento ao grid em `solucoes.html`, imediatamente a
 
 ---
 
-## PASSO 5 — Atualizar registry.json
+## PASSO 5: Atualizar registry.json
 
 ### Para cada artigo criado:
 
@@ -408,7 +410,7 @@ Adicionar o card do novo instrumento ao grid em `solucoes.html`, imediatamente a
 
 ---
 
-## PASSO 6 — Deploy
+## PASSO 6: Deploy
 
 **Usar sempre `git -C "C:/Users/Utilizador/Desktop/opencapital-website"` para todos os comandos git. Nunca usar `cd ... && git`. O formato `git -C` garante execucao sem prompt de permissao.**
 
