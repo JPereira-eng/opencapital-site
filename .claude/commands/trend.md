@@ -544,7 +544,7 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="f-copy">&copy; 2025 Open Capital Advisory &amp; Consultancy</span>
+      <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
       <div class="f-legal">
         <a href="#">Privacidade</a>
         <a href="#">Termos</a>
