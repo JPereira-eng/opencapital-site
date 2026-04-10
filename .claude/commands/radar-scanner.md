@@ -1,4 +1,6 @@
-# Radar Scanner — Camada de Descoberta e Download
+# Radar Scanner: Camada de Descoberta e Download
+
+REGRA CRITICA: Nunca usar travessao (—) em nenhum texto gerado. Usar virgula, ponto, hifen (-) ou reescrever a frase.
 
 Es o scanner do sistema radar da Open Capital Advisory & Consultancy.
 A tua missao e navegar fontes de financiamento, descobrir novos instrumentos, descarregar regulamentos, e monitorizar alteracoes de estado.
@@ -7,7 +9,7 @@ A tua missao e navegar fontes de financiamento, descobrir novos instrumentos, de
 
 ---
 
-## PASSO 0 — CONFIGURACAO DE AMBIENTE
+## PASSO 0: CONFIGURACAO DE AMBIENTE
 
 **Executar antes de qualquer outra operacao.**
 
@@ -35,25 +37,25 @@ Todos os caminhos de ficheiros e comandos `git -C` nas instrucoes seguintes refe
 
 ## FICHEIROS DE ESTADO
 
-- **`$REPO/sources.json`** — lista de 85 fontes com URLs, metodo de acesso e prioridade
-- **`$REPO/registry.json`** — estado do agente: fila, publicados, ultima verificacao
-- **`$REPO/regulamentos/`** — pasta onde os textos extraidos sao guardados
+- **`$REPO/sources.json`**: lista de 85 fontes com URLs, metodo de acesso e prioridade
+- **`$REPO/registry.json`**: estado do agente - fila, publicados, ultima verificacao
+- **`$REPO/regulamentos/`**: pasta onde os textos extraidos sao guardados
 
 Le `sources.json` e `registry.json` no inicio de cada execucao.
 
 ---
 
-## ARQUITECTURA — 3 CAMADAS
+## ARQUITECTURA: 3 CAMADAS
 
 Este scanner executa 3 camadas por ordem. Cada execucao pode executar todas ou apenas algumas, conforme o budget de tokens disponivel.
 
-### Camada 1: SCAN — Descobrir novos instrumentos
-### Camada 2: DOWNLOAD — Descarregar regulamentos
-### Camada 3: MONITOR — Verificar alteracoes de estado
+### Camada 1: SCAN - Descobrir novos instrumentos
+### Camada 2: DOWNLOAD - Descarregar regulamentos
+### Camada 3: MONITOR - Verificar alteracoes de estado
 
 ---
 
-## CAMADA 1 — SCAN (descoberta de novos instrumentos)
+## CAMADA 1: SCAN (descoberta de novos instrumentos)
 
 ### 1.1 Selecionar fontes a verificar
 
@@ -129,7 +131,7 @@ Para cada fonte verificada, atualizar a data em `registry.json > source_last_che
 
 ---
 
-## CAMADA 2 — DOWNLOAD (descarregar regulamentos)
+## CAMADA 2: DOWNLOAD (descarregar regulamentos)
 
 ### 2.1 Identificar items sem regulamento local
 
@@ -186,7 +188,7 @@ Se o download falhar, manter `regulation_local: null` e adicionar nota:
 
 ---
 
-## CAMADA 3 — MONITOR (verificar alteracoes de estado)
+## CAMADA 3: MONITOR (verificar alteracoes de estado)
 
 ### 3.1 Identificar instrumentos a monitorizar
 
@@ -258,7 +260,7 @@ As alteracoes de estado e conteudo NAO sao aplicadas aos artigos HTML nesta skil
 
 ---
 
-## CAMADA EXTRA — DISCOVERY (descoberta exploratoria)
+## CAMADA EXTRA: DISCOVERY (descoberta exploratoria)
 
 Executar apenas quando TODAS as fontes de alta prioridade foram verificadas nos ultimos 7 dias.
 
@@ -282,7 +284,7 @@ Se encontrar uma nova fonte potencial:
 
 ---
 
-## PASSO FINAL — Deploy
+## PASSO FINAL: Deploy
 
 **Usar sempre `git -C "$REPO"` para todos os comandos git (ver Passo 0 para o valor de $REPO).**
 
