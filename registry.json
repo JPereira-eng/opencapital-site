@@ -6,7 +6,7 @@
   },
   "stats": {
     "total_published": 18,
-    "total_in_queue": 5,
+    "total_in_queue": 8,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-10",
     "last_scanner_run": "2026-04-11",
@@ -24,22 +24,29 @@
       "hadea",
       "interreg-poctep",
       "interreg-atlantic",
-      "interreg-mac"
+      "interreg-mac",
+      "eu-funding-tenders",
+      "aicep",
+      "turismo-portugal",
+      "iefp",
+      "sustentavel-2030",
+      "pessoas-2030"
     ]
   },
   "queue": [
     {
       "id": "norte2030-infraestruturas-acolhimento-empresarial",
-      "name": "Norte 2030 - Infraestruturas e Equipamentos de Apoio à Competitividade",
+      "name": "Norte 2030 - Infraestruturas e Equipamentos de Apoio a Competitividade (NORTE2030-2026-01)",
       "source_id": "norte-2030",
       "detected_date": "2026-04-09",
       "deadline": "2026-06-30",
-      "budget": null,
-      "regulation_url": "https://www.norte2030.pt/concursos/",
-      "pdf_url": null,
-      "regulation_local": null,
+      "budget": "35.000.000 EUR",
+      "regulation_url": "https://www.norte2030.pt/concurso/infraestruturas-e-equipamentos-de-base-nao-tecnologica-de-apoio-a-competitividade-criacao-e-expansao-de-areas-de-acolhimento-empresarial-norte2030-2026-1/",
+      "pdf_url": "https://www.norte2030.pt/app/uploads/2026/02/Aviso-NORTE2030-2026-01.pdf",
+      "regulation_local": "regulamentos/norte-2030/norte2030-infraestruturas-acolhimento-empresarial.txt",
       "priority_score": 25,
-      "status": "pending"
+      "status": "pending",
+      "notes": "NORTE2030-2026-01. Criacao e expansao de areas de acolhimento empresarial. FEDER 85%. Dotacao 35M EUR. 3 fases: 16/03, 15/05 e 30/06/2026. Beneficiarios: municipios, empresas municipais, associacoes de municipios. Regulamento descarregado em 2026-04-11."
     },
     {
       "id": "linha-garantia-bpf-investeu-pme",
@@ -57,17 +64,17 @@
     },
     {
       "id": "programa-consolidar-bpf",
-      "name": "Programa Consolidar BPF — Capitalização e Resiliência Empresarial",
+      "name": "Programa Consolidar BPF — Capitalizacao e Resiliencia Empresarial",
       "source_id": "banco-fomento",
       "detected_date": "2026-04-09",
-      "deadline": null,
+      "deadline": "2025-12-31",
       "budget": "563.000.000 EUR",
       "regulation_url": "https://www.bpfomento.pt/pt/catalogo/produtos-de-capital/",
       "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 15,
+      "regulation_local": "regulamentos/banco-fomento/programa-consolidar-bpf.txt",
+      "priority_score": 0,
       "status": "pending",
-      "download_error": "SSL cert error via WebFetch - requer Chrome MCP - tentativa 2026-04-10"
+      "notes": "Fundo de Capitalizacao e Resiliencia (FdCR). Decreto-Lei 63/2021. 14 gestores de fundo selecionados. Periodo de candidatura de intermediarios ENCERRADO. Prazo final de investimento era 31/12/2025 - programa pode estar concluido para novas candidaturas. Empresas devem contactar gestores aprovados diretamente. Regulamento guardado 2026-04-11."
     },
     {
       "id": "horizon-cl4-2026-espaco",
@@ -96,6 +103,48 @@
       "priority_score": 65,
       "status": "pending",
       "notes": "NORTE2030-2026-2. Beneficiario unico: Infraestruturas de Portugal, SA. FEDER 85%. Modernizacao Linha do Vouga NUTS II Norte."
+    },
+    {
+      "id": "turismo-acolhe-2026",
+      "name": "Programa 'O Turismo Acolhe' — Apoio a Calamidades",
+      "source_id": "turismo-portugal",
+      "detected_date": "2026-04-11",
+      "deadline": "2026-06-30",
+      "budget": null,
+      "regulation_url": "https://business.turismodeportugal.pt/pt/Investir/Financiamento/programas/Paginas/default.aspx",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 25,
+      "status": "pending",
+      "notes": "Programa de apoio a empresas de turismo afetadas por calamidades. Deadline 30 Jun 2026. Fonte: Turismo de Portugal."
+    },
+    {
+      "id": "iefp-estagios-iniciar-2026",
+      "name": "IEFP Estagios INICIAR 2026",
+      "source_id": "iefp",
+      "detected_date": "2026-04-11",
+      "deadline": "2026-07-30",
+      "budget": null,
+      "regulation_url": "https://iefponline.iefp.pt/IEFP/medida/estagios-mais-talento/overview.jsp",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 5,
+      "status": "pending",
+      "notes": "Estagios para jovens ate 35 anos (niveis de qualificacao 4-5). Subsidio 537.13 EUR/mes. Reembolso empresa 80% (ate 95% em casos especiais). Periodo: 10 Fev - 30 Jul 2026."
+    },
+    {
+      "id": "iefp-estagios-mais-talento-2026",
+      "name": "IEFP Estagios +Talento 2026",
+      "source_id": "iefp",
+      "detected_date": "2026-04-11",
+      "deadline": "2026-07-30",
+      "budget": null,
+      "regulation_url": "https://iefponline.iefp.pt/IEFP/apoioIncentivos.do?menu=ai_estagios",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 5,
+      "status": "pending",
+      "notes": "Estagios para jovens com nivel 6+ do QNQ (licenciatura+). Reembolso empresa 80% (ate 95% em casos especiais). Periodo: 10 Fev - 30 Jul 2026."
     }
   ],
   "published": [
@@ -293,6 +342,11 @@
     "interreg-atlantic": "2026-04-10",
     "hadea": "2026-04-10",
     "interreg-mac": "2026-04-10",
-    "eu-funding-tenders": "2026-04-10"
+    "eu-funding-tenders": "2026-04-10",
+    "aicep": "2026-04-11",
+    "turismo-portugal": "2026-04-11",
+    "iefp": "2026-04-11",
+    "sustentavel-2030": "2026-04-11",
+    "pessoas-2030": "2026-04-11"
   }
 }
