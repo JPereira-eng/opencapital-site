@@ -9,7 +9,18 @@
     "total_in_queue": 5,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-09",
-    "sources_checked_this_week": ["portugal-2030", "compete-2030", "eic-accelerator", "ani", "iapmei", "prr", "norte-2030", "horizonte-europa", "banco-fomento", "fct"]
+    "sources_checked_this_week": [
+      "portugal-2030",
+      "compete-2030",
+      "eic-accelerator",
+      "ani",
+      "iapmei",
+      "prr",
+      "norte-2030",
+      "horizonte-europa",
+      "banco-fomento",
+      "fct"
+    ]
   },
   "queue": [
     {
@@ -21,6 +32,7 @@
       "budget": null,
       "regulation_url": "https://www.norte2030.pt/concursos/",
       "pdf_url": null,
+      "regulation_local": null,
       "priority_score": 25,
       "status": "pending"
     },
@@ -33,6 +45,7 @@
       "budget": "2.560.000.000 EUR",
       "regulation_url": "https://www.bpfomento.pt/pt/catalogo/linha-de-garantia-bpf-investeu-pme-e-small-mid-caps/",
       "pdf_url": null,
+      "regulation_local": null,
       "priority_score": 25,
       "status": "pending"
     },
@@ -45,6 +58,7 @@
       "budget": null,
       "regulation_url": "https://www.ani.pt/pt/financiamento/",
       "pdf_url": null,
+      "regulation_local": null,
       "priority_score": 20,
       "status": "pending"
     },
@@ -57,6 +71,7 @@
       "budget": "563.000.000 EUR",
       "regulation_url": "https://www.bpfomento.pt/pt/catalogo/produtos-de-capital/",
       "pdf_url": null,
+      "regulation_local": null,
       "priority_score": 15,
       "status": "pending"
     },
@@ -69,6 +84,7 @@
       "budget": null,
       "regulation_url": "https://www.norte2030.pt/concursos/",
       "pdf_url": null,
+      "regulation_local": null,
       "priority_score": 5,
       "status": "pending"
     }
@@ -79,7 +95,8 @@
       "source": "pt2030",
       "file": "instrumentos/portugal-2030.html",
       "published_date": "2026-03-22",
-      "detected_date": "2026-03-22"
+      "detected_date": "2026-03-22",
+      "regulation_local": null
     },
     {
       "id": "step-inovacao-produtiva-digital-biotecnologia",
@@ -88,7 +105,8 @@
       "published_date": "2026-04-09",
       "detected_date": "2026-04-09",
       "current_state": "aberto",
-      "last_state_check": "2026-04-09"
+      "last_state_check": "2026-04-09",
+      "regulation_local": null
     },
     {
       "id": "step-inovacao-produtiva-energia",
@@ -97,7 +115,8 @@
       "published_date": "2026-04-09",
       "detected_date": "2026-04-09",
       "current_state": "aberto",
-      "last_state_check": "2026-04-09"
+      "last_state_check": "2026-04-09",
+      "regulation_local": null
     },
     {
       "id": "step-idi-empresarial-energia",
@@ -106,7 +125,8 @@
       "published_date": "2026-04-09",
       "detected_date": "2026-04-09",
       "current_state": "aberto",
-      "last_state_check": "2026-04-09"
+      "last_state_check": "2026-04-09",
+      "regulation_local": null
     },
     {
       "id": "step-idi-empresarial-digital-biotecnologia",
@@ -115,7 +135,8 @@
       "published_date": "2026-04-09",
       "detected_date": "2026-04-09",
       "current_state": "aberto",
-      "last_state_check": "2026-04-09"
+      "last_state_check": "2026-04-09",
+      "regulation_local": null
     },
     {
       "id": "eic-accelerator-2026",
@@ -124,7 +145,8 @@
       "published_date": "2026-04-09",
       "detected_date": "2026-04-09",
       "current_state": "aberto",
-      "last_state_check": "2026-04-09"
+      "last_state_check": "2026-04-09",
+      "regulation_local": null
     },
     {
       "id": "step-scale-up-eic",
@@ -133,7 +155,8 @@
       "published_date": "2026-04-09",
       "detected_date": "2026-04-09",
       "current_state": "aberto",
-      "last_state_check": "2026-04-09"
+      "last_state_check": "2026-04-09",
+      "regulation_local": null
     },
     {
       "id": "siac-digitalizacao-transformacao-digital",
@@ -142,7 +165,8 @@
       "published_date": "2026-04-09",
       "detected_date": "2026-04-09",
       "current_state": "aberto",
-      "last_state_check": "2026-04-09"
+      "last_state_check": "2026-04-09",
+      "regulation_local": null
     },
     {
       "id": "sitce-descarbonizacao-eficiencia-energetica",
@@ -151,7 +175,8 @@
       "published_date": "2026-04-09",
       "detected_date": "2026-04-09",
       "current_state": "aberto",
-      "last_state_check": "2026-04-09"
+      "last_state_check": "2026-04-09",
+      "regulation_local": null
     },
     {
       "id": "siac-acoes-coletivas-internacionalizacao",
@@ -160,7 +185,8 @@
       "published_date": "2026-04-09",
       "detected_date": "2026-04-09",
       "current_state": "aberto",
-      "last_state_check": "2026-04-09"
+      "last_state_check": "2026-04-09",
+      "regulation_local": null
     },
     {
       "id": "eic-pathfinder-2026",
@@ -169,7 +195,8 @@
       "published_date": "2026-04-09",
       "detected_date": "2026-04-09",
       "current_state": "aberto",
-      "last_state_check": "2026-04-09"
+      "last_state_check": "2026-04-09",
+      "regulation_local": null
     },
     {
       "id": "eic-transition-2026",
@@ -178,7 +205,8 @@
       "published_date": "2026-04-09",
       "detected_date": "2026-04-09",
       "current_state": "aberto",
-      "last_state_check": "2026-04-09"
+      "last_state_check": "2026-04-09",
+      "regulation_local": null
     },
     {
       "id": "sice-internacionalizacao-pme",
@@ -187,7 +215,8 @@
       "published_date": "2026-04-09",
       "detected_date": "2026-04-09",
       "current_state": "aberto",
-      "last_state_check": "2026-04-09"
+      "last_state_check": "2026-04-09",
+      "regulation_local": null
     }
   ],
   "source_last_checked": {

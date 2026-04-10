@@ -109,6 +109,7 @@ Para cada instrumento novo, adicionar ao array `queue` do `registry.json`:
   "budget": "2.000.000 EUR",
   "regulation_url": "https://...",
   "pdf_url": "https://...pdf",
+  "regulation_local": null,
   "priority_score": 0,
   "status": "pending"
 }
@@ -259,18 +260,28 @@ Ordenar a `queue` por `priority_score` (descendente).
 
 ### 4b. Obter o regulamento
 
-Para cada artigo selecionado:
+Para cada artigo selecionado, seguir esta cascata (parar na primeira que funcionar):
 
-1. Se `pdf_url` existe:
-   - Usar WebFetch para descarregar o PDF
-   - Usar `pdftotext -enc UTF-8 [ficheiro_local] -` para extrair o texto
+1. **Se `regulation_local` existe e nao e null:**
+   - Ler o ficheiro diretamente: `Read regulamentos/[fonte]/[id].txt`
+   - Se o texto tem mais de 3000 palavras: usar apenas as primeiras 3000
+   - Esta e a via preferencial — o scanner ja descarregou e extraiu o texto
+
+2. **Se `regulation_local` e null mas `pdf_url` existe:**
+   - Criar pasta `regulamentos/[source_id]/` se nao existir
+   - Descarregar: `curl -sL "[pdf_url]" -o "regulamentos/[source_id]/[id].pdf"`
+   - Extrair: `pdftotext -enc UTF-8 "regulamentos/[source_id]/[id].pdf" "regulamentos/[source_id]/[id].txt"`
+   - Atualizar o item na queue: `"regulation_local": "regulamentos/[source_id]/[id].txt"`
    - Se o texto tem mais de 3000 palavras: usar apenas as primeiras 3000
 
-2. Se `regulation_url` existe (sem PDF):
-   - Usar WebFetch para extrair o conteudo da pagina
+3. **Se `regulation_url` existe (sem PDF nem local):**
+   - Consultar `access_method` da fonte em `sources.json`
+   - Se `"webfetch"`: usar WebFetch para extrair o conteudo da pagina
+   - Se `"chrome"`: usar Chrome MCP tools (navigate → get_page_text)
    - Extrair: titulo, dotacao, elegibilidade, despesas elegiveis, taxas, prazos
+   - Guardar em `regulamentos/[source_id]/[id].txt` e atualizar `regulation_local`
 
-3. Se nenhum URL existe:
+4. **Se nenhum URL existe:**
    - Usar WebSearch para encontrar informacao sobre o instrumento
    - Combinar resultados de multiplas fontes
 
@@ -354,7 +365,8 @@ Adicionar o card do novo instrumento ao grid em `solucoes.html`, imediatamente a
   "published_date": "[data_hoje]",
   "detected_date": "[data_detecao]",
   "current_state": "aberto",
-  "last_state_check": "[data_hoje]"
+  "last_state_check": "[data_hoje]",
+  "regulation_local": "[regulamentos/source_id/slug.txt ou null]"
 }
 ```
 3. Atualizar `stats.total_published` (+1 por artigo)
