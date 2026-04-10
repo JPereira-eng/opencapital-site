@@ -6,9 +6,9 @@
   },
   "stats": {
     "total_published": 13,
-    "total_in_queue": 5,
+    "total_in_queue": 10,
     "total_state_updates": 0,
-    "last_full_cycle": "2026-04-09",
+    "last_full_cycle": "2026-04-10",
     "sources_checked_this_week": [
       "portugal-2030",
       "compete-2030",
@@ -19,7 +19,11 @@
       "norte-2030",
       "horizonte-europa",
       "banco-fomento",
-      "fct"
+      "fct",
+      "hadea",
+      "interreg-poctep",
+      "interreg-atlantic",
+      "interreg-mac"
     ]
   },
   "queue": [
@@ -47,7 +51,8 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "pending"
+      "status": "pending",
+      "download_error": "SSL cert error via WebFetch - requer Chrome MCP - tentativa 2026-04-10"
     },
     {
       "id": "siid-internacionalizacao-id-horizonte-europa",
@@ -57,8 +62,8 @@
       "deadline": null,
       "budget": null,
       "regulation_url": "https://www.ani.pt/pt/financiamento/",
-      "pdf_url": null,
-      "regulation_local": null,
+      "pdf_url": "https://portugal2030.pt/wp-content/uploads/sites/3/2024/11/MPR-2024-13_SIID_Internacionalizacao-ID_Selo-de-Excelencia_Accelarator-e-Transition.pdf",
+      "regulation_local": "regulamentos/ani/siid-internacionalizacao-id-horizonte-europa.txt",
       "priority_score": 20,
       "status": "pending"
     },
@@ -73,20 +78,92 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 15,
-      "status": "pending"
+      "status": "pending",
+      "download_error": "SSL cert error via WebFetch - requer Chrome MCP - tentativa 2026-04-10"
     },
     {
       "id": "norte2030-siid-vinnovate",
       "name": "SIID I&D Empresarial - Projetos Demonstradores - Vinnovate 2025 (Norte 2030)",
       "source_id": "norte-2030",
       "detected_date": "2026-04-09",
-      "deadline": "2026-12-02",
+      "deadline": "2025-12-02",
+      "budget": null,
+      "regulation_url": "https://www.norte2030.pt/concursos/",
+      "pdf_url": "https://www.norte2030.pt/app/uploads/2025/11/Aviso_PR-Norte2030_VInnovate_2025_Publicacao.pdf",
+      "regulation_local": "regulamentos/norte-2030/norte2030-siid-vinnovate.txt",
+      "priority_score": 5,
+      "status": "pending",
+      "notes": "Call ja fechada (dez 2025). Artigo documenta programa para futuras edicoes."
+    },
+    {
+      "id": "horizon-cl4-2026-data-ai",
+      "name": "Horizonte Europa Cluster 4 — Data Services & AI 2026",
+      "source_id": "hadea",
+      "detected_date": "2026-04-10",
+      "deadline": "2026-04-15",
+      "budget": null,
+      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals_en",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 115,
+      "status": "pending",
+      "notes": "HORIZON-CL4-2026-04. Prazo muito proximo — artigo documenta programa para proxima edicao."
+    },
+    {
+      "id": "horizon-hlth-2026-healthcare",
+      "name": "Horizonte Europa Saude 2026 — Healthcare Access",
+      "source_id": "hadea",
+      "detected_date": "2026-04-10",
+      "deadline": "2026-04-16",
+      "budget": null,
+      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals/horizon-europe-health-2026-calls_en",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 115,
+      "status": "pending",
+      "notes": "HORIZON-HLTH-2026-01-CARE."
+    },
+    {
+      "id": "cef-digital-2026-cabo-submarino",
+      "name": "CEF Digital 2026 — Capacidades de Reparacao de Cabos Submarinos",
+      "source_id": "hadea",
+      "detected_date": "2026-04-10",
+      "deadline": "2026-05-06",
+      "budget": null,
+      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals/submarine-cable-repair-capacities_en",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 115,
+      "status": "pending",
+      "notes": "CEF-DIG-2026-CABLE-REPAIR."
+    },
+    {
+      "id": "horizon-cl4-2026-espaco",
+      "name": "Horizonte Europa — Espaco 2026 (Accessing Space)",
+      "source_id": "hadea",
+      "detected_date": "2026-04-10",
+      "deadline": "2026-09-03",
+      "budget": null,
+      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals/accessing-space-horizon-europe-space-2026-calls_en",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 35,
+      "status": "pending",
+      "notes": "HORIZON-CL4-2026-03 SPACE."
+    },
+    {
+      "id": "norte2030-2026-2-ferrovia-linha-vouga",
+      "name": "Norte 2030 — Ferrovia: Intervencoes na Linha do Vouga",
+      "source_id": "norte-2030",
+      "detected_date": "2026-04-10",
+      "deadline": "2026-05-29",
       "budget": null,
       "regulation_url": "https://www.norte2030.pt/concursos/",
       "pdf_url": null,
       "regulation_local": null,
-      "priority_score": 5,
-      "status": "pending"
+      "priority_score": 65,
+      "status": "pending",
+      "notes": "NORTE2030-2026-2."
     }
   ],
   "published": [
@@ -226,9 +303,14 @@
     "ani": "2026-04-09",
     "iapmei": "2026-04-09",
     "prr": "2026-04-09",
-    "norte-2030": "2026-04-09",
+    "norte-2030": "2026-04-10",
     "horizonte-europa": "2026-04-09",
     "banco-fomento": "2026-04-09",
-    "fct": "2026-04-09"
+    "fct": "2026-04-09",
+    "interreg-poctep": "2026-04-10",
+    "interreg-atlantic": "2026-04-10",
+    "hadea": "2026-04-10",
+    "interreg-mac": "2026-04-10",
+    "eu-funding-tenders": "2026-04-10"
   }
 }
