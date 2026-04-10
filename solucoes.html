@@ -691,7 +691,7 @@
           <span class="cat-badge cat-nr">Não Reembolsável</span>
           <span class="status-pill status-open">Aberto até 30/06/2026</span>
         </div>
-        <h3 class="card-title">SICE — Internacionalização das PME</h3>
+        <h3 class="card-title">SICE: Internacionalização das PME</h3>
         <p class="card-tagline">Financiamento coletivo COMPETE 2030 para associações empresariais levarem as suas PME a mercados externos, com fundo perdido até 50%</p>
         <div class="card-divider"></div>
         <div class="card-highlights">
@@ -736,7 +736,7 @@
           <span class="cat-badge cat-nr">Não Reembolsável</span>
           <span class="status-pill status-open">Aberto até 15 abr 2026</span>
         </div>
-        <h3 class="card-title">Horizonte Europa — Data Services &amp; AI 2026</h3>
+        <h3 class="card-title">Horizonte Europa: Data Services &amp; AI 2026</h3>
         <p class="card-tagline">Financiamento europeu para projetos de investigacao e inovacao em servicos de dados, IA soberana e Open Internet Stack.</p>
         <div class="card-divider"></div>
         <div class="card-highlights">
@@ -751,7 +751,7 @@
           <span class="cat-badge cat-nr">Não Reembolsável</span>
           <span class="status-pill status-open">Aberto até 16 abr 2026</span>
         </div>
-        <h3 class="card-title">Horizonte Europa Saude 2026 — Healthcare Access</h3>
+        <h3 class="card-title">Horizonte Europa Saude 2026: Healthcare Access</h3>
         <p class="card-tagline">Financiamento europeu para inovacao em acesso igualitario a cuidados de saude sustentaveis e de qualidade.</p>
         <div class="card-divider"></div>
         <div class="card-highlights">
@@ -766,7 +766,7 @@
           <span class="cat-badge cat-nr">Não Reembolsável</span>
           <span class="status-pill status-open">Aberto até 6 mai 2026</span>
         </div>
-        <h3 class="card-title">CEF Digital 2026 — Reparacao de Cabos Submarinos</h3>
+        <h3 class="card-title">CEF Digital 2026: Reparacao de Cabos Submarinos</h3>
         <p class="card-tagline">Financiamento para reforcar capacidades europeias de reparacao de cabos submarinos criticos face a sabotagem e falhas tecnicas.</p>
         <div class="card-divider"></div>
         <div class="card-highlights">
@@ -1255,13 +1255,13 @@
     };
 
     /* ─────────────────────────────────────────────────
-       STATE — filtros multi-dimensão
+       STATE - filtros multi-dimensão
     ───────────────────────────────────────────────── */
     let activeCategory = 'all';
     let activeSearch = '';
 
     /* ─────────────────────────────────────────────────
-       FILTER — categoria (botões)
+       FILTER - categoria (botões)
     ───────────────────────────────────────────────── */
     function filterCards(cat) {
       activeCategory = cat;
@@ -1295,7 +1295,7 @@
     }
 
     /* ─────────────────────────────────────────────────
-       SELECT STYLES — highlight quando tem valor activo
+       SELECT STYLES - highlight quando tem valor activo
     ───────────────────────────────────────────────── */
     function updateSelectStyles() {
       ['filterCategory','filterEstado','filterFonte','filterBeneficiario','filterRegiao'].forEach(function(id) {
@@ -1312,7 +1312,7 @@
     }
 
     /* ─────────────────────────────────────────────────
-       APPLY FILTERS — cruzamento de todas as dimensões
+       APPLY FILTERS - cruzamento de todas as dimensões
     ───────────────────────────────────────────────── */
     function applyFilters() {
       var cards = document.querySelectorAll('.instrument-card');
