@@ -328,7 +328,7 @@ Logo (→ index.html) · Soluções · Conhecimento · Capital Simulator `em bre
 - **Col 2:** Soluções — Portugal 2030 · Fundos de Investimento · Benefícios Fiscais · Prémios de Inovação
 - **Col 3:** Plataforma — Capital Simulator `em breve` · Tech2Business `em breve` · Conhecimento · Parceiros
 - **Col 4:** Empresa — Sobre Nós · Equipa · Carreiras · Contacto
-- **Bottom:** © 2025 Open Capital Advisory & Consultancy · Privacidade · Termos · Cookies
+- **Bottom:** © 2009 Open Capital Advisory & Consultancy · Privacidade · Termos · Cookies
 
 ---
 
