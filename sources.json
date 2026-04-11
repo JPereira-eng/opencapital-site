@@ -1,10 +1,13 @@
 {
   "_meta": {
     "description": "Open Capital Advisory — Lista completa de fontes de financiamento, investimento e incentivos",
-    "version": "2.0",
+    "version": "3.0",
     "created": "2026-04-09",
-    "updated": "2026-04-10",
-    "total_sources": 88
+    "updated": "2026-04-11",
+    "total_sources": 88,
+    "api_sources": 2,
+    "covered_sources": 25,
+    "independent_sources": 61
   },
   "sources": [
 
@@ -18,9 +21,16 @@
       "url_plano_anual": "https://portugal2030.pt/wp-content/uploads/sites/3/2026/01/PlanoAnualAvisos_download_012026.pdf",
       "type": "national",
       "category": "Portal central PT2030 — agrega avisos de todos os programas",
-      "access_method": "chrome",
+      "access_method": "api",
       "access_status": "ok",
-      "access_notes": "Pagina JS-rendered (Divi/WordPress). Chrome necessario para extrair avisos. PDFs de regulamento individuais em portugal2030.pt/wp-content/uploads/. Plano Anual de Avisos disponivel como PDF com todos os codigos.",
+      "api_url": "https://portugal2030.pt/wp-json/wp/v2/aviso-2024",
+      "api_pagination": "per_page=100&offset=N (3 requests for all 220+ avisos)",
+      "xlsx_url": "https://dados.gov.pt/s/resources/dataset-pt2030-avisos/20260311-144023/02-datasets-avisos-pt2030-28022026.xlsx",
+      "xlsx_total": 1317,
+      "dedup_key": "codigo (FA####/YYYY format, unique across all programs)",
+      "is_superset": true,
+      "covers_programs": ["COMPETE2030", "PESSOAS2030", "SUSTENTAVEL2030", "MAR2030", "NORTE2030", "CENTRO2030", "LISBOA2030", "ALENTEJO2030", "ALGARVE2030", "ACORES2030", "MADEIRA2030", "PAT2030", "FAMI2030"],
+      "access_notes": "REST API publica (WordPress). 3 chamadas com per_page=100 capturam TODOS os avisos (220+). XLSX no dados.gov.pt com 1,317 avisos historicos. API retorna: codigo, datas, dotacao, programa, fundo, elegibilidade, PDF. E o SUPER-SET de todos os programas regionais e tematicos.",
       "pdf_pattern": "https://portugal2030.pt/wp-content/uploads/sites/3/2026/{mm}/{CODIGO}.pdf",
       "frequency": "weekly",
       "priority": "high",
@@ -52,9 +62,10 @@
       "category": "Inovacao, competitividade, digitalizacao, internacionalizacao",
       "access_method": "webfetch",
       "access_status": "ok",
-      "access_notes": "Avisos page loads perfectly. Lists open calls with deadlines, codes, and filtering.",
+      "covered_by": "portugal-2030",
+      "access_notes": "Coberto pela API PT2030. Scan independente opcional. Se usado: paginacao ?page=N (11 paginas, ~99 avisos). TIMEOUT frequente via WebFetch.",
       "frequency": "weekly",
-      "priority": "high",
+      "priority": "low",
       "description": "Programa tematico para inovacao e transicao digital. Dotacao: 3.904 mil milhoes EUR. Gere avisos SIAC, SITCE, STEP, SIIDE."
     },
     {
@@ -66,9 +77,10 @@
       "category": "Emprego, qualificacao, inclusao social (FSE+)",
       "access_method": "chrome",
       "access_status": "partial",
-      "access_notes": "Divi/WordPress JS-rendered. Chrome necessario. Avisos publicados no portal central PT2030.",
+      "covered_by": "portugal-2030",
+      "access_notes": "Coberto pela API PT2030. Site proprio e apenas news/comunicacao, nao lista avisos.",
       "frequency": "weekly",
-      "priority": "high",
+      "priority": "low",
       "description": "Programa tematico para emprego e qualificacao. Dotacao: 6.7 mil milhoes EUR (FSE+). 28 avisos previstos para 2026."
     },
     {
@@ -80,9 +92,10 @@
       "category": "Pescas, aquicultura, economia maritima (FEAMPA)",
       "access_method": "chrome",
       "access_status": "partial",
-      "access_notes": "Site proprio (mar2030.gov.pt) retorna ECONNREFUSED. Avisos publicados no portal central PT2030.",
+      "covered_by": "portugal-2030",
+      "access_notes": "Coberto pela API PT2030. Site proprio (mar2030.pt) e JS SPA, nao funciona com WebFetch.",
       "frequency": "weekly",
-      "priority": "medium",
+      "priority": "low",
       "description": "Programa tematico maritimo. Dotacao: 540 milhoes EUR (FEAMPA). 6 avisos previstos para 2026."
     },
     {
@@ -94,9 +107,10 @@
       "category": "Acao climatica, sustentabilidade, mobilidade, transportes (FC)",
       "access_method": "chrome",
       "access_status": "partial",
-      "access_notes": "Divi/WordPress JS-rendered. Chrome necessario. Avisos tambem no portal central PT2030.",
+      "covered_by": "portugal-2030",
+      "access_notes": "Coberto pela API PT2030. Divi/WordPress JS-rendered.",
       "frequency": "weekly",
-      "priority": "high",
+      "priority": "low",
       "description": "Programa tematico para acao climatica. Dotacao: 3.1 mil milhoes EUR (Fundo de Coesao). 25 avisos previstos para 2026."
     },
     {
@@ -108,7 +122,8 @@
       "category": "Apoio tecnico transversal a todos os programas PT2030",
       "access_method": "chrome",
       "access_status": "partial",
-      "access_notes": "Divi/WordPress JS-rendered. 1 aviso previsto para 2026.",
+      "covered_by": "portugal-2030",
+      "access_notes": "Coberto pela API PT2030.",
       "frequency": "monthly",
       "priority": "low",
       "description": "Programa transversal de assistencia tecnica. Dotacao: 168 milhoes EUR."
@@ -123,9 +138,10 @@
       "url_avisos": "https://www.norte2030.pt/concursos/",
       "type": "national",
       "category": "Programa regional (FEDER, FSE+) — Regiao Norte",
-      "access_method": "webfetch",
+      "access_method": "chrome",
       "access_status": "ok",
-      "access_notes": "WebFetch funciona. 29 concursos abertos visiveis com nomes, codigos, datas. Paginas individuais via /concurso/[slug]/.",
+      "covered_by": "portugal-2030",
+      "access_notes": "Coberto pela API PT2030 para dados basicos. Scan independente via Chrome MCP para dados detalhados: 171 concursos (29 abertos), mas HTML so mostra 5. Precisa clicar 'Ver mais' (AJAX). API REST bloqueada (401).",
       "frequency": "weekly",
       "priority": "high",
       "description": "Programa regional do Norte 2021-2027. 13 avisos previstos para 2026."
@@ -139,9 +155,10 @@
       "category": "Programa regional (FEDER, FSE+) — Regiao Centro",
       "access_method": "chrome",
       "access_status": "partial",
-      "access_notes": "Divi/WordPress JS-rendered. Chrome necessario. PDFs em portugal2030.pt/wp-content/uploads/.",
+      "covered_by": "portugal-2030",
+      "access_notes": "Coberto pela API PT2030.",
       "frequency": "weekly",
-      "priority": "medium",
+      "priority": "low",
       "description": "Programa regional do Centro. Dotacao: 2.2 mil milhoes EUR. 11 avisos previstos para 2026."
     },
     {
@@ -153,9 +170,10 @@
       "category": "Programa regional (FEDER, FSE+) — Regiao de Lisboa",
       "access_method": "chrome",
       "access_status": "partial",
-      "access_notes": "Divi/WordPress JS-rendered. Chrome necessario.",
+      "covered_by": "portugal-2030",
+      "access_notes": "Coberto pela API PT2030.",
       "frequency": "weekly",
-      "priority": "medium",
+      "priority": "low",
       "description": "Programa regional de Lisboa 2021-2027. 4 avisos previstos para 2026."
     },
     {
@@ -167,9 +185,10 @@
       "category": "Programa regional (FEDER, FSE+) — Regiao do Alentejo",
       "access_method": "chrome",
       "access_status": "partial",
-      "access_notes": "Divi/WordPress JS-rendered. Chrome necessario.",
+      "covered_by": "portugal-2030",
+      "access_notes": "Coberto pela API PT2030.",
       "frequency": "weekly",
-      "priority": "medium",
+      "priority": "low",
       "description": "Programa regional do Alentejo 2021-2027."
     },
     {
@@ -181,9 +200,10 @@
       "category": "Programa regional (FEDER, FSE+) — Regiao do Algarve",
       "access_method": "chrome",
       "access_status": "partial",
-      "access_notes": "Divi/WordPress JS-rendered. Chrome necessario.",
+      "covered_by": "portugal-2030",
+      "access_notes": "Coberto pela API PT2030.",
       "frequency": "weekly",
-      "priority": "medium",
+      "priority": "low",
       "description": "Programa regional do Algarve 2021-2027."
     },
     {
@@ -195,9 +215,10 @@
       "category": "Programa regional (FEDER, FSE+) — Regiao Autonoma dos Acores",
       "access_method": "chrome",
       "access_status": "partial",
-      "access_notes": "Divi/WordPress JS-rendered. Chrome necessario. 22 avisos previstos para 2026.",
+      "covered_by": "portugal-2030",
+      "access_notes": "Coberto pela API PT2030.",
       "frequency": "monthly",
-      "priority": "medium",
+      "priority": "low",
       "description": "Programa regional dos Acores 2021-2027."
     },
     {
@@ -209,9 +230,10 @@
       "category": "Programa regional (FEDER, FSE+) — Regiao Autonoma da Madeira",
       "access_method": "chrome",
       "access_status": "partial",
-      "access_notes": "Divi/WordPress JS-rendered. Chrome necessario. 26 avisos previstos para 2026.",
+      "covered_by": "portugal-2030",
+      "access_notes": "Coberto pela API PT2030.",
       "frequency": "monthly",
-      "priority": "medium",
+      "priority": "low",
       "description": "Programa regional da Madeira 2021-2027. Dotacao: 760 milhoes EUR."
     },
 
@@ -225,7 +247,8 @@
       "type": "national",
       "category": "I&D, inovacao, transferencia de tecnologia, SIFIDE II",
       "access_method": "webfetch",
-      "access_status": "ok",
+      "access_status": "partial",
+      "access_notes": "WebFetch parcial. Pagina principal mostra 1 featured article. 40+ programas distribuidos por sub-paginas no menu de navegacao. Necessita multi-URL crawl.",
       "frequency": "weekly",
       "priority": "high",
       "description": "Agencia que promove a inovacao e o conhecimento. Gere o SIFIDE II, Selos de Excelencia Horizonte Europa, e avisos de I&D."
@@ -252,7 +275,8 @@
       "category": "Garantias, linhas de credito, capital de risco, instrumentos financeiros",
       "access_method": "chrome",
       "access_status": "blocked",
-      "access_notes": "ECONNREFUSED via WebFetch. Chrome ou WebSearch.",
+      "access_notes": "SSL certificate error persistente via WebFetch. Chrome MCP necessario. ~14 linhas de financiamento. Alternativa: scraper pmeincentivos.pt (catalogo completo 3rd party).",
+      "download_error": "SSL: unable to verify the first certificate",
       "frequency": "monthly",
       "priority": "high",
       "description": "Banco publico de desenvolvimento. Garantias, linhas PT2030, instrumentos financeiros para PME."
@@ -261,11 +285,12 @@
       "id": "aicep",
       "name": "AICEP Portugal Global",
       "url": "https://portugalglobal.pt",
-      "url_avisos": "https://portugalglobal.pt/internacionalizacao/incentivos/",
+      "url_avisos": "https://www.portugalglobal.pt/pt/internacionalizacao/incentivos/",
       "type": "national",
       "category": "Internacionalizacao, investimento estrangeiro, incentivos a exportacao",
       "access_method": "webfetch",
       "access_status": "ok",
+      "access_notes": "WebFetch funciona. 6 programas. URL corrigido (antigo dava 404).",
       "frequency": "monthly",
       "priority": "medium",
       "description": "Agencia para o investimento e comercio externo."
@@ -290,8 +315,9 @@
       "url_avisos": "https://business.turismodeportugal.pt/pt/Investir/Financiamento/programas/Paginas/default.aspx",
       "type": "national",
       "category": "Incentivos e programas de apoio ao turismo",
-      "access_method": "webfetch",
-      "access_status": "ok",
+      "access_method": "chrome",
+      "access_status": "blocked",
+      "access_notes": "SharePoint framework. JS-rendered. WebFetch retorna apenas navegacao, zero conteudo. Chrome MCP necessario.",
       "frequency": "monthly",
       "priority": "medium",
       "description": "Programas: Crescer com o Turismo, Revive, Portugal Events."
@@ -300,11 +326,12 @@
       "id": "fct",
       "name": "Fundacao para a Ciencia e a Tecnologia (FCT)",
       "url": "https://www.fct.pt",
-      "url_avisos": "https://www.fct.pt/financiamento/",
+      "url_avisos": "https://www.fct.pt/concursos/",
       "type": "national",
       "category": "Bolsas, emprego cientifico, projetos I&D, infraestruturas de investigacao",
       "access_method": "webfetch",
-      "access_status": "ok",
+      "access_status": "partial",
+      "access_notes": "WebFetch parcial. Pagina 1 mostra 4 concursos abertos. JS-rendered com paginacao ?paged=N. Filtros por status (Abertos/Fechados) e tipo.",
       "frequency": "weekly",
       "priority": "medium",
       "description": "Agencia publica de financiamento da ciencia e investigacao."
@@ -326,11 +353,12 @@
       "id": "iefp",
       "name": "Instituto do Emprego e Formacao Profissional (IEFP)",
       "url": "https://www.iefp.pt",
-      "url_avisos": "https://iefponline.iefp.pt/IEFP/apoioIncentivos.do?menu=ai_emprego",
+      "url_avisos": "https://www.iefp.pt/apoios",
       "type": "national",
       "category": "Apoios a contratacao, estagios profissionais, formacao",
-      "access_method": "websearch",
-      "access_status": "blocked",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "access_notes": "WebFetch funciona. ~21 programas de apoio visiveis. SSR com JS analytics apenas. Pagina unica, sem paginacao.",
       "frequency": "weekly",
       "priority": "medium",
       "description": "Entidade publica de emprego. Medidas ativas: +Emprego, Estagios ATIVAR."
@@ -374,7 +402,7 @@
       "category": "Cooperacao transnacional atlantica (PT, ES, FR, IE)",
       "access_method": "webfetch",
       "access_status": "ok",
-      "access_notes": "WebFetch funciona. PDFs de ToR, manuais e guias disponiveis. 3 calls ja publicados.",
+      "access_notes": "WebFetch funciona. URL corrigido. 3 calls completos (todos fechados). 4o call planeado. Joomla SSR.",
       "frequency": "monthly",
       "priority": "high",
       "description": "Cooperacao atlantica. Dotacao: 113 milhoes EUR FEDER. Co-financiamento ate 75%."
@@ -542,9 +570,10 @@
       "category": "Mobilidade de investigadores, redes doutorais, bolsas pos-doc",
       "access_method": "webfetch",
       "access_status": "ok",
-      "access_notes": "PDFs de work programme e guide for applicants disponiveis.",
+      "covered_by": "eu-funding-tenders",
+      "access_notes": "Coberto pelo EU F&T API. Filtrar por HORIZON-MSCA.",
       "frequency": "monthly",
-      "priority": "medium",
+      "priority": "low",
       "description": "Mobilidade e formacao de investigadores. Orcamento 2026-2027: 1.25 mil milhoes EUR."
     },
     {
@@ -556,9 +585,10 @@
       "category": "IA, quantum, fabricacao avancada, materiais, espaco, blockchain",
       "access_method": "webfetch",
       "access_status": "ok",
-      "access_notes": "Filtrar topic-list por HORIZON-CL4. Work Programme PDF disponivel.",
+      "covered_by": "eu-funding-tenders",
+      "access_notes": "Coberto pelo EU F&T API. Filtrar topicDetails por HORIZON-CL4.",
       "frequency": "monthly",
-      "priority": "high",
+      "priority": "low",
       "description": "Maior cluster do Horizonte. Orcamento: 18.5 mil milhoes EUR."
     },
     {
@@ -570,9 +600,10 @@
       "category": "Renovaveis, hidrogenio, transportes, eficiencia energetica",
       "access_method": "webfetch",
       "access_status": "ok",
-      "access_notes": "Filtrar topic-list por HORIZON-CL5.",
+      "covered_by": "eu-funding-tenders",
+      "access_notes": "Coberto pelo EU F&T API. Filtrar por HORIZON-CL5.",
       "frequency": "monthly",
-      "priority": "high",
+      "priority": "low",
       "description": "Cluster energia e clima. Orcamento: 13.6 mil milhoes EUR. Alta relevancia para PT."
     },
     {
@@ -584,9 +615,10 @@
       "category": "Agricultura sustentavel, biodiversidade, economia circular",
       "access_method": "webfetch",
       "access_status": "ok",
-      "access_notes": "Filtrar topic-list por HORIZON-CL6.",
+      "covered_by": "eu-funding-tenders",
+      "access_notes": "Coberto pelo EU F&T API. Filtrar por HORIZON-CL6.",
       "frequency": "monthly",
-      "priority": "high",
+      "priority": "low",
       "description": "Cluster alimentacao e bioeconomia. Orcamento: 7.8 mil milhoes EUR."
     },
     {
@@ -598,9 +630,10 @@
       "category": "Saude, doencas, ferramentas e tecnologias para saude",
       "access_method": "webfetch",
       "access_status": "ok",
-      "access_notes": "Filtrar topic-list por HORIZON-HLTH.",
+      "covered_by": "eu-funding-tenders",
+      "access_notes": "Coberto pelo EU F&T API. Filtrar por HORIZON-HLTH.",
       "frequency": "monthly",
-      "priority": "medium",
+      "priority": "low",
       "description": "Cluster saude. Orcamento: 9.1 mil milhoes EUR."
     },
     {
@@ -612,7 +645,8 @@
       "category": "Patrimonio cultural, democracia, inovacao social",
       "access_method": "webfetch",
       "access_status": "ok",
-      "access_notes": "Filtrar topic-list por HORIZON-CL2.",
+      "covered_by": "eu-funding-tenders",
+      "access_notes": "Coberto pelo EU F&T API. Filtrar por HORIZON-CL2.",
       "frequency": "monthly",
       "priority": "low",
       "description": "Cluster cultura e sociedade. Orcamento: 2.6 mil milhoes EUR."
@@ -626,7 +660,8 @@
       "category": "Ciberseguranca, infraestruturas criticas, gestao de desastres",
       "access_method": "webfetch",
       "access_status": "ok",
-      "access_notes": "Filtrar topic-list por HORIZON-CL3.",
+      "covered_by": "eu-funding-tenders",
+      "access_notes": "Coberto pelo EU F&T API. Filtrar por HORIZON-CL3.",
       "frequency": "monthly",
       "priority": "low",
       "description": "Cluster seguranca. Orcamento: 2 mil milhoes EUR."
@@ -640,9 +675,10 @@
       "category": "Alargamento da participacao, ERA Chairs, Teaming, Twinning",
       "access_method": "webfetch",
       "access_status": "ok",
-      "access_notes": "Filtrar topic-list por HORIZON-WIDERA. Portugal e pais widening (prioritario).",
+      "covered_by": "eu-funding-tenders",
+      "access_notes": "Coberto pelo EU F&T API. Filtrar por HORIZON-WIDERA. Portugal e pais widening.",
       "frequency": "monthly",
-      "priority": "high",
+      "priority": "low",
       "description": "Widening participation. Orcamento: 1.4 mil milhoes EUR. PT e pais prioritario."
     },
     {
@@ -654,9 +690,10 @@
       "category": "5 missoes: Cancro, Clima, Oceanos, Cidades, Solo",
       "access_method": "webfetch",
       "access_status": "ok",
-      "access_notes": "Filtrar topic-list por HORIZON-MISS.",
+      "covered_by": "eu-funding-tenders",
+      "access_notes": "Coberto pelo EU F&T API. Filtrar por HORIZON-MISS.",
       "frequency": "monthly",
-      "priority": "medium",
+      "priority": "low",
       "description": "5 missoes europeias. Orcamento total: ~10 mil milhoes EUR."
     },
     {
@@ -668,7 +705,8 @@
       "category": "Agencia executiva: Saude, Digital, Industria, Espaco, CEF, EU4Health",
       "access_method": "webfetch",
       "access_status": "ok",
-      "access_notes": "WebFetch funciona. 24 calls abertas visiveis com filtros por programa.",
+      "pagination": "?page=1 e ?page=2 (20 per page, ~26 total)",
+      "access_notes": "WebFetch funciona. 26 calls em 2 paginas. SSR com JS enhancements. Dados completos: referencia, deadline, status.",
       "frequency": "weekly",
       "priority": "high",
       "description": "Agencia que gere calls de Horizon Cluster 1 e 4, CEF Digital, EU4Health, Digital Europe."
@@ -699,9 +737,10 @@
       "category": "Aliancas educacao-empresa, inovacao, competencias",
       "access_method": "webfetch",
       "access_status": "ok",
-      "access_notes": "Filtrar topic-list por ERASMUS. Grants 30K-400K por 6-36 meses.",
+      "covered_by": "eu-funding-tenders",
+      "access_notes": "Coberto pelo EU F&T API. Filtrar por ERASMUS.",
       "frequency": "annual",
-      "priority": "medium",
+      "priority": "low",
       "description": "Aliancas para inovacao entre universidades, VET e empresas."
     },
     {
@@ -713,8 +752,10 @@
       "category": "Parcerias de cooperacao, boas praticas",
       "access_method": "webfetch",
       "access_status": "ok",
+      "covered_by": "eu-funding-tenders",
+      "access_notes": "Coberto pelo EU F&T API.",
       "frequency": "annual",
-      "priority": "medium",
+      "priority": "low",
       "description": "Parcerias de cooperacao abertas a todos os tipos de organizacoes."
     },
     {
@@ -726,6 +767,8 @@
       "category": "Centros de excelencia profissional, ecossistemas de competencias",
       "access_method": "webfetch",
       "access_status": "ok",
+      "covered_by": "eu-funding-tenders",
+      "access_notes": "Coberto pelo EU F&T API.",
       "frequency": "annual",
       "priority": "low",
       "description": "Redes transnacionais de excelencia profissional."
@@ -834,7 +877,8 @@
       "category": "Direitos, igualdade, participacao democratica",
       "access_method": "webfetch",
       "access_status": "ok",
-      "access_notes": "Filtrar topic-list por CERV.",
+      "covered_by": "eu-funding-tenders",
+      "access_notes": "Coberto pelo EU F&T API. Filtrar por CERV.",
       "frequency": "monthly",
       "priority": "low",
       "description": "Programa direitos e valores. Orcamento: 1.55 mil milhoes EUR."
@@ -848,7 +892,8 @@
       "category": "Cooperacao judiciaria, e-justice, direitos das vitimas",
       "access_method": "webfetch",
       "access_status": "ok",
-      "access_notes": "Filtrar topic-list por JUST.",
+      "covered_by": "eu-funding-tenders",
+      "access_notes": "Coberto pelo EU F&T API. Filtrar por JUST.",
       "frequency": "quarterly",
       "priority": "low",
       "description": "Programa justica UE. Orcamento: 305 milhoes EUR."
@@ -860,9 +905,16 @@
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search",
       "type": "international",
       "category": "Portal central de todos os programas de financiamento da UE",
-      "access_method": "webfetch",
-      "access_status": "partial",
-      "access_notes": "Portal JS-rendered mas topic-list.html funciona como alternativa. Agregador de TODOS os programas EU.",
+      "access_method": "api",
+      "access_status": "ok",
+      "api_url": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/{topic-id}.json",
+      "api_index": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
+      "api_search": "POST https://api.tech.ec.europa.eu/search-api/prod/rest/search?apiKey=SEDIA",
+      "api_total": 7618,
+      "dedup_key": "topic identifier (e.g. HORIZON-CL4-2026-DATA-AI-01-02)",
+      "is_superset": true,
+      "covers_programs": ["HORIZON", "CEF", "DIGITAL", "LIFE", "ERASMUS+", "CERV", "JUST", "COSME", "EU4HEALTH", "CREATIVE-EUROPE"],
+      "access_notes": "API JSON publica sem autenticacao. topic-list.html lista 7,618 topic IDs. topicDetails/{id}.json retorna dados completos (titulo, status, deadlines, budget, descricao). SEDIA Search API (POST) para descoberta. Filtrar status 31094502 = Open. Slugs SEMPRE lowercase.",
       "frequency": "daily",
       "priority": "high",
       "description": "Portal unico de acesso a todas as oportunidades de financiamento da UE."
