@@ -5,8 +5,8 @@
     "created": "2026-04-09"
   },
   "stats": {
-    "total_published": 27,
-    "total_in_queue": 7,
+    "total_published": 30,
+    "total_in_queue": 4,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-10",
     "last_scanner_run": "2026-04-11",
@@ -61,48 +61,6 @@
       "priority_score": 0,
       "status": "pending",
       "notes": "Fundo de Capitalizacao e Resiliencia (FdCR). Decreto-Lei 63/2021. 14 gestores de fundo selecionados. Periodo de candidatura de intermediarios ENCERRADO. Prazo final de investimento era 31/12/2025 - programa pode estar concluido para novas candidaturas. Empresas devem contactar gestores aprovados diretamente. Regulamento guardado 2026-04-11."
-    },
-    {
-      "id": "turismo-acolhe-2026",
-      "name": "Programa 'O Turismo Acolhe' — Apoio a Calamidades",
-      "source_id": "turismo-portugal",
-      "detected_date": "2026-04-11",
-      "deadline": "2026-06-30",
-      "budget": null,
-      "regulation_url": "https://business.turismodeportugal.pt/pt/Investir/Financiamento/programas/Paginas/o-turismo-acolhe.aspx",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/turismo-portugal/turismo-acolhe-2026.txt",
-      "priority_score": 25,
-      "status": "pending",
-      "notes": "Apoio a empresas de turismo para alojamento de emergencia (tempestade Kristin). Ate 60 EUR/noite com pequeno-almoco. Prorrogado ate 30 Jun 2026 (original: 31 Mar). Regulamento extraido 2026-04-11."
-    },
-    {
-      "id": "iefp-estagios-iniciar-2026",
-      "name": "IEFP Estagios INICIAR 2026",
-      "source_id": "iefp",
-      "detected_date": "2026-04-11",
-      "deadline": "2026-07-30",
-      "budget": null,
-      "regulation_url": "https://iefponline.iefp.pt/IEFP/medida/estagios-iniciar/overview.jsp",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/iefp/iefp-estagios-iniciar-2026.txt",
-      "priority_score": 5,
-      "status": "pending",
-      "notes": "Estagios para jovens ate 35 anos (niveis de qualificacao 4-5). Subsidio 537.13 EUR/mes. Reembolso empresa 80% (ate 95% em casos especiais). Periodo: 10 Fev - 30 Jul 2026. Regulamento extraido 2026-04-11."
-    },
-    {
-      "id": "iefp-estagios-mais-talento-2026",
-      "name": "IEFP Estagios +Talento 2026",
-      "source_id": "iefp",
-      "detected_date": "2026-04-11",
-      "deadline": "2026-07-30",
-      "budget": null,
-      "regulation_url": "https://iefponline.iefp.pt/IEFP/medida/estagios-mais-talento/overview.jsp",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/iefp/iefp-estagios-mais-talento-2026.txt",
-      "priority_score": 5,
-      "status": "pending",
-      "notes": "Estagios para jovens com nivel 6+ do QNQ (licenciatura+). Subsidio: 1.181-1.396 EUR/mes (por nivel). Reembolso empresa 65% (ate 80% em casos especiais). Periodo: 10 Fev - 30 Jul 2026. Regulamento extraido 2026-04-11."
     },
     {
       "id": "madeira2030-2026-13-internacionalizacao-pme",
@@ -415,6 +373,36 @@
       "current_state": "aberto",
       "last_state_check": "2026-04-11",
       "regulation_local": "regulamentos/hadea/horizon-cl4-2026-espaco.txt"
+    },
+    {
+      "id": "turismo-acolhe-2026",
+      "source": "turismo-portugal",
+      "file": "instrumentos/turismo-acolhe-2026.html",
+      "published_date": "2026-04-11",
+      "detected_date": "2026-04-11",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-11",
+      "regulation_local": "regulamentos/turismo-portugal/turismo-acolhe-2026.txt"
+    },
+    {
+      "id": "iefp-estagios-iniciar-2026",
+      "source": "iefp",
+      "file": "instrumentos/iefp-estagios-iniciar-2026.html",
+      "published_date": "2026-04-11",
+      "detected_date": "2026-04-11",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-11",
+      "regulation_local": "regulamentos/iefp/iefp-estagios-iniciar-2026.txt"
+    },
+    {
+      "id": "iefp-estagios-mais-talento-2026",
+      "source": "iefp",
+      "file": "instrumentos/iefp-estagios-mais-talento-2026.html",
+      "published_date": "2026-04-11",
+      "detected_date": "2026-04-11",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-11",
+      "regulation_local": "regulamentos/iefp/iefp-estagios-mais-talento-2026.txt"
     }
   ],
   "source_last_checked": {
