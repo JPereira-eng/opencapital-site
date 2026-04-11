@@ -6,11 +6,11 @@
   },
   "stats": {
     "total_published": 31,
-    "total_in_queue": 20,
+    "total_in_queue": 21,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-10",
     "last_scanner_run": "2026-04-12",
-    "sources_checked_this_week": ["portugal-2030", "eu-funding-tenders", "ani", "iapmei", "prr", "interreg-poctep"],
+    "sources_checked_this_week": ["portugal-2030", "eu-funding-tenders", "ani", "iapmei", "prr", "interreg-poctep", "fct", "aicep", "iefp", "interreg-atlantic"],
     "reset_reason": "v3.0 reset cirurgico: novas APIs (PT2030 REST, EU F&T JSON), deduplicacao, super-fontes",
     "reset_date": "2026-04-11",
     "last_api_scan_pt2030": "2026-04-11",
@@ -285,6 +285,21 @@
       "priority_score": 35,
       "status": "pending",
       "notes": "HORIZON-CL6-2026-01-ZEROPOLLUTION-01. Dois fases: Fase 1 encerrou 16/04/2026; Fase 2 abre 16/04/2026 - fecho 23/09/2026. 23M EUR. Programa Horizonte Europa Cluster 6 (Alimentacao, Bioeconomia, Recursos Naturais, Ambiente). Acao: HORIZON-RIA. Foco: descontaminacao e biorremediacao de poluicao aquatica. Beneficiario: consorcio de instituicoes de investigacao e empresas (Privada + Publica). Relevancia para empresas de biotecnologia ambiental, tratamento de aguas, economia circular."
+    },
+    {
+      "id": "prima-2026-seccao-2",
+      "name": "PRIMA 2026 - Concurso Seccao 2 - Investigacao Mediterranica",
+      "source_id": "fct",
+      "aviso_codigo": null,
+      "detected_date": "2026-04-12",
+      "deadline": "2026-05-15",
+      "budget": "1.200.000 EUR",
+      "regulation_url": "https://www.fct.pt/concursos/prima-concurso-2026-seccao-2",
+      "pdf_url": null,
+      "regulation_local": "regulamentos/fct/prima-2026-seccao-2.txt",
+      "priority_score": 75,
+      "status": "pending",
+      "notes": "PRIMA 2026 Seccao 2. FCT contribuicao: 1.2M EUR. Fase 1: 15/05/2026; Fase 2: 29/09/2026. Consorcio transnacional (min. 3 paises PRIMA). Max por consorcio PT lider: 250K EUR. Topicos: gestao agua mediterranica, monitorizacao agricola remota, rastreabilidade digital agrofoodchain. Beneficiario: Privada (empresas) + Publica (universidades, labs). Relevante para empresas de biotecnologia agricola, tecnologia de agua, agrifood tech."
     },
     {
       "id": "i3-2026-interregional-innovation-investments",
@@ -630,7 +645,11 @@
     "ani": "2026-04-12",
     "iapmei": "2026-04-12",
     "prr": "2026-04-12",
-    "interreg-poctep": "2026-04-12"
+    "interreg-poctep": "2026-04-12",
+    "fct": "2026-04-12",
+    "aicep": "2026-04-12",
+    "iefp": "2026-04-12",
+    "interreg-atlantic": "2026-04-12"
   },
   "dedup_codigos_known": {
     "_note": "Codigos de avisos ja publicados ou ignorados, para deduplicacao futura",
