@@ -37,7 +37,7 @@ Todos os caminhos de ficheiros e comandos `git -C` nas instrucoes seguintes refe
 
 ## FICHEIROS DE ESTADO
 
-- **`$REPO/sources.json`**: lista de 85 fontes com URLs, metodo de acesso e prioridade
+- **`$REPO/sources.json`**: lista de fontes com URLs, metodo de acesso, prioridade, e campos API (v3.0: 2 super-fontes API + 25 fontes cobertas + ~61 independentes)
 - **`$REPO/registry.json`**: estado do agente - fila, publicados, ultima verificacao
 - **`$REPO/regulamentos/`**: pasta onde os textos extraidos sao guardados
 
@@ -59,13 +59,19 @@ Este scanner executa 3 camadas por ordem. Cada execucao pode executar todas ou a
 
 ### 1.1 Selecionar fontes a verificar
 
-Verificar no maximo **5 fontes por execucao**.
+Verificar no maximo **8 fontes por execucao** (APIs contam como 1 fonte mas cobrem muitos avisos).
+
+**Regra de super-fontes:** Fontes com `is_superset: true` (portugal-2030, eu-funding-tenders) devem ser priorizadas. Quando uma super-fonte e verificada, todas as fontes com `covered_by` correspondente ficam implicitamente cobertas.
+
+**Fontes com `covered_by` definido:** so sao verificadas individualmente se a super-fonte correspondente nao foi verificada nos ultimos 14 dias (fallback).
 
 **Prioridade de selecao:**
-1. Fontes com `priority: "high"` nao verificadas ha mais de 7 dias
-2. Fontes com `priority: "medium"` nao verificadas ha mais de 14 dias
-3. Fontes com `priority: "low"` nao verificadas ha mais de 30 dias
-4. Se nenhuma fonte precisa de verificacao: saltar para Camada 2
+1. Super-fontes (`is_superset: true`) nao verificadas ha mais de 3 dias
+2. Fontes independentes com `priority: "high"` nao verificadas ha mais de 7 dias
+3. Fontes independentes com `priority: "medium"` nao verificadas ha mais de 14 dias
+4. Fontes independentes com `priority: "low"` nao verificadas ha mais de 30 dias
+5. Fontes com `covered_by` como fallback (so se super-fonte ha mais de 14 dias)
+6. Se nenhuma fonte precisa de verificacao: saltar para Camada 2
 
 Consultar `registry.json > source_last_checked` para datas.
 
@@ -73,28 +79,76 @@ Consultar `registry.json > source_last_checked` para datas.
 
 Consultar o campo `access_method` no `sources.json`:
 
+**Se `access_method: "api"` (super-fontes):**
+
+Usar a estrategia especifica da fonte:
+
+**Portugal 2030 (id: portugal-2030):**
+1. Buscar todos os avisos via REST API com paginacao:
+   ```
+   WebFetch: https://portugal2030.pt/wp-json/wp/v2/aviso-2024?per_page=100&offset=0
+   WebFetch: https://portugal2030.pt/wp-json/wp/v2/aviso-2024?per_page=100&offset=100
+   WebFetch: https://portugal2030.pt/wp-json/wp/v2/aviso-2024?per_page=100&offset=200
+   ```
+2. De cada aviso JSON, extrair:
+   - `acf.codigo` (ex: "FA0212/2025") - chave de deduplicacao
+   - `title.rendered` - nome do aviso
+   - `acf.data_inicio` / `acf.data_fim` - datas (formato YYYYMMDD)
+   - `acf.df` - dotacao financeira
+   - `acf.programa[]` - programas (COMPETE2030, NORTE2030, etc.)
+   - `acf.fundo[]` - fundo EU (FEDER, FSE+, etc.)
+   - `acf.beneficiario[]` - elegibilidade
+   - `acf.natureza` - Concurso/Convite
+   - `acf.pdf` - ID do media WordPress (PDF do regulamento)
+3. Filtrar apenas avisos com status "Aberto" (verificar `acf.data_fim` > hoje)
+4. Atualizar `source_last_checked` para portugal-2030 E para todas as fontes em `covers_programs`
+
+**EU Funding & Tenders (id: eu-funding-tenders):**
+1. Usar SEDIA Search API para descobrir topics abertos:
+   ```
+   POST https://api.tech.ec.europa.eu/search-api/prod/rest/search?apiKey=SEDIA&text=2026&pageSize=200&pageNumber=1
+   ```
+2. Filtrar resultados client-side: manter apenas onde `metadata.status[0] === "31094502"` (Open)
+3. Para cada topic aberto, buscar detalhes completos:
+   ```
+   WebFetch: https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/{slug-lowercase}.json
+   ```
+4. De cada topicDetails JSON, extrair:
+   - `identifier` (ex: "HORIZON-CL4-2026-DATA-AI-01-02") - chave de deduplicacao
+   - `title` - nome do topic
+   - `actions[0].status.abbreviation` - "Open"/"Closed"/"Forthcoming"
+   - `actions[0].deadlineDates[]` - prazos (Unix timestamp ms)
+   - `budgetOverviewJSONItem` - orcamento
+   - `frameworkProgramme.abbreviation` - programa (HORIZON, CEF, etc.)
+   - `description` - descricao completa (HTML)
+5. Limitar a 20 topics detalhados por execucao (para controlar tokens)
+6. Atualizar `source_last_checked` para eu-funding-tenders E para todas as fontes em `covers_programs`
+
 **Se `access_method: "webfetch"`:**
 - Usar WebFetch no `url_avisos` da fonte
+- **Se a fonte tem `pagination`:** percorrer todas as paginas (ex: `?page=1` ate `?page=N` para COMPETE 2030, ou `?paged=N` para FCT)
 - Extrair: nome do aviso, codigo, estado, prazo, dotacao, URL regulamento, URL PDF
 
 **Se `access_method: "chrome"`:**
 - Usar Chrome MCP tools para navegar ao `url_avisos`
-- Sequencia: `navigate` → aguardar render → `get_page_text` ou `read_page`
+- Sequencia: `navigate` -> aguardar render -> `get_page_text` ou `read_page`
 - Se a pagina tem tabs/filtros (ex: "Abertos"): clicar no filtro via `computer` tool
+- Se a pagina tem "Ver mais" (ex: Norte 2030): clicar repetidamente ate carregar todos
 - Extrair os mesmos campos
 
 **Se `access_method: "websearch"`:**
 - Usar WebSearch com query: `site:[url] avisos abertos 2026` ou `[nome_fonte] concursos abertos financiamento 2026`
 - Combinar resultados de multiplas pesquisas se necessario
 
-### 1.3 Comparar com registry
+### 1.3 Comparar com registry (deduplicacao)
 
-Para cada instrumento detectado na pagina:
+Para cada instrumento detectado:
 
 1. Gerar `id` slug (kebab-case do nome)
-2. Verificar se ja existe em `registry.json > published` ou `queue`
-3. Se ja existe: anotar para Camada 3 (monitor)
-4. Se e novo: adicionar a `queue`
+2. **Verificacao por ID:** existe em `registry.json > published` ou `queue` com o mesmo id? Se sim: skip
+3. **Verificacao por codigo:** se o instrumento tem codigo (FA####/YYYY ou HORIZON-xxx), verificar se algum item existente tem o mesmo codigo no campo `aviso_codigo`. Se sim: skip
+4. **Verificacao por titulo:** se o titulo e >= 80% similar a um item existente (mesma fonte ou fonte coberta pela mesma super-fonte): skip e registar "possivel duplicado: [id-existente]"
+5. Se e novo: adicionar a `queue`
 
 ### 1.4 Adicionar novos a fila
 
@@ -104,7 +158,8 @@ Para cada instrumento novo, adicionar ao array `queue` do `registry.json`:
 {
   "id": "slug-do-instrumento",
   "name": "Nome completo do aviso",
-  "source_id": "compete-2030",
+  "source_id": "portugal-2030",
+  "aviso_codigo": "FA0212/2025 ou HORIZON-CL4-2026-xxx (se disponivel, null se nao)",
   "detected_date": "2026-04-10",
   "deadline": "2026-09-30",
   "budget": "2.000.000 EUR",
@@ -216,7 +271,7 @@ Para cada instrumento:
 
 ### 3.3 Registar alteracoes
 
-**Se estado mudou (aberto → fechado/previsto):**
+**Se estado mudou (aberto -> fechado/previsto):**
 ```json
 {
   "current_state": "fechado",
@@ -316,7 +371,7 @@ rm -rf /tmp/opencapital
 ## REGRAS DE SEGURANCA
 
 1. **Nunca duplicar items na fila.** Verificar sempre `queue` e `published` antes de adicionar.
-2. **Nunca exceder 5 scans + 3 downloads + 3 monitors por execucao.** Respeitar os limites para caber no budget de tokens.
+2. **Nunca exceder 8 scans + 5 downloads + 3 monitors por execucao. APIs contam como 1 scan mas podem retornar centenas de avisos.** Respeitar os limites para caber no budget de tokens.
 3. **Nunca modificar artigos HTML.** Esta skill so modifica `registry.json` e ficheiros em `regulamentos/`.
 4. **Nunca modificar `sources.json`.** Se encontrar fontes novas, apenas reportar.
 5. **Se WebFetch/Chrome falhar:** registar o erro e continuar para o proximo item. Nunca parar a execucao.
@@ -329,11 +384,11 @@ rm -rf /tmp/opencapital
 
 ```
 1. Ler registry.json + sources.json
-2. SCAN: verificar ate 5 fontes → detectar novos → adicionar a fila
-3. DOWNLOAD: descarregar ate 3 regulamentos → guardar em regulamentos/[fonte]/[id].txt
-4. MONITOR: verificar ate 3 instrumentos publicados → registar alteracoes
+2. SCAN: verificar ate 8 fontes (APIs primeiro) -> detectar novos -> deduplicar -> adicionar a fila
+3. DOWNLOAD: descarregar ate 5 regulamentos -> guardar em regulamentos/[fonte]/[id].txt
+4. MONITOR: verificar ate 3 instrumentos publicados -> registar alteracoes
 5. [Opcional] DISCOVERY: 2 WebSearch queries exploratorias
 6. Atualizar registry.json
 7. git commit + push
-8. Reportar: "Scan: [N fontes]. Novos: [N]. Downloads: [N]. Monitor: [N updates]. Fila total: [N]."
+8. Reportar: "Scan: [N fontes] ([N via API]). Novos: [N]. Dedup: [N ignorados]. Downloads: [N]. Monitor: [N updates]. Fila total: [N]."
 ```
