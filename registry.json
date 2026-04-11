@@ -6,7 +6,7 @@
   },
   "stats": {
     "total_published": 18,
-    "total_in_queue": 13,
+    "total_in_queue": 16,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-10",
     "last_scanner_run": "2026-04-11",
@@ -39,7 +39,12 @@
       "centro-2030",
       "autoridade-tributaria",
       "interreg-sudoe",
-      "lisboa-2030"
+      "lisboa-2030",
+      "mar-2030",
+      "alentejo-2030",
+      "algarve-2030",
+      "acores-2030",
+      "madeira-2030"
     ]
   },
   "queue": [
@@ -204,12 +209,12 @@
       "detected_date": "2026-04-11",
       "deadline": "2026-05-08",
       "budget": "5.000.000 EUR",
-      "regulation_url": "https://lisboa.portugal2030.pt/avisos/",
+      "regulation_url": "https://lisboa.portugal2030.pt/2026/03/27/lisboa-2030-lanca-aviso-de-5-milhoes-para-equipamentos-tecnologicos-step-com-candidaturas-ate-8-maio/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/lisboa-2030/lisboa2030-2026-step-fase2.txt",
       "priority_score": 115,
       "status": "pending",
-      "notes": "Segundo aviso Lisboa 2030 para Equipamentos Tecnologicos no ambito do Regulamento STEP. Periodo: 27 Mar - 8 Mai 2026 (18h00). FEDER 55% cofinanciamento. Elegiveis: centros e interfaces tecnologicos, parques de ciencia e tecnologia, IES, entidades sem fins lucrativos em transferencia de tecnologia. Foco: tecnologias digitais, biotecnologias. Area Metropolitana de Lisboa. Detetado 2026-04-11."
+      "notes": "LISBOA2030-2026-3. Segundo aviso Lisboa 2030 para Equipamentos Tecnologicos no ambito do Regulamento STEP. Periodo: 27 Mar - 8 Mai 2026 (18h00). FEDER 55% cofinanciamento. Elegiveis: IES, centros tecnologicos, parques de ciencia e tecnologia, incubadoras, entidades sem fins lucrativos em transferencia de tecnologia, municipios em cooperacao. Foco: tecnologias digitais, biotecnologias. Area Metropolitana de Lisboa. Regulamento extraido 2026-04-11."
     },
     {
       "id": "centro2030-2026-5-step",
@@ -224,6 +229,48 @@
       "priority_score": 55,
       "status": "pending",
       "notes": "Centro2030-2026-5. Publicado 23/02/2026. Periodo: 23 Fev - 30 Jun 2026 (18h00). FEDER 85% cofinanciamento. 25M EUR dotacao. Elegiveis: CTI reconhecidos (Despacho 15160/2024), parques de ciencia e tecnologia (PCT), IES e entidades sem fins lucrativos em transferencia tecnologica. Regiao NUTS II Centro. Tecnologias criticas STEP: digital, cleantech, biotecnologias. Regulamento descarregado 2026-04-11."
+    },
+    {
+      "id": "madeira2030-2026-13-internacionalizacao-pme",
+      "name": "Madeira 2030 - Internacionalizacao 2030 (M2030-2026-13)",
+      "source_id": "madeira-2030",
+      "detected_date": "2026-04-11",
+      "deadline": "2026-05-15",
+      "budget": "1.000.000 EUR",
+      "regulation_url": "https://madeira.portugal2030.pt/2026/04/01/madeira-2030-lanca-aviso-concurso-para-internacionalizacao-das-pme/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 65,
+      "status": "pending",
+      "notes": "M2030-2026-13. Internacionalizacao 2030. Apoio a projetos de internacionalizacao de PME da Regiao Autonoma da Madeira. Dotacao: 1M EUR FEDER. Taxa de cofinanciamento: 40%. Subsidio nao reembolsavel. Periodo: 1 Abr - 15 Mai 2026 (17h00). Submissao: Balcao dos Fundos (balcaofundosue.pt). Prioridade: Madeira + Inteligente e Competitiva - Conhecimento e Inovacao. Detetado 2026-04-11."
+    },
+    {
+      "id": "mar2030-2026-10-madeira-custos-suplementares",
+      "name": "MAR 2030 - Compensacao Custos Suplementares Pesca e Aquicultura Madeira 2025 (MAR2030-2026-10)",
+      "source_id": "mar-2030",
+      "detected_date": "2026-04-11",
+      "deadline": "2026-05-29",
+      "budget": null,
+      "regulation_url": "https://portugal2030.pt/2026/04/06/mar-2030-compensa-custos-suplementares-da-pesca-e-aquicultura-na-madeira/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 55,
+      "status": "pending",
+      "notes": "MAR2030-2026-10. Compensacao dos Custos Suplementares para Produtos da Pesca e Aquicultura na Regiao Autonoma da Madeira - Ano 2025. Fundo FEAMPA. Operadores de pesca e aquicultura na RAM. Publicado 06/04/2026. Candidaturas ate 29/05/2026 via Balcao dos Fundos. Relevancia limitada para tipico cliente Open Capital - setor pescas/aquicultura regional. Detetado 2026-04-11."
+    },
+    {
+      "id": "alentejo2030-ciclo-urbano-agua-2026",
+      "name": "Alentejo 2030 - Investimentos no Ciclo Urbano da Agua",
+      "source_id": "alentejo-2030",
+      "detected_date": "2026-04-11",
+      "deadline": "2026-12-31",
+      "budget": "8.997.000 EUR",
+      "regulation_url": "https://alentejo.portugal2030.pt/2026/03/09/alentejo-2030-abre-concurso-de-quase-9-milhoes-de-euros-para-investimentos-no-ciclo-urbano-da-agua/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 15,
+      "status": "pending",
+      "notes": "Aviso Alentejo 2030 para investimentos no ciclo urbano da agua. Dotacao: ~9M EUR FEDER 85%. Fases: 10 fases ate 31/12/2026 (1a fase encerrou 31/03/2026). Foco: reutilizacao, resiliencia, modernizacao e descarbonizacao do ciclo urbano da agua (tratamento de aguas residuais, reutilizacao de aguas tratadas, captacao de aguas pluviais). Relevancia limitada (infraestruturas municipais). Detetado 2026-04-11."
     }
   ],
   "published": [
@@ -435,6 +482,11 @@
     "centro-2030": "2026-04-11",
     "autoridade-tributaria": "2026-04-11",
     "interreg-sudoe": "2026-04-11",
-    "lisboa-2030": "2026-04-11"
+    "lisboa-2030": "2026-04-11",
+    "mar-2030": "2026-04-11",
+    "alentejo-2030": "2026-04-11",
+    "algarve-2030": "2026-04-11",
+    "acores-2030": "2026-04-11",
+    "madeira-2030": "2026-04-11"
   }
 }
