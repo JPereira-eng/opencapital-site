@@ -142,13 +142,16 @@ Usar a estrategia especifica da fonte:
 
 ### 1.3 Comparar com registry (deduplicacao)
 
+**Regra fundamental: adicionar TODOS os avisos abertos (data_fim > hoje), independentemente do setor de beneficiario (publico, privado ou misto). Nao filtrar por setor - essa decisao editorial e do writer, nao do scanner.**
+
 Para cada instrumento detectado:
 
-1. Gerar `id` slug (kebab-case do nome)
-2. **Verificacao por ID:** existe em `registry.json > published` ou `queue` com o mesmo id? Se sim: skip
-3. **Verificacao por codigo:** se o instrumento tem codigo (FA####/YYYY ou HORIZON-xxx), verificar se algum item existente tem o mesmo codigo no campo `aviso_codigo`. Se sim: skip
-4. **Verificacao por titulo:** se o titulo e >= 80% similar a um item existente (mesma fonte ou fonte coberta pela mesma super-fonte): skip e registar "possivel duplicado: [id-existente]"
-5. Se e novo: adicionar a `queue`
+1. Verificar se o aviso esta aberto: `data_fim > data de hoje`. Se encerrado: skip.
+2. Gerar `id` slug (kebab-case do nome)
+3. **Verificacao por ID:** existe em `registry.json > published` ou `queue` com o mesmo id? Se sim: skip
+4. **Verificacao por codigo:** se o instrumento tem codigo (FA####/YYYY ou HORIZON-xxx), verificar se algum item existente tem o mesmo codigo no campo `aviso_codigo`. Se sim: skip
+5. **Verificacao por titulo:** se o titulo e >= 80% similar a um item existente (mesma fonte ou fonte coberta pela mesma super-fonte): skip e registar "possivel duplicado: [id-existente]"
+6. Se e novo e aberto: adicionar a `queue`
 
 ### 1.4 Adicionar novos a fila
 
@@ -179,6 +182,10 @@ Para cada instrumento novo, adicionar ao array `queue` do `registry.json`:
 - Dotacao > 1M EUR: +10
 - Fonte priority "high": +15
 - Fonte priority "medium": +5
+- Beneficiario inclui "Privada": +10 (relevancia editorial acrescida para clientes tipicos Open Capital)
+- Beneficiario so "Publica": +0 (incluir na fila mas prioridade editorial mais baixa)
+
+**Nota sobre o campo `notes`:** incluir sempre o tipo de beneficiario no campo notes para o writer saber o contexto editorial ao escrever o artigo.
 
 ### 1.5 Atualizar source_last_checked
 
