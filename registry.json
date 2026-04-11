@@ -5,8 +5,8 @@
     "created": "2026-04-09"
   },
   "stats": {
-    "total_published": 21,
-    "total_in_queue": 13,
+    "total_published": 24,
+    "total_in_queue": 10,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-10",
     "last_scanner_run": "2026-04-11",
@@ -91,34 +91,6 @@
       "notes": "Fundo de Capitalizacao e Resiliencia (FdCR). Decreto-Lei 63/2021. 14 gestores de fundo selecionados. Periodo de candidatura de intermediarios ENCERRADO. Prazo final de investimento era 31/12/2025 - programa pode estar concluido para novas candidaturas. Empresas devem contactar gestores aprovados diretamente. Regulamento guardado 2026-04-11."
     },
     {
-      "id": "horizon-cl4-2026-espaco",
-      "name": "Horizonte Europa — Espaco 2026 (Accessing Space)",
-      "source_id": "hadea",
-      "detected_date": "2026-04-10",
-      "deadline": "2026-09-03",
-      "budget": "90.970.000 EUR",
-      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals/accessing-space-horizon-europe-space-2026-calls_en",
-      "pdf_url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-7-digital-industry-and-space_horizon-2026-2027_en.pdf",
-      "regulation_local": "regulamentos/hadea/horizon-cl4-2026-espaco.txt",
-      "priority_score": 35,
-      "status": "pending",
-      "notes": "HORIZON-CL4-2026-03 SPACE. 8 topicos. Topico principal: HORIZON-CL4-2026-SPACE-03-11 (spaceports, 22.59M EUR, 2 projetos). Deadline 3 Set 2026."
-    },
-    {
-      "id": "norte2030-2026-2-ferrovia-linha-vouga",
-      "name": "Norte 2030 — Ferrovia: Intervencoes na Linha do Vouga",
-      "source_id": "norte-2030",
-      "detected_date": "2026-04-10",
-      "deadline": "2026-05-29",
-      "budget": "8.000.000 EUR",
-      "regulation_url": "https://www.norte2030.pt/concurso/ferrovia-intervencoes-na-linha-do-vouga-nuts-ii-norte-norte2030-2026-2/",
-      "pdf_url": "https://www.norte2030.pt/app/uploads/2026/02/NORTE2030-2026-2_Ferrovia-intervencoes-na-Linha-do-Vouga_12-02-2026.pdf",
-      "regulation_local": "regulamentos/norte-2030/norte2030-2026-2-ferrovia-linha-vouga.txt",
-      "priority_score": 65,
-      "status": "pending",
-      "notes": "NORTE2030-2026-2. Beneficiario unico: Infraestruturas de Portugal, SA. FEDER 85%. Modernizacao Linha do Vouga NUTS II Norte."
-    },
-    {
       "id": "turismo-acolhe-2026",
       "name": "Programa 'O Turismo Acolhe' — Apoio a Calamidades",
       "source_id": "turismo-portugal",
@@ -173,20 +145,6 @@
       "priority_score": 35,
       "status": "pending",
       "notes": "ERC-2026-AdG. Abertura: 28 Mai 2026. Deadline: 27 Ago 2026 17:00 CET. Budget total: 747M EUR, ~294 grants. Ate 2.5M EUR por projeto (5 anos). Ate +2M EUR para recolocacao de paises terceiros. Elegibilidade: investigadores estabelecidos com track record reconhecido. Nova estrutura: Part I (5 pag concisa) + Part II (implementacao). Portugal elegivel. Work Programme 2026 descarregado 2026-04-11."
-    },
-    {
-      "id": "horizon-widera-twinning-2026",
-      "name": "Horizonte Europa WIDERA — Twinning 2026 (Widening Participation)",
-      "source_id": "horizon-widera",
-      "detected_date": "2026-04-11",
-      "deadline": "2026-04-09",
-      "budget": "264.500.000 EUR",
-      "regulation_url": "https://rea.ec.europa.eu/funding-and-grants/horizon-europe-widening-participation-and-spreading-excellence/twinning_en",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/horizon-widera/horizon-widera-twinning-2026.txt",
-      "priority_score": 45,
-      "status": "pending",
-      "notes": "HORIZON-WIDERA-2026-02-WIDENING-01. Deadline 9 Abr 2026 (encerrado). 264.5M EUR, ate 210 projetos, 0.8M-1.5M EUR/projeto. CSA, financiamento 100% lump sum. Duracao ate 3 anos. Objetivo: networking institucional entre entidades de investigacao, transferencia de conhecimento. Portugal e pais Widening prioritario (widening countries). Ficha tecnica extraida 2026-04-11."
     },
     {
       "id": "madeira2030-2026-13-internacionalizacao-pme",
@@ -439,6 +397,36 @@
       "current_state": "aberto",
       "last_state_check": "2026-04-11",
       "regulation_local": "regulamentos/centro-2030/centro2030-2026-5-step.txt"
+    },
+    {
+      "id": "norte2030-2026-2-ferrovia-linha-vouga",
+      "source": "norte-2030",
+      "file": "instrumentos/norte2030-2026-2-ferrovia-linha-vouga.html",
+      "published_date": "2026-04-11",
+      "detected_date": "2026-04-10",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-11",
+      "regulation_local": "regulamentos/norte-2030/norte2030-2026-2-ferrovia-linha-vouga.txt"
+    },
+    {
+      "id": "horizon-widera-twinning-2026",
+      "source": "horizon-widera",
+      "file": "instrumentos/horizon-widera-twinning-2026.html",
+      "published_date": "2026-04-11",
+      "detected_date": "2026-04-11",
+      "current_state": "fechado",
+      "last_state_check": "2026-04-11",
+      "regulation_local": "regulamentos/horizon-widera/horizon-widera-twinning-2026.txt"
+    },
+    {
+      "id": "horizon-cl4-2026-espaco",
+      "source": "hadea",
+      "file": "instrumentos/horizon-cl4-2026-espaco.html",
+      "published_date": "2026-04-11",
+      "detected_date": "2026-04-10",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-11",
+      "regulation_local": "regulamentos/hadea/horizon-cl4-2026-espaco.txt"
     }
   ],
   "source_last_checked": {
