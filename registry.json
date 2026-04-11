@@ -5,8 +5,8 @@
     "created": "2026-04-09"
   },
   "stats": {
-    "total_published": 18,
-    "total_in_queue": 16,
+    "total_published": 21,
+    "total_in_queue": 13,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-10",
     "last_scanner_run": "2026-04-11",
@@ -161,20 +161,6 @@
       "notes": "Estagios para jovens com nivel 6+ do QNQ (licenciatura+). Subsidio: 1.181-1.396 EUR/mes (por nivel). Reembolso empresa 65% (ate 80% em casos especiais). Periodo: 10 Fev - 30 Jul 2026. Regulamento extraido 2026-04-11."
     },
     {
-      "id": "horizon-cl6-2026-02",
-      "name": "Horizonte Europa CL6-2026-02 — Alimentacao, Bioeconomia, Recursos Naturais (17 topicos)",
-      "source_id": "horizon-cluster6",
-      "detected_date": "2026-04-11",
-      "deadline": "2026-04-14",
-      "budget": "166.400.000 EUR",
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/programmes/horizon",
-      "pdf_url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-9-food-bioeconomy-natural-resources-agriculture-and-environment_horizon-2026-2027_en.pdf",
-      "regulation_local": "regulamentos/hadea/horizon-cl6-2026-02.txt",
-      "priority_score": 145,
-      "status": "pending",
-      "notes": "HORIZON-CL6-2026-02. 17 topicos. Dest 2 (Farm2Fork) + Dest 5 (Land, Ocean, Water). 166.4M EUR. Abertura: 14 Jan 2026. Deadline 14 Abr 2026 (HOJE). Inclui topicos Farm2Fork (FARM2FORK-01: fitossanitarios, FARM2FORK-03: culturas proteicas) e ZeroPollution. URGENTE: prazo encerra hoje. Regulamento descarregado 2026-04-11 (Work Programme 2026-2027, 129k palavras)."
-    },
-    {
       "id": "erc-advanced-grant-2026",
       "name": "ERC Advanced Grant 2026 — Investigadores Estabelecidos (ERC-2026-AdG)",
       "source_id": "erc",
@@ -201,34 +187,6 @@
       "priority_score": 45,
       "status": "pending",
       "notes": "HORIZON-WIDERA-2026-02-WIDENING-01. Deadline 9 Abr 2026 (encerrado). 264.5M EUR, ate 210 projetos, 0.8M-1.5M EUR/projeto. CSA, financiamento 100% lump sum. Duracao ate 3 anos. Objetivo: networking institucional entre entidades de investigacao, transferencia de conhecimento. Portugal e pais Widening prioritario (widening countries). Ficha tecnica extraida 2026-04-11."
-    },
-    {
-      "id": "lisboa2030-2026-step-fase2",
-      "name": "Lisboa 2030 - Equipamentos Tecnologicos STEP (2.o Aviso)",
-      "source_id": "lisboa-2030",
-      "detected_date": "2026-04-11",
-      "deadline": "2026-05-08",
-      "budget": "5.000.000 EUR",
-      "regulation_url": "https://lisboa.portugal2030.pt/2026/03/27/lisboa-2030-lanca-aviso-de-5-milhoes-para-equipamentos-tecnologicos-step-com-candidaturas-ate-8-maio/",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/lisboa-2030/lisboa2030-2026-step-fase2.txt",
-      "priority_score": 115,
-      "status": "pending",
-      "notes": "LISBOA2030-2026-3. Segundo aviso Lisboa 2030 para Equipamentos Tecnologicos no ambito do Regulamento STEP. Periodo: 27 Mar - 8 Mai 2026 (18h00). FEDER 55% cofinanciamento. Elegiveis: IES, centros tecnologicos, parques de ciencia e tecnologia, incubadoras, entidades sem fins lucrativos em transferencia de tecnologia, municipios em cooperacao. Foco: tecnologias digitais, biotecnologias. Area Metropolitana de Lisboa. Regulamento extraido 2026-04-11."
-    },
-    {
-      "id": "centro2030-2026-5-step",
-      "name": "Centro 2030 - Apoio a Infraestruturas de Base Tecnologica STEP (Centro2030-2026-5)",
-      "source_id": "centro-2030",
-      "detected_date": "2026-04-11",
-      "deadline": "2026-06-30",
-      "budget": "25.000.000 EUR",
-      "regulation_url": "https://portugal2030.pt/wp-content/uploads/sites/3/2026/02/AAC_Centro2030_2026_5.pdf",
-      "pdf_url": "https://portugal2030.pt/wp-content/uploads/sites/3/2026/02/AAC_Centro2030_2026_5.pdf",
-      "regulation_local": "regulamentos/centro-2030/centro2030-2026-5-step.txt",
-      "priority_score": 55,
-      "status": "pending",
-      "notes": "Centro2030-2026-5. Publicado 23/02/2026. Periodo: 23 Fev - 30 Jun 2026 (18h00). FEDER 85% cofinanciamento. 25M EUR dotacao. Elegiveis: CTI reconhecidos (Despacho 15160/2024), parques de ciencia e tecnologia (PCT), IES e entidades sem fins lucrativos em transferencia tecnologica. Regiao NUTS II Centro. Tecnologias criticas STEP: digital, cleantech, biotecnologias. Regulamento descarregado 2026-04-11."
     },
     {
       "id": "madeira2030-2026-13-internacionalizacao-pme",
@@ -451,6 +409,36 @@
       "current_state": "aberto",
       "last_state_check": "2026-04-10",
       "regulation_local": "regulamentos/hadea/cef-digital-2026-cabo-submarino.txt"
+    },
+    {
+      "id": "horizon-cl6-2026-02",
+      "source": "horizon-cluster6",
+      "file": "instrumentos/horizon-cl6-2026-02.html",
+      "published_date": "2026-04-11",
+      "detected_date": "2026-04-11",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-11",
+      "regulation_local": "regulamentos/hadea/horizon-cl6-2026-02.txt"
+    },
+    {
+      "id": "lisboa2030-2026-step-fase2",
+      "source": "lisboa-2030",
+      "file": "instrumentos/lisboa2030-2026-step-fase2.html",
+      "published_date": "2026-04-11",
+      "detected_date": "2026-04-11",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-11",
+      "regulation_local": "regulamentos/lisboa-2030/lisboa2030-2026-step-fase2.txt"
+    },
+    {
+      "id": "centro2030-2026-5-step",
+      "source": "centro-2030",
+      "file": "instrumentos/centro2030-2026-5-step.html",
+      "published_date": "2026-04-11",
+      "detected_date": "2026-04-11",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-11",
+      "regulation_local": "regulamentos/centro-2030/centro2030-2026-5-step.txt"
     }
   ],
   "source_last_checked": {
