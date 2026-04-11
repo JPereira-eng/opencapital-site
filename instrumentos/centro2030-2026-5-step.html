@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro 2030 STEP - Infraestruturas de Base Tecnologica: Open Capital</title>
+  <meta name="description" content="Aviso Centro2030-2026-5: 25 milhoes EUR para infraestruturas tecnologicas STEP na regiao Centro. CTI e PCT. Cofinanciamento ate 85%. Candidaturas ate 30 junho 2026.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+
+    /* ─── RESET & VARIABLES ──────────────────────── */
+    :root {
+      --navy:       #1A3A5C;
+      --navy-deep:  #0D1F33;
+      --gold:       #C9A96E;
+      --white:      #FFFFFF;
+      --grey-light: #E5E5E5;
+      --grey-mid:   #7A7A7A;
+      --grey-dark:  #2A2A2A;
+      --font: 'Montserrat', sans-serif;
+      --transition: all 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --shadow: 0 8px 40px rgba(26,58,92,0.10);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:var(--font); background:var(--white); color:var(--grey-dark); -webkit-font-smoothing:antialiased; }
+
+    /* ─── TYPOGRAPHY ─────────────────────────────── */
+    .t-eyebrow { font-size:14px; font-weight:600; letter-spacing:0.30em; text-transform:uppercase; color:var(--gold); }
+    .t-h2      { font-size:36px; font-weight:600; letter-spacing:0.01em; color:var(--navy); line-height:1.15; }
+    .t-h3      { font-size:28px; font-weight:500; letter-spacing:0.03em; color:var(--navy); }
+    .t-body    { font-size:18px; font-weight:400; color:var(--grey-dark); line-height:1.85; }
+    .t-small   { font-size:15px; font-weight:300; letter-spacing:0.04em; color:var(--grey-mid); }
+
+    /* ─── NAVBAR ─────────────────────────────────── */
+    .navbar {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 48px; height:74px;
+      position:fixed; top:0; left:0; right:0; z-index:200;
+      background:var(--navy);
+      border-bottom:1px solid rgba(255,255,255,0.07);
+      transition:var(--transition);
+    }
+    .navbar.scrolled {
+      background:rgba(255,255,255,0.97);
+      backdrop-filter:blur(20px);
+      -webkit-backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--grey-light);
+    }
+    .nav-logo { display:flex; align-items:center; text-decoration:none; flex-shrink:0; }
+    .nav-logo-img { height:57px; width:auto; display:block; filter:brightness(0) invert(1); transition:var(--transition); }
+    .navbar.scrolled .nav-logo-img { filter:none; }
+    .nav-links { display:flex; align-items:center; gap:24px; list-style:none; margin-left:auto; }
+    .nav-links a { font-size:15px; font-weight:500; letter-spacing:0.08em; text-transform:none; color:rgba(255,255,255,0.68); text-decoration:none; transition:var(--transition); position:relative; padding-bottom:3px; white-space:nowrap; }
+    .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold); transition:width 0.3s ease; }
+    .nav-links a:hover { color:var(--white); }
+    .nav-links a:hover::after { width:100%; }
+    .nav-links a.active { color:var(--white); }
+    .nav-links a.active::after { width:100%; }
+    .navbar.scrolled .nav-links a { color:var(--grey-dark); }
+    .navbar.scrolled .nav-links a:hover, .navbar.scrolled .nav-links a.active { color:var(--navy); }
+    .nav-badge { font-size:10px; font-weight:600; letter-spacing:0.06em; text-transform:none; color:var(--gold); border:1px solid var(--gold); padding:1px 4px; margin-left:3px; vertical-align:super; line-height:1; }
+    .nav-dropdown { position:relative; }
+    .nav-dropdown-menu { position:absolute; top:calc(100% + 8px); right:0; background:var(--white); border:1px solid var(--grey-light); min-width:160px; box-shadow:var(--shadow); display:none; z-index:100; }
+    .nav-dropdown:hover .nav-dropdown-menu { display:block; }
+    .nav-dropdown-menu a { display:block; font-size:13px; font-weight:500; letter-spacing:0.05em; text-transform:none; color:var(--grey-dark); padding:11px 18px; text-decoration:none; transition:var(--transition); border-bottom:1px solid var(--grey-light); white-space:nowrap; }
+    .nav-dropdown-menu a:last-child { border-bottom:none; }
+    .nav-dropdown-menu a:hover { color:var(--navy); background:#FAFAFA; }
+    .nav-dropdown-menu a::after { display:none !important; }
+    .nav-cta { font-size:16px; font-weight:600; letter-spacing:0.08em; text-transform:none; color:var(--white); text-decoration:none; border:1px solid rgba(255,255,255,0.28); padding:9px 18px; margin-left:28px; transition:var(--transition); white-space:nowrap; }
+    .nav-cta:hover { border-color:var(--white); background:rgba(255,255,255,0.08); }
+    .navbar.scrolled .nav-cta { color:var(--navy); border-color:var(--navy); }
+    .navbar.scrolled .nav-cta:hover { background:var(--navy); color:var(--white); }
+    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
+    .nav-hamburger span { display:block; width:22px; height:1px; background:var(--white); transition:var(--transition); }
+    .navbar.scrolled .nav-hamburger span { background:var(--navy); }
+    .nav-mobile-menu { display:none; position:fixed; top:74px; left:0; right:0; background:var(--navy); padding:24px 32px 32px; border-bottom:1px solid rgba(255,255,255,0.07); z-index:199; }
+    .nav-mobile-menu.open { display:block; }
+    .nav-mobile-menu a { display:block; font-size:15px; font-weight:500; letter-spacing:0.05em; text-transform:none; color:rgba(255,255,255,0.7); text-decoration:none; padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.06); transition:var(--transition); }
+    .nav-mobile-menu a:hover { color:var(--white); }
+    .nav-mobile-cta { display:inline-block !important; margin-top:22px; font-size:14px; font-weight:600; color:var(--white) !important; border:1px solid rgba(255,255,255,0.28); padding:12px 24px; }
+
+    /* ─── SCROLL REVEAL ──────────────────────────── */
+    .reveal { opacity:0; transform:translateY(18px); transition:opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal-d1 { transition-delay:0.10s; }
+    .reveal-d2 { transition-delay:0.20s; }
+    .reveal-d3 { transition-delay:0.30s; }
+
+    /* ─── ARTICLE HERO ───────────────────────────── */
+    .article-hero {
+      background:var(--navy); padding:160px 80px 80px;
+      position:relative; overflow:hidden;
+    }
+    .article-hero::before {
+      content:''; position:absolute; top:-120px; right:-120px;
+      width:480px; height:480px; border-radius:50%;
+      background:radial-gradient(circle, rgba(201,169,110,0.07) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .article-hero-inner { position:relative; z-index:1; max-width:860px; }
+
+    /* Breadcrumb */
+    .breadcrumb { display:flex; align-items:center; gap:10px; margin-bottom:44px; flex-wrap:wrap; }
+    .breadcrumb a { font-size:13px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.32); text-decoration:none; transition:var(--transition); }
+    .breadcrumb a:hover { color:rgba(255,255,255,0.7); }
+    .breadcrumb-sep { font-size:13px; color:rgba(255,255,255,0.16); }
+    .breadcrumb-current { font-size:13px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.7); }
+
+    .hero-cat { font-size:12px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:var(--gold); margin-bottom:18px; display:inline-block; border:1px solid rgba(201,169,110,0.35); padding:5px 14px; }
+    .hero-title { font-size:54px; font-weight:700; color:var(--white); line-height:1.06; letter-spacing:-0.015em; margin-bottom:18px; }
+    .hero-tagline { font-size:20px; font-weight:300; color:rgba(255,255,255,0.52); line-height:1.7; max-width:620px; margin-bottom:36px; }
+
+    /* Meta bar */
+    .hero-meta { display:flex; align-items:center; gap:24px; flex-wrap:wrap; padding-top:28px; border-top:1px solid rgba(255,255,255,0.08); }
+    .meta-item { display:flex; flex-direction:column; gap:4px; }
+    .meta-label { font-size:10px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.28); }
+    .meta-value { font-size:15px; font-weight:500; color:var(--white); }
+    .meta-value.status-open { color:#4CAF88; font-weight:600; }
+    .meta-value.status-closed { color:#A63228; font-weight:600; }
+    .meta-sep { width:1px; height:36px; background:rgba(255,255,255,0.10); }
+
+    /* ─── ARTICLE LAYOUT ─────────────────────────── */
+    .article-layout {
+      display:grid;
+      grid-template-columns:1fr 320px;
+      gap:64px;
+      max-width:1200px;
+      margin:0 auto;
+      padding:80px 80px 96px;
+      align-items:start;
+    }
+
+    /* ─── ARTICLE BODY ───────────────────────────── */
+    .article-section { margin-bottom:56px; }
+    .article-section:last-child { margin-bottom:0; }
+
+    .section-eyebrow { font-size:11px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+    .section-h2 { font-size:28px; font-weight:600; color:var(--navy); line-height:1.2; margin-bottom:20px; }
+    .section-text { font-size:18px; font-weight:300; color:var(--grey-dark); line-height:1.9; margin-bottom:20px; }
+    .section-text:last-child { margin-bottom:0; }
+
+    /* Bullet list */
+    .article-list { list-style:none; padding:0; display:flex; flex-direction:column; gap:12px; margin:20px 0; }
+    .article-list li { display:flex; align-items:flex-start; gap:14px; font-size:17px; font-weight:300; color:var(--grey-dark); line-height:1.75; }
+    .article-list li::before { content:''; width:5px; height:5px; border:1px solid var(--gold); transform:rotate(45deg); flex-shrink:0; margin-top:8px; }
+
+    /* Highlight box */
+    .highlight-box { background:#FAFAFA; border-left:3px solid var(--gold); padding:24px 28px; margin:28px 0; }
+    .highlight-box-title { font-size:12px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
+    .highlight-box-text { font-size:17px; font-weight:300; color:var(--grey-dark); line-height:1.8; }
+
+    /* Alert box */
+    .alert-box { background:rgba(201,169,110,0.06); border:1px solid rgba(201,169,110,0.25); padding:24px 28px; margin:28px 0; }
+    .alert-box-title { font-size:12px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+    .alert-box-text { font-size:17px; font-weight:300; color:var(--grey-dark); line-height:1.8; }
+
+    /* Stats row */
+    .stats-row { display:grid; grid-template-columns:repeat(4, 1fr); gap:1px; background:var(--grey-light); border:1px solid var(--grey-light); margin:28px 0; }
+    .stat-cell { background:var(--white); padding:24px 20px; }
+    .stat-num { font-size:28px; font-weight:700; color:var(--navy); line-height:1; margin-bottom:6px; }
+    .stat-num sup { color:var(--gold); font-size:14px; font-weight:300; }
+    .stat-label { font-size:11px; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--grey-mid); }
+
+    /* STEP technology cards */
+    .tech-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:var(--grey-light); border:1px solid var(--grey-light); margin:28px 0; }
+    .tech-card { background:var(--white); padding:28px 24px; position:relative; overflow:hidden; transition:var(--transition); }
+    .tech-card::before { content:''; position:absolute; top:0; left:0; width:0; height:2px; background:var(--gold); transition:width 0.4s ease; }
+    .tech-card:hover { box-shadow:var(--shadow); }
+    .tech-card:hover::before { width:100%; }
+    .tech-icon { width:36px; height:36px; margin-bottom:16px; }
+    .tech-title { font-size:16px; font-weight:600; color:var(--navy); margin-bottom:10px; letter-spacing:0.03em; }
+    .tech-desc { font-size:15px; font-weight:300; color:var(--grey-mid); line-height:1.75; }
+
+    /* Rate table */
+    .rate-table { width:100%; border-collapse:collapse; margin:24px 0; }
+    .rate-table th { font-size:11px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--grey-mid); text-align:left; padding:12px 16px; border-bottom:2px solid var(--navy); }
+    .rate-table td { font-size:16px; font-weight:400; color:var(--grey-dark); padding:14px 16px; border-bottom:1px solid var(--grey-light); vertical-align:top; }
+    .rate-table td:last-child { font-weight:600; color:var(--navy); }
+    .rate-table tr:last-child td { border-bottom:none; }
+    .rate-table .highlight-row td { background:rgba(201,169,110,0.05); }
+    .rate-table td strong { color:var(--navy); }
+    .rate-table td.td-normal { font-weight:400; color:var(--grey-dark); }
+
+    /* Conditions table */
+    .cond-table { width:100%; border-collapse:collapse; margin:24px 0; }
+    .cond-table th { font-size:11px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--grey-mid); text-align:left; padding:12px 16px; border-bottom:2px solid var(--navy); background:#FAFAFA; }
+    .cond-table td { font-size:15px; font-weight:400; color:var(--grey-dark); padding:13px 16px; border-bottom:1px solid var(--grey-light); vertical-align:top; }
+    .cond-table td:first-child { font-weight:600; color:var(--navy); width:38%; }
+    .cond-table tr:last-child td { border-bottom:none; }
+    .cond-table tr:nth-child(even) td { background:#FAFAFA; }
+
+    /* Divider */
+    .art-divider { height:1px; background:var(--grey-light); margin:48px 0; }
+    .art-divider-gold { height:1px; background:linear-gradient(to right, var(--gold), transparent); margin:48px 0; }
+
+    /* ─── SIDEBAR ─────────────────────────────────── */
+    .article-sidebar { position:sticky; top:100px; }
+    .sidebar-author { border:1px solid var(--grey-light); padding:24px; margin-bottom:20px; position:relative; overflow:hidden; }
+    .sidebar-author::before { content:''; position:absolute; top:0; left:0; width:100%; height:2px; background:var(--gold); }
+    .sidebar-author-label { font-size:11px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:var(--grey-mid); margin-bottom:14px; }
+    .sidebar-author-inner { display:flex; align-items:center; gap:14px; }
+    .sidebar-author-photo { width:56px; height:56px; border-radius:50%; object-fit:cover; flex-shrink:0; }
+    .sidebar-author-name { font-size:15px; font-weight:600; color:var(--navy); line-height:1.3; }
+    .sidebar-author-role { font-size:12px; font-weight:400; color:var(--grey-mid); letter-spacing:0.04em; margin-top:2px; }
+    .sidebar-card { border:1px solid var(--grey-light); padding:28px; margin-bottom:20px; position:relative; overflow:hidden; }
+    .sidebar-card::before { content:''; position:absolute; top:0; left:0; width:100%; height:2px; background:var(--gold); }
+    .sidebar-card-label { font-size:11px; font-weight:600; letter-spacing:0.26em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    .sidebar-fact { display:flex; flex-direction:column; gap:3px; padding:12px 0; border-bottom:1px solid var(--grey-light); }
+    .sidebar-fact:last-child { border-bottom:none; padding-bottom:0; }
+    .sidebar-fact-key { font-size:11px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; color:var(--grey-mid); }
+    .sidebar-fact-val { font-size:16px; font-weight:600; color:var(--navy); }
+    .sidebar-fact-val.val-gold { color:var(--gold); }
+    .sidebar-fact-val.val-open { color:#2E7D52; font-weight:600; }
+    .sidebar-fact-val.val-closed { color:#A63228; font-weight:600; }
+
+    /* Sidebar CTA */
+    .sidebar-cta { background:var(--navy); padding:28px; margin-bottom:20px; }
+    .sidebar-cta-title { font-size:18px; font-weight:600; color:var(--white); line-height:1.3; margin-bottom:10px; }
+    .sidebar-cta-text { font-size:15px; font-weight:300; color:rgba(255,255,255,0.52); line-height:1.7; margin-bottom:20px; }
+    .sidebar-cta-btn { display:block; text-align:center; font-family:var(--font); font-size:13px; font-weight:600; letter-spacing:0.20em; text-transform:uppercase; color:var(--white); background:var(--gold); text-decoration:none; padding:14px 20px; transition:var(--transition); }
+    .sidebar-cta-btn:hover { background:#B8945A; }
+
+    /* Related instruments */
+    .sidebar-related { border:1px solid var(--grey-light); padding:24px; position:relative; overflow:hidden; }
+    .sidebar-related::before { content:''; position:absolute; top:0; left:0; width:100%; height:2px; background:var(--gold); }
+    .sidebar-related-title { font-size:11px; font-weight:600; letter-spacing:0.26em; text-transform:uppercase; color:var(--grey-mid); margin-bottom:14px; }
+    .related-link { display:flex; align-items:center; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--grey-light); text-decoration:none; transition:var(--transition); }
+    .related-link:last-child { border-bottom:none; }
+    .related-link-name { font-size:15px; font-weight:500; color:var(--navy); transition:var(--transition); }
+    .related-link:hover .related-link-name { color:var(--gold); }
+    .related-link-arrow { font-size:14px; font-weight:300; color:var(--grey-mid); transition:var(--transition); }
+    .related-link:hover .related-link-arrow { color:var(--gold); transform:translateX(3px); }
+
+    /* ─── BACK TO CATALOG ────────────────────────── */
+    .back-bar { background:#FAFAFA; border-top:1px solid var(--grey-light); border-bottom:1px solid var(--grey-light); padding:16px 80px; }
+    .back-link { font-size:13px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--grey-mid); text-decoration:none; display:inline-flex; align-items:center; gap:10px; transition:var(--transition); }
+    .back-link:hover { color:var(--navy); }
+
+    /* ─── FOOTER ─────────────────────────────────── */
+    .footer { background:var(--navy-deep); padding:56px 80px 34px; }
+    .footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr; gap:44px; margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.07); }
+    .f-logo-row { display:flex; align-items:center; }
+    .f-logo-img { height:72px; width:auto; filter:brightness(0) invert(1); opacity:0.75; }
+    .f-tagline { font-size:16px; font-weight:100; letter-spacing:0.14em; color:var(--gold); margin-top:12px; }
+    .f-col-label { font-size:11px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:rgba(255,255,255,0.24); margin-bottom:16px; }
+    .f-links { list-style:none; }
+    .f-links li { margin-bottom:10px; }
+    .f-links a  { font-size:15px; font-weight:300; color:rgba(255,255,255,0.48); text-decoration:none; transition:var(--transition); }
+    .f-links a:hover { color:var(--white); }
+    .f-badge { font-size:9px; font-weight:600; color:var(--gold); border:1px solid rgba(201,169,110,0.45); padding:1px 5px; margin-left:5px; vertical-align:middle; }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+    .f-copy    { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:0.05em; }
+    .f-legal   { display:flex; gap:20px; }
+    .f-legal a { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); text-decoration:none; transition:var(--transition); }
+    .f-legal a:hover { color:rgba(255,255,255,0.45); }
+
+    /* ─── RESPONSIVE ─────────────────────────────── */
+    @media (max-width:1024px) {
+      .article-layout { grid-template-columns:1fr; padding:60px 48px 80px; }
+      .article-sidebar { position:static; }
+    }
+    @media (max-width:768px) {
+      .navbar { padding:0 24px; }
+      .nav-links, .nav-cta { display:none; }
+      .nav-hamburger { display:flex; }
+      .article-hero { padding:120px 28px 60px; }
+      .hero-title { font-size:34px; }
+      .article-layout { padding:40px 24px 60px; }
+      .stats-row { grid-template-columns:1fr 1fr; }
+      .tech-grid { grid-template-columns:1fr; }
+      .rate-table { font-size:14px; }
+      .rate-table th, .rate-table td { padding:10px 10px; }
+      .cond-table td { font-size:14px; }
+      .back-bar { padding:14px 24px; }
+      .footer { padding:40px 24px 28px; }
+      .footer-grid { grid-template-columns:1fr; gap:32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img"
+         onerror="this.style.display='none'">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../solucoes.html" class="active">Biblioteca</a></li>
+    <li><a href="../conhecimento.html">Conhecimento</a></li>
+    <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros.html">Parceiros</a>
+        <a href="../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/tech2business" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../solucoes.html">Biblioteca</a>
+  <a href="../conhecimento.html">Conhecimento</a>
+  <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos.html">Sobre Nós</a>
+  <a href="../parceiros.html">Parceiros</a>
+  <a href="../carreiras.html">Carreiras</a>
+  <a href="https://calendly.com/tech2business" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+
+<!-- ════════════════════════════════════════
+     ARTICLE HERO
+════════════════════════════════════════ -->
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Inicio</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../solucoes.html">Solucoes</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Centro 2030 STEP Infraestruturas</span>
+    </nav>
+
+    <div class="hero-cat">Financiamento Publico</div>
+    <h1 class="hero-title">Centro 2030<br>Apoio a Infraestruturas<br>de Base Tecnologica STEP</h1>
+    <p class="hero-tagline">Financiamento de 25 milhoes para fortalecer infraestruturas tecnologicas no Centro de Portugal, em tecnologias digitais, cleantech e biotecnologia.</p>
+
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotacao</span>
+        <span class="meta-value">25 milhoes EUR</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Cofinanciamento</span>
+        <span class="meta-value">FEDER 85%</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Limite por projeto</span>
+        <span class="meta-value">ate 6M EUR</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-open">Aberto ate 30/06/2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     BACK BAR
+════════════════════════════════════════ -->
+<div class="back-bar">
+  <a href="../solucoes.html" class="back-link">← Voltar ao catalogo de instrumentos</a>
+</div>
+
+<!-- ════════════════════════════════════════
+     ARTICLE LAYOUT
+════════════════════════════════════════ -->
+<div class="article-layout">
+
+  <!-- ── ARTICLE BODY ─────────────────── -->
+  <article>
+
+    <!-- 1. O que e este aviso -->
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Contexto e Objetivo</div>
+      <h2 class="section-h2">O que e este aviso</h2>
+      <p class="section-text">O aviso Centro2030-2026-5 mobiliza 25 milhoes de euros do Programa Regional do Centro 2021-2027 para apoiar infraestruturas tecnologicas de excelencia vocacionadas para as tecnologias criticas da Plataforma Europeia STEP. Trata-se de um instrumento de coesao territorial que pretende, em concreto, reforcar a capacidade instalada da regiao Centro no dominio de tres vetores tecnologicos estrategicos para a soberania industrial europeia.</p>
+      <p class="section-text">O enquadramento regulamentar assenta no Regulamento (UE) 2024/795, que institui a Plataforma de Tecnologias Estrategicas para a Europa (STEP). O objetivo politico subjacente e claro: reduzir a dependencia europeia face a fornecedores externos em setores criticos, construindo uma base de investigacao, demonstracao e producao de tecnologia no territorio da Uniao. A regiao Centro, com a sua rede de instituicoes de ensino superior, centros tecnologicos e parques de ciencia, ocupa uma posicao relevante neste esforco nacional.</p>
+      <p class="section-text">O aviso financia exclusivamente operacoes no ambito do Objetivo Especifico RSO1.6 da Politica de Coesao, destinado ao apoio a investimentos enquadraveis no ambito STEP. As candidaturas abriram a 23 de fevereiro de 2026 e encerram a 30 de junho de 2026, pelas 18h00. Nao ha fases ou tranches: e uma janela unica de submissao.</p>
+    </div>
+
+    <!-- 2. Stats row -->
+    <div class="stats-row reveal reveal-d1">
+      <div class="stat-cell">
+        <div class="stat-num">25<sup>M EUR</sup></div>
+        <div class="stat-label">Dotacao total</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">85<sup>%</sup></div>
+        <div class="stat-label">Cofinancimento FEDER</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">2</div>
+        <div class="stat-label">Tipologias (CTI e PCT)</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">30<sup>m</sup></div>
+        <div class="stat-label">Meses de execucao</div>
+      </div>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <!-- 3. As tres tecnologias STEP -->
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Tecnologias Criticas</div>
+      <h2 class="section-h2">As tres areas STEP abrangidas</h2>
+      <p class="section-text">A candidatura deve focar-se exclusivamente numa das tres grandes familias de tecnologias criticas STEP. Esta escolha nao e meramente formal: toda a operacao, desde a justificacao da elegibilidade da entidade ate ao plano de servicos associados, deve ser coerente com o dominio tecnologico selecionado.</p>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <svg class="tech-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="8" width="28" height="20" rx="0" stroke="#1A3A5C" stroke-width="1.2"/>
+            <line x1="4" y1="14" x2="32" y2="14" stroke="#C9A96E" stroke-width="1.2"/>
+            <circle cx="10" cy="11" r="1.5" fill="#C9A96E"/>
+            <circle cx="15" cy="11" r="1.5" fill="#1A3A5C"/>
+            <line x1="12" y1="21" x2="24" y2="21" stroke="#1A3A5C" stroke-width="1.2"/>
+            <line x1="12" y1="25" x2="20" y2="25" stroke="#E5E5E5" stroke-width="1.2"/>
+          </svg>
+          <div class="tech-title">Tecnologias Digitais</div>
+          <p class="tech-desc">Semicondutores, inteligencia artificial, computacao avancada, conectividade de proxima geracao e ciberseguranca. Infraestruturas que habilitam a soberania digital europeia.</p>
+        </div>
+        <div class="tech-card">
+          <svg class="tech-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="18" r="10" stroke="#1A3A5C" stroke-width="1.2"/>
+            <path d="M18 8 L18 28 M8 18 L28 18" stroke="#C9A96E" stroke-width="1.2"/>
+            <path d="M12 12 L24 24 M24 12 L12 24" stroke="#E5E5E5" stroke-width="0.8"/>
+          </svg>
+          <div class="tech-title">Cleantech e Net-Zero</div>
+          <p class="tech-desc">Tecnologias limpas e eficientes na utilizacao de recursos, incluindo tecnologias de industria Net-Zero: energia renovavel, armazenamento, eficiencia energetica e economia circular.</p>
+        </div>
+        <div class="tech-card">
+          <svg class="tech-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 28 C10 22 14 18 18 14 C22 18 26 22 26 28" stroke="#1A3A5C" stroke-width="1.2" fill="none"/>
+            <line x1="18" y1="14" x2="18" y2="8" stroke="#C9A96E" stroke-width="1.2"/>
+            <circle cx="18" cy="7" r="2" stroke="#C9A96E" stroke-width="1.2"/>
+            <line x1="10" y1="28" x2="26" y2="28" stroke="#1A3A5C" stroke-width="1.2"/>
+          </svg>
+          <div class="tech-title">Biotecnologias</div>
+          <p class="tech-desc">Biotecnologia avancada, incluindo medicamentos criticos e farmacos essenciais. Plataformas de I&amp;D, producao e transferencia de tecnologia em ciencias da vida com impacto na soberania sanitaria europeia.</p>
+        </div>
+      </div>
+
+      <p class="section-text">Cada candidatura deve demonstrar que a entidade beneficiaria possui experiencia consolidada e reconhecida no dominio tecnologico escolhido. Nao basta enquadrar a operacao no setor: e necessario evidenciar que a infraestrutura a apoiar ja serve ou ira servir ativamente empresas e projetos nessa area especifica. A coerencia entre o perfil do beneficiario e o topico STEP selecionado e um criterio de elegibilidade material, nao apenas formal.</p>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <!-- 4. Quem pode candidatar -->
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Elegibilidade</div>
+      <h2 class="section-h2">Quem pode candidatar: CTI versus PCT</h2>
+      <p class="section-text">O aviso e restrito a tres categorias de entidades, definidas no artigo 162 do REITD. A tipologia da candidatura determina nao so o lote de dotacao disponivel, como tambem o tipo de operacao financiavel.</p>
+
+      <table class="rate-table">
+        <thead>
+          <tr>
+            <th>Tipologia</th>
+            <th>Descricao</th>
+            <th>Dotacao</th>
+            <th>Max Apoio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td><strong>CTI (TO 1023)</strong></td>
+            <td class="td-normal">Centros de Tecnologia e Inovacao reconhecidos ao abrigo do Despacho 15160/2024. Incluem institutos de ensino superior, entidades sem fins lucrativos de transferencia tecnologica e valorizacao de I&amp;D.</td>
+            <td class="td-normal">15.000.000 EUR</td>
+            <td>6M EUR (c/ obras) ou 2M EUR (so equip.)</td>
+          </tr>
+          <tr>
+            <td><strong>PCT (TO 1024)</strong></td>
+            <td class="td-normal">Parques de Ciencia e Tecnologia, geridos por entidades gestoras reconhecidas, que prestam servicos a empresas e laboratorios num ecossistema de inovacao integrado.</td>
+            <td class="td-normal">10.000.000 EUR</td>
+            <td>6M EUR (c/ obras) ou 2M EUR (so equip.)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="section-text">As instituicoes de ensino superior e seus institutos, as entidades publicas ou privadas sem fins lucrativos que desenvolvam ou participem em atividades de demonstracao e transferencia tecnologica, e as entidades gestoras de parques de ciencia e tecnologia sao os tres perfis admissíveis. A entidade candidata deve possuir, no maximo, um estabelecimento na NUTS II Centro elegivel para a operacao.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-box-title">Atencao: um estabelecimento por beneficiario</div>
+        <p class="highlight-box-text">O aviso permite apenas um estabelecimento elegivel por entidade beneficiaria na NUTS II Centro. Organizacoes com multiplos campus ou unidades devem selecionar uma unica localizacao para a operacao. Esta restricao e verificada na fase de elegibilidade e nao admite excecoes.</p>
+      </div>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <!-- 5. O que se pode financiar -->
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Operacoes Elegíveis</div>
+      <h2 class="section-h2">O que se pode financiar</h2>
+      <p class="section-text">As operacoes financiaveis centram-se na criacao, expansao ou modernizacao de infraestruturas de base tecnologica que prestem servicos associados nas areas STEP. O regulamento distingue claramente entre investimento em instalacoes fisicas (obras e construcao) e aquisicao de equipamento, com limites de apoio distintos para cada cenario.</p>
+
+      <table class="rate-table">
+        <thead>
+          <tr>
+            <th>Tipo de Operacao</th>
+            <th>Exemplos</th>
+            <th>Limite de Apoio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Criacao de infraestrutura</strong></td>
+            <td class="td-normal">Construcao de novos edificios, laboratorios, salas limpas, plataformas de ensaio, espacos de co-laboracao</td>
+            <td>Ate 6.000.000 EUR</td>
+          </tr>
+          <tr class="highlight-row">
+            <td><strong>Expansao de infraestrutura</strong></td>
+            <td class="td-normal">Ampliacao de instalacoes existentes, construcao de novos pisos ou modulos, extensao de capacidade produtiva</td>
+            <td>Ate 6.000.000 EUR</td>
+          </tr>
+          <tr>
+            <td><strong>Modernizacao</strong></td>
+            <td class="td-normal">Requalificacao de laboratorios e infraestruturas existentes, actualizacao de sistemas, renovacao de equipamentos criticos</td>
+            <td>Ate 6.000.000 EUR</td>
+          </tr>
+          <tr class="highlight-row">
+            <td><strong>Apenas equipamento</strong></td>
+            <td class="td-normal">Aquisicao de equipamento cientifico, instrumentacao, servidores, sistemas de medicao, plataformas de dados</td>
+            <td>Ate 2.000.000 EUR</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="section-text">O foco do instrumento e nos servicos associados que a infraestrutura vai prestar. O regulamento nao financia infraestrutura de investigacao por si mesma: exige que a entidade demonstre como os investimentos vao gerar ou ampliar servicos especializados para empresas e projectos no dominio STEP selecionado. Esta logica de impacto economico e central para a avaliacao das candidaturas.</p>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <!-- 6. Limits and conditions table -->
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Condicoes Financeiras</div>
+      <h2 class="section-h2">Limites e condicoes de apoio</h2>
+
+      <table class="cond-table">
+        <thead>
+          <tr>
+            <th>Parametro</th>
+            <th>Condicao</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Custo total minimo elegivel</td>
+            <td>200.000 EUR</td>
+          </tr>
+          <tr>
+            <td>Apoio maximo (c/ obras)</td>
+            <td>6.000.000 EUR por operacao</td>
+          </tr>
+          <tr>
+            <td>Apoio maximo (so equipamento)</td>
+            <td>2.000.000 EUR por operacao</td>
+          </tr>
+          <tr>
+            <td>Taxa de cofinanciamento FEDER</td>
+            <td>85% das despesas elegíveis</td>
+          </tr>
+          <tr>
+            <td>Duracao maxima de execucao</td>
+            <td>30 meses (extensivel ate 42 meses)</td>
+          </tr>
+          <tr>
+            <td>Candidaturas por beneficiario</td>
+            <td>Maximo 1 candidatura</td>
+          </tr>
+          <tr>
+            <td>Ambito geografico</td>
+            <td>NUTS II Centro (exclusivo)</td>
+          </tr>
+          <tr>
+            <td>Cumulacao de apoios</td>
+            <td>Nao permitida com outros fundos UE para as mesmas despesas</td>
+          </tr>
+          <tr>
+            <td>Conformidade DNSH</td>
+            <td>Obrigatoria para todas as operacoes</td>
+          </tr>
+          <tr>
+            <td>Novas construcoes</td>
+            <td>Exigencia NZEB+20% de eficiencia energetica</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="alert-box">
+        <div class="alert-box-title">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2L14 13H2L8 2Z" stroke="#C9A96E" stroke-width="1.2"/><line x1="8" y1="7" x2="8" y2="10" stroke="#C9A96E" stroke-width="1.2"/><circle cx="8" cy="11.5" r="0.5" fill="#C9A96E"/></svg>
+          DNSH e Construcoes
+        </div>
+        <p class="alert-box-text">Todas as operacoes devem demonstrar conformidade com o principio "Do No Significant Harm" (DNSH). Para novas construcoes, e obrigatorio cumprir os requisitos NZEB com uma margem adicional de 20% de desempenho energetico. Estes requisitos devem ser documentados na fase de candidatura, nao em fases posteriores.</p>
+      </div>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <!-- 7. Conditions specific to beneficiary -->
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Condicoes Especificas</div>
+      <h2 class="section-h2">Requisitos do beneficiario e da operacao</h2>
+      <p class="section-text">Para alem da elegibilidade base, o aviso impoe um conjunto de condicoes especificas que determinam tanto a admissibilidade da candidatura como a sua qualidade na avaliacao. Estas condicoes aplicam-se em dois planos distintos: o do beneficiario e o da operacao.</p>
+
+      <div class="section-eyebrow" style="margin-top:28px; margin-bottom:12px; font-size:10px;">Condicoes do beneficiario</div>
+      <ul class="article-list">
+        <li>Demonstrar maturidade operacional e experiencia reconhecida no dominio STEP selecionado (digital, cleantech ou biotech)</li>
+        <li>Nao ter projetos em curso ao abrigo do aviso Centro2030-2025-31, que abrangia a mesma tipologia de operacoes</li>
+        <li>Possuir titulo de propriedade ou direito legal de utilizacao do espaco onde a infraestrutura sera implantada</li>
+        <li>Enquadrar-se nas categorias de elegibilidade do artigo 162 do REITD (IES, entidades de transferencia tecnologica ou gestoras de PCT)</li>
+      </ul>
+
+      <div class="section-eyebrow" style="margin-top:28px; margin-bottom:12px; font-size:10px;">Condicoes da operacao</div>
+      <ul class="article-list">
+        <li>Focar-se num unico dominio tecnologico STEP (nao e permitida candidatura multi-dominio)</li>
+        <li>Em caso de obras, apresentar as licencas ou aprovacoes previas ja obtidas ou em curso</li>
+        <li>Demonstrar que os investimentos habilitam servicos associados com procura concreta no mercado regional</li>
+        <li>Assegurar a nao duplicacao de apoios europeus para as mesmas rubricas de despesa</li>
+        <li>Cumprir com o principio DNSH e, para construcoes novas, o padrao energetico NZEB+20%</li>
+      </ul>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <!-- Highlight box: base unica -->
+    <div class="highlight-box reveal">
+      <div class="highlight-box-title">Concurso de base unica</div>
+      <p class="highlight-box-text">Cada beneficiario so pode submeter UMA candidatura. A escolha do topico STEP certo e da infraestrutura a apoiar e critica. Nao existe segunda oportunidade neste aviso. A concentracao do esforco de candidatura num unico projeto bem estruturado e a unica estrategia viavel. Fragmentar o investimento ou tentar cobrir varios dominios numa so candidatura e um caminho para a inelegibilidade.</p>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <!-- 8. Perspetiva Open Capital -->
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que torna esta candidatura especialmente exigente</h2>
+      <p class="section-text">O aviso Centro2030-2026-5 nao e um instrumento de candidatura simples. A combinacao de quatro fatores torna a preparacao desta candidatura particularmente critica: a exclusividade de uma unica candidatura por beneficiario, a exigencia de demonstrar experiencia sectorial real, os requisitos DNSH e de construcao sustentavel, e a necessidade de provar maturidade operacional da infraestrutura.</p>
+
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-num">01</div>
+          <div>
+            <div class="step-title">Uma candidatura. Sem segunda hipotese.</div>
+            <p class="step-desc">O limite de uma candidatura por beneficiario significa que a estrategia de submissao e mais importante do que o volume de trabalho preparatorio. Escolher o dominio STEP errado, ou preparar uma candidatura tecnicamente fraca, inviabiliza totalmente a participacao neste aviso. Nao ha margem para ajustar numa segunda ronda.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">02</div>
+          <div>
+            <div class="step-title">Expertise sectorial como requisito material</div>
+            <p class="step-desc">O aviso exige que o beneficiario demonstre experiencia consolidada no dominio STEP que escolheu. Isto nao se resolve com declaracoes genericas: e necessario documentar projetos, publicacoes, contratos de servico ou parcerias que evidenciem capacidade instalada real. A avaliacao penaliza entidades que nao consigam provar este alinhamento.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">03</div>
+          <div>
+            <div class="step-title">DNSH e energia: uma barreira tecnica subestimada</div>
+            <p class="step-desc">Os requisitos de conformidade DNSH e o padrao NZEB+20% para novas construcoes sao frequentemente subestimados nas fases de preparacao. Estes documentos tecnicos devem ser produzidos por especialistas em eficiencia energetica e devem estar integrados na proposta desde o inicio, nao acrescentados no final como anexo de cumprimento formal.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">04</div>
+          <div>
+            <div class="step-title">Maturidade operacional documentada</div>
+            <p class="step-desc">A exigencia de titulo de propriedade ou direito legal de utilizacao do espaco antecipa um problema recorrente em candidaturas de infraestrutura: a falta de documentacao de titularidade atualizada. Verificar e regularizar esta documentacao antes de submeter a candidatura e um passo critico que frequentemente e deixado para ultimo momento.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="section-text" style="margin-top:28px;">Para entidades que cumpram os criterios de elegibilidade, este e um dos avisos mais generosos disponiveis na regiao Centro em termos de taxa de cofinanciamento (85%) e de dimensao de apoio por projeto (ate 6 milhoes de euros). A relacao custo-beneficio da preparacao de uma candidatura robusta e, portanto, muito favoravel, desde que a estrategia inicial de selecao de dominio e tipologia seja acertada.</p>
+    </div>
+
+    <div class="art-divider-gold"></div>
+
+    <!-- 9. Closing paragraph -->
+    <p class="section-text" style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo.</p>
+
+  </article>
+
+  <!-- ── SIDEBAR ────────────────────── -->
+  <aside class="article-sidebar">
+
+    <!-- Author card -->
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autora</div>
+      <div class="sidebar-author-inner">
+        <img src="../retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo"
+             onerror="this.style.background='var(--grey-light)'; this.style.display='block';">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Tecnica de Candidaturas e Incentivos, Fundos europeus</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Facts card -->
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rapidos</div>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Programa</span>
+        <span class="sidebar-fact-val">Centro 2030</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Codigo</span>
+        <span class="sidebar-fact-val">Centro2030-2026-5</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Dotacao</span>
+        <span class="sidebar-fact-val">25.000.000 EUR</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Cofinanciamento</span>
+        <span class="sidebar-fact-val">FEDER 85%</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Prazo</span>
+        <span class="sidebar-fact-val">30 junho 2026 (18h00)</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Maximo por projeto</span>
+        <span class="sidebar-fact-val">6M EUR (c/ obras) / 2M EUR (equip.)</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Duracao maxima</span>
+        <span class="sidebar-fact-val">30 meses</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Area geografica</span>
+        <span class="sidebar-fact-val">NUTS II Centro</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sidebar-fact-key">Estado</span>
+        <span class="sidebar-fact-val val-open">Aberto ate 30/06/2026</span>
+      </div>
+    </div>
+
+    <!-- CTA card -->
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Avaliar a sua elegibilidade STEP</div>
+      <p class="sidebar-cta-text">Quer avaliar a elegibilidade da sua infraestrutura e estruturar uma candidatura STEP competitiva? Fale com a nossa equipa.</p>
+      <a href="https://calendly.com/tech2business" target="_blank" class="sidebar-cta-btn">Falar com um especialista</a>
+    </div>
+
+    <!-- Related instruments -->
+    <div class="sidebar-related">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="lisboa2030-2026-step-fase2.html" class="related-link">
+        <span class="related-link-name">Lisboa 2030 STEP (2.o Aviso)</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="step-inovacao-produtiva-digital-biotecnologia.html" class="related-link">
+        <span class="related-link-name">STEP Inovacao Produtiva</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="portugal-2030.html" class="related-link">
+        <span class="related-link-name">Portugal 2030</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="eic-pathfinder-2026.html" class="related-link">
+        <span class="related-link-name">EIC Pathfinder 2026</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+      <a href="horizon-cl4-2026-data-ai.html" class="related-link">
+        <span class="related-link-name">Horizonte Europa CL4 Data e IA</span>
+        <span class="related-link-arrow">→</span>
+      </a>
+    </div>
+
+  </aside>
+
+</div>
+<!-- end article-layout -->
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <div class="f-col-label">Biblioteca</div>
+      <ul class="f-links">
+        <li><a href="../solucoes.html">Portugal 2030</a></li>
+        <li><a href="../solucoes.html">Fundos de Investimento</a></li>
+        <li><a href="../solucoes.html">Beneficios Fiscais</a></li>
+        <li><a href="../solucoes.html">Premios de Inovacao</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Plataforma</div>
+      <ul class="f-links">
+        <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../conhecimento.html">Conhecimento</a></li>
+        <li><a href="../parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Empresa</div>
+      <ul class="f-links">
+        <li><a href="../sobre-nos.html">Sobre Nos</a></li>
+        <li><a href="../sobre-nos.html">Equipa</a></li>
+        <li><a href="../carreiras.html">Carreiras</a></li>
+        <li><a href="https://calendly.com/tech2business" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════ -->
+<script>
+  // Navbar scroll behavior
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // Mobile hamburger
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
