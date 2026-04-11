@@ -6,7 +6,7 @@
   },
   "stats": {
     "total_published": 18,
-    "total_in_queue": 8,
+    "total_in_queue": 11,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-10",
     "last_scanner_run": "2026-04-11",
@@ -30,7 +30,11 @@
       "turismo-portugal",
       "iefp",
       "sustentavel-2030",
-      "pessoas-2030"
+      "pessoas-2030",
+      "horizon-cluster5",
+      "horizon-cluster6",
+      "horizon-widera",
+      "erc"
     ]
   },
   "queue": [
@@ -111,12 +115,12 @@
       "detected_date": "2026-04-11",
       "deadline": "2026-06-30",
       "budget": null,
-      "regulation_url": "https://business.turismodeportugal.pt/pt/Investir/Financiamento/programas/Paginas/default.aspx",
+      "regulation_url": "https://business.turismodeportugal.pt/pt/Investir/Financiamento/programas/Paginas/o-turismo-acolhe.aspx",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/turismo-portugal/turismo-acolhe-2026.txt",
       "priority_score": 25,
       "status": "pending",
-      "notes": "Programa de apoio a empresas de turismo afetadas por calamidades. Deadline 30 Jun 2026. Fonte: Turismo de Portugal."
+      "notes": "Apoio a empresas de turismo para alojamento de emergencia (tempestade Kristin). Ate 60 EUR/noite com pequeno-almoco. Prorrogado ate 30 Jun 2026 (original: 31 Mar). Regulamento extraido 2026-04-11."
     },
     {
       "id": "iefp-estagios-iniciar-2026",
@@ -125,12 +129,12 @@
       "detected_date": "2026-04-11",
       "deadline": "2026-07-30",
       "budget": null,
-      "regulation_url": "https://iefponline.iefp.pt/IEFP/medida/estagios-mais-talento/overview.jsp",
+      "regulation_url": "https://iefponline.iefp.pt/IEFP/medida/estagios-iniciar/overview.jsp",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/iefp/iefp-estagios-iniciar-2026.txt",
       "priority_score": 5,
       "status": "pending",
-      "notes": "Estagios para jovens ate 35 anos (niveis de qualificacao 4-5). Subsidio 537.13 EUR/mes. Reembolso empresa 80% (ate 95% em casos especiais). Periodo: 10 Fev - 30 Jul 2026."
+      "notes": "Estagios para jovens ate 35 anos (niveis de qualificacao 4-5). Subsidio 537.13 EUR/mes. Reembolso empresa 80% (ate 95% em casos especiais). Periodo: 10 Fev - 30 Jul 2026. Regulamento extraido 2026-04-11."
     },
     {
       "id": "iefp-estagios-mais-talento-2026",
@@ -139,12 +143,54 @@
       "detected_date": "2026-04-11",
       "deadline": "2026-07-30",
       "budget": null,
-      "regulation_url": "https://iefponline.iefp.pt/IEFP/apoioIncentivos.do?menu=ai_estagios",
+      "regulation_url": "https://iefponline.iefp.pt/IEFP/medida/estagios-mais-talento/overview.jsp",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/iefp/iefp-estagios-mais-talento-2026.txt",
       "priority_score": 5,
       "status": "pending",
-      "notes": "Estagios para jovens com nivel 6+ do QNQ (licenciatura+). Reembolso empresa 80% (ate 95% em casos especiais). Periodo: 10 Fev - 30 Jul 2026."
+      "notes": "Estagios para jovens com nivel 6+ do QNQ (licenciatura+). Subsidio: 1.181-1.396 EUR/mes (por nivel). Reembolso empresa 65% (ate 80% em casos especiais). Periodo: 10 Fev - 30 Jul 2026. Regulamento extraido 2026-04-11."
+    },
+    {
+      "id": "horizon-cl6-2026-02",
+      "name": "Horizonte Europa CL6-2026-02 — Alimentacao, Bioeconomia, Recursos Naturais (17 topicos)",
+      "source_id": "horizon-cluster6",
+      "detected_date": "2026-04-11",
+      "deadline": "2026-04-14",
+      "budget": "166.400.000 EUR",
+      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/programmes/horizon",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 145,
+      "status": "pending",
+      "notes": "HORIZON-CL6-2026-02. 17 topicos. Dest 2 (Farm2Fork) + Dest 5 (Land, Ocean, Water). 166.4M EUR. Abertura: 14 Jan 2026. Deadline 14 Abr 2026 (HOJE). Inclui topicos Farm2Fork (FARM2FORK-01: fitossanitarios, FARM2FORK-03: culturas proteicas) e ZeroPollution. URGENTE: prazo encerra hoje."
+    },
+    {
+      "id": "erc-advanced-grant-2026",
+      "name": "ERC Advanced Grant 2026 — Investigadores Estabelecidos (ERC-2026-AdG)",
+      "source_id": "erc",
+      "detected_date": "2026-04-11",
+      "deadline": "2026-08-27",
+      "budget": "747.000.000 EUR",
+      "regulation_url": "https://erc.europa.eu/apply-grant/advanced-grant",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 35,
+      "status": "pending",
+      "notes": "ERC-2026-AdG. Abertura: 28 Mai 2026. Deadline: 27 Ago 2026 17:00 CET. Budget total: 747M EUR, ~294 grants. Ate 2.5M EUR por projeto (5 anos). Ate +2M EUR para recolocacao de paises terceiros. Elegibilidade: investigadores estabelecidos com track record reconhecido. Nova estrutura: Part I (5 pag concisa) + Part II (implementacao). Portugal elegivel."
+    },
+    {
+      "id": "horizon-widera-twinning-2026",
+      "name": "Horizonte Europa WIDERA — Twinning 2026 (Widening Participation)",
+      "source_id": "horizon-widera",
+      "detected_date": "2026-04-11",
+      "deadline": "2026-04-09",
+      "budget": "264.500.000 EUR",
+      "regulation_url": "https://rea.ec.europa.eu/funding-and-grants/horizon-europe-widening-participation-and-spreading-excellence/twinning_en",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 45,
+      "status": "pending",
+      "notes": "HORIZON-WIDERA-2026-02-WIDENING-01. Deadline 9 Abr 2026 (encerrado). 264.5M EUR, ate 210 projetos, 0.8M-1.5M EUR/projeto. CSA, financiamento 100% lump sum. Duracao ate 3 anos. Objetivo: networking institucional entre entidades de investigacao, transferencia de conhecimento. Portugal e pais Widening prioritario (widening countries)."
     }
   ],
   "published": [
@@ -347,6 +393,10 @@
     "turismo-portugal": "2026-04-11",
     "iefp": "2026-04-11",
     "sustentavel-2030": "2026-04-11",
-    "pessoas-2030": "2026-04-11"
+    "pessoas-2030": "2026-04-11",
+    "horizon-cluster5": "2026-04-11",
+    "horizon-cluster6": "2026-04-11",
+    "horizon-widera": "2026-04-11",
+    "erc": "2026-04-11"
   }
 }
