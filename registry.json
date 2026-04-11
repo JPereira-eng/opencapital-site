@@ -5,8 +5,8 @@
     "created": "2026-04-09"
   },
   "stats": {
-    "total_published": 30,
-    "total_in_queue": 4,
+    "total_published": 31,
+    "total_in_queue": 3,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-10",
     "last_scanner_run": "2026-04-11",
@@ -48,20 +48,6 @@
     ]
   },
   "queue": [
-    {
-      "id": "programa-consolidar-bpf",
-      "name": "Programa Consolidar BPF — Capitalizacao e Resiliencia Empresarial",
-      "source_id": "banco-fomento",
-      "detected_date": "2026-04-09",
-      "deadline": "2025-12-31",
-      "budget": "563.000.000 EUR",
-      "regulation_url": "https://www.bpfomento.pt/pt/catalogo/produtos-de-capital/",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/banco-fomento/programa-consolidar-bpf.txt",
-      "priority_score": 0,
-      "status": "pending",
-      "notes": "Fundo de Capitalizacao e Resiliencia (FdCR). Decreto-Lei 63/2021. 14 gestores de fundo selecionados. Periodo de candidatura de intermediarios ENCERRADO. Prazo final de investimento era 31/12/2025 - programa pode estar concluido para novas candidaturas. Empresas devem contactar gestores aprovados diretamente. Regulamento guardado 2026-04-11."
-    },
     {
       "id": "madeira2030-2026-13-internacionalizacao-pme",
       "name": "Madeira 2030 - Internacionalizacao 2030 (M2030-2026-13)",
@@ -403,6 +389,16 @@
       "current_state": "aberto",
       "last_state_check": "2026-04-11",
       "regulation_local": "regulamentos/iefp/iefp-estagios-mais-talento-2026.txt"
+    },
+    {
+      "id": "programa-consolidar-bpf",
+      "source": "bfomento",
+      "file": "instrumentos/programa-consolidar-bpf.html",
+      "published_date": "2026-04-11",
+      "detected_date": "2026-04-09",
+      "current_state": "fechado",
+      "last_state_check": "2026-04-11",
+      "regulation_local": "regulamentos/banco-fomento/programa-consolidar-bpf.txt"
     }
   ],
   "source_last_checked": {
