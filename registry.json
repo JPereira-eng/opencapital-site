@@ -5,8 +5,8 @@
     "created": "2026-04-09"
   },
   "stats": {
-    "total_published": 33,
-    "total_in_queue": 24,
+    "total_published": 36,
+    "total_in_queue": 21,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-10",
     "last_scanner_run": "2026-04-12",
@@ -131,36 +131,6 @@
       "priority_score": 45,
       "status": "pending",
       "notes": "FA0915/2024. SIID Demonstradores I&D. 12M EUR FEDER. Programas: ALENTEJO, ALGARVE, CENTRO, COMPETE, LISBOA. Beneficiario: Privada. Concurso. Abertura 30/06/2026 - fecho 30/12/2026."
-    },
-    {
-      "id": "sice-qualificacao-pme-operacoes-individuais",
-      "name": "SICE - Qualificacao das PME - Operacoes Individuais",
-      "source_id": "portugal-2030",
-      "aviso_codigo": "FA0315/2025",
-      "detected_date": "2026-04-11",
-      "deadline": "2026-06-30",
-      "budget": "20.000.000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/sice-qualificacao-das-pme-operacoes-individuais/",
-      "pdf_url": "https://portugal2030.pt/wp-content/uploads/sites/3/2026/01/unnamed-file.pdf-26.octet-stream",
-      "regulation_local": "regulamentos/compete-2030/sice-qualificacao-pme-operacoes-individuais.txt",
-      "priority_score": 65,
-      "status": "pending",
-      "notes": "FA0315/2025. SICE Qualificacao PME. 20M EUR FEDER. Programa COMPETE2030. Beneficiario: Privada. Concurso. Abertura 30/04/2026 - fecho 30/06/2026. Apoio a projetos de qualificacao e modernizacao de PME."
-    },
-    {
-      "id": "siqrh-formacao-empresarial-individual",
-      "name": "SIQRH - Formacao Empresarial - Operacoes Individuais",
-      "source_id": "portugal-2030",
-      "aviso_codigo": "FA0104/2025",
-      "detected_date": "2026-04-11",
-      "deadline": "2026-06-30",
-      "budget": "40.000.000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/siqrh-formacao-empresarial-operacoes-individuais/",
-      "pdf_url": "https://portugal2030.pt/wp-content/uploads/sites/3/2026/01/unnamed-file.pdf-129.octet-stream",
-      "regulation_local": "regulamentos/compete-2030/siqrh-formacao-empresarial-individual.txt",
-      "priority_score": 65,
-      "status": "pending",
-      "notes": "FA0104/2025. SIQRH Formacao Empresarial Individual. 40M EUR FSE+. Programa COMPETE2030. Beneficiario: Privada. Concurso. Abertura 30/04/2026 - fecho 30/06/2026. Formacao de recursos humanos em empresas."
     },
     {
       "id": "siqrh-formacao-empresarial-conjunto",
@@ -311,21 +281,6 @@
       "priority_score": 35,
       "status": "pending",
       "notes": "HORIZON-CL6-2026-01-ZEROPOLLUTION-01. Dois fases: Fase 1 encerrou 16/04/2026; Fase 2 abre 16/04/2026 - fecho 23/09/2026. 23M EUR. Programa Horizonte Europa Cluster 6 (Alimentacao, Bioeconomia, Recursos Naturais, Ambiente). Acao: HORIZON-RIA. Foco: descontaminacao e biorremediacao de poluicao aquatica. Beneficiario: consorcio de instituicoes de investigacao e empresas (Privada + Publica). Relevancia para empresas de biotecnologia ambiental, tratamento de aguas, economia circular."
-    },
-    {
-      "id": "prima-2026-seccao-2",
-      "name": "PRIMA 2026 - Concurso Seccao 2 - Investigacao Mediterranica",
-      "source_id": "fct",
-      "aviso_codigo": null,
-      "detected_date": "2026-04-12",
-      "deadline": "2026-05-15",
-      "budget": "1.200.000 EUR",
-      "regulation_url": "https://www.fct.pt/concursos/prima-concurso-2026-seccao-2",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/fct/prima-2026-seccao-2.txt",
-      "priority_score": 75,
-      "status": "pending",
-      "notes": "PRIMA 2026 Seccao 2. FCT contribuicao: 1.2M EUR. Fase 1: 15/05/2026; Fase 2: 29/09/2026. Consorcio transnacional (min. 3 paises PRIMA). Max por consorcio PT lider: 250K EUR. Topicos: gestao agua mediterranica, monitorizacao agricola remota, rastreabilidade digital agrofoodchain. Beneficiario: Privada (empresas) + Publica (universidades, labs). Relevante para empresas de biotecnologia agricola, tecnologia de agua, agrifood tech."
     },
     {
       "id": "i3-2026-interregional-innovation-investments",
@@ -731,6 +686,36 @@
       "current_state": "aberto",
       "last_state_check": "2026-04-12",
       "regulation_local": "regulamentos/hadea/horizon-raise-2026-01-ia-ciencia.txt"
+    },
+    {
+      "id": "prima-2026-seccao-2",
+      "source": "fct",
+      "file": "instrumentos/prima-2026-seccao-2.html",
+      "published_date": "2026-04-12",
+      "detected_date": "2026-04-12",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-12",
+      "regulation_local": "regulamentos/fct/prima-2026-seccao-2.txt"
+    },
+    {
+      "id": "sice-qualificacao-pme-operacoes-individuais",
+      "source": "compete-2030",
+      "file": "instrumentos/sice-qualificacao-pme-operacoes-individuais.html",
+      "published_date": "2026-04-12",
+      "detected_date": "2026-04-11",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-12",
+      "regulation_local": "regulamentos/compete-2030/sice-qualificacao-pme-operacoes-individuais.txt"
+    },
+    {
+      "id": "siqrh-formacao-empresarial-individual",
+      "source": "compete-2030",
+      "file": "instrumentos/siqrh-formacao-empresarial-individual.html",
+      "published_date": "2026-04-12",
+      "detected_date": "2026-04-11",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-12",
+      "regulation_local": "regulamentos/compete-2030/siqrh-formacao-empresarial-individual.txt"
     }
   ],
   "source_last_checked": {
