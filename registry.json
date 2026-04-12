@@ -5,8 +5,8 @@
     "created": "2026-04-09"
   },
   "stats": {
-    "total_published": 36,
-    "total_in_queue": 21,
+    "total_published": 37,
+    "total_in_queue": 20,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-10",
     "last_scanner_run": "2026-04-12",
@@ -131,21 +131,6 @@
       "priority_score": 45,
       "status": "pending",
       "notes": "FA0915/2024. SIID Demonstradores I&D. 12M EUR FEDER. Programas: ALENTEJO, ALGARVE, CENTRO, COMPETE, LISBOA. Beneficiario: Privada. Concurso. Abertura 30/06/2026 - fecho 30/12/2026."
-    },
-    {
-      "id": "siqrh-formacao-empresarial-conjunto",
-      "name": "SIQRH - Formacao Empresarial - Operacoes em Conjunto",
-      "source_id": "portugal-2030",
-      "aviso_codigo": "FA0105/2025",
-      "detected_date": "2026-04-11",
-      "deadline": "2026-06-30",
-      "budget": "40.000.000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/siqrh-formacao-empresarial-operacoes-em-conjunto/",
-      "pdf_url": "https://portugal2030.pt/wp-content/uploads/sites/3/2026/01/unnamed-file.pdf-127.octet-stream",
-      "regulation_local": "regulamentos/compete-2030/siqrh-formacao-empresarial-conjunto.txt",
-      "priority_score": 65,
-      "status": "pending",
-      "notes": "FA0105/2025. SIQRH Formacao Empresarial em Conjunto. 40M EUR FSE+. Programa COMPETE2030. Beneficiario: Privada. Concurso. Abertura 30/04/2026 - fecho 30/06/2026. Formacao conjunta de RH em consorcio de empresas."
     },
     {
       "id": "formacao-executivos-compete",
@@ -716,6 +701,16 @@
       "current_state": "aberto",
       "last_state_check": "2026-04-12",
       "regulation_local": "regulamentos/compete-2030/siqrh-formacao-empresarial-individual.txt"
+    },
+    {
+      "id": "siqrh-formacao-empresarial-conjunto",
+      "source": "portugal-2030",
+      "file": "instrumentos/siqrh-formacao-empresarial-conjunto.html",
+      "published_date": "2026-04-12",
+      "detected_date": "2026-04-11",
+      "current_state": "previsto",
+      "last_state_check": "2026-04-12",
+      "regulation_local": "regulamentos/compete-2030/siqrh-formacao-empresarial-conjunto.txt"
     }
   ],
   "source_last_checked": {
