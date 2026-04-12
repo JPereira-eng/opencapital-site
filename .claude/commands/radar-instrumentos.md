@@ -21,12 +21,17 @@ Podes executar uma run completa (scan + download + monitor + write) usando as 4 
 
 ```
 registry/
-  index.json          - contadores globais
+  index.json          - contadores globais + source_last_checked
   lookup.json         - dedup O(1)
-  queue.json          - fila do writer
+  queue.json          - fila do writer (max 100 items)
+  queue-overflow.json - overflow quando queue >= 100
   shards/             - instrumentos publicados, por fonte
-    pt2030-compete.json, pt2030-norte.json, ...
-    eu-horizon.json, eu-other.json, ...
+    pt2030-compete.json   - COMPETE 2030 apenas
+    pt2030-pessoas.json   - PESSOAS 2030 (FSE+)
+    pt2030-central.json   - API central, multi-programa
+    pt2030-norte.json, pt2030-centro.json, pt2030-lisboa.json
+    pt2030-other.json     - regionais menores (Alentejo, Algarve, Acores, Madeira, MAR, etc.)
+    eu-horizon.json, eu-other.json, eic.json
     pt-other.json, interreg.json
   archive/            - fechados antigos (trimestral)
 ```

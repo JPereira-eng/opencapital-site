@@ -34,18 +34,38 @@ fi
 
 ---
 
+## PASSO 0.5: RECUPERACAO DE TRABALHO PENDENTE
+
+**Antes de iniciar qualquer batch, verificar se ha commits locais nao enviados:**
+
+```bash
+LOCAL_AHEAD=$(git -C "$REPO" rev-list --count origin/main..HEAD 2>/dev/null || echo "0")
+if [ "$LOCAL_AHEAD" -gt "0" ]; then
+  echo "RECUPERACAO: $LOCAL_AHEAD commits locais pendentes. A enviar..."
+  git -C "$REPO" push origin main
+fi
+```
+
+Se o push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push origin main`
+
+**Isto garante que artigos criados numa sessao anterior (que foi bloqueada por rate limit antes do push) sao publicados.**
+
+---
+
 ## MODO SPRINT
 
 O writer opera em **batches de 5 artigos**. Cada batch:
 1. Seleciona 5 items da queue (ou menos se queue menor)
-2. Cria os artigos
-3. Faz commit + push
+2. Cria os artigos, **commit apos cada artigo individual**
+3. Push apos completar o batch (ou apos cada artigo se rate limit proximo)
 4. Se queue ainda tem items E nao atingiu 20 artigos na sessao: inicia novo batch
 
 **Limites por sessao:**
 - Max 5 artigos por batch
 - Max 4 batches por sessao = **20 artigos max**
 - Se queue < 5: criar todos os que houver
+
+**REGRA DE SEGURANCA: Commit por artigo.** Cada artigo criado e imediatamente commitado (sem push). O push acontece ao final do batch. Se o agente for bloqueado por rate limit entre artigos, o trabalho ja esta guardado localmente e sera enviado na proxima sessao (Passo 0.5).
 
 ---
 
@@ -146,11 +166,20 @@ Para cada artigo criado:
 
 ---
 
-## PASSO 7: Deploy (por batch)
+## PASSO 7: Deploy (commit por artigo, push por batch)
+
+### 7a. Commit por artigo (apos cada artigo criado nos passos 4-6):
 
 ```bash
-git -C "$REPO" add instrumentos/[slug1].html instrumentos/[slug2].html ... instruments-catalog.json registry/
-git -C "$REPO" commit -m "writer: [nome1] + [nome2] + ... ([N] artigos)"
+git -C "$REPO" add instrumentos/[slug].html instruments-catalog.json registry/
+git -C "$REPO" commit -m "instrumento: [nome do instrumento]"
+```
+
+**Cada artigo tem o seu proprio commit.** Isto garante que se o agente for bloqueado por rate limit, os artigos ja criados ficam guardados localmente.
+
+### 7b. Push por batch (apos os 5 commits do batch):
+
+```bash
 git -C "$REPO" push origin main
 ```
 

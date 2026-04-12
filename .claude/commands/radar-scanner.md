@@ -54,7 +54,7 @@ Verificar no maximo **5 fontes por execucao**.
 2. Fontes com `priority: "medium"` nao verificadas ha mais de 7 dias
 3. Fontes com `priority: "low"` nao verificadas ha mais de 14 dias
 
-Consultar `registry/index.json > last_scanner_run` e `sources-scan.json` para datas.
+Consultar `registry/index.json > source_last_checked` para a data de ultima verificacao de cada fonte individual. Este mapa contem a data exata de cada fonte (nao apenas a data global do ultimo scan).
 
 **NOTA:** Programas regionais PT2030 (norte-2030, centro-2030, etc.) sao fontes independentes. Verificar a API central do PT2030 NAO cobre automaticamente os portais regionais. Cada um deve ser verificado individualmente.
 
@@ -134,7 +134,17 @@ Para cada instrumento detectado:
 
 ## PASSO 4: Adicionar novos a fila
 
-Para cada instrumento novo, adicionar a `registry/queue.json > queue`:
+### Limite de queue (protecao contra crescimento descontrolado)
+
+Antes de adicionar novos items, verificar o tamanho atual da queue:
+
+- Se `queue.length >= 100`: novos items vao para `registry/queue-overflow.json` em vez de `queue.json`
+- Se `queue.length < 100`: adicionar normalmente a `queue.json`
+- O overflow tem a mesma estrutura que queue.json mas com `"_meta": "Overflow. Items migram para queue.json quando esta desce abaixo de 80."`
+
+**O writer nao le o overflow.** Os items so migram quando o scanner deteta que a queue principal tem < 80 items. Nesse momento, migra os items de maior priority_score do overflow para a queue (ate perfazer 100).
+
+Para cada instrumento novo, adicionar a `registry/queue.json > queue` (ou `queue-overflow.json` se limite atingido):
 
 ```json
 {
@@ -154,6 +164,20 @@ Para cada instrumento novo, adicionar a `registry/queue.json > queue`:
   "notes": "Dados basicos: codigo, programa, dotacao, beneficiario, prazo"
 }
 ```
+
+**Routing de shard para items da API central PT2030:**
+
+Items detetados via API central (`source_id: "portugal-2030"`) devem ser encaminhados para o shard correto com base no campo `acf.programa[]`:
+- Se programa contem apenas "COMPETE" ou "COMPETE2030": `shard: "pt2030-compete"`
+- Se programa contem apenas "PESSOAS" ou "PESSOAS2030": `shard: "pt2030-pessoas"`
+- Se programa contem apenas "NORTE" ou "NORTE2030": `shard: "pt2030-norte"`
+- Se programa contem apenas "CENTRO" ou "CENTRO2030": `shard: "pt2030-centro"`
+- Se programa contem apenas "LISBOA" ou "LISBOA2030": `shard: "pt2030-lisboa"`
+- Se programa contem apenas "ALENTEJO", "ALGARVE", "ACORES", "MADEIRA", "MAR", "SUSTENTAVEL", ou "PAT": `shard: "pt2030-other"`
+- Se programa contem multiplos programas (ex: "COMPETE + ALENTEJO + ALGARVE"): `shard: "pt2030-central"`
+- Se programa nao identificavel: `shard: "pt2030-central"`
+
+Para fontes que nao sao a API central, usar o `shard` definido em `sources-scan.json`.
 
 **Calculo do priority_score:**
 - Prazo < 30 dias: +100
@@ -177,7 +201,14 @@ Para cada instrumento novo, adicionar a `registry/queue.json > queue`:
 1. Atualizar `registry/index.json`:
    - `totals.in_queue`: novo tamanho da queue
    - `last_scanner_run`: data de hoje
-2. Atualizar `source_last_checked` em `registry/index.json` (adicionar campo se necessario)
+2. Atualizar `source_last_checked` em `registry/index.json` para cada fonte verificada nesta run:
+   ```json
+   "source_last_checked": {
+     "compete-2030": "2026-04-12",
+     "norte-2030": "2026-04-12"
+   }
+   ```
+   Manter as datas das fontes nao verificadas inalteradas.
 
 ---
 
