@@ -149,15 +149,25 @@ Para cada instrumento detectado:
 
 ## PASSO 4: Adicionar novos a fila
 
-### Limite de queue (protecao contra crescimento descontrolado)
+### Limite de queue com swap por prioridade
 
 Antes de adicionar novos items, verificar o tamanho atual da queue:
 
-- Se `queue.length >= 100`: novos items vao para `registry/queue-overflow.json` em vez de `queue.json`
-- Se `queue.length < 100`: adicionar normalmente a `queue.json`
-- O overflow tem a mesma estrutura que queue.json mas com `"_meta": "Overflow. Items migram para queue.json quando esta desce abaixo de 80."`
+**Se `queue.length < 100`:** adicionar normalmente a `queue.json`.
 
-**O writer nao le o overflow.** Os items so migram quando o scanner deteta que a queue principal tem < 80 items. Nesse momento, migra os items de maior priority_score do overflow para a queue (ate perfazer 100).
+**Se `queue.length >= 100`:** nao ir directamente para overflow. Fazer swap por prioridade:
+
+1. Calcular `min_score = min(queue[].priority_score)`
+2. Se `novo_item.priority_score > min_score`:
+   - Remover da queue todos os items com `priority_score == min_score` ate ter espaco (max 1 item removido por novo item inserido)
+   - Mover o item removido para `registry/queue-overflow.json`
+   - Adicionar o novo item a `queue.json`
+3. Se `novo_item.priority_score <= min_score`:
+   - Adicionar directamente a `registry/queue-overflow.json`
+
+**Regra de migracao do overflow:** Quando o scanner deteta `queue.length < 80`, migrar os items de maior priority_score do overflow para a queue ate perfazer 100 items.
+
+O overflow tem a mesma estrutura que queue.json mas com `"_meta": "Overflow. Items migram para queue.json quando esta desce abaixo de 80."`. **O writer nao le o overflow.**
 
 Para cada instrumento novo, adicionar a `registry/queue.json > queue` (ou `queue-overflow.json` se limite atingido):
 
