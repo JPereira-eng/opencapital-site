@@ -9,21 +9,59 @@
     "open": 32,
     "closed": 4,
     "planned": 3,
-    "in_queue": 35
+    "in_queue": 100
   },
   "shards": {
-    "pt2030-compete": { "count": 13, "open": 11, "closed": 0, "planned": 2 },
-    "pt2030-pessoas": { "count": 0 },
-    "pt2030-central": { "count": 0 },
-    "pt2030-norte": { "count": 3, "open": 2, "closed": 1 },
-    "pt2030-centro": { "count": 1, "open": 1 },
-    "pt2030-lisboa": { "count": 1, "open": 1 },
-    "pt2030-other": { "count": 0 },
-    "eic": { "count": 4, "open": 4 },
-    "eu-horizon": { "count": 8, "open": 6, "closed": 1, "planned": 1 },
-    "eu-other": { "count": 1, "open": 1 },
-    "pt-other": { "count": 8, "open": 6, "closed": 2 },
-    "interreg": { "count": 0 }
+    "pt2030-compete": {
+      "count": 13,
+      "open": 11,
+      "closed": 0,
+      "planned": 2
+    },
+    "pt2030-pessoas": {
+      "count": 0
+    },
+    "pt2030-central": {
+      "count": 0
+    },
+    "pt2030-norte": {
+      "count": 3,
+      "open": 2,
+      "closed": 1
+    },
+    "pt2030-centro": {
+      "count": 1,
+      "open": 1
+    },
+    "pt2030-lisboa": {
+      "count": 1,
+      "open": 1
+    },
+    "pt2030-other": {
+      "count": 0
+    },
+    "eic": {
+      "count": 4,
+      "open": 4
+    },
+    "eu-horizon": {
+      "count": 8,
+      "open": 6,
+      "closed": 1,
+      "planned": 1
+    },
+    "eu-other": {
+      "count": 1,
+      "open": 1
+    },
+    "pt-other": {
+      "count": 8,
+      "open": 6,
+      "closed": 2
+    },
+    "interreg": {
+      "count": 0
+    }
   },
   "last_full_cycle": "2026-04-12",
   "last_scanner_run": "2026-04-12",
@@ -35,12 +73,12 @@
     "norte-2030": "2026-04-12",
     "centro-2030": "2026-04-12",
     "lisboa-2030": "2026-04-12",
-    "alentejo-2030": "2026-04-11",
-    "algarve-2030": "2026-04-11",
+    "alentejo-2030": "2026-04-12",
+    "algarve-2030": "2026-04-12",
     "madeira-2030": "2026-04-11",
-    "acores-2030": "2026-04-11",
-    "pessoas-2030": "2026-04-11",
-    "sustentavel-2030": "2026-04-11",
+    "acores-2030": "2026-04-12",
+    "pessoas-2030": "2026-04-12",
+    "sustentavel-2030": "2026-04-12",
     "mar-2030": "2026-04-11",
     "pat-2030": "2026-04-11",
     "eu-funding-tenders": "2026-04-12",
