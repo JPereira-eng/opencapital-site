@@ -288,6 +288,8 @@ Ordenar a `queue` por `priority_score` (descendente).
 
 ### 4b. Obter o regulamento
 
+REGRA CRITICA: NUNCA abortar a criacao de artigos por falta de `regulation_local`. A cascata abaixo garante que sempre e possivel escrever. Mesmo que todas as etapas falhem, os dados do campo `notes` no registry sao suficientes para criar um artigo de qualidade. **Artigos criados: 0 e sempre uma falha do agente, nao uma falha do sistema.**
+
 Para cada artigo selecionado, seguir esta cascata (parar na primeira que funcionar):
 
 1. **Se `regulation_local` existe e nao e null:**
@@ -295,23 +297,26 @@ Para cada artigo selecionado, seguir esta cascata (parar na primeira que funcion
    - Se o texto tem mais de 3000 palavras: usar apenas as primeiras 3000
    - Esta e a via preferencial. O scanner ja descarregou e extraiu o texto
 
-2. **Se `regulation_local` e null mas `pdf_url` existe:**
+2. **Se `regulation_local` e null mas `pdf_url` existe (url completo, nao um ID numerico):**
    - Criar pasta `regulamentos/[source_id]/` se nao existir
    - Descarregar: `curl -sL "[pdf_url]" -o "regulamentos/[source_id]/[id].pdf"`
    - Extrair: `pdftotext -enc UTF-8 "regulamentos/[source_id]/[id].pdf" "regulamentos/[source_id]/[id].txt"`
    - Atualizar o item na queue: `"regulation_local": "regulamentos/[source_id]/[id].txt"`
    - Se o texto tem mais de 3000 palavras: usar apenas as primeiras 3000
+   - Se o download falhar: continuar para passo 3
 
-3. **Se `regulation_url` existe (sem PDF nem local):**
-   - Consultar `access_method` da fonte em `sources.json`
-   - Se `"webfetch"`: usar WebFetch para extrair o conteudo da pagina
-   - Se `"chrome"`: usar Chrome MCP tools (navigate → get_page_text)
-   - Extrair: titulo, dotacao, elegibilidade, despesas elegiveis, taxas, prazos
-   - Guardar em `regulamentos/[source_id]/[id].txt` e atualizar `regulation_local`
+3. **Se `regulation_url` existe:**
+   - Usar WebFetch diretamente no `regulation_url` (independentemente do `access_method` da fonte)
+   - Prompt: "Extrai toda a informacao disponivel sobre este aviso/instrumento de financiamento: nome, codigo, dotacao, taxa de cofinanciamento, elegibilidade, despesas elegiveis, prazos, criterios de selecao, programa, fundo."
+   - Guardar o resultado em `regulamentos/[source_id]/[id].txt` e atualizar `regulation_local`
+   - Se WebFetch retornar pagina vazia ou erro JS: tentar Chrome MCP (navigate + get_page_text)
 
-4. **Se nenhum URL existe:**
-   - Usar WebSearch para encontrar informacao sobre o instrumento
-   - Combinar resultados de multiplas fontes
+4. **Se tudo falhou ou nao ha URLs:**
+   - Usar WebSearch: `"[aviso_codigo] [nome] financiamento portugal 2030"` e `"[nome] aviso candidaturas elegibilidade"`
+   - Combinar resultados de 2-3 pesquisas
+   - Complementar com os dados do campo `notes` no registry (codigo, programa, dotacao, beneficiario, prazo)
+
+**Nota para items PT2030:** Para items com `source_id: "portugal-2030"` e URL do tipo `portugal2030.pt/aviso-2024/[slug]/`, o WebFetch funciona directamente - sao paginas WordPress com render server-side. Usar sempre como passo 3.
 
 ### 4c. Criar o artigo
 
