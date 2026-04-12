@@ -53,11 +53,14 @@ Ler `registry-published.json` apenas para verificar duplicados.
 
 Le o `registry-queue.json` e conta os items na `queue`. Decide o modo:
 
-| Fila | Modo | Acao |
-|---|---|---|
-| < 5 items | **Normal** | Scan de fontes + state updates (max 3) + criar 1 artigo da fila |
-| 5-9 items | **Intensivo** | Sem scan, sem state updates, criar 2 artigos da fila |
-| >= 10 items | **Urgente** | Sem scan, sem state updates, criar 2 artigos da fila |
+| Fila | Modo | State updates | Artigos | Scan |
+|---|---|---|---|---|
+| 0 items | **Monitorizacao** | 10 | 0 | Sim |
+| 1-4 items | **Normal** | 10 | 1 | Sim |
+| 5-9 items | **Intensivo** | 5 | 2 | Nao |
+| >= 10 items | **Urgente** | 3 | 2 | Nao |
+
+**State updates acontecem SEMPRE**, independentemente do tamanho da fila.
 
 ---
 
@@ -67,11 +70,13 @@ Le o `registry-queue.json` e conta os items na `queue`. Decide o modo:
 1. Read registry.json            (stats + source_last_checked, ~500 tokens)
 2. Read registry-queue.json      (fila completa, ~3.300 tokens)
 3. Read sources-scan.json        (fontes para scanning, ~4.500 tokens)
-4. Contar items na queue (registry-queue.json > queue.length)
-4. Decidir o modo (Normal / Intensivo / Urgente)
-5. Se modo Normal: identificar quais fontes verificar (ver Passo 2)
-6. Se modo Normal: apos scan, aplicar state updates (ver Passo 3B)
-7. Se modo Intensivo/Urgente: saltar para Passo 4 (criar artigos)
+4. Read registry-published.json  (para selecionar instrumentos a monitorizar)
+5. Contar items na queue (registry-queue.json > queue.length)
+6. Decidir o modo (Monitorizacao / Normal / Intensivo / Urgente)
+7. Selecionar instrumentos para state update (ver Passo 3B.0)
+8. Se modo Monitorizacao/Normal: identificar quais fontes verificar (ver Passo 2)
+9. Aplicar state updates (ver Passo 3B) - TODOS os modos
+10. Se modo Normal/Intensivo/Urgente: criar artigos (ver Passo 4)
 ```
 
 ---
@@ -177,12 +182,28 @@ Atualizar `stats.sources_checked_this_week` com as fontes verificadas.
 
 ## PASSO 3B: Atualizar estados de instrumentos publicados
 
-Este passo executa-se **apenas em modo Normal**, apos o scan de fontes.
-Maximo de **3 state updates por execucao** (para caber no budget de tokens).
+**Este passo executa-se em TODOS os modos.** O numero maximo de state updates depende do modo:
+- Monitorizacao: 10
+- Normal: 10
+- Intensivo: 5
+- Urgente: 3
+
+### 3B.0 Selecionar instrumentos a verificar
+
+Ler `registry-published.json` e ordenar os instrumentos por `last_state_check` (data mais antiga primeiro). Selecionar os primeiros N instrumentos (conforme o limite do modo) cujo `current_state` e `"aberto"` ou `"previsto"`.
+
+Instrumentos com `current_state: "fechado"` nao precisam de monitorizacao frequente. Verificar apenas 1 fechado por cada 5 abertos, para confirmar se reabriram.
+
+Para cada instrumento selecionado:
+1. Consultar a fonte original (WebFetch no URL do aviso, se disponivel)
+2. Comparar estado atual, prazo e dotacao com os dados publicados
+3. Se houve alteracao, registar em `state_updates`
+
+Se nenhum instrumento precisar de verificacao (todos verificados recentemente), saltar para Passo 4.
 
 ### 3B.1 Identificar instrumentos com estado alterado
 
-Durante o Passo 3b, os instrumentos com alteracoes foram registados em `state_updates`.
+Os instrumentos com alteracoes foram registados em `state_updates` (via Passo 3b do scan e/ou via 3B.0 da monitorizacao).
 Se `state_updates` esta vazio, saltar para Passo 4.
 
 Cada entrada em `state_updates` tem:
@@ -202,7 +223,7 @@ Ordenar por prioridade:
 2. Mudanca de prazo - urgente
 3. Mudanca de dotacao - informativo
 
-Se mais de 3 updates pendentes, processar os 3 mais urgentes. Os restantes ficam para a proxima run.
+Se mais updates pendentes do que o limite do modo, processar os mais urgentes. Os restantes ficam para a proxima run.
 
 ### 3B.2 Atualizar o artigo HTML
 
@@ -481,7 +502,7 @@ rm -rf /tmp/opencapital
 
 1. **Nunca duplicar artigos.** Verificar sempre `registry-published.json > published` antes de criar.
 2. **Nunca exceder 2 artigos por execucao.** Se a fila tem 10 items, criar 2 e guardar os restantes.
-3. **Nunca exceder 3 state updates por execucao.** Se ha mais updates pendentes, processar 3 e guardar os restantes.
+3. **Nunca exceder o limite de state updates do modo atual** (3 em Urgente, 5 em Intensivo, 10 em Normal/Monitorizacao). Se ha mais updates pendentes, processar os mais urgentes e guardar os restantes.
 4. **Modificar artigos existentes APENAS para state updates.** Alteracoes permitidas: estado (aberto/fechado/previsto), prazo, dotacao, e aviso de encerramento. Nunca reescrever o conteudo editorial do artigo.
 5. **Nunca remover entradas de instruments-catalog.json.** So adicionar ou atualizar estado/prazo/dotacao. Nunca editar solucoes.html.
 5. **Se WebFetch falhar para uma fonte:** registar o erro em `source_last_checked` com nota de falha e continuar para a proxima fonte. Nao parar a execucao.
@@ -493,12 +514,13 @@ rm -rf /tmp/opencapital
 ## RESUMO DE UMA EXECUCAO TIPICA
 
 ```
-1. Ler registry.json + registry-queue.json + sources-scan.json
-2. Decidir modo (Normal/Intensivo/Urgente)
-3. [Normal] Scan 3 fontes → detectar novos → adicionar a fila → detectar state changes
-4. [Normal] Aplicar ate 3 state updates (artigo + instruments-catalog.json + registry)
-5. Criar 1-2 artigos da fila (por prioridade) + adicionar ao instruments-catalog.json
-6. Atualizar registry.json + registry-queue.json + registry-published.json + instruments-catalog.json
-7. git commit + push
-8. Reportar: "Scan: [fontes]. Novos: [N]. Criados: [N]. Updates: [N]. Fila: [N]."
+1. Ler registry.json + registry-queue.json + sources-scan.json + registry-published.json
+2. Decidir modo (Monitorizacao/Normal/Intensivo/Urgente)
+3. [Monitorizacao/Normal] Scan 3 fontes → detectar novos → adicionar a fila
+4. [TODOS os modos] Selecionar instrumentos por last_state_check (mais antigo primeiro)
+5. [TODOS os modos] Aplicar state updates (3-10 conforme modo) em artigos + instruments-catalog.json
+6. [Normal/Intensivo/Urgente] Criar 1-2 artigos da fila + adicionar ao instruments-catalog.json
+7. Atualizar registry.json + registry-queue.json + registry-published.json + instruments-catalog.json
+8. git commit + push
+9. Reportar: "Modo: [X]. Scan: [fontes]. Novos: [N]. Criados: [N]. Updates: [N]. Fila: [N]."
 ```
