@@ -387,6 +387,29 @@
       .footer-grid { grid-template-columns:1fr; gap:32px; }
     }
 
+
+    /* ─── PAGINATION ──────────────────────────────── */
+    .catalog-pagination {
+      display:flex; align-items:center; justify-content:center;
+      gap:8px; padding:40px 80px 20px; max-width:1200px; margin:0 auto;
+    }
+    .page-btn {
+      font-family:var(--font); font-size:13px; font-weight:500;
+      letter-spacing:0.06em; color:var(--grey-mid);
+      background:var(--white); border:1px solid var(--grey-light);
+      padding:10px 16px; cursor:pointer; transition:var(--transition);
+    }
+    .page-btn:hover { border-color:var(--navy); color:var(--navy); }
+    .page-btn.active { background:var(--navy); color:var(--white); border-color:var(--navy); }
+
+    /* ─── LOADING STATE ───────────────────────────── */
+    .catalog-loading {
+      grid-column:1/-1; padding:80px 40px; text-align:center;
+    }
+    .catalog-loading-text {
+      font-size:15px; font-weight:300; color:var(--grey-mid); letter-spacing:0.04em;
+    }
+
   </style>
 </head>
 <body>
@@ -484,15 +507,19 @@
         <select class="filter-select" id="filterFonte" onchange="applyFilters()">
           <option value="all">Fonte</option>
           <option value="pt2030">Portugal 2030</option>
+          <option value="compete">COMPETE 2030</option>
+          <option value="norte-2030">Norte 2030</option>
+          <option value="ue">União Europeia</option>
           <option value="ani">ANI</option>
           <option value="iapmei">IAPMEI</option>
           <option value="bfomento">Banco de Fomento</option>
           <option value="aicep">AICEP</option>
           <option value="at">Autoridade Tributária</option>
+          <option value="iefp">IEFP</option>
+          <option value="fct">FCT</option>
+          <option value="turismo">Turismo de Portugal</option>
           <option value="pventures">Portugal Ventures</option>
-          <option value="compete">COMPETE 2030</option>
           <option value="prr">PRR</option>
-          <option value="ue">União Europeia</option>
         </select>
         <select class="filter-select" id="filterBeneficiario" onchange="applyFilters()">
           <option value="all">Beneficiário</option>
@@ -520,551 +547,9 @@
   <!-- ─── INSTRUMENTS GRID ──────────────────────────── -->
   <section class="instruments-section" id="instrumentos">
     <div class="instruments-grid" id="instrumentsGrid">
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="compete-2030" data-beneficiario="empresa" data-regiao="norte,centro,alentejo,algarve" data-id="step-inovacao-produtiva-digital-biotecnologia" data-href="instrumentos/step-inovacao-produtiva-digital-biotecnologia.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-open">Aberto até 30/04/2026</span>
-        </div>
-        <h3 class="card-title">STEP Inovação Produtiva: Digital e Biotecnologia</h3>
-        <p class="card-tagline">Apoio não reembolsável para investimentos em tecnologias críticas europeias, com foco em inovação digital e biotecnologia</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>301M EUR de dotação · Cofinanciamento até 70%</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Empresas (todas as dimensões) · Norte, Centro, Alentejo, Algarve · FEDER</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="compete" data-beneficiario="empresa" data-regiao="norte,centro,alentejo" data-id="step-inovacao-produtiva-energia" data-href="instrumentos/step-inovacao-produtiva-energia.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-open">Aberto até 30/04/2026</span>
-        </div>
-        <h3 class="card-title">STEP Inovação Produtiva: Energia</h3>
-        <p class="card-tagline">Investimentos em tecnologias críticas e cadeias de abastecimento resilientes para o sector energético</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>300M EUR de dotação · Cofinanciamento até 70%</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Empresas (todas as dimensões) · Norte, Centro, Alentejo · FEDER</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="compete" data-beneficiario="empresa,ensino-investigacao" data-regiao="norte,centro,alentejo" data-id="step-idi-empresarial-energia" data-href="instrumentos/step-idi-empresarial-energia.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-open">Aberto até 30/04/2026</span>
-        </div>
-        <h3 class="card-title">STEP I&D&I Empresarial: Energia</h3>
-        <p class="card-tagline">Financiamento para investigação, desenvolvimento e inovação em tecnologias energéticas avançadas</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>86.25M EUR de dotação · Cofinanciamento até 80%</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Empresa + Investigação · Norte, Centro, Alentejo · FEDER</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="compete" data-beneficiario="empresa,ensino-investigacao" data-regiao="norte,centro,alentejo,algarve,acores,madeira" data-id="step-idi-empresarial-digital-biotecnologia" data-href="instrumentos/step-idi-empresarial-digital-biotecnologia.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-open">Aberto até 30/04/2026</span>
-        </div>
-        <h3 class="card-title">STEP I&amp;D&amp;I Empresarial: Digital e Biotecnologia</h3>
-        <p class="card-tagline">Financiamento STEP para projetos de I&D em tecnologias digitais e biotecnologia estratégica</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>153M EUR de dotação · Cofinanciamento até 85%</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Empresa + ENESII · Norte, Centro, Alentejo, Algarve · FEDER</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="hib" data-estado="aberto" data-fonte="ue" data-beneficiario="empresa,empreendedor" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="eic-accelerator-2026" data-featured="true" data-href="instrumentos/eic-accelerator-2026.html">
-        <div class="card-header">
-          <span class="cat-badge cat-hib">Híbrido</span>
-          <span class="status-pill status-open">Aberto até 06/05/2026</span>
-        </div>
-        <h3 class="card-title">EIC Accelerator 2026</h3>
-        <p class="card-tagline">Grant e investimento europeu para startups e PME com inovação disruptiva e escala global</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>634M EUR orçamento · Grant até €2,5M + Invest. até €10M</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Startups &amp; PME · Todos os países UE · Horizonte Europa</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="priv" data-estado="aberto" data-fonte="ue" data-beneficiario="empresa" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="step-scale-up-eic" data-href="instrumentos/step-scale-up-eic.html">
-        <div class="card-header">
-          <span class="cat-badge cat-priv">Investimento Privado</span>
-          <span class="status-pill status-cont">Candidatura Contínua</span>
-        </div>
-        <h3 class="card-title">EIC STEP Scale Up</h3>
-        <p class="card-tagline">Equity europeu de 10 a 30M EUR para startups e PME em deep tech, cleantech e biotecnologia</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>300M EUR dotação 2026 · Equity 10-30M EUR por empresa</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Startups &amp; PME · Co-investidor obrigatório (20%) · EIC / STEP</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="compete" data-beneficiario="entidade-publica" data-regiao="norte,centro,alentejo" data-id="siac-digitalizacao-transformacao-digital" data-href="instrumentos/siac-digitalizacao-transformacao-digital.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-open">Aberto até 29/05/2026</span>
-        </div>
-        <h3 class="card-title">SIAC Digitalização</h3>
-        <p class="card-tagline">Programa COMPETE 2030 para a transformação digital das PME no Norte, Centro e Alentejo</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>2M EUR dotação · Cofinanciamento até 85% FEDER</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Norte, Centro, Alentejo · Beneficiário: IAPMEI · COMPETE 2030</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="compete" data-beneficiario="empresa" data-regiao="norte,centro,alentejo,algarve" data-id="sitce-descarbonizacao-eficiencia-energetica" data-href="instrumentos/sitce-descarbonizacao-eficiencia-energetica.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-open">Aberto até 29/05/2026</span>
-        </div>
-        <h3 class="card-title">SITCE Descarbonização</h3>
-        <p class="card-tagline">Programa COMPETE 2030 para eficiência energética e descarbonização industrial, com cofinanciamento FEDER até 85%</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>165M EUR dotação FEDER · Até 85% de cofinanciamento</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Empresas de qualquer dimensão · Norte, Centro, Alentejo, Algarve</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="compete" data-beneficiario="associacao,entidade-publica" data-regiao="norte,centro,alentejo" data-id="siac-acoes-coletivas-internacionalizacao" data-href="instrumentos/siac-acoes-coletivas-internacionalizacao.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-open">Aberto até 29/05/2026</span>
-        </div>
-        <h3 class="card-title">SIAC Ações Coletivas - Internacionalização</h3>
-        <p class="card-tagline">Financiamento coletivo COMPETE 2030 para campanhas internacionais de associações empresariais, câmaras de comércio e agências de promoção</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>60M EUR dotação FEDER · Cofinanciamento até 85%</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Norte, Centro, Alentejo · Associações e entidades públicas</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="ue" data-beneficiario="empresa,ensino-investigacao" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="eic-pathfinder-2026" data-href="instrumentos/eic-pathfinder-2026.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-open">Aberto até 12/05/2026</span>
-        </div>
-        <h3 class="card-title">EIC Pathfinder 2026</h3>
-        <p class="card-tagline">Financiamento europeu para investigação de fronteira em deep tech, da ideia ao proof-of-concept com até 4 milhões EUR por consórcio</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>262M EUR dotação · Até 4M EUR por projeto</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>TRL 1-4 · Consorcios de 3+ entidades</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="ue" data-beneficiario="empresa,ensino-investigacao" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="eic-transition-2026" data-href="instrumentos/eic-transition-2026.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-open">Aberto até 16/09/2026</span>
-        </div>
-        <h3 class="card-title">EIC Transition 2026</h3>
-        <p class="card-tagline">O elo entre o laboratório e o mercado: maturação tecnológica de TRL 3-4 até TRL 5-6, com até 2,5 milhões EUR por projeto</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>100M EUR dotação · 0,5M a 2,5M EUR por projeto</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>100% custos cobertos · Startups, PME e universidades</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="compete" data-beneficiario="associacao" data-regiao="norte,centro,lisboa,alentejo,algarve" data-id="sice-internacionalizacao-pme" data-href="instrumentos/sice-internacionalizacao-pme.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-open">Aberto até 30/06/2026</span>
-        </div>
-        <h3 class="card-title">SICE: Internacionalização das PME</h3>
-        <p class="card-tagline">Financiamento coletivo COMPETE 2030 para associações empresariais levarem as suas PME a mercados externos, com fundo perdido até 50%</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>€151,5M dotação · Até 50% cofinanciamento</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Associações empresariais e entidades representativas de PME</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="fechado" data-fonte="ani" data-beneficiario="empresa" data-regiao="norte,centro,lisboa,alentejo,algarve" data-id="siid-internacionalizacao-id-horizonte-europa" data-href="instrumentos/siid-internacionalizacao-id-horizonte-europa.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-closed">Encerrado</span>
-        </div>
-        <h3 class="card-title">SIID – Internacionalização da I&amp;D com Selo de Excelência</h3>
-        <p class="card-tagline">Financiamento nacional para PME com Selo de Excelência nos instrumentos EIC Transition ou Accelerator do Horizonte Europa</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>€4,8M dotação · Até 100% cofinanciamento (Transition) / 70% (Accelerator)</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>PME do Continente · Organismo gestor: ANI</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="fechado" data-fonte="norte-2030" data-beneficiario="empresa,ensino-investigacao" data-regiao="norte" data-id="norte2030-siid-vinnovate" data-href="instrumentos/norte2030-siid-vinnovate.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-closed">Encerrado</span>
-        </div>
-        <h3 class="card-title">SIID – Projetos Demonstradores VInnovate 2025</h3>
-        <p class="card-tagline">Projetos demonstradores interregionais de tecnologias avançadas reconhecidos pela rede europeia Vanguard Initiative, financiados pelo Norte 2030</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>€250.000 dotação · 60% empresas / 85% ENESII</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>PME + ENESII · Região Norte · Produção avançada TRL 6-8</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="ue" data-beneficiario="empresa,ensino-investigacao,associacao" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="horizon-cl4-2026-data-ai" data-href="instrumentos/horizon-cl4-2026-data-ai.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-open">Aberto até 15 abr 2026</span>
-        </div>
-        <h3 class="card-title">Horizonte Europa: Data Services &amp; AI 2026</h3>
-        <p class="card-tagline">Financiamento europeu para projetos de investigacao e inovacao em servicos de dados, IA soberana e Open Internet Stack.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>HORIZON-CL4-2026-04 · 3 topicos abertos</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>RIA, CSA e IA · Consorcio min. 3 paises UE</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="ue" data-beneficiario="empresa,ensino-investigacao,entidade-publica,associacao" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="horizon-hlth-2026-healthcare" data-href="instrumentos/horizon-hlth-2026-healthcare.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-open">Aberto até 16 abr 2026</span>
-        </div>
-        <h3 class="card-title">Horizonte Europa Saude 2026: Healthcare Access</h3>
-        <p class="card-tagline">Financiamento europeu para inovacao em acesso igualitario a cuidados de saude sustentaveis e de qualidade.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>HORIZON-HLTH-2026-01-CARE · Cluster 1 Saude</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Hospitais, investigacao, medtech · 6 destinacoes</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="ue" data-beneficiario="empresa,entidade-publica" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="cef-digital-2026-cabo-submarino" data-href="instrumentos/cef-digital-2026-cabo-submarino.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-open">Aberto até 6 mai 2026</span>
-        </div>
-        <h3 class="card-title">CEF Digital 2026: Reparacao de Cabos Submarinos</h3>
-        <p class="card-tagline">Financiamento para reforcar capacidades europeias de reparacao de cabos submarinos criticos face a sabotagem e falhas tecnicas.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>CEF-DIG-2026-CABLE-REPAIR · Infraestrutura critica</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Telco, maritimo, engenharia submarina</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="ue" data-beneficiario="ensino-investigacao,empresa,associacao" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="horizon-cl6-2026-02" data-href="instrumentos/horizon-cl6-2026-02.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-open">Aberto até 14 abr 2026</span>
-        </div>
-        <h3 class="card-title">Horizonte Europa CL6-2026-02: Alimentação, Bioeconomia e Clima</h3>
-        <p class="card-tagline">17 tópicos de I&I em sistemas alimentares, bioeconomia, clima e comunidades rurais. Prazo encerrado hoje.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>HORIZON-CL6-2026-02 · 166,4M EUR · Consórcio multiator</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Farm2Fork, Clima, Comunidades · 100% investigação</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="pt2030" data-beneficiario="ensino-investigacao,entidade-publica,associacao" data-regiao="lisboa" data-id="lisboa2030-2026-step-fase2" data-href="instrumentos/lisboa2030-2026-step-fase2.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-open">Aberto até 8 mai 2026</span>
-        </div>
-        <h3 class="card-title">Lisboa 2030 STEP: Equipamentos Tecnológicos (2.º Aviso)</h3>
-        <p class="card-tagline">Apoio a equipamentos tecnológicos críticos na Área Metropolitana de Lisboa, em digital e biotecnologia.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>LISBOA2030-2026-3 · 5M EUR · FEDER 55%</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>IES, CTI, PCT, Municípios · AML</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="pt2030" data-beneficiario="ensino-investigacao,associacao" data-regiao="centro" data-id="centro2030-2026-5-step" data-featured="true" data-href="instrumentos/centro2030-2026-5-step.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Não Reembolsável</span>
-          <span class="status-pill status-open">Aberto até 30 jun 2026</span>
-        </div>
-        <h3 class="card-title">Centro 2030 STEP: Infraestruturas de Base Tecnológica</h3>
-        <p class="card-tagline">25 milhões para modernizar e expandir infraestruturas tecnológicas na Região Centro em tecnologias STEP críticas.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Centro2030-2026-5 · 25M EUR · FEDER 85% · até 6M/projeto</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>CTI e PCT · Digital, Cleantech, Biotecnologia</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="pt2030" data-beneficiario="entidade-publica" data-regiao="norte" data-id="norte2030-2026-2-ferrovia-linha-vouga" data-href="instrumentos/norte2030-2026-2-ferrovia-linha-vouga.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Nao Reembolsavel</span>
-          <span class="status-pill status-open">Aberto ate 29/05/2026</span>
-        </div>
-        <h3 class="card-title">Norte 2030 - Ferrovia Linha do Vouga</h3>
-        <p class="card-tagline">Modernizacao de trocos da Linha do Vouga na NUTS II Norte com supressao de passagens de nivel.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>8.000.000 EUR - FEDER 85%</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Infraestruturas de Portugal, SA - NUTS II Norte</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-      <div class="instrument-card reveal" data-category="nr" data-estado="fechado" data-fonte="ue" data-beneficiario="ensino-investigacao" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="horizon-widera-twinning-2026" data-href="instrumentos/horizon-widera-twinning-2026.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Nao Reembolsavel</span>
-          <span class="status-pill status-closed">Fechado</span>
-        </div>
-        <h3 class="card-title">Horizonte Europa WIDERA - Twinning 2026</h3>
-        <p class="card-tagline">Networking institucional entre entidades de investigacao de paises Widening e parceiros europeus de referencia.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>264.5M EUR total - 0.8M a 1.5M EUR/projeto - 100%</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Instituicoes de investigacao - Portugal elegivel como coordenador</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="ue" data-beneficiario="empresa,ensino-investigacao" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="horizon-cl4-2026-espaco" data-href="instrumentos/horizon-cl4-2026-espaco.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Nao Reembolsavel</span>
-          <span class="status-pill status-open">Aberto ate 03/09/2026</span>
-        </div>
-        <h3 class="card-title">Horizonte Europa - Espaco 2026</h3>
-        <p class="card-tagline">8 topicos para soberania espacial europeia: spaceports, observacao terrestre, componentes criticos e dados espaciais.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>90.970.000 EUR - 8 topicos - Single-stage</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Empresas e entidades de investigacao - Nacional</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-      <div class="instrument-card reveal" data-category="nr" data-estado="previsto" data-fonte="ue" data-beneficiario="ensino-investigacao" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="erc-advanced-grant-2026" data-href="instrumentos/erc-advanced-grant-2026.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Nao Reembolsavel</span>
-          <span class="status-pill status-planned">Previsto</span>
-        </div>
-        <h3 class="card-title">ERC Advanced Grant 2026</h3>
-        <p class="card-tagline">Ate 2,5 milhoes de euros para investigadores estabelecidos em qualquer area cientifica. Abertura 28 Mai 2026.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>747.000.000 EUR - ~294 grants - Lump sum</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Investigadores estabelecidos - Nacional</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="pt2030" data-beneficiario="entidade-publica" data-regiao="norte" data-id="norte2030-infraestruturas-acolhimento-empresarial" data-href="instrumentos/norte2030-infraestruturas-acolhimento-empresarial.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Nao Reembolsavel</span>
-          <span class="status-pill status-open">Aberto ate 30/06/2026</span>
-        </div>
-        <h3 class="card-title">Norte 2030 - Infraestruturas de Acolhimento Empresarial</h3>
-        <p class="card-tagline">Criacao e expansao de areas de acolhimento empresarial na regiao Norte. FEDER 85%, ate 1,5M EUR por operacao.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>35.000.000 EUR - FEDER 85% - 3 fases</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Municipios e entidades publicas - Norte</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="div" data-estado="aberto" data-fonte="bfomento" data-beneficiario="empresa" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="linha-garantia-bpf-investeu-pme" data-featured="true" data-href="instrumentos/linha-garantia-bpf-investeu-pme.html">
-        <div class="card-header">
-          <span class="cat-badge cat-div">Divida</span>
-          <span class="status-pill status-open">Candidatura Continua</span>
-        </div>
-        <h3 class="card-title">Linha de Garantia BPF InvestEU</h3>
-        <p class="card-tagline">Credito com garantia publica europeia para PME e Small Mid-Caps. Ate 8,25M EUR por empresa em tres modalidades.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>2.560.000.000 EUR - PME ate 499 trabalhadores</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Investimento sustentavel, geral e fundo de maneio</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="outros" data-estado="aberto" data-fonte="turismo" data-beneficiario="empresa" data-regiao="norte,centro" data-id="turismo-acolhe-2026" data-href="instrumentos/turismo-acolhe-2026.html">
-        <div class="card-header">
-          <span class="cat-badge cat-outros">Outro</span>
-          <span class="status-pill status-open">Aberto ate 30/06/2026</span>
-        </div>
-        <h3 class="card-title">Programa "O Turismo Acolhe"</h3>
-        <p class="card-tagline">Reembolso ate 60 EUR/noite para empresas de turismo que acolhem populacoes deslocadas pela tempestade Kristin.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Ate 60 EUR por noite com pequeno-almoco</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Hoteis, AL, quintas e outros alojamentos elegiveis</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="iefp" data-beneficiario="empresa" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="iefp-estagios-iniciar-2026" data-href="instrumentos/iefp-estagios-iniciar-2026.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Nao Reembolsavel</span>
-          <span class="status-pill status-open">Aberto ate 30/07/2026</span>
-        </div>
-        <h3 class="card-title">Estagios INICIAR 2026 (IEFP)</h3>
-        <p class="card-tagline">Subsidio de 537 EUR/mes para estagios de jovens tecnicos (niveis 4-5 QNQ). Empresa recupera 80%, ate 95% em condicoes especiais.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>537,13 EUR/mes - 80% reembolsado a empresa</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Jovens c/ nivel 4 ou 5 QNQ - 6 meses de estagio</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="iefp" data-beneficiario="empresa" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="iefp-estagios-mais-talento-2026" data-href="instrumentos/iefp-estagios-mais-talento-2026.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Nao Reembolsavel</span>
-          <span class="status-pill status-open">Aberto ate 30/07/2026</span>
-        </div>
-        <h3 class="card-title">Estagios +Talento 2026 (IEFP)</h3>
-        <p class="card-tagline">Subsidio de 1.181 a 1.396 EUR/mes para licenciados, mestres e doutoramentos. Empresa recupera 65% a 80% do custo total.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>1.181 a 1.396 EUR/mes por nivel de qualificacao</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>65% reembolsado (80% em interior, deficiencia, conversao)</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="priv" data-estado="fechado" data-fonte="bfomento" data-beneficiario="empresa" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="programa-consolidar-bpf" data-href="instrumentos/programa-consolidar-bpf.html">
-        <div class="card-header">
-          <span class="cat-badge cat-priv">Investimento Privado</span>
-          <span class="status-pill status-closed">Fechado</span>
-        </div>
-        <h3 class="card-title">Programa Consolidar BPF</h3>
-        <p class="card-tagline">Fundo de Capitalização e Resiliência: co-investimento público-privado de €563M em capital de risco para PME com potencial de crescimento.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>€563M dotação - tickets entre €5M e €12,5M por empresa</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>PME e Small Mid-Caps - 14 gestores de fundo aprovados</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="ue" data-beneficiario="empresa,ensino-investigacao,associacao" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="horizon-cl4-2026-01-materiais-producao" data-href="instrumentos/horizon-cl4-2026-01-materiais-producao.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Nao Reembolsavel</span>
-          <span class="status-pill status-open">Aberto ate 21/04/2026</span>
-        </div>
-        <h3 class="card-title">HORIZON-CL4-2026-01: Materiais e Producao</h3>
-        <p class="card-tagline">Horizonte Europa financia consorcios lideres em materiais avancados, manufactura de precisao e economia circular com dotacao de 319 milhoes EUR.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>~319M EUR - 15 topicos - tickets de 6M a 13M EUR por projeto</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Empresa, investigacao, associacao - consorcio UE min. 3 paises</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="ue" data-beneficiario="ensino-investigacao,empresa" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="horizon-raise-2026-01-ia-ciencia" data-href="instrumentos/horizon-raise-2026-01-ia-ciencia.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Nao Reembolsavel</span>
-          <span class="status-pill status-open">Aberto ate 21/04/2026</span>
-        </div>
-        <h3 class="card-title">HORIZON-RAISE-2026-01: IA na Ciencia</h3>
-        <p class="card-tagline">Redes tematicas de excelencia em inteligencia artificial aplicada a investigacao cientifica, com 27,8 milhoes EUR para 2 consorcios europeus.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>27,8M EUR - apenas 2 projetos financiados a nivel europeu</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Laboratorios de investigacao e empresas de IA - topico agricola e topico livre</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="fct" data-beneficiario="empresa,ensino-investigacao" data-regiao="norte,centro,lisboa,alentejo,algarve,acores,madeira" data-id="prima-2026-seccao-2" data-href="instrumentos/prima-2026-seccao-2.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Nao Reembolsavel</span>
-          <span class="status-pill status-open">Aberto ate 15/05/2026 (Fase 1)</span>
-        </div>
-        <h3 class="card-title">PRIMA 2026 - Seccao 2</h3>
-        <p class="card-tagline">Financiamento FCT para consorcios transnacionais de I&D mediterranica: agua, monitorizacao agricola e rastreabilidade digital agroalimentar.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>1.200.000 EUR (FCT) - Max. 250K EUR por consorcio liderado por PT</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Empresas e entidades de I&D - Consorcio min. 3 paises PRIMA</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="compete" data-beneficiario="empresa" data-regiao="norte,centro,alentejo" data-id="sice-qualificacao-pme-operacoes-individuais" data-href="instrumentos/sice-qualificacao-pme-operacoes-individuais.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Nao Reembolsavel</span>
-          <span class="status-pill status-open">Aberto ate junho 2026</span>
-        </div>
-        <h3 class="card-title">SICE - Qualificacao das PME (Individual)</h3>
-        <p class="card-tagline">20M EUR FEDER para PME testarem tecnologia em Test Beds e DIHs antes de investir. Conceito "test before invest" em ambientes controlados.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>20.000.000 EUR FEDER - Cofinanciamento ate 50%</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Micro e PME - Norte, Centro, Alentejo - FA0315/2025</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="aberto" data-fonte="compete" data-beneficiario="empresa" data-regiao="norte,centro,alentejo" data-id="siqrh-formacao-empresarial-individual" data-href="instrumentos/siqrh-formacao-empresarial-individual.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Nao Reembolsavel</span>
-          <span class="status-pill status-open">Aberto ate junho 2026</span>
-        </div>
-        <h3 class="card-title">SIQRH - Formacao Empresarial Individual</h3>
-        <p class="card-tagline">40M EUR FSE+ para qualificar empresarios, gestores e trabalhadores em IA, digitalizacao, ESG e tecnologias criticas STEP. Taxa 70%.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>40.000.000 EUR FSE+ - Cofinanciamento ate 70%</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Medias e Grandes Empresas - Norte, Centro, Alentejo - FA0104/2025</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <div class="instrument-card reveal" data-category="nr" data-estado="previsto" data-fonte="compete" data-beneficiario="empresa,associacao" data-regiao="norte,centro,alentejo" data-id="siqrh-formacao-empresarial-conjunto" data-href="instrumentos/siqrh-formacao-empresarial-conjunto.html">
-        <div class="card-header">
-          <span class="cat-badge cat-nr">Nao Reembolsavel</span>
-          <span class="status-pill status-planned">Previsto - abre 30 Abr</span>
-        </div>
-        <h3 class="card-title">SIQRH - Formacao Empresarial em Conjunto</h3>
-        <p class="card-tagline">40M EUR FSE+ para qualificar trabalhadores de PME em consorcio liderado por associacao. Competencias digitais, IA, ESG e tecnologias criticas STEP. Taxa 70%.</p>
-        <div class="card-divider"></div>
-        <div class="card-highlights">
-          <div class="card-highlight"><span class="card-highlight-dot"></span>40.000.000 EUR FSE+ - Cofinanciamento ate 70%</div>
-          <div class="card-highlight"><span class="card-highlight-dot"></span>Associacoes + PME - Norte, Centro, Alentejo - FA0105/2025</div>
-        </div>
-        <span class="card-cta">Ver artigo</span>
-      </div>
-
-      <!-- No results message -->
-      <div class="no-results" id="noResults">
-        <p class="no-results-text">Nenhum instrumento encontrado. Tente outro termo de pesquisa.</p>
-      </div>
-
+      <!-- Cards loaded dynamically from instruments-catalog.json -->
     </div>
+    <div class="catalog-pagination" id="pagination"></div>
   </section>
 
   <!-- ─── FOOTER ─────────────────────────────────────── -->
@@ -1118,434 +603,105 @@
   <!-- ─── JAVASCRIPT ────────────────────────────────── -->
   <script>
     /* ─────────────────────────────────────────────────
-       INSTRUMENTS DATA
+       DYNAMIC CATALOG — loads from instruments-catalog.json
     ───────────────────────────────────────────────── */
-    const INSTRUMENTS = {
-      'pt2030': {
-        catLabel: 'Não Reembolsável',
-        title: 'Portugal 2030',
-        tagline: 'Quadro comunitário 2021-2027 para competitividade e coesão',
-        status: 'Avisos regulares',
-        h1: 'Até €2.5M / projeto',
-        h2: 'PMEs · Grandes empresas · Entidades públicas',
-        desc: 'O Portugal 2030 é o principal instrumento de política pública 2021-2027, com €23 mil milhões para Portugal. Articula FEDER, FSE+ e Fundo de Coesão com objetivos de transição digital, transição climática e coesão territorial.',
-        eligibility: [
-          'PMEs e grandes empresas com investimento elegível',
-          'Startups e scale-ups em setores prioritários',
-          'Entidades do sistema de investigação e inovação',
-          'Municípios e entidades do setor público'
-        ],
-        amount: 'Incentivo não reembolsável: 45%–85% do investimento elegível. Montante por projeto: tipicamente €100K–€2.5M.',
-        howTo: [
-          'Criar conta em iPortalMais (balcao.portugal2030.pt)',
-          'Verificar elegibilidade e aviso aplicável',
-          'Preparar candidatura com plano de negócios e modelo financeiro',
-          'Submeter candidatura e aguardar avaliação (3–6 meses)'
-        ],
-        deadline: 'Avisos abertos regularmente: consultar balcão PT2030'
-      },
-      'prr': {
-        catLabel: 'Não Reembolsável',
-        title: 'PRR',
-        tagline: 'Plano de Recuperação e Resiliência da União Europeia',
-        status: 'Até 2026',
-        h1: '€16.6B para Portugal',
-        h2: 'Empresas · Setor público · Municípios',
-        desc: 'O PRR mobiliza €16.6 mil milhões para Portugal até 2026, focados em três dimensões: resiliência, transição climática e transição digital. Inclui componentes de apoio direto a empresas: digitalização, eficiência energética, qualificação e capitalização.',
-        eligibility: [
-          'Empresas de todos os setores em projetos de digitalização',
-          'Iniciativas de transição energética e eficiência',
-          'Entidades públicas em projetos de saúde, educação e habitação',
-          'PMEs em programas de capitalização e internacionalização'
-        ],
-        amount: 'Variável por aviso: de €50K a €10M por projeto. Mix de incentivos reembolsáveis e não reembolsáveis consoante tipologia.',
-        howTo: [
-          'Identificar a componente e aviso relevante para o seu setor',
-          'Candidatura via sistemas sectoriais (IAPMEI, DGE, DRE)',
-          'Preparação de plano de investimento e indicadores de impacto',
-          'Submissão dentro dos prazos por aviso'
-        ],
-        deadline: 'Avisos ativos até 2026: prazos variáveis por componente'
-      },
-      'compete2030': {
-        catLabel: 'Não Reembolsável',
-        title: 'COMPETE 2030',
-        tagline: 'Programa Operacional para competitividade e internacionalização empresarial',
-        status: 'Avisos periódicos',
-        h1: 'Até €2.5M de incentivo',
-        h2: 'PMEs exportadoras · Empresas inovadoras',
-        desc: 'O COMPETE 2030, no âmbito do Portugal 2030, apoia projetos de inovação produtiva, qualificação de PMEs, internacionalização e digitalização. Gerido pelo IAPMEI e AICEP, é o principal programa de apoio à competitividade empresarial.',
-        eligibility: [
-          'PMEs com CAE elegível e atividade económica em Portugal',
-          'Projetos de investimento em capacidade produtiva ou inovação',
-          'Empresas exportadoras ou com plano de internacionalização',
-          'Projetos de digitalização empresarial'
-        ],
-        amount: 'Co-financiamento de 45%–70% do investimento elegível. Incentivo máximo: €2.5M por projeto. Investimento mínimo elegível geralmente >€200K.',
-        howTo: [
-          'Verificar elegibilidade da empresa e do investimento',
-          'Aguardar abertura de aviso específico (balcão PT2030)',
-          'Preparar candidatura com plano de negócios e modelo financeiro',
-          'Submeter via iPortalMais com documentação completa'
-        ],
-        deadline: 'Avisos periódicos: verificar balcão PT2030'
-      },
-      'horizonte-europa': {
-        catLabel: 'Não Reembolsável',
-        title: 'Horizonte Europa',
-        tagline: 'O maior programa de I&D da União Europeia: €95.5B até 2027',
-        status: 'Calls abertas',
-        h1: 'Até €17.5M por empresa (EIC)',
-        h2: 'Consórcios · PMEs inovadoras · Investigadores',
-        desc: 'O Horizonte Europa financia investigação e inovação de excelência. Inclui o Conselho Europeu de Investigação (ERC), ações Marie Skłodowska-Curie, clusters temáticos e o European Innovation Council (EIC) para inovação disruptiva e startups de alto impacto.',
-        eligibility: [
-          'Consórcios com ≥3 entidades de ≥3 países membros da UE',
-          'PMEs inovadoras (via EIC Accelerator: candidatura individual)',
-          'Investigadores e grupos de investigação (via ERC e MSCA)',
-          'Startups deeptech com potencial de escala global'
-        ],
-        amount: 'EIC Pathfinder: €500K–€4M. EIC Accelerator Grant: até €2.5M (70% custos). EIC Accelerator Equity: até €15M. Colaborativos: 70%–100% dos custos diretos elegíveis.',
-        howTo: [
-          'Identificar o instrumento adequado (EIC, cluster temático, ERC)',
-          'Registar entidade no Funding & Tenders Portal (ec.europa.eu)',
-          'Preparar proposta com parceiros europeus se necessário',
-          'Submeter na call aberta: avaliação competitiva internacional'
-        ],
-        deadline: 'Calls por área: verificar EIC Work Programme anual'
-      },
-      'banco-fomento': {
-        catLabel: 'Dívida',
-        title: 'Banco de Fomento',
-        tagline: 'Linhas de crédito bonificado para PMEs e mid-caps portuguesas',
-        status: 'Contínuo',
-        h1: '€25K a €15M por operação',
-        h2: 'PMEs · Mid-Caps · Situação fiscal regularizada',
-        desc: 'O Banco de Fomento canaliza recursos do Estado e fundos europeus para financiar empresas através de bancos parceiros, com condições mais favoráveis que o mercado: taxas reduzidas, maiores prazos e períodos de carência mais longos.',
-        eligibility: [
-          'PMEs e Mid-Caps (até 3.000 trabalhadores) com sede em Portugal',
-          'Situação fiscal e contributiva regularizada',
-          'Projetos de investimento produtivo, internacionalização ou capitalização',
-          'Sem processo de insolvência ou reestruturação pendente'
-        ],
-        amount: '€25K a €15M por operação de crédito. Taxas de juro abaixo do mercado (Euribor + spread reduzido). Prazos até 12 anos com carência de capital até 3 anos.',
-        howTo: [
-          'Contactar um dos bancos parceiros (CGD, BPI, Millennium, Santander, Novo Banco)',
-          'Apresentar projeto de investimento e demonstrações financeiras',
-          'O banco avalia e estrutura a operação com garantia do Banco de Fomento',
-          'Formalização do contrato de crédito'
-        ],
-        deadline: 'Linhas contínuas: consultar banco parceiro para disponibilidade'
-      },
-      'venture-capital': {
-        catLabel: 'Investimento Privado',
-        title: 'Venture Capital',
-        tagline: 'Capital de risco para startups e empresas em crescimento acelerado',
-        status: 'Mercado ativo',
-        h1: 'Seed €100K–€1M · Series A €1M–€5M',
-        h2: 'Startups · Scale-ups · Modelo escalável',
-        desc: 'O Venture Capital é capital próprio investido em empresas com elevado potencial de crescimento. Em troca de participação, os fundos trazem capital, rede e expertise. Portugal tem um ecossistema crescente com fundos como Armilar, Indico Capital, Shilling e vários fundos europeus ativos.',
-        eligibility: [
-          'Startup ou scale-up com modelo de negócio escalável',
-          'Potencial de mercado endereçável significativo (>€500M)',
-          'Equipa fundadora com track record ou expertise diferenciadora',
-          'Tecnologia, IP ou posição competitiva defensável'
-        ],
-        amount: 'Pre-seed/Seed: €100K–€1M. Series A: €1M–€5M. Series B+: >€5M. Diluição típica: 10%–25% por ronda.',
-        howTo: [
-          'Preparar pitch deck, executive summary e modelo financeiro',
-          'Identificar fundos alinhados com setor, fase e geografia',
-          'Processo de due diligence (financeira, técnica, legal: 3–6 meses)',
-          'Negociação de term sheet e estrutura de governance'
-        ],
-        deadline: 'Processo 3–9 meses: mercado ativo continuamente'
-      },
-      'private-equity': {
-        catLabel: 'Investimento Privado',
-        title: 'Private Equity',
-        tagline: 'Investimento em empresas estabelecidas para expansão, aquisição ou transformação',
-        status: 'Processo 6–18 meses',
-        h1: '€3M–€50M de equity',
-        h2: 'Empresas maduras · EBITDA positivo · Expansão',
-        desc: 'O Private Equity investe em empresas com cash flows positivos para financiar crescimento acelerado, aquisições, internacionalização ou transformação. Pode envolver participações de controlo ou minoritárias significativas, com horizon de 4–7 anos.',
-        eligibility: [
-          'Empresa com EBITDA positivo (mínimo €500K–€1M)',
-          'Setor com potencial de consolidação ou internacionalização',
-          'Acionistas abertos a parceiro financeiro com assento no Conselho',
-          'Enterprise Value entre €5M e €200M'
-        ],
-        amount: 'Equity investido: €3M–€50M. EV implícito: €5M–€200M. Estrutura: equity puro, ou combinado com dívida (leveraged).',
-        howTo: [
-          'Preparar Information Memorandum (IM) confidencial',
-          'Identificar e contactar fundos com mandato relevante',
-          'Processo de data room e due diligence aprofundada',
-          'Negociação de SPA, shareholders agreement e estrutura pós-investimento'
-        ],
-        deadline: 'Processo típico 6–18 meses da abordagem inicial ao closing'
-      },
-      'business-angels': {
-        catLabel: 'Investimento Privado',
-        title: 'Business Angels Portugal',
-        tagline: 'Investidores individuais para fases early-stage: capital + mentoria + rede',
-        status: 'Contínuo',
-        h1: '€25K–€500K por ronda',
-        h2: 'Startups early-stage · Pré-seed · Seed',
-        desc: 'Os Business Angels são investidores individuais que investem nas fases mais precoces. Em Portugal, a SPBAN (Sociedade Portuguesa de Business Angels) e redes como a FNABA facilitam o match. Para além do capital, trazem experiência sectorial, rede e mentoria operacional.',
-        eligibility: [
-          'Startups em fase de ideia, MVP ou primeiras vendas',
-          'Fundadores com capacidade demonstrável de execução',
-          'Modelo de negócio com potencial de crescimento escalável',
-          'Abertura a partilha de equity e envolvimento do investidor'
-        ],
-        amount: '€25K–€500K por ronda. Estrutura: equity direta, SAFE ou convertível. Valorização pré-money geralmente €200K–€2M em pré-seed.',
-        howTo: [
-          'Preparar pitch deck de 10–12 slides e executive summary de 1 página',
-          'Candidatar-se a eventos e redes de BAs (SPBAN, Beta-i, Startup Lisboa)',
-          'Participar em aceleradoras que facilitem acesso a investidores',
-          'Processo de due diligence simplificado: term sheet e acordo de investimento'
-        ],
-        deadline: 'Contínuo: principais eventos: primavera e outono'
-      },
-      'crowdfunding': {
-        catLabel: 'Investimento Privado',
-        title: 'Equity Crowdfunding',
-        tagline: 'Financiamento coletivo via plataformas reguladas pela CMVM',
-        status: 'Contínuo',
-        h1: '€50K–€2M por campanha',
-        h2: 'PMEs · Startups com tração · Audiência estabelecida',
-        desc: 'O equity crowdfunding permite a PMEs e startups captar capital de uma base alargada de investidores, via plataformas licenciadas pela CMVM. Em Portugal, regulado pelo DL 61/2018. Plataformas como a CrowdWorks ou Seedrs (UE) permitem campanhas públicas com alta visibilidade.',
-        eligibility: [
-          'PMEs ou startups com produto/serviço com tração validada',
-          'Capacidade de comunicar e mobilizar uma audiência',
-          'Estrutura societária compatível com múltiplos acionistas',
-          'Projeto aprovado pela plataforma de crowdfunding'
-        ],
-        amount: 'Tipicamente €50K–€2M por campanha. Comissão da plataforma: 5%–8% do montante captado. Duração da campanha: 30–90 dias.',
-        howTo: [
-          'Candidatar-se a uma plataforma licenciada pela CMVM',
-          'Preparar dossier de empresa, projeções e pitch de campanha',
-          'Obter aprovação da plataforma e definir condições (valorização, equity)',
-          'Lançar campanha pública e mobilizar rede de contactos'
-        ],
-        deadline: 'Contínuo: sujeito a aprovação da plataforma (4–8 semanas)'
-      },
-      'sifide2': {
-        catLabel: 'Incentivos Fiscais',
-        title: 'SIFIDE II',
-        tagline: 'Crédito fiscal sobre despesas de I&D: até 82.5% de dedução ao IRC',
-        status: 'Candidaturas anuais',
-        h1: '32.5% base + 50% incremental',
-        h2: 'Empresas com IRC · Despesas de I&D elegíveis',
-        desc: 'O SIFIDE II (Sistema de Incentivos Fiscais à I&D Empresarial II) permite às empresas deduzir ao IRC uma percentagem das suas despesas em I&D. A taxa base é de 32.5%; a taxa incremental de 50% aplica-se ao aumento das despesas face à média dos 2 anos anteriores.',
-        eligibility: [
-          'Empresas com sede ou estabelecimento estável em Portugal',
-          'Despesas em I&D elegíveis: pessoal, equipamento, subcontratação, registo PI',
-          'Atividades de I&D reconhecidas como tal pela ANI',
-          'IRC positivo ou prejuízo reportável (dedução válida por 8 anos)'
-        ],
-        amount: 'Taxa base: 32.5% das despesas de I&D. Taxa incremental: 50% do aumento vs. média 2 anos anteriores. Limite anual: €1.5M (excesso reportável 8 anos). Poupança potencial: dezenas a centenas de milhares de euros por ano.',
-        howTo: [
-          'Identificar e documentar as despesas de I&D elegíveis do exercício',
-          'Submeter candidatura à ANI (1 julho – 30 setembro do ano seguinte)',
-          'Obter certificado da ANI com despesas reconhecidas',
-          'Declarar o benefício na Mod. 22 de IRC (campo específico SIFIDE)'
-        ],
-        deadline: 'Candidaturas anuais à ANI: 1 julho a 30 setembro'
-      },
-      'rfai': {
-        catLabel: 'Incentivos Fiscais',
-        title: 'RFAI',
-        tagline: 'Dedução ao IRC por investimento em ativos fixos em regiões elegíveis',
-        status: 'Regime permanente',
-        h1: '25% dedução até €15M investidos',
-        h2: 'Investimento em ativos fixos · IRC a pagar',
-        desc: 'O RFAI (Regime Fiscal para o Investimento) permite deduzir ao IRC uma percentagem do investimento realizado em ativos fixos tangíveis e intangíveis, afetos a atividades elegíveis. Cumulável com outros benefícios, sujeito a limites de auxílio de Estado.',
-        eligibility: [
-          'Empresas nos setores elegíveis (excluídos: financeiro, construção imobiliária)',
-          'Investimento em ativos fixos novos em Portugal',
-          'Manutenção dos postos de trabalho e dos ativos por ≥5 anos',
-          'Sem limitações fiscais ou deduções que reduzam o benefício'
-        ],
-        amount: '25% dedução ao IRC para investimentos até €15M realizados no período. 10% para o investimento que exceder €15M. Limite: 50% da coleta de IRC de cada exercício (excesso reportável).',
-        howTo: [
-          'Documentar o investimento realizado em ativos fixos elegíveis',
-          'Verificar CAE da empresa e região de instalação',
-          'Reconhecimento automático: dedução na Mod. 22 de IRC',
-          'Manter os ativos por mínimo 5 anos após o investimento'
-        ],
-        deadline: 'Regime permanente: aplicável na declaração anual de IRC'
-      },
-      'dlrr': {
-        catLabel: 'Incentivos Fiscais',
-        title: 'DLRR',
-        tagline: 'Incentivo fiscal à capitalização interna de PMEs: lucros reinvestidos',
-        status: 'Regime permanente',
-        h1: '10% dedução sobre lucros reinvestidos',
-        h2: 'PMEs e Small Mid Caps · Lucros reinvestidos em 4 anos',
-        desc: 'A DLRR (Dedução por Lucros Retidos e Reinvestidos) permite às PMEs e Small Mid Caps deduzir ao IRC 10% dos lucros que sejam retidos e reinvestidos em ativos elegíveis, promovendo o autofinanciamento e a capitalização interna.',
-        eligibility: [
-          'PMEs e Small Mid Caps (até 500 trabalhadores)',
-          'Lucros retidos reinvestidos em ativos elegíveis no prazo de 4 anos',
-          'Constituição de reserva especial indisponível',
-          'Sem impedimentos fiscais ou contributivos relevantes'
-        ],
-        amount: '10% dedução ao IRC sobre o montante de lucros retidos e reinvestidos. Limite máximo acumulado: €12.5M de dedução. Benefício efetivo: ~2.5% do lucro reinvestido em IRC poupado.',
-        howTo: [
-          'Calcular os lucros elegíveis para retenção e reinvestimento',
-          'Constituir reserva especial indisponível na contabilidade',
-          'Identificar ativos elegíveis para reinvestimento nos 4 anos seguintes',
-          'Declarar na Mod. 22 de IRC e manter documentação de suporte'
-        ],
-        deadline: 'Regime permanente: verificar elegibilidade com revisão do IRC'
-      },
-      'patent-box': {
-        catLabel: 'Incentivos Fiscais',
-        title: 'Patent Box / Regime PI',
-        tagline: '50% dos rendimentos de propriedade intelectual excluídos de IRC',
-        status: 'Regime permanente',
-        h1: '50% exclusão de tributação',
-        h2: 'PI registada · Desenvolvida internamente · Royalties',
-        desc: 'O Patent Box (Regime da PI) permite excluir de tributação em IRC 50% dos rendimentos positivos derivados de ativos de propriedade intelectual qualificados: patentes, modelos de utilidade, programas de computador e outros registados. Incentiva a criação e exploração de PI em Portugal.',
-        eligibility: [
-          'Empresa com ativos de PI qualificada registados',
-          'PI desenvolvida internamente ou com ≤30% de outsourcing a entidades relacionadas',
-          'Rendimentos de licenciamento, cedência ou alienação de PI',
-          'Documentação do nexo causal entre I&D realizado e PI detida'
-        ],
-        amount: '50% dos rendimentos líquidos de PI qualificada excluídos de IRC e Derrama. Poupança efetiva: 10.5%–12% dos rendimentos de PI (dependendo da taxa de IRC aplicável).',
-        howTo: [
-          'Inventariar os ativos de PI qualificada detidos pela empresa',
-          'Documentar os rendimentos derivados dessa PI (royalties, licenças)',
-          'Calcular o rácio nexo entre I&D interno e PI total',
-          'Exercer opção na Mod. 22 de IRC com documentação de suporte adequada'
-        ],
-        deadline: 'Regime permanente: opção exercida na declaração anual'
-      },
-      'premios-inovacao': {
-        catLabel: 'Não Reembolsável',
-        title: 'Prémios de Inovação',
-        tagline: 'Reconhecimento, visibilidade e dotações financeiras para empresas inovadoras',
-        status: 'Calendário anual',
-        h1: '€10K–€500K de dotação',
-        h2: 'PMEs inovadoras · Startups · Todos os setores',
-        desc: 'Portugal e a UE oferecem um ecossistema rico de prémios que reconhecem inovação empresarial. Desde o Prémio PME Inovação COTEC até ao European Innovation Prize da Comissão Europeia. Para além da dotação financeira, os prémios conferem visibilidade, credibilidade e acesso a redes premium.',
-        eligibility: [
-          'PMEs com atividade de inovação demonstrável (produto, processo ou modelo)',
-          'Startups em fase de crescimento com impacto comprovado',
-          'Empresas de qualquer setor: critérios variam por prémio',
-          'Histórico de resultados financeiros geralmente exigido'
-        ],
-        amount: 'Dotações: €10K–€500K consoante o prémio. Valor intangível: visibilidade media, redes de contacto e credencial de qualidade para investidores e clientes.',
-        howTo: [
-          'Mapear o calendário anual de prémios relevantes para o setor',
-          'Preparar dossier de inovação com evidências de impacto',
-          'Desenvolver narrativa de candidatura adaptada a cada júri',
-          'Apresentação em formato pitch ou escrito consoante o prémio'
-        ],
-        deadline: 'Principais prémios: março–outubro, calendário anual por prémio'
-      },
-      'eic-accelerator': {
-        catLabel: 'Híbridos',
-        title: 'EIC Accelerator',
-        tagline: 'O programa europeu para inovação disruptiva de alto risco: até €17.5M',
-        status: 'Calls abertas',
-        h1: 'Grant até €2.5M + Equity até €15M',
-        h2: 'PMEs europeia · TRL 5-9 · Impacto global',
-        desc: 'O EIC Accelerator (European Innovation Council) é o programa de referência da UE para PMEs com inovações de alto impacto e alto risco. Combina um grant a fundo perdido com um componente de equity via EIC Fund, criando um dos maiores pacotes de apoio à inovação empresarial na Europa.',
-        eligibility: [
-          'PME registada num Estado-membro da UE ou país associado',
-          'Inovação de produto/serviço com TRL entre 5 e 9',
-          'Potencial de criar mercados ou disrupcionar setores existentes',
-          'Equipa com capacidade de escalar europeia e/ou globalmente'
-        ],
-        amount: 'Grant: até €2.5M (70% dos custos elegíveis, não reembolsável). Equity: até €15M via EIC Fund (participação minoritária). Total máximo: €17.5M por empresa.',
-        howTo: [
-          'Candidatura via Funding & Tenders Portal (passo 1: short application)',
-          'Se aprovado: full application com pitch deck e business plan detalhado',
-          'Entrevista presencial em Bruxelas com júri internacional',
-          'Taxa de sucesso global ~5%: requer preparação intensiva'
-        ],
-        deadline: 'Calls anuais com deadlines em janeiro, maio e outubro'
-      },
-      'vouchers-inovacao': {
-        catLabel: 'Não Reembolsável',
-        title: 'Vouchers de Inovação IAPMEI',
-        tagline: 'Financiamento de pequenos projetos de inovação com entidades do sistema científico',
-        status: 'Avisos periódicos',
-        h1: '€5K–€25K por voucher',
-        h2: 'PMEs · Parceria com SCTN · Co-financiamento 75–85%',
-        desc: 'Os Vouchers de Inovação do IAPMEI apoiam PMEs no acesso a serviços de inovação, digitalização e consultoria especializada, em parceria com entidades do Sistema Científico e Tecnológico Nacional (universidades, laboratórios, centros de interface).',
-        eligibility: [
-          'PMEs com CAE elegível registadas em Portugal',
-          'Projeto desenvolvido em parceria com entidade do SCTN',
-          'Sem outro apoio público para o mesmo projeto',
-          'Situação fiscal e contributiva regularizada'
-        ],
-        amount: '€5K–€25K por voucher. Co-financiamento de 75%–85% das despesas elegíveis. Candidato suporta os restantes 15%–25%.',
-        howTo: [
-          'Identificar entidade do SCTN parceira para o projeto',
-          'Aguardar abertura de aviso no site do IAPMEI',
-          'Submeter candidatura conjunta empresa + entidade SCTN',
-          'Após aprovação, executar projeto e apresentar relatório final'
-        ],
-        deadline: 'Avisos periódicos: verificar iapmei.pt regularmente'
-      },
-      'aicep': {
-        catLabel: 'Não Reembolsável',
-        title: 'AICEP: Internacionalização',
-        tagline: 'Apoios à exportação, prospeção e estabelecimento em mercados externos',
-        status: 'Contínuo',
-        h1: 'Até €200K por projeto',
-        h2: 'Empresas exportadoras · Feiras internacionais · Prospeção',
-        desc: 'A AICEP Portugal Global é a agência de promoção externa e de investimento. Disponibiliza apoios à participação em feiras internacionais, missões empresariais, prospeção de mercados e desenvolvimento de projetos de exportação. Articula com o PT2030 para projetos de maior dimensão.',
-        eligibility: [
-          'Empresas portuguesas com produto/serviço exportável',
-          'Volume de negócios mínimo variável por instrumento (geralmente >€500K)',
-          'Estratégia de internacionalização definida e documentada',
-          'CAE elegível para o instrumento específico'
-        ],
-        amount: 'Participação em feiras: até €25K/evento. Missões empresariais: até €15K. Projetos de internacionalização (PT2030): até €200K–€1M. Co-financiamento: 40%–70%.',
-        howTo: [
-          'Registo no portal da AICEP (aicep.pt)',
-          'Identificar instrumento adequado ao momento da internacionalização',
-          'Contactar delegação AICEP no mercado-alvo para apoio local',
-          'Submeter candidatura ao instrumento específico com plano de internacionalização'
-        ],
-        deadline: 'Contínuo: algumas componentes com avisos específicos PT2030'
-      },
-      'sai': {
-        catLabel: 'Não Reembolsável',
-        title: 'SAI: Sistema de Apoio à Internacionalização',
-        tagline: 'Financiamento PT2030 para projetos estruturados de exportação e presença externa',
-        status: 'Avisos PT2030',
-        h1: 'Até €200K · Co-financiamento 60%',
-        h2: 'PMEs exportadoras · Novos mercados · Estrutura comercial externa',
-        desc: 'O SAI, no âmbito do PT2030, financia projetos de internacionalização de PMEs, desde certificações e prospeção de mercados até ao estabelecimento de estruturas comerciais no exterior. É o instrumento mais estruturado para empresas com ambição de crescimento internacional sustentado.',
-        eligibility: [
-          'PMEs com CAE elegível e histórico de exportações (ou plano concreto)',
-          'Projetos com impacto em novos mercados ou novos clientes externos',
-          'Investimento mínimo elegível tipicamente >€50K',
-          'Plano de internacionalização fundamentado e exequível'
-        ],
-        amount: 'Até €200K de incentivo por projeto. Co-financiamento até 60% das despesas elegíveis. Despesas elegíveis: prospeção, certificações, participação em feiras, escritórios externos, e-commerce internacional.',
-        howTo: [
-          'Preparar plano de internacionalização com mercados-alvo definidos',
-          'Aguardar abertura de aviso SAI no balcão PT2030',
-          'Submeter candidatura via iPortalMais em articulação com a AICEP',
-          'Após aprovação, executar projeto com reporte de indicadores de exportação'
-        ],
-        deadline: 'Avisos PT2030: verificar balcao.portugal2030.pt'
+    var catalogData = [];
+    var filteredData = [];
+    var currentPage = 1;
+    var ITEMS_PER_PAGE = 50;
+    var activeCategory = 'all';
+    var activeSearch = '';
+
+    /* ─── HTML ESCAPE ─── */
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    /* ─── RENDER CARDS ─── */
+    function renderCards() {
+      var grid = document.getElementById('instrumentsGrid');
+      var start = (currentPage - 1) * ITEMS_PER_PAGE;
+      var pageData = filteredData.slice(start, start + ITEMS_PER_PAGE);
+
+      grid.innerHTML = '';
+
+      if (filteredData.length === 0) {
+        grid.innerHTML = '<div class="no-results visible" style="display:block"><p class="no-results-text">Nenhum instrumento encontrado. Tente outro termo de pesquisa.</p></div>';
+        renderPagination();
+        return;
       }
-    };
 
-    /* ─────────────────────────────────────────────────
-       STATE - filtros multi-dimensão
-    ───────────────────────────────────────────────── */
-    let activeCategory = 'all';
-    let activeSearch = '';
+      pageData.forEach(function(item) {
+        var card = document.createElement('div');
+        card.className = 'instrument-card visible';
+        card.dataset.category = item.category;
+        card.dataset.estado = item.estado;
+        card.dataset.fonte = item.fonte;
+        card.dataset.beneficiario = item.beneficiario;
+        card.dataset.regiao = item.regiao;
+        card.dataset.id = item.id;
+        if (item.featured) card.dataset.featured = 'true';
+        if (item.href) {
+          card.dataset.href = item.href;
+          card.style.cursor = 'pointer';
+          card.addEventListener('click', function(e) {
+            if (!e.target.closest('button') && !e.target.closest('a')) {
+              window.location.href = item.href;
+            }
+          });
+        }
 
-    /* ─────────────────────────────────────────────────
-       FILTER - categoria (botões)
-    ───────────────────────────────────────────────── */
+        card.innerHTML =
+          '<div class="card-header">' +
+            '<span class="cat-badge cat-' + escapeHtml(item.category) + '">' + escapeHtml(item.category_label) + '</span>' +
+            '<span class="status-pill ' + escapeHtml(item.status_class) + '">' + escapeHtml(item.status_text) + '</span>' +
+          '</div>' +
+          '<h3 class="card-title">' + escapeHtml(item.title) + '</h3>' +
+          '<p class="card-tagline">' + escapeHtml(item.tagline) + '</p>' +
+          '<div class="card-divider"></div>' +
+          '<div class="card-highlights">' +
+            '<div class="card-highlight"><span class="card-highlight-dot"></span>' + escapeHtml(item.highlight1) + '</div>' +
+            '<div class="card-highlight"><span class="card-highlight-dot"></span>' + escapeHtml(item.highlight2) + '</div>' +
+          '</div>' +
+          '<span class="card-cta">Ver artigo</span>';
+
+        grid.appendChild(card);
+      });
+
+      renderPagination();
+    }
+
+    /* ─── PAGINATION ─── */
+    function renderPagination() {
+      var container = document.getElementById('pagination');
+      var totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
+
+      if (totalPages <= 1) {
+        container.innerHTML = '';
+        return;
+      }
+
+      var html = '';
+      if (currentPage > 1) {
+        html += '<button class="page-btn" onclick="goToPage(' + (currentPage - 1) + ')">\u2190 Anterior</button>';
+      }
+      for (var i = 1; i <= totalPages; i++) {
+        html += '<button class="page-btn' + (i === currentPage ? ' active' : '') + '" onclick="goToPage(' + i + ')">' + i + '</button>';
+      }
+      if (currentPage < totalPages) {
+        html += '<button class="page-btn" onclick="goToPage(' + (currentPage + 1) + ')">Seguinte \u2192</button>';
+      }
+      container.innerHTML = html;
+    }
+
+    function goToPage(page) {
+      currentPage = page;
+      renderCards();
+      document.getElementById('instrumentos').scrollIntoView({behavior:'smooth'});
+    }
+
+    /* ─── FILTER FUNCTIONS ─── */
     function filterCards(cat) {
       activeCategory = cat;
       var sel = document.getElementById('filterCategory');
@@ -1553,17 +709,11 @@
       applyFilters();
     }
 
-    /* ─────────────────────────────────────────────────
-       SEARCH
-    ───────────────────────────────────────────────── */
     function searchCards(query) {
       activeSearch = query.toLowerCase().trim();
       applyFilters();
     }
 
-    /* ─────────────────────────────────────────────────
-       CLEAR ALL FILTERS
-    ───────────────────────────────────────────────── */
     function clearAllFilters() {
       activeCategory = 'all';
       activeSearch = '';
@@ -1577,15 +727,11 @@
       applyFilters();
     }
 
-    /* ─────────────────────────────────────────────────
-       SELECT STYLES - highlight quando tem valor activo
-    ───────────────────────────────────────────────── */
     function updateSelectStyles() {
       ['filterCategory','filterEstado','filterFonte','filterBeneficiario','filterRegiao'].forEach(function(id) {
         var el = document.getElementById(id);
         el.classList.toggle('has-value', el.value !== 'all');
       });
-      // Mostrar/ocultar botão limpar
       var anyActive = activeCategory !== 'all' || activeSearch ||
         document.getElementById('filterEstado').value !== 'all' ||
         document.getElementById('filterFonte').value !== 'all' ||
@@ -1594,122 +740,80 @@
       document.getElementById('filterClear').classList.toggle('hidden', !anyActive);
     }
 
-    /* ─────────────────────────────────────────────────
-       APPLY FILTERS - cruzamento de todas as dimensões
-    ───────────────────────────────────────────────── */
-    function applyFilters() {
-      var cards = document.querySelectorAll('.instrument-card');
-      var visibleCount = 0;
+    function updateCount(count) {
+      var el = document.getElementById('filterCount');
+      el.textContent = count === 1 ? '1 instrumento' : count + ' instrumentos';
+    }
 
+    /* ─── APPLY FILTERS ─── */
+    function applyFilters() {
       var fEstado = document.getElementById('filterEstado').value;
       var fFonte = document.getElementById('filterFonte').value;
       var fBeneficiario = document.getElementById('filterBeneficiario').value;
       var fRegiao = document.getElementById('filterRegiao').value;
 
-      cards.forEach(function(card) {
-        // 1. Categoria (botões)
-        var catMatch = activeCategory === 'all' || card.dataset.category === activeCategory;
+      filteredData = catalogData.filter(function(item) {
+        var catMatch = activeCategory === 'all' || item.category === activeCategory;
+        var estadoMatch = fEstado === 'all' || item.estado === fEstado;
+        var fonteMatch = fFonte === 'all' || item.fonte === fFonte;
 
-        // 2. Estado
-        var estadoMatch = fEstado === 'all' || card.dataset.estado === fEstado;
-
-        // 3. Entidade
-        var fonteMatch = fFonte === 'all' || card.dataset.fonte === fFonte;
-
-        // 4. Beneficiário (multi-valor: "micro,pme")
         var beneficiarioMatch = fBeneficiario === 'all';
-        if (!beneficiarioMatch && card.dataset.beneficiario) {
-          beneficiarioMatch = card.dataset.beneficiario.split(',').indexOf(fBeneficiario) !== -1;
+        if (!beneficiarioMatch && item.beneficiario) {
+          beneficiarioMatch = item.beneficiario.split(',').indexOf(fBeneficiario) !== -1;
         }
 
-        // 5. Região (multi-valor possível: "norte,centro")
         var regiaoMatch = fRegiao === 'all';
-        if (!regiaoMatch && card.dataset.regiao) {
-          regiaoMatch = card.dataset.regiao.split(',').indexOf(fRegiao) !== -1;
+        if (!regiaoMatch && item.regiao) {
+          regiaoMatch = item.regiao.split(',').indexOf(fRegiao) !== -1;
         }
 
-        // 6. Pesquisa texto
         var searchMatch = true;
         if (activeSearch) {
-          var title = card.querySelector('.card-title').textContent.toLowerCase();
-          var tagline = card.querySelector('.card-tagline').textContent.toLowerCase();
-          var highlights = card.querySelector('.card-highlights');
-          var highlightText = highlights ? highlights.textContent.toLowerCase() : '';
-          searchMatch = title.includes(activeSearch) || tagline.includes(activeSearch) || highlightText.includes(activeSearch);
+          searchMatch = item.title.toLowerCase().indexOf(activeSearch) !== -1 ||
+                        item.tagline.toLowerCase().indexOf(activeSearch) !== -1 ||
+                        item.highlight1.toLowerCase().indexOf(activeSearch) !== -1 ||
+                        item.highlight2.toLowerCase().indexOf(activeSearch) !== -1;
         }
 
-        var visible = catMatch && estadoMatch && fonteMatch && beneficiarioMatch && regiaoMatch && searchMatch;
-        card.classList.toggle('hidden', !visible);
-        if (visible) visibleCount++;
+        return catMatch && estadoMatch && fonteMatch && beneficiarioMatch && regiaoMatch && searchMatch;
       });
 
-      updateCount(visibleCount);
+      currentPage = 1;
+      renderCards();
+      updateCount(filteredData.length);
       updateSelectStyles();
-      var noResults = document.getElementById('noResults');
-      noResults.classList.toggle('visible', visibleCount === 0);
     }
 
-    /* ─────────────────────────────────────────────────
-       UPDATE COUNT
-    ───────────────────────────────────────────────── */
-    function updateCount(count) {
-      var el = document.getElementById('filterCount');
-      el.textContent = count === 1 ? '1 instrumento': count + ' instrumentos';
-    }
-
-    /* ─── Contagem inicial ao carregar ─── */
+    /* ─── LOAD CATALOG ─── */
     (function() {
-      var total = document.querySelectorAll('.instrument-card').length;
-      updateCount(total);
+      var grid = document.getElementById('instrumentsGrid');
+      grid.innerHTML = '<div class="catalog-loading"><p class="catalog-loading-text">A carregar instrumentos...</p></div>';
       document.getElementById('filterClear').classList.add('hidden');
+
+      fetch('instruments-catalog.json')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          catalogData = data.instruments || [];
+          applyFilters();
+        })
+        .catch(function(err) {
+          console.error('Erro ao carregar catalogo:', err);
+          grid.innerHTML = '<div class="no-results visible" style="display:block"><p class="no-results-text">Erro ao carregar instrumentos. Recarregue a pagina.</p></div>';
+        });
     })();
 
-    /* ─────────────────────────────────────────────────
-       CARD CLICK · navigate to article page
-    ───────────────────────────────────────────────── */
-    document.querySelectorAll('.instrument-card[data-href]').forEach(function(card) {
-      card.addEventListener('click', function(e) {
-        if (!e.target.closest('button') && !e.target.closest('a')) {
-          window.location.href = card.dataset.href;
-        }
-      });
-    });
-
-    /* ─────────────────────────────────────────────────
-       NAVBAR SCROLL
-    ───────────────────────────────────────────────── */
+    /* ─── NAVBAR SCROLL ─── */
     var navbar = document.getElementById('navbar');
     window.addEventListener('scroll', function() {
       navbar.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
 
-    /* ─────────────────────────────────────────────────
-       HAMBURGER
-    ───────────────────────────────────────────────── */
+    /* ─── HAMBURGER ─── */
     var hamburger = document.getElementById('hamburger');
     var mobileMenu = document.getElementById('mobileMenu');
     hamburger.addEventListener('click', function() {
       mobileMenu.classList.toggle('open');
     });
-
-    /* ─────────────────────────────────────────────────
-       INTERSECTION OBSERVER · SCROLL REVEAL
-    ───────────────────────────────────────────────── */
-    var revealEls = document.querySelectorAll('.reveal');
-    if ('IntersectionObserver' in window) {
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.06, rootMargin: '0px 0px -32px 0px' });
-      revealEls.forEach(function(el) { observer.observe(el); });
-    } else {
-      revealEls.forEach(function(el) { el.classList.add('visible'); });
-    }
-
   </script>
 </body>
 </html>

@@ -237,20 +237,20 @@ Para cada instrumento a atualizar, ler o ficheiro `instrumentos/[slug].html` e a
 - Hero meta-bar: atualizar o valor da dotacao
 - Sidebar "Factos Rapidos": atualizar a dotacao
 
-### 3B.3 Atualizar o card em solucoes.html
+### 3B.3 Atualizar o catalogo JSON
 
-Para cada instrumento atualizado, encontrar o card correspondente em `solucoes.html` por `data-id="[slug]"`:
+Para cada instrumento atualizado, encontrar a entrada correspondente em `instruments-catalog.json` por `"id": "[slug]"`:
 
 **Se o estado mudou:**
-- Alterar `data-estado` no card (ex: `data-estado="aberto"` → `data-estado="fechado"`)
-- Alterar a `status-pill`: classe e texto
-  - `<span class="status-pill status-open">Aberto ate [DATA]</span>` → `<span class="status-pill status-closed">Fechado</span>`
+- Alterar `"estado"` (ex: `"aberto"` → `"fechado"`)
+- Alterar `"status_text"` (ex: `"Aberto ate 30/04/2026"` → `"Fechado"`)
+- Alterar `"status_class"` (ex: `"status-open"` → `"status-closed"`)
 
 **Se o prazo mudou:**
-- Alterar o texto da `status-pill` com a nova data (ex: "Aberto ate 31/12/2026")
+- Alterar `"status_text"` com a nova data (ex: `"Aberto ate 31/12/2026"`)
 
 **Se a dotacao mudou:**
-- Alterar o `hl-value` correspondente no card
+- Alterar `"highlight1"` com o novo valor
 
 ### 3B.4 Atualizar ficheiros de estado
 
@@ -355,40 +355,47 @@ Um instrumento pode ter multiplos beneficiarios (ex: `empresa,associacao`).
 3. Escrever o artigo HTML completo em `instrumentos/[slug].html`
 4. Seguir TODAS as regras do CLAUDE.md (design system, navbar com "Biblioteca", footer, etc.)
 
-### 4d. Injetar card em solucoes.html
+### 4d. Adicionar entrada ao catalogo JSON
 
-Adicionar o card do novo instrumento ao grid em `solucoes.html`, imediatamente antes do comentario `</div>` que fecha o `instruments-grid`:
+O catalogo de instrumentos e carregado dinamicamente a partir de `instruments-catalog.json`. Nao editar `solucoes.html`.
 
-```html
-<div class="instrument-card reveal" data-category="[CAT]" data-estado="[ESTADO]" data-fonte="[FONTE]" data-beneficiario="[BENEFICIARIO]" data-regiao="[REGIAO]" data-id="[SLUG]" data-href="instrumentos/[SLUG].html">
-  <div class="card-header">
-    <span class="cat-badge cat-[CAT]">[CATEGORIA_LABEL]</span>
-    <span class="status-pill status-[open/closed/planned]">[ESTADO_LABEL]</span>
-  </div>
-  <h3 class="card-title">[NOME]</h3>
-  <p class="card-tagline">[TAGLINE]</p>
-  <div class="card-highlights">
-    <div class="card-highlight"><span class="hl-label">[LABEL1]</span><span class="hl-value">[VALOR1]</span></div>
-    <div class="card-highlight"><span class="hl-label">[LABEL2]</span><span class="hl-value">[VALOR2]</span></div>
-  </div>
-  <div class="card-footer">
-    <a href="instrumentos/[SLUG].html" class="card-link">Ver instrumento →</a>
-  </div>
-</div>
+Abrir `instruments-catalog.json`, ler o array `instruments`, e adicionar uma nova entrada ao FINAL do array:
+
+```json
+{
+  "id": "[SLUG]",
+  "category": "[CAT]",
+  "category_label": "[CATEGORIA_LABEL]",
+  "estado": "[ESTADO]",
+  "status_text": "[ESTADO_LABEL]",
+  "status_class": "status-[open/closed/planned/cont]",
+  "fonte": "[FONTE]",
+  "beneficiario": "[BENEFICIARIO]",
+  "regiao": "[REGIAO]",
+  "title": "[NOME]",
+  "tagline": "[TAGLINE]",
+  "highlight1": "[VALOR1 - ex: 301M EUR de dotacao - Cofinanciamento ate 70%]",
+  "highlight2": "[VALOR2 - ex: Empresas - Norte, Centro, Alentejo - FEDER]",
+  "href": "instrumentos/[SLUG].html",
+  "featured": false
+}
 ```
 
-**Mapeamento de labels:**
-- `cat-nr` → "Nao Reembolsavel"
-- `cat-priv` → "Investimento Privado"
-- `cat-div` → "Divida"
-- `cat-hib` → "Hibrido"
-- `cat-fiscal` → "Incentivo Fiscal"
-- `cat-outros` → "Outro"
+**Mapeamento de category_label:**
+- `nr` → "Não Reembolsável"
+- `priv` → "Investimento Privado"
+- `div` → "Dívida"
+- `hib` → "Híbrido"
+- `fiscal` → "Incentivo Fiscal"
+- `outros` → "Outro"
 
-**Mapeamento de estado:**
-- `status-open` → "Aberto ate [DATA]"
-- `status-closed` → "Fechado"
-- `status-planned` → "Previsto"
+**Mapeamento de status_text e status_class:**
+- estado `aberto` → status_text: "Aberto ate [DATA]", status_class: "status-open"
+- estado `aberto` (continuo) → status_text: "Candidatura Continua", status_class: "status-cont"
+- estado `fechado` → status_text: "Fechado", status_class: "status-closed"
+- estado `previsto` → status_text: "Previsto", status_class: "status-planned"
+
+**REGRA CRITICA:** Nunca editar `solucoes.html`. O catalogo e 100% dinamico via JSON.
 
 ---
 
@@ -431,21 +438,21 @@ Adicionar o card do novo instrumento ao grid em `solucoes.html`, imediatamente a
 
 Se foi criado 1 artigo:
 ```bash
-git -C "$REPO" add instrumentos/[slug].html solucoes.html registry.json registry-queue.json registry-published.json
+git -C "$REPO" add instrumentos/[slug].html instruments-catalog.json registry.json registry-queue.json registry-published.json
 git -C "$REPO" commit -m "instrumento: [nome do instrumento] ([fonte])"
 git -C "$REPO" push origin main
 ```
 
 Se foram criados 2 artigos:
 ```bash
-git -C "$REPO" add instrumentos/[slug1].html instrumentos/[slug2].html solucoes.html registry.json registry-queue.json registry-published.json
+git -C "$REPO" add instrumentos/[slug1].html instrumentos/[slug2].html instruments-catalog.json registry.json registry-queue.json registry-published.json
 git -C "$REPO" commit -m "radar: [nome1] + [nome2]"
 git -C "$REPO" push origin main
 ```
 
 Se houve state updates sem artigos novos:
 ```bash
-git -C "$REPO" add instrumentos/[slug1].html instrumentos/[slug2].html solucoes.html registry.json registry-published.json
+git -C "$REPO" add instrumentos/[slug1].html instrumentos/[slug2].html instruments-catalog.json registry.json registry-published.json
 git -C "$REPO" commit -m "radar: estado atualizado [slug1] (fechado), [slug2] (prazo estendido)"
 git -C "$REPO" push origin main
 ```
@@ -476,7 +483,7 @@ rm -rf /tmp/opencapital
 2. **Nunca exceder 2 artigos por execucao.** Se a fila tem 10 items, criar 2 e guardar os restantes.
 3. **Nunca exceder 3 state updates por execucao.** Se ha mais updates pendentes, processar 3 e guardar os restantes.
 4. **Modificar artigos existentes APENAS para state updates.** Alteracoes permitidas: estado (aberto/fechado/previsto), prazo, dotacao, e aviso de encerramento. Nunca reescrever o conteudo editorial do artigo.
-5. **Nunca remover cards de solucoes.html.** So adicionar ou atualizar estado/prazo/dotacao.
+5. **Nunca remover entradas de instruments-catalog.json.** So adicionar ou atualizar estado/prazo/dotacao. Nunca editar solucoes.html.
 5. **Se WebFetch falhar para uma fonte:** registar o erro em `source_last_checked` com nota de falha e continuar para a proxima fonte. Nao parar a execucao.
 6. **Se pdftotext falhar:** usar apenas o conteudo disponivel via WebFetch (pagina HTML). O artigo pode ser menos detalhado mas deve ser publicado.
 7. **Se o git push falhar:** tentar `git pull --rebase && git push`. Se falhar novamente, guardar as alteracoes locais e reportar.
@@ -489,9 +496,9 @@ rm -rf /tmp/opencapital
 1. Ler registry.json + registry-queue.json + sources-scan.json
 2. Decidir modo (Normal/Intensivo/Urgente)
 3. [Normal] Scan 3 fontes → detectar novos → adicionar a fila → detectar state changes
-4. [Normal] Aplicar ate 3 state updates (artigo + card + registry)
-5. Criar 1-2 artigos da fila (por prioridade)
-6. Atualizar registry.json + registry-queue.json + registry-published.json
+4. [Normal] Aplicar ate 3 state updates (artigo + instruments-catalog.json + registry)
+5. Criar 1-2 artigos da fila (por prioridade) + adicionar ao instruments-catalog.json
+6. Atualizar registry.json + registry-queue.json + registry-published.json + instruments-catalog.json
 7. git commit + push
 8. Reportar: "Scan: [fontes]. Novos: [N]. Criados: [N]. Updates: [N]. Fila: [N]."
 ```
