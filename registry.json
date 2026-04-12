@@ -34,7 +34,9 @@
       "eit",
       "startup-portugal",
       "banco-fomento",
-      "autoridade-tributaria"
+      "autoridade-tributaria",
+      "digital-europe",
+      "cef"
     ],
     "reset_reason": "v3.0 reset cirurgico: novas APIs (PT2030 REST, EU F&T JSON), deduplicacao, super-fontes",
     "reset_date": "2026-04-11",
@@ -53,8 +55,7 @@
       "budget": "1.000.000 EUR",
       "regulation_url": "https://madeira.portugal2030.pt/2026/04/01/madeira-2030-lanca-aviso-concurso-para-internacionalizacao-das-pme/",
       "pdf_url": null,
-      "regulation_local": null,
-      "download_error": "WebFetch retornou apenas HTML/CSS styling - pagina JS-rendered - tentativa 2026-04-12",
+      "regulation_local": "regulamentos/madeira-2030/madeira2030-2026-13-internacionalizacao-pme.txt",
       "priority_score": 65,
       "status": "pending",
       "notes": "M2030-2026-13. Internacionalizacao 2030. Apoio a projetos de internacionalizacao de PME da Regiao Autonoma da Madeira. Dotacao: 1M EUR FEDER. Taxa de cofinanciamento: 40%. Subsidio nao reembolsavel..."
@@ -142,7 +143,7 @@
       "budget": "20.000.000 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/formacao-de-executivos/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/formacao-executivos-compete.txt",
       "priority_score": 65,
       "status": "pending",
       "notes": "FA0065/2025. Formacao de Executivos. 20M EUR FSE+. Programa COMPETE2030. Beneficiario: Publica e Privada. Concurso. Abertura 30/04/2026 - fecho 30/06/2026. Programas de formacao para quadros execut..."
@@ -337,7 +338,7 @@
       "budget": "Deducao ate 82,5% das despesas de I&D em sede de IRC",
       "regulation_url": "https://www2.gov.pt/servicos/submeter-a-candidatura-ao-sistema-de-incentivos-fiscais-a-i-d-empresarial-sifide-",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/autoridade-tributaria/sifide-ii-candidaturas-2025.txt",
       "priority_score": 70,
       "status": "pending",
       "notes": "SIFIDE II candidaturas 2026 para despesas de I&D realizadas em 2025. Prazo: 31/05/2026. Taxa base de deducao: 32,5% das despesas de I&D; taxa incremental: 50% do acrescimo face aos 2 anos anteriore..."
@@ -749,6 +750,15 @@
     "eit": "2026-04-12",
     "startup-portugal": "2026-04-12",
     "banco-fomento": "2026-04-12",
-    "autoridade-tributaria": "2026-04-12"
+    "autoridade-tributaria": "2026-04-12",
+    "digital-europe": "2026-04-12",
+    "cef": "2026-04-12"
+  },
+  "dedup_codigos_known": {
+    "_note": "Codigos de avisos ja publicados ou ignorados, para deduplicacao futura",
+    "FA0075/2025": "step-inovacao-produtiva-digital-biotecnologia",
+    "FA0076/2025": "step-idi-empresarial-digital-biotecnologia",
+    "FA0110/2025": "step-inovacao-produtiva-energia",
+    "FA0107/2025": "step-idi-empresarial-energia"
   }
 }
