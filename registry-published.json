@@ -6,7 +6,7 @@
       "file": "instrumentos/portugal-2030.html",
       "source": "pt2030",
       "current_state": "aberto",
-      "last_state_check": null
+      "last_state_check": "2026-04-12"
     },
     {
       "id": "step-inovacao-produtiva-digital-biotecnologia",
@@ -14,7 +14,7 @@
       "file": "instrumentos/step-inovacao-produtiva-digital-biotecnologia.html",
       "source": "compete-2030",
       "current_state": "aberto",
-      "last_state_check": "2026-04-09"
+      "last_state_check": "2026-04-12"
     },
     {
       "id": "step-inovacao-produtiva-energia",
@@ -22,7 +22,7 @@
       "file": "instrumentos/step-inovacao-produtiva-energia.html",
       "source": "compete-2030",
       "current_state": "aberto",
-      "last_state_check": "2026-04-09"
+      "last_state_check": "2026-04-12"
     },
     {
       "id": "step-idi-empresarial-energia",
@@ -295,6 +295,24 @@
       "source": "portugal-2030",
       "current_state": "previsto",
       "last_state_check": "2026-04-12"
+    },
+    {
+      "id": "sifide-ii-candidaturas-2025",
+      "aviso_codigo": null,
+      "file": "instrumentos/sifide-ii-candidaturas-2025.html",
+      "source": "autoridade-tributaria",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-12",
+      "regulation_local": "regulamentos/autoridade-tributaria/sifide-ii-candidaturas-2025.txt"
+    },
+    {
+      "id": "formacao-executivos-compete",
+      "aviso_codigo": "FA0065/2025",
+      "file": "instrumentos/formacao-executivos-compete.html",
+      "source": "portugal-2030",
+      "current_state": "previsto",
+      "last_state_check": "2026-04-12",
+      "regulation_local": "regulamentos/portugal-2030/formacao-executivos-compete.txt"
     }
   ]
 }
