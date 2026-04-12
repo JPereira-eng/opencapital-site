@@ -64,15 +64,25 @@ Consultar `registry/index.json > source_last_checked` para a data de ultima veri
 
 Consultar `access_method` no `sources-scan.json`:
 
-### Se `access_method: "api"` (portugal-2030):
+### Se `access_method: "api"` (portais WordPress PT2030):
 
+**Aplica-se a:** portugal-2030, centro-2030, lisboa-2030, pessoas-2030, alentejo-2030, algarve-2030, madeira-2030, acores-2030, pat-2030, sustentavel-2030.
+
+Usar o `api_url` definido em `sources-scan.json` para cada fonte. Exemplo:
 ```
-WebFetch: https://portugal2030.pt/wp-json/wp/v2/aviso-2024?page=1
-WebFetch: https://portugal2030.pt/wp-json/wp/v2/aviso-2024?page=2
-... (continuar ate resposta vazia, 10 resultados/pagina)
+WebFetch: https://centro2030.pt/wp-json/wp/v2/aviso-2024?page=1
+WebFetch: https://centro2030.pt/wp-json/wp/v2/aviso-2024?page=2
+... (continuar ate resposta vazia ou erro 400)
 ```
 
-**IMPORTANTE:** A API devolve 10 resultados por pagina (nao 100). Usar `page=N`, nao `offset=N`.
+**REGRA CRITICA DE PAGINACAO — NUNCA PARAR ANTES DO FIM:**
+- Cada pagina devolve 10 resultados
+- OBRIGATORIO percorrer TODAS as paginas ate receber resposta vazia ou erro HTTP 400
+- Nunca parar na pagina 3 ou 5 "para poupar tokens" — a paginacao incompleta causa perda de instrumentos
+- Se uma fonte tem 22 paginas, percorrer as 22. Se tem 4, percorrer as 4
+- O custo de tokens da paginacao e muito inferior ao custo de perder instrumentos
+
+**NOTA sobre Sustentavel 2030:** O endpoint e `/wp-json/wp/v2/aviso` (sem "-2024"). Verificar sempre o campo `api_url` em sources-scan.json.
 
 De cada aviso JSON, extrair:
 - `acf.codigo` (ex: "FA0212/2025") - chave de deduplicacao
@@ -86,6 +96,9 @@ De cada aviso JSON, extrair:
 - `acf.pdf` - ID do media WordPress
 
 Filtrar apenas por data: `data_fim > hoje` (abertos). NAO filtrar por beneficiario.
+
+**Dedup entre APIs regionais e API central:**
+Muitos avisos aparecem tanto na API central (portugal2030.pt) como nas APIs regionais (centro2030.pt, etc.). A deduplicacao por `acf.codigo` (via lookup.json) evita duplicados automaticamente. Nao e necessario tratamento especial.
 
 ### Se `access_method: "api"` (eu-funding-tenders):
 
@@ -112,6 +125,8 @@ Prompt: "Lista todos os avisos/instrumentos de financiamento visiveis. Para cada
 Usar Chrome MCP: `navigate` -> `get_page_text` ou `read_page`.
 Se pagina tem tabs/filtros "Abertos": clicar no filtro.
 Se pagina tem "Ver mais": clicar ate carregar todos.
+
+**NOTA:** Chrome MCP so funciona em execucao local (nao em agentes remotos). Se Chrome nao estiver disponivel, tentar WebFetch como fallback. Se tambem falhar, registar a fonte como "skipped: chrome unavailable" e continuar.
 
 ### Se `access_method: "websearch"`:
 
@@ -165,7 +180,9 @@ Para cada instrumento novo, adicionar a `registry/queue.json > queue` (ou `queue
 }
 ```
 
-**Routing de shard para items da API central PT2030:**
+**Routing de shard para items de APIs WordPress PT2030:**
+
+Items de APIs regionais (centro-2030, lisboa-2030, pessoas-2030, alentejo-2030, algarve-2030, madeira-2030, acores-2030, pat-2030, sustentavel-2030): usar o `shard` definido em `sources-scan.json` para a fonte. O shard ja esta pre-definido.
 
 Items detetados via API central (`source_id: "portugal-2030"`) devem ser encaminhados para o shard correto com base no campo `acf.programa[]`:
 - Se programa contem apenas "COMPETE" ou "COMPETE2030": `shard: "pt2030-compete"`
@@ -177,7 +194,7 @@ Items detetados via API central (`source_id: "portugal-2030"`) devem ser encamin
 - Se programa contem multiplos programas (ex: "COMPETE + ALENTEJO + ALGARVE"): `shard: "pt2030-central"`
 - Se programa nao identificavel: `shard: "pt2030-central"`
 
-Para fontes que nao sao a API central, usar o `shard` definido em `sources-scan.json`.
+Para fontes nao-PT2030 (EU, Interreg, etc.), usar o `shard` definido em `sources-scan.json`.
 
 **Calculo do priority_score:**
 - Prazo < 30 dias: +100
