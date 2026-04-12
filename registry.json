@@ -5,12 +5,37 @@
     "created": "2026-04-09"
   },
   "stats": {
-    "total_published": 31,
-    "total_in_queue": 27,
+    "total_published": 33,
+    "total_in_queue": 24,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-10",
     "last_scanner_run": "2026-04-12",
-    "sources_checked_this_week": ["portugal-2030", "eu-funding-tenders", "ani", "iapmei", "prr", "interreg-poctep", "fct", "aicep", "iefp", "interreg-atlantic", "hadea", "eic-accelerator", "interreg-mac", "life-programme", "erc", "investeu", "interreg-sudoe", "interreg-euromed", "interreg-urbact", "interreg-next-med", "eit", "startup-portugal", "banco-fomento", "autoridade-tributaria"],
+    "sources_checked_this_week": [
+      "portugal-2030",
+      "eu-funding-tenders",
+      "ani",
+      "iapmei",
+      "prr",
+      "interreg-poctep",
+      "fct",
+      "aicep",
+      "iefp",
+      "interreg-atlantic",
+      "hadea",
+      "eic-accelerator",
+      "interreg-mac",
+      "life-programme",
+      "erc",
+      "investeu",
+      "interreg-sudoe",
+      "interreg-euromed",
+      "interreg-urbact",
+      "interreg-next-med",
+      "eit",
+      "startup-portugal",
+      "banco-fomento",
+      "autoridade-tributaria"
+    ],
     "reset_reason": "v3.0 reset cirurgico: novas APIs (PT2030 REST, EU F&T JSON), deduplicacao, super-fontes",
     "reset_date": "2026-04-11",
     "last_api_scan_pt2030": "2026-04-11",
@@ -316,36 +341,6 @@
       "priority_score": 15,
       "status": "pending",
       "notes": "I3-2026-INV1 e I3-2026-INV2a. ABRE 13/05/2026 - fecho 12/11/2026. Ate 10M EUR por projeto, 70% cofinanciamento UE. Minimo 3-5 parceiros de diferentes EM. Foco: transicao verde, digital, manufactura inteligente. TRL 6-9. Elegivel: PME, clusters, instituicoes de investigacao, autoridades publicas de regioes europeias. Gerido por EISMEA. Beneficiario: Publica e Privada. Muito relevante para PME portuguesas em consorcio interregional."
-    },
-    {
-      "id": "horizon-cl4-2026-01-materiais-producao",
-      "name": "HORIZON-CL4-2026-01 - Leadership in Materials and Production for Europe",
-      "source_id": "hadea",
-      "aviso_codigo": "HORIZON-CL4-2026-01",
-      "detected_date": "2026-04-12",
-      "deadline": "2026-04-21",
-      "budget": "319.000.000 EUR (15 topicos)",
-      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals_en",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/hadea/horizon-cl4-2026-01-materiais-producao.txt",
-      "priority_score": 115,
-      "status": "pending",
-      "notes": "HORIZON-CL4-2026-01. Leadership in Materials and Production for Europe. Deadline: 21/04/2026 (9 dias - URGENTE). Horizonte Europa Cluster 4 - Industry, Space and Digital. HaDEA. Foco: materiais avancados, producao sustentavel, industria europeia estrategica. Beneficiario: consorcio de investigadores e empresas (Privada + Publica). Relevante para empresas de materiais avancados, industria, manufatura. Detectado 2026-04-12."
-    },
-    {
-      "id": "horizon-raise-2026-01-ia-ciencia",
-      "name": "HORIZON-RAISE-2026-01 - Thematic Networks of Excellence for AI in Science",
-      "source_id": "hadea",
-      "aviso_codigo": "HORIZON-RAISE-2026-01",
-      "detected_date": "2026-04-12",
-      "deadline": "2026-04-21",
-      "budget": "27.800.000 EUR (2 topicos)",
-      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals_en",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/hadea/horizon-raise-2026-01-ia-ciencia.txt",
-      "priority_score": 115,
-      "status": "pending",
-      "notes": "HORIZON-RAISE-2026-01. Thematic Networks of Excellence for AI in Science. Deadline: 21/04/2026 (9 dias - URGENTE). Horizonte Europa RAISE (Reforming and Enhancing the European Research and Innovation System). HaDEA. Foco: redes tematicas de excelencia em IA aplicada a ciencia. Beneficiario: consorcio universidades e empresas tecnologicas (Privada + Publica). Detectado 2026-04-12."
     },
     {
       "id": "horizon-cid-2026-01-clean-industrial-deal",
@@ -716,6 +711,26 @@
       "current_state": "fechado",
       "last_state_check": "2026-04-11",
       "regulation_local": "regulamentos/banco-fomento/programa-consolidar-bpf.txt"
+    },
+    {
+      "id": "horizon-cl4-2026-01-materiais-producao",
+      "source": "hadea",
+      "file": "instrumentos/horizon-cl4-2026-01-materiais-producao.html",
+      "published_date": "2026-04-12",
+      "detected_date": "2026-04-12",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-12",
+      "regulation_local": "regulamentos/hadea/horizon-cl4-2026-01-materiais-producao.txt"
+    },
+    {
+      "id": "horizon-raise-2026-01-ia-ciencia",
+      "source": "hadea",
+      "file": "instrumentos/horizon-raise-2026-01-ia-ciencia.html",
+      "published_date": "2026-04-12",
+      "detected_date": "2026-04-12",
+      "current_state": "aberto",
+      "last_state_check": "2026-04-12",
+      "regulation_local": "regulamentos/hadea/horizon-raise-2026-01-ia-ciencia.txt"
     }
   ],
   "source_last_checked": {
@@ -763,5 +778,4 @@
     "FA0110/2025": "step-inovacao-produtiva-energia",
     "FA0107/2025": "step-idi-empresarial-energia"
   }
-
 }
