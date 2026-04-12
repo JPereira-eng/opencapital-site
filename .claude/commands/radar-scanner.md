@@ -37,29 +37,34 @@ Todos os caminhos de ficheiros e comandos `git -C` nas instrucoes seguintes refe
 
 ## FICHEIROS DE ESTADO
 
-- **`$REPO/sources.json`**: lista de fontes (ficheiro grande - ler em partes)
-- **`$REPO/registry.json`**: estado do agente - fila, publicados, ultima verificacao (ficheiro grande - ler em partes)
-- **`$REPO/regulamentos/`**: pasta onde os textos extraidos sao guardados
+Os ficheiros estao divididos por funcao para manter cada um abaixo de 5.000 tokens:
 
-**AVISO: Estes ficheiros excedem o limite de leitura (10.000 tokens). Ler SEMPRE em partes:**
+| Ficheiro | Conteudo | Tokens aprox. | Quando ler |
+|---|---|---|---|
+| `registry.json` | stats + source_last_checked | ~500 | Sempre |
+| `registry-queue.json` | fila de instrumentos a escrever | ~3.300 | Sempre |
+| `registry-published.json` | IDs publicados (para dedup) | ~1.800 | Deduplicacao |
+| `sources-scan.json` | lista leve de fontes (id, method, url, api) | ~4.500 | Sempre |
+| `sources.json` | ficheiro completo com todos os metadados | ~13.600 | Consulta pontual |
 
+**Leitura no inicio de cada execucao:**
 ```
-# Ler registry.json - stats + queue (primeiras 150 linhas)
-Read $REPO/registry.json  offset=0 limit=150
-
-# Se necessario ver mais da queue ou os published IDs:
-Read $REPO/registry.json  offset=150 limit=150
-
-# Ler sources.json - usar Grep para encontrar fontes especificas
-# Exemplo: encontrar todos os is_superset
-Grep "is_superset" $REPO/sources.json
-# Exemplo: encontrar uma fonte especifica
-Grep -A 20 '"id": "portugal-2030"' $REPO/sources.json
-# Para listar todos os IDs de fontes:
-Grep '"id":' $REPO/sources.json
+Read $REPO/registry.json          (stats e source_last_checked)
+Read $REPO/registry-queue.json    (fila completa)
+Read $REPO/sources-scan.json      (fontes para scanning)
 ```
 
-Nao tentar ler os ficheiros completos de uma vez - vai falhar com erro de token.
+**Para deduplicacao:**
+```
+Read $REPO/registry-published.json   (IDs ja publicados)
+```
+
+**Escrita apos descobertas:**
+- Novos items: adicionar a `registry-queue.json > queue`
+- Fontes verificadas: atualizar `registry.json > source_last_checked`
+- Artigo publicado: mover de `registry-queue.json` para `registry-published.json`, atualizar stats em `registry.json`
+
+`sources.json` (ficheiro completo) NAO deve ser lido pelos agentes - usar sempre `sources-scan.json`.
 
 ---
 
@@ -166,14 +171,14 @@ Para cada instrumento detectado:
 
 1. Verificar se o aviso esta aberto: `data_fim > data de hoje`. Se encerrado: skip.
 2. Gerar `id` slug (kebab-case do nome)
-3. **Verificacao por ID:** existe em `registry.json > published` ou `queue` com o mesmo id? Se sim: skip
-4. **Verificacao por codigo:** se o instrumento tem codigo (FA####/YYYY ou HORIZON-xxx), verificar se algum item existente tem o mesmo codigo no campo `aviso_codigo`. Se sim: skip
+3. **Verificacao por ID:** existe em `registry-queue.json > queue` ou em `registry-published.json > published` com o mesmo id? Se sim: skip
+4. **Verificacao por codigo:** se o instrumento tem codigo (FA####/YYYY ou HORIZON-xxx), verificar se algum item em queue ou published tem o mesmo `aviso_codigo`. Se sim: skip
 5. **Verificacao por titulo:** se o titulo e >= 80% similar a um item existente (mesma fonte ou fonte coberta pela mesma super-fonte): skip e registar "possivel duplicado: [id-existente]"
 6. Se e novo e aberto: adicionar a `queue`
 
 ### 1.4 Adicionar novos a fila
 
-Para cada instrumento novo, adicionar ao array `queue` do `registry.json`:
+Para cada instrumento novo, adicionar ao array `queue` do `registry-queue.json`:
 
 ```json
 {
@@ -215,7 +220,7 @@ Para cada fonte verificada, atualizar a data em `registry.json > source_last_che
 
 ### 2.1 Identificar items sem regulamento local
 
-Percorrer `registry.json > queue` e encontrar items onde `regulation_local` e `null` mas `pdf_url` ou `regulation_url` existem.
+Percorrer `registry-queue.json > queue` e encontrar items onde `regulation_local` e `null` mas `pdf_url` ou `regulation_url` existem.
 
 Processar no maximo **3 downloads por execucao**.
 
@@ -272,7 +277,7 @@ Se o download falhar, manter `regulation_local: null` e adicionar nota:
 
 ### 3.1 Identificar instrumentos a monitorizar
 
-Percorrer `registry.json > published` e encontrar items onde:
+Percorrer `registry-published.json > published` e encontrar items onde:
 - `current_state` e `"aberto"` E
 - `last_state_check` e anterior a 7 dias
 

@@ -35,16 +35,23 @@ Todos os caminhos de ficheiros e comandos `git -C` nas instrucoes seguintes refe
 
 ## FICHEIROS DE ESTADO
 
-- **`$REPO/sources.json`**: lista de 85 fontes com URLs e metodo de acesso
-- **`$REPO/registry.json`**: estado do agente: fila, publicados, ultima verificacao
+Os ficheiros estao divididos por funcao (cada um abaixo de 5.000 tokens):
 
-Le ambos no inicio de cada execucao.
+| Ficheiro | Conteudo |
+|---|---|
+| `registry.json` | stats + source_last_checked (~500 tokens) |
+| `registry-queue.json` | fila de instrumentos a escrever (~3.300 tokens) |
+| `registry-published.json` | IDs publicados para dedup (~1.800 tokens) |
+| `sources-scan.json` | lista leve de fontes (~4.500 tokens) |
+
+Ler sempre no inicio: `registry.json`, `registry-queue.json`, `sources-scan.json`.
+Ler `registry-published.json` apenas para verificar duplicados.
 
 ---
 
 ## MODO DE OPERACAO
 
-Le o `registry.json` e conta os items na `queue`. Decide o modo:
+Le o `registry-queue.json` e conta os items na `queue`. Decide o modo:
 
 | Fila | Modo | Acao |
 |---|---|---|
@@ -57,12 +64,10 @@ Le o `registry.json` e conta os items na `queue`. Decide o modo:
 ## PASSO 1: Verificar o estado
 
 ```
-1. Read registry.json offset=0 limit=150  (ficheiro grande - nao ler de uma vez)
-   Se necessario ver mais: Read registry.json offset=150 limit=150
-2. Para sources.json usar Grep em vez de Read:
-   Grep '"id":' sources.json  (para listar todas as fontes)
-   Grep -A 15 '"id": "[fonte-especifica]"' sources.json  (para uma fonte)
-3. Contar items na queue
+1. Read registry.json            (stats + source_last_checked, ~500 tokens)
+2. Read registry-queue.json      (fila completa, ~3.300 tokens)
+3. Read sources-scan.json        (fontes para scanning, ~4.500 tokens)
+4. Contar items na queue (registry-queue.json > queue.length)
 4. Decidir o modo (Normal / Intensivo / Urgente)
 5. Se modo Normal: identificar quais fontes verificar (ver Passo 2)
 6. Se modo Normal: apos scan, aplicar state updates (ver Passo 3B)
@@ -115,7 +120,7 @@ Para cada instrumento detectado na pagina da fonte:
 
 **Novos instrumentos:**
 1. Gerar um `id` slug (kebab-case do nome)
-2. Verificar se ja existe em `registry.json > published` (comparar por `id`)
+2. Verificar se ja existe em `registry-published.json > published` (comparar por `id`)
 3. Se ja existe: verificar alteracoes de estado (ver abaixo)
 4. Se e novo: adicionar a `queue`
 
@@ -128,7 +133,7 @@ Para cada instrumento que ja existe em `published`, comparar os dados atuais da 
 
 ### 3c. Adicionar a fila
 
-Para cada instrumento novo, adicionar ao array `queue` do `registry.json`:
+Para cada instrumento novo, adicionar ao array `queue` do `registry-queue.json`:
 
 ```json
 {
@@ -164,7 +169,7 @@ Para cada instrumento novo, adicionar ao array `queue` do `registry.json`:
 }
 ```
 
-### 3e. Guardar registry.json
+### 3e. Guardar ficheiros de estado
 
 Atualizar `stats.sources_checked_this_week` com as fontes verificadas.
 
@@ -247,7 +252,7 @@ Para cada instrumento atualizado, encontrar o card correspondente em `solucoes.h
 **Se a dotacao mudou:**
 - Alterar o `hl-value` correspondente no card
 
-### 3B.4 Atualizar registry.json
+### 3B.4 Atualizar ficheiros de estado
 
 Adicionar ou atualizar o campo `state_history` para cada instrumento em `published`:
 ```json
@@ -387,12 +392,12 @@ Adicionar o card do novo instrumento ao grid em `solucoes.html`, imediatamente a
 
 ---
 
-## PASSO 5: Atualizar registry.json
+## PASSO 5: Atualizar ficheiros de estado
 
 ### Para cada artigo criado:
 
-1. Remover da `queue`
-2. Adicionar a `published`:
+1. Remover o item de `registry-queue.json > queue`
+2. Adicionar a `registry-published.json > published`:
 ```json
 {
   "id": "[slug]",
@@ -405,16 +410,16 @@ Adicionar o card do novo instrumento ao grid em `solucoes.html`, imediatamente a
   "regulation_local": "[regulamentos/source_id/slug.txt ou null]"
 }
 ```
-3. Atualizar `stats.total_published` (+1 por artigo)
-4. Atualizar `stats.total_in_queue` (novo tamanho da fila)
+3. Atualizar `registry.json > stats.total_published` (+1 por artigo)
+4. Atualizar `registry.json > stats.total_in_queue` (novo tamanho da fila)
 
 ### Para cada state update aplicado:
 
-1. Atualizar o registo em `published` com:
+1. Atualizar o registo em `registry-published.json > published` com:
    - `current_state`: novo estado
    - `last_state_check`: data de hoje
    - `state_history`: adicionar nova entrada
-2. Atualizar `stats.total_state_updates` (+1 por update)
+2. Atualizar `registry.json > stats.total_state_updates` (+1 por update)
 
 ---
 
@@ -426,21 +431,21 @@ Adicionar o card do novo instrumento ao grid em `solucoes.html`, imediatamente a
 
 Se foi criado 1 artigo:
 ```bash
-git -C "$REPO" add instrumentos/[slug].html solucoes.html registry.json
+git -C "$REPO" add instrumentos/[slug].html solucoes.html registry.json registry-queue.json registry-published.json
 git -C "$REPO" commit -m "instrumento: [nome do instrumento] ([fonte])"
 git -C "$REPO" push origin main
 ```
 
 Se foram criados 2 artigos:
 ```bash
-git -C "$REPO" add instrumentos/[slug1].html instrumentos/[slug2].html solucoes.html registry.json
+git -C "$REPO" add instrumentos/[slug1].html instrumentos/[slug2].html solucoes.html registry.json registry-queue.json registry-published.json
 git -C "$REPO" commit -m "radar: [nome1] + [nome2]"
 git -C "$REPO" push origin main
 ```
 
 Se houve state updates sem artigos novos:
 ```bash
-git -C "$REPO" add instrumentos/[slug1].html instrumentos/[slug2].html solucoes.html registry.json
+git -C "$REPO" add instrumentos/[slug1].html instrumentos/[slug2].html solucoes.html registry.json registry-published.json
 git -C "$REPO" commit -m "radar: estado atualizado [slug1] (fechado), [slug2] (prazo estendido)"
 git -C "$REPO" push origin main
 ```
@@ -467,7 +472,7 @@ rm -rf /tmp/opencapital
 
 ## REGRAS DE SEGURANCA
 
-1. **Nunca duplicar artigos.** Verificar sempre `registry.json > published` antes de criar.
+1. **Nunca duplicar artigos.** Verificar sempre `registry-published.json > published` antes de criar.
 2. **Nunca exceder 2 artigos por execucao.** Se a fila tem 10 items, criar 2 e guardar os restantes.
 3. **Nunca exceder 3 state updates por execucao.** Se ha mais updates pendentes, processar 3 e guardar os restantes.
 4. **Modificar artigos existentes APENAS para state updates.** Alteracoes permitidas: estado (aberto/fechado/previsto), prazo, dotacao, e aviso de encerramento. Nunca reescrever o conteudo editorial do artigo.
@@ -481,12 +486,12 @@ rm -rf /tmp/opencapital
 ## RESUMO DE UMA EXECUCAO TIPICA
 
 ```
-1. Ler registry.json + sources.json
+1. Ler registry.json + registry-queue.json + sources-scan.json
 2. Decidir modo (Normal/Intensivo/Urgente)
 3. [Normal] Scan 3 fontes → detectar novos → adicionar a fila → detectar state changes
 4. [Normal] Aplicar ate 3 state updates (artigo + card + registry)
 5. Criar 1-2 artigos da fila (por prioridade)
-6. Atualizar registry.json
+6. Atualizar registry.json + registry-queue.json + registry-published.json
 7. git commit + push
 8. Reportar: "Scan: [fontes]. Novos: [N]. Criados: [N]. Updates: [N]. Fila: [N]."
 ```

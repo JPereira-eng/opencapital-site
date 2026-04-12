@@ -1,0 +1,748 @@
+{
+  "_meta": {
+    "description": "Versao leve de sources.json para uso pelos agentes scanner/writer",
+    "updated": "2026-04-12"
+  },
+  "sources": [
+    {
+      "id": "portugal-2030",
+      "name": "Portugal 2030",
+      "priority": "high",
+      "access_method": "api",
+      "access_status": "ok",
+      "url_avisos": "https://portugal2030.pt/avisos/",
+      "api_url": "https://portugal2030.pt/wp-json/wp/v2/aviso-2024",
+      "api_pagination": "per_page=100&offset=N (3 requests for all 220+ avisos)",
+      "is_superset": true,
+      "covers_programs": [
+        "COMPETE2030",
+        "PESSOAS2030",
+        "SUSTENTAVEL2030",
+        "MAR2030",
+        "NORTE2030",
+        "CENTRO2030",
+        "LISBOA2030",
+        "ALENTEJO2030",
+        "ALGARVE2030",
+        "ACORES2030",
+        "MADEIRA2030",
+        "PAT2030",
+        "FAMI2030"
+      ],
+      "dedup_key": "codigo (FA####/YYYY format, unique across all programs)"
+    },
+    {
+      "id": "balcao-2030",
+      "name": "Balcao 2030",
+      "priority": "high",
+      "access_method": "websearch",
+      "access_status": "blocked",
+      "url_avisos": "https://balcao.portugal2030.pt/Balcao2030.idp/RequestHandler"
+    },
+    {
+      "id": "compete-2030",
+      "name": "COMPETE 2030",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://www.compete2030.gov.pt/avisos",
+      "covered_by": "portugal-2030"
+    },
+    {
+      "id": "pessoas-2030",
+      "name": "Pessoas 2030",
+      "priority": "low",
+      "access_method": "chrome",
+      "access_status": "partial",
+      "url_avisos": "https://pessoas2030.gov.pt/",
+      "covered_by": "portugal-2030"
+    },
+    {
+      "id": "mar-2030",
+      "name": "MAR 2030",
+      "priority": "low",
+      "access_method": "chrome",
+      "access_status": "partial",
+      "url_avisos": "https://portugal2030.pt/avisos/",
+      "covered_by": "portugal-2030"
+    },
+    {
+      "id": "sustentavel-2030",
+      "name": "Sustentavel 2030",
+      "priority": "low",
+      "access_method": "chrome",
+      "access_status": "partial",
+      "url_avisos": "https://sustentavel2030.gov.pt/avisos/",
+      "covered_by": "portugal-2030"
+    },
+    {
+      "id": "pat-2030",
+      "name": "Programa de Assistencia Tecnica 2030",
+      "priority": "low",
+      "access_method": "chrome",
+      "access_status": "partial",
+      "url_avisos": "https://pat.portugal2030.pt/",
+      "covered_by": "portugal-2030"
+    },
+    {
+      "id": "norte-2030",
+      "name": "Norte 2030",
+      "priority": "high",
+      "access_method": "chrome",
+      "access_status": "ok",
+      "url_avisos": "https://www.norte2030.pt/concursos/",
+      "covered_by": "portugal-2030"
+    },
+    {
+      "id": "centro-2030",
+      "name": "Centro 2030",
+      "priority": "low",
+      "access_method": "chrome",
+      "access_status": "partial",
+      "url_avisos": "https://centro2030.pt/avisos/",
+      "covered_by": "portugal-2030"
+    },
+    {
+      "id": "lisboa-2030",
+      "name": "Lisboa 2030",
+      "priority": "low",
+      "access_method": "chrome",
+      "access_status": "partial",
+      "url_avisos": "https://lisboa.portugal2030.pt/avisos/",
+      "covered_by": "portugal-2030"
+    },
+    {
+      "id": "alentejo-2030",
+      "name": "Alentejo 2030",
+      "priority": "low",
+      "access_method": "chrome",
+      "access_status": "partial",
+      "url_avisos": "https://alentejo.portugal2030.pt/avisos/",
+      "covered_by": "portugal-2030"
+    },
+    {
+      "id": "algarve-2030",
+      "name": "Algarve 2030",
+      "priority": "low",
+      "access_method": "chrome",
+      "access_status": "partial",
+      "url_avisos": "https://algarve.portugal2030.pt/avisos/",
+      "covered_by": "portugal-2030"
+    },
+    {
+      "id": "acores-2030",
+      "name": "Acores 2030",
+      "priority": "low",
+      "access_method": "chrome",
+      "access_status": "partial",
+      "url_avisos": "https://acores.portugal2030.pt/avisos/",
+      "covered_by": "portugal-2030"
+    },
+    {
+      "id": "madeira-2030",
+      "name": "Madeira 2030",
+      "priority": "low",
+      "access_method": "chrome",
+      "access_status": "partial",
+      "url_avisos": "https://madeira.portugal2030.pt/avisos/",
+      "covered_by": "portugal-2030"
+    },
+    {
+      "id": "ani",
+      "name": "Agencia Nacional de Inovacao (ANI)",
+      "priority": "high",
+      "access_method": "webfetch",
+      "access_status": "partial",
+      "url_avisos": "https://www.ani.pt/pt/financiamento/"
+    },
+    {
+      "id": "iapmei",
+      "name": "IAPMEI",
+      "priority": "high",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://www.iapmei.pt/PRODUTOS-E-SERVICOS/Incentivos-Financiamento.aspx"
+    },
+    {
+      "id": "banco-fomento",
+      "name": "Banco Portugues de Fomento",
+      "priority": "high",
+      "access_method": "chrome",
+      "access_status": "blocked",
+      "url_avisos": "https://www.bpfomento.pt/pt/catalogo/"
+    },
+    {
+      "id": "aicep",
+      "name": "AICEP Portugal Global",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://www.portugalglobal.pt/pt/internacionalizacao/incentivos/"
+    },
+    {
+      "id": "portugal-ventures",
+      "name": "Portugal Ventures",
+      "priority": "medium",
+      "access_method": "chrome",
+      "access_status": "partial",
+      "url_avisos": "https://www.portugalventures.pt/investments/"
+    },
+    {
+      "id": "turismo-portugal",
+      "name": "Turismo de Portugal",
+      "priority": "medium",
+      "access_method": "chrome",
+      "access_status": "blocked",
+      "url_avisos": "https://business.turismodeportugal.pt/pt/Investir/Financiamento/programas/Paginas/default.aspx"
+    },
+    {
+      "id": "fct",
+      "name": "Fundacao para a Ciencia e a Tecnologia (FCT)",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "partial",
+      "url_avisos": "https://www.fct.pt/concursos/"
+    },
+    {
+      "id": "autoridade-tributaria",
+      "name": "Autoridade Tributaria e Aduaneira (AT)",
+      "priority": "medium",
+      "access_method": "websearch",
+      "access_status": "indirect",
+      "url_avisos": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/beneficios_fiscais/Pages/default.aspx"
+    },
+    {
+      "id": "iefp",
+      "name": "Instituto do Emprego e Formacao Profissional (IEFP)",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://www.iefp.pt/apoios"
+    },
+    {
+      "id": "prr",
+      "name": "Plano de Recuperacao e Resiliencia (PRR)",
+      "priority": "high",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://recuperarportugal.gov.pt/avisos/"
+    },
+    {
+      "id": "interreg-poctep",
+      "name": "POCTEP (Interreg VI-A Espanha-Portugal)",
+      "priority": "high",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://www.poctep.eu/convocatorias-abiertas-poctep-2021-2027/"
+    },
+    {
+      "id": "interreg-atlantic",
+      "name": "Interreg Atlantic Area",
+      "priority": "high",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://www.atlanticarea.eu/for-applicants/call-for-projects"
+    },
+    {
+      "id": "interreg-sudoe",
+      "name": "Interreg SUDOE",
+      "priority": "medium",
+      "access_method": "chrome",
+      "access_status": "partial",
+      "url_avisos": "https://interreg-sudoe.eu/en/calendario-de-convocatorias/"
+    },
+    {
+      "id": "interreg-euromed",
+      "name": "Interreg Euro-MED",
+      "priority": "medium",
+      "access_method": "chrome",
+      "access_status": "partial",
+      "url_avisos": "https://interreg-euro-med.eu/en/get-involved/"
+    },
+    {
+      "id": "interreg-next-med",
+      "name": "Interreg NEXT MED",
+      "priority": "medium",
+      "access_method": "chrome",
+      "access_status": "partial",
+      "url_avisos": "https://www.interregnextmed.eu/apply-for-funding/"
+    },
+    {
+      "id": "interreg-europe",
+      "name": "Interreg Europe",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "blocked",
+      "url_avisos": "https://www.interregeurope.eu/call-for-projects"
+    },
+    {
+      "id": "interreg-urbact",
+      "name": "URBACT IV",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://urbact.eu/"
+    },
+    {
+      "id": "interreg-espon",
+      "name": "ESPON 2030",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "blocked",
+      "url_avisos": "https://www.espon.eu/"
+    },
+    {
+      "id": "interreg-interact",
+      "name": "INTERACT IV",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.interact.eu/"
+    },
+    {
+      "id": "interreg-mac",
+      "name": "Interreg MAC (Madeira-Acores-Canarias)",
+      "priority": "high",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://interregmac.org/pt-pt/"
+    },
+    {
+      "id": "horizonte-europa",
+      "name": "Horizonte Europa (portal geral)",
+      "priority": "high",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html"
+    },
+    {
+      "id": "eic-accelerator",
+      "name": "European Innovation Council (EIC)",
+      "priority": "high",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://eic.ec.europa.eu/eic-funding-opportunities_en"
+    },
+    {
+      "id": "erc",
+      "name": "European Research Council (ERC)",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://erc.europa.eu/apply-grant"
+    },
+    {
+      "id": "horizon-msca",
+      "name": "Marie Sklodowska-Curie Actions (MSCA)",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
+      "covered_by": "eu-funding-tenders"
+    },
+    {
+      "id": "horizon-cluster4",
+      "name": "Horizonte Europa — Cluster 4: Digital, Industria, Espaco",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
+      "covered_by": "eu-funding-tenders"
+    },
+    {
+      "id": "horizon-cluster5",
+      "name": "Horizonte Europa — Cluster 5: Clima, Energia, Mobilidade",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
+      "covered_by": "eu-funding-tenders"
+    },
+    {
+      "id": "horizon-cluster6",
+      "name": "Horizonte Europa — Cluster 6: Alimentacao, Bioeconomia, Ambiente",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
+      "covered_by": "eu-funding-tenders"
+    },
+    {
+      "id": "horizon-cluster1",
+      "name": "Horizonte Europa — Cluster 1: Saude",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
+      "covered_by": "eu-funding-tenders"
+    },
+    {
+      "id": "horizon-cluster2",
+      "name": "Horizonte Europa — Cluster 2: Cultura, Criatividade, Sociedade",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
+      "covered_by": "eu-funding-tenders"
+    },
+    {
+      "id": "horizon-cluster3",
+      "name": "Horizonte Europa — Cluster 3: Seguranca Civil",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
+      "covered_by": "eu-funding-tenders"
+    },
+    {
+      "id": "horizon-widera",
+      "name": "Horizonte Europa — WIDERA (Widening Participation)",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
+      "covered_by": "eu-funding-tenders"
+    },
+    {
+      "id": "horizon-missions",
+      "name": "Horizonte Europa — EU Missions",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
+      "covered_by": "eu-funding-tenders"
+    },
+    {
+      "id": "hadea",
+      "name": "HaDEA (Health and Digital Executive Agency)",
+      "priority": "high",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://hadea.ec.europa.eu/calls-proposals_en"
+    },
+    {
+      "id": "erasmus-enterprise",
+      "name": "Erasmus+ (portal geral)",
+      "priority": "medium",
+      "access_method": "chrome",
+      "access_status": "partial",
+      "url_avisos": "https://erasmus-plus.ec.europa.eu/funding-calls"
+    },
+    {
+      "id": "erasmus-ka2-alliances",
+      "name": "Erasmus+ KA2 — Alliances for Innovation",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
+      "covered_by": "eu-funding-tenders"
+    },
+    {
+      "id": "erasmus-ka2-cooperation",
+      "name": "Erasmus+ KA2 — Cooperation Partnerships",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
+      "covered_by": "eu-funding-tenders"
+    },
+    {
+      "id": "erasmus-cove",
+      "name": "Erasmus+ — Centres of Vocational Excellence",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
+      "covered_by": "eu-funding-tenders"
+    },
+    {
+      "id": "life-programme",
+      "name": "LIFE Programme",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://cinea.ec.europa.eu/programmes/life/life-calls-proposals_en"
+    },
+    {
+      "id": "digital-europe",
+      "name": "Digital Europe Programme",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/programmes/digital"
+    },
+    {
+      "id": "single-market-programme",
+      "name": "Single Market Programme (SMP/COSME)",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/programmes/cosme"
+    },
+    {
+      "id": "investeu",
+      "name": "InvestEU",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://investeu.europa.eu/investeu-fund_en"
+    },
+    {
+      "id": "cef",
+      "name": "Connecting Europe Facility (CEF)",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://cinea.ec.europa.eu/programmes/connecting-europe-facility_en"
+    },
+    {
+      "id": "eu4health",
+      "name": "EU4Health",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://hadea.ec.europa.eu/calls-proposals_en"
+    },
+    {
+      "id": "creative-europe",
+      "name": "Creative Europe",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.eacea.ec.europa.eu/grants/2021-2027/creative-europe_en"
+    },
+    {
+      "id": "cerv",
+      "name": "CERV (Citizens, Equality, Rights and Values)",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
+      "covered_by": "eu-funding-tenders"
+    },
+    {
+      "id": "justice-programme",
+      "name": "Justice Programme",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
+      "covered_by": "eu-funding-tenders"
+    },
+    {
+      "id": "eu-funding-tenders",
+      "name": "EU Funding & Tenders Portal",
+      "priority": "high",
+      "access_method": "api",
+      "access_status": "ok",
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-search",
+      "api_url": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/{topic-id}.json",
+      "is_superset": true,
+      "covers_programs": [
+        "HORIZON",
+        "CEF",
+        "DIGITAL",
+        "LIFE",
+        "ERASMUS+",
+        "CERV",
+        "JUST",
+        "COSME",
+        "EU4HEALTH",
+        "CREATIVE-EUROPE"
+      ],
+      "dedup_key": "topic identifier (e.g. HORIZON-CL4-2026-DATA-AI-01-02)"
+    },
+    {
+      "id": "esa-bic",
+      "name": "ESA BIC Portugal",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://space.ipn.pt/esa-bic-portugal/"
+    },
+    {
+      "id": "nato-diana",
+      "name": "NATO DIANA",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "blocked",
+      "url_avisos": "https://www.diana.nato.int/challenges.html"
+    },
+    {
+      "id": "eit",
+      "name": "European Institute of Innovation and Technology (EIT)",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://eit.europa.eu/our-activities/opportunities"
+    },
+    {
+      "id": "eit-digital",
+      "name": "EIT Digital",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.eitdigital.eu/our-activities/"
+    },
+    {
+      "id": "eit-climate",
+      "name": "EIT Climate-KIC",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.climate-kic.org/programmes/"
+    },
+    {
+      "id": "cgd-empresas",
+      "name": "Caixa Geral de Depositos — Empresas",
+      "priority": "medium",
+      "access_method": "chrome",
+      "access_status": "unverified",
+      "url_avisos": "https://www.cgd.pt/Empresas/Pages/Empresas_v2.aspx"
+    },
+    {
+      "id": "bpi-empresas",
+      "name": "BPI — Empresas",
+      "priority": "medium",
+      "access_method": "chrome",
+      "access_status": "unverified",
+      "url_avisos": "https://www.bancobpi.pt/empresas/financiamento"
+    },
+    {
+      "id": "millennium-empresas",
+      "name": "Millennium BCP — Empresas",
+      "priority": "medium",
+      "access_method": "chrome",
+      "access_status": "unverified",
+      "url_avisos": "https://ind.millenniumbcp.pt/pt/Empresas/Financiamento/Pages/default.aspx"
+    },
+    {
+      "id": "novobanco-empresas",
+      "name": "Novo Banco — Empresas",
+      "priority": "medium",
+      "access_method": "chrome",
+      "access_status": "unverified",
+      "url_avisos": "https://www.novobanco.pt/empresas/financiamento"
+    },
+    {
+      "id": "santander-empresas",
+      "name": "Santander — Empresas",
+      "priority": "medium",
+      "access_method": "chrome",
+      "access_status": "unverified",
+      "url_avisos": "https://www.santander.pt/empresas/financiamento"
+    },
+    {
+      "id": "indico-capital",
+      "name": "Indico Capital Partners",
+      "priority": "medium",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.indicocapital.com"
+    },
+    {
+      "id": "armilar-ventures",
+      "name": "Armilar Venture Partners",
+      "priority": "medium",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://armilarventurepartners.com"
+    },
+    {
+      "id": "faber-ventures",
+      "name": "Faber Ventures",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://faber.vc"
+    },
+    {
+      "id": "shilling-vc",
+      "name": "Shilling Capital",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://shilling.vc"
+    },
+    {
+      "id": "bynd-vc",
+      "name": "Bynd Venture Capital",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://bynd.vc"
+    },
+    {
+      "id": "premio-bpi-lacaixa",
+      "name": "Premio BPI La Caixa",
+      "priority": "medium",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.bancobpi.pt/grupo-bpi/sustentabilidade/premios-bpi-fundacao-la-caixa"
+    },
+    {
+      "id": "premio-gulbenkian",
+      "name": "Fundacao Gulbenkian — Premios e Bolsas",
+      "priority": "medium",
+      "access_method": "chrome",
+      "access_status": "unverified",
+      "url_avisos": "https://gulbenkian.pt/apoios-e-parcerias/"
+    },
+    {
+      "id": "edp-innovation",
+      "name": "EDP Innovation",
+      "priority": "medium",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.edp.com/en/innovation"
+    },
+    {
+      "id": "bgi-accelerator",
+      "name": "Building Global Innovators (BGI)",
+      "priority": "medium",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.bfrancisco.com/bgi"
+    },
+    {
+      "id": "startup-lisboa",
+      "name": "Startup Lisboa",
+      "priority": "medium",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.startuplisboa.com/apply"
+    },
+    {
+      "id": "beta-i",
+      "name": "Beta-i",
+      "priority": "medium",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://beta-i.com/programs"
+    },
+    {
+      "id": "f6s",
+      "name": "F6S — Grants & Accelerators",
+      "priority": "medium",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.f6s.com/deals"
+    },
+    {
+      "id": "eu-startups",
+      "name": "EU-Startups",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.eu-startups.com/category/funding/"
+    },
+    {
+      "id": "startup-portugal",
+      "name": "Startup Portugal",
+      "priority": "medium",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://startupportugal.com"
+    }
+  ]
+}
