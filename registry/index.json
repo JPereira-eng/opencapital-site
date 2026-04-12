@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "description": "Open Capital Radar v4.0 - Indice global",
+    "version": "4.0",
+    "migrated_from_v3": "2026-04-12"
+  },
+  "totals": {
+    "published": 39,
+    "open": 32,
+    "closed": 4,
+    "planned": 3,
+    "in_queue": 18
+  },
+  "shards": {
+    "pt2030-compete": { "count": 13, "open": 11, "closed": 0, "planned": 2 },
+    "pt2030-norte": { "count": 3, "open": 2, "closed": 1 },
+    "pt2030-centro": { "count": 1, "open": 1 },
+    "pt2030-lisboa": { "count": 1, "open": 1 },
+    "pt2030-other": { "count": 0 },
+    "eic": { "count": 4, "open": 4 },
+    "eu-horizon": { "count": 8, "open": 6, "closed": 1, "planned": 1 },
+    "eu-other": { "count": 1, "open": 1 },
+    "pt-other": { "count": 8, "open": 6, "closed": 2 },
+    "interreg": { "count": 0 }
+  },
+  "last_full_cycle": "2026-04-12",
+  "last_scanner_run": "2026-04-12",
+  "last_monitor_run": "2026-04-12",
+  "last_writer_run": "2026-04-12"
+}

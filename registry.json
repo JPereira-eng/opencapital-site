@@ -42,8 +42,10 @@
     "reset_date": "2026-04-11",
     "last_api_scan_pt2030": "2026-04-11",
     "pt2030_api_total_avisos": 220,
-    "pt2030_api_open_private": 42,
-    "pt2030_api_new_added": 15
+    "pt2030_api_open_total": 220,
+    "pt2030_api_note": "API central cobre ~220 avisos. Portais regionais tem mais. Norte sozinho: 171 total, 29 abertos.",
+    "pt2030_api_new_added": 15,
+    "v4_migration": "2026-04-12 - Ficheiros de estado migrados para registry/. Este ficheiro mantido para referencia."
   },
   "source_last_checked": {
     "portugal-2030": "2026-04-11",

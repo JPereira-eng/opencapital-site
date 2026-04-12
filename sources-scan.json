@@ -6,29 +6,17 @@
   "sources": [
     {
       "id": "portugal-2030",
-      "name": "Portugal 2030",
+      "name": "Portugal 2030 (API central)",
       "priority": "high",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://portugal2030.pt/avisos/",
       "api_url": "https://portugal2030.pt/wp-json/wp/v2/aviso-2024",
-      "api_pagination": "per_page=100&offset=N (3 requests for all 220+ avisos)",
-      "is_superset": true,
-      "covers_programs": [
-        "COMPETE2030",
-        "PESSOAS2030",
-        "SUSTENTAVEL2030",
-        "MAR2030",
-        "NORTE2030",
-        "CENTRO2030",
-        "LISBOA2030",
-        "ALENTEJO2030",
-        "ALGARVE2030",
-        "ACORES2030",
-        "MADEIRA2030",
-        "PAT2030",
-        "FAMI2030"
-      ],
+      "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia)",
+      "is_superset": false,
+      "superset_coverage": "partial",
+      "superset_note": "API central cobre ~220 avisos de ~1500+ totais. Portais regionais tem avisos adicionais. Nunca filtrar por beneficiario.",
+      "shard": "pt2030-compete",
       "dedup_key": "codigo (FA####/YYYY format, unique across all programs)"
     },
     {
@@ -42,38 +30,38 @@
     {
       "id": "compete-2030",
       "name": "COMPETE 2030",
-      "priority": "low",
+      "priority": "high",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://www.compete2030.gov.pt/avisos",
-      "covered_by": "portugal-2030"
+      "shard": "pt2030-compete"
     },
     {
       "id": "pessoas-2030",
       "name": "Pessoas 2030",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://pessoas2030.gov.pt/",
-      "covered_by": "portugal-2030"
+      "shard": "pt2030-other"
     },
     {
       "id": "mar-2030",
       "name": "MAR 2030",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "chrome",
       "access_status": "partial",
-      "url_avisos": "https://portugal2030.pt/avisos/",
-      "covered_by": "portugal-2030"
+      "url_avisos": "https://mar2030.gov.pt/",
+      "shard": "pt2030-other"
     },
     {
       "id": "sustentavel-2030",
       "name": "Sustentavel 2030",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://sustentavel2030.gov.pt/avisos/",
-      "covered_by": "portugal-2030"
+      "shard": "pt2030-other"
     },
     {
       "id": "pat-2030",
@@ -82,7 +70,7 @@
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://pat.portugal2030.pt/",
-      "covered_by": "portugal-2030"
+      "shard": "pt2030-other"
     },
     {
       "id": "norte-2030",
@@ -91,61 +79,62 @@
       "access_method": "chrome",
       "access_status": "ok",
       "url_avisos": "https://www.norte2030.pt/concursos/",
-      "covered_by": "portugal-2030"
+      "shard": "pt2030-norte",
+      "note": "29 abertos / 171 total (verificado 2026-04-12)"
     },
     {
       "id": "centro-2030",
       "name": "Centro 2030",
-      "priority": "low",
+      "priority": "high",
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://centro2030.pt/avisos/",
-      "covered_by": "portugal-2030"
+      "shard": "pt2030-centro"
     },
     {
       "id": "lisboa-2030",
       "name": "Lisboa 2030",
-      "priority": "low",
+      "priority": "high",
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://lisboa.portugal2030.pt/avisos/",
-      "covered_by": "portugal-2030"
+      "shard": "pt2030-lisboa"
     },
     {
       "id": "alentejo-2030",
       "name": "Alentejo 2030",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://alentejo.portugal2030.pt/avisos/",
-      "covered_by": "portugal-2030"
+      "shard": "pt2030-other"
     },
     {
       "id": "algarve-2030",
       "name": "Algarve 2030",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://algarve.portugal2030.pt/avisos/",
-      "covered_by": "portugal-2030"
+      "shard": "pt2030-other"
     },
     {
       "id": "acores-2030",
       "name": "Acores 2030",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://acores.portugal2030.pt/avisos/",
-      "covered_by": "portugal-2030"
+      "shard": "pt2030-other"
     },
     {
       "id": "madeira-2030",
       "name": "Madeira 2030",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://madeira.portugal2030.pt/avisos/",
-      "covered_by": "portugal-2030"
+      "shard": "pt2030-other"
     },
     {
       "id": "ani",
@@ -338,7 +327,7 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
-      "covered_by": "eu-funding-tenders"
+      "shard": "eu-horizon"
     },
     {
       "id": "horizon-cluster4",
@@ -347,7 +336,7 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "covered_by": "eu-funding-tenders"
+      "shard": "eu-horizon"
     },
     {
       "id": "horizon-cluster5",
@@ -356,7 +345,7 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "covered_by": "eu-funding-tenders"
+      "shard": "eu-horizon"
     },
     {
       "id": "horizon-cluster6",
@@ -365,7 +354,7 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "covered_by": "eu-funding-tenders"
+      "shard": "eu-horizon"
     },
     {
       "id": "horizon-cluster1",
@@ -374,7 +363,7 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "covered_by": "eu-funding-tenders"
+      "shard": "eu-horizon"
     },
     {
       "id": "horizon-cluster2",
@@ -383,7 +372,7 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "covered_by": "eu-funding-tenders"
+      "shard": "eu-horizon"
     },
     {
       "id": "horizon-cluster3",
@@ -392,7 +381,7 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "covered_by": "eu-funding-tenders"
+      "shard": "eu-horizon"
     },
     {
       "id": "horizon-widera",
@@ -401,7 +390,7 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "covered_by": "eu-funding-tenders"
+      "shard": "eu-horizon"
     },
     {
       "id": "horizon-missions",
@@ -410,7 +399,7 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "covered_by": "eu-funding-tenders"
+      "shard": "eu-horizon"
     },
     {
       "id": "hadea",
@@ -435,7 +424,7 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "covered_by": "eu-funding-tenders"
+      "shard": "eu-other"
     },
     {
       "id": "erasmus-ka2-cooperation",
@@ -444,7 +433,7 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "covered_by": "eu-funding-tenders"
+      "shard": "eu-other"
     },
     {
       "id": "erasmus-cove",
@@ -453,7 +442,7 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "covered_by": "eu-funding-tenders"
+      "shard": "eu-other"
     },
     {
       "id": "life-programme",
@@ -518,7 +507,7 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "covered_by": "eu-funding-tenders"
+      "shard": "eu-other"
     },
     {
       "id": "justice-programme",
@@ -527,7 +516,7 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "covered_by": "eu-funding-tenders"
+      "shard": "eu-other"
     },
     {
       "id": "eu-funding-tenders",
