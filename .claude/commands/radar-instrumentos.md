@@ -57,8 +57,11 @@ Le o `registry.json` e conta os items na `queue`. Decide o modo:
 ## PASSO 1: Verificar o estado
 
 ```
-1. Read registry.json
-2. Read sources.json
+1. Read registry.json offset=0 limit=150  (ficheiro grande - nao ler de uma vez)
+   Se necessario ver mais: Read registry.json offset=150 limit=150
+2. Para sources.json usar Grep em vez de Read:
+   Grep '"id":' sources.json  (para listar todas as fontes)
+   Grep -A 15 '"id": "[fonte-especifica]"' sources.json  (para uma fonte)
 3. Contar items na queue
 4. Decidir o modo (Normal / Intensivo / Urgente)
 5. Se modo Normal: identificar quais fontes verificar (ver Passo 2)

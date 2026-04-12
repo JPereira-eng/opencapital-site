@@ -37,11 +37,29 @@ Todos os caminhos de ficheiros e comandos `git -C` nas instrucoes seguintes refe
 
 ## FICHEIROS DE ESTADO
 
-- **`$REPO/sources.json`**: lista de fontes com URLs, metodo de acesso, prioridade, e campos API (v3.0: 2 super-fontes API + 25 fontes cobertas + ~61 independentes)
-- **`$REPO/registry.json`**: estado do agente - fila, publicados, ultima verificacao
+- **`$REPO/sources.json`**: lista de fontes (ficheiro grande - ler em partes)
+- **`$REPO/registry.json`**: estado do agente - fila, publicados, ultima verificacao (ficheiro grande - ler em partes)
 - **`$REPO/regulamentos/`**: pasta onde os textos extraidos sao guardados
 
-Le `sources.json` e `registry.json` no inicio de cada execucao.
+**AVISO: Estes ficheiros excedem o limite de leitura (10.000 tokens). Ler SEMPRE em partes:**
+
+```
+# Ler registry.json - stats + queue (primeiras 150 linhas)
+Read $REPO/registry.json  offset=0 limit=150
+
+# Se necessario ver mais da queue ou os published IDs:
+Read $REPO/registry.json  offset=150 limit=150
+
+# Ler sources.json - usar Grep para encontrar fontes especificas
+# Exemplo: encontrar todos os is_superset
+Grep "is_superset" $REPO/sources.json
+# Exemplo: encontrar uma fonte especifica
+Grep -A 20 '"id": "portugal-2030"' $REPO/sources.json
+# Para listar todos os IDs de fontes:
+Grep '"id":' $REPO/sources.json
+```
+
+Nao tentar ler os ficheiros completos de uma vez - vai falhar com erro de token.
 
 ---
 
