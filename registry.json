@@ -6,11 +6,11 @@
   },
   "stats": {
     "total_published": 31,
-    "total_in_queue": 25,
+    "total_in_queue": 26,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-10",
     "last_scanner_run": "2026-04-12",
-    "sources_checked_this_week": ["portugal-2030", "eu-funding-tenders", "ani", "iapmei", "prr", "interreg-poctep", "fct", "aicep", "iefp", "interreg-atlantic", "hadea", "eic-accelerator", "interreg-mac", "life-programme", "erc"],
+    "sources_checked_this_week": ["portugal-2030", "eu-funding-tenders", "ani", "iapmei", "prr", "interreg-poctep", "fct", "aicep", "iefp", "interreg-atlantic", "hadea", "eic-accelerator", "interreg-mac", "life-programme", "erc", "investeu", "interreg-sudoe", "interreg-euromed", "interreg-urbact", "interreg-next-med"],
     "reset_reason": "v3.0 reset cirurgico: novas APIs (PT2030 REST, EU F&T JSON), deduplicacao, super-fontes",
     "reset_date": "2026-04-11",
     "last_api_scan_pt2030": "2026-04-11",
@@ -116,9 +116,8 @@
       "deadline": "2026-06-30",
       "budget": "20.000.000 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/sice-qualificacao-das-pme-operacoes-individuais/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "download_error": "WebFetch retornou apenas HTML/CSS styling - pagina JS-rendered - tentativa 2026-04-12",
+      "pdf_url": "https://portugal2030.pt/wp-content/uploads/sites/3/2026/01/unnamed-file.pdf-26.octet-stream",
+      "regulation_local": "regulamentos/compete-2030/sice-qualificacao-pme-operacoes-individuais.txt",
       "priority_score": 65,
       "status": "pending",
       "notes": "FA0315/2025. SICE Qualificacao PME. 20M EUR FEDER. Programa COMPETE2030. Beneficiario: Privada. Concurso. Abertura 30/04/2026 - fecho 30/06/2026. Apoio a projetos de qualificacao e modernizacao de PME."
@@ -132,9 +131,8 @@
       "deadline": "2026-06-30",
       "budget": "40.000.000 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/siqrh-formacao-empresarial-operacoes-individuais/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "download_error": "WebFetch retornou apenas HTML/CSS styling - pagina JS-rendered - tentativa 2026-04-12",
+      "pdf_url": "https://portugal2030.pt/wp-content/uploads/sites/3/2026/01/unnamed-file.pdf-129.octet-stream",
+      "regulation_local": "regulamentos/compete-2030/siqrh-formacao-empresarial-individual.txt",
       "priority_score": 65,
       "status": "pending",
       "notes": "FA0104/2025. SIQRH Formacao Empresarial Individual. 40M EUR FSE+. Programa COMPETE2030. Beneficiario: Privada. Concurso. Abertura 30/04/2026 - fecho 30/06/2026. Formacao de recursos humanos em empresas."
@@ -148,8 +146,8 @@
       "deadline": "2026-06-30",
       "budget": "40.000.000 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/siqrh-formacao-empresarial-operacoes-em-conjunto/",
-      "pdf_url": null,
-      "regulation_local": null,
+      "pdf_url": "https://portugal2030.pt/wp-content/uploads/sites/3/2026/01/unnamed-file.pdf-127.octet-stream",
+      "regulation_local": "regulamentos/compete-2030/siqrh-formacao-empresarial-conjunto.txt",
       "priority_score": 65,
       "status": "pending",
       "notes": "FA0105/2025. SIQRH Formacao Empresarial em Conjunto. 40M EUR FSE+. Programa COMPETE2030. Beneficiario: Privada. Concurso. Abertura 30/04/2026 - fecho 30/06/2026. Formacao conjunta de RH em consorcio de empresas."
@@ -378,6 +376,21 @@
       "priority_score": 15,
       "status": "pending",
       "notes": "DIGITAL-2026-BESTUSE-10. Digital Europe Programme - Accelerating Best Use of Technologies. Abre 21/04/2026 (previsto). Deadline: 01/10/2026. Digital Europe Programme (2021/2027). HaDEA. Foco: aceleracao da adocao de tecnologias digitais (IA, cloud, dados) por empresas e setor publico. Beneficiario: Privada + Publica. Relevante para empresas de consultoria tecnologica e transformacao digital. Detectado 2026-04-12."
+    },
+    {
+      "id": "urbact-iv-action-networks-2026",
+      "name": "URBACT IV - Call for Action Networks 2026",
+      "source_id": "interreg-urbact",
+      "aviso_codigo": null,
+      "detected_date": "2026-04-12",
+      "deadline": "2026-06-17",
+      "budget": null,
+      "regulation_url": "https://urbact.eu/get-involved",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 20,
+      "status": "pending",
+      "notes": "URBACT IV Action Networks 2026. Candidaturas abertas: 17/03/2026 - 17/06/2026. Redes transnacionais de cidades para intercambio e aprendizagem de boas praticas urbanas. Elegivel: municipios e cidades europeias. Beneficiario: Publica. Cofinanciamento FEDER. Relevancia limitada para tipico cliente Open Capital (municipios, nao empresas privadas). Detectado 2026-04-12."
     }
   ],
   "published": [
@@ -717,7 +730,12 @@
     "eic-accelerator": "2026-04-12",
     "interreg-mac": "2026-04-12",
     "life-programme": "2026-04-12",
-    "erc": "2026-04-12"
+    "erc": "2026-04-12",
+    "investeu": "2026-04-12",
+    "interreg-sudoe": "2026-04-12",
+    "interreg-euromed": "2026-04-12",
+    "interreg-urbact": "2026-04-12",
+    "interreg-next-med": "2026-04-12"
   },
   "dedup_codigos_known": {
     "_note": "Codigos de avisos ja publicados ou ignorados, para deduplicacao futura",
