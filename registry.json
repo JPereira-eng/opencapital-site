@@ -6,11 +6,11 @@
   },
   "stats": {
     "total_published": 31,
-    "total_in_queue": 21,
+    "total_in_queue": 25,
     "total_state_updates": 0,
     "last_full_cycle": "2026-04-10",
     "last_scanner_run": "2026-04-12",
-    "sources_checked_this_week": ["portugal-2030", "eu-funding-tenders", "ani", "iapmei", "prr", "interreg-poctep", "fct", "aicep", "iefp", "interreg-atlantic"],
+    "sources_checked_this_week": ["portugal-2030", "eu-funding-tenders", "ani", "iapmei", "prr", "interreg-poctep", "fct", "aicep", "iefp", "interreg-atlantic", "hadea", "eic-accelerator", "interreg-mac", "life-programme", "erc"],
     "reset_reason": "v3.0 reset cirurgico: novas APIs (PT2030 REST, EU F&T JSON), deduplicacao, super-fontes",
     "reset_date": "2026-04-11",
     "last_api_scan_pt2030": "2026-04-11",
@@ -29,6 +29,7 @@
       "regulation_url": "https://madeira.portugal2030.pt/2026/04/01/madeira-2030-lanca-aviso-concurso-para-internacionalizacao-das-pme/",
       "pdf_url": null,
       "regulation_local": null,
+      "download_error": "WebFetch retornou apenas HTML/CSS styling - pagina JS-rendered - tentativa 2026-04-12",
       "priority_score": 65,
       "status": "pending",
       "notes": "M2030-2026-13. Internacionalizacao 2030. Apoio a projetos de internacionalizacao de PME da Regiao Autonoma da Madeira. Dotacao: 1M EUR FEDER. Taxa de cofinanciamento: 40%. Subsidio nao reembolsavel. Periodo: 1 Abr - 15 Mai 2026 (17h00). Submissao: Balcao dos Fundos (balcaofundosue.pt). Prioridade: Madeira + Inteligente e Competitiva - Conhecimento e Inovacao. Detetado 2026-04-11."
@@ -117,6 +118,7 @@
       "regulation_url": "https://portugal2030.pt/aviso-2024/sice-qualificacao-das-pme-operacoes-individuais/",
       "pdf_url": null,
       "regulation_local": null,
+      "download_error": "WebFetch retornou apenas HTML/CSS styling - pagina JS-rendered - tentativa 2026-04-12",
       "priority_score": 65,
       "status": "pending",
       "notes": "FA0315/2025. SICE Qualificacao PME. 20M EUR FEDER. Programa COMPETE2030. Beneficiario: Privada. Concurso. Abertura 30/04/2026 - fecho 30/06/2026. Apoio a projetos de qualificacao e modernizacao de PME."
@@ -132,6 +134,7 @@
       "regulation_url": "https://portugal2030.pt/aviso-2024/siqrh-formacao-empresarial-operacoes-individuais/",
       "pdf_url": null,
       "regulation_local": null,
+      "download_error": "WebFetch retornou apenas HTML/CSS styling - pagina JS-rendered - tentativa 2026-04-12",
       "priority_score": 65,
       "status": "pending",
       "notes": "FA0104/2025. SIQRH Formacao Empresarial Individual. 40M EUR FSE+. Programa COMPETE2030. Beneficiario: Privada. Concurso. Abertura 30/04/2026 - fecho 30/06/2026. Formacao de recursos humanos em empresas."
@@ -315,6 +318,66 @@
       "priority_score": 15,
       "status": "pending",
       "notes": "I3-2026-INV1 e I3-2026-INV2a. ABRE 13/05/2026 - fecho 12/11/2026. Ate 10M EUR por projeto, 70% cofinanciamento UE. Minimo 3-5 parceiros de diferentes EM. Foco: transicao verde, digital, manufactura inteligente. TRL 6-9. Elegivel: PME, clusters, instituicoes de investigacao, autoridades publicas de regioes europeias. Gerido por EISMEA. Beneficiario: Publica e Privada. Muito relevante para PME portuguesas em consorcio interregional."
+    },
+    {
+      "id": "horizon-cl4-2026-01-materiais-producao",
+      "name": "HORIZON-CL4-2026-01 - Leadership in Materials and Production for Europe",
+      "source_id": "hadea",
+      "aviso_codigo": "HORIZON-CL4-2026-01",
+      "detected_date": "2026-04-12",
+      "deadline": "2026-04-21",
+      "budget": null,
+      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals_en",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 115,
+      "status": "pending",
+      "notes": "HORIZON-CL4-2026-01. Leadership in Materials and Production for Europe. Deadline: 21/04/2026 (9 dias - URGENTE). Horizonte Europa Cluster 4 - Industry, Space and Digital. HaDEA. Foco: materiais avancados, producao sustentavel, industria europeia estrategica. Beneficiario: consorcio de investigadores e empresas (Privada + Publica). Relevante para empresas de materiais avancados, industria, manufatura. Detectado 2026-04-12."
+    },
+    {
+      "id": "horizon-raise-2026-01-ia-ciencia",
+      "name": "HORIZON-RAISE-2026-01 - Thematic Networks of Excellence for AI in Science",
+      "source_id": "hadea",
+      "aviso_codigo": "HORIZON-RAISE-2026-01",
+      "detected_date": "2026-04-12",
+      "deadline": "2026-04-21",
+      "budget": null,
+      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals_en",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 115,
+      "status": "pending",
+      "notes": "HORIZON-RAISE-2026-01. Thematic Networks of Excellence for AI in Science. Deadline: 21/04/2026 (9 dias - URGENTE). Horizonte Europa RAISE (Reforming and Enhancing the European Research and Innovation System). HaDEA. Foco: redes tematicas de excelencia em IA aplicada a ciencia. Beneficiario: consorcio universidades e empresas tecnologicas (Privada + Publica). Detectado 2026-04-12."
+    },
+    {
+      "id": "horizon-cid-2026-01-clean-industrial-deal",
+      "name": "HORIZON-CID-2026-01 - R&I Clean Industrial Deal: Descarbonizacao de Industrias Energo-Intensivas",
+      "source_id": "hadea",
+      "aviso_codigo": "HORIZON-CID-2026-01",
+      "detected_date": "2026-04-12",
+      "deadline": "2026-09-15",
+      "budget": null,
+      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals_en",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 15,
+      "status": "pending",
+      "notes": "HORIZON-CID-2026-01. R&I in Support of the Clean Industrial Deal: Decarbonisation of Energy Intensive Industries. Aberto desde 18/12/2025. Deadline: 15/09/2026. Horizonte Europa - Clean Industrial Deal. HaDEA. Foco: descarbonizacao de industrias energo-intensivas (aco, cimento, quimica, etc). Beneficiario: consorcio industrial e investigacao (Privada + Publica). Muito relevante para industria pesada e empresas de eficiencia energetica. Detectado 2026-04-12."
+    },
+    {
+      "id": "digital-2026-bestuse-10",
+      "name": "DIGITAL-2026-BESTUSE-10 - Digital Europe: Accelerating Best Use of Technologies",
+      "source_id": "hadea",
+      "aviso_codigo": "DIGITAL-2026-BESTUSE-10",
+      "detected_date": "2026-04-12",
+      "deadline": "2026-10-01",
+      "budget": null,
+      "regulation_url": "https://hadea.ec.europa.eu/calls-proposals_en",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 15,
+      "status": "pending",
+      "notes": "DIGITAL-2026-BESTUSE-10. Digital Europe Programme - Accelerating Best Use of Technologies. Abre 21/04/2026 (previsto). Deadline: 01/10/2026. Digital Europe Programme (2021/2027). HaDEA. Foco: aceleracao da adocao de tecnologias digitais (IA, cloud, dados) por empresas e setor publico. Beneficiario: Privada + Publica. Relevante para empresas de consultoria tecnologica e transformacao digital. Detectado 2026-04-12."
     }
   ],
   "published": [
@@ -649,7 +712,12 @@
     "fct": "2026-04-12",
     "aicep": "2026-04-12",
     "iefp": "2026-04-12",
-    "interreg-atlantic": "2026-04-12"
+    "interreg-atlantic": "2026-04-12",
+    "hadea": "2026-04-12",
+    "eic-accelerator": "2026-04-12",
+    "interreg-mac": "2026-04-12",
+    "life-programme": "2026-04-12",
+    "erc": "2026-04-12"
   },
   "dedup_codigos_known": {
     "_note": "Codigos de avisos ja publicados ou ignorados, para deduplicacao futura",
