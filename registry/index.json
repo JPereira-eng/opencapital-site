@@ -9,7 +9,7 @@
     "open": 32,
     "closed": 4,
     "planned": 3,
-    "in_queue": 100
+    "in_queue": 0
   },
   "shards": {
     "pt2030-compete": {
@@ -66,7 +66,7 @@
   "last_full_cycle": "2026-04-12",
   "last_scanner_run": "2026-04-13",
   "last_monitor_run": "2026-04-12",
-  "last_writer_run": "2026-04-12",
+  "last_writer_run": "2026-04-13",
   "source_last_checked": {
     "portugal-2030": "2026-04-13",
     "compete-2030": "2026-04-12",
