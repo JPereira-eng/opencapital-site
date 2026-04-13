@@ -98,7 +98,38 @@ Prompt para WebFetch: "Extrai toda a informacao sobre este aviso/instrumento de 
 
 Guardar resultado em `regulamentos/[source_id]/[id].txt`.
 
-**Nota para items PT2030:** URLs do tipo `portugal2030.pt/aviso-2024/[slug]/` sao paginas WordPress server-rendered. WebFetch funciona diretamente.
+**Nota para items PT2030:** Alguns portais (pessoas2030.gov.pt, regionais) sao server-rendered e WebFetch funciona. Outros (portugal2030.pt, compete2030.pt) sao JS-rendered e WebFetch so retorna CSS/JS sem conteudo.
+
+**Se WebFetch retornar texto com < 300 palavras de conteudo real (maioritariamente CSS/JS):** tratar como falha e continuar para 2b-pdf.
+
+#### 2b-pdf: Tentar obter PDF via WordPress media API (para portais PT2030)
+
+Se o item tem `wordpress_id` (ID do post) E o regulamento ainda nao foi obtido:
+
+1. Chamar a API do post para obter o ID do PDF:
+   ```
+   GET https://[portal-base]/wp-json/wp/v2/aviso-2024/[wordpress_id]
+   ```
+   Extrair `acf.pdf` (e um ID numerico, ex: 252679).
+
+2. Se `acf.pdf` for null ou 0: sem PDF disponivel. Continuar para 2c.
+
+3. Se `acf.pdf` for um ID numerico valido, obter URL do PDF:
+   ```
+   GET https://[portal-base]/wp-json/wp/v2/media/[acf.pdf]
+   ```
+   Extrair `source_url` (URL directo do ficheiro PDF).
+
+4. Descarregar e extrair:
+   ```bash
+   curl -sL "[source_url]" -o "$REPO/regulamentos/[source_id]/[id].pdf"
+   pdftotext -enc UTF-8 "$REPO/regulamentos/[source_id]/[id].pdf" "$REPO/regulamentos/[source_id]/[id].txt"
+   ```
+
+5. **Verificar conteudo do PDF:**
+   - Se contiver "Plano Anual de Avisos" ou "PAA2026" ou "PAA202": marcar `status: "plano_anual"`. Parar.
+   - Se o texto tiver < 1500 palavras E nao contiver "despesas elegiveis" E nao contiver "criterios de selecao": provavelmente e um resumo. Marcar `status: "plano_anual"`, `download_error: "Resumo do aviso - sem regulamento completo"`. Parar.
+   - Se passou ambos os testes: regulamento valido. Continuar para Passo 3 (ready).
 
 ### 2c. Se tudo falhou:
 
