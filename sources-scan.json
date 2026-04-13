@@ -652,18 +652,20 @@
     {
       "id": "indico-capital",
       "name": "Indico Capital Partners",
-      "priority": "medium",
+      "priority": "low",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://www.indicocapital.com"
+      "url_avisos": "https://www.indicocapital.com",
+      "notes": " | Fundo VC candidatura continua - sem calls formais com deadline. Scanner nao deve adicionar a queue."
     },
     {
       "id": "armilar-ventures",
       "name": "Armilar Venture Partners",
-      "priority": "medium",
+      "priority": "low",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://armilarventurepartners.com"
+      "url_avisos": "https://armilarventurepartners.com",
+      "notes": " | Fundo VC candidatura continua - sem calls formais com deadline. Scanner nao deve adicionar a queue."
     },
     {
       "id": "faber-ventures",
@@ -671,7 +673,8 @@
       "priority": "low",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://faber.vc"
+      "url_avisos": "https://faber.vc",
+      "notes": " | Fundo VC candidatura continua - sem calls formais com deadline. Scanner nao deve adicionar a queue."
     },
     {
       "id": "shilling-vc",
@@ -708,10 +711,11 @@
     {
       "id": "edp-innovation",
       "name": "EDP Innovation",
-      "priority": "medium",
+      "priority": "low",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://www.edp.com/en/innovation"
+      "url_avisos": "https://www.edp.com/en/innovation",
+      "notes": " | Fundo VC candidatura continua - sem calls formais com deadline. Scanner nao deve adicionar a queue."
     },
     {
       "id": "bgi-accelerator",

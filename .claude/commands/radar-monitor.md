@@ -98,6 +98,35 @@ Max 10 verificacoes individuais por run.
 
 ---
 
+## PASSO 2.5: Re-verificar watchlist (plano_anual)
+
+Ler `registry/lookup.json` seccao `plano_anual`. Contem items que foram detectados como Plano Anual (sem regulamento publicado) e que podem ter aberto entretanto.
+
+**Max 5 items por run.** Priorizar items cujo `aviso_codigo` sugere deadlines proximos.
+
+Para cada item na watchlist:
+1. Verificar na API da fonte (usando `source_id` e `aviso_codigo`) se o aviso ja tem regulamento publicado
+2. Para fontes PT2030 com API WordPress: verificar se `acf.pdf` agora aponta para um regulamento real (nao "Resumo de Aviso do Plano Anual")
+3. Para outras fontes: WebFetch na URL do item e verificar se ha PDF de regulamento
+
+### Se o aviso abriu (tem regulamento publicado):
+
+1. Remover da seccao `plano_anual` do lookup.json
+2. Adicionar ao `queue.json` como `"status": "ready"` com os campos completos (id, name, source_id, shard, aviso_codigo, deadline, budget, regulation_url, priority_score, notes)
+3. Reportar: "Watchlist: [id] abriu - adicionado ao queue como ready"
+
+### Se continua como plano anual:
+
+Nao fazer nada. O item permanece na watchlist para a proxima run.
+
+### Se o aviso foi removido/cancelado:
+
+1. Remover da seccao `plano_anual` do lookup.json
+2. Manter no `by_id` e `by_aviso_codigo` (para dedup)
+3. Reportar: "Watchlist: [id] removido/cancelado - retirado da watchlist"
+
+---
+
 ## PASSO 3: Registar alteracoes
 
 ### Se estado mudou (aberto -> fechado):
@@ -151,10 +180,10 @@ Apos processar o shard:
 ## PASSO 5: Deploy
 
 ```bash
-git -C "$REPO" add registry/index.json registry/shards/[shard].json instruments-catalog.json
+git -C "$REPO" add registry/index.json registry/shards/[shard].json instruments-catalog.json registry/lookup.json registry/queue.json
 # Se artigos foram alterados:
 git -C "$REPO" add instrumentos/[slug1].html instrumentos/[slug2].html
-git -C "$REPO" commit -m "monitor: [shard] - [N verificados], [N alteracoes]"
+git -C "$REPO" commit -m "monitor: [shard] - [N verificados], [N alteracoes], [N watchlist]"
 git -C "$REPO" push origin main
 ```
 
@@ -177,8 +206,9 @@ git -C "$REPO" push origin main
 2. Selecionar 1-2 shards (o mais antigo ou com deadlines proximos)
 3. Ler shard selecionado
 4. Verificar por lotes via super-fonte (1 API call = muitos updates)
-5. Se alteracoes: atualizar shard + artigo HTML + catalogo JSON
+4.5. Re-verificar ate 5 items da watchlist plano_anual (lookup.json)
+5. Se alteracoes: atualizar shard + artigo HTML + catalogo JSON + lookup + queue
 6. Atualizar index.json
 7. git commit + push
-8. Reportar: "Monitor: [shard] - [N verificados], [N alteracoes] ([detalhe])."
+8. Reportar: "Monitor: [shard] - [N verificados], [N alteracoes], [N watchlist re-checked]."
 ```
