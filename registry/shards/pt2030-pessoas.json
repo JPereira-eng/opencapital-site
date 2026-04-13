@@ -5,7 +5,15 @@
     "portugal-2030"
   ],
   "_note": "Items do programa PESSOAS 2030 (FSE+). Items da API central com programa[] = PESSOAS migram para aqui.",
-  "items": [],
+  "items": [
+    {
+      "id": "apoio-organizacoes-sociedade-civil-migrantes-pessoas2030",
+      "file": "instrumentos/apoio-organizacoes-sociedade-civil-migrantes-pessoas2030.html",
+      "source": "pessoas-2030",
+      "state": "aberto",
+      "last_check": "2026-04-13"
+    }
+  ],
   "instruments": [
     {
       "id": "acoes-mercado-social-emprego-pessoas2030",
