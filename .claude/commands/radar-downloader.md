@@ -131,6 +131,24 @@ Se o item tem `wordpress_id` (ID do post) E o regulamento ainda nao foi obtido:
    - Se o texto tiver < 1500 palavras E nao contiver "despesas elegiveis" E nao contiver "criterios de selecao": provavelmente e um resumo. Marcar `status: "plano_anual"`, `download_error: "Resumo do aviso - sem regulamento completo"`. Parar.
    - Se passou ambos os testes: regulamento valido. Continuar para Passo 3 (ready).
 
+### 2b-horizon: API JSON para items Horizonte Europa / SEDIA (source_id: eu-funding-tenders)
+
+Se `source_id == "eu-funding-tenders"` E regulamento ainda nao obtido:
+
+O portal eu-funding-tenders e JS-rendered e o WebFetch da pagina nao funciona. Usar directamente a API JSON publica da SEDIA:
+
+```
+WebFetch: https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/[aviso_codigo_lowercase].json
+```
+
+Exemplo: codigo `HORIZON-CL6-2026-01-ZEROPOLLUTION-01` → URL `https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/horizon-cl6-2026-01-zeropollution-01.json`
+
+Extrair do JSON: title, description, budgetOverviewInEur, deadlineDate, conditions, keywords, programmePeriod, actions.
+
+Guardar em `regulamentos/eu-funding-tenders/[id].txt`. Conteudo tipicamente 800-2000 palavras.
+
+Se o JSON retornar 404: continuar para 2c.
+
 ### 2c. WebSearch + WebFetch do melhor resultado:
 
 Usar WebSearch com queries combinadas:
