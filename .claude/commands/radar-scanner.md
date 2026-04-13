@@ -90,6 +90,7 @@ WebFetch: https://centro2030.pt/wp-json/wp/v2/aviso-2024?page=2
 **NOTA sobre Sustentavel 2030:** O endpoint e `/wp-json/wp/v2/aviso` (sem "-2024"). Verificar sempre o campo `api_url` em sources-scan.json.
 
 De cada aviso JSON, extrair:
+- `link` - URL canonica da pagina do aviso (OBRIGATORIO como regulation_url)
 - `acf.codigo` (ex: "FA0212/2025") - chave de deduplicacao
 - `title.rendered` - nome do aviso
 - `acf.data_inicio` / `acf.data_fim` - datas (formato YYYYMMDD)
@@ -100,7 +101,18 @@ De cada aviso JSON, extrair:
 - `acf.natureza` - Concurso/Convite
 - `acf.pdf` - ID do media WordPress
 
-Filtrar apenas por data: `data_fim > hoje` (abertos). NAO filtrar por beneficiario.
+**REGRA CRITICA - URL DO AVISO:**
+O campo `regulation_url` de cada item DEVE ser o campo `link` do JSON da API (ex: `https://portugal2030.pt/aviso-2024/nome-do-aviso/`). NUNCA usar URLs genericos como `https://portugal2030.pt/avisos/` ou `https://pessoas2030.gov.pt/avisos/`. Se `link` nao estiver disponivel, construir a partir do slug do aviso.
+
+**REGRA CRITICA - ESTADO DO AVISO:**
+Determinar o estado com base na data de hoje:
+- Se `data_inicio > hoje`: estado = `"previsto"` (aviso publicado mas candidaturas ainda nao abriram)
+- Se `data_inicio <= hoje` E `data_fim > hoje`: estado = `"aberto"` (candidaturas abertas)
+- Se `data_fim <= hoje`: SKIP - nao adicionar a queue (encerrado)
+
+**Registar sempre o campo `acf.natureza` nas notes** (Concurso/Convite/Pre-Qualificacao). O writer usa esta informacao para contextualizar o artigo.
+
+Filtrar por data: `data_fim > hoje`. NAO filtrar por beneficiario nem por natureza.
 
 **Dedup entre APIs regionais e API central:**
 Muitos avisos aparecem tanto na API central (portugal2030.pt) como nas APIs regionais (centro2030.pt, etc.). A deduplicacao por `acf.codigo` (via lookup.json) evita duplicados automaticamente. Nao e necessario tratamento especial.
