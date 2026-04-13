@@ -143,11 +143,37 @@ WebFetch: https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDeta
 
 Exemplo: codigo `HORIZON-CL6-2026-01-ZEROPOLLUTION-01` → URL `https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/horizon-cl6-2026-01-zeropollution-01.json`
 
-Extrair do JSON: title, description, budgetOverviewInEur, deadlineDate, conditions, keywords, programmePeriod, actions.
+**CRITICO - Extrair o campo `description` COMPLETO:**
+O campo `description` do JSON SEDIA e o mais rico (500-2000 palavras de conteudo tecnico em HTML). Nao ignorar. Fazer strip de tags HTML mas guardar todo o texto resultante.
+Extrair tambem: title, description (completo, sem tags HTML), budgetOverviewInEur, deadlineDate (converter timestamp Unix para data legivel), conditions, keywords, actions, callIdentifier.
 
-Guardar em `regulamentos/eu-funding-tenders/[id].txt`. Conteudo tipicamente 800-2000 palavras.
+**Deadline:** O campo `deadlineDate` e um timestamp Unix em milissegundos. Converter: `new Date(deadlineDate).toISOString()`. NAO usar a data de abertura como deadline.
 
-Se o JSON retornar 404: continuar para 2c.
+Guardar em `regulamentos/eu-funding-tenders/[id].txt`. Com `description` completo deve ter 800-2000 palavras.
+
+Se o JSON retornar 404: continuar para 2b-eu-pdf.
+
+### 2b-eu-pdf: PDF de Call Document para fontes EU (hadea, eismea, eu-funding-tenders)
+
+Se `source_id` e uma agencia europeia (hadea, eismea, eu-funding-tenders, interreg-*) E o conteudo obtido ate agora for < 400 palavras:
+
+Tentar encontrar o PDF oficial da chamada (Call Document / Guidelines for Applicants):
+
+```
+WebSearch: "[aviso_codigo] call document filetype:pdf site:ec.europa.eu"
+WebSearch: "[aviso_codigo] guidelines applicants hadea.ec.europa.eu"
+WebSearch: "[aviso_codigo] work programme topic description"
+```
+
+Se encontrar URL de PDF directo (.pdf):
+```bash
+curl -sL "[pdf_url]" -o "$REPO/regulamentos/[source_id]/[id]-calldoc.pdf"
+pdftotext -enc UTF-8 "$REPO/regulamentos/[source_id]/[id]-calldoc.pdf" "$REPO/regulamentos/[source_id]/[id].txt"
+```
+
+Work Programmes Horizon Europa estao em: `https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2025-2027/`
+
+Se encontrar, indicar na coluna Metodo: `PDF Call Document`. Conteudo esperado: 1000-5000 palavras.
 
 ### 2c. WebSearch + WebFetch do melhor resultado:
 
