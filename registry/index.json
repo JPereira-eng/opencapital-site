@@ -9,7 +9,7 @@
     "open": 34,
     "closed": 4,
     "planned": 3,
-    "in_queue": 40
+    "in_queue": 44
   },
   "shards": {
     "pt2030-compete": {
@@ -65,7 +65,7 @@
     }
   },
   "last_full_cycle": "2026-04-12",
-  "last_scanner_run": "2026-04-13T09:00:00",
+  "last_scanner_run": "2026-04-13T14:00:00",
   "last_monitor_run": "2026-04-12",
   "last_writer_run": "2026-04-13",
   "source_last_checked": {
@@ -73,7 +73,7 @@
     "compete-2030": "2026-04-13",
     "norte-2030": "2026-04-13",
     "centro-2030": "2026-04-13",
-    "lisboa-2030": "2026-04-12",
+    "lisboa-2030": "2026-04-13",
     "alentejo-2030": "2026-04-12",
     "algarve-2030": "2026-04-12",
     "madeira-2030": "2026-04-13",
@@ -83,17 +83,17 @@
     "mar-2030": "2026-04-13",
     "pat-2030": "2026-04-13",
     "eu-funding-tenders": "2026-04-13",
-    "ani": "2026-04-12",
-    "iapmei": "2026-04-12",
+    "ani": "2026-04-13",
+    "iapmei": "2026-04-13",
     "prr": "2026-04-12",
-    "interreg-poctep": "2026-04-12",
+    "interreg-poctep": "2026-04-13",
     "fct": "2026-04-12",
     "aicep": "2026-04-12",
     "iefp": "2026-04-12",
     "interreg-atlantic": "2026-04-12",
     "hadea": "2026-04-13",
     "eic-accelerator": "2026-04-12",
-    "interreg-mac": "2026-04-12",
+    "interreg-mac": "2026-04-13",
     "life-programme": "2026-04-12",
     "erc": "2026-04-12",
     "investeu": "2026-04-12",
@@ -113,5 +113,5 @@
     "armilar-ventures": "2026-04-13",
     "edp-innovation": "2026-04-13"
   },
-  "last_updated": "2026-04-13"
+  "last_updated": "2026-04-13T14:00:00"
 }
