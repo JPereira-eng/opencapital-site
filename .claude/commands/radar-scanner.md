@@ -7,6 +7,11 @@ A tua missao e navegar fontes de financiamento e descobrir novos instrumentos.
 
 **Esta skill so descobre.** Nao descarrega regulamentos, nao monitoriza estados, nao cria artigos.
 
+**REGRAS DE PROCESSAMENTO CRITICAS:**
+1. **NUNCA criar ficheiros temporarios** (avisos_portugal2030.json, new_open_avisos.json, temp_*.json, ou qualquer outro ficheiro intermedio). Processar tudo em memoria na sessao. Criar ficheiros temporarios causa bloqueios de contexto e perde dados.
+2. **Maximo 30 novos items por run.** Se uma fonte tiver mais de 30 avisos novos, adicionar apenas os 30 com maior priority_score (prazo mais urgente + dotacao maior). Os restantes serao descobertos em runs futuras quando o lookup os identificar como ausentes.
+3. **Processar fonte a fonte**, adicionando imediatamente ao queue.json/overflow apos cada fonte. Nao acumular todos os avisos de todas as fontes antes de escrever.
+
 ---
 
 ## PASSO 0: CONFIGURACAO DE AMBIENTE
