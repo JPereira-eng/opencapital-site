@@ -54,12 +54,20 @@ Verificar no maximo **5 fontes por execucao**.
 
 **REGRA CRITICA: Nunca filtrar por tipo de beneficiario.** Todos os avisos abertos devem ser descobertos, independentemente de serem para entidades publicas, privadas, mistas, ou qualquer outro tipo. A decisao editorial e do writer, nao do scanner.
 
-**Prioridade de selecao:**
-1. Fontes com `priority: "high"` nao verificadas ha mais de 3 dias
-2. Fontes com `priority: "medium"` nao verificadas ha mais de 7 dias
-3. Fontes com `priority: "low"` nao verificadas ha mais de 14 dias
+**Prioridade de selecao (por esta ordem estrita):**
 
-Consultar `registry/index.json > source_last_checked` para a data de ultima verificacao de cada fonte individual. Este mapa contem a data exata de cada fonte (nao apenas a data global do ultimo scan).
+1. **Fontes NUNCA verificadas** (`source_last_checked` nao contem o id). Selecionar ate 3 por run. Estas tem prioridade absoluta sobre fontes ja verificadas.
+2. Fontes com `priority: "high"` nao verificadas ha mais de 3 dias
+3. Fontes com `priority: "medium"` nao verificadas ha mais de 7 dias
+4. Fontes com `priority: "low"` nao verificadas ha mais de 14 dias
+
+Se existirem mais de 3 fontes nunca verificadas, preencher as 2 slots restantes com fontes high/medium por antiguidade. Se nao houver fontes nunca verificadas, usar as 5 slots para fontes por antiguidade.
+
+Consultar `registry/index.json > source_last_checked` para a data de ultima verificacao de cada fonte individual.
+
+**Fontes VC/investimento continuo** (notas em sources-scan.json com "candidatura continua"): verificar apenas 1 vez por mes. Estas fontes nao produzem items para a queue. Se o scanner nao encontrar nenhum aviso com deadline formal, registar no relatorio e nao gastar mais slots.
+
+**Fontes cobertas por superset:** `eu-funding-tenders` cobre HORIZON, CEF, DIGITAL, LIFE, ERASMUS+, CERV, JUST, COSME, EU4HEALTH, CREATIVE-EUROPE (ver `covers_programs` em sources-scan.json). Se `eu-funding-tenders` foi verificada ha menos de 7 dias, as sub-fontes individuais (horizon-cluster1..6, horizon-msca, horizon-widera, horizon-missions, erasmus-*, cerv, justice-programme, creative-europe, single-market-programme) NAO devem ocupar slots. Os avisos ja foram descobertos via superset.
 
 **NOTA:** Programas regionais PT2030 (norte-2030, centro-2030, etc.) sao fontes independentes. Verificar a API central do PT2030 NAO cobre automaticamente os portais regionais. Cada um deve ser verificado individualmente.
 
@@ -159,18 +167,35 @@ Se pagina tem "Ver mais": clicar ate carregar todos.
 
 Usar WebSearch: `site:[url] avisos abertos 2026` ou `[nome_fonte] concursos abertos financiamento 2026`
 
+### Campos a extrair de fontes nao-API (webfetch, chrome, websearch)
+
+Para fontes que nao tem API estruturada, extrair o maximo possivel:
+- **Nome** do instrumento/programa (OBRIGATORIO)
+- **URL** da pagina do instrumento (OBRIGATORIO como regulation_url)
+- **Prazo/deadline** (se existir na pagina - muitas fontes nao tem deadline formal)
+- **Dotacao/budget** (se disponivel)
+- **Elegibilidade** (tipo de entidades elegiveis)
+- **Estado** (aberto, encerrado, permanente, candidatura continua)
+
+**Se a fonte nao tem prazos formais** (ex: IEFP, bancos, aceleradores, premios permanentes): usar `deadline: null`. Nao inventar prazos. Nao excluir o item por falta de prazo. Estas fontes operam com candidatura continua ou "ate esgotar dotacao".
+
+**ATENCAO - Fontes PT2030 continuam com regras estritas:** A flexibilidade de deadline nulo aplica-se APENAS a fontes nao-PT2030 e nao-EU. Para fontes PT2030 com access_method "webfetch" (ex: compete-2030, norte-2030), os avisos devem ter prazo. Se nao tiverem prazo visivel, registar mas com nota "prazo nao visivel na pagina".
+
 ---
 
 ## PASSO 3: Deduplicacao (usando lookup.json)
 
 Para cada instrumento detectado:
 
-1. Verificar se aberto: `data_fim > hoje`. Se encerrado: skip
+1. **Filtro temporal (depende da familia da fonte):**
+   - **Fontes PT2030** (access_method: "api", portais WordPress): `data_fim > hoje` obrigatorio. Se encerrado ou sem data_fim: skip.
+   - **Fontes EU** (eu-funding-tenders, Horizon, Interreg): deadline obrigatorio. Se expirado: skip.
+   - **Outras fontes** (IEFP, bancos, premios, aceleradores, agencias nacionais): deadline pode ser null. Se deadline existe e ja passou: skip. Se nao existe deadline: incluir com `deadline: null`.
 2. Gerar `id` slug (kebab-case do nome)
 3. **Lookup por ID:** `lookup.json.by_id[id]` existe? Se sim: skip
 4. **Lookup por codigo:** `lookup.json.by_aviso_codigo[codigo]` existe? Se sim: skip
 5. **Verificacao por titulo:** Se >= 80% similar a um item existente (mesma fonte): skip
-6. Se novo e aberto: adicionar a queue
+6. Se novo e nao filtrado: adicionar a queue
 
 ---
 
@@ -237,6 +262,7 @@ Para fontes nao-PT2030 (EU, Interreg, etc.), usar o `shard` definido em `sources
 - Prazo < 30 dias: +100
 - Prazo 30-60 dias: +50
 - Prazo 60-90 dias: +20
+- Prazo null (candidatura continua/permanente): +10
 - Dotacao > 10M EUR: +30
 - Dotacao > 1M EUR: +10
 - Fonte priority "high": +15

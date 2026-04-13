@@ -67,13 +67,20 @@ Um unico ciclo de WebFetch retorna todos os avisos da API central. Comparar com 
 - Para cada item do shard, procurar o aviso correspondente na API (por aviso_codigo ou titulo)
 - Verificar: estado mudou? prazo mudou? dotacao mudou?
 
-### Para portais regionais (norte-2030, centro-2030, etc.):
+### Para portais regionais PT2030 (centro-2030, lisboa-2030, alentejo-2030, etc.):
 
-Usar Chrome MCP ou WebFetch no portal regional:
+Portais com WordPress API (ver `api_url` em sources-scan.json): usar a API directamente.
 ```
-WebFetch/Chrome: https://www.norte2030.pt/concursos/
+WebFetch: https://centro2030.pt/wp-json/wp/v2/aviso-2024?page=1
+WebFetch: https://lisboa.portugal2030.pt/wp-json/wp/v2/aviso-2024?page=1
 ```
+Comparar `acf.data_fim`, `acf.df`, e estado com os dados do shard.
 
+Portais sem API (norte-2030, compete-2030): usar WebFetch na pagina de concursos.
+```
+WebFetch: https://www.norte2030.pt/concursos/
+WebFetch: https://www.compete2030.gov.pt/avisos
+```
 Procurar cada item do shard na pagina da fonte.
 
 ### Para shards EU:
