@@ -5,17 +5,17 @@
     "migrated_from_v3": "2026-04-12"
   },
   "totals": {
-    "published": 51,
-    "open": 44,
+    "published": 56,
+    "open": 49,
     "closed": 4,
     "planned": 3,
-    "in_queue": 9,
+    "in_queue": 4,
     "in_watchlist": 21
   },
   "shards": {
     "pt2030-compete": {
-      "count": 10,
-      "open": 8,
+      "count": 11,
+      "open": 9,
       "closed": 0,
       "planned": 2
     },
@@ -40,8 +40,8 @@
       "open": 1
     },
     "pt2030-other": {
-      "count": 7,
-      "open": 7
+      "count": 10,
+      "open": 10
     },
     "eic": {
       "count": 4,
@@ -63,7 +63,8 @@
       "closed": 2
     },
     "interreg": {
-      "count": 0
+      "count": 1,
+      "open": 1
     }
   },
   "last_full_cycle": "2026-04-12",
@@ -118,5 +119,5 @@
     "beta-i": "2026-04-13"
   },
   "last_scanner_run": "2026-04-13T17:00:00",
-  "last_updated": "2026-04-13T17:00:00"
+  "last_updated": "2026-04-13T18:00:00"
 }

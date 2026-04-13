@@ -17,35 +17,6 @@
       "notes": "PACS-2025-14. Sustentavel 2030 - Fundo Coesao. Concurso. APA, Municipios, Setor empresarial do Estado."
     },
     {
-      "id": "alentejo2030-ciclo-urbano-agua-2026",
-      "name": "Alentejo 2030 - Investimentos no Ciclo Urbano da Agua",
-      "source_id": "alentejo-2030",
-      "shard": "pt2030-other",
-      "detected_date": "2026-04-11",
-      "deadline": "2026-12-31",
-      "budget": "8.997.000 EUR",
-      "regulation_url": "https://alentejo.portugal2030.pt/2026/03/09/alentejo-2030-abre-concurso-de-quase-9-milhoes-de-euros-para-investimentos-no-ciclo-urbano-da-agua/",
-      "regulation_local": "regulamentos/alentejo-2030/alentejo2030-ciclo-urbano-agua-2026.txt",
-      "priority_score": 15,
-      "status": "ready",
-      "notes": "Aviso Alentejo 2030 para investimentos no ciclo urbano da agua. Dotacao: ~9M EUR FEDER 85%."
-    },
-    {
-      "id": "rede-fornecedores-inovadores",
-      "name": "Rede de Fornecedores Inovadores - Selecao de Empresas Nucleares",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-compete",
-      "aviso_codigo": "FA0317/2025",
-      "detected_date": "2026-04-11",
-      "deadline": "2027-12-30",
-      "budget": null,
-      "regulation_url": "https://portugal2030.pt/aviso-2024/rede-de-fornecedores-inovadores-selecao-de-empresas-nucleares/",
-      "regulation_local": "regulamentos/portugal-2030/rede-fornecedores-inovadores.txt",
-      "priority_score": 15,
-      "status": "ready",
-      "notes": "FA0317/2025. Pre-qualificacao para Rede de Fornecedores Inovadores. FEDER+FSE+. COMPETE2030."
-    },
-    {
       "id": "i3-2026-interregional-innovation-investments",
       "name": "I3 Instrument 2026 - Investimentos Interregionais em Inovacao",
       "source_id": "eu-funding-tenders",
@@ -89,50 +60,6 @@
       "priority_score": 15,
       "status": "ready",
       "notes": "DIGITAL-2026-BESTUSE-10. Digital Europe Programme. | Re-download: tentar PDF Call Document via WebSearch filetype:pdf"
-    },
-    {
-      "id": "urbact-iv-action-networks-2026",
-      "name": "URBACT IV - Call for Action Networks 2026",
-      "source_id": "interreg-urbact",
-      "shard": "interreg",
-      "detected_date": "2026-04-12",
-      "deadline": "2026-06-17",
-      "budget": null,
-      "regulation_url": "https://urbact.eu/get-involved",
-      "regulation_local": "regulamentos/interreg-urbact/urbact-iv-action-networks-2026.txt",
-      "priority_score": 20,
-      "status": "ready",
-      "notes": "URBACT IV Action Networks 2026. Candidaturas abertas: 17/03/2026 - 17/06/2026."
-    },
-    {
-      "id": "sustentavel-2030-pacs-2026-8",
-      "name": "Sustentavel 2030 - PACS-2026-8 (Secretaria Regional Equipamentos)",
-      "source_id": "sustentavel-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "PACS-2026-8",
-      "detected_date": "2026-04-12",
-      "deadline": "2026-06-22",
-      "budget": null,
-      "regulation_url": "https://sustentavel2030.gov.pt/wp-content/uploads/2026/03/Aviso-PACS-2026-8.pdf",
-      "regulation_local": "regulamentos/sustentavel-2030/sustentavel-2030-pacs-2026-8.txt",
-      "priority_score": 25,
-      "status": "ready",
-      "notes": "PACS-2026-8. Sustentavel 2030 - Fundo Coesao. Convite. Secretaria Regional de Equipamentos e Infraestruturas."
-    },
-    {
-      "id": "sustentavel-2030-pacs-2026-07",
-      "name": "Sustentavel 2030 - PACS-2026-07 (Passivos Ambientais)",
-      "source_id": "sustentavel-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "PACS-2026-07",
-      "detected_date": "2026-04-12",
-      "deadline": "2026-06-22",
-      "budget": null,
-      "regulation_url": "https://sustentavel2030.gov.pt/wp-content/uploads/2026/03/Aviso-PACS-2026-7.pdf",
-      "regulation_local": "regulamentos/sustentavel-2030/sustentavel-2030-pacs-2026-07.txt",
-      "priority_score": 25,
-      "status": "ready",
-      "notes": "PACS-2026-07. Sustentavel 2030 - Fundo Coesao. Convite. Passivos Ambientais PENSAARP 2030."
     }
   ]
 }

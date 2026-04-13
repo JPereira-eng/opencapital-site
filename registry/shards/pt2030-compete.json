@@ -1,19 +1,109 @@
 {
   "_shard": "pt2030-compete",
-  "_sources": ["compete-2030", "portugal-2030"],
+  "_sources": [
+    "compete-2030",
+    "portugal-2030"
+  ],
   "items": [
-    { "id": "portugal-2030", "file": "instrumentos/portugal-2030.html", "source": "pt2030", "state": "aberto", "last_check": "2026-04-12" },
-    { "id": "step-inovacao-produtiva-digital-biotecnologia", "file": "instrumentos/step-inovacao-produtiva-digital-biotecnologia.html", "source": "compete-2030", "state": "aberto", "last_check": "2026-04-12" },
-    { "id": "step-inovacao-produtiva-energia", "file": "instrumentos/step-inovacao-produtiva-energia.html", "source": "compete-2030", "state": "aberto", "last_check": "2026-04-12" },
-    { "id": "step-idi-empresarial-energia", "file": "instrumentos/step-idi-empresarial-energia.html", "source": "compete-2030", "state": "aberto", "last_check": "2026-04-09" },
-    { "id": "step-idi-empresarial-digital-biotecnologia", "file": "instrumentos/step-idi-empresarial-digital-biotecnologia.html", "source": "compete-2030", "state": "aberto", "last_check": "2026-04-09" },
-    { "id": "siac-digitalizacao-transformacao-digital", "file": "instrumentos/siac-digitalizacao-transformacao-digital.html", "source": "compete-2030", "state": "aberto", "last_check": "2026-04-09" },
-    { "id": "sitce-descarbonizacao-eficiencia-energetica", "file": "instrumentos/sitce-descarbonizacao-eficiencia-energetica.html", "source": "compete-2030", "state": "aberto", "last_check": "2026-04-09" },
-    { "id": "siac-acoes-coletivas-internacionalizacao", "file": "instrumentos/siac-acoes-coletivas-internacionalizacao.html", "source": "compete-2030", "state": "aberto", "last_check": "2026-04-09" },
-    { "id": "sice-internacionalizacao-pme", "file": "instrumentos/sice-internacionalizacao-pme.html", "source": "compete-2030", "state": "aberto", "last_check": "2026-04-09" },
-    { "id": "sice-qualificacao-pme-operacoes-individuais", "file": "instrumentos/sice-qualificacao-pme-operacoes-individuais.html", "source": "compete-2030", "state": "aberto", "last_check": "2026-04-12" },
-    { "id": "siqrh-formacao-empresarial-individual", "file": "instrumentos/siqrh-formacao-empresarial-individual.html", "source": "compete-2030", "state": "aberto", "last_check": "2026-04-12" },
-    { "id": "siqrh-formacao-empresarial-conjunto", "file": "instrumentos/siqrh-formacao-empresarial-conjunto.html", "source": "portugal-2030", "state": "previsto", "last_check": "2026-04-12" },
-    { "id": "formacao-executivos-compete", "file": "instrumentos/formacao-executivos-compete.html", "source": "portugal-2030", "state": "previsto", "last_check": "2026-04-12", "aviso_codigo": "FA0065/2025", "regulation_local": "regulamentos/portugal-2030/formacao-executivos-compete.txt" }
+    {
+      "id": "portugal-2030",
+      "file": "instrumentos/portugal-2030.html",
+      "source": "pt2030",
+      "state": "aberto",
+      "last_check": "2026-04-12"
+    },
+    {
+      "id": "step-inovacao-produtiva-digital-biotecnologia",
+      "file": "instrumentos/step-inovacao-produtiva-digital-biotecnologia.html",
+      "source": "compete-2030",
+      "state": "aberto",
+      "last_check": "2026-04-12"
+    },
+    {
+      "id": "step-inovacao-produtiva-energia",
+      "file": "instrumentos/step-inovacao-produtiva-energia.html",
+      "source": "compete-2030",
+      "state": "aberto",
+      "last_check": "2026-04-12"
+    },
+    {
+      "id": "step-idi-empresarial-energia",
+      "file": "instrumentos/step-idi-empresarial-energia.html",
+      "source": "compete-2030",
+      "state": "aberto",
+      "last_check": "2026-04-09"
+    },
+    {
+      "id": "step-idi-empresarial-digital-biotecnologia",
+      "file": "instrumentos/step-idi-empresarial-digital-biotecnologia.html",
+      "source": "compete-2030",
+      "state": "aberto",
+      "last_check": "2026-04-09"
+    },
+    {
+      "id": "siac-digitalizacao-transformacao-digital",
+      "file": "instrumentos/siac-digitalizacao-transformacao-digital.html",
+      "source": "compete-2030",
+      "state": "aberto",
+      "last_check": "2026-04-09"
+    },
+    {
+      "id": "sitce-descarbonizacao-eficiencia-energetica",
+      "file": "instrumentos/sitce-descarbonizacao-eficiencia-energetica.html",
+      "source": "compete-2030",
+      "state": "aberto",
+      "last_check": "2026-04-09"
+    },
+    {
+      "id": "siac-acoes-coletivas-internacionalizacao",
+      "file": "instrumentos/siac-acoes-coletivas-internacionalizacao.html",
+      "source": "compete-2030",
+      "state": "aberto",
+      "last_check": "2026-04-09"
+    },
+    {
+      "id": "sice-internacionalizacao-pme",
+      "file": "instrumentos/sice-internacionalizacao-pme.html",
+      "source": "compete-2030",
+      "state": "aberto",
+      "last_check": "2026-04-09"
+    },
+    {
+      "id": "sice-qualificacao-pme-operacoes-individuais",
+      "file": "instrumentos/sice-qualificacao-pme-operacoes-individuais.html",
+      "source": "compete-2030",
+      "state": "aberto",
+      "last_check": "2026-04-12"
+    },
+    {
+      "id": "siqrh-formacao-empresarial-individual",
+      "file": "instrumentos/siqrh-formacao-empresarial-individual.html",
+      "source": "compete-2030",
+      "state": "aberto",
+      "last_check": "2026-04-12"
+    },
+    {
+      "id": "siqrh-formacao-empresarial-conjunto",
+      "file": "instrumentos/siqrh-formacao-empresarial-conjunto.html",
+      "source": "portugal-2030",
+      "state": "previsto",
+      "last_check": "2026-04-12"
+    },
+    {
+      "id": "formacao-executivos-compete",
+      "file": "instrumentos/formacao-executivos-compete.html",
+      "source": "portugal-2030",
+      "state": "previsto",
+      "last_check": "2026-04-12",
+      "aviso_codigo": "FA0065/2025",
+      "regulation_local": "regulamentos/portugal-2030/formacao-executivos-compete.txt"
+    },
+    {
+      "id": "rede-fornecedores-inovadores",
+      "file": "instrumentos/rede-fornecedores-inovadores.html",
+      "source": "portugal-2030",
+      "state": "aberto",
+      "last_check": "2026-04-13"
+    }
   ]
 }
