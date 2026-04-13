@@ -37,10 +37,39 @@ fi
 
 Percorrer `registry/queue.json > queue`. Encontrar items onde:
 - `regulation_local` e `null`
+- `status` NAO e `"plano_anual"` (ja identificados como plano, ignorar)
 - `pdf_url` ou `regulation_url` existem
 
 Processar no maximo **5 downloads por execucao**.
 Priorizar por `priority_score` descendente.
+
+---
+
+## PASSO 1.5: Verificar se e Plano Anual (APENAS itens PT2030)
+
+Para items com `source_id` que contenha "2030" ou "pessoas" E que tenham `regulation_url`:
+
+Fazer WebFetch ao `regulation_url` ANTES de tentar descarregar qualquer PDF.
+
+Verificar se a pagina contem QUALQUER um destes textos (case-insensitive):
+- "previsao aproximada"
+- "previsão aproximada"
+- "ficha que aqui pode consultar e apenas uma previsao"
+- "aviso que ira ser lancado"
+- "aviso que irá ser lançado"
+- "plano anual de avisos"
+
+**Se qualquer um destes textos for encontrado:**
+```json
+{
+  "status": "plano_anual",
+  "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
+}
+```
+Atualizar a queue com este estado. Nao descarregar. Continuar para o proximo item.
+**Nao contar como falha nem como sucesso.** Nao incluir no total de downloads.
+
+**Se nenhum destes textos for encontrado:** continuar para Passo 2 normalmente.
 
 ---
 

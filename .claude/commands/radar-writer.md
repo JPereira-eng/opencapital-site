@@ -75,6 +75,8 @@ Ler `registry/queue.json`. Ordenar por `priority_score` descendente.
 
 **Priorizar items com `status: "ready"`** (regulamento ja descarregado) sobre `status: "pending"`.
 
+**IGNORAR completamente** items com `status: "plano_anual"` - sao previsoes do plano anual, nao avisos publicados. Nao contar, nao processar, nao remover da queue.
+
 Selecionar os primeiros 5 (ou menos) para este batch.
 
 **REGRA CRITICA - O QUE E "PUBLICADO":**

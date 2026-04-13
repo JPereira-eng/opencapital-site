@@ -203,7 +203,7 @@ Para cada instrumento novo, adicionar a `registry/queue.json > queue` (ou `queue
   "regulation_local": null,
   "priority_score": 0,
   "status": "pending",
-  "notes": "Dados basicos: codigo, programa, dotacao, beneficiario, prazo"
+  "notes": "Dados basicos: codigo, programa, dotacao, beneficiario, prazo. SEM_PDF se acf.pdf=null (possivel plano anual - downloader verificara)"
 }
 ```
 
