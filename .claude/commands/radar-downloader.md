@@ -236,7 +236,7 @@ git -C "$REPO" push origin main
 
 ## REGRAS DE SEGURANCA
 
-1. **Nunca exceder 10 downloads por execucao.**
+1. **Nunca exceder 5 downloads por execucao.**
 2. **Nunca modificar artigos HTML ou shards.**
 3. **Sempre guardar em UTF-8.**
 4. **Se curl falhar:** tentar WebFetch como alternativa.
@@ -248,7 +248,7 @@ git -C "$REPO" push origin main
 
 ```
 1. Ler queue.json
-2. Encontrar items sem regulation_local (max 10)
+2. Encontrar items sem regulation_local (max 5)
 3. Para cada: tentar PDF -> WebFetch -> WebSearch
 4. Atualizar queue (status: ready/pending)
 5. git commit + push
