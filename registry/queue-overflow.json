@@ -213,9 +213,9 @@
       "budget": "15 000 000 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/infraestruturas-e-equipamentos-tecnologicos-step/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/infraestruturas-e-equipamentos-tecnologicos-step.txt",
       "priority_score": 145,
-      "status": "pending",
+      "status": "ready",
       "notes": "FA0238/2025. LISBOA2030. FEDER."
     },
     {
@@ -232,7 +232,8 @@
       "regulation_local": null,
       "priority_score": 145,
       "status": "pending",
-      "notes": "FA0225/2025. PESSOAS2030. FSE+."
+      "notes": "FA0225/2025. PESSOAS2030. FSE+.",
+      "download_error": "Nao encontrado na API WP - slug nao existe - tentativa 2026-04-13"
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-iibt-do-pinhal-interior",
@@ -245,9 +246,9 @@
       "budget": "4 000 000 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-de-base-territorial-iibt-do-pinhal-interior/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/sistema-de-incentivos-de-base-territorial-iibt-do-pinhal-interior.txt",
       "priority_score": 125,
-      "status": "pending",
+      "status": "ready",
       "notes": "FA0248/2025. CENTRO2030. FEDER."
     },
     {
@@ -264,7 +265,8 @@
       "regulation_local": null,
       "priority_score": 125,
       "status": "pending",
-      "notes": "FA0251/2025. CENTRO2030. FEDER."
+      "notes": "FA0251/2025. CENTRO2030. FEDER.",
+      "download_error": "Nao encontrado na API WP - slug nao existe - tentativa 2026-04-13"
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-it-cim-douro",
@@ -277,9 +279,9 @@
       "budget": "1 920 288 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-de-base-territorial-it-cim-douro/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/sistema-de-incentivos-de-base-territorial-it-cim-douro.txt",
       "priority_score": 125,
-      "status": "pending",
+      "status": "ready",
       "notes": "FA0881/2024. NORTE2030. FEDER."
     },
     {
@@ -293,9 +295,9 @@
       "budget": "1 831 886 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-de-base-territorial-it-cim-tamega-e-sousa/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/sistema-de-incentivos-de-base-territorial-it-cim-tamega-e-sousa.txt",
       "priority_score": 125,
-      "status": "pending",
+      "status": "ready",
       "notes": "FA0884/2024. NORTE2030. FEDER."
     },
     {
@@ -325,9 +327,9 @@
       "budget": "1 231 724 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-de-base-territorial-it-amp/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/sistema-de-incentivos-de-base-territorial-it-amp.txt",
       "priority_score": 125,
-      "status": "pending",
+      "status": "ready",
       "notes": "FA0874/2024. NORTE2030. FEDER."
     },
     {
