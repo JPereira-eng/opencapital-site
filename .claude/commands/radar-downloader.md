@@ -131,10 +131,19 @@ Se o item tem `wordpress_id` (ID do post) E o regulamento ainda nao foi obtido:
    - Se o texto tiver < 1500 palavras E nao contiver "despesas elegiveis" E nao contiver "criterios de selecao": provavelmente e um resumo. Marcar `status: "plano_anual"`, `download_error: "Resumo do aviso - sem regulamento completo"`. Parar.
    - Se passou ambos os testes: regulamento valido. Continuar para Passo 3 (ready).
 
-### 2c. Se tudo falhou:
+### 2c. WebSearch + WebFetch do melhor resultado:
 
-Usar WebSearch: `"[aviso_codigo] [nome] financiamento"` + `"[nome] aviso candidaturas elegibilidade"`
-Guardar resultado combinado em `regulamentos/[source_id]/[id].txt`.
+Usar WebSearch com queries combinadas:
+1. `"[aviso_codigo]" site:portugal2030.pt` (encontra noticias/anuncios oficiais)
+2. `"[aviso_codigo] [nome] candidaturas"`
+
+Para cada resultado do WebSearch, verificar se existe um URL de portugal2030.pt no formato `portugal2030.pt/YYYY/MM/DD/[slug]/` (post de noticia) ou `[portal-regional]/aviso-2024/[slug]/`.
+
+**Se encontrar um URL promissor:** fazer WebFetch a esse URL antes de guardar. O conteudo de um post de noticia do portal central e tipicamente 500-1500 palavras e muito mais rico que o resumo do WebSearch.
+
+Guardar o melhor conteudo obtido (WebFetch se disponivel, WebSearch caso contrario) em `regulamentos/[source_id]/[id].txt`.
+
+Indicar na coluna "Metodo" da tabela de resultados: `WebSearch` se so WebSearch, `WebSearch+WebFetch` se conseguiu WebFetch adicional.
 
 ---
 
