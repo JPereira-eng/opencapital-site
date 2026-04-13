@@ -1253,9 +1253,9 @@
       "deadline": "2026-04-20",
       "budget": null,
       "regulation_url": "https://sustentavel2030.gov.pt/wp-content/uploads/2026/03/Aviso-PACS-2026-4.pdf",
-      "regulation_local": null,
+      "regulation_local": "regulamentos/sustentavel-2030/sustentavel-2030-pacs-2026-04.txt",
       "priority_score": 105,
-      "status": "pending",
+      "status": "ready",
       "notes": "PACS-2026-04. Sustentavel 2030 - Fundo Coesao. Convite. Infraestruturas de Portugal, S.A. Prazo urgente: 20/04/2026."
     },
     {
@@ -1268,9 +1268,9 @@
       "deadline": "2026-04-20",
       "budget": null,
       "regulation_url": "https://sustentavel2030.gov.pt/wp-content/uploads/2026/03/Aviso-PACS-2026-3-1.pdf",
-      "regulation_local": null,
+      "regulation_local": "regulamentos/sustentavel-2030/sustentavel-2030-pacs-2026-03.txt",
       "priority_score": 105,
-      "status": "pending",
+      "status": "ready",
       "notes": "PACS-2026-03. Sustentavel 2030 - Fundo Coesao. Convite. Infraestruturas de Portugal, S.A. Prazo urgente: 20/04/2026."
     },
     {
@@ -1283,9 +1283,9 @@
       "deadline": "2026-04-20",
       "budget": null,
       "regulation_url": "https://sustentavel2030.gov.pt/wp-content/uploads/2025/12/Aviso-PACS-2025-16.pdf",
-      "regulation_local": null,
+      "regulation_local": "regulamentos/sustentavel-2030/sustentavel-2030-pacs-2025-16.txt",
       "priority_score": 105,
-      "status": "pending",
+      "status": "ready",
       "notes": "PACS-2025-16. Sustentavel 2030 - Fundo Coesao. Convite. Secretaria Regional do Turismo, Mobilidade e Infraestruturas. Prazo urgente: 20/04/2026."
     },
     {
@@ -1315,8 +1315,9 @@
       "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-de-base-territorial-iti-iibt-ovt-alentejo/",
       "regulation_local": null,
       "priority_score": 115,
-      "status": "pending",
-      "notes": "FA0211/2025. SIBT - projetos enquadrados na ITI IIBT OVT. 1M EUR FEDER. ALENTEJO2030. Prazo urgente: 30/04/2026."
+      "status": "plano_anual",
+      "notes": "FA0211/2025. SIBT - projetos enquadrados na ITI IIBT OVT. 1M EUR FEDER. ALENTEJO2030. Prazo urgente: 30/04/2026.",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "sibt-cim-cavado-norte",
@@ -1328,9 +1329,9 @@
       "deadline": "2026-04-30",
       "budget": "830.893 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-de-base-territorial-cim-cavado/",
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/sibt-cim-cavado-norte.txt",
       "priority_score": 115,
-      "status": "pending",
+      "status": "ready",
       "notes": "FA0880/2024. SIBT - CIM Cavado. 830.893 EUR FEDER. NORTE2030. Prazo urgente: 30/04/2026."
     },
     {
@@ -1373,9 +1374,9 @@
       "deadline": "2026-04-30",
       "budget": "1.168.676 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-de-base-territorial-cim-alto-minho/",
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/sibt-cim-alto-minho-norte.txt",
       "priority_score": 125,
-      "status": "pending",
+      "status": "ready",
       "notes": "FA0876/2024. SIBT - CIM Alto Minho. 1.168.676 EUR FEDER. NORTE2030. Prazo urgente: 30/04/2026."
     },
     {
@@ -1390,8 +1391,9 @@
       "regulation_url": "https://pessoas2030.gov.pt/aviso-2024/estruturas-locais-de-apoio-ao-emprego/",
       "regulation_local": null,
       "priority_score": 135,
-      "status": "pending",
-      "notes": "FA0436/2023. Estruturas Locais de Apoio ao Emprego. 5.1M EUR FSE+. PESSOAS2030. Prazo urgente: 30/04/2026."
+      "status": "plano_anual",
+      "notes": "FA0436/2023. Estruturas Locais de Apoio ao Emprego. 5.1M EUR FSE+. PESSOAS2030. Prazo urgente: 30/04/2026.",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "estagios-profissionais-3-aviso-acores",
@@ -1405,8 +1407,9 @@
       "regulation_url": "https://acores.portugal2030.pt/aviso-2024/estagios-profissionais-3o-aviso/",
       "regulation_local": null,
       "priority_score": 135,
-      "status": "pending",
-      "notes": "FA0200/2025. Estagios Profissionais 3 Aviso. 15M EUR FSE+. ACORES2030. Prazo urgente: 30/04/2026."
+      "status": "plano_anual",
+      "notes": "FA0200/2025. Estagios Profissionais 3 Aviso. 15M EUR FSE+. ACORES2030. Prazo urgente: 30/04/2026.",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "sice-qualificacao-pme-operacoes-individuais",
