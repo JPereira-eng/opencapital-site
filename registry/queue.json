@@ -2,21 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "acoes-mercado-social-emprego-pessoas2030",
-      "name": "Acoes do Mercado Social de Emprego (Pessoas 2030)",
-      "source_id": "pessoas-2030",
-      "shard": "pt2030-pessoas",
-      "aviso_codigo": "FA0770/2024",
-      "detected_date": "2026-04-12",
-      "deadline": "2026-04-30",
-      "budget": "31.450.000 EUR",
-      "regulation_url": "https://pessoas2030.gov.pt/avisos/",
-      "regulation_local": "regulamentos/pessoas-2030/acoes-mercado-social-emprego-pessoas2030.txt",
-      "priority_score": 135,
-      "status": "ready",
-      "notes": "FA0770/2024. Acoes do Mercado Social de Emprego. 31.45M EUR FSE+. PESSOAS2030. Prazo urgente: 30/04/2026."
-    },
-    {
       "id": "insercao-socioprofissional-cigana-pessoas2030",
       "name": "Insercao Socioprofissional da Comunidade Cigana (Pessoas 2030)",
       "source_id": "pessoas-2030",
