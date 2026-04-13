@@ -2,22 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "eit-food-fan-2026",
-      "name": "EIT Food Accelerator Network (FAN) 2026",
-      "source_id": "bgi-accelerator",
-      "shard": "eu-other",
-      "aviso_codigo": null,
-      "detected_date": "2026-04-13",
-      "deadline": "2026-04-14",
-      "budget": "50.000 EUR",
-      "regulation_url": "https://www.eitfood.eu/open-calls/eit-food-accelerator-network-fan-call-for-startups-2026",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 105,
-      "status": "pending",
-      "notes": "EIT Food FAN 2026. Ate 50.000 EUR por startup + 3.000 EUR travel grant. Elegibilidade: empresa UE registada em/apos 2016, TRL 4-8, pre-Series A, receitas < 1M EUR, ate 20 pessoas. Foco: agrifood e foodtech. BGI e hub parceiro. PRAZO AMANHA: 14/04/2026 12h00 CET."
-    },
-    {
       "id": "parcerias-inovacao-social-algarve",
       "name": "Algarve 2030 - Parcerias para a Inovacao Social (FA0290/2025)",
       "source_id": "algarve-2030",
