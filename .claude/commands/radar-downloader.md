@@ -126,10 +126,23 @@ Se o item tem `wordpress_id` (ID do post) E o regulamento ainda nao foi obtido:
    pdftotext -enc UTF-8 "$REPO/regulamentos/[source_id]/[id].pdf" "$REPO/regulamentos/[source_id]/[id].txt"
    ```
 
-5. **Verificar conteudo do PDF:**
-   - Se contiver "Plano Anual de Avisos" ou "PAA2026" ou "PAA202": marcar `status: "plano_anual"`. Parar.
-   - Se o texto tiver < 1500 palavras E nao contiver "despesas elegiveis" E nao contiver "criterios de selecao": provavelmente e um resumo. Marcar `status: "plano_anual"`, `download_error: "Resumo do aviso - sem regulamento completo"`. Parar.
-   - Se passou ambos os testes: regulamento valido. Continuar para Passo 3 (ready).
+5. **VERIFICACAO OBRIGATORIA DO CONTEUDO DO PDF — NAO SALTAR ESTE PASSO:**
+
+   Ler o ficheiro .txt extraido. Verificar na seguinte ordem:
+
+   **TESTE A - Texto de plano anual (BLOQUEANTE):**
+   Se o texto contiver QUALQUER um destes:
+   - "Plano Anual de Avisos"
+   - "Resumo de Aviso do Plano"
+   - "PAA2026" ou "PAA202"
+   - "Aviso a publicar em:"
+   → Apagar o ficheiro .txt e o .pdf. Marcar `status: "plano_anual"`, `regulation_local: null`. NAO continuar para Passo 3. PARAR este item.
+
+   **TESTE B - Conteudo insuficiente (BLOQUEANTE):**
+   Se o texto tiver < 800 palavras E nao contiver "despesas elegiveis" E nao contiver "criterios de selecao":
+   → Apagar o ficheiro .txt e o .pdf. Marcar `status: "plano_anual"`, `download_error: "Resumo sem regulamento completo"`, `regulation_local: null`. NAO continuar para Passo 3. PARAR este item.
+
+   **Se passou ambos os testes:** regulamento valido. Continuar para Passo 3 (ready).
 
 ### 2b-horizon: API JSON para items Horizonte Europa / SEDIA (source_id: eu-funding-tenders)
 
