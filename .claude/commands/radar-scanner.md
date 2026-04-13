@@ -101,6 +101,16 @@ De cada aviso JSON, extrair:
 - `acf.natureza` - Concurso/Convite
 - `acf.pdf` - ID do media WordPress
 
+**REGRA CRITICA - FILTRO acf.pdf (APENAS fontes PT2030 com access_method: "api"):**
+
+Para cada aviso obtido da API, verificar o campo `acf.pdf`:
+- Se `acf.pdf` e null, 0, false ou string vazia: **SKIP TOTAL** - nao adicionar a queue, nao adicionar ao lookup.json. Estes items sao quase sempre plano anual ou resumos sem regulamento. Serao reavaliados em futuras runs quando o PDF for publicado.
+- Se `acf.pdf` e um ID numerico valido (ex: 252679): continuar normalmente.
+
+Esta regra aplica-se APENAS a fontes com `access_method: "api"`. Para fontes webfetch/chrome/websearch nao existe campo `acf.pdf`, ignorar esta regra.
+
+Registar no relatorio: "N items sem PDF ignorados (possivel plano anual)".
+
 **REGRA CRITICA - URL DO AVISO:**
 O campo `regulation_url` de cada item DEVE ser o campo `link` do JSON da API (ex: `https://portugal2030.pt/aviso-2024/nome-do-aviso/`). NUNCA usar URLs genericos como `https://portugal2030.pt/avisos/` ou `https://pessoas2030.gov.pt/avisos/`. Se `link` nao estiver disponivel, construir a partir do slug do aviso.
 

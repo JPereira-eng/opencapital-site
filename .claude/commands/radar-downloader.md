@@ -40,7 +40,7 @@ Percorrer `registry/queue.json > queue`. Encontrar items onde:
 - `status` NAO e `"plano_anual"` (ja identificados como plano, ignorar)
 - `pdf_url` ou `regulation_url` existem
 
-Processar no maximo **5 downloads por execucao**.
+Processar no maximo **10 downloads por execucao**.
 Priorizar por `priority_score` descendente.
 
 ---
