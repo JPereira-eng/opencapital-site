@@ -77,6 +77,16 @@ Ler `registry/queue.json`. Ordenar por `priority_score` descendente.
 
 Selecionar os primeiros 5 (ou menos) para este batch.
 
+**REGRA CRITICA - O QUE E "PUBLICADO":**
+Um item esta publicado SE E SOMENTE SE existir o ficheiro `instrumentos/[id].html` no repositorio.
+- Estar no `lookup.json` NAO significa publicado - o scanner adiciona ao lookup ao descobrir
+- Estar num shard NAO e suficiente por si so - o ficheiro HTML tem de existir
+- NUNCA remover um item da queue sem ter criado o ficheiro HTML correspondente
+- NUNCA apagar a queue com base em "ja esta no lookup"
+
+Se encontrares items na queue que ja tem o ficheiro HTML em `instrumentos/`: remover da queue (e apenas nesses casos).
+Se encontrares items na queue que NAO tem ficheiro HTML: sao trabalho por fazer, manter na queue e escrever.
+
 ---
 
 ## PASSO 2: Ler template obrigatorio
