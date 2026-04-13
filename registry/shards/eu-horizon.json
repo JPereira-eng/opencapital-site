@@ -1,15 +1,87 @@
 {
   "_shard": "eu-horizon",
-  "_sources": ["hadea", "horizon-cluster6", "horizon-widera", "erc", "horizon-cluster4", "horizon-cluster5", "horizon-cluster1", "horizon-cluster2", "horizon-cluster3", "horizon-missions"],
+  "_sources": [
+    "hadea",
+    "horizon-cluster6",
+    "horizon-widera",
+    "erc",
+    "horizon-cluster4",
+    "horizon-cluster5",
+    "horizon-cluster1",
+    "horizon-cluster2",
+    "horizon-cluster3",
+    "horizon-missions"
+  ],
   "items": [
-    { "id": "horizon-cl4-2026-data-ai", "file": "instrumentos/horizon-cl4-2026-data-ai.html", "source": "hadea", "state": "aberto", "last_check": "2026-04-10" },
-    { "id": "horizon-hlth-2026-healthcare", "file": "instrumentos/horizon-hlth-2026-healthcare.html", "source": "hadea", "state": "aberto", "last_check": "2026-04-10" },
-    { "id": "horizon-cl6-2026-02", "file": "instrumentos/horizon-cl6-2026-02.html", "source": "horizon-cluster6", "state": "aberto", "last_check": "2026-04-11" },
-    { "id": "horizon-widera-twinning-2026", "file": "instrumentos/horizon-widera-twinning-2026.html", "source": "horizon-widera", "state": "fechado", "last_check": "2026-04-11" },
-    { "id": "erc-advanced-grant-2026", "file": "instrumentos/erc-advanced-grant-2026.html", "source": "erc", "state": "previsto", "last_check": "2026-04-11" },
-    { "id": "horizon-cl4-2026-espaco", "file": "instrumentos/horizon-cl4-2026-espaco.html", "source": "hadea", "state": "aberto", "last_check": "2026-04-11" },
-    { "id": "horizon-cl4-2026-01-materiais-producao", "file": "instrumentos/horizon-cl4-2026-01-materiais-producao.html", "source": "hadea", "state": "aberto", "last_check": "2026-04-12" },
-    { "id": "horizon-raise-2026-01-ia-ciencia", "file": "instrumentos/horizon-raise-2026-01-ia-ciencia.html", "source": "hadea", "state": "aberto", "last_check": "2026-04-12" },
-    { "id": "horizon-cl6-2026-01-zeropollution", "file": "instrumentos/horizon-cl6-2026-01-zeropollution.html", "source": "eu-funding-tenders", "state": "aberto", "last_check": "2026-04-13" }
+    {
+      "id": "horizon-cl4-2026-data-ai",
+      "file": "instrumentos/horizon-cl4-2026-data-ai.html",
+      "source": "hadea",
+      "state": "aberto",
+      "last_check": "2026-04-10"
+    },
+    {
+      "id": "horizon-hlth-2026-healthcare",
+      "file": "instrumentos/horizon-hlth-2026-healthcare.html",
+      "source": "hadea",
+      "state": "aberto",
+      "last_check": "2026-04-10"
+    },
+    {
+      "id": "horizon-cl6-2026-02",
+      "file": "instrumentos/horizon-cl6-2026-02.html",
+      "source": "horizon-cluster6",
+      "state": "aberto",
+      "last_check": "2026-04-11"
+    },
+    {
+      "id": "horizon-widera-twinning-2026",
+      "file": "instrumentos/horizon-widera-twinning-2026.html",
+      "source": "horizon-widera",
+      "state": "fechado",
+      "last_check": "2026-04-11"
+    },
+    {
+      "id": "erc-advanced-grant-2026",
+      "file": "instrumentos/erc-advanced-grant-2026.html",
+      "source": "erc",
+      "state": "previsto",
+      "last_check": "2026-04-11"
+    },
+    {
+      "id": "horizon-cl4-2026-espaco",
+      "file": "instrumentos/horizon-cl4-2026-espaco.html",
+      "source": "hadea",
+      "state": "aberto",
+      "last_check": "2026-04-11"
+    },
+    {
+      "id": "horizon-cl4-2026-01-materiais-producao",
+      "file": "instrumentos/horizon-cl4-2026-01-materiais-producao.html",
+      "source": "hadea",
+      "state": "aberto",
+      "last_check": "2026-04-12"
+    },
+    {
+      "id": "horizon-raise-2026-01-ia-ciencia",
+      "file": "instrumentos/horizon-raise-2026-01-ia-ciencia.html",
+      "source": "hadea",
+      "state": "aberto",
+      "last_check": "2026-04-12"
+    },
+    {
+      "id": "horizon-cl6-2026-01-zeropollution",
+      "file": "instrumentos/horizon-cl6-2026-01-zeropollution.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-13"
+    },
+    {
+      "id": "horizon-cid-2026-01-clean-industrial-deal",
+      "file": "instrumentos/horizon-cid-2026-01-clean-industrial-deal.html",
+      "source": "hadea",
+      "state": "aberto",
+      "last_check": "2026-04-13"
+    }
   ]
 }
