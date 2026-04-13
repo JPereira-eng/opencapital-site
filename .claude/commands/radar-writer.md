@@ -54,16 +54,17 @@ Se o push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" pu
 
 ## MODO SPRINT
 
-O writer opera em **batches de 5 artigos**. Cada batch:
+O writer opera em **1 batch de 5 artigos por sessao**. Cada batch:
 1. Seleciona 5 items da queue (ou menos se queue menor)
 2. Cria os artigos, **commit apos cada artigo individual**
 3. Push apos completar o batch (ou apos cada artigo se rate limit proximo)
-4. Se queue ainda tem items E nao atingiu 20 artigos na sessao: inicia novo batch
+4. Termina. Nao inicia novo batch mesmo que a queue tenha mais items.
 
 **Limites por sessao:**
 - Max 5 artigos por batch
-- Max 4 batches por sessao = **20 artigos max**
+- **1 batch por sessao = 5 artigos max**
 - Se queue < 5: criar todos os que houver
+- Se queue vazia: terminar imediatamente sem criar artigos
 
 **REGRA DE SEGURANCA: Commit por artigo.** Cada artigo criado e imediatamente commitado (sem push). O push acontece ao final do batch. Se o agente for bloqueado por rate limit entre artigos, o trabalho ja esta guardado localmente e sera enviado na proxima sessao (Passo 0.5).
 
@@ -197,13 +198,13 @@ git -C "$REPO" push origin main
 
 Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push origin main`
 
-**Apos push bem-sucedido:** Se queue ainda tem items E total < 20, iniciar novo batch (voltar ao Passo 1).
+**Apos push bem-sucedido:** Terminar sessao. O proximo writer agendado tratara dos restantes.
 
 ---
 
 ## REGRAS DE SEGURANCA
 
-1. **Max 5 artigos por batch, max 20 por sessao.**
+1. **Max 5 artigos por sessao (1 batch). Terminar apos o push, nunca iniciar segundo batch.**
 2. **Nunca criar artigo sem ler instrumento.md primeiro.**
 3. **Nunca editar solucoes.html.**
 4. **Nunca duplicar.** Verificar lookup antes de publicar.
@@ -215,13 +216,14 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
 ## RESUMO
 
 ```
-BATCH (repete ate 4x ou queue vazia):
+BATCH UNICO (1 vez por sessao):
   1. Ler queue.json + instrumento.md
-  2. Selecionar 5 items (ready primeiro, depois pending)
-  3. Para cada: ler regulamento, criar HTML, atualizar catalogo
-  4. Atualizar queue + shard + lookup + index
-  5. git commit + push
-  6. Se queue > 0 e total < 20: novo batch
+  2. Se queue vazia: terminar imediatamente
+  3. Selecionar ate 5 items (ready primeiro, depois pending)
+  4. Para cada: ler regulamento, criar HTML, atualizar catalogo
+  5. Atualizar queue + shard + lookup + index
+  6. git commit + push
+  7. Terminar. Nao iniciar segundo batch.
 
 Reportar: "Writer: [N] artigos criados. Fila restante: [N]."
 ```
