@@ -2,22 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "prr-habitacao-c02-i01-2026",
-      "name": "PRR - Programa de Apoio ao Acesso a Habitacao (29/C02-i01/2026)",
-      "source_id": "prr",
-      "shard": "pt-other",
-      "aviso_codigo": "29/C02-i01/2026",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-04-30",
-      "budget": null,
-      "regulation_url": "https://recuperarportugal.gov.pt/candidatura/29-programa-de-apoio-ao-acesso-a-habitacao-n-o-29-c02-i01-2026/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 115,
-      "status": "pending",
-      "notes": "PRR Habitacao. Aviso 29/C02-i01/2026. Prazo urgente: 30/04/2026. Publicado 13/04/2026."
-    },
-    {
       "id": "prr-flexibilidade-rede-2026",
       "name": "PRR - Flexibilidade de Rede e Armazenamento (01/C21-i18/2026)",
       "source_id": "prr",
