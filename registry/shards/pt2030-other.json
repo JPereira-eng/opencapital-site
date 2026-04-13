@@ -1,5 +1,22 @@
 {
   "_shard": "pt2030-other",
-  "_sources": ["alentejo-2030", "algarve-2030", "acores-2030", "madeira-2030", "pessoas-2030", "sustentavel-2030", "mar-2030", "pat-2030"],
-  "items": []
+  "_sources": [
+    "alentejo-2030",
+    "algarve-2030",
+    "acores-2030",
+    "madeira-2030",
+    "pessoas-2030",
+    "sustentavel-2030",
+    "mar-2030",
+    "pat-2030"
+  ],
+  "items": [
+    {
+      "id": "sustentavel-2030-pacs-2026-04",
+      "file": "instrumentos/sustentavel-2030-pacs-2026-04.html",
+      "source": "sustentavel-2030",
+      "state": "aberto",
+      "last_check": "2026-04-13"
+    }
+  ]
 }
