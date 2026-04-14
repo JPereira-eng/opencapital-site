@@ -502,13 +502,10 @@
           <option value="all">Estado</option>
           <option value="aberto">Aberto</option>
           <option value="fechado">Fechado</option>
-          <option value="previsto">Previsto</option>
         </select>
         <select class="filter-select" id="filterFonte" onchange="applyFilters()">
           <option value="all">Fonte</option>
           <option value="pt2030">Portugal 2030</option>
-          <option value="compete">COMPETE 2030</option>
-          <option value="norte-2030">Norte 2030</option>
           <option value="ue">União Europeia</option>
           <option value="ani">ANI</option>
           <option value="iapmei">IAPMEI</option>
@@ -523,7 +520,7 @@
         </select>
         <select class="filter-select" id="filterBeneficiario" onchange="applyFilters()">
           <option value="all">Beneficiário</option>
-          <option value="empresa">Empresas</option>
+          <option value="empresa">Empresas Privadas</option>
           <option value="entidade-publica">Entidades Públicas</option>
           <option value="associacao">Associações</option>
           <option value="ensino-investigacao">Ensino e Investigação</option>
@@ -755,7 +752,7 @@
       filteredData = catalogData.filter(function(item) {
         var catMatch = activeCategory === 'all' || item.category === activeCategory;
         var estadoMatch = fEstado === 'all' || item.estado === fEstado;
-        var fonteMatch = fFonte === 'all' || item.fonte === fFonte;
+        var fonteMatch = fFonte === 'all' || item.fonte === fFonte || (fFonte === 'pt2030' && ['compete','norte-2030'].indexOf(item.fonte) !== -1);
 
         var beneficiarioMatch = fBeneficiario === 'all';
         if (!beneficiarioMatch && item.beneficiario) {
