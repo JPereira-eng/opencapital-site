@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programa O Turismo Acolhe 2026: Open Capital</title>
-  <meta name="description" content="Apoio de emergencia para empresas de turismo que acolhem populacoes deslocadas pela tempestade Kristin. Até 60 EUR por noite. Prazo até 30 junho 2026.">
+  <title>IT CIM Douro - Incentivos de Base Territorial Norte 2030: Open Capital</title>
+  <meta name="description" content="Sistema de Incentivos de Base Territorial IT CIM Douro. Norte 2030, FEDER. 1,92M EUR, 60% cofinanciamento. Micro e pequenas empresas do territorio do Douro.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
     *{margin:0;padding:0;box-sizing:border-box;}
     body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
 
-    /* NAVBAR */
     .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
     .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
     .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
@@ -45,7 +44,6 @@
     .nav-mobile-menu a:hover{color:var(--white);}
     .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
 
-    /* ARTICLE HERO */
     .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
     .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
     .article-hero-inner{position:relative;z-index:1;max-width:860px;}
@@ -64,14 +62,11 @@
     .meta-value.status-open{color:#2E7D52;font-weight:600;}
     .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
 
-    /* BACK BAR */
     .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
     .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
     .back-link:hover{color:var(--navy);}
 
-    /* ARTICLE LAYOUT */
     .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
-    .article-body{}
     .article-section{margin-bottom:56px;}
     .article-section:last-child{margin-bottom:0;}
     .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
@@ -89,15 +84,7 @@
     .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
     .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
     .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
-    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
-    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
-    .art-table thead{border-bottom:2px solid var(--navy);}
-    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
-    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
-    .art-table tr:last-child td{border-bottom:none;}
-    .art-table td strong{font-weight:600;color:var(--navy);}
 
-    /* SIDEBAR */
     .article-sidebar{position:sticky;top:100px;}
     .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
     .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
@@ -114,6 +101,7 @@
     .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
     .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
     .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-planned{color:#7A5C1E;font-weight:600;}
     .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
     .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
     .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
@@ -127,11 +115,9 @@
     .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
     .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
 
-    /* SCROLL REVEAL */
     .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
     .reveal.visible{opacity:1;transform:translateY(0);}
 
-    /* FOOTER */
     .footer{background:var(--navy-deep);padding:56px 80px 34px;}
     .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
     .f-logo-row{display:flex;align-items:center;}
@@ -149,9 +135,8 @@
     .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
     .f-legal a:hover{color:rgba(255,255,255,0.45);}
 
-    /* RESPONSIVE */
-    @média(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
-    @média(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
   </style>
 </head>
 <body>
@@ -161,7 +146,7 @@
     <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
   </a>
   <ul class="nav-links">
-    <li><a href="../soluções.html" class="active">Biblioteca</a></li>
+    <li><a href="../solucoes.html" class="active">Biblioteca</a></li>
     <li><a href="../conhecimento.html">Conhecimento</a></li>
     <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
     <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
@@ -178,7 +163,7 @@
   <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-mobile-menu" id="mobileMenu">
-  <a href="../soluções.html">Biblioteca</a>
+  <a href="../solucoes.html">Biblioteca</a>
   <a href="../conhecimento.html">Conhecimento</a>
   <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
   <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
@@ -191,111 +176,108 @@
 <section class="article-hero">
   <div class="article-hero-inner">
     <nav class="breadcrumb">
-      <a href="../index.html">Início</a>
+      <a href="../index.html">Inicio</a>
       <span class="breadcrumb-sep">/</span>
-      <a href="../soluções.html">Biblioteca</a>
+      <a href="../solucoes.html">Biblioteca</a>
       <span class="breadcrumb-sep">/</span>
-      <span class="breadcrumb-current">O Turismo Acolhe</span>
+      <span class="breadcrumb-current">IT CIM Douro</span>
     </nav>
-    <p class="hero-cat">Apoio de Emergencia</p>
-    <h1 class="hero-title">Programa "O Turismo Acolhe"</h1>
-    <p class="hero-tagline">Reembolso até 60 EUR por noite para empresas de turismo que acolhem populacoes deslocadas por calamidades naturais.</p>
+    <p class="hero-cat">Financiamento Publico</p>
+    <h1 class="hero-title">IT CIM Douro - Incentivos de Base Territorial</h1>
+    <p class="hero-tagline">Apoio Norte 2030 ao investimento de pequena dimensao para modernizacao e criacao de emprego nas economias locais do territorio do Douro.</p>
     <div class="hero-meta">
       <div class="meta-item">
-        <span class="meta-label">Apoio Máximo</span>
-        <span class="meta-value">60 EUR/noite</span>
+        <span class="meta-label">Dotacao</span>
+        <span class="meta-value">1,92 milhoes EUR</span>
       </div>
       <div class="meta-sep"></div>
       <div class="meta-item">
-        <span class="meta-label">Elegibilidade</span>
-        <span class="meta-value">Empreendimentos turisticos e AL</span>
+        <span class="meta-label">Cofinanciamento</span>
+        <span class="meta-value">60%</span>
       </div>
       <div class="meta-sep"></div>
       <div class="meta-item">
-        <span class="meta-label">Prazo</span>
-        <span class="meta-value">30/06/2026</span>
+        <span class="meta-label">Territorio</span>
+        <span class="meta-value">CIM Douro</span>
       </div>
       <div class="meta-sep"></div>
       <div class="meta-item">
         <span class="meta-label">Estado</span>
-        <span class="meta-value status-open">Aberto até 30/06/2026</span>
+        <span class="meta-value status-open">Aberto</span>
       </div>
     </div>
   </div>
 </section>
 
 <div class="back-bar">
-  <a href="../soluções.html" class="back-link">&larr; Voltar ao catalogo de instrumentos</a>
+  <a href="../solucoes.html" class="back-link">&larr; Voltar ao catalogo de instrumentos</a>
 </div>
 
 <div class="article-layout">
   <article class="article-body">
 
     <div class="article-section reveal">
-      <div class="section-eyebrow">Contexto e Origem</div>
-      <h2 class="section-h2">Um programa de resposta rápida a calamidades</h2>
-      <p class="section-text">A tempestade Kristin afetou severamente varias zonas de Portugal, deslocando familias e criando necessidades imediatas de alojamento temporario. Em resposta, o Turismo de Portugal lancou o programa "O Turismo Acolhe", que mobiliza a rede de empreendimentos turisticos e alojamento local para disponibilizar quartos e unidades a populacoes afetadas e a trabalhadores das entidades públicas envolvidos nos esforcos de reconstrucao.</p>
-      <p class="section-text">O programa comecou a 10 de fevereiro de 2026 e foi posteriormente prorrogado até 30 de junho de 2026, estendendo o período durante o qual as empresas de turismo podem disponibilizar alojamento e receber o reembolso correspondente.</p>
+      <div class="section-eyebrow">O que e</div>
+      <h2 class="section-h2">Investimento territorial no coracão do Douro</h2>
+      <p class="section-text">O aviso FA0881/2024, enquadrado no Programa Regional do Norte 2021-2027, destina-se a apoiar investimentos de pequena dimensao de micro e pequenas empresas no territorio da Comunidade Intermunicipal do Douro (CIM Douro). O instrumento insere-se na familia dos Investimentos Territoriais Integrados (ITI-CIM/AM) do Norte 2030, que reconhecem as especificidades economicas e demograficas das sub-regioes do Norte de Portugal.</p>
+      <p class="section-text">Os objetivos do aviso sao diretos: apoiar o emprego e a modernizacao das economias locais. O Douro, com uma estrutura economica marcada pelo peso do setor agricola e vitivinicola, do comercio e dos servicos de proximidade, necessita de instrumentos adaptados a escala das suas empresas, sobretudo micro e pequenas.</p>
+      <p class="section-text">O aviso tem um elemento condicionante importante: a abertura esta condicionada aos resultados do aviso anterior na mesma familia, o NORTE2030-2024-53. As empresas devem confirmar junto do Norte 2030 se o aviso esta efetivamente aberto antes de iniciar a preparacao da candidatura.</p>
     </div>
 
-    <div class="highlight-box reveal">
-      <div class="highlight-box-title">Prorrogacao confirmada</div>
-      <div class="highlight-box-text">O prazo original do programa era 31 de marco de 2026. A 2 de abril de 2026, o Turismo de Portugal confirmou a extensao até 30 de junho de 2026. Empresas que já participavam devem verificar os termos da prorrogacao junto do organismo.</div>
-    </div>
-
-    <div class="article-section reveal">
-      <div class="section-eyebrow">Estrutura do Apoio</div>
-      <h2 class="section-h2">Como funciona o reembolso</h2>
-      <p class="section-text">O programa reembolsa as empresas de turismo por cada noite de alojamento prestada. O valor do reembolso e o menor de dois calculos alternativos, escolhido pelo Turismo de Portugal:</p>
-      <div class="stats-row reveal" style="grid-template-columns:repeat(2,1fr);">
-        <div class="stat-cell">
-          <div class="stat-num">60<sup>EUR</sup></div>
-          <div class="stat-label">Por noite com pequeno-almoco</div>
-        </div>
-        <div class="stat-cell">
-          <div class="stat-num">10<sup>%</sup></div>
-          <div class="stat-label">Desconto sobre melhor tarifa praticada</div>
-        </div>
+    <div class="stats-row reveal" style="grid-template-columns:repeat(3,1fr);">
+      <div class="stat-cell">
+        <div class="stat-num">1,92<sup>M</sup></div>
+        <div class="stat-label">Dotacao FEDER</div>
       </div>
-      <p class="section-text">Na prática, o reembolso e calculado com base no valor que for inferior: até 60 EUR por noite (com pequeno-almoco incluido) ou uma redução de 10% aplicada a melhor tarifa comercial praticada pela unidade. Esta regra previne situacoes em que o programa reembolse acima do valor de mercado do alojamento.</p>
-      <p class="section-text">O pagamento e processado em até 5 dias uteis apos submissão do pedido de pagamento devidamente preenchido junto do Turismo de Portugal.</p>
+      <div class="stat-cell">
+        <div class="stat-num">60<sup>%</sup></div>
+        <div class="stat-label">Taxa max. cofinanciamento</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">Mar<sup>-Abr</sup></div>
+        <div class="stat-label">Periodo previsto 2026</div>
+      </div>
     </div>
 
-    <div class="art-divider"></div>
+    <div class="highlight-box">
+      <div class="highlight-box-title">Atencao: aviso condicionado</div>
+      <div class="highlight-box-text">A abertura deste aviso fica condicionada aos resultados do aviso NORTE2030-2024-53, da mesma familia de investimentos territoriais. Antes de iniciar qualquer preparacao, as empresas interessadas devem confirmar diretamente junto da Autoridade de Gestao do Norte 2030 ou da CIM Douro se o aviso foi formalmente aberto.</div>
+    </div>
 
     <div class="article-section reveal">
-      <div class="section-eyebrow">Elegibilidade</div>
-      <h2 class="section-h2">Quem pode participar</h2>
-      <p class="section-text">O programa esta aberto a entidades exploradoras de empreendimentos turisticos e alojamento local que reúnam as seguintes condições:</p>
+      <div class="section-eyebrow">Quem pode candidatar-se</div>
+      <h2 class="section-h2">Micro e pequenas empresas do territorio do Douro</h2>
+      <p class="section-text">Sao entidades beneficiarias as micro e pequenas empresas elegíveis nos termos do artigo 72.o do Regulamento Especifico da Area Tematica Inovacao e Transicao Digital (REITD, Portaria n.o 103-A/2023 na sua atual redacao). A elegibilidade geografica e determinada pela localizacao do estabelecimento do beneficiario onde o investimento sera realizado, que deve estar situado no territorio da CIM Douro.</p>
+      <p class="section-text">O aviso exige que o beneficiario tenha, a data da candidatura, pelo menos um posto de trabalho remunerado em Equivalente de Tempo Integral (ETI) registado na Seguranca Social. Para empresas recentemente constituidas, e aceite a apresentacao da inscricao do posto de trabalho na SS acompanhada do respetivo contrato de trabalho.</p>
       <ul class="article-list">
-        <li><strong style="color:var(--navy);font-weight:600;">Localizacao:</strong> o estabelecimento deve situar-se nos municipios abrangidos pela declaracao de calamidade resultante da tempestade Kristin, ou em municipios adjacentes.</li>
-        <li><strong style="color:var(--navy);font-weight:600;">Tipo de alojamento:</strong> qualquer categoria e elegível, incluindo hoteis, apartamentos turisticos, quintas de turismo rural, hostels e unidades de alojamento local (AL).</li>
-        <li><strong style="color:var(--navy);font-weight:600;">Beneficiários finais:</strong> as unidades de alojamento devem ser disponibilizadas a populacoes deslocadas pela tempestade ou a trabalhadores de entidades públicas envolvidos na reconstrucao, de acordo com as indicacoes do Turismo de Portugal.</li>
-        <li><strong style="color:var(--navy);font-weight:600;">Regularidade:</strong> a empresa deve estar em situacao regularizada face as obrigações fiscais e de segurança social.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Estatuto de micro ou pequena empresa:</strong> menos de 50 trabalhadores e volume de negocios ou balanco total inferior a 10 milhoes de euros.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Contabilidade organizada:</strong> obrigatoria por declaracao.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Situacao regularizada:</strong> a nivel fiscal e contributivo perante a AT e a Seguranca Social.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Empresa nao em dificuldade:</strong> nos termos do Regulamento UE n.o 651/2014.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Ausencia de sobreposicao:</strong> sem operacoes submetidas ou aprovadas no SICE - Inovacao Produtiva para o mesmo investimento.</li>
       </ul>
     </div>
 
     <div class="article-section reveal">
-      <div class="section-eyebrow">Beneficiários Finais</div>
-      <h2 class="section-h2">Quem e alojado pelo programa</h2>
-      <p class="section-text">O programa tem dois grupos de beneficiários finais, cuja afetacao ao alojamento e coordenada pelo Turismo de Portugal e pelas entidades públicas envolvidas na resposta a calamidade:</p>
+      <div class="section-eyebrow">Investimentos elegíveis</div>
+      <h2 class="section-h2">Modernizacao e resiliencia das economias locais</h2>
+      <p class="section-text">O aviso suporta investimentos de pequena dimensao que contribuam para o emprego e para a modernizacao e resiliencia das economias locais do Douro. A formulacao e generica, mas o regulamento especifico do REITD define as condicoes aplicaveis em detalhe. Os projetos devem enquadrar-se numa das duas tipologias:</p>
       <ul class="article-list">
-        <li><strong style="color:var(--navy);font-weight:600;">Populacoes deslocadas:</strong> familias e individuos que perderam o acesso temporario as suas habitacoes em resultado direto da tempestade Kristin.</li>
-        <li><strong style="color:var(--navy);font-weight:600;">Trabalhadores em reconstrucao:</strong> funcionarios de entidades públicas (autarquias, proteção civil, serviços técnicos) destacados para as zonas afetadas no ambito dos esforcos de reconstrucao e recuperação.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Criacao de empresa:</strong> investimentos em empresas com menos de 5 anos de atividade, focados no arranque e estabelecimento da atividade.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Expansao ou modernizacao:</strong> para empresas com 5 ou mais anos de atividade, incluindo projetos de aumento da capacidade produtiva, integracao em cadeias de valor e ganhos de escala.</li>
       </ul>
+      <p class="section-text">O prazo de execucao maximo e de 18 meses a contar do inicio da operacao, com possibilidade de prorrogacao de ate 6 meses em situacoes devidamente justificadas e aceites pela Autoridade de Gestao. O efeito de incentivo deve ser demonstrado: a candidatura deve provar que o apoio e determinante para a decisao de investimento.</p>
     </div>
-
-    <div class="art-divider"></div>
 
     <div class="article-section reveal">
       <div class="section-eyebrow">Perspetiva Open Capital</div>
       <h2 class="section-h2">O que recomendamos</h2>
-      <p class="section-text">O programa "O Turismo Acolhe" e um instrumento de resposta de emergencia, não um programa de financiamento estrutural. O seu alcance depende da localizacao do estabelecimento face aos municipios abrangidos pela declaracao de calamidade, e o valor do reembolso (máximo 60 EUR/noite) pode ser modesto face aos custos operacionais de unidades de categoria superior.</p>
-      <p class="section-text">Para empresas localizadas nas zonas afetadas, a participação e relevante por duas razoes: contribui para a comunidade local num momento crítico e gera receita adicional em periodos que poderiam ser de menor ocupacao. A simplicidade do mecanismo de pagamento (até 5 dias uteis) e um ponto positivo para a tesouraria das unidades participantes.</p>
-      <p class="section-text">A principal limitacao e a natureza transitoria do programa: termina a 30 de junho de 2026 ou quando a necessidade de alojamento de emergencia deixar de existir. Empresas que considerem participar devem contactar o Turismo de Portugal para confirmar os municipios abrangidos, os termos exatos do reembolso e o processo de submissão dos pedidos de pagamento, dado que alguns detalhes operacionais dependem de orientacoes emitidas diretamente pelo organismo.</p>
+      <p class="section-text">O IT CIM Douro tem uma dotacao modesta (1,92 milhoes de euros) num territorio com necessidades de investimento substanciais. Isto significa que a competicao por fundos pode ser intensa se o aviso efetivamente abrir. A taxa de 60% de cofinanciamento e, no entanto, bastante atrativa para projetos de pequena dimensao, onde o montante absoluto do apoio pode ser decisivo para a viabilidade do investimento.</p>
+      <p class="section-text">O carater condicionado da abertura e o aspeto mais critico a gerir. Empresas interessadas devem manter-se informadas junto da CIM Douro sobre o estado da abertura, pois o periodo de candidaturas previsto (marco a abril de 2026) pode ja estar em curso ou prestes a encerrar. A confirmar que o aviso esta aberto, o prazo de preparacao sera muito curto.</p>
+      <p class="section-text">Para empresas do Douro com projetos de investimento industrial, agricola-transformador ou de servicos de proximidade ja planeados para 2026, este e um aviso a acompanhar com atencao. A Open Capital recomenda contacto direto com a CIM Douro para confirmar o estado atual do aviso e os prazos exatos de submissao antes de iniciar qualquer trabalho de preparacao da candidatura.</p>
     </div>
 
-    <p class="section-text" style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore também o nosso arquivo para mais conteudos sobre inovação, tecnologia, ciencia aplicada e empreendedorismo.</p>
+    <p class="section-text" style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo.</p>
 
   </article>
 
@@ -306,58 +288,62 @@
         <img src="../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
         <div>
           <div class="sidebar-author-name">Mara Ferreira</div>
-          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+          <div class="sidebar-author-role">Tecnica de Candidaturas e Incentivos</div>
         </div>
       </div>
     </div>
 
     <div class="sidebar-card">
-      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-card-label">Factos Rapidos</div>
       <div class="sidebar-fact">
-        <div class="sidebar-fact-key">Entidade gestora</div>
-        <div class="sidebar-fact-val">Turismo de Portugal, I.P.</div>
+        <div class="sidebar-fact-key">Codigo do aviso</div>
+        <div class="sidebar-fact-val">FA0881/2024</div>
       </div>
       <div class="sidebar-fact">
-        <div class="sidebar-fact-key">Apoio máximo</div>
-        <div class="sidebar-fact-val">60 EUR por noite (com pequeno-almoco)</div>
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">Norte 2030 (FEDER)</div>
       </div>
       <div class="sidebar-fact">
-        <div class="sidebar-fact-key">Alternativa de calculo</div>
-        <div class="sidebar-fact-val">Desconto de 10% na melhor tarifa praticada</div>
+        <div class="sidebar-fact-key">Dotacao</div>
+        <div class="sidebar-fact-val">1.920.288 EUR</div>
       </div>
       <div class="sidebar-fact">
-        <div class="sidebar-fact-key">Prazo de pagamento</div>
-        <div class="sidebar-fact-val">Até 5 dias uteis apos submissão</div>
+        <div class="sidebar-fact-key">Cofinanciamento max.</div>
+        <div class="sidebar-fact-val">60%</div>
       </div>
       <div class="sidebar-fact">
-        <div class="sidebar-fact-key">Início</div>
-        <div class="sidebar-fact-val">10 de fevereiro de 2026</div>
+        <div class="sidebar-fact-key">Territorio</div>
+        <div class="sidebar-fact-val">CIM Douro</div>
       </div>
       <div class="sidebar-fact">
-        <div class="sidebar-fact-key">Fim</div>
-        <div class="sidebar-fact-val">30 de junho de 2026 (prorrogado)</div>
+        <div class="sidebar-fact-key">Periodo candidaturas</div>
+        <div class="sidebar-fact-val">Marco a Abril 2026</div>
       </div>
       <div class="sidebar-fact">
         <div class="sidebar-fact-key">Estado</div>
-        <div class="sidebar-fact-val val-open">Aberto até 30/06/2026</div>
+        <div class="sidebar-fact-val val-open">Aberto (condicionado)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Condicionante</div>
+        <div class="sidebar-fact-val">Resultados NORTE2030-2024-53</div>
       </div>
     </div>
 
     <div class="sidebar-cta">
       <div class="sidebar-cta-title">Falar com um especialista</div>
-      <div class="sidebar-cta-text">A sua unidade turistica esta nos municipios abrangidos? Ajudamos a avaliar a elegibilidade e a estruturar o processo de reembolso.</div>
+      <div class="sidebar-cta-text">A sua empresa e do territorio do Douro e tem um projeto de investimento? Ajudamo-lo a verificar a elegibilidade e a preparar a candidatura.</div>
       <a href="https://calendly.com/tech2business" class="sidebar-cta-btn" target="_blank">Contactar</a>
     </div>
 
     <div class="sidebar-card">
       <div class="sidebar-related-title">Instrumentos relacionados</div>
-      <a href="linha-garantia-bpf-investeu-pme.html" class="related-link">
-        <span class="related-link-name">Linha de Garantia BPF InvestEU</span>
-        <span class="related-link-arrow">&rarr;</span>
+      <a href="sistema-de-incentivos-de-base-territorial-iibt-do-pinhal-interior.html" class="related-link">
+        <span class="related-link-name">IIBT Pinhal Interior</span>
+        <span class="related-link-arrow">&#8594;</span>
       </a>
-      <a href="norte2030-infraestruturas-acolhimento-empresarial.html" class="related-link">
-        <span class="related-link-name">Norte 2030 - Infraestruturas de Acolhimento</span>
-        <span class="related-link-arrow">&rarr;</span>
+      <a href="sistema-de-incentivos-de-base-territorial-iti-cim-regiao-do-oeste-indu.html" class="related-link">
+        <span class="related-link-name">ITI CIM Oeste</span>
+        <span class="related-link-arrow">&#8594;</span>
       </a>
     </div>
   </aside>
@@ -374,10 +360,10 @@
     <div>
       <div class="f-col-label">Biblioteca</div>
       <ul class="f-links">
-        <li><a href="../soluções.html">Portugal 2030</a></li>
-        <li><a href="../soluções.html">Fundos de Investimento</a></li>
-        <li><a href="../soluções.html">Beneficios Fiscais</a></li>
-        <li><a href="../soluções.html">Premios de Inovação</a></li>
+        <li><a href="../solucoes.html">Portugal 2030</a></li>
+        <li><a href="../solucoes.html">Fundos de Investimento</a></li>
+        <li><a href="../solucoes.html">Beneficios Fiscais</a></li>
+        <li><a href="../solucoes.html">Premios de Inovacao</a></li>
       </ul>
     </div>
     <div>
