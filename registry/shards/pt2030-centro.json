@@ -1,7 +1,29 @@
 {
   "_shard": "pt2030-centro",
-  "_sources": ["centro-2030"],
+  "_sources": [
+    "centro-2030"
+  ],
   "items": [
-    { "id": "centro2030-2026-5-step", "file": "instrumentos/centro2030-2026-5-step.html", "source": "centro-2030", "state": "aberto", "last_check": "2026-04-11" }
+    {
+      "id": "centro2030-2026-5-step",
+      "file": "instrumentos/centro2030-2026-5-step.html",
+      "source": "centro-2030",
+      "state": "aberto",
+      "last_check": "2026-04-11"
+    },
+    {
+      "id": "sistema-de-incentivos-de-base-territorial-iibt-do-pinhal-interior",
+      "file": "instrumentos/sistema-de-incentivos-de-base-territorial-iibt-do-pinhal-interior.html",
+      "source": "portugal-2030",
+      "state": "aberto",
+      "last_check": "2026-04-14"
+    },
+    {
+      "id": "sistema-de-incentivos-de-base-territorial-iti-cim-regiao-do-oeste-indu",
+      "file": "instrumentos/sistema-de-incentivos-de-base-territorial-iti-cim-regiao-do-oeste-indu.html",
+      "source": "portugal-2030",
+      "state": "aberto",
+      "last_check": "2026-04-14"
+    }
   ]
 }
