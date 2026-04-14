@@ -658,8 +658,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0234/2025. Alentejo 2030. FEDER. Concurso. Publicos e Privados. Estado: aberto."
+      "status": "plano_anual",
+      "notes": "FA0234/2025. Alentejo 2030. FEDER. Concurso. Publicos e Privados. Estado: aberto.",
+      "download_error": "Plano Anual - Resumo de Aviso do Plano Anual de Avisos (PAA202601)"
     },
     {
       "id": "cursos-cet-2-aviso-acores",
@@ -674,8 +675,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0203/2025. Acores 2030. FSE+. Concurso. Publicos e Privados. Estado: aberto."
+      "status": "plano_anual",
+      "notes": "FA0203/2025. Acores 2030. FSE+. Concurso. Publicos e Privados. Estado: aberto.",
+      "download_error": "Plano Anual - Resumo de Aviso do Plano Anual de Avisos (PAA202601)"
     },
     {
       "id": "ciclo-agua-reutilizacao-resiliencia-2-aviso-acores",
@@ -690,8 +692,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0302/2025. Acores 2030. FEDER. Concurso. Beneficiarios publicos. Estado: aberto."
+      "status": "plano_anual",
+      "notes": "FA0302/2025. Acores 2030. FEDER. Concurso. Beneficiarios publicos. Estado: aberto.",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "ciclo-agua-alta-baixa-2-aviso-acores",
@@ -706,8 +709,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0304/2025. Acores 2030. FEDER. Concurso. Beneficiarios publicos. Estado: aberto."
+      "status": "plano_anual",
+      "notes": "FA0304/2025. Acores 2030. FEDER. Concurso. Beneficiarios publicos. Estado: aberto.",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "protecao-civil-gestao-riscos-2-aviso-acores",
@@ -722,8 +726,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0303/2025. Acores 2030. FEDER. Concurso. Beneficiarios publicos. Estado: aberto."
+      "status": "plano_anual",
+      "notes": "FA0303/2025. Acores 2030. FEDER. Concurso. Beneficiarios publicos. Estado: aberto.",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "acoes-promocao-destino-acores-3-aviso",
@@ -848,9 +853,9 @@
       "budget": "850.000 EUR (max por projeto, 50% co-financiamento)",
       "regulation_url": "https://eithealth.eu/opportunity/innovation-validation/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eit/eit-health-innovation-validation-2026.txt",
       "priority_score": 105,
-      "status": "pending",
+      "status": "ready",
       "notes": "Consorcio minimo 2 organizacoes de paises diferentes. Tecnologias digitais/IA para dispositivos medicos. IML6 para IML7. Prazo: 6 maio 2026. Q&A: 8 e 22 abril 2026."
     },
     {
@@ -864,9 +869,9 @@
       "budget": "60.000.000 EUR (total 2026-2028), ate 2.000.000 EUR por projeto",
       "regulation_url": "https://www.eiturbanmobility.eu/call-for-proposals/strategic-innovation-open-call/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eit/eit-urban-mobility-strategic-innovation-2026.txt",
       "priority_score": 55,
-      "status": "pending",
+      "status": "ready",
       "notes": "Multiplos cut-off: proximo em 18 junho 2026. 5 sectores: logistica urbana, transportes publicos, dados mobilidade, eletrificacao, saude-mobilidade. 65% reembolso, min 35% co-financiamento. Consorcio multi-pais."
     },
     {
@@ -912,9 +917,9 @@
       "budget": "Ate 2.500.000 EUR por empresa (blended finance)",
       "regulation_url": "https://www.eit.europa.eu/our-activities/opportunities/financial-support-startups-open-call-2026",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eit/eit-urban-mobility-financial-support-startups-2026.txt",
       "priority_score": 55,
-      "status": "pending",
+      "status": "ready",
       "notes": "Startups early-stage (pre-seed a Series A). Proximo cut-off 18 mai 2026. Tambem: 31 ago e 16 nov 2026. Valorizacao pre-money max 50M EUR. Min 40% equity por fundadores. Sectores: logistica urbana, mobilidade partilhada, transportes publicos, dados mobilidade, eletrificacao, saude-mobilidade. Entidades UE/Horizon associadas."
     },
     {
