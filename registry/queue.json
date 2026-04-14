@@ -2,6 +2,38 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
+      "id": "sibt-cim-cavado-norte",
+      "name": "NORTE2030 - Sistema de Incentivos Base Territorial IT CIM Cavado (FA0880/2024)",
+      "source_id": "norte-2030",
+      "shard": "pt2030-norte",
+      "aviso_codigo": "FA0880/2024",
+      "detected_date": "2026-04-14",
+      "deadline": "2026-04-30",
+      "budget": "830.893 EUR",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-de-base-territorial-it-cim-cavado/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 92,
+      "status": "ready",
+      "notes": "FA0880/2024. NORTE2030. FEDER. Concurso. Beneficiarios privados (micro e pequenas empresas). Co-financiamento 60%. Prazo URGENTE: 30/04/2026 (16 dias). Abriu com regulamento publicado - promovido de watchlist plano_anual."
+    },
+    {
+      "id": "sibt-cim-alto-minho-norte",
+      "name": "NORTE2030 - Sistema de Incentivos Base Territorial IT CIM Alto Minho (FA0876/2024)",
+      "source_id": "norte-2030",
+      "shard": "pt2030-norte",
+      "aviso_codigo": "FA0876/2024",
+      "detected_date": "2026-04-14",
+      "deadline": "2026-04-30",
+      "budget": "1.168.676 EUR",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-de-base-territorial-it-cim-alto-minho/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 92,
+      "status": "ready",
+      "notes": "FA0876/2024. NORTE2030. FEDER. Concurso. Beneficiarios privados (micro e pequenas empresas). Co-financiamento 60%. Prazo URGENTE: 30/04/2026 (16 dias). Abriu com regulamento publicado - promovido de watchlist plano_anual."
+    },
+    {
       "id": "parcerias-inovacao-social-algarve",
       "name": "Algarve 2030 - Parcerias para a Inovacao Social (FA0290/2025)",
       "source_id": "algarve-2030",
