@@ -490,8 +490,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0274/2025. Alentejo 2030. FEDER. Concurso. Beneficiarios publicos. Estado: aberto."
+      "status": "plano_anual",
+      "notes": "FA0274/2025. Alentejo 2030. FEDER. Concurso. Beneficiarios publicos. Estado: aberto.",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "passivos-ambientais-pedreiras-alentejo",
@@ -506,8 +507,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0277/2025. Alentejo 2030. FEDER. Concurso. Beneficiarios publicos. PREVISTO (abre 22/05/2026)."
+      "status": "plano_anual",
+      "notes": "FA0277/2025. Alentejo 2030. FEDER. Concurso. Beneficiarios publicos. PREVISTO (abre 22/05/2026).",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "conservacao-natureza-biodiversidade-alentejo",
@@ -538,8 +540,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0276/2025. Alentejo 2030. FEDER. Concurso. Beneficiarios publicos. Estado: aberto."
+      "status": "plano_anual",
+      "notes": "FA0276/2025. Alentejo 2030. FEDER. Concurso. Beneficiarios publicos. Estado: aberto.",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "gestao-agua-conservacao-hidricos-iti-alentejo",
@@ -554,8 +557,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0266/2025. Alentejo 2030. FEDER. Concurso. Beneficiarios publicos. PREVISTO (abre 24/04/2026)."
+      "status": "plano_anual",
+      "notes": "FA0266/2025. Alentejo 2030. FEDER. Concurso. Beneficiarios publicos. PREVISTO (abre 24/04/2026).",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "gestao-agua-recursos-hidricos-alentejo",
@@ -570,8 +574,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0312/2025. Alentejo 2030. FEDER. Concurso. Beneficiarios publicos. Estado: aberto."
+      "status": "plano_anual",
+      "notes": "FA0312/2025. Alentejo 2030. FEDER. Concurso. Beneficiarios publicos. Estado: aberto.",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "medidas-adaptacao-climatica-gestao-riscos-alentejo",
@@ -602,8 +607,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0830/2024. Alentejo 2030. FEDER. Concurso. Beneficiarios publicos. PREVISTO (abre 29/05/2026)."
+      "status": "plano_anual",
+      "notes": "FA0830/2024. Alentejo 2030. FEDER. Concurso. Beneficiarios publicos. PREVISTO (abre 29/05/2026).",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "eficiencia-energetica-habitacao-social-alentejo",
@@ -618,8 +624,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0270/2025. Alentejo 2030. FEDER. Concurso. Beneficiarios publicos. Estado: aberto."
+      "status": "plano_anual",
+      "notes": "FA0270/2025. Alentejo 2030. FEDER. Concurso. Beneficiarios publicos. Estado: aberto.",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "sistema-incentivos-base-territorial-alentejo",
@@ -634,8 +641,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0147/2025. Alentejo 2030. FEDER. Concurso. Beneficiarios privados (PME). Estado: aberto."
+      "status": "plano_anual",
+      "notes": "FA0147/2025. Alentejo 2030. FEDER. Concurso. Beneficiarios privados (PME). Estado: aberto.",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "infraestruturas-equipamentos-tecnologicos-iti-agua-alentejo",
@@ -808,9 +816,9 @@
       "budget": null,
       "regulation_url": "https://cinea.ec.europa.eu/funding-opportunities/calls-proposals/call-proposals-support-maritime-spatial-planning-atlantic-and-black-sea_en",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/cef/emfaf-2026-pia-msp.txt",
       "priority_score": 105,
-      "status": "pending",
+      "status": "ready",
       "notes": "EMFAF-2026-PIA-MSP. Fundo Europeu dos Assuntos Maritimos, Pescas e Aquicultura. Planeamento espaco maritimo Atlantico e Mar Negro. Prazo: 15/04/2026. URGENTE - encerra amanha."
     },
     {
@@ -824,9 +832,9 @@
       "budget": null,
       "regulation_url": "https://cinea.ec.europa.eu/funding-opportunities/calls-proposals/innovation-fund-2025-net-zero-technologies-call_en",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/cef/innovation-fund-2025-net-zero.txt",
       "priority_score": 105,
-      "status": "pending",
+      "status": "ready",
       "notes": "IF-2025-NZT. Innovation Fund EU. Tecnologias de emissoes zero (net-zero). Prazo: 23/04/2026. Urgente - encerra em 9 dias."
     }
   ]
