@@ -111,6 +111,18 @@ Para cada artigo selecionado, seguir esta cascata:
 2. **Se `regulation_local` e null mas `regulation_url` existe:** Usar WebFetch.
 3. **Se tudo falhou:** Usar WebSearch + dados do campo `notes`. Artigos criados: 0 e sempre falha do agente.
 
+### PASSO 3.5: Validar conteudo (ultima barreira antes de escrever)
+
+Apos obter o texto do regulamento (por qualquer metodo), verificar se contem QUALQUER um destes markers (case-insensitive):
+- "Plano Anual de Avisos"
+- "Resumo de Aviso do Plano"
+- "PAA2026" ou "PAA202"
+- "Aviso a publicar em:"
+
+**Se encontrar:** o item e um documento de plano anual, nao um aviso publicado. NAO escrever o artigo. Atualizar o item na queue para `status: "plano_anual"`. Passar ao proximo item do batch.
+
+Esta verificacao existe como defesa contra falhas do downloader, que deveria ter bloqueado estes items antes.
+
 ---
 
 ## PASSO 4: Criar artigo
