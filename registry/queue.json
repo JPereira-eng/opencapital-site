@@ -675,8 +675,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0300/2025. Acores 2030. FEDER. Concurso. Beneficiarios publicos. Estado: aberto."
+      "status": "plano_anual",
+      "notes": "FA0300/2025. Acores 2030. FEDER. Concurso. Beneficiarios publicos. Estado: aberto.",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "nucleos-idt-ambiente-empresarial-acores",
@@ -849,9 +850,9 @@
       "budget": "1.000 EUR credito formacao + 3 meses incubacao UPTEC (vencedores Portugal)",
       "regulation_url": "https://www.eit.europa.eu/our-activities/opportunities/climatelaunchpad-2026",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eit-climate/climatelaunchpad-2026.txt",
       "priority_score": 55,
-      "status": "pending",
+      "status": "ready",
       "notes": "Maior competicao global de ideias de negocio verdes. Prazo Portugal: 16 maio 2026. Boot camps: 27-29 maio. Grande Final Global: 14 out 2026 Singapura. Elegivel: startups <2 anos, captado <200K EUR, nao comercializado. Organizado EIT Climate-KIC + UPTEC (Portugal)."
     }
   ]
