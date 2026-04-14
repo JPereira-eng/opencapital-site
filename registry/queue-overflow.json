@@ -229,11 +229,10 @@
       "budget": "12 250 000 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/formacao-continua-de-docentes-formadores-e-outros-agentes-de-educacao-/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/formacao-continua-de-docentes-formadores-e-outros-agentes-de-educacao-.txt",
       "priority_score": 145,
-      "status": "pending",
-      "notes": "FA0225/2025. PESSOAS2030. FSE+.",
-      "download_error": "Nao encontrado na API WP - slug nao existe - tentativa 2026-04-13"
+      "status": "ready",
+      "notes": "FA0225/2025. PESSOAS2030. FSE+."
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-iibt-do-pinhal-interior",
@@ -262,11 +261,10 @@
       "budget": "2 500 000 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-de-base-territorial-iti-cim-regiao-do-oeste-indu/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/sistema-de-incentivos-de-base-territorial-iti-cim-regiao-do-oeste-indu.txt",
       "priority_score": 125,
-      "status": "pending",
-      "notes": "FA0251/2025. CENTRO2030. FEDER.",
-      "download_error": "Nao encontrado na API WP - slug nao existe - tentativa 2026-04-13"
+      "status": "ready",
+      "notes": "FA0251/2025. CENTRO2030. FEDER."
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-it-cim-douro",
@@ -313,8 +311,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 125,
-      "status": "pending",
-      "notes": "FA0882/2024. NORTE2030. FEDER."
+      "status": "plano_anual",
+      "notes": "FA0882/2024. NORTE2030. FEDER.",
+      "download_error": "Resumo de Aviso do Plano Anual de Avisos - PDF e apenas resumo sem regulamento publicado"
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-it-amp",
@@ -345,8 +344,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 125,
-      "status": "pending",
-      "notes": "FA0878/2024. NORTE2030. FEDER."
+      "status": "plano_anual",
+      "notes": "FA0878/2024. NORTE2030. FEDER.",
+      "download_error": "Resumo de Aviso do Plano Anual de Avisos - PDF e apenas resumo sem regulamento publicado"
     },
     {
       "id": "distribuicao-indireta-de-generos-alimentares-cartao-eletronico",
@@ -361,8 +361,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 125,
-      "status": "pending",
-      "notes": "FA0267/2025. MADEIRA2030. FSE+."
+      "status": "plano_anual",
+      "notes": "FA0267/2025. MADEIRA2030. FSE+.",
+      "download_error": "Resumo de Aviso do Plano Anual de Avisos - PDF e apenas resumo sem regulamento publicado"
     },
     {
       "id": "apoio-a-infraestruturas-de-base-tecnologica-da-regiao-do-medio-tejo-ft",
@@ -1513,8 +1514,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "pending",
-      "notes": "FA0214/2025. MADEIRA2030. FSE+."
+      "status": "plano_anual",
+      "notes": "FA0214/2025. MADEIRA2030. FSE+.",
+      "download_error": "Resumo de Aviso do Plano Anual de Avisos - PDF e apenas resumo sem regulamento publicado"
     },
     {
       "id": "apoio-tecnico-e-financeiro-a-organizacoes-da-sociedade-civil-que-atuam",
