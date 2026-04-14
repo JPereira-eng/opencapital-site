@@ -128,7 +128,23 @@ Se o item tem `wordpress_id` (ID do post) E o regulamento ainda nao foi obtido:
    pdftotext -enc UTF-8 "$REPO/regulamentos/[source_id]/[id].pdf" "$REPO/regulamentos/[source_id]/[id].txt"
    ```
 
-5. Se o download for bem-sucedido, continuar para Passo 2.5.
+5. **VERIFICACAO DO CONTEUDO DO PDF — NAO SALTAR:**
+
+   Ler o ficheiro .txt extraido. Verificar na seguinte ordem:
+
+   **TESTE A - Texto de plano anual (BLOQUEANTE):**
+   Se o texto contiver QUALQUER um destes:
+   - "Plano Anual de Avisos"
+   - "Resumo de Aviso do Plano"
+   - "PAA2026" ou "PAA202"
+   - "Aviso a publicar em:"
+   → Apagar o ficheiro .txt e o .pdf. Marcar `status: "plano_anual"`, `regulation_local: null`. NAO continuar para Passo 2.5. PARAR este item.
+
+   **TESTE B - Conteudo insuficiente (BLOQUEANTE):**
+   Se o texto tiver < 800 palavras E nao contiver "despesas elegiveis" E nao contiver "criterios de selecao":
+   → Apagar o ficheiro .txt e o .pdf. Marcar `status: "pending"`, `download_error: "Resumo sem regulamento completo"`, `regulation_local: null`. NAO continuar para Passo 2.5. PARAR este item.
+
+   **Se passou ambos os testes:** continuar para Passo 2.5.
 
 ### 2b-horizon: API JSON para items Horizonte Europa / SEDIA (source_id: eu-funding-tenders)
 
@@ -190,11 +206,11 @@ Indicar na coluna "Metodo" da tabela de resultados: `WebSearch` se so WebSearch,
 
 ---
 
-## PASSO 2.5: VALIDACAO UNIVERSAL DE CONTEUDO (BLOQUEANTE)
+## PASSO 2.5: VALIDACAO UNIVERSAL DE CONTEUDO PAA (BLOQUEANTE)
 
 **Este passo e obrigatorio para TODOS os items, independentemente do metodo de download (PDF, WebFetch, WebSearch, ou ficheiro ja existente no disco). Nunca saltar.**
 
-Ler o ficheiro `.txt` obtido. Verificar na seguinte ordem:
+Ler o ficheiro `.txt` obtido. Aplicar o seguinte teste:
 
 **TESTE A - Identificar plano anual (BLOQUEANTE):**
 Se o texto contiver QUALQUER um destes (case-insensitive):
@@ -209,12 +225,7 @@ Se o texto contiver QUALQUER um destes (case-insensitive):
 
 Nota: este teste captura os casos em que o downloader descarregou um "Resumo de Aviso do Plano Anual de Avisos" (documento PAA) em vez de um aviso publicado formalmente. Sao documentos de previsao, nao regulamentos validos.
 
-**TESTE B - Conteudo insuficiente (BLOQUEANTE):**
-Se o texto tiver menos de 300 palavras de conteudo real (excluindo CSS/JS):
-
-→ **Apagar o ficheiro .txt. Marcar `status: "pending"`, `regulation_local: null`, `download_error: "Conteudo insuficiente - menos de 300 palavras"`. NAO ir para Passo 3. PARAR este item.**
-
-**Se passou ambos os testes:** regulamento valido. Continuar para Passo 3.
+**Se passou o Teste A:** regulamento valido. Continuar para Passo 3.
 
 ---
 
