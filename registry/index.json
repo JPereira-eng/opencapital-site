@@ -5,11 +5,11 @@
     "migrated_from_v3": "2026-04-12"
   },
   "totals": {
-    "published": 64,
-    "open": 54,
+    "published": 65,
+    "open": 55,
     "closed": 5,
     "planned": 5,
-    "in_queue": 51,
+    "in_queue": 50,
     "in_watchlist": 21
   },
   "shards": {
@@ -54,8 +54,8 @@
       "planned": 1
     },
     "eu-other": {
-      "count": 5,
-      "open": 3
+      "count": 6,
+      "open": 4
     },
     "pt-other": {
       "count": 12,
@@ -69,7 +69,7 @@
   },
   "last_full_cycle": "2026-04-12",
   "last_monitor_run": "2026-04-13",
-  "last_writer_run": "2026-04-13",
+  "last_writer_run": "2026-04-14",
   "source_last_checked": {
     "portugal-2030": "2026-04-13",
     "compete-2030": "2026-04-13",
@@ -124,5 +124,5 @@
     "eu-startups": "2026-04-13"
   },
   "last_scanner_run": "2026-04-13T22:30:00",
-  "last_updated": "2026-04-13T22:30:00"
+  "last_updated": "2026-04-14T00:00:00"
 }
