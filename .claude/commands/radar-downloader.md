@@ -43,6 +43,8 @@ Percorrer `registry/queue.json > queue`. Encontrar items onde:
 Processar no maximo **10 downloads por execucao**.
 Priorizar por `priority_score` descendente.
 
+**Caso especial - ficheiros ja existentes no disco:** Se `regulation_local` aponta para um ficheiro que existe mas `status` ainda nao e `"ready"` (ex: sessao anterior interrompida), ir diretamente para Passo 2.5 para validar o conteudo antes de marcar como ready.
+
 ---
 
 ## PASSO 1.5: Verificar se e Plano Anual (APENAS itens PT2030)
@@ -126,23 +128,7 @@ Se o item tem `wordpress_id` (ID do post) E o regulamento ainda nao foi obtido:
    pdftotext -enc UTF-8 "$REPO/regulamentos/[source_id]/[id].pdf" "$REPO/regulamentos/[source_id]/[id].txt"
    ```
 
-5. **VERIFICACAO OBRIGATORIA DO CONTEUDO DO PDF — NAO SALTAR ESTE PASSO:**
-
-   Ler o ficheiro .txt extraido. Verificar na seguinte ordem:
-
-   **TESTE A - Texto de plano anual (BLOQUEANTE):**
-   Se o texto contiver QUALQUER um destes:
-   - "Plano Anual de Avisos"
-   - "Resumo de Aviso do Plano"
-   - "PAA2026" ou "PAA202"
-   - "Aviso a publicar em:"
-   → Apagar o ficheiro .txt e o .pdf. Marcar `status: "plano_anual"`, `regulation_local: null`. NAO continuar para Passo 3. PARAR este item.
-
-   **TESTE B - Conteudo insuficiente (BLOQUEANTE):**
-   Se o texto tiver < 800 palavras E nao contiver "despesas elegiveis" E nao contiver "criterios de selecao":
-   → Apagar o ficheiro .txt e o .pdf. Marcar `status: "plano_anual"`, `download_error: "Resumo sem regulamento completo"`, `regulation_local: null`. NAO continuar para Passo 3. PARAR este item.
-
-   **Se passou ambos os testes:** regulamento valido. Continuar para Passo 3 (ready).
+5. Se o download for bem-sucedido, continuar para Passo 2.5.
 
 ### 2b-horizon: API JSON para items Horizonte Europa / SEDIA (source_id: eu-funding-tenders)
 
@@ -204,9 +190,37 @@ Indicar na coluna "Metodo" da tabela de resultados: `WebSearch` se so WebSearch,
 
 ---
 
+## PASSO 2.5: VALIDACAO UNIVERSAL DE CONTEUDO (BLOQUEANTE)
+
+**Este passo e obrigatorio para TODOS os items, independentemente do metodo de download (PDF, WebFetch, WebSearch, ou ficheiro ja existente no disco). Nunca saltar.**
+
+Ler o ficheiro `.txt` obtido. Verificar na seguinte ordem:
+
+**TESTE A - Identificar plano anual (BLOQUEANTE):**
+Se o texto contiver QUALQUER um destes (case-insensitive):
+- "Plano Anual de Avisos"
+- "Resumo de Aviso do Plano"
+- "PAA2026" ou "PAA202"
+- "Aviso a publicar em:"
+- "previsao aproximada" ou "previsão aproximada"
+- "aviso que ira ser lancado" ou "aviso que irá ser lançado"
+
+→ **Apagar o ficheiro .txt e o .pdf (se existir). Marcar `status: "plano_anual"`, `regulation_local: null`, `download_error: "Plano Anual - conteudo PAA detectado no ficheiro"`. NAO ir para Passo 3. PARAR este item.**
+
+Nota: este teste captura os casos em que o downloader descarregou um "Resumo de Aviso do Plano Anual de Avisos" (documento PAA) em vez de um aviso publicado formalmente. Sao documentos de previsao, nao regulamentos validos.
+
+**TESTE B - Conteudo insuficiente (BLOQUEANTE):**
+Se o texto tiver menos de 300 palavras de conteudo real (excluindo CSS/JS):
+
+→ **Apagar o ficheiro .txt. Marcar `status: "pending"`, `regulation_local: null`, `download_error: "Conteudo insuficiente - menos de 300 palavras"`. NAO ir para Passo 3. PARAR este item.**
+
+**Se passou ambos os testes:** regulamento valido. Continuar para Passo 3.
+
+---
+
 ## PASSO 3: Atualizar queue
 
-Apos download bem-sucedido, atualizar o item na queue:
+Apos validacao bem-sucedida no Passo 2.5, atualizar o item na queue:
 ```json
 {
   "regulation_local": "regulamentos/[source_id]/[id].txt",
@@ -248,9 +262,12 @@ git -C "$REPO" push origin main
 
 ```
 1. Ler queue.json
-2. Encontrar items sem regulation_local (max 5)
+2. Encontrar items sem regulation_local (max 5, ignorar plano_anual)
 3. Para cada: tentar PDF -> WebFetch -> WebSearch
-4. Atualizar queue (status: ready/pending)
-5. git commit + push
-6. Reportar: "Downloader: [N] regulamentos. [N] falhas."
+4. PASSO 2.5 (OBRIGATORIO): validar conteudo - Teste A (PAA) e Teste B (tamanho)
+   Se falhar Teste A: apagar ficheiro, marcar plano_anual, PARAR item
+   Se falhar Teste B: apagar ficheiro, marcar pending, PARAR item
+5. Se passou: atualizar queue (status: ready)
+6. git commit + push
+7. Reportar: "Downloader: [N] regulamentos. [N] PAA bloqueados. [N] falhas."
 ```

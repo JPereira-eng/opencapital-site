@@ -1576,6 +1576,40 @@
       "priority_score": 15,
       "status": "pending",
       "notes": "Linha BPF para empresas exportadoras. PME com exportacoes em 2024. Investimento: max 5M EUR (media), fundo maneio: max 3M EUR (media). Garantia SGM 50%. Prazo utilizacao: ate 31/12/2028."
+    },
+    {
+      "id": "sistema-de-incentivos-de-base-territorial-it-cim-tamega-e-sousa",
+      "name": "Sistema de Incentivos de base territorial (IT) - CIM Tamega e Sousa",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-norte",
+      "aviso_codigo": "FA0884/2024",
+      "detected_date": "2026-04-13",
+      "deadline": "2026-04-30",
+      "budget": "1 831 886 EUR",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-de-base-territorial-it-cim-tamega-e-sousa/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 65,
+      "status": "plano_anual",
+      "notes": "Plano Anual de Avisos - aviso nao publicado formalmente. Regulamento era documento PAA.",
+      "download_error": "Plano Anual - ficheiro txt continha \"Resumo de Aviso do Plano Anual de Avisos\""
+    },
+    {
+      "id": "sistema-de-incentivos-de-base-territorial-it-amp",
+      "name": "Sistema de Incentivos de base territorial (IT) - AMP",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-norte",
+      "aviso_codigo": "FA0874/2024",
+      "detected_date": "2026-04-13",
+      "deadline": "2026-04-30",
+      "budget": "1 231 724 EUR",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-de-base-territorial-it-amp/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 65,
+      "status": "plano_anual",
+      "notes": "Plano Anual de Avisos - aviso nao publicado formalmente. Regulamento era documento PAA.",
+      "download_error": "Plano Anual - ficheiro txt continha \"Resumo de Aviso do Plano Anual de Avisos\""
     }
   ]
 }
