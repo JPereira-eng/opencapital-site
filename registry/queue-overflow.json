@@ -200,7 +200,8 @@
       "regulation_local": null,
       "priority_score": 25,
       "status": "pending",
-      "notes": "PACS-2026-08. RAM - Medidas de adaptacao as alteracoes climaticas - 4 Aviso. Fundo Coesao. SUSTENTAVEL2030."
+      "notes": "PACS-2026-08. RAM - Medidas de adaptacao as alteracoes climaticas - 4 Aviso. Fundo Coesao. SUSTENTAVEL2030.",
+      "download_error": "Aviso nao encontrado em nenhum portal - sustentavel2030 e JS-rendered e WP API sem resultado - tentativa 2026-04-14"
     },
     {
       "id": "infraestruturas-e-equipamentos-tecnologicos-step",
@@ -309,11 +310,10 @@
       "budget": "1 257 908 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-de-base-territorial-it-cim-terras-de-tras-os-mon/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/sistema-de-incentivos-de-base-territorial-it-cim-terras-de-tras-os-mon.txt",
       "priority_score": 125,
-      "status": "plano_anual",
-      "notes": "FA0882/2024. NORTE2030. FEDER.",
-      "download_error": "Resumo de Aviso do Plano Anual de Avisos - PDF e apenas resumo sem regulamento publicado"
+      "status": "ready",
+      "notes": "FA0882/2024. NORTE2030. FEDER."
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-it-amp",
@@ -342,11 +342,10 @@
       "budget": "1 220 305 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-de-base-territorial-it-cim-ave/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/sistema-de-incentivos-de-base-territorial-it-cim-ave.txt",
       "priority_score": 125,
-      "status": "plano_anual",
-      "notes": "FA0878/2024. NORTE2030. FEDER.",
-      "download_error": "Resumo de Aviso do Plano Anual de Avisos - PDF e apenas resumo sem regulamento publicado"
+      "status": "ready",
+      "notes": "FA0878/2024. NORTE2030. FEDER."
     },
     {
       "id": "distribuicao-indireta-de-generos-alimentares-cartao-eletronico",
@@ -1657,10 +1656,11 @@
       "regulation_url": "https://portugal2030.pt/2026/04/10/apoio-a-investimentos-em-portos-de-pesca-lotas-e-abrigos/",
       "notes": "MAR2030. FEAMPA. Portos de pesca Portugal Continental.",
       "detected_date": "2026-04-13",
-      "pdf_url": null,
-      "regulation_local": null,
+      "pdf_url": "https://portugal2030.pt/wp-content/uploads/sites/3/2026/04/MAR2030-2026-13.pdf",
+      "regulation_local": "regulamentos/mar-2030/mar2030-2026-13-portos-pesca-lotas-abrigos.txt",
       "priority_score": 25,
-      "status": "pending"
+      "status": "ready",
+      "download_error": null
     },
     {
       "id": "mar2030-2025-25-execucao-edl-comunidades-costeiras",
@@ -1673,10 +1673,11 @@
       "regulation_url": "https://a2s.pt/prazo-para-candidaturas-ao-aviso-mar2030-2025-25-prorrogado-ate-30-de-junho-de-2026/",
       "notes": "MAR2030. FEAMPA. Grupos de Acao Local Costeira.",
       "detected_date": "2026-04-13",
-      "pdf_url": null,
-      "regulation_local": null,
+      "pdf_url": "https://a2s.pt/wp-content/uploads/2024/05/MAR_2030_2025_25_concorrencial.pdf",
+      "regulation_local": "regulamentos/mar-2030/mar2030-2025-25-execucao-edl-comunidades-costeiras.txt",
       "priority_score": 25,
-      "status": "pending"
+      "status": "ready",
+      "download_error": null
     },
     {
       "id": "inqueritos-de-mobilidade-nas-areas-metropolitana-de-lisboa-e-do-porto",
