@@ -14,8 +14,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 92,
-      "status": "ready",
-      "notes": "FA0880/2024. NORTE2030. FEDER. Concurso. Beneficiarios privados (micro e pequenas empresas). Co-financiamento 60%. Prazo URGENTE: 30/04/2026 (16 dias). Abriu com regulamento publicado - promovido de watchlist plano_anual."
+      "status": "plano_anual",
+      "notes": "FA0880/2024. NORTE2030. FEDER. Concurso. Beneficiarios privados (micro e pequenas empresas). Co-financiamento 60%. Prazo URGENTE: 30/04/2026 (16 dias). Abriu com regulamento publicado - promovido de watchlist plano_anual.",
+      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro (PAA202601, Resumo de Aviso do Plano Anual de Avisos)"
     },
     {
       "id": "sibt-cim-alto-minho-norte",
@@ -30,8 +31,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 92,
-      "status": "ready",
-      "notes": "FA0876/2024. NORTE2030. FEDER. Concurso. Beneficiarios privados (micro e pequenas empresas). Co-financiamento 60%. Prazo URGENTE: 30/04/2026 (16 dias). Abriu com regulamento publicado - promovido de watchlist plano_anual."
+      "status": "plano_anual",
+      "notes": "FA0876/2024. NORTE2030. FEDER. Concurso. Beneficiarios privados (micro e pequenas empresas). Co-financiamento 60%. Prazo URGENTE: 30/04/2026 (16 dias). Abriu com regulamento publicado - promovido de watchlist plano_anual.",
+      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro (PAA202601, Resumo de Aviso do Plano Anual de Avisos)"
     },
     {
       "id": "parcerias-inovacao-social-algarve",
@@ -775,9 +777,9 @@
       "budget": "30.000.000 EUR",
       "regulation_url": "https://business.turismodeportugal.pt/pt/Investir/Financiamento/programas/Paginas/programa-crescer-com-turismo.aspx",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/turismo-portugal/programa-apoio-crescer-com-o-turismo.txt",
       "priority_score": 35,
-      "status": "pending",
+      "status": "ready",
       "notes": "Candidatura continua ate 31/12/2026 ou esgotamento da dotacao. 15M nao reembolsavel + 15M reembolsavel. Elegivel: entidades publicas, privadas sem fins lucrativos, PME em estrategias de inovacao social ou eficiencia coletiva. Plataforma SGPI."
     },
     {
@@ -1302,8 +1304,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 45,
-      "status": "pending",
-      "notes": "FA0578/2024. SUSTENTAVEL2030. FC."
+      "status": "plano_anual",
+      "notes": "FA0578/2024. SUSTENTAVEL2030. FC.",
+      "download_error": "Plano Anual - PDF confirma PAA202601, Resumo de Aviso do Plano Anual de Avisos"
     },
     {
       "id": "medidas-de-adaptacao-as-alteracoes-climaticas",
@@ -1318,8 +1321,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 45,
-      "status": "pending",
-      "notes": "FA0154/2025. SUSTENTAVEL2030. FC."
+      "status": "plano_anual",
+      "notes": "FA0154/2025. SUSTENTAVEL2030. FC.",
+      "download_error": "Plano Anual - PDF confirma PAA202601, Resumo de Aviso do Plano Anual de Avisos"
     },
     {
       "id": "protecao-civil-e-gestao-integrada-de-riscos-prevencao-e-mitigacao-de-r",
