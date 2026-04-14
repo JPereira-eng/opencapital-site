@@ -45,7 +45,7 @@
       "priority_score": 5,
       "status": "plano_anual",
       "notes": "FA0233/2025. Participacao individual na formacao FTJ. 300K EUR FTJ. ALENTEJO2030.",
-      "download_error": "Plano Anual - PDF contem Resumo de Aviso do Plano, nao regulamento publicado"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "servicos-recursos-digitais-valorizacao-territorios-alentejo",
@@ -61,7 +61,7 @@
       "priority_score": 5,
       "status": "plano_anual",
       "notes": "FA0189/2025. Servicos e recursos digitais - Parcerias para a Coesao. 130.3K EUR FEDER. ALENTEJO2030. Convite.",
-      "download_error": "Plano Anual - PDF contem resumo PAA, nao regulamento publicado"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "contratos-impacto-social-algarve",
@@ -207,11 +207,10 @@
       "deadline": "2026-06-22",
       "budget": null,
       "regulation_url": "https://sustentavel2030.gov.pt/wp-content/uploads/Aviso-PACS-2026-8.pdf",
-      "regulation_local": null,
+      "regulation_local": "regulamentos/sustentavel-2030/sustentavel-2030-pacs-2026-8.txt",
       "priority_score": 25,
-      "status": "pending",
-      "notes": "PACS-2026-08. RAM - Medidas de adaptacao as alteracoes climaticas - 4 Aviso. Fundo Coesao. SUSTENTAVEL2030.",
-      "download_error": "HTTP 404 ou pagina inacessivel em 2026-04-14"
+      "status": "ready",
+      "notes": "PACS-2026-08. RAM - Medidas de adaptacao as alteracoes climaticas - 4 Aviso. Fundo Coesao. SUSTENTAVEL2030."
     },
     {
       "id": "infraestruturas-e-equipamentos-tecnologicos-step",
@@ -389,7 +388,7 @@
       "priority_score": 125,
       "status": "plano_anual",
       "notes": "FA0245/2025. CENTRO2030. FTJ.",
-      "download_error": "Plano Anual - API slug nao encontrado, item provavel PAA"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "educacao-intercultural-em-contexto-escolar",
@@ -406,7 +405,7 @@
       "priority_score": 125,
       "status": "plano_anual",
       "notes": "FA0320/2025. FAMI2030. FAMI.",
-      "download_error": "Plano Anual - PDF contem Resumo de Aviso do Plano, nao regulamento publicado"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
       "id": "execucao-da-edl-do-gal-costeiro-do-barlavento-do-algarve-destinado-a-v",
