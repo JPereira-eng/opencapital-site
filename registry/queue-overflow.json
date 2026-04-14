@@ -471,9 +471,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 115,
-      "status": "pending",
+      "status": "plano_anual",
       "notes": "FA0176/2025. MAR2030. FEAMPA.",
-      "download_error": "API retornou array vazio - aviso nao encontrado no portal em 2026-04-14"
+      "download_error": "Plano Anual - PDF contém Resumo de Aviso do Plano Anual de Avisos"
     },
     {
       "id": "formacao-e-emprego-jovens-ii",
@@ -590,9 +590,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 75,
-      "status": "pending",
+      "status": "plano_anual",
       "notes": "FA0313/2025. CENTRO2030. FSE+.",
-      "download_error": "API retornou array vazio - aviso nao encontrado no portal em 2026-04-14"
+      "download_error": "Plano Anual - PDF contém Resumo de Aviso do Plano Anual de Avisos"
     },
     {
       "id": "balcao-da-inclusao-unidades-moveis-em-territorios-de-baixa-densidade",
@@ -624,9 +624,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 75,
-      "status": "pending",
+      "status": "plano_anual",
       "notes": "FA0202/2025. AÇORES2030. FSE+.",
-      "download_error": "API retornou array vazio - aviso nao encontrado no portal em 2026-04-14"
+      "download_error": "Plano Anual - PDF contém Resumo de Aviso do Plano Anual de Avisos"
     },
     {
       "id": "sice-qualificacao-das-pme-operacoes-individuais",
@@ -709,8 +709,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 45,
-      "status": "pending",
-      "notes": "FA0076/2025. ALGARVE2030, COMPETE2030. FEDER."
+      "status": "plano_anual",
+      "notes": "FA0076/2025. ALGARVE2030, COMPETE2030. FEDER.",
+      "download_error": "Plano Anual - PDF contém Resumo de Aviso do Plano Anual de Avisos"
     },
     {
       "id": "step-inovacao-produtiva-digital-e-biotecnologia",
@@ -725,8 +726,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 45,
-      "status": "pending",
-      "notes": "FA0075/2025. ALGARVE2030, COMPETE2030. FEDER."
+      "status": "plano_anual",
+      "notes": "FA0075/2025. ALGARVE2030, COMPETE2030. FEDER.",
+      "download_error": "Plano Anual - PDF contém Resumo de Aviso do Plano Anual de Avisos"
     },
     {
       "id": "funcionamento-2030-oc",
@@ -741,8 +743,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 45,
-      "status": "pending",
-      "notes": "FA0135/2025. MADEIRA2030. FEDER."
+      "status": "plano_anual",
+      "notes": "FA0135/2025. MADEIRA2030. FEDER.",
+      "download_error": "Plano Anual - PDF contém Resumo de Aviso do Plano Anual de Avisos"
     },
     {
       "id": "reformulacao-da-estacao-de-transferencia-da-zona-leste-e-de-triagem-da",
@@ -789,8 +792,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 45,
-      "status": "pending",
-      "notes": "FA0260/2025. SUSTENTAVEL2030. FC."
+      "status": "plano_anual",
+      "notes": "FA0260/2025. SUSTENTAVEL2030. FC.",
+      "download_error": "Plano Anual - PDF contém Resumo de Aviso do Plano Anual de Avisos"
     },
     {
       "id": "infraestruturas-de-valorizacao-de-residuos-urbanos-em-alta-ru",
