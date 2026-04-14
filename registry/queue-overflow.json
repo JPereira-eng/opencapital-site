@@ -43,8 +43,9 @@
       "regulation_url": "https://alentejo.portugal2030.pt/aviso-2024/participacao-individual-na-formacao-ftj/",
       "regulation_local": null,
       "priority_score": 5,
-      "status": "pending",
-      "notes": "FA0233/2025. Participacao individual na formacao FTJ. 300K EUR FTJ. ALENTEJO2030."
+      "status": "plano_anual",
+      "notes": "FA0233/2025. Participacao individual na formacao FTJ. 300K EUR FTJ. ALENTEJO2030.",
+      "download_error": "Plano Anual - PDF contem Resumo de Aviso do Plano, nao regulamento publicado"
     },
     {
       "id": "servicos-recursos-digitais-valorizacao-territorios-alentejo",
@@ -58,8 +59,9 @@
       "regulation_url": "https://alentejo.portugal2030.pt/aviso-2024/servicos-e-recursos-digitais-para-valorizacao-de-territorios-parcerias-para-a-coesao-nao-urbanas/",
       "regulation_local": null,
       "priority_score": 5,
-      "status": "pending",
-      "notes": "FA0189/2025. Servicos e recursos digitais - Parcerias para a Coesao. 130.3K EUR FEDER. ALENTEJO2030. Convite."
+      "status": "plano_anual",
+      "notes": "FA0189/2025. Servicos e recursos digitais - Parcerias para a Coesao. 130.3K EUR FEDER. ALENTEJO2030. Convite.",
+      "download_error": "Plano Anual - PDF contem resumo PAA, nao regulamento publicado"
     },
     {
       "id": "contratos-impacto-social-algarve",
@@ -74,8 +76,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 5,
-      "status": "pending",
-      "notes": "Contratos de Impacto Social, Algarve 2030"
+      "status": "plano_anual",
+      "notes": "Contratos de Impacto Social, Algarve 2030",
+      "download_error": "Plano Anual - PDF contem Resumo de Aviso do Plano, nao regulamento publicado"
     },
     {
       "id": "cursos-tesp-26-28-algarve",
@@ -90,8 +93,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 5,
-      "status": "pending",
-      "notes": "Cursos TESP 2026-2028, Algarve 2030"
+      "status": "plano_anual",
+      "notes": "Cursos TESP 2026-2028, Algarve 2030",
+      "download_error": "Plano Anual - PDF contem Resumo de Aviso do Plano, nao regulamento publicado"
     },
     {
       "id": "vale-spin-off-acores",
@@ -107,7 +111,8 @@
       "regulation_local": null,
       "priority_score": 5,
       "status": "pending",
-      "notes": "Vale Spin-off, Acores 2030"
+      "notes": "Vale Spin-off, Acores 2030",
+      "download_error": "HTTP 404 - pagina nao encontrada em 2026-04-14"
     },
     {
       "id": "vale-inovacao-acores",
@@ -122,8 +127,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 5,
-      "status": "pending",
-      "notes": "Vale Inovacao, Acores 2030"
+      "status": "plano_anual",
+      "notes": "Vale Inovacao, Acores 2030",
+      "download_error": "Plano Anual - PDF contem Resumo de Aviso do Plano, nao regulamento publicado"
     },
     {
       "id": "vale-direitos-propriedade-intelectual-acores",
@@ -139,7 +145,8 @@
       "regulation_local": null,
       "priority_score": 5,
       "status": "pending",
-      "notes": "Vale Direitos de Propriedade Intelectual, Acores 2030"
+      "notes": "Vale Direitos de Propriedade Intelectual, Acores 2030",
+      "download_error": "HTTP 404 ou pagina inacessivel em 2026-04-14"
     },
     {
       "id": "vale-certificacao-id-acores",
@@ -155,7 +162,8 @@
       "regulation_local": null,
       "priority_score": 5,
       "status": "pending",
-      "notes": "Vale Certificacao I&D, Acores 2030"
+      "notes": "Vale Certificacao I&D, Acores 2030",
+      "download_error": "HTTP 404 ou pagina inacessivel em 2026-04-14"
     },
     {
       "id": "gestao-recursos-hidricos-acores2030",
@@ -170,7 +178,8 @@
       "regulation_local": null,
       "priority_score": 35,
       "status": "pending",
-      "notes": "FA0583/2023. Gestao de Recursos hidricos. 6.5M EUR FEDER. ACORES2030."
+      "notes": "FA0583/2023. Gestao de Recursos hidricos. 6.5M EUR FEDER. ACORES2030.",
+      "download_error": "HTTP 404 ou pagina inacessivel em 2026-04-14"
     },
     {
       "id": "programa-escolhas-2026-pessoas2030",
@@ -185,7 +194,8 @@
       "regulation_local": null,
       "priority_score": 35,
       "status": "pending",
-      "notes": "FA0077/2025. Programa Escolhas 2026. 13.3M EUR FSE+. PESSOAS2030."
+      "notes": "FA0077/2025. Programa Escolhas 2026. 13.3M EUR FSE+. PESSOAS2030.",
+      "download_error": "HTTP 404 - pagina nao encontrada em 2026-04-14"
     },
     {
       "id": "pacs-2026-08-medidas-adaptacao-climatica-ram",
@@ -201,7 +211,7 @@
       "priority_score": 25,
       "status": "pending",
       "notes": "PACS-2026-08. RAM - Medidas de adaptacao as alteracoes climaticas - 4 Aviso. Fundo Coesao. SUSTENTAVEL2030.",
-      "download_error": "Aviso nao encontrado em nenhum portal - sustentavel2030 e JS-rendered e WP API sem resultado - tentativa 2026-04-14"
+      "download_error": "HTTP 404 ou pagina inacessivel em 2026-04-14"
     },
     {
       "id": "infraestruturas-e-equipamentos-tecnologicos-step",
@@ -377,8 +387,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 125,
-      "status": "pending",
-      "notes": "FA0245/2025. CENTRO2030. FTJ."
+      "status": "plano_anual",
+      "notes": "FA0245/2025. CENTRO2030. FTJ.",
+      "download_error": "Plano Anual - API slug nao encontrado, item provavel PAA"
     },
     {
       "id": "educacao-intercultural-em-contexto-escolar",
@@ -393,8 +404,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 125,
-      "status": "pending",
-      "notes": "FA0320/2025. FAMI2030. FAMI."
+      "status": "plano_anual",
+      "notes": "FA0320/2025. FAMI2030. FAMI.",
+      "download_error": "Plano Anual - PDF contem Resumo de Aviso do Plano, nao regulamento publicado"
     },
     {
       "id": "execucao-da-edl-do-gal-costeiro-do-barlavento-do-algarve-destinado-a-v",
@@ -409,8 +421,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 115,
-      "status": "pending",
-      "notes": "FA0273/2025. MAR2030. FEAMPA."
+      "status": "plano_anual",
+      "notes": "FA0273/2025. MAR2030. FEAMPA.",
+      "download_error": "Plano Anual - API slug nao encontrado, item provavel PAA"
     },
     {
       "id": "execucao-da-edl-do-gal-litoral-rural-aldeias-de-mar-litoral-rural-proj",
@@ -425,8 +438,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 115,
-      "status": "pending",
-      "notes": "FA0312/2023. MAR2030. FEAMPA."
+      "status": "plano_anual",
+      "notes": "FA0312/2023. MAR2030. FEAMPA.",
+      "download_error": "Plano Anual - API slug nao encontrado, item provavel PAA"
     },
     {
       "id": "execucao-da-edl-do-gal-litoral-rural-capacitacao-das-associacoes-de-pe",
@@ -441,8 +455,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 115,
-      "status": "pending",
-      "notes": "FA0236/2025. MAR2030. FEAMPA."
+      "status": "plano_anual",
+      "notes": "FA0236/2025. MAR2030. FEAMPA.",
+      "download_error": "Plano Anual - API slug nao encontrado, item provavel PAA"
     },
     {
       "id": "execucao-da-edl-do-gal-litoral-rural-sistema-de-apoio-ao-investimento-",
@@ -473,8 +488,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 115,
-      "status": "pending",
-      "notes": "FA0122/2025. MADEIRA2030. FSE+."
+      "status": "plano_anual",
+      "notes": "FA0122/2025. MADEIRA2030. FSE+.",
+      "download_error": "Plano Anual - PDF contem resumo PAA, nao regulamento publicado"
     },
     {
       "id": "programas-de-insercao-profissional-publicos-mais-vulneraveis",
@@ -489,8 +505,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 115,
-      "status": "pending",
-      "notes": "FA0123/2025. MADEIRA2030. FSE+."
+      "status": "plano_anual",
+      "notes": "FA0123/2025. MADEIRA2030. FSE+.",
+      "download_error": "Plano Anual - PDF contem resumo PAA, nao regulamento publicado"
     },
     {
       "id": "formacao-e-emprego-desempregados",
@@ -505,8 +522,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 115,
-      "status": "pending",
-      "notes": "FA0120/2025. MADEIRA2030. FSE+."
+      "status": "plano_anual",
+      "notes": "FA0120/2025. MADEIRA2030. FSE+.",
+      "download_error": "Plano Anual - PDF contem resumo PAA, nao regulamento publicado"
     },
     {
       "id": "apoio-a-infraestruturas-de-base-tecnologica-regulamento-step",
@@ -521,8 +539,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 95,
-      "status": "pending",
-      "notes": "FA0244/2025. CENTRO2030. FEDER."
+      "status": "plano_anual",
+      "notes": "FA0244/2025. CENTRO2030. FEDER.",
+      "download_error": "Plano Anual - PDF contem resumo PAA, nao regulamento publicado"
     },
     {
       "id": "passivos-ambientais-de-saneamento-de-aguas-residuais-em-alta",
@@ -1819,9 +1838,9 @@
       "notes": "MAR2030. FEAMPA. Taxa apoio PME 60%.",
       "detected_date": "2026-04-13",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/mar-2030/mar2030-2026-6-reposicao-capacidade-produtiva-aquicola.txt",
       "priority_score": 5,
-      "status": "pending"
+      "status": "ready"
     }
   ]
 }
