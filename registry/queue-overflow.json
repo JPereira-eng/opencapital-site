@@ -472,7 +472,8 @@
       "regulation_local": null,
       "priority_score": 115,
       "status": "pending",
-      "notes": "FA0176/2025. MAR2030. FEAMPA."
+      "notes": "FA0176/2025. MAR2030. FEAMPA.",
+      "download_error": "API retornou array vazio - aviso nao encontrado no portal em 2026-04-14"
     },
     {
       "id": "formacao-e-emprego-jovens-ii",
@@ -555,8 +556,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 95,
-      "status": "pending",
-      "notes": "FA0263/2025. SUSTENTAVEL2030. FC."
+      "status": "plano_anual",
+      "notes": "FA0263/2025. SUSTENTAVEL2030. FC.",
+      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado"
     },
     {
       "id": "protecao-e-defesa-do-litoral-acoes-materiais",
@@ -571,8 +573,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 75,
-      "status": "pending",
-      "notes": "FA0261/2025. SUSTENTAVEL2030. FC."
+      "status": "plano_anual",
+      "notes": "FA0261/2025. SUSTENTAVEL2030. FC.",
+      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado"
     },
     {
       "id": "programas-intermunicipais-de-promocao-do-sucesso-escolar-pipse-iti-cim",
@@ -588,7 +591,8 @@
       "regulation_local": null,
       "priority_score": 75,
       "status": "pending",
-      "notes": "FA0313/2025. CENTRO2030. FSE+."
+      "notes": "FA0313/2025. CENTRO2030. FSE+.",
+      "download_error": "API retornou array vazio - aviso nao encontrado no portal em 2026-04-14"
     },
     {
       "id": "balcao-da-inclusao-unidades-moveis-em-territorios-de-baixa-densidade",
@@ -603,8 +607,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 75,
-      "status": "pending",
-      "notes": "FA0215/2025. CENTRO2030. FSE+."
+      "status": "plano_anual",
+      "notes": "FA0215/2025. CENTRO2030. FSE+.",
+      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado"
     },
     {
       "id": "combate-a-privacao-material-2-aviso",
@@ -620,7 +625,8 @@
       "regulation_local": null,
       "priority_score": 75,
       "status": "pending",
-      "notes": "FA0202/2025. AÇORES2030. FSE+."
+      "notes": "FA0202/2025. AÇORES2030. FSE+.",
+      "download_error": "API retornou array vazio - aviso nao encontrado no portal em 2026-04-14"
     },
     {
       "id": "sice-qualificacao-das-pme-operacoes-individuais",
@@ -635,8 +641,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 65,
-      "status": "pending",
-      "notes": "FA0315/2025. COMPETE2030. FEDER."
+      "status": "plano_anual",
+      "notes": "FA0315/2025. COMPETE2030. FEDER.",
+      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado"
     },
     {
       "id": "saccct-equipamento-reequipamento-de-infraestruturas-cientificas-rniie",
@@ -651,8 +658,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 65,
-      "status": "pending",
-      "notes": "FA0513/2023. NORTE2030. FEDER."
+      "status": "plano_anual",
+      "notes": "FA0513/2023. NORTE2030. FEDER.",
+      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado"
     },
     {
       "id": "siqrh-formacao-empresarial-operacoes-individuais",
@@ -667,8 +675,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 65,
-      "status": "pending",
-      "notes": "FA0104/2025. COMPETE2030. FSE+."
+      "status": "plano_anual",
+      "notes": "FA0104/2025. COMPETE2030. FSE+.",
+      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado"
     },
     {
       "id": "siqrh-formacao-empresarial-operacoes-em-conjunto",
@@ -683,8 +692,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 65,
-      "status": "pending",
-      "notes": "FA0105/2025. COMPETE2030. FSE+."
+      "status": "plano_anual",
+      "notes": "FA0105/2025. COMPETE2030. FSE+.",
+      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado"
     },
     {
       "id": "step-i-d-i-empresarial-digital-e-biotecnologia",
