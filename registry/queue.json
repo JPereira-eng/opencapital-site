@@ -1310,23 +1310,6 @@
       "download_error": "Plano Anual - PDF confirma PAA202601, Resumo de Aviso do Plano Anual de Avisos"
     },
     {
-      "id": "tratamento-em-estacoes-de-tratamento-de-aguas-residuais-etar-para-prod",
-      "name": "Tratamento em Estações de Tratamento de Águas Residuais (ETAR) para produção de Água para Reutilização (ApR)",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0287/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2027-09-30",
-      "budget": "30 000 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/tratamento-em-estacoes-de-tratamento-de-aguas-residuais-etar-para-prod/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 45,
-      "status": "plano_anual",
-      "notes": "FA0287/2025. SUSTENTAVEL2030. FC.",
-      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro"
-    },
-    {
       "id": "aguas-residuais-em-alta",
       "name": "Águas residuais em alta",
       "source_id": "portugal-2030",
@@ -1341,7 +1324,7 @@
       "priority_score": 45,
       "status": "plano_anual",
       "notes": "FA0271/2025. SUSTENTAVEL2030. FC.",
-      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro"
+      "download_error": "Plano Anual - texto PAA detectado via WebFetch na pagina regulation_url"
     },
     {
       "id": "abastecimento-de-agua-em-alta",
@@ -1354,11 +1337,10 @@
       "budget": "15 000 000 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/abastecimento-de-agua-em-alta/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/abastecimento-de-agua-em-alta.txt",
       "priority_score": 45,
-      "status": "plano_anual",
-      "notes": "FA0269/2025. SUSTENTAVEL2030. FC.",
-      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro"
+      "status": "ready",
+      "notes": "FA0269/2025. SUSTENTAVEL2030. FC."
     },
     {
       "id": "infraestrutura-ferroviaria-rte-programa-de-sinalizacao-e-implementacao",
@@ -1373,25 +1355,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 45,
-      "status": "plano_anual",
-      "notes": "FA0152/2025. SUSTENTAVEL2030. FC.",
-      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro"
-    },
-    {
-      "id": "acoes-para-mitigacao-da-situacao-de-escassez-hidrica-e-assegurar-a-res",
-      "name": "Ações para mitigação da situação de escassez hídrica  e assegurar a resiliência hídrica da Região do Algarve",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0280/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-07-31",
-      "budget": "110 370 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/acoes-para-mitigacao-da-situacao-de-escassez-hidrica-e-assegurar-a-res/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 45,
       "status": "pending",
-      "notes": "FA0280/2025. SUSTENTAVEL2030. FC."
+      "notes": "FA0152/2025. SUSTENTAVEL2030. FC.",
+      "download_error": "PDF PACS-2026-4 inacessivel - URL nao encontrado nas localizacoes esperadas - tentativa 2026-04-15"
     },
     {
       "id": "programa-de-seguranca-ferroviaria-supressao-de-pns",
