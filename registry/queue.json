@@ -1326,22 +1326,6 @@
       "notes": "PAA - Plano Anual. Abertura condicionada ao aviso NORTE2030-2024-53."
     },
     {
-      "id": "linha-bpf-invest-export",
-      "name": "Linha BPF Invest Export",
-      "source_id": "santander-empresas",
-      "shard": "pt-other",
-      "aviso_codigo": null,
-      "detected_date": "2026-04-14",
-      "deadline": "2028-12-31",
-      "budget": "Ate 5M EUR por empresa (investimento)",
-      "regulation_url": "https://www.santander.pt/empresas/financiamento/linhas-especiais-credito/linha-bpf-invest-export",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 15,
-      "status": "pending",
-      "notes": "Linha BPF para empresas exportadoras. PME com exportacoes em 2024. Investimento: max 5M EUR (media), fundo maneio: max 3M EUR (media). Garantia SGM 50%. Prazo utilizacao: ate 31/12/2028."
-    },
-    {
       "id": "sistema-de-incentivos-de-base-territorial-it-cim-tamega-e-sousa",
       "name": "Sistema de Incentivos de base territorial (IT) - CIM Tamega e Sousa",
       "source_id": "portugal-2030",
