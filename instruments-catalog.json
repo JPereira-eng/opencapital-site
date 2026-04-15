@@ -15,7 +15,8 @@
       "highlight1": "Empresas Privadas",
       "highlight2": "Norte, Centro, Alentejo, Algarve",
       "href": "instrumentos/step-inovacao-produtiva-digital-biotecnologia.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "step-inovacao-produtiva-energia",
@@ -32,7 +33,8 @@
       "highlight1": "Empresas Privadas",
       "highlight2": "Norte, Centro, Alentejo",
       "href": "instrumentos/step-inovacao-produtiva-energia.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "step-idi-empresarial-energia",
@@ -46,10 +48,11 @@
       "regiao": "norte,centro,alentejo",
       "title": "STEP I&D&I Empresarial: Energia",
       "tagline": "Financiamento para investigação, desenvolvimento e inovação em tecnologias energéticas avançadas",
-      "highlight1": "Empresas Privadas · Ensino e Investigação",
+      "highlight1": "Empresas Privadas, Ensino e Investigação",
       "highlight2": "Norte, Centro, Alentejo",
       "href": "instrumentos/step-idi-empresarial-energia.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "step-idi-empresarial-digital-biotecnologia",
@@ -63,10 +66,11 @@
       "regiao": "norte,centro,alentejo,algarve,acores,madeira",
       "title": "STEP I&D&I Empresarial: Digital e Biotecnologia",
       "tagline": "Financiamento STEP para projetos de I&D em tecnologias digitais e biotecnologia estratégica",
-      "highlight1": "Empresas Privadas · Ensino e Investigação",
-      "highlight2": "Norte, Centro, Alentejo, Algarve, Açores, Madeira",
+      "highlight1": "Empresas Privadas, Ensino e Investigação",
+      "highlight2": "Nacional",
       "href": "instrumentos/step-idi-empresarial-digital-biotecnologia.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "eic-accelerator-2026",
@@ -80,10 +84,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EIC Accelerator 2026",
       "tagline": "Grant e investimento europeu para startups e PME com inovação disruptiva e escala global",
-      "highlight1": "Empresas Privadas · Empreendedores",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Empreendedores",
+      "highlight2": "Nacional",
       "href": "instrumentos/eic-accelerator-2026.html",
-      "featured": true
+      "featured": true,
+      "highlight0": "Grant + investimento de capital"
     },
     {
       "id": "step-scale-up-eic",
@@ -98,9 +103,10 @@
       "title": "EIC STEP Scale Up",
       "tagline": "Equity europeu de 10 a 30M EUR para startups e PME em deep tech, cleantech e biotecnologia",
       "highlight1": "Empresas Privadas",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight2": "Nacional",
       "href": "instrumentos/step-scale-up-eic.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Investimento em equity"
     },
     {
       "id": "siac-digitalizacao-transformacao-digital",
@@ -117,7 +123,8 @@
       "highlight1": "Entidades Públicas",
       "highlight2": "Norte, Centro, Alentejo",
       "href": "instrumentos/siac-digitalizacao-transformacao-digital.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "sitce-descarbonizacao-eficiencia-energetica",
@@ -134,7 +141,8 @@
       "highlight1": "Empresas Privadas",
       "highlight2": "Norte, Centro, Alentejo, Algarve",
       "href": "instrumentos/sitce-descarbonizacao-eficiencia-energetica.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "até 85% de apoio"
     },
     {
       "id": "siac-acoes-coletivas-internacionalizacao",
@@ -148,10 +156,11 @@
       "regiao": "norte,centro,alentejo",
       "title": "SIAC Ações Coletivas - Internacionalização",
       "tagline": "Financiamento coletivo COMPETE 2030 para campanhas internacionais de associações empresariais, câmaras de comércio e agências de promoção",
-      "highlight1": "Associações · Entidades Públicas",
+      "highlight1": "Associações, Entidades Públicas",
       "highlight2": "Norte, Centro, Alentejo",
       "href": "instrumentos/siac-acoes-coletivas-internacionalizacao.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "eic-pathfinder-2026",
@@ -165,10 +174,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EIC Pathfinder 2026",
       "tagline": "Financiamento europeu para investigação de fronteira em deep tech, da ideia ao proof-of-concept com até 4 milhões EUR por consórcio",
-      "highlight1": "Empresas Privadas · Ensino e Investigação",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Ensino e Investigação",
+      "highlight2": "Nacional",
       "href": "instrumentos/eic-pathfinder-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "até 4 milhões EUR"
     },
     {
       "id": "eic-transition-2026",
@@ -182,10 +192,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EIC Transition 2026",
       "tagline": "O elo entre o laboratório e o mercado: maturação tecnológica de TRL 3-4 até TRL 5-6, com até 2,5 milhões EUR por projeto",
-      "highlight1": "Empresas Privadas · Ensino e Investigação",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Ensino e Investigação",
+      "highlight2": "Nacional",
       "href": "instrumentos/eic-transition-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "até 2,5 milhões EUR"
     },
     {
       "id": "sice-internacionalizacao-pme",
@@ -200,9 +211,10 @@
       "title": "SICE: Internacionalização das PME",
       "tagline": "Financiamento coletivo COMPETE 2030 para associações empresariais levarem as suas PME a mercados externos, com fundo perdido até 50%",
       "highlight1": "Associações",
-      "highlight2": "Norte, Centro, Lisboa, Alentejo, Algarve",
+      "highlight2": "Portugal Continental",
       "href": "instrumentos/sice-internacionalizacao-pme.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "até 50% de apoio"
     },
     {
       "id": "siid-internacionalizacao-id-horizonte-europa",
@@ -217,9 +229,10 @@
       "title": "SIID – Internacionalização da I&D com Selo de Excelência",
       "tagline": "Financiamento nacional para PME com Selo de Excelência nos instrumentos EIC Transition ou Accelerator do Horizonte Europa",
       "highlight1": "Empresas Privadas",
-      "highlight2": "Norte, Centro, Lisboa, Alentejo, Algarve",
+      "highlight2": "Portugal Continental",
       "href": "instrumentos/siid-internacionalizacao-id-horizonte-europa.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "norte2030-siid-vinnovate",
@@ -233,10 +246,11 @@
       "regiao": "norte",
       "title": "SIID – Projetos Demonstradores VInnovate 2025",
       "tagline": "Projetos demonstradores interregionais de tecnologias avançadas reconhecidos pela rede europeia Vanguard Initiative, financiados pelo Norte 2030",
-      "highlight1": "Empresas Privadas · Ensino e Investigação",
+      "highlight1": "Empresas Privadas, Ensino e Investigação",
       "highlight2": "Norte",
       "href": "instrumentos/norte2030-siid-vinnovate.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "horizon-cl4-2026-data-ai",
@@ -250,10 +264,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa: Data Services & AI 2026",
       "tagline": "Financiamento europeu para projetos de investigação e inovação em serviços de dados, IA soberana e Open Internet Stack",
-      "highlight1": "Empresas Privadas · Ensino e Investigação · Associações",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Ensino e Investigação, Associações",
+      "highlight2": "Nacional",
       "href": "instrumentos/horizon-cl4-2026-data-ai.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "horizon-hlth-2026-healthcare",
@@ -267,10 +282,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa Saúde 2026: Healthcare Access",
       "tagline": "Financiamento europeu para inovação em acesso igualitário a cuidados de saúde sustentáveis e de qualidade",
-      "highlight1": "Empresas Privadas · Ensino e Investigação · Entidades Públicas · Associações",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Ensino e Investigação, Entidades Públicas, Associações",
+      "highlight2": "Nacional",
       "href": "instrumentos/horizon-hlth-2026-healthcare.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "cef-digital-2026-cabo-submarino",
@@ -284,10 +300,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "CEF Digital 2026: Reparação de Cabos Submarinos",
       "tagline": "Financiamento para reforçar capacidades europeias de reparação de cabos submarinos críticos face a sabotagem e falhas técnicas",
-      "highlight1": "Empresas Privadas · Entidades Públicas",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Entidades Públicas",
+      "highlight2": "Nacional",
       "href": "instrumentos/cef-digital-2026-cabo-submarino.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "horizon-cl6-2026-02",
@@ -301,10 +318,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa CL6-2026-02: Alimentação, Bioeconomia e Clima",
       "tagline": "17 tópicos de I&I em sistemas alimentares, bioeconomia, clima e comunidades rurais",
-      "highlight1": "Ensino e Investigação · Empresas Privadas · Associações",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Ensino e Investigação, Empresas Privadas, Associações",
+      "highlight2": "Nacional",
       "href": "instrumentos/horizon-cl6-2026-02.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "lisboa2030-2026-step-fase2",
@@ -318,10 +336,11 @@
       "regiao": "lisboa",
       "title": "Lisboa 2030 STEP: Equipamentos Tecnológicos (2.º Aviso)",
       "tagline": "Apoio a equipamentos tecnológicos críticos na Área Metropolitana de Lisboa, em digital e biotecnologia",
-      "highlight1": "Ensino e Investigação · Entidades Públicas · Associações",
+      "highlight1": "Ensino e Investigação, Entidades Públicas, Associações",
       "highlight2": "Lisboa",
       "href": "instrumentos/lisboa2030-2026-step-fase2.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "centro2030-2026-5-step",
@@ -335,10 +354,11 @@
       "regiao": "centro",
       "title": "Centro 2030 STEP: Infraestruturas de Base Tecnológica",
       "tagline": "25 milhões para modernizar e expandir infraestruturas tecnológicas na Região Centro em tecnologias STEP críticas",
-      "highlight1": "Ensino e Investigação · Associações",
+      "highlight1": "Ensino e Investigação, Associações",
       "highlight2": "Centro",
       "href": "instrumentos/centro2030-2026-5-step.html",
-      "featured": true
+      "featured": true,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "norte2030-2026-2-ferrovia-linha-vouga",
@@ -355,7 +375,8 @@
       "highlight1": "Entidades Públicas",
       "highlight2": "Norte",
       "href": "instrumentos/norte2030-2026-2-ferrovia-linha-vouga.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "horizon-widera-twinning-2026",
@@ -370,9 +391,10 @@
       "title": "Horizonte Europa WIDERA - Twinning 2026",
       "tagline": "Networking institucional entre entidades de investigação de paises Widening e parceiros europeus de referência",
       "highlight1": "Ensino e Investigação",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight2": "Nacional",
       "href": "instrumentos/horizon-widera-twinning-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "horizon-cl4-2026-espaco",
@@ -386,10 +408,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa - Espaco 2026",
       "tagline": "8 tópicos para soberania espacial europeia: spaceports, observacao terrestre, componentes críticos e dados espaciais",
-      "highlight1": "Empresas Privadas · Ensino e Investigação",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Ensino e Investigação",
+      "highlight2": "Nacional",
       "href": "instrumentos/horizon-cl4-2026-espaco.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "norte2030-infraestruturas-acolhimento-empresarial",
@@ -406,7 +429,8 @@
       "highlight1": "Entidades Públicas",
       "highlight2": "Norte",
       "href": "instrumentos/norte2030-infraestruturas-acolhimento-empresarial.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "até 1,5M EUR"
     },
     {
       "id": "linha-garantia-bpf-investeu-pme",
@@ -421,9 +445,10 @@
       "title": "Linha de Garantia BPF InvestEU",
       "tagline": "Credito com garantia pública europeia para PME e Small Mid-Caps. Até 8,25M EUR por empresa em tres modalidades.",
       "highlight1": "Empresas Privadas",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight2": "Nacional",
       "href": "instrumentos/linha-garantia-bpf-investeu-pme.html",
-      "featured": true
+      "featured": true,
+      "highlight0": "Até 8,25M EUR"
     },
     {
       "id": "turismo-acolhe-2026",
@@ -440,7 +465,8 @@
       "highlight1": "Empresas Privadas",
       "highlight2": "Norte, Centro",
       "href": "instrumentos/turismo-acolhe-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "até 60 EUR"
     },
     {
       "id": "iefp-estagios-iniciar-2026",
@@ -455,9 +481,10 @@
       "title": "Estagios INICIAR 2026 (IEFP)",
       "tagline": "Subsídio de 537 EUR/mes para estagios de jovens tecnicos (níveis 4-5 QNQ). Empresa recupera 80%, até 95% em condições especiais.",
       "highlight1": "Empresas Privadas",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight2": "Nacional",
       "href": "instrumentos/iefp-estagios-iniciar-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "até 95% de apoio"
     },
     {
       "id": "iefp-estagios-mais-talento-2026",
@@ -472,9 +499,10 @@
       "title": "Estagios +Talento 2026 (IEFP)",
       "tagline": "Subsídio de 1.181 a 1.396 EUR/mes para licenciados, mestres e doutoramentos. Empresa recupera 65% a 80% do custo total.",
       "highlight1": "Empresas Privadas",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight2": "Nacional",
       "href": "instrumentos/iefp-estagios-mais-talento-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "1.181 a 1.396 EUR"
     },
     {
       "id": "programa-consolidar-bpf",
@@ -489,9 +517,10 @@
       "title": "Programa Consolidar BPF",
       "tagline": "Fundo de Capitalização e Resiliência: co-investimento público-privado de €563M em capital de risco para PME com potencial de crescimento.",
       "highlight1": "Empresas Privadas",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight2": "Nacional",
       "href": "instrumentos/programa-consolidar-bpf.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Investimento privado"
     },
     {
       "id": "horizon-cl4-2026-01-materiais-producao",
@@ -505,10 +534,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "HORIZON-CL4-2026-01: Materiais e Produção",
       "tagline": "Horizonte Europa financia consórcios lideres em materiais avancados, manufactura de precisao e economia circular com dotação de 319 milhoes EUR.",
-      "highlight1": "Empresas Privadas · Ensino e Investigação · Associações",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Ensino e Investigação, Associações",
+      "highlight2": "Nacional",
       "href": "instrumentos/horizon-cl4-2026-01-materiais-producao.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "319 milhoes EUR"
     },
     {
       "id": "horizon-raise-2026-01-ia-ciencia",
@@ -522,10 +552,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "HORIZON-RAISE-2026-01: IA na Ciencia",
       "tagline": "Redes temáticas de excelencia em inteligência artificial aplicada a investigação científica, com 27,8 milhoes EUR para 2 consórcios europeus.",
-      "highlight1": "Ensino e Investigação · Empresas Privadas",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Ensino e Investigação, Empresas Privadas",
+      "highlight2": "Nacional",
       "href": "instrumentos/horizon-raise-2026-01-ia-ciencia.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "27,8 milhoes EUR"
     },
     {
       "id": "prima-2026-seccao-2",
@@ -539,10 +570,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "PRIMA 2026 - Seccao 2",
       "tagline": "Financiamento FCT para consórcios transnacionais de I&D mediterranica: água, monitorizacao agrícola e rastreabilidade digital agroalimentar.",
-      "highlight1": "Empresas Privadas · Ensino e Investigação",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Ensino e Investigação",
+      "highlight2": "Nacional",
       "href": "instrumentos/prima-2026-seccao-2.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "sifide-ii-candidaturas-2025",
@@ -557,9 +589,10 @@
       "title": "SIFIDE II - Candidaturas 2026",
       "tagline": "Deduza até 82,5% das despesas de I&D de 2025 diretamente na coleta de IRC. Prazo: 31 de maio de 2026.",
       "highlight1": "Empresas Privadas",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight2": "Nacional",
       "href": "instrumentos/sifide-ii-candidaturas-2025.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "até 82,5% de apoio"
     },
     {
       "id": "sustentavel-2030-pacs-2026-04",
@@ -576,7 +609,8 @@
       "highlight1": "Entidades Públicas",
       "highlight2": "Norte, Centro, Alentejo",
       "href": "instrumentos/sustentavel-2030-pacs-2026-04.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "20M EUR"
     },
     {
       "id": "sustentavel-2030-pacs-2026-03",
@@ -593,7 +627,8 @@
       "highlight1": "Entidades Públicas",
       "highlight2": "Centro, Alentejo",
       "href": "instrumentos/sustentavel-2030-pacs-2026-03.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "41,3M EUR"
     },
     {
       "id": "sustentavel-2030-pacs-2025-16",
@@ -608,9 +643,10 @@
       "title": "Viaturas ARFF - Aerodromos dos Açores (PACS-2025-16)",
       "tagline": "Aquisição de viaturas de combate a incêndios aeronauticos para os aeródromos da Graciosa, Pico e S. Jorge. 2,8M EUR FC, 85% cofinanciamento.",
       "highlight1": "Entidades Públicas",
-      "highlight2": "Açores",
+      "highlight2": "Acores",
       "href": "instrumentos/sustentavel-2030-pacs-2025-16.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "2,8M EUR"
     },
     {
       "id": "apoio-organizacoes-sociedade-civil-migrantes-pessoas2030",
@@ -627,7 +663,8 @@
       "highlight1": "Associações",
       "highlight2": "Norte, Centro, Alentejo",
       "href": "instrumentos/apoio-organizacoes-sociedade-civil-migrantes-pessoas2030.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "1,3M EUR"
     },
     {
       "id": "estagios-alma-pessoas2030",
@@ -642,9 +679,10 @@
       "title": "Estagios ALMA - Mobilidade Transnacional de Jovens (Pessoas 2030)",
       "tagline": "Iniciativa europeia ALMA: estagios transnacionais de 2 a 6 meses para jovens NEET vulneraveis em empresas de outros Estados-Membros. 2M EUR FSE+.",
       "highlight1": "Entidades Públicas",
-      "highlight2": "Norte, Centro, Lisboa, Alentejo, Algarve",
+      "highlight2": "Portugal Continental",
       "href": "instrumentos/estagios-alma-pessoas2030.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "2M EUR"
     },
     {
       "id": "sustentavel-2030-pacs-2025-15",
@@ -659,9 +697,10 @@
       "title": "Sustentável 2030 - PACS-2025-15: Iluminacao Aerodrome do Pico",
       "tagline": "Novo sistema de iluminacao da pista do aerodrome da ilha do Pico. 2,46M EUR Fundo de Coesão, 85% cofinanciamento. Convite para Secretaria Regional dos Açores.",
       "highlight1": "Entidades Públicas",
-      "highlight2": "Açores",
+      "highlight2": "Acores",
       "href": "instrumentos/sustentavel-2030-pacs-2025-15.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "2,46M EUR"
     },
     {
       "id": "madeira2030-2026-13-internacionalizacao-pme",
@@ -678,7 +717,8 @@
       "highlight1": "Empresas Privadas",
       "highlight2": "Madeira",
       "href": "instrumentos/madeira2030-2026-13-internacionalizacao-pme.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "1M EUR"
     },
     {
       "id": "mar2030-2026-10-madeira-custos-suplementares",
@@ -695,7 +735,8 @@
       "highlight1": "Empresas Privadas",
       "highlight2": "Madeira",
       "href": "instrumentos/mar2030-2026-10-madeira-custos-suplementares.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "2,5M EUR"
     },
     {
       "id": "sustentavel-2030-pacs-2026-06",
@@ -712,7 +753,8 @@
       "highlight1": "Entidades Públicas",
       "highlight2": "Lisboa, Alentejo",
       "href": "instrumentos/sustentavel-2030-pacs-2026-06.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "1,98M EUR"
     },
     {
       "id": "sustentavel-2030-pacs-2026-05",
@@ -729,7 +771,8 @@
       "highlight1": "Entidades Públicas",
       "highlight2": "Algarve",
       "href": "instrumentos/sustentavel-2030-pacs-2026-05.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "20M EUR"
     },
     {
       "id": "sustentavel-2030-pacs-2025-10",
@@ -746,7 +789,8 @@
       "highlight1": "Entidades Públicas",
       "highlight2": "Norte",
       "href": "instrumentos/sustentavel-2030-pacs-2025-10.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "6,1M EUR"
     },
     {
       "id": "sustentavel-2030-pacs-2026-02",
@@ -763,7 +807,8 @@
       "highlight1": "Entidades Públicas",
       "highlight2": "Madeira",
       "href": "instrumentos/sustentavel-2030-pacs-2026-02.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "5,5M EUR"
     },
     {
       "id": "cef-dig-2026-smart-cables",
@@ -777,10 +822,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "CEF Digital - Cabos Submarinos Inteligentes 2026",
       "tagline": "20M EUR para equipar cabos submarinos de fibra otica com tecnologias de monitorizacao inteligente. Até 50% de cofinanciamento. Exclusivo para entidades de Estados-Membros da UE.",
-      "highlight1": "Empresas Privadas · Entidades Públicas",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Entidades Públicas",
+      "highlight2": "Nacional",
       "href": "instrumentos/cef-dig-2026-smart-cables.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Até 50% de apoio"
     },
     {
       "id": "horizon-cl6-2026-01-zeropollution",
@@ -794,10 +840,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa - Ruido Subaquático e Ecossistemas Marinhos",
       "tagline": "10M EUR (1 projeto) para investigação sobre impacto do ruido antropogénico subaquático nos ecossistemas marinhos. Horizonte Europa Cluster 6, acao RIA.",
-      "highlight1": "Ensino e Investigação · Empresas Privadas",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Ensino e Investigação, Empresas Privadas",
+      "highlight2": "Nacional",
       "href": "instrumentos/horizon-cl6-2026-01-zeropollution.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "10M EUR"
     },
     {
       "id": "deep2start-ani-2025-01",
@@ -811,10 +858,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Deep2Start - Vouchers para Startups Deep Tech",
       "tagline": "Vouchers não reembolsaveis de até 60.000 EUR para startups Deep Tech portuguesas aprovadas no EIC Accelerator. Dotação 3,5M EUR, candidatura continua, decisao em 30 dias úteis.",
-      "highlight1": "Empresas Privadas · Empreendedores",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Empreendedores",
+      "highlight2": "Nacional",
       "href": "instrumentos/deep2start-ani-2025-01.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "até 60.000 EUR"
     },
     {
       "id": "sustentavel-2030-pacs-2026-07",
@@ -831,7 +879,8 @@
       "highlight1": "Entidades Públicas",
       "highlight2": "Norte, Centro, Alentejo",
       "href": "instrumentos/sustentavel-2030-pacs-2026-07.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "40 milhoes EUR"
     },
     {
       "id": "sustentavel-2030-pacs-2026-8",
@@ -848,7 +897,8 @@
       "highlight1": "Entidades Públicas",
       "highlight2": "Madeira",
       "href": "instrumentos/sustentavel-2030-pacs-2026-8.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "2,5 milhoes EUR"
     },
     {
       "id": "urbact-iv-action-networks-2026",
@@ -863,9 +913,10 @@
       "title": "URBACT IV - Call for Action Networks 2026",
       "tagline": "Até 1 milhao EUR por rede transnacional de 6 a 8 cidades europeias para desenvolver soluções urbanas integradas. FEDER, candidaturas até 17 junho 2026.",
       "highlight1": "Entidades Públicas",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight2": "Nacional",
       "href": "instrumentos/urbact-iv-action-networks-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "alentejo2030-ciclo-urbano-agua-2026",
@@ -882,7 +933,8 @@
       "highlight1": "Entidades Públicas",
       "highlight2": "Alentejo",
       "href": "instrumentos/alentejo2030-ciclo-urbano-agua-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "9 milhoes EUR"
     },
     {
       "id": "rede-fornecedores-inovadores",
@@ -897,9 +949,10 @@
       "title": "Rede de Fornecedores Inovadores - Empresas Nucleares",
       "tagline": "COMPETE2030 pre-qualifica grandes empresas ancora para liderar ecossistemas de inovação com PME fornecedoras. FA0317/2025, FEDER+FSE+, até 30/12/2027.",
       "highlight1": "Empresas Privadas",
-      "highlight2": "Norte, Centro, Lisboa, Alentejo, Algarve",
+      "highlight2": "Portugal Continental",
       "href": "instrumentos/rede-fornecedores-inovadores.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "horizon-cid-2026-01-clean-industrial-deal",
@@ -913,10 +966,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "HORIZON-CID-2026-01 - Clean Industrial Deal",
       "tagline": "125 milhoes EUR para demonstradores industriais de descarbonização. Captura de carbono, eletrificacao e circularidade. TRL 6-8. Até 25M EUR por projeto.",
-      "highlight1": "Empresas Privadas · Ensino e Investigação",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Ensino e Investigação",
+      "highlight2": "Nacional",
       "href": "instrumentos/horizon-cid-2026-01-clean-industrial-deal.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Até 25M EUR"
     },
     {
       "id": "digital-2026-bestuse-10",
@@ -930,10 +984,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "DIGITAL-2026-BESTUSE-10 - Best Use of Technologies",
       "tagline": "Digital Europe: dois tópicos para saúde digital EHDS e rede de Internet Segura. Cascading grants até 120.000 EUR por terceiro. Prazo outubro 2026.",
-      "highlight1": "Entidades Públicas · Empresas Privadas · Associações",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Entidades Públicas, Empresas Privadas, Associações",
+      "highlight2": "Nacional",
       "href": "instrumentos/digital-2026-bestuse-10.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "até 120.000 EUR"
     },
     {
       "id": "sustentavel-2030-pacs-2025-14",
@@ -948,9 +1003,10 @@
       "title": "Sustentável 2030 - Proteção e Defesa do Litoral",
       "tagline": "65 milhoes EUR FC para proteção costeira no continente: defesa de praias, estabilizacao de arribas, reposição sedimentar. APA, municípios e SEE. 3 fases até out 2026.",
       "highlight1": "Entidades Públicas",
-      "highlight2": "Norte, Centro, Lisboa, Alentejo, Algarve",
+      "highlight2": "Portugal Continental",
       "href": "instrumentos/sustentavel-2030-pacs-2025-14.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "65 milhoes EUR"
     },
     {
       "id": "prr-doenca-mental-rncci-2026",
@@ -964,10 +1020,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "PRR - Doença Mental Crónica fora da RNCCI",
       "tagline": "PRR financia criação de respostas para pessoas com doença mental crónica institucionalizadas sem acesso a RNCCI. Aviso 19/Re-C01-i03/2026. Prazo urgente: 23/04/2026.",
-      "highlight1": "Entidades Públicas · Associações",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Entidades Públicas, Associações",
+      "highlight2": "Nacional",
       "href": "instrumentos/prr-doenca-mental-rncci-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "prr-habitacao-c02-i01-2026",
@@ -981,10 +1038,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "PRR - Apoio ao Acesso a Habitação",
       "tagline": "Financiamento não reembolsável para entidades que promovem habitação acessível em Portugal.",
-      "highlight1": "Entidades Públicas · Associações",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Entidades Públicas, Associações",
+      "highlight2": "Nacional",
       "href": "instrumentos/prr-habitacao-c02-i01-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "prr-flexibilidade-rede-2026",
@@ -998,10 +1056,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "PRR - Flexibilidade de Rede e Armazenamento",
       "tagline": "Financiamento para projetos de armazenamento de energia e flexibilidade da rede elétrica nacional.",
-      "highlight1": "Empresas Privadas · Entidades Públicas",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Entidades Públicas",
+      "highlight2": "Nacional",
       "href": "instrumentos/prr-flexibilidade-rede-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "eit-food-fan-2026",
@@ -1015,10 +1074,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EIT Food Accelerator Network (FAN) 2026",
       "tagline": "Aceleradora europeia para startups agrifood e foodtech com premios até 50.000 EUR e acesso a rede industrial europeia.",
-      "highlight1": "Empresas Privadas · Empreendedores",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Empreendedores",
+      "highlight2": "Nacional",
       "href": "instrumentos/eit-food-fan-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "até 50.000 EUR"
     },
     {
       "id": "open-horizons-call-3-startups-mulheres",
@@ -1032,10 +1092,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Open Horizons - Final Call Startups Lideradas por Mulheres",
       "tagline": "Até 55.000 EUR equity-free para startups deeptech lideradas por mulheres, com pilotos corporativos pagos.",
-      "highlight1": "Empresas Privadas · Empreendedores",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Empreendedores",
+      "highlight2": "Nacional",
       "href": "instrumentos/open-horizons-call-3-startups-mulheres.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Até 55.000 EUR"
     },
     {
       "id": "inclusao-pela-cultura-juntas-freguesia-alentejo",
@@ -1052,7 +1113,8 @@
       "highlight1": "Entidades Públicas",
       "highlight2": "Alentejo",
       "href": "instrumentos/inclusao-pela-cultura-juntas-freguesia-alentejo.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "apoio-capacitacao-entidades-emprego-alentejo",
@@ -1066,10 +1128,11 @@
       "regiao": "alentejo",
       "title": "Alentejo 2030 - Capacitação Entidades de Emprego e Empreendedorismo",
       "tagline": "Financiamento FSE+ para reforçar a capacidade de entidades públicas e privadas que suportam o emprego e o empreendedorismo no Alentejo.",
-      "highlight1": "Entidades Públicas · Associações",
+      "highlight1": "Entidades Públicas, Associações",
       "highlight2": "Alentejo",
       "href": "instrumentos/apoio-capacitacao-entidades-emprego-alentejo.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "respostas-sociais-proximidade-2-aviso-acores",
@@ -1084,9 +1147,10 @@
       "title": "Açores 2030 - Respostas Sociais de Proximidade (2o Aviso)",
       "tagline": "FEDER para expandir infraestruturas, veículos e serviços de cuidados de proximidade na Região Autónoma dos Açores.",
       "highlight1": "Entidades Públicas",
-      "highlight2": "Açores",
+      "highlight2": "Acores",
       "href": "instrumentos/respostas-sociais-proximidade-2-aviso-acores.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "cursos-profissionais-2-aviso-acores",
@@ -1100,10 +1164,11 @@
       "regiao": "acores",
       "title": "Açores 2030 - Cursos Profissionais (2o Aviso)",
       "tagline": "FSE+ para financiar a oferta de cursos profissionais de nível secundario nas escolas e entidades formadoras acreditadas dos Açores.",
-      "highlight1": "Entidades Públicas · Empresas Privadas",
-      "highlight2": "Açores",
+      "highlight1": "Entidades Públicas, Empresas Privadas",
+      "highlight2": "Acores",
       "href": "instrumentos/cursos-profissionais-2-aviso-acores.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "eurostars-call-11-setembro-2026",
@@ -1118,9 +1183,10 @@
       "title": "Eurostars Call 11 - Setembro 2026",
       "tagline": "Financiamento europeu para projetos internacionais de I&D liderados por PMEs inovadoras, via Eureka Network co-financiada pelo Horizonte Europa.",
       "highlight1": "Empresas Privadas",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight2": "Nacional",
       "href": "instrumentos/eurostars-call-11-setembro-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "emfaf-2026-pia-msp",
@@ -1134,10 +1200,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EMFAF 2026 - Planeamento do Espaco Maritimo (Atlantico e Mar Negro)",
       "tagline": "Financiamento europeu para cooperação transfronteiriça no ordenamento maritimo e economia azul sustentável entre Estados-Membros da bacia atlantica.",
-      "highlight1": "Entidades Públicas · Ensino e Investigação · Associações",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Entidades Públicas, Ensino e Investigação, Associações",
+      "highlight2": "Nacional",
       "href": "instrumentos/emfaf-2026-pia-msp.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "innovation-fund-2025-net-zero",
@@ -1151,10 +1218,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Innovation Fund 2025 - Tecnologias Net-Zero",
       "tagline": "O maior programa europeu de financiamento a tecnologias inovadoras de emissões zero, com 2,9 mil milhoes EUR para industria, energia, mobilidade e CCUS.",
-      "highlight1": "Empresas Privadas · Entidades Públicas · Ensino e Investigação",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Entidades Públicas, Ensino e Investigação",
+      "highlight2": "Nacional",
       "href": "instrumentos/innovation-fund-2025-net-zero.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "eit-health-innovation-validation-2026",
@@ -1168,10 +1236,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EIT Health Innovation Validation Call 2026",
       "tagline": "Até 850.000 EUR por projeto para validar tecnologias digitais e dispositivos medicos inovadores em consorcio transnacional europeu com ensaios clinicos e marcacao CE.",
-      "highlight1": "Empresas Privadas · Ensino e Investigação",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Ensino e Investigação",
+      "highlight2": "Nacional",
       "href": "instrumentos/eit-health-innovation-validation-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Até 850.000 EUR"
     },
     {
       "id": "eit-urban-mobility-strategic-innovation-2026",
@@ -1185,10 +1254,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EIT Urban Mobility Strategic Innovation Open Call 2026",
       "tagline": "60 milhoes EUR para projetos europeus de inovação em mobilidade urbana sustentável, com até 2 milhoes EUR por projeto e multiplos prazos em 2026 e 2027.",
-      "highlight1": "Empresas Privadas · Entidades Públicas · Ensino e Investigação · Associações",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Entidades Públicas, Ensino e Investigação, Associações",
+      "highlight2": "Nacional",
       "href": "instrumentos/eit-urban-mobility-strategic-innovation-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "até 2 milhoes EUR"
     },
     {
       "id": "eit-urban-mobility-financial-support-startups-2026",
@@ -1202,10 +1272,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EIT Urban Mobility Financial Support to Startups 2026",
       "tagline": "Até 2,5 milhoes EUR em blended finance para startups de mobilidade urbana em ronda ativa de financiamento, com co-investimento europeu ao lado de VCs privados.",
-      "highlight1": "Empresas Privadas · Empreendedores",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Empreendedores",
+      "highlight2": "Nacional",
       "href": "instrumentos/eit-urban-mobility-financial-support-startups-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Até 2,5 milhoes EUR"
     },
     {
       "id": "climatelaunchpad-2026",
@@ -1219,10 +1290,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "ClimateLaunchpad 2026",
       "tagline": "A maior competicao global de ideias de negocio verdes, com incubacao UPTEC e acesso a rede de 500M EUR em investimento.",
-      "highlight1": "Empresas Privadas · Empreendedores",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Empreendedores",
+      "highlight2": "Nacional",
       "href": "instrumentos/climatelaunchpad-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Apoio institucional"
     },
     {
       "id": "esa-bic-centro-plus-2026",
@@ -1236,10 +1308,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "ESA BIC Centro+",
       "tagline": "Incubacao espacial europeia em Portugal: até 60.000 EUR equity-free para startups com tecnologia espacial, coordenada pelo IPN Coimbra.",
-      "highlight1": "Empresas Privadas · Empreendedores",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Empreendedores",
+      "highlight2": "Nacional",
       "href": "instrumentos/esa-bic-centro-plus-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "até 60.000 EUR"
     },
     {
       "id": "esa-bic-tagus-plus-2026",
@@ -1253,10 +1326,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "ESA BIC Tagus+",
       "tagline": "Incubacao espacial europeia em Lisboa: até 60.000 EUR equity-free para startups com tecnologia espacial, coordenada pelo IST em Oeiras.",
-      "highlight1": "Empresas Privadas · Empreendedores",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empresas Privadas, Empreendedores",
+      "highlight2": "Nacional",
       "href": "instrumentos/esa-bic-tagus-plus-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "até 60.000 EUR"
     },
     {
       "id": "gulbenkian-apoio-internacionalizacao-2026",
@@ -1270,10 +1344,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Gulbenkian - Apoio Internacionalização Cultural",
       "tagline": "Apoio a artistas e organizações culturais portuguesas para participação em projetos internacionais de referência. Até 5.000 EUR por projeto.",
-      "highlight1": "Empreendedores · Associações",
-      "highlight2": "Nacional (todas as regiões)",
+      "highlight1": "Empreendedores, Associações",
+      "highlight2": "Nacional",
       "href": "instrumentos/gulbenkian-apoio-internacionalizacao-2026.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Até 5.000 EUR"
     },
     {
       "id": "infraestruturas-e-equipamentos-tecnologicos-step",
@@ -1287,10 +1362,11 @@
       "regiao": "lisboa",
       "title": "Infraestruturas e Equipamentos Tecnologicos STEP",
       "tagline": "Apoio a infraestruturas criticas para tecnologias digitais e biotecnologicas no ecossistema de inovacao de Lisboa.",
-      "highlight1": "15M EUR",
-      "highlight2": "60% FEDER",
+      "highlight1": "Entidades Publicas, Associacoes e outros",
+      "highlight2": "Lisboa",
       "href": "instrumentos/infraestruturas-e-equipamentos-tecnologicos-step.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "15M EUR"
     },
     {
       "id": "formacao-continua-de-docentes-formadores-e-outros-agentes-de-educacao-",
@@ -1304,10 +1380,11 @@
       "regiao": "norte,centro,alentejo",
       "title": "Formacao Continua de Docentes e Formadores",
       "tagline": "Financiamento FSE+ para qualificacao de professores, formadores e agentes de educacao no Norte, Centro e Alentejo.",
-      "highlight1": "12,25M EUR",
-      "highlight2": "85% FSE+",
+      "highlight1": "Entidades Publicas, Associacoes e outros",
+      "highlight2": "Norte, Centro, Alentejo",
       "href": "instrumentos/formacao-continua-de-docentes-formadores-e-outros-agentes-de-educacao-.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "12,25M EUR"
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-iti-cim-regiao-do-oeste-indu",
@@ -1321,10 +1398,11 @@
       "regiao": "centro",
       "title": "SIBT - ITI CIM do Oeste - Industria",
       "tagline": "Apoio FEDER para investimentos industriais de pequena dimensao na CIM do Oeste via Centro 2030",
-      "highlight1": "Dotacao: 2 500 000 EUR - Co-financiamento 40% FEDER",
-      "highlight2": "Micro e Pequenas Empresas - CIM do Oeste",
+      "highlight1": "Empresas",
+      "highlight2": "Centro",
       "href": "instrumentos/sistema-de-incentivos-de-base-territorial-iti-cim-regiao-do-oeste-indu.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Dotacao: 2 500 000 EUR - Co-financiamento 40% FEDER"
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-it-cim-terras-de-tras-os-mon",
@@ -1338,10 +1416,11 @@
       "regiao": "norte",
       "title": "IT CIM Terras de Tras-os-Montes - Norte 2030",
       "tagline": "Investimento nao reembolsavel para modernizar micro e pequenas empresas transmontanas.",
-      "highlight1": "1.257.908 EUR",
-      "highlight2": "Ate 60% fundo perdido",
+      "highlight1": "Empresas",
+      "highlight2": "Norte",
       "href": "instrumentos/sistema-de-incentivos-de-base-territorial-it-cim-terras-de-tras-os-mon.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "1.257.908 EUR"
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-it-cim-ave",
@@ -1355,10 +1434,11 @@
       "regiao": "norte",
       "title": "IT CIM Ave - Norte 2030",
       "tagline": "Investimento nao reembolsavel para modernizar micro e pequenas empresas do Vale do Ave.",
-      "highlight1": "1.220.305 EUR",
-      "highlight2": "Ate 60% fundo perdido",
+      "highlight1": "Empresas",
+      "highlight2": "Norte",
       "href": "instrumentos/sistema-de-incentivos-de-base-territorial-it-cim-ave.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "1.220.305 EUR"
     },
     {
       "id": "step-i-d-i-empresarial-energia",
@@ -1372,10 +1452,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "STEP I&D&I Empresarial - Energia",
       "tagline": "115 milhoes EUR para projetos de I&D&I em energia limpa e descarbonizacao.",
-      "highlight1": "115.000.000 EUR",
-      "highlight2": "COMPETE 2030 / STEP",
+      "highlight1": "Empresas",
+      "highlight2": "Nacional",
       "href": "instrumentos/step-i-d-i-empresarial-energia.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "115.000.000 EUR"
     },
     {
       "id": "programa-apoio-crescer-com-o-turismo",
@@ -1390,9 +1471,10 @@
       "title": "Programa de Apoio Crescer com o Turismo",
       "tagline": "Fundo híbrido de 30 milhões para projetos de competitividade turística, inovação social e gestão inteligente de territórios",
       "highlight1": "Entidades Públicas, OSFL, PME (condicionado)",
-      "highlight2": "Todo o território nacional",
+      "highlight2": "Nacional",
       "href": "instrumentos/programa-apoio-crescer-com-o-turismo.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Apoio hibrido (reembolsavel + fundo perdido)"
     },
     {
       "id": "protecao-civil-e-gestao-integrada-de-riscos-prevencao-e-mitigacao-de-r",
@@ -1409,7 +1491,8 @@
       "highlight1": "Municípios e Administração Regional",
       "highlight2": "Portugal Continental",
       "href": "instrumentos/protecao-civil-e-gestao-integrada-de-riscos-prevencao-e-mitigacao-de-r.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "tratamento-em-estacoes-de-tratamento-de-aguas-residuais-etar-para-prod",
@@ -1426,7 +1509,8 @@
       "highlight1": "Operadores de Sistemas de Saneamento",
       "highlight2": "Portugal Continental",
       "href": "instrumentos/tratamento-em-estacoes-de-tratamento-de-aguas-residuais-etar-para-prod.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "acoes-para-mitigacao-da-situacao-de-escassez-hidrica-e-assegurar-a-res",
@@ -1440,10 +1524,11 @@
       "regiao": "algarve",
       "title": "Acoes para Mitigacao da Escassez Hidrica do Algarve",
       "tagline": "110 milhoes EUR do Fundo de Coesao para infraestrutura hidrica e resiliencia climatica no Algarve (FA0280/2025)",
-      "highlight1": "110.370.000 EUR (FC)",
-      "highlight2": "Convite - Entidades Publicas",
+      "highlight1": "Entidades Publicas",
+      "highlight2": "Algarve",
       "href": "instrumentos/acoes-para-mitigacao-da-situacao-de-escassez-hidrica-e-assegurar-a-res.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "110.370.000 EUR (FC)"
     },
     {
       "id": "aguas-residuais-em-alta",
@@ -1460,7 +1545,8 @@
       "highlight1": "Sistemas Intermunicipais de Saneamento",
       "highlight2": "Portugal Continental",
       "href": "instrumentos/aguas-residuais-em-alta.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "programa-de-seguranca-ferroviaria-supressao-de-pns",
@@ -1474,10 +1560,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve",
       "title": "Seguranca Ferroviaria - Supressao de Passagens de Nivel",
       "tagline": "41 milhoes EUR do Fundo de Coesao para eliminar passagens de nivel e reduzir sinistralidade ferroviaria (FA0156/2025)",
-      "highlight1": "41.379.567 EUR (FC)",
-      "highlight2": "Convite - Infraestruturas de Portugal",
+      "highlight1": "Entidades Publicas",
+      "highlight2": "Portugal Continental",
       "href": "instrumentos/programa-de-seguranca-ferroviaria-supressao-de-pns.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "41.379.567 EUR (FC)"
     },
     {
       "id": "abastecimento-de-agua-em-alta",
@@ -1494,7 +1581,8 @@
       "highlight1": "Sistemas Intermunicipais de Abastecimento",
       "highlight2": "Portugal Continental",
       "href": "instrumentos/abastecimento-de-agua-em-alta.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "linha-norte-estacao-do-oriente-terminal-tecnico",
@@ -1508,10 +1596,11 @@
       "regiao": "lisboa",
       "title": "Linha Norte - Estacao do Oriente e Terminal Tecnico",
       "tagline": "100 milhoes EUR FC para modernizacao da Linha Norte: obras no Oriente e novo Terminal Tecnico ferroviario (FA0682/2024)",
-      "highlight1": "100.120.000 EUR (FC)",
-      "highlight2": "Convite - IP / CP",
+      "highlight1": "Entidades Publicas",
+      "highlight2": "Lisboa",
       "href": "instrumentos/linha-norte-estacao-do-oriente-terminal-tecnico.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "100.120.000 EUR (FC)"
     },
     {
       "id": "ampliacao-e-modernizacao-do-aeroporto-das-lajes",
@@ -1525,10 +1614,11 @@
       "regiao": "acores",
       "title": "Ampliacao e Modernizacao do Aeroporto das Lajes",
       "tagline": "42.5 milhoes EUR FC para ampliar e modernizar o aeroporto da ilha Terceira, reforcando a conectividade aerea dos Acores (FA0165/2025)",
-      "highlight1": "42.500.000 EUR (FC)",
-      "highlight2": "RUP Acores - Ilha Terceira",
+      "highlight1": "Entidades Publicas",
+      "highlight2": "Acores",
       "href": "instrumentos/ampliacao-e-modernizacao-do-aeroporto-das-lajes.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "42.500.000 EUR (FC)"
     },
     {
       "id": "infraestrutura-ferroviaria-rte-programa-de-sinalizacao-e-implementacao",
@@ -1542,10 +1632,11 @@
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Infraestrutura Ferroviaria (RTE) - Sinalizacao e ERTMS",
       "tagline": "Financiamento nao reembolsavel para implementacao do ERTMS nas linhas ferroviarias da Rede Transeuropeia de Transportes.",
-      "highlight1": "65,9M EUR",
-      "highlight2": "Fundo de Coesao",
+      "highlight1": "Entidades Publicas",
+      "highlight2": "Nacional",
       "href": "instrumentos/infraestrutura-ferroviaria-rte-programa-de-sinalizacao-e-implementacao.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "65,9M EUR"
     },
     {
       "id": "infraestrutura-portuaria-rte-porto-de-lisboa-3-aviso-navegabilidade-do",
@@ -1559,10 +1650,11 @@
       "regiao": "lisboa",
       "title": "Infraestrutura Portuaria (RTE) - Navegabilidade do Estuario do Tejo",
       "tagline": "Financiamento para dragagem e manutencao da navegabilidade do Estuario do Tejo ate Castanheira do Ribatejo.",
-      "highlight1": "15,2M EUR",
-      "highlight2": "Fundo de Coesao",
+      "highlight1": "Entidades Publicas",
+      "highlight2": "Lisboa",
       "href": "instrumentos/infraestrutura-portuaria-rte-porto-de-lisboa-3-aviso-navegabilidade-do.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "15,2M EUR"
     },
     {
       "id": "aquisicao-de-equipamentos-e-intervencao-em-infraestruturas-portuarias-",
@@ -1576,10 +1668,11 @@
       "regiao": "acores",
       "title": "Aquisicao de Equipamentos e Intervencao em Infraestruturas Portuarias da RAA",
       "tagline": "Financiamento para equipar e requalificar infraestruturas portuarias na Regiao Autonoma dos Acores, 3.o aviso.",
-      "highlight1": "15,4M EUR",
-      "highlight2": "Fundo de Coesao",
+      "highlight1": "Entidades Publicas",
+      "highlight2": "Acores",
       "href": "instrumentos/aquisicao-de-equipamentos-e-intervencao-em-infraestruturas-portuarias-.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "15,4M EUR"
     },
     {
       "id": "estagios-profissionais",
@@ -1594,9 +1687,10 @@
       "title": "Estagios Profissionais - Pessoas 2030",
       "tagline": "Apoio a realizacao de estagios profissionais para jovens e desempregados, financiado pelo FSE+ no ambito do Pessoas 2030.",
       "highlight1": "Apoio FSE+",
-      "highlight2": "Pessoas 2030",
+      "highlight2": "Portugal Continental",
       "href": "instrumentos/estagios-profissionais.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "Fundo nao reembolsavel"
     },
     {
       "id": "cursos-profissionais-entidades-privadas",
@@ -1610,10 +1704,11 @@
       "regiao": "madeira",
       "title": "Cursos Profissionais - Entidades Privadas (Madeira 2030)",
       "tagline": "FSE+ para cursos profissionais em escolas privadas na Madeira, ciclo formativo 2025/2028 (FA0098/2025)",
-      "highlight1": "10.500.000 EUR (FSE+)",
-      "highlight2": "Madeira - Nivel 4 QNQ",
+      "highlight1": "Ensino e Investigacao",
+      "highlight2": "Madeira",
       "href": "instrumentos/cursos-profissionais-entidades-privadas.html",
-      "featured": false
+      "featured": false,
+      "highlight0": "10.500.000 EUR (FSE+)"
     }
   ]
 }
