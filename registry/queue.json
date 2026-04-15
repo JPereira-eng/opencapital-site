@@ -1326,22 +1326,6 @@
       "notes": "PAA - Plano Anual. Abertura condicionada ao aviso NORTE2030-2024-53."
     },
     {
-      "id": "linha-bpf-investeu-id-digitalizacao",
-      "name": "Linha BPF InvestEU I&D e Digitalizacao",
-      "source_id": "santander-empresas",
-      "shard": "pt-other",
-      "aviso_codigo": null,
-      "detected_date": "2026-04-14",
-      "deadline": null,
-      "budget": "Ate 10M EUR por empresa",
-      "regulation_url": "https://www.santander.pt/empresas/financiamento/linhas-especiais-credito/linha-bpf-invest-eu-investigacao-inovacao-digitalizacao",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 15,
-      "status": "pending",
-      "notes": "Linha BPF InvestEU para investigacao, inovacao e digitalizacao. PME e Small Midcaps. Infraestruturas de I&D, transferencia tecnologica, novos produtos de saude, economia digital. Max 10M EUR, prazo 180 meses, garantia SGM 75%. Candidatura continua via bancos aderentes."
-    },
-    {
       "id": "linha-bpf-invest-export",
       "name": "Linha BPF Invest Export",
       "source_id": "santander-empresas",
