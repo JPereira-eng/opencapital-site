@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estágios Profissionais (Pessoas 2030) - FA0221/2025: Open Capital</title>
+  <meta name="description" content="Aviso FA0221/2025 do Pessoas 2030 financia empresas para acolherem jovens desempregados qualificados em estágios de 6 meses. 144,5M EUR FSE+. Prazo 31/12/2026.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.status-open{color:#4CAF82;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-body{}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+
+    .two-col-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:28px 0;}
+    .profile-card{border:1px solid var(--grey-light);padding:28px;position:relative;overflow:hidden;}
+    .profile-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .profile-card-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .profile-card-title{font-size:17px;font-weight:600;color:var(--navy);margin-bottom:14px;line-height:1.3;}
+    .profile-card-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:9px;}
+    .profile-card-list li{position:relative;padding-left:16px;font-size:15px;font-weight:300;color:var(--grey-dark);line-height:1.65;}
+    .profile-card-list li::before{content:'';position:absolute;left:0;top:8px;width:4px;height:4px;border:1px solid var(--gold);transform:rotate(45deg);}
+
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}.two-col-grid{grid-template-columns:1fr;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../solucoes.html" class="active">Biblioteca</a></li>
+    <li><a href="../conhecimento.html">Conhecimento</a></li>
+    <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros.html">Parceiros</a>
+        <a href="../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/tech2business" class="nav-cta" target="_blank">Contactar</a>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../solucoes.html">Biblioteca</a>
+  <a href="../conhecimento.html">Conhecimento</a>
+  <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos.html">Sobre Nós</a>
+  <a href="../parceiros.html">Parceiros</a>
+  <a href="../carreiras.html">Carreiras</a>
+  <a href="https://calendly.com/tech2business" class="nav-mobile-cta" target="_blank">Contactar</a>
+</div>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../index.html">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../solucoes.html">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Estágios Profissionais</span>
+    </nav>
+    <p class="hero-cat">Financiamento Público</p>
+    <h1 class="hero-title">Estágios Profissionais</h1>
+    <p class="hero-tagline">O programa que financia empresas para acolherem jovens qualificados e acelerar a sua integração no mercado de trabalho português.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotação</span>
+        <span class="meta-value">144.500.000 EUR</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Duração</span>
+        <span class="meta-value">6 meses</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Elegibilidade</span>
+        <span class="meta-value">Empresas privadas</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-open">Aberto até 31/12/2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../solucoes.html" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O Programa</div>
+      <h2 class="section-h2">O que são os Estágios Profissionais</h2>
+      <p class="section-text">Os Estágios Profissionais são um instrumento do programa Pessoas 2030, financiado pelo FSE+ (Fundo Social Europeu Plus), que subsidia empresas privadas para acolherem jovens desempregados com qualificações superiores. O aviso FA0221/2025 abre uma dotação de 144,5 milhões de euros para este propósito, tornando-o um dos maiores instrumentos de emprego da atual geração de fundos europeus em Portugal.</p>
+      <p class="section-text">O mecanismo é direto: a empresa privada candidata-se como entidade acolhedora de um ou mais estagiários. Se aprovada, recebe financiamento para cobrir os custos da bolsa de estágio paga ao jovem participante. O estágio tem a duração de 6 meses, não renovável, e é gerido administrativamente através do IEFP (Instituto do Emprego e Formação Profissional).</p>
+      <p class="section-text">O objetivo central é combater o desemprego jovem qualificado e reduzir a fuga de cérebros, criando uma ponte entre jovens licenciados sem experiência profissional e empresas que necessitam de talento. Portugal enfrenta um paradoxo persistente: empresas com dificuldade em recrutar e jovens qualificados que emigram por falta de oportunidades. Este programa existe precisamente para encurtar essa distância.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Quem Pode Participar</div>
+      <h2 class="section-h2">Duas perspetivas: empresas acolhedoras e estagiários</h2>
+      <p class="section-text">O programa distingue dois tipos de intervenientes com requisitos distintos. As <strong style="color:var(--navy);font-weight:600;">empresas acolhedoras</strong> candidatam-se ao financiamento, enquanto os <strong style="color:var(--navy);font-weight:600;">estagiários</strong> são os participantes que beneficiam da inserção profissional.</p>
+
+      <div class="two-col-grid">
+        <div class="profile-card">
+          <div class="profile-card-label">Empresas acolhedoras</div>
+          <div class="profile-card-title">Quem pode candidatar-se ao financiamento</div>
+          <ul class="profile-card-list">
+            <li>Entidades privadas com ou sem fins lucrativos (empresas, associações, cooperativas)</li>
+            <li>Qualquer sector de atividade</li>
+            <li>Devem apresentar um plano de estágio para cada estagiário</li>
+            <li>Podem acolher múltiplos estagiários em função da sua dimensão</li>
+            <li>Submetem candidatura via iefponline.iefp.pt</li>
+          </ul>
+        </div>
+        <div class="profile-card">
+          <div class="profile-card-label">Estagiários participantes</div>
+          <div class="profile-card-title">Perfil exigido aos jovens acolhidos</div>
+          <ul class="profile-card-list">
+            <li>Idade até 35 anos (inclusive)</li>
+            <li>Desempregados inscritos no IEFP, ou em situação de emigração há 12 meses ou mais</li>
+            <li>Qualificação de nível 6 ou superior do CNQ (licenciatura, mestrado ou doutoramento)</li>
+            <li>Disponibilidade para iniciar o estágio na empresa acolhedora</li>
+          </ul>
+        </div>
+      </div>
+
+      <table class="art-table">
+        <thead>
+          <tr><th>Regiao</th><th>Abrangencia</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Norte</strong></td><td>NUTS II Norte - incluida</td></tr>
+          <tr><td><strong>Centro</strong></td><td>NUTS II Centro - incluida</td></tr>
+          <tr><td><strong>Lisboa</strong></td><td>Area Metropolitana de Lisboa - incluida</td></tr>
+          <tr><td><strong>Alentejo</strong></td><td>NUTS II Alentejo - incluida</td></tr>
+          <tr><td><strong>Algarve</strong></td><td>NUTS II Algarve - incluida</td></tr>
+          <tr><td><strong>Acores</strong></td><td>Regiao Autonoma dos Acores - incluida</td></tr>
+          <tr><td><strong>Madeira</strong></td><td>Regiao Autonoma da Madeira - incluida</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="stats-row reveal" style="grid-template-columns:repeat(3,1fr);">
+      <div class="stat-cell">
+        <div class="stat-num">144<sup>M EUR</sup></div>
+        <div class="stat-label">Dotacao total disponivel</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Meses por estagio (nao renovavel)</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">FSE<sup>+</sup></div>
+        <div class="stat-label">Fundo Social Europeu Plus</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Condicoes Financeiras</div>
+      <h2 class="section-h2">O que é financiado e como funciona o processo</h2>
+      <p class="section-text">O financiamento cobre os custos associados à bolsa de estágio paga ao estagiário. A empresa acolhedora não suporta a totalidade deste custo: o programa subsidia uma parte significativa da bolsa, reduzindo o custo efetivo para a empresa. Os valores exatos de bolsa e taxa de comparticipação são definidos pela regulamentação do IEFP em vigor à data da candidatura.</p>
+      <p class="section-text">Todo o processo de candidatura, seleção e gestão dos estágios corre dentro da plataforma iefponline.iefp.pt. A empresa regista-se, submete a proposta de estágio com o respetivo plano formativo, e o IEFP faz a correspondência com estagiários disponíveis e elegíveis no seu sistema de inscrição. A gestão administrativa é centralizada pelo IEFP, o que reduz a carga burocrática para a empresa acolhedora.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-box-title">Plataforma de candidatura</div>
+        <div class="highlight-box-text">As candidaturas são submetidas exclusivamente através de <strong style="color:var(--navy);">iefponline.iefp.pt</strong>. O IEFP atua como organismo intermediário do aviso, gerindo a correspondência entre empresas e candidatos e assegurando o cumprimento dos critérios de elegibilidade.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Beneficios para as Empresas</div>
+      <h2 class="section-h2">Porque faz sentido aderir a este programa</h2>
+      <p class="section-text">Para além do subsidio direto à bolsa de estágio, as empresas acolhedoras acumulam vantagens estratégicas que vão além do beneficio financeiro imediato:</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Acesso a talento qualificado a custo subsidiado:</strong> a empresa testa um colaborador com nivel de licenciatura ou superior sem assumir o custo total de uma contratação a tempo inteiro.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Pipeline de recrutamento:</strong> o estágio funciona como um periodo de avaliação mútua. As empresas com melhores práticas de acolhimento convertem regularmente os estagiários em contratos efetivos.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Compromisso ESG e responsabilidade social:</strong> participar em programas de emprego jovem contribui para os objetivos de impacto social que investidores e parceiros valorizam cada vez mais.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Suporte administrativo do IEFP:</strong> a plataforma centraliza a gestão da documentação, pagamentos e reporting, minimizando a carga interna para a empresa.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Contributo para a retencao de talento em Portugal:</strong> ao absorver jovens qualificados que de outra forma emigrariam, as empresas participantes ajudam a construir um mercado de talento mais profundo e sustentavel a longo prazo.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Contexto</div>
+      <h2 class="section-h2">O que distingue este aviso no panorama do PT2030</h2>
+
+      <div class="highlight-box">
+        <div class="highlight-box-title">Pessoas 2030 e o FSE+</div>
+        <div class="highlight-box-text">Este aviso é financiado pelo programa Pessoas 2030, o programa operacional português dedicado integralmente ao capital humano. Ao contrário dos programas regionais ou setoriais, o Pessoas 2030 financia exclusivamente intervencoes em emprego, qualificacoes e inclusao social. A dotacao de 144,5 milhoes de euros para este aviso representa uma das maiores alocacoes individuais de toda a geração 2021-2027, o que sinaliza a prioridade politica atribuida ao emprego jovem qualificado. Este volume de financiamento garante que o aviso permanecera aberto e com fundos disponiveis durante um periodo prolongado, ao contrario de instrumentos com dotacoes mais reduzidas que esgotam rapidamente.</div>
+      </div>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">Uma analise honesta para empresas</h2>
+      <p class="section-text">Os Estagios Profissionais sao um dos instrumentos mais acessiveis do Portugal 2030 para empresas privadas. A barreira burocratica e baixa: a candidatura corre na plataforma do IEFP, o processo e relativamente simples, e o beneficio financeiro e claro. Empresas em sectores com escassez de talento qualificado, como tecnologia, engenharia, financas e ciencias da vida, devem usar este programa de forma sistematica e nao ocasional.</p>
+      <p class="section-text">O beneficio estrategico supera frequentemente o financeiro. Um estagio de 6 meses e tempo suficiente para avaliar um candidato em condicoes reais de trabalho, com um custo substancialmente inferior ao de uma contratacao direta. Empresas que integram os Estagios Profissionais no seu processo de recrutamento criam um funil de talento proprio, reduzindo a dependencia de recrutadoras externas e acelerando a integracao de novos colaboradores.</p>
+      <p class="section-text">A principal limitacao a ter em conta: os participantes devem estar inscritos como desempregados no IEFP, ou em situacao de emigracao documentada. O programa nao se aplica a recrutamento de licenciados recentes que ainda estudam, nem a transicoes entre empregos. Para empresas que querem acolher um estagiario especifico que nao reuna estas condicoes, o instrumento nao e a via correta. Para todas as outras situacoes, dificilmente existe alternativa mais vantajosa no atual portfolio de incentivos ao emprego em Portugal.</p>
+    </div>
+
+    <p class="section-text" style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore também o nosso arquivo para mais conteúdos sobre inovação, tecnologia, ciência aplicada e empreendedorismo.</p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">Pessoas 2030</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Aviso</div>
+        <div class="sidebar-fact-val">FA0221/2025</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Dotação</div>
+        <div class="sidebar-fact-val">144.500.000 EUR</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Fundo</div>
+        <div class="sidebar-fact-val">FSE+ (Fundo Social Europeu Plus)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Duração</div>
+        <div class="sidebar-fact-val">6 meses (não renovável)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Beneficiário</div>
+        <div class="sidebar-fact-val">Empresas privadas</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Participantes</div>
+        <div class="sidebar-fact-val">Jovens desempregados (até 35 anos, nível 6+ CNQ)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Prazo</div>
+        <div class="sidebar-fact-val">31 de dezembro de 2026</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-open">Aberto</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Quer acolher estagiários financiados?</div>
+      <div class="sidebar-cta-text">A sua empresa quer acolher estagiários financiados? Fale connosco e avaliamos a elegibilidade e o processo de candidatura.</div>
+      <a href="https://calendly.com/tech2business" class="sidebar-cta-btn" target="_blank">Falar com um especialista</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="portugal-2030.html" class="related-link">
+        <span class="related-link-name">Portugal 2030</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="cursos-profissionais-2-aviso-acores.html" class="related-link">
+        <span class="related-link-name">Cursos Profissionais - Madeira</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="linha-norte-estacao-do-oriente-terminal-tecnico.html" class="related-link">
+        <span class="related-link-name">Linha Norte - Estação do Oriente</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <div class="f-col-label">Biblioteca</div>
+      <ul class="f-links">
+        <li><a href="../solucoes.html">Portugal 2030</a></li>
+        <li><a href="../solucoes.html">Fundos de Investimento</a></li>
+        <li><a href="../solucoes.html">Benefícios Fiscais</a></li>
+        <li><a href="../solucoes.html">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Plataforma</div>
+      <ul class="f-links">
+        <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../conhecimento.html">Conhecimento</a></li>
+        <li><a href="../parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Empresa</div>
+      <ul class="f-links">
+        <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="../sobre-nos.html">Equipa</a></li>
+        <li><a href="../carreiras.html">Carreiras</a></li>
+        <li><a href="https://calendly.com/tech2business" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
