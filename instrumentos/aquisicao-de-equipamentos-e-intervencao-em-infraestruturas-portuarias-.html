@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Infraestruturas Portuárias da RAA - 3.º Aviso: Open Capital</title>
-  <meta name="description" content="FA0288/2025: 15,4 milhões EUR do Fundo de Coesão para aquisição de equipamentos e intervenção nas infraestruturas portuárias da Região Autónoma dos Açores.">
+  <title>Aquisicao de Equipamentos e Intervencao em Infraestruturas Portuarias dos Acores (FA0288/2025): Open Capital</title>
+  <meta name="description" content="Aviso FA0288/2025 Sustentavel 2030: 15,3 milhoes EUR do Fundo de Coesao para modernizacao dos portos da Regiao Autonoma dos Acores. 3o aviso desta linha. Prazo: 30/04/2027.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
     *{margin:0;padding:0;box-sizing:border-box;}
     body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+
+    /* NAVBAR */
     .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
     .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
     .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
@@ -42,6 +44,8 @@
     .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
     .nav-mobile-menu a:hover{color:var(--white);}
     .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+
+    /* HERO */
     .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
     .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
     .article-hero-inner{position:relative;z-index:1;max-width:860px;}
@@ -52,17 +56,21 @@
     .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
     .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
     .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
-    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:580px;margin-bottom:36px;}
     .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
     .meta-item{display:flex;flex-direction:column;gap:4px;}
     .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
     .meta-value{font-size:15px;font-weight:500;color:var(--white);}
-    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-open{color:#5BC88A;font-weight:600;}
     .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+
+    /* BACK BAR */
     .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
     .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
     .back-link:hover{color:var(--navy);}
-    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+
+    /* ARTICLE LAYOUT */
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;max-width:1200px;margin:0 auto;}
     .article-section{margin-bottom:56px;}
     .article-section:last-child{margin-bottom:0;}
     .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
@@ -76,16 +84,20 @@
     .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
     .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
     .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
-    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-cell{background:var(--white);padding:28px 24px;}
     .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
     .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
     .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
-    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
-    .art-table thead{border-bottom:2px solid var(--navy);}
-    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+
+    /* TABLE */
+    .art-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:15px;}
+    .art-table th{font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;border-bottom:2px solid var(--grey-light);text-align:left;background:#FAFAFA;}
     .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
     .art-table tr:last-child td{border-bottom:none;}
-    .art-table td strong{font-weight:600;color:var(--navy);}
+    .art-table tr:hover td{background:#FAFAFA;}
+
+    /* SIDEBAR */
     .article-sidebar{position:sticky;top:100px;}
     .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
     .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
@@ -114,12 +126,17 @@
     .related-link:hover .related-link-name{color:var(--gold);}
     .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
     .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+
+    /* REVEAL */
     .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
     .reveal.visible{opacity:1;transform:translateY(0);}
+
+    /* FOOTER */
     .footer{background:var(--navy-deep);padding:56px 80px 34px;}
     .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
     .f-logo-row{display:flex;align-items:center;}
     .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-desc{font-size:15px;font-weight:300;color:rgba(255,255,255,0.36);line-height:1.85;margin-top:18px;max-width:260px;}
     .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
     .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
     .f-links{list-style:none;}
@@ -132,12 +149,32 @@
     .f-legal{display:flex;gap:20px;}
     .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
     .f-legal a:hover{color:rgba(255,255,255,0.45);}
-    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
-    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}
+      .article-sidebar{position:static;}
+    }
+    @media(max-width:768px){
+      .navbar{padding:0 24px;}
+      .nav-links,.nav-cta{display:none;}
+      .nav-hamburger{display:flex;}
+      .article-hero{padding:120px 28px 60px;}
+      .hero-title{font-size:36px;}
+      .hero-tagline{font-size:17px;}
+      .article-layout{padding:40px 24px 60px;gap:36px;}
+      .stats-row{grid-template-columns:1fr 1fr!important;}
+      .back-bar{padding:14px 24px;}
+      .footer{padding:40px 24px 28px;}
+      .footer-grid{grid-template-columns:1fr;gap:32px;}
+      .hero-meta{gap:16px;}
+      .meta-sep{display:none;}
+    }
   </style>
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <a href="../index.html" class="nav-logo">
     <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
@@ -147,7 +184,7 @@
     <li><a href="../conhecimento.html">Conhecimento</a></li>
     <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
     <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
-    <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+    <li><a href="../sobre-nos.html">Sobre Nos</a></li>
     <li class="nav-dropdown">
       <a href="#">Oportunidades</a>
       <div class="nav-dropdown-menu">
@@ -159,223 +196,272 @@
   <a href="https://calendly.com/tech2business" class="nav-cta" target="_blank">Contactar</a>
   <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
 </nav>
+
 <div class="nav-mobile-menu" id="mobileMenu">
   <a href="../solucoes.html">Biblioteca</a>
   <a href="../conhecimento.html">Conhecimento</a>
   <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
   <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
-  <a href="../sobre-nos.html">Sobre Nós</a>
+  <a href="../sobre-nos.html">Sobre Nos</a>
   <a href="../parceiros.html">Parceiros</a>
   <a href="../carreiras.html">Carreiras</a>
   <a href="https://calendly.com/tech2business" class="nav-mobile-cta" target="_blank">Contactar</a>
 </div>
 
+<!-- HERO -->
 <section class="article-hero">
   <div class="article-hero-inner">
     <nav class="breadcrumb">
-      <a href="../index.html">Início</a>
+      <a href="../index.html">Inicio</a>
       <span class="breadcrumb-sep">/</span>
       <a href="../solucoes.html">Biblioteca</a>
       <span class="breadcrumb-sep">/</span>
-      <span class="breadcrumb-current">Infraestruturas Portuárias da RAA - 3.º Aviso</span>
+      <span class="breadcrumb-current">Aquisicao de Equipamentos Portuarios - Acores</span>
     </nav>
-    <p class="hero-cat">Financiamento Público</p>
-    <h1 class="hero-title">Aquisição de Equipamentos e Intervenção em Infraestruturas Portuárias da RAA - 3.º Aviso</h1>
-    <p class="hero-tagline">Fundo de Coesão para modernizar equipamentos e intervir nas infraestruturas dos portos da Região Autónoma dos Açores, reforçando a mobilidade insular e a coesão territorial.</p>
+    <p class="hero-cat">Financiamento Publico</p>
+    <h1 class="hero-title">Aquisicao de Equipamentos e Infraestruturas Portuarias dos Acores</h1>
+    <p class="hero-tagline">O programa que moderniza os portos dos Acores, reforcando a seguranca, eficiencia e resiliencia da mobilidade insular.</p>
     <div class="hero-meta">
       <div class="meta-item">
-        <span class="meta-label">Dotação</span>
+        <span class="meta-label">Dotacao</span>
         <span class="meta-value">15.365.450 EUR</span>
       </div>
       <div class="meta-sep"></div>
       <div class="meta-item">
         <span class="meta-label">Fundo</span>
-        <span class="meta-value">Fundo de Coesão</span>
+        <span class="meta-value">Fundo de Coesao</span>
       </div>
       <div class="meta-sep"></div>
       <div class="meta-item">
-        <span class="meta-label">Prazo</span>
-        <span class="meta-value">30 abril 2027</span>
+        <span class="meta-label">Elegibilidade</span>
+        <span class="meta-value">Entidades Publicas RAA</span>
       </div>
       <div class="meta-sep"></div>
       <div class="meta-item">
         <span class="meta-label">Estado</span>
-        <span class="meta-value status-open">Aberto</span>
+        <span class="meta-value status-open">Aberto ate 30/04/2027</span>
       </div>
     </div>
   </div>
 </section>
 
+<!-- BACK BAR -->
 <div class="back-bar">
-  <a href="../solucoes.html" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+  <a href="../solucoes.html" class="back-link">&#8592; Voltar ao catalogo de instrumentos</a>
 </div>
 
+<!-- ARTICLE LAYOUT -->
 <div class="article-layout">
-  <article class="article-body">
 
+  <!-- MAIN ARTICLE BODY -->
+  <article>
+
+    <!-- SECTION 1: O desafio da insularidade -->
     <div class="article-section reveal">
-      <div class="section-eyebrow">Contexto</div>
-      <h2 class="section-h2">Os portos dos Açores como infraestrutura de coesão territorial</h2>
-      <p class="section-text">O arquipélago dos Açores é composto por nove ilhas distribuídas por uma área de cerca de 600 000 km² no Atlântico Norte. Esta dispersão geográfica torna a infraestrutura portuária um elemento absolutamente crítico: não apenas para o transporte de mercadorias e passageiros entre ilhas, mas também para a conectividade com o continente e para a integração da região nas cadeias logísticas internacionais.</p>
-      <p class="section-text">Os portos açorianos cumprem funções que noutras regiões do país são partilhadas com outros modos de transporte. Nas ilhas, não há alternativa: a dependência das infraestruturas marítimas é total para garantir o abastecimento de bens essenciais, apoiar a atividade piscatória, acolher o turismo de cruzeiros e manter a conectividade inter-ilhas. A modernização continuada destas infraestruturas é, por isso, uma condição estrutural de desenvolvimento regional.</p>
-      <p class="section-text">Este é o 3.º aviso desta série no âmbito do Portugal 2030, reconhecendo a natureza permanente das necessidades de investimento e manutenção dos portos açorianos face aos desafios de uma região ultraperiférica (RUP).</p>
+      <p class="section-eyebrow">Contexto</p>
+      <h2 class="section-h2">O desafio da insularidade nos Acores</h2>
+      <p class="section-text">O arquipelago dos Acores e composto por nove ilhas habitadas, distribuidas pelo Atlantico Norte numa extensao de mais de 600 quilometros. Esta dispersao geografica coloca desafios unicos em materia de mobilidade e logistica: ao contrario do continente, nao existem alternativas rodoviarias ou ferroviarias entre as ilhas. O porto e, em muitos casos, a unica via de ligacao entre comunidades, garantindo o transporte de pessoas, bens essenciais, materiais de construcao, produtos agricolas e combustiveis.</p>
+      <p class="section-text">A dependencia portuaria e total. Qualquer disrupcao numa infraestrutura portuaria afeta diretamente a vida quotidiana das populacoes insulares, a viabilidade economica das empresas locais e a capacidade de resposta a situacoes de emergencia. A modernizacao desta rede e, portanto, uma prioridade estrategica de primeira ordem para a Regiao Autonoma dos Acores (RAA).</p>
+      <p class="section-text">Os Acores beneficiam do estatuto de Regiao Ultraperiferica (RUP) da Uniao Europeia, um reconhecimento formal das desvantagens estruturais decorrentes do isolamento geografico, da pequena dimensao dos mercados e da vulnerabilidade a fenomenos climaticos extremos. Este estatuto traduz-se em taxas de cofinanciamento europeu mais elevadas e no acesso a mecanismos de apoio especificos, dos quais este aviso e um exemplo direto.</p>
+      <p class="section-text">Este e o terceiro aviso desta linha de financiamento, o que demonstra a continuidade do compromisso europeu e regional com a modernizacao portuaria dos Acores. Os dois primeiros avisos ja geraram melhorias concretas em varios portos do arquipelago, e este terceiro aviso amplia esse legado com uma dotacao de 15,3 milhoes de euros do Fundo de Coesao.</p>
     </div>
 
+    <div class="art-divider"></div>
+
+    <!-- SECTION 2: O que financia este aviso -->
     <div class="article-section reveal">
-      <div class="section-eyebrow">O que financia</div>
-      <h2 class="section-h2">Equipamentos e intervenções nos portos da RAA</h2>
-      <p class="section-text">O aviso FA0288/2025 financia dois tipos de investimento distintos mas complementares nos portos da Região Autónoma dos Açores:</p>
+      <p class="section-eyebrow">Elegibilidade</p>
+      <h2 class="section-h2">O que financia este aviso</h2>
+      <p class="section-text">O aviso FA0288/2025 cobre um leque alargado de investimentos em infraestruturas e equipamentos portuarios, sempre orientados para os objetivos de eficiencia, seguranca e sustentabilidade. As tipologias de despesa elegivel incluem:</p>
       <ul class="article-list">
-        <li><strong style="color:var(--navy);font-weight:600;">Aquisição de equipamentos portuários:</strong> equipamentos de movimentação de carga, gruas, sistemas de armazenagem, material de apoio a operações de pesca e de passageiros, e equipamentos de segurança portuária.</li>
-        <li><strong style="color:var(--navy);font-weight:600;">Intervenções em infraestruturas:</strong> obras de reabilitação e melhoria de cais, molhes, terminais de passageiros, armazéns frigoríficos para apoio à pesca, e sistemas de abastecimento e tratamento de águas portuárias.</li>
-        <li><strong style="color:var(--navy);font-weight:600;">Sistemas de segurança e vigilância:</strong> modernização de sistemas de videovigilância, controlo de acessos e comunicações de emergência nos portos.</li>
-        <li><strong style="color:var(--navy);font-weight:600;">Infraestruturas de apoio à navegação:</strong> sinalização marítima, balizamento, e sistemas de apoio à gestão do tráfego portuário.</li>
+        <li>Aquisicao de equipamentos portuarios, incluindo guindastes, equipamentos de movimentacao de carga e maquinaria especializada para operacoes de cais</li>
+        <li>Obras de modernizacao e reabilitacao de infraestruturas portuarias existentes, garantindo maior capacidade operacional e conformidade com normas internacionais</li>
+        <li>Intervencoes de adaptacao climatica, nomeadamente protecao e reforco de molhes, cais e estruturas costeiras face aos efeitos das alteracoes climaticas</li>
+        <li>Implementacao de sistemas de gestao de trafego maritimo e digitalizacao das operacoes portuarias, aumentando a eficiencia e a rastreabilidade</li>
+        <li>Aquisicao de equipamentos de seguranca e emergencia maritima, incluindo meios de busca e salvamento e equipamentos de combate a derrames</li>
+        <li>Infraestruturas de apoio a embarcacoes de pesca, contribuindo para a sustentabilidade do setor pesqueiro regional</li>
       </ul>
-      <p class="section-text">A dotação de 15.365.450 euros permite uma intervenção distribuída por vários portos do arquipélago, priorizando os que servem as ilhas com menor densidade populacional e maior dependência da conectividade marítima.</p>
+      <p class="section-text">A taxa de cofinanciamento europeu e de aproximadamente 85% atraves do Fundo de Coesao, enquadrado no programa Sustentavel 2030 para a Regiao Autonoma dos Acores. Este nivel de cofinanciamento e superior ao standard nacional, refletindo precisamente o estatuto RUP dos Acores.</p>
     </div>
 
+    <!-- STATS ROW -->
     <div class="stats-row reveal" style="grid-template-columns:repeat(3,1fr);">
       <div class="stat-cell">
-        <div class="stat-num">15,4<sup>M€</sup></div>
-        <div class="stat-label">Dotacao FC</div>
+        <div class="stat-num">15,3<sup>M EUR</sup></div>
+        <div class="stat-label">Dotacao Total</div>
       </div>
       <div class="stat-cell">
-        <div class="stat-num">9<sup></sup></div>
-        <div class="stat-label">Ilhas Acores</div>
+        <div class="stat-num">Abr<sup>2027</sup></div>
+        <div class="stat-label">Prazo de Candidatura</div>
       </div>
       <div class="stat-cell">
-        <div class="stat-num">3.º</div>
-        <div class="stat-label">Aviso Portos RAA</div>
+        <div class="stat-num">9</div>
+        <div class="stat-label">Ilhas Servidas</div>
       </div>
     </div>
 
+    <div class="art-divider"></div>
+
+    <!-- SECTION 3: Quem pode candidatar-se -->
     <div class="article-section reveal">
-      <div class="section-eyebrow">Enquadramento</div>
-      <h2 class="section-h2">Açores 2030 e o estatuto de Região Ultraperiférica</html>
-      <p class="section-text">Os Açores beneficiam de um estatuto especial no quadro europeu como Região Ultraperiférica (RUP). Este estatuto reconhece as desvantagens estruturais da insularidade e do afastamento geográfico, e traduz-se em regras de cofinanciamento mais favoráveis e em programas específicos de apoio ao desenvolvimento regional.</p>
-      <p class="section-text">O programa Açores 2030 é a expressão regional do Portugal 2030, com uma dotação dedicada e uma autoridade de gestão própria. Os transportes e a conectividade são uma das prioridades centrais deste programa, dado o seu papel estruturante no desenvolvimento económico e social do arquipélago. Os avisos de infraestruturas portuárias fazem parte desta prioridade estratégica.</p>
+      <p class="section-eyebrow">Beneficiarios</p>
+      <h2 class="section-h2">Quem pode candidatar-se</h2>
+      <p class="section-text">Este aviso funciona por convite direto, o que significa que nao esta aberto a qualquer entidade, mas sim dirigido especificamente as entidades publicas responsaveis pela gestao dos portos da Regiao Autonoma dos Acores. Os beneficiarios elegiveis incluem:</p>
+      <ul class="article-list">
+        <li>O Governo Regional dos Acores, atraves das suas secretarias e organismos com competencias portuarias</li>
+        <li>As autoridades portuarias regionais com tutela sobre os portos das nove ilhas habitadas</li>
+        <li>Entidades publicas ou de capitais maioritariamente publicos com missao especifica na gestao e operacao de infraestruturas portuarias regionais</li>
+      </ul>
+      <p class="section-text">A modalidade de convite direto e comum em instrumentos de investimento de grande dimensao, onde o beneficiario esta previamente identificado no programa operacional. Neste caso, o Governo dos Acores e as autoridades portuarias regionais sao os destinatarios naturais, dado o seu papel insubstituivel na gestao das infraestruturas criticas do arquipelago.</p>
+      <p class="section-text">Operadores portuarios privados ou empresas de logistica insular nao sao elegiveis como beneficiarios diretos deste aviso. No entanto, podem participar indiretamente como fornecedores de equipamentos, empreiteiros de obras ou prestadores de servicos tecnologicos, atraves dos concursos publicos lancados pelos beneficiarios no ambito dos projetos financiados.</p>
     </div>
 
-    <div class="highlight-box">
-      <div class="highlight-box-title">RUP e regras especiais de cofinanciamento</div>
-      <div class="highlight-box-text">Enquanto Região Ultraperiférica, os Açores beneficiam de taxas de cofinanciamento europeu mais elevadas do que as aplicáveis em Portugal continental. Esta vantagem aplica-se também aos avisos de infraestruturas portuárias, permitindo que o esforço financeiro regional seja proporcionalmente menor para o mesmo volume de investimento total.</div>
+    <!-- HIGHLIGHT BOX -->
+    <div class="highlight-box reveal">
+      <div class="highlight-box-title">3o Aviso desta Linha</div>
+      <div class="highlight-box-text">Este e o terceiro aviso desta linha de financiamento. Os dois primeiros avisos ja contribuiram para melhorias significativas nos portos de varias ilhas dos Acores. Este terceiro aviso representa uma continuidade do compromisso europeu com as regioes ultraperifericas, consolidando o investimento realizado nas fases anteriores e alargando o seu impacto a novas infraestruturas e equipamentos.</div>
     </div>
 
-    <div class="article-section reveal">
-      <div class="section-eyebrow">Elegibilidade e beneficiários</div>
-      <h2 class="section-h2">A quem se destina este financiamento</h2>
-      <p class="section-text">O aviso dirige-se a entidades públicas com competência sobre a gestão dos portos da Região Autónoma dos Açores, designadamente a Portos dos Açores, S.A., a empresa pública regional responsável pela administração, exploração e desenvolvimento das infraestruturas portuárias do arquipélago.</p>
-      <p class="section-text">Os projetos devem demonstrar impacto direto na capacidade operacional, segurança ou eficiência dos portos. A elegibilidade de despesas inclui investimentos em equipamentos e obras, mas exclui custos de exploração corrente e manutenção de rotina sem componente de melhoria.</p>
+    <div class="art-divider"></div>
 
+    <!-- SECTION 4: Os quatro pilares -->
+    <div class="article-section reveal">
+      <p class="section-eyebrow">Objetivos</p>
+      <h2 class="section-h2">Os quatro pilares de modernizacao</h2>
+      <p class="section-text">O aviso FA0288/2025 articula-se em torno de quatro grandes objetivos estrategicos, alinhados com as prioridades do programa Sustentavel 2030 e com os compromissos europeus para as regioes ultraperifericas:</p>
       <table class="art-table">
         <thead>
-          <tr><th>Tipo de Intervenção</th><th>Elegibilidade</th></tr>
+          <tr>
+            <th>Pilar</th>
+            <th>Objetivo</th>
+            <th>Impacto esperado</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Equipamentos de movimentação de carga</strong></td><td>Elegível</td></tr>
-          <tr><td><strong>Obras de reabilitação de cais e molhes</strong></td><td>Elegível</td></tr>
-          <tr><td><strong>Sistemas de segurança e vigilância</strong></td><td>Elegível</td></tr>
-          <tr><td><strong>Sinalização e balizamento marítimo</strong></td><td>Elegível</td></tr>
-          <tr><td><strong>Manutenção corrente sem melhoria</strong></td><td>Não elegível</td></tr>
-          <tr><td><strong>Infraestruturas comerciais privadas</strong></td><td>Não elegível</td></tr>
+          <tr>
+            <td>Eficiencia</td>
+            <td>Aumentar a produtividade das operacoes portuarias</td>
+            <td>Reducao de tempos de escala e custos operacionais</td>
+          </tr>
+          <tr>
+            <td>Sustentabilidade</td>
+            <td>Reduzir a pegada ambiental das operacoes</td>
+            <td>Transicao para equipamentos de baixa emissao</td>
+          </tr>
+          <tr>
+            <td>Seguranca</td>
+            <td>Conformidade com normas internacionais SOLAS e ISPS</td>
+            <td>Certificacoes atualizadas e reducao de incidentes</td>
+          </tr>
+          <tr>
+            <td>Resiliencia</td>
+            <td>Adaptacao climatica das infraestruturas costeiras</td>
+            <td>Protecao face a eventos extremos e subida do nivel do mar</td>
+          </tr>
         </tbody>
       </table>
     </div>
 
+    <div class="art-divider"></div>
+
+    <!-- SECTION 5: Perspetiva Open Capital -->
     <div class="article-section reveal">
-      <div class="section-eyebrow">Perspetiva Open Capital</div>
-      <h2 class="section-h2">O que recomendamos</h2>
-      <p class="section-text">Este aviso tem elegibilidade restrita a entidades públicas de gestão portuária. O seu valor para o setor privado é, como nos avisos de infraestrutura pública em geral, indireto: a melhoria das condições dos portos açorianos tem impacto direto nas empresas que dependem da logística marítima para importação, exportação e abastecimento das ilhas.</p>
-      <p class="section-text">Para o setor da pesca, o turismo náutico e de cruzeiros, e a indústria de transformação com base nas ilhas, a modernização dos portos representa uma redução de custos operacionais e uma melhoria das condições de acesso a mercados externos. As empresas destes setores devem acompanhar os projetos financiados e, quando aplicável, participar nos processos de consulta pública ou de planeamento conjunto com a Portos dos Açores.</p>
-      <p class="section-text">Empresas de engenharia civil marítima, fornecedores de equipamentos portuários e prestadores de serviços de segurança e vigilância devem estar atentos à abertura de concursos públicos associados à execução deste aviso. Com 15 milhões de euros em investimento, esperam-se adjudicações relevantes no horizonte 2025-2027.</p>
+      <p class="section-eyebrow">Perspetiva Open Capital</p>
+      <h2 class="section-h2">O que significa este aviso para empresas privadas</h2>
+      <p class="section-text">Embora este aviso seja dirigido exclusivamente a entidades publicas, cria oportunidades indiretas significativas para empresas do setor privado. Empresas de engenharia maritima, tecnologia portuaria, construcao civil costeira e consultoria em adaptacao climatica podem participar como fornecedoras e subcontratadas nos projetos financiados pelos beneficiarios publicos.</p>
+      <p class="section-text">As contratacoes publicas decorrentes deste aviso estao sujeitas ao Codigo dos Contratos Publicos, o que implica a publicacao de concursos abertos no portal Base.gov.pt. Empresas com competencias em movimentacao de carga, sistemas de digitalizacao portuaria, obras maritimas ou seguranca e emergencia maritima devem acompanhar os lancamentos de concurso nos proximos meses.</p>
+      <p class="section-text">Para operadores portuarios privados, empresas de logistica insular ou investidores interessados em modernizar as suas proprias instalacoes nos Acores, outros mecanismos podem ser mais adequados, nomeadamente os incentivos ao investimento disponibilizados pelos programas regionais e pelo sistema de incentivos empresariais do Portugal 2030.</p>
     </div>
 
-    <p class="section-text" style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore também o nosso arquivo para mais conteúdos sobre inovação, tecnologia, ciência aplicada e empreendedorismo.</p>
+    <!-- CLOSING PARAGRAPH -->
+    <p style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;line-height:1.8;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo.</p>
 
   </article>
 
+  <!-- SIDEBAR -->
   <aside class="article-sidebar">
+
+    <!-- Author Card -->
     <div class="sidebar-author">
-      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-label">Autora</div>
       <div class="sidebar-author-inner">
         <img src="../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
         <div>
           <div class="sidebar-author-name">Mara Ferreira</div>
-          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+          <div class="sidebar-author-role">Tecnica de Candidaturas e Incentivos</div>
         </div>
       </div>
     </div>
 
+    <!-- Factos Rapidos -->
     <div class="sidebar-card">
-      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-card-label">Factos Rapidos</div>
       <div class="sidebar-fact">
-        <div class="sidebar-fact-key">Código</div>
-        <div class="sidebar-fact-val">FA0288/2025</div>
+        <span class="sidebar-fact-key">Aviso</span>
+        <span class="sidebar-fact-val">FA0288/2025</span>
       </div>
       <div class="sidebar-fact">
-        <div class="sidebar-fact-key">Programa</div>
-        <div class="sidebar-fact-val">Açores 2030 / SUSTENTAVEL2030</div>
+        <span class="sidebar-fact-key">Dotacao</span>
+        <span class="sidebar-fact-val">15.365.450 EUR</span>
       </div>
       <div class="sidebar-fact">
-        <div class="sidebar-fact-key">Fundo</div>
-        <div class="sidebar-fact-val">Fundo de Coesão (FC)</div>
+        <span class="sidebar-fact-key">Fundo</span>
+        <span class="sidebar-fact-val">Fundo de Coesao (FC)</span>
       </div>
       <div class="sidebar-fact">
-        <div class="sidebar-fact-key">Dotação</div>
-        <div class="sidebar-fact-val">15.365.450 EUR</div>
+        <span class="sidebar-fact-key">Regiao</span>
+        <span class="sidebar-fact-val">Acores (RAA)</span>
       </div>
       <div class="sidebar-fact">
-        <div class="sidebar-fact-key">Prazo</div>
-        <div class="sidebar-fact-val">30/04/2027</div>
+        <span class="sidebar-fact-key">Aviso</span>
+        <span class="sidebar-fact-val">3o aviso desta linha</span>
       </div>
       <div class="sidebar-fact">
-        <div class="sidebar-fact-key">Beneficiário</div>
-        <div class="sidebar-fact-val">Portos dos Açores, S.A.</div>
+        <span class="sidebar-fact-key">Prazo</span>
+        <span class="sidebar-fact-val">30 de abril de 2027</span>
       </div>
       <div class="sidebar-fact">
-        <div class="sidebar-fact-key">Região</div>
-        <div class="sidebar-fact-val">Açores (RAA)</div>
-      </div>
-      <div class="sidebar-fact">
-        <div class="sidebar-fact-key">Estado</div>
-        <div class="sidebar-fact-val val-open">Aberto</div>
+        <span class="sidebar-fact-key">Estado</span>
+        <span class="sidebar-fact-val val-open">Aberto</span>
       </div>
     </div>
 
+    <!-- CTA Card -->
     <div class="sidebar-cta">
-      <div class="sidebar-cta-title">Falar com um especialista</div>
-      <div class="sidebar-cta-text">Tem projetos relacionados com a logística ou infraestrutura portuária nos Açores? Fale connosco.</div>
+      <div class="sidebar-cta-title">Precisa de apoio em infraestruturas ou projetos nas ilhas?</div>
+      <div class="sidebar-cta-text">A Open Capital tem experiencia em projetos de cofinanciamento em regioes insulares e ultraperifericas.</div>
       <a href="https://calendly.com/tech2business" class="sidebar-cta-btn" target="_blank">Contactar</a>
     </div>
 
-    <div class="sidebar-card">
+    <!-- Related Instruments -->
+    <div>
       <div class="sidebar-related-title">Instrumentos relacionados</div>
-      <a href="infraestrutura-portuaria-rte-porto-de-lisboa-3-aviso-navegabilidade-do.html" class="related-link">
-        <span class="related-link-name">Infraestrutura Portuária RTE - Porto de Lisboa</span>
-        <span class="related-link-arrow">→</span>
-      </a>
       <a href="ampliacao-e-modernizacao-do-aeroporto-das-lajes.html" class="related-link">
-        <span class="related-link-name">Aeroporto das Lajes - Açores</span>
-        <span class="related-link-arrow">→</span>
+        <span class="related-link-name">Aeroporto das Lajes - Ampliacao</span>
+        <span class="related-link-arrow">&#8594;</span>
       </a>
-      <a href="infraestrutura-ferroviaria-rte-programa-de-sinalizacao-e-implementacao.html" class="related-link">
-        <span class="related-link-name">Infraestrutura Ferroviária RTE - ERTMS</span>
-        <span class="related-link-arrow">→</span>
+      <a href="portugal-2030.html" class="related-link">
+        <span class="related-link-name">Portugal 2030</span>
+        <span class="related-link-arrow">&#8594;</span>
       </a>
-      <a href="abastecimento-de-agua-em-alta.html" class="related-link">
-        <span class="related-link-name">Abastecimento de Água em Alta</span>
-        <span class="related-link-arrow">→</span>
+      <a href="linha-norte-estacao-do-oriente-terminal-tecnico.html" class="related-link">
+        <span class="related-link-name">Linha Norte - Estacao do Oriente</span>
+        <span class="related-link-arrow">&#8594;</span>
       </a>
     </div>
+
   </aside>
+
 </div>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-grid">
     <div>
       <div class="f-logo-row">
         <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
       </div>
+      <p class="f-desc">Consultoria estrategica especializada em acesso a capital, financiamento publico e instrumentos de investimento para empresas e entidades publicas.</p>
       <p class="f-tagline">O capital de que a sua empresa precisa.</p>
     </div>
     <div>
@@ -383,15 +469,15 @@
       <ul class="f-links">
         <li><a href="../solucoes.html">Portugal 2030</a></li>
         <li><a href="../solucoes.html">Fundos de Investimento</a></li>
-        <li><a href="../solucoes.html">Benefícios Fiscais</a></li>
-        <li><a href="../solucoes.html">Prémios de Inovação</a></li>
+        <li><a href="../solucoes.html">Beneficios Fiscais</a></li>
+        <li><a href="../solucoes.html">Premios de Inovacao</a></li>
       </ul>
     </div>
     <div>
       <div class="f-col-label">Plataforma</div>
       <ul class="f-links">
-        <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
-        <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">em breve</span></a></li>
+        <li><a href="../tech2business.html">Tech2Business <span class="f-badge">em breve</span></a></li>
         <li><a href="../conhecimento.html">Conhecimento</a></li>
         <li><a href="../parceiros.html">Parceiros</a></li>
       </ul>
@@ -399,7 +485,7 @@
     <div>
       <div class="f-col-label">Empresa</div>
       <ul class="f-links">
-        <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="../sobre-nos.html">Sobre Nos</a></li>
         <li><a href="../sobre-nos.html">Equipa</a></li>
         <li><a href="../carreiras.html">Carreiras</a></li>
         <li><a href="https://calendly.com/tech2business" target="_blank">Contacto</a></li>
@@ -407,7 +493,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <span class="f-copy">&#169; 2009 Open Capital Advisory &amp; Consultancy</span>
     <div class="f-legal">
       <a href="#">Privacidade</a>
       <a href="#">Termos</a>
@@ -420,10 +506,26 @@
   const navbar = document.getElementById('navbar');
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
-  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
-  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
-  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  }, {passive: true});
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.08});
+
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
+
 </body>
 </html>
