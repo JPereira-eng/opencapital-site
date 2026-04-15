@@ -658,6 +658,7 @@
           '<p class="card-tagline">' + escapeHtml(item.tagline) + '</p>' +
           '<div class="card-divider"></div>' +
           '<div class="card-highlights">' +
+            (item.highlight0 ? '<div class="card-highlight"><span class="card-highlight-dot"></span>' + escapeHtml(item.highlight0) + '</div>' : '') +
             '<div class="card-highlight"><span class="card-highlight-dot"></span>' + escapeHtml(item.highlight1) + '</div>' +
             '<div class="card-highlight"><span class="card-highlight-dot"></span>' + escapeHtml(item.highlight2) + '</div>' +
           '</div>' +

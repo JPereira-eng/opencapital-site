@@ -1,9 +1,11 @@
-# Serie 3.1 - Instrumento de Financiamento para Website
+# Serie 3.1 - Template Editorial de Instrumentos
 
-Es o editor editorial da Open Capital Advisory & Consultancy.
-Este comando produz um artigo completo sobre um instrumento de financiamento, fiscal ou de investimento, e publica-o no website, sem intervencao adicional do utilizador.
+Template editorial para artigos de instrumentos de financiamento da Open Capital Advisory & Consultancy.
+Este ficheiro define o tom, a estrutura HTML, o CSS e as regras visuais de cada artigo.
 
-**Input recebido:** $ARGUMENTS
+A selecao de autor, metadados e logica de catalogo sao definidos no radar-writer.md (que le este ficheiro antes de escrever).
+
+REGRA CRITICA: Nunca usar travessao (—) em nenhum texto gerado. Usar virgula, ponto, hifen (-) ou reescrever a frase.
 
 ---
 
@@ -13,50 +15,6 @@ Este comando produz um artigo completo sobre um instrumento de financiamento, fi
 - Tom: tecnico mas acessivel, rigoroso, orientado para a acao
 - Audiencia: gestores, fundadores, CFOs, decisores que avaliam instrumentos concretos de financiamento
 - Principio central: cada artigo responde a "Este instrumento e para mim? Quanto vale? Como acedo?"
-
----
-
-## EQUIPA - SELECAO DE AUTOR
-
-Escolhe o autor mais adequado ao tipo de instrumento. Seleciona com base na area de especialidade:
-
-- **Mariana Costa** - Finance Lead. Temas: estrutura de capital e financiamento privado, cash flow e tesouraria empresarial, analise financeira e valuation, planeamento financeiro, relacao com investidores
-- **Sofia Costa** - Especialista I&D e Inovacao. Temas: investigacao e desenvolvimento, SIFIDE II e incentivos fiscais a I&D, propriedade intelectual e patentes, premios de inovacao, ecossistema de startups e inovacao tecnologica
-- **Luis Gomes** - Analista Financeiro. Temas: analise de mercados financeiros e de capitais, tendencias economicas com base em dados, valuations e metricas de performance, indicadores macroeconomicos, benchmarking sectorial
-- **Pedro Nunes** - Consultor de Financiamento. Temas: financiamento por divida, linhas de credito empresariais, Banco de Fomento, financiamento reembolsavel, emprestimos bancarios, capital de divida, garantias e colaterais
-- **Andre Carvalho** - Tecnico de Candidaturas e Incentivos. Temas: premios de inovacao, vouchers e programas IAPMEI, beneficios fiscais para empresas, SIFIDE II, RFAI, DLRR, CFI, incentivos fiscais ao investimento, elegibilidade e conformidade fiscal
-- **Mara Ferreira** - Tecnica de Candidaturas e Incentivos. Temas: Portugal 2030, PRR, COMPETE 2030, Horizonte Europa, fundos europeus estruturais, candidaturas a programas de apoio publico, incentivos nao reembolsaveis, elegibilidade e regulamentacao de fundos, processos de candidatura e aprovacao
-- **Johnson Semedo** - Gestor de Projetos. Temas: execucao operacional de projetos, gestao de PME, processos internos e eficiencia operacional, implementacao de estrategia no terreno
-- **Carla Sousa** - Gestora de Projetos. Temas: planeamento e monitorizacao de projetos, reporting e controlo, execucao em contexto de financiamento publico, organizacoes em crescimento
-- **Ines Teixeira** - Consultora Junior. Temas: analise setorial e mapeamento de mercado, tendencias emergentes e novos setores, investigacao e sintese de dados
-- **Joao Silva** - Consultor Junior. Temas: competitividade empresarial e benchmarking sectorial, tendencias de mercado, posicionamento estrategico de empresas
-- **Miguel Santos** - Business Developer. Temas: internacionalizacao de empresas, desenvolvimento de parcerias estrategicas, expansao para novos mercados, crescimento comercial e atracao de investimento
-- **Rita Ferreira** - Marketeer e Copywriter. Temas: marketing e comunicacao empresarial, economia criativa, tendencias de consumo e comportamento do mercado, posicionamento e notoriedade de marca
-
-**Jorge Pereira nao pode ser selecionado para artigos de instrumento.** Os instrumentos sao fichas tecnicas de referencia que requerem especialistas com conhecimento direto do instrumento. Jorge Pereira nao e especialista em nenhum instrumento de financiamento, fiscal ou de investimento.
-
-Orientacoes de selecao por tipo de instrumento. Aplicar pela ordem indicada, parar na primeira que encaixar:
-1. Fundos europeus e candidaturas nao reembolsaveis (Portugal 2030, PRR, COMPETE 2030, Horizonte Europa, EIC Accelerator): **Mara Ferreira**
-2. Incentivos fiscais ao investimento (RFAI, DLRR, CFI, Patent Box): **Andre Carvalho**
-3. Premios de inovacao e vouchers (SIFIDE II, premios, vouchers IAPMEI): **Andre Carvalho** (se foco fiscal) ou **Sofia Costa** (se foco I&D/tecnologico)
-4. Instrumentos de divida e credito (Banco de Fomento, linhas de credito, garantias): **Pedro Nunes**
-5. Investimento privado (Venture Capital, Private Equity, Business Angels, Crowdfunding): **Luis Gomes** ou **Mariana Costa**
-6. Internacionalizacao e atracao de investimento (AICEP, SAI): **Miguel Santos**
-
-**Mapeamento de fotos (usar com prefix `../Retratos Equipa/`):**
-- Jorge Pereira → `retrato_jorgepereira.png`
-- Mariana Costa → `retrato_marianacosta.png`
-- Sofia Costa → `retrato_sofiacosta.png`
-- Luis Gomes → `retrato_luísgomes.png`
-- Pedro Nunes → `retrato_pedronunes.png`
-- Andre Carvalho → `retrato_andrecarvalho.png`
-- Mara Ferreira → `retrato_maraferreira.png`
-- Johnson Semedo → `retrato_Johnson Semedo.png`
-- Carla Sousa → `retrato_carlasousa.png`
-- Ines Teixeira → `retrato_inêsteixeira.png`
-- Joao Silva → `retrato_joaosilva.png`
-- Miguel Santos → `retrato_miguelsantos.png`
-- Rita Ferreira → `retrato_ritaferreira.png`
 
 ---
 
@@ -134,42 +92,9 @@ O ultimo paragrafo do corpo do artigo deve ser sempre exatamente (em italico, vi
 
 ---
 
-## PASSOS DE EXECUCAO
+## TEMPLATE HTML
 
-### Passo 1 - Analisar o input
-
-O input pode ser:
-- Um URL de regulamento, ficha tecnica ou pagina oficial: usa WebFetch para recolher o conteudo antes de continuar
-- Um documento em texto (regulamento colado, brief descritivo): usar como base
-- O nome do instrumento apenas: inferir com base no conhecimento proprio, sendo rigoroso nos valores e condicoes
-
-### Passo 2 - Decidir os metadados
-
-Define antes de escrever:
-- **slug**: kebab-case, descritivo (ex: `sifide-2`, `rfai`, `horizonte-europa`, `business-angels`)
-- **nome_instrumento**: nome completo e oficial (ex: `SIFIDE II`, `Portugal 2030`, `EIC Accelerator`)
-- **categoria_badge**: uma de `Financiamento Publico`, `Investimento Privado`, `Fiscal`, `Inovacao`, `Estrategia`
-- **categoria_card**: codigo para o filtro em solucoes.html, uma de: `nr` (Nao Reembolsavel), `priv` (Investimento Privado), `div` (Divida), `hib` (Hibridos), `fiscal` (Incentivos Fiscais), `outros` (Outros)
-- **estado**: uma de: `aberto`, `fechado`, `previsto`
-- **fonte**: codigo da fonte/programa, uma de: `pt2030`, `ani`, `iapmei`, `bfomento`, `aicep`, `at`, `pventures`, `compete`, `prr`, `ue`
-- **beneficiario**: lista separada por virgulas dos tipos elegiveis, combinacao de: `empresa` (qualquer tipo de empresa), `entidade-publica` (municipios, autarquias, entidades publicas), `associacao` (associacoes, entidades sem fins lucrativos), `ensino-investigacao` (universidades, centros de investigacao), `empreendedor` (empreendedores individuais, pre-incorporacao)
-- **regiao**: lista separada por virgulas das regioes onde o instrumento esta disponivel. Se o instrumento e nacional, listar TODAS as regioes: `norte,centro,lisboa,alentejo,algarve,acores,madeira`. Se e regional, listar apenas as regioes cobertas (ex: `norte,centro`). Nunca usar "nacional" ou "multi-regiao" como valor.
-- **hero_tagline**: 1 frase clara sobre o instrumento, max 20 palavras (ex: "O incentivo fiscal que transforma investimento em I&D em poupanca imediata de IRC.")
-- **meta_fact_1_label** + **meta_fact_1_valor**: dado chave 1 (ex: Dotacao: €23 mil milhoes)
-- **meta_fact_2_label** + **meta_fact_2_valor**: dado chave 2 (ex: Beneficio maximo: 82.5% das despesas)
-- **meta_fact_3_label** + **meta_fact_3_valor**: dado chave 3 (ex: Elegibilidade: PME e grandes empresas)
-- **meta_fact_4_label** + **meta_fact_4_valor**: dado chave 4 (ex: Estado: Aberto, candidatura permanente)
-- **sidebar_factos**: lista de 5 a 8 pares chave/valor para o card "Factos Rapidos" na sidebar
-- **instrumentos_relacionados**: 3 a 5 links para outros artigos em `instrumentos/` relevantes para o tema
-  - Referencia existente: `portugal-2030.html` - "Portugal 2030"
-  - Escolhe os mais relevantes para o instrumento em causa
-- **autor**: nome completo selecionado da equipa
-- **autor_cargo**: cargo correspondente
-- **sidebar_cta_text**: texto contextualizado ao instrumento (ex: "Quer calcular o beneficio SIFIDE para a sua empresa?")
-
-### Passo 3 - Escrever e guardar o artigo HTML
-
-Cria o ficheiro `instrumentos/[slug].html` com a estrutura completa abaixo.
+Criar o ficheiro `instrumentos/[slug].html` com a estrutura abaixo. Os metadados (slug, autor, categoria, etc.) sao definidos pelo radar-writer antes de chamar este template.
 
 **Elementos disponiveis para o corpo do artigo:**
 
@@ -611,86 +536,4 @@ NAO usar `val-gold` para valores monetarios, dotacoes ou taxas. Valores monetari
 </a>
 ```
 
-### Passo 4 - Injetar card em solucoes.html
-
-Cada instrumento novo precisa de um card no catalogo. Executar SEMPRE este passo.
-
-**Determinar `card_category` e `cat_label`:**
-- Fundo perdido / subsidio / premio / voucher: `nr` · "Nao Reembolsavel"
-- Emprestimo / linha de credito / garantia bancaria: `div` · "Divida"
-- VC / PE / business angels / crowdfunding: `priv` · "Investimento Privado"
-- Componente reembolsavel + nao reembolsavel: `hib` · "Hibridos"
-- Deducao de IRC / beneficio fiscal ao investimento: `fiscal` · "Incentivos Fiscais"
-- Outro (internacionalizacao, apoio tecnico, etc.): `outros` · "Outros"
-
-**Determinar estado (comparar com a data de hoje):**
-- Ha prazo de candidatura e ainda nao passou: `status-open` · "Aberto ate DD/MM/AAAA"
-- Ha prazo de candidatura e ja passou: `status-closed` · "Fechado"
-- Sem prazo ou instrumento de candidatura continua: `status-cont` · "Continuo"
-
-**Construir os dois highlights do card:**
-- Highlight 1: dotacao total ou beneficio maximo (ex: "€10K a €300K · Co-financiamento a 65%")
-- Highlight 2: elegibilidade resumida (ex: "Micro e pequenas empresas · 11 municipios · FTJ")
-
-**Injetar o card com Node.js:**
-
-```bash
-node -e "
-const fs = require('fs');
-let html = fs.readFileSync('solucoes.html', 'utf8');
-
-const newCard = \`
-      <div class=\"instrument-card reveal reveal-d1\" data-category=\"[CAT]\" data-estado=\"[ESTADO]\" data-fonte=\"[FONTE]\" data-beneficiario=\"[BENEFICIARIO]\" data-regiao=\"[REGIAO]\" data-id=\"[SLUG]\" data-href=\"instrumentos/[SLUG].html\">
-        <div class=\"card-header\">
-          <span class=\"cat-badge cat-[CAT]\">[CAT_LABEL]</span>
-          <span class=\"status-pill [STATUS_CLASS]\">[STATUS_TEXT]</span>
-        </div>
-        <h3 class=\"card-title\">[NOME_INSTRUMENTO]</h3>
-        <p class=\"card-tagline\">[CARD_TAGLINE]</p>
-        <div class=\"card-divider\"></div>
-        <div class=\"card-highlights\">
-          <div class=\"card-highlight\"><span class=\"card-highlight-dot\"></span>[HIGHLIGHT_1]</div>
-          <div class=\"card-highlight\"><span class=\"card-highlight-dot\"></span>[HIGHLIGHT_2]</div>
-        </div>
-        <span class=\"card-cta\">Ver artigo</span>
-      </div>
-\`;
-
-// Inserir antes do primeiro card da mesma categoria, ou antes do comentario No results
-const catPattern = new RegExp('(<div class=\"instrument-card[^\"]*\"[^>]*data-category=\"[CAT]\")', '');
-if (catPattern.test(html)) {
-  html = html.replace(catPattern, newCard + '\$1');
-} else {
-  html = html.replace('      <!-- No results message -->', newCard + '      <!-- No results message -->');
-}
-
-fs.writeFileSync('solucoes.html', html, 'utf8');
-console.log('Card inserido em solucoes.html');
-"
-```
-
-Substituir todos os placeholders com os valores reais antes de executar:
-- `[CAT]`: valor de `categoria_card` (nr, priv, div, hib, fiscal, outros)
-- `[ESTADO]`: valor de `estado` (aberto, fechado, previsto)
-- `[FONTE]`: valor de `fonte` (pt2030, ani, iapmei, bfomento, aicep, at, pventures, compete, prr, ue)
-- `[BENEFICIARIO]`: valor de `beneficiario` (ex: "micro,pme" ou "startup,pme,grande-empresa")
-- `[REGIAO]`: valor de `regiao` (ex: "norte,centro" ou todas as 7 regioes se nacional)
-- `[SLUG]`, `[CAT_LABEL]`, `[STATUS_CLASS]`, `[STATUS_TEXT]`, `[NOME_INSTRUMENTO]`, `[CARD_TAGLINE]`, `[HIGHLIGHT_1]`, `[HIGHLIGHT_2]`
-
-### Passo 5 - Deploy
-
-```bash
-git add instrumentos/[SLUG].html solucoes.html
-git commit -m "instrumento: [NOME_INSTRUMENTO]"
-git push
-```
-
-Se o git push falhar, reporta o erro. Nao tentes novamente automaticamente.
-
-### Passo 6 - Confirmar
-
-Apos deploy com sucesso, informa:
-- Nome do instrumento publicado
-- Autor selecionado e respetivo cargo
-- URL relativo: `instrumentos/[slug].html`
 - GitHub Pages fara o deploy automaticamente via push
