@@ -1310,23 +1310,6 @@
       "download_error": "Plano Anual - PDF confirma PAA202601, Resumo de Aviso do Plano Anual de Avisos"
     },
     {
-      "id": "aguas-residuais-em-alta",
-      "name": "Águas residuais em alta",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0271/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2027-01-29",
-      "budget": "20 000 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/aguas-residuais-em-alta/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 45,
-      "status": "plano_anual",
-      "notes": "FA0271/2025. SUSTENTAVEL2030. FC.",
-      "download_error": "Plano Anual - texto PAA detectado via WebFetch na pagina regulation_url"
-    },
-    {
       "id": "abastecimento-de-agua-em-alta",
       "name": "Abastecimento de água em alta",
       "source_id": "portugal-2030",
@@ -1358,22 +1341,6 @@
       "status": "pending",
       "notes": "FA0152/2025. SUSTENTAVEL2030. FC.",
       "download_error": "PDF PACS-2026-4 inacessivel - URL nao encontrado nas localizacoes esperadas - tentativa 2026-04-15"
-    },
-    {
-      "id": "programa-de-seguranca-ferroviaria-supressao-de-pns",
-      "name": "Programa de Segurança Ferroviária - Supressão de PNs",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0156/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-07-31",
-      "budget": "41 379 567,2 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/programa-de-seguranca-ferroviaria-supressao-de-pns/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 45,
-      "status": "pending",
-      "notes": "FA0156/2025. SUSTENTAVEL2030. FC."
     },
     {
       "id": "linha-norte-estacao-do-oriente-terminal-tecnico",
