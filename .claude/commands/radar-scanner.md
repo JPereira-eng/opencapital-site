@@ -180,6 +180,29 @@ Usar WebFetch no `url_avisos` da fonte. Se a fonte tem paginacao, percorrer pagi
 
 Prompt: "Lista todos os avisos/instrumentos de financiamento visiveis. Para cada um: nome, codigo, estado, prazo, dotacao, URL regulamento, URL PDF."
 
+**REGRA CRITICA - MULTIPLOS URLs ANTES DE DECLARAR "0 NOVOS":**
+
+Muitos portais organizam conteudo em multiplas paginas/seccoes. Antes de concluir que uma fonte webfetch nao tem nada novo, **verificar pelo menos 3 URLs** do dominio, nesta ordem:
+
+1. **URL principal** (`url_avisos` de sources-scan.json)
+2. **URLs alternativos tipicos** (tentar ate encontrar 200 OK):
+   - `[dominio]/convocatorias/`
+   - `[dominio]/calls/`
+   - `[dominio]/oportunidades/`
+   - `[dominio]/avisos/`
+   - `[dominio]/concursos/`
+   - `[dominio]/open-calls/` ou `[dominio]/open-call/`
+   - `[dominio]/programas/`
+   - `[dominio]/en/calls/` (versao inglesa)
+3. **WebSearch de fallback** se nenhum dos anteriores retornou conteudo util:
+   ```
+   site:[dominio] (calls OR concursos OR convocatorias OR avisos) 2026
+   ```
+
+**Minimo 3 tentativas antes de declarar "0 novos".** Registar no relatorio granular (ver Passo 5) quais URLs foram verificados e o que cada um retornou.
+
+**Excecao:** se o URL principal ja lista claramente "todas as oportunidades" num indice (ex: ec.europa.eu/info/funding-tenders), uma so verificacao basta. Documentar esta decisao no relatorio.
+
 ### Se `access_method: "chrome"`:
 
 Usar Chrome MCP: `navigate` -> `get_page_text` ou `read_page`.
@@ -310,12 +333,13 @@ Para fontes nao-PT2030 (EU, Interreg, etc.), usar o `shard` definido em `sources
 
 ---
 
-## PASSO 5: Atualizar estado
+## PASSO 5: Atualizar estado e produzir relatorio granular
 
-1. Atualizar `registry/index.json`:
-   - `totals.in_queue`: novo tamanho da queue
-   - `last_scanner_run`: data de hoje
-2. Atualizar `source_last_checked` em `registry/index.json` para cada fonte verificada nesta run:
+### 5a. Atualizar registry/index.json
+
+1. `totals.in_queue`: novo tamanho da queue.json (NAO somar queue-catalogo)
+2. `last_scanner_run`: data de hoje
+3. `source_last_checked` para cada fonte verificada nesta run:
    ```json
    "source_last_checked": {
      "compete-2030": "2026-04-12",
@@ -324,13 +348,114 @@ Para fontes nao-PT2030 (EU, Interreg, etc.), usar o `shard` definido em `sources
    ```
    Manter as datas das fontes nao verificadas inalteradas.
 
+### 5b. RELATORIO GRANULAR OBRIGATORIO
+
+**No final da execucao, produzir relatorio estruturado com TODAS as metricas por fonte.** Este relatorio torna o comportamento do scanner transparente e auditavel. Sem este detalhe, e impossivel detectar regressoes (falhas silenciosas, paginacao incompleta, filtros excessivos, dedup incorrecto).
+
+**Template obrigatorio por fonte:**
+
+```
+[source-id] (regime: aviso|catalogo, access_method: X)
+  Paginas/URLs verificados:
+    - [url_1]: [N items retornados | vazio | HTTP xxx | timeout]
+    - [url_2]: [...]
+  Items retornados pela fonte (total): N
+  Filtros aplicados:
+    - Sem acf.pdf (PT2030 apenas): N ignorados
+    - data_fim no passado: N ignorados
+    - data_inicio no passado mas data_fim no futuro: N mantidos (abertos)
+    - data_inicio no futuro: N mantidos (previstos)
+  Deduplicacao:
+    - Ja em lookup.by_aviso_codigo: N ignorados
+    - Ja em lookup.by_id: N ignorados
+    - Titulo >= 80% similar: N ignorados
+  NOVOS adicionados a queue.json (aviso): N
+  NOVOS adicionados a queue-catalogo.json (catalogo): N
+```
+
+**Template final do run:**
+
+```
+Scanner run: 2026-04-16
+Fontes verificadas: 5 de 5 slots
+  - Regime aviso: 4 (listar)
+  - Regime catalogo: 1 (listar)
+
+[bloco granular por fonte, conforme template acima]
+
+Totais da run:
+  - Total items retornados pelas fontes: N
+  - Total ignorados por acf.pdf: N
+  - Total ignorados por deadline: N
+  - Total ignorados por dedup: N
+  - Total NOVOS aviso: N
+  - Total NOVOS catalogo: N
+
+Estado da queue:
+  - queue.json antes: N
+  - queue.json depois: N (delta = novos_aviso - migrados_para_overflow + migrados_do_overflow)
+  - queue-catalogo.json antes: N
+  - queue-catalogo.json depois: N (delta = novos_catalogo)
+  - queue-overflow.json antes: N
+  - queue-overflow.json depois: N
+
+Operacoes de overflow (se houver):
+  - Items movidos queue -> overflow: N (priority_score min: X)
+  - Items movidos overflow -> queue: N
+```
+
+**Nunca suprimir campos por brevidade.** Mesmo que zero, reportar `Sem acf.pdf: 0 ignorados`. Ausencia de campo e ambiguidade.
+
 ---
 
-## PASSO 6: Deploy
+## PASSO 6: Sanity check + Deploy
+
+### 6a. SANITY CHECK DE CONTAGEM (OBRIGATORIO antes do commit)
+
+Antes de qualquer `git add`, validar que as contagens batem certo. Uma discrepancia indica bug interno (items adicionados silenciosamente, migracao inesperada do overflow, dedup falhado).
+
+**Calcular as esperancas:**
+```
+expected_queue_delta = novos_aviso - movidos_para_overflow + movidos_do_overflow
+expected_queue_catalogo_delta = novos_catalogo
+expected_overflow_delta = movidos_para_overflow - movidos_do_overflow
+expected_in_queue = queue_antes + expected_queue_delta
+```
+
+**Verificar os valores reais:**
+```
+actual_queue_depois = queue.json.queue.length
+actual_queue_catalogo_depois = queue-catalogo.json.queue.length
+actual_overflow_depois = queue-overflow.json.queue.length
+actual_in_queue = index.json.totals.in_queue
+```
+
+**Comparar:**
+- `actual_queue_depois == queue_antes + expected_queue_delta` ?
+- `actual_queue_catalogo_depois == queue_catalogo_antes + expected_queue_catalogo_delta` ?
+- `actual_overflow_depois == overflow_antes + expected_overflow_delta` ?
+- `actual_in_queue == actual_queue_depois` (index.json deve reflectir queue.json) ?
+
+**Se QUALQUER uma falhar:**
+1. **NAO fazer commit.**
+2. Imprimir discrepancia completa:
+   ```
+   SANITY CHECK FAIL:
+     queue.json esperado: [X], actual: [Y], diff: [Y-X]
+     index.in_queue esperado: [X], actual: [Y], diff: [Y-X]
+   ```
+3. Investigar qual foi o item/operacao extra ou em falta.
+4. Corrigir antes de commit, ou reverter mudancas e abortar a run.
+
+**Se todas passarem:** prosseguir para 6b.
+
+Este sanity check existe porque em runs anteriores foram reportados "3 novos" quando `in_queue` subiu 7 - indicando que 4 items entraram sem ser explicitamente contabilizados. Este teste deteta isso antes do push.
+
+### 6b. Commit e push
 
 ```bash
-git -C "$REPO" add registry/index.json registry/queue.json registry/lookup.json sources-scan.json
-git -C "$REPO" commit -m "scanner: [N fontes], [N novos] na fila"
+git -C "$REPO" add registry/index.json registry/queue.json registry/queue-catalogo.json registry/queue-overflow.json registry/lookup.json sources-scan.json
+git -C "$REPO" commit -m "scanner: [N fontes], [N novos aviso], [N novos catalogo]"
 git -C "$REPO" push origin main
 ```
 
@@ -351,11 +476,16 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
 ## RESUMO
 
 ```
-1. Ler index.json + queue.json + lookup.json + sources-scan.json
-2. Selecionar ate 5 fontes por prioridade/data
-3. Para cada fonte: aceder, extrair avisos, deduplicar
-4. Adicionar novos a queue + lookup
-5. Atualizar index.json
-6. git commit + push
-7. Reportar: "Scanner: [N fontes]. Novos: [N]. Fila total: [N]."
+1. Ler index.json + queue.json + queue-catalogo.json + lookup.json + sources-scan.json
+2. Selecionar ate 5 fontes (4 aviso + 1 catalogo) por prioridade/data
+3. Para cada fonte:
+   - Aceder (se webfetch: tentar 3 URLs antes de declarar "0 novos")
+   - Extrair items, aplicar filtros, deduplicar
+   - Adicionar novos a queue correcta (aviso -> queue.json, catalogo -> queue-catalogo.json)
+4. Manter contadores internos: novos_aviso, novos_catalogo, movidos_overflow
+5. Atualizar index.json e source_last_checked
+5b. Produzir RELATORIO GRANULAR: por fonte detalhar URLs verificados, items retornados, filtros, dedup, novos
+6a. SANITY CHECK: queue_depois == queue_antes + delta esperado. Se falhar: ABORT sem commit.
+6b. git commit + push
+7. Reportar relatorio granular completo
 ```
