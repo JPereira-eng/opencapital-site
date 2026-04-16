@@ -2,22 +2,6 @@
   "_meta": "Fila de instrumentos de regime 'catalogo' (bancos, VC, premios, aceleradores, startups). Preenchida pelo scanner quando verifica fontes de regime catalogo. O writer le esta fila separadamente, com menor frequencia que queue.json.",
   "queue": [
     {
-      "id": "portugal-events-2026-2028",
-      "name": "Portugal Events 2026-2028 - Programa de Apoio a Eventos Turisticos",
-      "source_id": "turismo-portugal",
-      "shard": "catalogo-premios",
-      "aviso_codigo": null,
-      "detected_date": "2026-04-16",
-      "deadline": null,
-      "budget": "45.000.000 EUR (2026-2028)",
-      "regulation_url": "https://business.turismodeportugal.pt/pt/Investir/Financiamento/programas/Paginas/programa-portugal-events.aspx",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 45,
-      "status": "cont",
-      "notes": "Programa de apoio a eventos turisticos 2026-2028. 45M EUR total. Suporte a: eventos estrategicos (max 300K EUR), eventos associativos/corporativos (max 50K EUR), planos regionais (max 500K EUR). Bonus 25% para territorios baixa densidade ou eventos de inverno. Candidatura minimo 30 dias antes do evento, via portal SGPI (investimento.turismodeportugal.pt). Candidatura continua/rolling."
-    },
-    {
       "id": "faber-ventures-fundo-vc-pre-seed",
       "name": "Faber Ventures - Fundo VC Pre-Seed e Seed",
       "source_id": "faber-ventures",

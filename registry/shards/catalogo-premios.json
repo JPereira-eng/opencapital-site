@@ -2,5 +2,13 @@
   "_meta": "Shard de instrumentos publicados do regime catalogo - premios de inovacao e vouchers. Inclui Premio BPI La Caixa, Premio Gulbenkian, e outros premios anuais.",
   "shard_id": "catalogo-premios",
   "regime": "catalogo",
-  "items": []
+  "items": [
+    {
+      "id": "portugal-events-2026-2028",
+      "file": "instrumentos/portugal-events-2026-2028.html",
+      "source": "turismo-portugal",
+      "state": "cont",
+      "last_check": "2026-04-16"
+    }
+  ]
 }
