@@ -32,7 +32,7 @@
     {
       "id": "compete-2030",
       "name": "COMPETE 2030",
-      "priority": "high",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://www.compete2030.gov.pt/avisos",
@@ -79,7 +79,7 @@
     {
       "id": "pat-2030",
       "name": "Programa de Assistencia Tecnica 2030",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://pat.portugal2030.pt/",
@@ -92,7 +92,7 @@
     {
       "id": "norte-2030",
       "name": "Norte 2030",
-      "priority": "high",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://www.norte2030.pt/concursos/",
@@ -103,7 +103,7 @@
     {
       "id": "centro-2030",
       "name": "Centro 2030",
-      "priority": "high",
+      "priority": "medium",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://centro2030.pt/avisos/",
@@ -116,7 +116,7 @@
     {
       "id": "lisboa-2030",
       "name": "Lisboa 2030",
-      "priority": "high",
+      "priority": "low",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://lisboa.portugal2030.pt/avisos/",
@@ -190,7 +190,7 @@
     {
       "id": "iapmei",
       "name": "IAPMEI",
-      "priority": "high",
+      "priority": "low",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://www.iapmei.pt/PRODUTOS-E-SERVICOS/Incentivos-Financiamento.aspx",
@@ -262,7 +262,7 @@
     {
       "id": "prr",
       "name": "Plano de Recuperacao e Resiliencia (PRR)",
-      "priority": "high",
+      "priority": "medium",
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://recuperarportugal.gov.pt/avisos/",
@@ -289,7 +289,7 @@
     {
       "id": "interreg-sudoe",
       "name": "Interreg SUDOE",
-      "priority": "medium",
+      "priority": "high",
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://interreg-sudoe.eu/en/calendario-de-convocatorias/",
@@ -298,7 +298,7 @@
     {
       "id": "interreg-euromed",
       "name": "Interreg Euro-MED",
-      "priority": "medium",
+      "priority": "high",
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://interreg-euro-med.eu/en/get-involved/",
@@ -307,7 +307,7 @@
     {
       "id": "interreg-next-med",
       "name": "Interreg NEXT MED",
-      "priority": "medium",
+      "priority": "high",
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://www.interregnextmed.eu/apply-for-funding/",
@@ -316,7 +316,7 @@
     {
       "id": "interreg-europe",
       "name": "Interreg Europe",
-      "priority": "low",
+      "priority": "high",
       "access_method": "websearch",
       "access_status": "blocked",
       "url_avisos": "https://www.interregeurope.eu/call-for-projects",
@@ -325,7 +325,7 @@
     {
       "id": "interreg-urbact",
       "name": "URBACT IV",
-      "priority": "low",
+      "priority": "high",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://urbact.eu/",
@@ -334,7 +334,7 @@
     {
       "id": "interreg-espon",
       "name": "ESPON 2030",
-      "priority": "low",
+      "priority": "high",
       "access_method": "websearch",
       "access_status": "blocked",
       "url_avisos": "https://www.espon.eu/",
@@ -343,7 +343,7 @@
     {
       "id": "interreg-interact",
       "name": "INTERACT IV",
-      "priority": "low",
+      "priority": "high",
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://www.interact.eu/",
