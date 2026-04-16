@@ -29,7 +29,8 @@ fi
 | Ficheiro | Quando ler |
 |---|---|
 | `registry/index.json` | Sempre |
-| `registry/queue.json` | Sempre |
+| `registry/queue.json` | Sempre (regime "aviso" - avisos com deadline formal) |
+| `registry/queue-catalogo.json` | Sempre (regime "catalogo" - bancos, VC, premios, aceleradores) |
 | `.claude/commands/instrumento.md` | **OBRIGATORIO antes de escrever** |
 
 ---
@@ -72,7 +73,13 @@ O writer opera em **1 batch de 5 artigos por sessao**. Cada batch:
 
 ## PASSO 1: Selecionar artigos
 
-Ler `registry/queue.json`. Ordenar por `priority_score` descendente.
+Ler **ambas as filas**: `registry/queue.json` (regime aviso) e `registry/queue-catalogo.json` (regime catalogo).
+
+**Composicao do batch de 5 artigos:**
+- Ate 4 items de `queue.json` (regime aviso), ordenados por `priority_score` descendente
+- 1 item de `queue-catalogo.json` (regime catalogo), o mais antigo na fila (FIFO - para garantir que todas as fontes de catalogo sao cobertas em rotacao)
+- Se `queue-catalogo.json` estiver vazia: usar o 5o slot para mais um item de `queue.json`
+- Se `queue.json` estiver vazia mas `queue-catalogo.json` tiver items: processar ate 5 items do catalogo
 
 **Priorizar items com `status: "ready"`** (regulamento ja descarregado) sobre `status: "pending"`.
 
@@ -222,7 +229,7 @@ Adicionar entrada ao FINAL de `instruments-catalog.json > instruments`:
 
 Para cada artigo criado:
 
-1. **Remover da queue** (`registry/queue.json`)
+1. **Remover da queue correcta**: se o item veio de `queue.json` remover de `queue.json`; se veio de `queue-catalogo.json` remover de `queue-catalogo.json`
 2. **Adicionar ao shard** (`registry/shards/[shard].json`):
 ```json
 { "id": "[slug]", "file": "instrumentos/[slug].html", "source": "[source_id]", "state": "[estado]", "last_check": "[hoje]" }

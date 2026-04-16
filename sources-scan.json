@@ -17,15 +17,17 @@
       "superset_coverage": "partial",
       "superset_note": "API central cobre ~220 avisos de ~1500+ totais. Portais regionais tem avisos adicionais. Nunca filtrar por beneficiario.",
       "shard": "pt2030-compete",
-      "dedup_key": "codigo (FA####/YYYY format, unique across all programs)"
+      "dedup_key": "codigo (FA####/YYYY format, unique across all programs)",
+      "regime": "aviso"
     },
     {
       "id": "balcao-2030",
       "name": "Balcao 2030",
       "priority": "high",
       "access_method": "websearch",
-      "access_status": "blocked",
-      "url_avisos": "https://balcao.portugal2030.pt/Balcao2030.idp/RequestHandler"
+      "access_status": "blocked-auth",
+      "url_avisos": "https://balcao.portugal2030.pt/Balcao2030.idp/RequestHandler",
+      "regime": "aviso"
     },
     {
       "id": "compete-2030",
@@ -34,7 +36,8 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://www.compete2030.gov.pt/avisos",
-      "shard": "pt2030-compete"
+      "shard": "pt2030-compete",
+      "regime": "aviso"
     },
     {
       "id": "pessoas-2030",
@@ -46,7 +49,8 @@
       "api_url": "https://pessoas2030.gov.pt/wp-json/wp/v2/aviso-2024",
       "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia ou erro 400)",
       "shard": "pt2030-pessoas",
-      "note": "30 avisos (3 paginas). Mesma estrutura ACF que PT2030 central."
+      "note": "30 avisos (3 paginas). Mesma estrutura ACF que PT2030 central.",
+      "regime": "aviso"
     },
     {
       "id": "mar-2030",
@@ -55,7 +59,8 @@
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://mar2030.gov.pt/",
-      "shard": "pt2030-other"
+      "shard": "pt2030-other",
+      "regime": "aviso"
     },
     {
       "id": "sustentavel-2030",
@@ -68,7 +73,8 @@
       "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia ou erro 400)",
       "api_note": "ATENCAO: endpoint e /aviso, nao /aviso-2024. Codigos PACS-YYYY-NN.",
       "shard": "pt2030-other",
-      "note": "8 avisos (1 pagina). Endpoint diferente dos outros portais."
+      "note": "8 avisos (1 pagina). Endpoint diferente dos outros portais.",
+      "regime": "aviso"
     },
     {
       "id": "pat-2030",
@@ -80,7 +86,8 @@
       "api_url": "https://pat.portugal2030.pt/wp-json/wp/v2/aviso-2024",
       "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia ou erro 400)",
       "shard": "pt2030-other",
-      "note": "Mesma estrutura ACF que PT2030 central."
+      "note": "Mesma estrutura ACF que PT2030 central.",
+      "regime": "aviso"
     },
     {
       "id": "norte-2030",
@@ -90,7 +97,8 @@
       "access_status": "ok",
       "url_avisos": "https://www.norte2030.pt/concursos/",
       "shard": "pt2030-norte",
-      "note": "API REST da 401. Usar WebFetch na pagina de concursos. 29 abertos / 171 total (verificado 2026-04-12)"
+      "note": "API REST da 401. Usar WebFetch na pagina de concursos. 29 abertos / 171 total (verificado 2026-04-12)",
+      "regime": "aviso"
     },
     {
       "id": "centro-2030",
@@ -102,7 +110,8 @@
       "api_url": "https://centro2030.pt/wp-json/wp/v2/aviso-2024",
       "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia ou erro 400)",
       "shard": "pt2030-centro",
-      "note": "12 avisos (2 paginas). Mesma estrutura ACF que PT2030 central."
+      "note": "12 avisos (2 paginas). Mesma estrutura ACF que PT2030 central.",
+      "regime": "aviso"
     },
     {
       "id": "lisboa-2030",
@@ -114,7 +123,8 @@
       "api_url": "https://lisboa.portugal2030.pt/wp-json/wp/v2/aviso-2024",
       "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia ou erro 400)",
       "shard": "pt2030-lisboa",
-      "note": "5 avisos (1 pagina). Mesma estrutura ACF que PT2030 central."
+      "note": "5 avisos (1 pagina). Mesma estrutura ACF que PT2030 central.",
+      "regime": "aviso"
     },
     {
       "id": "alentejo-2030",
@@ -126,7 +136,8 @@
       "api_url": "https://alentejo.portugal2030.pt/wp-json/wp/v2/aviso-2024",
       "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia ou erro 400)",
       "shard": "pt2030-other",
-      "note": "40+ avisos (4+ paginas). Mesma estrutura ACF que PT2030 central."
+      "note": "40+ avisos (4+ paginas). Mesma estrutura ACF que PT2030 central.",
+      "regime": "aviso"
     },
     {
       "id": "algarve-2030",
@@ -138,7 +149,8 @@
       "api_url": "https://algarve.portugal2030.pt/wp-json/wp/v2/aviso-2024",
       "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia ou erro 400)",
       "shard": "pt2030-other",
-      "note": "20 avisos (2 paginas). Mesma estrutura ACF que PT2030 central."
+      "note": "20 avisos (2 paginas). Mesma estrutura ACF que PT2030 central.",
+      "regime": "aviso"
     },
     {
       "id": "acores-2030",
@@ -150,7 +162,8 @@
       "api_url": "https://acores.portugal2030.pt/wp-json/wp/v2/aviso-2024",
       "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia ou erro 400)",
       "shard": "pt2030-other",
-      "note": "10+ avisos (1+ paginas). Mesma estrutura ACF que PT2030 central."
+      "note": "10+ avisos (1+ paginas). Mesma estrutura ACF que PT2030 central.",
+      "regime": "aviso"
     },
     {
       "id": "madeira-2030",
@@ -162,7 +175,8 @@
       "api_url": "https://madeira.portugal2030.pt/wp-json/wp/v2/aviso-2024",
       "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia ou erro 400)",
       "shard": "pt2030-other",
-      "note": "10+ avisos (1+ paginas). Mesma estrutura ACF que PT2030 central."
+      "note": "10+ avisos (1+ paginas). Mesma estrutura ACF que PT2030 central.",
+      "regime": "aviso"
     },
     {
       "id": "ani",
@@ -170,7 +184,8 @@
       "priority": "high",
       "access_method": "webfetch",
       "access_status": "partial",
-      "url_avisos": "https://www.ani.pt/pt/financiamento/"
+      "url_avisos": "https://www.ani.pt/pt/financiamento/",
+      "regime": "aviso"
     },
     {
       "id": "iapmei",
@@ -178,7 +193,8 @@
       "priority": "high",
       "access_method": "webfetch",
       "access_status": "ok",
-      "url_avisos": "https://www.iapmei.pt/PRODUTOS-E-SERVICOS/Incentivos-Financiamento.aspx"
+      "url_avisos": "https://www.iapmei.pt/PRODUTOS-E-SERVICOS/Incentivos-Financiamento.aspx",
+      "regime": "aviso"
     },
     {
       "id": "banco-fomento",
@@ -186,7 +202,8 @@
       "priority": "high",
       "access_method": "chrome",
       "access_status": "blocked",
-      "url_avisos": "https://www.bpfomento.pt/pt/catalogo/"
+      "url_avisos": "https://www.bpfomento.pt/pt/catalogo/",
+      "regime": "catalogo"
     },
     {
       "id": "aicep",
@@ -194,7 +211,8 @@
       "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
-      "url_avisos": "https://www.portugalglobal.pt/pt/internacionalizacao/incentivos/"
+      "url_avisos": "https://www.portugalglobal.pt/pt/internacionalizacao/incentivos/",
+      "regime": "aviso"
     },
     {
       "id": "portugal-ventures",
@@ -202,7 +220,8 @@
       "priority": "medium",
       "access_method": "chrome",
       "access_status": "partial",
-      "url_avisos": "https://www.portugalventures.pt/investments/"
+      "url_avisos": "https://www.portugalventures.pt/investments/",
+      "regime": "catalogo"
     },
     {
       "id": "turismo-portugal",
@@ -210,7 +229,8 @@
       "priority": "medium",
       "access_method": "chrome",
       "access_status": "blocked",
-      "url_avisos": "https://business.turismodeportugal.pt/pt/Investir/Financiamento/programas/Paginas/default.aspx"
+      "url_avisos": "https://business.turismodeportugal.pt/pt/Investir/Financiamento/programas/Paginas/default.aspx",
+      "regime": "catalogo"
     },
     {
       "id": "fct",
@@ -218,7 +238,8 @@
       "priority": "medium",
       "access_method": "webfetch",
       "access_status": "partial",
-      "url_avisos": "https://www.fct.pt/concursos/"
+      "url_avisos": "https://www.fct.pt/concursos/",
+      "regime": "aviso"
     },
     {
       "id": "autoridade-tributaria",
@@ -226,7 +247,8 @@
       "priority": "medium",
       "access_method": "websearch",
       "access_status": "indirect",
-      "url_avisos": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/beneficios_fiscais/Pages/default.aspx"
+      "url_avisos": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/beneficios_fiscais/Pages/default.aspx",
+      "regime": "aviso"
     },
     {
       "id": "iefp",
@@ -234,7 +256,8 @@
       "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
-      "url_avisos": "https://www.iefp.pt/apoios"
+      "url_avisos": "https://www.iefp.pt/apoios",
+      "regime": "aviso"
     },
     {
       "id": "prr",
@@ -242,7 +265,8 @@
       "priority": "high",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://recuperarportugal.gov.pt/avisos/"
+      "url_avisos": "https://recuperarportugal.gov.pt/avisos/",
+      "regime": "aviso"
     },
     {
       "id": "interreg-poctep",
@@ -250,7 +274,8 @@
       "priority": "high",
       "access_method": "webfetch",
       "access_status": "ok",
-      "url_avisos": "https://www.poctep.eu/convocatorias-abiertas-poctep-2021-2027/"
+      "url_avisos": "https://www.poctep.eu/convocatorias-abiertas-poctep-2021-2027/",
+      "regime": "aviso"
     },
     {
       "id": "interreg-atlantic",
@@ -258,7 +283,8 @@
       "priority": "high",
       "access_method": "webfetch",
       "access_status": "ok",
-      "url_avisos": "https://www.atlanticarea.eu/for-applicants/call-for-projects"
+      "url_avisos": "https://www.atlanticarea.eu/for-applicants/call-for-projects",
+      "regime": "aviso"
     },
     {
       "id": "interreg-sudoe",
@@ -266,7 +292,8 @@
       "priority": "medium",
       "access_method": "chrome",
       "access_status": "partial",
-      "url_avisos": "https://interreg-sudoe.eu/en/calendario-de-convocatorias/"
+      "url_avisos": "https://interreg-sudoe.eu/en/calendario-de-convocatorias/",
+      "regime": "aviso"
     },
     {
       "id": "interreg-euromed",
@@ -274,7 +301,8 @@
       "priority": "medium",
       "access_method": "chrome",
       "access_status": "partial",
-      "url_avisos": "https://interreg-euro-med.eu/en/get-involved/"
+      "url_avisos": "https://interreg-euro-med.eu/en/get-involved/",
+      "regime": "aviso"
     },
     {
       "id": "interreg-next-med",
@@ -282,7 +310,8 @@
       "priority": "medium",
       "access_method": "chrome",
       "access_status": "partial",
-      "url_avisos": "https://www.interregnextmed.eu/apply-for-funding/"
+      "url_avisos": "https://www.interregnextmed.eu/apply-for-funding/",
+      "regime": "aviso"
     },
     {
       "id": "interreg-europe",
@@ -290,7 +319,8 @@
       "priority": "low",
       "access_method": "websearch",
       "access_status": "blocked",
-      "url_avisos": "https://www.interregeurope.eu/call-for-projects"
+      "url_avisos": "https://www.interregeurope.eu/call-for-projects",
+      "regime": "aviso"
     },
     {
       "id": "interreg-urbact",
@@ -298,7 +328,8 @@
       "priority": "low",
       "access_method": "webfetch",
       "access_status": "ok",
-      "url_avisos": "https://urbact.eu/"
+      "url_avisos": "https://urbact.eu/",
+      "regime": "aviso"
     },
     {
       "id": "interreg-espon",
@@ -306,7 +337,8 @@
       "priority": "low",
       "access_method": "websearch",
       "access_status": "blocked",
-      "url_avisos": "https://www.espon.eu/"
+      "url_avisos": "https://www.espon.eu/",
+      "regime": "aviso"
     },
     {
       "id": "interreg-interact",
@@ -314,7 +346,8 @@
       "priority": "low",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://www.interact.eu/"
+      "url_avisos": "https://www.interact.eu/",
+      "regime": "aviso"
     },
     {
       "id": "interreg-mac",
@@ -322,7 +355,8 @@
       "priority": "high",
       "access_method": "webfetch",
       "access_status": "ok",
-      "url_avisos": "https://interregmac.org/pt-pt/"
+      "url_avisos": "https://interregmac.org/pt-pt/",
+      "regime": "aviso"
     },
     {
       "id": "horizonte-europa",
@@ -330,7 +364,8 @@
       "priority": "high",
       "access_method": "webfetch",
       "access_status": "ok",
-      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html"
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
+      "regime": "aviso"
     },
     {
       "id": "eic-accelerator",
@@ -338,7 +373,8 @@
       "priority": "high",
       "access_method": "webfetch",
       "access_status": "ok",
-      "url_avisos": "https://eic.ec.europa.eu/eic-funding-opportunities_en"
+      "url_avisos": "https://eic.ec.europa.eu/eic-funding-opportunities_en",
+      "regime": "aviso"
     },
     {
       "id": "erc",
@@ -346,7 +382,8 @@
       "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
-      "url_avisos": "https://erc.europa.eu/apply-grant"
+      "url_avisos": "https://erc.europa.eu/apply-grant",
+      "regime": "aviso"
     },
     {
       "id": "horizon-msca",
@@ -355,7 +392,8 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
-      "shard": "eu-horizon"
+      "shard": "eu-horizon",
+      "regime": "aviso"
     },
     {
       "id": "horizon-cluster4",
@@ -364,7 +402,8 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "shard": "eu-horizon"
+      "shard": "eu-horizon",
+      "regime": "aviso"
     },
     {
       "id": "horizon-cluster5",
@@ -373,7 +412,8 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "shard": "eu-horizon"
+      "shard": "eu-horizon",
+      "regime": "aviso"
     },
     {
       "id": "horizon-cluster6",
@@ -382,7 +422,8 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "shard": "eu-horizon"
+      "shard": "eu-horizon",
+      "regime": "aviso"
     },
     {
       "id": "horizon-cluster1",
@@ -391,7 +432,8 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "shard": "eu-horizon"
+      "shard": "eu-horizon",
+      "regime": "aviso"
     },
     {
       "id": "horizon-cluster2",
@@ -400,7 +442,8 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "shard": "eu-horizon"
+      "shard": "eu-horizon",
+      "regime": "aviso"
     },
     {
       "id": "horizon-cluster3",
@@ -409,7 +452,8 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "shard": "eu-horizon"
+      "shard": "eu-horizon",
+      "regime": "aviso"
     },
     {
       "id": "horizon-widera",
@@ -418,7 +462,8 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "shard": "eu-horizon"
+      "shard": "eu-horizon",
+      "regime": "aviso"
     },
     {
       "id": "horizon-missions",
@@ -427,7 +472,8 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "shard": "eu-horizon"
+      "shard": "eu-horizon",
+      "regime": "aviso"
     },
     {
       "id": "hadea",
@@ -435,7 +481,8 @@
       "priority": "high",
       "access_method": "webfetch",
       "access_status": "ok",
-      "url_avisos": "https://hadea.ec.europa.eu/calls-proposals_en"
+      "url_avisos": "https://hadea.ec.europa.eu/calls-proposals_en",
+      "regime": "aviso"
     },
     {
       "id": "erasmus-enterprise",
@@ -443,7 +490,8 @@
       "priority": "medium",
       "access_method": "chrome",
       "access_status": "partial",
-      "url_avisos": "https://erasmus-plus.ec.europa.eu/funding-calls"
+      "url_avisos": "https://erasmus-plus.ec.europa.eu/funding-calls",
+      "regime": "aviso"
     },
     {
       "id": "erasmus-ka2-alliances",
@@ -452,7 +500,8 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "shard": "eu-other"
+      "shard": "eu-other",
+      "regime": "aviso"
     },
     {
       "id": "erasmus-ka2-cooperation",
@@ -461,7 +510,8 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "shard": "eu-other"
+      "shard": "eu-other",
+      "regime": "aviso"
     },
     {
       "id": "erasmus-cove",
@@ -470,7 +520,8 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "shard": "eu-other"
+      "shard": "eu-other",
+      "regime": "aviso"
     },
     {
       "id": "life-programme",
@@ -478,7 +529,8 @@
       "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
-      "url_avisos": "https://cinea.ec.europa.eu/programmes/life/life-calls-proposals_en"
+      "url_avisos": "https://cinea.ec.europa.eu/programmes/life/life-calls-proposals_en",
+      "regime": "aviso"
     },
     {
       "id": "digital-europe",
@@ -486,7 +538,8 @@
       "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
-      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/programmes/digital"
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/programmes/digital",
+      "regime": "aviso"
     },
     {
       "id": "single-market-programme",
@@ -494,7 +547,8 @@
       "priority": "low",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/programmes/cosme"
+      "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/programmes/cosme",
+      "regime": "aviso"
     },
     {
       "id": "investeu",
@@ -502,7 +556,8 @@
       "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
-      "url_avisos": "https://investeu.europa.eu/investeu-fund_en"
+      "url_avisos": "https://investeu.europa.eu/investeu-fund_en",
+      "regime": "aviso"
     },
     {
       "id": "cef",
@@ -510,7 +565,8 @@
       "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
-      "url_avisos": "https://cinea.ec.europa.eu/programmes/connecting-europe-facility_en"
+      "url_avisos": "https://cinea.ec.europa.eu/programmes/connecting-europe-facility_en",
+      "regime": "aviso"
     },
     {
       "id": "eu4health",
@@ -518,7 +574,8 @@
       "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
-      "url_avisos": "https://hadea.ec.europa.eu/calls-proposals_en"
+      "url_avisos": "https://hadea.ec.europa.eu/calls-proposals_en",
+      "regime": "aviso"
     },
     {
       "id": "creative-europe",
@@ -526,7 +583,8 @@
       "priority": "low",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://www.eacea.ec.europa.eu/grants/2021-2027/creative-europe_en"
+      "url_avisos": "https://www.eacea.ec.europa.eu/grants/2021-2027/creative-europe_en",
+      "regime": "aviso"
     },
     {
       "id": "cerv",
@@ -535,7 +593,8 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "shard": "eu-other"
+      "shard": "eu-other",
+      "regime": "aviso"
     },
     {
       "id": "justice-programme",
@@ -544,7 +603,8 @@
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
-      "shard": "eu-other"
+      "shard": "eu-other",
+      "regime": "aviso"
     },
     {
       "id": "eu-funding-tenders",
@@ -567,7 +627,8 @@
         "EU4HEALTH",
         "CREATIVE-EUROPE"
       ],
-      "dedup_key": "topic identifier (e.g. HORIZON-CL4-2026-DATA-AI-01-02)"
+      "dedup_key": "topic identifier (e.g. HORIZON-CL4-2026-DATA-AI-01-02)",
+      "regime": "aviso"
     },
     {
       "id": "esa-bic",
@@ -575,15 +636,17 @@
       "priority": "low",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://space.ipn.pt/esa-bic-portugal/"
+      "url_avisos": "https://space.ipn.pt/esa-bic-portugal/",
+      "regime": "aviso"
     },
     {
       "id": "nato-diana",
       "name": "NATO DIANA",
       "priority": "low",
       "access_method": "websearch",
-      "access_status": "blocked",
-      "url_avisos": "https://www.diana.nato.int/challenges.html"
+      "access_status": "blocked-auth",
+      "url_avisos": "https://www.diana.nato.int/challenges.html",
+      "regime": "aviso"
     },
     {
       "id": "eit",
@@ -591,7 +654,8 @@
       "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
-      "url_avisos": "https://eit.europa.eu/our-activities/opportunities"
+      "url_avisos": "https://eit.europa.eu/our-activities/opportunities",
+      "regime": "aviso"
     },
     {
       "id": "eit-digital",
@@ -599,7 +663,8 @@
       "priority": "low",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://www.eitdigital.eu/our-activities/"
+      "url_avisos": "https://www.eitdigital.eu/our-activities/",
+      "regime": "aviso"
     },
     {
       "id": "eit-climate",
@@ -607,7 +672,8 @@
       "priority": "low",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://www.climate-kic.org/programmes/"
+      "url_avisos": "https://www.climate-kic.org/programmes/",
+      "regime": "aviso"
     },
     {
       "id": "cgd-empresas",
@@ -615,7 +681,8 @@
       "priority": "medium",
       "access_method": "chrome",
       "access_status": "unverified",
-      "url_avisos": "https://www.cgd.pt/Empresas/Pages/Empresas_v2.aspx"
+      "url_avisos": "https://www.cgd.pt/Empresas/Pages/Empresas_v2.aspx",
+      "regime": "catalogo"
     },
     {
       "id": "bpi-empresas",
@@ -623,7 +690,8 @@
       "priority": "medium",
       "access_method": "chrome",
       "access_status": "unverified",
-      "url_avisos": "https://www.bancobpi.pt/empresas/financiamento"
+      "url_avisos": "https://www.bancobpi.pt/empresas/financiamento",
+      "regime": "catalogo"
     },
     {
       "id": "millennium-empresas",
@@ -631,7 +699,8 @@
       "priority": "medium",
       "access_method": "chrome",
       "access_status": "unverified",
-      "url_avisos": "https://ind.millenniumbcp.pt/pt/Empresas/Financiamento/Pages/default.aspx"
+      "url_avisos": "https://ind.millenniumbcp.pt/pt/Empresas/Financiamento/Pages/default.aspx",
+      "regime": "catalogo"
     },
     {
       "id": "novobanco-empresas",
@@ -639,7 +708,8 @@
       "priority": "medium",
       "access_method": "chrome",
       "access_status": "unverified",
-      "url_avisos": "https://www.novobanco.pt/empresas/financiamento"
+      "url_avisos": "https://www.novobanco.pt/empresas/financiamento",
+      "regime": "catalogo"
     },
     {
       "id": "santander-empresas",
@@ -647,7 +717,8 @@
       "priority": "medium",
       "access_method": "chrome",
       "access_status": "unverified",
-      "url_avisos": "https://www.santander.pt/empresas/financiamento"
+      "url_avisos": "https://www.santander.pt/empresas/financiamento",
+      "regime": "catalogo"
     },
     {
       "id": "indico-capital",
@@ -656,7 +727,8 @@
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://www.indicocapital.com",
-      "notes": " | Fundo VC candidatura continua - sem calls formais com deadline. Scanner nao deve adicionar a queue."
+      "notes": " | Fundo VC candidatura continua - sem calls formais com deadline. Scanner nao deve adicionar a queue.",
+      "regime": "catalogo"
     },
     {
       "id": "armilar-ventures",
@@ -665,7 +737,8 @@
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://armilarventurepartners.com",
-      "notes": " | Fundo VC candidatura continua - sem calls formais com deadline. Scanner nao deve adicionar a queue."
+      "notes": " | Fundo VC candidatura continua - sem calls formais com deadline. Scanner nao deve adicionar a queue.",
+      "regime": "catalogo"
     },
     {
       "id": "faber-ventures",
@@ -674,7 +747,8 @@
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://faber.vc",
-      "notes": " | Fundo VC candidatura continua - sem calls formais com deadline. Scanner nao deve adicionar a queue."
+      "notes": " | Fundo VC candidatura continua - sem calls formais com deadline. Scanner nao deve adicionar a queue.",
+      "regime": "catalogo"
     },
     {
       "id": "shilling-vc",
@@ -682,7 +756,8 @@
       "priority": "low",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://shilling.vc"
+      "url_avisos": "https://shilling.vc",
+      "regime": "catalogo"
     },
     {
       "id": "bynd-vc",
@@ -690,7 +765,8 @@
       "priority": "low",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://bynd.vc"
+      "url_avisos": "https://bynd.vc",
+      "regime": "catalogo"
     },
     {
       "id": "premio-bpi-lacaixa",
@@ -698,7 +774,8 @@
       "priority": "medium",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://www.bancobpi.pt/grupo-bpi/sustentabilidade/premios-bpi-fundacao-la-caixa"
+      "url_avisos": "https://www.bancobpi.pt/grupo-bpi/sustentabilidade/premios-bpi-fundacao-la-caixa",
+      "regime": "catalogo"
     },
     {
       "id": "premio-gulbenkian",
@@ -706,7 +783,8 @@
       "priority": "medium",
       "access_method": "chrome",
       "access_status": "unverified",
-      "url_avisos": "https://gulbenkian.pt/apoios-e-parcerias/"
+      "url_avisos": "https://gulbenkian.pt/apoios-e-parcerias/",
+      "regime": "catalogo"
     },
     {
       "id": "edp-innovation",
@@ -715,7 +793,8 @@
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://www.edp.com/en/innovation",
-      "notes": " | Fundo VC candidatura continua - sem calls formais com deadline. Scanner nao deve adicionar a queue."
+      "notes": " | Fundo VC candidatura continua - sem calls formais com deadline. Scanner nao deve adicionar a queue.",
+      "regime": "catalogo"
     },
     {
       "id": "bgi-accelerator",
@@ -723,7 +802,8 @@
       "priority": "medium",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://www.bfrancisco.com/bgi"
+      "url_avisos": "https://www.bfrancisco.com/bgi",
+      "regime": "catalogo"
     },
     {
       "id": "startup-lisboa",
@@ -731,7 +811,8 @@
       "priority": "medium",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://www.startuplisboa.com/apply"
+      "url_avisos": "https://www.startuplisboa.com/apply",
+      "regime": "catalogo"
     },
     {
       "id": "beta-i",
@@ -739,7 +820,8 @@
       "priority": "medium",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://beta-i.com/programs"
+      "url_avisos": "https://beta-i.com/programs",
+      "regime": "catalogo"
     },
     {
       "id": "f6s",
@@ -747,7 +829,8 @@
       "priority": "medium",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://www.f6s.com/deals"
+      "url_avisos": "https://www.f6s.com/deals",
+      "regime": "catalogo"
     },
     {
       "id": "eu-startups",
@@ -755,7 +838,8 @@
       "priority": "low",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://www.eu-startups.com/category/funding/"
+      "url_avisos": "https://www.eu-startups.com/category/funding/",
+      "regime": "catalogo"
     },
     {
       "id": "startup-portugal",
@@ -763,7 +847,8 @@
       "priority": "medium",
       "access_method": "websearch",
       "access_status": "unverified",
-      "url_avisos": "https://startupportugal.com"
+      "url_avisos": "https://startupportugal.com",
+      "regime": "catalogo"
     }
   ]
 }

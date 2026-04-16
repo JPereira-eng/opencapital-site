@@ -50,9 +50,17 @@ Read $REPO/sources-scan.json
 
 ## PASSO 1: Selecionar fontes a verificar
 
-Verificar no maximo **5 fontes por execucao**.
+Verificar no maximo **5 fontes por execucao**: **4 slots para regime "aviso" + 1 slot para regime "catalogo"**.
 
 **REGRA CRITICA: Nunca filtrar por tipo de beneficiario.** Todos os avisos abertos devem ser descobertos, independentemente de serem para entidades publicas, privadas, mistas, ou qualquer outro tipo. A decisao editorial e do writer, nao do scanner.
+
+**REGRA CRITICA: Ignorar fontes com `access_status: "blocked-auth"`** (ex: balcao-2030, nato-diana). Estas requerem autenticacao externa. Nao gastar slots nelas.
+
+---
+
+### Regime "aviso" (4 slots) — fontes que produzem avisos com deadline formal
+
+Sao as fontes PT2030, Interreg, EU, ANI, IAPMEI, AICEP, FCT, IEFP, PRR, Horizonte Europa e equivalentes. Campo `regime: "aviso"` em sources-scan.json.
 
 **Prioridade de selecao (por esta ordem estrita):**
 
@@ -61,15 +69,32 @@ Verificar no maximo **5 fontes por execucao**.
 3. Fontes com `priority: "medium"` nao verificadas ha mais de 7 dias
 4. Fontes com `priority: "low"` nao verificadas ha mais de 14 dias
 
-Se existirem mais de 3 fontes nunca verificadas, preencher as 2 slots restantes com fontes high/medium por antiguidade. Se nao houver fontes nunca verificadas, usar as 5 slots para fontes por antiguidade.
+Se existirem mais de 3 fontes nunca verificadas, preencher as 2 slots restantes com fontes high/medium por antiguidade. Se nao houver fontes nunca verificadas, usar as 4 slots para fontes por antiguidade.
 
 Consultar `registry/index.json > source_last_checked` para a data de ultima verificacao de cada fonte individual.
-
-**Fontes VC/investimento continuo** (notas em sources-scan.json com "candidatura continua"): verificar apenas 1 vez por mes. Estas fontes nao produzem items para a queue. Se o scanner nao encontrar nenhum aviso com deadline formal, registar no relatorio e nao gastar mais slots.
 
 **Fontes cobertas por superset:** `eu-funding-tenders` cobre HORIZON, CEF, DIGITAL, LIFE, ERASMUS+, CERV, JUST, COSME, EU4HEALTH, CREATIVE-EUROPE (ver `covers_programs` em sources-scan.json). Se `eu-funding-tenders` foi verificada ha menos de 7 dias, as sub-fontes individuais (horizon-cluster1..6, horizon-msca, horizon-widera, horizon-missions, erasmus-*, cerv, justice-programme, creative-europe, single-market-programme) NAO devem ocupar slots. Os avisos ja foram descobertos via superset.
 
 **NOTA:** Programas regionais PT2030 (norte-2030, centro-2030, etc.) sao fontes independentes. Verificar a API central do PT2030 NAO cobre automaticamente os portais regionais. Cada um deve ser verificado individualmente.
+
+---
+
+### Regime "catalogo" (1 slot) — fontes de referencia, candidatura continua ou periodicidade irregular
+
+Sao as fontes de bancos, VC, premios, aceleradores e startups. Campo `regime: "catalogo"` em sources-scan.json.
+
+**Prioridade de selecao:**
+
+1. Fontes NUNCA verificadas: prioridade absoluta (1 por run)
+2. Fontes verificadas ha mais de 90 dias (1 por run)
+3. Se nenhuma cumprir os criterios acima: slot fica vazio (nao substituir por fontes de regime "aviso")
+
+**Regras especificas para regime "catalogo":**
+- **Nao exigir deadline formal.** Estas fontes operam com candidatura continua, produtos permanentes ou premios anuais sem data fixa. Registar o instrumento mesmo sem prazo (`deadline: null`).
+- **Nao adicionar a queue.json.** Instrumentos de regime "catalogo" sao adicionados diretamente ao `registry/queue-catalogo.json` (estrutura identica a queue.json). O writer le este ficheiro separadamente.
+- **VC e fundos de investimento privado:** Verificar uma vez por trimestre. Se nao houver call formal aberta, registar o fundo como instrumento de referencia (ex: "Fundo Indico Capital - candidatura permanente") com `status: "cont"` (candidatura continua). Util para o catalogo mesmo sem aviso ativo.
+- **Bancos (CGD, BPI, Millennium, NovoBanco, Santander):** Verificar uma vez por trimestre. Registar linhas de credito e produtos para empresas como instrumentos de tipo "div" (divida). Sem deadline.
+- **Premios e aceleradores:** Verificar uma vez por trimestre. Se existir candidatura aberta com prazo, registar normalmente. Se nao: registar como referencia anual.
 
 ---
 
@@ -187,21 +212,30 @@ Para fontes que nao tem API estruturada, extrair o maximo possivel:
 
 Para cada instrumento detectado:
 
-1. **Filtro temporal (depende da familia da fonte):**
-   - **Fontes PT2030** (access_method: "api", portais WordPress): `data_fim > hoje` obrigatorio. Se encerrado ou sem data_fim: skip.
-   - **Fontes EU** (eu-funding-tenders, Horizon, Interreg): deadline obrigatorio. Se expirado: skip.
-   - **Outras fontes** (IEFP, bancos, premios, aceleradores, agencias nacionais): deadline pode ser null. Se deadline existe e ja passou: skip. Se nao existe deadline: incluir com `deadline: null`.
+1. **Filtro temporal (depende do regime da fonte):**
+   - **Regime "aviso" PT2030** (access_method: "api", portais WordPress): `data_fim > hoje` obrigatorio. Se encerrado ou sem data_fim: skip.
+   - **Regime "aviso" EU** (eu-funding-tenders, Horizon, Interreg): deadline obrigatorio. Se expirado: skip.
+   - **Regime "aviso" outras** (IEFP, ANI, IAPMEI, agencias nacionais): deadline pode ser null. Se deadline existe e ja passou: skip. Se nao existe deadline: incluir com `deadline: null`.
+   - **Regime "catalogo"** (bancos, VC, premios, aceleradores, startups): deadline NUNCA obrigatorio. Incluir sempre com `deadline: null` se nao existir prazo formal.
 2. Gerar `id` slug (kebab-case do nome)
 3. **Lookup por ID:** `lookup.json.by_id[id]` existe? Se sim: skip
 4. **Lookup por codigo:** `lookup.json.by_aviso_codigo[codigo]` existe? Se sim: skip
 5. **Verificacao por titulo:** Se >= 80% similar a um item existente (mesma fonte): skip
-6. Se novo e nao filtrado: adicionar a queue
+6. Se novo e nao filtrado: adicionar a queue (ver Passo 4 para destino correto por regime)
 
 ---
 
 ## PASSO 4: Adicionar novos a fila
 
-### Limite de queue com swap por prioridade
+### Destino por regime
+
+**Regime "aviso":** adicionar a `registry/queue.json` (ou overflow se cheio). O writer le esta fila em cada run.
+
+**Regime "catalogo":** adicionar a `registry/queue-catalogo.json`. O writer le esta fila separadamente, com menor frequencia. Estrutura identica a queue.json.
+
+---
+
+### Regime "aviso" - Limite de queue com swap por prioridade
 
 Antes de adicionar novos items, verificar o tamanho atual da queue:
 
@@ -221,7 +255,7 @@ Antes de adicionar novos items, verificar o tamanho atual da queue:
 
 O overflow tem a mesma estrutura que queue.json mas com `"_meta": "Overflow. Items migram para queue.json quando esta desce abaixo de 80."`. **O writer nao le o overflow.**
 
-Para cada instrumento novo, adicionar a `registry/queue.json > queue` (ou `queue-overflow.json` se limite atingido):
+Para cada instrumento de regime "aviso", adicionar a `registry/queue.json > queue` (ou `queue-overflow.json` se limite atingido):
 
 ```json
 {
