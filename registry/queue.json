@@ -1550,6 +1550,38 @@
       "priority_score": 55,
       "status": "previsto",
       "notes": "POCTEP 10a Convocatoria. Dotacao prevista 30M EUR. Abertura prevista 2o semestre 2026. Bases pendentes de publicacao. Estado previsto."
+    },
+    {
+      "id": "sibt-iti-iibt-ovt-centro",
+      "name": "Centro 2030 - Sistema de Incentivos de Base Territorial ITI IIBT OVT (FA0212/2025)",
+      "source_id": "centro-2030",
+      "shard": "pt2030-centro",
+      "aviso_codigo": "FA0212/2025",
+      "detected_date": "2026-04-16",
+      "deadline": "2026-07-17",
+      "budget": "2.000.000 EUR",
+      "regulation_url": "https://centro2030.pt/aviso-2024/sistema-de-incentivos-de-base-territorial-projetos-enquadrados-na-iti-iibt-ovt/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 25,
+      "status": "previsto",
+      "notes": "FA0212/2025. CENTRO2030. FEDER. Concurso. Beneficiarios privados. Aviso previsto: abre 17/04/2026. Prazo: 17/07/2026. Dotacao 2M EUR."
+    },
+    {
+      "id": "espon-water-governing-water-resilient-2026",
+      "name": "ESPON WATER - Governing water-resilient territories 2026",
+      "source_id": "interreg-espon",
+      "shard": "interreg",
+      "aviso_codigo": null,
+      "detected_date": "2026-04-16",
+      "deadline": "2026-05-29",
+      "budget": null,
+      "regulation_url": "https://www.espon.eu/participate/calls",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 50,
+      "status": "aberto",
+      "notes": "ESPON 2030. Targeted Analysis. Chamada para analise territorial sobre governacao de territorios resilientes a agua. Website bloqueia acesso direto (403) - dados via websearch. Deadline: 29/05/2026."
     }
   ]
 }
