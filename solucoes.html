@@ -237,10 +237,14 @@
     .filter-dropdowns-row {
       display:flex; align-items:center; justify-content:center;
       gap:10px; padding:12px 0;
-      max-width:1200px; margin:0 auto;
+      max-width:1360px; margin:0 auto;
     }
-    .filter-selects { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+    .filter-selects {
+      display:flex; align-items:center; gap:8px;
+      flex-wrap:nowrap; flex:1;
+    }
     .filter-select {
+      flex:1 1 0; min-width:0;
       font-family:var(--font); font-size:12px; font-weight:500;
       letter-spacing:0.06em; text-transform:uppercase;
       color:var(--grey-mid); background:var(--white);
@@ -250,6 +254,7 @@
       -webkit-appearance:none; -moz-appearance:none; appearance:none;
       background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpolyline points='1,1 5,5 9,1' fill='none' stroke='%237A7A7A' stroke-width='1'/%3E%3C/svg%3E");
       background-repeat:no-repeat; background-position:right 12px center;
+      text-overflow:ellipsis; white-space:nowrap; overflow:hidden;
     }
     .filter-select:hover { border-color:var(--navy); color:var(--navy); }
     .filter-select:focus { outline:none; border-color:var(--navy); color:var(--navy); }
@@ -351,6 +356,8 @@
     @media (max-width: 1100px) {
       .filter-section { padding:0 24px; }
       .instruments-grid { grid-template-columns:repeat(2,1fr); }
+      .filter-selects { flex-wrap:wrap; }
+      .filter-select { flex:1 1 calc(33.333% - 6px); }
     }
     @media (max-width: 1024px) {
       .footer-grid { grid-template-columns:1fr 1fr; }
