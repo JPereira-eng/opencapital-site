@@ -60,16 +60,28 @@ Verificar no maximo **5 fontes por execucao**: **4 slots para regime "aviso" + 1
 
 ### Regime "aviso" (4 slots) — fontes que produzem avisos com deadline formal
 
-Sao as fontes PT2030, Interreg, EU, ANI, IAPMEI, AICEP, FCT, IEFP, PRR, Horizonte Europa e equivalentes. Campo `regime: "aviso"` em sources-scan.json.
+Sao as fontes PT2030, Interreg, EU, ANI, AICEP, FCT, IEFP, PRR, Horizonte Europa e equivalentes. Campo `regime: "aviso"` em sources-scan.json.
 
-**Prioridade de selecao (por esta ordem estrita):**
+**Os 4 slots aviso sao divididos em dois grupos com regras independentes:**
 
-1. **Fontes NUNCA verificadas** (`source_last_checked` nao contem o id). Selecionar ate 3 por run. Estas tem prioridade absoluta sobre fontes ja verificadas.
-2. Fontes com `priority: "high"` nao verificadas ha mais de 3 dias
-3. Fontes com `priority: "medium"` nao verificadas ha mais de 7 dias
-4. Fontes com `priority: "low"` nao verificadas ha mais de 14 dias
+#### Slots 1-3: HIGH priority
 
-Se existirem mais de 3 fontes nunca verificadas, preencher as 2 slots restantes com fontes high/medium por antiguidade. Se nao houver fontes nunca verificadas, usar as 4 slots para fontes por antiguidade.
+Selecionar por esta ordem:
+1. Fontes "high" NUNCA verificadas (prioridade absoluta, ate 3)
+2. Fontes "high" nao verificadas ha mais de 3 dias (ordenar por mais antiga primeiro)
+3. Se menos de 3 candidatos: completar com fontes "high" mais antigas (mesmo dentro dos 3 dias)
+
+**Ignorar completamente** fontes medium e low nestes 3 slots.
+
+#### Slot 4: MEDIUM/LOW garantido
+
+Este slot e exclusivo para fontes de prioridade medium ou low. Nunca e preenchido por uma fonte high. Isto garante que medium/low rodam mesmo quando ha muitas high atrasadas.
+
+Selecionar por esta ordem:
+1. Fontes medium ou low NUNCA verificadas (prioridade absoluta)
+2. Fontes "medium" nao verificadas ha mais de 7 dias (ordenar por mais antiga primeiro)
+3. Fontes "low" nao verificadas ha mais de 14 dias (ordenar por mais antiga primeiro)
+4. Se nenhum candidato elegivel: deixar o slot vazio (nao substituir por high)
 
 Consultar `registry/index.json > source_last_checked` para a data de ultima verificacao de cada fonte individual.
 
@@ -87,9 +99,11 @@ Sao as fontes de bancos, VC, premios, aceleradores e startups. Campo `regime: "c
 
 **Prioridade de selecao:**
 
-1. Fontes NUNCA verificadas: prioridade absoluta (1 por run)
-2. Fontes verificadas ha mais de 90 dias (1 por run)
-3. Se nenhuma cumprir os criterios acima: slot fica vazio (nao substituir por fontes de regime "aviso")
+1. Fontes catalogo NUNCA verificadas: prioridade absoluta (1 por run)
+2. Fontes catalogo verificadas ha mais de 90 dias (1 por run, a mais antiga primeiro)
+3. **Se nenhuma fonte catalogo for elegivel:** usar o slot para uma fonte aviso de prioridade medium ou low (a mais antiga por antiguidade, mesma logica do slot 4). Nao desperdicar o slot.
+
+**Nota:** com 22 fontes catalogo e 1 slot/run, nos primeiros ~22 dias o slot fica preenchido pelas nunca-verificadas. Depois disso, a maioria dos dias nao ha candidatos catalogo elegíveis (90 dias ainda nao passaram) e o slot cai automaticamente para aviso medium/low.
 
 **Regras especificas para regime "catalogo":**
 - **Nao exigir deadline formal.** Estas fontes operam com candidatura continua, produtos permanentes ou premios anuais sem data fixa. Registar o instrumento mesmo sem prazo (`deadline: null`).
@@ -507,7 +521,10 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
 
 ```
 1. Ler index.json + queue.json + queue-catalogo.json + lookup.json + sources-scan.json
-2. Selecionar ate 5 fontes (4 aviso + 1 catalogo) por prioridade/data
+2. Selecionar ate 5 fontes:
+   - Slots 1-3: high nunca-verificadas > high >3d > high mais antigas (so high)
+   - Slot 4: medium/low nunca-verificadas > medium >7d > low >14d (nunca high, pode ficar vazio)
+   - Slot 5: catalogo nunca-verificadas > catalogo >90d > se vazio: medium/low aviso mais antiga
 3. Para cada fonte:
    - Aceder (se webfetch: tentar 3 URLs antes de declarar "0 novos")
    - Extrair items, aplicar filtros, deduplicar
