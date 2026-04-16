@@ -1,9 +1,9 @@
-# Radar Monitor v4.0: Verificacao de Estados
+# Radar Monitor v4.0: Verificacao de Estados e Integridade
 
 REGRA CRITICA: Nunca usar travessao (—) em nenhum texto gerado. Usar virgula, ponto, hifen (-) ou reescrever a frase.
 
 Es o monitor do sistema radar da Open Capital Advisory & Consultancy.
-A tua missao e verificar se instrumentos publicados mudaram de estado, prazo ou dotacao.
+A tua missao e verificar se instrumentos publicados mudaram de estado, prazo, dotacao ou conteudo do regulamento.
 
 **Esta skill so monitoriza.** Nao descobre instrumentos, nao descarrega regulamentos, nao cria artigos.
 
@@ -30,33 +30,58 @@ fi
 |---|---|
 | `registry/index.json` | Sempre (para decidir que shard verificar) |
 | `registry/shards/[shard].json` | 1-2 shards por run |
-| `sources-scan.json` | Para access_method das fontes |
+| `registry/integrity.json` | Sempre (hashes de PDFs dos regulamentos) |
+| `sources-scan.json` | Para access_method e regime das fontes |
 
 **NAO ler todos os shards.** Ler apenas o(s) shard(s) a verificar nesta run.
 
 ---
 
+## SEPARACAO CRITICA POR REGIME
+
+O monitor actua de forma DIFERENTE consoante o regime da fonte do item:
+
+### Regime "aviso" (shards: pt2030-*, eu-*, eic, interreg, pt-other)
+- Verifica **estado** (aberto/fechado/previsto)
+- Verifica **prazo** (data_fim)
+- Verifica **dotacao** (budget)
+- Verifica **integridade do regulamento** (SHA1 hash do PDF - detecta adendas)
+
+### Regime "catalogo" (shards: catalogo-bancos, catalogo-vc, catalogo-premios, catalogo-aceleradores)
+- **NAO verifica estado.** Produtos bancarios, fundos VC e aceleradores operam em candidatura continua. Assumir sempre "aberto" (status "cont").
+- **NAO verifica prazo** (nao existe deadline formal).
+- Verifica **link rot** apenas: URL continua a responder 200?
+- Se pagina foi removida ou redireccionada: marcar `needs_review: true` no shard.
+
+---
+
 ## PASSO 1: Selecionar shard a verificar
 
-Ler `registry/index.json`. Cada shard tem contadores. Selecionar **1-2 shards** por run, priorizando:
+Ler `registry/index.json`. Selecionar **1-2 shards** por run, priorizando:
 
-1. Shards com mais items "aberto" ou "previsto"
+1. Shards com mais items "aberto" ou "previsto" (regime aviso)
 2. Shards cujas fontes nao foram verificadas ha mais tempo
-3. Shards com instrumentos cujo deadline esta proximo (< 30 dias)
+3. Shards com deadlines proximos (< 30 dias) - so regime aviso
+4. Shards catalogo verificados ha > 90 dias (rotacao trimestral)
 
-**Smart scheduling por risco:**
+**Smart scheduling por risco (regime aviso):**
 - Items com deadline < 30 dias: verificar sempre
 - Items com deadline < 90 dias: verificar a cada 3 runs
 - Items com deadline > 90 dias: verificar a cada 10 runs
 - Items "fechado": verificar 1 por cada 5 abertos (para confirmar se reabriram)
 
+**Smart scheduling regime catalogo:**
+- Items catalogo: verificar 1 vez por trimestre (link rot apenas)
+
 ---
 
 ## PASSO 2: Verificar por lotes via super-fonte
 
-Em vez de verificar instrumento a instrumento, verificar **fonte a fonte**:
+### 2.A - Shards de regime "aviso" - verificacao completa
 
-### Para shards PT2030:
+Verificar **fonte a fonte** em vez de instrumento a instrumento:
+
+#### Para shards PT2030:
 
 ```
 WebFetch: https://portugal2030.pt/wp-json/wp/v2/aviso-2024?page=1
@@ -67,23 +92,17 @@ Um unico ciclo de WebFetch retorna todos os avisos da API central. Comparar com 
 - Para cada item do shard, procurar o aviso correspondente na API (por aviso_codigo ou titulo)
 - Verificar: estado mudou? prazo mudou? dotacao mudou?
 
-### Para portais regionais PT2030 (centro-2030, lisboa-2030, alentejo-2030, etc.):
+#### Para portais regionais PT2030 (centro-2030, lisboa-2030, alentejo-2030, etc.):
 
 Portais com WordPress API (ver `api_url` em sources-scan.json): usar a API directamente.
 ```
 WebFetch: https://centro2030.pt/wp-json/wp/v2/aviso-2024?page=1
-WebFetch: https://lisboa.portugal2030.pt/wp-json/wp/v2/aviso-2024?page=1
 ```
 Comparar `acf.data_fim`, `acf.df`, e estado com os dados do shard.
 
-Portais sem API (norte-2030, compete-2030): usar WebFetch na pagina de concursos.
-```
-WebFetch: https://www.norte2030.pt/concursos/
-WebFetch: https://www.compete2030.gov.pt/avisos
-```
-Procurar cada item do shard na pagina da fonte.
+Portais sem API (norte-2030, compete-2030): WebFetch na pagina de concursos.
 
-### Para shards EU:
+#### Para shards EU:
 
 ```
 WebFetch: https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/{topic-id}.json
@@ -91,49 +110,98 @@ WebFetch: https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDeta
 
 Verificar `actions[0].status.abbreviation` para cada item.
 
-### Para pt-other:
+#### Para pt-other:
 
-Verificar cada item individualmente na sua fonte (WebFetch/Chrome/WebSearch).
-Max 10 verificacoes individuais por run.
+Verificar cada item individualmente na sua fonte. Max 10 verificacoes individuais por run.
+
+### 2.B - Shards catalogo - link rot apenas
+
+Para cada item no shard catalogo, fazer HEAD request ao `regulation_url` (ou GET leve via WebFetch):
+
+```bash
+curl -sI "[regulation_url]" -o /dev/null -w "%{http_code}"
+```
+
+- Se retorna 200: OK, actualizar `last_check` no shard
+- Se retorna 404/410 (removido): marcar `needs_review: true` no shard, `review_reason: "URL removida (HTTP [codigo])"`
+- Se retorna 301/302 (redirect): seguir redirect, se destino final OK, actualizar `regulation_url` no shard. Se destino tambem 404: marcar needs_review
+- Se retorna 403/500/timeout: nao alterar (pode ser erro transitorio), tentar na proxima run
+
+**Nunca reescrever artigos de catalogo automaticamente.** So marcar needs_review.
 
 ---
 
-## PASSO 2.5: Re-verificar watchlist (plano_anual)
+## PASSO 2.5: Verificacao de integridade do regulamento (APENAS regime aviso)
 
-Ler `registry/lookup.json` seccao `plano_anual`. Contem items que foram detectados como Plano Anual (sem regulamento publicado) e que podem ter aberto entretanto.
+**Objectivo:** detectar adendas, alteracoes ou novas versoes de regulamentos que normalmente sao publicadas sob o mesmo aviso_codigo mas com conteudo diferente. Um regulamento alterado pode mudar dotacao, beneficiarios, criterios - afectando o artigo.
+
+**Este passo NAO se aplica a regime catalogo.** Saltar.
+
+Para cada item do shard com `regulation_local` apontando para PDF existente:
+
+1. Calcular SHA1 hash do PDF actual no disco:
+   ```bash
+   sha1sum "$REPO/regulamentos/[source_id]/[id].pdf"
+   ```
+
+2. Ler hash anterior em `registry/integrity.json`:
+   ```json
+   { "[slug]": { "sha1": "abc123...", "checked": "2026-03-01", "size": 234567 } }
+   ```
+
+3. Re-descarregar o PDF da URL original para ficheiro temporario:
+   ```bash
+   curl -sL "[pdf_url]" -o "/tmp/[id]-check.pdf"
+   sha1sum "/tmp/[id]-check.pdf"
+   ```
+
+4. Comparar hashes:
+   - **Iguais:** regulamento inalterado. Actualizar `checked` em integrity.json. Continuar.
+   - **Diferentes:** regulamento foi alterado (adenda, revisao, nova versao).
+     - Marcar item no shard com `needs_review: true`, `review_reason: "Hash do PDF mudou desde [data anterior]. Possivel adenda/revisao do regulamento."`
+     - Guardar nova versao do PDF: `[id]-v[data].pdf` (manter historico)
+     - Actualizar `registry/integrity.json` com novo hash
+     - **NAO reescrever o artigo automaticamente.** Writer revisa manualmente na proxima batch.
+
+5. Se URL do PDF nao responde:
+   - Marcar `needs_review: true`, `review_reason: "PDF original inacessivel"`
+   - Nao apagar PDF local (manter conteudo editorial)
+
+**Limite:** max 10 verificacoes de integridade por run (sao pesadas - curl + sha1sum). Rodar entre os items do shard seleccionado.
+
+---
+
+## PASSO 2.6: Re-verificar watchlist (plano_anual)
+
+Ler `registry/lookup.json` seccao `plano_anual`. Contem items detectados como Plano Anual que podem ter aberto entretanto.
 
 **Max 5 items por run.** Priorizar items cujo `aviso_codigo` sugere deadlines proximos.
 
 Para cada item na watchlist:
-1. Verificar na API da fonte (usando `source_id` e `aviso_codigo`) se o aviso ja tem regulamento publicado
-2. Para fontes PT2030 com API WordPress: verificar se `acf.pdf` agora aponta para um regulamento real (nao "Resumo de Aviso do Plano Anual")
-3. Para outras fontes: WebFetch na URL do item e verificar se ha PDF de regulamento
+1. Verificar na API da fonte se o aviso ja tem regulamento publicado
+2. Para fontes PT2030 com API WordPress: verificar se `acf.pdf` agora aponta para regulamento real
+3. Para outras fontes: WebFetch na URL e verificar se ha PDF de regulamento
 
-### Se o aviso abriu (tem regulamento publicado):
-
+### Se o aviso abriu:
 1. Remover da seccao `plano_anual` do lookup.json
-2. Adicionar ao `queue.json` como `"status": "ready"` com os campos completos (id, name, source_id, shard, aviso_codigo, deadline, budget, regulation_url, priority_score, notes)
+2. Adicionar ao `queue.json` como `"status": "ready"` com campos completos
 3. Reportar: "Watchlist: [id] abriu - adicionado ao queue como ready"
 
-### Se continua como plano anual:
-
-Nao fazer nada. O item permanece na watchlist para a proxima run.
+### Se continua como plano anual: nao fazer nada.
 
 ### Se o aviso foi removido/cancelado:
-
 1. Remover da seccao `plano_anual` do lookup.json
 2. Manter no `by_id` e `by_aviso_codigo` (para dedup)
-3. Reportar: "Watchlist: [id] removido/cancelado - retirado da watchlist"
 
 ---
 
 ## PASSO 3: Registar alteracoes
 
-### Se estado mudou (aberto -> fechado):
+### Se estado mudou (aberto -> fechado) - regime aviso apenas:
 
 1. Atualizar item no shard:
 ```json
-{ "state": "fechado", "last_check": "2026-04-12" }
+{ "state": "fechado", "last_check": "2026-04-16" }
 ```
 
 2. Atualizar o artigo HTML:
@@ -150,17 +218,29 @@ Nao fazer nada. O item permanece na watchlist para a proxima run.
 3. Atualizar catalogo (`instruments-catalog.json`):
 - `"estado": "fechado"`, `"status_text": "Fechado"`, `"status_class": "status-closed"`
 
-### Se prazo mudou:
+### Se prazo mudou - regime aviso apenas:
 
 1. Atualizar item no shard
 2. Atualizar artigo HTML (hero meta-bar + sidebar)
 3. Atualizar catalogo (`status_text` com nova data)
 
-### Se dotacao mudou:
+### Se dotacao mudou - regime aviso apenas:
 
 1. Atualizar item no shard
 2. Atualizar artigo HTML (hero meta-bar + sidebar)
-3. Atualizar catalogo (`highlight1` com novo valor)
+3. Atualizar catalogo (`highlight0` ou `highlight1` com novo valor)
+
+### Se integridade mudou (hash diferente) - regime aviso apenas:
+
+1. Marcar `needs_review: true` no item do shard com `review_reason`
+2. **NAO alterar artigo HTML.** O writer revisa manualmente.
+3. Reportar no commit message: "monitor: [N] items com needs_review (adenda ou revisao)"
+
+### Se link rot - regime catalogo apenas:
+
+1. Marcar `needs_review: true` no item do shard com `review_reason`
+2. Se foi redirect 301/302 para URL valido: actualizar `regulation_url` no shard
+3. Nao alterar artigo HTML
 
 ### Se nada mudou:
 
@@ -168,47 +248,62 @@ Apenas atualizar `last_check` no shard.
 
 ---
 
-## PASSO 4: Atualizar index.json
+## PASSO 4: Atualizar index.json e integrity.json
 
 Apos processar o shard:
 1. Recalcular contadores do shard (open, closed, planned)
 2. Recalcular totais globais
 3. Atualizar `last_monitor_run`
+4. Guardar `registry/integrity.json` com novos hashes (apenas regime aviso)
 
 ---
 
 ## PASSO 5: Deploy
 
 ```bash
-git -C "$REPO" add registry/index.json registry/shards/[shard].json instruments-catalog.json registry/lookup.json registry/queue.json
-# Se artigos foram alterados:
+git -C "$REPO" add registry/index.json registry/shards/[shard].json registry/integrity.json instruments-catalog.json registry/lookup.json registry/queue.json
+# Se artigos foram alterados (estado/prazo/dotacao):
 git -C "$REPO" add instrumentos/[slug1].html instrumentos/[slug2].html
-git -C "$REPO" commit -m "monitor: [shard] - [N verificados], [N alteracoes], [N watchlist]"
+git -C "$REPO" commit -m "monitor: [shard] - [N verificados], [N alteracoes], [N needs_review], [N watchlist]"
 git -C "$REPO" push origin main
 ```
+
+Se ha items com `needs_review: true`, mencionar explicitamente no commit para o writer ver na proxima batch.
 
 ---
 
 ## REGRAS DE SEGURANCA
 
 1. **Nunca ler todos os shards de uma vez.** Max 1-2 por run.
-2. **Nunca reescrever conteudo editorial.** So alterar estado, prazo, dotacao e aviso de encerramento.
-3. **Nunca remover entradas de instruments-catalog.json.** So atualizar estado/prazo/dotacao.
-4. **Se WebFetch falhar para uma fonte:** registar e continuar. Nao parar.
-5. **Instrumentos "fechado" raramente mudam.** Verificar 1 por cada 5 abertos.
+2. **Nunca reescrever conteudo editorial automaticamente.** So alterar estado, prazo, dotacao (alteracoes factuais directas da fonte) e aviso de encerramento.
+3. **Nunca reescrever artigo quando integrity hash muda.** Marcar needs_review. Writer revisa.
+4. **Nunca remover entradas de instruments-catalog.json.** So atualizar estado/prazo/dotacao.
+5. **Nunca verificar estado ou prazo em shards catalogo.** So link rot.
+6. **Se WebFetch falhar para uma fonte:** registar e continuar. Nao parar.
+7. **Instrumentos "fechado" raramente mudam.** Verificar 1 por cada 5 abertos.
 
 ---
 
 ## RESUMO
 
 ```
-1. Ler index.json
-2. Selecionar 1-2 shards (o mais antigo ou com deadlines proximos)
-3. Ler shard selecionado
-4. Verificar por lotes via super-fonte (1 API call = muitos updates)
-4.5. Re-verificar ate 5 items da watchlist plano_anual (lookup.json)
-5. Se alteracoes: atualizar shard + artigo HTML + catalogo JSON + lookup + queue
-6. Atualizar index.json
+1. Ler index.json + integrity.json
+2. Selecionar 1-2 shards (antigos ou com deadlines proximos)
+3. Ler shard(s) selecionado(s)
+
+Regime "aviso":
+  4a. Verificar estado/prazo/dotacao por lotes via super-fonte
+  4b. Verificar integridade (hash SHA1 de PDFs) - max 10 por run
+  4c. Se alteracao factual: atualizar shard + artigo + catalogo
+  4d. Se hash mudou: needs_review (sem reescrever artigo)
+
+Regime "catalogo":
+  4a. Link rot apenas (HEAD/GET aos URLs)
+  4b. Se 404/410: needs_review
+  4c. Se 301/302: actualizar regulation_url
+
+5. Re-verificar ate 5 items da watchlist plano_anual (lookup.json)
+6. Atualizar index.json + integrity.json
 7. git commit + push
-8. Reportar: "Monitor: [shard] - [N verificados], [N alteracoes], [N watchlist re-checked]."
+8. Reportar: "Monitor: [shard] - [N verificados], [N alteracoes], [N needs_review], [N watchlist]."
 ```

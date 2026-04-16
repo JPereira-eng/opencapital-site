@@ -151,6 +151,19 @@ Com o regulamento, definir:
 - `sidebar_cta_text`: texto contextualizado ao instrumento (ex: "Quer calcular o beneficio SIFIDE para a sua empresa?")
 - `instrumentos_relacionados`: 3 a 5 links para outros artigos em `instrumentos/`
 
+**Guidance para meta-bar por tipo de instrumento (nao obrigatoria - escolher os 4 factos mais relevantes):**
+
+| Tipo | meta_fact_1 | meta_fact_2 | meta_fact_3 | meta_fact_4 |
+|---|---|---|---|---|
+| Fundo publico (PT2030, PRR) | Dotacao | Taxa cofinanciamento | Prazo | Beneficiario |
+| Incentivo fiscal (SIFIDE, RFAI) | Beneficio fiscal | Despesas elegiveis | Periodo aplicacao | Elegibilidade |
+| Banco (linhas credito, garantias) | Montante maximo | Prazo amortizacao | Taxa/Spread | Garantias exigidas |
+| Fundo VC/PE | Ticket medio | Fase de investimento | Setores alvo | Dimensao fundo |
+| Premio/Voucher | Valor premio | Prazo candidatura | Elegibilidade | Periodicidade |
+| Acelerador | Duracao programa | Equity/nao-equity | Setores | Perfil participante |
+
+**O writer tem liberdade editorial total.** Pode usar factos diferentes se forem mais relevantes para o instrumento especifico. Esta tabela existe apenas para guiar em tipos de instrumentos menos comuns (bancos, VC, premios) que ainda nao tem muitos artigos de referencia.
+
 ### 4b. Selecao de autor
 
 Escolher o autor com base na area de especialidade do instrumento. Aplicar pela ordem indicada, parar na primeira que encaixar:

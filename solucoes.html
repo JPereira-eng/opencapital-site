@@ -752,7 +752,7 @@
 
       filteredData = catalogData.filter(function(item) {
         var catMatch = activeCategory === 'all' || item.category === activeCategory;
-        var estadoMatch = fEstado === 'all' || item.estado === fEstado;
+        var estadoMatch = fEstado === 'all' || item.estado === fEstado || (fEstado === 'aberto' && item.estado === 'cont');
         var fonteMatch = fFonte === 'all' || item.fonte === fFonte || (fFonte === 'pt2030' && ['compete','norte-2030'].indexOf(item.fonte) !== -1);
 
         var beneficiarioMatch = fBeneficiario === 'all';

@@ -3,7 +3,7 @@
 REGRA CRITICA: Nunca usar travessao (—) em nenhum texto gerado. Usar virgula, ponto, hifen (-) ou reescrever a frase.
 
 Es o downloader do sistema radar da Open Capital Advisory & Consultancy.
-A tua missao e descarregar regulamentos e fichas tecnicas dos instrumentos na fila.
+A tua missao e descarregar regulamentos e fichas tecnicas dos instrumentos nas filas.
 
 **Esta skill so descarrega.** Nao descobre instrumentos, nao monitoriza estados, nao cria artigos.
 
@@ -28,58 +28,86 @@ fi
 
 | Ficheiro | Quando ler |
 |---|---|
-| `registry/queue.json` | Sempre |
-| `sources-scan.json` | Para access_method |
+| `registry/queue.json` | Sempre (regime "aviso") |
+| `registry/queue-catalogo.json` | Sempre (regime "catalogo") |
+| `sources-scan.json` | Para access_method e regime |
 
 ---
 
 ## PASSO 1: Identificar items sem regulamento
 
-Percorrer `registry/queue.json > queue`. Encontrar items onde:
+Percorrer **ambas as filas**:
+- `registry/queue.json > queue` (items de regime "aviso")
+- `registry/queue-catalogo.json > queue` (items de regime "catalogo")
+
+Para cada item, tracking de qual fila veio (campo interno `_queue_origin: "aviso" | "catalogo"`). Encontrar items onde:
 - `regulation_local` e `null`
 - `status` NAO e `"plano_anual"` (ja identificados como plano, ignorar)
-- `pdf_url` ou `regulation_url` existem
+- `regulation_url` existe (catalogo pode nao ter `pdf_url`)
 
-Processar no maximo **10 downloads por execucao**.
-Priorizar por `priority_score` descendente.
+Processar no maximo **10 downloads por execucao** (soma das duas filas).
+Priorizar por `priority_score` descendente, tratando ambas as filas como pool unico.
 
-**Caso especial - ficheiros ja existentes no disco:** Se `regulation_local` aponta para um ficheiro que existe mas `status` ainda nao e `"ready"` (ex: sessao anterior interrompida), ir diretamente para Passo 2.5 para validar o conteudo antes de marcar como ready.
+**Caso especial - ficheiros ja existentes no disco:** Se `regulation_local` aponta para um ficheiro que existe mas `status` ainda nao e `"ready"`, ir para Passo 2.5 para validar conteudo antes de marcar como ready.
 
 ---
 
-## PASSO 1.5: Verificar se e Plano Anual (APENAS itens PT2030)
+## SEPARACAO CRITICA POR REGIME (LER ANTES DE PROSSEGUIR)
 
-Para items com `source_id` que contenha "2030" ou "pessoas" E que tenham `regulation_url`:
+**Esta skill processa dois fluxos paralelos com regras DIFERENTES. Nunca misturar.**
+
+### Fluxo A - Regime "aviso" (items de queue.json)
+- Tem deadline formal, regulamento oficial (PDF), codigo de aviso
+- **Testes PAA APLICAM-SE.** Objectivo: evitar descarregar "Resumos do Plano Anual" em vez de regulamentos reais.
+- **Teste de tamanho minimo APLICA-SE** (800 palavras + "despesas elegiveis" ou "criterios de selecao")
+- Fontes tipicas: PT2030 (portugal-2030, compete-2030, norte-2030, etc), EU (eu-funding-tenders, hadea, eismea), Interreg, ANI, IAPMEI, AICEP, FCT, IEFP, PRR
+
+### Fluxo B - Regime "catalogo" (items de queue-catalogo.json)
+- Pode nao ter deadline, regulamento, nem codigo formal. Bancos/VC/premios vendem produtos/fundos continuamente.
+- **Testes PAA NAO SE APLICAM.** A deteccao PAA esta desenhada para linguagem especifica do PT2030. Um produto bancario ou fundo VC nunca dispara esses marcadores, mas se por acaso um texto tivesse uma coincidencia linguistica, nao queremos bloquear.
+- **Teste de tamanho minimo NAO se aplica** com o threshold de 800 palavras. Usar threshold de 200 palavras. Paginas de produtos bancarios e fichas de fundos VC tem tipicamente 300-800 palavras.
+- **Aceitar conteudo de pagina web** (HTML) como regulamento valido. Nao exigir PDF.
+- Fontes tipicas: banco-fomento, cgd-empresas, bpi-empresas, millennium-empresas, novobanco-empresas, santander-empresas, indico-capital, armilar-ventures, faber-ventures, shilling-vc, bynd-vc, portugal-ventures, edp-innovation, premio-bpi-lacaixa, premio-gulbenkian, bgi-accelerator, startup-lisboa, beta-i, f6s, eu-startups, startup-portugal, turismo-portugal
+
+**Determinacao do regime para um item:**
+- Se `_queue_origin == "catalogo"`: regime = "catalogo"
+- Se `_queue_origin == "aviso"`: regime = "aviso"
+- Nunca derivar por outras vias. A fila de origem e autoritativa.
+
+---
+
+## PASSO 1.5: Verificar se e Plano Anual (APENAS Fluxo A - regime "aviso", APENAS PT2030)
+
+**Este passo NAO se aplica a items de regime "catalogo". Saltar directamente para Passo 2 se `_queue_origin == "catalogo"`.**
+
+Para items de regime "aviso" com `source_id` que contenha "2030" ou "pessoas" E que tenham `regulation_url`:
 
 Fazer WebFetch ao `regulation_url` ANTES de tentar descarregar qualquer PDF.
 
 Verificar se a pagina contem QUALQUER um destes textos (case-insensitive):
-- "previsao aproximada"
-- "previsão aproximada"
+- "previsao aproximada" / "previsão aproximada"
 - "ficha que aqui pode consultar e apenas uma previsao"
-- "aviso que ira ser lancado"
-- "aviso que irá ser lançado"
+- "aviso que ira ser lancado" / "aviso que irá ser lançado"
 - "plano anual de avisos"
 
 **Se qualquer um destes textos for encontrado:**
 ```json
-{
-  "status": "plano_anual",
-  "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
-}
+{ "status": "plano_anual", "download_error": "Plano Anual - nao e aviso publicado, apenas previsao" }
 ```
 Atualizar a queue com este estado. Nao descarregar. Continuar para o proximo item.
-**Nao contar como falha nem como sucesso.** Nao incluir no total de downloads.
+Nao contar como falha nem como sucesso.
 
-**Se nenhum destes textos for encontrado:** continuar para Passo 2 normalmente.
+**Se nenhum destes textos for encontrado:** continuar para Passo 2.
 
 ---
 
 ## PASSO 2: Descarregar e extrair texto
 
-Para cada item, seguir esta cascata (parar na primeira que funcionar):
+### Fluxo A (regime "aviso") - cascata completa
 
-### 2a. Se `pdf_url` existe (URL completo):
+Para cada item de regime "aviso", seguir esta cascata (parar na primeira que funcionar):
+
+#### 2a. Se `pdf_url` existe (URL completo):
 
 ```bash
 mkdir -p "$REPO/regulamentos/[source_id]/"
@@ -89,162 +117,169 @@ pdftotext -enc UTF-8 "$REPO/regulamentos/[source_id]/[id].pdf" "$REPO/regulament
 
 Verificar que o .txt tem mais de 100 palavras. Se falhar, continuar para 2b.
 
-### 2b. Se `regulation_url` existe:
+#### 2b. Se `regulation_url` existe:
 
 Consultar `access_method` da fonte em `sources-scan.json`:
 - `"webfetch"`: usar WebFetch no regulation_url
 - `"chrome"`: usar Chrome MCP (navigate + get_page_text)
-- `"websearch"`: usar WebSearch para encontrar informacao
+- `"websearch"`: usar WebSearch
 
 Prompt para WebFetch: "Extrai toda a informacao sobre este aviso/instrumento de financiamento: nome, codigo, dotacao, taxa de cofinanciamento, elegibilidade, despesas elegiveis, prazos, criterios de selecao, programa, fundo."
 
 Guardar resultado em `regulamentos/[source_id]/[id].txt`.
 
-**Nota para items PT2030:** Alguns portais (pessoas2030.gov.pt, regionais) sao server-rendered e WebFetch funciona. Outros (portugal2030.pt, compete2030.pt) sao JS-rendered e WebFetch so retorna CSS/JS sem conteudo.
+**Nota para items PT2030:** Portais regionais sao server-rendered (WebFetch funciona). Central (portugal2030.pt) e JS-rendered (WebFetch so retorna CSS/JS).
 
-**Se WebFetch retornar texto com < 300 palavras de conteudo real (maioritariamente CSS/JS):** tratar como falha e continuar para 2b-pdf.
+**Se WebFetch retornar < 300 palavras de conteudo real:** tratar como falha e continuar para 2b-pdf.
 
-#### 2b-pdf: Tentar obter PDF via WordPress media API (para portais PT2030)
+#### 2b-pdf: PDF via WordPress media API (para portais PT2030)
 
-Se o item tem `wordpress_id` (ID do post) E o regulamento ainda nao foi obtido:
+Se o item tem `wordpress_id` E regulamento ainda nao obtido:
 
-1. Chamar a API do post para obter o ID do PDF:
-   ```
-   GET https://[portal-base]/wp-json/wp/v2/aviso-2024/[wordpress_id]
-   ```
-   Extrair `acf.pdf` (e um ID numerico, ex: 252679).
-
-2. Se `acf.pdf` for null ou 0: sem PDF disponivel. Continuar para 2c.
-
-3. Se `acf.pdf` for um ID numerico valido, obter URL do PDF:
-   ```
-   GET https://[portal-base]/wp-json/wp/v2/media/[acf.pdf]
-   ```
-   Extrair `source_url` (URL directo do ficheiro PDF).
-
+1. `GET https://[portal-base]/wp-json/wp/v2/aviso-2024/[wordpress_id]` e extrair `acf.pdf`
+2. Se `acf.pdf` for null/0: sem PDF. Continuar para 2c.
+3. Se ID numerico valido: `GET https://[portal-base]/wp-json/wp/v2/media/[acf.pdf]`, extrair `source_url`
 4. Descarregar e extrair:
    ```bash
    curl -sL "[source_url]" -o "$REPO/regulamentos/[source_id]/[id].pdf"
    pdftotext -enc UTF-8 "$REPO/regulamentos/[source_id]/[id].pdf" "$REPO/regulamentos/[source_id]/[id].txt"
    ```
 
-5. **VERIFICACAO DO CONTEUDO DO PDF — NAO SALTAR:**
-
-   Ler o ficheiro .txt extraido. Verificar na seguinte ordem:
+5. **VERIFICACAO DO CONTEUDO DO PDF (so Fluxo A):**
 
    **TESTE A - Texto de plano anual (BLOQUEANTE):**
-   Se o texto contiver QUALQUER um destes:
-   - "Plano Anual de Avisos"
-   - "Resumo de Aviso do Plano"
-   - "PAA2026" ou "PAA202"
-   - "Aviso a publicar em:"
-   → Apagar o ficheiro .txt e o .pdf. Marcar `status: "plano_anual"`, `regulation_local: null`. NAO continuar para Passo 2.5. PARAR este item.
+   Se contem "Plano Anual de Avisos", "Resumo de Aviso do Plano", "PAA2026", "PAA202", "Aviso a publicar em:"
+   → Apagar .txt e .pdf. Marcar `status: "plano_anual"`. PARAR item.
 
    **TESTE B - Conteudo insuficiente (BLOQUEANTE):**
-   Se o texto tiver < 800 palavras E nao contiver "despesas elegiveis" E nao contiver "criterios de selecao":
-   → Apagar o ficheiro .txt e o .pdf. Marcar `status: "pending"`, `download_error: "Resumo sem regulamento completo"`, `regulation_local: null`. NAO continuar para Passo 2.5. PARAR este item.
+   Se < 800 palavras E nao contem "despesas elegiveis" E nao contem "criterios de selecao"
+   → Apagar .txt e .pdf. Marcar `status: "pending"`, `download_error: "Resumo sem regulamento completo"`. PARAR item.
 
-   **Se passou ambos os testes:** continuar para Passo 2.5.
+   **Se passou ambos:** continuar para Passo 2.5.
 
-### 2b-horizon: API JSON para items Horizonte Europa / SEDIA (source_id: eu-funding-tenders)
+#### 2b-horizon: API JSON para items Horizonte Europa / SEDIA
 
-Se `source_id == "eu-funding-tenders"` E regulamento ainda nao obtido:
-
-O portal eu-funding-tenders e JS-rendered e o WebFetch da pagina nao funciona. Usar directamente a API JSON publica da SEDIA:
+Se `source_id == "eu-funding-tenders"` E regulamento nao obtido:
 
 ```
 WebFetch: https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/[aviso_codigo_lowercase].json
 ```
 
-Exemplo: codigo `HORIZON-CL6-2026-01-ZEROPOLLUTION-01` → URL `https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/horizon-cl6-2026-01-zeropollution-01.json`
+Extrair campo `description` COMPLETO (500-2000 palavras HTML - strip tags mas guardar todo o texto), mais title, budgetOverviewInEur, deadlineDate, conditions, keywords, actions, callIdentifier.
 
-**CRITICO - Extrair o campo `description` COMPLETO:**
-O campo `description` do JSON SEDIA e o mais rico (500-2000 palavras de conteudo tecnico em HTML). Nao ignorar. Fazer strip de tags HTML mas guardar todo o texto resultante.
-Extrair tambem: title, description (completo, sem tags HTML), budgetOverviewInEur, deadlineDate (converter timestamp Unix para data legivel), conditions, keywords, actions, callIdentifier.
+Guardar em `regulamentos/eu-funding-tenders/[id].txt`. Se 404: continuar para 2b-eu-pdf.
 
-**Deadline:** O campo `deadlineDate` e um timestamp Unix em milissegundos. Converter: `new Date(deadlineDate).toISOString()`. NAO usar a data de abertura como deadline.
+#### 2b-eu-pdf: PDF de Call Document para fontes EU
 
-Guardar em `regulamentos/eu-funding-tenders/[id].txt`. Com `description` completo deve ter 800-2000 palavras.
-
-Se o JSON retornar 404: continuar para 2b-eu-pdf.
-
-### 2b-eu-pdf: PDF de Call Document para fontes EU (hadea, eismea, eu-funding-tenders)
-
-Se `source_id` e uma agencia europeia (hadea, eismea, eu-funding-tenders, interreg-*) E o conteudo obtido ate agora for < 400 palavras:
-
-Tentar encontrar o PDF oficial da chamada (Call Document / Guidelines for Applicants):
+Se `source_id` e agencia europeia E conteudo < 400 palavras:
 
 ```
 WebSearch: "[aviso_codigo] call document filetype:pdf site:ec.europa.eu"
 WebSearch: "[aviso_codigo] guidelines applicants hadea.ec.europa.eu"
-WebSearch: "[aviso_codigo] work programme topic description"
 ```
 
-Se encontrar URL de PDF directo (.pdf):
-```bash
-curl -sL "[pdf_url]" -o "$REPO/regulamentos/[source_id]/[id]-calldoc.pdf"
-pdftotext -enc UTF-8 "$REPO/regulamentos/[source_id]/[id]-calldoc.pdf" "$REPO/regulamentos/[source_id]/[id].txt"
-```
+Se encontrar PDF: `curl -sL` + `pdftotext`. Conteudo esperado: 1000-5000 palavras.
 
-Work Programmes Horizon Europa estao em: `https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2025-2027/`
+#### 2c. WebSearch + WebFetch do melhor resultado:
 
-Se encontrar, indicar na coluna Metodo: `PDF Call Document`. Conteudo esperado: 1000-5000 palavras.
-
-### 2c. WebSearch + WebFetch do melhor resultado:
-
-Usar WebSearch com queries combinadas:
-1. `"[aviso_codigo]" site:portugal2030.pt` (encontra noticias/anuncios oficiais)
+Queries:
+1. `"[aviso_codigo]" site:portugal2030.pt`
 2. `"[aviso_codigo] [nome] candidaturas"`
 
-Para cada resultado do WebSearch, verificar se existe um URL de portugal2030.pt no formato `portugal2030.pt/YYYY/MM/DD/[slug]/` (post de noticia) ou `[portal-regional]/aviso-2024/[slug]/`.
+Se encontrar URL promissor: WebFetch antes de guardar. Posts de noticia tem 500-1500 palavras.
 
-**Se encontrar um URL promissor:** fazer WebFetch a esse URL antes de guardar. O conteudo de um post de noticia do portal central e tipicamente 500-1500 palavras e muito mais rico que o resumo do WebSearch.
-
-Guardar o melhor conteudo obtido (WebFetch se disponivel, WebSearch caso contrario) em `regulamentos/[source_id]/[id].txt`.
-
-Indicar na coluna "Metodo" da tabela de resultados: `WebSearch` se so WebSearch, `WebSearch+WebFetch` se conseguiu WebFetch adicional.
+Guardar o melhor conteudo em `regulamentos/[source_id]/[id].txt`.
 
 ---
 
-## PASSO 2.5: VALIDACAO UNIVERSAL DE CONTEUDO PAA (BLOQUEANTE)
+### Fluxo B (regime "catalogo") - cascata simplificada
 
-**Este passo e obrigatorio para TODOS os items, independentemente do metodo de download (PDF, WebFetch, WebSearch, ou ficheiro ja existente no disco). Nunca saltar.**
+Para cada item de regime "catalogo", seguir esta cascata:
 
-Ler o ficheiro `.txt` obtido. Aplicar o seguinte teste:
+#### 2a-cat. Se `pdf_url` existe (raro em catalogo, mas possivel):
+
+```bash
+mkdir -p "$REPO/regulamentos/[source_id]/"
+curl -sL "[pdf_url]" -o "$REPO/regulamentos/[source_id]/[id].pdf"
+pdftotext -enc UTF-8 "$REPO/regulamentos/[source_id]/[id].pdf" "$REPO/regulamentos/[source_id]/[id].txt"
+```
+
+#### 2b-cat. Se `regulation_url` existe (caso normal para catalogo):
+
+Usar `access_method` da fonte:
+- `"webfetch"`: WebFetch no regulation_url
+- `"chrome"`: Chrome MCP (navigate + get_page_text)
+- `"websearch"`: WebSearch
+
+Prompt para WebFetch (adaptado a catalogo): "Extrai toda a informacao sobre este produto de financiamento, fundo de investimento, premio ou programa: nome oficial, descricao, montantes/ticket, prazos de candidatura (se existirem), elegibilidade/perfil de empresas-alvo, setores, fases/estagios, contactos. Se nao existir deadline ou dotacao, registar que e candidatura continua ou produto permanente."
+
+Guardar em `regulamentos/[source_id]/[id].txt`.
+
+#### 2c-cat. WebSearch como fallback:
+
+Se WebFetch falhar ou retornar muito pouco:
+```
+WebSearch: "[nome do instrumento] [source_id nome do banco/VC/premio]"
+```
+
+Guardar melhor resultado em `regulamentos/[source_id]/[id].txt`.
+
+---
+
+## PASSO 2.5: VALIDACAO DE CONTEUDO (diferente por regime)
+
+### 2.5.A - Fluxo A (regime "aviso") - VALIDACAO RIGIDA PAA
+
+**Obrigatoria para TODOS os items de regime "aviso", independentemente do metodo de download. Nunca saltar.**
+
+Ler `.txt` obtido.
 
 **TESTE A - Identificar plano anual (BLOQUEANTE):**
-Se o texto contiver QUALQUER um destes (case-insensitive):
+Se contem (case-insensitive) QUALQUER um destes:
 - "Plano Anual de Avisos"
 - "Resumo de Aviso do Plano"
 - "PAA2026" ou "PAA202"
 - "Aviso a publicar em:"
-- "previsao aproximada" ou "previsão aproximada"
-- "aviso que ira ser lancado" ou "aviso que irá ser lançado"
+- "previsao aproximada" / "previsão aproximada"
+- "aviso que ira ser lancado" / "aviso que irá ser lançado"
 
-→ **Apagar o ficheiro .txt e o .pdf (se existir). Marcar `status: "plano_anual"`, `regulation_local: null`, `download_error: "Plano Anual - conteudo PAA detectado no ficheiro"`. NAO ir para Passo 3. PARAR este item.**
+→ **Apagar .txt e .pdf. Marcar `status: "plano_anual"`, `regulation_local: null`, `download_error: "Plano Anual - conteudo PAA detectado no ficheiro"`. NAO ir para Passo 3. PARAR item.**
 
-Nota: este teste captura os casos em que o downloader descarregou um "Resumo de Aviso do Plano Anual de Avisos" (documento PAA) em vez de um aviso publicado formalmente. Sao documentos de previsao, nao regulamentos validos.
+Este teste captura casos em que o downloader descarregou um "Resumo de Aviso do Plano Anual" em vez de aviso publicado. Sao documentos de previsao, nao regulamentos validos.
 
-**Se passou o Teste A:** regulamento valido. Continuar para Passo 3.
+**Se passou Teste A:** continuar para Passo 3.
+
+### 2.5.B - Fluxo B (regime "catalogo") - VALIDACAO LAX
+
+**Os testes PAA do 2.5.A NAO SE APLICAM aqui. A linguagem PAA e especifica do PT2030 e nao aparece em produtos bancarios, fundos VC ou premios. Nunca correr Teste A em catalogo.**
+
+Ler `.txt` obtido.
+
+**TESTE C - Conteudo minimo para catalogo (NAO BLOQUEANTE, apenas warn):**
+- Se tem >= 200 palavras: valido, marcar `status: "ready"`, prosseguir para Passo 3.
+- Se tem < 200 palavras mas > 50: marcar `status: "ready"` com `download_note: "Conteudo breve - o writer deve complementar com WebSearch"`. Continuar para Passo 3.
+- Se tem < 50 palavras ou ficheiro vazio: marcar `status: "pending"`, `download_error: "Conteudo insuficiente"`, tentar de novo em execucao futura.
+
+**TESTE D - Link rot (NAO BLOQUEANTE):**
+Se o curl ou WebFetch devolveu 404/403/500: marcar `status: "pending"`, `download_error: "HTTP [codigo] - URL pode ter mudado"`. O monitor marcara como needs_review.
+
+**Nao e falha do downloader se um produto bancario tem pouco texto.** Muitos produtos bancarios sao descritos em 300-500 palavras. Isto e aceitavel em catalogo.
 
 ---
 
-## PASSO 3: Atualizar queue
+## PASSO 3: Atualizar queue (fila correcta)
 
-Apos validacao bem-sucedida no Passo 2.5, atualizar o item na queue:
+Apos validacao bem-sucedida, atualizar o item:
+
 ```json
-{
-  "regulation_local": "regulamentos/[source_id]/[id].txt",
-  "status": "ready"
-}
+{ "regulation_local": "regulamentos/[source_id]/[id].txt", "status": "ready" }
 ```
+
+**IMPORTANTE:** se o item veio de `queue.json` (regime aviso), actualizar em `queue.json`. Se veio de `queue-catalogo.json`, actualizar em `queue-catalogo.json`. Nunca mover items entre filas.
 
 Se download falhar:
 ```json
-{
-  "download_error": "PDF 404 - tentativa em 2026-04-12",
-  "status": "pending"
-}
+{ "download_error": "PDF 404 - tentativa em 2026-04-16", "status": "pending" }
 ```
 
 ---
@@ -252,8 +287,8 @@ Se download falhar:
 ## PASSO 4: Deploy
 
 ```bash
-git -C "$REPO" add registry/queue.json regulamentos/
-git -C "$REPO" commit -m "downloader: [N] regulamentos descarregados"
+git -C "$REPO" add registry/queue.json registry/queue-catalogo.json regulamentos/
+git -C "$REPO" commit -m "downloader: [N] aviso + [N] catalogo regulamentos descarregados"
 git -C "$REPO" push origin main
 ```
 
@@ -261,24 +296,34 @@ git -C "$REPO" push origin main
 
 ## REGRAS DE SEGURANCA
 
-1. **Nunca exceder 5 downloads por execucao.**
-2. **Nunca modificar artigos HTML ou shards.**
-3. **Sempre guardar em UTF-8.**
-4. **Se curl falhar:** tentar WebFetch como alternativa.
-5. **Se tudo falhar:** marcar download_error e continuar. Nunca parar a execucao.
+1. **Nunca misturar regimes.** Testes PAA SO para regime "aviso". Never apply to catalogo.
+2. **Nunca exceder 10 downloads por execucao** (soma das duas filas).
+3. **Nunca modificar artigos HTML ou shards.**
+4. **Sempre guardar em UTF-8.**
+5. **Se curl falhar:** tentar WebFetch como alternativa.
+6. **Se tudo falhar:** marcar download_error e continuar. Nunca parar a execucao.
+7. **Em catalogo, aceitar conteudo breve.** 200+ palavras e suficiente. Um produto bancario pode ter 300 palavras - nao e erro.
 
 ---
 
 ## RESUMO
 
 ```
-1. Ler queue.json
-2. Encontrar items sem regulation_local (max 5, ignorar plano_anual)
-3. Para cada: tentar PDF -> WebFetch -> WebSearch
-4. PASSO 2.5 (OBRIGATORIO): validar conteudo - Teste A (PAA) e Teste B (tamanho)
-   Se falhar Teste A: apagar ficheiro, marcar plano_anual, PARAR item
-   Se falhar Teste B: apagar ficheiro, marcar pending, PARAR item
-5. Se passou: atualizar queue (status: ready)
-6. git commit + push
-7. Reportar: "Downloader: [N] regulamentos. [N] PAA bloqueados. [N] falhas."
+1. Ler queue.json (aviso) + queue-catalogo.json (catalogo)
+2. Encontrar items sem regulation_local (max 10 total, ignorar plano_anual)
+3. Para cada, determinar regime pela fila de origem:
+
+   Fluxo A (aviso): cascata PDF -> WebFetch -> WebSearch
+     PASSO 2.5.A (BLOQUEANTE): Teste A (PAA) - se falhar: plano_anual, PARAR
+     Teste B (tamanho) no 2b-pdf para PDFs PT2030
+     Se passou: status ready
+
+   Fluxo B (catalogo): cascata simplificada WebFetch/PDF -> WebSearch
+     PASSO 2.5.B (LAX): Teste C (minimo 50 palavras), Teste D (link rot)
+     NUNCA aplicar testes PAA aqui
+     Se conteudo >= 200: ready. Se 50-200: ready com note. Se < 50: pending.
+
+4. Atualizar queue CORRECTA (aviso ou catalogo, nunca misturar)
+5. git commit + push
+6. Reportar: "Downloader: [N] aviso ready, [N] catalogo ready. [N] PAA bloqueados. [N] falhas."
 ```

@@ -66,6 +66,21 @@ Cada instrumento e diferente. O Claude tem liberdade para decidir a estrutura ed
 
 **Comprimento:** idealmente entre 1500 e 2500 palavras, ajustando a extensao a complexidade do instrumento.
 
+**Regra de fecho para material limitado (aplicavel a instrumentos de regime catalogo - bancos, VC, premios, aceleradores):**
+
+Se o regulamento/material disponivel no `regulation_local` tem menos de 500 palavras de conteudo util, produzir artigo mais curto (entre 800 e 1200 palavras em vez de 1500-2500).
+
+**Nunca inventar informacao.** Se nao ha dados sobre taxa de juro, prazo, dotacao, criterios - nao escrever sobre esses pontos. Focar apenas no que e conhecido:
+- O que e o instrumento e o seu proposito estrategico
+- Quem e a entidade que o oferece (banco, fundo, acelerador, promotor)
+- Que tipo de empresa ou projecto se adequa
+- Contexto do instrumento no ecossistema portugues
+- Analise critica da sua relevancia
+
+**Nunca incluir "Como candidatar", "Passos para acesso", "Guia de candidatura" ou similares.** Esta e a identidade editorial da Open Capital: ficha analitica, nao manual. Mesmo em artigos curtos. Se o leitor quiser candidatar-se, o CTA da sidebar dirige-o para uma reuniao com a equipa.
+
+Artigos curtos mantem a mesma qualidade editorial, a mesma estrutura (navbar + hero + back-bar + corpo + sidebar + footer), os mesmos building blocks. So o corpo e mais conciso. A sidebar permanece completa (Factos Rapidos + CTA + Instrumentos Relacionados).
+
 **Layout:** dividir o conteudo em duas colunas, com a coluna da direita (sidebar) mais estreita, contendo ficha resumo e outras informacoes relevantes. A sidebar ja existe no template (Factos Rapidos + CTA + Instrumentos Relacionados).
 
 O artigo deve:
