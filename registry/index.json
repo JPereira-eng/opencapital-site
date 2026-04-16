@@ -5,11 +5,11 @@
     "migrated_from_v3": "2026-04-12"
   },
   "totals": {
-    "published": 116,
+    "published": 117,
     "open": 104,
     "closed": 7,
-    "planned": 5,
-    "in_queue": 87,
+    "planned": 6,
+    "in_queue": 86,
     "in_watchlist": 11
   },
   "shards": {
@@ -63,8 +63,9 @@
       "closed": 2
     },
     "interreg": {
-      "count": 2,
-      "open": 2
+      "count": 3,
+      "open": 2,
+      "planned": 1
     },
     "catalogo-bancos": {
       "count": 0,
