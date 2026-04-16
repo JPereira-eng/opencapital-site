@@ -526,6 +526,19 @@
           <option value="ensino-investigacao">Ensino e Investigação</option>
           <option value="empreendedor">Empreendedores</option>
         </select>
+        <select class="filter-select" id="filterSetor" onchange="applyFilters()">
+          <option value="all">Setor</option>
+          <option value="agroalimentar">Agroalimentar</option>
+          <option value="comercio">Comércio</option>
+          <option value="economia-criativa">Economia Criativa e Cultura</option>
+          <option value="energia-ambiente">Energia e Ambiente</option>
+          <option value="industria">Indústria</option>
+          <option value="mar-pescas">Mar e Pescas</option>
+          <option value="mobilidade-transportes">Mobilidade e Transportes</option>
+          <option value="saude-ciencias-vida">Saúde e Ciências da Vida</option>
+          <option value="tecnologia-digital">Tecnologia e Digital</option>
+          <option value="turismo">Turismo</option>
+        </select>
         <select class="filter-select" id="filterRegiao" onchange="applyFilters()">
           <option value="all">Região</option>
           <option value="norte">Norte</option>
@@ -720,13 +733,14 @@
       document.getElementById('filterEstado').value = 'all';
       document.getElementById('filterFonte').value = 'all';
       document.getElementById('filterBeneficiario').value = 'all';
+      document.getElementById('filterSetor').value = 'all';
       document.getElementById('filterRegiao').value = 'all';
       updateSelectStyles();
       applyFilters();
     }
 
     function updateSelectStyles() {
-      ['filterCategory','filterEstado','filterFonte','filterBeneficiario','filterRegiao'].forEach(function(id) {
+      ['filterCategory','filterEstado','filterFonte','filterBeneficiario','filterSetor','filterRegiao'].forEach(function(id) {
         var el = document.getElementById(id);
         el.classList.toggle('has-value', el.value !== 'all');
       });
@@ -734,6 +748,7 @@
         document.getElementById('filterEstado').value !== 'all' ||
         document.getElementById('filterFonte').value !== 'all' ||
         document.getElementById('filterBeneficiario').value !== 'all' ||
+        document.getElementById('filterSetor').value !== 'all' ||
         document.getElementById('filterRegiao').value !== 'all';
       document.getElementById('filterClear').classList.toggle('hidden', !anyActive);
     }
@@ -748,6 +763,7 @@
       var fEstado = document.getElementById('filterEstado').value;
       var fFonte = document.getElementById('filterFonte').value;
       var fBeneficiario = document.getElementById('filterBeneficiario').value;
+      var fSetor = document.getElementById('filterSetor').value;
       var fRegiao = document.getElementById('filterRegiao').value;
 
       filteredData = catalogData.filter(function(item) {
@@ -758,6 +774,11 @@
         var beneficiarioMatch = fBeneficiario === 'all';
         if (!beneficiarioMatch && item.beneficiario) {
           beneficiarioMatch = item.beneficiario.split(',').indexOf(fBeneficiario) !== -1;
+        }
+
+        var setorMatch = fSetor === 'all';
+        if (!setorMatch && item.setores && item.setores.length) {
+          setorMatch = item.setores.indexOf('todos') !== -1 || item.setores.indexOf(fSetor) !== -1;
         }
 
         var regiaoMatch = fRegiao === 'all';
@@ -773,7 +794,7 @@
                         item.highlight2.toLowerCase().indexOf(activeSearch) !== -1;
         }
 
-        return catMatch && estadoMatch && fonteMatch && beneficiarioMatch && regiaoMatch && searchMatch;
+        return catMatch && estadoMatch && fonteMatch && beneficiarioMatch && setorMatch && regiaoMatch && searchMatch;
       });
 
       currentPage = 1;

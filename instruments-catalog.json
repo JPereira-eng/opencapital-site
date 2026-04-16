@@ -16,7 +16,11 @@
       "highlight2": "Norte, Centro, Alentejo, Algarve",
       "href": "instrumentos/step-inovacao-produtiva-digital-biotecnologia.html",
       "featured": false,
-      "highlight0": "Ate 70%"
+      "highlight0": "Ate 70%",
+      "setores": [
+        "tecnologia-digital",
+        "saude-ciencias-vida"
+      ]
     },
     {
       "id": "step-inovacao-produtiva-energia",
@@ -34,7 +38,11 @@
       "highlight2": "Norte, Centro, Alentejo",
       "href": "instrumentos/step-inovacao-produtiva-energia.html",
       "featured": false,
-      "highlight0": "Ate 70% (subvencao)"
+      "highlight0": "Ate 70% (subvencao)",
+      "setores": [
+        "energia-ambiente",
+        "industria"
+      ]
     },
     {
       "id": "step-idi-empresarial-energia",
@@ -52,7 +60,10 @@
       "highlight2": "Norte, Centro, Alentejo",
       "href": "instrumentos/step-idi-empresarial-energia.html",
       "featured": false,
-      "highlight0": "Ate 80% (I&D) / 85% ENESII"
+      "highlight0": "Ate 80% (I&D) / 85% ENESII",
+      "setores": [
+        "energia-ambiente"
+      ]
     },
     {
       "id": "step-idi-empresarial-digital-biotecnologia",
@@ -70,7 +81,11 @@
       "highlight2": "Nacional",
       "href": "instrumentos/step-idi-empresarial-digital-biotecnologia.html",
       "featured": false,
-      "highlight0": "Ate 85%"
+      "highlight0": "Ate 85%",
+      "setores": [
+        "tecnologia-digital",
+        "saude-ciencias-vida"
+      ]
     },
     {
       "id": "eic-accelerator-2026",
@@ -88,7 +103,12 @@
       "highlight2": "Nacional",
       "href": "instrumentos/eic-accelerator-2026.html",
       "featured": true,
-      "highlight0": "Grant + investimento de capital"
+      "highlight0": "Grant + investimento de capital",
+      "setores": [
+        "tecnologia-digital",
+        "saude-ciencias-vida",
+        "energia-ambiente"
+      ]
     },
     {
       "id": "step-scale-up-eic",
@@ -106,7 +126,12 @@
       "highlight2": "Nacional",
       "href": "instrumentos/step-scale-up-eic.html",
       "featured": false,
-      "highlight0": "Investimento em equity"
+      "highlight0": "Investimento em equity",
+      "setores": [
+        "tecnologia-digital",
+        "saude-ciencias-vida",
+        "energia-ambiente"
+      ]
     },
     {
       "id": "siac-digitalizacao-transformacao-digital",
@@ -124,7 +149,10 @@
       "highlight2": "Norte, Centro, Alentejo",
       "href": "instrumentos/siac-digitalizacao-transformacao-digital.html",
       "featured": false,
-      "highlight0": "Ate 85% FEDER"
+      "highlight0": "Ate 85% FEDER",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "sitce-descarbonizacao-eficiencia-energetica",
@@ -142,7 +170,11 @@
       "highlight2": "Norte, Centro, Alentejo, Algarve",
       "href": "instrumentos/sitce-descarbonizacao-eficiencia-energetica.html",
       "featured": false,
-      "highlight0": "Ate 85% de apoio"
+      "highlight0": "Ate 85% de apoio",
+      "setores": [
+        "industria",
+        "energia-ambiente"
+      ]
     },
     {
       "id": "siac-acoes-coletivas-internacionalizacao",
@@ -160,7 +192,10 @@
       "highlight2": "Norte, Centro, Alentejo",
       "href": "instrumentos/siac-acoes-coletivas-internacionalizacao.html",
       "featured": false,
-      "highlight0": "85%"
+      "highlight0": "85%",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "eic-pathfinder-2026",
@@ -178,7 +213,12 @@
       "highlight2": "Nacional",
       "href": "instrumentos/eic-pathfinder-2026.html",
       "featured": false,
-      "highlight0": "Ate 4 milhoes EUR"
+      "highlight0": "Ate 4 milhoes EUR",
+      "setores": [
+        "tecnologia-digital",
+        "saude-ciencias-vida",
+        "energia-ambiente"
+      ]
     },
     {
       "id": "eic-transition-2026",
@@ -196,7 +236,12 @@
       "highlight2": "Nacional",
       "href": "instrumentos/eic-transition-2026.html",
       "featured": false,
-      "highlight0": "Ate 2,5 milhoes EUR"
+      "highlight0": "Ate 2,5 milhoes EUR",
+      "setores": [
+        "tecnologia-digital",
+        "saude-ciencias-vida",
+        "energia-ambiente"
+      ]
     },
     {
       "id": "sice-internacionalizacao-pme",
@@ -214,7 +259,10 @@
       "highlight2": "Portugal Continental",
       "href": "instrumentos/sice-internacionalizacao-pme.html",
       "featured": false,
-      "highlight0": "Ate 50% de apoio"
+      "highlight0": "Ate 50% de apoio",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "siid-internacionalizacao-id-horizonte-europa",
@@ -232,7 +280,12 @@
       "highlight2": "Portugal Continental",
       "href": "instrumentos/siid-internacionalizacao-id-horizonte-europa.html",
       "featured": false,
-      "highlight0": "100% (Transition) / 70% (Accelerator)"
+      "highlight0": "100% (Transition) / 70% (Accelerator)",
+      "setores": [
+        "tecnologia-digital",
+        "saude-ciencias-vida",
+        "energia-ambiente"
+      ]
     },
     {
       "id": "norte2030-siid-vinnovate",
@@ -250,7 +303,11 @@
       "highlight2": "Norte",
       "href": "instrumentos/norte2030-siid-vinnovate.html",
       "featured": false,
-      "highlight0": "60% empresas / 85% ENESII"
+      "highlight0": "60% empresas / 85% ENESII",
+      "setores": [
+        "industria",
+        "tecnologia-digital"
+      ]
     },
     {
       "id": "horizon-cl4-2026-data-ai",
@@ -268,7 +325,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/horizon-cl4-2026-data-ai.html",
       "featured": false,
-      "highlight0": "100% financiamento UE (RIA)"
+      "highlight0": "100% financiamento UE (RIA)",
+      "setores": [
+        "tecnologia-digital"
+      ]
     },
     {
       "id": "horizon-hlth-2026-healthcare",
@@ -286,7 +346,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/horizon-hlth-2026-healthcare.html",
       "featured": false,
-      "highlight0": "100% financiamento UE (RIA)"
+      "highlight0": "100% financiamento UE (RIA)",
+      "setores": [
+        "saude-ciencias-vida"
+      ]
     },
     {
       "id": "cef-digital-2026-cabo-submarino",
@@ -304,7 +367,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/cef-digital-2026-cabo-submarino.html",
       "featured": false,
-      "highlight0": "Ate 75% financiamento UE"
+      "highlight0": "Ate 75% financiamento UE",
+      "setores": [
+        "tecnologia-digital"
+      ]
     },
     {
       "id": "horizon-cl6-2026-02",
@@ -322,7 +388,11 @@
       "highlight2": "Nacional",
       "href": "instrumentos/horizon-cl6-2026-02.html",
       "featured": false,
-      "highlight0": "100% financiamento UE (RIA)"
+      "highlight0": "100% financiamento UE (RIA)",
+      "setores": [
+        "agroalimentar",
+        "energia-ambiente"
+      ]
     },
     {
       "id": "lisboa2030-2026-step-fase2",
@@ -340,7 +410,11 @@
       "highlight2": "Lisboa",
       "href": "instrumentos/lisboa2030-2026-step-fase2.html",
       "featured": false,
-      "highlight0": "FEDER 55%"
+      "highlight0": "FEDER 55%",
+      "setores": [
+        "tecnologia-digital",
+        "saude-ciencias-vida"
+      ]
     },
     {
       "id": "centro2030-2026-5-step",
@@ -358,7 +432,10 @@
       "highlight2": "Centro",
       "href": "instrumentos/centro2030-2026-5-step.html",
       "featured": true,
-      "highlight0": "FEDER 85%"
+      "highlight0": "FEDER 85%",
+      "setores": [
+        "tecnologia-digital"
+      ]
     },
     {
       "id": "norte2030-2026-2-ferrovia-linha-vouga",
@@ -376,7 +453,10 @@
       "highlight2": "Norte",
       "href": "instrumentos/norte2030-2026-2-ferrovia-linha-vouga.html",
       "featured": false,
-      "highlight0": "FEDER 85%"
+      "highlight0": "FEDER 85%",
+      "setores": [
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "horizon-widera-twinning-2026",
@@ -394,7 +474,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/horizon-widera-twinning-2026.html",
       "featured": false,
-      "highlight0": "100% financiamento UE (CSA)"
+      "highlight0": "100% financiamento UE (CSA)",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "horizon-cl4-2026-espaco",
@@ -412,7 +495,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/horizon-cl4-2026-espaco.html",
       "featured": false,
-      "highlight0": "100% financiamento UE (RIA)"
+      "highlight0": "100% financiamento UE (RIA)",
+      "setores": [
+        "tecnologia-digital"
+      ]
     },
     {
       "id": "norte2030-infraestruturas-acolhimento-empresarial",
@@ -430,7 +516,10 @@
       "highlight2": "Norte",
       "href": "instrumentos/norte2030-infraestruturas-acolhimento-empresarial.html",
       "featured": false,
-      "highlight0": "Ate 1,5M EUR"
+      "highlight0": "Ate 1,5M EUR",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "linha-garantia-bpf-investeu-pme",
@@ -448,7 +537,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/linha-garantia-bpf-investeu-pme.html",
       "featured": true,
-      "highlight0": "Ate 8,25M EUR"
+      "highlight0": "Ate 8,25M EUR",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "turismo-acolhe-2026",
@@ -466,7 +558,10 @@
       "highlight2": "Norte, Centro",
       "href": "instrumentos/turismo-acolhe-2026.html",
       "featured": false,
-      "highlight0": "Ate 60 EUR"
+      "highlight0": "Ate 60 EUR",
+      "setores": [
+        "turismo"
+      ]
     },
     {
       "id": "iefp-estagios-iniciar-2026",
@@ -484,7 +579,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/iefp-estagios-iniciar-2026.html",
       "featured": false,
-      "highlight0": "Ate 95% de apoio"
+      "highlight0": "Ate 95% de apoio",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "iefp-estagios-mais-talento-2026",
@@ -502,7 +600,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/iefp-estagios-mais-talento-2026.html",
       "featured": false,
-      "highlight0": "1.181 a 1.396 EUR"
+      "highlight0": "1.181 a 1.396 EUR",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "programa-consolidar-bpf",
@@ -520,7 +621,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/programa-consolidar-bpf.html",
       "featured": false,
-      "highlight0": "€5M a €12,5M"
+      "highlight0": "€5M a €12,5M",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "horizon-cl4-2026-01-materiais-producao",
@@ -538,7 +642,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/horizon-cl4-2026-01-materiais-producao.html",
       "featured": false,
-      "highlight0": "100% financiamento UE (RIA)"
+      "highlight0": "100% financiamento UE (RIA)",
+      "setores": [
+        "industria"
+      ]
     },
     {
       "id": "horizon-raise-2026-01-ia-ciencia",
@@ -556,7 +663,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/horizon-raise-2026-01-ia-ciencia.html",
       "featured": false,
-      "highlight0": "100% financiamento UE (CSA)"
+      "highlight0": "100% financiamento UE (CSA)",
+      "setores": [
+        "tecnologia-digital"
+      ]
     },
     {
       "id": "prima-2026-seccao-2",
@@ -574,7 +684,11 @@
       "highlight2": "Nacional",
       "href": "instrumentos/prima-2026-seccao-2.html",
       "featured": false,
-      "highlight0": "Ate 100% financiamento FCT"
+      "highlight0": "Ate 100% financiamento FCT",
+      "setores": [
+        "agroalimentar",
+        "energia-ambiente"
+      ]
     },
     {
       "id": "sifide-ii-candidaturas-2025",
@@ -592,7 +706,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/sifide-ii-candidaturas-2025.html",
       "featured": false,
-      "highlight0": "Ate 82,5% de apoio"
+      "highlight0": "Ate 82,5% de apoio",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "sustentavel-2030-pacs-2026-04",
@@ -610,7 +727,10 @@
       "highlight2": "Norte, Centro, Alentejo",
       "href": "instrumentos/sustentavel-2030-pacs-2026-04.html",
       "featured": false,
-      "highlight0": "85% Fundo de Coesao"
+      "highlight0": "85% Fundo de Coesao",
+      "setores": [
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "sustentavel-2030-pacs-2026-03",
@@ -628,7 +748,10 @@
       "highlight2": "Centro, Alentejo",
       "href": "instrumentos/sustentavel-2030-pacs-2026-03.html",
       "featured": false,
-      "highlight0": "85% Fundo de Coesao"
+      "highlight0": "85% Fundo de Coesao",
+      "setores": [
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "sustentavel-2030-pacs-2025-16",
@@ -646,7 +769,10 @@
       "highlight2": "Acores",
       "href": "instrumentos/sustentavel-2030-pacs-2025-16.html",
       "featured": false,
-      "highlight0": "85% Fundo de Coesao"
+      "highlight0": "85% Fundo de Coesao",
+      "setores": [
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "apoio-organizacoes-sociedade-civil-migrantes-pessoas2030",
@@ -664,7 +790,10 @@
       "highlight2": "Norte, Centro, Alentejo",
       "href": "instrumentos/apoio-organizacoes-sociedade-civil-migrantes-pessoas2030.html",
       "featured": false,
-      "highlight0": "85% FSE+"
+      "highlight0": "85% FSE+",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "estagios-alma-pessoas2030",
@@ -682,7 +811,10 @@
       "highlight2": "Portugal Continental",
       "href": "instrumentos/estagios-alma-pessoas2030.html",
       "featured": false,
-      "highlight0": "2M EUR"
+      "highlight0": "2M EUR",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "sustentavel-2030-pacs-2025-15",
@@ -700,7 +832,10 @@
       "highlight2": "Acores",
       "href": "instrumentos/sustentavel-2030-pacs-2025-15.html",
       "featured": false,
-      "highlight0": "85% FC"
+      "highlight0": "85% FC",
+      "setores": [
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "madeira2030-2026-13-internacionalizacao-pme",
@@ -718,7 +853,10 @@
       "highlight2": "Madeira",
       "href": "instrumentos/madeira2030-2026-13-internacionalizacao-pme.html",
       "featured": false,
-      "highlight0": "1M EUR"
+      "highlight0": "1M EUR",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "mar2030-2026-10-madeira-custos-suplementares",
@@ -736,7 +874,10 @@
       "highlight2": "Madeira",
       "href": "instrumentos/mar2030-2026-10-madeira-custos-suplementares.html",
       "featured": false,
-      "highlight0": "Compensacao FEAMPA custos insulares"
+      "highlight0": "Compensacao FEAMPA custos insulares",
+      "setores": [
+        "mar-pescas"
+      ]
     },
     {
       "id": "sustentavel-2030-pacs-2026-06",
@@ -754,7 +895,10 @@
       "highlight2": "Lisboa, Alentejo",
       "href": "instrumentos/sustentavel-2030-pacs-2026-06.html",
       "featured": false,
-      "highlight0": "85% FC"
+      "highlight0": "85% FC",
+      "setores": [
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "sustentavel-2030-pacs-2026-05",
@@ -772,7 +916,11 @@
       "highlight2": "Algarve",
       "href": "instrumentos/sustentavel-2030-pacs-2026-05.html",
       "featured": false,
-      "highlight0": "85% FC"
+      "highlight0": "85% FC",
+      "setores": [
+        "mobilidade-transportes",
+        "energia-ambiente"
+      ]
     },
     {
       "id": "sustentavel-2030-pacs-2025-10",
@@ -790,7 +938,10 @@
       "highlight2": "Norte",
       "href": "instrumentos/sustentavel-2030-pacs-2025-10.html",
       "featured": false,
-      "highlight0": "85% (Fundo de Coesao)"
+      "highlight0": "85% (Fundo de Coesao)",
+      "setores": [
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "sustentavel-2030-pacs-2026-02",
@@ -808,7 +959,10 @@
       "highlight2": "Madeira",
       "href": "instrumentos/sustentavel-2030-pacs-2026-02.html",
       "featured": false,
-      "highlight0": "85% (Fundo de Coesao)"
+      "highlight0": "85% (Fundo de Coesao)",
+      "setores": [
+        "energia-ambiente"
+      ]
     },
     {
       "id": "cef-dig-2026-smart-cables",
@@ -826,7 +980,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/cef-dig-2026-smart-cables.html",
       "featured": false,
-      "highlight0": "Ate 50% de apoio"
+      "highlight0": "Ate 50% de apoio",
+      "setores": [
+        "tecnologia-digital"
+      ]
     },
     {
       "id": "horizon-cl6-2026-01-zeropollution",
@@ -844,7 +1001,11 @@
       "highlight2": "Nacional",
       "href": "instrumentos/horizon-cl6-2026-01-zeropollution.html",
       "featured": false,
-      "highlight0": "100% (entidades sem fins lucrativos)"
+      "highlight0": "100% (entidades sem fins lucrativos)",
+      "setores": [
+        "mar-pescas",
+        "energia-ambiente"
+      ]
     },
     {
       "id": "deep2start-ani-2025-01",
@@ -862,7 +1023,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/deep2start-ani-2025-01.html",
       "featured": false,
-      "highlight0": "Ate 60.000 EUR"
+      "highlight0": "Ate 60.000 EUR",
+      "setores": [
+        "tecnologia-digital"
+      ]
     },
     {
       "id": "sustentavel-2030-pacs-2026-07",
@@ -880,7 +1044,10 @@
       "highlight2": "Norte, Centro, Alentejo",
       "href": "instrumentos/sustentavel-2030-pacs-2026-07.html",
       "featured": false,
-      "highlight0": "85% (Fundo de Coesao)"
+      "highlight0": "85% (Fundo de Coesao)",
+      "setores": [
+        "energia-ambiente"
+      ]
     },
     {
       "id": "sustentavel-2030-pacs-2026-8",
@@ -898,7 +1065,10 @@
       "highlight2": "Madeira",
       "href": "instrumentos/sustentavel-2030-pacs-2026-8.html",
       "featured": false,
-      "highlight0": "85% (Fundo de Coesao)"
+      "highlight0": "85% (Fundo de Coesao)",
+      "setores": [
+        "energia-ambiente"
+      ]
     },
     {
       "id": "urbact-iv-action-networks-2026",
@@ -916,7 +1086,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/urbact-iv-action-networks-2026.html",
       "featured": false,
-      "highlight0": "Ate 1M EUR por rede de cidades"
+      "highlight0": "Ate 1M EUR por rede de cidades",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "alentejo2030-ciclo-urbano-agua-2026",
@@ -934,7 +1107,10 @@
       "highlight2": "Alentejo",
       "href": "instrumentos/alentejo2030-ciclo-urbano-agua-2026.html",
       "featured": false,
-      "highlight0": "9 milhoes EUR"
+      "highlight0": "9 milhoes EUR",
+      "setores": [
+        "energia-ambiente"
+      ]
     },
     {
       "id": "rede-fornecedores-inovadores",
@@ -952,7 +1128,10 @@
       "highlight2": "Portugal Continental",
       "href": "instrumentos/rede-fornecedores-inovadores.html",
       "featured": false,
-      "highlight0": "Pre-qualificacao (sem apoio direto)"
+      "highlight0": "Pre-qualificacao (sem apoio direto)",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "horizon-cid-2026-01-clean-industrial-deal",
@@ -970,7 +1149,11 @@
       "highlight2": "Nacional",
       "href": "instrumentos/horizon-cid-2026-01-clean-industrial-deal.html",
       "featured": false,
-      "highlight0": "Ate 25M EUR"
+      "highlight0": "Ate 25M EUR",
+      "setores": [
+        "industria",
+        "energia-ambiente"
+      ]
     },
     {
       "id": "digital-2026-bestuse-10",
@@ -988,7 +1171,11 @@
       "highlight2": "Nacional",
       "href": "instrumentos/digital-2026-bestuse-10.html",
       "featured": false,
-      "highlight0": "Ate 120.000 EUR"
+      "highlight0": "Ate 120.000 EUR",
+      "setores": [
+        "tecnologia-digital",
+        "saude-ciencias-vida"
+      ]
     },
     {
       "id": "sustentavel-2030-pacs-2025-14",
@@ -1006,7 +1193,10 @@
       "highlight2": "Portugal Continental",
       "href": "instrumentos/sustentavel-2030-pacs-2025-14.html",
       "featured": false,
-      "highlight0": "85% Fundo de Coesao"
+      "highlight0": "85% Fundo de Coesao",
+      "setores": [
+        "energia-ambiente"
+      ]
     },
     {
       "id": "prr-doenca-mental-rncci-2026",
@@ -1024,7 +1214,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/prr-doenca-mental-rncci-2026.html",
       "featured": false,
-      "highlight0": "100% financiamento PRR"
+      "highlight0": "100% financiamento PRR",
+      "setores": [
+        "saude-ciencias-vida"
+      ]
     },
     {
       "id": "prr-habitacao-c02-i01-2026",
@@ -1042,7 +1235,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/prr-habitacao-c02-i01-2026.html",
       "featured": false,
-      "highlight0": "Nao Reembolsavel"
+      "highlight0": "Nao Reembolsavel",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "prr-flexibilidade-rede-2026",
@@ -1060,7 +1256,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/prr-flexibilidade-rede-2026.html",
       "featured": false,
-      "highlight0": "Nao Reembolsavel"
+      "highlight0": "Nao Reembolsavel",
+      "setores": [
+        "energia-ambiente"
+      ]
     },
     {
       "id": "eit-food-fan-2026",
@@ -1078,7 +1277,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/eit-food-fan-2026.html",
       "featured": false,
-      "highlight0": "Ate 50.000 EUR"
+      "highlight0": "Ate 50.000 EUR",
+      "setores": [
+        "agroalimentar"
+      ]
     },
     {
       "id": "open-horizons-call-3-startups-mulheres",
@@ -1096,7 +1298,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/open-horizons-call-3-startups-mulheres.html",
       "featured": false,
-      "highlight0": "Ate 55.000 EUR"
+      "highlight0": "Ate 55.000 EUR",
+      "setores": [
+        "tecnologia-digital"
+      ]
     },
     {
       "id": "inclusao-pela-cultura-juntas-freguesia-alentejo",
@@ -1114,7 +1319,10 @@
       "highlight2": "Alentejo",
       "href": "instrumentos/inclusao-pela-cultura-juntas-freguesia-alentejo.html",
       "featured": false,
-      "highlight0": "100% FSE+ (Alentejo 2030)"
+      "highlight0": "100% FSE+ (Alentejo 2030)",
+      "setores": [
+        "economia-criativa"
+      ]
     },
     {
       "id": "apoio-capacitacao-entidades-emprego-alentejo",
@@ -1132,7 +1340,10 @@
       "highlight2": "Alentejo",
       "href": "instrumentos/apoio-capacitacao-entidades-emprego-alentejo.html",
       "featured": false,
-      "highlight0": "85% FSE+ (Alentejo 2030)"
+      "highlight0": "85% FSE+ (Alentejo 2030)",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "respostas-sociais-proximidade-2-aviso-acores",
@@ -1150,7 +1361,10 @@
       "highlight2": "Acores",
       "href": "instrumentos/respostas-sociais-proximidade-2-aviso-acores.html",
       "featured": false,
-      "highlight0": "85% FEDER (Acores 2030)"
+      "highlight0": "85% FEDER (Acores 2030)",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "cursos-profissionais-2-aviso-acores",
@@ -1168,7 +1382,10 @@
       "highlight2": "Acores",
       "href": "instrumentos/cursos-profissionais-2-aviso-acores.html",
       "featured": false,
-      "highlight0": "85% FSE+ (Acores 2030)"
+      "highlight0": "85% FSE+ (Acores 2030)",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "eurostars-call-11-setembro-2026",
@@ -1186,7 +1403,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/eurostars-call-11-setembro-2026.html",
       "featured": false,
-      "highlight0": "Ate 500.000 EUR (co-financiamento FCT)"
+      "highlight0": "Ate 500.000 EUR (co-financiamento FCT)",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "emfaf-2026-pia-msp",
@@ -1204,7 +1424,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/emfaf-2026-pia-msp.html",
       "featured": false,
-      "highlight0": "Ate 1,7 M EUR"
+      "highlight0": "Ate 1,7 M EUR",
+      "setores": [
+        "mar-pescas"
+      ]
     },
     {
       "id": "innovation-fund-2025-net-zero",
@@ -1222,7 +1445,12 @@
       "highlight2": "Nacional",
       "href": "instrumentos/innovation-fund-2025-net-zero.html",
       "featured": false,
-      "highlight0": "Subvencao nao reembolsavel"
+      "highlight0": "Subvencao nao reembolsavel",
+      "setores": [
+        "energia-ambiente",
+        "industria",
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "eit-health-innovation-validation-2026",
@@ -1240,7 +1468,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/eit-health-innovation-validation-2026.html",
       "featured": false,
-      "highlight0": "Ate 850.000 EUR"
+      "highlight0": "Ate 850.000 EUR",
+      "setores": [
+        "saude-ciencias-vida"
+      ]
     },
     {
       "id": "eit-urban-mobility-strategic-innovation-2026",
@@ -1258,7 +1489,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/eit-urban-mobility-strategic-innovation-2026.html",
       "featured": false,
-      "highlight0": "Ate 2 milhoes EUR"
+      "highlight0": "Ate 2 milhoes EUR",
+      "setores": [
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "eit-urban-mobility-financial-support-startups-2026",
@@ -1276,7 +1510,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/eit-urban-mobility-financial-support-startups-2026.html",
       "featured": false,
-      "highlight0": "Ate 2,5 milhoes EUR"
+      "highlight0": "Ate 2,5 milhoes EUR",
+      "setores": [
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "climatelaunchpad-2026",
@@ -1294,7 +1531,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/climatelaunchpad-2026.html",
       "featured": false,
-      "highlight0": "Premios ate 10.000 EUR + aceleracao"
+      "highlight0": "Premios ate 10.000 EUR + aceleracao",
+      "setores": [
+        "energia-ambiente"
+      ]
     },
     {
       "id": "esa-bic-centro-plus-2026",
@@ -1312,7 +1552,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/esa-bic-centro-plus-2026.html",
       "featured": false,
-      "highlight0": "Ate 60.000 EUR"
+      "highlight0": "Ate 60.000 EUR",
+      "setores": [
+        "tecnologia-digital"
+      ]
     },
     {
       "id": "esa-bic-tagus-plus-2026",
@@ -1330,7 +1573,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/esa-bic-tagus-plus-2026.html",
       "featured": false,
-      "highlight0": "Ate 60.000 EUR"
+      "highlight0": "Ate 60.000 EUR",
+      "setores": [
+        "tecnologia-digital"
+      ]
     },
     {
       "id": "gulbenkian-apoio-internacionalizacao-2026",
@@ -1348,7 +1594,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/gulbenkian-apoio-internacionalizacao-2026.html",
       "featured": false,
-      "highlight0": "Ate 5.000 EUR"
+      "highlight0": "Ate 5.000 EUR",
+      "setores": [
+        "economia-criativa"
+      ]
     },
     {
       "id": "infraestruturas-e-equipamentos-tecnologicos-step",
@@ -1366,7 +1615,11 @@
       "highlight2": "Lisboa",
       "href": "instrumentos/infraestruturas-e-equipamentos-tecnologicos-step.html",
       "featured": false,
-      "highlight0": "60%"
+      "highlight0": "60%",
+      "setores": [
+        "tecnologia-digital",
+        "saude-ciencias-vida"
+      ]
     },
     {
       "id": "formacao-continua-de-docentes-formadores-e-outros-agentes-de-educacao-",
@@ -1384,7 +1637,10 @@
       "highlight2": "Norte, Centro, Alentejo",
       "href": "instrumentos/formacao-continua-de-docentes-formadores-e-outros-agentes-de-educacao-.html",
       "featured": false,
-      "highlight0": "85% FSE+"
+      "highlight0": "85% FSE+",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-iti-cim-regiao-do-oeste-indu",
@@ -1402,7 +1658,10 @@
       "highlight2": "Centro",
       "href": "instrumentos/sistema-de-incentivos-de-base-territorial-iti-cim-regiao-do-oeste-indu.html",
       "featured": false,
-      "highlight0": "40%"
+      "highlight0": "40%",
+      "setores": [
+        "industria"
+      ]
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-it-cim-terras-de-tras-os-mon",
@@ -1420,7 +1679,10 @@
       "highlight2": "Norte",
       "href": "instrumentos/sistema-de-incentivos-de-base-territorial-it-cim-terras-de-tras-os-mon.html",
       "featured": false,
-      "highlight0": "60% do investimento"
+      "highlight0": "60% do investimento",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-it-cim-ave",
@@ -1438,7 +1700,10 @@
       "highlight2": "Norte",
       "href": "instrumentos/sistema-de-incentivos-de-base-territorial-it-cim-ave.html",
       "featured": false,
-      "highlight0": "60% do investimento"
+      "highlight0": "60% do investimento",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "step-i-d-i-empresarial-energia",
@@ -1456,7 +1721,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/step-i-d-i-empresarial-energia.html",
       "featured": false,
-      "highlight0": "Ate 80% (I. Industrial PME)"
+      "highlight0": "Ate 80% (I. Industrial PME)",
+      "setores": [
+        "energia-ambiente"
+      ]
     },
     {
       "id": "programa-apoio-crescer-com-o-turismo",
@@ -1474,7 +1742,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/programa-apoio-crescer-com-o-turismo.html",
       "featured": false,
-      "highlight0": "60% (ate 90%)"
+      "highlight0": "60% (ate 90%)",
+      "setores": [
+        "turismo"
+      ]
     },
     {
       "id": "protecao-civil-e-gestao-integrada-de-riscos-prevencao-e-mitigacao-de-r",
@@ -1492,7 +1763,10 @@
       "highlight2": "Portugal Continental",
       "href": "instrumentos/protecao-civil-e-gestao-integrada-de-riscos-prevencao-e-mitigacao-de-r.html",
       "featured": false,
-      "highlight0": "Ate 85% fundo nao reembolsavel (FC)"
+      "highlight0": "Ate 85% fundo nao reembolsavel (FC)",
+      "setores": [
+        "energia-ambiente"
+      ]
     },
     {
       "id": "tratamento-em-estacoes-de-tratamento-de-aguas-residuais-etar-para-prod",
@@ -1510,7 +1784,10 @@
       "highlight2": "Portugal Continental",
       "href": "instrumentos/tratamento-em-estacoes-de-tratamento-de-aguas-residuais-etar-para-prod.html",
       "featured": false,
-      "highlight0": "Ate 85% fundo nao reembolsavel (FC)"
+      "highlight0": "Ate 85% fundo nao reembolsavel (FC)",
+      "setores": [
+        "energia-ambiente"
+      ]
     },
     {
       "id": "acoes-para-mitigacao-da-situacao-de-escassez-hidrica-e-assegurar-a-res",
@@ -1528,7 +1805,10 @@
       "highlight2": "Algarve",
       "href": "instrumentos/acoes-para-mitigacao-da-situacao-de-escassez-hidrica-e-assegurar-a-res.html",
       "featured": false,
-      "highlight0": "Ate 85% fundo nao reembolsavel (FC)"
+      "highlight0": "Ate 85% fundo nao reembolsavel (FC)",
+      "setores": [
+        "energia-ambiente"
+      ]
     },
     {
       "id": "aguas-residuais-em-alta",
@@ -1546,7 +1826,10 @@
       "highlight2": "Portugal Continental",
       "href": "instrumentos/aguas-residuais-em-alta.html",
       "featured": false,
-      "highlight0": "85% Fundo de Coesao"
+      "highlight0": "85% Fundo de Coesao",
+      "setores": [
+        "energia-ambiente"
+      ]
     },
     {
       "id": "programa-de-seguranca-ferroviaria-supressao-de-pns",
@@ -1564,7 +1847,10 @@
       "highlight2": "Portugal Continental",
       "href": "instrumentos/programa-de-seguranca-ferroviaria-supressao-de-pns.html",
       "featured": false,
-      "highlight0": "85% Fundo de Coesao"
+      "highlight0": "85% Fundo de Coesao",
+      "setores": [
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "abastecimento-de-agua-em-alta",
@@ -1582,7 +1868,10 @@
       "highlight2": "Portugal Continental",
       "href": "instrumentos/abastecimento-de-agua-em-alta.html",
       "featured": false,
-      "highlight0": "85% Fundo de Coesao"
+      "highlight0": "85% Fundo de Coesao",
+      "setores": [
+        "energia-ambiente"
+      ]
     },
     {
       "id": "linha-norte-estacao-do-oriente-terminal-tecnico",
@@ -1600,7 +1889,10 @@
       "highlight2": "Lisboa",
       "href": "instrumentos/linha-norte-estacao-do-oriente-terminal-tecnico.html",
       "featured": false,
-      "highlight0": "85% Fundo de Coesao"
+      "highlight0": "85% Fundo de Coesao",
+      "setores": [
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "ampliacao-e-modernizacao-do-aeroporto-das-lajes",
@@ -1618,7 +1910,10 @@
       "highlight2": "Acores",
       "href": "instrumentos/ampliacao-e-modernizacao-do-aeroporto-das-lajes.html",
       "featured": false,
-      "highlight0": "85% Fundo de Coesao"
+      "highlight0": "85% Fundo de Coesao",
+      "setores": [
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "infraestrutura-ferroviaria-rte-programa-de-sinalizacao-e-implementacao",
@@ -1636,7 +1931,10 @@
       "highlight2": "Nacional",
       "href": "instrumentos/infraestrutura-ferroviaria-rte-programa-de-sinalizacao-e-implementacao.html",
       "featured": false,
-      "highlight0": "85% Fundo de Coesao"
+      "highlight0": "85% Fundo de Coesao",
+      "setores": [
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "infraestrutura-portuaria-rte-porto-de-lisboa-3-aviso-navegabilidade-do",
@@ -1654,7 +1952,10 @@
       "highlight2": "Lisboa",
       "href": "instrumentos/infraestrutura-portuaria-rte-porto-de-lisboa-3-aviso-navegabilidade-do.html",
       "featured": false,
-      "highlight0": "Ate 85% fundo nao reembolsavel (FC)"
+      "highlight0": "Ate 85% fundo nao reembolsavel (FC)",
+      "setores": [
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "aquisicao-de-equipamentos-e-intervencao-em-infraestruturas-portuarias-",
@@ -1672,7 +1973,10 @@
       "highlight2": "Acores",
       "href": "instrumentos/aquisicao-de-equipamentos-e-intervencao-em-infraestruturas-portuarias-.html",
       "featured": false,
-      "highlight0": "Ate 85% fundo nao reembolsavel (FEDER)"
+      "highlight0": "Ate 85% fundo nao reembolsavel (FEDER)",
+      "setores": [
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "estagios-profissionais",
@@ -1690,7 +1994,10 @@
       "highlight2": "Portugal Continental",
       "href": "instrumentos/estagios-profissionais.html",
       "featured": false,
-      "highlight0": "100% FSE+ (Pessoas 2030)"
+      "highlight0": "100% FSE+ (Pessoas 2030)",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "cursos-profissionais-entidades-privadas",
@@ -1708,7 +2015,10 @@
       "highlight2": "Madeira",
       "href": "instrumentos/cursos-profissionais-entidades-privadas.html",
       "featured": false,
-      "highlight0": "85%"
+      "highlight0": "85%",
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "linha-apoio-qualificacao-oferta-2026",
@@ -1726,7 +2036,10 @@
       "highlight1": "PME, Grandes Empresas e Empreendedores",
       "highlight2": "Nacional",
       "href": "instrumentos/linha-apoio-qualificacao-oferta-2026.html",
-      "featured": false
+      "featured": false,
+      "setores": [
+        "turismo"
+      ]
     },
     {
       "id": "linha-bpf-investeu-mobilidade-urbana-sustentavel",
@@ -1744,7 +2057,10 @@
       "highlight1": "PME e Small Midcaps",
       "highlight2": "Nacional",
       "href": "instrumentos/linha-bpf-investeu-mobilidade-urbana-sustentavel.html",
-      "featured": false
+      "featured": false,
+      "setores": [
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "linha-bpf-investeu-id-digitalizacao",
@@ -1762,7 +2078,10 @@
       "highlight1": "PME e Small Midcaps",
       "highlight2": "Nacional",
       "href": "instrumentos/linha-bpf-investeu-id-digitalizacao.html",
-      "featured": false
+      "featured": false,
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "linha-bpf-invest-export",
@@ -1780,7 +2099,10 @@
       "highlight1": "PME com exportacoes em 2024",
       "highlight2": "Nacional",
       "href": "instrumentos/linha-bpf-invest-export.html",
-      "featured": false
+      "featured": false,
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "ewa-advance-programme-2026",
@@ -1798,7 +2120,10 @@
       "highlight1": "Mulheres fundadoras de startups agrifood",
       "highlight2": "Europa (programa pan-europeu)",
       "href": "instrumentos/ewa-advance-programme-2026.html",
-      "featured": false
+      "featured": false,
+      "setores": [
+        "agroalimentar"
+      ]
     },
     {
       "id": "risingfoodstars-2026",
@@ -1816,7 +2141,10 @@
       "highlight1": "Scale-ups agrifood alumni EIT Food",
       "highlight2": "Europa (programa pan-europeu)",
       "href": "instrumentos/risingfoodstars-2026.html",
-      "featured": false
+      "featured": false,
+      "setores": [
+        "agroalimentar"
+      ]
     },
     {
       "id": "new-models-deliver-healthcare-eit-2026",
@@ -1834,7 +2162,10 @@
       "highlight1": "Empresas medtech, hospitais e parceiros de saude",
       "highlight2": "Europa (minimo 2 paises)",
       "href": "instrumentos/new-models-deliver-healthcare-eit-2026.html",
-      "featured": false
+      "featured": false,
+      "setores": [
+        "saude-ciencias-vida"
+      ]
     },
     {
       "id": "ignite-neb-open-call-hosts-2026",
@@ -1852,7 +2183,10 @@
       "highlight1": "Organizacoes, hubs, municipios e associacoes",
       "highlight2": "Europa (programa pan-europeu)",
       "href": "instrumentos/ignite-neb-open-call-hosts-2026.html",
-      "featured": false
+      "featured": false,
+      "setores": [
+        "economia-criativa"
+      ]
     },
     {
       "id": "eit-jumpstarter-2026",
@@ -1870,7 +2204,10 @@
       "highlight1": "Inovadores early-stage (EIT RIS, Portugal elegivel)",
       "highlight2": "Europa (6 cohorts tematicos)",
       "href": "instrumentos/eit-jumpstarter-2026.html",
-      "featured": false
+      "featured": false,
+      "setores": [
+        "todos"
+      ]
     },
     {
       "id": "neb-mentors-open-call-2026",
@@ -1888,7 +2225,10 @@
       "highlight1": "Profissionais, empresarios e investidores com 10+ anos de experiencia",
       "highlight2": "Europa (paises Horizon Europe elegíveis)",
       "href": "instrumentos/neb-mentors-open-call-2026.html",
-      "featured": false
+      "featured": false,
+      "setores": [
+        "economia-criativa"
+      ]
     },
     {
       "id": "fct-computacao-avancada-a0-a1-lote-d-2026",
@@ -1906,7 +2246,10 @@
       "highlight1": "I&D, universidades, empresas em investigacao pre-concorrencial",
       "highlight2": "Nacional",
       "href": "instrumentos/fct-computacao-avancada-a0-a1-lote-d-2026.html",
-      "featured": false
+      "featured": false,
+      "setores": [
+        "tecnologia-digital"
+      ]
     },
     {
       "id": "fct-computacao-avancada-a2-a3-lote-d-2026",
@@ -1924,7 +2267,10 @@
       "highlight1": "I&D, universidades, laboratorios e empresas em investigacao",
       "highlight2": "Nacional",
       "href": "instrumentos/fct-computacao-avancada-a2-a3-lote-d-2026.html",
-      "featured": false
+      "featured": false,
+      "setores": [
+        "tecnologia-digital"
+      ]
     },
     {
       "id": "scaleup-promotion-initiative-eit-2026",
@@ -1942,7 +2288,10 @@
       "highlight1": "Aceleradoras, entidades de inovacao e consultoras com track record EIT/EIC",
       "highlight2": "Europa (pan-europeu)",
       "href": "instrumentos/scaleup-promotion-initiative-eit-2026.html",
-      "featured": false
+      "featured": false,
+      "setores": [
+        "mobilidade-transportes"
+      ]
     },
     {
       "id": "portugal-events-2026-2028",
@@ -1960,7 +2309,10 @@
       "highlight1": "Empresas, associacoes e entidades regionais de turismo",
       "highlight2": "Nacional",
       "href": "instrumentos/portugal-events-2026-2028.html",
-      "featured": false
+      "featured": false,
+      "setores": [
+        "turismo"
+      ]
     }
   ]
 }

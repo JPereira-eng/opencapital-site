@@ -144,6 +144,7 @@ Com o regulamento, definir:
 - `estado`: `aberto`, `fechado`, ou `previsto`
 - `fonte`: codigo da fonte/programa (`pt2030`, `ani`, `iapmei`, `bfomento`, `aicep`, `at`, `pventures`, `compete`, `prr`, `ue`)
 - `beneficiario`: lista separada por virgulas (`empresa`, `entidade-publica`, `associacao`, `ensino-investigacao`, `empreendedor`)
+- `setores`: array de setores elegiveis (ver 4f). Campo invisivel, usado apenas pelo filtro do catalogo.
 - `regiao`: lista das regioes. Se nacional: `norte,centro,lisboa,alentejo,algarve,acores,madeira`. Se regional: apenas as cobertas.
 - `hero_tagline`: 1 frase clara, max 20 palavras
 - `meta_fact_1` a `meta_fact_4`: label + valor para a meta-bar do hero (ex: Dotacao: €23 mil milhoes)
@@ -207,6 +208,45 @@ Cada card tem 3 highlights com funcao fixa:
 
 Criar `instrumentos/[slug].html` seguindo TODAS as regras do CLAUDE.md e do template instrumento.md.
 
+### 4f. Definir setores (campo invisivel)
+
+**Pergunta orientadora:** "Que beneficiario pode ser alvo de financiamento a este instrumento? A que setor(es) pertence?"
+
+Preencher o array `setores` no `instruments-catalog.json` com 1 a N codigos da tabela. O campo e invisivel (so usado pelo filtro do catalogo), logo o artigo em si nao menciona setores - limita-se a esclarecer o tipo de beneficiario elegivel.
+
+**Valores permitidos (10 setores + wildcard):**
+
+| Codigo | Beneficiario tipico |
+|---|---|
+| `agroalimentar` | Agricultores, agroindustria, transformacao alimentar, floresta |
+| `comercio` | Retalho, comercio por grosso, distribuicao |
+| `economia-criativa` | Cultura, design, audiovisual, media, artes, patrimonio |
+| `energia-ambiente` | Renovaveis, eficiencia energetica, cleantech, economia circular, residuos, agua |
+| `industria` | Industria transformadora, metalomecanica, textil, quimica, materiais |
+| `mar-pescas` | Pescas, aquicultura, biotecnologia marinha, economia azul |
+| `mobilidade-transportes` | Transporte passageiros/mercadorias, logistica, mobilidade eletrica/sustentavel, ferrovia, portos, aeroportos |
+| `saude-ciencias-vida` | Saude, biotecnologia, farmaceutica, medtech, dispositivos medicos |
+| `tecnologia-digital` | TIC, software, deep tech, startups digitais, espaco, IA |
+| `turismo` | Hotelaria, restauracao, operadores turisticos, animacao turistica |
+| `todos` | **Wildcard** para instrumentos transversais (aparece em qualquer filtro de setor) |
+
+**Regras de decisao:**
+
+1. Se o instrumento tem restricao setorial explicita (CAE elegiveis, ou "apenas empresas de X"): listar os setores cobertos.
+2. Se o instrumento cobre 2-3 setores especificos: listar todos (ex: `["industria", "energia-ambiente"]` para descarbonizacao industrial).
+3. Se o instrumento e transversal (qualquer empresa/entidade): usar `["todos"]`.
+4. Se o beneficiario e academico/investigacao sem foco setorial: usar `["todos"]`.
+5. Nao combinar `todos` com outros setores (e redundante).
+
+**Exemplos:**
+- SIFIDE II (qualquer empresa com I&D) → `["todos"]`
+- Linha Turismo de Portugal → `["turismo"]`
+- STEP Descarbonizacao Industrial → `["industria", "energia-ambiente"]`
+- EIT Urban Mobility → `["mobilidade-transportes"]`
+- EIC Accelerator (startups deep tech multi-setor) → `["tecnologia-digital", "saude-ciencias-vida", "energia-ambiente"]`
+- PEPAC / Mar 2030 → `["agroalimentar"]` / `["mar-pescas"]`
+- Linha Banco de Fomento generica → `["todos"]`
+
 ---
 
 ## PASSO 5: Atualizar catalogo
@@ -223,6 +263,7 @@ Adicionar entrada ao FINAL de `instruments-catalog.json > instruments`:
   "status_class": "status-[open/closed/planned/cont]",
   "fonte": "[FONTE]",
   "beneficiario": "[BENEF]",
+  "setores": ["[SETOR1]", "[SETOR2]"],
   "regiao": "[REGIAO]",
   "title": "[NOME]",
   "tagline": "[TAGLINE]",
@@ -233,6 +274,8 @@ Adicionar entrada ao FINAL de `instruments-catalog.json > instruments`:
   "featured": false
 }
 ```
+
+**Nota:** `setores` e obrigatorio. Usar valores da tabela em 4f ou `["todos"]` se transversal.
 
 **REGRA CRITICA:** Nunca editar `solucoes.html`. Catalogo e 100% dinamico via JSON.
 
