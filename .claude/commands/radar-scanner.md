@@ -73,7 +73,9 @@ Se existirem mais de 3 fontes nunca verificadas, preencher as 2 slots restantes 
 
 Consultar `registry/index.json > source_last_checked` para a data de ultima verificacao de cada fonte individual.
 
-**Fontes cobertas por superset:** `eu-funding-tenders` cobre HORIZON, CEF, DIGITAL, LIFE, ERASMUS+, CERV, JUST, COSME, EU4HEALTH, CREATIVE-EUROPE (ver `covers_programs` em sources-scan.json). Se `eu-funding-tenders` foi verificada ha menos de 7 dias, as sub-fontes individuais (horizon-cluster1..6, horizon-msca, horizon-widera, horizon-missions, erasmus-*, cerv, justice-programme, creative-europe, single-market-programme) NAO devem ocupar slots. Os avisos ja foram descobertos via superset.
+**Fontes cobertas por superset:** `eu-funding-tenders` cobre HORIZON, CEF, DIGITAL, LIFE, ERASMUS+, CERV, JUST, COSME, EU4HEALTH, CREATIVE-EUROPE (ver `covers_programs` em sources-scan.json). Se `eu-funding-tenders` foi verificada ha menos de **2 dias**, as sub-fontes individuais (horizon-cluster1..6, horizon-msca, horizon-widera, horizon-missions, erasmus-*, cerv, justice-programme, creative-europe, single-market-programme) NAO devem ocupar slots. Os avisos ja foram descobertos via superset.
+
+**Nota:** O limiar e 2 dias (nao 7) porque o catalogo EU tem milhares de topics ainda por descobrir. Fontes EU independentes (horizonte-europa via ANI, hadea, eismea, interreg-*) nunca sao bloqueadas pelo superset — sao fontes distintas com conteudo proprio.
 
 **NOTA:** Programas regionais PT2030 (norte-2030, centro-2030, etc.) sao fontes independentes. Verificar a API central do PT2030 NAO cobre automaticamente os portais regionais. Cada um deve ser verificado individualmente.
 
@@ -162,17 +164,45 @@ Muitos avisos aparecem tanto na API central (portugal2030.pt) como nas APIs regi
 
 ### Se `access_method: "api"` (eu-funding-tenders):
 
-Usar SEDIA Search API:
+**Logica de paginacao progressiva — o lookup.json e o marcador de progresso:**
+
+A SEDIA API tem centenas ou milhares de topics abertos. Nao e possivel processar todos numa run. A logica correcta e:
+
+1. Percorrer as paginas da API **em ordem**, uma a uma (pageSize=200):
+   ```
+   pageNumber=1 → pageNumber=2 → pageNumber=3 → ...
+   ```
+2. Para cada topic de cada pagina: verificar o lookup.
+   - Se ja esta em `lookup.by_aviso_codigo` ou `lookup.by_id`: **skip** (ja foi descoberto numa run anterior)
+   - Se e novo: buscar detalhes e adicionar a queue
+3. Continuar a paginar ate atingir **50 topics novos** (com detalhes buscados) OU ate a API nao retornar mais resultados.
+4. Parar. Os topics seguintes ficam para a proxima run.
+
+**Na proxima run:** o lookup ja tem os 50 do ciclo anterior. O scanner percorre as primeiras paginas rapidamente (todos skip), avanca ate encontrar os proximos novos, e recolhe mais 50. E assim sucessivamente ate cobrir todos os topics.
+
+**Implementacao:**
 ```
-POST https://api.tech.ec.europa.eu/search-api/prod/rest/search?apiKey=SEDIA&text=2026&pageSize=200&pageNumber=1
+pageNumber = 1
+novos_encontrados = 0
+
+enquanto novos_encontrados < 50:
+  GET https://api.tech.ec.europa.eu/search-api/prod/rest/search?apiKey=SEDIA&text=2026&pageSize=200&pageNumber=[pageNumber]
+  se resposta vazia: parar (fim do catalogo)
+  
+  para cada topic na pagina:
+    se topic em lookup: skip
+    senao:
+      WebFetch: https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/{slug}.json
+      adicionar a queue + lookup
+      novos_encontrados += 1
+      se novos_encontrados == 50: parar
+
+  pageNumber += 1
 ```
 
-Filtrar por status Open. Para cada topic aberto, buscar detalhes:
-```
-WebFetch: https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/{slug}.json
-```
+**Registar no relatorio granular:** paginas percorridas, topics vistos, topics skip (dedup), topics novos com detalhes.
 
-Limitar a 20 topics detalhados por execucao.
+**Nota importante:** Filtrar por status Open. Topics com status FORTHCOMING, CLOSED ou AWARDED: skip sem buscar detalhes.
 
 ### Se `access_method: "webfetch"`:
 
