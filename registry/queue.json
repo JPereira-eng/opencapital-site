@@ -1521,5 +1521,55 @@
       "notes": "ESPON 2030. Targeted Analysis. Chamada para analise territorial sobre governacao de territorios resilientes a agua. Website bloqueia acesso direto (403) - dados via websearch. Deadline: 29/05/2026.",
       "download_note": "Conteudo via websearch - website ESPON bloqueou acesso direto (403). Writer deve complementar com documentos de concurso do portal ESPON."
     }
+  ],
+  "items": [
+    {
+      "id": "estagios-profissionais-3-aviso-acores",
+      "status": "ready",
+      "source_id": "acores-2030",
+      "aviso_codigo": "FA0200/2025",
+      "title": "Estagios Profissionais - 3 Aviso (Acores)",
+      "shard": "pt2030-other",
+      "deadline": "2026-04-30",
+      "priority": "urgent",
+      "notes": "Deadline em 14 dias. Verificado via API acores.portugal2030.pt. Candidaturas abertas.",
+      "discovered": "2026-04-16"
+    },
+    {
+      "id": "siid-id-empresarial-demonstradores-individuais-copromocao",
+      "status": "ready",
+      "source_id": "lisboa-2030",
+      "aviso_codigo": "FA0915/2024",
+      "title": "SIID - I&D Empresarial - Demonstradores Individuais e em Copromocao",
+      "shard": "pt2030-lisboa",
+      "deadline": "2026-12-30",
+      "budget": "12M EUR",
+      "notes": "Aberto. Verificado via lisboa.portugal2030.pt API. 40-80% co-financiamento.",
+      "discovered": "2026-04-16"
+    },
+    {
+      "id": "siid-internacionalizacao-id-industrial-escala-europeia",
+      "status": "ready",
+      "source_id": "lisboa-2030",
+      "aviso_codigo": "FA0318/2025",
+      "title": "SIID - Internacionalizacao de I&D - Operacoes a Escala Europeia",
+      "shard": "pt2030-lisboa",
+      "deadline": "2026-09-30",
+      "budget": "2.055M EUR",
+      "notes": "Aberto. Verificado via lisboa.portugal2030.pt API. 40-85% co-financiamento.",
+      "discovered": "2026-04-16"
+    },
+    {
+      "id": "sice-inovacao-produtiva-outros-territorios",
+      "status": "ready",
+      "source_id": "lisboa-2030",
+      "aviso_codigo": "FA0733/2024",
+      "title": "SICE - Inovacao Produtiva - Outros Territorios",
+      "shard": "pt2030-lisboa",
+      "deadline": "2027-04-30",
+      "budget": "120.5M EUR",
+      "notes": "Aberto. Verificado via lisboa.portugal2030.pt API. 50% co-financiamento.",
+      "discovered": "2026-04-16"
+    }
   ]
 }
