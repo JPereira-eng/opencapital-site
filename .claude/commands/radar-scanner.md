@@ -1,4 +1,4 @@
-# Radar Scanner v4.2: Descoberta de Novos Instrumentos
+# Radar Scanner v4.3: Descoberta de Novos Instrumentos
 
 REGRA CRITICA: Nunca usar travessao (—) em nenhum texto gerado. Usar virgula, ponto, hifen (-) ou reescrever a frase.
 
@@ -81,27 +81,31 @@ Os restantes portais considerados HIGH em v4.1 (Interreg, hadea, horizonte-europ
 
 Se uma destas fontes falhar (erro de acesso), registar o erro e continuar. Nao substituir por outra fonte.
 
-#### Slots 3-4: Overflow HIGH->MEDIUM
+#### Slots 3-5: MEDIUM rotativos com FALLBACK GARANTIDO (v4.3)
 
-As 4 slots HIGH originais v4.1 transbordam para MEDIUM quando nao ha mais fontes HIGH. Como so existem 2 HIGH em v4.2, estas 2 slots sao **sempre** preenchidas por MEDIUM (mais antigas primeiro).
+**OBJETIVO CRITICO:** As 3 slots MEDIUM DEVEM estar **sempre preenchidas** quando existem fontes MEDIUM/LOW disponiveis. Slots vazios por cooldown e um BUG de throughput — desperdicamos 3× capacidade de descoberta.
 
-Selecionar por esta ordem (mesma logica do slot 5 abaixo):
-1. Fontes medium NUNCA verificadas (prioridade absoluta)
-2. Fontes "medium" nao verificadas ha mais de 7 dias (ordenar por mais antiga primeiro)
-3. Fontes "low" nao verificadas ha mais de 14 dias (ordenar por mais antiga primeiro)
-4. Se nenhum candidato elegivel: deixar o slot vazio
+**Algoritmo de selecao (em cascata, avancar para o proximo passo se nao preencher):**
 
-#### Slot 5: MEDIUM/LOW garantido
+1. **Fontes medium NUNCA verificadas** (absent from `source_last_checked`) — prioridade absoluta, adicionar ate preencher as 3 slots.
 
-Este slot e exclusivo para fontes de prioridade medium ou low. Nunca e preenchido por uma fonte high. Isto garante que medium/low rodam mesmo quando os slots 3-4 ja estao preenchidos com medium.
+2. **Fontes medium verificadas ha >7 dias** (ordenar por mais antiga primeiro) — adicionar ate preencher as 3 slots.
 
-Selecionar por esta ordem (excluindo as fontes ja selecionadas nas slots 3-4):
-1. Fontes medium ou low NUNCA verificadas (prioridade absoluta)
-2. Fontes "medium" nao verificadas ha mais de 7 dias (ordenar por mais antiga primeiro)
-3. Fontes "low" nao verificadas ha mais de 14 dias (ordenar por mais antiga primeiro)
-4. Se nenhum candidato elegivel: deixar o slot vazio
+3. **Fontes low NUNCA verificadas** — adicionar ate preencher as 3 slots.
 
-**Resultado por execucao:** 2 HIGH fixas + 3 slots MEDIUM rotativos (slots 3, 4, 5). Com ~55 fontes medium/low, o ciclo de cobertura e de ~18 dias por fonte (era ~55 dias em v4.1).
+4. **Fontes low verificadas ha >14 dias** (ordenar por mais antiga primeiro) — adicionar ate preencher as 3 slots.
+
+5. **FALLBACK (v4.3 — critico):** Se apos passos 1-4 ainda restam slots vazios, completar com **fontes medium/low mais antigas MESMO DENTRO do cooldown** (ordenar por `source_last_checked` mais antigo primeiro, independentemente do dia-limite). Preencher as 3 slots em pleno.
+
+6. Apenas se nao existir nenhuma fonte medium/low no sources-scan.json (impossivel — ha 51 medium + 10 low): deixar slot vazio.
+
+**Motivacao (2026-04-17):** Run de teste descobriu que a regra rigida ">7 dias" deixou 3 slots vazios quando todas as medium tinham sido verificadas 3-5 dias antes. Perda de 3× throughput por execucao. Fallback garante preenchimento total.
+
+**Resultado por execucao:** 2 HIGH fixas (slots 1-2) + 3 MEDIUM garantidas (slots 3-5). Com ~61 fontes medium+low, ciclo de cobertura de ~20 dias por fonte — mesmo que todas tenham sido verificadas nos ultimos 7 dias.
+
+#### Excluir duplicacao entre slots
+
+Garantir que a mesma fonte nao e selecionada em mais do que 1 slot. Quando ordenar para slots 3-5, excluir `portugal-2030` e `eu-funding-tenders` (ja nos slots 1-2).
 
 Consultar `registry/index.json > source_last_checked` para a data de ultima verificacao de cada fonte individual.
 
@@ -221,11 +225,43 @@ Muitos avisos aparecem tanto na API central (portugal2030.pt) como nas APIs regi
 
 ### Se `access_method: "api"` (eu-funding-tenders):
 
+**AVISO CRITICO v4.3 — A API SEDIA REQUER HTTP POST, NUNCA GET**
+
+A API `https://api.tech.ec.europa.eu/search-api/prod/rest/search` responde com **HTTP 405 (Method Not Allowed)** a pedidos GET. O WebFetch tool **so suporta GET**, portanto e **incompativel** com esta API.
+
+**NAO USAR WebFetch para eu-funding-tenders. USAR SEMPRE Bash + curl -X POST.**
+
+Se o agente tentar WebFetch nesta fonte, vai falhar com 405 e desistir — foi o que aconteceu na run de teste 2026-04-17T20:00. Esta nota existe para evitar repeticao desse erro.
+
+**Comando correto (Bash):**
+```bash
+curl -s -X POST "https://api.tech.ec.europa.eu/search-api/prod/rest/search?apiKey=SEDIA&text=**&pageSize=200&pageNumber=1&facetQueries=status%3AOPEN" \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -d '{}' > /tmp/sedia_page_1.json
+```
+
+**Parametros chave:**
+- `apiKey=SEDIA` (obrigatorio)
+- `text=**` (wildcard, devolve tudo)
+- `pageSize=200` (maximo util)
+- `pageNumber=N` (paginar)
+- `facetQueries=status%3AOPEN` (apenas topics abertos, URL-encoded de `status:OPEN`)
+- `-d '{}'` (body JSON vazio, obrigatorio porque e POST)
+
+**Resposta JSON:** objecto com `results[]`. Cada resultado tem:
+- `metadata.callIdentifier` — id do topic (ex: `HORIZON-CL4-2026-DIGITAL-EMERGING-01-02`)
+- `metadata.callTitle` — titulo
+- `metadata.deadlineDate` — array com ISO dates
+- `metadata.indicativeBudget` — orcamento
+- `metadata.status` — OPEN / FORTHCOMING / CLOSED
+- `url` — URL do topic no portal
+
 **Logica de paginacao progressiva — o lookup.json e o marcador de progresso:**
 
 A SEDIA API tem centenas ou milhares de topics abertos. Nao e possivel processar todos numa run. A logica correcta e:
 
-1. Percorrer as paginas da API **em ordem**, uma a uma (pageSize=200):
+1. Percorrer as paginas da API **em ordem**, uma a uma (pageSize=200, via `curl -X POST`):
    ```
    pageNumber=1 → pageNumber=2 → pageNumber=3 → ...
    ```
@@ -239,29 +275,33 @@ A SEDIA API tem centenas ou milhares de topics abertos. Nao e possivel processar
 
 **Justificacao cap 150 (v4.2):** SEDIA tem milhares de topics. Com cap 50, cobertura total demora ~40 runs. Com cap 150, reduz-se para ~14 runs. Custo de tokens escala linearmente mas e absorvido pela ausencia de necessidade de re-runs.
 
-**Implementacao:**
-```
-pageNumber = 1
-novos_encontrados = 0
+**Implementacao (Bash + curl):**
+```bash
+pageNumber=1
+novos_encontrados=0
 
-enquanto novos_encontrados < 50:
-  GET https://api.tech.ec.europa.eu/search-api/prod/rest/search?apiKey=SEDIA&text=2026&pageSize=200&pageNumber=[pageNumber]
-  se resposta vazia: parar (fim do catalogo)
+enquanto [novos_encontrados -lt 150]:
+  curl -s -X POST "https://api.tech.ec.europa.eu/search-api/prod/rest/search?apiKey=SEDIA&text=**&pageSize=200&pageNumber=$pageNumber&facetQueries=status%3AOPEN" \
+    -H "Content-Type: application/json" -d '{}' > /tmp/sedia_page_$pageNumber.json
   
-  para cada topic na pagina:
-    se topic em lookup: skip
+  se results[] vazio: parar (fim do catalogo)
+
+  para cada topic in results[]:
+    callId = metadata.callIdentifier[0]
+    se callId em lookup.by_aviso_codigo: skip
     senao:
-      WebFetch: https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/{slug}.json
+      # Buscar detalhes via WebFetch (estes endpoints respondem a GET)
+      WebFetch: https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/$callId.json
       adicionar a queue + lookup
       novos_encontrados += 1
-      se novos_encontrados == 50: parar
+      se novos_encontrados == 150: parar
 
   pageNumber += 1
 ```
 
 **Registar no relatorio granular:** paginas percorridas, topics vistos, topics skip (dedup), topics novos com detalhes.
 
-**Nota importante:** Filtrar por status Open. Topics com status FORTHCOMING, CLOSED ou AWARDED: skip sem buscar detalhes.
+**Nota importante:** O parametro `facetQueries=status%3AOPEN` ja filtra a listagem, mas confirmar sempre `metadata.status` no detalhe buscado. Topics com status FORTHCOMING, CLOSED ou AWARDED: skip sem buscar detalhes completos.
 
 ### Se `access_method: "webfetch"`:
 
@@ -574,15 +614,17 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
 
 ---
 
-## RESUMO (v4.2)
+## RESUMO (v4.3)
 
 ```
 1. Ler index.json + queue.json + queue-catalogo.json + lookup.json + sources-scan.json
 2. Selecionar ate 6 fontes:
    - Slots 1-2: HIGH permanentes SEM cooldown (portugal-2030 + eu-funding-tenders sempre)
-   - Slots 3-4: Overflow HIGH->MEDIUM (medium nunca-verificadas > medium >7d > low >14d)
-   - Slot 5: MEDIUM/LOW garantido (mesma logica, exclui fontes ja em 3-4)
+   - Slots 3-5: MEDIUM rotativos com FALLBACK GARANTIDO (v4.3 - slots nunca vazios):
+     (a) medium nunca-verificadas > (b) medium >7d > (c) low nunca >
+     (d) low >14d > (e) FALLBACK: mais antigas mesmo dentro do cooldown
    - Slot 6: catalogo nunca-verificadas > catalogo >90d > se vazio: medium/low aviso
+   - CRITICO eu-funding-tenders: usar Bash+curl -X POST, NUNCA WebFetch (API rejeita GET com 405)
 3. Para cada fonte:
    - Aceder (se webfetch: tentar 3 URLs antes de declarar "0 novos")
    - Extrair items, aplicar filtros (incluindo cascade acf.pdf|aviso|ficheiro|... + fallback generico)
