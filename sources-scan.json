@@ -271,7 +271,7 @@
     {
       "id": "interreg-poctep",
       "name": "POCTEP (Interreg VI-A Espanha-Portugal)",
-      "priority": "high",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://www.poctep.eu/convocatorias-abiertas-poctep-2021-2027/",
@@ -280,7 +280,7 @@
     {
       "id": "interreg-atlantic",
       "name": "Interreg Atlantic Area",
-      "priority": "high",
+      "priority": "low",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://www.atlanticarea.eu/for-applicants/call-for-projects",
@@ -370,7 +370,7 @@
     {
       "id": "eic-accelerator",
       "name": "European Innovation Council (EIC)",
-      "priority": "high",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://eic.ec.europa.eu/eic-funding-opportunities_en",

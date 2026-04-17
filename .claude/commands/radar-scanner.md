@@ -1,4 +1,4 @@
-# Radar Scanner v4.0: Descoberta de Novos Instrumentos
+# Radar Scanner v4.1: Descoberta de Novos Instrumentos
 
 REGRA CRITICA: Nunca usar travessao (—) em nenhum texto gerado. Usar virgula, ponto, hifen (-) ou reescrever a frase.
 
@@ -52,7 +52,7 @@ Read $REPO/sources-scan.json
 
 ## PASSO 1: Selecionar fontes a verificar
 
-Verificar no maximo **5 fontes por execucao**: **4 slots para regime "aviso" + 1 slot para regime "catalogo"**.
+Verificar no maximo **6 fontes por execucao**: **5 slots para regime "aviso" + 1 slot para regime "catalogo"**.
 
 **REGRA CRITICA: Nunca filtrar por tipo de beneficiario.** Todos os avisos abertos devem ser descobertos, independentemente de serem para entidades publicas, privadas, mistas, ou qualquer outro tipo. A decisao editorial e do writer, nao do scanner.
 
@@ -60,22 +60,24 @@ Verificar no maximo **5 fontes por execucao**: **4 slots para regime "aviso" + 1
 
 ---
 
-### Regime "aviso" (4 slots) — fontes que produzem avisos com deadline formal
+### Regime "aviso" (5 slots) — fontes que produzem avisos com deadline formal
 
 Sao as fontes PT2030, Interreg, EU, ANI, AICEP, FCT, IEFP, PRR, Horizonte Europa e equivalentes. Campo `regime: "aviso"` em sources-scan.json.
 
-**Os 4 slots aviso sao divididos em dois grupos com regras independentes:**
+**Os 5 slots aviso sao divididos em dois grupos com regras independentes:**
 
-#### Slots 1-3: HIGH priority
+#### Slots 1-4: HIGH priority
 
 Selecionar por esta ordem:
-1. Fontes "high" NUNCA verificadas (prioridade absoluta, ate 3)
+1. Fontes "high" NUNCA verificadas (prioridade absoluta, ate 4)
 2. Fontes "high" nao verificadas ha mais de 3 dias (ordenar por mais antiga primeiro)
-3. Se menos de 3 candidatos: completar com fontes "high" mais antigas (mesmo dentro dos 3 dias)
+3. Se menos de 4 candidatos: completar com fontes "high" mais antigas (mesmo dentro dos 3 dias)
 
-**Ignorar completamente** fontes medium e low nestes 3 slots.
+**Ignorar completamente** fontes medium e low nestes 4 slots.
 
-#### Slot 4: MEDIUM/LOW garantido
+**Justificacao v4.1:** O 4o slot high adicional (passou de 3 para 4) serve a realidade de portais PT2030 e EU terem sempre atualizacoes - os slots ficam sempre preenchidos com fontes relevantes. Com ~12 fontes high activas, o ritmo de cobertura e de 3 dias (4 fontes/run x N runs).
+
+#### Slot 5: MEDIUM/LOW garantido
 
 Este slot e exclusivo para fontes de prioridade medium ou low. Nunca e preenchido por uma fonte high. Isto garante que medium/low rodam mesmo quando ha muitas high atrasadas.
 
@@ -95,7 +97,7 @@ Consultar `registry/index.json > source_last_checked` para a data de ultima veri
 
 ---
 
-### Regime "catalogo" (1 slot) — fontes de referencia, candidatura continua ou periodicidade irregular
+### Regime "catalogo" (1 slot, slot 6) — fontes de referencia, candidatura continua ou periodicidade irregular
 
 Sao as fontes de bancos, VC, premios, aceleradores e startups. Campo `regime: "catalogo"` em sources-scan.json.
 
@@ -458,44 +460,56 @@ Operacoes de overflow (se houver):
 
 ### 6a. SANITY CHECK DE CONTAGEM (OBRIGATORIO antes do commit)
 
-Antes de qualquer `git add`, validar que as contagens batem certo. Uma discrepancia indica bug interno (items adicionados silenciosamente, migracao inesperada do overflow, dedup falhado).
+Antes de qualquer `git add`, validar que as contagens batem certo. Uma discrepancia indica bug interno (items adicionados silenciosamente, migracao inesperada do overflow, dedup falhado, ou contadores legados desatualizados).
 
-**Calcular as esperancas:**
+**TESTE 1 - Delta esperado (bug da run atual):**
+
 ```
 expected_queue_delta = novos_aviso - movidos_para_overflow + movidos_do_overflow
 expected_queue_catalogo_delta = novos_catalogo
 expected_overflow_delta = movidos_para_overflow - movidos_do_overflow
-expected_in_queue = queue_antes + expected_queue_delta
 ```
 
-**Verificar os valores reais:**
+Verificar:
+- `queue.json.queue.length == queue_antes + expected_queue_delta` ?
+- `queue-catalogo.json.queue.length == queue_catalogo_antes + expected_queue_catalogo_delta` ?
+- `queue-overflow.json.queue.length == overflow_antes + expected_overflow_delta` ?
+
+Se qualquer falhar: **ABORTAR RUN**. Investigar item/operacao extra, corrigir, ou reverter.
+
+**TESTE 2 - Invariantes absolutos (protege contra drift historico):**
+
+Os contadores em `index.json` devem SEMPRE bater com o tamanho real dos ficheiros, independentemente do que aconteceu na run. Se detectar discrepancia: auto-corrigir com log.
+
+Verificar:
+- `index.totals.in_queue == queue.json.queue.length` ?
+- `index.totals.in_overflow == queue-overflow.json.queue.length` ?
+- `index.totals.in_catalogo == queue-catalogo.json.queue.length` ?
+- `index.totals.in_plano_anual == queue-plano-anual.json.queue.length` ? (se campo existir)
+
+Se alguma falhar: **NAO abortar, auto-corrigir** e emitir WARNING no relatorio:
 ```
-actual_queue_depois = queue.json.queue.length
-actual_queue_catalogo_depois = queue-catalogo.json.queue.length
-actual_overflow_depois = queue-overflow.json.queue.length
-actual_in_queue = index.json.totals.in_queue
+SANITY WARNING: in_queue was [X], corrected to [Y] (drift: [Y-X]).
+Causa provavel: contador nao foi recalculado em run anterior.
 ```
 
-**Comparar:**
-- `actual_queue_depois == queue_antes + expected_queue_delta` ?
-- `actual_queue_catalogo_depois == queue_catalogo_antes + expected_queue_catalogo_delta` ?
-- `actual_overflow_depois == overflow_antes + expected_overflow_delta` ?
-- `actual_in_queue == actual_queue_depois` (index.json deve reflectir queue.json) ?
+Esta auto-correccao e segura porque os ficheiros queue*.json sao a fonte de verdade; index.json e apenas cache.
 
-**Se QUALQUER uma falhar:**
-1. **NAO fazer commit.**
-2. Imprimir discrepancia completa:
-   ```
-   SANITY CHECK FAIL:
-     queue.json esperado: [X], actual: [Y], diff: [Y-X]
-     index.in_queue esperado: [X], actual: [Y], diff: [Y-X]
-   ```
-3. Investigar qual foi o item/operacao extra ou em falta.
-4. Corrigir antes de commit, ou reverter mudancas e abortar a run.
+**TESTE 3 - Coerencia lookup vs ficheiros:**
 
-**Se todas passarem:** prosseguir para 6b.
+Verificar:
+- Cada item em queue.json tem entrada em lookup.by_id e lookup.by_aviso_codigo (se aviso_codigo)?
+- Cada item em queue-overflow.json tem entrada em lookup?
+- Cada item em queue-catalogo.json tem entrada em lookup?
 
-Este sanity check existe porque em runs anteriores foram reportados "3 novos" quando `in_queue` subiu 7 - indicando que 4 items entraram sem ser explicitamente contabilizados. Este teste deteta isso antes do push.
+Se faltar: adicionar ao lookup com log:
+```
+SANITY WARNING: [id] em queue.json mas ausente de lookup.by_id. Adicionado.
+```
+
+**Se TODOS os testes passam (ou foram auto-corrigidos):** prosseguir para 6b com relatorio dos warnings emitidos.
+
+Este sanity check existe porque em runs anteriores foram reportados "3 novos" quando `in_queue` subiu 7 (TESTE 1), e mais recentemente (2026-04-17) foi detectado que `in_queue=94` enquanto queue.json tinha 37 items (TESTE 2) - um drift legado que o TESTE 1 nao apanha.
 
 ### 6b. Commit e push
 
@@ -513,7 +527,7 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
 
 1. **Nunca duplicar items.** Usar lookup.json para dedup O(1).
 2. **Nunca filtrar por beneficiario.** Todos os tipos de organizacoes sao incluidos.
-3. **Nunca exceder 5 fontes por execucao.**
+3. **Nunca exceder 6 fontes por execucao.**
 4. **Nunca modificar artigos HTML ou shards de publicados.** So modifica queue e lookup.
 5. **Se WebFetch/Chrome falhar:** registar o erro e continuar para a proxima fonte.
 
@@ -523,10 +537,10 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
 
 ```
 1. Ler index.json + queue.json + queue-catalogo.json + lookup.json + sources-scan.json
-2. Selecionar ate 5 fontes:
-   - Slots 1-3: high nunca-verificadas > high >3d > high mais antigas (so high)
-   - Slot 4: medium/low nunca-verificadas > medium >7d > low >14d (nunca high, pode ficar vazio)
-   - Slot 5: catalogo nunca-verificadas > catalogo >90d > se vazio: medium/low aviso mais antiga
+2. Selecionar ate 6 fontes:
+   - Slots 1-4: high nunca-verificadas > high >3d > high mais antigas (so high)
+   - Slot 5: medium/low nunca-verificadas > medium >7d > low >14d (nunca high, pode ficar vazio)
+   - Slot 6: catalogo nunca-verificadas > catalogo >90d > se vazio: medium/low aviso mais antiga
 3. Para cada fonte:
    - Aceder (se webfetch: tentar 3 URLs antes de declarar "0 novos")
    - Extrair items, aplicar filtros, deduplicar
