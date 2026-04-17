@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundos SIFIDE II 2026: investir em I&D e deduzir ao IRC | Open Capital</title>
+  <meta name="description" content="Fundos SIFIDE II certificados pela ANI: investir em venture capital de I&D e deduzir a coleta IRC ate taxas majoradas. Lista anual, fundos certificados e mecanica fiscal.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:620px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.status-open{color:#7AB87A;font-weight:600;}
+    .meta-value.status-cont{color:#2E7D52;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table th{background:var(--navy);color:var(--white);text-align:left;padding:14px 16px;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);vertical-align:top;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table tbody tr:hover{background:#FAFAFA;}
+    .calculo-box{background:#FAFAFA;border:1px solid var(--grey-light);border-left:3px solid var(--navy);padding:28px 32px;margin:28px 0;}
+    .calculo-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--navy);margin-bottom:18px;}
+    .calculo-row{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .calculo-desc{font-size:15px;font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .calculo-val{font-size:16px;font-weight:500;color:var(--navy);white-space:nowrap;}
+    .calculo-total{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:14px 0 0;margin-top:8px;border-top:2px solid var(--navy);}
+    .calculo-total-desc{font-size:14px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--navy);}
+    .calculo-total-val{font-size:22px;font-weight:700;color:var(--gold);white-space:nowrap;}
+    .art-divider{height:1px;background:linear-gradient(to right,transparent,var(--gold) 40%,transparent);margin:56px 0;}
+    .steps-list{counter-reset:stepnum;list-style:none;padding:0;margin:28px 0;display:flex;flex-direction:column;gap:20px;}
+    .steps-list li{counter-increment:stepnum;position:relative;padding:22px 24px 22px 78px;background:#FAFAFA;border-left:2px solid var(--gold);font-size:16px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .steps-list li::before{content:counter(stepnum,decimal-leading-zero);position:absolute;left:24px;top:22px;font-size:20px;font-weight:700;color:var(--gold);letter-spacing:0.04em;}
+    .steps-list li strong{color:var(--navy);font-weight:600;display:block;margin-bottom:4px;}
+    .fund-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .fund-cell{background:var(--white);padding:20px 22px;}
+    .fund-cell-name{font-size:15px;font-weight:600;color:var(--navy);letter-spacing:0.02em;margin-bottom:4px;}
+    .fund-cell-focus{font-size:13px;font-weight:300;color:var(--grey-mid);line-height:1.5;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}.fund-grid{grid-template-columns:1fr;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}.calculo-box{padding:22px;}.art-table{font-size:13px;}.art-table th,.art-table td{padding:10px 10px;}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../biblioteca.html" class="active">Solucoes</a></li>
+    <li><a href="../conhecimento.html">Conhecimento</a></li>
+    <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos.html">Sobre Nos</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros.html">Parceiros</a>
+        <a href="../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/tech2business" class="nav-cta" target="_blank">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../biblioteca.html">Solucoes</a>
+  <a href="../conhecimento.html">Conhecimento</a>
+  <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos.html">Sobre Nos</a>
+  <a href="../parceiros.html">Parceiros</a>
+  <a href="../carreiras.html">Carreiras</a>
+  <a href="https://calendly.com/tech2business" class="nav-mobile-cta" target="_blank">Contactar</a>
+</div>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../index.html">Inicio</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../biblioteca.html">Solucoes</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Fundos SIFIDE II 2026</span>
+    </nav>
+    <p class="hero-cat">Fiscal &amp; Investimento Privado</p>
+    <h1 class="hero-title">Fundos SIFIDE II 2026</h1>
+    <p class="hero-tagline">Investir em venture capital certificado pela ANI e deduzir a coleta de IRC a taxa base de 32,5%. Uma forma legal de transformar tesouraria ociosa em posicao de capital, com beneficio fiscal imediato.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Beneficio base</span>
+        <span class="meta-value">32,5% deducao a coleta IRC</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Holding minimo</span>
+        <span class="meta-value">5 anos</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Entidade certificadora</span>
+        <span class="meta-value">ANI</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Candidatura fiscal</span>
+        <span class="meta-value status-open">Ate 31 mai 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../biblioteca.html" class="back-link">&larr; Voltar ao catalogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O Instrumento</div>
+      <h2 class="section-h2">O que sao Fundos SIFIDE II</h2>
+      <p class="section-text">Os Fundos SIFIDE II sao fundos de investimento em recursos proprios, certificados pela Agencia Nacional de Inovacao (ANI), cujo objeto e financiar empresas dedicadas sobretudo a investigacao e desenvolvimento. O enquadramento legal esta no artigo 37.o, n.o 1, alinea f) do Codigo Fiscal do Investimento (CFI), que equipara o investimento nestes fundos a uma despesa elegivel de I&amp;D para efeitos do SIFIDE II.</p>
+      <p class="section-text">A mecanica e simples na sua logica e poderosa no seu efeito. Uma empresa sujeita passiva de IRC aplica capital em unidades de participacao de um fundo certificado. Esse investimento e reconhecido pela ANI como despesa de I&amp;D para calculo do SIFIDE II. A empresa mantem a titularidade da participacao, continua a beneficiar da valorizacao economica do fundo, e ao mesmo tempo deduz a coleta do IRC a taxa SIFIDE aplicavel ao seu perfil.</p>
+      <p class="section-text">Na pratica, a empresa investe e paga menos IRC no exercicio em que subscreve. Nao e um subsidio, nao e um donativo, nao e uma perda. E uma reclassificacao fiscal de uma alocacao de capital que continua no balanco da empresa, com regras de permanencia minima e liquidez condicionada as caracteristicas do fundo subjacente.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Como funciona</div>
+      <h2 class="section-h2">O duplo beneficio: deducao fiscal + retencao de capital</h2>
+      <p class="section-text">Ao contrario da despesa corrente de I&amp;D, onde o capital investido e consumido em salarios, equipamento ou materiais, o investimento num fundo SIFIDE mantem o valor economico na esfera da empresa. A empresa continua a deter uma participacao que pode valorizar ao longo do tempo, enquanto ja deduziu ao IRC uma fracao significativa do valor investido.</p>
+
+      <div class="stats-row reveal" style="grid-template-columns:repeat(3,1fr);">
+        <div class="stat-cell">
+          <div class="stat-num">32,5<sup>%</sup></div>
+          <div class="stat-label">Taxa base de deducao a coleta IRC</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">47,5<sup>%</sup></div>
+          <div class="stat-label">Taxa majorada PME em primeira candidatura</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Anos minimos de detencao da participacao</div>
+        </div>
+      </div>
+
+      <p class="section-text">A base do beneficio e a taxa SIFIDE II normal. Quem conhece o regime sabe que a taxa base de deducao a coleta IRC sobre despesas elegiveis de I&amp;D e de 32,5%. Para PMEs em primeira candidatura, ha um suplemento de 15% que leva a taxa para 47,5%. Existe ainda uma taxa incremental de 50% sobre o acrescimo face a media dos dois exercicios anteriores, com limite de 1,5 milhoes de euros. Esses mesmos mecanismos aplicam-se ao investimento no fundo.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-box-title">O que distingue o investimento em fundo da despesa corrente</div>
+        <div class="highlight-box-text">Numa despesa corrente de I&amp;D a empresa paga ordenados, consome materiais ou contrata servicos. O dinheiro sai e nao volta. No investimento em fundo SIFIDE, a empresa subscreve uma unidade de participacao. O capital continua no balanco como ativo financeiro, com potencial de retorno, e simultaneamente gera deducao fiscal. E por isso que o instrumento e muitas vezes descrito como a forma mais eficiente de combinar beneficio fiscal com exposicao a inovacao.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Exemplo pratico</div>
+      <h2 class="section-h2">Quanto poupa uma empresa ao investir num fundo SIFIDE</h2>
+      <p class="section-text">Considere uma PME sujeita passiva de IRC, com coleta positiva e sem historico de SIFIDE, que decide aplicar 200.000 euros num fundo SIFIDE II certificado pela ANI durante o exercicio fiscal de 2026.</p>
+
+      <div class="calculo-box">
+        <div class="calculo-title">Simulacao: PME em primeira candidatura, 200.000 EUR investidos</div>
+        <div class="calculo-row">
+          <span class="calculo-desc">Valor investido no fundo SIFIDE II certificado</span>
+          <span class="calculo-val">200.000 EUR</span>
+        </div>
+        <div class="calculo-row">
+          <span class="calculo-desc">Taxa majorada PME (32,5% base + 15% suplemento 1.a candidatura)</span>
+          <span class="calculo-val">47,5%</span>
+        </div>
+        <div class="calculo-row">
+          <span class="calculo-desc">Deducao a coleta IRC (47,5% x 200.000)</span>
+          <span class="calculo-val">95.000 EUR</span>
+        </div>
+        <div class="calculo-row">
+          <span class="calculo-desc">Participacao retida no balanco (ativo financeiro)</span>
+          <span class="calculo-val">200.000 EUR</span>
+        </div>
+        <div class="calculo-total">
+          <span class="calculo-total-desc">Custo liquido efetivo do investimento</span>
+          <span class="calculo-total-val">105.000 EUR</span>
+        </div>
+      </div>
+
+      <p class="section-text">Neste cenario, a empresa mobiliza 200.000 euros de tesouraria, reduz o IRC a pagar em 95.000 euros e mantem uma participacao de 200.000 euros num fundo especializado em I&amp;D. O custo economico efetivo do investimento e de 105.000 euros, contra uma exposicao de 200.000 euros em unidades de participacao cujo valor pode valorizar ao longo do tempo.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-box-title">Se a coleta nao absorver a deducao</div>
+        <div class="highlight-box-text">Caso o valor apurado exceda a coleta de IRC do exercicio, o excesso nao se perde. O saldo transita para os 8 exercicios fiscais seguintes, podendo ser utilizado em qualquer ano em que a empresa apresente coleta positiva. Para empresas com rentabilidade volatil, este mecanismo garante que o beneficio e integralmente recuperavel desde que exista coleta nos 8 anos seguintes.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O processo</div>
+      <h2 class="section-h2">Como a empresa subscreve e candidata</h2>
+      <ol class="steps-list">
+        <li><strong>Seleccao do fundo certificado</strong>A empresa escolhe um fundo com certificacao SIFIDE II em vigor, validada pela ANI. A lista de fundos certificados e atualizada anualmente pela ANI e publicada no portal oficial sifide.ani.pt. Nem todos os fundos VC portugueses sao SIFIDE: so os que solicitam e obtem a certificacao especifica da ANI.</li>
+        <li><strong>Subscricao durante o exercicio fiscal</strong>A subscricao deve ser realizada e o capital efetivamente desembolsado dentro do exercicio fiscal a que respeita a candidatura SIFIDE. Subscricoes realizadas apos 31 de dezembro nao sao elegiveis para o exercicio que acabou de fechar.</li>
+        <li><strong>Declaracao SIFIDE II na plataforma ANI</strong>A empresa submete a candidatura SIFIDE II, incluindo o investimento no fundo como despesa elegivel. O prazo e 31 de maio do ano seguinte ao exercicio fiscal: candidaturas relativas a 2026 devem ser submetidas ate 31 de maio de 2027. Documento principal: comprovativo de subscricao e pagamento das unidades de participacao.</li>
+        <li><strong>Compromisso de permanencia minima</strong>A empresa compromete-se a manter a participacao por um periodo minimo de 5 anos. A alienacao antecipada implica reversao do beneficio fiscal e pode gerar contingencia fiscal relevante. O compromisso e formal e verificavel pela ANI e pela AT.</li>
+        <li><strong>Aplicacao da deducao no apuramento do IRC</strong>A deducao opera no campo 355 do quadro 10 da Modelo 22. Gerir com a contabilidade a articulacao com outras deducoes a coleta, nomeadamente RFAI, DLRR e outros beneficios fiscais, para maximizar o uso anual.</li>
+      </ol>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Quem certifica</div>
+      <h2 class="section-h2">O papel da ANI e a lista anual de fundos</h2>
+      <p class="section-text">A ANI, Agencia Nacional de Inovacao, e a entidade publica responsavel pela certificacao dos fundos SIFIDE II. A sua funcao nao e comercial nem de intermediacao. E uma funcao tecnica de verificacao: atesta que o fundo cumpre os requisitos para que o investimento nele possa ser reconhecido como despesa de I&amp;D pelas empresas investidoras.</p>
+      <p class="section-text">O processo de certificacao envolve escrutinio do regulamento de gestao do fundo, da tese de investimento, dos criterios de selecao das empresas participadas e da estrutura contratual que liga o fundo aos seus investidores. A ANI publica e atualiza periodicamente a lista de fundos certificados, com indicacao do ambito, entidade gestora e data de validade da certificacao.</p>
+      <p class="section-text">Para as empresas que querem usar SIFIDE via fundo, a primeira etapa obrigatoria e verificar a lista oficial em sifide.ani.pt ou atraves de pedido direto a ANI. Investir num fundo VC portugues que nao esta na lista nao gera o beneficio fiscal, independentemente da qualidade do fundo ou do perfil dos seus investimentos.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-box-title">Atencao: certificacao tem prazo</div>
+        <div class="highlight-box-text">A certificacao SIFIDE de um fundo nao e vitalicia. Tem um prazo de validade que precisa de ser renovado. Alguns fundos tem certificacao continua, outros tem certificacao por periodos especificos (tipicamente coincidentes com a sua fase de captacao ativa). Antes de subscrever, validar sempre que a certificacao esta em vigor na data exata da subscricao.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Universo dos fundos</div>
+      <h2 class="section-h2">Fundos SIFIDE II em atividade no mercado portugues</h2>
+      <p class="section-text">A lista oficial e publicada pela ANI e varia de ano para ano, com entradas e saidas consoante as certificacoes sao obtidas, renovadas ou expiradas. O conjunto de gestoras com fundos certificados em Portugal inclui players relevantes em venture capital, growth e deep tech. Apresenta-se abaixo um universo indicativo, nao exaustivo, de gestoras com presenca no regime SIFIDE em anos recentes:</p>
+
+      <div class="fund-grid">
+        <div class="fund-cell">
+          <div class="fund-cell-name">Portugal Ventures</div>
+          <div class="fund-cell-focus">Fundo publico, gerido pela IFD. Venture capital em fase inicial, foco em tecnologia e ciencia aplicada.</div>
+        </div>
+        <div class="fund-cell">
+          <div class="fund-cell-name">Bright Pixel Capital</div>
+          <div class="fund-cell-focus">Ex-Sonae IM. Early-stage tech, com foco em cibersseguranca, enterprise software e marketplaces.</div>
+        </div>
+        <div class="fund-cell">
+          <div class="fund-cell-name">Faber Ventures</div>
+          <div class="fund-cell-focus">Applied Science e Climate Tech. Fundos SIFIDE certificados incluem o Faber Applied Science Fund.</div>
+        </div>
+        <div class="fund-cell">
+          <div class="fund-cell-name">Bynd Venture Capital</div>
+          <div class="fund-cell-focus">Pre-seed e seed. Tickets iniciais entre 100K e 750K EUR, foco em SaaS e tech iberico.</div>
+        </div>
+        <div class="fund-cell">
+          <div class="fund-cell-name">Indico Capital Partners</div>
+          <div class="fund-cell-focus">Venture capital portugues, seed a series A. Portfolio com Unbabel, Sword Health, DefinedCrowd.</div>
+        </div>
+        <div class="fund-cell">
+          <div class="fund-cell-name">Armilar Venture Partners</div>
+          <div class="fund-cell-focus">Um dos mais antigos VCs portugueses. Varios fundos em gestao, foco tech e deep tech.</div>
+        </div>
+        <div class="fund-cell">
+          <div class="fund-cell-name">200M Capital</div>
+          <div class="fund-cell-focus">Deep tech e life sciences. Tickets medios a altos, foco em empresas com base cientifica forte.</div>
+        </div>
+        <div class="fund-cell">
+          <div class="fund-cell-name">Semapa Next</div>
+          <div class="fund-cell-focus">CVC do grupo Semapa. Tech, industria 4.0 e sustentabilidade.</div>
+        </div>
+        <div class="fund-cell">
+          <div class="fund-cell-name">MAZE Impact</div>
+          <div class="fund-cell-focus">Impact VC. Startups com mensuracao de impacto social e ambiental, foco iberico e europeu.</div>
+        </div>
+        <div class="fund-cell">
+          <div class="fund-cell-name">Iberis Capital</div>
+          <div class="fund-cell-focus">Growth equity e private equity. Tickets elevados para empresas com escala e rentabilidade.</div>
+        </div>
+        <div class="fund-cell">
+          <div class="fund-cell-name">Shilling Capital Partners</div>
+          <div class="fund-cell-focus">Seed e series A, investimento em fundadores portugueses e ibericos.</div>
+        </div>
+        <div class="fund-cell">
+          <div class="fund-cell-name">Pathena Ventures</div>
+          <div class="fund-cell-focus">VC focado em tech e servicos B2B em fase de escala.</div>
+        </div>
+      </div>
+
+      <p class="section-text">A lista real, completa e atualizada, esta disponivel no site da ANI. A presenca de uma gestora nesta seleccao indicativa nao garante certificacao atual dos seus fundos, e a ausencia nao implica que nao exista certificacao. A validacao caso a caso junto da ANI e parte obrigatoria do processo.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Requisitos</div>
+      <h2 class="section-h2">Quem pode investir</h2>
+      <p class="section-text">Podem subscrever Fundos SIFIDE II todas as empresas sujeitas passivas de IRC, residentes em Portugal continental ou nas regioes autonomas dos Acores e Madeira, que cumpram os requisitos gerais do regime SIFIDE II.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Sujeitos passivos de IRC</strong> residentes em territorio nacional, com atividade agricola, industrial, comercial ou de servicos</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Sem dividas fiscais</strong> a Autoridade Tributaria nem a Seguranca Social na data da candidatura SIFIDE</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Coleta positiva de IRC</strong> recomendavel no exercicio de investimento, embora a transicao de saldos para os 8 anos seguintes permita absorver deducoes mesmo com coletas menores no ano inicial</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Capacidade de imobilizar capital</strong> por 5 anos, periodo minimo de permanencia no fundo para nao perder o beneficio fiscal</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Acordo com o regulamento de gestao</strong> do fundo, incluindo estrutura de fees, estrategia de investimento e governacao</li>
+      </ul>
+      <p class="section-text">Nao ha restricao setorial nem de dimensao. Uma start-up tech em crescimento, uma industria madura com tesouraria, uma holding familiar com excedentes operacionais: todas podem usar o instrumento. O que importa e a existencia de coleta IRC onde aplicar a deducao e a capacidade de comprometer o capital por cinco anos.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Comparacao</div>
+      <h2 class="section-h2">Fundo SIFIDE vs despesa direta de I&amp;D</h2>
+      <p class="section-text">Para empresas sem equipa propria de investigacao, o fundo SIFIDE e frequentemente a forma mais eficiente de ativar o beneficio. Compara-se:</p>
+
+      <table class="art-table">
+        <thead>
+          <tr>
+            <th>Dimensao</th>
+            <th>I&amp;D corrente na empresa</th>
+            <th>Investimento em fundo SIFIDE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Destino do capital</strong></td>
+            <td>Consumido em salarios, equipamento, materiais</td>
+            <td>Permanece no balanco como ativo financeiro</td>
+          </tr>
+          <tr>
+            <td><strong>Valor residual</strong></td>
+            <td>Propriedade intelectual, know-how, protótipos</td>
+            <td>Unidade de participacao com valor de mercado</td>
+          </tr>
+          <tr>
+            <td><strong>Requisito operacional</strong></td>
+            <td>Contabilidade analitica por projeto desde o inicio do exercicio</td>
+            <td>Comprovativo de subscricao e certificacao do fundo</td>
+          </tr>
+          <tr>
+            <td><strong>Risco tecnico</strong></td>
+            <td>Depende do sucesso dos projetos internos</td>
+            <td>Diluido no portfolio do fundo, gerido por equipa especializada</td>
+          </tr>
+          <tr>
+            <td><strong>Liquidez</strong></td>
+            <td>Nao aplicavel (despesa consumida)</td>
+            <td>Condicionada ao ciclo do fundo (5 a 10 anos tipicamente)</td>
+          </tr>
+          <tr>
+            <td><strong>Taxa de deducao</strong></td>
+            <td>32,5% a 47,5% sobre despesa elegivel</td>
+            <td>32,5% a 47,5% sobre valor subscrito</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="section-text">O instrumento nao substitui a I&amp;D interna para empresas que a praticam de forma estruturada. Para essas, o SIFIDE corrente e insubstituivel. Mas para empresas com tesouraria excedentaria e sem capacidade operacional de I&amp;D proprio, o fundo SIFIDE abre uma via de exposicao a inovacao com logica fiscal eficiente e preservacao de capital.</p>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Riscos e limites</div>
+      <h2 class="section-h2">O que ponderar antes de subscrever</h2>
+      <p class="section-text">O instrumento tem logica fiscal favoravel, mas o investimento subjacente e ainda venture capital ou private equity. Os riscos nao desaparecem por existir beneficio fiscal: transferem-se para o plano economico do fundo.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Risco de capital:</strong> um fundo VC pode perder valor. O beneficio fiscal recupera parte da exposicao, mas nao anula o risco de o valor liquido final ser inferior ao investido</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Iliquidez:</strong> as unidades de participacao sao tipicamente iliquidas durante o ciclo de vida do fundo. A saida antecipada nao so e dificil como faz perder o beneficio fiscal</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Risco de certificacao:</strong> se a certificacao SIFIDE do fundo for retirada ou nao renovada durante o periodo de detencao, o beneficio fiscal pode ser questionado pela AT</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Fees de gestao:</strong> os fundos VC tem custos de gestao anuais (tipicamente 1,5% a 2,5%) que erodem o retorno economico ao longo do tempo</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Horizonte temporal:</strong> fundos VC operam em horizontes de 7 a 10 anos. A empresa tem de aceitar essa imobilizacao de capital com conforto</li>
+      </ul>
+      <p class="section-text">Para empresas com excedentes de tesouraria estrutural e horizonte longo, o instrumento e atrativo. Para empresas com necessidades de liquidez previsiveis nos proximos anos, a subscricao pode nao ser apropriada, independentemente do beneficio fiscal.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">Os Fundos SIFIDE II sao um dos instrumentos mais subutilizados pelo tecido empresarial portugues, tipicamente por tres razoes: falta de conhecimento formal da figura, confusao com a despesa corrente de I&amp;D, e relutancia em investir em venture capital por parte de empresas nao familiarizadas com a classe de ativo.</p>
+      <p class="section-text">A nossa leitura estrategica e que o instrumento e especialmente relevante em tres perfis. O primeiro sao empresas industriais ou de servicos com tesouraria estrutural positiva e sem I&amp;D interno significativo: o fundo SIFIDE permite-lhes capturar beneficio fiscal sem alterar o modelo operacional. O segundo sao holdings familiares com horizonte longo e apetite moderado por risco: o regime fiscal alinha-se com o perfil multigeracional deste capital. O terceiro sao empresas tecnologicas com SIFIDE corrente proprio que querem combinar a deducao sobre I&amp;D interna com exposicao a ecossistemas de inovacao adjacentes aos seus.</p>
+      <p class="section-text">A escolha do fundo especifico nao e trivial. A tese de investimento, o track record da equipa gestora, a estrutura de fees, a geografia do portfolio e o alinhamento com o horizonte da empresa investidora sao todos fatores relevantes. O beneficio fiscal uniformiza a entrada, mas a diferenca entre um fundo e outro pode ser significativa em valor economico final ao fim de 10 anos.</p>
+      <p class="section-text">Para empresas a considerar Fundos SIFIDE II pela primeira vez, recomendamos uma analise conjunta do perfil fiscal da empresa, do perfil de liquidez requerido, da tese dos fundos certificados disponiveis e da articulacao com outros beneficios fiscais (RFAI, DLRR, SIFIDE corrente). A decisao deve ser economica antes de fiscal: subscrever um mau fundo por incentivo fiscal e pior decisao do que nao usar o regime.</p>
+    </div>
+
+    <p class="section-text" style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre instrumentos fiscais, capital de risco e estrategia financeira empresarial.</p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../Retratos Equipa/retrato_andrecarvalho.png" alt="Andre Carvalho" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Andre Carvalho</div>
+          <div class="sidebar-author-role">Tecnico de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rapidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Regime fiscal</div>
+        <div class="sidebar-fact-val">Deducao a coleta IRC</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Taxa base</div>
+        <div class="sidebar-fact-val">32,5%</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Taxa PME 1.a vez</div>
+        <div class="sidebar-fact-val">47,5%</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Holding minimo</div>
+        <div class="sidebar-fact-val">5 anos</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Entidade certificadora</div>
+        <div class="sidebar-fact-val">ANI</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Base legal</div>
+        <div class="sidebar-fact-val">Art. 37.o CFI</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Prazo SIFIDE 2026</div>
+        <div class="sidebar-fact-val">31 mai 2027</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Plataforma</div>
+        <div class="sidebar-fact-val">sifide.ani.pt</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-open">Ativo</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">A sua empresa tem tesouraria e coleta IRC para aproveitar o regime de Fundos SIFIDE II? Avalie conosco que fundos certificados melhor se alinham com o seu perfil.</div>
+      <a href="https://calendly.com/tech2business" class="sidebar-cta-btn" target="_blank">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="sifide-ii-candidaturas-2025.html" class="related-link">
+        <span class="related-link-name">SIFIDE II (candidaturas)</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="faber-ventures-fundo-vc-pre-seed.html" class="related-link">
+        <span class="related-link-name">Faber Ventures</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="bynd-vc-busy-angels-pre-seed.html" class="related-link">
+        <span class="related-link-name">Bynd VC - Busy Angels</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="deep2start-ani-2025-01.html" class="related-link">
+        <span class="related-link-name">Deep2Start ANI</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <div class="f-col-label">Solucoes</div>
+      <ul class="f-links">
+        <li><a href="../biblioteca.html">Portugal 2030</a></li>
+        <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+        <li><a href="../biblioteca.html">Beneficios Fiscais</a></li>
+        <li><a href="../biblioteca.html">Premios de Inovacao</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Plataforma</div>
+      <ul class="f-links">
+        <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../conhecimento.html">Conhecimento</a></li>
+        <li><a href="../parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Empresa</div>
+      <ul class="f-links">
+        <li><a href="../sobre-nos.html">Sobre Nos</a></li>
+        <li><a href="../sobre-nos.html">Equipa</a></li>
+        <li><a href="../carreiras.html">Carreiras</a></li>
+        <li><a href="https://calendly.com/tech2business" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
