@@ -5,11 +5,11 @@
     "migrated_from_v3": "2026-04-12"
   },
   "totals": {
-    "published": 170,
-    "open": 146,
+    "published": 175,
+    "open": 151,
     "closed": 15,
     "planned": 9,
-    "in_queue": 45,
+    "in_queue": 40,
     "in_watchlist": 11
   },
   "shards": {
@@ -49,8 +49,8 @@
       "open": 4
     },
     "eu-horizon": {
-      "count": 26,
-      "open": 22,
+      "count": 31,
+      "open": 27,
       "closed": 3,
       "planned": 1
     },
@@ -87,7 +87,7 @@
   },
   "last_full_cycle": "2026-04-12",
   "last_monitor_run": "2026-04-16",
-  "last_writer_run": "2026-04-17T19:00:00",
+  "last_writer_run": "2026-04-17T23:00:00",
   "source_last_checked": {
     "portugal-2030": "2026-04-17",
     "compete-2030": "2026-04-16",
@@ -160,5 +160,5 @@
     "bynd-vc": "2026-04-16"
   },
   "last_scanner_run": "2026-04-17T22:00:00",
-  "last_updated": "2026-04-17T22:00:00"
+  "last_updated": "2026-04-17T23:00:00"
 }
