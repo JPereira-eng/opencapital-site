@@ -1,4 +1,4 @@
-# Radar Monitor v4.0: Verificacao de Estados e Integridade
+# Radar Monitor v4.1: Verificacao de Estados e Integridade
 
 REGRA CRITICA: Nunca usar travessao (—) em nenhum texto gerado. Usar virgula, ponto, hifen (-) ou reescrever a frase.
 
@@ -24,16 +24,20 @@ fi
 
 ---
 
-## FICHEIROS DE ESTADO (v4.0)
+## FICHEIROS DE ESTADO (v4.1)
 
-| Ficheiro | Quando ler |
+| Ficheiro | Quando ler/escrever |
 |---|---|
 | `registry/index.json` | Sempre (para decidir que shard verificar) |
 | `registry/shards/[shard].json` | 1-2 shards por run |
 | `registry/integrity.json` | Sempre (hashes de PDFs dos regulamentos) |
+| `registry/queue-plano-anual.json` | Sempre (watchlist de PAAs - Passo 2.6) |
+| `registry/queue.json` | Ler para promocao de PAAs que abriram |
 | `sources-scan.json` | Para access_method e regime das fontes |
 
 **NAO ler todos os shards.** Ler apenas o(s) shard(s) a verificar nesta run.
+
+**MUDANCA v4.1 (2026-04-17):** A watchlist de PAAs migrou de `lookup.json > plano_anual` para ficheiro dedicado `queue-plano-anual.json`. Capacidade duplicada (10 items/run vs 5).
 
 ---
 
@@ -171,27 +175,37 @@ Para cada item do shard com `regulation_local` apontando para PDF existente:
 
 ---
 
-## PASSO 2.6: Re-verificar watchlist (plano_anual)
+## PASSO 2.6: Re-verificar watchlist (queue-plano-anual.json)
 
-Ler `registry/lookup.json` seccao `plano_anual`. Contem items detectados como Plano Anual que podem ter aberto entretanto.
+**MUDANCA v4.1:** Ler `registry/queue-plano-anual.json` (nao `lookup.json`). Contem items detectados como Plano Anual pelo downloader que podem ter aberto entretanto.
 
-**Max 5 items por run.** Priorizar items cujo `aviso_codigo` sugere deadlines proximos.
+**Max 10 items por run** (duplicou vs v4.0, dado que agora existe ficheiro dedicado).
+
+**Ordem de selecao:**
+1. Items com `plano_anual_last_check` mais antigo (ou sem check ainda)
+2. Em caso de empate: items com `priority_score` mais alto
+3. Ignorar items ja verificados ha menos de 7 dias
 
 Para cada item na watchlist:
 1. Verificar na API da fonte se o aviso ja tem regulamento publicado
-2. Para fontes PT2030 com API WordPress: verificar se `acf.pdf` agora aponta para regulamento real
+2. Para fontes PT2030 com API WordPress: `GET https://[portal]/wp-json/wp/v2/aviso-2024?slug=[id]` e verificar se `acf.pdf` agora aponta para regulamento real. Descarregar PDF rapidamente (1-2 paginas) e correr TESTE A (PAA detection).
 3. Para outras fontes: WebFetch na URL e verificar se ha PDF de regulamento
 
-### Se o aviso abriu:
-1. Remover da seccao `plano_anual` do lookup.json
-2. Adicionar ao `queue.json` como `"status": "ready"` com campos completos
-3. Reportar: "Watchlist: [id] abriu - adicionado ao queue como ready"
+### Se o aviso abriu (PDF existe E passa TESTE A - nao e PAA):
+1. **Remover** item de `queue-plano-anual.json`
+2. **Adicionar** a `queue.json` com `"status": "pending"`, `"fail_count": 0`, limpar `download_error`
+3. O downloader ira processa-lo na proxima run normalmente
+4. Reportar: "Watchlist: [id] abriu - movido para queue.json como pending"
 
-### Se continua como plano anual: nao fazer nada.
+### Se continua como plano anual:
+1. Atualizar apenas `plano_anual_last_check: "[data]"` e incrementar `plano_anual_checks` no item
+2. Nao fazer mais nada
 
-### Se o aviso foi removido/cancelado:
-1. Remover da seccao `plano_anual` do lookup.json
-2. Manter no `by_id` e `by_aviso_codigo` (para dedup)
+### Se o aviso foi removido/cancelado (URL 404 + nao encontrado via WebSearch):
+1. Atualizar item com `plano_anual_last_check: "[data]"`, `plano_anual_status: "url_removed"`, incrementar `plano_anual_checks`
+2. **Apos 10 checks sem sucesso** (cerca de 10 semanas de verificacoes): mover item para `queue-plano-anual-archived.json` (criar se nao existir). Nao eliminar - preservar para auditoria.
+
+**Nota importante:** Nunca remover o item de `lookup.json` (seccoes `by_id` e `by_aviso_codigo`) mesmo se for arquivado. Isto garante que o scanner nao o re-detete.
 
 ---
 
@@ -261,10 +275,12 @@ Apos processar o shard:
 ## PASSO 5: Deploy
 
 ```bash
-git -C "$REPO" add registry/index.json registry/shards/[shard].json registry/integrity.json instruments-catalog.json registry/lookup.json registry/queue.json
+git -C "$REPO" add registry/index.json registry/shards/[shard].json registry/integrity.json instruments-catalog.json registry/lookup.json registry/queue.json registry/queue-plano-anual.json
+# Se foi criado ficheiro de arquivo:
+git -C "$REPO" add registry/queue-plano-anual-archived.json 2>/dev/null || true
 # Se artigos foram alterados (estado/prazo/dotacao):
 git -C "$REPO" add instrumentos/[slug1].html instrumentos/[slug2].html
-git -C "$REPO" commit -m "monitor: [shard] - [N verificados], [N alteracoes], [N needs_review], [N watchlist]"
+git -C "$REPO" commit -m "monitor: [shard] - [N verificados], [N alteracoes], [N needs_review], [N promovidos do plano_anual]"
 git -C "$REPO" push origin main
 ```
 
@@ -302,8 +318,11 @@ Regime "catalogo":
   4b. Se 404/410: needs_review
   4c. Se 301/302: actualizar regulation_url
 
-5. Re-verificar ate 5 items da watchlist plano_anual (lookup.json)
+5. Re-verificar ate 10 items da watchlist plano_anual (queue-plano-anual.json)
+   - Se PDF real disponivel: promover para queue.json como pending
+   - Se ainda PAA: incrementar plano_anual_checks, atualizar plano_anual_last_check
+   - Se 10+ checks falhados: arquivar em queue-plano-anual-archived.json
 6. Atualizar index.json + integrity.json
 7. git commit + push
-8. Reportar: "Monitor: [shard] - [N verificados], [N alteracoes], [N needs_review], [N watchlist]."
+8. Reportar: "Monitor: [shard] - [N verificados], [N alteracoes], [N needs_review], [N promovidos do plano_anual]."
 ```

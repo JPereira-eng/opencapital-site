@@ -1,4 +1,4 @@
-# Radar Downloader v4.0: Descarregar Regulamentos
+# Radar Downloader v4.1: Descarregar Regulamentos
 
 REGRA CRITICA: Nunca usar travessao (—) em nenhum texto gerado. Usar virgula, ponto, hifen (-) ou reescrever a frase.
 
@@ -24,13 +24,16 @@ fi
 
 ---
 
-## FICHEIROS DE ESTADO (v4.0)
+## FICHEIROS DE ESTADO (v4.1)
 
-| Ficheiro | Quando ler |
+| Ficheiro | Quando ler/escrever |
 |---|---|
-| `registry/queue.json` | Sempre (regime "aviso") |
+| `registry/queue.json` | Sempre (regime "aviso") - so contem items ready/pending/abandoned |
 | `registry/queue-catalogo.json` | Sempre (regime "catalogo") |
+| `registry/queue-plano-anual.json` | Escrever quando PAA detetado (watchlist) |
 | `sources-scan.json` | Para access_method e regime |
+
+**MUDANCA v4.1 (2026-04-17):** Items detetados como Plano Anual (PAA) ja nao ficam em queue.json com status "plano_anual". Sao MOVIDOS para `queue-plano-anual.json` (watchlist dedicada). Isto liberta espaco na queue para items realmente processaveis. O monitor le queue-plano-anual.json e devolve items a queue.json quando abrem.
 
 ---
 
@@ -40,10 +43,13 @@ Percorrer **ambas as filas**:
 - `registry/queue.json > queue` (items de regime "aviso")
 - `registry/queue-catalogo.json > queue` (items de regime "catalogo")
 
+**NAO ler `queue-plano-anual.json`.** Essa e a watchlist do monitor, nao do downloader.
+
 Para cada item, tracking de qual fila veio (campo interno `_queue_origin: "aviso" | "catalogo"`). Encontrar items onde:
 - `regulation_local` e `null`
-- `status` NAO e `"plano_anual"` (ja identificados como plano, ignorar)
+- `status` e `"pending"` ou nao definido (items com status "ready", "abandoned" sao ignorados)
 - `regulation_url` existe (catalogo pode nao ter `pdf_url`)
+- `fail_count` < 3 (items com 3+ falhas exigem fallback especial, ver Passo 1.6)
 
 Processar no maximo **10 downloads por execucao** (soma das duas filas).
 Priorizar por `priority_score` descendente, tratando ambas as filas como pool unico.
@@ -90,14 +96,30 @@ Verificar se a pagina contem QUALQUER um destes textos (case-insensitive):
 - "aviso que ira ser lancado" / "aviso que irá ser lançado"
 - "plano anual de avisos"
 
-**Se qualquer um destes textos for encontrado:**
-```json
-{ "status": "plano_anual", "download_error": "Plano Anual - nao e aviso publicado, apenas previsao" }
-```
-Atualizar a queue com este estado. Nao descarregar. Continuar para o proximo item.
-Nao contar como falha nem como sucesso.
+**Se qualquer um destes textos for encontrado:** MOVER item para `queue-plano-anual.json` (ver PASSO 3.5). Nao descarregar. Nao contar como falha nem como sucesso.
 
 **Se nenhum destes textos for encontrado:** continuar para Passo 2.
+
+---
+
+## PASSO 1.6: Fallback via WebSearch para items com 3+ falhas
+
+Items com `fail_count >= 3` ja falharam cascata normal. Antes de os marcar como `abandoned`, tentar **recuperacao de slug/URL via WebSearch**.
+
+Muitos 404s sao causados por mudancas no slug da URL (ex: "adaptacao-as-alteracoes-climaticas-2-aviso" -> "adaptacao-as-alteracoes-climaticas-2o-aviso"). Este passo recupera esses casos.
+
+**Logica:**
+
+1. Query: `"[aviso_codigo]" "[nome do item]" site:[dominio da fonte]`
+2. Se encontrar URL valido diferente do `regulation_url` atual:
+   - Atualizar `regulation_url` no item
+   - Resetar `fail_count` para 0
+   - Tentar novamente a cascata normal (Passo 2)
+3. Se nao encontrar nada de novo:
+   - Marcar `status: "abandoned"`, `download_error: "URL inacessivel apos 3+ tentativas e WebSearch fallback"`
+   - **Manter o item no queue.json** (nao apagar). O monitor podera re-verificar trimestralmente.
+
+**Items "abandoned" sao ignorados pelo downloader em runs futuras** (filtro no Passo 1). Isto evita loops infinitos em items mortos.
 
 ---
 
@@ -149,11 +171,11 @@ Se o item tem `wordpress_id` E regulamento ainda nao obtido:
 
    **TESTE A - Texto de plano anual (BLOQUEANTE):**
    Se contem "Plano Anual de Avisos", "Resumo de Aviso do Plano", "PAA2026", "PAA202", "Aviso a publicar em:"
-   → Apagar .txt e .pdf. Marcar `status: "plano_anual"`. PARAR item.
+   → Apagar .txt e .pdf. MOVER item para `queue-plano-anual.json` (ver PASSO 3.5). PARAR item.
 
    **TESTE B - Conteudo insuficiente (BLOQUEANTE):**
    Se < 800 palavras E nao contem "despesas elegiveis" E nao contem "criterios de selecao"
-   → Apagar .txt e .pdf. Marcar `status: "pending"`, `download_error: "Resumo sem regulamento completo"`. PARAR item.
+   → Apagar .txt e .pdf. Incrementar `fail_count`. Marcar `status: "pending"`, `download_error: "Resumo sem regulamento completo"`. PARAR item.
 
    **Se passou ambos:** continuar para Passo 2.5.
 
@@ -243,7 +265,7 @@ Se contem (case-insensitive) QUALQUER um destes:
 - "previsao aproximada" / "previsão aproximada"
 - "aviso que ira ser lancado" / "aviso que irá ser lançado"
 
-→ **Apagar .txt e .pdf. Marcar `status: "plano_anual"`, `regulation_local: null`, `download_error: "Plano Anual - conteudo PAA detectado no ficheiro"`. NAO ir para Passo 3. PARAR item.**
+→ **Apagar .txt e .pdf. MOVER item para `queue-plano-anual.json` (ver PASSO 3.5). NAO ir para Passo 3. PARAR item.**
 
 Este teste captura casos em que o downloader descarregou um "Resumo de Aviso do Plano Anual" em vez de aviso publicado. Sao documentos de previsao, nao regulamentos validos.
 
@@ -272,23 +294,57 @@ Se o curl ou WebFetch devolveu 404/403/500: marcar `status: "pending"`, `downloa
 Apos validacao bem-sucedida, atualizar o item:
 
 ```json
-{ "regulation_local": "regulamentos/[source_id]/[id].txt", "status": "ready" }
+{
+  "regulation_local": "regulamentos/[source_id]/[id].txt",
+  "status": "ready",
+  "fail_count": 0
+}
 ```
 
-**IMPORTANTE:** se o item veio de `queue.json` (regime aviso), actualizar em `queue.json`. Se veio de `queue-catalogo.json`, actualizar em `queue-catalogo.json`. Nunca mover items entre filas.
+**IMPORTANTE:** se o item veio de `queue.json` (regime aviso), actualizar em `queue.json`. Se veio de `queue-catalogo.json`, actualizar em `queue-catalogo.json`. Nunca mover items entre filas (excepcao: PAAs vao para queue-plano-anual.json via Passo 3.5).
 
 Se download falhar:
 ```json
-{ "download_error": "PDF 404 - tentativa em 2026-04-16", "status": "pending" }
+{
+  "download_error": "PDF 404 - tentativa em 2026-04-16",
+  "status": "pending",
+  "fail_count": [incrementar],
+  "last_fail_date": "2026-04-16"
+}
 ```
+
+**Se `fail_count` chegar a 3 apos este incremento:** o item fica elegivel para o Passo 1.6 (WebSearch fallback) na proxima run.
+
+---
+
+## PASSO 3.5: Mover PAA para watchlist (queue-plano-anual.json)
+
+Quando um item e identificado como Plano Anual (Passo 1.5, Teste A em 2b-pdf ou 2.5.A):
+
+1. **Remover** o item de `queue.json > queue` (pelo seu `id`)
+2. **Adicionar** o item a `queue-plano-anual.json > queue` com campos adicionais:
+   ```json
+   {
+     ...(campos originais),
+     "status": "plano_anual",
+     "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
+     "plano_anual_detected_date": "2026-04-17",
+     "plano_anual_checks": 1
+   }
+   ```
+3. **Nao adicionar** ao lookup.json seccao plano_anual (redundante). O campo `by_id` ja garante dedup.
+
+**Se o item ja existe em queue-plano-anual.json** (pode acontecer se o downloader reprocessa): incrementar `plano_anual_checks`, atualizar `plano_anual_last_check` com a data actual. Nao duplicar.
+
+O monitor lera este ficheiro para re-verificar se os PAAs abriram.
 
 ---
 
 ## PASSO 4: Deploy
 
 ```bash
-git -C "$REPO" add registry/queue.json registry/queue-catalogo.json regulamentos/
-git -C "$REPO" commit -m "downloader: [N] aviso + [N] catalogo regulamentos descarregados"
+git -C "$REPO" add registry/queue.json registry/queue-catalogo.json registry/queue-plano-anual.json regulamentos/
+git -C "$REPO" commit -m "downloader: [N] aviso + [N] catalogo ready, [N] PAAs watchlisted, [N] abandoned"
 git -C "$REPO" push origin main
 ```
 
@@ -310,20 +366,25 @@ git -C "$REPO" push origin main
 
 ```
 1. Ler queue.json (aviso) + queue-catalogo.json (catalogo)
-2. Encontrar items sem regulation_local (max 10 total, ignorar plano_anual)
+2. Encontrar items pending sem regulation_local (max 10 total, ignorar abandoned, fail_count>=3 vai ao Passo 1.6)
 3. Para cada, determinar regime pela fila de origem:
 
    Fluxo A (aviso): cascata PDF -> WebFetch -> WebSearch
-     PASSO 2.5.A (BLOQUEANTE): Teste A (PAA) - se falhar: plano_anual, PARAR
-     Teste B (tamanho) no 2b-pdf para PDFs PT2030
-     Se passou: status ready
+     PASSO 1.5 (PAA check): se PAA -> MOVER para queue-plano-anual.json (Passo 3.5), PARAR
+     PASSO 2.5.A (BLOQUEANTE): Teste A (PAA) - se falhar: MOVER para queue-plano-anual.json, PARAR
+     Teste B (tamanho) no 2b-pdf: incrementar fail_count, status pending
+     Se passou: status ready, fail_count=0
 
    Fluxo B (catalogo): cascata simplificada WebFetch/PDF -> WebSearch
      PASSO 2.5.B (LAX): Teste C (minimo 50 palavras), Teste D (link rot)
      NUNCA aplicar testes PAA aqui
-     Se conteudo >= 200: ready. Se 50-200: ready com note. Se < 50: pending.
+     Se conteudo >= 200: ready. Se 50-200: ready com note. Se < 50: pending + fail_count++.
 
-4. Atualizar queue CORRECTA (aviso ou catalogo, nunca misturar)
+   Items com fail_count >= 3: PASSO 1.6 (WebSearch fallback)
+     Se encontrar novo URL: update + fail_count=0 + retry
+     Se nao encontrar: status "abandoned"
+
+4. Atualizar queue CORRECTA (aviso, catalogo ou plano-anual)
 5. git commit + push
-6. Reportar: "Downloader: [N] aviso ready, [N] catalogo ready. [N] PAA bloqueados. [N] falhas."
+6. Reportar: "Downloader: [N] aviso ready, [N] catalogo ready, [N] PAAs watchlisted, [N] abandoned, [N] falhas."
 ```

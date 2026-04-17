@@ -38,6 +38,8 @@ fi
 | `registry/lookup.json` | dedup O(1) por id/codigo | Sempre |
 | `sources-scan.json` | fontes com access_method, shard | Sempre |
 
+**NAO TOCAR** em `registry/queue-plano-anual.json` (watchlist do monitor/downloader). O scanner nao deve ler nem escrever neste ficheiro. A dedup via `lookup.json` ja garante que items PAA nao sao re-descobertos.
+
 **Leitura no inicio:**
 ```
 Read $REPO/registry/index.json
