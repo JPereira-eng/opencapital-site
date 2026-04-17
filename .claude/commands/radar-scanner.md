@@ -1,4 +1,4 @@
-# Radar Scanner v4.5: Descoberta de Novos Instrumentos
+# Radar Scanner v4.6: Descoberta de Novos Instrumentos
 
 REGRA CRITICA: Nunca usar travessao (—) em nenhum texto gerado. Usar virgula, ponto, hifen (-) ou reescrever a frase.
 
@@ -97,7 +97,7 @@ Se uma destas fontes falhar (erro de acesso), registar o erro e continuar. Nao s
 
 5. **FALLBACK (v4.3 — critico):** Se apos passos 1-4 ainda restam slots vazios, completar com **fontes medium/low mais antigas MESMO DENTRO do cooldown** (ordenar por `source_last_checked` mais antigo primeiro, independentemente do dia-limite). Preencher as 3 slots em pleno.
 
-6. Apenas se nao existir nenhuma fonte medium/low no sources-scan.json (impossivel — ha 51 medium + 10 low): deixar slot vazio.
+6. Apenas se nao existir nenhuma fonte medium/low no sources-scan.json (impossivel, ha 54 medium + 10 low): deixar slot vazio.
 
 **Motivacao (2026-04-17):** Run de teste descobriu que a regra rigida ">7 dias" deixou 3 slots vazios quando todas as medium tinham sido verificadas 3-5 dias antes. Perda de 3× throughput por execucao. Fallback garante preenchimento total.
 
@@ -958,13 +958,26 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
 6b. git commit + push (incluindo queue-catalogo.json se alterado)
 7. Reportar relatorio granular completo
 
-DISTRIBUICAO ACTUAL (v4.5, aplicado 2026-04-17):
-- regime=aviso: high=2 | medium=51 | low=10 (total 63)
-- regime=catalogo: 44 fontes (11 catalog_types)
-- Total: 107 fontes
+DISTRIBUICAO ACTUAL (v4.6, aplicado 2026-04-17 apos expansao para 130 fontes):
+- regime=aviso: high=2 | medium=54 | low=10 (total 66)
+- regime=catalogo: 64 fontes (11 catalog_types)
+- Total: 130 fontes
 
-REFRESH RATE CATALOGO (v4.5):
-- 30d: accelerator(4) + incubator(3) + prize(4) + crowdfunding(2) = 13
+Catalogo por catalog_type (v4.6):
+- vc: 15 (Faber, Bynd, Indico, Armilar, Shilling, Bright Pixel, 200M, MAZE, Pathena, LC Ventures, Olisipo, HCapital, Change Partners, Kibo, K Fund)
+- accelerator: 7 (BGI, Beta-i, Techstars Lisbon, Plug and Play, Startup Visa, Founder Institute Lisbon, EIT Health)
+- bank-product: 6 (CGD, BPI, Millennium, NovoBanco, Santander, Turismo PT)
+- ba: 6 (FNABA, Invicta Angels, Core Angels Atlantic, Busy Angels, LBAC, APBA)
+- cvc: 6 (EDP, Semapa Next, Brisa, Galp, Fidelidade Ventures, Novabase Capital)
+- prize: 5 (BPI La Caixa, Gulbenkian, ClimateLaunchpad PT, EIT Digital, Born from Knowledge ANI)
+- incubator: 5 (Startup Lisboa, UPTEC, Nova SBE Venture Lab, IPN Coimbra, Fabrica de Startups)
+- public-fund: 4 (BPF, Portugal Ventures, IFD, EIF)
+- crowdfunding: 4 (Seedrs PT, Raize, PPL, GoParity)
+- pe: 3 (Iberis Capital, Oxy Capital, Explorer Investments)
+- platform: 3 (F6S, EU-Startups, Startup Portugal)
+
+REFRESH RATE CATALOGO (v4.5 logica, v4.6 dados):
+- 30d: accelerator(7) + incubator(5) + prize(5) + crowdfunding(4) = 21
 - 45d: platform(3) = 3
-- 90d: vc(11) + pe(1) + cvc(4) + ba(3) + bank-product(6) + public-fund(3) = 28
+- 90d: vc(15) + pe(3) + cvc(6) + ba(6) + bank-product(6) + public-fund(4) = 40
 ```

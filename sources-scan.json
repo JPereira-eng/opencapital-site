@@ -1,8 +1,9 @@
 {
   "_meta": {
-    "description": "Versao leve de sources.json para uso pelos agentes scanner/writer (v4.3: 2 HIGH fixos + overflow medium; catalog_type subcategorizacao para regime=catalogo)",
+    "description": "Fontes monitorizadas pelo radar-scanner. Regime aviso (avisos com deadline formal) vs catalogo (fundos, BAs, bancos, premios, aceleradores, platforms). v4.6: expansao de 23 fontes (20 catalogo + 3 aviso) para preencher gaps em pe, ba, crowdfunding, accelerator, incubator, prize, public-fund.",
     "updated": "2026-04-17",
-    "version": "v4.3"
+    "version": "v4.6",
+    "last_updated": "2026-04-17"
   },
   "sources": [
     {
@@ -1114,6 +1115,259 @@
       "notes": "Concurso anual para scaleups digitais europeias. Deadline verao.",
       "regime": "catalogo",
       "catalog_type": "prize"
+    },
+    {
+      "id": "hcapital",
+      "name": "HCapital Partners",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://hcapital.pt",
+      "notes": "Fundo VC/growth PT. Scanner nao adiciona a queue (sem calls formais).",
+      "regime": "catalogo",
+      "catalog_type": "vc"
+    },
+    {
+      "id": "change-partners",
+      "name": "Change Partners",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://changepartners.com",
+      "notes": "Fundo VC/growth PT focado em B2B SaaS. Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "vc"
+    },
+    {
+      "id": "kibo-ventures",
+      "name": "Kibo Ventures",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.kiboventures.com",
+      "notes": "Fundo VC iberico (ES), activo em PT (Unbabel, outros). Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "vc"
+    },
+    {
+      "id": "k-fund",
+      "name": "K Fund",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://k-fund.co",
+      "notes": "Fundo VC ES (seed/Series A), activo em PT. Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "vc"
+    },
+    {
+      "id": "oxy-capital",
+      "name": "Oxy Capital",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.oxycapital.com",
+      "notes": "Fundo PE PT (growth/buyout). Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "pe"
+    },
+    {
+      "id": "explorer-investments",
+      "name": "Explorer Investments",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.explorerinv.com",
+      "notes": "Fundo PE PT multi-sector. Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "pe"
+    },
+    {
+      "id": "fidelidade-ventures",
+      "name": "Fidelidade Ventures",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://fidelidadeventures.com",
+      "notes": "CVC do grupo Fidelidade. Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "cvc"
+    },
+    {
+      "id": "novabase-capital",
+      "name": "Novabase Capital",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.novabase.pt",
+      "notes": "CVC tech do grupo Novabase. Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "cvc"
+    },
+    {
+      "id": "busy-angels",
+      "name": "Busy Angels",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://busyangels.com",
+      "notes": "Rede de business angels PT. Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "ba"
+    },
+    {
+      "id": "lisbon-business-angels-club",
+      "name": "Lisbon Business Angels Club",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.lbac.pt",
+      "notes": "Clube de business angels de Lisboa. Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "ba"
+    },
+    {
+      "id": "apba-portugal",
+      "name": "APBA (Associacao Portuguesa de Business Angels)",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://apba.pt",
+      "notes": "Associacao nacional de business angels PT. Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "ba"
+    },
+    {
+      "id": "ppl-crowdfunding",
+      "name": "PPL Crowdfunding",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "unverified",
+      "url_avisos": "https://ppl.pt",
+      "notes": "Plataforma PT de rewards crowdfunding. Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "crowdfunding"
+    },
+    {
+      "id": "goparity",
+      "name": "GoParity",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "unverified",
+      "url_avisos": "https://goparity.com",
+      "notes": "Plataforma PT de debt crowdfunding (green/impact). Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "crowdfunding"
+    },
+    {
+      "id": "startup-visa-portugal",
+      "name": "Startup Visa Portugal (IAPMEI)",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "unverified",
+      "url_avisos": "https://startupvisa.iapmei.pt",
+      "notes": "Programa publico de residencia e aceleracao para empreendedores nao-UE. Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "accelerator"
+    },
+    {
+      "id": "founder-institute-lisbon",
+      "name": "Founder Institute Lisbon",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "unverified",
+      "url_avisos": "https://fi.co/s/lisbon",
+      "notes": "Capitulo Lisboa do programa global Founder Institute. Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "accelerator"
+    },
+    {
+      "id": "eit-health",
+      "name": "EIT Health",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "unverified",
+      "url_avisos": "https://eithealth.eu",
+      "notes": "Accelerator e rede de inovacao UE para saude. Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "accelerator"
+    },
+    {
+      "id": "instituto-pedro-nunes",
+      "name": "Instituto Pedro Nunes (IPN)",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.ipn.pt",
+      "notes": "Incubadora de base tecnologica em Coimbra, ligada a UC. Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "incubator"
+    },
+    {
+      "id": "fabrica-startups",
+      "name": "Fabrica de Startups",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "unverified",
+      "url_avisos": "https://fabricadestartups.com",
+      "notes": "Incubadora/aceleradora em Lisboa com programa LaunchPad. Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "incubator"
+    },
+    {
+      "id": "born-from-knowledge-ani",
+      "name": "Born From Knowledge (ANI)",
+      "priority": "low",
+      "access_method": "webfetch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.ani.pt/en/bfk/",
+      "notes": "Premio anual da ANI para spin-offs academicas. Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "prize"
+    },
+    {
+      "id": "eif-european-investment-fund",
+      "name": "EIF (European Investment Fund)",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.eif.org",
+      "notes": "Fundo europeu de fundos (fund-of-funds). Provider de capital para VCs iberos. Scanner nao adiciona a queue.",
+      "regime": "catalogo",
+      "catalog_type": "public-fund"
+    },
+    {
+      "id": "eea-grants-portugal",
+      "name": "EEA Grants / Norway Grants Portugal",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.eeagrants.gov.pt/pt/avisos/",
+      "notes": "Mecanismo Financeiro do Espaco Economico Europeu + Noruega. Concursos para PT em cultura, ambiente, ciencia, sociedade civil.",
+      "regime": "aviso",
+      "shard": "other"
+    },
+    {
+      "id": "fundo-ambiental",
+      "name": "Fundo Ambiental",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.fundoambiental.pt/avisos-fundo-ambiental.aspx",
+      "notes": "Fundo do Ministerio do Ambiente. Financia projectos em economia circular, descarbonizacao, mobilidade sustentavel, adaptacao climatica.",
+      "regime": "aviso",
+      "shard": "other"
+    },
+    {
+      "id": "ifap-pdr",
+      "name": "IFAP (PDR2020/PEPAC)",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.ifap.pt/avisos",
+      "notes": "Instituto de Financiamento da Agricultura e Pescas. Avisos PDR2020 + PEPAC (PAC 2023-2027) para agro-industria e pescas.",
+      "regime": "aviso",
+      "shard": "other"
     }
   ]
 }
