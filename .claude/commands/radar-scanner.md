@@ -1,4 +1,4 @@
-# Radar Scanner v4.4: Descoberta de Novos Instrumentos
+# Radar Scanner v4.5: Descoberta de Novos Instrumentos
 
 REGRA CRITICA: Nunca usar travessao (—) em nenhum texto gerado. Usar virgula, ponto, hifen (-) ou reescrever a frase.
 
@@ -143,13 +143,17 @@ A partir de v4.4, cada fonte de regime `catalogo` tem tambem um campo `catalog_t
 
 **Uso recomendado na selecao do slot 6:** quando existem multiplas fontes catalogo nunca-verificadas, preferir rotacao por `catalog_type` em vez de ordem alfabetica. Assim, o ecossistema e coberto de forma equilibrada (ex: nao verificar 5 VCs seguidos antes de ver um unico BA).
 
-#### Prioridade de selecao do slot 6
+#### Prioridade de selecao do slot 6 (v4.5 — cascata com refresh diferenciado)
 
 1. Fontes catalogo NUNCA verificadas: prioridade absoluta (1 por run). Se houver multiplas, preferir um `catalog_type` ainda nao representado na historia recente (7 dias) de `source_last_checked`.
-2. Fontes catalogo verificadas ha mais de 90 dias (1 por run, a mais antiga primeiro)
+2. Fontes catalogo elegiveis por refresh, usando a cascata por `catalog_type`:
+   - `accelerator`, `incubator`, `prize`, `crowdfunding`: elegiveis se `source_last_checked > 30 dias`
+   - `platform`: elegivel se `source_last_checked > 45 dias`
+   - `vc`, `pe`, `cvc`, `ba`, `bank-product`, `public-fund`: elegiveis se `source_last_checked > 90 dias`
+   Dentro dos elegiveis, escolher a mais antiga primeiro. Preferir rotacao por `catalog_type`.
 3. **Se nenhuma fonte catalogo for elegivel:** usar o slot para uma fonte aviso de prioridade medium ou low (a mais antiga por antiguidade, mesma logica do slot 4). Nao desperdicar o slot.
 
-**Nota:** com 44 fontes catalogo e 1 slot/run, nos primeiros ~44 dias o slot fica preenchido pelas nunca-verificadas. Depois disso, a maioria dos dias nao ha candidatos catalogo elegíveis (90 dias ainda nao passaram) e o slot cai automaticamente para aviso medium/low.
+**Nota:** com 44 fontes catalogo e 1 slot/run, nos primeiros ~44 dias o slot fica preenchido pelas nunca-verificadas. Depois disso, as fontes de refresh curto (30d: prize/accelerator/incubator/crowdfunding = 13 fontes; 45d: platform = 3 fontes) voltam rapidamente a ser elegiveis; as de refresh longo (90d: vc/pe/cvc/ba/bank-product/public-fund = 28 fontes) criam um espalhamento natural ao longo do trimestre.
 
 **Regras especificas para regime "catalogo":**
 - **Nao exigir deadline formal.** Estas fontes operam com candidatura continua, produtos permanentes ou premios anuais sem data fixa. Registar o instrumento mesmo sem prazo (`deadline: null`).
@@ -383,6 +387,277 @@ Para fontes que nao tem API estruturada, extrair o maximo possivel:
 
 ---
 
+## PASSO 2bis: Extracao estruturada de fontes catalogo (v4.5)
+
+**Aplica-se quando:** a fonte selecionada para o slot 6 tem `regime: "catalogo"`. Nao aplica a avisos.
+
+**Objectivo:** extrair um **profile estruturado** da organizacao/fonte (tese, ticket, portfolio, produtos, etc.) em vez de "avisos com deadline". O writer usa este profile para popular sidebars de artigos sobre VCs, BAs, bancos, premios, etc., sem precisar de re-scrape.
+
+**Modelo de entidade:** 1 entrada por `source_id` em `queue-catalogo.json` (upsert: se ja existir, merge). Excepcao: `platform` nao produz entrada (so produz suggestions de novas fontes a adicionar ao sources-scan.json).
+
+---
+
+### Campos comuns do `profile` (todos os catalog_type excepto platform)
+
+```
+website              : string (URL canonica)
+linkedin             : string | null
+pais_sede            : string ("PT", "ES", "EU", "US", ...)
+descricao_curta      : string (1-2 frases)
+como_candidatar      : string (processo resumido)
+```
+
+### Campos especificos por catalog_type
+
+**vc | pe | cvc** (fundos de investimento):
+```
+tese                 : string (1-3 frases)
+estagios             : array ["pre-seed"|"seed"|"series-a"|"series-b"|"series-c"|"growth"]
+setores              : array (ex: ["SaaS B2B", "fintech", "climate", "deep tech"])
+geografia            : array ["PT"|"ES"|"EU"|"global"|...]
+ticket_min_eur       : number | null
+ticket_max_eur       : number | null
+ticket_sweet_eur     : number | null (ticket tipico)
+aum_eur              : number | null (assets under management total)
+vintage              : string (ex: "Faber Tech III (2024-2027)")
+portfolio_pt_exemplos: array (3-5 nomes)
+parceiros            : array (managing/general partners)
+```
+
+**ba** (business angels network/federacao):
+```
+numero_membros           : number | null
+ticket_individual_eur    : number | null
+ticket_coletivo_eur      : number | null
+setores_foco             : array
+requisitos_apresentacao  : string (ex: "pitch 10min + Q&A, via website")
+```
+
+**crowdfunding** (plataforma):
+```
+modelo                    : "equity" | "debt" | "rewards" | "mixed"
+ticket_min_investidor_eur : number | null
+comissao                  : string (ex: "7.5% + 2.9% pagamento")
+regulamentacao            : string (ex: "ECSPR/CMVM")
+campanhas_ativas_url      : string
+```
+
+**bank-product** (produtos bancarios para empresas):
+```
+produtos : array de objectos {
+  nome             : string (ex: "Linha Apoio Inovacao")
+  tipo             : "linha-credito" | "garantia" | "leasing" | "factoring" | "outros"
+  max_eur          : number | null
+  beneficiarios    : string (ex: "PMEs, micro-empresas")
+  condicoes_tldr   : string (1 frase)
+}
+linha_oficial_url : string (pagina de consulta de produtos)
+```
+
+**accelerator | incubator**:
+```
+modelo             : "equity-free" | "equity-taking"
+formato            : "residencia" | "online" | "hibrido"
+duracao_meses      : number | null
+batches_ano        : number | null
+batch_proximo      : string | null (ex: "Spring 2026")
+deadline_proxima   : ISO date | null
+estipendio_eur     : number | null
+equity_pct         : number | null (percentagem de equity tomado)
+mentorias          : array (nomes destacados)
+setores_foco       : array
+alumni_destaques   : array (3-5 nomes)
+```
+
+**prize** (concursos/premios):
+```
+premio_total_eur   : number | null
+categorias         : array
+deadline_proxima   : ISO date | null
+edicao_ano         : string (ex: "2026")
+juri_destaque      : array (3-5 nomes)
+elegibilidade      : string (quem pode candidatar)
+```
+
+**public-fund**:
+```
+tutela                : string (ex: "Ministerio das Financas")
+instrumentos_abertos  : array (nomes de linhas/programas ativos)
+site_oficial          : string
+```
+
+**platform** (agregadores, NAO produzem entrada):
+```
+Nao adicionar a queue-catalogo.json. Em vez disso, usar o scraping para descobrir
+organizacoes/fontes novas que ainda nao estao em sources-scan.json. Registar no
+relatorio como "suggestions: N novas fontes potenciais".
+```
+
+---
+
+### Prompt por catalog_type (para WebFetch/Chrome)
+
+Quando acede a uma fonte catalogo, usar o prompt especifico para o tipo. Abaixo esta o template base, adaptar ligeiramente consoante a fonte.
+
+**vc | pe | cvc:**
+> Extrai da pagina informacao sobre este fundo de investimento:
+> 1. Tese (1-3 frases, para que tipo de empresa investem)
+> 2. Estagios (pre-seed, seed, series A/B/C, growth)
+> 3. Setores de foco (ex: SaaS, fintech, deep tech)
+> 4. Geografia (PT, Ibéria, Europa, global)
+> 5. Ticket size (min, max, e ticket sweet/tipico)
+> 6. AUM (assets under management) se publico
+> 7. Fundo actual e vintage (ex: "Faber Tech III, 2024-2027")
+> 8. 3-5 empresas portuguesas do portfolio
+> 9. Nomes dos managing partners/general partners
+> 10. Como candidatar (email, formulario, intro obrigatoria)
+> 11. Website e LinkedIn corporativo.
+> Devolve em JSON. Se um campo nao for encontrado, usar null. Nao inventar valores.
+
+**ba:**
+> Extrai da pagina informacao sobre esta rede/federacao de business angels:
+> 1. Numero de membros activos
+> 2. Ticket tipico individual (por angel)
+> 3. Ticket coletivo tipico (quando sindicam)
+> 4. Setores de foco
+> 5. Requisitos de apresentacao (ex: pitch 10min, via website)
+> 6. Como candidatar (processo completo)
+> 7. Website e LinkedIn.
+> Devolve em JSON. Se um campo nao for encontrado, usar null.
+
+**crowdfunding:**
+> Extrai da pagina informacao sobre esta plataforma de crowdfunding:
+> 1. Modelo (equity / debt / rewards / mixed)
+> 2. Ticket minimo por investidor
+> 3. Comissao cobrada ao promotor e/ou investidor
+> 4. Regulamentacao (ECSPR, CMVM, outra)
+> 5. URL das campanhas activas
+> 6. Como candidatar uma campanha (processo para empresas promotoras)
+> Devolve em JSON.
+
+**bank-product:**
+> Extrai da pagina informacao sobre os produtos bancarios para empresas:
+> 1. Lista de produtos (linhas de credito, garantias, leasing, factoring, outros)
+> 2. Para cada produto: nome, tipo, montante maximo, beneficiarios, condicoes (1 frase)
+> 3. URL da pagina oficial de consulta
+> 4. Como candidatar (balcao, online, gestor).
+> Devolve em JSON. Lista ate 8 produtos mais relevantes. Se houver mais, priorizar os destinados a PME e inovacao.
+
+**accelerator | incubator:**
+> Extrai da pagina informacao sobre este programa:
+> 1. Modelo (equity-free ou equity-taking, e se taking: quantos %)
+> 2. Formato (residencia fisica, online, hibrido)
+> 3. Duracao (meses)
+> 4. Batches por ano
+> 5. Proximo batch (nome e data aproximada)
+> 6. Deadline da proxima candidatura (ISO date se publicada)
+> 7. Estipendio ou investimento (EUR)
+> 8. Mentores destacados (3-5 nomes)
+> 9. Setores de foco
+> 10. Alumni com destaque (3-5 nomes)
+> 11. Como candidatar.
+> Devolve em JSON. Se nenhum batch esta aberto, pode devolver deadline_proxima=null.
+
+**prize:**
+> Extrai da pagina informacao sobre este premio/concurso:
+> 1. Premio total (soma de todos os valores monetarios em EUR)
+> 2. Categorias (lista)
+> 3. Deadline da proxima edicao (ISO date)
+> 4. Ano da edicao actual
+> 5. Juri (3-5 nomes destacados)
+> 6. Elegibilidade (quem pode candidatar)
+> 7. Como candidatar.
+> Devolve em JSON.
+
+**public-fund:**
+> Extrai da pagina informacao sobre este fundo publico:
+> 1. Tutela (ministerio ou entidade)
+> 2. Lista de instrumentos/linhas actualmente abertas (nomes)
+> 3. Site oficial
+> 4. Como aceder (candidatura directa, via consultor, via intermediario).
+> Devolve em JSON.
+
+**platform (excepcao, nao produz entrada):**
+> Lista 10-20 organizacoes (VCs, aceleradores, premios, fundos) apresentadas nesta plataforma que atuam em Portugal ou envolvem empresas portuguesas.
+> Para cada uma: nome, tipo (vc, ba, accelerator, etc.), website.
+> Devolve em JSON array. Estes dados servem para avaliar se devem ser adicionados ao sources-scan.json numa run futura (nao criar entrada em queue-catalogo.json).
+
+---
+
+### Upsert em queue-catalogo.json
+
+Para fontes catalogo (excepto platform):
+
+1. **Procurar entrada existente** por `source_id` em `queue-catalogo.json > queue`.
+2. **Se existe:** merge dos campos novos no `profile`. Preservar `detected_date` original. Bump `last_profile_update` para hoje. Actualizar `status` se mudou (ex: "active" -> "fundraising").
+3. **Se nao existe:** criar entrada nova com esta estrutura:
+
+```json
+{
+  "id": "faber-ventures",
+  "name": "Faber Ventures",
+  "source_id": "faber-ventures",
+  "catalog_type": "vc",
+  "detected_date": "2026-04-17",
+  "last_profile_update": "2026-04-17",
+  "status": "active",
+  "regulation_url": "https://faber.vc",
+  "priority_score": 10,
+  "profile": {
+    "website": "https://faber.vc",
+    "linkedin": "https://linkedin.com/company/faber-ventures",
+    "pais_sede": "PT",
+    "descricao_curta": "VC Ibérico focado em seed/Series A com tese em deep tech, climate e B2B SaaS.",
+    "como_candidatar": "Formulario no website + intro preferencial via networking",
+    "tese": "...",
+    "estagios": ["seed", "series-a"],
+    "setores": ["deep tech", "climate", "B2B SaaS"],
+    "geografia": ["PT", "ES"],
+    "ticket_min_eur": 500000,
+    "ticket_max_eur": 3000000,
+    "ticket_sweet_eur": 1500000,
+    "aum_eur": 100000000,
+    "vintage": "Faber Tech III (2024-2027)",
+    "portfolio_pt_exemplos": ["Unbabel", "Raize", "Uniplaces"],
+    "parceiros": ["Alexandre Barbosa", "Ricardo Monteiro"]
+  },
+  "notes": "Fundo VC em deployment activo; tese confirmada 2026-04-17."
+}
+```
+
+4. **Status possiveis:**
+   - `active`: em deployment, candidaturas abertas/continuas
+   - `fundraising`: fundo a captar (podem nao aceitar novas empresas ate fechar)
+   - `inactive`: fundo esgotado, aguarda vintage seguinte
+   - `closed`: encerrado (ex: accelerator descontinuado)
+
+5. **Nao adicionar a lookup.json.** A dedup de catalogo e feita directamente por `source_id` na propria queue-catalogo.json (porque a chave e 1-para-1 com sources-scan.json). Nao poluir `lookup.by_id` com IDs de catalogo.
+
+### Frequencia de refresh diferenciada (v4.5)
+
+Nao e igual para todos os catalog_type. Profiles mais dinamicos requerem verificacao mais frequente:
+
+| catalog_type | Refresh | Justificacao |
+|---|---|---|
+| `vc`, `pe`, `cvc`, `ba` | 90 dias | Tese e tickets sao estaveis; portfolios mudam lentamente |
+| `bank-product` | 90 dias | Produtos bancarios sao estaveis entre revisoes anuais |
+| `public-fund` | 90 dias | Linhas publicas rotacao anual ou semestral |
+| `accelerator`, `incubator` | 30 dias | Batches abrem/fecham com frequencia; deadlines criticos |
+| `prize` | 30 dias | Deadlines e juri mudam por edicao; relevancia temporal |
+| `crowdfunding` | 30 dias | Campanhas activas mudam semanalmente |
+| `platform` | 45 dias | Suggestions, nao criticas mas valem refresh medio |
+
+**Actualizacao do algoritmo de selecao do slot 6 (Passo 1):**
+
+Quando decidir se uma fonte catalogo ja verificada pode voltar a ser verificada:
+- Se `catalog_type in [accelerator, incubator, prize, crowdfunding]`: elegivel se `source_last_checked > 30 dias`
+- Se `catalog_type == platform`: elegivel se `source_last_checked > 45 dias`
+- Restantes: elegivel se `source_last_checked > 90 dias` (como antes)
+
+Substituir a regra anterior "90 dias para todos" por esta cascata.
+
+---
+
 ## PASSO 3: Deduplicacao (usando lookup.json)
 
 Para cada instrumento detectado:
@@ -404,9 +679,9 @@ Para cada instrumento detectado:
 
 ### Destino por regime
 
-**Regime "aviso":** adicionar a `registry/queue.json` (ou overflow se cheio). O writer le esta fila em cada run.
+**Regime "aviso":** adicionar a `registry/queue.json` (ou overflow se cheio). Dedup via lookup.json. O writer le esta fila em cada run.
 
-**Regime "catalogo":** adicionar a `registry/queue-catalogo.json`. O writer le esta fila separadamente, com menor frequencia. Estrutura identica a queue.json.
+**Regime "catalogo" (v4.5):** upsert em `registry/queue-catalogo.json` com objecto `profile` estruturado (ver Passo 2bis). Uma entrada por `source_id` — nao ha overflow, nao ha lookup separado, dedup e directa pelo id. Excepcao: `catalog_type: "platform"` nao adiciona entrada (so produz suggestions no relatorio).
 
 ---
 
@@ -504,10 +779,10 @@ Para fontes nao-PT2030 (EU, Interreg, etc.), usar o `shard` definido em `sources
 
 **No final da execucao, produzir relatorio estruturado com TODAS as metricas por fonte.** Este relatorio torna o comportamento do scanner transparente e auditavel. Sem este detalhe, e impossivel detectar regressoes (falhas silenciosas, paginacao incompleta, filtros excessivos, dedup incorrecto).
 
-**Template obrigatorio por fonte:**
+**Template obrigatorio por fonte — REGIME AVISO:**
 
 ```
-[source-id] (regime: aviso|catalogo, access_method: X)
+[source-id] (regime: aviso, access_method: X)
   Paginas/URLs verificados:
     - [url_1]: [N items retornados | vazio | HTTP xxx | timeout]
     - [url_2]: [...]
@@ -521,8 +796,24 @@ Para fontes nao-PT2030 (EU, Interreg, etc.), usar o `shard` definido em `sources
     - Ja em lookup.by_aviso_codigo: N ignorados
     - Ja em lookup.by_id: N ignorados
     - Titulo >= 80% similar: N ignorados
-  NOVOS adicionados a queue.json (aviso): N
-  NOVOS adicionados a queue-catalogo.json (catalogo): N
+  NOVOS adicionados a queue.json: N
+```
+
+**Template obrigatorio por fonte — REGIME CATALOGO (v4.5):**
+
+```
+[source-id] (regime: catalogo, catalog_type: X, access_method: Y)
+  URLs verificados:
+    - [url_1]: [status]
+  Accao: INSERT | UPDATE | SKIP-PLATFORM
+  Campos do profile extraidos: N de M esperados (X%)
+    - website: ok/null
+    - tese: ok/null
+    - ticket_min_eur: ok/null
+    - [listar os campos criticos por catalog_type]
+  Campos em falta (null): [lista]
+  Status detectado: active|fundraising|inactive|closed
+  Se platform: suggestions extraidas = N (listar 3-5 nomes top)
 ```
 
 **Template final do run:**
@@ -637,7 +928,7 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
 
 ---
 
-## RESUMO (v4.4)
+## RESUMO (v4.5)
 
 ```
 1. Ler index.json + queue.json + queue-catalogo.json + lookup.json + sources-scan.json
@@ -646,36 +937,34 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
    - Slots 3-5: MEDIUM rotativos com FALLBACK GARANTIDO (v4.3 - slots nunca vazios):
      (a) medium nunca-verificadas > (b) medium >7d > (c) low nunca >
      (d) low >14d > (e) FALLBACK: mais antigas mesmo dentro do cooldown
-   - Slot 6: catalogo nunca-verificadas (rotar por catalog_type para diversidade)
-             > catalogo >90d > se vazio: medium/low aviso
+   - Slot 6 (v4.5): catalogo nunca-verificadas (rotar por catalog_type) >
+     catalogo elegiveis por refresh diferenciado
+     (30d: accelerator|incubator|prize|crowdfunding
+      45d: platform
+      90d: vc|pe|cvc|ba|bank-product|public-fund)
+     > se vazio: medium/low aviso
    - CRITICO eu-funding-tenders: usar Bash+curl -X POST, NUNCA WebFetch (API rejeita GET com 405)
 3. Para cada fonte:
-   - Aceder (se webfetch: tentar 3 URLs antes de declarar "0 novos")
-   - Extrair items, aplicar filtros (incluindo cascade acf.pdf|aviso|ficheiro|... + fallback generico)
-   - Deduplicar via lookup
-   - Adicionar novos a queue correcta (aviso -> queue.json, catalogo -> queue-catalogo.json)
-   - Aplicar cap: eu-funding-tenders=150, restantes=50
-4. Manter contadores internos: novos_aviso, novos_catalogo, movidos_overflow
+   - Aviso: aceder, extrair items, filtros (acf.pdf cascade), dedup via lookup, queue.json, cap
+   - Catalogo (v4.5): Passo 2bis, prompt por catalog_type, extrair profile estruturado,
+     upsert em queue-catalogo.json por source_id, sem lookup, sem cap
+   - Platform: scraping so produz suggestions no relatorio, nao adiciona a queue
+4. Manter contadores internos: novos_aviso, novos_catalogo, profiles_atualizados, movidos_overflow
 5. Atualizar index.json e source_last_checked
-5b. Produzir RELATORIO GRANULAR: por fonte detalhar URLs verificados, items retornados, filtros, dedup, novos
-   - Novo v4.4: reportar tambem breakdown de catalogo por catalog_type
+5b. Produzir RELATORIO GRANULAR:
+   - Aviso: URLs verificados, items retornados, filtros, dedup, novos
+   - Catalogo (v4.5): accao (INSERT/UPDATE/SKIP-PLATFORM), % campos extraidos, status detectado
 6a. SANITY CHECK (3 testes): delta + invariantes absolutos + coerencia lookup. Auto-correct com WARNING.
-6b. git commit + push
+6b. git commit + push (incluindo queue-catalogo.json se alterado)
 7. Reportar relatorio granular completo
 
-DISTRIBUICAO ACTUAL (v4.4, aplicado 2026-04-17 apos expansao VC/investimento):
+DISTRIBUICAO ACTUAL (v4.5, aplicado 2026-04-17):
 - regime=aviso: high=2 | medium=51 | low=10 (total 63)
-- regime=catalogo: total 44, distribuido por catalog_type:
-  - vc: 11 (Faber, Bynd, Indico, Armilar, Shilling, Bright Pixel, 200M, MAZE, Pathena, LC Ventures, Olisipo Way)
-  - bank-product: 6 (CGD, BPI, Millennium, NovoBanco, Santander, Turismo PT)
-  - prize: 4 (BPI La Caixa, Gulbenkian, ClimateLaunchpad PT, EIT Digital Challenge)
-  - cvc: 4 (EDP, Semapa Next, Brisa, Galp Ventures)
-  - accelerator: 4 (BGI, Beta-i, Techstars Lisbon, Plug and Play PT)
-  - public-fund: 3 (BPF, Portugal Ventures, IFD)
-  - incubator: 3 (Startup Lisboa, UPTEC, Nova SBE Venture Lab)
-  - platform: 3 (F6S, EU-Startups, Startup Portugal)
-  - ba: 3 (FNABA, Invicta Angels, Core Angels Atlantic)
-  - crowdfunding: 2 (Seedrs PT, Raize)
-  - pe: 1 (Iberis Capital)
+- regime=catalogo: 44 fontes (11 catalog_types)
 - Total: 107 fontes
+
+REFRESH RATE CATALOGO (v4.5):
+- 30d: accelerator(4) + incubator(3) + prize(4) + crowdfunding(2) = 13
+- 45d: platform(3) = 3
+- 90d: vc(11) + pe(1) + cvc(4) + ba(3) + bank-product(6) + public-fund(3) = 28
 ```

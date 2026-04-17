@@ -1,4 +1,67 @@
 {
-  "_meta": "Fila de instrumentos de regime 'catalogo' (bancos, VC, premios, aceleradores, startups). Preenchida pelo scanner quando verifica fontes de regime catalogo. O writer le esta fila separadamente, com menor frequencia que queue.json.",
+  "_meta": "Fila de fontes de regime 'catalogo' com profile estruturado (v4.5). Uma entrada por source_id (excepto platform, que nao produz entradas). Cada entrada tem um objecto 'profile' com campos comuns (website, linkedin, pais_sede, descricao_curta, como_candidatar) + campos especificos por catalog_type. O writer usa 'profile' para popular sidebars de artigos sem re-scrape. Upsert por id: se entrada ja existe, merge de campos novos e bump de last_profile_update. Frequencia de refresh: 30d (accelerator, incubator, prize, crowdfunding) | 45d (platform) | 90d (vc, pe, cvc, ba, bank-product, public-fund).",
+  "_schema_version": "v4.5",
+  "_schema_examples": {
+    "vc_example": {
+      "id": "exemplo-vc",
+      "name": "Exemplo VC",
+      "source_id": "exemplo-vc",
+      "catalog_type": "vc",
+      "detected_date": "2026-04-17",
+      "last_profile_update": "2026-04-17",
+      "status": "active",
+      "regulation_url": "https://exemplo.vc",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://exemplo.vc",
+        "linkedin": "https://linkedin.com/company/exemplo-vc",
+        "pais_sede": "PT",
+        "descricao_curta": "VC iberico focado em seed/Series A em deep tech e climate.",
+        "como_candidatar": "Formulario no website + intro preferencial via networking",
+        "tese": "Pre-seed/seed em founders tecnicos iberos com produtos B2B",
+        "estagios": ["seed", "series-a"],
+        "setores": ["deep tech", "climate", "B2B SaaS"],
+        "geografia": ["PT", "ES"],
+        "ticket_min_eur": 500000,
+        "ticket_max_eur": 3000000,
+        "ticket_sweet_eur": 1500000,
+        "aum_eur": 100000000,
+        "vintage": "Fundo III (2024-2027)",
+        "portfolio_pt_exemplos": ["Unbabel", "Raize", "Uniplaces"],
+        "parceiros": ["Nome Apelido", "Nome Apelido"]
+      },
+      "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=vc."
+    },
+    "accelerator_example": {
+      "id": "exemplo-accelerator",
+      "name": "Exemplo Accelerator",
+      "source_id": "exemplo-accelerator",
+      "catalog_type": "accelerator",
+      "detected_date": "2026-04-17",
+      "last_profile_update": "2026-04-17",
+      "status": "active",
+      "regulation_url": "https://exemplo.com",
+      "priority_score": 15,
+      "profile": {
+        "website": "https://exemplo.com",
+        "linkedin": null,
+        "pais_sede": "PT",
+        "descricao_curta": "Programa de aceleracao de 3 meses para startups em fase seed.",
+        "como_candidatar": "Formulario online aberto durante 6 semanas antes de cada batch",
+        "modelo": "equity-taking",
+        "formato": "hibrido",
+        "duracao_meses": 3,
+        "batches_ano": 2,
+        "batch_proximo": "Spring 2026",
+        "deadline_proxima": "2026-06-15",
+        "estipendio_eur": 50000,
+        "equity_pct": 6,
+        "mentorias": ["Nome 1", "Nome 2", "Nome 3"],
+        "setores_foco": ["fintech", "climate"],
+        "alumni_destaques": ["Alumni 1", "Alumni 2"]
+      },
+      "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
+    }
+  },
   "queue": []
 }
