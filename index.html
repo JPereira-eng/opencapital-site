@@ -1355,7 +1355,7 @@
       const abertos = items.filter(i => i.estado === 'aberto');
       const pickTop = slot => {
         const pool = abertos.filter(i => slotOf(i.fonte) === slot);
-        const ranked = pool.map(i => ({ i, s: parseMontanteEur(i.highlight0) })).sort((a,b) => b.s - a.s);
+        const ranked = pool.map(i => ({ i, s: Math.max(parseMontanteEur(i.highlight0), parseMontanteEur(i.tagline)) })).sort((a,b) => b.s - a.s);
         const withVal = ranked.find(r => r.s > 0);
         return withVal ? withVal.i : (ranked[0] ? ranked[0].i : null);
       };
