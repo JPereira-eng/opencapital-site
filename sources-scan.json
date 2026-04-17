@@ -1,7 +1,8 @@
 {
   "_meta": {
-    "description": "Versao leve de sources.json para uso pelos agentes scanner/writer",
-    "updated": "2026-04-12"
+    "description": "Versao leve de sources.json para uso pelos agentes scanner/writer (v4.2: 2 HIGH fixos + overflow medium)",
+    "updated": "2026-04-17",
+    "version": "v4.2"
   },
   "sources": [
     {
@@ -23,7 +24,7 @@
     {
       "id": "balcao-2030",
       "name": "Balcao 2030",
-      "priority": "high",
+      "priority": "low",
       "access_method": "websearch",
       "access_status": "blocked-auth",
       "url_avisos": "https://balcao.portugal2030.pt/Balcao2030.idp/RequestHandler",
@@ -79,7 +80,7 @@
     {
       "id": "pat-2030",
       "name": "Programa de Assistencia Tecnica 2030",
-      "priority": "medium",
+      "priority": "low",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://pat.portugal2030.pt/",
@@ -103,7 +104,7 @@
     {
       "id": "centro-2030",
       "name": "Centro 2030",
-      "priority": "medium",
+      "priority": "low",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://centro2030.pt/avisos/",
@@ -129,7 +130,7 @@
     {
       "id": "alentejo-2030",
       "name": "Alentejo 2030",
-      "priority": "medium",
+      "priority": "low",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://alentejo.portugal2030.pt/avisos/",
@@ -142,7 +143,7 @@
     {
       "id": "algarve-2030",
       "name": "Algarve 2030",
-      "priority": "medium",
+      "priority": "low",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://algarve.portugal2030.pt/avisos/",
@@ -155,7 +156,7 @@
     {
       "id": "acores-2030",
       "name": "Acores 2030",
-      "priority": "medium",
+      "priority": "low",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://acores.portugal2030.pt/avisos/",
@@ -168,7 +169,7 @@
     {
       "id": "madeira-2030",
       "name": "Madeira 2030",
-      "priority": "medium",
+      "priority": "low",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://madeira.portugal2030.pt/avisos/",
@@ -190,7 +191,7 @@
     {
       "id": "iapmei",
       "name": "IAPMEI",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://www.iapmei.pt/PRODUTOS-E-SERVICOS/Incentivos-Financiamento.aspx",
@@ -280,7 +281,7 @@
     {
       "id": "interreg-atlantic",
       "name": "Interreg Atlantic Area",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://www.atlanticarea.eu/for-applicants/call-for-projects",
@@ -289,7 +290,7 @@
     {
       "id": "interreg-sudoe",
       "name": "Interreg SUDOE",
-      "priority": "high",
+      "priority": "medium",
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://interreg-sudoe.eu/en/calendario-de-convocatorias/",
@@ -298,7 +299,7 @@
     {
       "id": "interreg-euromed",
       "name": "Interreg Euro-MED",
-      "priority": "high",
+      "priority": "medium",
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://interreg-euro-med.eu/en/get-involved/",
@@ -307,7 +308,7 @@
     {
       "id": "interreg-next-med",
       "name": "Interreg NEXT MED",
-      "priority": "high",
+      "priority": "medium",
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://www.interregnextmed.eu/apply-for-funding/",
@@ -325,7 +326,7 @@
     {
       "id": "interreg-urbact",
       "name": "URBACT IV",
-      "priority": "high",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://urbact.eu/",
@@ -334,7 +335,7 @@
     {
       "id": "interreg-espon",
       "name": "ESPON 2030",
-      "priority": "high",
+      "priority": "low",
       "access_method": "websearch",
       "access_status": "blocked",
       "url_avisos": "https://www.espon.eu/",
@@ -352,7 +353,7 @@
     {
       "id": "interreg-mac",
       "name": "Interreg MAC (Madeira-Acores-Canarias)",
-      "priority": "high",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://interregmac.org/pt-pt/",
@@ -361,7 +362,7 @@
     {
       "id": "horizonte-europa",
       "name": "Horizonte Europa (portal geral)",
-      "priority": "high",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
@@ -388,7 +389,7 @@
     {
       "id": "horizon-msca",
       "name": "Marie Sklodowska-Curie Actions (MSCA)",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships",
@@ -398,7 +399,7 @@
     {
       "id": "horizon-cluster4",
       "name": "Horizonte Europa — Cluster 4: Digital, Industria, Espaco",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
@@ -408,7 +409,7 @@
     {
       "id": "horizon-cluster5",
       "name": "Horizonte Europa — Cluster 5: Clima, Energia, Mobilidade",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
@@ -418,7 +419,7 @@
     {
       "id": "horizon-cluster6",
       "name": "Horizonte Europa — Cluster 6: Alimentacao, Bioeconomia, Ambiente",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
@@ -428,7 +429,7 @@
     {
       "id": "horizon-cluster1",
       "name": "Horizonte Europa — Cluster 1: Saude",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
@@ -438,7 +439,7 @@
     {
       "id": "horizon-cluster2",
       "name": "Horizonte Europa — Cluster 2: Cultura, Criatividade, Sociedade",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
@@ -448,7 +449,7 @@
     {
       "id": "horizon-cluster3",
       "name": "Horizonte Europa — Cluster 3: Seguranca Civil",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
@@ -458,7 +459,7 @@
     {
       "id": "horizon-widera",
       "name": "Horizonte Europa — WIDERA (Widening Participation)",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
@@ -468,7 +469,7 @@
     {
       "id": "horizon-missions",
       "name": "Horizonte Europa — EU Missions",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
@@ -478,7 +479,7 @@
     {
       "id": "hadea",
       "name": "HaDEA (Health and Digital Executive Agency)",
-      "priority": "high",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://hadea.ec.europa.eu/calls-proposals_en",
@@ -496,7 +497,7 @@
     {
       "id": "erasmus-ka2-alliances",
       "name": "Erasmus+ KA2 — Alliances for Innovation",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
@@ -506,7 +507,7 @@
     {
       "id": "erasmus-ka2-cooperation",
       "name": "Erasmus+ KA2 — Cooperation Partnerships",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
@@ -516,7 +517,7 @@
     {
       "id": "erasmus-cove",
       "name": "Erasmus+ — Centres of Vocational Excellence",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
@@ -544,7 +545,7 @@
     {
       "id": "single-market-programme",
       "name": "Single Market Programme (SMP/COSME)",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/programmes/cosme",
@@ -580,7 +581,7 @@
     {
       "id": "creative-europe",
       "name": "Creative Europe",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://www.eacea.ec.europa.eu/grants/2021-2027/creative-europe_en",
@@ -589,7 +590,7 @@
     {
       "id": "cerv",
       "name": "CERV (Citizens, Equality, Rights and Values)",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
@@ -599,7 +600,7 @@
     {
       "id": "justice-programme",
       "name": "Justice Programme",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topic-list.html",
@@ -633,7 +634,7 @@
     {
       "id": "esa-bic",
       "name": "ESA BIC Portugal",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://space.ipn.pt/esa-bic-portugal/",
@@ -642,7 +643,7 @@
     {
       "id": "nato-diana",
       "name": "NATO DIANA",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "websearch",
       "access_status": "blocked-auth",
       "url_avisos": "https://www.diana.nato.int/challenges.html",
@@ -660,7 +661,7 @@
     {
       "id": "eit-digital",
       "name": "EIT Digital",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://www.eitdigital.eu/our-activities/",
@@ -669,7 +670,7 @@
     {
       "id": "eit-climate",
       "name": "EIT Climate-KIC",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://www.climate-kic.org/programmes/",

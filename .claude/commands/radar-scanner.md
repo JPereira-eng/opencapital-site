@@ -1,4 +1,4 @@
-# Radar Scanner v4.1: Descoberta de Novos Instrumentos
+# Radar Scanner v4.2: Descoberta de Novos Instrumentos
 
 REGRA CRITICA: Nunca usar travessao (—) em nenhum texto gerado. Usar virgula, ponto, hifen (-) ou reescrever a frase.
 
@@ -9,7 +9,10 @@ A tua missao e navegar fontes de financiamento e descobrir novos instrumentos.
 
 **REGRAS DE PROCESSAMENTO CRITICAS:**
 1. **NUNCA criar ficheiros temporarios** (avisos_portugal2030.json, new_open_avisos.json, temp_*.json, ou qualquer outro ficheiro intermedio). Processar tudo em memoria na sessao. Criar ficheiros temporarios causa bloqueios de contexto e perde dados.
-2. **Maximo 50 novos items por run.** Se uma fonte tiver mais de 50 avisos novos, adicionar apenas os 50 com maior priority_score (prazo mais urgente + dotacao maior). Os restantes serao descobertos em runs futuras quando o lookup os identificar como ausentes.
+2. **Cap diferenciado por fonte:**
+   - `eu-funding-tenders`: **150 novos items/run** (superset EU com milhares de topics, profundidade aumentada em v4.2)
+   - Todas as outras fontes: **50 novos items/run**
+   Se uma fonte tiver mais items novos do que o seu cap, adicionar apenas os N com maior priority_score (prazo mais urgente + dotacao maior). Os restantes serao descobertos em runs futuras quando o lookup os identificar como ausentes.
 3. **Processar fonte a fonte**, adicionando imediatamente ao queue.json/overflow apos cada fonte. Nao acumular todos os avisos de todas as fontes antes de escrever.
 
 ---
@@ -29,7 +32,7 @@ fi
 
 ---
 
-## FICHEIROS DE ESTADO (v4.0)
+## FICHEIROS DE ESTADO (v4.2)
 
 | Ficheiro | Conteudo | Quando ler |
 |---|---|---|
@@ -64,28 +67,41 @@ Verificar no maximo **6 fontes por execucao**: **5 slots para regime "aviso" + 1
 
 Sao as fontes PT2030, Interreg, EU, ANI, AICEP, FCT, IEFP, PRR, Horizonte Europa e equivalentes. Campo `regime: "aviso"` em sources-scan.json.
 
-**Os 5 slots aviso sao divididos em dois grupos com regras independentes:**
+**Arquitetura v4.2: 2 HIGH permanentes + overflow HIGH->MEDIUM + 1 MEDIUM/LOW garantido**
 
-#### Slots 1-4: HIGH priority
+A analise empirica (2026-04-17) concluiu que apenas 2 fontes merecem estatuto HIGH pela combinacao de cobertura + exclusividade editorial:
+- `portugal-2030` (API central): cobre 100% dos regionais centro/alentejo/algarve/lisboa/acores/madeira/pat (185 avisos abertos, todos com PDF)
+- `eu-funding-tenders` (SEDIA): superset real de HORIZON, CEF, DIGITAL, LIFE, ERASMUS+, CERV, JUST, COSME, EU4HEALTH, CREATIVE-EUROPE (milhares de topics)
 
-Selecionar por esta ordem:
-1. Fontes "high" NUNCA verificadas (prioridade absoluta, ate 4)
-2. Fontes "high" nao verificadas ha mais de 3 dias (ordenar por mais antiga primeiro)
-3. Se menos de 4 candidatos: completar com fontes "high" mais antigas (mesmo dentro dos 3 dias)
+Os restantes portais considerados HIGH em v4.1 (Interreg, hadea, horizonte-europa, etc.) ou eram bloqueados (interreg-espon, balcao-2030) ou parciais (interreg-sudoe/euromed/next-med) ou redundantes (horizonte-europa coberto por superset). Foram despromovidos para MEDIUM/LOW.
 
-**Ignorar completamente** fontes medium e low nestes 4 slots.
+#### Slots 1-2: HIGH permanentes (sem cooldown)
 
-**Justificacao v4.1:** O 4o slot high adicional (passou de 3 para 4) serve a realidade de portais PT2030 e EU terem sempre atualizacoes - os slots ficam sempre preenchidos com fontes relevantes. Com ~12 fontes high activas, o ritmo de cobertura e de 3 dias (4 fontes/run x N runs).
+**Regra:** `portugal-2030` e `eu-funding-tenders` correm em **todas as execucoes**, sempre, sem cooldown. Nao ha selecao — sao fixas.
+
+Se uma destas fontes falhar (erro de acesso), registar o erro e continuar. Nao substituir por outra fonte.
+
+#### Slots 3-4: Overflow HIGH->MEDIUM
+
+As 4 slots HIGH originais v4.1 transbordam para MEDIUM quando nao ha mais fontes HIGH. Como so existem 2 HIGH em v4.2, estas 2 slots sao **sempre** preenchidas por MEDIUM (mais antigas primeiro).
+
+Selecionar por esta ordem (mesma logica do slot 5 abaixo):
+1. Fontes medium NUNCA verificadas (prioridade absoluta)
+2. Fontes "medium" nao verificadas ha mais de 7 dias (ordenar por mais antiga primeiro)
+3. Fontes "low" nao verificadas ha mais de 14 dias (ordenar por mais antiga primeiro)
+4. Se nenhum candidato elegivel: deixar o slot vazio
 
 #### Slot 5: MEDIUM/LOW garantido
 
-Este slot e exclusivo para fontes de prioridade medium ou low. Nunca e preenchido por uma fonte high. Isto garante que medium/low rodam mesmo quando ha muitas high atrasadas.
+Este slot e exclusivo para fontes de prioridade medium ou low. Nunca e preenchido por uma fonte high. Isto garante que medium/low rodam mesmo quando os slots 3-4 ja estao preenchidos com medium.
 
-Selecionar por esta ordem:
+Selecionar por esta ordem (excluindo as fontes ja selecionadas nas slots 3-4):
 1. Fontes medium ou low NUNCA verificadas (prioridade absoluta)
 2. Fontes "medium" nao verificadas ha mais de 7 dias (ordenar por mais antiga primeiro)
 3. Fontes "low" nao verificadas ha mais de 14 dias (ordenar por mais antiga primeiro)
-4. Se nenhum candidato elegivel: deixar o slot vazio (nao substituir por high)
+4. Se nenhum candidato elegivel: deixar o slot vazio
+
+**Resultado por execucao:** 2 HIGH fixas + 3 slots MEDIUM rotativos (slots 3, 4, 5). Com ~55 fontes medium/low, o ciclo de cobertura e de ~18 dias por fonte (era ~55 dias em v4.1).
 
 Consultar `registry/index.json > source_last_checked` para a data de ultima verificacao de cada fonte individual.
 
@@ -154,15 +170,38 @@ De cada aviso JSON, extrair:
 - `acf.natureza` - Concurso/Convite
 - `acf.pdf` - ID do media WordPress
 
-**REGRA CRITICA - FILTRO acf.pdf (APENAS fontes PT2030 com access_method: "api"):**
+**REGRA CRITICA - FILTRO DOCUMENTO PUBLICADO (v4.2, APENAS fontes com access_method: "api"):**
 
-Para cada aviso obtido da API, verificar o campo `acf.pdf`:
-- Se `acf.pdf` e null, 0, false ou string vazia: **SKIP TOTAL** - nao adicionar a queue, nao adicionar ao lookup.json. Estes items sao quase sempre plano anual ou resumos sem regulamento. Serao reavaliados em futuras runs quando o PDF for publicado.
-- Se `acf.pdf` e um ID numerico valido (ex: 252679): continuar normalmente.
+Objetivo: detectar se o aviso tem **regulamento/documento publicado** (vs PAA sem documento). Nomes de campos ACF variam entre portais WordPress (descoberto 2026-04-17: sustentavel-2030 usa `acf.aviso`, portugal-2030 usa `acf.pdf`). Para ser futuro-proof, a verificacao e feita em 2 niveis:
 
-Esta regra aplica-se APENAS a fontes com `access_method: "api"`. Para fontes webfetch/chrome/websearch nao existe campo `acf.pdf`, ignorar esta regra.
+**Nivel 1 - Lista nominal de campos conhecidos (verificar por esta ordem):**
+```
+acf.pdf
+acf.aviso
+acf.ficheiro
+acf.regulamento
+acf.documento
+acf.link_documento
+acf.anexo
+acf.url_aviso
+acf.url_regulamento
+```
+Se qualquer um destes campos contiver valor valido (ID numerico > 100, ou URL nao vazia, ou array com elemento valido): **CONSIDERAR PUBLICADO** e continuar processamento.
 
-Registar no relatorio: "N items sem PDF ignorados (possivel plano anual)".
+**Nivel 2 - Fallback generico (apenas se Nivel 1 falhar):**
+Iterar por **todos** os campos de `acf` e considerar publicado se qualquer valor:
+- for inteiro >= 100 (WP media ID plausivel), OU
+- for string contendo `.pdf`, `.doc`, `.docx` (URL de documento), OU
+- for string comecando por `http` E contendo `/uploads/` ou `/wp-content/` (anexo WordPress)
+
+Se Nivel 1 **e** Nivel 2 falharem ambos: **SKIP TOTAL** - nao adicionar a queue, nao adicionar ao lookup.json. Estes items sao quase sempre plano anual ou resumos sem regulamento. Serao reavaliados em futuras runs quando o documento for publicado.
+
+Esta regra aplica-se APENAS a fontes com `access_method: "api"`. Para fontes webfetch/chrome/websearch nao existe estrutura ACF, ignorar esta regra.
+
+**Registar no relatorio:**
+- "N items com documento detectado via Nivel 1 (campo: X)"
+- "M items com documento detectado via Nivel 2 (fallback generico)"
+- "K items sem documento ignorados (possivel plano anual)"
 
 **REGRA CRITICA - URL DO AVISO:**
 O campo `regulation_url` de cada item DEVE ser o campo `link` do JSON da API (ex: `https://portugal2030.pt/aviso-2024/nome-do-aviso/`). NUNCA usar URLs genericos como `https://portugal2030.pt/avisos/` ou `https://pessoas2030.gov.pt/avisos/`. Se `link` nao estiver disponivel, construir a partir do slug do aviso.
@@ -193,10 +232,12 @@ A SEDIA API tem centenas ou milhares de topics abertos. Nao e possivel processar
 2. Para cada topic de cada pagina: verificar o lookup.
    - Se ja esta em `lookup.by_aviso_codigo` ou `lookup.by_id`: **skip** (ja foi descoberto numa run anterior)
    - Se e novo: buscar detalhes e adicionar a queue
-3. Continuar a paginar ate atingir **50 topics novos** (com detalhes buscados) OU ate a API nao retornar mais resultados.
+3. Continuar a paginar ate atingir **150 topics novos** (cap v4.2 para fontes HIGH, vs 50 para as restantes) OU ate a API nao retornar mais resultados.
 4. Parar. Os topics seguintes ficam para a proxima run.
 
-**Na proxima run:** o lookup ja tem os 50 do ciclo anterior. O scanner percorre as primeiras paginas rapidamente (todos skip), avanca ate encontrar os proximos novos, e recolhe mais 50. E assim sucessivamente ate cobrir todos os topics.
+**Na proxima run:** o lookup ja tem os 150 do ciclo anterior. O scanner percorre as primeiras paginas rapidamente (todos skip), avanca ate encontrar os proximos novos, e recolhe mais 150. E assim sucessivamente ate cobrir todos os topics.
+
+**Justificacao cap 150 (v4.2):** SEDIA tem milhares de topics. Com cap 50, cobertura total demora ~40 runs. Com cap 150, reduz-se para ~14 runs. Custo de tokens escala linearmente mas e absorvido pela ausencia de necessidade de re-runs.
 
 **Implementacao:**
 ```
@@ -533,22 +574,30 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
 
 ---
 
-## RESUMO
+## RESUMO (v4.2)
 
 ```
 1. Ler index.json + queue.json + queue-catalogo.json + lookup.json + sources-scan.json
 2. Selecionar ate 6 fontes:
-   - Slots 1-4: high nunca-verificadas > high >3d > high mais antigas (so high)
-   - Slot 5: medium/low nunca-verificadas > medium >7d > low >14d (nunca high, pode ficar vazio)
-   - Slot 6: catalogo nunca-verificadas > catalogo >90d > se vazio: medium/low aviso mais antiga
+   - Slots 1-2: HIGH permanentes SEM cooldown (portugal-2030 + eu-funding-tenders sempre)
+   - Slots 3-4: Overflow HIGH->MEDIUM (medium nunca-verificadas > medium >7d > low >14d)
+   - Slot 5: MEDIUM/LOW garantido (mesma logica, exclui fontes ja em 3-4)
+   - Slot 6: catalogo nunca-verificadas > catalogo >90d > se vazio: medium/low aviso
 3. Para cada fonte:
    - Aceder (se webfetch: tentar 3 URLs antes de declarar "0 novos")
-   - Extrair items, aplicar filtros, deduplicar
+   - Extrair items, aplicar filtros (incluindo cascade acf.pdf|aviso|ficheiro|... + fallback generico)
+   - Deduplicar via lookup
    - Adicionar novos a queue correcta (aviso -> queue.json, catalogo -> queue-catalogo.json)
+   - Aplicar cap: eu-funding-tenders=150, restantes=50
 4. Manter contadores internos: novos_aviso, novos_catalogo, movidos_overflow
 5. Atualizar index.json e source_last_checked
 5b. Produzir RELATORIO GRANULAR: por fonte detalhar URLs verificados, items retornados, filtros, dedup, novos
-6a. SANITY CHECK: queue_depois == queue_antes + delta esperado. Se falhar: ABORT sem commit.
+6a. SANITY CHECK (3 testes): delta + invariantes absolutos + coerencia lookup. Auto-correct com WARNING.
 6b. git commit + push
 7. Reportar relatorio granular completo
+
+DISTRIBUICAO ACTUAL (v4.2, verificado empiricamente 2026-04-17):
+- regime=aviso: high=2 | medium=51 | low=10
+- regime=catalogo: medium=14 | low=7
+- Total: 84 fontes
 ```
