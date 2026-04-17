@@ -1383,9 +1383,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "pending",
+      "status": "plano_anual",
       "notes": "FA0138/2025. MADEIRA2030. FEDER.",
-      "download_error": "PDF nao encontrado - tentativa em 2026-04-17"
+      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro"
     },
     {
       "id": "funcionamento-2030-t-4-aviso",
@@ -1432,9 +1432,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "pending",
+      "status": "plano_anual",
       "notes": "FA0207/2025. AÇORES2030. FEDER.",
-      "download_error": "URL no queue diverge da publicada (2-aviso vs 2o-aviso) - PDF nao encontrado em 2026-04-17"
+      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro"
     },
     {
       "id": "intervencoes-de-gestao-conservacao-reflorestacao-e-ordenamento-da-flor",
@@ -1449,9 +1449,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "pending",
+      "status": "plano_anual",
       "notes": "FA0932/2024. SUSTENTAVEL2030. FC.",
-      "download_error": "PDF nao encontrado - tentativa em 2026-04-17"
+      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro"
     },
     {
       "id": "gestao-de-residuos-urbanos-acoes-imateriais",
@@ -1466,9 +1466,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "pending",
+      "status": "plano_anual",
       "notes": "FA0577/2024. SUSTENTAVEL2030. FC.",
-      "download_error": "PACS-2024-05 PDF inacessivel - tentativa em 2026-04-17"
+      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro"
     },
     {
       "id": "estudos-mobilidade-urbana-sustentavel",
@@ -1483,9 +1483,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "pending",
+      "status": "plano_anual",
       "notes": "FA0282/2025. SUSTENTAVEL2030. FC.",
-      "download_error": "PDF nao encontrado - item pode ser ainda PAA - tentativa em 2026-04-17"
+      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro"
     },
     {
       "id": "infraestrutura-portuaria-rte-porto-de-leixoes-4-aviso",
@@ -1501,7 +1501,8 @@
       "regulation_local": null,
       "priority_score": 25,
       "status": "pending",
-      "notes": "FA0037/2025. SUSTENTAVEL2030. FC."
+      "notes": "FA0037/2025. SUSTENTAVEL2030. FC.",
+      "download_error": "HTTP 404 - URL nao encontrado, 4o aviso ainda nao publicado - tentativa 2026-04-17"
     },
     {
       "id": "formacao-empresarial-individual",
@@ -1516,8 +1517,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "pending",
-      "notes": "FA0240/2025. MADEIRA2030. FSE+."
+      "status": "plano_anual",
+      "notes": "FA0240/2025. MADEIRA2030. FSE+.",
+      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro"
     },
     {
       "id": "formacoes-modulares-certificadas",
@@ -1532,8 +1534,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "pending",
-      "notes": "FA0097/2025. MADEIRA2030. FSE+."
+      "status": "plano_anual",
+      "notes": "FA0097/2025. MADEIRA2030. FSE+.",
+      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro"
     },
     {
       "id": "inovcontacto",
@@ -1548,8 +1551,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "pending",
-      "notes": "FA0293/2025. COMPETE2030. FSE+."
+      "status": "plano_anual",
+      "notes": "FA0293/2025. COMPETE2030. FSE+.",
+      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro"
     },
     {
       "id": "pepac-missoes",
@@ -1564,8 +1568,9 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "pending",
-      "notes": "FA0294/2025. COMPETE2030. FSE+."
+      "status": "plano_anual",
+      "notes": "FA0294/2025. COMPETE2030. FSE+.",
+      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro"
     },
     {
       "id": "cursos-profissionais-entidades-publicas",
