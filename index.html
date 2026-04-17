@@ -1347,15 +1347,19 @@
         const n = items.length;
         totalEl.textContent = n + (n === 1 ? ' instrumento na biblioteca' : ' instrumentos na biblioteca');
       }
+      // 3 slots fixos: Portugal 2030 · União Europeia · Outros
+      // Dentro de cada slot: estado='aberto', ordenado por maior montante EUR
+      const PT2030 = new Set(['pt2030','compete','norte-2030','centro-2030','lisboa-2030','alentejo-2030','algarve-2030','acores-2030','madeira-2030']);
+      const EU     = new Set(['ue','eit']);
+      const slotOf = f => PT2030.has(f) ? 'pt2030' : (EU.has(f) ? 'ue' : 'outros');
       const abertos = items.filter(i => i.estado === 'aberto');
-      const ranked = abertos
-        .map(i => ({ item: i, score: parseMontanteEur(i.highlight0) }))
-        .sort((a, b) => b.score - a.score);
-      const withValue = ranked.filter(r => r.score > 0).slice(0, 3).map(r => r.item);
-      // Fallback: se menos de 3 tiveram montante parseavel, completar com restantes abertos
-      const featured = withValue.length >= 3
-        ? withValue
-        : withValue.concat(abertos.filter(i => !withValue.includes(i)).slice(0, 3 - withValue.length));
+      const pickTop = slot => {
+        const pool = abertos.filter(i => slotOf(i.fonte) === slot);
+        const ranked = pool.map(i => ({ i, s: parseMontanteEur(i.highlight0) })).sort((a,b) => b.s - a.s);
+        const withVal = ranked.find(r => r.s > 0);
+        return withVal ? withVal.i : (ranked[0] ? ranked[0].i : null);
+      };
+      const featured = ['pt2030','ue','outros'].map(pickTop).filter(Boolean);
       const grid = document.getElementById('libraryFeaturedGrid');
       if (!grid || featured.length === 0) return;
 
