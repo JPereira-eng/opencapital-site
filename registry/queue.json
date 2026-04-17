@@ -516,70 +516,6 @@
       "status": "ready"
     },
     {
-      "id": "cursos-profissionais-ano-letivo-2026-2027-escolas-privadas-e-outras",
-      "name": "Cursos Profissionais Ano Letivo 2026/2027 - Escolas Privadas e Outras",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-pessoas",
-      "aviso_codigo": "FA0140/2025",
-      "detected_date": "2026-04-17",
-      "deadline": "2026-08-31",
-      "budget": "230 000 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/cursos-profissionais-ano-letivo-2026-2027-escolas-privadas-e-outras/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0140/2025. PESSOAS2030. FSE+. Previsto."
-    },
-    {
-      "id": "cursos-profissionais-ano-letivo-2026-2027-escolas-publicas",
-      "name": "Cursos Profissionais Ano Letivo 2026/2027 - Escolas Publicas",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-pessoas",
-      "aviso_codigo": "FA0139/2025",
-      "detected_date": "2026-04-17",
-      "deadline": "2026-08-31",
-      "budget": "45 000 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/cursos-profissionais-ano-letivo-2026-2027-escolas-publicas/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0139/2025. PESSOAS2030. FSE+. Previsto."
-    },
-    {
-      "id": "vida-ativa-emprego-qualificado",
-      "name": "Vida Ativa - Emprego Qualificado",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-pessoas",
-      "aviso_codigo": "FA0083/2025",
-      "detected_date": "2026-04-17",
-      "deadline": "2026-12-31",
-      "budget": "71 250 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/vida-ativa-emprego-qualificado/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0083/2025. PESSOAS2030. FSE+. Previsto."
-    },
-    {
-      "id": "formacoes-modulares-certificadas-pessoas2030",
-      "name": "Formacoes Modulares Certificadas (PESSOAS2030)",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-pessoas",
-      "aviso_codigo": "FA0298/2025",
-      "detected_date": "2026-04-17",
-      "deadline": "2026-12-31",
-      "budget": "150 000 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/formacoes-modulares-certificadas/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0298/2025. PESSOAS2030. FSE+. Previsto."
-    },
-    {
       "id": "formacao-publicos-estrategicos-xenofobia-discriminacao",
       "name": "Formacao de Publicos Estrategicos na Area do Combate a Xenofobia e Discriminacao",
       "source_id": "portugal-2030",
@@ -612,22 +548,6 @@
       "notes": "FA0142/2025. PESSOAS2030. FSE+. Previsto."
     },
     {
-      "id": "cursos-cef-cefjam-escolas-privadas-2026-2027",
-      "name": "Cursos de Educacao e Formacao de Jovens (CEF incluindo CEFJAM) Ano Letivo 2026/2027 - Escolas Privadas e Outras",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-pessoas",
-      "aviso_codigo": "FA0141/2025",
-      "detected_date": "2026-04-17",
-      "deadline": "2026-08-31",
-      "budget": "13 000 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/cursos-de-educacao-e-formacao-de-jovens-cef-incluindo-cefjam-ano-letivo-2026-2027-escolas-privadas-e-outras/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0141/2025. PESSOAS2030. FSE+. Previsto."
-    },
-    {
       "id": "horizon-cl5-2026-07-d1-01",
       "name": "Next Generation Climate Monitoring and Related Capabilities",
       "source_id": "eu-funding-tenders",
@@ -638,10 +558,11 @@
       "budget": "82 000 000 EUR",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2026-07-d1-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2026-07-d1-01.txt",
       "priority_score": 145,
-      "status": "pending",
-      "notes": "HORIZON-CL5-2026-07-D1-01. Cluster 5 - Climate Change. Orcamento indicativo 82M EUR. URGENTE: prazo 21 abr 2026."
+      "status": "ready",
+      "notes": "HORIZON-CL5-2026-07-D1-01. Cluster 5 - Climate Change. Orcamento indicativo 82M EUR. URGENTE: prazo 21 abr 2026.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl5-2026-07-d1-02",
@@ -654,10 +575,11 @@
       "budget": "82 000 000 EUR",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2026-07-d1-02",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2026-07-d1-02.txt",
       "priority_score": 145,
-      "status": "pending",
-      "notes": "HORIZON-CL5-2026-07-D1-02. Cluster 5 - Climate Change. Orcamento indicativo 82M EUR. URGENTE: prazo 21 abr 2026."
+      "status": "ready",
+      "notes": "HORIZON-CL5-2026-07-D1-02. Cluster 5 - Climate Change. Orcamento indicativo 82M EUR. URGENTE: prazo 21 abr 2026.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl5-2026-07-d1-03",
@@ -670,10 +592,11 @@
       "budget": "82 000 000 EUR",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2026-07-d1-03",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2026-07-d1-03.txt",
       "priority_score": 145,
-      "status": "pending",
-      "notes": "HORIZON-CL5-2026-07-D1-03. Cluster 5 - Climate Change. Orcamento indicativo 82M EUR. URGENTE: prazo 21 abr 2026."
+      "status": "ready",
+      "notes": "HORIZON-CL5-2026-07-D1-03. Cluster 5 - Climate Change. Orcamento indicativo 82M EUR. URGENTE: prazo 21 abr 2026.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl5-2026-07-d1-04",
@@ -686,10 +609,11 @@
       "budget": "82 000 000 EUR",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2026-07-d1-04",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2026-07-d1-04.txt",
       "priority_score": 145,
-      "status": "pending",
-      "notes": "HORIZON-CL5-2026-07-D1-04. Cluster 5 - Climate Change. Orcamento indicativo 82M EUR. URGENTE: prazo 21 abr 2026."
+      "status": "ready",
+      "notes": "HORIZON-CL5-2026-07-D1-04. Cluster 5 - Climate Change. Orcamento indicativo 82M EUR. URGENTE: prazo 21 abr 2026.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl5-2026-07-d1-05",
@@ -702,10 +626,11 @@
       "budget": "82 000 000 EUR",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl5-2026-07-d1-05",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2026-07-d1-05.txt",
       "priority_score": 145,
-      "status": "pending",
-      "notes": "HORIZON-CL5-2026-07-D1-05. Cluster 5 - Climate Change. Orcamento indicativo 82M EUR. URGENTE: prazo 21 abr 2026."
+      "status": "ready",
+      "notes": "HORIZON-CL5-2026-07-D1-05. Cluster 5 - Climate Change. Orcamento indicativo 82M EUR. URGENTE: prazo 21 abr 2026.",
+      "fail_count": 0
     },
     {
       "id": "norte2030-2026-5-5g-healthcare",
