@@ -6,11 +6,11 @@
   },
   "totals": {
     "published": 180,
-    "open": 156,
-    "closed": 15,
+    "open": 153,
+    "closed": 18,
     "planned": 9,
-    "in_queue": 55,
-    "in_watchlist": 11,
+    "in_queue": 59,
+    "in_watchlist": 103,
     "in_catalogo": 0
   },
   "shards": {
@@ -51,8 +51,8 @@
     },
     "eu-horizon": {
       "count": 35,
-      "open": 31,
-      "closed": 3,
+      "open": 28,
+      "closed": 6,
       "planned": 1
     },
     "eu-other": {
@@ -87,7 +87,7 @@
     }
   },
   "last_full_cycle": "2026-04-12",
-  "last_monitor_run": "2026-04-16",
+  "last_monitor_run": "2026-04-17",
   "last_writer_run": "2026-04-17T23:00:00",
   "source_last_checked": {
     "portugal-2030": "2026-04-17",

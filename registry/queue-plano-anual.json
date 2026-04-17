@@ -563,23 +563,6 @@
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
     },
     {
-      "id": "distribuicao-indireta-de-generos-alimentares-cartao-eletronico",
-      "name": "Distribuição indireta de géneros alimentares - cartão eletrónico",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0267/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-04-24",
-      "budget": "1 050 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/distribuicao-indireta-de-generos-alimentares-cartao-eletronico/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 125,
-      "status": "plano_anual",
-      "notes": "FA0267/2025. MADEIRA2030. FSE+.",
-      "download_error": "Resumo de Aviso do Plano Anual de Avisos - PDF e apenas resumo sem regulamento publicado"
-    },
-    {
       "id": "apoio-a-infraestruturas-de-base-tecnologica-da-regiao-do-medio-tejo-ft",
       "name": "Apoio a Infraestruturas de Base Tecnológica da Região do Médio Tejo (FTJ)",
       "source_id": "portugal-2030",
@@ -594,24 +577,9 @@
       "priority_score": 125,
       "status": "plano_anual",
       "notes": "FA0245/2025. CENTRO2030. FTJ.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
-    },
-    {
-      "id": "educacao-intercultural-em-contexto-escolar",
-      "name": "Educação intercultural em contexto escolar",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0320/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-04-30",
-      "budget": "4 000 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/educacao-intercultural-em-contexto-escolar/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 125,
-      "status": "plano_anual",
-      "notes": "FA0320/2025. FAMI2030. FAMI.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
+      "plano_anual_last_check": "2026-04-17",
+      "plano_anual_checks": 1
     },
     {
       "id": "execucao-da-edl-do-gal-costeiro-do-barlavento-do-algarve-destinado-a-v",
@@ -628,7 +596,9 @@
       "priority_score": 115,
       "status": "plano_anual",
       "notes": "FA0273/2025. MAR2030. FEAMPA.",
-      "download_error": "Plano Anual - API slug nao encontrado, item provavel PAA"
+      "download_error": "Plano Anual - API slug nao encontrado, item provavel PAA",
+      "plano_anual_last_check": "2026-04-17",
+      "plano_anual_checks": 1
     },
     {
       "id": "execucao-da-edl-do-gal-litoral-rural-aldeias-de-mar-litoral-rural-proj",
@@ -645,7 +615,9 @@
       "priority_score": 115,
       "status": "plano_anual",
       "notes": "FA0312/2023. MAR2030. FEAMPA.",
-      "download_error": "Plano Anual - API slug nao encontrado, item provavel PAA"
+      "download_error": "Plano Anual - API slug nao encontrado, item provavel PAA",
+      "plano_anual_last_check": "2026-04-17",
+      "plano_anual_checks": 1
     },
     {
       "id": "execucao-da-edl-do-gal-litoral-rural-capacitacao-das-associacoes-de-pe",
@@ -662,7 +634,9 @@
       "priority_score": 115,
       "status": "plano_anual",
       "notes": "FA0236/2025. MAR2030. FEAMPA.",
-      "download_error": "Plano Anual - API slug nao encontrado, item provavel PAA"
+      "download_error": "Plano Anual - API slug nao encontrado, item provavel PAA",
+      "plano_anual_last_check": "2026-04-17",
+      "plano_anual_checks": 1
     },
     {
       "id": "execucao-da-edl-do-gal-litoral-rural-sistema-de-apoio-ao-investimento-",
@@ -679,58 +653,9 @@
       "priority_score": 115,
       "status": "plano_anual",
       "notes": "FA0176/2025. MAR2030. FEAMPA.",
-      "download_error": "Plano Anual - PDF contém Resumo de Aviso do Plano Anual de Avisos"
-    },
-    {
-      "id": "formacao-e-emprego-jovens-ii",
-      "name": "Formação e Emprego - JOVENS II",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0122/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-04-30",
-      "budget": "400 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/formacao-e-emprego-jovens-ii/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 115,
-      "status": "plano_anual",
-      "notes": "FA0122/2025. MADEIRA2030. FSE+.",
-      "download_error": "Plano Anual - PDF contem resumo PAA, nao regulamento publicado"
-    },
-    {
-      "id": "programas-de-insercao-profissional-publicos-mais-vulneraveis",
-      "name": "Programas de Inserção profissional - Públicos mais vulneráveis",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0123/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-04-30",
-      "budget": "600 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/programas-de-insercao-profissional-publicos-mais-vulneraveis/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 115,
-      "status": "plano_anual",
-      "notes": "FA0123/2025. MADEIRA2030. FSE+.",
-      "download_error": "Plano Anual - PDF contem resumo PAA, nao regulamento publicado"
-    },
-    {
-      "id": "formacao-e-emprego-desempregados",
-      "name": "Formação e Emprego - Desempregados",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0120/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-04-30",
-      "budget": "510 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/formacao-e-emprego-desempregados/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 115,
-      "status": "plano_anual",
-      "notes": "FA0120/2025. MADEIRA2030. FSE+.",
-      "download_error": "Plano Anual - PDF contem resumo PAA, nao regulamento publicado"
+      "download_error": "Plano Anual - PDF contém Resumo de Aviso do Plano Anual de Avisos",
+      "plano_anual_last_check": "2026-04-17",
+      "plano_anual_checks": 1
     },
     {
       "id": "apoio-a-infraestruturas-de-base-tecnologica-regulamento-step",
@@ -1444,23 +1369,6 @@
       "status": "plano_anual",
       "notes": "FA0294/2025. COMPETE2030. FSE+.",
       "download_error": "Plano Anual - conteudo PAA detectado no ficheiro"
-    },
-    {
-      "id": "distribuicao-indireta-de-generos-alimentares-cartao-eletronico",
-      "name": "Distribuição indireta de géneros alimentares - cartão eletrónico",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0214/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-10-28",
-      "budget": "1 050 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/distribuicao-indireta-de-generos-alimentares-cartao-eletronico/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 25,
-      "status": "plano_anual",
-      "notes": "FA0214/2025. MADEIRA2030. FSE+.",
-      "download_error": "Resumo de Aviso do Plano Anual de Avisos - PDF e apenas resumo sem regulamento publicado"
     },
     {
       "id": "sitce-economia-circular-algarve",
