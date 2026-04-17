@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "description": "Versao leve de sources.json para uso pelos agentes scanner/writer (v4.2: 2 HIGH fixos + overflow medium)",
+    "description": "Versao leve de sources.json para uso pelos agentes scanner/writer (v4.3: 2 HIGH fixos + overflow medium; catalog_type subcategorizacao para regime=catalogo)",
     "updated": "2026-04-17",
-    "version": "v4.2"
+    "version": "v4.3"
   },
   "sources": [
     {
@@ -204,7 +204,8 @@
       "access_method": "chrome",
       "access_status": "blocked",
       "url_avisos": "https://www.bpfomento.pt/pt/catalogo/",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "public-fund"
     },
     {
       "id": "aicep",
@@ -222,7 +223,8 @@
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://www.portugalventures.pt/investments/",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "public-fund"
     },
     {
       "id": "turismo-portugal",
@@ -231,7 +233,8 @@
       "access_method": "chrome",
       "access_status": "blocked",
       "url_avisos": "https://business.turismodeportugal.pt/pt/Investir/Financiamento/programas/Paginas/default.aspx",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "bank-product"
     },
     {
       "id": "fct",
@@ -683,7 +686,8 @@
       "access_method": "chrome",
       "access_status": "unverified",
       "url_avisos": "https://www.cgd.pt/Empresas/Pages/Empresas_v2.aspx",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "bank-product"
     },
     {
       "id": "bpi-empresas",
@@ -692,7 +696,8 @@
       "access_method": "chrome",
       "access_status": "unverified",
       "url_avisos": "https://www.bancobpi.pt/empresas/financiamento",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "bank-product"
     },
     {
       "id": "millennium-empresas",
@@ -701,7 +706,8 @@
       "access_method": "chrome",
       "access_status": "unverified",
       "url_avisos": "https://ind.millenniumbcp.pt/pt/Empresas/Financiamento/Pages/default.aspx",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "bank-product"
     },
     {
       "id": "novobanco-empresas",
@@ -710,7 +716,8 @@
       "access_method": "chrome",
       "access_status": "unverified",
       "url_avisos": "https://www.novobanco.pt/empresas/financiamento",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "bank-product"
     },
     {
       "id": "santander-empresas",
@@ -719,7 +726,8 @@
       "access_method": "chrome",
       "access_status": "unverified",
       "url_avisos": "https://www.santander.pt/empresas/financiamento",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "bank-product"
     },
     {
       "id": "indico-capital",
@@ -729,7 +737,8 @@
       "access_status": "unverified",
       "url_avisos": "https://www.indicocapital.com",
       "notes": " | Fundo VC candidatura continua - sem calls formais com deadline. Scanner nao deve adicionar a queue.",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "vc"
     },
     {
       "id": "armilar-ventures",
@@ -739,7 +748,8 @@
       "access_status": "unverified",
       "url_avisos": "https://armilarventurepartners.com",
       "notes": " | Fundo VC candidatura continua - sem calls formais com deadline. Scanner nao deve adicionar a queue.",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "vc"
     },
     {
       "id": "faber-ventures",
@@ -749,7 +759,8 @@
       "access_status": "unverified",
       "url_avisos": "https://faber.vc",
       "notes": " | Fundo VC candidatura continua - sem calls formais com deadline. Scanner nao deve adicionar a queue.",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "vc"
     },
     {
       "id": "shilling-vc",
@@ -758,7 +769,8 @@
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://shilling.vc",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "vc"
     },
     {
       "id": "bynd-vc",
@@ -767,7 +779,8 @@
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://bynd.vc",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "vc"
     },
     {
       "id": "premio-bpi-lacaixa",
@@ -776,7 +789,8 @@
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://www.bancobpi.pt/grupo-bpi/sustentabilidade/premios-bpi-fundacao-la-caixa",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "prize"
     },
     {
       "id": "premio-gulbenkian",
@@ -785,7 +799,8 @@
       "access_method": "chrome",
       "access_status": "unverified",
       "url_avisos": "https://gulbenkian.pt/apoios-e-parcerias/",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "prize"
     },
     {
       "id": "edp-innovation",
@@ -795,7 +810,8 @@
       "access_status": "unverified",
       "url_avisos": "https://www.edp.com/en/innovation",
       "notes": " | Fundo VC candidatura continua - sem calls formais com deadline. Scanner nao deve adicionar a queue.",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "cvc"
     },
     {
       "id": "bgi-accelerator",
@@ -804,7 +820,8 @@
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://www.bfrancisco.com/bgi",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "accelerator"
     },
     {
       "id": "startup-lisboa",
@@ -813,7 +830,8 @@
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://www.startuplisboa.com/apply",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "incubator"
     },
     {
       "id": "beta-i",
@@ -822,7 +840,8 @@
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://beta-i.com/programs",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "accelerator"
     },
     {
       "id": "f6s",
@@ -831,7 +850,8 @@
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://www.f6s.com/deals",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "platform"
     },
     {
       "id": "eu-startups",
@@ -840,7 +860,8 @@
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://www.eu-startups.com/category/funding/",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "platform"
     },
     {
       "id": "startup-portugal",
@@ -849,7 +870,250 @@
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://startupportugal.com",
-      "regime": "catalogo"
+      "regime": "catalogo",
+      "catalog_type": "platform"
+    },
+    {
+      "id": "bright-pixel-capital",
+      "name": "Bright Pixel Capital (ex-Sonae IM)",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://brightpixelcapital.com",
+      "notes": "VC early-stage, portfolio cibersseguranca, enterprise software, marketplaces. Potencialmente SIFIDE-certificado. Candidatura continua.",
+      "regime": "catalogo",
+      "catalog_type": "vc"
+    },
+    {
+      "id": "200m-capital",
+      "name": "200M Capital",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://200mcapital.com",
+      "notes": "VC deep tech e life sciences, tickets medios/altos, co-investimento IFD. Candidatura continua.",
+      "regime": "catalogo",
+      "catalog_type": "vc"
+    },
+    {
+      "id": "maze-impact",
+      "name": "MAZE Impact",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://maze-impact.com",
+      "notes": "Impact VC, startups com mensuracao de impacto social e ambiental, foco iberico e europeu. Candidatura continua.",
+      "regime": "catalogo",
+      "catalog_type": "vc"
+    },
+    {
+      "id": "iberis-capital",
+      "name": "Iberis Capital",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://iberiscapital.com",
+      "notes": "Growth equity / private equity, tickets elevados para empresas com escala. Candidatura continua.",
+      "regime": "catalogo",
+      "catalog_type": "pe"
+    },
+    {
+      "id": "pathena-ventures",
+      "name": "Pathena Ventures",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://pathena.vc",
+      "notes": "VC focado em tech e servicos B2B em fase de escala. Candidatura continua.",
+      "regime": "catalogo",
+      "catalog_type": "vc"
+    },
+    {
+      "id": "lc-ventures",
+      "name": "LC Ventures",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://lcventures.vc",
+      "notes": "VC portugues pre-seed/seed, foco iberico. Candidatura continua.",
+      "regime": "catalogo",
+      "catalog_type": "vc"
+    },
+    {
+      "id": "olisipo-way",
+      "name": "Olisipo Way",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.olisipo.pt/olisipo-way",
+      "notes": "VC corporativo Olisipo, foco em tech portugues e escalabilidade. Candidatura continua.",
+      "regime": "catalogo",
+      "catalog_type": "vc"
+    },
+    {
+      "id": "semapa-next",
+      "name": "Semapa Next",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.semapanext.com",
+      "notes": "CVC do grupo Semapa, foco tech, industria 4.0 e sustentabilidade. Fundo potencialmente SIFIDE-certificado.",
+      "regime": "catalogo",
+      "catalog_type": "cvc"
+    },
+    {
+      "id": "brisa-innovation",
+      "name": "Brisa Innovation",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.brisa.pt/inovacao",
+      "notes": "CVC Brisa Infraestruturas, foco mobilidade, smart infra, cidades inteligentes.",
+      "regime": "catalogo",
+      "catalog_type": "cvc"
+    },
+    {
+      "id": "galp-ventures",
+      "name": "Galp Ventures",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.galp.com/corp/en/ventures",
+      "notes": "CVC Galp Energia, foco transicao energetica, clean tech, mobilidade electrica.",
+      "regime": "catalogo",
+      "catalog_type": "cvc"
+    },
+    {
+      "id": "fnaba",
+      "name": "FNABA (Federacao Nacional de Associacoes de Business Angels)",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "unverified",
+      "url_avisos": "https://fnaba.org",
+      "notes": "Federacao portuguesa de redes de BAs. Coordena investimento pre-seed colectivo em Portugal.",
+      "regime": "catalogo",
+      "catalog_type": "ba"
+    },
+    {
+      "id": "invicta-angels",
+      "name": "Invicta Angels",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://invictaangels.com",
+      "notes": "Rede de BAs do Porto, pre-seed tickets 25-250K EUR.",
+      "regime": "catalogo",
+      "catalog_type": "ba"
+    },
+    {
+      "id": "core-angels-atlantic",
+      "name": "Core Angels Atlantic",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://coreangels.com/atlantic",
+      "notes": "Rede iberica de BAs, pre-seed cross-border PT-ES.",
+      "regime": "catalogo",
+      "catalog_type": "ba"
+    },
+    {
+      "id": "seedrs-pt",
+      "name": "Seedrs Portugal",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://www.seedrs.com/invest",
+      "notes": "Plataforma equity crowdfunding UK com operacao PT. Campanhas individuais sao aviso-like (deadline). A entry catalogo refere-se a plataforma como instrumento de referencia.",
+      "regime": "catalogo",
+      "catalog_type": "crowdfunding"
+    },
+    {
+      "id": "raize-empresarial",
+      "name": "Raize",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://www.raize.pt",
+      "notes": "Plataforma portuguesa de P2P lending empresarial e equity crowdfunding. Alternativa a credito bancario para PMEs.",
+      "regime": "catalogo",
+      "catalog_type": "crowdfunding"
+    },
+    {
+      "id": "ifd-instituicao-financeira-desenvolvimento",
+      "name": "IFD (Instituicao Financeira de Desenvolvimento)",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://www.ifd.pt/instrumentos-financeiros",
+      "notes": "IFD gere instrumentos publicos (Fundo 200M, co-investimento, garantia mutua). Integrada no Banco Portugues de Fomento.",
+      "regime": "catalogo",
+      "catalog_type": "public-fund"
+    },
+    {
+      "id": "techstars-lisbon",
+      "name": "Techstars Lisbon (programa continuo)",
+      "priority": "medium",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.techstars.com/accelerators/lisbon",
+      "notes": "Acelerador global, cohort de Lisboa. Entry catalogo refere-se ao programa como instrumento de referencia; cohorts individuais sao aviso-like (ver techstars-lisbon-cohort).",
+      "regime": "catalogo",
+      "catalog_type": "accelerator"
+    },
+    {
+      "id": "plug-and-play-portugal",
+      "name": "Plug and Play Portugal",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.plugandplaytechcenter.com/portugal",
+      "notes": "Acelerador corporativo global com presenca PT. Verticais: fintech, mobility, supply chain, enterprise.",
+      "regime": "catalogo",
+      "catalog_type": "accelerator"
+    },
+    {
+      "id": "uptec-porto",
+      "name": "UPTEC (Parque de Ciencia e Tecnologia da UP)",
+      "priority": "medium",
+      "access_method": "webfetch",
+      "access_status": "ok",
+      "url_avisos": "https://uptec.up.pt",
+      "notes": "Incubadora da Universidade do Porto, hub tecnologico na zona norte.",
+      "regime": "catalogo",
+      "catalog_type": "incubator"
+    },
+    {
+      "id": "nova-sbe-venture-lab",
+      "name": "NOVA SBE Venture Lab",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.novasbe.unl.pt/en/programs/venture-lab",
+      "notes": "Pre-incubadora da Nova SBE, apoio a startups em fase de ideia/MVP.",
+      "regime": "catalogo",
+      "catalog_type": "incubator"
+    },
+    {
+      "id": "climatelaunchpad-portugal",
+      "name": "ClimateLaunchpad Portugal",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://climatelaunchpad.org/portugal",
+      "notes": "Concurso anual ClimateLaunchpad (EIT Climate-KIC), nacional pre-final iberica. Deadline anual primavera.",
+      "regime": "catalogo",
+      "catalog_type": "prize"
+    },
+    {
+      "id": "eit-digital-challenge",
+      "name": "EIT Digital Challenge",
+      "priority": "low",
+      "access_method": "websearch",
+      "access_status": "unverified",
+      "url_avisos": "https://www.eitdigital.eu/challenge",
+      "notes": "Concurso anual para scaleups digitais europeias. Deadline verao.",
+      "regime": "catalogo",
+      "catalog_type": "prize"
     }
   ]
 }

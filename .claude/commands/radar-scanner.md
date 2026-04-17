@@ -1,4 +1,4 @@
-# Radar Scanner v4.3: Descoberta de Novos Instrumentos
+# Radar Scanner v4.4: Descoberta de Novos Instrumentos
 
 REGRA CRITICA: Nunca usar travessao (—) em nenhum texto gerado. Usar virgula, ponto, hifen (-) ou reescrever a frase.
 
@@ -121,20 +121,43 @@ Consultar `registry/index.json > source_last_checked` para a data de ultima veri
 
 Sao as fontes de bancos, VC, premios, aceleradores e startups. Campo `regime: "catalogo"` em sources-scan.json.
 
-**Prioridade de selecao:**
+#### Subcategorizacao via `catalog_type` (v4.4)
 
-1. Fontes catalogo NUNCA verificadas: prioridade absoluta (1 por run)
+A partir de v4.4, cada fonte de regime `catalogo` tem tambem um campo `catalog_type` que identifica a natureza da fonte. Isto permite (a) diversidade temporal na selecao do slot 6, (b) reporting granular de cobertura por tipo, (c) regras de processamento especificas por tipo.
+
+**Taxonomia (11 valores):**
+
+| catalog_type | Descricao | Exemplos |
+|---|---|---|
+| `vc` | Venture Capital fund (pre-seed, seed, Series A/B/C) | Faber Ventures, Bynd VC, Indico, Bright Pixel, 200M |
+| `pe` | Private Equity / Growth Equity | Iberis Capital |
+| `cvc` | Corporate Venture Capital | Semapa Next, Galp Ventures, EDP Innovation, Brisa Innovation |
+| `ba` | Business Angels network / federacao | FNABA, Invicta Angels, Core Angels Atlantic |
+| `crowdfunding` | Plataforma equity ou debt crowdfunding | Seedrs, Raize |
+| `bank-product` | Linha de credito ou produto bancario empresarial | CGD, BPI, Millennium, NovoBanco, Santander, Turismo de Portugal |
+| `accelerator` | Programa de aceleracao continuo | BGI, Beta-i, Techstars Lisbon, Plug and Play |
+| `incubator` | Incubadora universitaria ou regional | Startup Lisboa, UPTEC, Nova SBE Venture Lab |
+| `prize` | Premio ou concurso anual recorrente | Gulbenkian, BPI La Caixa, ClimateLaunchpad, EIT Digital Challenge |
+| `public-fund` | Fundo publico ou semi-publico | BPF, Portugal Ventures, IFD |
+| `platform` | Agregador ou diretorio de oportunidades | F6S, EU-Startups, Startup Portugal |
+
+**Uso recomendado na selecao do slot 6:** quando existem multiplas fontes catalogo nunca-verificadas, preferir rotacao por `catalog_type` em vez de ordem alfabetica. Assim, o ecossistema e coberto de forma equilibrada (ex: nao verificar 5 VCs seguidos antes de ver um unico BA).
+
+#### Prioridade de selecao do slot 6
+
+1. Fontes catalogo NUNCA verificadas: prioridade absoluta (1 por run). Se houver multiplas, preferir um `catalog_type` ainda nao representado na historia recente (7 dias) de `source_last_checked`.
 2. Fontes catalogo verificadas ha mais de 90 dias (1 por run, a mais antiga primeiro)
 3. **Se nenhuma fonte catalogo for elegivel:** usar o slot para uma fonte aviso de prioridade medium ou low (a mais antiga por antiguidade, mesma logica do slot 4). Nao desperdicar o slot.
 
-**Nota:** com 22 fontes catalogo e 1 slot/run, nos primeiros ~22 dias o slot fica preenchido pelas nunca-verificadas. Depois disso, a maioria dos dias nao ha candidatos catalogo elegíveis (90 dias ainda nao passaram) e o slot cai automaticamente para aviso medium/low.
+**Nota:** com 44 fontes catalogo e 1 slot/run, nos primeiros ~44 dias o slot fica preenchido pelas nunca-verificadas. Depois disso, a maioria dos dias nao ha candidatos catalogo elegíveis (90 dias ainda nao passaram) e o slot cai automaticamente para aviso medium/low.
 
 **Regras especificas para regime "catalogo":**
 - **Nao exigir deadline formal.** Estas fontes operam com candidatura continua, produtos permanentes ou premios anuais sem data fixa. Registar o instrumento mesmo sem prazo (`deadline: null`).
 - **Nao adicionar a queue.json.** Instrumentos de regime "catalogo" sao adicionados diretamente ao `registry/queue-catalogo.json` (estrutura identica a queue.json). O writer le este ficheiro separadamente.
-- **VC e fundos de investimento privado:** Verificar uma vez por trimestre. Se nao houver call formal aberta, registar o fundo como instrumento de referencia (ex: "Fundo Indico Capital - candidatura permanente") com `status: "cont"` (candidatura continua). Util para o catalogo mesmo sem aviso ativo.
-- **Bancos (CGD, BPI, Millennium, NovoBanco, Santander):** Verificar uma vez por trimestre. Registar linhas de credito e produtos para empresas como instrumentos de tipo "div" (divida). Sem deadline.
-- **Premios e aceleradores:** Verificar uma vez por trimestre. Se existir candidatura aberta com prazo, registar normalmente. Se nao: registar como referencia anual.
+- **VC, PE, CVC, BA (catalog_type in [vc, pe, cvc, ba]):** Verificar uma vez por trimestre. Se nao houver call formal aberta, registar o fundo/rede como instrumento de referencia (ex: "Fundo Indico Capital - candidatura permanente") com `status: "cont"` (candidatura continua). Util para o catalogo mesmo sem aviso ativo.
+- **Bank-product (catalog_type=bank-product):** Verificar uma vez por trimestre. Registar linhas de credito e produtos para empresas como instrumentos de tipo "div" (divida). Sem deadline.
+- **Premios, aceleradores, incubadoras (catalog_type in [prize, accelerator, incubator]):** Verificar uma vez por trimestre. Se existir candidatura aberta com prazo, registar normalmente. Se nao: registar como referencia anual.
+- **Public-fund, platform, crowdfunding:** Verificar uma vez por trimestre. Plataformas e agregadores (F6S, EU-Startups, Startup Portugal) servem tambem de fonte indireta para descobrir novas oportunidades que ainda nao estao no sources-scan.json.
 
 ---
 
@@ -614,7 +637,7 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
 
 ---
 
-## RESUMO (v4.3)
+## RESUMO (v4.4)
 
 ```
 1. Ler index.json + queue.json + queue-catalogo.json + lookup.json + sources-scan.json
@@ -623,7 +646,8 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
    - Slots 3-5: MEDIUM rotativos com FALLBACK GARANTIDO (v4.3 - slots nunca vazios):
      (a) medium nunca-verificadas > (b) medium >7d > (c) low nunca >
      (d) low >14d > (e) FALLBACK: mais antigas mesmo dentro do cooldown
-   - Slot 6: catalogo nunca-verificadas > catalogo >90d > se vazio: medium/low aviso
+   - Slot 6: catalogo nunca-verificadas (rotar por catalog_type para diversidade)
+             > catalogo >90d > se vazio: medium/low aviso
    - CRITICO eu-funding-tenders: usar Bash+curl -X POST, NUNCA WebFetch (API rejeita GET com 405)
 3. Para cada fonte:
    - Aceder (se webfetch: tentar 3 URLs antes de declarar "0 novos")
@@ -634,12 +658,24 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
 4. Manter contadores internos: novos_aviso, novos_catalogo, movidos_overflow
 5. Atualizar index.json e source_last_checked
 5b. Produzir RELATORIO GRANULAR: por fonte detalhar URLs verificados, items retornados, filtros, dedup, novos
+   - Novo v4.4: reportar tambem breakdown de catalogo por catalog_type
 6a. SANITY CHECK (3 testes): delta + invariantes absolutos + coerencia lookup. Auto-correct com WARNING.
 6b. git commit + push
 7. Reportar relatorio granular completo
 
-DISTRIBUICAO ACTUAL (v4.2, verificado empiricamente 2026-04-17):
-- regime=aviso: high=2 | medium=51 | low=10
-- regime=catalogo: medium=14 | low=7
-- Total: 84 fontes
+DISTRIBUICAO ACTUAL (v4.4, aplicado 2026-04-17 apos expansao VC/investimento):
+- regime=aviso: high=2 | medium=51 | low=10 (total 63)
+- regime=catalogo: total 44, distribuido por catalog_type:
+  - vc: 11 (Faber, Bynd, Indico, Armilar, Shilling, Bright Pixel, 200M, MAZE, Pathena, LC Ventures, Olisipo Way)
+  - bank-product: 6 (CGD, BPI, Millennium, NovoBanco, Santander, Turismo PT)
+  - prize: 4 (BPI La Caixa, Gulbenkian, ClimateLaunchpad PT, EIT Digital Challenge)
+  - cvc: 4 (EDP, Semapa Next, Brisa, Galp Ventures)
+  - accelerator: 4 (BGI, Beta-i, Techstars Lisbon, Plug and Play PT)
+  - public-fund: 3 (BPF, Portugal Ventures, IFD)
+  - incubator: 3 (Startup Lisboa, UPTEC, Nova SBE Venture Lab)
+  - platform: 3 (F6S, EU-Startups, Startup Portugal)
+  - ba: 3 (FNABA, Invicta Angels, Core Angels Atlantic)
+  - crowdfunding: 2 (Seedrs PT, Raize)
+  - pe: 1 (Iberis Capital)
+- Total: 107 fontes
 ```
