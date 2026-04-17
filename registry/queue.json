@@ -1301,11 +1301,10 @@
       "deadline": "2026-08-31",
       "budget": "13.300.000 EUR",
       "regulation_url": "https://pessoas2030.gov.pt/aviso-2024/programa-escolhas-2026-pessoas2030/",
-      "regulation_local": null,
+      "regulation_local": "regulamentos/pessoas-2030/programa-escolhas-2026-pessoas2030.txt",
       "priority_score": 35,
-      "status": "pending",
-      "notes": "FA0077/2025. Programa Escolhas 2026. 13.3M EUR FSE+. PESSOAS2030.",
-      "download_error": "HTTP 404 - URL inacessivel em 2026-04-17"
+      "status": "ready",
+      "notes": "FA0077/2025. Programa Escolhas 2026. 13.3M EUR FSE+. PESSOAS2030."
     },
     {
       "id": "formacao-da-administracao-publica-regional-e-local-cimbal",
@@ -1350,9 +1349,9 @@
       "budget": "6 800 000 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/inovacao-2030-3-aviso/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/inovacao-2030-3-aviso.txt",
       "priority_score": 25,
-      "status": "pending",
+      "status": "ready",
       "notes": "FA0134/2025. MADEIRA2030. FEDER."
     },
     {
@@ -1366,9 +1365,9 @@
       "budget": "4 250 000 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/investigacao-2030-iii/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/investigacao-2030-iii.txt",
       "priority_score": 25,
-      "status": "pending",
+      "status": "ready",
       "notes": "FA0128/2025. MADEIRA2030. FEDER."
     },
     {
@@ -1385,7 +1384,8 @@
       "regulation_local": null,
       "priority_score": 25,
       "status": "pending",
-      "notes": "FA0138/2025. MADEIRA2030. FEDER."
+      "notes": "FA0138/2025. MADEIRA2030. FEDER.",
+      "download_error": "PDF nao encontrado - tentativa em 2026-04-17"
     },
     {
       "id": "funcionamento-2030-t-4-aviso",
@@ -1398,9 +1398,9 @@
       "budget": "3 400 000 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/funcionamento-2030-t-4-aviso/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/funcionamento-2030-t-4-aviso.txt",
       "priority_score": 25,
-      "status": "pending",
+      "status": "ready",
       "notes": "FA0136/2025. MADEIRA2030. FEDER."
     },
     {
@@ -1414,9 +1414,9 @@
       "budget": "2 550 000 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/eficiencia-energetica-iv/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/eficiencia-energetica-iv.txt",
       "priority_score": 25,
-      "status": "pending",
+      "status": "ready",
       "notes": "FA0137/2025. MADEIRA2030. FEDER."
     },
     {
@@ -1433,7 +1433,8 @@
       "regulation_local": null,
       "priority_score": 25,
       "status": "pending",
-      "notes": "FA0207/2025. AÇORES2030. FEDER."
+      "notes": "FA0207/2025. AÇORES2030. FEDER.",
+      "download_error": "URL no queue diverge da publicada (2-aviso vs 2o-aviso) - PDF nao encontrado em 2026-04-17"
     },
     {
       "id": "intervencoes-de-gestao-conservacao-reflorestacao-e-ordenamento-da-flor",
@@ -1449,7 +1450,8 @@
       "regulation_local": null,
       "priority_score": 25,
       "status": "pending",
-      "notes": "FA0932/2024. SUSTENTAVEL2030. FC."
+      "notes": "FA0932/2024. SUSTENTAVEL2030. FC.",
+      "download_error": "PDF nao encontrado - tentativa em 2026-04-17"
     },
     {
       "id": "gestao-de-residuos-urbanos-acoes-imateriais",
@@ -1465,7 +1467,8 @@
       "regulation_local": null,
       "priority_score": 25,
       "status": "pending",
-      "notes": "FA0577/2024. SUSTENTAVEL2030. FC."
+      "notes": "FA0577/2024. SUSTENTAVEL2030. FC.",
+      "download_error": "PACS-2024-05 PDF inacessivel - tentativa em 2026-04-17"
     },
     {
       "id": "estudos-mobilidade-urbana-sustentavel",
@@ -1481,7 +1484,8 @@
       "regulation_local": null,
       "priority_score": 25,
       "status": "pending",
-      "notes": "FA0282/2025. SUSTENTAVEL2030. FC."
+      "notes": "FA0282/2025. SUSTENTAVEL2030. FC.",
+      "download_error": "PDF nao encontrado - item pode ser ainda PAA - tentativa em 2026-04-17"
     },
     {
       "id": "infraestrutura-portuaria-rte-porto-de-leixoes-4-aviso",
