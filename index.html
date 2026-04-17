@@ -1311,16 +1311,51 @@
     .catch(err => console.warn('Carousel fetch falhou:', err));
 
   /* ─── BIBLIOTECA · DESTAQUES + CONTAGEM TOTAL ─── */
-  /* Le instruments-catalog.json (fonte canonica), conta total e renderiza os featured */
+  /* Le instruments-catalog.json e seleciona autonomamente os 3 avisos ABERTOS
+     com maior montante/beneficio (parse heuristico de highlight0).
+     Actualiza automaticamente a cada page-load conforme avisos abrem/fecham. */
+  function parseMontanteEur(txt) {
+    if (!txt) return 0;
+    const s = String(txt).toLowerCase();
+    // Exigir referencia a EUR ou € para evitar falsos positivos
+    // (ex: "30 milhoes de CPU core.horas")
+    if (!/eur|€/i.test(s)) return 0;
+    let max = 0;
+    const patterns = [
+      { re: /(\d+(?:[.,]\d+)?)\s*mil\s*milh[oõã]/gi, mult: 1e9 },
+      { re: /(\d+(?:[.,]\d+)?)\s*bili/gi,             mult: 1e9 },
+      { re: /(\d+(?:[.,]\d+)?)\s*milh[oõã]/gi,        mult: 1e6 },
+      { re: /€\s*(\d+(?:[.,]\d+)?)\s*m\b/gi,          mult: 1e6 },
+      { re: /(\d+(?:[.,]\d+)?)\s*m(?=\s|eur|€|$|\W)/gi, mult: 1e6 },
+      { re: /(\d+(?:[.,]\d+)?)\s*k(?=\s|eur|€|$|\W)/gi, mult: 1e3 }
+    ];
+    for (const p of patterns) {
+      let m;
+      while ((m = p.re.exec(s)) !== null) {
+        const num = parseFloat(m[1].replace(',', '.'));
+        if (!isNaN(num)) max = Math.max(max, num * p.mult);
+      }
+    }
+    return max;
+  }
   fetch('instruments-catalog.json')
     .then(r => r.ok ? r.json() : Promise.reject(r.status))
-    .then(items => {
+    .then(data => {
+      const items = Array.isArray(data) ? data : (data.instruments || []);
       const totalEl = document.getElementById('libraryTotal');
       if (totalEl) {
         const n = items.length;
         totalEl.textContent = n + (n === 1 ? ' instrumento na biblioteca' : ' instrumentos na biblioteca');
       }
-      const featured = items.filter(i => i.featured === true);
+      const abertos = items.filter(i => i.estado === 'aberto');
+      const ranked = abertos
+        .map(i => ({ item: i, score: parseMontanteEur(i.highlight0) }))
+        .sort((a, b) => b.score - a.score);
+      const withValue = ranked.filter(r => r.score > 0).slice(0, 3).map(r => r.item);
+      // Fallback: se menos de 3 tiveram montante parseavel, completar com restantes abertos
+      const featured = withValue.length >= 3
+        ? withValue
+        : withValue.concat(abertos.filter(i => !withValue.includes(i)).slice(0, 3 - withValue.length));
       const grid = document.getElementById('libraryFeaturedGrid');
       if (!grid || featured.length === 0) return;
 
