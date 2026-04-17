@@ -1279,11 +1279,11 @@
       "budget": "5.000.000 EUR",
       "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-de-base-territorial-ram-ii/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/portugal-2030/sistema-de-incentivos-de-base-territorial-ram-ii.txt",
       "priority_score": 75,
-      "status": "pending",
+      "status": "ready",
       "notes": "FA0132/2025. MADEIRA2030. FEDER. Concurso. Beneficiarios privados. Estado: previsto (abre 23/04/2026). Prazo: 31/05/2026.",
-      "download_error": "Aviso previsto - abertura agendada para 23/04/2026. Retentar apos essa data."
+      "download_note": "Conteudo limitado - pagina JS-rendered. Writer deve complementar via regulation_url."
     },
     {
       "id": "horizon-msca-2026-dn-01-01",
@@ -1312,9 +1312,9 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-raise-2026-01-03",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-raise-2026-01-03.txt",
       "priority_score": 65,
-      "status": "pending",
+      "status": "ready",
       "notes": "HORIZON-RAISE-2026-01-03. Horizon Europe RAISE Pilot. Redes doutorais para IA em Ciencia. Deadline: 28/05/2026 (41 dias)."
     },
     {
@@ -1328,9 +1328,9 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eie-2026-03-connect-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-eie-2026-03-connect-01.txt",
       "priority_score": 65,
-      "status": "pending",
+      "status": "ready",
       "notes": "HORIZON-EIE-2026-03-CONNECT-01. Horizon Europe. Technology Transfer Offices. Deadline: 09/06/2026 (53 dias)."
     },
     {
@@ -1344,9 +1344,9 @@
       "budget": "90.970.000 EUR",
       "regulation_url": "https://hadea.ec.europa.eu/programmes/horizon-europe/space_en",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2026-03-space.txt",
       "priority_score": 45,
-      "status": "pending",
+      "status": "ready",
       "notes": "HORIZON-CL4-2026-03-SPACE. Horizon Europe CL4 Espaco. 8 topicos: acesso ao espaco, utilizacao terrestre, ciencias espaciais. EUR 90.97M. Deadline: 03/09/2026."
     }
   ],
