@@ -660,10 +660,11 @@
       "budget": "~3M EUR (estimado)",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-01-MAT-PROD-04",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2026-01-mat-prod-04.txt",
       "priority_score": 125,
-      "status": "pending",
-      "notes": "Call: HORIZON-CL4-2026-01. INDUSTRY. Deadline verificado via web search."
+      "status": "ready",
+      "notes": "Call: HORIZON-CL4-2026-01. INDUSTRY. Deadline verificado via web search.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2026-01-mat-prod-01",
@@ -676,10 +677,11 @@
       "budget": "~3M EUR (estimado)",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-01-MAT-PROD-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2026-01-mat-prod-01.txt",
       "priority_score": 125,
-      "status": "pending",
-      "notes": "Call: HORIZON-CL4-2026-01. INDUSTRY. Deadline verificado via web search."
+      "status": "ready",
+      "notes": "Call: HORIZON-CL4-2026-01. INDUSTRY. Deadline verificado via web search.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2026-01-mat-prod-12",
@@ -692,10 +694,11 @@
       "budget": "~3M EUR (estimado)",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-01-MAT-PROD-12",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2026-01-mat-prod-12.txt",
       "priority_score": 125,
-      "status": "pending",
-      "notes": "Call: HORIZON-CL4-2026-01. INDUSTRY. Deadline verificado via web search."
+      "status": "ready",
+      "notes": "Call: HORIZON-CL4-2026-01. INDUSTRY. Deadline verificado via web search.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2026-01-mat-prod-11",
@@ -708,10 +711,11 @@
       "budget": "~3M EUR (estimado)",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-01-MAT-PROD-11",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2026-01-mat-prod-11.txt",
       "priority_score": 125,
-      "status": "pending",
-      "notes": "Call: HORIZON-CL4-2026-01. INDUSTRY. Deadline verificado via web search."
+      "status": "ready",
+      "notes": "Call: HORIZON-CL4-2026-01. INDUSTRY. Deadline verificado via web search.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2026-01-mat-prod-31",
@@ -724,10 +728,11 @@
       "budget": "~3M EUR (estimado)",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-01-MAT-PROD-31",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2026-01-mat-prod-31.txt",
       "priority_score": 125,
-      "status": "pending",
-      "notes": "Call: HORIZON-CL4-2026-01. INDUSTRY. Deadline verificado via web search."
+      "status": "ready",
+      "notes": "Call: HORIZON-CL4-2026-01. INDUSTRY. Deadline verificado via web search.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2026-space-03-82",
@@ -872,91 +877,6 @@
       "priority_score": 5,
       "status": "pending",
       "notes": "Estado: previsto (abre 11-mai-2026). Abertura: 11/05/2026. Encerramento: 15/09/2026. Foco bilateral PT-Noruega-Islandia. Financiamento: 10K-50K EUR por projeto, taxa 90%."
-    },
-    {
-      "id": "distribuicao-indireta-de-generos-alimentares-cartao-eletronico",
-      "name": "Distribuição indireta de géneros alimentares - cartão eletrónico",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0267/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-04-24",
-      "budget": "1 050 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/distribuicao-indireta-de-generos-alimentares-cartao-eletronico/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 125,
-      "status": "pending",
-      "notes": "FA0267/2025. MADEIRA2030. FSE+.",
-      "fail_count": 0
-    },
-    {
-      "id": "educacao-intercultural-em-contexto-escolar",
-      "name": "Educação intercultural em contexto escolar",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0320/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-04-30",
-      "budget": "4 000 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/educacao-intercultural-em-contexto-escolar/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 125,
-      "status": "pending",
-      "notes": "FA0320/2025. FAMI2030. FAMI.",
-      "fail_count": 0
-    },
-    {
-      "id": "formacao-e-emprego-jovens-ii",
-      "name": "Formação e Emprego - JOVENS II",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0122/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-04-30",
-      "budget": "400 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/formacao-e-emprego-jovens-ii/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 115,
-      "status": "pending",
-      "notes": "FA0122/2025. MADEIRA2030. FSE+.",
-      "fail_count": 0
-    },
-    {
-      "id": "programas-de-insercao-profissional-publicos-mais-vulneraveis",
-      "name": "Programas de Inserção profissional - Públicos mais vulneráveis",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0123/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-04-30",
-      "budget": "600 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/programas-de-insercao-profissional-publicos-mais-vulneraveis/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 115,
-      "status": "pending",
-      "notes": "FA0123/2025. MADEIRA2030. FSE+.",
-      "fail_count": 0
-    },
-    {
-      "id": "formacao-e-emprego-desempregados",
-      "name": "Formação e Emprego - Desempregados",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0120/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-04-30",
-      "budget": "510 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/formacao-e-emprego-desempregados/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 115,
-      "status": "pending",
-      "notes": "FA0120/2025. MADEIRA2030. FSE+.",
-      "fail_count": 0
     },
     {
       "id": "acoes-para-minimizar-a-situacao-de-escassez-hidrica-algarve-pacs-2026-10",
