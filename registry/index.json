@@ -5,11 +5,11 @@
     "migrated_from_v3": "2026-04-12"
   },
   "totals": {
-    "published": 128,
+    "published": 129,
     "open": 113,
-    "closed": 7,
+    "closed": 8,
     "planned": 8,
-    "in_queue": 100,
+    "in_queue": 99,
     "in_watchlist": 11
   },
   "shards": {
@@ -27,9 +27,9 @@
       "count": 0
     },
     "pt2030-norte": {
-      "count": 5,
+      "count": 6,
       "open": 4,
-      "closed": 1
+      "closed": 2
     },
     "pt2030-centro": {
       "count": 1,
@@ -86,7 +86,7 @@
   },
   "last_full_cycle": "2026-04-12",
   "last_monitor_run": "2026-04-16",
-  "last_writer_run": "2026-04-16",
+  "last_writer_run": "2026-04-17",
   "source_last_checked": {
     "portugal-2030": "2026-04-17",
     "compete-2030": "2026-04-16",
