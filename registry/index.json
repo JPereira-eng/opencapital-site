@@ -9,8 +9,9 @@
     "open": 151,
     "closed": 15,
     "planned": 9,
-    "in_queue": 40,
-    "in_watchlist": 11
+    "in_queue": 59,
+    "in_watchlist": 11,
+    "in_catalogo": 1
   },
   "shards": {
     "pt2030-compete": {
@@ -157,8 +158,12 @@
     "santander-empresas": "2026-04-14",
     "faber-ventures": "2026-04-16",
     "erasmus-enterprise": "2026-04-16",
-    "bynd-vc": "2026-04-16"
+    "bynd-vc": "2026-04-16",
+    "eea-grants-portugal": "2026-04-17",
+    "fundo-ambiental": "2026-04-17",
+    "ifap-pdr": "2026-04-17",
+    "fnaba": "2026-04-17"
   },
-  "last_scanner_run": "2026-04-17T22:00:00",
-  "last_updated": "2026-04-17T23:00:00"
+  "last_scanner_run": "2026-04-17",
+  "last_updated": "2026-04-17"
 }

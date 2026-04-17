@@ -19,16 +19,33 @@
         "descricao_curta": "VC iberico focado em seed/Series A em deep tech e climate.",
         "como_candidatar": "Formulario no website + intro preferencial via networking",
         "tese": "Pre-seed/seed em founders tecnicos iberos com produtos B2B",
-        "estagios": ["seed", "series-a"],
-        "setores": ["deep tech", "climate", "B2B SaaS"],
-        "geografia": ["PT", "ES"],
+        "estagios": [
+          "seed",
+          "series-a"
+        ],
+        "setores": [
+          "deep tech",
+          "climate",
+          "B2B SaaS"
+        ],
+        "geografia": [
+          "PT",
+          "ES"
+        ],
         "ticket_min_eur": 500000,
         "ticket_max_eur": 3000000,
         "ticket_sweet_eur": 1500000,
         "aum_eur": 100000000,
         "vintage": "Fundo III (2024-2027)",
-        "portfolio_pt_exemplos": ["Unbabel", "Raize", "Uniplaces"],
-        "parceiros": ["Nome Apelido", "Nome Apelido"]
+        "portfolio_pt_exemplos": [
+          "Unbabel",
+          "Raize",
+          "Uniplaces"
+        ],
+        "parceiros": [
+          "Nome Apelido",
+          "Nome Apelido"
+        ]
       },
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=vc."
     },
@@ -56,12 +73,47 @@
         "deadline_proxima": "2026-06-15",
         "estipendio_eur": 50000,
         "equity_pct": 6,
-        "mentorias": ["Nome 1", "Nome 2", "Nome 3"],
-        "setores_foco": ["fintech", "climate"],
-        "alumni_destaques": ["Alumni 1", "Alumni 2"]
+        "mentorias": [
+          "Nome 1",
+          "Nome 2",
+          "Nome 3"
+        ],
+        "setores_foco": [
+          "fintech",
+          "climate"
+        ],
+        "alumni_destaques": [
+          "Alumni 1",
+          "Alumni 2"
+        ]
       },
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": []
+  "queue": [
+    {
+      "id": "fnaba",
+      "name": "FNABA / Investors Portugal (APIES)",
+      "source_id": "fnaba",
+      "catalog_type": "ba",
+      "detected_date": "2026-04-17",
+      "last_profile_update": "2026-04-17",
+      "status": "active",
+      "regulation_url": "https://investors.pt",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://investors.pt",
+        "linkedin": "https://www.linkedin.com/company/investors-portugal/",
+        "pais_sede": "PT",
+        "descricao_curta": "Associacao portuguesa de investidores early stage (ex-FNABA + APBA). Representa mais de 300 business angels e 30 veiculos de investimento em Portugal.",
+        "como_candidatar": "Contactar atraves de investors.pt ou atraves de membros da rede. Intro preferencial por referencia.",
+        "numero_membros": 300,
+        "ticket_individual_eur": null,
+        "ticket_coletivo_eur": null,
+        "setores_foco": null,
+        "requisitos_apresentacao": "Via website investors.pt ou por contacto com membros. Sessions periodicas de pitch para startups."
+      },
+      "notes": "FNABA e APBA fundiram-se em mai-2022 na APIES (Investors Portugal). Website original fnaba.org expirado. Novo website: investors.pt. 300+ angels, 30+ VCs, 1000+ startups no ecossistema, 10B+ EUR AUM."
+    }
+  ]
 }
