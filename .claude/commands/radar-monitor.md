@@ -192,10 +192,20 @@ Para cada item na watchlist:
 3. Para outras fontes: WebFetch na URL e verificar se ha PDF de regulamento
 
 ### Se o aviso abriu (PDF existe E passa TESTE A - nao e PAA):
-1. **Remover** item de `queue-plano-anual.json`
-2. **Adicionar** a `queue.json` com `"status": "pending"`, `"fail_count": 0`, limpar `download_error`
-3. O downloader ira processa-lo na proxima run normalmente
-4. Reportar: "Watchlist: [id] abriu - movido para queue.json como pending"
+1. **Verificar primeiro** se o `id` ja existe em `queue.json`:
+   ```python
+   existing_ids = [q['id'] for q in queue_json['queue']]
+   if item_id in existing_ids:
+       # Ja esta em queue - apenas remover de plano_anual, nao duplicar
+       # Reportar: "Watchlist: [id] ja existia em queue.json - removido da watchlist (sem duplicar)"
+       pass
+   else:
+       # Adicionar a queue.json normalmente
+   ```
+2. **Remover** item de `queue-plano-anual.json` (independentemente do resultado acima)
+3. **So se nao existia em queue.json:** adicionar com `"status": "pending"`, `"fail_count": 0`, limpar `download_error`
+4. O downloader ira processa-lo na proxima run normalmente
+5. Reportar: "Watchlist: [id] abriu - movido para queue.json como pending" (ou "ja existia em queue.json - watchlist limpa")
 
 ### Se continua como plano anual:
 1. Atualizar apenas `plano_anual_last_check: "[data]"` e incrementar `plano_anual_checks` no item
@@ -297,6 +307,7 @@ Se ha items com `needs_review: true`, mencionar explicitamente no commit para o 
 5. **Nunca verificar estado ou prazo em shards catalogo.** So link rot.
 6. **Se WebFetch falhar para uma fonte:** registar e continuar. Nao parar.
 7. **Instrumentos "fechado" raramente mudam.** Verificar 1 por cada 5 abertos.
+8. **Nunca duplicar items em queue.json.** Antes de promover da watchlist, verificar sempre se o id ja existe. Se existir, apenas remover da watchlist (sem adicionar novamente).
 
 ---
 
