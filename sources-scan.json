@@ -181,7 +181,7 @@
     {
       "id": "ani",
       "name": "Agencia Nacional de Inovacao (ANI)",
-      "priority": "high",
+      "priority": "medium",
       "access_method": "webfetch",
       "access_status": "partial",
       "url_avisos": "https://www.ani.pt/pt/financiamento/",
@@ -316,7 +316,7 @@
     {
       "id": "interreg-europe",
       "name": "Interreg Europe",
-      "priority": "high",
+      "priority": "medium",
       "access_method": "websearch",
       "access_status": "blocked",
       "url_avisos": "https://www.interregeurope.eu/call-for-projects",
@@ -343,7 +343,7 @@
     {
       "id": "interreg-interact",
       "name": "INTERACT IV",
-      "priority": "high",
+      "priority": "low",
       "access_method": "websearch",
       "access_status": "unverified",
       "url_avisos": "https://www.interact.eu/",
