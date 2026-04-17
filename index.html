@@ -1311,39 +1311,47 @@
     .catch(err => console.warn('Carousel fetch falhou:', err));
 
   /* ─── BIBLIOTECA · DESTAQUES + CONTAGEM TOTAL ─── */
-  /* Le biblioteca.html, conta total de cards e clona os marcados data-featured */
-  fetch('biblioteca.html')
-    .then(r => r.ok ? r.text() : Promise.reject(r.status))
-    .then(html => {
-      const doc = new DOMParser().parseFromString(html, 'text/html');
-      const allCards = doc.querySelectorAll('.instrument-card[data-category]');
+  /* Le instruments-catalog.json (fonte canonica), conta total e renderiza os featured */
+  fetch('instruments-catalog.json')
+    .then(r => r.ok ? r.json() : Promise.reject(r.status))
+    .then(items => {
       const totalEl = document.getElementById('libraryTotal');
       if (totalEl) {
-        const n = allCards.length;
+        const n = items.length;
         totalEl.textContent = n + (n === 1 ? ' instrumento na biblioteca' : ' instrumentos na biblioteca');
       }
-      const featured = doc.querySelectorAll('.instrument-card[data-featured="true"]');
+      const featured = items.filter(i => i.featured === true);
       const grid = document.getElementById('libraryFeaturedGrid');
-      if (grid && featured.length > 0) {
-        grid.innerHTML = '';
-        featured.forEach(card => {
-          const clone = card.cloneNode(true);
-          // remover classes reveal/hidden e tornar clicavel via tag <a>
-          clone.classList.remove('reveal','reveal-d1','reveal-d2','reveal-d3','hidden');
-          const href = clone.dataset.href;
-          if (href) {
-            const wrapper = document.createElement('a');
-            wrapper.href = href;
-            wrapper.style.textDecoration = 'none';
-            wrapper.style.color = 'inherit';
-            wrapper.style.display = 'contents';
-            wrapper.appendChild(clone);
-            grid.appendChild(wrapper);
-          } else {
-            grid.appendChild(clone);
-          }
-        });
-      }
+      if (!grid || featured.length === 0) return;
+
+      const esc = s => !s ? '' : String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+      grid.innerHTML = '';
+      featured.forEach(item => {
+        const regioesArr = (item.regiao || '').split(',').filter(Boolean);
+        const regiaoDisplay = regioesArr.length >= 4 ? 'Várias Regiões' : item.highlight2;
+        const card = document.createElement(item.href ? 'a' : 'div');
+        card.className = 'instrument-card visible';
+        if (item.href) {
+          card.href = item.href;
+          card.style.textDecoration = 'none';
+          card.style.color = 'inherit';
+        }
+        card.innerHTML =
+          '<div class="card-header">' +
+            '<span class="cat-badge cat-' + esc(item.category) + '">' + esc(item.category_label) + '</span>' +
+            '<span class="status-pill ' + esc(item.status_class) + '">' + esc(item.status_text) + '</span>' +
+          '</div>' +
+          '<h3 class="card-title">' + esc(item.title) + '</h3>' +
+          '<p class="card-tagline">' + esc(item.tagline) + '</p>' +
+          '<div class="card-divider"></div>' +
+          '<div class="card-highlights">' +
+            (item.highlight0 ? '<div class="card-highlight"><span class="card-highlight-dot"></span>' + esc(item.highlight0) + '</div>' : '') +
+            '<div class="card-highlight"><span class="card-highlight-dot"></span>' + esc(item.highlight1) + '</div>' +
+            '<div class="card-highlight"><span class="card-highlight-dot"></span>' + esc(regiaoDisplay) + '</div>' +
+          '</div>' +
+          '<span class="card-cta">Mais Informações</span>';
+        grid.appendChild(card);
+      });
     })
     .catch(() => {
       const totalEl = document.getElementById('libraryTotal');
