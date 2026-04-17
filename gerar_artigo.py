@@ -291,7 +291,7 @@ ARTICLE_TEMPLATE = """<!DOCTYPE html>
       <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img" onerror="this.style.display='none'">
     </a>
     <ul class="nav-links">
-      <li><a href="../solucoes.html">Soluções</a></li>
+      <li><a href="../biblioteca.html">Soluções</a></li>
       <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
       <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
       <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
@@ -397,10 +397,10 @@ ARTICLE_TEMPLATE = """<!DOCTYPE html>
       <div>
         <div class="f-col-label">Soluções</div>
         <ul class="f-links">
-          <li><a href="../solucoes.html">Portugal 2030</a></li>
-          <li><a href="../solucoes.html">Fundos de Investimento</a></li>
-          <li><a href="../solucoes.html">Benefícios Fiscais</a></li>
-          <li><a href="../solucoes.html">Prémios de Inovação</a></li>
+          <li><a href="../biblioteca.html">Portugal 2030</a></li>
+          <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+          <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+          <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
         </ul>
       </div>
       <div>

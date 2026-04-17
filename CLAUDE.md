@@ -346,7 +346,7 @@ A pasta `instrumentos/` é uma biblioteca de artigos editoriais — um por instr
 
 **1. Navbar** — idêntica ao resto do site (v1.3), com paths relativos `../`
 - Logo: `../logo_opencapital_azul_semfundo.png`, height 57px
-- Links com `../` prefix (ex: `../solucoes.html`, `../index.html`)
+- Links com `../` prefix (ex: `../biblioteca.html`, `../index.html`)
 - Active state em "Soluções" (pois os artigos pertencem a esse menu)
 
 **2. Hero do artigo** — secção navy com:
@@ -360,7 +360,7 @@ A pasta `instrumentos/` é uma biblioteca de artigos editoriais — um por instr
 **3. Barra "Voltar ao catálogo"** — imediatamente abaixo do hero
 ```html
 <div class="back-bar">
-  <a href="../solucoes.html" class="back-link">← Voltar ao catálogo de instrumentos</a>
+  <a href="../biblioteca.html" class="back-link">← Voltar ao catálogo de instrumentos</a>
 </div>
 ```
 
@@ -459,7 +459,7 @@ O corpo do artigo (`<article>`) pode ser estruturado livremente. O Claude deve e
 1. O utilizador fornece: regulamento, ficha técnica, URL oficial, ou brief descritivo do instrumento
 2. O Claude lê o material, decide a melhor estrutura editorial para esse instrumento específico
 3. Cria `instrumentos/[slug].html` seguindo as regras obrigatórias acima
-4. O card correspondente em `solucoes.html` já tem o `data-href` correto — não é necessário alterar o catálogo
+4. O card correspondente em `biblioteca.html` já tem o `data-href` correto — não é necessário alterar o catálogo
 
 ---
 
@@ -468,7 +468,7 @@ O corpo do artigo (`<article>`) pode ser estruturado livremente. O Claude deve e
 | # | Menu Label | File | Status |
 |---|---|---|---|
 | 🏠 | Logo → Homepage | `index.html` | ✅ Built |
-| 1 | Soluções | `solucoes.html` | ✅ Built |
+| 1 | Soluções | `biblioteca.html` | ✅ Built |
 | 2 | Conhecimento | `conhecimento.html` | ✅ Built |
 | 3 | Capital Simulator | `capital-simulator.html` | ✅ Built (em breve) |
 | 4 | Tech2Business | `tech2business.html` | ✅ Built (em breve) |
@@ -484,7 +484,7 @@ O corpo do artigo (`<article>`) pode ser estruturado livremente. O Claude deve e
 opencapital-website/
 ├── CLAUDE.md
 ├── index.html
-├── solucoes.html
+├── biblioteca.html
 ├── conhecimento.html
 ├── capital-simulator.html
 ├── tech2business.html

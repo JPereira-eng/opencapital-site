@@ -722,7 +722,7 @@
   </a>
 
   <ul class="nav-links">
-    <li><a href="solucoes.html">Biblioteca</a></li>
+    <li><a href="biblioteca.html">Biblioteca</a></li>
     <li><a href="conhecimento.html">Conhecimento</a></li>
     <li><a href="capital-simulator.html">Capital Simulator<span class="nav-badge">em breve</span></a></li>
     <li><a href="tech2business.html">Tech2Business<span class="nav-badge">em breve</span></a></li>
@@ -743,7 +743,7 @@
 </nav>
 
 <div class="nav-mobile-menu" id="mobileMenu">
-  <a href="solucoes.html">Biblioteca</a>
+  <a href="biblioteca.html">Biblioteca</a>
   <a href="conhecimento.html">Conhecimento</a>
   <a href="capital-simulator.html">Capital Simulator<span class="nav-badge">em breve</span></a>
   <a href="tech2business.html">Tech2Business<span class="nav-badge">em breve</span></a>
@@ -771,7 +771,7 @@
         <p>Cresça connosco.</p>
       </div>
       <div class="hero-actions anim-3">
-        <a href="#solucoes" class="btn btn-gold">Ver Soluções</a>
+        <a href="#biblioteca" class="btn btn-gold">Ver Soluções</a>
         <a href="https://calendly.com/tech2business" target="_blank" class="btn btn-ghost">Falar Connosco</a>
       </div>
 
@@ -808,7 +808,7 @@
 <!-- ════════════════════════════════════════
      SOLUÇÕES INTEGRADAS (preserved)
 ════════════════════════════════════════ -->
-<section class="section" id="solucoes">
+<section class="section" id="biblioteca">
   <div class="section-inner">
 
     <div class="reveal" style="margin-bottom:56px;">
@@ -1038,11 +1038,11 @@
     <p class="library-featured-label reveal reveal-d2">Em destaque agora</p>
 
     <div class="library-featured-grid reveal reveal-d3" id="libraryFeaturedGrid">
-      <!-- Cards populated dynamically from solucoes.html via JS -->
+      <!-- Cards populated dynamically from biblioteca.html via JS -->
     </div>
 
     <div class="library-see-all reveal reveal-d3">
-      <a href="solucoes.html" class="btn btn-outline">Ver biblioteca completa</a>
+      <a href="biblioteca.html" class="btn btn-outline">Ver biblioteca completa</a>
     </div>
 
   </div>
@@ -1228,10 +1228,10 @@
     <div>
       <p class="f-col-label">Biblioteca</p>
       <ul class="f-links">
-        <li><a href="solucoes.html">Portugal 2030</a></li>
-        <li><a href="solucoes.html">Fundos de Investimento</a></li>
-        <li><a href="solucoes.html">Benefícios Fiscais</a></li>
-        <li><a href="solucoes.html">Prémios de Inovação</a></li>
+        <li><a href="biblioteca.html">Portugal 2030</a></li>
+        <li><a href="biblioteca.html">Fundos de Investimento</a></li>
+        <li><a href="biblioteca.html">Benefícios Fiscais</a></li>
+        <li><a href="biblioteca.html">Prémios de Inovação</a></li>
       </ul>
     </div>
     <div>
@@ -1311,8 +1311,8 @@
     .catch(err => console.warn('Carousel fetch falhou:', err));
 
   /* ─── BIBLIOTECA · DESTAQUES + CONTAGEM TOTAL ─── */
-  /* Le solucoes.html, conta total de cards e clona os marcados data-featured */
-  fetch('solucoes.html')
+  /* Le biblioteca.html, conta total de cards e clona os marcados data-featured */
+  fetch('biblioteca.html')
     .then(r => r.ok ? r.text() : Promise.reject(r.status))
     .then(html => {
       const doc = new DOMParser().parseFromString(html, 'text/html');

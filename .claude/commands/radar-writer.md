@@ -277,7 +277,7 @@ Adicionar entrada ao FINAL de `instruments-catalog.json > instruments`:
 
 **Nota:** `setores` e obrigatorio. Usar valores da tabela em 4f ou `["todos"]` se transversal.
 
-**REGRA CRITICA:** Nunca editar `solucoes.html`. Catalogo e 100% dinamico via JSON.
+**REGRA CRITICA:** Nunca editar `biblioteca.html`. Catalogo e 100% dinamico via JSON.
 
 ---
 
@@ -331,7 +331,7 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
 
 1. **Max 5 artigos por sessao (1 batch). Terminar apos o push, nunca iniciar segundo batch.**
 2. **Nunca criar artigo sem ler instrumento.md primeiro.**
-3. **Nunca editar solucoes.html.**
+3. **Nunca editar biblioteca.html.**
 4. **Nunca duplicar.** Verificar lookup antes de publicar.
 5. **Artigos criados: 0 e sempre falha do agente.** Mesmo sem regulamento, os dados do campo notes sao suficientes.
 6. **Commit entre batches.** Nunca acumular mais de 5 artigos sem commit.

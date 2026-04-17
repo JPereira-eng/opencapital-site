@@ -10,7 +10,7 @@ Sistema editorial com 7 series e 14 subserias. Foco atual: subserias com output 
 - `/trend` -> Serie 1.2 -- Artigo Trend para Website (`conhecimento/`) - injecta card em conhecimento.html + atualiza index.html
 - `/informativo` -> Serie 2.1 -- Artigo Informativo para Website (`conhecimento/`) - injecta card em conhecimento.html + atualiza index.html
 - `/opiniao` -> Serie 6.2 -- Opiniao Controversa para Website (`conhecimento/`) - injecta card em conhecimento.html + atualiza index.html
-- `/instrumento` -> Serie 3.1 -- Instrumento de Financiamento (`instrumentos/`) - NAO injeta card (ja existem em solucoes.html com data-href)
+- `/instrumento` -> Serie 3.1 -- Instrumento de Financiamento (`instrumentos/`) - NAO injeta card (ja existem em biblioteca.html com data-href)
 
 **Pipeline skills conhecimento/ (trend, informativo, opiniao):**
 1. Processar input (WebFetch se URL)

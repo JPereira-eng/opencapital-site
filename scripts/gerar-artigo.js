@@ -337,9 +337,9 @@ const ARTICLE_TEMPLATE = (data) => `<!DOCTYPE html>
       <div>
         <div class="f-col-label">Soluções</div>
         <ul class="f-links" style="list-style:none;padding:0;">
-          <li><a href="../solucoes.html">Portugal 2030</a></li>
-          <li><a href="../solucoes.html">Fundos Europeus</a></li>
-          <li><a href="../solucoes.html">Benefícios Fiscais</a></li>
+          <li><a href="../biblioteca.html">Portugal 2030</a></li>
+          <li><a href="../biblioteca.html">Fundos Europeus</a></li>
+          <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
         </ul>
       </div>
       <div>
