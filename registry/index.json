@@ -5,11 +5,11 @@
     "migrated_from_v3": "2026-04-12"
   },
   "totals": {
-    "published": 160,
-    "open": 140,
-    "closed": 11,
+    "published": 165,
+    "open": 142,
+    "closed": 14,
     "planned": 9,
-    "in_queue": 100,
+    "in_queue": 94,
     "in_watchlist": 11
   },
   "shards": {
@@ -20,7 +20,7 @@
       "planned": 1
     },
     "pt2030-pessoas": {
-      "count": 0,
+      "count": 1,
       "open": 0
     },
     "pt2030-central": {
@@ -40,16 +40,17 @@
       "open": 4
     },
     "pt2030-other": {
-      "count": 25,
-      "open": 24
+      "count": 28,
+      "open": 25,
+      "closed": 2
     },
     "eic": {
       "count": 4,
       "open": 4
     },
     "eu-horizon": {
-      "count": 25,
-      "open": 21,
+      "count": 26,
+      "open": 22,
       "closed": 3,
       "planned": 1
     },
@@ -159,5 +160,5 @@
     "bynd-vc": "2026-04-16"
   },
   "last_scanner_run": "2026-04-17T14:00:00",
-  "last_updated": "2026-04-17T14:00:00"
+  "last_updated": "2026-04-17T15:00:00"
 }
