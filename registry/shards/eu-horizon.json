@@ -146,6 +146,13 @@
       "source": "eu-funding-tenders",
       "state": "aberto",
       "last_check": "2026-04-17"
+    },
+    {
+      "id": "horizon-msca-2026-dn-01-01",
+      "file": "instrumentos/horizon-msca-2026-dn-01-01.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-17"
     }
   ],
   "instruments": [
@@ -226,5 +233,7 @@
       "state": "fechado",
       "last_check": "2026-04-17"
     }
-  ]
+  ],
+  "count": 1,
+  "open": 1
 }
