@@ -90,30 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "fnaba",
-      "name": "FNABA / Investors Portugal (APIES)",
-      "source_id": "fnaba",
-      "catalog_type": "ba",
-      "detected_date": "2026-04-17",
-      "last_profile_update": "2026-04-17",
-      "status": "active",
-      "regulation_url": "https://investors.pt",
-      "priority_score": 10,
-      "profile": {
-        "website": "https://investors.pt",
-        "linkedin": "https://www.linkedin.com/company/investors-portugal/",
-        "pais_sede": "PT",
-        "descricao_curta": "Associacao portuguesa de investidores early stage (ex-FNABA + APBA). Representa mais de 300 business angels e 30 veiculos de investimento em Portugal.",
-        "como_candidatar": "Contactar atraves de investors.pt ou atraves de membros da rede. Intro preferencial por referencia.",
-        "numero_membros": 300,
-        "ticket_individual_eur": null,
-        "ticket_coletivo_eur": null,
-        "setores_foco": null,
-        "requisitos_apresentacao": "Via website investors.pt ou por contacto com membros. Sessions periodicas de pitch para startups."
-      },
-      "notes": "FNABA e APBA fundiram-se em mai-2022 na APIES (Investors Portugal). Website original fnaba.org expirado. Novo website: investors.pt. 300+ angels, 30+ VCs, 1000+ startups no ecossistema, 10B+ EUR AUM."
-    }
-  ]
+  "queue": []
 }
