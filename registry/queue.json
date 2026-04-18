@@ -2,23 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "horizon-cl6-2026-04-governance-01",
-      "name": "Horizon Europe CL6 2026 - Agriculture of Data Partnership additional activities",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "aviso_codigo": "HORIZON-CL6-2026-04-GOVERNANCE-01",
-      "detected_date": "2026-04-17",
-      "deadline": "2026-08-25",
-      "budget": null,
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2026-04-governance-01",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl6-2026-04-governance-01.txt",
-      "priority_score": 15,
-      "status": "ready",
-      "notes": "HORIZON-CL6-2026-04-GOVERNANCE-01. Horizon Europe CL6. Agriculture of Data Partnership. Deadline: 25/08/2026.",
-      "fail_count": 0
-    },
-    {
       "id": "horizon-raise-2027-01-01",
       "name": "Horizon Europe RAISE 2027 - Automated Scientific Discovery (RIA)",
       "source_id": "eu-funding-tenders",
@@ -238,23 +221,6 @@
       "priority_score": 5,
       "status": "ready",
       "notes": "NORTE2030-2026-5. Convite a entidade unica: ULS Sao Joao EPE. Programa 5G for Smart Communities (CEF-DIG-2022-5GSMARTCOM). Norte Mais Social.",
-      "fail_count": 0
-    },
-    {
-      "id": "horizon-cl4-2026-space-03-81",
-      "name": "Horizon Europe HORIZON-CL4-2026-SPACE-03-81 - Space critical EEE components for EU non-dependence – Radiat",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "aviso_codigo": "HORIZON-CL4-2026-SPACE-03-81",
-      "detected_date": "2026-04-17",
-      "deadline": "2026-09-03",
-      "budget": "~3M EUR (estimado)",
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-SPACE-03-81",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2026-space-03-81.txt",
-      "priority_score": 25,
-      "status": "ready",
-      "notes": "Call: HORIZON-CL4-2026-03. SPACE. Deadline verificado via web search.",
       "fail_count": 0
     },
     {
