@@ -3733,7 +3733,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,entidade-publica,associacao,ensino-investigacao",
-      "setores": ["tecnologia-digital", "industria"],
+      "setores": [
+        "tecnologia-digital",
+        "industria"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon CL4 - Portal de Infraestruturas Tecnologicas (CSA)",
       "tagline": "CSA para criar um portal interativo de mapeamento das infraestruturas tecnologicas europeias acessivel a PME e startups.",
@@ -3752,7 +3755,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao,entidade-publica",
-      "setores": ["industria", "energia-ambiente"],
+      "setores": [
+        "industria",
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon CL4 - Monitorizacao de Materias-Primas Secundarias (CSA)",
       "tagline": "CSA para monitorizar materias-primas secundarias europeias e reforcar a autonomia estrategica da UE na cadeia de abastecimento.",
@@ -3771,7 +3777,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "energia-ambiente"],
+      "setores": [
+        "industria",
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon CL4 - Materiais Avancados Circulares (RIA)",
       "tagline": "RIA Horizon Europe para desenvolver materiais avancados inovadores concebidos para circularidade em mobilidade e dispositivos medicos.",
@@ -3790,7 +3799,9 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon CL4 - Proof of Market para Resultados de I&I (IA)",
       "tagline": "IA Horizon Europe para spin-offs e PME validarem comercialmente resultados de projetos Cluster 4 ou LEIT-H2020 anteriores.",
@@ -3809,7 +3820,9 @@
       "status_class": "status-cont",
       "fonte": "pventures",
       "beneficiario": "empresa,empreendedor",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Investors Portugal (APIES) - Business Angels",
       "tagline": "Rede nacional de business angels com mais de 300 membros e 30 veiculos de investimento para startups e empresas em fase early stage.",
@@ -3828,7 +3841,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "entidade-publica,ensino-investigacao",
-      "setores": ["tecnologia-digital", "industria"],
+      "setores": [
+        "tecnologia-digital",
+        "industria"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon CL4 - Talento de Gestao para Infraestruturas Tecnologicas (CSA)",
       "tagline": "CSA para atrair profissionais de gestao que reforcem a capacidade organizacional das infraestruturas tecnologicas europeias ao servico de PME e startups.",
@@ -3847,7 +3863,9 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao",
-      "setores": ["industria"],
+      "setores": [
+        "industria"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon CL4 - Cooperacao EU-Japao em Materiais Avancados (CSA)",
       "tagline": "CSA para financiar visitas de investigacao de cientistas europeus a instituicoes japonesas no ambito do Dialogo Reforcado EU-Japao em materiais estrategicos.",
@@ -3866,7 +3884,9 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon CL4 - Ciencias Sociais e Humanidades ao Servico da Industria (CSA)",
       "tagline": "CSA para fomentar co-criacao entre investigadores de ciencias sociais, humanidades e artes e empresas europeias atraves de hackathons e programas de intercambio.",
@@ -3885,7 +3905,12 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,empreendedor",
-      "setores": ["tecnologia-digital", "industria", "saude-ciencias-vida", "energia-ambiente"],
+      "setores": [
+        "tecnologia-digital",
+        "industria",
+        "saude-ciencias-vida",
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon CL4 - Acesso Piloto de PME a Infraestruturas Tecnologicas (CSA)",
       "tagline": "CSA para criar esquemas piloto multi-site de acesso simplificado de startups, scaleups e PME inovadoras a infraestruturas tecnologicas europeias em materiais, energia, saude e biotech.",
@@ -3904,7 +3929,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["tecnologia-digital", "industria"],
+      "setores": [
+        "tecnologia-digital",
+        "industria"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon CL4 - Descoberta de Materiais Avancados por IA e Digitalizacao (IA)",
       "tagline": "Innovation Action Horizon Europe para acelerar a descoberta e desenvolvimento de quimicos e materiais avancados atraves de IA, workflows digitais e principios Safe and Sustainable by Design.",
@@ -3923,7 +3951,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "tecnologia-digital"],
+      "setores": [
+        "industria",
+        "tecnologia-digital"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon CL4 - Fabrico Avancado para Produtos-Chave (IA)",
       "tagline": "Innovation Action da parceria Made in Europe: 38 milhoes EUR para desenvolver tecnologias de fabrico que reforcem a competitividade europeia em componentes criticos.",
@@ -3942,7 +3973,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "energia-ambiente"],
+      "setores": [
+        "industria",
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon CL4 - Otimizacao de Recursos na Economia Circular (RIA)",
       "tagline": "RIA de maior escala do call HORIZON-CL4-2026-01: 64 milhoes EUR para investigar reciclagem, upcycling e eficiencia de recursos ao longo de toda a cadeia de valor industrial.",
@@ -3961,7 +3995,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "energia-ambiente"],
+      "setores": [
+        "industria",
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon CL4 - Reciclagem de Materiais Secundarios Criticos (IA)",
       "tagline": "Innovation Action para demonstrar sistemas de reciclagem de alta qualidade de metais e materiais criticos, cobrindo toda a cadeia de valor desde a recolha ate ao refino.",
@@ -3980,7 +4017,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "energia-ambiente"],
+      "setores": [
+        "industria",
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon CL4 - Extracao Inovadora de Materiais Criticos (RIA)",
       "tagline": "RIA Horizon Europe com 19 milhoes EUR para tecnologias sustentaveis de extracao primaria de materiais criticos, reduzindo emissoes e impactos ambientais.",
@@ -3999,7 +4039,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "tecnologia-digital"],
+      "setores": [
+        "industria",
+        "tecnologia-digital"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon CL4 - Exploracao Geologica Inteligente de Materiais Criticos (RIA)",
       "tagline": "RIA Horizon Europe com 18,5 milhoes EUR para integrar IA, machine learning e modelacao geologica na identificacao de depositos europeus de materiais criticos.",
@@ -4007,6 +4050,28 @@
       "highlight1": "Consorcios geociencias, IA e exploracao mineira (UE e parceiros estrategicos)",
       "highlight2": "Nacional",
       "href": "instrumentos/horizon-cl4-2026-01-mat-prod-11.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl4-2026-01-mat-prod-31",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto - prazo 28 Jan 2027",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "energia-ambiente",
+        "industria"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizon CL4 - Captura e Utilizacao de CO2 para Produtos Competitivos (RIA)",
+      "tagline": "Financiamento europeu para projetos de captura, purificacao e conversao de CO2 em produtos competitivos com alternativas fosseis.",
+      "highlight0": "Ate 7M por projeto, 7 projetos a financiar (43,8M total)",
+      "highlight1": "Consorcios multinacionais (empresas e investigacao)",
+      "highlight2": "Internacional (UE)",
+      "href": "instrumentos/horizon-cl4-2026-01-mat-prod-31.html",
       "featured": false
     }
   ]
