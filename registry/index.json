@@ -5,13 +5,13 @@
     "migrated_from_v3": "2026-04-12"
   },
   "totals": {
-    "published": 214,
-    "open": 178,
+    "published": 215,
+    "open": 179,
     "closed": 22,
     "planned": 14,
     "in_queue": 96,
     "in_watchlist": 103,
-    "in_catalogo": 1,
+    "in_catalogo": 0,
     "in_overflow": 107
   },
   "shards": {
@@ -75,8 +75,8 @@
       "open": 0
     },
     "catalogo-vc": {
-      "count": 4,
-      "open": 4
+      "count": 5,
+      "open": 5
     },
     "catalogo-premios": {
       "count": 0,
@@ -89,7 +89,7 @@
   },
   "last_full_cycle": "2026-04-12",
   "last_monitor_run": "2026-04-18",
-  "last_writer_run": "2026-04-18T-batch3-a4",
+  "last_writer_run": "2026-04-18T-batch3-a5",
   "source_last_checked": {
     "portugal-2030": "2026-04-18",
     "compete-2030": "2026-04-18",
