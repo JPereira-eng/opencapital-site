@@ -2,118 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "inqueritos-de-mobilidade-nas-areas-metropolitana-de-lisboa-e-do-porto",
-      "name": "Inquéritos de mobilidade nas Áreas Metropolitana de Lisboa e do Porto",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0284/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-12-31",
-      "budget": "1 000 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/inqueritos-de-mobilidade-nas-areas-metropolitana-de-lisboa-e-do-porto/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 15,
-      "status": "pending",
-      "notes": "FA0284/2025. SUSTENTAVEL2030. FC."
-    },
-    {
-      "id": "execucao-da-edl-do-gal-adrepes-costeiro-projeto-ancora-reativacao-de-u",
-      "name": "Execução da EDL do GAL ADREPES COSTEIRO - Projeto âncora “Reativação de uma salina na Reserva Natural do Estuário do Sado”",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0294/2023",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-07-30",
-      "budget": "200 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/execucao-da-edl-do-gal-adrepes-costeiro-projeto-ancora-reativacao-de-u/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 15,
-      "status": "pending",
-      "notes": "FA0294/2023. MAR2030. FEAMPA."
-    },
-    {
-      "id": "execucao-da-edl-do-gal-pesca-sotavento-algarveinvestimentos-que-contri",
-      "name": "Execução da EDL do GAL Pesca Sotavento AlgarveInvestimentos que contribuam para o desenvolvimento de uma economia azul sustentável nas regiões costeiras, insulares e interiores e fomentar o desenvolvimento das comunidades piscatórias e de aquicultura",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0144/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-12-31",
-      "budget": "805 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/execucao-da-edl-do-gal-pesca-sotavento-algarveinvestimentos-que-contri/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 15,
-      "status": "pending",
-      "notes": "FA0144/2025. MAR2030. FEAMPA."
-    },
-    {
-      "id": "reabilitacao-da-aerogare-do-aerodromo-de-sao-jorge",
-      "name": "Reabilitação da Aerogare do aeródromo de São Jorge",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0285/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-08-31",
-      "budget": "743 750 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/reabilitacao-da-aerogare-do-aerodromo-de-sao-jorge/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 15,
-      "status": "pending",
-      "notes": "FA0285/2025. SUSTENTAVEL2030. FC."
-    },
-    {
-      "id": "qualificacao-de-pessoas-com-deficiencia-e-ou-incapacidade",
-      "name": "Qualificação de pessoas com deficiência e ou incapacidade",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0241/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-11-02",
-      "budget": "250 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/qualificacao-de-pessoas-com-deficiencia-e-ou-incapacidade/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 15,
-      "status": "pending",
-      "notes": "FA0241/2025. MADEIRA2030. FSE+."
-    },
-    {
-      "id": "contratos-de-impacto-social",
-      "name": "Contratos de Impacto Social",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-centro",
-      "aviso_codigo": "FA0864/2024",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-12-21",
-      "budget": "425 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/contratos-de-impacto-social/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 15,
-      "status": "pending",
-      "notes": "FA0864/2024. CENTRO2030. FSE+."
-    },
-    {
-      "id": "centros-especializados-em-qualificacao-de-adultos-e-processos-de-recon",
-      "name": "Centros especializados em qualificação de adultos e processos de Reconhecimento, Validação e Certificação de Competências Profissionais - Centros Qualifica",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0242/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-11-02",
-      "budget": "1 000 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/centros-especializados-em-qualificacao-de-adultos-e-processos-de-recon/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 15,
-      "status": "pending",
-      "notes": "FA0242/2025. MADEIRA2030. FSE+."
-    },
-    {
       "id": "horizon-cl6-2026-04-governance-01",
       "name": "Horizon Europe CL6 2026 - Agriculture of Data Partnership additional activities",
       "source_id": "eu-funding-tenders",
@@ -124,10 +12,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cl6-2026-04-governance-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl6-2026-04-governance-01.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "HORIZON-CL6-2026-04-GOVERNANCE-01. Horizon Europe CL6. Agriculture of Data Partnership. Deadline: 25/08/2026."
+      "status": "ready",
+      "notes": "HORIZON-CL6-2026-04-GOVERNANCE-01. Horizon Europe CL6. Agriculture of Data Partnership. Deadline: 25/08/2026.",
+      "fail_count": 0
     },
     {
       "id": "horizon-raise-2027-01-01",
@@ -140,10 +29,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-raise-2027-01-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-raise-2027-01-01.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "HORIZON-RAISE-2027-01-01. Horizon Europe RAISE Pilot 2027. Descoberta Cientifica Automatizada por IA. Deadline: 22/09/2026."
+      "status": "ready",
+      "notes": "HORIZON-RAISE-2027-01-01. Horizon Europe RAISE Pilot 2027. Descoberta Cientifica Automatizada por IA. Deadline: 22/09/2026.",
+      "fail_count": 0
     },
     {
       "id": "horizon-raise-2027-01-02",
@@ -156,10 +46,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-raise-2027-01-02",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-raise-2027-01-02.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "HORIZON-RAISE-2027-01-02. Horizon Europe RAISE Pilot 2027. Descoberta Cientifica Automatizada - Alimentacao. Deadline: 22/09/2026."
+      "status": "ready",
+      "notes": "HORIZON-RAISE-2027-01-02. Horizon Europe RAISE Pilot 2027. Descoberta Cientifica Automatizada - Alimentacao. Deadline: 22/09/2026.",
+      "fail_count": 0
     },
     {
       "id": "horizon-msca-2027-cofund-01-01",
@@ -172,10 +63,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-msca-2027-cofund-01-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-msca-2027-cofund-01-01.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "HORIZON-MSCA-2027-COFUND-01-01. MSCA COFUND 2027. Co-financiamento programas regionais/nacionais/internacionais. Deadline: 08/12/2026."
+      "status": "ready",
+      "notes": "HORIZON-MSCA-2027-COFUND-01-01. MSCA COFUND 2027. Co-financiamento programas regionais/nacionais/internacionais. Deadline: 08/12/2026.",
+      "fail_count": 0
     },
     {
       "id": "horizon-msca-2027-cofund-02-01",
@@ -188,10 +80,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-msca-2027-cofund-02-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-msca-2027-cofund-02-01.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "HORIZON-MSCA-2027-COFUND-02-01. MSCA Choose Europe for Science 2027. Deadline: 08/12/2026."
+      "status": "ready",
+      "notes": "HORIZON-MSCA-2027-COFUND-02-01. MSCA Choose Europe for Science 2027. Deadline: 08/12/2026.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cid-2027-01-01",
@@ -204,10 +97,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cid-2027-01-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cid-2027-01-01.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "HORIZON-CID-2027-01-01. Horizon Europe Clean Industrial Deal 2027. Descarbonizacao industrias energo-intensivas. Deadline: 12/01/2027."
+      "status": "ready",
+      "notes": "HORIZON-CID-2027-01-01. Horizon Europe Clean Industrial Deal 2027. Descarbonizacao industrias energo-intensivas. Deadline: 12/01/2027.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cid-2027-01-02",
@@ -220,10 +114,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-cid-2027-01-02",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cid-2027-01-02.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "HORIZON-CID-2027-01-02. Horizon Europe Clean Industrial Deal 2027. Tecnologias limpas para accao climatica. Deadline: 12/01/2027."
+      "status": "ready",
+      "notes": "HORIZON-CID-2027-01-02. Horizon Europe Clean Industrial Deal 2027. Tecnologias limpas para accao climatica. Deadline: 12/01/2027.",
+      "fail_count": 0
     },
     {
       "id": "vales-id-acreditacao-prestadores-acores",
@@ -238,7 +133,10 @@
       "regulation_local": null,
       "priority_score": 5,
       "status": "pending",
-      "notes": "FA0607/2023. Vales de I&D - Pre-qualificacao/acreditacao de prestadores de servicos. ACORES2030 FEDER."
+      "notes": "FA0607/2023. Vales de I&D - Pre-qualificacao/acreditacao de prestadores de servicos. ACORES2030 FEDER.",
+      "download_error": "HTTP 404 - pagina nao encontrada em 2026-04-18",
+      "fail_count": 1,
+      "last_fail_date": "2026-04-18"
     },
     {
       "id": "estimulo-provas-conceito-empresariais-acores",
@@ -253,7 +151,10 @@
       "regulation_local": null,
       "priority_score": 5,
       "status": "pending",
-      "notes": "FA0614/2023. Estimulo as provas de conceito empresariais. 450K EUR FEDER. ACORES2030."
+      "notes": "FA0614/2023. Estimulo as provas de conceito empresariais. 450K EUR FEDER. ACORES2030.",
+      "download_error": "HTTP 404 - pagina nao encontrada em 2026-04-18",
+      "fail_count": 1,
+      "last_fail_date": "2026-04-18"
     },
     {
       "id": "vale-spin-off-acores",
@@ -323,38 +224,6 @@
       "status": "ready"
     },
     {
-      "id": "formacao-publicos-estrategicos-xenofobia-discriminacao",
-      "name": "Formacao de Publicos Estrategicos na Area do Combate a Xenofobia e Discriminacao",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-pessoas",
-      "aviso_codigo": "FA0034/2025",
-      "detected_date": "2026-04-17",
-      "deadline": "2026-12-31",
-      "budget": "2 000 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/formacao-de-publicos-estrategicos-na-area-do-combate-a-xenofobia-e-discriminacao/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 15,
-      "status": "pending",
-      "notes": "FA0034/2025. PESSOAS2030. FSE+. Previsto."
-    },
-    {
-      "id": "cursos-cef-escolas-publicas-2026-2027",
-      "name": "Cursos de Educacao e Formacao de Jovens (CEF) Ano Letivo 2026/2027 - Escolas Publicas",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-pessoas",
-      "aviso_codigo": "FA0142/2025",
-      "detected_date": "2026-04-17",
-      "deadline": "2026-08-31",
-      "budget": "1 500 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/cursos-de-educacao-e-formacao-de-jovens-cef-ano-letivo-2026-2027-escolas-publicas/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 15,
-      "status": "pending",
-      "notes": "FA0142/2025. PESSOAS2030. FSE+. Previsto."
-    },
-    {
       "id": "norte2030-2026-5-5g-healthcare",
       "name": "5G in Healthcare - Northern Region (PT)",
       "source_id": "norte-2030",
@@ -365,10 +234,11 @@
       "budget": null,
       "regulation_url": "https://www.norte2030.pt/concurso/apoio-para-a-implementacao-do-projeto-5g-in-healthcare-northern-region-pt-norte2030-2026-5/",
       "pdf_url": "https://www.norte2030.pt/app/uploads/2027/04/Aviso_5G-for-Smart-Communities-Unidade-Local-de-Saude-de-Sao-Joao_10-04-2026.pdf",
-      "regulation_local": null,
+      "regulation_local": "regulamentos/norte-2030/norte2030-2026-5-5g-healthcare.txt",
       "priority_score": 5,
-      "status": "pending",
-      "notes": "NORTE2030-2026-5. Convite a entidade unica: ULS Sao Joao EPE. Programa 5G for Smart Communities (CEF-DIG-2022-5GSMARTCOM). Norte Mais Social."
+      "status": "ready",
+      "notes": "NORTE2030-2026-5. Convite a entidade unica: ULS Sao Joao EPE. Programa 5G for Smart Communities (CEF-DIG-2022-5GSMARTCOM). Norte Mais Social.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2026-space-03-81",
@@ -415,10 +285,11 @@
       "budget": "~3M EUR (estimado)",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-SPACE-03-11",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2026-space-03-11.txt",
       "priority_score": 25,
-      "status": "pending",
-      "notes": "Call: HORIZON-CL4-2026-03. SPACE. Deadline verificado via web search."
+      "status": "ready",
+      "notes": "Call: HORIZON-CL4-2026-03. SPACE. Deadline verificado via web search.",
+      "fail_count": 0
     },
     {
       "id": "eea-bilateral-fund-call-1-defesa-seguranca",
@@ -431,10 +302,11 @@
       "budget": "500.000 EUR",
       "regulation_url": "https://eeagrants.org/pt/portugal/programmes/bilateral-fund/call-1-defesa-seguranca-e-politica-externa",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eea-grants-portugal/eea-bilateral-fund-call-1-defesa-seguranca.txt",
       "priority_score": 5,
-      "status": "pending",
-      "notes": "Estado: previsto (abre 11-mai-2026). Abertura: 11/05/2026. Encerramento: 15/09/2026. Foco bilateral PT-Noruega-Islandia. Financiamento: 10K-50K EUR por projeto, taxa 90%."
+      "status": "ready",
+      "notes": "Estado: previsto (abre 11-mai-2026). Abertura: 11/05/2026. Encerramento: 15/09/2026. Foco bilateral PT-Noruega-Islandia. Financiamento: 10K-50K EUR por projeto, taxa 90%.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2026-04-digital-emerging-09",
