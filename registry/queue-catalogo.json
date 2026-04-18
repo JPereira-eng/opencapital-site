@@ -90,5 +90,46 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": []
+  "queue": [
+    {
+      "id": "uptec-porto",
+      "name": "UPTEC - Parque de Ciencia e Tecnologia da UP",
+      "source_id": "uptec-porto",
+      "catalog_type": "incubator",
+      "detected_date": "2026-04-18",
+      "last_profile_update": "2026-04-18",
+      "status": "active",
+      "regulation_url": "https://uptec.up.pt",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://uptec.up.pt",
+        "linkedin": "https://www.linkedin.com/company/uptecporto/",
+        "pais_sede": "PT",
+        "descricao_curta": "Parque de Ciencia e Tecnologia da Universidade do Porto. Incubadora de referencia no norte de Portugal para startups e empresas de base tecnologica.",
+        "como_candidatar": "Formulario online em uptec.up.pt/join-the-uptec-community/. Admissao continua sem prazo fixo.",
+        "modelo": "equity-free",
+        "formato": "hibrido",
+        "duracao_meses": null,
+        "batches_ano": null,
+        "batch_proximo": null,
+        "deadline_proxima": null,
+        "estipendio_eur": null,
+        "equity_pct": null,
+        "mentorias": [
+          "Universidade do Porto",
+          "rede de parceiros empresariais e academicos"
+        ],
+        "setores_foco": [
+          "tecnologia",
+          "biotecnologia",
+          "digital",
+          "industria 4.0",
+          "ciencias da vida",
+          "engenharia"
+        ],
+        "alumni_destaques": []
+      },
+      "notes": "Incubadora UP com 15+ anos de atividade. Modalidades fisica, co-working e virtual. Sem equity nem prazo formal - candidatura continua."
+    }
+  ]
 }
