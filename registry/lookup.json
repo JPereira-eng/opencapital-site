@@ -1117,7 +1117,12 @@
       "status": "aberto",
       "detected_date": "2026-04-18"
     },
-    "iberis-capital": true
+    "iberis-capital": true,
+    "horizon-raise-2027-01-02": true,
+    "horizon-msca-2027-cofund-01-01": true,
+    "horizon-msca-2027-cofund-02-01": true,
+    "horizon-cid-2027-01-01": true,
+    "horizon-cid-2027-01-02": true
   },
   "by_aviso_codigo": {
     "FA0065/2025": "formacao-executivos-compete",
@@ -2252,6 +2257,31 @@
       "source_id": "ani",
       "aviso_codigo": "EUROSTARS-CALL-11",
       "shard": "eu-other"
+    },
+    "horizon-raise-2027-01-02": {
+      "source_id": "eu-funding-tenders",
+      "aviso_codigo": "HORIZON-RAISE-2027-01-02",
+      "shard": "eu-horizon"
+    },
+    "horizon-msca-2027-cofund-01-01": {
+      "source_id": "eu-funding-tenders",
+      "aviso_codigo": "HORIZON-MSCA-2027-COFUND-01-01",
+      "shard": "eu-horizon"
+    },
+    "horizon-msca-2027-cofund-02-01": {
+      "source_id": "eu-funding-tenders",
+      "aviso_codigo": "HORIZON-MSCA-2027-COFUND-02-01",
+      "shard": "eu-horizon"
+    },
+    "horizon-cid-2027-01-01": {
+      "source_id": "eu-funding-tenders",
+      "aviso_codigo": "HORIZON-CID-2027-01-01",
+      "shard": "eu-horizon"
+    },
+    "horizon-cid-2027-01-02": {
+      "source_id": "eu-funding-tenders",
+      "aviso_codigo": "HORIZON-CID-2027-01-02",
+      "shard": "eu-horizon"
     }
   }
 }

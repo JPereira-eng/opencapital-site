@@ -5,11 +5,11 @@
     "migrated_from_v3": "2026-04-12"
   },
   "totals": {
-    "published": 205,
-    "open": 176,
+    "published": 210,
+    "open": 177,
     "closed": 19,
-    "planned": 10,
-    "in_queue": 85,
+    "planned": 14,
+    "in_queue": 80,
     "in_watchlist": 103,
     "in_catalogo": 0,
     "in_overflow": 97
@@ -51,10 +51,10 @@
       "open": 4
     },
     "eu-horizon": {
-      "count": 56,
-      "open": 47,
+      "count": 61,
+      "open": 48,
       "closed": 7,
-      "planned": 2
+      "planned": 6
     },
     "eu-other": {
       "count": 34,
@@ -89,7 +89,7 @@
   },
   "last_full_cycle": "2026-04-12",
   "last_monitor_run": "2026-04-17",
-  "last_writer_run": "2026-04-18",
+  "last_writer_run": "2026-04-18T-batch2",
   "source_last_checked": {
     "portugal-2030": "2026-04-18",
     "compete-2030": "2026-04-18",

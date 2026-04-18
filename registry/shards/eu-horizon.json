@@ -463,10 +463,45 @@
       "source": "eu-funding-tenders",
       "state": "aberto",
       "last_check": "2026-04-18"
+    },
+    {
+      "id": "horizon-raise-2027-01-02",
+      "file": "instrumentos/horizon-raise-2027-01-02.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-18"
+    },
+    {
+      "id": "horizon-msca-2027-cofund-01-01",
+      "file": "instrumentos/horizon-msca-2027-cofund-01-01.html",
+      "source": "eu-funding-tenders",
+      "state": "previsto",
+      "last_check": "2026-04-18"
+    },
+    {
+      "id": "horizon-msca-2027-cofund-02-01",
+      "file": "instrumentos/horizon-msca-2027-cofund-02-01.html",
+      "source": "eu-funding-tenders",
+      "state": "previsto",
+      "last_check": "2026-04-18"
+    },
+    {
+      "id": "horizon-cid-2027-01-01",
+      "file": "instrumentos/horizon-cid-2027-01-01.html",
+      "source": "eu-funding-tenders",
+      "state": "previsto",
+      "last_check": "2026-04-18"
+    },
+    {
+      "id": "horizon-cid-2027-01-02",
+      "file": "instrumentos/horizon-cid-2027-01-02.html",
+      "source": "eu-funding-tenders",
+      "state": "previsto",
+      "last_check": "2026-04-18"
     }
   ],
-  "count": 33,
-  "open": 31,
+  "count": 38,
+  "open": 32,
   "closed": 1,
-  "planned": 1
+  "planned": 5
 }
