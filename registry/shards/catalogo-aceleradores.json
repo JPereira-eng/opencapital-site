@@ -2,5 +2,13 @@
   "_meta": "Shard de instrumentos publicados do regime catalogo - aceleradores, incubadoras e programas de startup. Inclui BGI Accelerator, Startup Lisboa, Beta-i, F6S, EU Startups, Startup Portugal.",
   "shard_id": "catalogo-aceleradores",
   "regime": "catalogo",
-  "items": []
+  "items": [
+    {
+      "id": "uptec-porto",
+      "file": "instrumentos/uptec-porto.html",
+      "source": "uptec-porto",
+      "state": "aberto",
+      "last_check": "2026-04-18"
+    }
+  ]
 }

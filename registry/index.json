@@ -5,13 +5,13 @@
     "migrated_from_v3": "2026-04-12"
   },
   "totals": {
-    "published": 229,
-    "open": 191,
+    "published": 230,
+    "open": 192,
     "closed": 24,
     "planned": 14,
     "in_queue": 90,
     "in_watchlist": 103,
-    "in_catalogo": 1,
+    "in_catalogo": 0,
     "in_overflow": 107
   },
   "shards": {
@@ -84,8 +84,8 @@
       "open": 0
     },
     "catalogo-aceleradores": {
-      "count": 0,
-      "open": 0
+      "count": 1,
+      "open": 1
     }
   },
   "last_full_cycle": "2026-04-12",
