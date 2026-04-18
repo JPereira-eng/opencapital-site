@@ -2,23 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "horizon-raise-2027-01-01",
-      "name": "Horizon Europe RAISE 2027 - Automated Scientific Discovery (RIA)",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "aviso_codigo": "HORIZON-RAISE-2027-01-01",
-      "detected_date": "2026-04-17",
-      "deadline": "2026-09-22",
-      "budget": null,
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-raise-2027-01-01",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/eu-funding-tenders/horizon-raise-2027-01-01.txt",
-      "priority_score": 15,
-      "status": "ready",
-      "notes": "HORIZON-RAISE-2027-01-01. Horizon Europe RAISE Pilot 2027. Descoberta Cientifica Automatizada por IA. Deadline: 22/09/2026.",
-      "fail_count": 0
-    },
-    {
       "id": "horizon-raise-2027-01-02",
       "name": "Horizon Europe RAISE 2027 - Automated Scientific Discovery - Food",
       "source_id": "eu-funding-tenders",
