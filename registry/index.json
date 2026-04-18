@@ -9,9 +9,10 @@
     "open": 163,
     "closed": 18,
     "planned": 9,
-    "in_queue": 51,
+    "in_queue": 100,
     "in_watchlist": 103,
-    "in_catalogo": 0
+    "in_catalogo": 1,
+    "in_overflow": 97
   },
   "shards": {
     "pt2030-compete": {
@@ -90,9 +91,9 @@
   "last_monitor_run": "2026-04-17",
   "last_writer_run": "2026-04-18",
   "source_last_checked": {
-    "portugal-2030": "2026-04-17",
-    "compete-2030": "2026-04-16",
-    "norte-2030": "2026-04-17",
+    "portugal-2030": "2026-04-18",
+    "compete-2030": "2026-04-18",
+    "norte-2030": "2026-04-18",
     "centro-2030": "2026-04-16",
     "lisboa-2030": "2026-04-16",
     "alentejo-2030": "2026-04-16",
@@ -103,7 +104,7 @@
     "sustentavel-2030": "2026-04-17",
     "mar-2030": "2026-04-17",
     "pat-2030": "2026-04-13",
-    "eu-funding-tenders": "2026-04-17",
+    "eu-funding-tenders": "2026-04-18",
     "ani": "2026-04-17",
     "iapmei": "2026-04-16",
     "prr": "2026-04-16",
@@ -143,7 +144,7 @@
     "eu-startups": "2026-04-13",
     "esa-bic": "2026-04-16",
     "eit-digital": "2026-04-14",
-    "eit-climate": "2026-04-14",
+    "eit-climate": "2026-04-18",
     "shilling-vc": "2026-04-14",
     "portugal-ventures": "2026-04-14",
     "balcao-2030": "2026-04-14",
@@ -163,8 +164,9 @@
     "fundo-ambiental": "2026-04-17",
     "ifap-pdr": "2026-04-17",
     "fnaba": "2026-04-17",
-    "seedrs": "2026-04-17"
+    "seedrs": "2026-04-17",
+    "iberis-capital": "2026-04-18"
   },
-  "last_scanner_run": "2026-04-17",
-  "last_updated": "2026-04-17"
+  "last_scanner_run": "2026-04-18",
+  "last_updated": "2026-04-18"
 }
