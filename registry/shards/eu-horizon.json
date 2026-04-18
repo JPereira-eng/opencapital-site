@@ -393,8 +393,7 @@
       "source": "eu-funding-tenders",
       "state": "aberto",
       "last_check": "2026-04-18"
-    }
-  ],
+    },
     {
       "id": "horizon-cl4-2026-space-03-82",
       "file": "instrumentos/horizon-cl4-2026-space-03-82.html",
@@ -450,9 +449,17 @@
       "source": "eu-funding-tenders",
       "state": "aberto",
       "last_check": "2026-04-18"
+    },
+    {
+      "id": "horizon-cl6-2026-04-governance-01",
+      "file": "instrumentos/horizon-cl6-2026-04-governance-01.html",
+      "source": "eu-funding-tenders",
+      "state": "previsto",
+      "last_check": "2026-04-18"
     }
   ],
-  "count": 31,
+  "count": 32,
   "open": 30,
-  "closed": 1
+  "closed": 1,
+  "planned": 1
 }
