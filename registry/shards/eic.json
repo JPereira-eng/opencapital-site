@@ -1,10 +1,43 @@
 {
   "_shard": "eic",
-  "_sources": ["eic-accelerator"],
+  "_sources": [
+    "eic-accelerator"
+  ],
   "items": [
-    { "id": "eic-accelerator-2026", "file": "instrumentos/eic-accelerator-2026.html", "source": "eic-accelerator", "state": "aberto", "last_check": "2026-04-13" },
-    { "id": "step-scale-up-eic", "file": "instrumentos/step-scale-up-eic.html", "source": "eic-accelerator", "state": "aberto", "last_check": "2026-04-13" },
-    { "id": "eic-pathfinder-2026", "file": "instrumentos/eic-pathfinder-2026.html", "source": "eic-accelerator", "state": "aberto", "last_check": "2026-04-13" },
-    { "id": "eic-transition-2026", "file": "instrumentos/eic-transition-2026.html", "source": "eic-accelerator", "state": "aberto", "last_check": "2026-04-13" }
+    {
+      "id": "eic-accelerator-2026",
+      "file": "instrumentos/eic-accelerator-2026.html",
+      "source": "eic-accelerator",
+      "state": "aberto",
+      "last_check": "2026-04-13"
+    },
+    {
+      "id": "step-scale-up-eic",
+      "file": "instrumentos/step-scale-up-eic.html",
+      "source": "eic-accelerator",
+      "state": "aberto",
+      "last_check": "2026-04-13"
+    },
+    {
+      "id": "eic-pathfinder-2026",
+      "file": "instrumentos/eic-pathfinder-2026.html",
+      "source": "eic-accelerator",
+      "state": "aberto",
+      "last_check": "2026-04-13"
+    },
+    {
+      "id": "eic-transition-2026",
+      "file": "instrumentos/eic-transition-2026.html",
+      "source": "eic-accelerator",
+      "state": "aberto",
+      "last_check": "2026-04-13"
+    },
+    {
+      "id": "horizon-eic-2026-bas-02",
+      "file": "instrumentos/horizon-eic-2026-bas-02.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-18"
+    }
   ]
 }
