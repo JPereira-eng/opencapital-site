@@ -90,5 +90,31 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": []
+  "queue": [
+    {
+      "id": "seedrs-pt",
+      "name": "Republic Europe (ex Seedrs)",
+      "source_id": "seedrs-pt",
+      "catalog_type": "crowdfunding",
+      "detected_date": "2026-04-18",
+      "last_profile_update": "2026-04-18",
+      "status": "active",
+      "regulation_url": "https://europe.republic.com",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://europe.republic.com",
+        "linkedin": "https://www.linkedin.com/company/republic-europe",
+        "pais_sede": "EU",
+        "descricao_curta": "Plataforma equity crowdfunding europeia, ex-Seedrs, adquirida pela Republic em 2021 por USD 100M. Opera sob licenca ECSPR do Banco Central da Irlanda desde outubro 2023, com passporting para toda a UE incluindo Portugal.",
+        "como_candidatar": "Formulario em europe.republic.com - empresa preenche pitch e informacao financeira, equipa Republic avalia candidatura",
+        "modelo": "equity",
+        "ticket_min_investidor_eur": 10,
+        "comissao": "Investidor: 2.5% na subscricao (min EUR 5, max EUR 250) + 5% sobre lucro na saida; Empresa: fees negociadas caso a caso",
+        "regulamentacao": "ECSPR - Banco Central da Irlanda (desde outubro 2023); FCA (UK). Passporting EU incluindo Portugal.",
+        "campanhas_ativas_url": "https://europe.republic.com/invest",
+        "nota": "Rebranding de Seedrs para Republic Europe em 2023. Total historico investido: >3.4B EUR em 2447+ projetos. Mercado secundario disponivel. HQ Dublin (EU) + Londres (UK)."
+      },
+      "notes": "Ex-Seedrs. Maior plataforma equity crowdfunding europeia por historico. Rebranding Republic Europe 2023. Profile confirmado 2026-04-18."
+    }
+  ]
 }

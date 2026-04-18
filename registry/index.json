@@ -9,10 +9,10 @@
     "open": 177,
     "closed": 19,
     "planned": 14,
-    "in_queue": 80,
+    "in_queue": 100,
     "in_watchlist": 103,
-    "in_catalogo": 0,
-    "in_overflow": 97
+    "in_catalogo": 1,
+    "in_overflow": 107
   },
   "shards": {
     "pt2030-compete": {
@@ -165,7 +165,11 @@
     "ifap-pdr": "2026-04-17",
     "fnaba": "2026-04-17",
     "seedrs": "2026-04-17",
-    "iberis-capital": "2026-04-18"
+    "iberis-capital": "2026-04-18",
+    "erasmus-ka2-alliances": "2026-04-18",
+    "erasmus-ka2-cooperation": "2026-04-18",
+    "erasmus-cove": "2026-04-18",
+    "seedrs-pt": "2026-04-18"
   },
   "last_scanner_run": "2026-04-18",
   "last_updated": "2026-04-18T-monitor-r01-j1"
