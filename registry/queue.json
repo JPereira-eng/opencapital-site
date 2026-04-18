@@ -2,54 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "centros-locais-de-apoio-a-integracao-de-migrantes-claim",
-      "name": "Centros Locais de Apoio à Integração de Migrantes (CLAIM)",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0321/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-08-31",
-      "budget": "3 950 624,33 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/centros-locais-de-apoio-a-integracao-de-migrantes-claim/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 25,
-      "status": "pending",
-      "notes": "FA0321/2025. FAMI2030. FAMI."
-    },
-    {
-      "id": "assistencia-tecnica-organismo-intermedio-da-regiao-autonoma-da-madeira",
-      "name": "Assistência Técnica - Organismo Intermédio da Região Autónoma da Madeira (2027 - 2029)",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0289/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-12-31",
-      "budget": "2 000 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/assistencia-tecnica-organismo-intermedio-da-regiao-autonoma-da-madeira/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 25,
-      "status": "pending",
-      "notes": "FA0289/2025. SUSTENTAVEL2030. FC."
-    },
-    {
-      "id": "estudos-e-avaliacoes-do-plano-global-de-avaliacao-do-portugal-2030-202",
-      "name": "Estudos e Avaliações do Plano Global de Avaliação do Portugal 2030 | 2027-2029",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0265/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-07-31",
-      "budget": "1 500 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/estudos-e-avaliacoes-do-plano-global-de-avaliacao-do-portugal-2030-202/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 25,
-      "status": "pending",
-      "notes": "FA0265/2025. PAT2030. FEDER."
-    },
-    {
       "id": "inqueritos-de-mobilidade-nas-areas-metropolitana-de-lisboa-e-do-porto",
       "name": "Inquéritos de mobilidade nas Áreas Metropolitana de Lisboa e do Porto",
       "source_id": "portugal-2030",
@@ -429,10 +381,11 @@
       "budget": "~3M EUR (estimado)",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-SPACE-03-82",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2026-space-03-82.txt",
       "priority_score": 25,
-      "status": "pending",
-      "notes": "Call: HORIZON-CL4-2026-03. SPACE. Deadline verificado via web search."
+      "status": "ready",
+      "notes": "Call: HORIZON-CL4-2026-03. SPACE. Deadline verificado via web search.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2026-space-03-85",
@@ -445,10 +398,11 @@
       "budget": "~3M EUR (estimado)",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-SPACE-03-85",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2026-space-03-85.txt",
       "priority_score": 25,
-      "status": "pending",
-      "notes": "Call: HORIZON-CL4-2026-03. SPACE. Deadline verificado via web search."
+      "status": "ready",
+      "notes": "Call: HORIZON-CL4-2026-03. SPACE. Deadline verificado via web search.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2026-space-03-31",
@@ -461,10 +415,11 @@
       "budget": "~3M EUR (estimado)",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-SPACE-03-31",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2026-space-03-31.txt",
       "priority_score": 25,
-      "status": "pending",
-      "notes": "Call: HORIZON-CL4-2026-03. SPACE. Deadline verificado via web search."
+      "status": "ready",
+      "notes": "Call: HORIZON-CL4-2026-03. SPACE. Deadline verificado via web search.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2026-space-03-32",
@@ -477,10 +432,11 @@
       "budget": "~3M EUR (estimado)",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-SPACE-03-32",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2026-space-03-32.txt",
       "priority_score": 25,
-      "status": "pending",
-      "notes": "Call: HORIZON-CL4-2026-03. SPACE. Deadline verificado via web search."
+      "status": "ready",
+      "notes": "Call: HORIZON-CL4-2026-03. SPACE. Deadline verificado via web search.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2026-space-03-61",
@@ -493,10 +449,11 @@
       "budget": "~3M EUR (estimado)",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-SPACE-03-61",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2026-space-03-61.txt",
       "priority_score": 25,
-      "status": "pending",
-      "notes": "Call: HORIZON-CL4-2026-03. SPACE. Deadline verificado via web search."
+      "status": "ready",
+      "notes": "Call: HORIZON-CL4-2026-03. SPACE. Deadline verificado via web search.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2026-space-03-81",
@@ -509,10 +466,11 @@
       "budget": "~3M EUR (estimado)",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-SPACE-03-81",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2026-space-03-81.txt",
       "priority_score": 25,
-      "status": "pending",
-      "notes": "Call: HORIZON-CL4-2026-03. SPACE. Deadline verificado via web search."
+      "status": "ready",
+      "notes": "Call: HORIZON-CL4-2026-03. SPACE. Deadline verificado via web search.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2026-space-03-86",
@@ -525,10 +483,11 @@
       "budget": "~3M EUR (estimado)",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-SPACE-03-86",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2026-space-03-86.txt",
       "priority_score": 25,
-      "status": "pending",
-      "notes": "Call: HORIZON-CL4-2026-03. SPACE. Deadline verificado via web search."
+      "status": "ready",
+      "notes": "Call: HORIZON-CL4-2026-03. SPACE. Deadline verificado via web search.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2026-space-03-11",
