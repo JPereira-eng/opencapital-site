@@ -90,58 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "iberis-capital",
-      "name": "Iberis Capital",
-      "source_id": "iberis-capital",
-      "catalog_type": "pe",
-      "detected_date": "2026-04-18",
-      "last_profile_update": "2026-04-18",
-      "status": "active",
-      "regulation_url": "https://iberiscapital.com",
-      "priority_score": 20,
-      "profile": {
-        "website": "https://iberiscapital.com",
-        "linkedin": "https://www.linkedin.com/company/iberis-capital",
-        "pais_sede": "PT",
-        "descricao_curta": "Gestora portuguesa de fundos de Private Equity focada em PME ibéricas com potencial de crescimento e internacionalização, com AUM superior a 600M EUR.",
-        "como_candidatar": "Contacto direto via website ou email iberis@iberiscapital.com. Processo de due diligence estruturado.",
-        "tese": "Growth equity e buyout em PME ibéricas com EBITDA positivo, modelos de negócio provados e potencial de internacionalização",
-        "estagios": [
-          "growth",
-          "buyout",
-          "consolidation"
-        ],
-        "setores": [
-          "Food & Beverage",
-          "Manufacturing",
-          "Energy",
-          "Digital",
-          "Business Services"
-        ],
-        "geografia": [
-          "PT",
-          "ES"
-        ],
-        "ticket_min_eur": 5000000,
-        "ticket_max_eur": 50000000,
-        "ticket_sweet_eur": 20000000,
-        "aum_eur": 600000000,
-        "vintage": "Greytech III + Greentech II (ativos em 2026)",
-        "portfolio_pt_exemplos": [
-          "Grupo Casais",
-          "Ibersol",
-          "Grupo Edivisa"
-        ],
-        "parceiros": [
-          "Luis Quaresma",
-          "Diogo Chalbert",
-          "Joao Henriques",
-          "David Pinheiro"
-        ]
-      },
-      "notes": "PE manager português com foco em PME ibéricas. AUM +600M EUR. Dois fundos ativos: Greytech III (growth/buyout) e Greentech II (energia/sustentabilidade). Parceiros: Luis Quaresma, Diogo Chalbert, Joao Henriques, David Pinheiro."
-    }
-  ]
+  "queue": []
 }
