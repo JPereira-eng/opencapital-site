@@ -2,25 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "infraestrutura-portuaria-rte-porto-de-leixoes-4-aviso",
-      "name": "Infraestrutura Portuária (RTE) – Porto de Leixões  - 4.º Aviso",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0037/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-12-31",
-      "budget": "7 197 800 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/infraestrutura-portuaria-rte-porto-de-leixoes-4-aviso/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 25,
-      "status": "pending",
-      "notes": "FA0037/2025. SUSTENTAVEL2030. FC.",
-      "download_error": "404 em 2026-04-18 - pagina nao encontrada, URL pode nao estar publicada ainda",
-      "fail_count": 1,
-      "last_fail_date": "2026-04-18"
-    },
-    {
       "id": "centros-locais-de-apoio-a-integracao-de-migrantes-claim",
       "name": "Centros Locais de Apoio à Integração de Migrantes (CLAIM)",
       "source_id": "portugal-2030",
