@@ -795,8 +795,8 @@
       "detected_date": "2026-04-18",
       "priority_score": 15,
       "notes": "Digital Europe - acoes de suporte ao programa 2026. Fonte: SEDIA.",
-      "fail_count": 1,
-      "download_error": "API 404 - call nao encontrado no portal EU Funding & Tenders em 2026-04-19",
+      "fail_count": 2,
+      "download_error": "Codigo de call (DIGITAL-2026-SUPPORT-10) nao encontrado no topicDetails API (404). Pode ser call-level sem topico valido ou codigo incorreto do scanner.",
       "last_fail_date": "2026-04-19"
     },
     {
@@ -813,8 +813,8 @@
       "detected_date": "2026-04-18",
       "priority_score": 15,
       "notes": "Digital Europe - melhor uso tecnologias para especializacao inteligente regional. Fonte: SEDIA.",
-      "fail_count": 1,
-      "download_error": "API 404 - call nao encontrado no portal EU Funding & Tenders em 2026-04-19",
+      "fail_count": 2,
+      "download_error": "Codigo de call (DIGITAL-2026-BESTUSE-RSF-10) nao encontrado no topicDetails API (404). Pode ser call-level sem topico valido ou codigo incorreto do scanner.",
       "last_fail_date": "2026-04-19"
     },
     {
@@ -823,7 +823,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "pending",
+      "status": "ready",
       "aviso_codigo": "HORIZON-CL6-2026-04",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL6-2026-04",
       "deadline": "2026-11-26",
@@ -831,9 +831,10 @@
       "detected_date": "2026-04-18",
       "priority_score": 15,
       "notes": "Horizon Europe Cluster 6 - alimentacao, bioeconomia, recursos naturais e ambiente. Fonte: SEDIA.",
-      "fail_count": 1,
-      "download_error": "API 404 - call nao encontrado no portal EU Funding & Tenders em 2026-04-19",
-      "last_fail_date": "2026-04-19"
+      "fail_count": 0,
+      "download_error": null,
+      "last_fail_date": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl6-2026-04.txt"
     },
     {
       "id": "horizon-miss-2026-02-cancer-02",
@@ -1031,8 +1032,8 @@
       "regulation_local": null,
       "priority_score": 65,
       "notes": "SEDIA status:31094502 OPEN, page 19",
-      "fail_count": 1,
-      "download_error": "webgate.ec.europa.eu/prospect - autenticacao obrigatoria (HTTP 303), WebSearch sem resultado",
+      "fail_count": 2,
+      "download_error": "webgate.ec.europa.eu/prospect - autenticacao obrigatoria (HTTP 303). API topicDetails retorna 404 (nao e topic grant). WebSearch sem resultado. Portal SEDIA requer credenciais EU.",
       "last_fail_date": "2026-04-19"
     },
     {
@@ -1051,8 +1052,8 @@
       "regulation_local": null,
       "priority_score": 115,
       "notes": "SEDIA status:31094502 OPEN, page 21",
-      "fail_count": 1,
-      "download_error": "webgate.ec.europa.eu/prospect - autenticacao obrigatoria (HTTP 303), WebSearch sem resultado",
+      "fail_count": 2,
+      "download_error": "webgate.ec.europa.eu/prospect - autenticacao obrigatoria (HTTP 303). API topicDetails retorna 404 (nao e topic grant). WebSearch sem resultado. Portal SEDIA requer credenciais EU.",
       "last_fail_date": "2026-04-19"
     },
     {
@@ -1071,8 +1072,8 @@
       "regulation_local": null,
       "priority_score": 65,
       "notes": "SEDIA status:31094502 OPEN, page 25",
-      "fail_count": 1,
-      "download_error": "webgate.ec.europa.eu/prospect - autenticacao obrigatoria (HTTP 303), WebSearch sem resultado",
+      "fail_count": 2,
+      "download_error": "webgate.ec.europa.eu/prospect - autenticacao obrigatoria (HTTP 303). API topicDetails retorna 404 (nao e topic grant). WebSearch sem resultado. Portal SEDIA requer credenciais EU.",
       "last_fail_date": "2026-04-19"
     },
     {
@@ -1091,8 +1092,8 @@
       "regulation_local": null,
       "priority_score": 115,
       "notes": "SEDIA status:31094502 OPEN, page 27",
-      "fail_count": 1,
-      "download_error": "webgate.ec.europa.eu/prospect - autenticacao obrigatoria (HTTP 303), WebSearch sem resultado",
+      "fail_count": 2,
+      "download_error": "webgate.ec.europa.eu/prospect - autenticacao obrigatoria (HTTP 303). API topicDetails retorna 404 (nao e topic grant). WebSearch sem resultado. Portal SEDIA requer credenciais EU.",
       "last_fail_date": "2026-04-19"
     },
     {
@@ -1111,8 +1112,8 @@
       "regulation_local": null,
       "priority_score": 65,
       "notes": "SEDIA status:31094502 OPEN, page 29",
-      "fail_count": 1,
-      "download_error": "webgate.ec.europa.eu/prospect - autenticacao obrigatoria (HTTP 303), WebSearch sem resultado",
+      "fail_count": 2,
+      "download_error": "webgate.ec.europa.eu/prospect - autenticacao obrigatoria (HTTP 303). API topicDetails retorna 404 (nao e topic grant). WebSearch sem resultado. Portal SEDIA requer credenciais EU.",
       "last_fail_date": "2026-04-19"
     },
     {
@@ -1165,8 +1166,8 @@
       "regulation_local": null,
       "priority_score": 115,
       "notes": "SEDIA status:31094502 OPEN, page 32",
-      "fail_count": 1,
-      "download_error": "Conteudo insuficiente - tender CDT sem descricao publica acessivel via WebFetch ou WebSearch",
+      "fail_count": 2,
+      "download_error": "CDT-NET-2026 (manutencao/limpeza/residuos CDT Luxembourg) - documentos completos requerem autenticacao no portal EU F&T. Info publica insuficiente (<800 palavras, sem despesas elegiveis nem criterios de selecao).",
       "last_fail_date": "2026-04-19"
     },
     {
