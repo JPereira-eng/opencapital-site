@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KPIs numa PME: quais fazem sentido e como usá-los | Open Capital</title>
+  <meta name="description" content="Medir tudo não é o mesmo que medir o que importa. Um guia prático sobre os KPIs que uma PME deve acompanhar e como os usar para tomar decisões.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../biblioteca.html">Biblioteca</a></li>
+      <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades</a>
+        <div class="nav-dropdown-menu">
+          <a href="../parceiros.html">Parceiros</a>
+          <a href="../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/tech2business" class="nav-cta" target="_blank">Contactar</a>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../conhecimento.html">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Estratégia</span>
+      </nav>
+      <span class="hero-cat-badge">Estratégia - Guia</span>
+      <h1 class="article-title">KPIs numa PME: quais fazem sentido e como usá-los</h1>
+      <p class="article-standfirst">Medir tudo não é o mesmo que medir o que importa. Um guia prático para gestores de PME que querem indicadores que realmente orientam decisões.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Estratégia</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Outubro 2023</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>9 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Luís Gomes</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+
+      <div class="article-section reveal">
+        <p>Há um problema silencioso em muitas PME portuguesas: têm demasiados números e poucas respostas. O gestor abre o ficheiro de Excel, vê 40 colunas, faz scroll até ao fim, fecha o ficheiro e toma a mesma decisão que tomaria sem ele. O problema não é falta de dados. É excesso de indicadores sem hierarquia.</p>
+        <p>Um KPI, por definição, é um Key Performance Indicator: um indicador chave de desempenho. A palavra "chave" é deliberada. Não é um indicador qualquer, não é um número que se pode calcular, não é uma métrica que alguém achou interessante. É um número que, quando muda, muda o que a empresa faz a seguir. Poucos gestores de PME pensam nos seus indicadores com esta exigência.</p>
+        <p>Este artigo é sobre como escolher esses indicadores, o que cada um mede de facto, e como organizar um sistema de acompanhamento que seja utilizável numa empresa com entre 5 e 250 pessoas.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">O problema de base</div>
+        <h2>A ilusão de controlo dos dashboards com 50 métricas</h2>
+        <p>Existe uma tendência natural nos gestores que começam a trabalhar com dados: querem medir tudo. Receita, margem, tickets médios, tempo médio de resposta, NPS, custo por lead, taxa de abandono, produtividade por colaborador, rotação de stocks, dias de crédito concedido. Cada um destes números tem valor informativo. Mas agrupados num painel sem prioridade, transformam-se em ruído.</p>
+        <p>O problema prático é simples: se tudo é prioritário, nada é prioritário. Quando um gestor de PME tem de decidir entre renegociar prazos com fornecedores ou investir em mais um comercial, o que precisa não é de 50 métricas. Precisa de 3 ou 4 números que lhe digam com clareza qual é o estado atual da empresa e qual das duas opções resolve o problema mais urgente.</p>
+        <p>A outra falha comum é confundir métricas de vaidade com KPIs reais. Número de seguidores nas redes sociais, visitas ao website, presença em feiras setoriais: são dados, podem ser úteis para acompanhar em certos contextos, mas raramente justificam uma decisão de gestão. Um KPI genuíno tem consequência direta na saúde do negócio. Quando sobe ou desce de forma relevante, o gestor deve agir.</p>
+
+        <div class="pull-quote reveal">
+          <div class="pull-quote-text">"Um KPI genuíno tem consequência direta na saúde do negócio. Quando sobe ou desce, o gestor deve agir."</div>
+        </div>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">A base financeira</div>
+        <h2>Os KPIs financeiros que nenhuma PME pode ignorar</h2>
+        <p>A saúde financeira de uma empresa comunica-se através de um conjunto restrito de indicadores. Uma PME que os acompanhe regularmente tem uma vantagem operacional enorme face a quem navega apenas por intuição. Não se trata de sofisticação financeira, trata-se de higiene básica de gestão.</p>
+
+        <h3>Fundo de maneio</h3>
+        <p>O fundo de maneio é a diferença entre o ativo circulante (o que a empresa tem ou vai receber a curto prazo) e o passivo circulante (o que a empresa deve pagar a curto prazo). É o indicador mais imediato de capacidade de sobrevivência a 90 dias.</p>
+        <p>Uma empresa pode ser lucrativa no papel e falir por falta de fundo de maneio. Acontece com mais frequência do que parece, especialmente em PME com prazos de recebimento longos e prazos de pagamento curtos. O gestor que acompanha este número semanalmente consegue antecipar tensões de tesouraria com tempo suficiente para agir.</p>
+
+        <h3>Margem bruta</h3>
+        <p>A margem bruta mede a diferença entre a receita e os custos diretos de produção ou prestação do serviço. Expressa em percentagem, diz quanto cada euro de receita contribui para cobrir os custos fixos e gerar lucro. Uma empresa com margem bruta de 35% tem 35 cêntimos por cada euro vendido para pagar salários, rendas, marketing e tudo o resto.</p>
+        <p>O valor absoluto da margem importa menos do que a sua evolução. Uma margem bruta que cai trimestre após trimestre é um sinal de problema estrutural, seja na política de preços, seja no custo das matérias-primas ou dos serviços externos contratados. Em sectores como o retalho, margens de 20-30% são normais. Em serviços profissionais, margens abaixo de 50% merecem atenção.</p>
+
+        <h3>EBITDA e EBITDA margin</h3>
+        <p>O EBITDA (Earnings Before Interest, Taxes, Depreciation and Amortization) é o resultado operacional antes de juros, impostos, amortizações e depreciações. É, na prática, o indicador que melhor representa a capacidade da empresa de gerar caixa a partir da sua operação, sem interferência da estrutura de capital ou das opções contabilísticas.</p>
+        <p>Para uma PME, o EBITDA é particularmente útil por dois motivos. Primeiro, é a métrica que qualquer banco ou investidor irá calcular ao analisar a empresa, por isso o gestor deve conhecê-la antes de entrar em qualquer negociação financeira. Segundo, permite comparar a performance operacional ao longo do tempo sem que as variações de endividamento ou de política de amortizações distorçam a leitura.</p>
+
+        <h3>Prazo médio de recebimento e de pagamento</h3>
+        <p>O prazo médio de recebimento (DSO, Days Sales Outstanding) diz quantos dias a empresa demora, em média, a receber após a fatura. O prazo médio de pagamento diz quantos dias a empresa tem para pagar os seus fornecedores. A diferença entre os dois determina o ciclo de tesouraria: quanto maior o gap entre o que se recebe tarde e o que se paga cedo, maior o esforço financeiro da empresa.</p>
+        <p>Numa empresa com 10 milhões de euros de faturação anual, reduzir o prazo médio de recebimento de 75 para 55 dias liberta cerca de 550 mil euros de liquidez. Sem qualquer financiamento externo, sem qualquer crescimento de receita. Só através de gestão de crédito mais rigorosa. Poucos indicadores têm impacto tão direto e imediato na tesouraria.</p>
+
+        <div class="stats-row cols-3 reveal">
+          <div class="stat-cell">
+            <div class="stat-num">3<sup>×</sup></div>
+            <div class="stat-label">Impacto no fundo de maneio ao reduzir DSO em 20 dias</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">40<sup>%</sup></div>
+            <div class="stat-label">Das PME com resultados positivos têm problemas de tesouraria</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">5</div>
+            <div class="stat-label">KPIs financeiros são suficientes para monitorizar uma PME</div>
+          </div>
+        </div>
+
+        <h3>Cash flow operacional</h3>
+        <p>O resultado líquido e o cash flow operacional são duas métricas diferentes que frequentemente divergem. Uma empresa pode apresentar lucros contabilísticos enquanto o saldo de caixa cai mês após mês, porque os lucros ainda estão presos em faturas por receber ou em stocks. O cash flow operacional mede o dinheiro real que entra e sai da operação, sem ajustes contabilísticos.</p>
+        <p>Para um gestor de PME, este número deve ser acompanhado mensalmente. Um cash flow operacional negativo durante dois ou três meses consecutivos é um sinal de alerta, mesmo que os resultados do período pareçam positivos.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Vendas e crescimento</div>
+        <h2>O que medir na frente comercial</h2>
+        <p>Os KPIs comerciais variam bastante consoante o modelo de negócio. Uma empresa de serviços por projeto tem dinâmicas completamente diferentes de uma empresa de software com receita recorrente. O erro mais comum é importar métricas de modelos de negócio diferentes, o que leva a indicadores que medem a coisa errada.</p>
+
+        <h3>Receita recorrente vs. receita transacional</h3>
+        <p>Para qualquer empresa, a distinção entre receita recorrente (que se renova automaticamente ou por contrato) e receita transacional (que depende de nova venda) é fundamental. A receita recorrente tem valor previsional; a transacional, não. Uma empresa de consultoria que fatura 2 milhões por ano mas com 90% de receita por projeto tem um negócio estruturalmente diferente de uma que fatura o mesmo valor com 60% em contratos anuais de retenção.</p>
+        <p>Para empresas com componente de subscrição ou contrato, o Monthly Recurring Revenue (MRR) ou o Annual Recurring Revenue (ARR) são os indicadores de topo. Para empresas com modelo transacional, a atenção deve estar no número de clientes ativos por período e no ticket médio.</p>
+
+        <h3>Taxa de conversão por etapa do funil</h3>
+        <p>A taxa de conversão global diz pouco. Saber que 5% dos leads se tornam clientes não permite tomar nenhuma decisão específica. O que vale é perceber onde o funil perde mais. Se de 100 leads qualificados, 60 chegam a uma proposta mas só 15 chegam a negociação e apenas 5 fecham, o problema está na fase de negociação, não na geração de leads. Cada etapa merece o seu próprio indicador.</p>
+
+        <h3>Custo de aquisição de cliente e Lifetime Value</h3>
+        <p>O CAC (Customer Acquisition Cost) mede quanto a empresa gasta, em média, para adquirir um novo cliente. Inclui todos os custos de marketing e vendas divididos pelo número de clientes adquiridos no período. O LTV (Lifetime Value) mede o valor total que um cliente gera ao longo de toda a relação com a empresa.</p>
+        <p>A relação entre LTV e CAC é provavelmente o indicador de sustentabilidade comercial mais importante. Uma PME deve ter um LTV pelo menos 3 vezes superior ao CAC para que a aquisição de clientes faça sentido económico. Se o rácio for inferior a 2:1, a empresa está a crescer a um custo insustentável.</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">Referência prática</div>
+          <div class="art-highlight-text">Um rácio LTV/CAC de 3:1 é considerado saudável para a maioria dos modelos de negócio. Abaixo de 2:1, os custos de aquisição comprometem a rentabilidade do crescimento. Acima de 5:1 pode indicar subinvestimento em aquisição com potencial por explorar.</div>
+        </div>
+
+        <h3>Churn rate</h3>
+        <p>Para empresas com receita recorrente, o churn (taxa de cancelamento ou não renovação) é o indicador mais crítico. Um churn mensal de 3% pode parecer baixo, mas implica a perda de mais de um terço da base de clientes por ano. Uma empresa que cresce 25% em novos clientes mas tem 30% de churn está, na prática, a encolher.</p>
+        <p>Mesmo para empresas sem modelo de subscrição, vale a pena acompanhar a taxa de repetição de compra ou o período médio entre compras. A perda silenciosa de clientes que simplesmente deixam de comprar é, em muitas PME, a principal razão pela qual o crescimento estagna apesar de bons resultados comerciais a curto prazo.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Operação</div>
+        <h2>KPIs operacionais: o que medir além das finanças</h2>
+        <p>Os KPIs operacionais variam muito por setor, mas existem dois princípios transversais. Primeiro: só vale a pena medir o que a empresa consegue influenciar diretamente. Segundo: um KPI operacional deve estar sempre ligado a um resultado financeiro, caso contrário é apenas uma métrica de atividade sem consequência.</p>
+
+        <h3>Produtividade por colaborador</h3>
+        <p>A receita por colaborador é um indicador simples e revelador. Divide a receita total pelo número de colaboradores equivalentes a tempo inteiro. Numa empresa de serviços profissionais com 20 pessoas e 2 milhões de euros de faturação, a receita por colaborador é de 100 mil euros. Em empresas comparáveis do mesmo setor, esse valor pode ser 80 ou 140 mil euros, o que coloca a empresa numa posição relativa de eficiência ou ineficiência.</p>
+        <p>Para empresas com operações mais complexas, vale segmentar: receita por colaborador comercial, output por colaborador de produção, tickets resolvidos por agente de suporte. A granularidade certa depende do setor.</p>
+
+        <h3>Prazo de entrega e taxa de cumprimento</h3>
+        <p>Para empresas que entregam produtos ou projetos, o prazo médio de entrega e a percentagem de entregas dentro do prazo são indicadores com impacto direto na satisfação do cliente e, por consequência, no churn e no LTV. Uma empresa com 85% de cumprimento de prazos está a criar insatisfação ativa em 15% das suas entregas, o que tem custo comercial real, mesmo que não apareça imediatamente nas demonstrações financeiras.</p>
+
+        <h3>NPS como proxy de saúde relacional</h3>
+        <p>O Net Promoter Score mede a propensão dos clientes para recomendar a empresa. Não é uma métrica financeira direta, mas existe correlação entre NPS alto e menor churn, maior LTV e crescimento mais orgânico. Para uma PME, um NPS acima de 40 é um sinal positivo. Abaixo de 20, especialmente combinado com churn elevado, é um problema estrutural de experiência de cliente que nenhum investimento em marketing consegue compensar a longo prazo.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Implementação</div>
+        <h2>Quantos KPIs são suficientes e como organizá-los</h2>
+        <p>A resposta prática é entre 5 e 10 indicadores no dashboard principal. Não é um número arbitrário: é o máximo que um gestor consegue ter presente simultaneamente sem entrar em paralisia analítica. Estes 10 devem cobrir as três dimensões críticas de qualquer empresa: saúde financeira, performance comercial e eficiência operacional.</p>
+        <p>Uma forma útil de organizar é a estrutura de "dashboard por camada". No topo, 3 a 4 KPIs de saúde global que o CEO ou CFO vê semanalmente. Numa segunda camada, 6 a 8 KPIs de detalhe que cada responsável de área acompanha mensalmente. Na terceira camada, métricas operacionais específicas que cada equipa monitoriza diariamente ou em tempo real.</p>
+
+        <table class="art-table">
+          <thead>
+            <tr>
+              <th>Camada</th>
+              <th>Quem usa</th>
+              <th>Frequência</th>
+              <th>Exemplos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Estratégica</strong></td>
+              <td>CEO / CFO</td>
+              <td>Semanal</td>
+              <td>Fundo de maneio, EBITDA, MRR, Churn</td>
+            </tr>
+            <tr>
+              <td><strong>Tática</strong></td>
+              <td>Diretores de área</td>
+              <td>Mensal</td>
+              <td>CAC, LTV, Margem bruta por produto, DSO</td>
+            </tr>
+            <tr>
+              <td><strong>Operacional</strong></td>
+              <td>Equipas</td>
+              <td>Diária / Semanal</td>
+              <td>Leads gerados, tickets resolvidos, entregas no prazo</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Cadência de revisão</h3>
+        <p>Um KPI sem cadência de revisão é inútil. O que funciona na maioria das PME é uma reunião semanal de 30 minutos focada nos 4 ou 5 indicadores de topo, uma revisão mensal mais aprofundada com toda a liderança, e uma revisão trimestral onde se avalia se os próprios indicadores ainda fazem sentido para a fase da empresa.</p>
+        <p>Esta última é frequentemente ignorada. Uma empresa em fase de arranque precisa de medir coisas diferentes de uma empresa em fase de escala, que por sua vez mede coisas diferentes de uma empresa em fase de maturidade. Os KPIs não são estáticos: devem evoluir com a estratégia.</p>
+
+        <h3>O erro da meta sem contexto</h3>
+        <p>Definir uma meta para cada KPI é importante, mas a meta isolada pode ser enganosa. Uma margem bruta de 42% é boa ou má? Depende do setor, do modelo de negócio e do momento da empresa. O que importa é a tendência (está a subir ou a descer?) e a comparação com o período equivalente do ano anterior.</p>
+        <p>Uma ferramenta simples que funciona em PME de qualquer tamanho é o semáforo: verde quando o indicador está acima do objetivo, amarelo quando está dentro de uma banda de tolerância, vermelho quando está abaixo. Não é sofisticado. Mas numa reunião de 30 minutos, permite ao gestor identificar em segundos onde tem de concentrar a atenção.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Erros frequentes</div>
+        <h2>O que corre mal na maioria das PME</h2>
+        <p>O erro mais comum não é escolher os KPIs errados. É nunca conseguir calculá-los de forma fiável. Uma empresa que mede o cash flow operacional mas cujos dados financeiros são atualizados trimestralmente pelo contabilista externo não consegue agir sobre esse indicador a tempo. Os KPIs só têm valor se a informação que os alimenta for atual e fiável.</p>
+        <p>O segundo erro é acompanhar indicadores sem os ligar a decisões. Saber que o DSO subiu de 60 para 75 dias não chega. A questão é: o que muda no processo de cobrança, na política de crédito ou na negociação com clientes por causa disto? Um KPI que não gera perguntas e ações é apenas um número decorativo.</p>
+        <p>O terceiro erro é a confusão entre KPIs e objetivos. "Crescer 20%" não é um KPI, é um objetivo. O KPI é a taxa de crescimento de receita, que se mede mensalmente e que pode apontar se o objetivo está ou não ao alcance. A distinção importa porque objetivos são anuais, KPIs são contínuos.</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">Armadilha comum</div>
+          <div class="art-highlight-text">Muitas PME passam meses a construir dashboards sofisticados antes de garantir que os dados de base são fiáveis. Um dashboard bonito alimentado por dados inconsistentes é pior do que não ter dashboard nenhum: cria uma ilusão de controlo que pode conduzir a decisões erradas.</div>
+        </div>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>Como aplicar este conhecimento</h2>
+        <p>Numa PME em fase de crescimento, o ponto de partida mais eficaz não é escolher 10 KPIs. É escolher um ou dois por área e garantir que são medidos com consistência durante 3 meses. Só depois de ter essa base é que faz sentido expandir o sistema.</p>
+        <p>A nossa experiência com empresas entre 500 mil e 10 milhões de euros de faturação mostra um padrão consistente: as que tomam melhores decisões de financiamento, de contratação e de expansão são invariavelmente aquelas que conhecem bem 5 ou 6 números do negócio. Não porque tenham mais informação, mas porque têm informação que confiam.</p>
+        <p>Para uma PME que está a estruturar este processo pela primeira vez, sugerimos começar pelos 5 indicadores financeiros descritos neste artigo. Garanta que são calculados mensalmente, com dados atualizados, e que existem 30 minutos por semana dedicados a discuti-los. Este investimento mínimo de tempo transforma a forma como a equipa de liderança toma decisões, sem qualquer software especializado ou consultor externo.</p>
+        <p>Se já tem esses 5 estabilizados, o passo seguinte é acrescentar 2 ou 3 KPIs comerciais alinhados com a estratégia de crescimento do momento. Uma empresa a tentar aumentar a base de clientes deve focar-se em CAC e taxa de conversão. Uma empresa a tentar aumentar rentabilidade deve focar-se em LTV e margem por segmento. A escolha dos indicadores deve seguir a estratégia, não o contrário.</p>
+      </div>
+
+      <p style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore também o nosso arquivo para mais conteúdos sobre inovação, tecnologia, ciência aplicada e empreendedorismo.</p>
+
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../Retratos Equipa/retrato_luísgomes.png" alt="Luís Gomes" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Luís Gomes</div>
+            <div class="sidebar-author-role">Analista Financeiro</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Categoria</div><div class="sidebar-info-val">Estratégia</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Publicado</div><div class="sidebar-info-val">Outubro 2023</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Leitura</div><div class="sidebar-info-val">9 min</div></div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
+        <div class="sidebar-cta-text">Quer definir os KPIs certos para a sua empresa e construir um modelo de gestão mais eficaz?</div>
+        <a href="https://calendly.com/tech2business" class="sidebar-cta-btn" target="_blank">Falar com um especialista</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="como-preparar-candidatura-portugal-2030.html" class="related-item">
+          <span class="related-item-title">Como preparar uma candidatura Portugal 2030</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="venture-capital-portugal.html" class="related-item">
+          <span class="related-item-title">Venture Capital em Portugal</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="capital-europeu-disponivel-problema-execucao.html" class="related-item">
+          <span class="related-item-title">O capital europeu está disponível</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo-row">
+          <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+        </div>
+        <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+      </div>
+      <div>
+        <div class="f-col-label">Biblioteca</div>
+        <ul class="f-links">
+          <li><a href="../biblioteca.html">Portugal 2030</a></li>
+          <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+          <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+          <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Plataforma</div>
+        <ul class="f-links">
+          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../conhecimento.html">Conhecimento</a></li>
+          <li><a href="../parceiros.html">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Empresa</div>
+        <ul class="f-links">
+          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="../sobre-nos.html">Equipa</a></li>
+          <li><a href="../carreiras.html">Carreiras</a></li>
+          <li><a href="https://calendly.com/tech2business" target="_blank">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+      <div class="f-legal"><a href="#">Privacidade</a><a href="#">Termos</a><a href="#">Cookies</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
