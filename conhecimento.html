@@ -382,6 +382,21 @@
       .footer-grid { grid-template-columns:1fr 1fr; }
     }
 
+    /* ── Pagination */
+    .pagination {
+      display:flex; align-items:center; justify-content:center;
+      gap:6px; padding:40px 80px 64px;
+    }
+    .page-btn {
+      font-family:var(--font); font-size:13px; font-weight:500;
+      letter-spacing:0.10em; color:var(--grey-mid);
+      background:var(--white); border:1px solid var(--grey-light);
+      padding:9px 16px; cursor:pointer; transition:var(--transition);
+    }
+    .page-btn:hover { border-color:var(--navy); color:var(--navy); }
+    .page-btn.active { background:var(--navy); color:var(--white); border-color:var(--navy); }
+    .page-btn:disabled { opacity:0.35; cursor:default; pointer-events:none; }
+
     @media (max-width:768px) {
       .navbar { padding:0 24px; }
       .nav-links, .nav-cta { display:none; }
@@ -398,6 +413,8 @@
 
       .articles-section { padding:32px 24px 64px; }
       .articles-grid { grid-template-columns:1fr; }
+
+      .pagination { padding:28px 24px 48px; flex-wrap:wrap; }
 
       .footer { padding:48px 24px 28px; }
       .footer-grid { grid-template-columns:1fr; gap:32px; }
@@ -836,6 +853,7 @@
       </article>
 
     </div>
+    <div class="pagination" id="pagination"></div>
   </section>
 
   <!-- ═══════════════════════════
@@ -909,29 +927,75 @@
       mobileMenu.classList.toggle('open');
     });
 
+    // ── Pagination config
+    const PER_PAGE = 12;
+    let currentPage = 1;
+    let currentFilter = 'todos';
+
+    function getFilteredCards() {
+      return [...document.querySelectorAll('.article-card')].filter(c =>
+        currentFilter === 'todos' || c.dataset.category === currentFilter
+      );
+    }
+
+    function renderPage() {
+      const all = document.querySelectorAll('.article-card');
+      const filtered = getFilteredCards();
+      const total = filtered.length;
+      const totalPages = Math.ceil(total / PER_PAGE);
+      const start = (currentPage - 1) * PER_PAGE;
+
+      // ocultar todos, mostrar só a página atual dos filtrados
+      all.forEach(c => c.classList.add('hidden'));
+      filtered.slice(start, start + PER_PAGE).forEach(c => {
+        c.classList.remove('hidden');
+        c.classList.add('visible'); // garantir reveal visível
+      });
+
+      // atualizar contador
+      const countEl = document.getElementById('filterCount');
+      const end = Math.min(start + PER_PAGE, total);
+      countEl.textContent = total <= PER_PAGE
+        ? total + (total === 1 ? ' artigo' : ' artigos')
+        : (start + 1) + '–' + end + ' de ' + total + ' artigos';
+
+      // renderizar paginação
+      renderPagination(totalPages);
+    }
+
+    function renderPagination(totalPages) {
+      const el = document.getElementById('pagination');
+      if (totalPages <= 1) { el.innerHTML = ''; return; }
+
+      let html = '';
+      html += '<button class="page-btn" onclick="goToPage(' + (currentPage - 1) + ')"' +
+              (currentPage === 1 ? ' disabled' : '') + '>← Anterior</button>';
+      for (let i = 1; i <= totalPages; i++) {
+        html += '<button class="page-btn' + (i === currentPage ? ' active' : '') +
+                '" onclick="goToPage(' + i + ')">' + i + '</button>';
+      }
+      html += '<button class="page-btn" onclick="goToPage(' + (currentPage + 1) + ')"' +
+              (currentPage === totalPages ? ' disabled' : '') + '>Seguinte →</button>';
+      el.innerHTML = html;
+    }
+
+    function goToPage(p) {
+      currentPage = p;
+      renderPage();
+      window.scrollTo({ top: document.getElementById('filterBar').offsetTop - 90, behavior: 'smooth' });
+    }
+
     // ── Filter cards
     function filterCards(cat) {
-      const cards = document.querySelectorAll('.article-card');
       const buttons = document.querySelectorAll('.filter-btn');
-      const countEl = document.getElementById('filterCount');
-
-      buttons.forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.filter === cat);
-      });
-
-      let visible = 0;
-      cards.forEach(card => {
-        const cardCat = card.dataset.category;
-        if (cat === 'todos' || cardCat === cat) {
-          card.classList.remove('hidden');
-          visible++;
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-
-      countEl.textContent = visible + (visible === 1 ? ' artigo': ' artigos');
+      buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.filter === cat));
+      currentFilter = cat;
+      currentPage = 1;
+      renderPage();
     }
+
+    // inicializar
+    renderPage();
 
     // ── Card click navigation
     document.querySelectorAll('.article-card').forEach(card => {
@@ -943,7 +1007,7 @@
       });
     });
 
-    // ── Scroll reveal
+    // ── Scroll reveal (apenas para elementos fora do grid)
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -953,7 +1017,7 @@
       });
     }, { threshold: 0.08 });
 
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    document.querySelectorAll('.reveal:not(.article-card)').forEach(el => revealObserver.observe(el));
   </script>
 </body>
 </html>
