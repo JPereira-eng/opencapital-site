@@ -553,7 +553,8 @@ Cria `conhecimento/[slug].html`.
 
 Le `conhecimento.html`. Injeta imediatamente apos `<div class="articles-grid" id="articlesGrid">`.
 
-**Cards de opiniao usam layout editorial com foto do autor em full-bleed e overlay gradient.**
+**⚠️ CRITICO — FORMATO EXCLUSIVO DE OPINIAO:**
+Os outros cards em `conhecimento.html` usam `article-card-img` + `article-card-body`. Esse formato e PROIBIDO aqui. Ignorar completamente o padrao dos outros cards. O card de opiniao tem estrutura propria: foto do autor em full-bleed com overlay gradient. Se gerares um card com `article-card-img` ou `article-card-body`, o resultado esta errado.
 
 A foto do autor e determinada pelo mapeamento de fotos definido na seccao EQUIPA acima.
 
@@ -576,7 +577,7 @@ A foto do autor e determinada pelo mapeamento de fotos definido na seccao EQUIPA
       </article>
 ```
 
-Nota: os cards de opiniao NAO usam `.article-card-img` nem `.article-card-body` (estes sao ocultados por CSS). O layout visual vem de `.opiniao-card-photo` + `.opiniao-card-overlay`.
+**Verificacao obrigatoria antes de continuar:** confirma que o card injetado contem EXACTAMENTE estas tres coisas: (1) classe `type-opiniao`, (2) elemento `<img class="opiniao-card-photo">`, (3) elemento `<div class="opiniao-card-overlay">`. Se qualquer uma faltar, corrige antes de avançar.
 
 Atualiza o contador: `id="filterCount">X artigos</span>` substituindo X por X+1.
 
