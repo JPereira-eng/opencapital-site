@@ -9,9 +9,9 @@
     "open": 207,
     "closed": 48,
     "planned": 15,
-    "in_queue": 74,
+    "in_queue": 91,
     "in_watchlist": 103,
-    "in_catalogo": 0,
+    "in_catalogo": 1,
     "in_overflow": 107
   },
   "shards": {
@@ -110,8 +110,8 @@
     "iapmei": "2026-04-19",
     "prr": "2026-04-16",
     "interreg-poctep": "2026-04-17",
-    "fct": "2026-04-16",
-    "aicep": "2026-04-16",
+    "fct": "2026-04-19",
+    "aicep": "2026-04-19",
     "iefp": "2026-04-16",
     "interreg-atlantic": "2026-04-17",
     "hadea": "2026-04-17",
@@ -127,7 +127,7 @@
     "eit": "2026-04-16",
     "startup-portugal": "2026-04-12",
     "banco-fomento": "2026-04-12",
-    "autoridade-tributaria": "2026-04-16",
+    "autoridade-tributaria": "2026-04-19",
     "digital-europe": "2026-04-18",
     "cef": "2026-04-18",
     "horizonte-europa": "2026-04-19",
@@ -172,8 +172,9 @@
     "erasmus-cove": "2026-04-18",
     "seedrs-pt": "2026-04-18",
     "uptec-porto": "2026-04-18",
-    "raize-empresarial": "2026-04-19"
+    "raize-empresarial": "2026-04-19",
+    "techstars-lisbon": "2026-04-19"
   },
   "last_scanner_run": "2026-04-19",
-  "last_updated": "2026-04-19T-scanner-r14-j3"
+  "last_updated": "2026-04-19T-scanner-r15-j1"
 }
