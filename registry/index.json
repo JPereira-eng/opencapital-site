@@ -5,13 +5,13 @@
     "migrated_from_v3": "2026-04-12"
   },
   "totals": {
-    "published": 249,
-    "open": 199,
+    "published": 250,
+    "open": 200,
     "closed": 36,
     "planned": 14,
     "in_queue": 94,
     "in_watchlist": 103,
-    "in_catalogo": 1,
+    "in_catalogo": 0,
     "in_overflow": 107
   },
   "shards": {
@@ -72,8 +72,8 @@
       "planned": 2
     },
     "catalogo-bancos": {
-      "count": 0,
-      "open": 0
+      "count": 1,
+      "open": 1
     },
     "catalogo-vc": {
       "count": 5,

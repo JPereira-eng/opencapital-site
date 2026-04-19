@@ -90,46 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "raize-empresarial",
-      "name": "Raize - Plataforma de Financiamento Empresarial",
-      "source_id": "raize-empresarial",
-      "catalog_type": "crowdfunding",
-      "detected_date": "2026-04-19",
-      "last_profile_update": "2026-04-19",
-      "status": "active",
-      "regulation_url": "https://raize.pt/empresas",
-      "priority_score": 10,
-      "profile": {
-        "website": "https://raize.pt",
-        "linkedin": "https://linkedin.com/company/raize-pt",
-        "pais_sede": "PT",
-        "descricao_curta": "Plataforma portuguesa de P2P lending para PME. Emprestimos de 10K a 250K euros com taxas competitivas. Mais de 200M euros financiados desde 2014.",
-        "como_candidatar": "Formulario online em raize.pt/empresas. Avaliacao de credito automatizada. Resposta em 48-72h. Regulada pela CMVM.",
-        "tipo_financiamento": "divida",
-        "modelo": "P2P lending",
-        "ticket_min_eur": 10000,
-        "ticket_max_eur": 250000,
-        "prazo_tipico_meses": "6-48",
-        "taxa_tipica_pct": "3.5-9.5",
-        "investidor_min_eur": 20,
-        "requisitos": [
-          "PME portuguesa",
-          "Minimo 2 anos de atividade",
-          "Faturacao minima 100K euros",
-          "Sem incidentes bancarios ativos"
-        ],
-        "setores_excluidos": [
-          "imobiliario especulativo",
-          "jogo",
-          "armamento"
-        ],
-        "regulador": "CMVM",
-        "ano_fundacao": 2014,
-        "montante_total_financiado_eur": 200000000,
-        "nota_scanner": "Primeira plataforma de crowdfunding P2P dedicada a empresas em Portugal. Util para PME sem acesso a financiamento bancario tradicional."
-      }
-    }
-  ]
+  "queue": []
 }

@@ -2,5 +2,14 @@
   "_meta": "Shard de instrumentos publicados do regime catalogo - bancos (linhas de credito, produtos para empresas, garantias). Inclui CGD, BPI, Millennium, NovoBanco, Santander, Banco Portugues de Fomento.",
   "shard_id": "catalogo-bancos",
   "regime": "catalogo",
-  "items": []
+  "items": [],
+  "instruments": [
+    {
+      "id": "raize-empresarial",
+      "file": "instrumentos/raize-empresarial.html",
+      "source": "raize-empresarial",
+      "state": "aberto",
+      "last_check": "2026-04-19"
+    }
+  ]
 }
