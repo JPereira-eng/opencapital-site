@@ -90,41 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "techstars-lisbon",
-      "name": "Techstars Lisbon in Partnership with Semapa Next",
-      "source_id": "techstars-lisbon",
-      "catalog_type": "accelerator",
-      "detected_date": "2026-04-19",
-      "last_profile_update": "2026-04-19",
-      "status": "active",
-      "regulation_url": "https://www.techstars.com/lisbon-program/",
-      "priority_score": 10,
-      "profile": {
-        "website": "https://www.techstars.com/lisbon-program/",
-        "linkedin": null,
-        "pais_sede": "PT",
-        "descricao_curta": "Acelerador global Techstars com cohort em Lisboa, em parceria com a Semapa Next. Foco em Industrial & Environmental Tech, Smart Transportation e Travel & Leisure Tech.",
-        "como_candidatar": "Candidatura via formulario online no site Techstars. Processo seletivo com entrevistas. Aplicacoes abertas com antecedencia de 3-4 meses antes do arranque de cada batch.",
-        "modelo": "equity-taking",
-        "formato": "residencia",
-        "duracao_meses": 3,
-        "batches_ano": 1,
-        "batch_proximo": null,
-        "deadline_proxima": null,
-        "estipendio_eur": null,
-        "equity_pct": null,
-        "mentorias": [],
-        "setores_foco": [
-          "Industrial Tech",
-          "Environmental Tech",
-          "Smart Transportation",
-          "Travel & Leisure Tech"
-        ],
-        "alumni_destaques": []
-      },
-      "notes": "Parceria Techstars + Semapa Next. Batch Spring 2026 em curso (aplicacoes fechadas novembro 2025). Proximas candidaturas previstas para outono 2026. 10 startups por cohort."
-    }
-  ]
+  "queue": []
 }
