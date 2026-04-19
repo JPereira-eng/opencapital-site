@@ -5783,6 +5783,27 @@
       "highlight2": "Mercado UE + Terceiros Paises",
       "href": "instrumentos/agrip-multi-2026.html",
       "featured": false
+    },
+    {
+      "id": "agrip-simple-2026",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 30/05/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "associacao,empresa",
+      "setores": [
+        "agroalimentar"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "AGRIP-SIMPLE-2026: Promocao de Produtos Agricolas (Programas Simples)",
+      "tagline": "Ate 95 milhoes para organizacoes agricolas individuais que promovam produtos europeus no mercado interno e nos mercados de exportacao",
+      "highlight0": "Ate 95 milhoes em subvencoes",
+      "highlight1": "Organizacoes agricolas (candidatura individual)",
+      "highlight2": "Mercado UE + Terceiros Paises",
+      "href": "instrumentos/agrip-simple-2026.html",
+      "featured": false
     }
   ]
 }
