@@ -554,10 +554,31 @@
       "source": "eu-funding-tenders",
       "state": "fechado",
       "last_check": "2026-04-19"
+    },
+    {
+      "id": "horizon-ju-chips-2026-1-ia",
+      "file": "instrumentos/horizon-ju-chips-2026-1-ia.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-19"
+    },
+    {
+      "id": "horizon-ju-chips-2026-1-ria",
+      "file": "instrumentos/horizon-ju-chips-2026-1-ria.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-19"
+    },
+    {
+      "id": "horizon-eic-2026-bas-02-scaleup",
+      "file": "instrumentos/horizon-eic-2026-bas-02-scaleup.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-19"
     }
   ],
-  "count": 38,
-  "open": 32,
+  "count": 41,
+  "open": 35,
   "closed": 1,
   "planned": 5
 }
