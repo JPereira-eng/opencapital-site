@@ -196,7 +196,6 @@
     }
     .filter-btn:hover { color:var(--navy); border-color:var(--grey-light); }
     .filter-btn.active { background:var(--navy); color:var(--white); border-color:var(--navy); }
-    .filter-count { font-size:12px; font-weight:300; color:var(--grey-mid); }
 
     /* ───────────────────────────────
        ARTICLE GRID
@@ -409,7 +408,6 @@
       .filter-bar { padding:0 24px; overflow-x:auto; }
       .filter-inner { justify-content:flex-start; gap:12px; }
       .filter-tabs { gap:4px; overflow-x:auto; padding-bottom:4px; }
-      .filter-count { white-space:nowrap; flex-shrink:0; margin-left:auto; }
 
       .articles-section { padding:32px 24px 64px; }
       .articles-grid { grid-template-columns:1fr; }
@@ -503,7 +501,6 @@
         <button class="filter-btn" data-filter="mercados" onclick="filterCards('mercados')">Mercados</button>
         <button class="filter-btn" data-filter="opiniao" onclick="filterCards('opiniao')">Opinião</button>
       </div>
-      <span class="filter-count" id="filterCount">17 artigos</span>
     </div>
   </div>
 
@@ -518,10 +515,10 @@
                data-category="opiniao"
                data-featured="true"
                data-href="conhecimento/equipas-crescem-para-manter-sistemas-ineficientes.html">
-        <img src="Retratos Equipa/retrato_jorgepereira.png" alt="Jorge Pereira" class="opiniao-card-photo">
+        <img src="Retratos Equipa/retrato_marianacosta.png" alt="Mariana Costa" class="opiniao-card-photo">
         <div class="opiniao-card-overlay">
           <div class="opiniao-card-meta">
-            <span class="opiniao-card-author">Jorge Pereira</span>
+            <span class="opiniao-card-author">Mariana Costa</span>
             <span class="opiniao-card-badge">Opinião</span>
           </div>
           <h3 class="opiniao-card-title">A equipa cresceu para aguentar o sistema. Não para crescer o negócio.</h3>
@@ -951,13 +948,6 @@
         c.classList.remove('hidden');
         c.classList.add('visible'); // garantir reveal visível
       });
-
-      // atualizar contador
-      const countEl = document.getElementById('filterCount');
-      const end = Math.min(start + PER_PAGE, total);
-      countEl.textContent = total <= PER_PAGE
-        ? total + (total === 1 ? ' artigo' : ' artigos')
-        : (start + 1) + '–' + end + ' de ' + total + ' artigos';
 
       // renderizar paginação
       renderPagination(totalPages);
