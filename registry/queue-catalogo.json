@@ -90,5 +90,35 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": []
+  "queue": [
+    {
+      "id": "ifd-instituicao-financeira-desenvolvimento",
+      "name": "IFD (Instituicao Financeira de Desenvolvimento)",
+      "source_id": "ifd-instituicao-financeira-desenvolvimento",
+      "catalog_type": "public-fund",
+      "detected_date": "2026-04-19",
+      "last_profile_update": "2026-04-19",
+      "status": "active",
+      "regulation_url": "https://www.bpfomento.pt",
+      "priority_score": 15,
+      "profile": {
+        "website": "https://www.bpfomento.pt",
+        "linkedin": "https://www.linkedin.com/company/banco-portugues-de-fomento",
+        "pais_sede": "PT",
+        "descricao_curta": "Fundo publico nacional integrado no Banco Portugues de Fomento desde 2020, focado em instrumentos de capital, quase-capital e garantia para PMEs e startups portugueses.",
+        "como_candidatar": "Candidaturas via plataforma SIGA-BF (instrumentos PRR) ou contacto direto com BPF (bpfomento.pt). Para instrumentos de capital direto, consultar o catalogo de produtos BPF.",
+        "tipo_intervencao": ["capital", "quase-capital", "garantia", "divida"],
+        "beneficiarios": ["PME", "startups", "mid-cap", "spin-off"],
+        "instrumentos_geridos": [
+          "Fundo de Coinvestimento 200M",
+          "Fundo Capital e Quase Capital (FC&QC)",
+          "IFIC (Instrumento Financeiro para a Inovacao e Competitividade)",
+          "Fundo de Apoio ao Financiamento a Inovacao (FAFI)"
+        ],
+        "programa_referencia": ["PRR", "PT2030", "FEDER"],
+        "geografia": ["PT"]
+      },
+      "notes": "IFD foi integrada no Banco Portugues de Fomento em novembro 2020. O website ifd.pt esta inacessivel; informacao agora disponivel em bpfomento.pt. Fundo 200M fechado para novas candidaturas. IFIC ativo com varios avisos publicados 2025-2026."
+    }
+  ]
 }

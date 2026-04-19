@@ -10,10 +10,10 @@
     "open": 221,
     "closed": 49,
     "planned": 15,
-    "in_queue": 77,
+    "in_queue": 100,
     "in_watchlist": 103,
-    "in_catalogo": 0,
-    "in_overflow": 107
+    "in_catalogo": 1,
+    "in_overflow": 84
   },
   "shards": {
     "pt2030-compete": {
@@ -109,17 +109,17 @@
     "eu-funding-tenders": "2026-04-19",
     "ani": "2026-04-17",
     "iapmei": "2026-04-19",
-    "prr": "2026-04-16",
+    "prr": "2026-04-19",
     "interreg-poctep": "2026-04-17",
     "fct": "2026-04-19",
     "aicep": "2026-04-19",
-    "iefp": "2026-04-16",
+    "iefp": "2026-04-19",
     "interreg-atlantic": "2026-04-17",
     "hadea": "2026-04-17",
     "eic-accelerator": "2026-04-17",
     "interreg-mac": "2026-04-16",
     "life-programme": "2026-04-17",
-    "erc": "2026-04-16",
+    "erc": "2026-04-19",
     "investeu": "2026-04-16",
     "interreg-sudoe": "2026-04-16",
     "interreg-euromed": "2026-04-16",
@@ -174,8 +174,9 @@
     "seedrs-pt": "2026-04-18",
     "uptec-porto": "2026-04-18",
     "raize-empresarial": "2026-04-19",
-    "techstars-lisbon": "2026-04-19"
+    "techstars-lisbon": "2026-04-19",
+    "ifd-instituicao-financeira-desenvolvimento": "2026-04-19"
   },
   "last_scanner_run": "2026-04-19",
-  "last_updated": "2026-04-19T-scanner-r15-j1"
+  "last_updated": "2026-04-19T-scanner-r16-j2"
 }
