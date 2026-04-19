@@ -6,13 +6,13 @@
     "last_writer_run": "2026-04-19"
   },
   "totals": {
-    "published": 285,
-    "open": 221,
-    "closed": 49,
-    "planned": 15,
-    "in_queue": 100,
+    "published": 290,
+    "open": 223,
+    "closed": 51,
+    "planned": 16,
+    "in_queue": 95,
     "in_watchlist": 103,
-    "in_catalogo": 1,
+    "in_catalogo": 0,
     "in_overflow": 84
   },
   "shards": {
@@ -52,10 +52,10 @@
       "open": 6
     },
     "eu-horizon": {
-      "count": 82,
-      "open": 61,
-      "closed": 12,
-      "planned": 7
+      "count": 86,
+      "open": 62,
+      "closed": 14,
+      "planned": 8
     },
     "eu-other": {
       "count": 71,
@@ -73,8 +73,8 @@
       "planned": 2
     },
     "catalogo-bancos": {
-      "count": 1,
-      "open": 1
+      "count": 2,
+      "open": 2
     },
     "catalogo-vc": {
       "count": 5,
@@ -178,5 +178,5 @@
     "ifd-instituicao-financeira-desenvolvimento": "2026-04-19"
   },
   "last_scanner_run": "2026-04-19",
-  "last_updated": "2026-04-19T-scanner-r16-j2"
+  "last_updated": "2026-04-19T-writer-r09-j2"
 }

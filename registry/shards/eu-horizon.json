@@ -209,6 +209,34 @@
       "source": "eu-funding-tenders",
       "state": "aberto",
       "last_check": "2026-04-18"
+    },
+    {
+      "id": "horizon-cl6-2026-04",
+      "file": "instrumentos/horizon-cl6-2026-04.html",
+      "source": "eu-funding-tenders",
+      "state": "previsto",
+      "last_check": "2026-04-19"
+    },
+    {
+      "id": "horizon-miss-2026-02-cancer-02",
+      "file": "instrumentos/horizon-miss-2026-02-cancer-02.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-19"
+    },
+    {
+      "id": "horizon-miss-2026-02-cancer-03",
+      "file": "instrumentos/horizon-miss-2026-02-cancer-03.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-19"
+    },
+    {
+      "id": "horizon-miss-2026-02-cancer-04",
+      "file": "instrumentos/horizon-miss-2026-02-cancer-04.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-19"
     }
   ],
   "instruments": [
@@ -682,8 +710,8 @@
       "last_check": "2026-04-19"
     }
   ],
-  "count": 45,
-  "open": 39,
-  "closed": 1,
-  "planned": 5
+  "count": 49,
+  "open": 40,
+  "closed": 3,
+  "planned": 6
 }

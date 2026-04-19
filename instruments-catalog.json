@@ -5988,7 +5988,9 @@
       "status_class": "status-open",
       "fonte": "fct",
       "beneficiario": "ensino-investigacao",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "MIT Portugal 2026 - Concurso de Projetos",
       "tagline": "FCT financia ate 50.000 euros por equipa portuguesa em colaboracao com o MIT em investigacao de fronteira",
@@ -6007,7 +6009,9 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao,entidade-publica,empresa",
-      "setores": ["energia-ambiente"],
+      "setores": [
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Missao Clima CLIMA-07 - Financas e Risco Climatico (CSA)",
       "tagline": "Horizonte Europa financia coordenacao e inovacao em mecanismos de financiamento climatico e avaliacao de risco",
@@ -6026,7 +6030,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao,entidade-publica,empresa",
-      "setores": ["agroalimentar", "energia-ambiente"],
+      "setores": [
+        "agroalimentar",
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Missao Solo - Solos Saudaveis e Gestao Sustentavel (RIA)",
       "tagline": "Horizonte Europa investe em investigacao para restaurar solos europeus e reforcar o seu papel no combate climatico",
@@ -6045,7 +6052,9 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao,entidade-publica,empresa",
-      "setores": ["saude-ciencias-vida"],
+      "setores": [
+        "saude-ciencias-vida"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Missao Cancer CANCER-01 - Prevencao e Deteção Precoce (RIA)",
       "tagline": "Horizonte Europa financia investigacao transformadora em prevencao do cancer e metodos inovadores de rastreio e detecao precoce",
@@ -6064,7 +6073,9 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "ERC Proof of Concept 2026",
       "tagline": "Ate 150.000 euros para titulares de bolsa ERC explorarem o potencial comercial ou social das suas descobertas cientificas",
@@ -6072,6 +6083,112 @@
       "highlight1": "Exclusivo para titulares de bolsa ERC ativa ou terminada ha menos de 12 meses",
       "highlight2": "Nacional (fundo europeu)",
       "href": "instrumentos/erc-2026-poc.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl6-2026-04",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "previsto",
+      "status_text": "Previsto - abre junho 2026",
+      "status_class": "status-planned",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao,empresa",
+      "setores": [
+        "agroalimentar",
+        "tecnologia-digital"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Parceria Europeia de Dados Agricolas",
+      "tagline": "Horizonte Europa financia atividades adicionais da maior parceria de dados do setor agro-alimentar europeu",
+      "highlight0": "60 milhoes EUR, taxa de financiamento 30%",
+      "highlight1": "Coordenador do consorcio HORIZON-CL6-2024-GOVERNANCE-02-01",
+      "highlight2": "Nacional (fundo europeu)",
+      "href": "instrumentos/horizon-cl6-2026-04.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-miss-2026-02-cancer-02",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Fechado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao",
+      "setores": [
+        "saude-ciencias-vida"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Missao Cancer: Microbioma para Previsao de Cancro",
+      "tagline": "Investigacao do microbioma como biomarcador preditivo de cancro antes do inicio clinico da doenca",
+      "highlight0": "15 milhoes EUR para 1 projeto europeu (lump sum)",
+      "highlight1": "Consorcios de investigacao europeus",
+      "highlight2": "Nacional (fundo europeu)",
+      "href": "instrumentos/horizon-miss-2026-02-cancer-02.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-miss-2026-02-cancer-03",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Fechado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao",
+      "setores": [
+        "saude-ciencias-vida"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Missao Cancer: Imunoterapia para Cancros Refratarios",
+      "tagline": "Ensaios clinicos pragmaticos para otimizar intervencoes imunoterapeuticas em cancros que resistem ao tratamento convencional",
+      "highlight0": "22 milhoes EUR para 3 projetos (7-8M cada)",
+      "highlight1": "Consorcios com capacidade de ensaio clinico oncologico",
+      "highlight2": "Nacional (fundo europeu)",
+      "href": "instrumentos/horizon-miss-2026-02-cancer-03.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-miss-2026-02-cancer-04",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 13/05/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao,empresa",
+      "setores": [
+        "saude-ciencias-vida"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Missao Cancer: Cuidados Paliativos Precoces",
+      "tagline": "Modelos inovadores de cuidados paliativos mais precoces, precisos e integrados para doentes oncologicos",
+      "highlight0": "15 milhoes EUR para 3 projetos (5M cada, lump sum)",
+      "highlight1": "Hospitais, centros de investigacao, empresas de healthtech",
+      "highlight2": "Nacional (fundo europeu)",
+      "href": "instrumentos/horizon-miss-2026-02-cancer-04.html",
+      "featured": false
+    },
+    {
+      "id": "ifd-instituicao-financeira-desenvolvimento",
+      "category": "hib",
+      "category_label": "Hibridos",
+      "estado": "aberto",
+      "status_text": "Candidatura Continua",
+      "status_class": "status-cont",
+      "fonte": "bfomento",
+      "beneficiario": "empresa",
+      "setores": [
+        "todos"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "IFD - Instituicao Financeira de Desenvolvimento",
+      "tagline": "Capital, quase-capital e garantias para PME e startups portugueses, geridos pelo Banco Portugues de Fomento desde 2020",
+      "highlight0": "Capital, Quase-Capital, Garantia e Divida",
+      "highlight1": "PME, Startups, Mid-caps e Spin-offs academicos",
+      "highlight2": "Nacional",
+      "href": "instrumentos/ifd-instituicao-financeira-desenvolvimento.html",
       "featured": false
     }
   ]
