@@ -5014,6 +5014,112 @@
       "highlight2": "Nacional (mercado interno UE)",
       "href": "instrumentos/agrip-simple-2026-im-fresh-fv.html",
       "featured": false
+    },
+    {
+      "id": "agrip-simple-2026-tc-org-sust",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Fechado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "associacao,empresa",
+      "setores": [
+        "agroalimentar"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "AGRIP Simple 2026 - Agricultura Organica e Sustentavel (TC)",
+      "tagline": "Financiamento europeu para campanhas de promocao de produtos biologicos e sustentaveis da UE em mercados de terceiros paises.",
+      "highlight0": "EUR 5,5M para campanhas de promocao de produtos biologicos e sustentaveis (fundo perdido)",
+      "highlight1": "Associacoes de produtores e organizacoes sectoriais da UE",
+      "highlight2": "Nacional (mercados terceiros paises)",
+      "href": "instrumentos/agrip-simple-2026-tc-org-sust.html",
+      "featured": false
+    },
+    {
+      "id": "agrip-multi-2026-tc-org-sust",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Fechado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "associacao,empresa",
+      "setores": [
+        "agroalimentar"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "AGRIP Multi 2026 - Agricultura Organica e Sustentavel em Consorcio (TC)",
+      "tagline": "Financiamento europeu para consorcio transnacional que promova a producao biologica e as praticas sustentaveis da UE em terceiros paises.",
+      "highlight0": "EUR 3M para consorcio de promocao de agricultura biologica e sustentavel (fundo perdido)",
+      "highlight1": "Consorcio de organizacoes de pelo menos 2 paises membros UE",
+      "highlight2": "Nacional (mercados terceiros paises)",
+      "href": "instrumentos/agrip-multi-2026-tc-org-sust.html",
+      "featured": false
+    },
+    {
+      "id": "agrip-multi-2026-im-fresh-fv",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Fechado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "associacao,empresa",
+      "setores": [
+        "agroalimentar"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "AGRIP Multi 2026 - Promocao de Frutas e Vegetais Frescos (Mercado Interno)",
+      "tagline": "Financiamento europeu para consorcio que promova o consumo de frutas e vegetais frescos e habitos alimentares saudaveis no mercado interno da UE.",
+      "highlight0": "EUR 5,7M para campanhas de promocao de frutas e vegetais frescos (fundo perdido)",
+      "highlight1": "Consorcio de organizacoes hortofruticolas de pelo menos 2 paises membros UE",
+      "highlight2": "Nacional (mercado interno UE)",
+      "href": "instrumentos/agrip-multi-2026-im-fresh-fv.html",
+      "featured": false
+    },
+    {
+      "id": "smp-cons-2026-adr-rad",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 25/04/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "associacao,entidade-publica",
+      "setores": [
+        "todos"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "SMP 2026 - Apoio a Organismos ADR e Entidades de Acoes Representativas",
+      "tagline": "Financiamento do Programa Mercado Unico para organismos de resolucao alternativa de litigios e entidades autorizadas a propor acoes representativas de consumidores.",
+      "highlight0": "EUR 1,5M para atividades de protecao dos consumidores no mercado interno (fundo perdido)",
+      "highlight1": "Organismos ADR certificados e entidades RAD qualificadas nos Estados-Membros",
+      "highlight2": "Nacional (mercado interno UE)",
+      "href": "instrumentos/smp-cons-2026-adr-rad.html",
+      "featured": false
+    },
+    {
+      "id": "rfcs-2026-bt-coal",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 30/06/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao,entidade-publica",
+      "setores": [
+        "energia-ambiente",
+        "industria"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "RFCS 2026 - Grandes Projetos para a Transicao do Carvao",
+      "tagline": "O Fundo de Investigacao para o Carvao e o Aco financia projetos piloto e de demonstracao que apoiam a transicao justa das regioes carvoeiras europeias.",
+      "highlight0": "EUR 35M para projetos piloto e demonstracao de transicao carvoeira (fundo perdido)",
+      "highlight1": "Consorcio de entidades de investigacao, empresas e regioes carvoeiras da UE",
+      "highlight2": "Nacional (regioes carvoeiras UE)",
+      "href": "instrumentos/rfcs-2026-bt-coal.html",
+      "featured": false
     }
   ]
 }
