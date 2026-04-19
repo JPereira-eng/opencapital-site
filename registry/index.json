@@ -9,9 +9,9 @@
     "open": 197,
     "closed": 34,
     "planned": 14,
-    "in_queue": 75,
+    "in_queue": 98,
     "in_watchlist": 103,
-    "in_catalogo": 0,
+    "in_catalogo": 1,
     "in_overflow": 107
   },
   "shards": {
@@ -92,7 +92,7 @@
   "last_monitor_run": "2026-04-18",
   "last_writer_run": "2026-04-19",
   "source_last_checked": {
-    "portugal-2030": "2026-04-18",
+    "portugal-2030": "2026-04-19",
     "compete-2030": "2026-04-18",
     "norte-2030": "2026-04-18",
     "centro-2030": "2026-04-16",
@@ -105,9 +105,9 @@
     "sustentavel-2030": "2026-04-17",
     "mar-2030": "2026-04-17",
     "pat-2030": "2026-04-18",
-    "eu-funding-tenders": "2026-04-18",
+    "eu-funding-tenders": "2026-04-19",
     "ani": "2026-04-17",
-    "iapmei": "2026-04-16",
+    "iapmei": "2026-04-19",
     "prr": "2026-04-16",
     "interreg-poctep": "2026-04-17",
     "fct": "2026-04-16",
@@ -130,7 +130,7 @@
     "autoridade-tributaria": "2026-04-16",
     "digital-europe": "2026-04-18",
     "cef": "2026-04-18",
-    "horizonte-europa": "2026-04-16",
+    "horizonte-europa": "2026-04-19",
     "eu4health": "2026-04-17",
     "indico-capital": "2026-04-13",
     "armilar-ventures": "2026-04-13",
@@ -144,7 +144,7 @@
     "interreg-interact": "2026-04-17",
     "eu-startups": "2026-04-13",
     "esa-bic": "2026-04-16",
-    "eit-digital": "2026-04-14",
+    "eit-digital": "2026-04-19",
     "eit-climate": "2026-04-18",
     "shilling-vc": "2026-04-14",
     "portugal-ventures": "2026-04-14",
@@ -171,8 +171,9 @@
     "erasmus-ka2-cooperation": "2026-04-18",
     "erasmus-cove": "2026-04-18",
     "seedrs-pt": "2026-04-18",
-    "uptec-porto": "2026-04-18"
+    "uptec-porto": "2026-04-18",
+    "raize-empresarial": "2026-04-19"
   },
-  "last_scanner_run": "2026-04-18",
-  "last_updated": "2026-04-18T-scanner-r07-j2"
+  "last_scanner_run": "2026-04-19",
+  "last_updated": "2026-04-19T-scanner-r14-j3"
 }
