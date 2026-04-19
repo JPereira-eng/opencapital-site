@@ -836,51 +836,6 @@
       "last_fail_date": "2026-04-19"
     },
     {
-      "id": "horizon-miss-2026-01-clima-07",
-      "name": "Missions Climate: Climate finance and risk assessment innovation (CSA) - topic 07",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "regime": "aviso",
-      "status": "aberto",
-      "aviso_codigo": "HORIZON-MISS-2026-01-CLIMA-07",
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-01-CLIMA-07",
-      "deadline": "2026-09-23",
-      "budget_eur": null,
-      "detected_date": "2026-04-19",
-      "priority_score": 15,
-      "notes": "Mission Climate - A Smarter Europe. MISS-2026-01 call, topic 07."
-    },
-    {
-      "id": "horizon-miss-2026-06-clima-soil",
-      "name": "Missions Climate: Healthy Soils and sustainable land management (RIA)",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "regime": "aviso",
-      "status": "aberto",
-      "aviso_codigo": "HORIZON-MISS-2026-06-CLIMA-SOIL",
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-06-CLIMA-SOIL",
-      "deadline": "2026-09-23",
-      "budget_eur": null,
-      "detected_date": "2026-04-19",
-      "priority_score": 15,
-      "notes": "Mission A Soil Deal for Europe. MISS-2026-06 call, CLIMA-SOIL topic. Nexo solo-clima."
-    },
-    {
-      "id": "horizon-miss-2026-02-cancer-01",
-      "name": "Missions Cancer: Prevention and early detection research (RIA) - topic 01",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "regime": "aviso",
-      "status": "aberto",
-      "aviso_codigo": "HORIZON-MISS-2026-02-CANCER-01",
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-02-CANCER-01",
-      "deadline": "2026-09-15",
-      "budget_eur": null,
-      "detected_date": "2026-04-19",
-      "priority_score": 15,
-      "notes": "Mission Cancer. MISS-2026-02 call, topic 01. Prevencao e rastreio precoce."
-    },
-    {
       "id": "horizon-miss-2026-02-cancer-02",
       "name": "Missions Cancer: Innovative treatments and therapeutics (RIA) - topic 02",
       "source_id": "eu-funding-tenders",
@@ -1248,40 +1203,6 @@
       "priority_score": 65,
       "notes": "SEDIA status:31094502 OPEN, page 34"
     },
-    {
-      "id": "erc-2026-poc",
-      "name": "Call for proposals for ERC Proof of Concept",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "regime": "aviso",
-      "status": "aberto",
-      "aviso_codigo": "ERC-2026-POC",
-      "detected_date": "2026-04-19",
-      "deadline": "2026-09-17",
-      "budget": null,
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERC-2026-POC",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 15,
-      "notes": "SEDIA status:31094502 OPEN, page 36"
-    },
-    {
-      "id": "fct-mit-portugal-2026",
-      "name": "MIT Portugal 2026 Project Competition - FCT",
-      "source_id": "fct",
-      "shard": "pt-other",
-      "regime": "aviso",
-      "status": "aberto",
-      "aviso_codigo": "FCT-MIT-PORTUGAL-2026",
-      "detected_date": "2026-04-19",
-      "deadline": "2026-05-25",
-      "budget": "800000 EUR (para equipas portuguesas)",
-      "regulation_url": "https://www.fct.pt/en/candidaturas-abertas-para-o-concurso-de-projetos-mit-portugal-2026/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 55,
-      "notes": "Prazo: 25 maio 2026. Budget: 800K EUR FCT para equipas PT. Colaboracao MIT-Portugal. Categorias: Joint Integrated Proposals e Seed Proposals."
-    }
   ],
   "items": []
 }
