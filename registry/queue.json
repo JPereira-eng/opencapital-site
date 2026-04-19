@@ -993,14 +993,17 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "pending",
       "aviso_codigo": "DIGITAL-2026-SUPPORT-10",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-SUPPORT-10",
       "deadline": "2026-10-01",
       "budget": null,
       "detected_date": "2026-04-18",
       "priority_score": 15,
-      "notes": "Digital Europe - acoes de suporte ao programa 2026. Fonte: SEDIA."
+      "notes": "Digital Europe - acoes de suporte ao programa 2026. Fonte: SEDIA.",
+      "fail_count": 1,
+      "download_error": "API 404 - call nao encontrado no portal EU Funding & Tenders em 2026-04-19",
+      "last_fail_date": "2026-04-19"
     },
     {
       "id": "digital-2026-bestuse-rsf-10",
@@ -1008,14 +1011,17 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "pending",
       "aviso_codigo": "DIGITAL-2026-BESTUSE-RSF-10",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-BESTUSE-RSF-10",
       "deadline": "2026-10-01",
       "budget": null,
       "detected_date": "2026-04-18",
       "priority_score": 15,
-      "notes": "Digital Europe - melhor uso tecnologias para especializacao inteligente regional. Fonte: SEDIA."
+      "notes": "Digital Europe - melhor uso tecnologias para especializacao inteligente regional. Fonte: SEDIA.",
+      "fail_count": 1,
+      "download_error": "API 404 - call nao encontrado no portal EU Funding & Tenders em 2026-04-19",
+      "last_fail_date": "2026-04-19"
     },
     {
       "id": "horizon-cl6-2026-04",
@@ -1023,14 +1029,17 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "pending",
       "aviso_codigo": "HORIZON-CL6-2026-04",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL6-2026-04",
       "deadline": "2026-11-26",
       "budget": null,
       "detected_date": "2026-04-18",
       "priority_score": 15,
-      "notes": "Horizon Europe Cluster 6 - alimentacao, bioeconomia, recursos naturais e ambiente. Fonte: SEDIA."
+      "notes": "Horizon Europe Cluster 6 - alimentacao, bioeconomia, recursos naturais e ambiente. Fonte: SEDIA.",
+      "fail_count": 1,
+      "download_error": "API 404 - call nao encontrado no portal EU Funding & Tenders em 2026-04-19",
+      "last_fail_date": "2026-04-19"
     },
     {
       "id": "horizon-miss-2026-02",
@@ -1038,14 +1047,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-MISS-2026-02",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-02",
       "deadline": "2026-09-15",
       "budget": null,
       "detected_date": "2026-04-18",
       "priority_score": 15,
-      "notes": "Horizon Europe Missions - Missao Cancer 2026 segundo aviso. Fonte: SEDIA."
+      "notes": "Horizon Europe Missions - Missao Cancer 2026 segundo aviso. Fonte: SEDIA.",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-02.txt",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-01-clima-01",
@@ -1053,14 +1064,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-MISS-2026-01-CLIMA-01",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-01-CLIMA-01",
       "deadline": "2026-09-23",
       "budget_eur": null,
       "detected_date": "2026-04-19",
       "priority_score": 15,
-      "notes": "Mission Climate - A Smarter Europe. MISS-2026-01 call, topic 01."
+      "notes": "Mission Climate - A Smarter Europe. MISS-2026-01 call, topic 01.",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-01-clima-01.txt",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-01-clima-02",
@@ -1068,14 +1081,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-MISS-2026-01-CLIMA-02",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-01-CLIMA-02",
       "deadline": "2026-09-23",
       "budget_eur": null,
       "detected_date": "2026-04-19",
       "priority_score": 15,
-      "notes": "Mission Climate - A Smarter Europe. MISS-2026-01 call, topic 02."
+      "notes": "Mission Climate - A Smarter Europe. MISS-2026-01 call, topic 02.",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-01-clima-02.txt",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-01-clima-03",
@@ -1083,14 +1098,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-MISS-2026-01-CLIMA-03",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-01-CLIMA-03",
       "deadline": "2026-09-23",
       "budget_eur": null,
       "detected_date": "2026-04-19",
       "priority_score": 15,
-      "notes": "Mission Climate - A Smarter Europe. MISS-2026-01 call, topic 03."
+      "notes": "Mission Climate - A Smarter Europe. MISS-2026-01 call, topic 03.",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-01-clima-03.txt",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-01-clima-04",
@@ -1098,14 +1115,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-MISS-2026-01-CLIMA-04",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-01-CLIMA-04",
       "deadline": "2026-09-23",
       "budget_eur": null,
       "detected_date": "2026-04-19",
       "priority_score": 15,
-      "notes": "Mission Climate - A Smarter Europe. MISS-2026-01 call, topic 04."
+      "notes": "Mission Climate - A Smarter Europe. MISS-2026-01 call, topic 04.",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-01-clima-04.txt",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-01-clima-05",
@@ -1113,14 +1132,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-MISS-2026-01-CLIMA-05",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-01-CLIMA-05",
       "deadline": "2026-09-23",
       "budget_eur": null,
       "detected_date": "2026-04-19",
       "priority_score": 15,
-      "notes": "Mission Climate - A Smarter Europe. MISS-2026-01 call, topic 05."
+      "notes": "Mission Climate - A Smarter Europe. MISS-2026-01 call, topic 05.",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-01-clima-05.txt",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-01-clima-06",
@@ -1128,14 +1149,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-MISS-2026-01-CLIMA-06",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-01-CLIMA-06",
       "deadline": "2026-09-23",
       "budget_eur": null,
       "detected_date": "2026-04-19",
       "priority_score": 15,
-      "notes": "Mission Climate - A Smarter Europe. MISS-2026-01 call, topic 06."
+      "notes": "Mission Climate - A Smarter Europe. MISS-2026-01 call, topic 06.",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-01-clima-06.txt",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-01-clima-07",
