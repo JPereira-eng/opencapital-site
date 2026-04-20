@@ -6542,7 +6542,9 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao,entidade-publica,associacao",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Inovacao Social Transformativa em Bem-Estar e Comunidades - Horizonte Europa 2026",
       "tagline": "Financiamento europeu para investigacao sobre novos modelos de bem-estar social, produtividade inclusiva e resiliencia comunitaria.",
@@ -6561,7 +6563,9 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao,entidade-publica,associacao",
-      "setores": ["economia-criativa"],
+      "setores": [
+        "economia-criativa"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Patrimonio Cultural Europeu, Diversidade e Identidades - Horizonte Europa 2026",
       "tagline": "Horizonte Europa financia investigacao em patrimonio cultural, industrias criativas, diversidade linguistica e integracao de IA no setor cultural.",
@@ -6580,7 +6584,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa",
-      "setores": ["mobilidade-transportes"],
+      "setores": [
+        "mobilidade-transportes"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EIT Urban Mobility: SME Market Expansion 2026",
       "tagline": "Financiamento de €60.000 para PME de mobilidade urbana validarem solucoes em novos mercados com utilizadores reais.",
@@ -6599,7 +6605,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao,empresa",
-      "setores": ["tecnologia-digital"],
+      "setores": [
+        "tecnologia-digital"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Apply AI: Piloto RAISE Science for AI - Horizonte Europa 2026",
       "tagline": "Horizonte Europa financia um projeto unico para construir infraestrutura de IA reproduzivel e escalavel ao servico da ciencia europeia.",
@@ -6618,7 +6626,9 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empreendedor",
-      "setores": ["energia-ambiente"],
+      "setores": [
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "ClimateLaunchpad Portugal 2026",
       "tagline": "A maior competicao mundial de ideias de negocio sustentaveis, edicao portuguesa organizada pela UPTEC com apoio da Climate KIC.",
@@ -6637,7 +6647,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["tecnologia-digital"],
+      "setores": [
+        "tecnologia-digital"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Mundos Virtuais e Web 4.0 - Virtual Worlds Partnership 2026",
       "tagline": "Financiamento para tecnologias imersivas XR, haptica e integracao de ambientes virtuais com Web 4.0 no ambito da Virtual Worlds Partnership.",
@@ -6656,7 +6668,10 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao,associacao",
-      "setores": ["tecnologia-digital", "industria"],
+      "setores": [
+        "tecnologia-digital",
+        "industria"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Estrategia de Fotonica Europeia - Photonics Partnership CSA 2026",
       "tagline": "Coordenacao e apoio estrategico ao ecossistema europeu de fotonica, alinhando agendas de I&I e mobilizando sinergias entre industria e academia.",
@@ -6675,7 +6690,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["tecnologia-digital"],
+      "setores": [
+        "tecnologia-digital"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Computacao Quantica Fotonica a Grande Escala (RIA) 2026",
       "tagline": "Plataformas fotonicas de computacao quantica escalaveis com alvo de 1000 qubits fot onicos e demonstracao de vantagem quantica real ate 2030.",
@@ -6694,7 +6711,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "tecnologia-digital"],
+      "setores": [
+        "industria",
+        "tecnologia-digital"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Materiais Avancados para Sensorizacao (IAM Sensing) 2026",
       "tagline": "Materiais avancados inovadores para superficies multifuncionais e sensores IoT/wearable com demonstracao em ambiente industrialmente relevante.",
@@ -6713,7 +6733,10 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["tecnologia-digital", "industria"],
+      "setores": [
+        "tecnologia-digital",
+        "industria"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Apply AI: Plataformas de Robotica Agil e Inteligente para Industria 2026",
       "tagline": "Plataformas roboticas modulares e inteligentes para ambientes industriais dinamicos, com IA aplicada e interacao segura homem-maquina.",
@@ -6732,7 +6755,11 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "energia-ambiente", "saude-ciencias-vida"],
+      "setores": [
+        "industria",
+        "energia-ambiente",
+        "saude-ciencias-vida"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Alternativas Seguras a Substancias Preocupantes (Horizon Europa IA 2026)",
       "tagline": "Desenvolvimento de alternativas quimicas e materiais a substancias de risco regulatorio em energia, mobilidade, construcao, eletronica, texteis e dispositivos medicos.",
@@ -6751,7 +6778,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "tecnologia-digital"],
+      "setores": [
+        "industria",
+        "tecnologia-digital"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "IA para Fabricas do Futuro: Producao Avancada (Horizon Europa RIA 2026)",
       "tagline": "IA robusta e eficiente para otimizacao de processos de fabrico, manutencao preditiva e controlo de qualidade em industrias avancadas europeias.",
@@ -6770,7 +6800,11 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "energia-ambiente", "tecnologia-digital"],
+      "setores": [
+        "industria",
+        "energia-ambiente",
+        "tecnologia-digital"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "IA para Industrias de Processo: Processos4Planet e AI (Horizon Europa RIA 2026)",
       "tagline": "Metodos e tecnologias IA inovadores para otimizacao de producao, sustentabilidade e melhoria das condicoes de trabalho nas industrias de processo europeias.",
@@ -6789,7 +6823,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "energia-ambiente"],
+      "setores": [
+        "industria",
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Descarbonizacao de Industrias Intensivas em Energia (Horizon Europa CID 2026)",
       "tagline": "O Clean Industrial Deal financia ate 25 milhoes EUR por projeto para descarbonizar aco, cimento e quimica com inovacoes de TRL 6 a 8.",
@@ -6808,7 +6845,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["energia-ambiente", "industria"],
+      "setores": [
+        "energia-ambiente",
+        "industria"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Tecnologias Limpas para a Acao Climatica (Horizon Europa CID 2026)",
       "tagline": "Demonstracao de tecnologias net-zero em sistemas de energia, armazenamento, hidrogenio verde e combustiveis renovaveis. TRL 6 a 8 com plano de negocio e deployment real.",
@@ -6816,6 +6856,113 @@
       "highlight1": "Consorcios liderados pela industria energetica",
       "highlight2": "Nacional",
       "href": "instrumentos/horizon-cid-2026-01-02.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl4-2025-02-space-41",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Fechado em 25/09/2025",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao,empresa",
+      "setores": [
+        "energia-ambiente",
+        "tecnologia-digital"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Copernicus C3S: Novos Metodos para Reanalise Climatica com Sentinels",
+      "tagline": "Horizonte Europa financia €18M para metodos inovadores de reanalise climatica integrando dados dos satelites Sentinel.",
+      "highlight0": "Grant de ate 18 milhoes EUR (1 projeto RIA, lump sum)",
+      "highlight1": "Consorcios de meteorologia, oceanografia e satelites",
+      "highlight2": "Nacional",
+      "href": "instrumentos/horizon-cl4-2025-02-space-41.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl4-2025-02-space-72",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Fechado em 25/09/2025",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "tecnologia-digital"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Autonomia Espacial UE: Relogios Atomicos e Celulas Solares sem Dependencia Externa",
+      "tagline": "€8M para desenvolver relogios atomicos de chip e celulas solares espaciais totalmente europeus, sem restricoes ITAR ou EAR.",
+      "highlight0": "Grant de 4 milhoes EUR por tecnologia (CSAC ou celulas solares)",
+      "highlight1": "Empresas de espaco e institutos de investigacao europeus",
+      "highlight2": "Nacional (UE + Noruega + Islandia)",
+      "href": "instrumentos/horizon-cl4-2025-02-space-72.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-hlth-2026-02-disease-12",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 15/09/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao,entidade-publica",
+      "setores": [
+        "saude-ciencias-vida"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "ERDERA Fase 2: Parceria Europeia para Doencas Raras",
+      "tagline": "€91M em cofunding europeu para diagnostico e terapias de doencas raras, com chamada tematica 2026 sobre genetica.",
+      "highlight0": "50% cofunding (€91M total para projetos de investigacao)",
+      "highlight1": "Parceiros do consorcio ERDERA (acesso via FCT Portugal)",
+      "highlight2": "Nacional",
+      "href": "instrumentos/horizon-hlth-2026-02-disease-12.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl4-2025-05-twin-transition-21",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Fechado em 14/04/2026",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao,associacao",
+      "setores": [
+        "industria"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Demonstradores para Agrupamentos de Empresas Circulares Sociais",
+      "tagline": "€10M para demonstradores digitais em empresas circulares sociais nos setores textil, eletronicos e construcao.",
+      "highlight0": "Grant de ate 10 milhoes EUR (IA dois estagios, lump sum)",
+      "highlight1": "Empresas circulares sociais e consorcios industriais",
+      "highlight2": "Nacional",
+      "href": "instrumentos/horizon-cl4-2025-05-twin-transition-21.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl4-2025-05-materials-51",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Fechado em 14/04/2026",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "industria",
+        "energia-ambiente"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Alternativas a PFAS por Concepcao: Horizonte Europa MATERIALS-51",
+      "tagline": "€30M para substitutos seguros e sustentaveis a PFAS em eletrónica, cabos, fluidos de transferencia de calor e lubrificantes industriais.",
+      "highlight0": "Grant de ate 30 milhoes EUR (IA dois estagios, lump sum)",
+      "highlight1": "Industria quimica, eletrónica e fabricantes de cabos",
+      "highlight2": "Nacional",
+      "href": "instrumentos/horizon-cl4-2025-05-materials-51.html",
       "featured": false
     }
   ]
