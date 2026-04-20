@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ITI CIM Oeste - Incentivos Industria: Open Capital</title>
   <meta name="description" content="Sistema de Incentivos de Base Territorial ITI CIM do Oeste - Industria. Centro 2030, FEDER. 2,5M EUR, 40% cofinanciamento. Micro e pequenas empresas industriais da regiao Oeste.">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/fonts/montserrat.css">
   <style>
     :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
     *{margin:0;padding:0;box-sizing:border-box;}
@@ -60,7 +60,11 @@
     .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
     .meta-value{font-size:15px;font-weight:500;color:var(--white);}
     .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#C9A96E;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
     .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .instrument-closed-notice{display:flex;align-items:center;gap:14px;background:#FFF8F0;border-left:3px solid var(--gold);padding:16px 24px;margin:0 80px;font-size:15px;font-weight:400;color:var(--grey-dark);}
+    @media(max-width:768px){.instrument-closed-notice{margin:0 20px;}}
 
     .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
     .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
@@ -208,7 +212,7 @@
       <div class="meta-sep"></div>
       <div class="meta-item">
         <span class="meta-label">Estado</span>
-        <span class="meta-value status-open">Aberto ate 30/04</span>
+        <span class="meta-value status-closed">Fechado</span>
       </div>
     </div>
   </div>
@@ -216,6 +220,11 @@
 
 <div class="back-bar">
   <a href="../biblioteca.html" class="back-link">&larr; Voltar ao catalogo de instrumentos</a>
+</div>
+
+<div class="instrument-closed-notice">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="0.5" fill="#C9A96E"/></svg>
+  <span>Este instrumento encontra-se <strong>encerrado</strong>. As candidaturas ja nao estao abertas.</span>
 </div>
 
 <div class="article-layout">
@@ -349,11 +358,11 @@
       </div>
       <div class="sidebar-fact">
         <div class="sidebar-fact-key">Prazo final</div>
-        <div class="sidebar-fact-val">30/04/2026 (18h00)</div>
+        <div class="sidebar-fact-val">16/04/2026 (18h00)</div>
       </div>
       <div class="sidebar-fact">
         <div class="sidebar-fact-key">Estado</div>
-        <div class="sidebar-fact-val val-open">Aberto</div>
+        <div class="sidebar-fact-val val-closed">Fechado</div>
       </div>
       <div class="sidebar-fact">
         <div class="sidebar-fact-key">Organismo intermedio</div>

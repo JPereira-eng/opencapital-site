@@ -7,8 +7,8 @@
   },
   "totals": {
     "published": 325,
-    "open": 238,
-    "closed": 71,
+    "open": 237,
+    "closed": 72,
     "planned": 16,
     "in_queue": 62,
     "in_watchlist": 103,
@@ -35,8 +35,9 @@
       "closed": 2
     },
     "pt2030-centro": {
-      "count": 1,
-      "open": 1
+      "count": 2,
+      "open": 1,
+      "closed": 1
     },
     "pt2030-lisboa": {
       "count": 4,
@@ -91,13 +92,13 @@
     }
   },
   "last_full_cycle": "2026-04-12",
-  "last_monitor_run": "2026-04-19",
+  "last_monitor_run": "2026-04-20",
   "last_writer_run": "2026-04-20",
   "source_last_checked": {
     "portugal-2030": "2026-04-20",
     "compete-2030": "2026-04-19",
     "norte-2030": "2026-04-18",
-    "centro-2030": "2026-04-16",
+    "centro-2030": "2026-04-20",
     "lisboa-2030": "2026-04-16",
     "alentejo-2030": "2026-04-16",
     "algarve-2030": "2026-04-17",
@@ -111,7 +112,7 @@
     "ani": "2026-04-17",
     "iapmei": "2026-04-19",
     "prr": "2026-04-19",
-    "interreg-poctep": "2026-04-17",
+    "interreg-poctep": "2026-04-20",
     "fct": "2026-04-19",
     "aicep": "2026-04-19",
     "iefp": "2026-04-19",
@@ -124,7 +125,7 @@
     "investeu": "2026-04-20",
     "interreg-sudoe": "2026-04-16",
     "interreg-euromed": "2026-04-16",
-    "interreg-urbact": "2026-04-16",
+    "interreg-urbact": "2026-04-20",
     "interreg-next-med": "2026-04-16",
     "eit": "2026-04-16",
     "startup-portugal": "2026-04-12",
@@ -153,7 +154,7 @@
     "balcao-2030": "2026-04-14",
     "nato-diana": "2026-04-14",
     "interreg-europe": "2026-04-17",
-    "interreg-espon": "2026-04-16",
+    "interreg-espon": "2026-04-20",
     "turismo-portugal": "2026-04-16",
     "cgd-empresas": "2026-04-14",
     "bpi-empresas": "2026-04-14",
@@ -180,5 +181,5 @@
     "climatelaunchpad-portugal": "2026-04-20"
   },
   "last_scanner_run": "2026-04-20",
-  "last_updated": "2026-04-20T-scanner-r14-j3"
+  "last_updated": "2026-04-20T-monitor-r01-j1"
 }

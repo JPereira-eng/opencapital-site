@@ -9,14 +9,16 @@
       "file": "instrumentos/centro2030-2026-5-step.html",
       "source": "centro-2030",
       "state": "aberto",
-      "last_check": "2026-04-11"
+      "last_check": "2026-04-20",
+      "notes": "Prazo corrigido para 15/05/2026 (artigo tinha 30/06/2026 - confirmado via API Centro 2030 FA0244/2025)"
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-iti-cim-regiao-do-oeste-indu",
       "file": "instrumentos/sistema-de-incentivos-de-base-territorial-iti-cim-regiao-do-oeste-indu.html",
       "source": "portugal-2030",
-      "state": "aberto",
-      "last_check": "2026-04-14"
+      "state": "fechado",
+      "last_check": "2026-04-20",
+      "notes": "Fechou a 16/04/2026. Artigo tinha prazo errado (30/04) - corrigido para 16/04 e estado atualizado para fechado."
     }
   ]
 }
