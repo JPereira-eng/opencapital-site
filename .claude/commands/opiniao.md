@@ -420,7 +420,7 @@ Cria `conhecimento/[slug].html`.
         </div>
       </li>
     </ul>
-    <a href="https://calendly.com/tech2business" class="nav-cta">Contactar</a>
+    <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
     <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
   </nav>
 
@@ -481,7 +481,7 @@ Cria `conhecimento/[slug].html`.
       <div class="sidebar-cta">
         <div class="sidebar-cta-title">Precisa de apoio nesta area?</div>
         <div class="sidebar-cta-text">[SIDEBAR_CTA_TEXT]</div>
-        <a href="https://calendly.com/tech2business" class="sidebar-cta-btn">Falar com um especialista</a>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Falar com um especialista</a>
       </div>
       <div class="sidebar-card">
         <div class="sidebar-related-label">Artigos relacionados</div>
@@ -522,7 +522,7 @@ Cria `conhecimento/[slug].html`.
           <li><a href="../sobre-nos.html">Sobre Nós</a></li>
           <li><a href="../sobre-nos.html">Equipa</a></li>
           <li><a href="../carreiras.html">Carreiras</a></li>
-          <li><a href="https://calendly.com/tech2business">Contacto</a></li>
+          <li><a href="https://calendly.com/opencapital">Contacto</a></li>
         </ul>
       </div>
     </div>

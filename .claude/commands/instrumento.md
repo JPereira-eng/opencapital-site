@@ -370,7 +370,7 @@ Criar o ficheiro `instrumentos/[slug].html` com a estrutura abaixo. Os metadados
       </div>
     </li>
   </ul>
-  <a href="https://calendly.com/tech2business" class="nav-cta">Contactar</a>
+  <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
   <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-mobile-menu" id="mobileMenu">
@@ -381,7 +381,7 @@ Criar o ficheiro `instrumentos/[slug].html` com a estrutura abaixo. Os metadados
   <a href="../sobre-nos.html">Sobre Nós</a>
   <a href="../parceiros.html">Parceiros</a>
   <a href="../carreiras.html">Carreiras</a>
-  <a href="https://calendly.com/tech2business" class="nav-mobile-cta">Contactar</a>
+  <a href="https://calendly.com/opencapital" class="nav-mobile-cta">Contactar</a>
 </div>
 
 <section class="article-hero">
@@ -449,7 +449,7 @@ Criar o ficheiro `instrumentos/[slug].html` com a estrutura abaixo. Os metadados
     <div class="sidebar-cta">
       <div class="sidebar-cta-title">Falar com um especialista</div>
       <div class="sidebar-cta-text">[SIDEBAR_CTA_TEXT]</div>
-      <a href="https://calendly.com/tech2business" class="sidebar-cta-btn">Contactar</a>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Contactar</a>
     </div>
 
     <div class="sidebar-card">
@@ -491,7 +491,7 @@ Criar o ficheiro `instrumentos/[slug].html` com a estrutura abaixo. Os metadados
         <li><a href="../sobre-nos.html">Sobre Nós</a></li>
         <li><a href="../sobre-nos.html">Equipa</a></li>
         <li><a href="../carreiras.html">Carreiras</a></li>
-        <li><a href="https://calendly.com/tech2business">Contacto</a></li>
+        <li><a href="https://calendly.com/opencapital">Contacto</a></li>
       </ul>
     </div>
   </div>

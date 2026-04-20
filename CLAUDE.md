@@ -514,7 +514,7 @@ opencapital-website/
 
 **Todos os botões e links de contacto apontam para Calendly.**
 
-URL: `https://calendly.com/tech2business`
+URL: `https://calendly.com/opencapital`
 
 Isto aplica-se a TODOS os CTAs com texto tipo:
 - "Contactar" / "Contacte-nos" / "Contacto"
@@ -523,7 +523,7 @@ Isto aplica-se a TODOS os CTAs com texto tipo:
 - Qualquer CTA cujo propósito é iniciar contacto com a Open Capital
 
 **Regras:**
-- `href="https://calendly.com/tech2business"`
+- `href="https://calendly.com/opencapital"`
 - `target="_blank"` (abre em nova aba)
 - Aplica-se em todas as páginas: raiz, `instrumentos/`, `conhecimento/`, e qualquer pasta futura
 - Inclui: navbar CTA, sidebar CTAs, hero CTAs, footer "Contacto", mobile CTAs
