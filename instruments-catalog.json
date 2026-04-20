@@ -6306,7 +6306,11 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["tecnologia-digital", "saude-ciencias-vida", "mobilidade-transportes"],
+      "setores": [
+        "tecnologia-digital",
+        "saude-ciencias-vida",
+        "mobilidade-transportes"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "GenAI4EU Booster 2026 - Horizonte Europa IA Generativa",
       "tagline": "Cascading grants para IA generativa nos setores aeroespacial, farmacêutico e telecomunicações",
@@ -6314,6 +6318,27 @@
       "highlight1": "PME, startups, universidades e centros de investigação",
       "highlight2": "Europa (UE e países associados)",
       "href": "instrumentos/horizon-genai4eu-booster-2026.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-open-internet-stack-2026",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "fechado",
+      "status_text": "Fechado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "tecnologia-digital"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Open Internet Stack Sovereign Solutions 2026",
+      "tagline": "Financiamento para soluções open-source soberanas na infraestrutura digital europeia",
+      "highlight0": "€7M a €10,25M por projeto (RIA)",
+      "highlight1": "Empresas, universidades e centros de investigação",
+      "highlight2": "Europa (UE e países associados)",
+      "href": "instrumentos/horizon-open-internet-stack-2026.html",
       "featured": false
     }
   ]

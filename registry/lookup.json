@@ -1219,7 +1219,8 @@
     "fct-mit-portugal-2026": true,
     "sifide-2026": true,
     "techstars-lisbon": true,
-    "horizon-genai4eu-booster-2026": true
+    "horizon-genai4eu-booster-2026": true,
+    "horizon-open-internet-stack-2026": true
   },
   "by_aviso_codigo": {
     "FA0065/2025": "formacao-executivos-compete",
@@ -1536,11 +1537,7 @@
       "status": "aberto",
       "detected_date": "2026-04-18"
     },
-    "HORIZON-CL4-2026-04-DATA-02": {
-      "shard": "eu-horizon",
-      "status": "aberto",
-      "detected_date": "2026-04-18"
-    },
+    "HORIZON-CL4-2026-04-DATA-02": "horizon-open-internet-stack-2026",
     "HORIZON-CL4-2026-04-DIGITAL-EMERGING-19": "horizon-genai4eu-booster-2026",
     "HORIZON-CL4-2026-04-DIGITAL-EMERGING-08": {
       "shard": "eu-horizon",
