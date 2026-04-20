@@ -6415,7 +6415,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Acesso e Uso Eficiente de Dados 2026 - Horizonte Europa",
       "tagline": "Innovation Action para sistemas de dados conformes e compliance regulatorio com IA no mercado unico europeu",
@@ -6423,6 +6425,27 @@
       "highlight1": "Empresas, universidades e centros de I&D",
       "highlight2": "Nacional",
       "href": "instrumentos/horizon-cl4-2026-04-data-06.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl4-2026-04-digital-emerging-11",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Encerrado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa",
+      "setores": [
+        "tecnologia-digital"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Grand Challenge: Sensores Quanticos para Navegacao Inercial 2026",
+      "tagline": "Financiamento para PME que desenvolvam sensores quanticos alternativos ao GPS em ambientes GNSS-denied",
+      "highlight0": "Ate 500 000 EUR por PME (mono-beneficiario)",
+      "highlight1": "PME estabelecida na UE ou pais associado",
+      "highlight2": "Nacional",
+      "href": "instrumentos/horizon-cl4-2026-04-digital-emerging-11.html",
       "featured": false
     }
   ]
