@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizonte Europa: Estrategia de Fotonica Europeia - Photonics Partnership CSA 2026 | Open Capital</title>
+  <meta name="description" content="HORIZON-CL4-2026-04-DIGITAL-EMERGING-14: financiamento de 3 milhoes EUR para coordenacao e apoio estrategico ao ecossistema europeu de fotonica no ambito da Photonics Partnership.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../biblioteca.html" class="active">Biblioteca</a></li>
+    <li><a href="../conhecimento.html">Conhecimento</a></li>
+    <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos.html">Sobre Nos</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros.html">Parceiros</a>
+        <a href="../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/tech2business" class="nav-cta" target="_blank">Contactar</a>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../biblioteca.html">Biblioteca</a>
+  <a href="../conhecimento.html">Conhecimento</a>
+  <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos.html">Sobre Nos</a>
+  <a href="../parceiros.html">Parceiros</a>
+  <a href="../carreiras.html">Carreiras</a>
+  <a href="https://calendly.com/tech2business" class="nav-mobile-cta" target="_blank">Contactar</a>
+</div>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../index.html">Inicio</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../biblioteca.html">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Estrategia de Fotonica Europeia</span>
+    </nav>
+    <p class="hero-cat">Inovacao</p>
+    <h1 class="hero-title">Estrategia de Fotonica Europeia - Photonics Partnership CSA 2026</h1>
+    <p class="hero-tagline">Financiamento para coordenacao estrategica e networking do ecossistema europeu de fotonica, alinhando agendas de I&amp;I e mobilizando sinergias entre industria, academia e financiadores.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotacao</span>
+        <span class="meta-value">3 milhoes EUR</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Tipo de Acao</span>
+        <span class="meta-value">CSA (Coordenacao e Apoio)</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Grants</span>
+        <span class="meta-value">1 projeto</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-closed">Fechado</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../biblioteca.html" class="back-link">&larr; Voltar ao catalogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Sobre o instrumento</div>
+      <h2 class="section-h2">O papel estrategico das CSA na Photonics Partnership</h2>
+      <p class="section-text">A fotonica e uma das tecnologias digitais de base que a Europa considera critica para a sua soberania tecnologica. Presente em comunicacoes opticas, sensores industriais, imagiologia medica, computacao quantica e producao de energia, a fotonica permeia praticamente todos os setores da economia moderna. O topico HORIZON-CL4-2026-04-DIGITAL-EMERGING-14 financia uma Coordination and Support Action (CSA) especificamente desenhada para fortalecer a governanca e o alinhamento estrategico da Photonics Partnership.</p>
+      <p class="section-text">Ao contrario dos topicos de I&D (RIA) ou demonstracao (IA), uma CSA nao produz resultados tecnologicos diretos. Cria em vez disso a infraestrutura organizacional, os roteiros e as plataformas de colaboracao que maximizam o impacto coletivo de dezenas de projetos de I&D financiados no mesmo ecossistema. Com 3 milhoes EUR e um unico grant, este topico financia essencialmente a "cabeca" da Photonics Partnership.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Atividades centrais</div>
+      <h2 class="section-h2">O que deve incluir uma proposta CSA para fotonica</h2>
+      <p class="section-text">A Comissao Europeia define com precisao as atividades que o projeto CSA selecionado deve executar. Nao se trata de uma lista opcional - sao compromissos obrigatorios que o consorcio vencedor assumira por contrato:</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Agenda estrategica de I&amp;I (SRIA):</strong> desenvolvimento e atualizacao regular da Strategic Research and Innovation Agenda europeia para fotonica, com roteiros associados por linha tecnologica.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Monitorizacao de projetos:</strong> coordenacao e acompanhamento dos projetos de R&amp;I financiados pela Partnership, incluindo rastreamento de KPIs e recomendacoes de acoes corretivas quando necessario.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Engajamento de stakeholders:</strong> alcance sistematico a industria, academia, plataformas nacionais de fotonica e setores de utilizadores finais, com alinhamento das agendas regionais, nacionais e europeias.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Plataforma de comunicacao unificada:</strong> criacao e manutencao de um ponto de acesso central para a comunidade europeia de fotonica, com comunicacao publica reforcada sobre impacto e resultados.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Facilitacao de financiamento:</strong> apoio ao acesso a financiamento privado e combinado para startups e PME de fotonica, incluindo articulacao com EIB, bancos nacionais e fundos de capital de risco especializados.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Colaboracao inter-Parcerias:</strong> articulacao com outras Parcerias Europeias e iniciativas estrategicas para maximizar sinergias (ex: ligacoes com Chips JU, EuroHPC, KDT JU).</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box reveal">
+      <div class="highlight-box-title">Relevancia para Portugal</div>
+      <div class="highlight-box-text">Portugal tem uma comunidade de fotonica ativa, com grupos de investigacao de referencia em INESC TEC, IT (Instituto de Telecomunicacoes), Universidade de Aveiro e IST Lisboa. Empresas como a EFACEC, WIT Software e varios spinoffs universitarios operam em nichos de aplicacoes fotonicas. A participacao portuguesa na governanca da Photonics Partnership, mesmo que indireta, e um vetor relevante para orientar o financiamento europeu para areas onde Portugal tem vantagem comparativa.</div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Tecnologias cobertas</div>
+      <h2 class="section-h2">O espectro tecnologico da fotonica europeia</h2>
+      <p class="section-text">A Photonics Partnership abrange um conjunto vasto de sub-areas tecnologicas, cada uma com players, aplicacoes e maturidade distintas. A CSA financiada por este topico deve cobrir e coordenar todas estas areas na sua funcao de "orquestracao" da Partnership:</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Fotonica de silicio e integracao fotonico-eletronica:</strong> base para circuitos integrados fot onicos de baixo custo e alto volume, essencial para datacenters e comunicacoes opticas.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Fotonica III-V e lasers:</strong> materiais de alto desempenho para aplicacoes em telecomunicacoes de alta velocidade, LiDAR e sensores industriais.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Nanofotonica e optica nao-linear:</strong> fundamento para dispositivos de nova geracao em computacao optica e comunicacoes quanticas.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Fotonica em computacao e interligacao de dados:</strong> reducao de latencia e consumo energetico em datacenters atraves de interconexoes opticas.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Imagiologia e processamento optico:</strong> aplicacoes em diagnostico medico, inspecao industrial e sistemas de visao artificial.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">Este topico tem uma logica muito especifica: financia apenas um projeto de coordenacao, com um valor de 3 milhoes EUR. O consorcio candidato nao e um grupo de laboratorios a fazer investigacao conjunta - e uma entidade (ou conglomerado de entidades) com capacidade de representar e mobilizar todo o ecossistema europeu de fotonica. Na pratica, o vencedor sera quase certamente uma associacao industrialdedominante como a Photonics21, ou um consorcio liderado por ela.</p>
+      <p class="section-text">Para empresas e centros de investigacao portugueses, o valor direto deste topico e limitado. O valor estrategico esta em estar presente nas estruturas que definem a SRIA e os roteiros - pois esses documentos influenciam quais os topicos de I&D que a Comissao Europeia financiara nas proximas chamadas. Participar nas plataformas nacionais de fotonica e nas reunioes da Photonics21 e a forma de influenciar essa agenda.</p>
+    </div>
+
+    <p class="section-text" style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo.</p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Tecnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rapidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Codigo</div>
+        <div class="sidebar-fact-val">HORIZON-CL4-2026-04-DIGITAL-EMERGING-14</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Parceria</div>
+        <div class="sidebar-fact-val">Photonics Partnership</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Dotacao</div>
+        <div class="sidebar-fact-val">3 milhoes EUR</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Numero de Grants</div>
+        <div class="sidebar-fact-val">1 projeto</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tipo de Acao</div>
+        <div class="sidebar-fact-val">CSA (Coordenacao e Apoio)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Deadline</div>
+        <div class="sidebar-fact-val">15 Abril 2026</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-closed">Fechado</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Trabalha numa empresa ou instituto de fotonica e quer entender como posicionar-se para chamadas futuras da Photonics Partnership?</div>
+      <a href="https://calendly.com/tech2business" class="sidebar-cta-btn" target="_blank">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="horizon-cl4-2026-04-digital-emerging-17.html" class="related-link">
+        <span class="related-link-name">Materiais Bidimensionais (2DM) 2026</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="horizon-cl4-2026-04-digital-emerging-11.html" class="related-link">
+        <span class="related-link-name">Sensores Quanticos para Navegacao</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="horizon-cl4-2026-04-human-01.html" class="related-link">
+        <span class="related-link-name">Mundos Virtuais e Web 4.0 2026</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="horizon-cl4-2026-04-data-03.html" class="related-link">
+        <span class="related-link-name">Open Internet Stack Support 2026</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <div class="f-col-label">Biblioteca</div>
+      <ul class="f-links">
+        <li><a href="../biblioteca.html">Portugal 2030</a></li>
+        <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+        <li><a href="../biblioteca.html">Beneficios Fiscais</a></li>
+        <li><a href="../biblioteca.html">Premios de Inovacao</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Plataforma</div>
+      <ul class="f-links">
+        <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../conhecimento.html">Conhecimento</a></li>
+        <li><a href="../parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Empresa</div>
+      <ul class="f-links">
+        <li><a href="../sobre-nos.html">Sobre Nos</a></li>
+        <li><a href="../sobre-nos.html">Equipa</a></li>
+        <li><a href="../carreiras.html">Carreiras</a></li>
+        <li><a href="https://calendly.com/tech2business" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
