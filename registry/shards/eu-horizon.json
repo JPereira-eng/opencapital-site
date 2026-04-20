@@ -286,6 +286,13 @@
       "source": "eu-funding-tenders",
       "state": "fechado",
       "last_check": "2026-04-20"
+    },
+    {
+      "id": "horizon-semiconductor-regions-2026",
+      "file": "instrumentos/horizon-semiconductor-regions-2026.html",
+      "source": "horizon-europe",
+      "state": "fechado",
+      "last_check": "2026-04-20"
     }
   ],
   "instruments": [
@@ -759,8 +766,8 @@
       "last_check": "2026-04-19"
     }
   ],
-  "count": 53,
+  "count": 54,
   "open": 40,
-  "closed": 7,
+  "closed": 8,
   "planned": 6
 }
