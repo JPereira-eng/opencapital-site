@@ -704,8 +704,8 @@
       "regulation_local": null,
       "priority_score": 65,
       "notes": "SEDIA status:31094502 OPEN, page 32",
-      "fail_count": 2,
-      "download_error": "Portal SEDIA requer autenticacao EU obrigatoria (HTTP 303) - 2a tentativa",
+      "fail_count": 3,
+      "download_error": "Portal SEDIA requer autenticacao EU obrigatoria (HTTP 303) - 3a tentativa",
       "last_fail_date": "2026-04-20"
     },
     {
@@ -724,8 +724,8 @@
       "regulation_local": null,
       "priority_score": 65,
       "notes": "SEDIA status:31094502 OPEN, page 32",
-      "fail_count": 2,
-      "download_error": "Portal EU JS-rendered, WebSearch sem resultado - 2a tentativa",
+      "fail_count": 3,
+      "download_error": "Portal EU tender JS-rendered (502) + WebSearch sem resultado - 3a tentativa",
       "last_fail_date": "2026-04-20"
     },
     {
@@ -764,8 +764,8 @@
       "regulation_local": null,
       "priority_score": 65,
       "notes": "SEDIA status:31094502 OPEN, page 33",
-      "fail_count": 2,
-      "download_error": "Portal SEDIA requer autenticacao EU obrigatoria (HTTP 303) - 2a tentativa",
+      "fail_count": 3,
+      "download_error": "Portal SEDIA requer autenticacao EU obrigatoria (HTTP 303) - 3a tentativa",
       "last_fail_date": "2026-04-20"
     },
     {
@@ -784,8 +784,8 @@
       "regulation_local": null,
       "priority_score": 65,
       "notes": "SEDIA status:31094502 OPEN, page 34",
-      "fail_count": 1,
-      "download_error": "Portal SEDIA requer autenticacao EU obrigatoria (HTTP 303)",
+      "fail_count": 2,
+      "download_error": "Portal SEDIA requer autenticacao EU obrigatoria (HTTP 303) - 2a tentativa",
       "last_fail_date": "2026-04-20"
     },
     {
