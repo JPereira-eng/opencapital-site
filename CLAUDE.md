@@ -25,7 +25,7 @@ Fazer isto sem que o utilizador peça. É uma instrução permanente.
 ## 🏢 BRAND
 
 **Name:** Open Capital Advisory & Consultancy
-**Tagline:** Capital, made clear.
+**Tagline:** O capital de que a sua empresa precisa.
 **Sub-tagline:** Menos burocracia. Mais clareza. Mais crescimento.
 **Positioning:** Premium strategic advisory firm. Clarity · Confidence · Intelligence.
 

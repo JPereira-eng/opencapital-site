@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Assinatura Open Capital — Pessoal (Template)</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; background:#f5f5f5; padding:40px; }
+  .instructions { max-width:680px; margin:0 auto 32px; padding:20px; background:#fff; border-left:3px solid #C9A96E; font-size:13px; line-height:1.6; color:#2A2A2A; }
+  .instructions h2 { font-size:14px; letter-spacing:0.1em; text-transform:uppercase; color:#1A3A5C; margin-bottom:10px; }
+  .instructions code { background:#f0f0f0; padding:2px 5px; font-size:12px; }
+  .instructions ul { margin:8px 0 8px 20px; }
+  .signature-wrapper { background:#fff; padding:32px; max-width:680px; margin:0 auto; border:1px solid #e5e5e5; }
+</style>
+</head>
+<body>
+
+<div class="instructions">
+  <h2>Como personalizar e instalar</h2>
+  <strong>Passo 1 — substituir os placeholders no código HTML:</strong>
+  <ul>
+    <li><code>{{FOTO_URL}}</code> → URL pública da foto (quadrada, min. 200×200px). Ex: <code>https://opencapital.pt/assets/team/nome-apelido.jpg</code></li>
+    <li><code>{{NOME}}</code> → nome completo</li>
+    <li><code>{{CARGO}}</code> → cargo/função</li>
+    <li><code>{{EMAIL}}</code> → email direto (ex: <code>nome@opencapital.pt</code>)</li>
+    <li><code>{{TELEMOVEL}}</code> → número (ex: <code>+351 912 345 678</code>)</li>
+  </ul>
+  <strong>Passo 2 — Gmail:</strong> abrir este ficheiro no browser, selecionar tudo dentro da caixa branca, copiar, e colar em Gmail → Definições → Assinatura.
+</div>
+
+<div class="signature-wrapper">
+
+<!-- ========= INÍCIO DA ASSINATURA — COPIAR A PARTIR DAQUI ========= -->
+<table cellpadding="0" cellspacing="0" border="0" style="font-family:'Montserrat',Arial,Helvetica,sans-serif;color:#2A2A2A;font-size:13px;line-height:1.5;border-collapse:collapse;">
+  <tr>
+    <td style="padding-right:24px;border-right:1px solid #E5E5E5;vertical-align:top;text-align:center;">
+      <img src="{{FOTO_URL}}" alt="{{NOME}}" width="110" height="110" style="display:block;border:0;outline:none;text-decoration:none;object-fit:cover;">
+      <img src="https://opencapital.pt/logo_opencapital_azul_semfundo.png" alt="Open Capital" width="100" style="display:block;border:0;outline:none;text-decoration:none;margin-top:14px;">
+      <div style="margin-top:8px;font-size:9px;font-weight:100;letter-spacing:0.14em;color:#1A3A5C;font-family:'Montserrat',Arial,Helvetica,sans-serif;max-width:110px;line-height:1.4;">
+        O CAPITAL DE QUE A SUA EMPRESA PRECISA.
+      </div>
+    </td>
+    <td style="padding-left:24px;vertical-align:top;">
+      <div style="font-size:17px;font-weight:700;color:#1A3A5C;letter-spacing:0.01em;font-family:'Montserrat',Arial,Helvetica,sans-serif;">
+        {{NOME}}
+      </div>
+      <div style="font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:#C9A96E;margin-top:3px;font-family:'Montserrat',Arial,Helvetica,sans-serif;">
+        {{CARGO}}
+      </div>
+      <div style="font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#1A3A5C;margin-top:8px;font-family:'Montserrat',Arial,Helvetica,sans-serif;">
+        Open Capital <span style="color:#7A7A7A;font-weight:300;">· Advisory &amp; Consultancy</span>
+      </div>
+
+      <div style="height:1px;background:#E5E5E5;margin:14px 0;width:240px;"></div>
+
+      <div style="font-size:12px;color:#2A2A2A;font-family:'Montserrat',Arial,Helvetica,sans-serif;line-height:1.8;">
+        <a href="mailto:{{EMAIL}}" style="color:#2A2A2A;text-decoration:none;">{{EMAIL}}</a><br>
+        <span style="color:#2A2A2A;">{{TELEMOVEL}}</span><br>
+        <a href="https://opencapital.pt" style="color:#2A2A2A;text-decoration:none;">opencapital.pt</a>
+      </div>
+
+      <div style="margin-top:14px;font-family:'Montserrat',Arial,Helvetica,sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;">
+        <a href="https://opencapital.pt" style="color:#1A3A5C;text-decoration:none;">Website</a>
+        <span style="color:#C9A96E;margin:0 8px;">·</span>
+        <a href="https://opencapital.pt/biblioteca.html" style="color:#1A3A5C;text-decoration:none;">Biblioteca</a>
+        <span style="color:#C9A96E;margin:0 8px;">·</span>
+        <a href="https://calendly.com/opencapital" style="color:#C9A96E;text-decoration:none;">Agendar reunião →</a>
+      </div>
+    </td>
+  </tr>
+</table>
+<!-- ========= FIM DA ASSINATURA ========= -->
+
+</div>
+
+</body>
+</html>
