@@ -10,9 +10,9 @@
     "open": 237,
     "closed": 72,
     "planned": 16,
-    "in_queue": 62,
+    "in_queue": 94,
     "in_watchlist": 103,
-    "in_catalogo": 0,
+    "in_catalogo": 1,
     "in_overflow": 84
   },
   "shards": {
@@ -123,11 +123,11 @@
     "life-programme": "2026-04-17",
     "erc": "2026-04-19",
     "investeu": "2026-04-20",
-    "interreg-sudoe": "2026-04-16",
+    "interreg-sudoe": "2026-04-20",
     "interreg-euromed": "2026-04-16",
     "interreg-urbact": "2026-04-20",
     "interreg-next-med": "2026-04-16",
-    "eit": "2026-04-16",
+    "eit": "2026-04-20",
     "startup-portugal": "2026-04-12",
     "banco-fomento": "2026-04-12",
     "autoridade-tributaria": "2026-04-19",
@@ -162,7 +162,7 @@
     "novobanco-empresas": "2026-04-14",
     "santander-empresas": "2026-04-14",
     "faber-ventures": "2026-04-16",
-    "erasmus-enterprise": "2026-04-16",
+    "erasmus-enterprise": "2026-04-20",
     "bynd-vc": "2026-04-16",
     "eea-grants-portugal": "2026-04-17",
     "fundo-ambiental": "2026-04-17",
@@ -178,8 +178,9 @@
     "raize-empresarial": "2026-04-19",
     "techstars-lisbon": "2026-04-19",
     "ifd-instituicao-financeira-desenvolvimento": "2026-04-19",
-    "climatelaunchpad-portugal": "2026-04-20"
+    "climatelaunchpad-portugal": "2026-04-20",
+    "semapa-next": "2026-04-20"
   },
   "last_scanner_run": "2026-04-20",
-  "last_updated": "2026-04-20T-monitor-r01-j1"
+  "last_updated": "2026-04-20T-scanner-r02-j1"
 }
