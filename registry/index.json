@@ -12,7 +12,7 @@
     "planned": 16,
     "in_queue": 81,
     "in_watchlist": 103,
-    "in_catalogo": 0,
+    "in_catalogo": 1,
     "in_overflow": 84
   },
   "shards": {
@@ -94,7 +94,7 @@
   "last_monitor_run": "2026-04-19",
   "last_writer_run": "2026-04-20",
   "source_last_checked": {
-    "portugal-2030": "2026-04-19",
+    "portugal-2030": "2026-04-20",
     "compete-2030": "2026-04-19",
     "norte-2030": "2026-04-18",
     "centro-2030": "2026-04-16",
@@ -107,7 +107,7 @@
     "sustentavel-2030": "2026-04-17",
     "mar-2030": "2026-04-17",
     "pat-2030": "2026-04-18",
-    "eu-funding-tenders": "2026-04-19",
+    "eu-funding-tenders": "2026-04-20",
     "ani": "2026-04-17",
     "iapmei": "2026-04-19",
     "prr": "2026-04-19",
@@ -118,10 +118,10 @@
     "interreg-atlantic": "2026-04-17",
     "hadea": "2026-04-17",
     "eic-accelerator": "2026-04-17",
-    "interreg-mac": "2026-04-16",
+    "interreg-mac": "2026-04-20",
     "life-programme": "2026-04-17",
     "erc": "2026-04-19",
-    "investeu": "2026-04-16",
+    "investeu": "2026-04-20",
     "interreg-sudoe": "2026-04-16",
     "interreg-euromed": "2026-04-16",
     "interreg-urbact": "2026-04-16",
@@ -176,8 +176,10 @@
     "uptec-porto": "2026-04-18",
     "raize-empresarial": "2026-04-19",
     "techstars-lisbon": "2026-04-19",
-    "ifd-instituicao-financeira-desenvolvimento": "2026-04-19"
+    "ifd-instituicao-financeira-desenvolvimento": "2026-04-19",
+    "esa-bic": "2026-04-20",
+    "climatelaunchpad-portugal": "2026-04-20"
   },
-  "last_scanner_run": "2026-04-19",
-  "last_updated": "2026-04-20T-writer-r13-j2"
+  "last_scanner_run": "2026-04-20",
+  "last_updated": "2026-04-20T-scanner-r14-j3"
 }

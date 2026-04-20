@@ -90,5 +90,47 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": []
+  "queue": [
+    {
+      "id": "climatelaunchpad-portugal-2026",
+      "name": "ClimateLaunchpad Portugal 2026",
+      "source_id": "climatelaunchpad-portugal",
+      "catalog_type": "prize",
+      "detected_date": "2026-04-20",
+      "last_profile_update": "2026-04-20",
+      "status": "active",
+      "regulation_url": "https://climatelaunchpad.org/countries/portugal-2/",
+      "priority_score": 105,
+      "profile": {
+        "website": "https://climatelaunchpad.org/countries/portugal-2/",
+        "linkedin": null,
+        "pais_sede": "PT",
+        "descricao_curta": "Maior competicao mundial de ideias verdes, edicao portuguesa organizada pela UPTEC. Finalistas representam Portugal na final europeia e no evento global em Singapura.",
+        "como_candidatar": "Candidatura online em climatelaunchpad.org/countries/portugal-2/ ate 15 de maio de 2026",
+        "premio_total_eur": null,
+        "categorias": [
+          "Energia limpa",
+          "Mobilidade sustentavel",
+          "Economia circular",
+          "Construcao sustentavel",
+          "Alimentacao e agricultura sustentavel",
+          "Agua e recursos naturais",
+          "Industria e descarbonizacao",
+          "Solucoes digitais para o clima"
+        ],
+        "deadline_proxima": "2026-05-15",
+        "edicao_ano": "2026",
+        "juri_destaque": null,
+        "elegibilidade": "Empreendedores, investigadores e equipas com ideias em fase inicial ate primeiros prototipos nas areas de clima e tecnologia limpa. Sem restricao geografica para inscricao na edicao PT.",
+        "beneficios_adicionais": [
+          "Mentoria especializada",
+          "Bootcamp online intensivo",
+          "Acesso a investidores e especialistas",
+          "Top 3 nacional: incubacao gratuita na UPTEC durante 3 meses + 1000 EUR em formacao",
+          "Vencedor nacional: representacao na final europeia e potencialmente no evento global em Singapura"
+        ]
+      },
+      "notes": "Edicao 2026 com candidaturas abertas ate 15 maio. Organizada pela UPTEC (U.Porto). Apoiada por PRIO, Fundacao Santander Portugal, MEXT, Ordem dos Engenheiros."
+    }
+  ]
 }
