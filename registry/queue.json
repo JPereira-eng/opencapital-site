@@ -727,7 +727,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "186375",
       "detected_date": "2026-04-19",
       "deadline": "2026-06-04",
@@ -738,7 +738,7 @@
       "priority_score": 65,
       "notes": "SEDIA status:31094502 OPEN, page 19",
       "fail_count": 3,
-      "download_error": "Portal requer autenticacao EU obrigatoria. Nao acessivel publicamente. WebSearch sem resultado util.",
+      "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback sem resultado",
       "last_fail_date": "2026-04-20"
     },
     {
@@ -747,7 +747,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "186111",
       "detected_date": "2026-04-19",
       "deadline": "2026-05-18",
@@ -758,7 +758,7 @@
       "priority_score": 115,
       "notes": "SEDIA status:31094502 OPEN, page 21",
       "fail_count": 3,
-      "download_error": "Portal requer autenticacao EU obrigatoria. Nao acessivel publicamente. WebSearch sem resultado util.",
+      "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback sem resultado",
       "last_fail_date": "2026-04-20"
     },
     {
@@ -767,7 +767,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "186548",
       "detected_date": "2026-04-19",
       "deadline": "2026-05-26",
@@ -778,7 +778,7 @@
       "priority_score": 65,
       "notes": "SEDIA status:31094502 OPEN, page 25",
       "fail_count": 3,
-      "download_error": "Portal requer autenticacao EU obrigatoria. Nao acessivel publicamente. WebSearch sem resultado util.",
+      "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback sem resultado",
       "last_fail_date": "2026-04-20"
     },
     {
@@ -787,7 +787,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "186170",
       "detected_date": "2026-04-19",
       "deadline": "2026-05-18",
@@ -798,7 +798,7 @@
       "priority_score": 115,
       "notes": "SEDIA status:31094502 OPEN, page 27",
       "fail_count": 3,
-      "download_error": "Portal requer autenticacao EU obrigatoria. Nao acessivel publicamente. WebSearch sem resultado util.",
+      "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback sem resultado",
       "last_fail_date": "2026-04-20"
     },
     {
@@ -807,7 +807,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "185979",
       "detected_date": "2026-04-19",
       "deadline": "2026-05-20",
@@ -818,7 +818,7 @@
       "priority_score": 65,
       "notes": "SEDIA status:31094502 OPEN, page 29",
       "fail_count": 3,
-      "download_error": "Portal requer autenticacao EU obrigatoria. Nao acessivel publicamente. WebSearch sem resultado util.",
+      "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback sem resultado",
       "last_fail_date": "2026-04-20"
     },
     {
@@ -827,7 +827,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "pending",
       "aviso_codigo": "186081",
       "detected_date": "2026-04-19",
       "deadline": "2026-06-04",
@@ -836,7 +836,10 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 65,
-      "notes": "SEDIA status:31094502 OPEN, page 32"
+      "notes": "SEDIA status:31094502 OPEN, page 32",
+      "fail_count": 1,
+      "download_error": "Portal SEDIA requer autenticacao EU obrigatoria (HTTP 303)",
+      "last_fail_date": "2026-04-20"
     },
     {
       "id": "ec-mare-2026-op-0001",
@@ -844,7 +847,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "pending",
       "aviso_codigo": "EC-MARE/2026/OP/0001",
       "detected_date": "2026-04-19",
       "deadline": "2026-06-15",
@@ -853,7 +856,10 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 65,
-      "notes": "SEDIA status:31094502 OPEN, page 32"
+      "notes": "SEDIA status:31094502 OPEN, page 32",
+      "fail_count": 1,
+      "download_error": "Portal EU JS-rendered e WebSearch sem resultado especifico para esta referencia",
+      "last_fail_date": "2026-04-20"
     },
     {
       "id": "cdt-2026-op-0004",
@@ -861,7 +867,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "CDT/2026/OP/0004",
       "detected_date": "2026-04-19",
       "deadline": "2026-04-28",
@@ -872,7 +878,7 @@
       "priority_score": 115,
       "notes": "SEDIA status:31094502 OPEN, page 32",
       "fail_count": 3,
-      "download_error": "CDT tender portal requer autenticacao. Nao e programa de financiamento publico (e concurso de procurement para servicos de traducao). WebSearch insuficiente. Considerado inacessivel.",
+      "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback sem resultado",
       "last_fail_date": "2026-04-20"
     },
     {
@@ -881,7 +887,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "pending",
       "aviso_codigo": "186065",
       "detected_date": "2026-04-19",
       "deadline": "2026-05-26",
@@ -890,7 +896,10 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 65,
-      "notes": "SEDIA status:31094502 OPEN, page 33"
+      "notes": "SEDIA status:31094502 OPEN, page 33",
+      "fail_count": 1,
+      "download_error": "Portal SEDIA requer autenticacao EU obrigatoria (HTTP 303)",
+      "last_fail_date": "2026-04-20"
     },
     {
       "id": "186297",

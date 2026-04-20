@@ -98,7 +98,7 @@
       "catalog_type": "prize",
       "detected_date": "2026-04-20",
       "last_profile_update": "2026-04-20",
-      "status": "active",
+      "status": "ready",
       "regulation_url": "https://climatelaunchpad.org/countries/portugal-2/",
       "priority_score": 105,
       "profile": {
@@ -130,7 +130,9 @@
           "Vencedor nacional: representacao na final europeia e potencialmente no evento global em Singapura"
         ]
       },
-      "notes": "Edicao 2026 com candidaturas abertas ate 15 maio. Organizada pela UPTEC (U.Porto). Apoiada por PRIO, Fundacao Santander Portugal, MEXT, Ordem dos Engenheiros."
+      "notes": "Edicao 2026 com candidaturas abertas ate 15 maio. Organizada pela UPTEC (U.Porto). Apoiada por PRIO, Fundacao Santander Portugal, MEXT, Ordem dos Engenheiros.",
+      "regulation_local": "regulamentos/climatelaunchpad-portugal/climatelaunchpad-portugal-2026.txt",
+      "fail_count": 0
     }
   ]
 }
