@@ -321,7 +321,7 @@ const ARTICLE_TEMPLATE = (data) => `<!DOCTYPE html>
         <div class="sidebar-label">Artigos relacionados</div>
         <div style="display:flex;flex-direction:column;gap:10px;">
           <a href="portugal-2030.html" style="font-size:13px;color:var(--navy);text-decoration:none;">Portugal 2030 →</a>
-          <a href="venture-capital-portugal.html" style="font-size:13px;color:var(--navy);text-decoration:none;">Venture Capital →</a>
+          <a href="preparar-ronda-investimento-startup.html" style="font-size:13px;color:var(--navy);text-decoration:none;">Ronda de investimento →</a>
         </div>
       </div>
     </aside>

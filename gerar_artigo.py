@@ -371,16 +371,16 @@ ARTICLE_TEMPLATE = """<!DOCTYPE html>
 
       <div class="sidebar-card">
         <div class="sidebar-related-label">Artigos relacionados</div>
-        <a href="como-preparar-candidatura-portugal-2030.html" class="related-item">
-          <span class="related-item-title">Como preparar uma candidatura Portugal 2030</span>
+        <a href="como-funciona-horizonte-europa.html" class="related-item">
+          <span class="related-item-title">Como funciona o Horizonte Europa</span>
           <span class="related-item-arrow">&rarr;</span>
         </a>
-        <a href="venture-capital-portugal.html" class="related-item">
-          <span class="related-item-title">Venture Capital em Portugal</span>
+        <a href="preparar-ronda-investimento-startup.html" class="related-item">
+          <span class="related-item-title">Preparar uma ronda de investimento na sua startup</span>
           <span class="related-item-arrow">&rarr;</span>
         </a>
-        <a href="capital-europeu-disponivel-problema-execucao.html" class="related-item">
-          <span class="related-item-title">O capital europeu está disponível</span>
+        <a href="ai-act-o-que-muda-para-empresas.html" class="related-item">
+          <span class="related-item-title">AI Act: o que muda para as empresas</span>
           <span class="related-item-arrow">&rarr;</span>
         </a>
       </div>

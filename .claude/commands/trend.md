@@ -196,11 +196,11 @@ Define antes de escrever:
 - **date_pt**: mes e ano em portugues (ex: `Marco 2026`)
 - **imagem** (opcional): se imagem foi anexada NESTA MENSAGEM (file path visivel), copia para `assets/articles/[SLUG].jpg` e define `IMAGEM_SRC = "../assets/articles/[SLUG].jpg"`. Sem imagem nesta mensagem = sem imagem. Nunca reutilizar paths anteriores.
 
-**Artigos relacionados para a sidebar** - usa os 3 mais relevantes para o tema entre os existentes em `conhecimento/`:
-- `como-preparar-candidatura-portugal-2030.html` - "Como preparar uma candidatura Portugal 2030"
-- `venture-capital-portugal.html` - "Venture Capital em Portugal"
-- `capital-europeu-disponivel-problema-execucao.html` - "O capital europeu esta disponivel"
-Verifica tambem se existem outros artigos mais recentes na pasta `conhecimento/` que possam ser mais relevantes.
+**Artigos relacionados para a sidebar** - usa os 3 mais relevantes para o tema entre os existentes em `conhecimento/`. Exemplos:
+- `como-funciona-horizonte-europa.html` - "Como funciona o Horizonte Europa"
+- `preparar-ronda-investimento-startup.html` - "Preparar uma ronda de investimento na sua startup"
+- `ai-act-o-que-muda-para-empresas.html` - "AI Act: o que muda para as empresas"
+Verifica sempre a pasta `conhecimento/` para os artigos mais recentes e relevantes.
 
 ### Passo 3 - Escrever e guardar o artigo HTML
 

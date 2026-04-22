@@ -25,11 +25,7 @@ Sistema editorial com 7 series e 14 subserias. Foco atual: subserias com output 
 2. Gerar HTML completo em `instrumentos/[slug].html`
 3. git add + commit + push -> GitHub Pages auto-deploy (sem injecao de card)
 
-**Artigos existentes em `conhecimento/`:**
-- `como-preparar-candidatura-portugal-2030.html`
-- `venture-capital-portugal.html`
-- `capital-europeu-disponivel-problema-execucao.html`
-- `trump-nato-impacto-defesa-europeia.html`
+**Artigos existentes em `conhecimento/`:** verificar sempre a pasta `conhecimento/` para a lista atualizada (ex: `como-funciona-horizonte-europa.html`, `preparar-ronda-investimento-startup.html`, `ai-act-o-que-muda-para-empresas.html`, `tarifas-trump-impacto-empresas-portuguesas.html`).
 
 **Artigos existentes em `instrumentos/`:**
 - `portugal-2030.html`
