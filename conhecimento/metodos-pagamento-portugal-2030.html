@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Métodos de Pagamento no Portugal 2030: Guia para Beneficiários | Open Capital</title>
+  <meta name="description" content="Adiantamentos, reembolsos intercalares e saldo final. Como funcionam os pedidos de pagamento no Portugal 2030 e o que cada modalidade exige da empresa beneficiária.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../biblioteca.html">Biblioteca</a></li>
+      <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades</a>
+        <div class="nav-dropdown-menu">
+          <a href="../parceiros.html">Parceiros</a>
+          <a href="../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../conhecimento.html">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Financiamento</span>
+      </nav>
+      <span class="hero-cat-badge">Financiamento - Guia</span>
+      <h1 class="article-title">Métodos de Pagamento no Portugal 2030: Guia para Beneficiários</h1>
+      <p class="article-standfirst">Adiantamentos, reembolsos intercalares, saldo final. Uma candidatura aprovada não chega à conta bancária de uma só vez, e as regras do fluxo determinam boa parte da tesouraria da empresa.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Financiamento</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Junho 2024</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>12 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Mara Ferreira</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+
+      <div class="article-section reveal">
+        <p>Quando uma empresa recebe a decisão de aprovação de um apoio ao abrigo do Portugal 2030, a tendência natural é olhar para o valor total e começar a planear o investimento. O que muitas vezes fica por perceber, e que pesa bastante no dia a dia, é que esse montante não chega numa única transferência. Chega em partes, ao longo de meses ou anos, condicionado ao ritmo de execução e sempre com 5% retidos até ao fecho da operação.</p>
+
+        <p>Quem já geriu um projeto cofinanciado sabe que a conversa sobre pagamentos é diferente da conversa sobre elegibilidade. São duas camadas distintas da mesma realidade. A primeira responde à pergunta "isto é apoiado?". A segunda responde a uma pergunta mais prosaica e mais urgente: "quando é que o dinheiro entra?".</p>
+
+        <p>O COMPETE 2030, enquanto programa estruturante do ciclo Portugal 2030 na área da Inovação e Transição Digital, tem um conjunto harmonizado de procedimentos de pagamento aplicáveis a quase todas as suas tipologias. Este artigo explica como funcionam, que modalidades existem, em que condições cada uma se processa, e que decisões a empresa beneficiária deve tomar logo no arranque do projeto, porque essas decisões são irreversíveis ao longo da execução.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Arquitectura geral</div>
+        <h2>Três títulos possíveis, várias combinações</h2>
+        <p>Os pagamentos aos beneficiários podem assumir três formas: adiantamento, reembolso ou saldo final. Esta divisão parece simples, e é. A complexidade aparece quando se combinam estas três figuras em sequências de pedidos ao longo do ciclo de vida do projeto.</p>
+
+        <p>Cada pedido submetido pela empresa cai numa de quatro siglas que vale a pena interiorizar, porque são a linguagem do Balcão dos Fundos e de qualquer interlocutor do sistema:</p>
+
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">PTA - INICIAL:</strong> pedido de pagamento a título de adiantamento inicial. Dinheiro que a empresa recebe sem ter ainda apresentado despesa validada.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">PTA - FATURA:</strong> pedido de pagamento a título de adiantamento contra fatura. A empresa apresenta faturas já emitidas, ainda não pagas, e recebe o incentivo para poder fechar o circuito com o fornecedor.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">PTRI:</strong> pedido de pagamento a título de reembolso intercalar. Reembolso clássico, sobre despesa já realizada e paga.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">PTRF:</strong> pedido de pagamento a título de reembolso final. O último pedido do projeto, que fecha contas e aciona o saldo.</li>
+        </ul>
+
+        <p>Estas quatro figuras podem ser combinadas em quatro modalidades de processamento. A empresa escolhe uma, normalmente logo no início, e é essa que estrutura o calendário financeiro de toda a operação:</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">As quatro modalidades</div>
+          <div class="art-highlight-text">
+            <strong style="color:var(--navy);">(i)</strong> PTA-INICIAL seguido de PTRI e PTRF, ou apenas PTRF.<br>
+            <strong style="color:var(--navy);">(ii)</strong> PTA-INICIAL seguido de PTA-FATURA e PTRF, ou apenas PTRF.<br>
+            <strong style="color:var(--navy);">(iii)</strong> PTA-FATURA com PTRI e PTRF, ou apenas PTRF.<br>
+            <strong style="color:var(--navy);">(iv)</strong> Um ou mais PTRI terminados por um PTRF, ou apenas PTRF.
+          </div>
+        </div>
+
+        <p>A opção mais conservadora é a modalidade iv, que vive só de reembolsos sobre despesa paga. A mais agressiva em termos de tesouraria é a modalidade ii, que permite adiantamento inicial seguido de pagamentos contra fatura sem esperar pelo pagamento ao fornecedor.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Adiantamento inicial</div>
+        <h2>O PTA-INICIAL, e o que custa realmente</h2>
+        <p>O adiantamento inicial é a figura mais apetecível à primeira vista. A empresa acaba de assinar o termo de aceitação, comunica o início da operação e pede até 10% do incentivo aprovado. O dinheiro entra na conta antes de existir sequer uma fatura.</p>
+
+        <p>Há uma contrapartida que raramente aparece nas conversas iniciais. Esse adiantamento não é um presente, é uma liquidez concedida mediante recuperação progressiva. A partir do momento em que a empresa começa a submeter PTRI ou PTA-FATURA, cada pagamento que lhe caberia receber integralmente é reembolsado apenas a 80%. Os restantes 20% ficam retidos para ir amortizando o adiantamento inicial até este estar totalmente comprovado.</p>
+
+        <p>Na prática, isto significa que o adiantamento inicial antecipa caixa mas reduz o ritmo dos reembolsos intermédios. É uma troca, não um ganho. Faz sentido quando o arranque do projeto tem uma carga forte de pagamentos imediatos, por exemplo mobilizar equipas internas, pagar sinais a fornecedores ou encomendar equipamento com prazos longos. Não faz sentido se a empresa tem liquidez confortável e prefere receber reembolsos cheios à medida que executa.</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">Caso prático</div>
+          <div class="art-highlight-text">Uma PME com um projeto aprovado de 500.000 euros de incentivo pede o PTA-INICIAL máximo, 50.000 euros. No primeiro PTRI, submete 100.000 euros de incentivo apurado. Em vez de receber 100.000 euros, recebe 80.000. Os outros 20.000 vão amortizar o adiantamento, que passa de 50.000 para 30.000 euros em saldo por comprovar.</div>
+        </div>
+
+        <p>Um detalhe com alguma subtileza: se a empresa escolher uma trajectória mínima composta por um único PTA-INICIAL e um único PTRF, todo o adiantamento é recuperado na análise do pedido final. Isto pode ser uma solução válida para projetos curtos, mas implica que a empresa financie o intervalo inteiro com recursos próprios ou linha de crédito.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Adiantamento contra fatura</div>
+        <h2>O PTA-FATURA e a regra dos 30 dias</h2>
+        <p>Esta é provavelmente a figura mais mal compreendida do sistema. O PTA-FATURA permite à empresa apresentar faturas eletrónicas, ou documentos fiscalmente equivalentes, que ainda não foram pagas ao fornecedor. O incentivo é processado com base nessas faturas, e só depois a empresa usa esse dinheiro para liquidar a despesa.</p>
+
+        <p>A vantagem é evidente para quem gere tesouraria apertada: a empresa não precisa de adiantar recursos próprios para pagar ao fornecedor e só depois reaver via reembolso. O circuito inverte-se, e é o incentivo que alimenta a liquidação.</p>
+
+        <p>O preço desta vantagem é um prazo curto e inflexível. A partir da data em que o adiantamento é pago à empresa, correm 30 dias úteis para comprovar o pagamento integral da despesa que serviu de base ao pedido. Não é uma boa prática, é uma obrigação. Em caso de falha total ou parcial nesse prazo, o montante não comprovado entra num processo formal de recuperação.</p>
+
+        <p>Há ainda um limite mínimo, cada PTA-FATURA tem de representar pelo menos 10% do investimento elegível total aprovado, salvo situações excecionais autorizadas pela autoridade de gestão. E um segundo PTA-FATURA só pode ser processado depois de validada a despesa do anterior. Isto impede que a empresa encadeie adiantamentos sem comprovar os que já recebeu.</p>
+
+        <p>Um último ponto técnico que vale reter: o PTA-FATURA não se aplica a operações apoiadas por custos simplificados. Quem está num regime desse tipo, tipicamente projetos de I&D ou ações coletivas com custos unitários padronizados, não tem esta via disponível.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Reembolsos</div>
+        <h2>O PTRI, a espinha dorsal do projeto</h2>
+        <p>Para a grande maioria dos projetos, os reembolsos intercalares são o instrumento dominante. A empresa executa, paga ao fornecedor, carrega a despesa no Balcão dos Fundos e submete um PTRI. A autoridade de gestão valida e emite a ordem de pagamento.</p>
+
+        <p>O valor mínimo de cada PTRI é de 10% do investimento elegível aprovado, com a exceção natural das operações de assistência técnica, que não têm este limite. Fora dessa excepção, o limite serve para evitar uma multiplicação de pedidos pequenos que saturariam a análise sem qualquer benefício de tesouraria para a empresa.</p>
+
+        <p>Se a empresa tiver um PTA-INICIAL ativo, lembre-se que os PTRI entram também na lógica dos 80/20 descrita atrás. Se não tiver adiantamento inicial, o reembolso é integral.</p>
+
+        <h3>O tecto dos 95%</h3>
+        <p>Um limite estrutural atravessa todas as modalidades e merece estar sempre presente: a soma de todos os pagamentos processados durante a execução não pode ultrapassar 95% do incentivo aprovado, ou 95% do incentivo apurado em função do grau de execução se este for inferior ao aprovado.</p>
+
+        <p>Este 5% final só se liberta no saldo, depois da análise do PTRF e da validação física, financeira e contabilística da operação. É uma garantia para o Estado, não é margem para negociação. Qualquer empresa que planeie o cash flow do projeto tem de saber que 5% do incentivo total só entra no encerramento, e esse encerramento demora.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Prazo e saldo final</div>
+        <h2>O PTRF, o pedido que fecha o ciclo</h2>
+        <p>O pedido final de reembolso tem de ser apresentado no prazo máximo de 45 dias úteis a contar da conclusão financeira da operação. Alguns avisos alargam este prazo para 90 dias úteis, e em casos fundamentados pode haver prorrogação.</p>
+
+        <p>Ao contrário dos PTRI, o PTRF não é só um pedido financeiro. Tem de vir acompanhado do Anexo ao Pedido Final, o APF, que consolida a execução física da operação, os entregáveis e os outputs contratualizados. Sem APF preenchido, não há pedido válido.</p>
+
+        <p>Do outro lado, a autoridade de gestão dispõe também de 45 dias úteis para emitir ordem de pagamento ou comunicar os motivos para não a emitir. Pode solicitar esclarecimentos, uma única vez, e nesse caso o prazo suspende-se. A empresa tem então 10 dias úteis para responder, por força do Código do Procedimento Administrativo, ou pedir prazo adicional fundamentado.</p>
+
+        <p>A sanção por não resposta é severa e pouco conhecida: a ausência de resposta em sede de PTRF determina a não elegibilidade da despesa. Ou seja, não é só uma questão de processo administrativo, é uma decisão substantiva sobre se aquela despesa entra ou não entra no apuramento final do incentivo.</p>
+
+        <div class="pull-quote reveal">
+          <div class="pull-quote-text">"A ausência de resposta em sede de PTRF determina a não elegibilidade da despesa. O silêncio custa incentivo."</div>
+        </div>
+
+        <h3>Quando a autoridade de gestão falha o prazo</h3>
+        <p>Existe uma cláusula de equilíbrio que protege o beneficiário. Se a autoridade de gestão ou o organismo intermédio não conseguirem cumprir os prazos por motivos não imputáveis à empresa, é emitido um adiantamento a 100% do incentivo correspondente à despesa apresentada. Esse adiantamento é posteriormente convertido em pagamento via validação da despesa, em prazo não superior a 60 dias úteis.</p>
+
+        <p>Na prática, a empresa não fica refém da capacidade de análise da administração. É um mecanismo importante em períodos de pico, quando a autoridade de gestão tem picos de submissão e não consegue dar resposta a todos os pedidos em tempo útil.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Tabela comparativa</div>
+        <h2>As quatro figuras lado a lado</h2>
+
+        <table class="art-table">
+          <thead><tr><th>Figura</th><th>Que exige</th><th>Quanto paga</th><th>Prazo crítico</th></tr></thead>
+          <tbody>
+            <tr><td><strong>PTA-INICIAL</strong></td><td>Termo de aceitação + comunicação de arranque</td><td>Até 10% do incentivo aprovado</td><td>Recuperação progressiva (80/20)</td></tr>
+            <tr><td><strong>PTA-FATURA</strong></td><td>Faturas emitidas, não pagas</td><td>Mínimo 10% do elegível; 80% se há PTA-INICIAL, 100% se não há</td><td>30 dias úteis para comprovar pagamento</td></tr>
+            <tr><td><strong>PTRI</strong></td><td>Despesa realizada e paga</td><td>Mínimo 10% do elegível; 80% ou 100% conforme há ou não PTA-INICIAL</td><td>Intervalo máximo 6 meses entre pedidos</td></tr>
+            <tr><td><strong>PTRF</strong></td><td>Conclusão financeira + APF + entregáveis</td><td>Saldo até 100% (liberta os 5% retidos)</td><td>45 ou 90 dias úteis após conclusão</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Ritmo e disciplina</div>
+        <h2>Os prazos que não aparecem nos avisos</h2>
+        <p>Há dois prazos que muitas empresas só descobrem quando já estão em incumprimento, e que vale a pena sublinhar.</p>
+
+        <p>O primeiro é o prazo de arranque. O primeiro pedido de pagamento, seja da modalidade que for, tem de ser apresentado até seis meses após a assinatura do termo de aceitação. Projetos que arrancam devagar podem chegar a este marco sem nada para submeter, e isso sinaliza à autoridade de gestão que a operação está parada.</p>
+
+        <p>O segundo é o intervalo entre pedidos. A empresa não pode deixar passar mais de seis meses entre pedidos sucessivos. Isto obriga a um ritmo mínimo de execução e submissão que, em projetos de longo prazo, é muitas vezes esquecido.</p>
+
+        <h3>Pagamento efetivo: 6 dias úteis</h3>
+        <p>Do lado da tesouraria, vale reter um número: emitida a ordem de pagamento, a Agência, I.P. executa a transferência em até 6 dias úteis, desde que estejam verificadas quatro condições. Disponibilidade de tesouraria pública, situação regularizada perante a Autoridade Tributária, situação regularizada em matéria de fundos europeus perante a Agência, e inexistência de decisão de suspensão de pagamentos.</p>
+
+        <p>A terceira condição é a que mais apanha empresas desprevenidas. Uma pendência antiga num projeto anterior, mesmo já encerrado, pode travar pagamentos de um projeto novo. Vale a pena auditar a situação antes do primeiro pedido, não no momento em que o pagamento se torna urgente.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Copromoção</div>
+        <h2>Quando há mais do que uma empresa no mesmo projeto</h2>
+        <p>Projetos em copromoção, frequentes em I&DT e em ações coletivas, introduzem uma regra de alinhamento forte. Os copromotores têm de escolher em conjunto uma única das quatro modalidades de pagamento, e essa modalidade é obrigatória para todos. Não há flexibilidade individual.</p>
+
+        <p>Os limites de cada figura, os 10% mínimos, os 95% máximos, aplicam-se ao nível de cada copromotor, não ao nível da operação global. Na prática, cada entidade formaliza os seus pedidos e recebe individualmente, mas dentro de uma arquitectura comum decidida à partida.</p>
+
+        <p>Esta decisão sobre a modalidade deve ser discutida entre copromotores antes da submissão e formalizada logo no arranque. Um copromotor que precise de liquidez imediata e queira PTA-INICIAL obriga todos os outros a seguir a mesma lógica, mesmo que alguns preferissem uma via mais conservadora.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Escolher bem, no momento certo</div>
+        <h2>Que modalidade faz sentido para a sua empresa</h2>
+        <p>Não há resposta universal. A escolha entre as quatro modalidades depende de três factores concretos: perfil de tesouraria, natureza das despesas e duração do projeto.</p>
+
+        <p>Uma empresa com liquidez confortável, que executa um projeto maioritariamente assente em recursos humanos internos, raramente beneficia de adiantamentos. Os seus PTRI saem limpos, a 100%, e o saldo final entra no prazo previsto. A modalidade iv costuma ser suficiente.</p>
+
+        <p>Uma empresa que precisa de comprar equipamento pesado logo no primeiro ano, com sinais exigidos pelos fornecedores, ganha em pedir PTA-INICIAL para financiar esses primeiros pagamentos. A penalidade dos 80/20 é compensada pelo acesso antecipado a capital.</p>
+
+        <p>Uma empresa com fornecedores nacionais que aceitam prazos mais longos, e que consegue coordenar a facturação com os ciclos do projeto, pode explorar PTA-FATURA de forma recorrente. O segredo aqui é ter processos internos afinados para garantir o pagamento no prazo dos 30 dias úteis. Falhar este prazo transforma um instrumento útil num problema de recuperação.</p>
+
+        <div class="stats-row cols-3 reveal">
+          <div class="stat-cell">
+            <div class="stat-num">10<sup>%</sup></div>
+            <div class="stat-label">Limite mínimo de cada PTA-FATURA ou PTRI</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">30<sup>dias</sup></div>
+            <div class="stat-label">Prazo úteis para comprovar pagamento no PTA-FATURA</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">95<sup>%</sup></div>
+            <div class="stat-label">Tecto de pagamentos antes do saldo final</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Recuperações</div>
+        <h2>O risco invertido: quando o incentivo é devolvido</h2>
+        <p>Há um cenário que poucos promotores discutem com o rigor necessário. Sempre que a autoridade de gestão identifica pagamentos indevidos, ou apoios não justificados nos termos previstos, aciona procedimentos de recuperação ao abrigo do Decreto-Lei n.º 5/2023 e do Decreto-Lei n.º 20-A/2023.</p>
+
+        <p>Na prática, isto pode acontecer por várias vias. Um PTA-FATURA não comprovado no prazo dos 30 dias úteis. Uma despesa que se vem a revelar inelegível em verificação posterior. Indicadores de realização não cumpridos no fecho da operação. Cada uma destas falhas pode gerar uma obrigação de devolução total ou parcial do incentivo recebido, com juros e, dependendo da gravidade, impactos em elegibilidade futura.</p>
+
+        <p>O sistema de pagamentos não é apenas uma mecânica de entrada de dinheiro. É um contrato contínuo entre o beneficiário e a autoridade de gestão, em que cada pedido renova compromissos e abre exposição. Geri-lo bem exige disciplina documental desde o primeiro dia.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>Como aplicar este conhecimento</h2>
+        <p>A leitura que fazemos desta arquitectura é clara. A modalidade de pagamento escolhida no arranque do projeto é uma decisão financeira tão relevante como a própria candidatura. Condiciona o cash flow da operação, a exposição a recuperações, e a capacidade da empresa responder a imprevistos na execução.</p>
+
+        <p>Três recomendações práticas para quem tem um projeto aprovado ou em fase de decisão:</p>
+
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Simular antes de decidir.</strong> Construir um cash flow mês a mês do projeto, com e sem PTA-INICIAL, para perceber o custo real da liquidez antecipada em função dos 80/20.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Auditar a situação contributiva e fiscal antes do primeiro pedido.</strong> Pendências antigas noutras operações podem bloquear pagamentos de novas operações.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Criar um calendário interno de pedidos.</strong> A regra dos seis meses entre pedidos parece generosa, mas sem processo interno definido transforma-se rapidamente em incumprimento silencioso.</li>
+        </ul>
+
+        <p>Para projetos em copromoção, o momento crítico é anterior à aprovação. É nas conversas iniciais entre copromotores que se deve fixar a modalidade de pagamento, porque depois é tarde.</p>
+
+        <p style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore também o nosso arquivo para mais conteúdos sobre inovação, tecnologia, ciência aplicada e empreendedorismo.</p>
+      </div>
+
+    </article>
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Mara Ferreira</div>
+            <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Categoria</div><div class="sidebar-info-val">Financiamento</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Publicado</div><div class="sidebar-info-val">Junho 2024</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Leitura</div><div class="sidebar-info-val">12 min</div></div>
+      </div>
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
+        <div class="sidebar-cta-text">Quer estruturar os pedidos de pagamento da sua operação Portugal 2030 sem surpresas de tesouraria?</div>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="como-preparar-candidatura-portugal-2030.html" class="related-item">
+          <span class="related-item-title">Como preparar uma candidatura Portugal 2030</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="capital-europeu-disponivel-problema-execucao.html" class="related-item">
+          <span class="related-item-title">O capital europeu está disponível</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="como-funciona-horizonte-europa.html" class="related-item">
+          <span class="related-item-title">Como funciona o Horizonte Europa</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo-row">
+          <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+        </div>
+        <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+      </div>
+      <div>
+        <div class="f-col-label">Biblioteca</div>
+        <ul class="f-links">
+          <li><a href="../biblioteca.html">Portugal 2030</a></li>
+          <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+          <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+          <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Plataforma</div>
+        <ul class="f-links">
+          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../conhecimento.html">Conhecimento</a></li>
+          <li><a href="../parceiros.html">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Empresa</div>
+        <ul class="f-links">
+          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="../sobre-nos.html">Equipa</a></li>
+          <li><a href="../carreiras.html">Carreiras</a></li>
+          <li><a href="https://calendly.com/opencapital">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+      <div class="f-legal"><a href="#">Privacidade</a><a href="#">Termos</a><a href="#">Cookies</a></div>
+    </div>
+  </footer>
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
