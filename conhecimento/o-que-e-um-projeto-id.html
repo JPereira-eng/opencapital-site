@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O que é realmente um projeto de I&amp;D | Open Capital</title>
+  <meta name="description" content="O que distingue investigação e desenvolvimento de uma simples melhoria operacional. Critérios, exemplos e implicações para empresas que querem aceder a SIFIDE, PT2030 ou Horizonte Europa.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../biblioteca.html">Biblioteca</a></li>
+      <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades</a>
+        <div class="nav-dropdown-menu">
+          <a href="../parceiros.html">Parceiros</a>
+          <a href="../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../conhecimento.html">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Inovação</span>
+      </nav>
+      <span class="hero-cat-badge">Inovação . Explicado</span>
+      <h1 class="article-title">O que é realmente um projeto de I&amp;D</h1>
+      <p class="article-standfirst">Quase todas as empresas dizem que fazem I&amp;D. Poucas fazem. A confusão entre desenvolvimento técnico e investigação é onde quase todas as candidaturas a SIFIDE ou PT2030 falham.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Inovação</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Março 2025</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>10 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Sofia Costa</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Ponto de partida</div>
+        <h2>Porque é que esta definição importa</h2>
+        <p>Quando uma empresa candidata um projeto a SIFIDE II, a Portugal 2030 ou a Horizonte Europa, o primeiro filtro não é a qualidade do dossier. É saber se o que ali está escrito é, de facto, um projeto de investigação e desenvolvimento. A maioria das candidaturas recusadas não falha por falta de ambição ou por má execução administrativa. Falha porque aquilo que a empresa descreveu como I&amp;D é, aos olhos do avaliador, uma melhoria normal de produto, uma customização de software comprado, ou a simples adaptação de uma tecnologia que já existe no mercado.</p>
+        <p>A fronteira entre I&amp;D e desenvolvimento corrente é técnica, e é exigente. Muitas empresas vivem do lado errado dessa linha sem saber. Outras vivem do lado certo e nunca reclamam os apoios a que teriam direito, por acharem que "o que fazemos não é ciência". Ambas as situações são caras.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Definição</div>
+        <h2>A definição oficial, e o que ela quer mesmo dizer</h2>
+        <p>O enquadramento de referência em Portugal e na União Europeia vem do Manual de Frascati, publicado pela OCDE. A sua definição é simples de enunciar e difícil de aplicar: a I&amp;D é o trabalho criativo e sistemático empreendido para aumentar o volume de conhecimento, incluindo o conhecimento da humanidade, da cultura e da sociedade, e para conceber novas aplicações a partir do conhecimento disponível.</p>
+        <p>Desta frase retiram-se cinco critérios que qualquer atividade tem de cumprir, em simultâneo, para ser classificada como I&amp;D. Se falhar um, deixa de ser. Não há média ponderada.</p>
+
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Novidade:</strong> a atividade tem de visar resultados novos. Novos para a empresa, no mínimo, e preferencialmente novos para o sector ou para o mercado. Aplicar uma solução conhecida a um contexto já documentado não qualifica.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Criatividade:</strong> tem de existir uma contribuição humana baseada em conceitos e hipóteses originais. Reproduzir, copiar ou adaptar marginalmente não é criativo, em sentido técnico.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Incerteza:</strong> tem de haver dúvida real sobre o resultado final, sobre o custo do resultado, ou sobre o caminho para lá chegar. Se no início do projeto se sabe como se faz e quanto vai custar, não é I&amp;D.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Sistemático:</strong> tem de ser um trabalho planeado, com orçamento e registo. Não é improvisação nem descoberta acidental.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Transferível e reprodutível:</strong> o conhecimento gerado tem de poder ser documentado, transmitido a outros e, em teoria, replicado. Se só existe na cabeça de uma pessoa, não é conhecimento, é tácito.</li>
+        </ul>
+
+        <p>A incerteza é, na prática, o critério mais distintivo e o mais mal compreendido. A incerteza técnica existe quando a equipa não consegue garantir, à partida, que o objetivo é exequível com os recursos disponíveis. Se alguém, em algum lado do mundo, já resolveu o problema e publicou a solução, a incerteza para a humanidade desapareceu. Pode subsistir incerteza para a empresa, mas isso, por si só, raramente é suficiente para classificar o projeto como I&amp;D em sentido estrito.</p>
+      </div>
+
+      <div class="pull-quote reveal">
+        <div class="pull-quote-text">"Se no início do projeto conseguem estimar com precisão o resultado e o custo, provavelmente não estão a fazer I&amp;D. Estão a fazer engenharia."</div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Tipologia</div>
+        <h2>Os três tipos de I&amp;D</h2>
+        <p>Nem todos os projetos de I&amp;D são iguais. O Manual de Frascati distingue três categorias, e esta distinção é usada por quase todos os programas de apoio público. Conhecer em que categoria cai o projeto ajuda a escolher o instrumento certo e a calibrar a linguagem da candidatura.</p>
+
+        <table class="art-table">
+          <thead>
+            <tr><th>Tipo</th><th>Objetivo</th><th>Exemplo</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Investigação fundamental</strong></td>
+              <td>Adquirir novos conhecimentos sem aplicação imediata.</td>
+              <td>Estudar o comportamento de um novo material a temperaturas criogénicas, sem produto definido.</td>
+            </tr>
+            <tr>
+              <td><strong>Investigação aplicada</strong></td>
+              <td>Adquirir novos conhecimentos orientados a um objetivo prático específico.</td>
+              <td>Testar se uma nova liga pode substituir o alumínio em componentes de baterias de veículos elétricos.</td>
+            </tr>
+            <tr>
+              <td><strong>Desenvolvimento experimental</strong></td>
+              <td>Usar conhecimento existente e gerar conhecimento novo para produzir produtos, processos ou serviços novos ou substancialmente melhorados.</td>
+              <td>Desenvolver um protótipo funcional de uma bateria com a nova liga, incluindo testes de ciclo, segurança e fabrico.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>A esmagadora maioria da I&amp;D empresarial portuguesa cai na terceira categoria. Investigação aplicada ainda aparece, sobretudo em empresas spin-off de universidades ou com laboratórios próprios. Investigação fundamental em contexto empresarial puro é rara, e quando existe costuma estar ligada a grandes grupos multinacionais ou a parcerias com centros de investigação.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">A linha que separa</div>
+        <h2>O que NÃO é I&amp;D, mesmo quando parece</h2>
+        <p>Aqui está a maior fonte de confusão, e a principal razão de recusas. Há um conjunto de atividades muito comuns em empresas tecnológicas ou industriais que, apesar de envolverem trabalho técnico complexo, não qualificam como I&amp;D. Vale a pena nomeá-las, porque são as que mais vezes aparecem em candidaturas mal enquadradas.</p>
+
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Customização de software ou hardware existente:</strong> parametrizar um ERP, adaptar um CRM ao fluxo de uma empresa, ou ajustar um módulo de um sistema comprado não é I&amp;D, por mais horas que leve. É implementação.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Melhoria contínua de um produto que já existe:</strong> passar de uma versão 3.4 para uma 3.5 com correções de bugs, optimizações de performance conhecidas ou pequenos ajustes de UX é engenharia de produto, não I&amp;D.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Design gráfico, estético ou de interface:</strong> redesenhar um website, criar uma nova identidade visual, ou redefinir o layout de uma aplicação, por si só, não é investigação.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Estudos de mercado e análises comerciais:</strong> compreender melhor um cliente, segmentar uma base de dados ou explorar novos canais de venda é inteligência de negócio.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Formação e treino de equipas:</strong> capacitar pessoas em tecnologias que já dominam outras empresas é transferência de competências, não geração de conhecimento.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Certificações, normas e conformidade regulamentar:</strong> obter uma ISO, uma marcação CE ou cumprir um novo regulamento europeu é boa prática, não é I&amp;D.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Compra de máquinas, equipamentos ou licenças:</strong> adquirir um robot mais sofisticado, uma máquina CNC com mais eixos ou uma licença de um software avançado é investimento, não I&amp;D, mesmo que o equipamento seja usado para fazer coisas novas.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Engenharia de produção e ramp-up industrial:</strong> preparar uma linha de produção para um produto já desenvolvido, optimizar tempos de setup ou afinar parâmetros de uma máquina é produção, não desenvolvimento.</li>
+        </ul>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">Princípio prático</div>
+          <div class="art-highlight-text">Um projeto é I&amp;D se, ao tentar descrevê-lo, a equipa técnica hesita sobre como vai chegar ao resultado. Se a resposta é "vamos fazer X, depois Y, depois Z, como já fizemos noutros projetos", é execução, não investigação. A incerteza técnica é o termómetro mais honesto.</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Casos concretos</div>
+        <h2>Exemplos que ajudam a calibrar o critério</h2>
+        <p>Três situações reais, anonimizadas, que ilustram a fronteira.</p>
+
+        <h3>Caso 1. Empresa de software industrial</h3>
+        <p>Uma PME de Braga desenvolve sistemas MES para fábricas. Decide criar um módulo de deteção de anomalias em linhas de produção usando aprendizagem automática. Não existe no catálogo da empresa, nem nos catálogos dos concorrentes portugueses, um módulo com as caraterísticas pretendidas. A equipa não sabe, no início, se os modelos vão conseguir distinguir falhas reais de ruído operacional em ambientes com elevada variabilidade, e investe seis meses a testar arquiteturas diferentes. É I&amp;D. Há novidade, incerteza técnica real e sistematização.</p>
+
+        <h3>Caso 2. Fabricante de componentes metálicos</h3>
+        <p>Uma empresa do Norte compra uma máquina de impressão 3D de metal de última geração. Passa três meses a aprender a operá-la e a replicar peças que antes comprava a fornecedores. Não é I&amp;D. É investimento e curva de aprendizagem. A tecnologia já existe, a operação está documentada, o resultado é previsível. Pode ser elegível para RFAI ou para apoios a capacidade produtiva, mas não para SIFIDE.</p>
+
+        <h3>Caso 3. Produtor agroalimentar</h3>
+        <p>Uma empresa do Alentejo quer desenvolver uma bebida fermentada a partir de um subproduto vegetal que habitualmente é descartado. Desconhece-se se é possível atingir estabilidade microbiológica com os métodos de conservação habituais sem aditivos sintéticos. A empresa contrata um bolseiro de uma universidade, estabelece um protocolo experimental e testa seis formulações ao longo de nove meses. É I&amp;D. A incerteza é genuína, o trabalho é sistemático, o objetivo é conhecimento aplicado.</p>
+
+        <p>O padrão é claro. A diferença raramente está na dimensão do investimento ou na complexidade aparente da tecnologia. Está na natureza do problema que se está a tentar resolver e na previsibilidade do resultado.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Como se estrutura</div>
+        <h2>Como se organiza um projeto de I&amp;D elegível</h2>
+        <p>Um projeto de I&amp;D credível, do ponto de vista técnico e de candidatura, tem quatro componentes que precisam de aparecer claramente no dossier.</p>
+
+        <p><strong style="color:var(--navy);font-weight:600;">Primeiro, o problema e a hipótese.</strong> Não basta dizer "queremos desenvolver X". É preciso explicar qual o problema técnico que ainda não tem resposta, quais as hipóteses iniciais sobre como o resolver, e porque é que as soluções existentes não servem. Um bom dossier começa sempre com uma revisão do estado da arte que justifica porque o projeto não é uma reinvenção.</p>
+
+        <p><strong style="color:var(--navy);font-weight:600;">Segundo, as tarefas de investigação.</strong> O projeto decompõe-se em atividades distintas, cada uma com um objetivo técnico específico, entregáveis identificáveis e uma duração estimada. Tipicamente inclui tarefas de estado da arte, conceção, prototipagem, validação experimental, e disseminação. A gestão do projeto é uma tarefa suporte, não o projeto em si.</p>
+
+        <p><strong style="color:var(--navy);font-weight:600;">Terceiro, a equipa e os recursos.</strong> Os perfis envolvidos têm de ser consistentes com a natureza científica do projeto: engenheiros, investigadores, doutorados, técnicos qualificados. Trabalho de I&amp;D feito exclusivamente por comerciais ou gestores administrativos é difícil de defender.</p>
+
+        <p><strong style="color:var(--navy);font-weight:600;">Quarto, os resultados esperados e a sua mensuração.</strong> O projeto tem de produzir algo tangível e verificável: um protótipo funcional, um processo documentado, uma publicação científica, uma patente, um novo produto em fase de validação. "Maior satisfação do cliente" ou "aumento de eficiência" não são resultados de I&amp;D, são efeitos de negócio.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Custos</div>
+        <h2>Que custos são elegíveis, e como declará-los</h2>
+        <p>Um projeto de I&amp;D, para efeitos de apoio público, não é uma lista de desejos. É um orçamento rigoroso, articulado com as tarefas, e documentável. As rubricas típicas elegíveis variam ligeiramente entre SIFIDE, PT2030 e Horizonte Europa, mas a lógica de fundo é comum.</p>
+
+        <div class="stats-row cols-3 reveal">
+          <div class="stat-cell">
+            <div class="stat-num">60<sup>-70%</sup></div>
+            <div class="stat-label">Peso típico de despesas com pessoal</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">10<sup>-20%</sup></div>
+            <div class="stat-label">Subcontratação a entidades científicas</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">5<sup>-15%</sup></div>
+            <div class="stat-label">Materiais, consumíveis e equipamentos</div>
+          </div>
+        </div>
+
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Despesas com pessoal:</strong> são, tipicamente, a maior rubrica. Investigadores, técnicos, bolseiros. A alocação tem de ser justificada por timesheets ou por percentagem de afetação ao projeto. Salários de gestores executivos, comerciais ou administrativos raramente são aceites, salvo afetação parcial muito bem fundamentada.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Subcontratação a entidades do Sistema Científico e Tecnológico Nacional:</strong> universidades, laboratórios, centros de investigação. Em SIFIDE, estas despesas beneficiam de uma majoração, o que torna a parceria com entes científicos fiscalmente muito atrativa.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Aquisição de material específico e reagentes:</strong> consumíveis usados no projeto. Um laptop genérico para um investigador raramente é elegível. Um equipamento de medição comprado para uma tarefa experimental específica, sim.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Amortizações de equipamento:</strong> proporcionais à utilização no projeto.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Despesas de patentes e proteção de propriedade intelectual:</strong> registo, manutenção, tradução. Em SIFIDE, elegíveis até certos limites anuais.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Viagens, deslocações, disseminação:</strong> em menor grau. Têm de estar ligadas a atividades concretas de investigação ou divulgação científica.</li>
+        </ul>
+
+        <p>As despesas gerais, overheads, marketing, vendas ou produção em série ficam fora. Confundir custo elegível com custo estratégico para a empresa é um dos erros mais frequentes em empresas que candidatam pela primeira vez.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Instrumentos</div>
+        <h2>Onde é que um projeto de I&amp;D pode ser apoiado</h2>
+        <p>Uma vez estabilizado o que é o projeto, a questão passa a ser outra: qual o instrumento certo. A resposta depende da fase em que o projeto está, da dimensão da empresa, e do perfil de custos.</p>
+
+        <table class="art-table">
+          <thead>
+            <tr><th>Instrumento</th><th>Mecânica</th><th>Quando encaixa</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>SIFIDE II</strong></td>
+              <td>Crédito fiscal, dedução à coleta de IRC, até 82,5% das despesas elegíveis em certas condições.</td>
+              <td>Empresas com coleta, despesas de I&amp;D já realizadas ou previstas. Funciona a posteriori.</td>
+            </tr>
+            <tr>
+              <td><strong>PT2030 . Sistema de Incentivos à I&amp;D Empresarial</strong></td>
+              <td>Incentivo a fundo perdido e reembolsável sem juros para projetos de I&amp;D industrial e desenvolvimento experimental.</td>
+              <td>Projetos novos, com perfil transformador, dimensão relevante, resultados tangíveis.</td>
+            </tr>
+            <tr>
+              <td><strong>Horizonte Europa</strong></td>
+              <td>Subvenção europeia para projetos em consórcio internacional, com forte componente científica.</td>
+              <td>Empresas com capacidade de consórcio, temas alinhados com agendas europeias, ambição científica.</td>
+            </tr>
+            <tr>
+              <td><strong>Vouchers de Inovação IAPMEI</strong></td>
+              <td>Apoio de pequena dimensão para serviços de I&amp;D adquiridos a entidades científicas.</td>
+              <td>PME em fase inicial, projetos piloto, primeira aproximação a universidades.</td>
+            </tr>
+            <tr>
+              <td><strong>Patent Box</strong></td>
+              <td>Regime fiscal que isenta parcialmente de IRC os rendimentos provenientes de patentes.</td>
+              <td>Empresas com propriedade intelectual registada e a gerar receita.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Uma nota importante. Estes instrumentos não são excludentes entre si. Um mesmo projeto de I&amp;D pode, em teoria, beneficiar de SIFIDE e de PT2030, desde que respeitadas as regras de não sobreposição de custos. A combinação inteligente de instrumentos é onde reside grande parte do valor do financiamento de inovação em Portugal.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Erros frequentes</div>
+        <h2>Os cinco enganos que tornam um projeto irrecuperável</h2>
+
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Descrever o produto em vez de descrever a investigação.</strong> O dossier é tratado como um pitch comercial. Fala do mercado, das vantagens competitivas, do impacto nas vendas. E esquece a pergunta central: que conhecimento novo se vai gerar.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Pedir apoio para algo que já está feito.</strong> Em candidaturas a PT2030, as despesas têm de ser posteriores à submissão. Empresas que começam o projeto e depois tentam "candidatar o que já andam a fazer" ficam sem enquadramento.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Inflacionar a incerteza.</strong> Tentar transformar uma tarefa de engenharia em I&amp;D forçando linguagem pseudo-científica é facilmente detectado por avaliadores experientes. Pior do que não candidatar é candidatar e ser considerado pouco credível.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Não documentar durante a execução.</strong> Timesheets por preencher, relatórios de tarefas inexistentes, decisões técnicas não registadas. Quando o projeto termina, a empresa não consegue provar o que fez, e a auditoria pode desconsiderar parte substancial das despesas.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Confundir inovação com I&amp;D.</strong> Toda a I&amp;D é inovação, mas nem toda a inovação é I&amp;D. Abrir um modelo de negócio novo, lançar um serviço diferente ou entrar num mercado novo pode ser inovação de processo ou organizacional. Não é investigação científica nem desenvolvimento experimental.</li>
+        </ul>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>Como aplicar este conhecimento</h2>
+        <p>Antes de submeter uma candidatura, uma empresa deve fazer um exercício honesto: descrever o projeto em uma página, sem jargão, e confrontá-lo com os cinco critérios de Frascati. Se a novidade é marginal, se a incerteza é fraca, se o resultado é previsível, provavelmente não estamos perante I&amp;D. Nesse caso, há outros instrumentos, RFAI, apoios à capacidade produtiva, linhas específicas de digitalização, que podem encaixar melhor e ser aprovados sem fricção.</p>
+        <p>Se, pelo contrário, o projeto envolve genuinamente pesquisa, hipóteses por testar e risco técnico real, vale a pena organizar o dossier com o rigor que o tema exige. Isto significa: mobilizar perfis técnicos qualificados, considerar a parceria com uma universidade ou centro de investigação para aumentar a majoração, documentar desde o primeiro dia, e escolher o instrumento, ou combinação de instrumentos, adequado ao perfil de despesas.</p>
+        <p>A diferença entre uma empresa que faz I&amp;D e uma empresa que é reconhecida como fazendo I&amp;D não é o trabalho técnico. É a capacidade de o traduzir para a linguagem do avaliador e do regulador, sem perder rigor técnico nem inflacionar expectativas.</p>
+        <p style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore também o nosso arquivo para mais conteúdos sobre inovação, tecnologia, ciência aplicada e empreendedorismo.</p>
+      </div>
+
+    </article>
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../Retratos Equipa/retrato_sofiacosta.png" alt="Sofia Costa" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Sofia Costa</div>
+            <div class="sidebar-author-role">Especialista I&amp;D e Inovação</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Categoria</div><div class="sidebar-info-val">Inovação</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Publicado</div><div class="sidebar-info-val">Março 2025</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Leitura</div><div class="sidebar-info-val">10 min</div></div>
+      </div>
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
+        <div class="sidebar-cta-text">Quer perceber se o projeto da sua empresa qualifica como I&amp;D e quais os instrumentos certos para o apoiar?</div>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="como-preparar-candidatura-portugal-2030.html" class="related-item">
+          <span class="related-item-title">Como preparar uma candidatura Portugal 2030</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="erros-comuns-candidatura-incentivos.html" class="related-item">
+          <span class="related-item-title">Os erros mais comuns numa candidatura a incentivos</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="como-interpretar-taxas-apoio.html" class="related-item">
+          <span class="related-item-title">Como interpretar as taxas de apoio</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo-row">
+          <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+        </div>
+        <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+      </div>
+      <div>
+        <div class="f-col-label">Biblioteca</div>
+        <ul class="f-links">
+          <li><a href="../biblioteca.html">Portugal 2030</a></li>
+          <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+          <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+          <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Plataforma</div>
+        <ul class="f-links">
+          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../conhecimento.html">Conhecimento</a></li>
+          <li><a href="../parceiros.html">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Empresa</div>
+        <ul class="f-links">
+          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="../sobre-nos.html">Equipa</a></li>
+          <li><a href="../carreiras.html">Carreiras</a></li>
+          <li><a href="https://calendly.com/opencapital">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+      <div class="f-legal"><a href="#">Privacidade</a><a href="#">Termos</a><a href="#">Cookies</a></div>
+    </div>
+  </footer>
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
