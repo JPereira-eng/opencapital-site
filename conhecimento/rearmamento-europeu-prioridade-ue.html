@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rearmamento europeu: a nova prioridade da UE e o que muda para as empresas | Open Capital</title>
+  <meta name="description" content="A UE mobiliza 800 mil milhoes de euros para defesa ate 2030. O que isto significa para a industria, o capital privado e as empresas portuguesas.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../biblioteca.html">Biblioteca</a></li>
+      <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades</a>
+        <div class="nav-dropdown-menu">
+          <a href="../parceiros.html">Parceiros</a>
+          <a href="../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../conhecimento.html">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Mercados</span>
+      </nav>
+      <span class="hero-cat-badge">Mercados - Analise</span>
+      <h1 class="article-title">Rearmamento europeu: a nova prioridade da UE e o que muda para as empresas</h1>
+      <p class="article-standfirst">Bruxelas aprovou um dos maiores pacotes de defesa da sua historia. Por detras do numero, esta uma mudanca de posicao que reorganiza capital, industria e cadeias de fornecimento em toda a Europa.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Mercados</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Abril 2025</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>10 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Luis Gomes</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+
+      <img src="../assets/articles/Rearmamentoeuropeu_trend.avif" alt="Rearmamento europeu: a nova prioridade da UE" class="article-cover-img">
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">O que aconteceu</div>
+        <h2>A Europa reescreveu a sua doutrina orcamental em tres meses</h2>
+        <p>Em marco de 2025, a Comissao Europeia apresentou o plano ReArm Europe, pouco depois redesignado Readiness 2030. O objetivo declarado: mobilizar ate 800 mil milhoes de euros para defesa ao longo dos proximos anos. Nao se trata de um envelope de subsidios classicos. E uma combinacao de instrumentos, com logicas e prazos distintos, que no conjunto alteram o lugar da defesa no orcamento europeu.</p>
+        <p>O White Paper for European Defence, publicado a 19 de marco, define a arquitetura. Um novo instrumento financeiro, o SAFE (Security Action for Europe), assegura 150 mil milhoes de euros em emprestimos europeus para aquisicoes conjuntas. Uma clausula de escape do Pacto de Estabilidade permite aos Estados-membros elevar o defice em defesa ate 1,5% do PIB anual durante quatro anos, sem sancao orcamental. O Banco Europeu de Investimento viu a sua mandatura expandida para projetos de uso dual. Os fundos de coesao ganharam nova flexibilidade para financiar infraestrutura critica, mobilidade militar e base industrial de defesa.</p>
+        <p>Em abril, o Conselho aprovou a maioria dos elementos. A formalizacao legislativa do SAFE avancou. Varios Estados-membros, incluindo Alemanha, Polonia e os paises balticos, anunciaram aumentos significativos de despesa militar. Berlim desbloqueou a reforma constitucional do travao da divida para permitir um fundo especial de 500 mil milhoes em infraestrutura e defesa. Varsovia anunciou que gastaria 4,7% do PIB em defesa em 2025. A Polonia tornou-se, em percentagem, o pais da NATO com maior esforco relativo.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Os numeros</div>
+        <h2>A dimensao do reposicionamento</h2>
+        <div class="stats-row cols-4">
+          <div class="stat-cell">
+            <div class="stat-num">800<sup>mil M&euro;</sup></div>
+            <div class="stat-label">Mobilizacao total Readiness 2030</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">150<sup>mil M&euro;</sup></div>
+            <div class="stat-label">Instrumento SAFE (emprestimos UE)</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">1,5<sup>%</sup></div>
+            <div class="stat-label">Margem adicional de defice permitida</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">500<sup>mil M&euro;</sup></div>
+            <div class="stat-label">Fundo especial alemao (infra + defesa)</div>
+          </div>
+        </div>
+        <p>Para contextualizar a escala: o valor total do Portugal 2030 para Portugal em todo o ciclo e cerca de 23 mil milhoes de euros. O SAFE, por si so, tem o dobro do orcamento do Mecanismo de Recuperacao e Resiliencia para varios Estados-membros de media dimensao combinados. O fundo especial alemao de infraestrutura e defesa vale, em termos nominais, mais do que vinte vezes o Plano de Recuperacao portugues.</p>
+        <p>Em paralelo, a NATO passou a discutir abertamente uma meta de 3% do PIB, ou superior, para despesa em defesa. A velha meta de 2% tornou-se piso, nao teto. Estonia, Lituania e Latvia ja anunciaram trajetorias para 5%. E a discussao europeia deixou de ser se o esforco tem de aumentar. Passou a ser quanto, quao depressa e com que instrumentos.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">A leitura</div>
+        <h2>Porque agora, e porque assim</h2>
+        <p>A tentacao facil e explicar tudo com a guerra na Ucrania. Nao chega. A invasao russa de 2022 foi o ponto de viragem politico, mas o que aconteceu em 2025 e uma coisa diferente: a aceitacao formal, por parte da UE, de que nao pode mais subcontratar a sua seguranca. A posicao da nova administracao americana acelerou essa conclusao. Washington deixou de tratar a defesa europeia como prioridade americana. E passou a sinalizar, de forma pouco ambigua, que a Europa tera de pagar a sua propria conta.</p>
+        <p>A resposta nao foi um novo pilar europeu dentro da NATO. Foi um reposicionamento orcamental. A UE escolheu fazer o que nunca tinha feito antes: tratar a defesa como politica industrial. O vocabulario mudou. Deixou de se falar de gastos militares como despesa a controlar. Passou a falar-se de autonomia estrategica, base industrial europeia, soberania tecnologica. O orcamento seguiu o vocabulario.</p>
+        <p>Ha uma segunda mudanca, mais silenciosa, mais importante. O tratamento da defesa como sector economico legitimo. Durante duas decadas, a taxonomia europeia, os criterios ESG, as regras de investimento responsavel e a propria politica do BEI empurraram capital privado para longe do sector. Em 2025, esse movimento inverteu-se. O BEI passa a poder financiar projetos de uso dual. Bancos comerciais comecam a rever as suas politicas de exclusao. O capital privado europeu, habituado a tratar defesa como setor nao investivel, esta a ser obrigado a reabrir a pasta.</p>
+      </div>
+
+      <div class="pull-quote reveal">
+        <div class="pull-quote-text">"O que mudou em 2025 nao foi apenas o numero. Foi o pressuposto. A defesa deixou de ser uma categoria orcamental marginal para passar a ser um motor de politica industrial."</div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Impacto setorial</div>
+        <h2>Onde o capital vai aterrar</h2>
+        <p>A industria de defesa tradicional e a beneficiaria obvia. Fabricantes de municoes, drones, sistemas de defesa aerea, veiculos blindados. Mas reduzir o Readiness 2030 a encomendas para grandes primes europeus e ler o plano de forma incompleta. A maior parte do dinheiro nao vai para armas no sentido convencional.</p>
+        <div class="art-highlight">
+          <div class="art-highlight-label">Contexto</div>
+          <div class="art-highlight-text">O conceito-chave do novo ciclo e "dual-use": tecnologia, infraestrutura ou capacidade industrial que serve simultaneamente propositos civis e militares. O BEI calcula que a maioria dos projetos elegiveis para financiamento expandido se enquadram nesta categoria.</div>
+        </div>
+        <p>A logica dual-use abre espaco para empresas que nunca se viram como fornecedoras do setor. Cibersseguranca. Inteligencia artificial aplicada. Sensores e imagiologia. Computacao quantica. Producao de baterias, materiais criticos e semicondutores. Construcao e reforco de infraestruturas de transporte e energia. Ate fabricantes de componentes mecanicos de precisao, empresas de aeronautica civil, operadores de satelites e produtores agricolas estrategicos entram na conversa.</p>
+        <p>Uma leitura mais fina permite identificar os grandes vetores de captura de capital:</p>
+        <table class="art-table">
+          <thead>
+            <tr>
+              <th>Vetor</th>
+              <th>Exemplos concretos</th>
+              <th>Instrumento dominante</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Equipamento tradicional</strong></td>
+              <td>Municoes, blindados, artilharia, sistemas antiaereos</td>
+              <td>Aquisicoes conjuntas via SAFE</td>
+            </tr>
+            <tr>
+              <td><strong>Tecnologia dual-use</strong></td>
+              <td>Drones, IA, ciber, sensores, quantica</td>
+              <td>BEI, EDF, capital privado renovado</td>
+            </tr>
+            <tr>
+              <td><strong>Mobilidade militar</strong></td>
+              <td>Portos, ferroviario, estradas reforcadas, pontes</td>
+              <td>Fundos de coesao reorientados</td>
+            </tr>
+            <tr>
+              <td><strong>Materiais criticos</strong></td>
+              <td>Semicondutores, baterias, rare earths, aco</td>
+              <td>IPCEI, STEP, fundos estruturais</td>
+            </tr>
+            <tr>
+              <td><strong>Capacidade industrial</strong></td>
+              <td>Expansao de linhas de producao, onshoring</td>
+              <td>EDIP, SAFE, garantias nacionais</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Em cada um destes vetores, existem janelas ja abertas. O European Defence Fund tem concursos anuais. O STEP (Strategic Technologies for Europe Platform) canaliza 1,5 mil milhoes de euros para tecnologias criticas, incluindo aplicacoes de defesa. O EDIP (European Defence Industry Programme) vai entrar em execucao nos proximos meses. Os fundos de coesao permitem reprogramacao para componentes de mobilidade militar e infraestrutura critica.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Portugal</div>
+        <h2>Uma economia pequena num ciclo grande</h2>
+        <p>Portugal gasta historicamente pouco em defesa. Em 2024 ficou abaixo de 1,6% do PIB, longe dos 2% da meta NATO e muito longe do que passa a ser norma europeia. Em marco de 2025, o Governo anunciou a intencao de atingir os 2% ja em 2025, antes do prazo de 2029 previamente assumido. Na pratica, e um aumento de mais de mil milhoes de euros em despesa militar anual.</p>
+        <p>A pergunta relevante nao e se Portugal vai gastar mais. Vai. A pergunta e onde esse dinheiro vai aterrar. Se a maioria sair na forma de importacoes de equipamento pronto, o impacto na economia portuguesa e residual. Se uma fracao material for canalizada para a base industrial nacional, a equacao muda.</p>
+        <p>Portugal tem capacidades reais em varios nichos: aeronautica e manutencao (OGMA, Embraer, Critical Software), sistemas de informacao e cibersseguranca, equipamento de protecao balistica, compositos e materiais avancados, industria naval com vocacao dual-use, tecnologias de observacao da terra e satelite. Nenhuma destas areas e dominante a nivel europeu. Todas podem, no atual ciclo, crescer duas ou tres vezes em dimensao se o acesso aos instrumentos for bem preparado.</p>
+        <div class="art-highlight">
+          <div class="art-highlight-label">Nota</div>
+          <div class="art-highlight-text">O acesso das empresas portuguesas ao SAFE e aos concursos do EDF nao e automatico. Depende da capacidade de apresentar consorcios credveis com parceiros de outros Estados-membros. O trabalho de construcao de alianca industrial transfronteirica e hoje mais determinante do que a capacidade tecnica isolada.</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">O que muda para o capital privado</div>
+        <h2>Um setor que volta ao menu</h2>
+        <p>Durante cerca de quinze anos, as maiores gestoras de ativos europeias trataram defesa como setor excluivel. As politicas de responsible investment, a leitura restritiva da taxonomia europeia, a pressao de investidores institucionais com mandato ESG rigido, tudo contribuiu para manter a defesa fora do capital privado europeu. Era um paradoxo confortavel: o continente mais rico do mundo financiava a sua propria protecao via Estados Unidos.</p>
+        <p>Esse paradoxo esta a ser desmontado. Em abril de 2025, varios dos maiores bancos europeus revisaram publicamente as suas politicas de exclusao, abrindo espaco ao financiamento de defesa convencional legitima. O BEI aprovou novas linhas de uso dual. A Comissao Europeia preparou orientacoes que clarificam a compatibilidade entre investimento de defesa e criterios de sustentabilidade, quando o proposito e defensivo e em conformidade com direito internacional.</p>
+        <p>Para os fundos de venture capital e private equity, isto e uma mudanca de universo. Startups de dual-use tech, que ha dois anos enfrentavam portas fechadas em praticamente todos os LPs institucionais europeus, comecam a ver mandatos explicitos para investir na area. Em Franca, Alemanha e Reino Unido ja ha fundos especificamente dedicados a defesa e seguranca. A Italia e a Espanha seguem atras. Portugal ainda nao tem nada equivalente.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Riscos e fricoes</div>
+        <h2>O que pode correr mal</h2>
+        <p>Nenhum plano desta dimensao se executa sem fricao. Tres riscos sao evidentes desde ja.</p>
+        <p>Primeiro, o risco de captura por incumbentes. As grandes primes europeias tem capacidade de lobby consolidada e relacoes antigas com ministerios da defesa. Se o dinheiro circular apenas entre Estados, primes e seus fornecedores ja estabelecidos, o plano reforca a base industrial existente sem a alargar. A retorica oficial fala em abrir espaco a PME e novos entrantes. A execucao real dependera do desenho dos concursos.</p>
+        <p>Segundo, o risco de fragmentacao. Um dos problemas estruturais da defesa europeia e a proliferacao de sistemas incompativeis entre Estados-membros. Sem harmonizacao de requisitos e standards, o dinheiro pode financiar mais do mesmo: 27 variantes nacionais da mesma capacidade, incapazes de operar em conjunto. O SAFE foi desenhado para premiar aquisicoes conjuntas precisamente por esta razao. Resta ver quantos Estados usam o mecanismo dessa forma.</p>
+        <p>Terceiro, o risco de reacao popular. O aumento do defice para defesa, no quadro atual de custo de vida alto e servicos publicos sob pressao, nao e politicamente trivial. Varios governos ja enfrentam debate interno sobre trade-offs entre defesa, saude, educacao e habitacao. A sustentabilidade politica do esforco dependera da narrativa e dos resultados visiveis nos primeiros dois anos.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Para a decisao empresarial</div>
+        <h2>Onde procurar oportunidades</h2>
+        <p>Para empresas portuguesas, o ciclo atual abre janelas concretas em pelo menos cinco frentes:</p>
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Subcontratacao tecnologica a primes europeias:</strong> componentes de precisao, sistemas de informacao, cibersseguranca aplicada, manutencao e overhaul, integracao de subsistemas</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Participacao em consorcios EDF e EDIP:</strong> concursos anuais com tickets por projeto entre 5 e 30 milhoes de euros, normalmente com 3 a 7 parceiros de diferentes Estados-membros</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Infraestrutura critica e mobilidade militar:</strong> obras em portos comerciais com vocacao dual, ferrovia, reforco de redes energeticas, ciberseguranca de operadores de infraestrutura critica</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Materiais criticos e produtos intermedios:</strong> baterias, compositos, aco de alta performance, componentes electronicos, todos elegiveis para linhas STEP e IPCEI</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Capital para scale-up de empresas dual-use:</strong> fundos europeus de defesa estao a ser criados, incluindo veiculos de co-investimento publico-privado com mandato alargado</li>
+        </ul>
+        <p>A janela nao e infinita. A arquitetura do Readiness 2030 foi desenhada para o periodo 2025 a 2030. Os primeiros concursos abrem em 2025 e 2026. As empresas que entrarem cedo em consorcios, que comecarem ja o trabalho de certificacao e conformidade, que estabelecerem relacoes com primes europeias, terao vantagem estrutural sobre as que esperem para ver.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>O que isto significa para a sua empresa</h2>
+        <p>A maioria das empresas portuguesas ainda nao percebeu o que esta realmente a acontecer. O Readiness 2030 nao e um programa sectorial, e uma reorientacao geral do capital europeu. Um fabricante de componentes mecanicos em Aveiro, uma empresa de software de gestao operacional no Porto, um produtor de compositos em Leiria, todos podem estar, hoje, a meia duzia de meses de uma oportunidade que nao existia ha um ano.</p>
+        <p>A leitura que defendemos e esta: tratar o Readiness 2030 como o Portugal 2030 foi tratado em 2020. Nao como curiosidade distante, mas como trajetoria de crescimento a preparar desde ja. Quem comecou a preparar candidaturas ao PT2030 em 2020, com dois anos de antecedencia, captou instrumentos que outros nao captaram. A logica aqui e identica. Os concursos vao abrir, os consorcios vao formar-se, as primes vao escolher subcontratados. O momento em que entra nessa conversa determina se apanha o ciclo ou assiste a ele.</p>
+        <p>Nao ha duvida de que a defesa e um setor dificil. Tem regras proprias, certificacoes complexas, barreiras de acesso reais. Mas o dinheiro, a escala politica e a abertura institucional que existem em 2025 nao existiam em 2022. Quem trabalhar o tema agora trabalha numa janela historicamente favoravel.</p>
+        <p>A recomendacao pratica e simples: mapear onde a empresa pode encaixar, identificar primes ou parceiros europeus relevantes, preparar a conformidade minima para concursos EDF e EDIP, e posicionar-se como potencial fornecedor de nivel 2 ou 3 em consorcios existentes. Nao e necessario transformar a empresa em fornecedor militar. E necessario perceber onde a atividade atual tem aplicacao dual e agir em conformidade.</p>
+      </div>
+
+      <p style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo.</p>
+
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../Retratos Equipa/retrato_luísgomes.png" alt="Luis Gomes" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Luis Gomes</div>
+            <div class="sidebar-author-role">Analista Financeiro</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Categoria</div>
+          <div class="sidebar-info-val">Mercados</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Publicado</div>
+          <div class="sidebar-info-val">Abril 2025</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Leitura</div>
+          <div class="sidebar-info-val">10 min</div>
+        </div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Precisa de apoio nesta area?</div>
+        <div class="sidebar-cta-text">Ajudamos empresas portuguesas a posicionar-se no ciclo Readiness 2030 e a aceder a instrumentos europeus de defesa e uso dual.</div>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="fragmentacao-global-fim-globalizacao-eficiente.html" class="related-item">
+          <span class="related-item-title">Fragmentacao global: o fim da globalizacao eficiente?</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="capital-europeu-disponivel-problema-execucao.html" class="related-item">
+          <span class="related-item-title">O capital europeu esta disponivel</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="como-funciona-horizonte-europa.html" class="related-item">
+          <span class="related-item-title">Como funciona o Horizonte Europa</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo-row">
+          <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+        </div>
+        <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+      </div>
+      <div>
+        <div class="f-col-label">Biblioteca</div>
+        <ul class="f-links">
+          <li><a href="../biblioteca.html">Portugal 2030</a></li>
+          <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+          <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+          <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Plataforma</div>
+        <ul class="f-links">
+          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../conhecimento.html">Conhecimento</a></li>
+          <li><a href="../parceiros.html">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Empresa</div>
+        <ul class="f-links">
+          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="../sobre-nos.html">Equipa</a></li>
+          <li><a href="../carreiras.html">Carreiras</a></li>
+          <li><a href="https://calendly.com/opencapital">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+      <div class="f-legal">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
