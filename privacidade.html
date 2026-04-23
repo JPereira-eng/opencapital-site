@@ -64,17 +64,8 @@
 
     /* ─── DOC PAGE ─── */
     .doc-page { padding-top:74px; background:var(--white); }
-    .doc-header { position:relative; padding:96px 8% 56px; overflow:hidden; }
-    .doc-header::before {
-      content:'';
-      position:absolute;
-      top:0; right:0;
-      width:38%; height:100%;
-      background:var(--navy);
-      clip-path: polygon(100% 0, 0 0, 100% 100%);
-      z-index:0;
-    }
-    .doc-title { position:relative; z-index:1; font-size:72px; font-weight:800; color:var(--grey-dark); line-height:1.0; letter-spacing:-0.02em; max-width:640px; }
+    .doc-header { position:relative; padding:96px 8% 56px; }
+    .doc-title { font-size:72px; font-weight:800; color:var(--grey-dark); line-height:1.0; letter-spacing:-0.02em; max-width:640px; }
     .doc-wrap { padding:48px 8% 96px; }
     .doc-p { font-size:16px; font-weight:400; color:var(--grey-dark); line-height:1.75; margin-bottom:18px; }
     .doc-p a { color:var(--navy); text-decoration:underline; text-underline-offset:3px; }
@@ -106,7 +97,6 @@
 
     @media(max-width:768px) {
       .doc-header { padding:64px 24px 32px; }
-      .doc-header::before { width:30%; }
       .doc-title { font-size:44px; }
       .doc-wrap { padding:32px 24px 72px; width:100%; }
       .doc-h2 { font-size:19px; margin-top:36px; }
@@ -241,7 +231,7 @@
       <p class="doc-sub"><strong>13.2.</strong> A versão em vigor será, em cada momento, a que se encontra publicada nesta página, com indicação da data de atualização.</p>
       <p class="doc-sub"><strong>13.3.</strong> Recomenda-se a consulta periódica. Alterações materiais serão comunicadas com destaque, quando aplicável.</p>
 
-      <p class="doc-update"><strong>Última atualização:</strong> 23 de abril de 2026</p>
+      <p class="doc-update"><strong>Última atualização:</strong> junho de 2023</p>
 
     </div>
   </section>
