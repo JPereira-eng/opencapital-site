@@ -622,7 +622,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "186297",
       "detected_date": "2026-04-19",
       "deadline": "2026-06-01",
@@ -633,8 +633,8 @@
       "priority_score": 65,
       "notes": "SEDIA status:31094502 OPEN, page 34",
       "fail_count": 3,
-      "download_error": "Portal SEDIA requer autenticacao EU obrigatoria (HTTP 303) - 3a tentativa",
-      "last_fail_date": "2026-04-20"
+      "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback",
+      "last_fail_date": "2026-04-23"
     },
     {
       "id": "horizon-cl4-2021-human-01-05",
@@ -1077,16 +1077,17 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "H2020-FoodScannerPrize-2015",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/FoodScanner-01-2015.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/foodscanner-01-2015.txt",
       "detected_date": "2026-04-20",
       "deadline": null,
       "budget": null,
       "priority_score": 25,
-      "notes": "Discovered via SEDIA search. No deadline data available from API."
+      "notes": "Discovered via SEDIA search. No deadline data available from API.",
+      "fail_count": 0
     },
     {
       "id": "h2020-birthdayprize-2016",
@@ -1094,16 +1095,17 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "H2020-BirthDayPrize-2016",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/H2020-BirthDayPrize-2016.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/h2020-birthdayprize-2016.txt",
       "detected_date": "2026-04-20",
       "deadline": null,
       "budget": null,
       "priority_score": 25,
-      "notes": "Discovered via SEDIA search. No deadline data available from API."
+      "notes": "Discovered via SEDIA search. No deadline data available from API.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-industry-2025-01-human-60",
@@ -1111,16 +1113,17 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-CL4-2025-01",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-INDUSTRY-2025-01-HUMAN-60",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-industry-2025-01-human-60.txt",
       "detected_date": "2026-04-20",
       "deadline": null,
       "budget": null,
       "priority_score": 25,
-      "notes": "Discovered via SEDIA search. No deadline data available from API."
+      "notes": "Discovered via SEDIA search. No deadline data available from API.",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-04-pcp-cit-01",
@@ -1128,16 +1131,17 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-MISS-2026-04-PCP",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-04-PCP-CIT-01.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-04-pcp-cit-01.txt",
       "detected_date": "2026-04-20",
       "deadline": null,
       "budget": null,
       "priority_score": 25,
-      "notes": "Discovered via SEDIA search. No deadline data available from API."
+      "notes": "Discovered via SEDIA search. No deadline data available from API.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl5-2026-01-d2-05",
@@ -1145,16 +1149,17 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-CL5-2026-01",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-01-D2-05.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2026-01-d2-05.txt",
       "detected_date": "2026-04-20",
       "deadline": null,
       "budget": null,
       "priority_score": 25,
-      "notes": "Discovered via SEDIA search. No deadline data available from API."
+      "notes": "Discovered via SEDIA search. No deadline data available from API.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2022-space-01-11",
@@ -1162,16 +1167,17 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-CL4-2022-SPACE-01",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2022-SPACE-01-11.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2022-space-01-11.txt",
       "detected_date": "2026-04-20",
       "deadline": null,
       "budget": null,
       "priority_score": 25,
-      "notes": "Discovered via SEDIA search. No deadline data available from API."
+      "notes": "Discovered via SEDIA search. No deadline data available from API.",
+      "fail_count": 0
     },
     {
       "id": "lce-prize-co2reuse-01-2016",
@@ -1179,16 +1185,17 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "H2020-LCE-Prizes-2016-03",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/LCE-Prize-CO2Reuse-01-2016.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/lce-prize-co2reuse-01-2016.txt",
       "detected_date": "2026-04-20",
       "deadline": null,
       "budget": null,
       "priority_score": 25,
-      "notes": "Discovered via SEDIA search. No deadline data available from API."
+      "notes": "Discovered via SEDIA search. No deadline data available from API.",
+      "fail_count": 0
     },
     {
       "id": "spectrumprize-01-2015",
@@ -1196,16 +1203,17 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "H2020-SpectrumPrize-2015",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/SpectrumPrize-01-2015.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/spectrumprize-01-2015.txt",
       "detected_date": "2026-04-20",
       "deadline": null,
       "budget": null,
       "priority_score": 25,
-      "notes": "Discovered via SEDIA search. No deadline data available from API."
+      "notes": "Discovered via SEDIA search. No deadline data available from API.",
+      "fail_count": 0
     },
     {
       "id": "edf-2021-dis-rdis-othr",
@@ -1213,16 +1221,17 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "EDF-2021-DIS-RDIS",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/EDF-2021-DIS-RDIS-OTHR.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/edf-2021-dis-rdis-othr.txt",
       "detected_date": "2026-04-20",
       "deadline": null,
       "budget": null,
       "priority_score": 25,
-      "notes": "Discovered via SEDIA search. No deadline data available from API."
+      "notes": "Discovered via SEDIA search. No deadline data available from API.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2021-space-01-41",
