@@ -98,7 +98,7 @@
       "catalog_type": "ba",
       "detected_date": "2026-04-23",
       "last_profile_update": "2026-04-23",
-      "status": "active",
+      "status": "ready",
       "regulation_url": "https://invictaangels.pt/2019/selecao-de-projetos/",
       "priority_score": 15,
       "profile": {
@@ -118,7 +118,9 @@
         "membros_activos": null,
         "contacto": "geral@invictaangels.pt"
       },
-      "notes": "Rede de BAs no Porto. Admissao de novos BAs por convite de membro fundador ou ativo. Projetos devem apresentar inovacao, escalabilidade, estado do projeto, plano de investimento e equipa."
+      "notes": "Rede de BAs no Porto. Admissao de novos BAs por convite de membro fundador ou ativo. Projetos devem apresentar inovacao, escalabilidade, estado do projeto, plano de investimento e equipa.",
+      "regulation_local": "regulamentos/invicta-angels/invicta-angels.txt",
+      "fail_count": 0
     }
   ]
 }
