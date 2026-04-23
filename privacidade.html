@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Política de Privacidade: Grupo Open Capital</title>
-  <meta name="description" content="Política de privacidade da Open Capital. Como tratamos os dados pessoais recolhidos através do website, Calendly e contactos por email, ao abrigo do RGPD.">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Política de privacidade do Grupo Open Capital. Como tratamos os dados pessoais recolhidos através do website, Calendly e contactos por email, ao abrigo do RGPD.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* ─── CSS VARIABLES ─── */
     :root {
       --navy:       #1A3A5C;
       --navy-deep:  #0D1F33;
@@ -63,65 +62,29 @@
     .nav-mobile-cta { display:inline-block !important; margin-top:22px; font-size:14px; font-weight:600; color:var(--white) !important; border:1px solid rgba(255,255,255,0.28); padding:12px 24px; }
     @media(max-width:768px) { .nav-links { display:none; } .nav-cta { display:none; } .nav-hamburger { display:flex; } }
 
-    /* ─── HERO COMPACT ─── */
-    .hero-compact { background:var(--navy); padding:140px 8% 60px; position:relative; min-height:42vh; display:flex; flex-direction:column; justify-content:flex-end; }
-    .hero-compact::before { content:''; position:absolute; left:0; top:74px; bottom:0; width:4px; background:linear-gradient(to bottom, var(--gold) 0%, rgba(201,169,110,0.3) 60%, transparent 100%); }
-    .breadcrumb { display:flex; align-items:center; gap:10px; font-size:13px; font-weight:400; letter-spacing:0.08em; color:rgba(255,255,255,0.48); margin-bottom:24px; }
-    .breadcrumb a { color:rgba(255,255,255,0.48); text-decoration:none; transition:var(--transition); }
-    .breadcrumb a:hover { color:var(--gold); }
-    .breadcrumb span { color:rgba(255,255,255,0.24); }
-    .hero-eyebrow { font-size:14px; font-weight:600; letter-spacing:0.34em; text-transform:uppercase; color:var(--gold); margin-bottom:18px; }
-    .hero-h1 { font-size:54px; font-weight:700; color:var(--white); line-height:1.05; letter-spacing:-0.015em; margin-bottom:20px; max-width:820px; }
-    .hero-sub { font-size:18px; font-weight:300; color:rgba(255,255,255,0.58); line-height:1.75; max-width:640px; letter-spacing:0.01em; }
-    .hero-meta { margin-top:32px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.10); display:flex; gap:48px; flex-wrap:wrap; }
-    .hero-meta-item { display:flex; flex-direction:column; gap:4px; }
-    .hero-meta-label { font-size:10px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.38); }
-    .hero-meta-value { font-size:14px; font-weight:400; color:var(--white); letter-spacing:0.02em; }
-
-    /* ─── ARTICLE BODY ─── */
-    .article-wrap { max-width:860px; margin:0 auto; padding:80px 40px 96px; }
-    .article-intro { font-size:19px; font-weight:300; color:var(--grey-dark); line-height:1.85; margin-bottom:48px; padding-bottom:40px; border-bottom:1px solid var(--grey-light); }
-    .article-section { margin-bottom:56px; }
-    .article-section:last-child { margin-bottom:0; }
-    .article-eyebrow { font-size:12px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
-    .article-h2 { font-size:28px; font-weight:600; color:var(--navy); line-height:1.25; letter-spacing:0.01em; margin-bottom:22px; }
-    .article-h3 { font-size:18px; font-weight:600; color:var(--navy); letter-spacing:0.02em; margin-top:28px; margin-bottom:12px; }
-    .article-p { font-size:17px; font-weight:400; color:var(--grey-dark); line-height:1.85; margin-bottom:18px; }
-    .article-p a { color:var(--navy); font-weight:500; text-decoration:underline; text-underline-offset:3px; transition:var(--transition); }
-    .article-p a:hover { color:var(--gold); }
-    .article-list { list-style:none; padding:0; margin:0 0 20px 0; }
-    .article-list li { font-size:17px; font-weight:400; color:var(--grey-dark); line-height:1.8; padding-left:22px; position:relative; margin-bottom:10px; }
-    .article-list li::before { content:''; position:absolute; left:0; top:13px; width:5px; height:5px; border:1px solid var(--gold); transform:rotate(45deg); }
-    .article-list li strong { color:var(--navy); font-weight:600; }
-
-    /* ─── IDENTIFICATION BLOCK ─── */
-    .id-block { background:#FAFAFA; border-left:2px solid var(--gold); padding:28px 32px; margin:28px 0 40px; }
-    .id-block dl { display:grid; grid-template-columns:170px 1fr; gap:12px 24px; font-size:15px; }
-    .id-block dt { font-weight:600; color:var(--navy); letter-spacing:0.02em; }
-    .id-block dd { color:var(--grey-dark); }
-    .id-block a { color:var(--navy); text-decoration:underline; text-underline-offset:3px; }
-    .id-block a:hover { color:var(--gold); }
-
-    /* ─── HIGHLIGHT BOX ─── */
-    .highlight-box { background:rgba(26,58,92,0.04); border-left:2px solid var(--navy); padding:22px 28px; margin:24px 0; font-size:16px; font-weight:400; color:var(--grey-dark); line-height:1.75; }
-    .highlight-box strong { color:var(--navy); }
-
-    /* ─── TABLE ─── */
-    .article-table { width:100%; border-collapse:collapse; margin:20px 0 28px; font-size:15px; }
-    .article-table th { background:var(--navy); color:var(--white); font-weight:600; letter-spacing:0.04em; padding:14px 18px; text-align:left; border:1px solid var(--navy); }
-    .article-table td { padding:13px 18px; border:1px solid var(--grey-light); color:var(--grey-dark); vertical-align:top; }
-    .article-table tr:nth-child(even) td { background:#FAFAFA; }
-
-    /* ─── CTA BLOCK ─── */
-    .cta-block { background:var(--navy); padding:48px 44px; margin-top:64px; text-align:left; }
-    .cta-block h3 { font-size:22px; font-weight:600; color:var(--white); margin-bottom:12px; letter-spacing:0.01em; }
-    .cta-block p { font-size:16px; font-weight:300; color:rgba(255,255,255,0.62); line-height:1.75; margin-bottom:24px; max-width:540px; }
-    .cta-block a { display:inline-block; font-size:13px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--navy); background:var(--gold); padding:14px 32px; text-decoration:none; transition:var(--transition); }
-    .cta-block a:hover { background:var(--white); }
-
-    /* ─── UPDATE BADGE ─── */
-    .update-badge { display:inline-flex; align-items:center; gap:10px; font-size:12px; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--grey-mid); margin-top:40px; padding-top:24px; border-top:1px solid var(--grey-light); }
-    .update-badge span { color:var(--navy); font-weight:600; }
+    /* ─── DOC PAGE ─── */
+    .doc-page { padding-top:74px; background:var(--white); }
+    .doc-header { position:relative; padding:96px 8% 56px; overflow:hidden; }
+    .doc-header::before {
+      content:'';
+      position:absolute;
+      top:0; right:0;
+      width:38%; height:100%;
+      background:var(--navy);
+      clip-path: polygon(100% 0, 0 0, 100% 100%);
+      z-index:0;
+    }
+    .doc-title { position:relative; z-index:1; font-size:72px; font-weight:800; color:var(--grey-dark); line-height:1.0; letter-spacing:-0.02em; max-width:640px; }
+    .doc-wrap { padding:48px 8% 96px; }
+    .doc-p { font-size:16px; font-weight:400; color:var(--grey-dark); line-height:1.75; margin-bottom:18px; }
+    .doc-p a { color:var(--navy); text-decoration:underline; text-underline-offset:3px; }
+    .doc-p a:hover { color:var(--gold); }
+    .doc-h2 { font-size:22px; font-weight:700; color:var(--grey-dark); letter-spacing:-0.005em; margin-top:44px; margin-bottom:18px; }
+    .doc-h2:first-of-type { margin-top:32px; }
+    .doc-sub { font-size:16px; font-weight:400; color:var(--grey-dark); line-height:1.75; margin-bottom:14px; }
+    .doc-sub strong { font-weight:700; color:var(--grey-dark); }
+    .doc-update { margin-top:56px; padding-top:24px; border-top:1px solid var(--grey-light); font-size:14px; color:var(--grey-mid); }
+    .doc-update strong { color:var(--grey-dark); font-weight:600; }
 
     /* ─── FOOTER ─── */
     .footer { background:var(--navy-deep); padding:56px 80px 34px; }
@@ -141,17 +104,14 @@
     .f-legal a { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); text-decoration:none; letter-spacing:0.05em; transition:var(--transition); }
     .f-legal a:hover { color:rgba(255,255,255,0.45); }
 
-    /* ─── RESPONSIVE ─── */
     @media(max-width:768px) {
-      .hero-compact { padding:120px 24px 40px; }
-      .hero-h1 { font-size:36px; }
-      .article-wrap { padding:56px 24px 72px; }
-      .article-h2 { font-size:24px; }
-      .id-block dl { grid-template-columns:1fr; gap:4px; }
-      .id-block dt { margin-top:10px; }
+      .doc-header { padding:64px 24px 32px; }
+      .doc-header::before { width:30%; }
+      .doc-title { font-size:44px; }
+      .doc-wrap { padding:32px 24px 72px; width:100%; }
+      .doc-h2 { font-size:19px; margin-top:36px; }
       .footer { padding:48px 24px 28px; }
       .footer-grid { grid-template-columns:1fr; gap:32px; }
-      .hero-meta { gap:24px; }
     }
   </style>
 </head>
@@ -192,222 +152,99 @@
     <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
   </div>
 
-  <!-- ─── HERO ─── -->
-  <section class="hero-compact">
-    <div class="breadcrumb">
-      <a href="index.html">Início</a>
-      <span>/</span>
-      <span>Privacidade</span>
-    </div>
-    <div class="hero-eyebrow">Informação legal</div>
-    <h1 class="hero-h1">Política de Privacidade</h1>
-    <p class="hero-sub">Explicamos, de forma clara e sem jargão, que dados tratamos, porquê, durante quanto tempo, e como pode exercer os seus direitos ao abrigo do Regulamento Geral de Proteção de Dados (RGPD).</p>
-    <div class="hero-meta">
-      <div class="hero-meta-item">
-        <span class="hero-meta-label">Versão</span>
-        <span class="hero-meta-value">1.0</span>
-      </div>
-      <div class="hero-meta-item">
-        <span class="hero-meta-label">Em vigor desde</span>
-        <span class="hero-meta-value">22 de abril de 2026</span>
-      </div>
-      <div class="hero-meta-item">
-        <span class="hero-meta-label">Aplicável a</span>
-        <span class="hero-meta-value">opencapital.pt e serviços associados</span>
-      </div>
+  <!-- ─── DOC ─── -->
+  <section class="doc-page">
+    <header class="doc-header">
+      <h1 class="doc-title">Política<br>de Privacidade</h1>
+    </header>
+
+    <div class="doc-wrap">
+
+      <p class="doc-p">O Grupo Open Capital, na qualidade de entidade responsável pelo tratamento de dados, está empenhado em proteger a privacidade e os dados pessoais dos seus clientes e utilizadores do website, pelo que elaborou e adotou a presente política e as práticas aqui descritas, cuja leitura aconselha.</p>
+
+      <p class="doc-p">A presente política de privacidade regula a recolha e tratamento dos dados pessoais fornecidos pelos clientes e utilizadores do website opencapital.pt, assim como o exercício dos seus direitos relativamente a estes dados, nos termos da legislação em vigor, designadamente do Regulamento Geral de Proteção de Dados (RGPD).</p>
+
+      <h2 class="doc-h2">1. Do que trata esta política?</h2>
+      <p class="doc-sub"><strong>1.1.</strong> Esta Política de Privacidade explica como recolhemos e tratamos os dados pessoais que são necessários para o fornecimento de serviços disponibilizados através do website e dos canais digitais do Grupo Open Capital.</p>
+      <p class="doc-sub"><strong>1.2.</strong> O objetivo é que a recolha e tratamento dos dados sejam levados a cabo da melhor forma, pretendendo esta política descrever as práticas adotadas para esse efeito.</p>
+      <p class="doc-sub"><strong>1.3.</strong> A utilização do website implica o conhecimento e a aceitação desta Política de Privacidade.</p>
+
+      <h2 class="doc-h2">2. O que são dados pessoais?</h2>
+      <p class="doc-sub"><strong>2.1.</strong> Dados pessoais são todas as informações relativas a uma pessoa e que a identificam, ou tornam identificável, independentemente da natureza e suporte das informações, incluindo o som e a imagem da pessoa.</p>
+      <p class="doc-sub"><strong>2.2.</strong> Por identificável deve entender-se uma pessoa que possa ser identificada, direta ou indiretamente, designadamente por referência a um número de identificação ou a outros elementos específicos da sua identidade física, fisiológica, psíquica, económica, cultural ou social.</p>
+      <p class="doc-sub"><strong>2.3.</strong> O Grupo Open Capital assume que os dados recolhidos foram inseridos pelo respetivo titular ou que a sua inserção foi autorizada pelo mesmo, sendo estes verdadeiros e exatos.</p>
+
+      <h2 class="doc-h2">3. Quem é o responsável pelo tratamento?</h2>
+      <p class="doc-sub"><strong>3.1.</strong> A entidade responsável pelo tratamento dos dados pessoais descritos nesta política é o Grupo Open Capital.</p>
+      <p class="doc-sub"><strong>3.2.</strong> Para qualquer questão relativa a proteção de dados, o titular pode contactar o Grupo Open Capital através do email <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a>.</p>
+      <p class="doc-sub"><strong>3.3.</strong> O Grupo Open Capital não nomeou Encarregado de Proteção de Dados (DPO), por não se verificarem os critérios previstos no artigo 37.º do RGPD.</p>
+
+      <h2 class="doc-h2">4. Que dados pessoais tratamos?</h2>
+      <p class="doc-sub"><strong>4.1.</strong> O website opencapital.pt não tem formulários de recolha direta de dados. Os dados pessoais são tratados nos seguintes contextos:</p>
+      <p class="doc-sub"><strong>4.2.</strong> <strong>Agendamentos através do Calendly.</strong> Quando marca uma reunião com o Grupo Open Capital através do botão <em>Contactar</em>, é encaminhado para a plataforma Calendly, que recolhe nome, endereço de email, e eventual mensagem ou informação adicional que preencha.</p>
+      <p class="doc-sub"><strong>4.3.</strong> <strong>Contactos por email.</strong> Quando nos escreve para <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a>, tratamos o seu nome, endereço de email, e o conteúdo da mensagem.</p>
+      <p class="doc-sub"><strong>4.4.</strong> <strong>Candidaturas profissionais.</strong> No âmbito de candidaturas a vagas ou candidaturas espontâneas, tratamos os dados constantes do currículo e da carta de apresentação, designadamente dados identificativos, percurso académico, experiência profissional e contactos.</p>
+      <p class="doc-sub"><strong>4.5.</strong> <strong>Dados técnicos de navegação.</strong> A infraestrutura técnica do website (GitHub Pages e Cloudflare) gera automaticamente registos com o endereço IP, tipo de browser, páginas visitadas, data e hora de acesso, para finalidades de segurança, estatística agregada e prevenção de abuso.</p>
+
+      <h2 class="doc-h2">5. Finalidades e fundamentos legais</h2>
+      <p class="doc-sub"><strong>5.1.</strong> O tratamento de dados pessoais pelo Grupo Open Capital tem por base um dos fundamentos previstos no artigo 6.º do RGPD, consoante a finalidade:</p>
+      <p class="doc-sub"><strong>5.2.</strong> Resposta a pedidos de contacto, marcação de reuniões e diligências pré-contratuais, com base no interesse legítimo e nas diligências a pedido do titular (artigo 6.º, n.º 1, alíneas b) e f)).</p>
+      <p class="doc-sub"><strong>5.3.</strong> Prestação dos serviços de consultoria contratados, com base na execução do contrato (artigo 6.º, n.º 1, alínea b)).</p>
+      <p class="doc-sub"><strong>5.4.</strong> Cumprimento de obrigações legais, nomeadamente fiscais e contabilísticas, com base na obrigação legal (artigo 6.º, n.º 1, alínea c)).</p>
+      <p class="doc-sub"><strong>5.5.</strong> Gestão de candidaturas profissionais, com base em diligências pré-contratuais e consentimento (artigo 6.º, n.º 1, alíneas a) e b)).</p>
+      <p class="doc-sub"><strong>5.6.</strong> Segurança, integridade do website e prevenção de utilização abusiva, com base no interesse legítimo (artigo 6.º, n.º 1, alínea f)).</p>
+      <p class="doc-sub"><strong>5.7.</strong> O Grupo Open Capital não utiliza os dados pessoais para envio de comunicações de marketing, newsletters, nem para qualquer finalidade secundária sem o consentimento expresso do titular.</p>
+
+      <h2 class="doc-h2">6. Prazos de conservação</h2>
+      <p class="doc-sub"><strong>6.1.</strong> Os dados pessoais são conservados apenas pelo tempo necessário à finalidade para que foram recolhidos, ou pelos prazos impostos por lei.</p>
+      <p class="doc-sub"><strong>6.2.</strong> Contactos e pedidos de informação sem seguimento contratual: até 24 meses após o último contacto.</p>
+      <p class="doc-sub"><strong>6.3.</strong> Dados de clientes e documentação contratual: durante a vigência do contrato e 10 anos após o seu termo, nos termos do Código do IRC e do Código do IVA.</p>
+      <p class="doc-sub"><strong>6.4.</strong> Candidaturas profissionais não selecionadas: até 12 meses, salvo consentimento expresso para conservação em base de talento.</p>
+      <p class="doc-sub"><strong>6.5.</strong> Registos técnicos de navegação: até 12 meses, de acordo com as políticas dos subcontratantes.</p>
+      <p class="doc-sub"><strong>6.6.</strong> Findos os respetivos prazos, os dados são eliminados ou anonimizados de forma irreversível.</p>
+
+      <h2 class="doc-h2">7. Com quem partilhamos os dados?</h2>
+      <p class="doc-sub"><strong>7.1.</strong> O Grupo Open Capital não vende, aluga nem cede dados pessoais a terceiros para fins comerciais.</p>
+      <p class="doc-sub"><strong>7.2.</strong> Os dados podem ser partilhados, dentro do estritamente necessário, com subcontratantes tecnológicos que operam infraestrutura ou ferramentas utilizadas pelo Grupo Open Capital, designadamente Calendly (agendamento), GitHub (alojamento do website), Cloudflare (CDN e proteção), e provedor de correio eletrónico.</p>
+      <p class="doc-sub"><strong>7.3.</strong> Os dados podem ainda ser partilhados com prestadores de serviços profissionais sujeitos a dever de confidencialidade, como contabilistas, advogados ou auditores, quando tal se revele necessário ao cumprimento das obrigações legais.</p>
+      <p class="doc-sub"><strong>7.4.</strong> O Grupo Open Capital só comunica dados a autoridades públicas quando exista obrigação legal de comunicação, nomeadamente à autoridade tributária, tribunais ou entidades reguladoras competentes.</p>
+      <p class="doc-sub"><strong>7.5.</strong> Todos os subcontratantes estão vinculados por contratos que asseguram padrões de proteção equivalentes aos do RGPD.</p>
+
+      <h2 class="doc-h2">8. Transferências internacionais</h2>
+      <p class="doc-sub"><strong>8.1.</strong> Algumas ferramentas utilizadas pelo Grupo Open Capital são operadas por empresas com sede nos Estados Unidos da América, designadamente a Calendly LLC, a GitHub Inc. e a Cloudflare Inc.</p>
+      <p class="doc-sub"><strong>8.2.</strong> Tais transferências estão salvaguardadas pelos mecanismos previstos no capítulo V do RGPD, nomeadamente o EU-US Data Privacy Framework e as Cláusulas Contratuais Tipo aprovadas pela Comissão Europeia.</p>
+      <p class="doc-sub"><strong>8.3.</strong> Para conhecer em detalhe as práticas de cada subcontratante, o titular pode consultar a <a href="https://calendly.com/legal/privacy-notice" target="_blank">Política de Privacidade da Calendly</a>, a <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank">Política de Privacidade do GitHub</a> e a <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Política de Privacidade da Cloudflare</a>.</p>
+
+      <h2 class="doc-h2">9. Os seus direitos</h2>
+      <p class="doc-sub"><strong>9.1.</strong> Nos termos dos artigos 15.º a 22.º do RGPD, o titular dos dados tem, a qualquer momento, direito de acesso, retificação, apagamento, limitação do tratamento, oposição, portabilidade e, quando aplicável, direito a retirar o consentimento.</p>
+      <p class="doc-sub"><strong>9.2.</strong> O exercício destes direitos pode ser efetuado através do email <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a>. O Grupo Open Capital responderá no prazo máximo de 30 dias.</p>
+      <p class="doc-sub"><strong>9.3.</strong> Podem ser solicitados elementos adicionais para confirmação da identidade do titular antes de ser dado seguimento ao pedido.</p>
+      <p class="doc-sub"><strong>9.4.</strong> O titular tem ainda o direito de apresentar reclamação à autoridade de controlo nacional, a Comissão Nacional de Proteção de Dados (<a href="https://www.cnpd.pt" target="_blank">www.cnpd.pt</a>).</p>
+
+      <h2 class="doc-h2">10. Segurança dos dados</h2>
+      <p class="doc-sub"><strong>10.1.</strong> O Grupo Open Capital adota medidas técnicas e organizativas adequadas para proteger os dados pessoais contra destruição, perda, alteração, divulgação ou acesso não autorizado.</p>
+      <p class="doc-sub"><strong>10.2.</strong> Estas medidas incluem, entre outras, comunicações em HTTPS, autenticação forte nos sistemas internos, acesso restrito à informação com base na necessidade de saber, e seleção criteriosa de subcontratantes que cumpram padrões equivalentes.</p>
+      <p class="doc-sub"><strong>10.3.</strong> Em caso de violação de dados pessoais suscetível de resultar em risco elevado para os direitos e liberdades do titular, o Grupo Open Capital cumprirá os deveres de notificação à CNPD e de comunicação aos titulares, nos termos dos artigos 33.º e 34.º do RGPD.</p>
+
+      <h2 class="doc-h2">11. Cookies</h2>
+      <p class="doc-sub"><strong>11.1.</strong> O website opencapital.pt não utiliza cookies próprios de tracking, perfilagem ou publicidade.</p>
+      <p class="doc-sub"><strong>11.2.</strong> Podem existir cookies estritamente necessários definidos pela Cloudflare, para efeitos de segurança e integridade da ligação, e pela Calendly, quando o utilizador acede à funcionalidade de agendamento.</p>
+      <p class="doc-sub"><strong>11.3.</strong> Não são utilizadas ferramentas de analytics comerciais, como Google Analytics, Meta Pixel ou LinkedIn Insight Tag.</p>
+      <p class="doc-sub"><strong>11.4.</strong> O titular pode, a qualquer momento, gerir a utilização de cookies através das definições de privacidade do seu navegador.</p>
+
+      <h2 class="doc-h2">12. Menores</h2>
+      <p class="doc-sub"><strong>12.1.</strong> Os serviços do Grupo Open Capital dirigem-se exclusivamente a empresas, empresários e profissionais, não sendo recolhidos conscientemente dados pessoais de menores de 16 anos.</p>
+      <p class="doc-sub"><strong>12.2.</strong> Caso seja detetado que um menor forneceu dados pessoais, o Grupo Open Capital procederá à sua eliminação imediata.</p>
+
+      <h2 class="doc-h2">13. Alterações à presente política</h2>
+      <p class="doc-sub"><strong>13.1.</strong> A presente política poderá ser atualizada sempre que existam alterações legais, tecnológicas ou operacionais que o justifiquem.</p>
+      <p class="doc-sub"><strong>13.2.</strong> A versão em vigor será, em cada momento, a que se encontra publicada nesta página, com indicação da data de atualização.</p>
+      <p class="doc-sub"><strong>13.3.</strong> Recomenda-se a consulta periódica. Alterações materiais serão comunicadas com destaque, quando aplicável.</p>
+
+      <p class="doc-update"><strong>Última atualização:</strong> 23 de abril de 2026</p>
+
     </div>
   </section>
-
-  <!-- ─── ARTICLE ─── -->
-  <main class="article-wrap">
-
-    <p class="article-intro">A Open Capital é uma consultora estratégica focada em capital, financiamento e crescimento empresarial. Esta política descreve como tratamos os dados pessoais que chegam até nós através do website <strong>opencapital.pt</strong>, da plataforma de agendamento Calendly, e dos contactos por email. Escrevemo-la sem linguagem corporativa porque preferimos que a leia do que que a ignore.</p>
-
-    <!-- 1 -->
-    <section class="article-section">
-      <div class="article-eyebrow">01</div>
-      <h2 class="article-h2">Quem é o responsável pelo tratamento</h2>
-      <p class="article-p">A entidade responsável pelo tratamento dos dados pessoais descritos nesta política é o <strong>Grupo Open Capital</strong>, que pode ser contactado através dos seguintes meios:</p>
-      <div class="id-block">
-        <dl>
-          <dt>Denominação</dt><dd>Grupo Open Capital</dd>
-          <dt>Email</dt><dd><a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a></dd>
-          <dt>Website</dt><dd><a href="https://opencapital.pt">opencapital.pt</a></dd>
-        </dl>
-      </div>
-      <p class="article-p">Não nomeámos Encarregado de Proteção de Dados (DPO), porque a nossa atividade não preenche os critérios do artigo 37.º do RGPD. Para qualquer questão relacionada com privacidade, pode contactar-nos diretamente pelo email indicado acima.</p>
-    </section>
-
-    <!-- 2 -->
-    <section class="article-section">
-      <div class="article-eyebrow">02</div>
-      <h2 class="article-h2">Que dados pessoais tratamos</h2>
-      <p class="article-p">O nosso website não tem formulários de recolha direta de dados. Ainda assim, tratamos dados pessoais nos seguintes contextos:</p>
-
-      <h3 class="article-h3">Agendamentos via Calendly</h3>
-      <p class="article-p">Quando marca uma reunião connosco através do botão <em>Contactar</em>, é encaminhado para a plataforma Calendly, que recolhe nome, email, e eventual mensagem ou informação adicional que preencha. Recebemos essa informação por notificação para preparar e realizar a reunião.</p>
-
-      <h3 class="article-h3">Contactos por email</h3>
-      <p class="article-p">Se nos escrever para <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a>, tratamos o seu nome, endereço de email, e o conteúdo da mensagem, pelo tempo necessário para responder e acompanhar a relação.</p>
-
-      <h3 class="article-h3">Candidaturas espontâneas ou a vagas</h3>
-      <p class="article-p">Se enviar um CV, currículo ou carta de apresentação no âmbito da secção <a href="carreiras.html">Carreiras</a>, tratamos os dados nele contidos (dados identificativos, percurso académico e profissional, contactos) para efeitos de recrutamento.</p>
-
-      <h3 class="article-h3">Dados técnicos de navegação</h3>
-      <p class="article-p">O website é servido através do GitHub Pages e do Cloudflare. Estas infraestruturas geram registos técnicos automáticos (endereço IP, tipo de browser, páginas visitadas, data e hora) com finalidades estritas de segurança, estatística agregada e prevenção de abuso. Não utilizamos cookies de marketing, remarketing ou perfilagem comportamental.</p>
-    </section>
-
-    <!-- 3 -->
-    <section class="article-section">
-      <div class="article-eyebrow">03</div>
-      <h2 class="article-h2">Finalidades e fundamentos legais</h2>
-      <p class="article-p">Só tratamos dados pessoais quando existe uma base legal válida, nos termos do artigo 6.º do RGPD.</p>
-      <table class="article-table">
-        <thead>
-          <tr>
-            <th>Finalidade</th>
-            <th>Categoria de dados</th>
-            <th>Fundamento legal</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Responder a pedidos de contacto e marcar reuniões</td>
-            <td>Identificação e contacto</td>
-            <td>Diligências pré-contratuais a pedido do titular (art. 6.º/1/b)</td>
-          </tr>
-          <tr>
-            <td>Prestação de serviços de consultoria contratados</td>
-            <td>Identificação, contacto e dados da empresa do cliente</td>
-            <td>Execução de contrato (art. 6.º/1/b)</td>
-          </tr>
-          <tr>
-            <td>Cumprimento de obrigações fiscais e contabilísticas</td>
-            <td>Dados de faturação</td>
-            <td>Obrigação legal (art. 6.º/1/c)</td>
-          </tr>
-          <tr>
-            <td>Gestão de candidaturas a oportunidades profissionais</td>
-            <td>Dados do CV</td>
-            <td>Diligências pré-contratuais e consentimento (art. 6.º/1/a e b)</td>
-          </tr>
-          <tr>
-            <td>Segurança, integridade do website e prevenção de abuso</td>
-            <td>Logs técnicos, IP</td>
-            <td>Interesse legítimo (art. 6.º/1/f)</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="article-p">Não utilizamos os seus dados para envio de comunicações de marketing, newsletters ou para qualquer finalidade secundária sem o seu consentimento expresso.</p>
-    </section>
-
-    <!-- 4 -->
-    <section class="article-section">
-      <div class="article-eyebrow">04</div>
-      <h2 class="article-h2">Prazos de conservação</h2>
-      <p class="article-p">Conservamos os dados pessoais apenas pelo tempo necessário à finalidade para que foram recolhidos, ou pelos prazos impostos por lei.</p>
-      <ul class="article-list">
-        <li><strong>Contactos e pedidos de informação:</strong> até 24 meses após o último contacto, salvo se der seguimento a uma relação contratual.</li>
-        <li><strong>Dados de clientes e documentação contratual:</strong> durante a vigência do contrato e 10 anos após o seu termo, ao abrigo das obrigações fiscais e contabilísticas (art. 123.º do CIRC e art. 52.º do CIVA).</li>
-        <li><strong>Candidaturas a vagas ou candidaturas espontâneas:</strong> até 12 meses, salvo consentimento expresso para conservação mais prolongada em base de talento.</li>
-        <li><strong>Logs técnicos de navegação:</strong> até 12 meses, de acordo com as políticas dos subcontratantes (Cloudflare e GitHub Pages).</li>
-      </ul>
-      <p class="article-p">Findos estes prazos, os dados são eliminados ou anonimizados de forma irreversível.</p>
-    </section>
-
-    <!-- 5 -->
-    <section class="article-section">
-      <div class="article-eyebrow">05</div>
-      <h2 class="article-h2">Com quem partilhamos os dados</h2>
-      <p class="article-p">Não vendemos, alugamos, nem cedemos dados pessoais a terceiros para fins comerciais. Podemos partilhar dados, dentro do estritamente necessário, com:</p>
-      <ul class="article-list">
-        <li><strong>Subcontratantes tecnológicos</strong> que operam infraestrutura ou ferramentas utilizadas pela Open Capital, designadamente Calendly (agendamento), GitHub (alojamento do website), Cloudflare (CDN e proteção), e provedor de correio eletrónico.</li>
-        <li><strong>Prestadores de serviços profissionais</strong> obrigados a dever de confidencialidade, como contabilistas, advogados ou auditores, quando necessário ao cumprimento das nossas obrigações legais.</li>
-        <li><strong>Autoridades públicas</strong>, exclusivamente quando existe obrigação legal de comunicação (autoridade tributária, tribunais, entidades reguladoras).</li>
-      </ul>
-      <p class="article-p">Todos os subcontratantes estão vinculados por contratos que asseguram padrões de proteção equivalentes aos do RGPD.</p>
-    </section>
-
-    <!-- 6 -->
-    <section class="article-section">
-      <div class="article-eyebrow">06</div>
-      <h2 class="article-h2">Transferências internacionais</h2>
-      <p class="article-p">Algumas das ferramentas que utilizamos são operadas por empresas com sede nos Estados Unidos da América, nomeadamente a Calendly LLC, a GitHub Inc. e a Cloudflare Inc. Isso significa que, quando utiliza estas ferramentas, os seus dados podem ser transferidos e tratados fora do Espaço Económico Europeu.</p>
-      <p class="article-p">Estas transferências estão salvaguardadas pelos seguintes mecanismos legais previstos no capítulo V do RGPD:</p>
-      <ul class="article-list">
-        <li><strong>EU-US Data Privacy Framework (DPF)</strong>, sempre que o subcontratante esteja certificado nesse enquadramento.</li>
-        <li><strong>Cláusulas Contratuais Tipo (SCC)</strong> aprovadas pela Comissão Europeia, quando aplicáveis.</li>
-      </ul>
-      <p class="article-p">Para conhecer em detalhe as práticas de cada subcontratante:</p>
-      <ul class="article-list">
-        <li><a href="https://calendly.com/legal/privacy-notice" target="_blank">Política de Privacidade da Calendly</a></li>
-        <li><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank">Política de Privacidade do GitHub</a></li>
-        <li><a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Política de Privacidade da Cloudflare</a></li>
-      </ul>
-    </section>
-
-    <!-- 7 -->
-    <section class="article-section">
-      <div class="article-eyebrow">07</div>
-      <h2 class="article-h2">Os seus direitos</h2>
-      <p class="article-p">Ao abrigo dos artigos 15.º a 22.º do RGPD, tem o direito de, a qualquer momento:</p>
-      <ul class="article-list">
-        <li><strong>Aceder</strong> aos seus dados pessoais e saber quais tratamos.</li>
-        <li><strong>Retificar</strong> dados incorretos, incompletos ou desatualizados.</li>
-        <li><strong>Solicitar o apagamento</strong> (direito ao esquecimento), quando não existam obrigações legais que imponham a sua conservação.</li>
-        <li><strong>Limitar o tratamento</strong> em situações específicas previstas na lei.</li>
-        <li><strong>Opor-se</strong> ao tratamento baseado em interesse legítimo.</li>
-        <li><strong>Receber os seus dados</strong> em formato estruturado e de leitura automática (portabilidade).</li>
-        <li><strong>Retirar o consentimento</strong>, quando este tenha sido a base do tratamento, sem afetar a licitude do tratamento anterior.</li>
-      </ul>
-      <div class="highlight-box">
-        <strong>Como exercer estes direitos:</strong> envie um email para <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a> com o pedido. Respondemos no prazo máximo de 30 dias. Podemos pedir elementos adicionais para confirmar a sua identidade antes de dar seguimento ao pedido.
-      </div>
-      <p class="article-p">Se considerar que o tratamento dos seus dados viola o RGPD, tem o direito de apresentar reclamação à autoridade de controlo nacional, a <a href="https://www.cnpd.pt" target="_blank">Comissão Nacional de Proteção de Dados (CNPD)</a>.</p>
-    </section>
-
-    <!-- 8 -->
-    <section class="article-section">
-      <div class="article-eyebrow">08</div>
-      <h2 class="article-h2">Segurança dos dados</h2>
-      <p class="article-p">Adotamos medidas técnicas e organizativas adequadas para proteger os dados pessoais contra destruição, perda, alteração, divulgação ou acesso não autorizado. Essas medidas incluem, entre outras: comunicações em HTTPS, autenticação forte nos sistemas internos, acesso restrito à informação com base na necessidade de saber, e seleção criteriosa de subcontratantes que cumpram padrões equivalentes.</p>
-      <p class="article-p">Ainda assim, nenhum sistema é totalmente imune a riscos. Em caso de violação de dados pessoais suscetível de resultar em risco elevado para os seus direitos e liberdades, cumpriremos os deveres de notificação à CNPD e de comunicação aos titulares, nos termos dos artigos 33.º e 34.º do RGPD.</p>
-    </section>
-
-    <!-- 9 -->
-    <section class="article-section">
-      <div class="article-eyebrow">09</div>
-      <h2 class="article-h2">Cookies e tecnologias semelhantes</h2>
-      <p class="article-p">O website da Open Capital não utiliza cookies próprios de tracking, perfilagem ou publicidade. Podem existir cookies estritamente necessários definidos pelo Cloudflare para efeitos de segurança e integridade da ligação, e pelo Calendly quando utiliza a funcionalidade de agendamento.</p>
-      <p class="article-p">Não utilizamos ferramentas de analytics comerciais (como Google Analytics, Meta Pixel ou LinkedIn Insight Tag). Para mais detalhe sobre a gestão de cookies do seu browser, consulte as definições de privacidade do navegador que utiliza.</p>
-    </section>
-
-    <!-- 10 -->
-    <section class="article-section">
-      <div class="article-eyebrow">10</div>
-      <h2 class="article-h2">Menores</h2>
-      <p class="article-p">Os serviços da Open Capital dirigem-se exclusivamente a empresas, empresários e profissionais. Não recolhemos conscientemente dados pessoais de menores de 16 anos. Se tomar conhecimento de que um menor nos forneceu dados pessoais, contacte-nos para que procedamos à sua eliminação.</p>
-    </section>
-
-    <!-- 11 -->
-    <section class="article-section">
-      <div class="article-eyebrow">11</div>
-      <h2 class="article-h2">Alterações a esta política</h2>
-      <p class="article-p">Esta política pode ser atualizada sempre que existam alterações legais, tecnológicas ou operacionais que o justifiquem. A versão em vigor é sempre a que se encontra publicada nesta página, com indicação da data da última atualização. Recomendamos consulta periódica. Alterações materiais serão comunicadas com destaque, quando aplicável.</p>
-    </section>
-
-    <!-- CTA -->
-    <div class="cta-block">
-      <h3>Dúvidas sobre privacidade ou sobre os seus dados?</h3>
-      <p>Fale connosco diretamente. Respondemos a pedidos de acesso, retificação e apagamento em até 30 dias, conforme previsto no RGPD.</p>
-      <a href="mailto:geral@opencapital.pt">Escrever para geral@opencapital.pt</a>
-    </div>
-
-    <div class="update-badge">
-      Última atualização: <span>22 de abril de 2026</span>
-    </div>
-
-  </main>
 
   <!-- ─── FOOTER ─── -->
   <footer class="footer">
@@ -455,7 +292,6 @@
     </div>
   </footer>
 
-  <!-- ─── JAVASCRIPT ─── -->
   <script>
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
