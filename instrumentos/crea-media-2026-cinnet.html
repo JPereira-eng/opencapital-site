@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Europe MEDIA 2026 - Redes de Cinemas Europeus | Open Capital</title>
+<meta name="description" content="Apoio europeu para redes de cinemas independentes que promovem filmes europeus nao nacionais. EUR 17,5 milhoes, taxa de 95%, prazo 9 julho 2026.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1A3A5C;
+  --navy-deep: #0D1F33;
+  --gold: #C9A96E;
+  --white: #FFFFFF;
+  --grey-light: #E5E5E5;
+  --grey-mid: #7A7A7A;
+  --grey-dark: #2A2A2A;
+  --font: 'Montserrat', sans-serif;
+  --transition: all 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --shadow: 0 8px 40px rgba(26,58,92,0.10);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:var(--font); background:var(--white); color:var(--grey-dark); -webkit-font-smoothing:antialiased; }
+
+/* NAVBAR */
+.navbar { display:flex; align-items:center; justify-content:space-between; padding:0 40px; height:74px; background:var(--white); border-bottom:1px solid var(--grey-light); position:fixed; top:0; left:0; right:0; z-index:1000; transition:var(--transition); }
+.nav-logo-img { height:57px; width:auto; filter:none; }
+.nav-links { display:flex; align-items:center; gap:24px; list-style:none; margin-left:auto; }
+.nav-links a { font-size:15px; font-weight:500; letter-spacing:0.08em; color:var(--grey-dark); text-decoration:none; transition:var(--transition); position:relative; padding-bottom:3px; white-space:nowrap; }
+.nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold); transition:width 0.3s ease; }
+.nav-links a:hover { color:var(--navy); }
+.nav-links a:hover::after { width:100%; }
+.nav-links a.active { color:var(--navy); }
+.nav-links a.active::after { width:100%; }
+.nav-badge { font-size:10px; font-weight:600; letter-spacing:0.06em; color:var(--gold); border:1px solid var(--gold); padding:1px 4px; margin-left:3px; vertical-align:super; line-height:1; }
+.nav-dropdown { position:relative; }
+.nav-dropdown-menu { position:absolute; top:100%; right:0; background:var(--white); border:1px solid var(--grey-light); min-width:160px; box-shadow:var(--shadow); display:none; z-index:100; }
+.nav-dropdown:hover .nav-dropdown-menu { display:block; }
+.nav-dropdown-menu a { display:block; font-size:13px; font-weight:500; letter-spacing:0.05em; color:var(--grey-dark); padding:11px 18px; text-decoration:none; transition:var(--transition); border-bottom:1px solid var(--grey-light); }
+.nav-dropdown-menu a:last-child { border-bottom:none; }
+.nav-dropdown-menu a:hover { color:var(--navy); background:#FAFAFA; }
+.nav-cta { font-size:16px; font-weight:600; letter-spacing:0.08em; color:var(--navy); text-decoration:none; border:1px solid var(--navy); padding:9px 18px; margin-left:28px; transition:var(--transition); white-space:nowrap; }
+.nav-cta:hover { background:var(--navy); color:var(--white); }
+
+/* HERO ARTIGO */
+.hero-article { background:var(--navy); padding:140px 8% 80px; position:relative; overflow:hidden; }
+.hero-article::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background:linear-gradient(to bottom, var(--gold) 0%, rgba(201,169,110,0.3) 60%, transparent 100%); }
+.hero-article-inner { max-width:720px; position:relative; z-index:1; }
+.hero-breadcrumb { font-size:13px; font-weight:400; color:rgba(255,255,255,0.38); letter-spacing:0.06em; margin-bottom:20px; }
+.hero-breadcrumb a { color:rgba(255,255,255,0.38); text-decoration:none; transition:var(--transition); }
+.hero-breadcrumb a:hover { color:rgba(255,255,255,0.7); }
+.hero-breadcrumb span { margin:0 8px; }
+.hero-category-badge { display:inline-block; font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); border:1px solid rgba(201,169,110,0.45); padding:5px 14px; margin-bottom:20px; }
+.hero-title { font-size:48px; font-weight:700; color:var(--white); line-height:1.06; letter-spacing:-0.01em; margin-bottom:16px; }
+.hero-tagline { font-size:19px; font-weight:300; color:rgba(255,255,255,0.52); line-height:1.7; max-width:600px; margin-bottom:40px; }
+.hero-meta-bar { display:flex; gap:0; border-top:1px solid rgba(255,255,255,0.1); padding-top:32px; flex-wrap:wrap; }
+.hero-meta-item { flex:1; min-width:140px; padding-right:28px; border-right:1px solid rgba(255,255,255,0.08); margin-right:28px; }
+.hero-meta-item:last-child { border-right:none; margin-right:0; }
+.hero-meta-label { font-size:10px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:rgba(255,255,255,0.36); margin-bottom:6px; }
+.hero-meta-value { font-size:17px; font-weight:600; color:var(--white); letter-spacing:0.01em; }
+.hero-meta-value.val-open { color:#6FCF97; }
+
+/* BACK BAR */
+.back-bar { background:#FAFAFA; border-bottom:1px solid var(--grey-light); padding:14px 8%; }
+.back-link { font-size:13px; font-weight:500; letter-spacing:0.08em; color:var(--grey-mid); text-decoration:none; transition:var(--transition); }
+.back-link:hover { color:var(--navy); }
+
+/* LAYOUT */
+.article-layout { display:grid; grid-template-columns:1fr 320px; gap:64px; max-width:1200px; margin:0 auto; padding:80px 80px 96px; align-items:start; }
+.article-sidebar { position:sticky; top:100px; }
+
+/* ARTICLE TYPOGRAPHY */
+.art-eyebrow { font-size:12px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
+.art-h2 { font-size:28px; font-weight:600; color:var(--navy); line-height:1.2; margin-bottom:16px; }
+.art-h3 { font-size:20px; font-weight:600; color:var(--navy); margin-bottom:12px; margin-top:28px; }
+.art-body { font-size:17px; font-weight:400; color:var(--grey-dark); line-height:1.85; margin-bottom:20px; max-width:600px; }
+.art-section { margin-bottom:56px; }
+
+/* STATS ROW */
+.stats-row { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--grey-light); border:1px solid var(--grey-light); margin:32px 0; }
+.stat-cell { background:var(--white); padding:28px 24px; text-align:center; }
+.stat-value { font-size:30px; font-weight:700; color:var(--navy); letter-spacing:-0.02em; margin-bottom:6px; }
+.stat-label { font-size:11px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--grey-mid); }
+
+/* HIGHLIGHT BOX */
+.highlight-box { border-left:3px solid var(--gold); background:#FAFAFA; padding:20px 24px; margin:24px 0; }
+.highlight-box p { font-size:16px; font-weight:400; color:var(--grey-dark); line-height:1.7; margin:0; }
+.highlight-box strong { color:var(--navy); font-weight:600; }
+
+/* TABLE */
+.art-table { width:100%; border-collapse:collapse; margin:24px 0; font-size:14px; }
+.art-table th { background:var(--navy); color:var(--white); font-weight:600; letter-spacing:0.06em; padding:12px 16px; text-align:left; font-size:12px; text-transform:uppercase; }
+.art-table td { padding:12px 16px; border-bottom:1px solid var(--grey-light); color:var(--grey-dark); }
+.art-table tr:last-child td { border-bottom:none; }
+.art-table tr:nth-child(even) td { background:#FAFAFA; }
+.art-table .score-col { text-align:center; font-weight:700; color:var(--navy); font-size:15px; }
+
+/* BULLET LIST */
+.art-list { list-style:none; margin:16px 0; }
+.art-list li { font-size:16px; font-weight:400; color:var(--grey-dark); line-height:1.75; padding-left:20px; position:relative; margin-bottom:8px; }
+.art-list li::before { content:''; position:absolute; left:0; top:10px; width:5px; height:5px; background:var(--gold); transform:rotate(45deg); }
+
+/* REQUISITO BOX */
+.req-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:24px 0; }
+.req-box { border:1px solid var(--grey-light); padding:20px; }
+.req-box-label { font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+.req-box-value { font-size:18px; font-weight:700; color:var(--navy); margin-bottom:6px; }
+.req-box-desc { font-size:13px; color:var(--grey-mid); line-height:1.6; }
+
+/* WP LIST */
+.wp-list { list-style:none; margin:20px 0; }
+.wp-list li { display:flex; gap:16px; margin-bottom:16px; padding-bottom:16px; border-bottom:1px solid var(--grey-light); }
+.wp-list li:last-child { border-bottom:none; }
+.wp-tag { font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--white); background:var(--navy); padding:4px 10px; white-space:nowrap; flex-shrink:0; align-self:flex-start; margin-top:3px; }
+.wp-desc { font-size:15px; color:var(--grey-dark); line-height:1.6; }
+.wp-desc strong { color:var(--navy); }
+
+/* SIDEBAR */
+.sidebar-card { border:1px solid var(--grey-light); padding:28px; margin-bottom:24px; }
+.sidebar-card-title { font-size:12px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--navy); margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--grey-light); }
+.sidebar-fact { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:14px; padding-bottom:14px; border-bottom:1px solid #F5F5F5; }
+.sidebar-fact:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+.sf-label { font-size:11px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--grey-mid); flex-shrink:0; }
+.sf-value { font-size:13px; font-weight:500; color:var(--navy); text-align:right; }
+.sf-value.open { color:#27AE60; }
+.sidebar-cta { background:var(--navy); padding:28px; margin-bottom:24px; }
+.sidebar-cta-title { font-size:16px; font-weight:600; color:var(--white); margin-bottom:10px; line-height:1.4; }
+.sidebar-cta-text { font-size:13px; font-weight:300; color:rgba(255,255,255,0.6); line-height:1.65; margin-bottom:20px; }
+.sidebar-cta-btn { display:block; text-align:center; background:var(--gold); color:var(--white); font-size:12px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; padding:13px 20px; text-decoration:none; transition:var(--transition); }
+.sidebar-cta-btn:hover { background:#B8945A; }
+.sidebar-related-title { font-size:12px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--navy); margin-bottom:16px; }
+.related-list { list-style:none; }
+.related-list li { border-bottom:1px solid var(--grey-light); }
+.related-list li:last-child { border-bottom:none; }
+.related-list a { display:block; font-size:13px; font-weight:500; color:var(--grey-dark); text-decoration:none; padding:10px 0; transition:var(--transition); }
+.related-list a:hover { color:var(--navy); padding-left:4px; }
+
+/* AUTHOR */
+.author-block { display:flex; align-items:center; gap:16px; margin-top:48px; padding-top:28px; border-top:1px solid var(--grey-light); }
+.author-photo { width:52px; height:52px; border-radius:50%; object-fit:cover; flex-shrink:0; }
+.author-name { font-size:15px; font-weight:600; color:var(--navy); }
+.author-role { font-size:12px; font-weight:400; color:var(--grey-mid); letter-spacing:0.04em; }
+
+/* FOOTER */
+.footer { background:var(--navy-deep); padding:56px 80px 34px; }
+.footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr; gap:44px; margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.07); }
+.f-logo-img { height:72px; width:auto; filter:brightness(0) invert(1); }
+.f-desc { font-size:15px; font-weight:300; color:rgba(255,255,255,0.36); line-height:1.85; margin-top:18px; max-width:260px; }
+.f-tagline { font-size:16px; font-weight:100; letter-spacing:0.14em; color:var(--gold); margin-top:12px; }
+.f-col-label { font-size:11px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:rgba(255,255,255,0.24); margin-bottom:16px; }
+.f-links { list-style:none; }
+.f-links li { margin-bottom:9px; }
+.f-links a { font-size:15px; font-weight:300; color:rgba(255,255,255,0.48); text-decoration:none; transition:var(--transition); letter-spacing:0.03em; }
+.f-links a:hover { color:var(--white); }
+.f-badge { font-size:9px; font-weight:600; letter-spacing:0.1em; color:var(--gold); border:1px solid rgba(201,169,110,0.45); padding:1px 5px; margin-left:5px; vertical-align:middle; }
+.footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+.f-copy { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:0.05em; }
+.f-legal { display:flex; gap:20px; }
+.f-legal a { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); text-decoration:none; letter-spacing:0.05em; transition:var(--transition); }
+.f-legal a:hover { color:rgba(255,255,255,0.45); }
+
+/* RESPONSIVE */
+@media (max-width:1024px) {
+  .article-layout { grid-template-columns:1fr; padding:48px 40px; }
+  .article-sidebar { position:static; }
+  .req-grid { grid-template-columns:1fr; }
+}
+@media (max-width:768px) {
+  .navbar { padding:0 20px; }
+  .nav-links { display:none; }
+  .hero-article { padding:110px 5% 60px; }
+  .hero-title { font-size:34px; }
+  .hero-meta-bar { gap:16px; }
+  .hero-meta-item { min-width:120px; }
+  .article-layout { padding:40px 20px; gap:40px; }
+  .stats-row { grid-template-columns:1fr; }
+  .footer { padding:40px 24px 24px; }
+  .footer-grid { grid-template-columns:1fr; gap:28px; }
+}
+
+/* REVEAL */
+.reveal { opacity:0; transform:translateY(22px); transition:opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity:1; transform:none; }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="../index.html"><img src="../logo_opencapital_azul_semfundo.png" class="nav-logo-img" alt="Open Capital"></a>
+  <ul class="nav-links">
+    <li><a href="../biblioteca.html" class="active">Solucoes</a></li>
+    <li><a href="../conhecimento.html">Conhecimento</a></li>
+    <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos.html">Sobre Nos</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros.html">Parceiros</a>
+        <a href="../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+    <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero-article">
+  <div class="hero-article-inner">
+    <div class="hero-breadcrumb">
+      <a href="../index.html">Inicio</a><span>→</span>
+      <a href="../biblioteca.html">Solucoes</a><span>→</span>
+      Creative Europe MEDIA 2026 - Redes de Cinemas Europeus
+    </div>
+    <div class="hero-category-badge">Financiamento Publico</div>
+    <h1 class="hero-title">Creative Europe MEDIA 2026<br>Redes de Cinemas Europeus</h1>
+    <p class="hero-tagline">Financiamento europeu para redes de cinemas independentes que promovem filmes nao nacionais e desenvolvem novas audiencias em toda a Europa.</p>
+    <div class="hero-meta-bar">
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Dotacao</div>
+        <div class="hero-meta-value">EUR 17,5 milhoes</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Taxa financiamento</div>
+        <div class="hero-meta-value">95%</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Prazo</div>
+        <div class="hero-meta-value val-open">9 julho 2026</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Duracao max.</div>
+        <div class="hero-meta-value">21 meses</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BACK BAR -->
+<div class="back-bar">
+  <a href="../biblioteca.html" class="back-link">← Voltar ao catalogo de instrumentos</a>
+</div>
+
+<!-- ARTICLE LAYOUT -->
+<div class="article-layout">
+  <article>
+
+    <!-- ENQUADRAMENTO -->
+    <div class="art-section reveal">
+      <p class="art-eyebrow">Enquadramento</p>
+      <h2 class="art-h2">O maior instrumento de apoio ao cinema de sala em Portugal</h2>
+      <p class="art-body">O CREA-MEDIA-2026-CINNET e o instrumento de maior dotacao do Creative Europe MEDIA dedicado ao ecossistema de exibicao cinematografica. Com EUR 17,5 milhoes e uma taxa de cofinanciamento de 95%, financia a operacao e expansao de redes de cinemas europeus independentes que dedicam uma proporcao significativa da sua programacao a filmes europeus nao nacionais.</p>
+      <p class="art-body">O instrumento nao financia cinemas individuais diretamente - financia a entidade coordenadora da rede, que por sua vez distribui apoio financeiro aos seus membros (ate EUR 250 000 por cinema). Este modelo cascata e um dos principais mecanismos de apoio ao cinema de sala europeu.</p>
+
+      <div class="stats-row">
+        <div class="stat-cell">
+          <div class="stat-value">EUR 17,5 M</div>
+          <div class="stat-label">Dotacao total</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-value">95%</div>
+          <div class="stat-label">Taxa cofinanciamento</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-value">EUR 250 k</div>
+          <div class="stat-label">Max. por cinema membro</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ELEGIBILIDADE -->
+    <div class="art-section reveal">
+      <p class="art-eyebrow">Elegibilidade</p>
+      <h2 class="art-h2">Exclusivo para redes pan-europeias de cinemas</h2>
+      <p class="art-body">Este instrumento tem requisitos de elegibilidade muito especificos: so podem candidatar-se entidades que coordenem redes de cinemas ja constituidas a escala europeia. Uma rede de cinemas europeia e um grupo de cinemas independentes europeus que, atraves de uma entidade coordenadora legalmente constituida, desenvolve atividades conjuntas de exibicao e promocao de filmes europeus.</p>
+
+      <div class="req-grid">
+        <div class="req-box">
+          <div class="req-box-label">Minimo de cinemas</div>
+          <div class="req-box-value">400 cinemas</div>
+          <div class="req-box-desc">A rede deve representar pelo menos 400 cinemas independentes europeus</div>
+        </div>
+        <div class="req-box">
+          <div class="req-box-label">Cobertura geografica</div>
+          <div class="req-box-value">20 paises MEDIA</div>
+          <div class="req-box-desc">Os cinemas devem estar situados em pelo menos 20 paises participantes no strand MEDIA</div>
+        </div>
+      </div>
+
+      <p class="art-body">Os cinemas membros devem ser empresas, associacoes ou organizacoes independentes com um ou varios ecras, situadas em paises participantes no MEDIA, cuja atividade principal seja a exibicao cinematografica. A entidade coordenadora candidata-se como beneficiario unico.</p>
+
+      <div class="highlight-box">
+        <p><strong>Candidatura individual:</strong> apenas e permitida uma candidatura por beneficiario (entidade coordenadora unica). Nao ha consorcio formal, mas a rede de cinemas membro e o nucleo da proposta - a sua amplitude geografica e o numero de cinemas sao determinantes para a avaliacao.</p>
+      </div>
+    </div>
+
+    <!-- ATIVIDADES FINANCIAVEIS -->
+    <div class="art-section reveal">
+      <p class="art-eyebrow">Atividades</p>
+      <h2 class="art-h2">O que pode ser financiado</h2>
+      <p class="art-body">A rede pode financiar dois tipos de atividades: atividades de networking da propria entidade coordenadora, e apoio financeiro direto aos cinemas membros para que implementem atividades especificas.</p>
+
+      <h3 class="art-h3">Atividades da entidade coordenadora</h3>
+      <ul class="art-list">
+        <li>Networking, informacao, formacao e comunicacao para aumentar o alcance de audiencias</li>
+        <li>Implementacao de acoes inovadoras e colaborativas, incluindo em zonas com baixa densidade de ecras</li>
+        <li>Recolha de dados e disseminacao dos resultados do trabalho da rede</li>
+        <li>Contribuicao para o dialogo politico sobre a industria cinematografica</li>
+      </ul>
+
+      <h3 class="art-h3">Apoio financeiro aos cinemas membros (ate EUR 250 000 por cinema)</h3>
+      <ul class="art-list">
+        <li>Acoes de promocao e exibicao de filmes europeus e aumento de audiencias para filmes nao nacionais</li>
+        <li>Atividades inovadoras para atrair novos publicos, especialmente jovens, incluindo em regioes com infraestrutura cinematografica limitada</li>
+        <li>Aproveitamento da transicao digital: ferramentas online, aplicacoes de dados e inteligencia artificial</li>
+        <li>Adaptacao das praticas de negocio dos cinemas em materia de sustentabilidade, inclusao e acessibilidade</li>
+        <li>Promocao e marketing em cooperacao com plataformas de distribuicao (TV, VOD)</li>
+      </ul>
+
+      <div class="highlight-box">
+        <p>O apoio financeiro a terceiros (cinemas membros) e expressamente permitido. As candidaturas internas da rede devem ser abertas, publicas e obedecer a padroes de transparencia europeia. Devem estar abertas no minimo dois meses e os resultados devem ser publicados no site do coordenador.</p>
+      </div>
+    </div>
+
+    <!-- WORK PACKAGES -->
+    <div class="art-section reveal">
+      <p class="art-eyebrow">Estrutura do projeto</p>
+      <h2 class="art-h2">Work packages obrigatorios</h2>
+      <p class="art-body">O projeto deve ser estruturado em quatro work packages obrigatorios. Podem ser adicionados WPs suplementares.</p>
+
+      <ul class="wp-list">
+        <li>
+          <span class="wp-tag">WP 1</span>
+          <div class="wp-desc"><strong>Gestao do projeto</strong> - Coordenacao, governanca da rede e gestao financeira e administrativa</div>
+        </li>
+        <li>
+          <span class="wp-tag">WP 2</span>
+          <div class="wp-desc"><strong>Apoio a terceiros</strong> - Mecanismo de distribuicao de apoio financeiro aos cinemas membros, com processo de selecao transparente</div>
+        </li>
+        <li>
+          <span class="wp-tag">WP 3</span>
+          <div class="wp-desc"><strong>Acoes inovadoras para novas audiencias</strong> - Atividades para atrair novos publicos e jovens espetadores para filmes europeus</div>
+        </li>
+        <li>
+          <span class="wp-tag">WP 4</span>
+          <div class="wp-desc"><strong>Cinema em regioes com infraestrutura limitada</strong> - Atividades especificas para cinemas em regioes com pouca oferta cinematografica ("desertos de cinema")</div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- CRITERIOS DE AVALIACAO -->
+    <div class="art-section reveal">
+      <p class="art-eyebrow">Avaliacao</p>
+      <h2 class="art-h2">Quatro criterios, 100 pontos</h2>
+      <p class="art-body">A avaliacao e feita por um comite de avaliacao com base em quatro criterios. O limiar minimo global e de 70 pontos para passar. Nao ha limiares individuais por criterio.</p>
+
+      <table class="art-table">
+        <thead>
+          <tr>
+            <th>Criterio</th>
+            <th>O que avalia</th>
+            <th style="text-align:center;">Pontos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Relevancia</strong></td>
+            <td>Estrategia da rede, numero e equilibrio geografico dos cinemas, indicadores de desempenho, impacto previsto</td>
+            <td class="score-col">30</td>
+          </tr>
+          <tr>
+            <td><strong>Qualidade das atividades</strong></td>
+            <td>Eficiencia e eficacia das atividades, logica de intervencao clara e monitorizacao de resultados</td>
+            <td class="score-col">30</td>
+          </tr>
+          <tr>
+            <td><strong>Gestao do projeto</strong></td>
+            <td>Governanca da entidade coordenadora, gestao financeira, transparencia e ausencia de conflitos de interesse</td>
+            <td class="score-col">20</td>
+          </tr>
+          <tr>
+            <td><strong>Disseminacao</strong></td>
+            <td>Estrategia de comunicacao entre membros e para o exterior, partilha de boas praticas e inovacoes</td>
+            <td class="score-col">20</td>
+          </tr>
+          <tr style="background:rgba(201,169,110,0.06);">
+            <td><strong>Total</strong></td>
+            <td><strong>Limiar minimo de aprovacao: 70 pontos</strong></td>
+            <td class="score-col" style="font-size:18px;">100</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="art-body">Em caso de empate, a prioridade e definida sequencialmente por: Relevancia, depois Disseminacao, depois Qualidade das atividades.</p>
+    </div>
+
+    <!-- PERSPETIVA OPEN CAPITAL -->
+    <div class="art-section reveal">
+      <p class="art-eyebrow">Perspetiva Open Capital</p>
+      <h2 class="art-h2">Um instrumento estrutural para quem ja opera redes europeias</h2>
+      <p class="art-body">O CINNET e um instrumento de escala europeia por definicao - os requisitos de 400 cinemas em 20 paises excluem candidaturas puramente nacionais. Na pratica, este instrumento e acessivel principalmente a redes pan-europeias ja estabelecidas, como a Europa Cinemas, a principal rede de exibicao de filmes europeus no mundo.</p>
+      <p class="art-body">Para organizacoes portuguesas do setor cinematografico, a relevancia direta deste instrumento esta no facto de poderem ser membros de redes financiadas pelo CINNET - e portanto beneficiarios do apoio financeiro em cascata (ate EUR 250 000 por cinema). Cinemas independentes portugueses que queiram aceder a este financiamento devem verificar se ja pertencem a uma rede elegivel ou explorar a adesao.</p>
+      <p class="art-body">A taxa de 95% e excecional no contexto europeu e reflete a natureza de servico publico cultural desta atividade. O montante pedido nao tem limite formal - a proposta deve ser justificada em funcao do plano de atividades e do numero de cinemas membros.</p>
+    </div>
+
+    <!-- AUTHOR -->
+    <div class="author-block">
+      <img src="../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="author-photo">
+      <div>
+        <div class="author-name">Mara Ferreira</div>
+        <div class="author-role">Tecnica de Candidaturas e Incentivos</div>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="article-sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">Factos Rapidos</div>
+      <div class="sidebar-fact">
+        <span class="sf-label">Programa</span>
+        <span class="sf-value">Creative Europe MEDIA</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sf-label">Gestao</span>
+        <span class="sf-value">EACEA</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sf-label">Dotacao</span>
+        <span class="sf-value">EUR 17 467 470</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sf-label">Prazo</span>
+        <span class="sf-value open">9 julho 2026</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sf-label">Taxa financ.</span>
+        <span class="sf-value">95%</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sf-label">Duracao max.</span>
+        <span class="sf-value">21 meses</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sf-label">Montante max. 3os</span>
+        <span class="sf-value">EUR 250 000</span>
+      </div>
+      <div class="sidebar-fact">
+        <span class="sf-label">Requisito rede</span>
+        <span class="sf-value">400+ cinemas / 20+ paises</span>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">A sua organizacao coordena ou pertence a uma rede de cinemas europeia?</div>
+      <p class="sidebar-cta-text">Ajudamos a verificar a elegibilidade e a avaliar o potencial de candidatura ou de adesao a uma rede financiada.</p>
+      <a href="https://calendly.com/opencapital" target="_blank" class="sidebar-cta-btn">Falar com um especialista</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <ul class="related-list">
+        <li><a href="crea-media-2026-filmsales.html">Creative Europe MEDIA - European Film Sales 2026</a></li>
+        <li><a href="crea-media-2026-tvonline-3.html">Creative Europe MEDIA - Ficcao TV e Online 2026</a></li>
+        <li><a href="crea-media-2026-tvonline-1.html">Creative Europe MEDIA - Animacao TV e Online 2026</a></li>
+        <li><a href="crea-media-2026-tvonline-2.html">Creative Europe MEDIA - Documentario TV e Online 2026</a></li>
+        <li><a href="crea-cult-2026-coop.html">Creative Europe Culture - Projetos de Cooperacao 2026</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <img src="../logo_opencapital_azul_semfundo.png" class="f-logo-img" alt="Open Capital">
+      <p class="f-desc">Consultoria estrategica de financiamento para empresas que querem crescer com inteligencia e sem burocracia.</p>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <div class="f-col-label">Solucoes</div>
+      <ul class="f-links">
+        <li><a href="../biblioteca.html">Portugal 2030</a></li>
+        <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+        <li><a href="../biblioteca.html">Beneficios Fiscais</a></li>
+        <li><a href="../biblioteca.html">Premios de Inovacao</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Plataforma</div>
+      <ul class="f-links">
+        <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">em breve</span></a></li>
+        <li><a href="../tech2business.html">Tech2Business <span class="f-badge">em breve</span></a></li>
+        <li><a href="../conhecimento.html">Conhecimento</a></li>
+        <li><a href="../parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Empresa</div>
+      <ul class="f-links">
+        <li><a href="../sobre-nos.html">Sobre Nos</a></li>
+        <li><a href="../sobre-nos.html">Equipa</a></li>
+        <li><a href="../carreiras.html">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">© 2009 Open Capital Advisory & Consultancy</span>
+    <div class="f-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.1 });
+reveals.forEach(r => io.observe(r));
+
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(26,58,92,0.08)' : 'none';
+});
+</script>
+</body>
+</html>
