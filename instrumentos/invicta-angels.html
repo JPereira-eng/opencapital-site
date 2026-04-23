@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invicta Angels - Rede de Business Angels do Porto | Open Capital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:       #1A3A5C;
+      --navy-deep:  #0D1F33;
+      --gold:       #C9A96E;
+      --white:      #FFFFFF;
+      --grey-light: #E5E5E5;
+      --grey-mid:   #7A7A7A;
+      --grey-dark:  #2A2A2A;
+      --font: 'Montserrat', sans-serif;
+      --transition: all 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --shadow: 0 8px 40px rgba(26,58,92,0.10);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:var(--font); background:var(--white); color:var(--grey-dark); -webkit-font-smoothing:antialiased; }
+
+    /* NAVBAR */
+    .navbar { display:flex; align-items:center; justify-content:space-between; padding:0 40px; height:74px; background:var(--white); border-bottom:1px solid var(--grey-light); position:fixed; top:0; left:0; right:0; z-index:100; backdrop-filter:blur(8px); }
+    .nav-logo-img { height:57px; width:auto; }
+    .nav-links { display:flex; align-items:center; gap:24px; list-style:none; margin-left:auto; }
+    .nav-links a { font-size:15px; font-weight:500; letter-spacing:0.08em; color:var(--grey-dark); text-decoration:none; transition:var(--transition); position:relative; padding-bottom:3px; white-space:nowrap; }
+    .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold); transition:width 0.3s ease; }
+    .nav-links a:hover { color:var(--navy); }
+    .nav-links a:hover::after { width:100%; }
+    .nav-links a.active { color:var(--navy); }
+    .nav-links a.active::after { width:100%; }
+    .nav-badge { font-size:10px; font-weight:600; letter-spacing:0.06em; color:var(--gold); border:1px solid var(--gold); padding:1px 4px; margin-left:3px; vertical-align:super; line-height:1; }
+    .nav-cta { font-size:16px; font-weight:600; letter-spacing:0.08em; color:var(--navy); text-decoration:none; border:1px solid var(--navy); padding:9px 18px; margin-left:28px; transition:var(--transition); white-space:nowrap; }
+    .nav-cta:hover { background:var(--navy); color:var(--white); }
+    .nav-dropdown { position:relative; }
+    .nav-dropdown-menu { position:absolute; top:100%; right:0; background:var(--white); border:1px solid var(--grey-light); min-width:160px; box-shadow:var(--shadow); display:none; z-index:100; }
+    .nav-dropdown:hover .nav-dropdown-menu { display:block; }
+    .nav-dropdown-menu a { display:block; font-size:13px; font-weight:500; letter-spacing:0.05em; color:var(--grey-dark); padding:11px 18px; text-decoration:none; transition:var(--transition); border-bottom:1px solid var(--grey-light); }
+    .nav-dropdown-menu a:last-child { border-bottom:none; }
+    .nav-dropdown-menu a:hover { color:var(--navy); background:#FAFAFA; }
+
+    /* HERO */
+    .article-hero { background:var(--navy); padding:140px 8% 80px; position:relative; overflow:hidden; }
+    .hero-gold-bar { position:absolute; left:0; top:0; bottom:0; width:4px; background:linear-gradient(to bottom, var(--gold) 0%, rgba(201,169,110,0.3) 60%, transparent 100%); }
+    .breadcrumb { display:flex; align-items:center; gap:8px; margin-bottom:28px; }
+    .breadcrumb a { font-size:13px; font-weight:400; color:rgba(255,255,255,0.45); text-decoration:none; letter-spacing:0.05em; transition:var(--transition); }
+    .breadcrumb a:hover { color:rgba(255,255,255,0.75); }
+    .breadcrumb span { font-size:13px; color:rgba(255,255,255,0.25); }
+    .breadcrumb .current { font-size:13px; color:rgba(255,255,255,0.45); }
+    .hero-badge { display:inline-block; font-size:11px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:var(--gold); border:1px solid rgba(201,169,110,0.45); padding:5px 14px; margin-bottom:22px; }
+    .hero-divider { width:1px; height:44px; background:var(--gold); margin:0 0 28px; }
+    .article-hero h1 { font-size:54px; font-weight:700; color:var(--white); line-height:1.06; letter-spacing:-0.015em; margin-bottom:20px; max-width:780px; }
+    .article-hero .hero-tagline { font-size:20px; font-weight:300; color:rgba(255,255,255,0.52); line-height:1.8; max-width:620px; margin-bottom:48px; }
+    .meta-bar { display:flex; gap:0; border-top:1px solid rgba(255,255,255,0.10); padding-top:32px; flex-wrap:wrap; }
+    .meta-item { flex:1; min-width:160px; padding-right:32px; border-right:1px solid rgba(255,255,255,0.10); margin-right:32px; }
+    .meta-item:last-child { border-right:none; margin-right:0; }
+    .meta-label { font-size:10px; font-weight:600; letter-spacing:0.26em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:6px; }
+    .meta-value { font-size:18px; font-weight:600; color:var(--white); }
+    .meta-value.status-open { color:#6FCF97; }
+
+    /* BACK BAR */
+    .back-bar { background:#FAFAFA; border-bottom:1px solid var(--grey-light); padding:14px 8%; }
+    .back-link { font-size:13px; font-weight:500; letter-spacing:0.08em; color:var(--grey-mid); text-decoration:none; transition:var(--transition); }
+    .back-link:hover { color:var(--navy); }
+
+    /* LAYOUT */
+    .article-layout { display:grid; grid-template-columns:1fr 320px; gap:64px; max-width:1200px; margin:0 auto; padding:80px 80px 96px; align-items:start; }
+    @media(max-width:1024px) { .article-layout { grid-template-columns:1fr; } .article-sidebar { position:static !important; } }
+
+    /* ARTICLE BODY */
+    .article-body section { margin-bottom:56px; }
+    .section-eyebrow { font-size:14px; font-weight:600; letter-spacing:0.30em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+    .section-h2 { font-size:36px; font-weight:600; letter-spacing:0.01em; color:var(--navy); line-height:1.15; margin-bottom:22px; }
+    .section-h3 { font-size:22px; font-weight:600; color:var(--navy); margin-bottom:14px; margin-top:32px; }
+    .body-text { font-size:18px; font-weight:400; color:var(--grey-dark); line-height:1.85; max-width:640px; margin-bottom:20px; }
+
+    /* HIGHLIGHT BOX */
+    .highlight-box { border-left:3px solid var(--gold); background:#FFFBF5; padding:22px 28px; margin:28px 0; }
+    .highlight-box-label { font-size:11px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+    .highlight-box p { font-size:16px; font-weight:400; color:var(--grey-dark); line-height:1.7; }
+
+    /* STATS ROW */
+    .stats-row { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--grey-light); margin:28px 0; }
+    .stat-col { background:var(--white); padding:28px; text-align:center; }
+    .stat-num { font-size:36px; font-weight:700; color:var(--gold); margin-bottom:6px; }
+    .stat-label { font-size:12px; font-weight:500; letter-spacing:0.10em; text-transform:uppercase; color:var(--grey-mid); }
+
+    /* STEPS LIST */
+    .steps-list { counter-reset:steps; list-style:none; margin:20px 0; }
+    .steps-list li { counter-increment:steps; display:flex; gap:20px; margin-bottom:24px; align-items:flex-start; }
+    .steps-list li::before { content:counter(steps); font-size:13px; font-weight:700; color:var(--navy); border:1px solid var(--navy); width:30px; height:30px; min-width:30px; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px; }
+    .step-content h4 { font-size:16px; font-weight:600; color:var(--navy); margin-bottom:6px; }
+    .step-content p { font-size:15px; font-weight:400; color:var(--grey-mid); line-height:1.65; }
+
+    /* CRITERIA GRID */
+    .criteria-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:20px 0; }
+    @media(max-width:768px) { .criteria-grid { grid-template-columns:1fr; } }
+    .criteria-card { border:1px solid var(--grey-light); padding:22px; position:relative; overflow:hidden; }
+    .criteria-card::before { content:''; position:absolute; top:0; left:0; width:0; height:2px; background:var(--gold); transition:width 0.4s ease; }
+    .criteria-card:hover::before { width:100%; }
+    .criteria-num { font-size:32px; font-weight:700; color:rgba(201,169,110,0.25); position:absolute; top:14px; right:16px; }
+    .criteria-title { font-size:15px; font-weight:600; color:var(--navy); margin-bottom:8px; }
+    .criteria-desc { font-size:14px; font-weight:400; color:var(--grey-mid); line-height:1.6; }
+
+    /* DIAMOND LIST */
+    .diamond-list { list-style:none; margin:16px 0 20px; }
+    .diamond-list li { display:flex; align-items:flex-start; gap:14px; font-size:17px; font-weight:400; color:var(--grey-dark); line-height:1.7; margin-bottom:12px; }
+    .diamond-list li::before { content:''; width:6px; height:6px; min-width:6px; border:1px solid var(--gold); transform:rotate(45deg); margin-top:9px; }
+
+    /* PLACEMENT IN CAPITAL STACK */
+    .stack-diagram { margin:28px 0; border:1px solid var(--grey-light); }
+    .stack-row { display:flex; align-items:stretch; border-bottom:1px solid var(--grey-light); }
+    .stack-row:last-child { border-bottom:none; }
+    .stack-row.active { background:rgba(201,169,110,0.06); }
+    .stack-stage { padding:18px 22px; width:180px; min-width:180px; border-right:1px solid var(--grey-light); }
+    .stack-stage-name { font-size:13px; font-weight:600; color:var(--navy); }
+    .stack-stage-range { font-size:12px; font-weight:400; color:var(--grey-mid); margin-top:3px; }
+    .stack-source { padding:18px 22px; display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+    .stack-tag { font-size:11px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; padding:4px 10px; }
+    .stack-tag.primary { background:rgba(201,169,110,0.12); color:#9A7040; }
+    .stack-tag.secondary { background:rgba(26,58,92,0.06); color:var(--navy); }
+    .stack-tag.dim { background:transparent; color:var(--grey-light); border:1px solid var(--grey-light); }
+
+    /* PERSPETIVA */
+    .perspetiva { background:#FAFAFA; border:1px solid var(--grey-light); border-top:3px solid var(--gold); padding:36px 36px 28px; margin-top:48px; }
+    .perspetiva-label { font-size:11px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    .perspetiva p { font-size:17px; font-weight:400; color:var(--grey-dark); line-height:1.85; margin-bottom:16px; }
+    .perspetiva p:last-child { font-style:italic; color:var(--grey-mid); margin-bottom:0; }
+
+    /* SIDEBAR */
+    .article-sidebar { position:sticky; top:100px; }
+    .sidebar-card { border:1px solid var(--grey-light); padding:28px; margin-bottom:20px; position:relative; overflow:hidden; }
+    .sidebar-card::before { content:''; position:absolute; top:0; left:0; width:0; height:2px; background:var(--gold); transition:width 0.4s ease; }
+    .sidebar-card:hover::before { width:100%; }
+    .sidebar-label { font-size:10px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    .fact-row { display:flex; justify-content:space-between; align-items:flex-start; padding:10px 0; border-bottom:1px solid var(--grey-light); gap:12px; }
+    .fact-row:last-child { border-bottom:none; }
+    .fact-key { font-size:12px; font-weight:500; color:var(--grey-mid); letter-spacing:0.05em; }
+    .fact-val { font-size:13px; font-weight:600; color:var(--navy); text-align:right; }
+    .fact-val.open { color:#27AE60; }
+    .sidebar-cta { background:var(--navy); padding:28px; margin-bottom:20px; }
+    .sidebar-cta h4 { font-size:17px; font-weight:600; color:var(--white); margin-bottom:10px; }
+    .sidebar-cta p { font-size:14px; font-weight:300; color:rgba(255,255,255,0.60); line-height:1.7; margin-bottom:20px; }
+    .sidebar-cta a { display:block; text-align:center; background:var(--gold); color:var(--white); font-size:13px; font-weight:600; letter-spacing:0.20em; text-transform:uppercase; padding:14px; text-decoration:none; transition:var(--transition); }
+    .sidebar-cta a:hover { background:#B8945A; }
+    .related-list { list-style:none; }
+    .related-list li { border-bottom:1px solid var(--grey-light); }
+    .related-list li:last-child { border-bottom:none; }
+    .related-list a { display:block; padding:12px 0; font-size:14px; font-weight:500; color:var(--navy); text-decoration:none; transition:var(--transition); letter-spacing:0.02em; }
+    .related-list a:hover { color:var(--gold); }
+    .related-list a::before { content:'→ '; color:var(--gold); font-size:13px; }
+
+    /* AUTHOR CARD */
+    .author-card { display:flex; align-items:flex-start; gap:14px; padding:20px 0; border-top:1px solid var(--grey-light); margin-top:8px; }
+    .author-avatar { width:40px; height:40px; background:var(--navy); display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:700; color:var(--white); flex-shrink:0; }
+    .author-name { font-size:14px; font-weight:600; color:var(--navy); }
+    .author-role { font-size:12px; font-weight:400; color:var(--grey-mid); margin-top:2px; }
+
+    /* FOOTER */
+    .footer { background:var(--navy-deep); padding:56px 80px 34px; }
+    .footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr; gap:44px; margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.07); }
+    .f-logo-img { height:72px; width:auto; filter:brightness(0) invert(1); }
+    .f-desc { font-size:15px; font-weight:300; color:rgba(255,255,255,0.36); line-height:1.85; margin-top:18px; max-width:260px; }
+    .f-tagline { font-size:16px; font-weight:100; letter-spacing:0.14em; color:var(--gold); margin-top:12px; }
+    .f-col-label { font-size:11px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:rgba(255,255,255,0.24); margin-bottom:16px; }
+    .f-links { list-style:none; }
+    .f-links li { margin-bottom:9px; }
+    .f-links a { font-size:15px; font-weight:300; color:rgba(255,255,255,0.48); text-decoration:none; transition:var(--transition); letter-spacing:0.03em; }
+    .f-links a:hover { color:var(--white); }
+    .f-badge { font-size:9px; font-weight:600; letter-spacing:0.1em; color:var(--gold); border:1px solid rgba(201,169,110,0.45); padding:1px 5px; margin-left:5px; vertical-align:middle; }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+    .f-copy { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:0.05em; }
+    .f-legal a { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); text-decoration:none; letter-spacing:0.05em; transition:var(--transition); }
+    .f-legal a:hover { color:rgba(255,255,255,0.45); }
+    .f-legal { display:flex; gap:24px; }
+
+    @media(max-width:768px) {
+      .article-hero h1 { font-size:36px; }
+      .article-layout { padding:40px 24px 60px; }
+      .meta-bar { flex-direction:column; gap:20px; }
+      .meta-item { border-right:none; padding-right:0; margin-right:0; }
+      .footer-grid { grid-template-columns:1fr; gap:28px; }
+      .footer { padding:40px 24px 24px; }
+      .navbar { padding:0 20px; }
+      .stats-row { grid-template-columns:1fr; }
+      .criteria-grid { grid-template-columns:1fr; }
+      .stack-row { flex-direction:column; }
+      .stack-stage { width:100%; border-right:none; border-bottom:1px solid var(--grey-light); }
+    }
+
+    .reveal { opacity:0; transform:translateY(22px); transition:opacity 0.55s ease, transform 0.55s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="../index.html"><img src="../logo_opencapital_azul_semfundo.png" class="nav-logo-img" alt="Open Capital"></a>
+  <ul class="nav-links">
+    <li><a href="../biblioteca.html" class="active">Soluções</a></li>
+    <li><a href="../conhecimento.html">Conhecimento</a></li>
+    <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros.html">Parceiros</a>
+        <a href="../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+    <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="article-hero">
+  <div class="hero-gold-bar"></div>
+  <div class="breadcrumb">
+    <a href="../index.html">Inicio</a>
+    <span>›</span>
+    <a href="../biblioteca.html">Solucoes</a>
+    <span>›</span>
+    <span class="current">Invicta Angels</span>
+  </div>
+  <div class="hero-badge">Investimento Privado</div>
+  <div class="hero-divider"></div>
+  <h1>Invicta Angels</h1>
+  <p class="hero-tagline">Uma das maiores e mais antigas redes de Business Angels em Portugal, sediada no Porto desde 2007. Capital informal, mentoria e rede de contactos para startups em fase seed e early stage no Norte do pais.</p>
+  <div class="meta-bar">
+    <div class="meta-item">
+      <div class="meta-label">Tipo</div>
+      <div class="meta-value">Rede de Business Angels</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Ticket Tipico</div>
+      <div class="meta-value">EUR 25 k - 250 k</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Candidatura</div>
+      <div class="meta-value status-open">Continua (sem deadline)</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Fase</div>
+      <div class="meta-value">Seed / Early Stage</div>
+    </div>
+  </div>
+</section>
+
+<!-- BACK BAR -->
+<div class="back-bar">
+  <a href="../biblioteca.html" class="back-link">← Voltar ao catalogo de instrumentos</a>
+</div>
+
+<!-- CONTENT -->
+<div class="article-layout">
+
+  <!-- ARTICLE BODY -->
+  <article class="article-body">
+
+    <section class="reveal">
+      <div class="section-eyebrow">Quem sao</div>
+      <h2 class="section-h2">A rede de BAs mais antiga do Norte de Portugal</h2>
+      <p class="body-text">A Invicta Angels foi fundada em 2007 no Porto e e uma das redes de Business Angels mais antigas e relevantes em Portugal. Opera como associacao privada sem fins lucrativos, intermediando empreendedores com investidores privados informais que disponibilizam nao apenas capital, mas tambem experiencia setorial, mentoria e acesso a redes de contacto.</p>
+      <p class="body-text">A rede conta com mais de 50 Business Angels ativos, investidores com experiencia empresarial e setorial diversificada que avaliam projetos de forma individual ou em sindicato. A admissao de novos BAs e feita exclusivamente por convite de membro fundador ou membro ativo, garantindo qualidade e compromisso na base de investidores.</p>
+
+      <div class="stats-row">
+        <div class="stat-col">
+          <div class="stat-num">+50</div>
+          <div class="stat-label">Business Angels ativos</div>
+        </div>
+        <div class="stat-col">
+          <div class="stat-num">2007</div>
+          <div class="stat-label">Ano de fundacao</div>
+        </div>
+        <div class="stat-col">
+          <div class="stat-num">Mensal</div>
+          <div class="stat-label">Ciclo de validacao de projetos</div>
+        </div>
+      </div>
+
+      <p class="body-text">A missao da Invicta Angels e promover o investimento early-stage no Norte de Portugal, com enfase particular no eixo Aveiro-Porto-Braga/Guimaraes-Vila Real. A rede complementa o ecossistema local de incubadoras e aceleradoras, preenchendo o gap de financiamento entre bootstrapping e capital de risco institucional.</p>
+    </section>
+
+    <section class="reveal">
+      <div class="section-eyebrow">Posicionamento no capital stack</div>
+      <h2 class="section-h2">Onde encaixa o investimento BA</h2>
+      <p class="body-text">Os Business Angels atuam no intervalo entre o financiamento inicial (proprios recursos, familia e amigos) e o Venture Capital institucional, que tipicamente exige tracoes e tamanhos de ronda que startups em fase muito inicial nao conseguem ainda demonstrar.</p>
+
+      <div class="stack-diagram">
+        <div class="stack-row">
+          <div class="stack-stage">
+            <div class="stack-stage-name">Pre-seed</div>
+            <div class="stack-stage-range">Ate EUR 100 k</div>
+          </div>
+          <div class="stack-source">
+            <span class="stack-tag secondary">Proprios recursos</span>
+            <span class="stack-tag secondary">FFF</span>
+            <span class="stack-tag secondary">Vouchers IAPMEI</span>
+          </div>
+        </div>
+        <div class="stack-row active">
+          <div class="stack-stage">
+            <div class="stack-stage-name">Seed</div>
+            <div class="stack-stage-range">EUR 25 k - 500 k</div>
+          </div>
+          <div class="stack-source">
+            <span class="stack-tag primary">Invicta Angels</span>
+            <span class="stack-tag secondary">Business Angels</span>
+            <span class="stack-tag secondary">Aceleradores</span>
+          </div>
+        </div>
+        <div class="stack-row active">
+          <div class="stack-stage">
+            <div class="stack-stage-name">Early Stage</div>
+            <div class="stack-stage-range">EUR 250 k - 2 M</div>
+          </div>
+          <div class="stack-source">
+            <span class="stack-tag primary">Invicta Angels (sindicato)</span>
+            <span class="stack-tag secondary">VC pre-seed</span>
+            <span class="stack-tag secondary">Portugal 2030</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-stage">
+            <div class="stack-stage-name">Series A+</div>
+            <div class="stack-stage-range">Acima EUR 2 M</div>
+          </div>
+          <div class="stack-source">
+            <span class="stack-tag secondary">Venture Capital</span>
+            <span class="stack-tag secondary">Private Equity</span>
+            <span class="stack-tag dim">BA tipicamente exit</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="section-eyebrow">Criterios de avaliacao</div>
+      <h2 class="section-h2">O que a Invicta Angels valoriza num projeto</h2>
+      <p class="body-text">A rede nao tem restricoes sectoriais formais e tem investido em tecnologia, saude, alimentacao, energia e outros setores. A avaliacao centra-se em cinco dimensoes, que determinam se o Board distribui o projeto aos BAs membros para analise individual de interesse:</p>
+
+      <div class="criteria-grid">
+        <div class="criteria-card">
+          <div class="criteria-num">01</div>
+          <div class="criteria-title">Inovacao</div>
+          <div class="criteria-desc">Grau de novidade da solucao ou produto. A rede valoriza projetos que diferenciem genuinamente da oferta existente, seja por tecnologia, modelo de negocio ou abordagem ao mercado.</div>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-num">02</div>
+          <div class="criteria-title">Escalabilidade</div>
+          <div class="criteria-desc">Potencial de crescimento alem do mercado local. Os BAs buscam projetos com potencial de expansao nacional e internacional, nao apenas soluções regionais.</div>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-num">03</div>
+          <div class="criteria-title">Estado do Projeto</div>
+          <div class="criteria-desc">Fase de desenvolvimento, existencia de MVP ou prototipo, primeiras tracoes de mercado. Quanto mais validado o produto, maior o interesse dos BAs.</div>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-num">04</div>
+          <div class="criteria-title">Plano de Investimento</div>
+          <div class="criteria-desc">Utilizacao clara do capital solicitado e retorno esperado. Os BAs avaliam se a startup sabe como usar o dinheiro e qual o impacto esperado nas metricas do negocio.</div>
+        </div>
+        <div class="criteria-card">
+          <div class="criteria-num">05</div>
+          <div class="criteria-title">Equipa</div>
+          <div class="criteria-desc">Experiencia, competencias complementares e dedicacao dos fundadores. Para muitos BAs, a equipa e o criterio mais determinante numa fase em que o produto ainda esta a ser validado.</div>
+        </div>
+        <div class="criteria-card" style="border:1px solid rgba(201,169,110,0.30); background:rgba(201,169,110,0.04);">
+          <div class="criteria-num" style="color:rgba(201,169,110,0.40);">+</div>
+          <div class="criteria-title">Introducao por membro</div>
+          <div class="criteria-desc">Nao e um criterio formal de avaliacao, mas uma introducao por um BA associado aumenta significativamente a probabilidade de o projeto ser selecionado para analise aprofundada.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="section-eyebrow">Processo</div>
+      <h2 class="section-h2">Como funciona o ciclo de investimento</h2>
+      <p class="body-text">A candidatura e continua, sem datas fixas de deadline. Os projetos submetidos sao validados mensalmente pelo Board, que distribui os projetos que passam a triagem inicial aos BAs membros para analise individual. Cada BA decide de forma autonoma se quer investir; investimentos em sindicato entre varios BAs sao frequentes.</p>
+
+      <ol class="steps-list">
+        <li>
+          <div class="step-content">
+            <h4>Submissao do projeto</h4>
+            <p>Envio por email para geral@invictaangels.pt ou introducao por um membro BA da rede. A apresentacao deve incluir deck (max. 10-15 slides), visao do produto, mercado-alvo, modelo de negocio, tracoes, equipa e necessidades de financiamento.</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-content">
+            <h4>Triagem pelo Board</h4>
+            <p>O Board reune mensalmente e valida os projetos recebidos. Os projetos selecionados sao enviados aos BAs membros para analise individual de interesse.</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-content">
+            <h4>Due diligence pelos BAs interessados</h4>
+            <p>Os BAs que manifestem interesse contactam diretamente o empreendedor para reunioes de due diligence. Este processo pode envolver varios BAs em paralelo ou em sequencia.</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-content">
+            <h4>Negociacao e formalização</h4>
+            <p>O investimento e formalizado individualmente por cada BA ou em sindicato entre varios. Os termos (valorizacao, participacao, direitos) sao negociados diretamente entre empreendedor e investidor(es).</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="highlight-box">
+        <div class="highlight-box-label">O que preparar para a candidatura</div>
+        <p>Deck de 10 a 15 slides com: (1) problema e solucao, (2) mercado-alvo e dimensao, (3) modelo de negocio e como gera receita, (4) tracoes atuais (clientes, revenue, parcerias), (5) equipa e competencias-chave, (6) necessidade de financiamento e utilizacao dos fundos, (7) projecoes financeiras a 3-5 anos. Apresentacoes mais longas nao aumentam a probabilidade de avanco.</p>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="section-eyebrow">Ecossistema</div>
+      <h2 class="section-h2">Parceiros e enquadramento</h2>
+      <p class="body-text">A Invicta Angels esta integrada no ecossistema de empreendedorismo e inovacao do Norte de Portugal, com parcerias formais e informais com entidades de incubacao, aceleracao e garantia de credito da regiao.</p>
+
+      <ul class="diamond-list">
+        <li><strong>Norgarante:</strong> protocolo de cooperacao com a Sociedade de Garantia Mutua do Norte, que pode facilitar o acesso a linhas de credito complementares ao investimento BA</li>
+        <li><strong>Incubadoras e aceleradoras regionais:</strong> a rede colabora com o ecossistema de suporte ao empreendedorismo do eixo Porto-Braga, operando frequentemente em projetos ja acompanhados por entidades de suporte</li>
+        <li><strong>FNABA:</strong> a Invicta Angels esta integrada no ecossistema nacional de redes de Business Angels em Portugal</li>
+        <li><strong>Crunchbase:</strong> a rede tem perfil publico e historial de investimentos registados na plataforma internacional</li>
+      </ul>
+
+      <p class="body-text">Para startups no Norte de Portugal, a Invicta Angels representa frequentemente a primeira porta de entrada ao capital privado formal, antes de uma ronda seed com VC. A presenca de um BA da rede no cap table e frequentemente valorizada por VCs em fases subsequentes como sinal de validacao precoce.</p>
+    </section>
+
+    <!-- PERSPETIVA OPEN CAPITAL -->
+    <div class="perspetiva reveal">
+      <div class="perspetiva-label">Perspetiva Open Capital</div>
+      <p>As redes de Business Angels como a Invicta Angels operam de forma fundamentalmente diferente dos programas de financiamento publico: nao ha regulamento a cumprir, nao ha threshold de pontuacao, nao ha prazo administrativo. O que existe e um processo de construcao de relacao de confianca entre empreendedor e investidor, em que a qualidade da equipa e frequentemente o fator mais determinante.</p>
+      <p>A vantagem de uma rede como a Invicta Angels face a um BA individual e o acesso a um grupo diversificado de investidores com diferentes backgrounds setoriais, e a possibilidade de sindicato que permite rondas de dimensao maior do que seria possivel com um unico investidor. Para projetos no Norte de Portugal, a proximidade geografica e cultural e um elemento relevante: os BAs da rede conhecem o mercado local e as especificidades do ecossistema regional.</p>
+      <p>A abordagem mais eficaz para aceder a uma rede BA nao e o email frio. Uma introducao por um membro da rede, por um parceiro do ecossistema, ou atraves de participacao em eventos e programas de empreendedorismo do Norte aumenta substancialmente a probabilidade de avancar para due diligence.</p>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="article-sidebar">
+
+    <div class="sidebar-card">
+      <div class="sidebar-label">Factos Rapidos</div>
+      <div class="fact-row">
+        <span class="fact-key">Tipo</span>
+        <span class="fact-val">Rede de Business Angels</span>
+      </div>
+      <div class="fact-row">
+        <span class="fact-key">Sede</span>
+        <span class="fact-val">Porto, Portugal</span>
+      </div>
+      <div class="fact-row">
+        <span class="fact-key">Fundacao</span>
+        <span class="fact-val">2007</span>
+      </div>
+      <div class="fact-row">
+        <span class="fact-key">BAs ativos</span>
+        <span class="fact-val">+50</span>
+      </div>
+      <div class="fact-row">
+        <span class="fact-key">Ticket tipico</span>
+        <span class="fact-val">EUR 25 k - 250 k</span>
+      </div>
+      <div class="fact-row">
+        <span class="fact-key">Fase</span>
+        <span class="fact-val">Seed / Early Stage</span>
+      </div>
+      <div class="fact-row">
+        <span class="fact-key">Setor</span>
+        <span class="fact-val">Sem restricao</span>
+      </div>
+      <div class="fact-row">
+        <span class="fact-key">Geografia foco</span>
+        <span class="fact-val">Norte de Portugal</span>
+      </div>
+      <div class="fact-row">
+        <span class="fact-key">Candidatura</span>
+        <span class="fact-val open">Continua, sem deadline</span>
+      </div>
+      <div class="fact-row">
+        <span class="fact-key">Contacto</span>
+        <span class="fact-val">geral@invictaangels.pt</span>
+      </div>
+      <div class="fact-row">
+        <span class="fact-key">Estatuto</span>
+        <span class="fact-val">Ass. privada s/ fins luc.</span>
+      </div>
+      <div class="author-card">
+        <div class="author-avatar">MF</div>
+        <div>
+          <div class="author-name">Mara Ferreira</div>
+          <div class="author-role">Senior Associate, Investimento Privado</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <h4>Prepara uma ronda seed?</h4>
+      <p>Ajudamos a estruturar o seu pitch para BAs e VCs, a identificar o momento certo de captacao e a preparar a documentacao de due diligence.</p>
+      <a href="https://calendly.com/opencapital" target="_blank">Falar com um especialista</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-label">Instrumentos relacionados</div>
+      <ul class="related-list">
+        <li><a href="venture-capital.html">Venture Capital em Portugal</a></li>
+        <li><a href="business-angels.html">Business Angels - Guia Completo</a></li>
+        <li><a href="crowdfunding.html">Equity Crowdfunding</a></li>
+        <li><a href="portugal-2030.html">Portugal 2030</a></li>
+        <li><a href="vouchers-inovacao.html">Vouchers de Inovacao IAPMEI</a></li>
+      </ul>
+    </div>
+
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <img src="../logo_opencapital_azul_semfundo.png" class="f-logo-img" alt="Open Capital">
+      <p class="f-desc">Consultora especializada em acesso a financiamento, beneficios fiscais e investimento para empresas portuguesas e europeias.</p>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <div class="f-col-label">Solucoes</div>
+      <ul class="f-links">
+        <li><a href="../biblioteca.html">Portugal 2030</a></li>
+        <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+        <li><a href="../biblioteca.html">Beneficios Fiscais</a></li>
+        <li><a href="../biblioteca.html">Premios de Inovacao</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Plataforma</div>
+      <ul class="f-links">
+        <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">em breve</span></a></li>
+        <li><a href="../tech2business.html">Tech2Business <span class="f-badge">em breve</span></a></li>
+        <li><a href="../conhecimento.html">Conhecimento</a></li>
+        <li><a href="../parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Empresa</div>
+      <ul class="f-links">
+        <li><a href="../sobre-nos.html">Sobre Nos</a></li>
+        <li><a href="../sobre-nos.html">Equipa</a></li>
+        <li><a href="../carreiras.html">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">© 2009 Open Capital Advisory & Consultancy</span>
+    <div class="f-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  reveals.forEach(r => observer.observe(r));
+</script>
+
+</body>
+</html>

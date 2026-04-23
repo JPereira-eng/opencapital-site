@@ -90,37 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "invicta-angels",
-      "name": "Invicta Angels",
-      "source_id": "invicta-angels",
-      "catalog_type": "ba",
-      "detected_date": "2026-04-23",
-      "last_profile_update": "2026-04-23",
-      "status": "ready",
-      "regulation_url": "https://invictaangels.pt/2019/selecao-de-projetos/",
-      "priority_score": 15,
-      "profile": {
-        "website": "https://invictaangels.pt",
-        "linkedin": null,
-        "pais_sede": "PT",
-        "descricao_curta": "Uma das mais antigas e maiores redes de Business Angels em Portugal, baseada no Porto, focada em investimento early-stage no Norte do pais.",
-        "como_candidatar": "Submissao por email ou recomendacao de BA associado. Projetos validados mensalmente pelo Board e distribuidos aos BAs para analise de interesse.",
-        "tipologia": "network",
-        "foco_geografico": [
-          "PT-Norte"
-        ],
-        "setores": [],
-        "ticket_min_eur": null,
-        "ticket_max_eur": null,
-        "candidatura_aberta": true,
-        "membros_activos": null,
-        "contacto": "geral@invictaangels.pt"
-      },
-      "notes": "Rede de BAs no Porto. Admissao de novos BAs por convite de membro fundador ou ativo. Projetos devem apresentar inovacao, escalabilidade, estado do projeto, plano de investimento e equipa.",
-      "regulation_local": "regulamentos/invicta-angels/invicta-angels.txt",
-      "fail_count": 0
-    }
-  ]
+  "queue": []
 }

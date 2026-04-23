@@ -6,13 +6,13 @@
     "last_writer_run": "2026-04-19"
   },
   "totals": {
-    "published": 348,
+    "published": 349,
     "open": 241,
     "closed": 88,
     "planned": 16,
     "in_queue": 81,
     "in_watchlist": 103,
-    "in_catalogo": 1,
+    "in_catalogo": 0,
     "in_overflow": 84
   },
   "shards": {
@@ -89,6 +89,10 @@
     "catalogo-aceleradores": {
       "count": 2,
       "open": 2
+    },
+    "catalogo-ba": {
+      "count": 1,
+      "open": 1
     }
   },
   "last_full_cycle": "2026-04-12",
