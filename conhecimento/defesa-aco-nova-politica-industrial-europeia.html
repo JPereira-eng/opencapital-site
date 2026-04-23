@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Defesa e aço: a nova política industrial europeia está a emergir | Open Capital</title>
+  <meta name="description" content="A UE travou quase metade das importações de aço e aplicou tarifas de 50 por cento ao excesso. Leitura estratégica sobre a nova política industrial europeia.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .cover-placeholder{width:100%;height:360px;background:linear-gradient(135deg,#f4f1ea 0%,#ece4d2 100%);display:flex;align-items:center;justify-content:center;margin-bottom:40px;position:relative;overflow:hidden;}
+    .cover-placeholder svg{width:70%;max-width:560px;height:auto;}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.cover-placeholder,.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../biblioteca.html">Biblioteca</a></li>
+      <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades</a>
+        <div class="nav-dropdown-menu">
+          <a href="../parceiros.html">Parceiros</a>
+          <a href="../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../conhecimento.html">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Mercados</span>
+      </nav>
+      <span class="hero-cat-badge">Mercados - Análise</span>
+      <h1 class="article-title">Defesa e aço: a nova política industrial europeia está a emergir</h1>
+      <p class="article-standfirst">A UE travou quase metade das importações de aço e aplicou tarifas de 50 por cento ao excesso. Bruxelas está a redesenhar a sua relação com a concorrência global.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Mercados</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Abril 2026</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>9 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Luis Gomes</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+      <div class="cover-placeholder">
+        <svg viewBox="0 0 560 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="40" y="220" width="480" height="1" stroke="#1A3A5C" stroke-width="1"/>
+          <rect x="70" y="170" width="50" height="50" stroke="#1A3A5C" stroke-width="1.2" fill="none"/>
+          <rect x="130" y="140" width="50" height="80" stroke="#1A3A5C" stroke-width="1.2" fill="none"/>
+          <rect x="190" y="110" width="50" height="110" stroke="#C9A96E" stroke-width="1.2" fill="none"/>
+          <rect x="250" y="150" width="50" height="70" stroke="#1A3A5C" stroke-width="1.2" fill="none"/>
+          <rect x="310" y="90" width="50" height="130" stroke="#1A3A5C" stroke-width="1.2" fill="none"/>
+          <rect x="370" y="130" width="50" height="90" stroke="#1A3A5C" stroke-width="1.2" fill="none"/>
+          <rect x="430" y="160" width="50" height="60" stroke="#1A3A5C" stroke-width="1.2" fill="none"/>
+          <path d="M 70 80 L 120 60 L 190 70 L 260 50 L 330 55 L 400 40 L 480 50" stroke="#C9A96E" stroke-width="1.4" fill="none" stroke-dasharray="4 3"/>
+          <circle cx="215" cy="130" r="3" fill="#C9A96E"/>
+          <text x="230" y="80" font-family="Montserrat" font-size="11" letter-spacing="3" fill="#1A3A5C" font-weight="600">POLÍTICA INDUSTRIAL</text>
+        </svg>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">O que foi decidido</div>
+        <h2>Bruxelas virou a mesa sobre o aço</h2>
+        <p>A União Europeia chegou a um acordo preliminar que marca uma viragem declarada na sua política comercial. As importações de aço para o mercado europeu vão ser cortadas para cerca de metade do volume actual, por via de quotas muito mais apertadas. Tudo o que exceda essas quotas será taxado a 50 por cento à entrada. O regime substitui o sistema de salvaguardas em vigor desde 2019, que deverá ser descontinuado ainda este ano.</p>
+        <p>O acordo ainda precisa de validação final dos Estados-membros e do Parlamento Europeu. A arquitectura está fechada, faltam as palavras exactas do texto legal. Pela primeira vez em décadas, a Comissão propõe medidas comerciais deste calibre contra produtos siderúrgicos sem esperar por uma crise aguda como gatilho formal. Não há crise pontual. Há uma doença crónica que Bruxelas decidiu tratar.</p>
+        <p>A Eurofer, associação que representa os produtores europeus de aço, recebeu a notícia com alívio público. A ArcelorMittal, Tata Steel, Thyssenkrupp, Salzgitter e outros grandes produtores pressionaram durante mais de um ano, através de encontros com comissários, testemunhos em comités e comunicados cada vez menos diplomáticos. A China, primeiro alvo implícito das medidas, respondeu com as críticas habituais sobre proteccionismo unilateral. A Coreia do Sul, a Índia e a Turquia, exportadores relevantes para a Europa, prometeram estudar medidas de reciprocidade.</p>
+        <p>Do ponto de vista da mecânica, o novo regime é simples na aparência e complexo na execução. Cada país exportador terá uma quota anual, calibrada com base em volumes históricos e ajustada para baixo. Os envios acima do limite entram, mas pagam metade do valor como tarifa. O cálculo pode ser feito por qualquer empresa portuguesa que trabalhe com chapa ou perfis importados: se a cadeia de fornecimento depende de aço de origem asiática, o preço unitário vai subir entre 15 e 50 por cento consoante a categoria.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">A pressão que levou aqui</div>
+        <h2>A doença crónica da indústria europeia</h2>
+        <p>O pano de fundo é conhecido e não se resume ao aço. A indústria europeia vive desde 2020 sob um empilhamento de choques. Custos de energia disparados após a invasão da Ucrânia. Sobrecapacidade instalada na China que continua a despejar produto no mercado global a preços abaixo do custo europeu. Taxas de juro que durante três anos sufocaram investimento e consolidação. Concorrência americana dopada pelo Inflation Reduction Act, e agora pela segunda vaga de tarifas lançada por Washington. Todos estes factores pesaram. Nenhum, sozinho, explica a decisão.</p>
+        <p>No aço, a combinação é particularmente tóxica. Fábricas como a Tata em Port Talbot, ou unidades da ArcelorMittal em Espanha e França, entraram em regime de produção reduzida ou de encerramento parcial. A Thyssenkrupp avançou com despedimentos em número que seria politicamente impensável há uma década. A capacidade inactiva europeia de produção de aço bruto ronda hoje os 20 por cento. As margens operacionais, nas empresas que continuam a funcionar, estiveram em terreno negativo durante a maior parte de 2024 e início de 2025.</p>
+
+        <div class="stats-row cols-4 reveal">
+          <div class="stat-cell">
+            <div class="stat-num">~20<sup>%</sup></div>
+            <div class="stat-label">Capacidade europeia de aço bruto inactiva</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">50<sup>%</sup></div>
+            <div class="stat-label">Tarifa sobre excesso de importações</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">240<sup>B€</sup></div>
+            <div class="stat-label">Orçamento defesa UE em 2024</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">34</div>
+            <div class="stat-label">Matérias-primas classificadas como estratégicas</div>
+          </div>
+        </div>
+
+        <p>Entretanto, a conversa sobre defesa mudou tudo. A Europa percebeu que não pode ter uma indústria de defesa credível sem aço, sem alumínio, sem químicos base, sem semicondutores produzidos a menos de três mil quilómetros do utilizador final. A autonomia estratégica que era discurso passou a ser orçamento. Os planos de rearmamento alemão, francês, polaco e britânico, somados ao fundo europeu de defesa, colocaram pressão sobre uma cadeia de fornecimento que, em vários pontos críticos, deixou de existir em escala dentro do continente.</p>
+        <p>Este é o ponto que poucas análises captam. A decisão sobre o aço não é apenas proteccionismo económico. É uma consequência lógica de uma ambição estratégica já tomada. Se a Europa quer capacidade militar independente, precisa de manter capacidade industrial a montante. E se precisa de a manter, tem de fechar parcialmente a porta a concorrência externa que, em condições normais de mercado, a estaria a destruir.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Leitura estratégica</div>
+        <h2>Um mercado único que se fecha</h2>
+        <p>A palavra que alguns observadores ainda evitam é a correcta. A União Europeia está a construir um bloco económico menos aberto. Não é um processo súbito, ninguém o anuncia em conferência de imprensa com estas palavras. Basta juntar os movimentos dos últimos três anos para ver o padrão.</p>
+        <p>O Chips Act. O Critical Raw Materials Act. O Net-Zero Industry Act. O mecanismo de ajustamento carbónico na fronteira, que funciona de facto como tarifa verde sobre importações intensivas em carbono. Os controlos reforçados de investimento estrangeiro em setores sensíveis. A revisão da política de concorrência para permitir campeões europeus maiores. O relatório Draghi, apresentado em 2024, que serviu de manifesto intelectual para tudo isto.</p>
+        <p>Cada peça, isoladamente, parece defensiva e razoável. No conjunto, formam uma arquitectura nova. A Europa de Delors, a que abriu mercados e confiou que a competição internacional elevaria todos, não existe mais. Foi substituída por algo mais cauteloso, mais disposto a aceitar menor eficiência em troca de maior controlo. Chamar-lhe proteccionismo é redutor. Chamar-lhe soberania industrial é apologético. O termo honesto talvez seja realismo estratégico, mas essa nuance perde-se no debate público.</p>
+
+        <div class="pull-quote reveal">
+          <div class="pull-quote-text">"A Europa de Delors, a que abriu mercados e confiou que a competição elevaria todos, não existe mais."</div>
+        </div>
+
+        <p>Este artigo não julga se é bom ou mau. Limita-se a constatar o que está a acontecer. Para quem gere empresas na Europa, compreender esta mudança vale mais do que qualquer previsão macro sobre juros ou inflação. Os próximos cinco anos vão ser modelados por decisões industriais tomadas em Bruxelas com uma lógica que simplesmente não existia há uma década.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Impacto por setor</div>
+        <h2>Quem ganha, quem perde e quem paga a conta</h2>
+        <p>Nem todos os setores vão sentir o impacto com a mesma intensidade. A tabela abaixo sintetiza, em linhas gerais, o que está em cima da mesa.</p>
+
+        <table class="art-table">
+          <thead>
+            <tr>
+              <th>Setor</th>
+              <th>Efeito imediato</th>
+              <th>Janela de oportunidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Siderurgia europeia</strong></td>
+              <td>Protecção de mercado, recuperação de margens</td>
+              <td>Investir em capacidade descarbonizada</td>
+            </tr>
+            <tr>
+              <td><strong>Construção</strong></td>
+              <td>Aumento de custos, pressão sobre margens</td>
+              <td>Renegociar contratos de fornecimento a longo prazo</td>
+            </tr>
+            <tr>
+              <td><strong>Automóvel</strong></td>
+              <td>Inputs mais caros, competitividade pressionada</td>
+              <td>Substituir aço por alumínio ou compósitos onde viável</td>
+            </tr>
+            <tr>
+              <td><strong>Defesa e aeroespacial</strong></td>
+              <td>Segurança de abastecimento reforçada</td>
+              <td>Aumento significativo de encomendas públicas</td>
+            </tr>
+            <tr>
+              <td><strong>Embalagem metálica</strong></td>
+              <td>Margens apertadas em produto de baixo valor</td>
+              <td>Consolidação sectorial acelerada</td>
+            </tr>
+            <tr>
+              <td><strong>Energia renovável</strong></td>
+              <td>Eólica e solar estruturalmente mais caras</td>
+              <td>Qualificar fornecedores europeus antecipadamente</td>
+            </tr>
+            <tr>
+              <td><strong>Maquinaria industrial</strong></td>
+              <td>Inputs superiores, efeito moderado</td>
+              <td>Oportunidade de exportar para defesa</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>A leitura deste quadro depende de um factor que raramente aparece nos relatórios oficiais. O preço do aço europeu vai subir. Não é uma possibilidade. É a consequência matemática de reduzir oferta e colocar tarifa prohibitiva sobre o excedente. Quem consome aço, paga mais. Quem o produz dentro da UE, respira melhor.</p>
+        <p>O impacto sobre as PME portuguesas é menos óbvio mas real. Empresas de construção metálica, serralharia industrial, caldeiraria, que compram chapa e perfis no mercado europeu, vão ver os seus custos subir entre 8 e 15 por cento no prazo de doze meses. Empresas que exportam produtos acabados com alto conteúdo de aço, como mobiliário metálico, componentes automóvel ou reservatórios industriais, ganham protecção relativa no mercado interno mas perdem competitividade nas exportações para fora da UE.</p>
+        <p>Há efeitos de segunda ordem que escaparão à primeira leitura. A reciclagem de sucata ganha valor económico acrescido, porque reduz a dependência de metal primário. Empresas com forno de arco eléctrico partem em vantagem competitiva estrutural sobre as que dependem de alto-forno a carvão. O comércio de ferrovelho vai aumentar de intensidade, com Portugal a posicionar-se como exportador líquido potencial num mercado subitamente mais remunerador.</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">Leitura prospectiva</div>
+          <div class="art-highlight-text">O aço é o caso visível. Espere-se o mesmo tipo de decisão, nos próximos 24 meses, para alumínio, para químicos base e para fertilizantes. A lógica já foi validada politicamente.</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Os três eixos</div>
+        <h2>A nova política industrial europeia</h2>
+        <p>O aço é o caso visível. Por baixo, há uma transformação mais estrutural que merece atenção. Pela primeira vez desde os anos 80, Bruxelas tem orçamento, apetite político e mandato intelectual para uma política industrial digna desse nome. O Fundo Europeu de Competitividade, previsto para o próximo quadro financeiro 2028-2034, deverá mobilizar mais de 300 mil milhões de euros especificamente direccionados a setores considerados estratégicos. A proposta está em negociação. A direcção não está em dúvida.</p>
+        <p>Três eixos merecem ser seguidos de perto por qualquer gestor europeu.</p>
+        <h3>Cadeias de valor críticas</h3>
+        <p>A Europa identificou cerca de 34 matérias-primas como estratégicas e está a financiar exploração mineira interna, reciclagem e projectos de transformação. Empresas portuguesas ligadas ao lítio, ao tungsténio, ao cobre ou ao grafite têm aqui uma janela histórica, com linhas de financiamento que ainda há três anos seriam impensáveis. O desafio deixou de ser convencer um financiador a acreditar no setor. Passou a ser escolher entre várias ofertas de capital que competem pelo mesmo projecto.</p>
+        <h3>Defesa como motor industrial</h3>
+        <p>O orçamento europeu de defesa deverá passar dos aproximadamente 240 mil milhões de euros registados em 2024 para valores consideravelmente mais altos até 2027. A pressão vem de vários lados ao mesmo tempo: compromissos NATO, receio crescente em relação à Rússia, incerteza sobre o empenho americano, necessidade de projectar força em espaços como o Mediterrâneo ou o Árctico. Setores a jusante, electrónica, materiais compósitos, software de simulação, cibersegurança, robótica, sensores, vão receber encomendas que simplesmente não existiam.</p>
+        <h3>Descarbonização como arma comercial</h3>
+        <p>O mecanismo carbónico na fronteira já está em aplicação. Empresas que consigam demonstrar pegadas de carbono baixas terão vantagem competitiva não apenas moral, mas também tarifária. Esta é talvez a peça menos compreendida do novo desenho europeu: a sustentabilidade deixou de ser um custo regulatório e passou a ser uma arma comercial. Empresas portuguesas com electricidade renovável integrada nas suas operações, ou com produção eléctrica própria via fotovoltaico, ganham um activo competitivo que se materializa em euros poupados na exportação para dentro da UE.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Opinião</div>
+        <h2>O risco contrário</h2>
+        <p>Até aqui a narrativa é coerente. A Europa percebeu a realidade, está a reagir, tem plano. Vale a pena interromper o entusiasmo com uma dúvida séria. E se este é o caminho errado?</p>
+        <p>Proteger uma indústria dos seus concorrentes garante-lhe receita. Não lhe garante competitividade. A história económica do século XX está cheia de países que fecharam os seus mercados e criaram zombies industriais, empresas que só sobreviviam porque a alternativa estava proibida de entrar. A URSS fê-lo. O Brasil fê-lo até 1990. A Argentina tenta ainda hoje. Nenhum destes casos produziu indústria competitiva.</p>
+        <p>A Europa tem vantagens que esses casos não tinham. Mercado interno grande, capital acumulado, talento técnico, empresas com longa tradição industrial. Isto não a torna imune ao risco básico de qualquer política proteccionista, que é criar uma espécie de conforto que adia as reformas necessárias para competir a sério.</p>
+        <p>O aço europeu só sobrevive a longo prazo se descarbonizar. Se construir fornos de arco eléctrico alimentados por hidrogénio verde, integrar economia circular a sério, atingir custos unitários competitivos com o aço chinês mesmo sem tarifas. As tarifas dão tempo para essa transição. Não a fazem por si. Se as empresas europeias olharem para as novas quotas e concluírem que o que precisam é de menos pressão em vez de mais inovação, o tiro sai pela culatra.</p>
+        <p>Os sinais mostram ambas as direcções. A ArcelorMittal tem projectos de descarbonização sérios em França e Espanha, mas adiou recentemente alguns investimentos à espera de maior apoio público. A Salzgitter na Alemanha lidera aço verde com uma aposta clara no hidrogénio. A Thyssenkrupp hesita, com problemas financeiros que lhe retiram margem de manobra. Cada caso é diferente, e nenhum é puramente optimista.</p>
+        <p>Ninguém sabe ainda qual vai ser o efeito líquido. O que se pode afirmar, sem risco de exagero, é que o próximo ciclo industrial europeu vai ser diferente do anterior. Mais protegido, mais politicamente dirigido, menos orientado por eficiência pura e mais por soberania. É uma troca consciente. Tem consequências. A Europa ganhou capacidade de decisão. Arrisca perder velocidade de execução.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>O que isto significa para a sua empresa</h2>
+        <p>A pergunta concreta para um gestor português é o que fazer na segunda metade de 2026. Três reflexões práticas.</p>
+        <p>Para empresas consumidoras de aço: renegociar contratos de fornecimento agora, antes de a pressão no preço se materializar nos volumes reais. Procurar fornecedores portugueses ou espanhóis com contratos de preço fixo a 18 ou 24 meses, que permitam travar custos antes da curva subir. Avaliar substituição parcial por alumínio, compósitos, ou design optimizado que reduza peso em aço sem comprometer função. Empresas que esperam pelos primeiros aumentos de factura para reagir vão encontrar um mercado já menos generoso em condições contratuais.</p>
+        <p>Para empresas fornecedoras de setores protegidos, defesa, energia renovável e indústria pesada: o ciclo de investimento europeu vai criar oportunidades de encomenda que não existiam. Qualificar-se agora como fornecedor elegível, obter certificações sectoriais, integrar consórcios, é mais importante do que esperar por concursos específicos. As empresas que entram tarde nestas cadeias raramente as penetram, porque os incumbentes organizam-se em relações de longa duração com clientes finais que dificilmente quebram.</p>
+        <p>Para empresas com ambições de financiamento: o alinhamento estratégico com a nova política industrial europeia não é secundário nas candidaturas a fundos. É o critério central. Um projecto industrial ligado a descarbonização, cadeias de valor estratégicas ou defesa encontra financiamento com uma facilidade que não existia há três anos. Um projecto alinhado com a lógica do mercado aberto anterior tem o caminho estreito. Não é uma questão de preferência regulatória. É matemática de dotações orçamentais.</p>
+        <p>A Open Capital acompanha de perto a reconfiguração regulamentar europeia e o seu impacto directo sobre as empresas portuguesas. Se a sua empresa opera em cadeias de valor afectadas por estas mudanças, o custo de não ajustar estratégia é superior ao custo de uma leitura bem feita a tempo.</p>
+      </div>
+
+      <p style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore também o nosso arquivo para mais conteúdos sobre inovação, tecnologia, ciência aplicada e empreendedorismo.</p>
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../Retratos Equipa/retrato_luísgomes.png" alt="Luis Gomes" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Luis Gomes</div>
+            <div class="sidebar-author-role">Analista Financeiro</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Categoria</div>
+          <div class="sidebar-info-val">Mercados</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Publicado</div>
+          <div class="sidebar-info-val">Abril 2026</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Leitura</div>
+          <div class="sidebar-info-val">9 min</div>
+        </div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
+        <div class="sidebar-cta-text">A nova política industrial europeia está a redesenhar cadeias de valor. Avalie o impacto na sua empresa com a equipa da Open Capital.</div>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="rearmamento-europeu-prioridade-ue.html" class="related-item">
+          <span class="related-item-title">Rearmamento europeu: a nova prioridade da UE</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="fragmentacao-global-fim-globalizacao-eficiente.html" class="related-item">
+          <span class="related-item-title">Fragmentação global: o fim da globalização eficiente?</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="tarifas-trump-impacto-empresas-portuguesas.html" class="related-item">
+          <span class="related-item-title">Tarifas de Trump: o que muda para as empresas portuguesas</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo-row">
+          <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+        </div>
+        <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+      </div>
+      <div>
+        <div class="f-col-label">Biblioteca</div>
+        <ul class="f-links">
+          <li><a href="../biblioteca.html">Portugal 2030</a></li>
+          <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+          <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+          <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Plataforma</div>
+        <ul class="f-links">
+          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../conhecimento.html">Conhecimento</a></li>
+          <li><a href="../parceiros.html">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Empresa</div>
+        <ul class="f-links">
+          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="../sobre-nos.html">Equipa</a></li>
+          <li><a href="../carreiras.html">Carreiras</a></li>
+          <li><a href="https://calendly.com/opencapital">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+      <div class="f-legal">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
