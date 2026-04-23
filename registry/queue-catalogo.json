@@ -90,45 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "semapa-next",
-      "name": "Semapa Next",
-      "source_id": "semapa-next",
-      "catalog_type": "cvc",
-      "detected_date": "2026-04-20",
-      "last_profile_update": "2026-04-20",
-      "status": "active",
-      "regulation_url": "https://semapanext.com",
-      "priority_score": 10,
-      "profile": {
-        "website": "https://semapanext.com",
-        "linkedin": "https://www.linkedin.com/company/semapanext/?originalSubdomain=pt",
-        "pais_sede": "PT",
-        "descricao_curta": "CVC europeu sector-agnostico focado em empresas com ambicao de se tornarem lideres globais de categoria.",
-        "como_candidatar": "Formulario de candidatura em semapanext.com/submit-your-pitch/",
-        "tese": "Investe em empresas europeas com ambicao de se tornarem lideres globais de categoria, com foco em impacto positivo. Abordagem sector-agnostica.",
-        "estagios": [
-          "series-a"
-        ],
-        "setores": [],
-        "geografia": [
-          "PT",
-          "EU"
-        ],
-        "ticket_min_eur": null,
-        "ticket_max_eur": null,
-        "ticket_sweet_eur": null,
-        "aum_eur": null,
-        "vintage": null,
-        "portfolio_pt_exemplos": [
-          "Overstory",
-          "Kencko",
-          "Circuit"
-        ],
-        "parceiros": []
-      },
-      "notes": "CVC do grupo Semapa. Profile extraido 2026-04-20 via WebFetch. Foco em impacto positivo e escala global."
-    }
-  ]
+  "queue": []
 }
