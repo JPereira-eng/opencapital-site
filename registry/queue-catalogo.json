@@ -90,35 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "born-from-knowledge-ani",
-      "name": "Born From Knowledge (BfK) - ANI",
-      "source_id": "born-from-knowledge-ani",
-      "catalog_type": "prize",
-      "detected_date": "2026-04-24",
-      "last_profile_update": "2026-04-24",
-      "status": "active",
-      "regulation_url": "https://www.ani.pt/pt/born-from-knowledge/",
-      "priority_score": 10,
-      "profile": {
-        "website": "https://www.ani.pt/pt/born-from-knowledge/",
-        "linkedin": null,
-        "pais_sede": "PT",
-        "descricao_curta": "Premio anual da ANI para spin-offs e projetos de base cientifica emergentes de IES portuguesas.",
-        "como_candidatar": "Via bfk.ani.pt durante periodo de candidatura aberto.",
-        "premio_total_eur": null,
-        "categorias": [
-          "BfK Ideas",
-          "BfK Rise",
-          "BfK Awards"
-        ],
-        "deadline_proxima": null,
-        "edicao_ano": "2026",
-        "juri_destaque": [],
-        "elegibilidade": "Estudantes, investigadores e spin-offs de IES portuguesas."
-      },
-      "notes": "Premio recorrente ANI. Verificar bfk.ani.pt para edicao 2026."
-    }
-  ]
+  "queue": []
 }
