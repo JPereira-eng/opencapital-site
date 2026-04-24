@@ -398,6 +398,34 @@
       "source": "eu-funding-tenders",
       "state": "fechado",
       "last_check": "2026-04-24"
+    },
+    {
+      "id": "digital-2026-edih-eu-eea-09",
+      "file": "instrumentos/digital-2026-edih-eu-eea-09.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-24"
+    },
+    {
+      "id": "digital-2026-bestuse-mcp-10",
+      "file": "instrumentos/digital-2026-bestuse-mcp-10.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-24"
+    },
+    {
+      "id": "digital-2026-ai-piloting-10",
+      "file": "instrumentos/digital-2026-ai-piloting-10.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-24"
+    },
+    {
+      "id": "cerv-2026-ge",
+      "file": "instrumentos/cerv-2026-ge.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-24"
     }
   ],
   "instruments": [
@@ -877,5 +905,7 @@
       "state": "fechado",
       "last_check": "2026-04-24"
     }
-  ]
+  ],
+  "count": 4,
+  "published": 4
 }
