@@ -8116,6 +8116,112 @@
       "highlight2": "Europa (min. 3 paises UE no consorcio)",
       "href": "instrumentos/life-2026-plp.html",
       "featured": false
+    },
+    {
+      "id": "life-2026-ta-pp",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 20 Mai 2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "entidade-publica,associacao",
+      "setores": [
+        "energia-ambiente"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "LIFE-2026-TA-PP: Assistencia Tecnica para SNaPs",
+      "tagline": "Apoio financeiro para preparar propostas de Projetos Estrategicos de Natureza a escala territorial.",
+      "highlight0": "EUR 500.000 para preparacao de candidaturas SNaP",
+      "highlight1": "Autoridades publicas, ONGs ambientais",
+      "highlight2": "Europa (todos os estados-membros elegiveis)",
+      "href": "instrumentos/life-2026-ta-pp.html",
+      "featured": false
+    },
+    {
+      "id": "life-2026-strat-two-stage",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto - Fase 1: 25 Mai 2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "entidade-publica,associacao",
+      "setores": [
+        "energia-ambiente"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "LIFE SIP: Projetos Estrategicos Integrados de Acao Climatica",
+      "tagline": "EUR 30 milhoes para implementar planos climaticos nacionais a grande escala, mobilizando stakeholders e financiamento complementar.",
+      "highlight0": "EUR 30 milhoes, procedimento two-stage",
+      "highlight1": "Autoridades nacionais/regionais, entidades publicas, ONGs",
+      "highlight2": "Europa (todos os estados-membros elegiveis)",
+      "href": "instrumentos/life-2026-strat-two-stage.html",
+      "featured": false
+    },
+    {
+      "id": "life-2026-sap-nat",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Fechado (edicao 2024)",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "entidade-publica,associacao,ensino-investigacao",
+      "setores": [
+        "energia-ambiente"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "LIFE SAP: Governanca e Informacao para a Natureza",
+      "tagline": "Financiamento para projetos de governanca e informacao sobre conservacao da natureza, replicacao de solucoes e participacao publica.",
+      "highlight0": "EUR 173,5 milhoes (edicao 2024)",
+      "highlight1": "ONGs ambientais, autoridades publicas, entidades de investigacao",
+      "highlight2": "Europa (todos os estados-membros elegiveis)",
+      "href": "instrumentos/life-2026-sap-nat.html",
+      "featured": false
+    },
+    {
+      "id": "life-2026-sap-env",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 31 Jul 2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,entidade-publica,associacao,ensino-investigacao",
+      "setores": [
+        "energia-ambiente",
+        "industria"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "LIFE SAP: Economia Circular e Zero Poluicao",
+      "tagline": "EUR 79 milhoes para projetos de economia circular, reducao de residuos e eliminacao de poluicao na agua, ar, solo e cadeias de producao.",
+      "highlight0": "EUR 79 milhoes, prazo 31 julho 2026",
+      "highlight1": "Empresas, entidades publicas, ONGs, investigacao",
+      "highlight2": "Europa (todos os estados-membros elegiveis)",
+      "href": "instrumentos/life-2026-sap-env.html",
+      "featured": false
+    },
+    {
+      "id": "cef-e-2026-cbrenew",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Fechado (Marco 2026)",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,entidade-publica",
+      "setores": [
+        "energia-ambiente"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "CEF Energia: Renovaveis Transfronteiricasr (CB-RES)",
+      "tagline": "EUR 150 milhoes para obras de infraestrutura de energias renovaveis transfronteiricasr entre estados-membros da UE.",
+      "highlight0": "EUR 150 milhoes para projetos de obras transfronteiricasr",
+      "highlight1": "Promotores de projetos renovaveis, empresas de energia, entidades publicas",
+      "highlight2": "Europa (projetos entre 2 ou mais estados-membros)",
+      "href": "instrumentos/cef-e-2026-cbrenew.html",
+      "featured": false
     }
   ]
 }
