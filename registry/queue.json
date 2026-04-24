@@ -267,16 +267,17 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "DIGITAL-2026-AI-09",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/DIGITAL-2026-AI-09-SOLUTIONS-CANCER-STEP.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/digital-2026-ai-09-solutions-cancer-step.txt",
       "detected_date": "2026-04-20",
       "deadline": null,
       "budget": null,
       "priority_score": 25,
-      "notes": "Discovered via SEDIA search. No deadline data available from API."
+      "notes": "Discovered via SEDIA search. No deadline data available from API.",
+      "fail_count": 0
     },
     {
       "id": "eit-urban-mobility-citizens-on-the-move-2026",
@@ -284,16 +285,17 @@
       "source_id": "eit",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "EIT_URBAN_MOBILITY_CITIZENS_ON_THE_MOVE_2026",
       "regulation_url": "https://eit.europa.eu/our-activities/opportunities",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eit/eit-urban-mobility-citizens-on-the-move-2026.txt",
       "detected_date": "2026-04-20",
       "deadline": "2026-07-08",
       "budget": null,
       "priority_score": 25,
-      "notes": "EIT opportunity category: Mobility."
+      "notes": "EIT opportunity category: Mobility.",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2022-resilience-01-25",
@@ -817,10 +819,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-PROTMOB-DMM.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/edf-2026-da.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Source: EDF-2026 search. StatusCode: "
+      "status": "ready",
+      "notes": "Source: EDF-2026 search. StatusCode: ",
+      "fail_count": 0
     },
     {
       "id": "edf-2026-ra",
@@ -834,10 +837,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-RA-SENS-MSDT.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/edf-2026-ra.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Source: EDF-2026 search. StatusCode: "
+      "status": "ready",
+      "notes": "Source: EDF-2026 search. StatusCode: ",
+      "fail_count": 0
     },
     {
       "id": "edf-2026-ls-ra-si",
@@ -851,10 +855,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-RA-SI-ENERENV-NTFE.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/edf-2026-ls-ra-si.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Source: EDF-2026 search. StatusCode: "
+      "status": "ready",
+      "notes": "Source: EDF-2026 search. StatusCode: ",
+      "fail_count": 0
     },
     {
       "id": "edf-2026-ls-ra-challenge",
@@ -868,10 +873,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-RA-CHALLENGE-DIGIT-AISAP-STEP.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/edf-2026-ls-ra-challenge.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Source: EDF-2026 search. StatusCode: "
+      "status": "ready",
+      "notes": "Source: EDF-2026 search. StatusCode: ",
+      "fail_count": 0
     },
     {
       "id": "edf-2026-ls-dis",
@@ -885,10 +891,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-DIS-NT.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/edf-2026-ls-dis.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Source: EDF-2026 search. StatusCode: "
+      "status": "ready",
+      "notes": "Source: EDF-2026 search. StatusCode: ",
+      "fail_count": 0
     },
     {
       "id": "edf-2026-ls-da-sme",
@@ -902,10 +909,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-DA-SME-NT.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/edf-2026-ls-da-sme.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Source: EDF-2026 search. StatusCode: "
+      "status": "ready",
+      "notes": "Source: EDF-2026 search. StatusCode: ",
+      "fail_count": 0
     },
     {
       "id": "edf-2026-da-acc",
@@ -919,10 +927,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-ACC-AIRDEF-EATMI.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/edf-2026-da-acc.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Source: EDF-2026 search. StatusCode: "
+      "status": "ready",
+      "notes": "Source: EDF-2026 search. StatusCode: ",
+      "fail_count": 0
     },
     {
       "id": "edf-2026-da-exp",
@@ -936,10 +945,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-EXP-DIGIT-MDOC-STEP.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/edf-2026-da-exp.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Source: EDF-2026 search. StatusCode: "
+      "status": "ready",
+      "notes": "Source: EDF-2026 search. StatusCode: ",
+      "fail_count": 0
     },
     {
       "id": "edf-2026-ls-dis-ra-smero",
