@@ -10,10 +10,10 @@
     "open": 247,
     "closed": 97,
     "planned": 16,
-    "in_queue": 66,
+    "in_queue": 100,
     "in_watchlist": 103,
-    "in_catalogo": 0,
-    "in_overflow": 84
+    "in_catalogo": 1,
+    "in_overflow": 100
   },
   "shards": {
     "pt2030-compete": {
@@ -99,7 +99,7 @@
   "last_monitor_run": "2026-04-20",
   "last_writer_run": "2026-04-24",
   "source_last_checked": {
-    "portugal-2030": "2026-04-23",
+    "portugal-2030": "2026-04-24",
     "compete-2030": "2026-04-19",
     "norte-2030": "2026-04-18",
     "centro-2030": "2026-04-20",
@@ -112,8 +112,8 @@
     "sustentavel-2030": "2026-04-17",
     "mar-2030": "2026-04-17",
     "pat-2030": "2026-04-18",
-    "eu-funding-tenders": "2026-04-23",
-    "ani": "2026-04-17",
+    "eu-funding-tenders": "2026-04-24",
+    "ani": "2026-04-24",
     "iapmei": "2026-04-19",
     "prr": "2026-04-19",
     "interreg-poctep": "2026-04-20",
@@ -128,9 +128,9 @@
     "erc": "2026-04-19",
     "investeu": "2026-04-20",
     "interreg-sudoe": "2026-04-20",
-    "interreg-euromed": "2026-04-16",
+    "interreg-euromed": "2026-04-24",
     "interreg-urbact": "2026-04-20",
-    "interreg-next-med": "2026-04-16",
+    "interreg-next-med": "2026-04-24",
     "eit": "2026-04-20",
     "startup-portugal": "2026-04-12",
     "banco-fomento": "2026-04-12",
@@ -187,8 +187,9 @@
     "cerv": "2026-04-23",
     "creative-europe": "2026-04-23",
     "horizon-cluster1": "2026-04-23",
-    "invicta-angels": "2026-04-23"
+    "invicta-angels": "2026-04-23",
+    "born-from-knowledge-ani": "2026-04-24"
   },
-  "last_scanner_run": "2026-04-23",
+  "last_scanner_run": "2026-04-24",
   "last_updated": "2026-04-24T-writer-r12-j2"
 }
