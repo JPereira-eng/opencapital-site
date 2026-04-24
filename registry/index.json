@@ -7,8 +7,8 @@
   },
   "totals": {
     "published": 389,
-    "open": 265,
-    "closed": 102,
+    "open": 263,
+    "closed": 104,
     "planned": 16,
     "in_queue": 76,
     "in_watchlist": 103,
@@ -45,8 +45,8 @@
     },
     "pt2030-other": {
       "count": 31,
-      "open": 28,
-      "closed": 2
+      "open": 26,
+      "closed": 4
     },
     "eic": {
       "count": 6,
@@ -96,7 +96,7 @@
     }
   },
   "last_full_cycle": "2026-04-12",
-  "last_monitor_run": "2026-04-20",
+  "last_monitor_run": "2026-04-24",
   "last_writer_run": "2026-04-24",
   "source_last_checked": {
     "portugal-2030": "2026-04-24",
@@ -104,12 +104,12 @@
     "norte-2030": "2026-04-18",
     "centro-2030": "2026-04-20",
     "lisboa-2030": "2026-04-16",
-    "alentejo-2030": "2026-04-16",
+    "alentejo-2030": "2026-04-24",
     "algarve-2030": "2026-04-17",
     "madeira-2030": "2026-04-17",
     "acores-2030": "2026-04-16",
     "pessoas-2030": "2026-04-17",
-    "sustentavel-2030": "2026-04-17",
+    "sustentavel-2030": "2026-04-24",
     "mar-2030": "2026-04-17",
     "pat-2030": "2026-04-18",
     "eu-funding-tenders": "2026-04-24",
@@ -191,5 +191,5 @@
     "born-from-knowledge-ani": "2026-04-24"
   },
   "last_scanner_run": "2026-04-24",
-  "last_updated": "2026-04-24T-writer-r23-j5"
+  "last_updated": "2026-04-24T-monitor-r01-j1"
 }
