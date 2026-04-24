@@ -6,14 +6,14 @@
     "last_writer_run": "2026-04-24"
   },
   "totals": {
-    "published": 389,
+    "published": 394,
     "open": 263,
     "closed": 104,
     "planned": 16,
-    "in_queue": 76,
+    "in_queue": 100,
     "in_watchlist": 103,
-    "in_catalogo": 0,
-    "in_overflow": 100
+    "in_catalogo": 1,
+    "in_overflow": 81
   },
   "shards": {
     "pt2030-compete": {
@@ -44,9 +44,10 @@
       "open": 4
     },
     "pt2030-other": {
-      "count": 31,
-      "open": 26,
-      "closed": 4
+      "count": 36,
+      "open": 27,
+      "closed": 4,
+      "planned": 4
     },
     "eic": {
       "count": 6,
@@ -103,11 +104,11 @@
     "compete-2030": "2026-04-19",
     "norte-2030": "2026-04-18",
     "centro-2030": "2026-04-20",
-    "lisboa-2030": "2026-04-16",
+    "lisboa-2030": "2026-04-24",
     "alentejo-2030": "2026-04-24",
     "algarve-2030": "2026-04-17",
     "madeira-2030": "2026-04-17",
-    "acores-2030": "2026-04-16",
+    "acores-2030": "2026-04-24",
     "pessoas-2030": "2026-04-17",
     "sustentavel-2030": "2026-04-24",
     "mar-2030": "2026-04-17",
@@ -120,7 +121,7 @@
     "fct": "2026-04-19",
     "aicep": "2026-04-19",
     "iefp": "2026-04-19",
-    "interreg-atlantic": "2026-04-17",
+    "interreg-atlantic": "2026-04-24",
     "hadea": "2026-04-17",
     "eic-accelerator": "2026-04-17",
     "interreg-mac": "2026-04-20",
@@ -188,8 +189,9 @@
     "creative-europe": "2026-04-23",
     "horizon-cluster1": "2026-04-23",
     "invicta-angels": "2026-04-23",
-    "born-from-knowledge-ani": "2026-04-24"
+    "born-from-knowledge-ani": "2026-04-24",
+    "bright-pixel-capital": "2026-04-24"
   },
   "last_scanner_run": "2026-04-24",
-  "last_updated": "2026-04-24T-monitor-r01-j1"
+  "last_updated": "2026-04-24T-scanner-r02-j1"
 }

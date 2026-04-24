@@ -90,5 +90,58 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": []
+  "queue": [
+    {
+      "id": "bright-pixel-capital",
+      "name": "Bright Pixel Capital",
+      "source_id": "bright-pixel-capital",
+      "catalog_type": "vc",
+      "detected_date": "2026-04-24",
+      "last_profile_update": "2026-04-24",
+      "status": "active",
+      "regulation_url": "https://brpx.com",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://brpx.com",
+        "linkedin": "https://www.linkedin.com/company/brightpixelcapital/",
+        "pais_sede": "PT",
+        "descricao_curta": "Braco de investimento tecnologico da Sonae, focado em ciberseguranca, retail tech e infrastructure software. Fundo evergreen de 300M EUR com mais de 50 investimentos diretos.",
+        "como_candidatar": "Contacto via brpx.com/contact/ ou por introducao preferencial via rede Sonae.",
+        "tese": "Investimento em tech companies nos setores de ciberseguranca, retail tech e infraestrutura de software. Stages: seed, early-stage, growth e buyouts.",
+        "estagios": [
+          "seed",
+          "early-stage",
+          "growth",
+          "buyout"
+        ],
+        "setores": [
+          "ciberseguranca",
+          "retail tech",
+          "infrastructure software",
+          "enterprise software"
+        ],
+        "geografia": [
+          "PT",
+          "ES",
+          "EU"
+        ],
+        "ticket_min_eur": null,
+        "ticket_max_eur": null,
+        "ticket_sweet_eur": null,
+        "aum_eur": 300000000,
+        "vintage": "Fundo evergreen (ativo)",
+        "portfolio_pt_exemplos": [
+          "Codacy",
+          "Infraspeak",
+          "Reckon.ai",
+          "Portainer",
+          "Inovretail"
+        ],
+        "parceiros": [],
+        "capital_deployed_eur": 250000000,
+        "exits": 7
+      },
+      "notes": "Anteriormente conhecido como Sonae IM. URL real: brpx.com. Fundo evergreen, sem deadline formal, candidatura continua. 50+ investimentos, 7 exits, capital deployed: 250M EUR."
+    }
+  ]
 }
