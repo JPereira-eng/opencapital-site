@@ -990,8 +990,11 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CERV. Query: CERV 2026"
+      "status": "pending",
+      "notes": "Program: CERV. Query: CERV 2026",
+      "fail_count": 1,
+      "download_error": "topic API 404, portal JS-rendered, call-fiche PDF 404 - tentativa 2026-04-25",
+      "last_fail_date": "2026-04-25"
     },
     {
       "id": "crea-media-2026-marketnet",
@@ -1005,10 +1008,13 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-MARKETNET.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/crea-media-2026-marketnet.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CREA. Query: CREA 2026"
+      "status": "ready",
+      "notes": "Program: CREA. Query: CREA 2026",
+      "fail_count": 0,
+      "download_error": null,
+      "last_fail_date": null
     },
     {
       "id": "crea-media-2026-innovbusmod",
@@ -1022,10 +1028,13 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-INNOVBUSMOD.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/crea-media-2026-innovbusmod.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CREA. Query: CREA 2026"
+      "status": "ready",
+      "notes": "Program: CREA. Query: CREA 2026",
+      "fail_count": 0,
+      "download_error": null,
+      "last_fail_date": null
     },
     {
       "id": "crea-cult-2026-lit",
@@ -1039,10 +1048,13 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-CULT-2026-LIT.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/crea-cult-2026-lit.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CREA. Query: CREA 2026"
+      "status": "ready",
+      "notes": "Program: CREA. Query: CREA 2026",
+      "fail_count": 0,
+      "download_error": null,
+      "last_fail_date": null
     },
     {
       "id": "crea-media-2026-devvgim",
@@ -1056,10 +1068,13 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-DEVVGIM.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/crea-media-2026-devvgim.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CREA. Query: CREA 2026"
+      "status": "ready",
+      "notes": "Program: CREA. Query: CREA 2026",
+      "fail_count": 0,
+      "download_error": null,
+      "last_fail_date": null
     },
     {
       "id": "crea-media-2026-codev",
@@ -1073,10 +1088,13 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-CODEV.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/crea-media-2026-codev.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CREA. Query: CREA 2026"
+      "status": "ready",
+      "notes": "Program: CREA. Query: CREA 2026",
+      "fail_count": 0,
+      "download_error": null,
+      "last_fail_date": null
     },
     {
       "id": "crea-media-2026-training",
@@ -1090,10 +1108,13 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-TRAINING.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/crea-media-2026-training.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CREA. Query: CREA 2026"
+      "status": "ready",
+      "notes": "Program: CREA. Query: CREA 2026",
+      "fail_count": 0,
+      "download_error": null,
+      "last_fail_date": null
     },
     {
       "id": "crea-media-2026-vodnet",
@@ -1107,10 +1128,13 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-VODNET.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/crea-media-2026-vodnet.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CREA. Query: CREA 2026"
+      "status": "ready",
+      "notes": "Program: CREA. Query: CREA 2026",
+      "fail_count": 0,
+      "download_error": null,
+      "last_fail_date": null
     },
     {
       "id": "crea-media-2026-filmove",
@@ -1124,10 +1148,13 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-FILMOVE.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/crea-media-2026-filmove.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CREA. Query: CREA 2026"
+      "status": "ready",
+      "notes": "Program: CREA. Query: CREA 2026",
+      "fail_count": 0,
+      "download_error": null,
+      "last_fail_date": null
     },
     {
       "id": "crea-media-2026-festnet",
@@ -1141,10 +1168,13 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-FESTNET.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/crea-media-2026-festnet.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CREA. Query: CREA 2026"
+      "status": "ready",
+      "notes": "Program: CREA. Query: CREA 2026",
+      "fail_count": 0,
+      "download_error": null,
+      "last_fail_date": null
     },
     {
       "id": "186375",
