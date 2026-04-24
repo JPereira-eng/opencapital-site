@@ -1096,10 +1096,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2026-NRCP.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/cerv-2026-nrcp.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CERV. Query: CERV 2026"
+      "status": "ready",
+      "notes": "Program: CERV. Query: CERV 2026",
+      "fail_count": 0
     },
     {
       "id": "cerv-2025-char-liti",
@@ -1113,10 +1114,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2025-CHAR-LITI.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/cerv-2025-char-liti.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CERV. Query: CERV 2026"
+      "status": "ready",
+      "notes": "Program: CERV. Query: CERV 2026",
+      "fail_count": 0
     },
     {
       "id": "cerv-2025-citizens-rem",
@@ -1130,10 +1132,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2025-CITIZENS-REM-TRANSITION.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/cerv-2025-citizens-rem.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CERV. Query: CERV 2026"
+      "status": "ready",
+      "notes": "Program: CERV. Query: CERV 2026",
+      "fail_count": 0
     },
     {
       "id": "cerv-2025-equal",
@@ -1147,10 +1150,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2025-EQUAL-LGBTIQ.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/cerv-2025-equal.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CERV. Query: CERV 2026"
+      "status": "ready",
+      "notes": "Program: CERV. Query: CERV 2026",
+      "fail_count": 0
     },
     {
       "id": "cerv-2024-char-liti",
@@ -1166,8 +1170,11 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CERV. Query: CERV 2026"
+      "status": "pending",
+      "notes": "Program: CERV. Query: CERV 2026",
+      "fail_count": 1,
+      "download_error": "HTTP 404 - URL inacessivel - tentativa em 2026-04-24",
+      "last_fail_date": "2026-04-24"
     },
     {
       "id": "cerv-2023-char-liti",
@@ -1183,8 +1190,11 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CERV. Query: CERV 2026"
+      "status": "pending",
+      "notes": "Program: CERV. Query: CERV 2026",
+      "fail_count": 1,
+      "download_error": "HTTP 404 - URL inacessivel - tentativa em 2026-04-24",
+      "last_fail_date": "2026-04-24"
     },
     {
       "id": "cerv-2024-citizens-rem",
@@ -1200,8 +1210,11 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CERV. Query: CERV 2026"
+      "status": "pending",
+      "notes": "Program: CERV. Query: CERV 2026",
+      "fail_count": 1,
+      "download_error": "HTTP 404 - URL inacessivel - tentativa em 2026-04-24",
+      "last_fail_date": "2026-04-24"
     },
     {
       "id": "cerv-2022-citizens-town",
@@ -1266,10 +1279,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-TVONLINE-1.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/crea-media-2026-tvonline.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CREA. Query: CREA 2026"
+      "status": "ready",
+      "notes": "Program: CREA. Query: CREA 2026",
+      "fail_count": 0
     },
     {
       "id": "crea-cross-2026-jourpart",
@@ -1283,10 +1297,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-CROSS-2026-JOURPART-COLLABORATIONS.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/crea-cross-2026-jourpart.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CREA. Query: CREA 2026"
+      "status": "ready",
+      "notes": "Program: CREA. Query: CREA 2026",
+      "fail_count": 0
     },
     {
       "id": "crea-media-2026-devslate",
@@ -1300,10 +1315,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CREA-MEDIA-2026-DEVSLATE.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/crea-media-2026-devslate.txt",
       "priority_score": 25,
-      "status": "aberto",
-      "notes": "Program: CREA. Query: CREA 2026"
+      "status": "ready",
+      "notes": "Program: CREA. Query: CREA 2026",
+      "fail_count": 0
     },
     {
       "id": "crea-media-2026-marketnet",
@@ -1457,106 +1473,6 @@
       "priority_score": 25,
       "status": "aberto",
       "notes": "Program: CREA. Query: CREA 2026"
-    },
-    {
-      "id": "equipamentos-hospitalares-hospital-central-alentejo",
-      "name": "Equipamentos Hospitalares - Hospital Central do Alentejo",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "regime": "aviso",
-      "status": "previsto",
-      "aviso_codigo": "FA0268/2025",
-      "detected_date": "2026-04-24",
-      "deadline": "2026-10-30",
-      "budget": 1096424,
-      "regulation_url": "https://portugal2030.pt/aviso-2024/equipamentos-hospitalares-hospital-central-do-alentejo/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 40,
-      "notes": "Natureza: Convite. Programa: ALENTEJO2030. Fundo: FEDER. Beneficiario: Publica. WP pdf_id: 252828.",
-      "fail_count": 0,
-      "download_error": null,
-      "last_fail_date": null
-    },
-    {
-      "id": "equipamentos-infraestruturas-portuarias-raa-3aviso",
-      "name": "Aquisicao de equipamentos e intervencao em Infraestruturas portuarias da RAA - 3o aviso",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "regime": "aviso",
-      "status": "previsto",
-      "aviso_codigo": "FA0288/2025",
-      "detected_date": "2026-04-24",
-      "deadline": "2027-04-30",
-      "budget": 15365450,
-      "regulation_url": "https://portugal2030.pt/aviso-2024/aquisicao-de-equipamentos-e-intervencao-em-infraestruturas-portuarias-da-raa-3o-aviso/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 40,
-      "notes": "Natureza: Convite. Programa: SUSTENTAVEL2030. Fundo: FC. Beneficiario: Publica. WP pdf_id: 252824.",
-      "fail_count": 0,
-      "download_error": null,
-      "last_fail_date": null
-    },
-    {
-      "id": "modelo-apoio-vida-independente-mavi",
-      "name": "Modelo de Apoio a Vida Independente (MAVI)",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "regime": "aviso",
-      "status": "previsto",
-      "aviso_codigo": "FA0311/2025",
-      "detected_date": "2026-04-24",
-      "deadline": "2027-01-29",
-      "budget": 2400000,
-      "regulation_url": "https://portugal2030.pt/aviso-2024/modelo-de-apoio-a-vida-independente-mavi-2/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 40,
-      "notes": "Natureza: Concurso. Programa: ALGARVE2030. Fundo: FSE+. Beneficiario: Publica. WP pdf_id: 252914.",
-      "fail_count": 0,
-      "download_error": null,
-      "last_fail_date": null
-    },
-    {
-      "id": "bolsas-ensino-superior-alunos-carenciados",
-      "name": "Bolsas de ensino superior para alunos carenciados",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "regime": "aviso",
-      "status": "previsto",
-      "aviso_codigo": "FA0291/2025",
-      "detected_date": "2026-04-24",
-      "deadline": "2026-08-14",
-      "budget": 504000,
-      "regulation_url": "https://portugal2030.pt/aviso-2024/bolsas-de-ensino-superior-para-alunos-carenciados/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 40,
-      "notes": "Natureza: Convite. Programa: ALGARVE2030. Fundo: FSE+. Beneficiario: Publica. WP pdf_id: 252910.",
-      "fail_count": 0,
-      "download_error": null,
-      "last_fail_date": null
-    },
-    {
-      "id": "acoes-mitigacao-escassez-hidrica-algarve",
-      "name": "Acoes para mitigacao da situacao de escassez hidrica e assegurar a resiliencia hidrica da Regiao do Algarve",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-other",
-      "regime": "aviso",
-      "status": "aberto",
-      "aviso_codigo": "FA0280/2025",
-      "detected_date": "2026-04-24",
-      "deadline": "2026-07-31",
-      "budget": 110370000,
-      "regulation_url": "https://portugal2030.pt/aviso-2024/acoes-para-mitigacao-da-situacao-de-escassez-hidrica-e-assegurar-a-resiliencia-hidrica-da-regiao-do-algarve/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 60,
-      "notes": "Natureza: Convite. Programa: SUSTENTAVEL2030. Fundo: FC. Beneficiario: Publica. WP pdf_id: 252780.",
-      "fail_count": 0,
-      "download_error": null,
-      "last_fail_date": null
     },
     {
       "id": "186375",
