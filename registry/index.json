@@ -10,9 +10,9 @@
     "open": 268,
     "closed": 114,
     "planned": 16,
-    "in_queue": 85,
+    "in_queue": 83,
     "in_watchlist": 103,
-    "in_catalogo": 0,
+    "in_catalogo": 1,
     "in_overflow": 81
   },
   "shards": {
@@ -109,7 +109,7 @@
     "algarve-2030": "2026-04-17",
     "madeira-2030": "2026-04-17",
     "acores-2030": "2026-04-24",
-    "pessoas-2030": "2026-04-17",
+    "pessoas-2030": "2026-04-24",
     "sustentavel-2030": "2026-04-24",
     "mar-2030": "2026-04-17",
     "pat-2030": "2026-04-18",
@@ -122,8 +122,8 @@
     "aicep": "2026-04-19",
     "iefp": "2026-04-19",
     "interreg-atlantic": "2026-04-24",
-    "hadea": "2026-04-17",
-    "eic-accelerator": "2026-04-17",
+    "hadea": "2026-04-24",
+    "eic-accelerator": "2026-04-24",
     "interreg-mac": "2026-04-20",
     "life-programme": "2026-04-17",
     "erc": "2026-04-19",
@@ -190,8 +190,9 @@
     "horizon-cluster1": "2026-04-23",
     "invicta-angels": "2026-04-23",
     "born-from-knowledge-ani": "2026-04-24",
-    "bright-pixel-capital": "2026-04-24"
+    "bright-pixel-capital": "2026-04-24",
+    "eit-digital-challenge": "2026-04-24"
   },
   "last_scanner_run": "2026-04-24",
-  "last_updated": "2026-04-24T-scanner-r02-j1"
+  "last_updated": "2026-04-24T-scanner-r07-j2"
 }
