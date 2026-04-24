@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Europe MEDIA - Mini-Slate Europeu 2026 | Open Capital</title>
+  <meta name="description" content="Apoio europeu ao desenvolvimento de pacotes de 2 a 3 obras audiovisuais por produtoras independentes em paises com baixa capacidade audiovisual, incluindo Portugal.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:       #1A3A5C;
+      --navy-deep:  #0D1F33;
+      --gold:       #C9A96E;
+      --white:      #FFFFFF;
+      --grey-light: #E5E5E5;
+      --grey-mid:   #7A7A7A;
+      --grey-dark:  #2A2A2A;
+      --font: 'Montserrat', sans-serif;
+      --transition: all 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --shadow: 0 8px 40px rgba(26,58,92,0.10);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:var(--font); background:var(--white); color:var(--grey-dark); -webkit-font-smoothing:antialiased; }
+
+    /* NAVBAR */
+    .navbar { display:flex; align-items:center; justify-content:space-between; padding:0 40px; height:74px; background:var(--white); border-bottom:1px solid var(--grey-light); position:fixed; top:0; left:0; right:0; z-index:1000; transition:var(--transition); }
+    .nav-logo-img { height:57px; width:auto; }
+    .nav-links { display:flex; align-items:center; gap:24px; list-style:none; margin-left:auto; }
+    .nav-links a { font-size:15px; font-weight:500; letter-spacing:0.08em; color:var(--grey-dark); text-decoration:none; transition:var(--transition); position:relative; padding-bottom:3px; white-space:nowrap; }
+    .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold); transition:width 0.3s ease; }
+    .nav-links a:hover { color:var(--navy); }
+    .nav-links a:hover::after { width:100%; }
+    .nav-links a.active { color:var(--navy); }
+    .nav-links a.active::after { width:100%; }
+    .nav-badge { font-size:10px; font-weight:600; letter-spacing:0.06em; text-transform:none; color:var(--gold); border:1px solid var(--gold); padding:1px 4px; margin-left:3px; vertical-align:super; line-height:1; }
+    .nav-cta { font-size:16px; font-weight:600; letter-spacing:0.08em; color:var(--navy); text-decoration:none; border:1px solid var(--navy); padding:9px 18px; margin-left:28px; transition:var(--transition); white-space:nowrap; }
+    .nav-cta:hover { background:var(--navy); color:var(--white); }
+    .nav-dropdown { position:relative; }
+    .nav-dropdown-menu { position:absolute; top:100%; right:0; background:var(--white); border:1px solid var(--grey-light); min-width:160px; box-shadow:var(--shadow); display:none; z-index:100; }
+    .nav-dropdown:hover .nav-dropdown-menu { display:block; }
+    .nav-dropdown-menu a { display:block; font-size:13px; font-weight:500; letter-spacing:0.05em; color:var(--grey-dark); padding:11px 18px; text-decoration:none; transition:var(--transition); border-bottom:1px solid var(--grey-light); }
+    .nav-dropdown-menu a:last-child { border-bottom:none; }
+    .nav-dropdown-menu a:hover { color:var(--navy); background:#FAFAFA; }
+
+    /* HERO */
+    .hero-article { background:var(--navy); padding:140px 8% 80px; position:relative; overflow:hidden; }
+    .hero-gold-bar { position:absolute; left:0; top:0; bottom:0; width:4px; background:linear-gradient(to bottom, var(--gold) 0%, rgba(201,169,110,0.3) 60%, transparent 100%); }
+    .hero-breadcrumb { font-size:13px; font-weight:400; color:rgba(255,255,255,0.38); letter-spacing:0.06em; margin-bottom:24px; }
+    .hero-breadcrumb a { color:rgba(255,255,255,0.38); text-decoration:none; transition:var(--transition); }
+    .hero-breadcrumb a:hover { color:rgba(255,255,255,0.7); }
+    .hero-breadcrumb span { margin:0 8px; }
+    .hero-badge { display:inline-block; font-size:11px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:var(--gold); border:1px solid rgba(201,169,110,0.4); padding:5px 14px; margin-bottom:20px; }
+    .hero-title { font-size:54px; font-weight:700; color:var(--white); line-height:1.05; letter-spacing:-0.01em; margin-bottom:18px; max-width:700px; }
+    .hero-tagline { font-size:20px; font-weight:300; color:rgba(255,255,255,0.52); line-height:1.8; max-width:560px; margin-bottom:48px; letter-spacing:0.02em; }
+    .meta-bar { display:flex; gap:0; border-top:1px solid rgba(255,255,255,0.10); padding-top:36px; flex-wrap:wrap; }
+    .meta-item { flex:1; min-width:160px; padding-right:32px; }
+    .meta-item + .meta-item { border-left:1px solid rgba(255,255,255,0.10); padding-left:32px; padding-right:0; }
+    .meta-label { font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.36); margin-bottom:6px; }
+    .meta-value { font-size:18px; font-weight:600; color:var(--white); letter-spacing:0.01em; }
+
+    /* BACK BAR */
+    .back-bar { background:#FAFAFA; border-bottom:1px solid var(--grey-light); padding:14px 8%; }
+    .back-link { font-size:13px; font-weight:500; letter-spacing:0.08em; color:var(--grey-mid); text-decoration:none; transition:var(--transition); }
+    .back-link:hover { color:var(--navy); }
+
+    /* LAYOUT */
+    .article-layout { display:grid; grid-template-columns:1fr 320px; gap:64px; max-width:1200px; margin:0 auto; padding:80px 80px 96px; align-items:start; }
+    @media (max-width:1024px) { .article-layout { grid-template-columns:1fr; } .article-sidebar { position:static !important; } }
+    .article-sidebar { position:sticky; top:100px; }
+
+    /* ARTICLE BODY */
+    .article-section { margin-bottom:56px; }
+    .article-eyebrow { font-size:11px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+    .article-h2 { font-size:28px; font-weight:600; color:var(--navy); line-height:1.25; margin-bottom:20px; letter-spacing:0.01em; }
+    .article-h3 { font-size:20px; font-weight:600; color:var(--navy); line-height:1.3; margin-bottom:14px; letter-spacing:0.02em; }
+    .article-body { font-size:18px; font-weight:400; color:var(--grey-dark); line-height:1.85; margin-bottom:18px; }
+    .article-body:last-child { margin-bottom:0; }
+
+    /* BULLET LIST */
+    .bullet-list { list-style:none; margin:18px 0 24px; }
+    .bullet-list li { font-size:17px; font-weight:400; color:var(--grey-dark); line-height:1.75; padding-left:22px; margin-bottom:10px; position:relative; }
+    .bullet-list li::before { content:''; position:absolute; left:0; top:11px; width:5px; height:5px; border:1px solid var(--gold); transform:rotate(45deg); }
+
+    /* HIGHLIGHT BOX */
+    .highlight-box { border-left:3px solid var(--gold); background:#FAFAFA; padding:24px 28px; margin:28px 0; }
+    .highlight-box p { font-size:17px; font-weight:400; color:var(--grey-dark); line-height:1.8; margin:0; }
+    .highlight-box strong { color:var(--navy); font-weight:600; }
+
+    /* STATS ROW */
+    .stats-row { display:grid; grid-template-columns:repeat(4,1fr); gap:0; border:1px solid var(--grey-light); margin:32px 0; }
+    .stat-item { padding:28px 24px; text-align:center; border-right:1px solid var(--grey-light); }
+    .stat-item:last-child { border-right:none; }
+    .stat-number { font-size:30px; font-weight:700; color:var(--navy); letter-spacing:-0.01em; margin-bottom:6px; }
+    .stat-label { font-size:12px; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--grey-mid); }
+
+    /* TABLE */
+    .data-table { width:100%; border-collapse:collapse; margin:24px 0; }
+    .data-table th { font-size:11px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--grey-mid); padding:12px 16px; text-align:left; border-bottom:2px solid var(--grey-light); background:#FAFAFA; }
+    .data-table td { font-size:15px; font-weight:400; color:var(--grey-dark); padding:12px 16px; border-bottom:1px solid var(--grey-light); line-height:1.55; }
+    .data-table tr:last-child td { border-bottom:none; }
+    .data-table tr:hover td { background:#FAFAFA; }
+    .td-bold { font-weight:600; color:var(--navy); }
+    .td-gold { font-weight:600; color:var(--gold); }
+
+    /* LCC TABLE */
+    .lcc-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:24px 0; }
+    .lcc-box { border:1px solid var(--grey-light); padding:20px 24px; }
+    .lcc-title { font-size:12px; font-weight:600; letter-spacing:0.20em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+    .lcc-countries { font-size:15px; font-weight:400; color:var(--grey-dark); line-height:1.7; }
+    .lcc-pt { font-weight:600; color:var(--navy); }
+
+    /* EVALUATION TABLE */
+    .eval-row { display:flex; align-items:center; gap:0; border-bottom:1px solid var(--grey-light); padding:14px 0; }
+    .eval-row:last-child { border-bottom:none; }
+    .eval-criterion { flex:1; font-size:16px; font-weight:500; color:var(--navy); }
+    .eval-desc { flex:2; font-size:14px; font-weight:400; color:var(--grey-mid); padding:0 16px; line-height:1.5; }
+    .eval-score { font-size:22px; font-weight:700; color:var(--gold); min-width:60px; text-align:right; }
+
+    /* STEPS */
+    .steps-list { list-style:none; margin:24px 0; }
+    .step-item { display:flex; gap:20px; margin-bottom:24px; }
+    .step-num { width:36px; height:36px; border:1px solid var(--gold); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:600; color:var(--gold); flex-shrink:0; }
+    .step-content { padding-top:6px; }
+    .step-title { font-size:16px; font-weight:600; color:var(--navy); margin-bottom:5px; }
+    .step-body { font-size:15px; font-weight:400; color:var(--grey-mid); line-height:1.65; }
+
+    /* DIVIDER */
+    .div-std { height:1px; background:var(--grey-light); margin:44px 0; }
+    .div-gold { height:1px; background:linear-gradient(to right, transparent, var(--gold) 40%, transparent); margin:44px 0; }
+
+    /* SIDEBAR */
+    .sidebar-card { border:1px solid var(--grey-light); padding:28px; margin-bottom:24px; position:relative; overflow:hidden; }
+    .sidebar-card::before { content:''; position:absolute; top:0; left:0; width:0; height:2px; background:var(--gold); transition:width 0.4s ease; }
+    .sidebar-card:hover::before { width:100%; }
+    .sidebar-title { font-size:11px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; }
+    .fact-row { display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:10px 0; border-bottom:1px solid var(--grey-light); }
+    .fact-row:last-child { border-bottom:none; }
+    .fact-key { font-size:13px; font-weight:500; color:var(--grey-mid); flex-shrink:0; }
+    .fact-val { font-size:13px; font-weight:600; color:var(--navy); text-align:right; }
+    .sidebar-cta { background:var(--navy); padding:28px; margin-bottom:24px; }
+    .sidebar-cta-title { font-size:16px; font-weight:600; color:var(--white); line-height:1.4; margin-bottom:10px; }
+    .sidebar-cta-body { font-size:14px; font-weight:300; color:rgba(255,255,255,0.58); line-height:1.7; margin-bottom:20px; }
+    .sidebar-cta-btn { display:block; text-align:center; font-size:12px; font-weight:600; letter-spacing:0.20em; text-transform:uppercase; color:var(--navy); background:var(--gold); padding:13px 20px; text-decoration:none; transition:var(--transition); }
+    .sidebar-cta-btn:hover { background:#B8945A; }
+    .related-list { list-style:none; }
+    .related-list li { border-bottom:1px solid var(--grey-light); }
+    .related-list li:last-child { border-bottom:none; }
+    .related-list a { display:block; font-size:14px; font-weight:500; color:var(--navy); text-decoration:none; padding:12px 0; transition:var(--transition); line-height:1.4; }
+    .related-list a:hover { color:var(--gold); }
+    .author-card { display:flex; gap:16px; align-items:flex-start; }
+    .author-photo { width:60px; height:60px; object-fit:cover; flex-shrink:0; }
+    .author-name { font-size:15px; font-weight:600; color:var(--navy); margin-bottom:3px; }
+    .author-role { font-size:12px; font-weight:400; color:var(--grey-mid); line-height:1.4; }
+
+    /* FOOTER */
+    .footer { background:var(--navy-deep); padding:56px 80px 34px; }
+    .footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr; gap:44px; margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.07); }
+    .f-logo-img { height:72px; width:auto; }
+    .f-desc { font-size:15px; font-weight:300; color:rgba(255,255,255,0.36); line-height:1.85; margin-top:18px; max-width:260px; }
+    .f-tagline { font-size:16px; font-weight:100; letter-spacing:0.14em; color:var(--gold); margin-top:12px; }
+    .f-col-label { font-size:11px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:rgba(255,255,255,0.24); margin-bottom:16px; }
+    .f-links { list-style:none; }
+    .f-links li { margin-bottom:9px; }
+    .f-links a { font-size:15px; font-weight:300; color:rgba(255,255,255,0.48); text-decoration:none; transition:var(--transition); letter-spacing:0.03em; }
+    .f-links a:hover { color:var(--white); }
+    .f-badge { font-size:9px; font-weight:600; letter-spacing:0.1em; color:var(--gold); border:1px solid rgba(201,169,110,0.45); padding:1px 5px; margin-left:5px; vertical-align:middle; }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+    .f-copy { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:0.05em; }
+    .f-legal { display:flex; gap:20px; }
+    .f-legal a { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); text-decoration:none; letter-spacing:0.05em; transition:var(--transition); }
+    .f-legal a:hover { color:rgba(255,255,255,0.45); }
+
+    /* REVEAL */
+    .reveal { opacity:0; transform:translateY(24px); transition:opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    @media (max-width:768px) {
+      .navbar { padding:0 20px; }
+      .hero-article { padding:120px 5% 60px; }
+      .hero-title { font-size:36px; }
+      .meta-bar { flex-direction:column; gap:16px; }
+      .meta-item + .meta-item { border-left:none; border-top:1px solid rgba(255,255,255,0.10); padding-left:0; padding-top:16px; }
+      .article-layout { padding:40px 24px 60px; }
+      .stats-row { grid-template-columns:repeat(2,1fr); }
+      .lcc-grid { grid-template-columns:1fr; }
+      .footer { padding:40px 24px 24px; }
+      .footer-grid { grid-template-columns:1fr; gap:28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="../index.html">
+      <img src="../logo_opencapital_azul_semfundo.png" class="nav-logo-img" alt="Open Capital">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../biblioteca.html" class="active">Soluções</a></li>
+      <li><a href="../conhecimento.html">Conhecimento</a></li>
+      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades</a>
+        <div class="nav-dropdown-menu">
+          <a href="../parceiros.html">Parceiros</a>
+          <a href="../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-article">
+    <div class="hero-gold-bar"></div>
+    <div class="hero-breadcrumb">
+      <a href="../index.html">Inicio</a>
+      <span>›</span>
+      <a href="../biblioteca.html">Solucoes</a>
+      <span>›</span>
+      Creative Europe MEDIA Mini-Slate 2026
+    </div>
+    <div class="hero-badge">Financiamento Publico</div>
+    <h1 class="hero-title">Creative Europe MEDIA<br>Mini-Slate Europeu 2026</h1>
+    <p class="hero-tagline">Apoio europeu ao desenvolvimento de pacotes audiovisuais por produtoras independentes em paises com baixa capacidade - Portugal incluido no Grupo A</p>
+    <div class="meta-bar">
+      <div class="meta-item">
+        <div class="meta-label">Dotacao</div>
+        <div class="meta-value">EUR 7 000 000</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Por projeto</div>
+        <div class="meta-value">EUR 60 000 - 310 000</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Prazo candidatura</div>
+        <div class="meta-value">17 Set 2026</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Elegibilidade</div>
+        <div class="meta-value">Produtoras LCC A/B</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACK BAR -->
+  <div class="back-bar">
+    <a href="../biblioteca.html" class="back-link">← Voltar ao catalogo de instrumentos</a>
+  </div>
+
+  <!-- ARTICLE LAYOUT -->
+  <div class="article-layout">
+
+    <!-- MAIN ARTICLE -->
+    <article>
+
+      <!-- OVERVIEW -->
+      <section class="article-section reveal">
+        <div class="article-eyebrow">Visao Geral</div>
+        <h2 class="article-h2">O Programa Creative Europe MEDIA e o Cinema Europeu</h2>
+        <p class="article-body">O Creative Europe e o principal programa da Uniao Europeia de apoio ao setor cultural e criativo. A componente MEDIA foca-se especificamente na industria audiovisual, com o objetivo de reforcar a competitividade das producoes europeias nos mercados internacionais, estimular a co-producao transfronteirica e apoiar a circulacao de obras europeias.</p>
+        <p class="article-body">O aviso CREA-MEDIA-2026-DEVMINISLATE destina-se especificamente a produtoras independentes localizadas em paises com baixa capacidade audiovisual (LCC - Low Audiovisual Capacity Countries). Portugal e um desses paises, classificado no Grupo A, o que torna as producoras portuguesas elegíveis para este instrumento.</p>
+        <p class="article-body">A logica do mini-slate consiste em apoiar o desenvolvimento simultâneo de 2 a 3 obras audiovisuais num unico projeto, permitindo que as empresas diluam o risco do desenvolvimento e construam um pipeline mais robusto de projetos com potencial de circulacao europeia e internacional.</p>
+      </section>
+
+      <div class="div-std"></div>
+
+      <!-- STATS -->
+      <section class="article-section reveal">
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-number">EUR 7M</div>
+            <div class="stat-label">Dotacao total</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">2-3</div>
+            <div class="stat-label">Obras por slate</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">17 Set</div>
+            <div class="stat-label">Prazo 2026</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">36m</div>
+            <div class="stat-label">Duracao maxima</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- O QUE E O MINI-SLATE -->
+      <section class="article-section reveal">
+        <div class="article-eyebrow">Conceito</div>
+        <h2 class="article-h2">O que e o Mini-Slate e como funciona</h2>
+        <p class="article-body">O mini-slate e um pacote de desenvolvimento de entre 2 e 3 obras audiovisuais - ficao, animacao ou documentario criativo - apresentadas por uma unica empresa produtora independente. Ao contrario do apoio a um unico projeto, o slate permite uma abordagem de portfolio: a empresa distribui recursos e energia criativa por varios projetos em simultaneo, aumentando a sua presenca no mercado e a capacidade de atrair talentos e parceiros internacionais.</p>
+        <p class="article-body">As produtoras podem, opcionalmente, acrescentar uma curta-metragem de talento emergente ao slate, desde que cumpra as condicoes de elegibilidade previstas no regulamento.</p>
+        <div class="highlight-box">
+          <p><strong>Porquê o formato slate?</strong> A logica e simples: ao desenvolver varios projetos em paralelo, a empresa reduz o risco de depender de um unico titulo para garantir continuidade. Projetos que nao avancam para producao nao representam o fim da linha - ha sempre outros em desenvolvimento. Este modelo e praticado pelas principais produtoras europeias e o Creative Europe quer disseminá-lo nos mercados com menor capacidade.</p>
+        </div>
+      </section>
+
+      <div class="div-std"></div>
+
+      <!-- OBRAS ELEGIVEIS -->
+      <section class="article-section reveal">
+        <div class="article-eyebrow">Scope</div>
+        <h2 class="article-h2">Obras elegiveis: o que pode ser desenvolvido</h2>
+        <p class="article-body">O slate deve incluir obras das seguintes categorias, destinadas a exploracao comercial em cinema, televisao ou plataformas digitais:</p>
+        <ul class="bullet-list">
+          <li><strong>Longas-metragens de animacao, ficcao ou documentario criativo</strong> com duracao minima de 60 minutos, destinadas a estreia em sala</li>
+          <li><strong>Series de ficcao</strong> com duracao total minima de 90 minutos (tv/digital)</li>
+          <li><strong>Series de animacao</strong> com duracao total minima de 24 minutos</li>
+          <li><strong>Series de documentario criativo</strong> com duracao total minima de 50 minutos</li>
+          <li><strong>Projetos interativos e imersivos</strong> (ex: realidade virtual narrativa) de qualquer duracao</li>
+        </ul>
+        <p class="article-body">Sao excluidos programas de entretenimento de formato leve (talk shows, concursos, culinaria), documentarios de turismo, conteudos promocionais, videoclipes, jogos de video e trabalhos de estudantes.</p>
+        <p class="article-body">A primeira data de filmagem principal (ou equivalente) tem de estar prevista pelo menos 10 meses apos o prazo de submissao das candidaturas.</p>
+
+        <h3 class="article-h3" style="margin-top:32px;">Curta-metragem de talento emergente (opcional)</h3>
+        <p class="article-body">Uma curta de maximo 20 minutos pode ser adicionada ao slate, desde que seja dirigida por um talento emergente (realizador sem obra elegivel para slate development) e que a sua primeira data de filmagem seja posterior ao prazo de candidatura. Esta curta tem financiamento proprio dentro do lump sum.</p>
+      </section>
+
+      <div class="div-std"></div>
+
+      <!-- MONTANTES -->
+      <section class="article-section reveal">
+        <div class="article-eyebrow">Financiamento</div>
+        <h2 class="article-h2">Montantes por tipo de obra: tabela de lump sums</h2>
+        <p class="article-body">O financiamento e atribuido como lump sum - um valor fixo predeterminado por tipo e formato de obra, sem reembolso de custos reais. O valor total do projeto e a soma dos lump sums de cada obra do slate, com um minimo de EUR 60 000 e um maximo de EUR 310 000 por candidatura.</p>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Tipo de obra</th>
+              <th>Formato</th>
+              <th>Lump sum</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-bold">Animacao</td>
+              <td>One-off</td>
+              <td class="td-gold">EUR 55 000</td>
+            </tr>
+            <tr>
+              <td class="td-bold">Animacao</td>
+              <td>Serie</td>
+              <td class="td-gold">EUR 60 000</td>
+            </tr>
+            <tr>
+              <td class="td-bold">Documentario criativo</td>
+              <td>One-off</td>
+              <td class="td-gold">EUR 30 000</td>
+            </tr>
+            <tr>
+              <td class="td-bold">Documentario criativo</td>
+              <td>Serie</td>
+              <td class="td-gold">EUR 35 000</td>
+            </tr>
+            <tr>
+              <td class="td-bold">Ficcao</td>
+              <td>One-off, orcamento ate EUR 5M</td>
+              <td class="td-gold">EUR 45 000</td>
+            </tr>
+            <tr>
+              <td class="td-bold">Ficcao</td>
+              <td>One-off, orcamento acima de EUR 5M</td>
+              <td class="td-gold">EUR 60 000</td>
+            </tr>
+            <tr>
+              <td class="td-bold">Ficcao</td>
+              <td>Serie, orcamento ate EUR 5M</td>
+              <td class="td-gold">EUR 55 000</td>
+            </tr>
+            <tr>
+              <td class="td-bold">Ficcao</td>
+              <td>Serie, orcamento EUR 5M - EUR 20M</td>
+              <td class="td-gold">EUR 75 000</td>
+            </tr>
+            <tr>
+              <td class="td-bold">Ficcao</td>
+              <td>Serie, orcamento acima de EUR 20M</td>
+              <td class="td-gold">EUR 100 000</td>
+            </tr>
+            <tr>
+              <td class="td-bold">Curta-metragem</td>
+              <td>Talento emergente (opcional)</td>
+              <td class="td-gold">EUR 10 000</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="highlight-box">
+          <p><strong>Exemplo pratico:</strong> Uma produtora portuguesa submete um slate com uma serie de animacao (EUR 60 000), uma longa de ficcao com orcamento abaixo de EUR 5M (EUR 45 000) e um documentario criativo one-off (EUR 30 000). Total do lump sum: EUR 135 000 - dentro do intervalo elegivel. Com pre-financiamento de 70%, a empresa recebe EUR 94 500 logo apos a assinatura do contrato de subvencao.</p>
+        </div>
+      </section>
+
+      <div class="div-std"></div>
+
+      <!-- ELEGIBILIDADE -->
+      <section class="article-section reveal">
+        <div class="article-eyebrow">Elegibilidade</div>
+        <h2 class="article-h2">Quem pode candidatar-se: Portugal no Grupo A</h2>
+        <p class="article-body">Este aviso e dirigido exclusivamente a produtoras independentes estabelecidas em paises com baixa capacidade audiovisual (LCC). Portugal esta classificado no <strong>Grupo A</strong> - o grupo com prioridade mais alta no programa - ao lado de outros mercados como a Polónia, a Grécia e a Roménia.</p>
+
+        <div class="lcc-grid">
+          <div class="lcc-box">
+            <div class="lcc-title">LCC Grupo A</div>
+            <div class="lcc-countries">
+              <span class="lcc-pt">Portugal</span>, Croacia, Republica Checa, Estonia, Grecia, Polonia, Romania
+            </div>
+          </div>
+          <div class="lcc-box">
+            <div class="lcc-title">LCC Grupo B</div>
+            <div class="lcc-countries">
+              Bulgaria, Chipre, Hungria, Letonia, Lituania, Luxemburgo, Malta, Eslovaquia, Eslovenia + paises terceiros associados (Albania, Islândia, Serbia, Ucrânia, entre outros)
+            </div>
+          </div>
+        </div>
+
+        <p class="article-body">Para alem da localizacao geografica, a empresa candidata deve cumprir estas condicoes:</p>
+        <ul class="bullet-list">
+          <li><strong>Independencia comprovada:</strong> nenhum operador de servico audiovisual pode deter mais de 25% do capital social da produtora (ou 50% se varios operadores partilharem a participacao)</li>
+          <li><strong>Experiencia recente:</strong> ter produzido pelo menos uma obra desde 2019 (animacao, ficcao ou documentario de minimo 24 minutos) com distribuicao comercial em pelo menos tres paises alem do pais da produtora</li>
+          <li><strong>Titularidade de direitos:</strong> a empresa deve deter a maioria dos direitos sobre as obras do slate na data de candidatura, com contrato de cedencia de direitos devidamente assinado</li>
+          <li><strong>Candidatura unica:</strong> cada empresa so pode submeter uma candidatura como coordenadora nos avisos CODEV, DEVSLATE, DEVMINISLATE ou DEVVGIM de 2026</li>
+        </ul>
+      </section>
+
+      <div class="div-std"></div>
+
+      <!-- AVALIACAO -->
+      <section class="article-section reveal">
+        <div class="article-eyebrow">Criterios de Avaliacao</div>
+        <h2 class="article-h2">Como sao avaliadas as candidaturas</h2>
+        <p class="article-body">As propostas sao avaliadas por um comite de avaliacao assistido por especialistas externos independentes. O sistema de pontuacao e de 100 pontos, sendo necessario atingir um minimo de 70 pontos para ser considerado para financiamento. Nao ha limiares minimos por criterio individual.</p>
+
+        <div style="border:1px solid var(--grey-light); margin:24px 0;">
+          <div class="eval-row" style="padding:14px 20px; background:#FAFAFA;">
+            <div class="eval-criterion" style="font-size:12px; text-transform:uppercase; letter-spacing:0.18em; color:var(--grey-mid);">Criterio</div>
+            <div class="eval-desc" style="font-size:12px; text-transform:uppercase; letter-spacing:0.18em; color:var(--grey-mid);">O que e avaliado</div>
+            <div class="eval-score" style="font-size:12px; text-transform:uppercase; letter-spacing:0.18em; color:var(--grey-mid);">Pts</div>
+          </div>
+          <div class="eval-row" style="padding:16px 20px;">
+            <div class="eval-criterion">Relevância</div>
+            <div class="eval-desc">Posicionamento da empresa no mercado europeu/internacional, capacidade de inovacao, estrategias de sustentabilidade ambiental e equidade de genero</div>
+            <div class="eval-score">35</div>
+          </div>
+          <div class="eval-row" style="padding:16px 20px;">
+            <div class="eval-criterion">Qualidade do conteudo</div>
+            <div class="eval-desc">Valor criativo das obras do slate, potencial de circulacao transfronteirica, qualidade do guiao e equipa criativa</div>
+            <div class="eval-score">30</div>
+          </div>
+          <div class="eval-row" style="padding:16px 20px;">
+            <div class="eval-criterion">Gestao do projeto</div>
+            <div class="eval-desc">Adequacao do plano de desenvolvimento, cronograma e orcamento; estrategia de financiamento da producao</div>
+            <div class="eval-score">20</div>
+          </div>
+          <div class="eval-row" style="padding:16px 20px; border-bottom:none;">
+            <div class="eval-criterion">Disseminacao</div>
+            <div class="eval-desc">Estrategia de marketing, plano de distribuicao europeu e internacional, visao para os mercados-alvo</div>
+            <div class="eval-score">15</div>
+          </div>
+        </div>
+
+        <p class="article-body">Em caso de empate, a prioridade e determinada sequencialmente pelo criterio Relevância, depois Disseminacao e por ultimo Qualidade do conteudo.</p>
+      </section>
+
+      <div class="div-std"></div>
+
+      <!-- COMO CANDIDATAR -->
+      <section class="article-section reveal">
+        <div class="article-eyebrow">Processo</div>
+        <h2 class="article-h2">Como submeter uma candidatura</h2>
+        <p class="article-body">As candidaturas sao submetidas exclusivamente atraves do Portal de Financiamento da UE (Funding and Tenders Portal). Nao sao aceites candidaturas em papel.</p>
+        <ol class="steps-list">
+          <li class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <div class="step-title">Registo no Participant Register</div>
+              <div class="step-body">Criar conta EU Login e registar a empresa no Participant Register para obter o PIC (9 digitos). Este registo deve ser feito antes da submissao.</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <div class="step-title">Preparar o dossier Creative Europe MEDIA</div>
+              <div class="step-body">Criar fichas das obras na Creative Europe MEDIA Database. O sistema gera automaticamente o PDF com informacoes sobre cada filme/obra a incluir na candidatura.</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <div class="step-title">Compor a candidatura (4 partes)</div>
+              <div class="step-body">Parte A (dados administrativos, orcamento resumido), Parte B (descricao tecnica, ate 70 paginas), Parte C (dados adicionais, KPIs do programa), Anexos obrigatorios (lump sum calculator, dossiers criativos, contratos de direitos, declaracoes).</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <div class="step-title">Submeter antes do prazo</div>
+              <div class="step-body">Prazo: 17 de setembro de 2026, 17:00 CET (Bruxelas). Apos o prazo, o sistema fecha e nao aceita mais submissoes. Recomenda-se submeter com antecedencia suficiente para evitar problemas tecnicos de ultima hora.</div>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <div class="div-gold"></div>
+
+      <!-- PERSPETIVA OPEN CAPITAL -->
+      <section class="article-section reveal">
+        <div class="article-eyebrow">Perspetiva Open Capital</div>
+        <h2 class="article-h2">O que as produtoras portuguesas devem saber</h2>
+        <p class="article-body">Portugal integra o Grupo A de paises com baixa capacidade audiovisual, o que significa que as produtoras portuguesas sao um dos publicos-alvo prioritarios deste aviso. Isto e uma vantagem competitiva real: ao contrario dos avisos do programa MEDIA abertos a toda a Europa, este destina-se apenas a um conjunto restrito de mercados.</p>
+        <p class="article-body">O formato lump sum simplifica a gestao financeira do projeto: a empresa nao tem de fazer reports de custos detalhados nem justificar cada despesa. O financiamento e atribuido com base na tipologia das obras e na qualidade da candidatura, com 70% pre-financiado logo apos a assinatura do contrato.</p>
+        <p class="article-body">Os criterios de avaliacao penalizam candidaturas que nao demonstrem uma estrategia de distribuicao clara e uma visao para os mercados internacionais. Produtoras que ja tenham parceiros de co-producao identificados ou distribuidores em negociacao partem em vantagem. A componente de sustentabilidade ambiental (5 pontos) e de diversidade/genero (5 pontos) nao deve ser subestimada: em candidaturas competitivas, podem ser decisivos.</p>
+        <p class="article-body">Um aspeto critico: as produtoras que ja tenham recebido financiamento nos avisos CREA-MEDIA-2025-DEVSLATE ou CREA-MEDIA-2025-DEVMINISLATE nao podem candidatar-se. Da mesma forma, cada empresa so pode coordenar uma candidatura entre os quatro avisos de desenvolvimento disponíveis em 2026 (CODEV, DEVSLATE, DEVMINISLATE, DEVVGIM).</p>
+      </section>
+
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="article-sidebar">
+
+      <!-- AUTHOR -->
+      <div class="sidebar-card">
+        <div class="sidebar-title">Escrito por</div>
+        <div class="author-card">
+          <img src="../Retratos Equipa/retrato_ritaferreira.png" alt="Rita Ferreira" class="author-photo">
+          <div>
+            <div class="author-name">Rita Ferreira</div>
+            <div class="author-role">Marketeer e Copywriter, Open Capital</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FACTOS RAPIDOS -->
+      <div class="sidebar-card">
+        <div class="sidebar-title">Factos Rapidos</div>
+        <div class="fact-row">
+          <span class="fact-key">Programa</span>
+          <span class="fact-val">Creative Europe MEDIA</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-key">Entidade gestora</span>
+          <span class="fact-val">EACEA</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-key">Dotacao total</span>
+          <span class="fact-val">EUR 7 000 000</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-key">Valor por projeto</span>
+          <span class="fact-val">EUR 60K - EUR 310K</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-key">Tipo de financiamento</span>
+          <span class="fact-val">Lump sum (nao reembolsavel)</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-key">Pre-financiamento</span>
+          <span class="fact-val">70% na assinatura</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-key">Prazo</span>
+          <span class="fact-val">17 Set 2026, 17h CET</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-key">Duracao maxima</span>
+          <span class="fact-val">36 meses</span>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">A sua produtora quer desenvolver um slate europeu?</div>
+        <div class="sidebar-cta-body">Ajudamos a estruturar o projeto, avaliar a elegibilidade e preparar uma candidatura competitiva para o Creative Europe MEDIA.</div>
+        <a href="https://calendly.com/opencapital" target="_blank" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+
+      <!-- RELACIONADOS -->
+      <div class="sidebar-card">
+        <div class="sidebar-title">Instrumentos relacionados</div>
+        <ul class="related-list">
+          <li><a href="crea-media-2026-filmsales.html">Creative Europe MEDIA - Film Sales 2026</a></li>
+          <li><a href="crea-media-2026-cinnet.html">Creative Europe MEDIA - Cinema Network 2026</a></li>
+          <li><a href="crea-media-2025-fest.html">Creative Europe MEDIA - Festival de Cinema 2025</a></li>
+          <li><a href="crea-cult-2026-coop.html">Creative Europe CULTURE - Cooperacao 2026</a></li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <img src="../logo_opencapital_azul_semfundo.png" class="f-logo-img" alt="Open Capital" style="filter:brightness(0) invert(1);">
+        <p class="f-desc">Advisory boutique especializada em financiamento europeu, incentivos fiscais e investimento privado para empresas portuguesas.</p>
+        <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+      </div>
+      <div>
+        <div class="f-col-label">Solucoes</div>
+        <ul class="f-links">
+          <li><a href="../biblioteca.html">Portugal 2030</a></li>
+          <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+          <li><a href="../biblioteca.html">Beneficios Fiscais</a></li>
+          <li><a href="../biblioteca.html">Premios de Inovacao</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Plataforma</div>
+        <ul class="f-links">
+          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">em breve</span></a></li>
+          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">em breve</span></a></li>
+          <li><a href="../conhecimento.html">Conhecimento</a></li>
+          <li><a href="../parceiros.html">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Empresa</div>
+        <ul class="f-links">
+          <li><a href="../sobre-nos.html">Sobre Nos</a></li>
+          <li><a href="../sobre-nos.html">Equipa</a></li>
+          <li><a href="../carreiras.html">Carreiras</a></li>
+          <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">© 2009 Open Capital Advisory & Consultancy</span>
+      <div class="f-legal">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(0,0,0,0.08)' : 'none';
+    });
+    // Reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
