@@ -90,37 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "eit-digital-challenge",
-      "name": "EIT Digital Challenge",
-      "source_id": "eit-digital-challenge",
-      "catalog_type": "prize",
-      "detected_date": "2026-04-24",
-      "last_profile_update": "2026-04-24",
-      "status": "active",
-      "regulation_url": "https://www.eitdigital.eu/challenge/",
-      "priority_score": 10,
-      "profile": {
-        "website": "https://www.eitdigital.eu/challenge/",
-        "linkedin": null,
-        "pais_sede": "EU",
-        "descricao_curta": "Competicao anual europeia para scaleups de deep tech em busca de investimento e escala internacional. Seleciona 50 finalistas para pitch a investidores.",
-        "como_candidatar": "Candidatura via plataforma Submittable no website oficial; processo em ingles",
-        "premio_total_eur": 50000,
-        "categorias": [
-          "Digital Tech",
-          "Digital Industry",
-          "Digital Cities",
-          "Digital Wellbeing",
-          "Digital Finance"
-        ],
-        "deadline_proxima": null,
-        "edicao_ano": "2025",
-        "juri_destaque": null,
-        "elegibilidade": "Scaleups europeias de deep tech com menos de 10 anos, receitas >= EUR 300K ou financiamento >= EUR 2M, incorporated em EU27 ou paises associados Horizonte Europa"
-      },
-      "notes": "Edicao 2026 ainda nao anunciada. Edicao 2025 (12a) teve deadline Dez 2024. Refresh: 30 dias (prize)."
-    }
-  ]
+  "queue": []
 }
