@@ -977,26 +977,6 @@
       "last_fail_date": null
     },
     {
-      "id": "cerv-2023-char-liti",
-      "name": "Promote civil society organisations' awareness of, capacity building and implementation of the EU Charter of Fundamental Rights",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-other",
-      "regime": "aviso",
-      "aviso_codigo": "CERV-2023-CHAR-LITI",
-      "detected_date": "2026-04-24",
-      "deadline": null,
-      "budget": null,
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/cerv/wp-call/2023/call-fiche_cerv-2023-char-liti_en.pdf",
-      "pdf_url": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/cerv/wp-call/2023/call-fiche_cerv-2023-char-liti_en.pdf",
-      "regulation_local": "regulamentos/eu-funding-tenders/cerv-2023-char-liti.txt",
-      "priority_score": 25,
-      "status": "ready",
-      "notes": "Program: CERV. Query: CERV 2026",
-      "fail_count": 0,
-      "download_error": null,
-      "last_fail_date": null
-    },
-    {
       "id": "cerv-2024-citizens-rem",
       "name": "European Remembrance - 2024",
       "source_id": "eu-funding-tenders",
@@ -1419,7 +1399,7 @@
       "fail_count": 3,
       "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback sem resultado",
       "last_fail_date": "2026-04-20"
-    },
+    }
   ],
   "items": []
 }
