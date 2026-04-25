@@ -8942,24 +8942,133 @@
       "href": "instrumentos/crea-media-2026-festnet.html",
       "featured": false
     },
-  {
-    "id": "horizon-cl4-2022-resilience-01-07",
-    "category": "nr",
-    "category_label": "Financiamento Publico",
-    "estado": "aberto",
-    "status_text": "Candidatura Continua",
-    "status_class": "status-open",
-    "fonte": "Horizonte Europa",
-    "beneficiario": "Empresas e Centros I&D",
-    "setores": ["industria", "energia-ambiente"],
-    "regiao": "Europa",
-    "title": "Horizon Europa CL4 - Recuperacao Eficiente de Minerais e Metais",
-    "tagline": "Innovation Action para solucoes de recuperacao de minerais e metais a partir de subprodutos do processamento de materias-primas criticas.",
-    "highlight0": "60% / 100%",
-    "highlight1": "Taxa de Cofinanciamento",
-    "highlight2": "Innovation Action",
-    "href": "instrumentos/horizon-cl4-2022-resilience-01-07.html",
-    "featured": false
-  }
+    {
+      "id": "horizon-cl4-2022-resilience-01-07",
+      "category": "nr",
+      "category_label": "Financiamento Publico",
+      "estado": "aberto",
+      "status_text": "Candidatura Continua",
+      "status_class": "status-open",
+      "fonte": "Horizonte Europa",
+      "beneficiario": "Empresas e Centros I&D",
+      "setores": [
+        "industria",
+        "energia-ambiente"
+      ],
+      "regiao": "Europa",
+      "title": "Horizon Europa CL4 - Recuperacao Eficiente de Minerais e Metais",
+      "tagline": "Innovation Action para solucoes de recuperacao de minerais e metais a partir de subprodutos do processamento de materias-primas criticas.",
+      "highlight0": "60% / 100%",
+      "highlight1": "Taxa de Cofinanciamento",
+      "highlight2": "Innovation Action",
+      "href": "instrumentos/horizon-cl4-2022-resilience-01-07.html",
+      "featured": false
+    },
+    {
+      "id": "aviso-pessoas-2026-2-igualdade",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 3 jun 2026",
+      "status_class": "status-open",
+      "fonte": "pessoas-2030",
+      "beneficiario": "associacao",
+      "setores": [
+        "todos"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Aviso PESSOAS-2026-2: Igualdade e Nao Discriminacao",
+      "tagline": "Financiamento para ONG na area da igualdade de genero, violencia domestica e trafico de seres humanos",
+      "highlight0": "Fundo nao reembolsavel de 4 milhoes EUR",
+      "highlight1": "ONG e entidades da sociedade civil sem fins lucrativos",
+      "highlight2": "Nacional",
+      "href": "instrumentos/aviso-pessoas-2026-2-igualdade.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-msca-2026-pf-01",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 9 set 2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao",
+      "setores": [
+        "todos"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "MSCA Postdoctoral Fellowships 2026",
+      "tagline": "Bolsas europeias para investigadores pos-doutorados com mobilidade internacional",
+      "highlight0": "Orcamento de 399 milhoes EUR para bolsas individuais",
+      "highlight1": "Investigadores doutorados (todas as nacionalidades)",
+      "highlight2": "Internacional (UE e paises associados)",
+      "href": "instrumentos/horizon-msca-2026-pf-01.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-msca-2026-cofund-01",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Fechado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao",
+      "setores": [
+        "todos"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "MSCA COFUND 2026",
+      "tagline": "Co-financiamento europeu para programas doutorais e pos-doutorais com mobilidade MSCA",
+      "highlight0": "Orcamento de 105 milhoes EUR para programas institucionais",
+      "highlight1": "Universidades e institutos de investigacao",
+      "highlight2": "Internacional (UE e paises associados)",
+      "href": "instrumentos/horizon-msca-2026-cofund-01.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-msca-2026-se-01",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Fechado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao,empresa",
+      "setores": [
+        "todos"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "MSCA Staff Exchanges 2026",
+      "tagline": "Financiamento europeu para mobilidade de pessoal entre organizacoes academicas e industriais",
+      "highlight0": "Subsidio de 5.170 EUR por mes de missao",
+      "highlight1": "Consorcio de organizacoes academicas e nao academicas",
+      "highlight2": "Internacional (minimo 3 paises)",
+      "href": "instrumentos/horizon-msca-2026-se-01.html",
+      "featured": false
+    },
+    {
+      "id": "ppl-crowdfunding",
+      "category": "priv",
+      "category_label": "Investimento Privado",
+      "estado": "aberto",
+      "status_text": "Candidatura Continua",
+      "status_class": "status-cont",
+      "fonte": "ppl-crowdfunding",
+      "beneficiario": "empreendedor,empresa",
+      "setores": [
+        "economia-criativa",
+        "todos"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "PPL Crowdfunding",
+      "tagline": "Plataforma portuguesa de rewards crowdfunding para projetos sociais, criativos e ambientais",
+      "highlight0": "Rewards crowdfunding sem diluicao de capital",
+      "highlight1": "Criadores, empreendedores sociais e projetos criativos",
+      "highlight2": "Nacional",
+      "href": "instrumentos/ppl-crowdfunding.html",
+      "featured": false
+    }
   ]
 }

@@ -6,13 +6,13 @@
     "last_writer_run": "2026-04-25"
   },
   "totals": {
-    "published": 424,
-    "open": 270,
-    "closed": 127,
+    "published": 429,
+    "open": 272,
+    "closed": 129,
     "planned": 16,
-    "in_queue": 100,
+    "in_queue": 95,
     "in_watchlist": 103,
-    "in_catalogo": 1,
+    "in_catalogo": 0,
     "in_overflow": 103
   },
   "shards": {
@@ -23,8 +23,8 @@
       "planned": 1
     },
     "pt2030-pessoas": {
-      "count": 1,
-      "open": 0
+      "count": 2,
+      "open": 1
     },
     "pt2030-central": {
       "count": 0
@@ -54,7 +54,7 @@
       "open": 6
     },
     "eu-horizon": {
-      "count": 69,
+      "count": 72,
       "open": 71,
       "closed": 43,
       "planned": 8
@@ -92,6 +92,10 @@
       "open": 2
     },
     "catalogo-ba": {
+      "count": 1,
+      "open": 1
+    },
+    "catalogo-crowdfunding": {
       "count": 1,
       "open": 1
     }

@@ -463,6 +463,27 @@
       "state": "aberto",
       "published_date": "2026-04-25",
       "last_check": "2026-04-25"
+    },
+    {
+      "id": "horizon-msca-2026-pf-01",
+      "file": "instrumentos/horizon-msca-2026-pf-01.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-25"
+    },
+    {
+      "id": "horizon-msca-2026-cofund-01",
+      "file": "instrumentos/horizon-msca-2026-cofund-01.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-25"
+    },
+    {
+      "id": "horizon-msca-2026-se-01",
+      "file": "instrumentos/horizon-msca-2026-se-01.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-25"
     }
   ],
   "instruments": [
@@ -1062,7 +1083,7 @@
       "last_check": "2026-04-24"
     }
   ],
-  "count": 72,
+  "count": 75,
   "open": 49,
   "closed": 17,
   "planned": 6,
