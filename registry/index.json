@@ -10,10 +10,10 @@
     "open": 270,
     "closed": 127,
     "planned": 16,
-    "in_queue": 69,
+    "in_queue": 100,
     "in_watchlist": 103,
-    "in_catalogo": 0,
-    "in_overflow": 81
+    "in_catalogo": 1,
+    "in_overflow": 103
   },
   "shards": {
     "pt2030-compete": {
@@ -100,7 +100,7 @@
   "last_monitor_run": "2026-04-24",
   "last_writer_run": "2026-04-25",
   "source_last_checked": {
-    "portugal-2030": "2026-04-24",
+    "portugal-2030": "2026-04-25",
     "compete-2030": "2026-04-19",
     "norte-2030": "2026-04-18",
     "centro-2030": "2026-04-20",
@@ -113,7 +113,7 @@
     "sustentavel-2030": "2026-04-24",
     "mar-2030": "2026-04-17",
     "pat-2030": "2026-04-18",
-    "eu-funding-tenders": "2026-04-24",
+    "eu-funding-tenders": "2026-04-25",
     "ani": "2026-04-24",
     "iapmei": "2026-04-19",
     "prr": "2026-04-19",
@@ -125,7 +125,7 @@
     "hadea": "2026-04-24",
     "eic-accelerator": "2026-04-24",
     "interreg-mac": "2026-04-20",
-    "life-programme": "2026-04-17",
+    "life-programme": "2026-04-25",
     "erc": "2026-04-19",
     "investeu": "2026-04-20",
     "interreg-sudoe": "2026-04-20",
@@ -139,7 +139,7 @@
     "digital-europe": "2026-04-18",
     "cef": "2026-04-18",
     "horizonte-europa": "2026-04-19",
-    "eu4health": "2026-04-17",
+    "eu4health": "2026-04-25",
     "indico-capital": "2026-04-13",
     "armilar-ventures": "2026-04-13",
     "edp-innovation": "2026-04-13",
@@ -169,7 +169,7 @@
     "faber-ventures": "2026-04-16",
     "erasmus-enterprise": "2026-04-20",
     "bynd-vc": "2026-04-16",
-    "eea-grants-portugal": "2026-04-17",
+    "eea-grants-portugal": "2026-04-25",
     "fundo-ambiental": "2026-04-17",
     "ifap-pdr": "2026-04-17",
     "fnaba": "2026-04-17",
@@ -191,8 +191,9 @@
     "invicta-angels": "2026-04-23",
     "born-from-knowledge-ani": "2026-04-24",
     "bright-pixel-capital": "2026-04-24",
-    "eit-digital-challenge": "2026-04-24"
+    "eit-digital-challenge": "2026-04-24",
+    "ppl-crowdfunding": "2026-04-25"
   },
-  "last_scanner_run": "2026-04-24",
-  "last_updated": "2026-04-24T-scanner-r07-j2"
+  "last_scanner_run": "2026-04-25",
+  "last_updated": "2026-04-25T-scanner-r14-j3"
 }

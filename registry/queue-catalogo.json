@@ -90,5 +90,30 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": []
+  "queue": [
+    {
+      "id": "ppl-crowdfunding",
+      "name": "PPL Crowdfunding",
+      "source_id": "ppl-crowdfunding",
+      "catalog_type": "crowdfunding",
+      "detected_date": "2026-04-25",
+      "last_profile_update": "2026-04-25",
+      "status": "active",
+      "regulation_url": "https://ppl.pt",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://ppl.pt",
+        "linkedin": null,
+        "pais_sede": "PT",
+        "descricao_curta": "Plataforma portuguesa de crowdfunding por recompensas para projetos sociais, criativos e de empreendedorismo.",
+        "como_candidatar": "Criar campanha em ppl.pt/criar, com apoio da Academia PPL. Sem processo formal de selecao editorial.",
+        "modelo": "rewards",
+        "ticket_min_investidor_eur": null,
+        "comissao": "Nao divulgado publicamente",
+        "regulamentacao": "Rewards-based, nao sujeita a ECSPR nem CMVM (nao e equity/debt)",
+        "campanhas_ativas_url": "https://ppl.pt/apoiar"
+      },
+      "notes": "PPL e rewards crowdfunding (nao equity/debt). Projetos sociais, criativos, ambientais. Nao adequado para financiamento empresarial estruturado."
+    }
+  ]
 }
