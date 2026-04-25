@@ -64,6 +64,29 @@ Cada instrumento e diferente. O Claude tem liberdade para decidir a estrutura ed
 - Investimento privado (VC, PE): incluir diagrama de fases e comparacao de perfis
 - Premios e vouchers: incluir calendario visual e criterios de selecao
 
+**Elegibilidade geografica e setorial (obrigatorio quando aplicavel):**
+
+Sempre que o instrumento tenha restricoes explicitas de:
+- **Localizacao** (regioes NUTS II, territorios de baixa densidade, regioes menos desenvolvidas, areas geograficas elegiveis ou excluidas), ou
+- **CAE de atividade** (codigos CAE elegiveis, setores cobertos ou excluidos),
+
+o artigo deve explicitar essas restricoes com rigor e profundidade adequados, deixando claro ao leitor empresarial se o instrumento se aplica ao seu caso. Apresentar:
+
+- Que regioes/NUTS sao elegiveis (e taxas diferenciadas por regiao, se houver)
+- Que CAE ou divisoes CAE estao cobertos, e quais estao explicitamente excluidos
+- Listar a divisao CAE (2 digitos) ou a seccao quando a lista de CAE a 5 digitos for longa; listar codigos completos apenas quando curtos e relevantes
+- Indicar a fonte normativa (aviso, portaria, regulamento) e respetiva data quando os criterios podem variar entre avisos
+
+Usar os building blocks adequados: `highlight-box` para destacar restricoes criticas, `art-table` para taxas regionais ou listas estruturadas, `article-list` para enumerar setores.
+
+Adicionalmente, sempre que aplicavel, incluir nos Factos Rapidos da sidebar:
+- `<div class="sidebar-fact-key">Localizacao</div>` com resumo (ex: "Norte, Centro, Alentejo, Algarve, Acores, Madeira" ou "Territorios de baixa densidade")
+- `<div class="sidebar-fact-key">CAE elegiveis</div>` com resumo (ex: "Industria transformadora (C), TIC (J)" ou "Transversal a todos os setores")
+
+**Quando NAO aplicar:** se o instrumento e transversal (qualquer empresa, qualquer regiao), nao criar seccao artificial. Indicar simplesmente nos Factos Rapidos que e transversal.
+
+**Nunca inventar codigos CAE nem regioes elegiveis.** Se o regulamento disponivel nao especifica, indicar que os criterios sao definidos no aviso de abertura e nao detalhar.
+
 **Comprimento:** idealmente entre 1500 e 2500 palavras, ajustando a extensao a complexidade do instrumento.
 
 **Regra de fecho para material limitado (aplicavel a instrumentos de regime catalogo - bancos, VC, premios, aceleradores):**
