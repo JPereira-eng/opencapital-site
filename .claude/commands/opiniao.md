@@ -191,7 +191,19 @@ Esta serie e cronica de jornal de noticia, assinada por um dos cinco cronistas. 
 
 ## REGRAS EDITORIAIS
 
-**Comprimento:** entre 1500 e 2200 palavras. O cronista pode oscilar dentro desta banda; alguns escrevem mais comprido, outros mais conciso. A extensao e da voz, nao da regra.
+**Comprimento:** flexivel, determinado por tres factores combinados:
+
+1. **Profundidade do tema:** assuntos que exigem contexto historico, tecnico, ou explicacao de mecanica para o leitor compreender → mais comprido. Temas que assentam numa observacao aguda ou num facto desconcertante → podem ser mais curtos.
+
+2. **Estilo do autor (tendencia):**
+   - **Mariana e Andre:** tendem a escrever mais (1800-3000 palavras). A fundamentacao academica e a narrativa historica precisam de espaco para acumular.
+   - **Jorge:** oscila (1200-2500). Pode ser curto e cortante quando os numeros falam por si; mais comprido quando precisa de triangular varios dados.
+   - **Miguel:** oscila (1300-2400). Cronica visionaria curta e luminosa; cronica critica longa e densa.
+   - **Rita:** tende ao conciso (1000-2000). A prosa elegante carrega peso sem precisar de extensao.
+
+3. **Necessidade de contexto:** se o leitor precisa de saber X, Y, Z para entender a tese, o artigo cresce. Se a tese e legivel sem mais enquadramento, encurta-se.
+
+Estas sao tendencias, nao bandas rigidas. O cronista escreve o que o tema e a sua voz pedem. Artigo curto bem escrito vale mais do que artigo comprido por inercia.
 
 **Layout:** cronica em coluna unica com largura generosa. Sem sidebar de conteudo, sem duas colunas no corpo. A sidebar lateral (autor + sobre o artigo + CTA + relacionados) mantem-se.
 
@@ -305,13 +317,21 @@ A cronica e prosa continua. A pagina nao e um manual com capitulos: e um texto q
 - **Andre:** referencia historica, ano, episodio ("1974, outra vez", "Antes de Bruxelas")
 
 **Como organizar a cronica sem h2:**
-Pull-quote, art-divider, simples mudanca de paragrafo. A tipografia da prosa, a respiracao entre paragrafos, a ocasional citacao destacada: tudo isso da ritmo sem ser preciso titular blocos.
+Art-divider, simples mudanca de paragrafo, paragrafo curto isolado. A tipografia da prosa, a respiracao entre paragrafos, o ritmo das frases: tudo isso da estrutura sem ser preciso titular blocos.
 
 **Alternativas tipograficas a h2:**
 - `<div class="art-divider"></div>` - linha fina, sem rotulo, marca pausa
-- `<div class="pull-quote">` - citacao destacada do proprio texto, marca pausa visual
 - Paragrafo de uma frase isolado - efeito retorico de pausa
 - `<div class="art-highlight">` - quase nunca usado em cronica; reservado para nota lateral muito justificada
+
+**Pull-quote - regra restritiva:**
+Pull-quotes que destacam frases do proprio texto da cronica estao **proibidos**. Sao auto-citacao corporativa e quebram a voz do cronista.
+
+O `<div class="pull-quote">` so e admissivel quando:
+1. Cita literalmente uma figura, autor, fonte ou documento externo que o cronista invoca para sustentar o argumento (ex: uma frase de Taleb que Jorge cita, um verso de Sophia que Rita evoca, uma declaracao publica de um ministro, uma linha de um relatorio).
+2. A citacao e mesmo necessaria para o argumento - se o texto sobrevive sem ela, nao se usa.
+
+Em duvida: nao se usa pull-quote. A maioria das cronicas nao tem nenhum.
 
 **Regra geral:**
 A cronica vive na continuidade. Se o leitor consegue passar do paragrafo anterior para o seguinte sem perder o fio, nao precisa de divisao. Em duvida sobre se ha h2: nao ha.
@@ -320,27 +340,16 @@ A cronica vive na continuidade. Se o leitor consegue passar do paragrafo anterio
 
 ## REGRAS DE FECHO
 
-A cronica nao tem seccao "Perspetiva Open Capital" nem h2 final. Termina com tres elementos, por esta ordem:
+A cronica nao tem seccao "Perspetiva Open Capital", nem h2 final, nem linha de assinatura. O autor ja aparece no hero, na sidebar e nos meta-dados; nao precisa de assinar duas vezes. Termina com dois elementos, por esta ordem:
 
 **1. Ultimo paragrafo do corpo da cronica.** E o fecho do cronista, na voz dele, conforme o perfil (imagem que ressoa em Rita, aforismo cortante em Jorge, sintese tecnica em Mariana, porta entreaberta em Miguel, paralelo historico em Andre). Nao se trata de "conclusao": e o remate da prosa.
 
-**2. Linha de assinatura sobria** (imediatamente apos o ultimo paragrafo do corpo):
-```html
-<div class="article-signature">[NOME_AUTOR], [CARGO_AUTOR]. [MES] de [ANO].</div>
-```
-
-Estilo CSS aplicado: font-size:13px, font-weight:500, letter-spacing:0.06em, color:grey-mid, margin-top:40px, padding-top:20px, border-top:1px solid grey-light.
-
-Exemplo: "Jorge Pereira, COO da Open Capital. Abril de 2026."
-
-**3. Paragrafo de marca** (ultimo elemento, em italico discreto):
+**2. Paragrafo de marca** (ultimo elemento, em italico discreto):
 ```html
 <p class="article-coda">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo.</p>
 ```
 
 Estilo CSS aplicado: font-style:italic, font-size:15px, color:grey-mid, margin-top:32px, line-height:1.7.
-
-**Nota:** a assinatura nao substitui o fecho da cronica; vem depois dele. O paragrafo de marca nao substitui a assinatura; vem depois dela.
 
 ---
 
@@ -422,8 +431,10 @@ Cria `conhecimento/[slug].html`.
   <div class="art-highlight-text">Texto de destaque...</div>
 </div>
 
+<!-- Pull-quote: APENAS para citacao literal de figura/autor/fonte externa que o cronista invoca para o argumento. NUNCA para destacar frase do proprio texto. So usar se mesmo necessario. -->
 <div class="pull-quote reveal">
-  <div class="pull-quote-text">"Frase de impacto que sintetiza a tese."</div>
+  <div class="pull-quote-text">"Citacao literal de pessoa ou fonte externa referenciada pelo cronista."</div>
+  <div class="pull-quote-attr">- Nome da figura citada, contexto/obra</div>
 </div>
 
 <div class="stats-row cols-3 reveal">
@@ -447,12 +458,10 @@ Cria `conhecimento/[slug].html`.
 **Fecho obrigatorio (apos o ultimo paragrafo do corpo da cronica):**
 
 ```html
-<div class="article-signature">[NOME_AUTOR], [CARGO_AUTOR]. [MES] de [ANO].</div>
-
 <p class="article-coda">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo.</p>
 ```
 
-Nao incluir seccao "Perspetiva Open Capital". Nao incluir h2 final. A cronica termina com o paragrafo do cronista (na voz dele), depois assinatura, depois paragrafo de marca. Exemplo de assinatura: "Jorge Pereira, COO da Open Capital. Abril de 2026."
+Nao incluir seccao "Perspetiva Open Capital". Nao incluir h2 final. Nao incluir linha de assinatura. A cronica termina com o paragrafo do cronista (na voz dele), seguido apenas do paragrafo de marca. O autor ja aparece no hero e na sidebar.
 
 **Template HTML completo:**
 
