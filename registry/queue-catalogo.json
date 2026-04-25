@@ -98,7 +98,7 @@
       "catalog_type": "vc",
       "detected_date": "2026-04-25",
       "last_profile_update": "2026-04-25",
-      "status": "active",
+      "status": "ready",
       "regulation_url": "https://www.bpfomento.pt/pt/pt/institucional/fundos-sob-gestao/fundo-de-coinvestimento-200m/",
       "priority_score": 10,
       "profile": {
@@ -135,7 +135,12 @@
           "Banco Portugues de Fomento (gestor do fundo)"
         ]
       },
-      "notes": "Fundo de co-investimento publico. Nao e um VC classico mas sim um mecanismo matching 1:1 com parceiros privados qualificados. Gestor: BPF. Candidatura via VCs parceiros elegíveis."
+      "notes": "Fundo de co-investimento publico. Nao e um VC classico mas sim um mecanismo matching 1:1 com parceiros privados qualificados. Gestor: BPF. Candidatura via VCs parceiros elegíveis.",
+      "regulation_local": "regulamentos/200m-capital/200m-capital.txt",
+      "fail_count": 0,
+      "download_error": null,
+      "last_fail_date": null,
+      "download_note": "BPF site cert error - conteudo obtido via WebSearch + profile. Fundo reportado como encerrado em 2026."
     }
   ]
 }
