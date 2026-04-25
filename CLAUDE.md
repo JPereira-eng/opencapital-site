@@ -614,6 +614,34 @@ Midjourney prompt base:
 
 ---
 
+## ✍️ ESTILO EDITORIAL — REGRA GLOBAL DE ESCRITA
+
+Aplica-se a **todas as skills de escrita** (`/trend`, `/opiniao`, `/informativo`, e futuras) e a qualquer texto editorial gerado para o site.
+
+### Antíteses — máximo 1 por artigo
+
+Antítese = construção retórica que opõe duas ideias para criar contraste. Exemplos:
+- "Não é X, é Y."
+- "Menos A, mais B."
+- "Não basta X, é preciso Y."
+- "X não chega, Y é o que importa."
+- "O problema não é A, é B."
+
+Estas figuras são fortes quando usadas com parcimónia, e tornam-se tique editorial quando repetidas. Regra:
+
+- **Máximo 1 antítese por artigo.** Idealmente reservada para um momento de viragem (fim de introdução, abertura de tese, ou conclusão).
+- Nunca duas antíteses no mesmo parágrafo, nem em parágrafos consecutivos.
+- Antes de fechar o artigo, reler e contar. Se houver mais do que uma, reescrever as restantes em prosa direta.
+
+### Outras figuras a usar com moderação
+- Listas tricolónicas ("X, Y e Z") seguidas — variar ritmo
+- Perguntas retóricas — máx. 2 por artigo
+- Frases curtas isoladas para efeito ("É isto.") — máx. 2 por artigo
+
+O objetivo é prosa premium e confiante, não prosa enfática ou panfletária.
+
+---
+
 ## 🚀 AUTO-DEPLOY RULE
 
 **Every skill/command that creates or modifies site files MUST auto-deploy at the end.**
