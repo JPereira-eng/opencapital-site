@@ -1,6 +1,7 @@
 {
   "_meta": "Dedup index - O(1) lookup by id and aviso_codigo",
   "by_id": {
+    "185357": true,
     "185979": true,
     "186065": true,
     "186081": true,
@@ -1273,7 +1274,6 @@
     "eit-2026-mvp-0004-exa": true,
     "crea-cross-2024-cedesks-iba": true,
     "ec-scic-2025-lvp-0123-exa": true,
-    "185357": true,
     "cese-2026-lvp-0047-exa": true,
     "ec-olaf-2025-mvp-0008-exa": true,
     "ec-grow-2025-op-0091-pin": true,
@@ -1301,9 +1301,13 @@
     "life-2026-ta-pp-nat-snap": true,
     "life-2026-ta-pp-env-sip": true,
     "aviso-pessoas-2026-2-igualdade": true,
-    "ppl-crowdfunding": true
+    "ppl-crowdfunding": true,
+    "horizon-cl4-2027-04-digital-emerging-10": true,
+    "horizon-ju-edctp3-2025-scileadershipmaneuprize": true,
+    "horizon-ju-edctp3-2025-scileadershipwomaneuprize": true
   },
   "by_aviso_codigo": {
+    "185357": "185357",
     "185979": "185979",
     "186065": "186065",
     "186081": "186081",
@@ -2480,7 +2484,6 @@
     "EIT/2026/MVP/0004-EXA": "eit-2026-mvp-0004-exa",
     "CREA-CROSS-2024-CEDESKS-IBA": "crea-cross-2024-cedesks-iba",
     "EC-SCIC/2025/LVP/0123-EXA": "ec-scic-2025-lvp-0123-exa",
-    "185357": "185357",
     "CESE/2026/LVP/0047-EXA": "cese-2026-lvp-0047-exa",
     "EC-OLAF/2025/MVP/0008-EXA": "ec-olaf-2025-mvp-0008-exa",
     "EC-GROW/2025/OP/0091-PIN": "ec-grow-2025-op-0091-pin",
@@ -2507,7 +2510,10 @@
     "LIFE-2026-STRAT-NAT-SNaP-two-stage": "life-2026-strat-nat-snap-two-stage",
     "LIFE-2026-TA-PP-NAT-SNAP": "life-2026-ta-pp-nat-snap",
     "LIFE-2026-TA-PP-ENV-SIP": "life-2026-ta-pp-env-sip",
-    "PESSOAS-2026-2": "aviso-pessoas-2026-2-igualdade"
+    "PESSOAS-2026-2": "aviso-pessoas-2026-2-igualdade",
+    "HORIZON-CL4-2027-04-DIGITAL-EMERGING-10": "horizon-cl4-2027-04-digital-emerging-10",
+    "HORIZON-JU-EDCTP3-2025-SciLeadershipManEUPrize": "horizon-ju-edctp3-2025-scileadershipmaneuprize",
+    "HORIZON-JU-EDCTP3-2025-SciLeadershipWomanEUPrize": "horizon-ju-edctp3-2025-scileadershipwomaneuprize"
   },
   "plano_anual": {
     "acoes-inovadoras-desafio-demografico-parcerias-coesao-alentejo": {

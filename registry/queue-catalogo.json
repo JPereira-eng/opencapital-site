@@ -90,5 +90,52 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": []
+  "queue": [
+    {
+      "id": "200m-capital",
+      "name": "200M Co-Investment Fund",
+      "source_id": "200m-capital",
+      "catalog_type": "vc",
+      "detected_date": "2026-04-25",
+      "last_profile_update": "2026-04-25",
+      "status": "active",
+      "regulation_url": "https://www.bpfomento.pt/pt/pt/institucional/fundos-sob-gestao/fundo-de-coinvestimento-200m/",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://www.bpfomento.pt/pt/pt/institucional/fundos-sob-gestao/fundo-de-coinvestimento-200m/",
+        "linkedin": null,
+        "pais_sede": "PT",
+        "descricao_curta": "Fundo publico de co-investimento de 200M EUR gerido pelo Banco Portugues de Fomento que co-investe com fundos VC qualificados e corporacoes em startups portuguesas.",
+        "como_candidatar": "Acesso via parceria com um fundo VC co-investidor elegivel. Contactar o One Stop Shop do Banco Portugues de Fomento para informacao sobre o mecanismo.",
+        "tese": "Matching fund publico 1:1 com fundos VC qualificados e corporacoes em startups sediadas ou a crescer em Portugal. Ticket entre 10M e 50M EUR por fundo parceiro. Total disponivel: 200M EUR.",
+        "estagios": [
+          "seed",
+          "series-a",
+          "series-b",
+          "growth"
+        ],
+        "setores": [
+          "agnostico"
+        ],
+        "geografia": [
+          "PT"
+        ],
+        "ticket_min_eur": 10000000,
+        "ticket_max_eur": 50000000,
+        "ticket_sweet_eur": null,
+        "aum_eur": 200000000,
+        "vintage": "200M Co-Investment Fund (em deployment)",
+        "portfolio_pt_exemplos": [
+          "EatTasty",
+          "Aptoide",
+          "Sound Particles",
+          "Barkyn"
+        ],
+        "parceiros": [
+          "Banco Portugues de Fomento (gestor do fundo)"
+        ]
+      },
+      "notes": "Fundo de co-investimento publico. Nao e um VC classico mas sim um mecanismo matching 1:1 com parceiros privados qualificados. Gestor: BPF. Candidatura via VCs parceiros elegíveis."
+    }
+  ]
 }

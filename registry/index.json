@@ -10,9 +10,9 @@
     "open": 282,
     "closed": 135,
     "planned": 16,
-    "in_queue": 79,
+    "in_queue": 83,
     "in_watchlist": 103,
-    "in_catalogo": 0,
+    "in_catalogo": 1,
     "in_overflow": 103
   },
   "shards": {
@@ -115,7 +115,7 @@
     "acores-2030": "2026-04-24",
     "pessoas-2030": "2026-04-24",
     "sustentavel-2030": "2026-04-24",
-    "mar-2030": "2026-04-17",
+    "mar-2030": "2026-04-25",
     "pat-2030": "2026-04-18",
     "eu-funding-tenders": "2026-04-25",
     "ani": "2026-04-24",
@@ -162,7 +162,7 @@
     "portugal-ventures": "2026-04-14",
     "balcao-2030": "2026-04-14",
     "nato-diana": "2026-04-14",
-    "interreg-europe": "2026-04-17",
+    "interreg-europe": "2026-04-25",
     "interreg-espon": "2026-04-20",
     "turismo-portugal": "2026-04-16",
     "cgd-empresas": "2026-04-14",
@@ -174,7 +174,7 @@
     "erasmus-enterprise": "2026-04-20",
     "bynd-vc": "2026-04-16",
     "eea-grants-portugal": "2026-04-25",
-    "fundo-ambiental": "2026-04-17",
+    "fundo-ambiental": "2026-04-25",
     "ifap-pdr": "2026-04-17",
     "fnaba": "2026-04-17",
     "seedrs": "2026-04-17",
@@ -196,8 +196,9 @@
     "born-from-knowledge-ani": "2026-04-24",
     "bright-pixel-capital": "2026-04-24",
     "eit-digital-challenge": "2026-04-24",
-    "ppl-crowdfunding": "2026-04-25"
+    "ppl-crowdfunding": "2026-04-25",
+    "200m-capital": "2026-04-25"
   },
   "last_scanner_run": "2026-04-25",
-  "last_updated": "2026-04-25T-scanner-r14-j3"
+  "last_updated": "2026-04-25T-scanner-r15-j1"
 }
