@@ -897,11 +897,7 @@
       "status": "aberto",
       "detected_date": "2026-04-18"
     },
-    "horizon-cl4-2025-03-human-14": {
-      "shard": "eu-horizon",
-      "status": "aberto",
-      "detected_date": "2026-04-18"
-    },
+    "horizon-cl4-2025-03-human-14": true,
     "horizon-cl4-2025-03-materials-47": {
       "shard": "eu-horizon",
       "status": "aberto",
@@ -2144,11 +2140,7 @@
       "status": "aberto",
       "detected_date": "2026-04-18"
     },
-    "HORIZON-CL4-2025-03-HUMAN-14": {
-      "shard": "eu-horizon",
-      "status": "aberto",
-      "detected_date": "2026-04-18"
-    },
+    "HORIZON-CL4-2025-03-HUMAN-14": "horizon-cl4-2025-03-human-14",
     "HORIZON-CL4-2025-03-MATERIALS-47": {
       "shard": "eu-horizon",
       "status": "aberto",
