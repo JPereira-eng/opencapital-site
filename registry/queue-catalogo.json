@@ -98,7 +98,7 @@
       "catalog_type": "crowdfunding",
       "detected_date": "2026-04-25",
       "last_profile_update": "2026-04-25",
-      "status": "active",
+      "status": "ready",
       "regulation_url": "https://ppl.pt",
       "priority_score": 10,
       "profile": {
@@ -113,7 +113,9 @@
         "regulamentacao": "Rewards-based, nao sujeita a ECSPR nem CMVM (nao e equity/debt)",
         "campanhas_ativas_url": "https://ppl.pt/apoiar"
       },
-      "notes": "PPL e rewards crowdfunding (nao equity/debt). Projetos sociais, criativos, ambientais. Nao adequado para financiamento empresarial estruturado."
+      "notes": "PPL e rewards crowdfunding (nao equity/debt). Projetos sociais, criativos, ambientais. Nao adequado para financiamento empresarial estruturado.",
+      "regulation_local": "regulamentos/ppl-crowdfunding/ppl-crowdfunding.txt",
+      "fail_count": 0
     }
   ]
 }

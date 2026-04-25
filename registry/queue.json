@@ -647,8 +647,8 @@
       "priority_score": 25,
       "status": "pending",
       "notes": "Program: CERV. Query: CERV 2026",
-      "fail_count": 1,
-      "download_error": "topic API 404, portal JS-rendered, call-fiche PDF 404 - tentativa 2026-04-25",
+      "fail_count": 2,
+      "download_error": "topic API 404, portal JS-rendered, nao consta no planeamento indicativo CERV 2026 - tentativa 2026-04-25",
       "last_fail_date": "2026-04-25"
     },
     {
@@ -857,14 +857,17 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "previsto",
+      "status": "pending",
       "aviso_codigo": "EC-COMM/2026/MVP/0127-EXA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-COMM/2026/MVP/0127-EXA",
       "deadline": null,
       "budget": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "SEDIA text=2026 p1"
+      "notes": "SEDIA text=2026 p1",
+      "fail_count": 1,
+      "download_error": "tender MVP baixo valor, portal JS-rendered, WebSearch sem resultados especificos - tentativa 2026-04-25",
+      "last_fail_date": "2026-04-25"
     },
     {
       "id": "horizon-msca-2026-pf-01",
@@ -872,14 +875,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-MSCA-2026-PF-01",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MSCA-2026-PF-01",
       "deadline": "2026-09-09",
       "budget": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "SEDIA text=2026 p1"
+      "notes": "SEDIA text=2026 p1",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-msca-2026-pf-01.txt",
+      "fail_count": 0
     },
     {
       "id": "horizon-msca-2026-cofund-01",
@@ -887,29 +892,34 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "previsto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-MSCA-2026-COFUND-01",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MSCA-2026-COFUND-01",
       "deadline": null,
       "budget": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "SEDIA text=2026 p1"
+      "notes": "SEDIA text=2026 p1",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-msca-2026-cofund-01.txt",
+      "fail_count": 0
     },
     {
       "id": "ans-ttelsescyklus-kohorte-2026",
-      "name": "Ansættelsescyklus, kohorte 2026",
+      "name": "Ansï¿½ttelsescyklus, kohorte 2026",
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "pending",
       "aviso_codigo": "",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/",
       "deadline": "2026-06-30",
       "budget": null,
       "detected_date": "2026-04-25",
       "priority_score": 35,
-      "notes": "SEDIA text=2026 p2"
+      "notes": "SEDIA text=2026 p2",
+      "fail_count": 1,
+      "download_error": "regulation_url vazio, aviso_codigo vazio, item possivelmente capturado por erro do scanner - tentativa 2026-04-25",
+      "last_fail_date": "2026-04-25"
     },
     {
       "id": "ec-comm-tll-2025-mvp-0541-exa",
@@ -917,14 +927,17 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "previsto",
+      "status": "pending",
       "aviso_codigo": "EC-COMM/TLL/2025/MVP/0541-EXA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-COMM/TLL/2025/MVP/0541-EXA",
       "deadline": null,
       "budget": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "SEDIA text=2026 p2"
+      "notes": "SEDIA text=2026 p2",
+      "fail_count": 1,
+      "download_error": "tender MVP baixo valor, portal JS-rendered, WebSearch sem resultados especificos - tentativa 2026-04-25",
+      "last_fail_date": "2026-04-25"
     },
     {
       "id": "horizon-msca-2026-se-01",
@@ -932,14 +945,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "previsto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-MSCA-2026-SE-01",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MSCA-2026-SE-01",
       "deadline": null,
       "budget": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "SEDIA text=2026 p3"
+      "notes": "SEDIA text=2026 p3",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-msca-2026-se-01.txt",
+      "fail_count": 0
     },
     {
       "id": "ec-comm-tll-2025-mvp-0522-exa",
@@ -1142,14 +1157,17 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "pending",
       "aviso_codigo": "EC-ESTAT/2026/EA-RP/0012",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-ESTAT/2026/EA-RP/0012",
       "deadline": "2026-06-05",
       "budget": null,
       "detected_date": "2026-04-25",
       "priority_score": 65,
-      "notes": "SEDIA text=2026 p16"
+      "notes": "SEDIA text=2026 p16",
+      "fail_count": 1,
+      "download_error": "topic API 404, portal JS-rendered, WebSearch sem resultados - tentativa 2026-04-25",
+      "last_fail_date": "2026-04-25"
     },
     {
       "id": "ec-env-2026-mvp-0010-exa",
@@ -1262,14 +1280,17 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "pending",
       "aviso_codigo": "185357",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/185357",
       "deadline": "2026-06-14",
       "budget": null,
       "detected_date": "2026-04-25",
       "priority_score": 65,
-      "notes": "SEDIA text=2026 p23"
+      "notes": "SEDIA text=2026 p23",
+      "fail_count": 1,
+      "download_error": "topic API 404, portal JS-rendered, ID numerico nao encontrado em WebSearch - tentativa 2026-04-25",
+      "last_fail_date": "2026-04-25"
     },
     {
       "id": "cese-2026-lvp-0047-exa",
@@ -1667,14 +1688,16 @@
       "source_id": "pessoas-2030",
       "shard": "pt2030-pessoas",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "PESSOAS-2026-2",
       "regulation_url": "https://www.cig.gov.pt/2026/03/abertas-candidaturas-para-financiamento/",
       "deadline": "2026-06-03",
       "budget": "4000000",
       "detected_date": "2026-04-25",
       "priority_score": 65,
-      "notes": "PT2030 PESSOAS. ONG sociedade civil. Igualdade genero. 4M EUR. Prazo 3 Jun 2026."
+      "notes": "PT2030 PESSOAS. ONG sociedade civil. Igualdade genero. 4M EUR. Prazo 3 Jun 2026.",
+      "regulation_local": "regulamentos/pessoas-2030/aviso-pessoas-2026-2-igualdade.txt",
+      "fail_count": 0
     }
   ],
   "items": []
