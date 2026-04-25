@@ -722,9 +722,10 @@
       "detected_date": "2026-04-18"
     },
     "horizon-cl4-2022-resilience-01-07": {
+      "file": "instrumentos/horizon-cl4-2022-resilience-01-07.html",
       "shard": "eu-horizon",
-      "status": "aberto",
-      "detected_date": "2026-04-18"
+      "state": "aberto",
+      "published_date": "2026-04-25"
     },
     "horizon-cl4-2022-resilience-01-01": {
       "shard": "eu-horizon",
@@ -1928,11 +1929,7 @@
       "status": "aberto",
       "detected_date": "2026-04-18"
     },
-    "HORIZON-CL4-2022-RESILIENCE-01-07": {
-      "shard": "eu-horizon",
-      "status": "aberto",
-      "detected_date": "2026-04-18"
-    },
+    "HORIZON-CL4-2022-RESILIENCE-01-07": "horizon-cl4-2022-resilience-01-07",
     "HORIZON-CL4-2022-RESILIENCE-01-01": {
       "shard": "eu-horizon",
       "status": "aberto",

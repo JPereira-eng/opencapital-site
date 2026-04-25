@@ -454,6 +454,15 @@
       "source": "eu-funding-tenders",
       "state": "fechado",
       "last_check": "2026-04-24"
+    },
+    {
+      "id": "horizon-cl4-2022-resilience-01-07",
+      "file": "instrumentos/horizon-cl4-2022-resilience-01-07.html",
+      "source": "hadea",
+      "aviso_codigo": "HORIZON-CL4-2022-RESILIENCE-01-07",
+      "state": "aberto",
+      "published_date": "2026-04-25",
+      "last_check": "2026-04-25"
     }
   ],
   "instruments": [
@@ -1037,8 +1046,8 @@
       "source": "eu-funding-tenders",
       "state": "fechado",
       "last_check": "2026-04-24"
-    }
-    ,{
+    },
+    {
       "id": "horizon-ju-chips-2025-csa-jpn",
       "file": "instrumentos/horizon-ju-chips-2025-csa-jpn.html",
       "source": "eu-funding-tenders",
@@ -1053,8 +1062,9 @@
       "last_check": "2026-04-24"
     }
   ],
-  "count": 71,
-  "open": 48,
+  "count": 72,
+  "open": 49,
   "closed": 17,
-  "planned": 6
+  "planned": 6,
+  "published": 1
 }
