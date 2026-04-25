@@ -58,6 +58,10 @@
     .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
     .meta-value{font-size:15px;font-weight:500;color:var(--white);}
     .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:var(--grey-mid);font-weight:600;}
+    .sidebar-fact-val.val-closed{color:var(--grey-mid);font-weight:600;}
+    .instrument-closed-notice{display:flex;align-items:flex-start;gap:14px;background:#FAFAFA;border-left:3px solid var(--gold);padding:20px 24px;margin:0 0 32px;}
+    .instrument-closed-notice span{font-size:16px;font-weight:400;color:var(--grey-dark);line-height:1.7;}
     .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
     .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
     .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
@@ -206,7 +210,7 @@
       <div class="meta-sep"></div>
       <div class="meta-item">
         <span class="meta-label">Estado</span>
-        <span class="meta-value status-open">Aberto</span>
+        <span class="meta-value status-closed">Fechado</span>
       </div>
     </div>
   </div>
@@ -219,9 +223,9 @@
 <div class="article-layout">
   <article class="article-body">
 
-    <div class="alert-urgent">
-      <div class="alert-urgent-title">Prazo Crítico</div>
-      <div class="alert-urgent-text">Candidatura fecha a 23 de abril de 2026. Com menos de duas semanas de janela, entidades que ainda não iniciaram o processo de candidatura devem avaliar imediatamente a sua elegibilidade e a maturidade do projeto.</div>
+    <div class="instrument-closed-notice">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="0.5" fill="#C9A96E"/></svg>
+      <span>Este instrumento encontra-se <strong>encerrado</strong>. O prazo de candidatura terminou a 23 de abril de 2026.</span>
     </div>
 
     <div class="article-section reveal">
@@ -384,7 +388,7 @@
       </div>
       <div class="sidebar-fact">
         <div class="sidebar-fact-key">Estado</div>
-        <div class="sidebar-fact-val val-open">Aberto até 23/04/2026</div>
+        <div class="sidebar-fact-val val-closed">Fechado</div>
       </div>
     </div>
 
