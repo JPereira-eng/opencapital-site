@@ -66,25 +66,36 @@ Regras de routing. Aplicar pela ordem indicada, parar na primeira que encaixar:
 
 ## LOGICA EDITORIAL DA SERIE 2.2
 
-Esta serie produz artigos informativos a partir de videos do YouTube. O video impoe o tema e a estrutura narrativa; a Open Capital impoe a voz editorial.
+Esta serie produz artigos informativos a partir de videos do YouTube.
 
-**Diferenca chave em relacao a Serie 2.1 (`/informativo`):**
-- O tema NAO e escolhido pela Open Capital. E o tema do video.
-- A estrutura NAO e organizada livremente para decisores empresariais. E a estrutura narrativa do video, traduzida para prosa editorial.
-- O tom NAO e fixo. Acompanha o caracter do video (mais analitico, mais didatico, mais conversacional, mais argumentativo), sempre dentro do registo premium da Open Capital.
+**O video impoe TRES coisas, que devem ser preservadas praticamente iguais:**
+- **Tema**: o assunto central do video e o assunto central do artigo
+- **Estrutura**: a sequencia de blocos narrativos do video e a sequencia de seccoes do artigo
+- **Argumento**: a tese, conclusoes e linha de raciocinio do video sao a tese, conclusoes e linha de raciocinio do artigo
+
+**A Open Capital impoe TUDO o resto:**
+- **Voz e tom**: sempre Open Capital editorial premium. NUNCA o tom do apresentador. Nao adapta ao caracter do video.
+- **Lingua**: sempre portugues de Portugal (PT-PT). Nunca PT-BR.
+- **Linguagem**: sempre prosa editorial. Nunca oralidade, girias, tiques de YouTuber, expressoes de internet.
+- **Registo**: sempre formal, premium, medido. Mesmo que o video seja conversacional, sarcastico ou comico, o artigo e editorial e serio.
 
 **O que o sistema faz:**
 1. Le a transcricao integral do video.
 2. Identifica a estrutura narrativa: introducao, blocos tematicos, conclusao.
-3. Identifica os argumentos chave, dados, exemplos, nomes proprios e empresas citadas.
-4. Reescreve cada bloco em prosa editorial Open Capital, mantendo a sequencia.
-5. Corrige artefactos de transcricao (palavras mal reconhecidas, interjeicoes, falsas partidas).
-6. Adiciona uma seccao final "Perspetiva Open Capital" para enquadrar o conteudo no contexto empresarial portugues.
+3. Identifica o argumento central e os argumentos secundarios.
+4. Identifica os dados, exemplos, nomes proprios e empresas citadas.
+5. Reescreve cada bloco em prosa editorial Open Capital, mantendo a sequencia, o argumento e os factos.
+6. Remove publicidade, patrocinios e elementos de formato YouTube (ver Exclusoes Obrigatorias).
+7. Traduz para PT-PT vocabulario e construcoes PT-BR ou de outras variantes.
+8. Adapta referencias geograficas conforme regras abaixo.
+9. Adiciona uma seccao final "Perspetiva Open Capital" para enquadrar o conteudo no contexto empresarial portugues.
 
 **O que NAO faz:**
 - NAO transcreve literalmente.
 - NAO inventa exemplos, dados ou afirmacoes que o video nao tem.
+- NAO introduz nuances, contraposicoes ou conclusoes diferentes das que o video defende.
 - NAO reorganiza a estrutura do video por preferencia editorial.
+- NAO adapta o tom ao caracter do video.
 - NAO refere o video, o canal, o titulo original, ou o autor original em qualquer parte do artigo. O conteudo e apropriado como artigo Open Capital.
 
 ---
@@ -93,26 +104,49 @@ Esta serie produz artigos informativos a partir de videos do YouTube. O video im
 
 **Estrutura narrativa.** Seguir a sequencia do video. Se o video tem 4 blocos tematicos, o artigo tem 4 seccoes correspondentes (mais a "Perspetiva Open Capital" obrigatoria no fim). A ordem nao se altera. Se o video tem capitulos com timestamps, esses capitulos sao a estrutura. Se nao tem capitulos explicitos, identifica os blocos pela mudanca de assunto na transcricao.
 
-**Conteudo.** Todos os argumentos, dados, nomes proprios, empresas, estatisticas e exemplos do video tem de aparecer no artigo. Nada se omite por irrelevancia editorial. Se o video cita um numero ou um nome, o artigo tambem cita.
+**Argumento.** A tese central do video, as conclusoes e a linha de raciocinio do apresentador devem ser preservadas com fidelidade. Se o apresentador defende X com base em A, B, C, o artigo defende X com base em A, B, C. O artigo nao introduz nuances, contrapontos, ressalvas ou alternativas que o video nao tem. Nao "equilibra" o argumento. Nao apresenta "o outro lado" se o video nao o faz.
 
-**Tom.** Acompanhar o caracter do video, sempre dentro do registo Open Capital:
-- Video analitico ou com muitos dados → prosa mais densa, com numeros, tabelas, stats-rows
-- Video didatico ou explicativo → prosa mais clara, com listas, exemplos, h3 frequentes
-- Video conversacional ou de entrevista → prosa mais fluida, frases mais curtas, sem perder formalidade
-- Video argumentativo ou de tese → assumir a tese com firmeza, em prosa estruturada
-- Video de estudo de caso → narrativa mais sequencial, com pull-quotes nos momentos chave
-Nunca informalidade. Nunca girias. Nunca emojis.
+**Conteudo factual.** Todos os argumentos, dados, nomes proprios, empresas, estatisticas e exemplos do video tem de aparecer no artigo (sujeitos as Exclusoes Obrigatorias). Nada se omite por irrelevancia editorial. Se o video cita um numero ou um nome, o artigo tambem cita.
+
+**Tom e voz.** Sempre Open Capital editorial premium. **Nao adapta ao caracter do video.** Mesmo que o video seja conversacional, o artigo e editorial. Mesmo que o video seja sarcastico ou critico, o artigo e medido. Mesmo que o video tenha humor, o artigo e serio. Mesmo que o video use linguagem coloquial, o artigo usa prosa editorial. A voz Open Capital e fixa.
+
+A formatacao (uso de stats-rows, tabelas, listas, pull-quotes) pode ser informada pela densidade do conteudo do video (mais dados → mais stats; mais argumentos enumerados → mais listas), mas o **tom da escrita** nao muda.
+
+**Lingua: portugues de Portugal (PT-PT) obrigatorio.**
+
+Regras explicitas:
+- **Construcoes verbais**: usar "estou a fazer" (nao "estou fazendo"), "comecei a perceber" (nao "comecei percebendo")
+- **Pronomes**: usar a 2a/3a pessoa formal portuguesa. Evitar "voce" no sentido brasileiro (usar omissao do sujeito ou "o leitor", "o gestor")
+- **Vocabulario PT-PT obrigatorio**:
+  - "facto" (nao "fato")
+  - "ecra" (nao "tela")
+  - "telemovel" (nao "celular")
+  - "autocarro" (nao "onibus")
+  - "comboio" (nao "trem")
+  - "frigorifico" (nao "geladeira")
+  - "casa de banho" (nao "banheiro")
+  - "rapariga" / "jovem" (nao "garota")
+  - "equipa" (nao "time")
+  - "empresa" / "negocio" (nao "negocio" no sentido PT-BR de qualquer coisa)
+  - "gestor" / "diretor" (nao "executivo" excessivo)
+  - "imposto sobre rendimento" / "IRS" / "IRC" (nao "imposto de renda" / "IRPF")
+  - "candidatura" (nao "aplicacao")
+  - "ficheiro" (nao "arquivo" no sentido informatico)
+  - "aplicacao" / "app" (no sentido de software, ok)
+  - "comecar" (nao "iniciar" excessivo no sentido PT-BR)
+- **Se o video for em PT-BR**: traduzir TODAS as construcoes para PT-PT. Nao deixar passar gerundios, vocabulario brasileiro ou referencias culturais brasileiras.
+- **Se o video for em ingles ou espanhol**: traduzir directamente para PT-PT. Nao traduzir primeiro para PT-BR e depois adaptar.
 
 **Correcoes admissiveis na transcricao:**
 - Palavras mal transcritas (ex: "SIFIDE dois" deve ser "SIFIDE II"; "Por tugal" deve ser "Portugal"; nomes proprios mal grafados)
-- Interjeicoes ("ah", "ok", "tipo", "pronto")
+- Interjeicoes ("ah", "ok", "tipo", "pronto", "tipo assim")
 - Falsas partidas ("e... e... o que eu queria dizer era")
 - Repeticoes orais nao intencionais
 - Pontuacao ausente ou ilogica
 
 **Adicoes admissiveis:**
 - A seccao final "Perspetiva Open Capital" (obrigatoria)
-- Pequenos enquadramentos contextuais quando o video assume contexto que o leitor portugues nao tem (ex: video em ingles que assume conhecimento do mercado americano)
+- Pequenos enquadramentos contextuais quando o video assume contexto que o leitor portugues nao tem
 - Transicoes editoriais entre blocos para dar fluidez
 
 **Adicoes proibidas:**
@@ -120,6 +154,45 @@ Nunca informalidade. Nunca girias. Nunca emojis.
 - Dados, percentagens, valores que o video nao cita
 - Exemplos inventados
 - Comparacoes ou enquadramentos que mudem o significado do que o video diz
+- Contrapontos ou nuances que o video nao apresenta
+
+---
+
+## EXCLUSOES OBRIGATORIAS
+
+### Publicidade, patrocinios e formato YouTube
+
+Remover integralmente da transcricao antes de processar:
+- Leitura de patrocinios ("este video e patrocinado por X", "este episodio e trazido a vocs por Y")
+- Promocoes do proprio canal ou apresentador (cursos, livros, plataformas, newsletters, comunidades, mentorias)
+- Codigos de desconto, links de afiliado, links de aplicacoes
+- Pedidos de like, subscricao, partilha, sino de notificacoes, comentarios
+- Referencias ao formato YouTube ("no video anterior", "na proxima parte", "na playlist", "ja na descricao")
+- Aberturas e fechos tipicos de canal ("ola pessoal", "tudo bem com voces", "ate ao proximo video", "fica para a proxima")
+- Auto-promocao do apresentador ("eu, que ja tenho X anos de experiencia", "como sempre digo no canal")
+- Convites para evento/webinar/conferencia organizado pelo canal
+
+### Referencias geograficas e contextuais
+
+O artigo destina-se a leitor portugues/europeu. Aplicar a regra:
+
+**Regra 1 - Tema internacional, exemplos internacionais: MANTER.**
+Se o video e sobre tema **inerentemente internacional** (geopolitica, economia global, tecnologia, mercados de capitais, IA, cadeias de valor globais) e usa exemplos do Brasil, EUA, Asia, etc., manter os exemplos. Sao parte legitima do tema.
+Exemplo: video sobre "tendencias de IA em 2026" com exemplos da OpenAI, ByteDance, Mistral → manter todos.
+
+**Regra 2 - Tema universal, exemplos especificos de outro mercado: TRADUZIR.**
+Se o argumento central do video tem aplicacao universal (ex: gestao de tesouraria, estrutura de capital, fiscalidade empresarial) mas usa exemplos especificos de outro mercado (ex: brasileiro), traduzir os exemplos para o equivalente portugues/europeu sempre que existir.
+Exemplo: video sobre "como pagar menos imposto" com referencias a IRPF, MEI, Simples Nacional → traduzir para IRS, IRC, regime simplificado, NHR. Manter o argumento, substituir a referencia fiscal.
+
+**Regra 3 - Tema estritamente nao-europeu sem aplicacao em Portugal/Europa: REJEITAR.**
+Se o video trata exclusivamente de uma realidade que nao tem paralelo aplicavel em Portugal/Europa (ex: regulamentacao especifica da CVM brasileira, mecanismo do IRS americano sem equivalente, programa de governo de outro pais), parar a execucao. Informar o utilizador que o video nao se aplica ao publico Open Capital e sugerir que escolha outro.
+
+**Casos limite:**
+- Video sobre Wall Street ou bolsa americana: tema internacional, manter (Regra 1)
+- Video sobre como abrir empresa no Brasil para portugueses: traduzir vocabulario fiscal (Regra 2)
+- Video sobre como abrir MEI no Brasil para brasileiros: rejeitar (Regra 3)
+- Video sobre IA generativa com exemplos da Silicon Valley: manter (Regra 1)
+- Video sobre venture capital americano com licoes universais: traduzir exemplos quando possivel, manter quando essenciais (Regra 1 ou 2 conforme caso)
 
 ---
 
@@ -245,9 +318,12 @@ Nao prossigas sem transcricao integral. Transcricao parcial nao serve.
 Antes de escrever, processa a transcricao e identifica:
 
 - **Estrutura narrativa**: introducao, blocos tematicos (e respetivos titulos internos), conclusao. Se houver capitulos com timestamps, esses sao os blocos.
-- **Argumentos chave**: 3-7 ideias centrais que o video defende ou explica.
-- **Dados, nomes proprios, empresas, exemplos**: lista exaustiva de tudo o que o video cita concretamente.
-- **Caracter do video**: analitico, didatico, conversacional, argumentativo, estudo de caso. Define o tom da escrita.
+- **Argumento central**: a tese principal que o video defende. Em uma frase.
+- **Argumentos secundarios**: 3-7 ideias que sustentam a tese central.
+- **Dados, nomes proprios, empresas, exemplos**: lista exaustiva de tudo o que o video cita concretamente, depois de aplicar as Exclusoes Obrigatorias.
+- **Lingua original do video**: PT-PT, PT-BR, ingles, espanhol, outra. Determina o esforco de traducao.
+- **Aplicabilidade ao publico portugues/europeu**: aplicar as 3 regras das Exclusoes Obrigatorias. Se cair na Regra 3 (rejeitar), parar e informar o utilizador.
+- **Densidade do conteudo**: video maioritariamente argumentativo, factual/dados, narrativo, ou misto. Informa apenas a escolha de elementos formais (mais stats-rows, mais listas, mais prosa, mais pull-quotes), nao o tom.
 
 Decide os metadados:
 
