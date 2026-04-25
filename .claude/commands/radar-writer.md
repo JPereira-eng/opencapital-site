@@ -1,4 +1,4 @@
-# Radar Writer v4.0: Criacao de Artigos em Sprint
+# Radar Writer v4.1: Criacao de Artigos em Sprint
 
 REGRA CRITICA: Nunca usar travessao (—) em nenhum texto gerado. Usar virgula, ponto, hifen (-) ou reescrever a frase.
 
@@ -76,12 +76,20 @@ O writer opera em **1 batch de 5 artigos por sessao**. Cada batch:
 Ler **ambas as filas**: `registry/queue.json` (regime aviso) e `registry/queue-catalogo.json` (regime catalogo).
 
 **Composicao do batch de 5 artigos:**
-- Ate 4 items de `queue.json` (regime aviso), ordenados por `priority_score` descendente
+- Ate 4 items de `queue.json` (regime aviso), ordenados por: **(1) shard `pt2030-*` antes de qualquer outro shard, (2) `priority_score` descendente dentro de cada grupo**
 - 1 item de `queue-catalogo.json` (regime catalogo), o mais antigo na fila (FIFO - para garantir que todas as fontes de catalogo sao cobertas em rotacao)
-- Se `queue-catalogo.json` estiver vazia: usar o 5o slot para mais um item de `queue.json`
+- Se `queue-catalogo.json` estiver vazia: usar o 5o slot para mais um item de `queue.json` (mesma regra de ordenacao PT2030 primeiro)
 - Se `queue.json` estiver vazia mas `queue-catalogo.json` tiver items: processar ate 5 items do catalogo
 
-**Priorizar items com `status: "ready"`** (regulamento ja descarregado) sobre `status: "pending"`.
+**REGRA DE PRIORIDADE PT2030 (absoluta, v4.1):** Qualquer item cujo `shard` comece por `pt2030-` (pt2030-central, pt2030-centro, pt2030-compete, pt2030-lisboa, pt2030-norte, pt2030-other, pt2030-pessoas) e selecionado **antes de qualquer item de outro shard** (eu-horizon, eu-other, pt-other, interreg, etc.), independentemente do `priority_score`. Um aviso PT2030 com score 5 vence um aviso Horizon com score 100. Os shards EU/resto so entram nos slots restantes apos esgotar a tier PT2030. Razao: a Open Capital serve maioritariamente PME portuguesas; o catalogo deve crescer primeiro em instrumentos PT2030.
+
+**Priorizar items com `status: "ready"`** (regulamento ja descarregado) sobre `status: "pending"` **dentro de cada tier**. Ordem final dos 4 slots de `queue.json`:
+1. PT2030 com `status: ready` (priority_score desc)
+2. PT2030 com `status: pending` (priority_score desc)
+3. Resto com `status: ready` (priority_score desc)
+4. Resto com `status: pending` (priority_score desc)
+
+O slot 5 (catalogo) nao e afectado por esta regra — segue FIFO normal.
 
 **IGNORAR completamente** items com `status: "plano_anual"` - sao previsoes do plano anual, nao avisos publicados. Nao contar, nao processar, nao remover da queue.
 
@@ -344,7 +352,8 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
 BATCH UNICO (1 vez por sessao):
   1. Ler queue.json + instrumento.md
   2. Se queue vazia: terminar imediatamente
-  3. Selecionar ate 5 items (ready primeiro, depois pending)
+  3. Selecionar ate 5 items: PT2030 sempre primeiro (qualquer shard pt2030-*),
+     depois resto. Dentro de cada tier: ready antes de pending, score desc.
   4. Para cada: ler regulamento, criar HTML, atualizar catalogo
   5. Atualizar queue + shard + lookup + index
   6. git commit + push
