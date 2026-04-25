@@ -126,7 +126,7 @@ O artigo deve:
 
 O ultimo paragrafo do corpo do artigo deve ser sempre exatamente (em italico, visualmente distinto do corpo: font-size:15px, color:grey-mid, font-style:italic, margin-top:40px):
 
-"Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo."
+"Comentários, correções ou contrapontos são bem-vindos: geral@opencapital.pt"
 
 ---
 
@@ -197,7 +197,7 @@ Criar o ficheiro `instrumentos/[slug].html` com a estrutura abaixo. Os metadados
 
 **Paragrafo de fecho - obrigatorio como ultimo elemento:**
 ```html
-<p class="section-text" style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo.</p>
+<p class="section-text" style="font-size:15px;color:var(--grey-mid);margin-top:40px;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
 ```
 
 **Template HTML completo:**

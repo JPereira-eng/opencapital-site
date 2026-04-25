@@ -86,7 +86,7 @@ Incluir secção com section-eyebrow "Perspetiva Open Capital" com:
 
 === FECHO OBRIGATÓRIO ===
 O último parágrafo deve ser EXATAMENTE:
-"Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore também o nosso arquivo para mais conteúdos sobre inovação, tecnologia, ciência aplicada e empreendedorismo."
+"Comentários, correções ou contrapontos são bem-vindos: geral@opencapital.pt"
 
 === ELEMENTOS HTML DISPONÍVEIS ===
 SECÇÃO:

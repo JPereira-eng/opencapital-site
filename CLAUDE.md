@@ -527,7 +527,7 @@ Isto aplica-se a TODOS os CTAs com texto tipo:
 - `target="_blank"` (abre em nova aba)
 - Aplica-se em todas as páginas: raiz, `instrumentos/`, `conhecimento/`, e qualquer pasta futura
 - Inclui: navbar CTA, sidebar CTAs, hero CTAs, footer "Contacto", mobile CTAs
-- **Exceção:** links `mailto:hello@opencapital.pt` em contexto de texto informativo (ex: "o nosso email é hello@opencapital.pt") podem manter o mailto
+- **Exceção:** links `mailto:geral@opencapital.pt` em contexto de texto informativo (ex: "o nosso email é geral@opencapital.pt") podem manter o mailto
 
 **Nunca usar:**
 - `#contactar` como href de CTA

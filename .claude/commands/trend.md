@@ -146,7 +146,7 @@ O leitor e um gestor ou decisor que ja sabe o que e inflacao, o que e o BCE, o q
 **Regra geral:**
 Se o texto parecer demasiado limpo, simetrico ou "certinho", reescrever para o tornar mais natural, imperfeito e humano. O objetivo nao e perfeicao formal. E credibilidade.
 
-**Excecao permanente:** O paragrafo de fecho ("Achou o artigo relevante?...") e um elemento de marca fixo e nao esta sujeito a estas regras.
+**Excecao permanente:** O paragrafo de fecho ("Comentarios, correcoes ou contrapontos sao bem-vindos: geral@opencapital.pt") e um elemento de marca fixo e nao esta sujeito a estas regras.
 
 ---
 
@@ -198,7 +198,7 @@ O ultimo paragrafo do corpo do artigo deve ser sempre exatamente:
 
 O paragrafo de fecho deve estar em italico e visualmente distinto do corpo (font-size:15px, color:grey-mid, font-style:italic, margin-top:40px):
 
-"Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo."
+"Comentários, correções ou contrapontos são bem-vindos: geral@opencapital.pt"
 
 ---
 
@@ -306,7 +306,7 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
 
 **Paragrafo de fecho - obrigatorio como ultimo elemento (em italico, visualmente distinto do corpo):**
 ```html
-<p style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo.</p>
+<p style="font-size:15px;color:var(--grey-mid);margin-top:40px;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
 ```
 
 **Template HTML completo:**
