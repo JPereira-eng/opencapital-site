@@ -90,5 +90,40 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": []
+  "queue": [
+    {
+      "id": "plug-and-play-portugal",
+      "name": "Plug and Play Portugal",
+      "source_id": "plug-and-play-portugal",
+      "catalog_type": "accelerator",
+      "detected_date": "2026-04-25",
+      "last_profile_update": "2026-04-25",
+      "status": "active",
+      "regulation_url": "https://www.plugandplaytechcenter.com/portugal",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://www.plugandplaytechcenter.com/portugal",
+        "linkedin": null,
+        "pais_sede": "PT",
+        "descricao_curta": "Acelerador global com presenca em Portugal. Programas de aceleracao setorial e parceria com Startup Portugal para internacionalizacao (Scale Up Now).",
+        "como_candidatar": "Candidatura via website global ou programas parceiros (ex: Startup Portugal Scale Up Now)",
+        "modelo": "non-equity",
+        "formato": "presencial e remoto",
+        "duracao_meses": 3,
+        "batches_ano": null,
+        "batch_proximo": null,
+        "deadline_proxima": null,
+        "setores_foco": [
+          "fintech",
+          "healthtech",
+          "mobility",
+          "energy",
+          "deep tech",
+          "B2B SaaS"
+        ],
+        "alumni_destaques": []
+      },
+      "notes": "Acelerador global com hub em Lisboa. Programa Scale Up Now 2026 (jan 2026, concluido) deu acesso a Plug and Play GOAL nos EUA. Verificar para proximos batches 2026-2027."
+    }
+  ]
 }
