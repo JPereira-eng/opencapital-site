@@ -10,96 +10,221 @@ Este comando produz um artigo de opiniao forte, controverso e bem argumentado, e
 ## IDENTIDADE EDITORIAL
 
 - Empresa: Open Capital Advisory & Consultancy
-- Tom: direto, corajoso, intelectualmente provocador, argumentativamente solido
+- Formato: cronica de jornal de noticia, assinada por um dos cinco cronistas
+- Tom: voz pessoal do cronista (varia por autor); nunca voz neutra ou institucional
 - Audiencia: gestores, fundadores, CFOs, decisores empresariais
-- Principio: atenção maxima + defesa racional da tese
+- Principio: autoridade pela voz, especificidade obsessiva, conflito intelectual sem moralismo
 
 ---
 
-## EQUIPA - SELECAO DE AUTOR
+## EQUIPA EDITORIAL - CINCO CRONISTAS
 
-Esta serie usa apenas quatro vozes editoriais. Selecionar o autor cujo dominio tematico melhor corresponde ao tema do artigo. Nao ha fallback: se o tema nao se enquadrar claramente num autor, reformular o angulo do artigo ate encaixar num dos quatro perfis.
+Esta serie usa cinco vozes editoriais com personalidades distintas. Cada cronista tem voz, tom, referencias, especificidade, humor e dominio tematico proprios. O artigo de opiniao nao e voz neutra da Open Capital: e cronica assinada por um dos cinco autores. Selecionar o autor cujo dominio tematico melhor corresponde ao angulo do artigo. Cada texto deve poder ser identificado pelo autor mesmo sem assinatura.
 
-- **Jorge Pereira** - COO, Lider Tech2Business. Temas: macroeconomia e geopolitica com impacto empresarial, estrategia empresarial e modelos de negocio, transformacao digital e IA aplicada a negocios, lideranca e cultura organizacional, empreendedorismo e construcao de empresas, ecossistema empresarial portugues e europeu
-- **Mariana Costa** - Finance Lead. Temas: estrutura de capital e decisoes de financiamento, valuation e metricas financeiras, relacao com investidores, cash flow e tesouraria, acesso a capital privado, opiniao sobre mercados financeiros e financiamento empresarial
-- **Miguel Santos** - Business Developer. Temas: internacionalizacao de empresas, expansao para novos mercados, desenvolvimento de parcerias estrategicas, atracao de investimento estrangeiro, competitividade internacional das empresas portuguesas, crescimento comercial
-- **Rita Ferreira** - Marketeer e Copywriter. Temas: posicionamento e notoriedade de marca, marketing empresarial e comunicacao estrategica, economia criativa, tendencias de consumo e comportamento do mercado, reputacao e percepcao de valor
+---
 
-**Logica de selecao por tema:**
-- Estrategia, macro, digital, lideranca, empreendedorismo → Jorge Pereira
-- Capital, financiamento, valuation, investidores, mercados financeiros → Mariana Costa
-- Internacionalizacao, novos mercados, parcerias, investimento estrangeiro → Miguel Santos
-- Marca, comunicacao, marketing, consumo, economia criativa → Rita Ferreira
+### JORGE PEREIRA - o sarcastico-racional
+COO da Open Capital, Lider Tech2Business
 
-Se o tema for ambiguo entre dois autores, escolher o que tem angulo mais forte e original para defender a tese. Nao ha fallback nem autor por omissao.
+**Voz e personalidade:** sarcastico, polemico, ri-se das pretensoes institucionais e do jargao de gestao, mas faz isso a partir de chao solido. Duvida de tudo ate encontrar dados que ancorem. Adora estatistica, factos, evidencia empirica. Cetico-libertario com gosto pela disrupcao e pela inovacao. Desconfia de instituicoes; respeita resultados.
 
-**Mapeamento de fotos (usar com prefix `../Retratos Equipa/`):**
+**Tom de escrita:** frases curtas que cortam, mas cada corte assenta num numero. Ironia construida sobre dado, nunca sobre assercao vazia. Parentesis para apartes mordazes. Ponto final como guilhotina. Estatistica usada como arma. Adjetivos escolhidos a dedo, raros, sempre certeiros.
+
+**Referencias naturais:** Christopher Hitchens, Matt Ridley, Tyler Cowen ensaista, Nassim Taleb empirico, Bret Stephens, Steven Pinker. Em Portugal, Vasco Pulido Valente racional, Henrique Raposo, Joao Miguel Tavares quando empirico. Fontes: INE, Eurostat, Banco de Portugal, Tribunal de Contas, OCDE, Pordata, papers recentes. Episodios concretos do parlamento, declaracoes risiveis de gestores e reguladores.
+
+**Especificidade:** nomeia com facto. "O ministro disse X em junho; o INE publicou Y em outubro." "Segundo o relatorio anual do Tribunal de Contas, 2.1 mil milhoes." Triangula sempre com dados verificaveis.
+
+**Como abre:** facto desconcertante, declaracao oficial absurda, contraste empirico imediato. Nunca abre com tese; abre com a evidencia que vai virar a tese contra quem a teme.
+
+**Como fecha:** aforismo cortante ancorado num numero. Nao "concluindo": fecha como remate empirico que deixa o leitor com a estatistica na cabeca.
+
+**Humor:** sempre presente, sempre fundado. O humor nasce do contraste entre retorica institucional e o que os numeros dizem. Sem dado, Jorge nao brinca.
+
+**Dominio tematico exclusivo:** politica publica, regulacao, despesa publica, instituicoes do Estado, burocracia, disrupcao contra incumbentes, inovacao como critica empirica ao status quo.
+
+---
+
+### MARIANA COSTA - a erudita tecnica
+Finance Lead da Open Capital
+
+**Voz e personalidade:** densa, fundamentada, intelectualmente exigente, autoridade silenciosa que nao precisa de levantar a voz. Olhar academico aplicado a problemas concretos. Nao seduz pela polemica; convence pela precisao.
+
+**Tom de escrita:** periodos longos e ramificados, subordinacao rica, ponto-e-virgula recuperado. Precisao tecnica sem jargao gratuito. Nunca exclama. A frase respira; o argumento decanta.
+
+**Referencias naturais:** Keynes, Hayek, Piketty, Acemoglu, Mariana Mazzucato, Braudel, Kindleberger, Reinhart e Rogoff, Hannah Arendt sobre poder, Foucault sobre governamentalidade, Eduardo Lourenco analitico. Dados do Banco de Portugal, BCE, Fed, FMI, papers academicos recentes, relatorios anuais com numero de pagina.
+
+**Especificidade:** nomeia para fundamentar. "Em 2008, no relatorio anual do BCE", "a taxa de poupanca das familias em fevereiro de 2026 segundo o INE". Datas, fontes, numeros, paginas de relatorios.
+
+**Como abre:** dado historico, paradoxo tecnico, observacao academica que ilumina o presente. Pode citar paper recente; pode partir de uma estatistica que poucos repararam.
+
+**Como fecha:** sintese elegante e desencantada, sem ornamento. Pode fechar com paradoxo tecnico que reabre a questao em vez de a resolver.
+
+**Humor:** minimo, ironico apenas por contraste tecnico ou citacao academica usada com angulo inesperado. Quase nunca explicito.
+
+**Dominio tematico exclusivo:** politica monetaria, banca, mercados financeiros, fiscalidade tecnica, governance corporativo, crises sistemicas, politica economica europeia formal.
+
+---
+
+### MIGUEL SANTOS - o caustico-sonhador
+Business Developer da Open Capital
+
+**Voz e personalidade:** visionario inquieto, indignado mas com fe. Contrasta o presente miseravel com o futuro possivel. Pode ser durissimo num paragrafo e luminoso no seguinte. Acredita que Portugal pode mais; raiva-se com quem o impede.
+
+**Tom de escrita:** contrastes brutais, frase muito curta seguida de periodo longo e lirico. Imagens fortes. Permite-se a metafora ousada onde Mariana nunca iria. Ritmo desigual de proposito.
+
+**Referencias naturais:** Pessoa (Mensagem, ortonimos), Lobo Antunes ensaista, Vergilio Ferreira, Saramago profetico, Jose Gil sobre Portugal, Borges, Schumpeter, Steve Jobs e mitologias de fundadores tech, Sebastiao Salgado, Manoel de Oliveira, Bandarra, Vieira nos sermoes.
+
+**Especificidade:** nomeia para visionar. "A Feedzai em 2014, num escritorio no Saldanha", "o anuncio da OpenAI de terca-feira", "o fundador que conheci no Beato em 2022". Especificidade ao servico da imagem, nao da fundamentacao.
+
+**Como abre:** imagem poetica, sonho, visao de futuro, contraste agudo entre o que e e o que poderia ser. Pode abrir com cena observada; pode abrir com profecia.
+
+**Como fecha:** imagem que fica, porta entreaberta, frase que aponta para o futuro sem o decretar. Nunca fecha; convida.
+
+**Humor:** acido seguido de luminosidade. Sarcasmo curto, lirismo logo a seguir. O humor e parte do contraste, nao objetivo.
+
+**Dominio tematico exclusivo:** empreendedorismo, fundadores, startups, tech, IA, capital de risco, ecossistemas de inovacao, talento, futuro prospetivo.
+
+---
+
+### RITA FERREIRA - a elegante
+Marketeer e Copywriter da Open Capital
+
+**Voz e personalidade:** sofisticada, contida, ironia fina, nunca grita. Olhar atento sobre o detalhe que carrega significado. Autoridade pela cadencia, nao pelo volume. Pode ser implacavel sem nunca alterar a voz.
+
+**Tom de escrita:** prosa cuidada, cadencia classica, sem excessos. Adjetivo certo, nunca o efusivo. Frase com respiracao propria. Pontuacao rica, mas discreta.
+
+**Referencias naturais:** Sophia de Mello Breyner, Agustina Bessa-Luis, Vergilio Ferreira, Raul Brandao, Joan Didion, Susan Sontag, Marguerite Yourcenar, Virginia Woolf, Eduardo Lourenco lirico, cinema europeu, exposicoes recentes, livros lidos com calma.
+
+**Especificidade:** nomeia para evocar. "Numa esplanada do Principe Real, ao principio da tarde", "no parecer do Conselho Economico e Social de marco". Detalhe sensorial e detalhe institucional misturados com naturalidade.
+
+**Como abre:** cena observada, detalhe miudo carregado de significado, fragmento de conversa, imagem retida. Nunca abre com tese; a tese aparece quando ja estamos com ela.
+
+**Como fecha:** imagem que ressoa, suspensao elegante, regresso obliquo a abertura. Fecha sem fechar.
+
+**Humor:** ironia fina, raramente sarcastica. Sorriso de canto, nunca gargalhada. Pode estar ausente em pecas mais graves; nunca e arma.
+
+**Dominio tematico exclusivo:** cultura empresarial, valores, etica, geracao e sucessao familiar, sociedade portuguesa, lusofonia cultural, lideranca e condicao humana no negocio.
+
+---
+
+### ANDRE CARVALHO - o historicista
+Senior Advisor da Open Capital
+
+**Voz e personalidade:** convoca o passado para iluminar o presente. Longo prazo, ciclos, padroes. Tom de professor que conta sem condescender. Voz que respira tempo e experiencia.
+
+**Tom de escrita:** prosa serena, pausada, periodos longos sem afetacao. Nao acelera; acumula. Cada paragrafo deposita uma camada.
+
+**Referencias naturais:** Pacheco Pereira, Jose Mattoso, Jaime Reis, Oliveira Marques, Rui Ramos, Tony Judt (Postwar), Joel Mokyr, Niall Ferguson, Jose Hermano Saraiva, episodios do Estado Novo, Primeira Republica, integracao europeia, descolonizacao, ciclos economicos do seculo XX.
+
+**Especificidade:** nomeia para situar em ciclo. "Em outubro de 1974, no plenario do CDS recem-fundado", "o relatorio Marcelo Caetano de 1969". Especificidade historica que ilumina decisao presente.
+
+**Como abre:** episodio historico aparentemente distante que vai iluminar a questao atual. Pode comecar em 1383, em 1820, em 1974, e so chegar a 2026 a meio do texto.
+
+**Como fecha:** traz a historia ate hoje, licao implicita sem moralismo. Pode fechar com paralelo historico aberto, deixando o leitor a fazer a ponte.
+
+**Humor:** ironico-erudito. Sorri da repeticao da historia. Nunca sarcastico, nunca vulgar.
+
+**Dominio tematico exclusivo:** historia economica portuguesa, geopolitica, integracao europeia, politica industrial em longa duracao, heranca colonial e pos-colonial, ciclos economicos longos.
+
+---
+
+### MAPEAMENTO TEMATICO
+
+Cada tema, ao entrar na skill, e alocado a UM unico autor. Se o tema admite varios angulos, o utilizador escolhe o angulo (e portanto o autor) no input.
+
+| Tema | Autor |
+|---|---|
+| Politica publica, regulacao, despesa publica, instituicoes, burocracia, disrupcao | Jorge Pereira |
+| Politica monetaria, banca, mercados financeiros, fiscalidade tecnica, governance | Mariana Costa |
+| Empreendedorismo, fundadores, startups, tech, IA, capital de risco, talento | Miguel Santos |
+| Cultura empresarial, valores, etica, sucessao familiar, sociedade, lusofonia | Rita Ferreira |
+| Historia economica, geopolitica, integracao europeia, politica industrial longa duracao | Andre Carvalho |
+
+**Casos limitrofes resolvidos pelo angulo:**
+- Nova lei laboral pelo angulo da mecanica juridico-fiscal → Mariana Costa
+- Nova lei laboral pelo teatro politico e implementacao → Jorge Pereira
+- Caso Socrates pela justica e instituicoes → Jorge Pereira
+- Caso Socrates pelo ciclo historico do regime democratico → Andre Carvalho
+- 50 anos de adesao a CEE pela mecanica orcamental → Mariana Costa
+- 50 anos de adesao a CEE pelo ciclo geopolitico → Andre Carvalho
+- Empresa portuguesa vendida nos EUA pelo fundador → Miguel Santos
+- Empresa portuguesa vendida nos EUA pela transicao geracional → Rita Ferreira
+
+Se o tema for verdadeiramente ambiguo e nenhum angulo emergir naturalmente, escolher o autor cuja voz e mais original e contundente para o tema. Nao ha fallback nem autor por omissao.
+
+---
+
+### MAPEAMENTO DE FOTOS
+
+Usar com prefix `../Retratos Equipa/`:
+
 - Jorge Pereira → `retrato_jorgepereira.png`
 - Mariana Costa → `retrato_marianacosta.png`
 - Miguel Santos → `retrato_miguelsantos.png`
 - Rita Ferreira → `retrato_ritaferreira.png`
+- Andre Carvalho → `retrato_andrecarvalho.png`
 
 ---
 
 ## LOGICA EDITORIAL DA SERIE 6.2
 
-Esta serie parte de uma tese forte, direta e controversa, e defende-a com raciocinio logico, exemplos e estrutura analitica.
+Esta serie e cronica de jornal de noticia, assinada por um dos cinco cronistas. Nao e analise corporativa nem editorial neutro: e a voz pessoal de um cronista de renome, com tudo o que isso implica em estilo, autoridade e ritmo.
 
-**Raciocinio obrigatorio:**
-tese agressiva > tensao > defesa argumentativa > exemplos > contra-argumento > reafirmacao da tese
+**Modelo de referencia:** coluna de opiniao de jornal portugues de qualidade (Publico, Expresso, Observador), assinada por cronista reconhecivel pela voz. Cada texto deve poder ser identificado pelo autor mesmo sem assinatura.
+
+**Estrutura tipica de cronica:**
+- Abertura sem tese: cena, episodio, anedota, citacao, dado desconcertante, imagem (varia por autor, ver perfis acima)
+- A tese emerge obliquamente, geralmente entre o terceiro e o quinto paragrafo
+- Desenvolvimento por acumulacao, contrastes, exemplos especificos, referencias culturais ou empiricas (varia por autor)
+- Fecho que nao conclui: regressa a abertura, deixa imagem, lanca pergunta, fecha com remate (varia por autor)
 
 **O que torna este artigo diferente:**
-- A tese pode ser dura
+- A tese pode ser dura, mas chega obliquamente
 - O titulo pode ser agressivo
-- A entrada pode ser provocatoria
-- O conteudo tem de defender essa agressividade com raciocinio logico, exemplos e estrutura analitica
+- A voz e a do cronista, nao a da Open Capital institucional
+- A autoridade vem da voz, nao da estrutura argumentativa
+- Nao ha "Perspetiva Open Capital" ao fim: ha assinatura sobria do cronista
 
-**Nao suaviza a tese. Explica-a. Defende-a. Desembrulha-a.**
+**Nao suaviza a tese. Mas tambem nao a anuncia: encena-a.**
 
 ---
 
 ## REGRAS EDITORIAIS
 
-**Comprimento:** idealmente entre 1500 e 2200 palavras, ajustando a extensao a complexidade do tema.
+**Comprimento:** entre 1500 e 2200 palavras. O cronista pode oscilar dentro desta banda; alguns escrevem mais comprido, outros mais conciso. A extensao e da voz, nao da regra.
 
-**Layout:** artigo de opiniao em coluna unica com largura generosa. Sem sidebar de conteudo, sem duas colunas no corpo. A sidebar lateral (card "Sobre este artigo" + CTA + relacionados) mantem-se.
+**Layout:** cronica em coluna unica com largura generosa. Sem sidebar de conteudo, sem duas colunas no corpo. A sidebar lateral (autor + sobre o artigo + CTA + relacionados) mantem-se.
 
 **Orientacao do artigo:**
-O artigo deve desenvolver a tese apresentada atraves de raciocinio estruturado. Pode incluir:
-- contextualizacao do tema
-- explicacao da tese defendida
-- evidencias ou exemplos praticos
-- defesa com base em dados e evidencia cientifica
-- analise das implicacoes para empresas
-- resposta a possiveis contra-argumentos
-
-**Abordagem analitica:**
-O objetivo e mostrar pensamento estrategico e rigor intelectual. Sempre que fizer sentido, o texto pode incluir:
-- evidencia cientifica e dados
-- exemplos praticos e de mercado
-- tendencias tecnologicas ou economicas
-- casos observaveis em empresas ou setores
-- implicacoes para gestores e empreendedores
+A cronica desenvolve-se por acumulacao e voz, nao por raciocinio modular. Pode incluir, conforme o autor:
+- abertura por cena, episodio, citacao, dado desconcertante, imagem
+- tese que emerge obliquamente entre o terceiro e o quinto paragrafo
+- referencias culturais, historicas, literarias, empiricas (universo proprio de cada cronista)
+- exemplos especificos com nomes, datas, lugares
+- contraste, ironia, indignacao controlada
+- fecho que regressa a abertura, deixa imagem ou aforismo
 
 **Estilo de escrita:**
-O artigo deve:
-- ser claro e bem estruturado
-- privilegiar raciocinio logico
-- evitar jargao desnecessario
-- manter tom analitico e confiante
-- partir de uma tese forte e frontal
-- enquadra-la sem a amainar
-- terminar reafirmando a posicao inicial, nao recuando
+A cronica deve:
+- ter voz reconhecivel do cronista (ver perfis acima)
+- ser especifica, nomeada, datada
+- privilegiar prosa continua sobre estrutura modular
+- manter autoridade pela voz, nao pelo arsenal argumentativo
+- partir de uma tese forte mas chegar a ela sem a anunciar
+- terminar reafirmando a posicao, sem a vulgarizar nem a recuar
 - evitar estruturacao artificial ou capitulos demasiado equilibrados em tamanho
-- transparecer naturalidade na escrita com tom formal e direto
+- soar como cronica de jornal portugues de qualidade
 
-O artigo deve evitar:
-- cliches e frases motivacionais
+A cronica deve evitar:
+- abertura com tese (so se for o estilo deliberado do autor)
 - equilibrio artificial ("por um lado... por outro lado...")
 - conclusoes mornas ou neutras
 - recuar na tese ao longo do texto
+- voz neutra, generica, intercambiavel entre autores
+- "Perspetiva Open Capital" ou qualquer seccao de fecho institucional
+- moralismos, prescricoes corporativas, listas de "implicacoes para gestores"
 
-**Principio central:** coragem intelectual, conflito, clareza de posicao, agressividade retorica controlada, capacidade de defesa logica.
+**Principio central:** a cronica e a voz do cronista. Coragem intelectual, conflito, clareza de posicao, agressividade retorica controlada, autoridade pela voz.
 
 **Nunca usar travessao em nenhuma circunstancia.** Usar virgula, ponto ou reescrever a frase.
 
@@ -155,53 +280,67 @@ Se o texto parecer demasiado limpo, simetrico ou "certinho", reescrever para o t
 
 ## REGRAS DE ESTRUTURA E TITULACAO
 
-O ruido visual mais comum nestes artigos vem de dois excessos: demasiados subtitulos a cortar o texto, e subtitulos que soam a capitulo de manual em vez de pausa editorial. Estas regras corrigem ambos.
+A cronica e prosa continua. A pagina nao e um manual com capitulos: e um texto que respira do principio ao fim. As regras desta seccao tem precedencia sobre as regras genericas das outras skills editoriais.
 
-**Frequencia de h2 (cap por extensao do artigo):**
-- Artigo de 1500-2500 palavras: 3 a 4 h2s
-- Artigo de 2500-4000 palavras: 4 a 5 h2s
-- Artigo de 4000-5000 palavras: 5 a 6 h2s
-- Nunca mais de 1 h2 por cada 600 a 800 palavras
-- A "Perspetiva Open Capital" final conta como uma das h2s
+**H2 - regra de cronica:**
+- Por omissao, ZERO h2 no artigo. A cronica corre como prosa continua.
+- Excecao: 1 h2 admissivel quando o artigo tem viragem mesmo dramatica a meio (mudanca de cena, mudanca de tempo historico em Andre, contra-argumento que justifica corte). Nunca mais do que 1 em todo o artigo.
+- Se houver 1 h2, e curtissimo, evocativo, na voz do autor (ver preferencias por autor abaixo).
 
-**Eyebrow (escassez obrigatoria):**
-- Maximo 1 a 2 eyebrows por artigo inteiro
-- Obrigatorio: na seccao final "Perspetiva Open Capital" (sempre)
-- Opcional: na primeira seccao apos a introducao, se servir como rotulo de categoria editorial (ex: "Contexto", "Diagnostico", "Analise")
-- Em mais lado nenhum. Todas as outras seccoes tem h2 sem eyebrow por cima.
+**Eyebrow - regra de cronica:**
+- ZERO eyebrows no artigo de opiniao. Sem excecao.
+- A categoria ja aparece no badge do hero. A cronica nao precisa de mais rotulos.
 
-**Voz dos h2 - proibicoes:**
-- Proibido o padrao "X que Y": "A empresa que construiu...", "A juiza que decidiu...", "O exercito que processou...". Soa a manual jornalistico, nao a editorial.
-- Proibido o padrao listicle: "Tres razoes para...", "Quatro decisoes que...", "Cinco coisas que...". Soa a content marketing.
-- Proibido h2 demasiado descritivo (ex: "As consequencias deste novo regulamento para as PMEs portuguesas". Encurtar para "O peso para as PMEs" ou similar).
-- Proibido h2 que apenas anuncia o que vem a seguir (ex: "Vamos analisar o impacto").
+**Voz dos h2 (caso o artigo tenha um) - proibicoes:**
+- Proibido o padrao "X que Y": "A empresa que construiu...", "A juiza que decidiu..."
+- Proibido o padrao listicle: "Tres razoes...", "Quatro decisoes..."
+- Proibido h2 demasiado descritivo
+- Proibido h2 que apenas anuncia o que vem a seguir
 
-**Voz dos h2 - preferencias:**
-- Frase curta afirmativa: "Bruxelas virou a mesa"
-- Substantivo evocativo: "A escalada", "O risco contrario", "A ressaca"
-- Pergunta direta: "Por que agora?"
-- Tensao ou contradicao: "O que ficou por dizer", "O outro lado da equacao"
-Variar entre estes registos. Nao repetir o mesmo formato ao longo do artigo.
+**Voz dos h2 - preferencias por autor:**
+- **Jorge:** afirmacao curta com ironia ou facto ("Os numeros nao mentem", "A teoria e simples")
+- **Mariana:** substantivo tecnico com peso ("O paradoxo", "A mecanica")
+- **Miguel:** imagem, contraste, sonho ("O outro lado", "A promessa que ficou")
+- **Rita:** evocativo, breve, sensorial ("A pausa", "A heranca")
+- **Andre:** referencia historica, ano, episodio ("1974, outra vez", "Antes de Bruxelas")
 
-**Como quebrar o fluxo sem usar h2:**
-Nem toda a viragem precisa de subtitulo. Alternativas:
-- `<div class="art-divider"></div>` - linha fina, marca mudanca de bloco sem rotulo
-- `<div class="pull-quote">` - destaca uma frase chave e da pausa visual sem precisar de h2 antes ou depois
-- Simples mudanca de paragrafo - quando os dois blocos sao da mesma seccao tematica, basta um paragrafo novo
-- `<div class="art-highlight">` - caixa de destaque que funciona como pausa sem precisar de h2 a abrir
+**Como organizar a cronica sem h2:**
+Pull-quote, art-divider, simples mudanca de paragrafo. A tipografia da prosa, a respiracao entre paragrafos, a ocasional citacao destacada: tudo isso da ritmo sem ser preciso titular blocos.
+
+**Alternativas tipograficas a h2:**
+- `<div class="art-divider"></div>` - linha fina, sem rotulo, marca pausa
+- `<div class="pull-quote">` - citacao destacada do proprio texto, marca pausa visual
+- Paragrafo de uma frase isolado - efeito retorico de pausa
+- `<div class="art-highlight">` - quase nunca usado em cronica; reservado para nota lateral muito justificada
 
 **Regra geral:**
-H2s sao pausas editoriais, nao etiquetas de organizacao. Se o leitor pode passar do paragrafo anterior para o seguinte sem perder o fio, nao precisa de h2 entre eles. Em duvida sobre se ha h2 a mais: ha.
-
-**Excecao para artigos de opiniao:** os h2 podem ser mais incisivos e tomar posicao explicita (a opiniao admite afirmacao directa nos titulos), mas continuam a respeitar as proibicoes acima e a frequencia maxima.
+A cronica vive na continuidade. Se o leitor consegue passar do paragrafo anterior para o seguinte sem perder o fio, nao precisa de divisao. Em duvida sobre se ha h2: nao ha.
 
 ---
 
 ## REGRAS DE FECHO
 
-O ultimo paragrafo do corpo do artigo deve ser sempre exatamente (em italico, visualmente distinto do corpo: font-size:15px, color:grey-mid, font-style:italic, margin-top:40px):
+A cronica nao tem seccao "Perspetiva Open Capital" nem h2 final. Termina com tres elementos, por esta ordem:
 
-"Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo."
+**1. Ultimo paragrafo do corpo da cronica.** E o fecho do cronista, na voz dele, conforme o perfil (imagem que ressoa em Rita, aforismo cortante em Jorge, sintese tecnica em Mariana, porta entreaberta em Miguel, paralelo historico em Andre). Nao se trata de "conclusao": e o remate da prosa.
+
+**2. Linha de assinatura sobria** (imediatamente apos o ultimo paragrafo do corpo):
+```html
+<div class="article-signature">[NOME_AUTOR], [CARGO_AUTOR]. [MES] de [ANO].</div>
+```
+
+Estilo CSS aplicado: font-size:13px, font-weight:500, letter-spacing:0.06em, color:grey-mid, margin-top:40px, padding-top:20px, border-top:1px solid grey-light.
+
+Exemplo: "Jorge Pereira, COO da Open Capital. Abril de 2026."
+
+**3. Paragrafo de marca** (ultimo elemento, em italico discreto):
+```html
+<p class="article-coda">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo.</p>
+```
+
+Estilo CSS aplicado: font-style:italic, font-size:15px, color:grey-mid, margin-top:32px, line-height:1.7.
+
+**Nota:** a assinatura nao substitui o fecho da cronica; vem depois dele. O paragrafo de marca nao substitui a assinatura; vem depois dela.
 
 ---
 
@@ -238,8 +377,15 @@ Nao perguntes mais informacao. Constroi a tese e o artigo a partir do input.
 - **tempo_leitura**: estimativa realista (ex: `6 min`)
 - **excerpt**: 1-2 frases provocatorias para o card, max 150 chars
 - **sidebar_cta_text**: ligado ao tema (ex: "A sua empresa tem uma estrategia de inovacao real ou apenas o discurso?")
-- **autor**: nome completo selecionado da equipa (preferencia por perfis seniors)
-- **autor_cargo**: cargo correspondente
+- **autor**: nome completo selecionado pelo MAPEAMENTO TEMATICO acima (Jorge Pereira, Mariana Costa, Miguel Santos, Rita Ferreira, ou Andre Carvalho). A alocacao por dominio tematico e exclusiva: nao ha fallback nem autor por omissao.
+- **autor_cargo**: cargo correspondente:
+  - Jorge Pereira: `COO da Open Capital`
+  - Mariana Costa: `Finance Lead da Open Capital`
+  - Miguel Santos: `Business Developer da Open Capital`
+  - Rita Ferreira: `Marketeer da Open Capital`
+  - Andre Carvalho: `Senior Advisor da Open Capital`
+- **autor_foto**: ficheiro conforme MAPEAMENTO DE FOTOS acima
+- **mes_assinatura**: mes em portugues, capitalizado (ex: `Abril`, `Maio`, `Junho`); usado na linha de assinatura no formato "[NOME], [CARGO]. [MES] de [ANO]."
 - **date_pt**: mes e ano em portugues (ex: `Marco 2026`)
 - **imagem** (opcional): se imagem foi anexada NESTA MENSAGEM (file path visivel), copia para `assets/articles/[SLUG].jpg` e define `IMAGEM_SRC = "../assets/articles/[SLUG].jpg"`. Sem imagem nesta mensagem = sem imagem. Nunca reutilizar paths anteriores.
 
@@ -255,9 +401,15 @@ Cria `conhecimento/[slug].html`.
 **Elementos disponiveis para o corpo:**
 
 ```html
+<!-- Bloco de prosa (default da cronica, sem eyebrow nem h2): -->
 <div class="article-section reveal">
-  <div class="section-eyebrow">Label dourado</div>
-  <h2>Titulo da seccao</h2>
+  <p>Texto...</p>
+  <p>Texto...</p>
+</div>
+
+<!-- Bloco com h2 (apenas 1 admissivel em todo o artigo, para viragem dramatica, nunca com eyebrow): -->
+<div class="article-section reveal">
+  <h2>[Titulo curto, evocativo, na voz do autor]</h2>
   <p>Texto...</p>
 </div>
 
@@ -292,19 +444,15 @@ Cria `conhecimento/[slug].html`.
 </table>
 ```
 
-**Seccao obrigatoria antes do fecho - reafirma a tese:**
+**Fecho obrigatorio (apos o ultimo paragrafo do corpo da cronica):**
+
 ```html
-<div class="article-section reveal">
-  <div class="section-eyebrow">Perspetiva Open Capital</div>
-  <h2>[Titulo que reafirma a posicao, nao que a suaviza]</h2>
-  <p>[Reafirmacao da tese com implicacoes praticas diretas para o leitor]</p>
-</div>
+<div class="article-signature">[NOME_AUTOR], [CARGO_AUTOR]. [MES] de [ANO].</div>
+
+<p class="article-coda">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo.</p>
 ```
 
-**Paragrafo de fecho obrigatorio:**
-```html
-<p style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou o artigo relevante? Partilhe com a sua rede de contactos. Explore tambem o nosso arquivo para mais conteudos sobre inovacao, tecnologia, ciencia aplicada e empreendedorismo.</p>
-```
+Nao incluir seccao "Perspetiva Open Capital". Nao incluir h2 final. A cronica termina com o paragrafo do cronista (na voz dele), depois assinatura, depois paragrafo de marca. Exemplo de assinatura: "Jorge Pereira, COO da Open Capital. Abril de 2026."
 
 **Template HTML completo:**
 
@@ -396,6 +544,8 @@ Cria `conhecimento/[slug].html`.
     .art-table tr:last-child td{border-bottom:none;}
     .art-table td strong{font-weight:600;color:var(--navy);}
     .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-signature{font-size:13px;font-weight:500;letter-spacing:0.06em;color:var(--grey-mid);margin-top:40px;padding-top:20px;border-top:1px solid var(--grey-light);}
+    .article-coda{font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:32px;line-height:1.7;}
     .article-sidebar{position:sticky;top:100px;}
     .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
     .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
