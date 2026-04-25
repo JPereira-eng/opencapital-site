@@ -383,7 +383,7 @@ const CARD_TEMPLATE = (data) => `
                data-href="conhecimento/${data.slug}.html">
         <div class="article-card-header">
           <span class="art-cat-badge ${CATEGORIAS[data.categoria]}">${data.categoria_display}</span>
-          <span class="art-read-time">${data.tempo_leitura}</span>
+          <span class="art-read-time">Leitura: ${data.tempo_leitura.replace(/\s+/g, '')}</span>
         </div>
         <h3 class="article-card-title">${data.titulo}</h3>
         <p class="article-card-excerpt">${data.excerpt}</p>
