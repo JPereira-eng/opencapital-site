@@ -1187,13 +1187,16 @@
       "source_id": "interreg-interact",
       "shard": "interreg",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": null,
       "regulation_url": "https://www.interact.eu/about-interact/interact-programme/news/regiostars-award-2026-applications-open-until-22-may",
       "deadline": "2026-05-22",
       "detected_date": "2026-04-25",
       "priority_score": 105,
-      "notes": "Premio anual CE para projetos financiados por fundos de coesao. Candidaturas abertas ate 22 maio 2026. Projetos devem estar concluidos. Categorias: Smart/Green/Connected/Social/Citizens."
+      "notes": "Premio anual CE para projetos financiados por fundos de coesao. Candidaturas abertas ate 22 maio 2026. Projetos devem estar concluidos. Categorias: Smart/Green/Connected/Social/Citizens.",
+      "regulation_local": "regulamentos/interreg-interact/regiostars-award-2026.txt",
+      "fail_count": 0,
+      "download_error": null
     },
     {
       "id": "horizon-cl5-2026-03-d2-02",
@@ -1201,13 +1204,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-CL5-2026-03-D2-02",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-03-D2-02.json",
       "deadline": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "Call: HORIZON-CL5-2026-03"
+      "notes": "Call: HORIZON-CL5-2026-03",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2026-03-d2-02.txt",
+      "fail_count": 0,
+      "download_error": null
     },
     {
       "id": "horizon-cl5-2026-03-d3-29",
@@ -1215,13 +1221,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-CL5-2026-03-D3-29",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-03-D3-29.json",
       "deadline": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "Call: HORIZON-CL5-2026-03"
+      "notes": "Call: HORIZON-CL5-2026-03",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2026-03-d3-29.txt",
+      "fail_count": 0,
+      "download_error": null
     },
     {
       "id": "horizon-cl5-2026-03-d3-12",
@@ -1229,13 +1238,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-CL5-2026-03-D3-12",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-03-D3-12.json",
       "deadline": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "Call: HORIZON-CL5-2026-03"
+      "notes": "Call: HORIZON-CL5-2026-03",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2026-03-d3-12.txt",
+      "fail_count": 0,
+      "download_error": null
     },
     {
       "id": "horizon-cl5-2026-03-d3-13",
@@ -1243,13 +1255,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-CL5-2026-03-D3-13",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-03-D3-13.json",
       "deadline": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "Call: HORIZON-CL5-2026-03"
+      "notes": "Call: HORIZON-CL5-2026-03",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2026-03-d3-13.txt",
+      "fail_count": 0,
+      "download_error": null
     },
     {
       "id": "horizon-cl5-2026-03-d3-22",
@@ -1257,13 +1272,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-CL5-2026-03-D3-22",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-03-D3-22.json",
       "deadline": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "Call: HORIZON-CL5-2026-03"
+      "notes": "Call: HORIZON-CL5-2026-03",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2026-03-d3-22.txt",
+      "fail_count": 0,
+      "download_error": null
     },
     {
       "id": "horizon-cl5-2026-03-d3-18",
@@ -1271,13 +1289,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-CL5-2026-03-D3-18",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-03-D3-18.json",
       "deadline": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "Call: HORIZON-CL5-2026-03"
+      "notes": "Call: HORIZON-CL5-2026-03",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2026-03-d3-18.txt",
+      "fail_count": 0,
+      "download_error": null
     },
     {
       "id": "horizon-cl5-2026-03-d3-20",
@@ -1285,13 +1306,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-CL5-2026-03-D3-20",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-03-D3-20.json",
       "deadline": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "Call: HORIZON-CL5-2026-03"
+      "notes": "Call: HORIZON-CL5-2026-03",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2026-03-d3-20.txt",
+      "fail_count": 0,
+      "download_error": null
     },
     {
       "id": "horizon-cl5-2026-03-d3-01",
@@ -1299,13 +1323,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-CL5-2026-03-D3-01",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-03-D3-01.json",
       "deadline": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "Call: HORIZON-CL5-2026-03"
+      "notes": "Call: HORIZON-CL5-2026-03",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2026-03-d3-01.txt",
+      "fail_count": 0,
+      "download_error": null
     },
     {
       "id": "horizon-cl5-2026-03-d3-21",
@@ -1313,13 +1340,16 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-CL5-2026-03-D3-21",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2026-03-D3-21.json",
       "deadline": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "Call: HORIZON-CL5-2026-03"
+      "notes": "Call: HORIZON-CL5-2026-03",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2026-03-d3-21.txt",
+      "fail_count": 0,
+      "download_error": null
     },
     {
       "id": "horizon-cl5-2026-03-d3-19",
