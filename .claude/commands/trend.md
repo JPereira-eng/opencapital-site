@@ -188,7 +188,8 @@ Define antes de escrever:
 - **cat_class**: `cat-mercados`, `cat-estrategia`, `cat-inovacao`, `cat-financiamento`, `cat-fiscalidade`
 - **badge_text**: ex: `Mercados - Analise` ou `Estrategia - Tendencia` (sem travessao, usar hifen)
 - **breadcrumb_cat**: ex: `Mercados`
-- **tempo_leitura**: estimativa realista em minutos (ex: `6 min`)
+- **tempo_leitura**: estimativa realista em minutos (ex: `6 min`) — usado nas meta-tags do artigo
+- **tempo_leitura_compacto**: mesma estimativa em formato compacto sem espaco (ex: `6min`) — usado no card de listagem em conhecimento.html como `Leitura: 6min`
 - **excerpt**: 1-2 frases para o card, max 150 chars
 - **sidebar_cta_text**: texto contextualizado ao tema (ex: "Precisa de apoio para navegar este contexto regulatorio?")
 - **autor**: nome completo selecionado da equipa (ex: `Jorge Pereira`)
@@ -594,7 +595,7 @@ Se `IMAGEM_SRC` tiver valor:
         <div class="article-card-body">
           <div class="article-card-header">
             <span class="art-cat-badge [CAT_CLASS]">[CATEGORIA_DISPLAY]</span>
-            <span class="art-read-time">[TEMPO_LEITURA]</span>
+            <span class="art-read-time">Leitura: [TEMPO_LEITURA_COMPACTO]</span>
           </div>
           <h3 class="article-card-title">[TITULO]</h3>
           <p class="article-card-excerpt">[EXCERPT]</p>
@@ -620,7 +621,7 @@ Se `IMAGEM_SRC` estiver vazio (placeholder):
         <div class="article-card-body">
           <div class="article-card-header">
             <span class="art-cat-badge [CAT_CLASS]">[CATEGORIA_DISPLAY]</span>
-            <span class="art-read-time">[TEMPO_LEITURA]</span>
+            <span class="art-read-time">Leitura: [TEMPO_LEITURA_COMPACTO]</span>
           </div>
           <h3 class="article-card-title">[TITULO]</h3>
           <p class="article-card-excerpt">[EXCERPT]</p>
