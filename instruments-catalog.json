@@ -9424,7 +9424,9 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,entidade-publica,associacao,ensino-investigacao",
-      "setores": ["energia-ambiente"],
+      "setores": [
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "LIFE 2026 Governanca e Informacao Climatica",
       "tagline": "Financiamento europeu para projetos de governanca climatica, sensibilizacao publica e difusao de informacao sobre politicas de clima na UE.",
@@ -9443,7 +9445,9 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "entidade-publica,associacao,ensino-investigacao",
-      "setores": ["energia-ambiente"],
+      "setores": [
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "LIFE 2026 Assistencia Tecnica SNaPs Natureza",
       "tagline": "Financiamento para preparar candidaturas a Projetos Estrategicos de Natureza (SNaPs) no programa LIFE 2026. Ate EUR 70.000 por projeto.",
@@ -9462,7 +9466,9 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "entidade-publica,associacao",
-      "setores": ["energia-ambiente"],
+      "setores": [
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "LIFE 2026 Assistencia Tecnica SIPs Ambiente",
       "tagline": "Financiamento para preparar candidaturas a Projetos Integrados Estrategicos de Ambiente (SIPs) no LIFE 2026. Ate EUR 70.000 por entidade.",
@@ -9481,7 +9487,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao",
-      "setores": ["saude-ciencias-vida"],
+      "setores": [
+        "saude-ciencias-vida"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EDCTP3 Premio Lideranca Cientifica (Homem) 2025",
       "tagline": "Premio europeu de EUR 15.000 para investigador masculino residente na UE com lideranca cientifica em saude global e investigacao clinica na Africa subsariana.",
@@ -9500,7 +9508,11 @@
       "status_class": "status-closed",
       "fonte": "bfomento",
       "beneficiario": "empresa,empreendedor",
-      "setores": ["tecnologia-digital", "industria", "saude-ciencias-vida"],
+      "setores": [
+        "tecnologia-digital",
+        "industria",
+        "saude-ciencias-vida"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Fundo de Coinvestimento 200M",
       "tagline": "Fundo publico de EUR 200M gerido pelo BPF com matching 1:1 com fundos VC qualificados. Encerrado em 2026.",
@@ -9519,7 +9531,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EDCTP3 Premio Lideranca Cientifica (Mulher) 2025",
       "tagline": "Premio europeu de EUR 15.000 para investigadora feminina com lideranca cientifica em saude global e investigacao clinica na Africa subsariana.",
@@ -9538,7 +9552,9 @@
       "status_class": "status-planned",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao,empresa",
-      "setores": ["tecnologia-digital"],
+      "setores": [
+        "tecnologia-digital"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon Europe - Foresight em Tecnologias Digitais Emergentes (CSA)",
       "tagline": "Acao de coordenacao e apoio de EUR 4M para antecipacao tecnologica em computing, AI, robotica e tecnologias quanticas. Abertura prevista em 2027.",
@@ -9557,7 +9573,10 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "energia-ambiente"],
+      "setores": [
+        "industria",
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon Europe - Cadeias de Valor em Materias-Primas Sustentaveis (IA)",
       "tagline": "Call de EUR 36M para inovacao em cadeias de valor de materias-primas criticas para baterias, renovaveis, aeroespacial e minerais criticos. Fechada em 2021.",
@@ -9576,7 +9595,10 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "energia-ambiente"],
+      "setores": [
+        "industria",
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon Europe - Aprovisionamento Responsavel de Materias-Primas Primarias (RIA)",
       "tagline": "Call de EUR 30M para investigacao sobre aprovisionamento responsavel de materias-primas primarias da UE, dados geologicos e normas UNFC/UNRMS. Fechada em 2021.",
@@ -9595,7 +9617,10 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["saude-ciencias-vida", "industria"],
+      "setores": [
+        "saude-ciencias-vida",
+        "industria"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon Europe - Nanocoatings Antimicrobianos, Antivirais e Antifungicos (RIA)",
       "tagline": "Call de EUR 23M para investigacao em revestimentos nanometricos com propriedades antimicrobianas, antivirais e antifungicas para superficies de alto contacto. Fechada em 2021.",
@@ -9614,7 +9639,10 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "energia-ambiente"],
+      "setores": [
+        "industria",
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon Europe - Comunidade Internacional em Materiais Seguros e Sustentaveis 2021 (CSA)",
       "tagline": "Call CSA de EUR 4M para criar uma rede internacional de especialistas em materiais seguros e sustentaveis por design (SSbD). Encerrada em 2022.",
@@ -9633,7 +9661,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["saude-ciencias-vida"],
+      "setores": [
+        "saude-ciencias-vida"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon Europe - Base de Dados de Biomateriais para Saude 2021 (CSA)",
       "tagline": "Call CSA do Horizonte Europa que financiou a plataforma BIOMATDB, repositorio aberto de dados de biocompatibilidade e propriedades de biomateriais para dispositivos medicos. Encerrada.",
@@ -9652,7 +9682,10 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "energia-ambiente"],
+      "setores": [
+        "industria",
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon Europe - Materiais Polimericos Seguros e Sustentaveis 2021 (RIA)",
       "tagline": "Call RIA do Horizonte Europa para redesenhar polimeros sob principios SSbD, substituindo plasticos de dificil reciclagem e aditivos nocivos por alternativas circulares. Encerrada.",
@@ -9671,7 +9704,10 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao,empresa",
-      "setores": ["industria", "tecnologia-digital"],
+      "setores": [
+        "industria",
+        "tecnologia-digital"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "IAMs para Eletrónica Flexível e Conformável (IAM4EU)",
       "tagline": "Horizon Europe financia I&D em materiais avançados para wearables, sensores e circuitos flexíveis sustentáveis.",
@@ -9690,7 +9726,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao,empresa",
-      "setores": ["tecnologia-digital"],
+      "setores": [
+        "tecnologia-digital"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Web 4.0 e Mundos Virtuais: Blocos Construtores da Internet Aberta",
       "tagline": "I&D europeu para os alicerces de uma internet Web 4.0 aberta, interoperável e soberana segundo os valores da UE.",
@@ -9709,7 +9747,9 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "entidade-publica,empresa,associacao",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "REGIOSTARS Award 2026",
       "tagline": "Premio da Comissao Europeia para projetos de coesao concluidos com impacto real. Candidaturas abertas ate 22 de maio de 2026.",
@@ -9728,7 +9768,10 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "energia-ambiente"],
+      "setores": [
+        "industria",
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa - Reciclagem Direta de Baterias BATT4EU (RIA)",
       "tagline": "Call RIA do Horizonte Europa para tecnologias de reciclagem direta de baterias LFP, LMFP e sodio-ion. EUR 14,2M para 3 projetos. Encerrado.",
@@ -9747,7 +9790,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["energia-ambiente"],
+      "setores": [
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa - Armazenamento Geologico de CO2 em Aquiferos (IA)",
       "tagline": "Call IA do Horizonte Europa para avaliacao pre-comercial e teste piloto de armazenamento de CO2 em aquiferos salinos. EUR 25M para 5 projetos. Encerrado.",
@@ -9766,7 +9811,10 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["energia-ambiente", "industria"],
+      "setores": [
+        "energia-ambiente",
+        "industria"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa - Modulos Fotovoltaicos Sustentaveis EUPI-PV (RIA)",
       "tagline": "Call RIA do Horizonte Europa para celulas solares de silicio sem prata nem indio, com 40 anos de vida util e design de reciclagem melhorado. EUR 15M para 3 projetos. Encerrado.",
@@ -9785,7 +9833,9 @@
       "status_class": "status-cont",
       "fonte": "privado",
       "beneficiario": "empresa,empreendedor",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Plug and Play Portugal",
       "tagline": "Acelerador global com hub em Lisboa. Programas setoriais non-equity para startups de alto crescimento em fintech, healthtech, mobility, energy e deep tech.",
@@ -9793,6 +9843,113 @@
       "highlight1": "Startups seed a Series A, modelos B2B com clientes corporativos",
       "highlight2": "Lisboa (presencial e remoto)",
       "href": "instrumentos/plug-and-play-portugal.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl5-2026-03-d3-13",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "fechado",
+      "status_text": "Encerrado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "energia-ambiente"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa - Escalonamento Industrial e Circularidade de Tecnologias IPV (EUPI-PV 2026)",
+      "tagline": "Fabrico em escala e reciclagem de tecnologias fotovoltaicas integradas, no ambito da Parceria EUPI-PV.",
+      "highlight0": "Ate €10,5M por projeto (lump sum)",
+      "highlight1": "Empresas industriais e centros de investigacao",
+      "highlight2": "Nacional (UE e Paises Associados)",
+      "href": "instrumentos/horizon-cl5-2026-03-d3-13.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl5-2026-03-d3-22",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "fechado",
+      "status_text": "Encerrado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "energia-ambiente",
+        "tecnologia-digital"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa - Algoritmos de IA para Partilha de Energia em Comunidades (CL5-D3-22 2026)",
+      "tagline": "IA e teoria de jogos para otimizar partilha coletiva de energia, com componente obrigatoria de ciencias sociais.",
+      "highlight0": "Ate €6M por projeto (lump sum)",
+      "highlight1": "Empresas, municipios, operadores de rede, investigadores",
+      "highlight2": "Nacional (UE e Paises Associados)",
+      "href": "instrumentos/horizon-cl5-2026-03-d3-22.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl5-2026-03-d3-18",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "fechado",
+      "status_text": "Encerrado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao,entidade-publica",
+      "setores": [
+        "energia-ambiente"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa - Grid-Forming para Redes Eletricas Resilientes e Baseadas em Renovaveis (CL5-D3-18 2026)",
+      "tagline": "Inversores grid-forming que fornecem inércia sintetica e estabilidade a redes com alta penetracao de renovaveis.",
+      "highlight0": "Ate €10M por projeto (budget-based)",
+      "highlight1": "TSOs, DSOs, fabricantes GFI, produtores RES, universidades",
+      "highlight2": "Nacional - minimo 2 Estados-Membros UE",
+      "href": "instrumentos/horizon-cl5-2026-03-d3-18.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl5-2026-03-d3-20",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "fechado",
+      "status_text": "Encerrado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "energia-ambiente",
+        "tecnologia-digital"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa - Framework AI-Hibrido para Armazenamento de Energia em Rede (CL5-D3-20 2026)",
+      "tagline": "Sistemas de armazenamento em escala de rede com controlo por IA hibrida e gemeos digitais para gestao proativa.",
+      "highlight0": "Ate €7M por projeto (lump sum)",
+      "highlight1": "Empresas de armazenamento, operadores de rede, investigadores IA",
+      "highlight2": "Nacional (UE e Paises Associados)",
+      "href": "instrumentos/horizon-cl5-2026-03-d3-20.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl5-2026-03-d3-01",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "fechado",
+      "status_text": "Encerrado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "energia-ambiente"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa - Competitividade das Cadeias de Valor de Energias Renovaveis na Europa (CL5-D3-01 2026)",
+      "tagline": "Investigacao em eficiencia de materiais, economia circular e IA para fortalecer a lideranca industrial europeia em renovaveis.",
+      "highlight0": "Ate €3M por projeto (lump sum RIA)",
+      "highlight1": "Empresas industriais, centros de investigacao em materiais",
+      "highlight2": "Nacional (UE e Paises Associados)",
+      "href": "instrumentos/horizon-cl5-2026-03-d3-01.html",
       "featured": false
     }
   ]
