@@ -757,7 +757,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "EC-COMM/2026/MVP/0127-EXA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-COMM/2026/MVP/0127-EXA",
       "deadline": null,
@@ -765,8 +765,8 @@
       "detected_date": "2026-04-25",
       "priority_score": 15,
       "notes": "SEDIA text=2026 p1",
-      "fail_count": 2,
-      "download_error": "API 404, portal JS-rendered, WebSearch sem resultados - tentativa 2026-04-25",
+      "fail_count": 3,
+      "download_error": "API 404, portal JS-rendered, WebSearch sem resultados apos 3 tentativas - abandoned 2026-04-25",
       "last_fail_date": "2026-04-25"
     },
     {
@@ -775,7 +775,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/",
       "deadline": "2026-06-30",
@@ -783,8 +783,8 @@
       "detected_date": "2026-04-25",
       "priority_score": 35,
       "notes": "SEDIA text=2026 p2",
-      "fail_count": 2,
-      "download_error": "aviso_codigo vazio, regulation_url invalido, item possivelmente capturado por erro do scanner - tentativa 2026-04-25",
+      "fail_count": 3,
+      "download_error": "aviso_codigo vazio, regulation_url invalido, item capturado por erro do scanner - abandoned 2026-04-25",
       "last_fail_date": "2026-04-25"
     },
     {
@@ -793,7 +793,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "EC-COMM/TLL/2025/MVP/0541-EXA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-COMM/TLL/2025/MVP/0541-EXA",
       "deadline": null,
@@ -801,8 +801,8 @@
       "detected_date": "2026-04-25",
       "priority_score": 15,
       "notes": "SEDIA text=2026 p2",
-      "fail_count": 2,
-      "download_error": "API 404, portal JS-rendered, WebSearch sem resultados - tentativa 2026-04-25",
+      "fail_count": 3,
+      "download_error": "API 404, portal JS-rendered, WebSearch sem resultados apos 3 tentativas - abandoned 2026-04-25",
       "last_fail_date": "2026-04-25"
     },
     {
@@ -1006,7 +1006,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "EC-ESTAT/2026/EA-RP/0012",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-ESTAT/2026/EA-RP/0012",
       "deadline": "2026-06-05",
@@ -1014,8 +1014,8 @@
       "detected_date": "2026-04-25",
       "priority_score": 65,
       "notes": "SEDIA text=2026 p16",
-      "fail_count": 2,
-      "download_error": "API 404, portal JS-rendered, WebSearch sem resultados - tentativa 2026-04-25",
+      "fail_count": 3,
+      "download_error": "API 404, portal JS-rendered, WebSearch sem resultados apos 3 tentativas - abandoned 2026-04-25",
       "last_fail_date": "2026-04-25"
     },
     {
@@ -1129,7 +1129,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "185357",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/185357",
       "deadline": "2026-06-14",
@@ -1137,8 +1137,8 @@
       "detected_date": "2026-04-25",
       "priority_score": 65,
       "notes": "SEDIA text=2026 p23",
-      "fail_count": 2,
-      "download_error": "API 404, portal JS-rendered, ID numerico sem resultados em WebSearch - tentativa 2026-04-25",
+      "fail_count": 3,
+      "download_error": "API 404, ID numerico sem resultados em WebSearch apos 3 tentativas - abandoned 2026-04-25",
       "last_fail_date": "2026-04-25"
     },
     {
