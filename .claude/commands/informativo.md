@@ -155,6 +155,48 @@ Se o texto parecer demasiado limpo, simetrico ou "certinho", reescrever para o t
 
 ---
 
+## REGRAS DE ESTRUTURA E TITULACAO
+
+O ruido visual mais comum nestes artigos vem de dois excessos: demasiados subtitulos a cortar o texto, e subtitulos que soam a capitulo de manual em vez de pausa editorial. Estas regras corrigem ambos.
+
+**Frequencia de h2 (cap por extensao do artigo):**
+- Artigo de 1500-2500 palavras: 3 a 4 h2s
+- Artigo de 2500-4000 palavras: 4 a 5 h2s
+- Artigo de 4000-5000 palavras: 5 a 6 h2s
+- Nunca mais de 1 h2 por cada 600 a 800 palavras
+- A "Perspetiva Open Capital" final conta como uma das h2s
+
+**Eyebrow (escassez obrigatoria):**
+- Maximo 1 a 2 eyebrows por artigo inteiro
+- Obrigatorio: na seccao final "Perspetiva Open Capital" (sempre)
+- Opcional: na primeira seccao apos a introducao, se servir como rotulo de categoria editorial (ex: "Contexto", "Diagnostico", "Analise")
+- Em mais lado nenhum. Todas as outras seccoes tem h2 sem eyebrow por cima.
+
+**Voz dos h2 - proibicoes:**
+- Proibido o padrao "X que Y": "A empresa que construiu...", "A juiza que decidiu...", "O exercito que processou...". Soa a manual jornalistico, nao a editorial.
+- Proibido o padrao listicle: "Tres razoes para...", "Quatro decisoes que...", "Cinco coisas que...". Soa a content marketing.
+- Proibido h2 demasiado descritivo (ex: "As consequencias deste novo regulamento para as PMEs portuguesas". Encurtar para "O peso para as PMEs" ou similar).
+- Proibido h2 que apenas anuncia o que vem a seguir (ex: "Vamos analisar o impacto").
+
+**Voz dos h2 - preferencias:**
+- Frase curta afirmativa: "Bruxelas virou a mesa"
+- Substantivo evocativo: "A escalada", "O risco contrario", "A ressaca"
+- Pergunta direta: "Por que agora?"
+- Tensao ou contradicao: "O que ficou por dizer", "O outro lado da equacao"
+Variar entre estes registos. Nao repetir o mesmo formato ao longo do artigo.
+
+**Como quebrar o fluxo sem usar h2:**
+Nem toda a viragem precisa de subtitulo. Alternativas:
+- `<div class="art-divider"></div>` - linha fina, marca mudanca de bloco sem rotulo
+- `<div class="pull-quote">` - destaca uma frase chave e da pausa visual sem precisar de h2 antes ou depois
+- Simples mudanca de paragrafo - quando os dois blocos sao da mesma seccao tematica, basta um paragrafo novo
+- `<div class="art-highlight">` - caixa de destaque que funciona como pausa sem precisar de h2 a abrir
+
+**Regra geral:**
+H2s sao pausas editoriais, nao etiquetas de organizacao. Se o leitor pode passar do paragrafo anterior para o seguinte sem perder o fio, nao precisa de h2 entre eles. Em duvida sobre se ha h2 a mais: ha.
+
+---
+
 ## REGRAS DE FECHO
 
 O ultimo paragrafo do corpo do artigo deve ser sempre exatamente (em italico, visualmente distinto do corpo: font-size:15px, color:grey-mid, font-style:italic, margin-top:40px):
