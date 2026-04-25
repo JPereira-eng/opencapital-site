@@ -346,7 +346,7 @@ A cronica nao tem seccao "Perspetiva Open Capital", nem h2 final, nem linha de a
 
 **2. Paragrafo de marca** (ultimo elemento, em italico discreto):
 ```html
-<p class="article-coda">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a></p>
+<p class="article-coda" style="font-size:12px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a></p>
 ```
 
 Estilo CSS aplicado: font-style:italic, font-size:15px, color:grey-mid, margin-top:32px, line-height:1.7.
@@ -458,7 +458,7 @@ Cria `conhecimento/[slug].html`.
 **Fecho obrigatorio (apos o ultimo paragrafo do corpo da cronica):**
 
 ```html
-<p class="article-coda">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a></p>
+<p class="article-coda" style="font-size:12px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a></p>
 ```
 
 Nao incluir seccao "Perspetiva Open Capital". Nao incluir h2 final. Nao incluir linha de assinatura. A cronica termina com o paragrafo do cronista (na voz dele), seguido apenas do paragrafo de marca. O autor ja aparece no hero e na sidebar.

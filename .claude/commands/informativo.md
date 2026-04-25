@@ -303,7 +303,7 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa.
 
 **Paragrafo de fecho obrigatorio:**
 ```html
-<p style="font-size:15px;color:var(--grey-mid);margin-top:40px;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+<p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
 ```
 
 **Template HTML completo do ficheiro:**
