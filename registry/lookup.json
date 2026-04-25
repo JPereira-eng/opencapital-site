@@ -837,36 +837,12 @@
       "status": "aberto",
       "detected_date": "2026-04-18"
     },
-    "horizon-cl4-2021-resilience-01-10": {
-      "shard": "eu-horizon",
-      "status": "aberto",
-      "detected_date": "2026-04-18"
-    },
-    "horizon-cl4-2021-resilience-01-27": {
-      "shard": "eu-horizon",
-      "status": "aberto",
-      "detected_date": "2026-04-18"
-    },
-    "horizon-cl4-2021-resilience-01-05": {
-      "shard": "eu-horizon",
-      "status": "aberto",
-      "detected_date": "2026-04-18"
-    },
-    "horizon-cl4-2021-resilience-01-31": {
-      "shard": "eu-horizon",
-      "status": "aberto",
-      "detected_date": "2026-04-18"
-    },
-    "horizon-cl4-2021-resilience-01-04": {
-      "shard": "eu-horizon",
-      "status": "aberto",
-      "detected_date": "2026-04-18"
-    },
-    "horizon-cl4-2021-resilience-01-12": {
-      "shard": "eu-horizon",
-      "status": "aberto",
-      "detected_date": "2026-04-18"
-    },
+    "horizon-cl4-2021-resilience-01-10": true,
+    "horizon-cl4-2021-resilience-01-27": true,
+    "horizon-cl4-2021-resilience-01-05": true,
+    "horizon-cl4-2021-resilience-01-31": true,
+    "horizon-cl4-2021-resilience-01-04": true,
+    "horizon-cl4-2021-resilience-01-12": true,
     "horizon-cl4-2021-resilience-01-07": {
       "shard": "eu-horizon",
       "status": "aberto",
@@ -2076,36 +2052,12 @@
       "status": "aberto",
       "detected_date": "2026-04-18"
     },
-    "HORIZON-CL4-2021-RESILIENCE-01-10": {
-      "shard": "eu-horizon",
-      "status": "aberto",
-      "detected_date": "2026-04-18"
-    },
-    "HORIZON-CL4-2021-RESILIENCE-01-27": {
-      "shard": "eu-horizon",
-      "status": "aberto",
-      "detected_date": "2026-04-18"
-    },
-    "HORIZON-CL4-2021-RESILIENCE-01-05": {
-      "shard": "eu-horizon",
-      "status": "aberto",
-      "detected_date": "2026-04-18"
-    },
-    "HORIZON-CL4-2021-RESILIENCE-01-31": {
-      "shard": "eu-horizon",
-      "status": "aberto",
-      "detected_date": "2026-04-18"
-    },
-    "HORIZON-CL4-2021-RESILIENCE-01-04": {
-      "shard": "eu-horizon",
-      "status": "aberto",
-      "detected_date": "2026-04-18"
-    },
-    "HORIZON-CL4-2021-RESILIENCE-01-12": {
-      "shard": "eu-horizon",
-      "status": "aberto",
-      "detected_date": "2026-04-18"
-    },
+    "HORIZON-CL4-2021-RESILIENCE-01-10": "horizon-cl4-2021-resilience-01-10",
+    "HORIZON-CL4-2021-RESILIENCE-01-27": "horizon-cl4-2021-resilience-01-27",
+    "HORIZON-CL4-2021-RESILIENCE-01-05": "horizon-cl4-2021-resilience-01-05",
+    "HORIZON-CL4-2021-RESILIENCE-01-31": "horizon-cl4-2021-resilience-01-31",
+    "HORIZON-CL4-2021-RESILIENCE-01-04": "horizon-cl4-2021-resilience-01-04",
+    "HORIZON-CL4-2021-RESILIENCE-01-12": "horizon-cl4-2021-resilience-01-12",
     "HORIZON-CL4-2021-RESILIENCE-01-07": {
       "shard": "eu-horizon",
       "status": "aberto",
