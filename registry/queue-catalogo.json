@@ -90,46 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "nova-sbe-venture-lab",
-      "name": "NOVA SBE Venture Lab",
-      "source_id": "nova-sbe-venture-lab",
-      "catalog_type": "incubator",
-      "detected_date": "2026-04-26",
-      "last_profile_update": "2026-04-26",
-      "status": "active",
-      "regulation_url": "https://www.novasbe.unl.pt/en/community/institutes/nova-sbe-haddad-entrepreneurship-institute/startups",
-      "priority_score": 10,
-      "profile": {
-        "website": "https://www.novasbe.unl.pt/en/community/institutes/nova-sbe-haddad-entrepreneurship-institute",
-        "linkedin": null,
-        "pais_sede": "PT",
-        "descricao_curta": "Pre-incubadora da Nova SBE em Cascais. Apoia startups em fase de ideia e MVP com co-working, mentoria e workshops especializados.",
-        "como_candidatar": "Reserva via calendly.com/andre-tg ou email: andre.goncalves@novasbe.pt",
-        "modelo": "equity-free",
-        "formato": "residencia",
-        "duracao_meses": null,
-        "batches_ano": null,
-        "batch_proximo": null,
-        "deadline_proxima": null,
-        "estipendio_eur": null,
-        "equity_pct": null,
-        "mentorias": [],
-        "setores_foco": [
-          "Fintech & Data",
-          "Health & Well-Being",
-          "Hospitality & Customer Journeys",
-          "Smart Cities & Communities",
-          "Space, Green & Blue Economy"
-        ],
-        "alumni_destaques": [
-          "Intuitivo",
-          "Modatta",
-          "3D Ways / FullCycle"
-        ]
-      },
-      "notes": "165+ startups suportadas, 3000+ estudantes. Haddad Entrepreneurship Institute. Programa continuo sem equity."
-    }
-  ]
+  "queue": []
 }
