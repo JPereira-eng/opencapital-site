@@ -2,6 +2,7 @@
   "_meta": "Dedup index - O(1) lookup by id and aviso_codigo",
   "by_id": {
     "horizon-cl4-2026-01": true,
+    "horizon-ju-clean-aviation-2026-01": true,
     "200m-capital": true,
     "185357": true,
     "185979": true,
@@ -1575,6 +1576,7 @@
   },
   "by_aviso_codigo": {
     "HORIZON-CL4-2026-01": "horizon-cl4-2026-01",
+    "HORIZON-JU-Clean-Aviation-2026-01": "horizon-ju-clean-aviation-2026-01",
     "185357": "185357",
     "185979": "185979",
     "186065": "186065",
