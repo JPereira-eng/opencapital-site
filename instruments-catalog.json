@@ -10416,7 +10416,11 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "tecnologia-digital", "energia-ambiente"],
+      "setores": [
+        "industria",
+        "tecnologia-digital",
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon Europe CL4 2026 Call 01 - Materiais e Producao",
       "tagline": "€319M para materiais avancados e processos industriais limpos no ciclo 2026",
@@ -10435,7 +10439,11 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["mobilidade-transportes", "industria", "energia-ambiente"],
+      "setores": [
+        "mobilidade-transportes",
+        "industria",
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Clean Aviation JU - 4.a Chamada (CfP 04)",
       "tagline": "€329,5M para descarbonizar a aviacao europeia com hidrogenio e propulsao hibrida",
@@ -10454,7 +10462,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["tecnologia-digital", "industria"],
+      "setores": [
+        "tecnologia-digital",
+        "industria"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon Europe CL4 2026 Call 03 - Investigacao Espacial",
       "tagline": "€90,97M para investigacao e tecnologias espaciais no ambito do Cluster 4 do Horizonte Europa",
@@ -10473,7 +10484,9 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao,entidade-publica,associacao",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa WIDERA 2026 Call 06",
       "tagline": "8 topicos ERA para reformar o Espaco Europeu de Investigacao com ciencia aberta e inovacao academica",
@@ -10492,7 +10505,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao,empresa",
-      "setores": ["saude-ciencias-vida", "energia-ambiente"],
+      "setores": [
+        "saude-ciencias-vida",
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Euratom 2026 - Investigacao e Formacao Nuclear",
       "tagline": "€330M para fusao nuclear, seguranca de reatores, SMRs, isotopos medicos e radioprotecao no bienio 2026-2027",
@@ -10500,6 +10516,27 @@
       "highlight1": "Centros de investigacao nuclear, universidades, PMEs especializadas, hospitais universitarios",
       "highlight2": "Nacional (consorcio europeu, todos os EM UE)",
       "href": "instrumentos/horizon-euratom-2026-01.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-miss-2026-1",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 23 set 2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "entidade-publica,ensino-investigacao,empresa,associacao",
+      "setores": [
+        "energia-ambiente"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Missao UE: Adaptacao as Alteracoes Climaticas 2026",
+      "tagline": "226M euros para projetos de resiliencia climatica em regioes europeias. 8 topicos, prazo 23 setembro 2026.",
+      "highlight0": "Subvencao (ate 100%) para demonstracao e escalonamento de solucoes de adaptacao climatica",
+      "highlight1": "Municipios, regioes, universidades, centros de investigacao, PMEs ambientais",
+      "highlight2": "Nacional (todos os EM da UE elegiveis)",
+      "href": "instrumentos/horizon-miss-2026-1.html",
       "featured": false
     }
   ]
