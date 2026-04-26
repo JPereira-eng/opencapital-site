@@ -498,6 +498,46 @@
       "source": "eu-funding-tenders",
       "state": "fechado",
       "last_check": "2026-04-26"
+    },
+    {
+      "id": "horizon-cl6-2026-02-two-stage",
+      "file": "instrumentos/horizon-cl6-2026-02-two-stage.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "published_date": "2026-04-26",
+      "last_check": "2026-04-26"
+    },
+    {
+      "id": "horizon-ju-gh-edctp3-2026-03",
+      "file": "instrumentos/horizon-ju-gh-edctp3-2026-03.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "published_date": "2026-04-26",
+      "last_check": "2026-04-26"
+    },
+    {
+      "id": "erc-2026-stg",
+      "file": "instrumentos/erc-2026-stg.html",
+      "source": "erc",
+      "state": "fechado",
+      "published_date": "2026-04-26",
+      "last_check": "2026-04-26"
+    },
+    {
+      "id": "horizon-eie-2026-02",
+      "file": "instrumentos/horizon-eie-2026-02.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "published_date": "2026-04-26",
+      "last_check": "2026-04-26"
+    },
+    {
+      "id": "horizon-cl5-2026-08-two-stage",
+      "file": "instrumentos/horizon-cl5-2026-08-two-stage.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "published_date": "2026-04-26",
+      "last_check": "2026-04-26"
     }
   ],
   "instruments": [
@@ -1524,9 +1564,9 @@
       "last_check": "2026-04-26"
     }
   ],
-  "count": 146,
+  "count": 151,
   "open": 59,
   "closed": 48,
   "planned": 7,
-  "published": 6
+  "published": 11
 }

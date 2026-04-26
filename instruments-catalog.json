@@ -10848,7 +10848,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["tecnologia-digital"],
+      "setores": [
+        "tecnologia-digital"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EuroHPC JU - Centros de Excelencia HPC e Lighthouse Codes",
       "tagline": "Financiamento europeu para centros de excelencia em HPC e software de referencia para supercomputadores.",
@@ -10867,7 +10869,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "tecnologia-digital"],
+      "setores": [
+        "industria",
+        "tecnologia-digital"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizon CL4 2026-02: IA para Industria e Materiais Avancados",
       "tagline": "Call two-stage de EUR 98M para IA em manufatura, IA em industrias de processo e materiais sustentaveis.",
@@ -10886,7 +10891,10 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao,empreendedor",
-      "setores": ["tecnologia-digital", "saude-ciencias-vida"],
+      "setores": [
+        "tecnologia-digital",
+        "saude-ciencias-vida"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EIC Advanced Innovation Challenges 2026",
       "tagline": "Programa piloto do EIC para deep tech: Physical AI e alternativas ao teste animal, ate EUR 2.5M por estadio.",
@@ -10905,7 +10913,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["tecnologia-digital"],
+      "setores": [
+        "tecnologia-digital"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EUSPA Space Research Call 2026",
       "tagline": "EUR 15M para aplicacoes inovadoras baseadas em Galileo, EGNOS e Copernicus.",
@@ -10924,7 +10934,9 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao,associacao",
-      "setores": ["mobilidade-transportes"],
+      "setores": [
+        "mobilidade-transportes"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EU-RAIL JU Call 2026-01: Comboios Leves e Hyperloop",
       "tagline": "EUR 6.1M para comboios regionais leves e certificacao de seguranca hyperloop no ambito da Parceria Europeia Ferroviaria.",
@@ -10932,6 +10944,113 @@
       "highlight1": "Fabricantes, operadores ferroviarios, universidades, PMEs",
       "highlight2": "UE e paises associados",
       "href": "instrumentos/horizon-ju-er-2026-01.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl6-2026-02-two-stage",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "2o Estadio - Convidados",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao,empresa",
+      "setores": [
+        "agroalimentar",
+        "energia-ambiente"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizon CL6 2026-02: Bioeconomia e Sistemas Alimentares",
+      "tagline": "Call two-stage de EUR 166.4M para bioeconomia, fitossanidade, proteinas alternativas, pecuaria sustentavel e agricultura de precisao.",
+      "highlight0": "EUR 166.4M - 100% RIA / 70% IA",
+      "highlight1": "Universidades, centros I&D, empresas agroalimentares",
+      "highlight2": "2o estadio: convidados apenas - prazo 15 set 2026",
+      "href": "instrumentos/horizon-cl6-2026-02-two-stage.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-ju-gh-edctp3-2026-03",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 2/09/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao,associacao",
+      "setores": [
+        "saude-ciencias-vida",
+        "tecnologia-digital"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "EDCTP3 Call 2026-03: Saude Digital e Africa Subsariana",
+      "tagline": "EUR 33M para IA em saude digital e redes de formacao em regulamentacao farmaceutica em Africa.",
+      "highlight0": "EUR 33M - 100% CSA Lump Sum",
+      "highlight1": "Universidades, hospitais, associacoes de investigacao",
+      "highlight2": "Prazo: 2 de setembro de 2026",
+      "href": "instrumentos/horizon-ju-gh-edctp3-2026-03.html",
+      "featured": false
+    },
+    {
+      "id": "erc-2026-stg",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Encerrado (out 2025)",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao",
+      "setores": [
+        "todos"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "ERC Starting Grant 2026",
+      "tagline": "Ate EUR 1.5M para investigadores independentes com 2 a 7 anos pos-doutoramento. Proximo concurso: ERC-2027-STG.",
+      "highlight0": "Ate EUR 1.5M (max EUR 2.5M em casos excecionais)",
+      "highlight1": "Investigadores com PhD entre jan 2019 e dez 2023",
+      "highlight2": "Todas as areas cientificas - criterio: excelencia",
+      "href": "instrumentos/erc-2026-stg.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-eie-2026-02",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,associacao,empreendedor",
+      "setores": [
+        "tecnologia-digital"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizon EIE 2026-02: European Startup Hubs Pilot",
+      "tagline": "EUR 20M para criar uma rede piloto de 10 hubs de startups e scaleups ligados a investigacao europeia.",
+      "highlight0": "EUR 20M - 50% cofinanciamento por hub",
+      "highlight1": "Hubs de startups, aceleradoras, parques de ciencia",
+      "highlight2": "Rede de 10 hubs em 10 paises - um unico projeto vencedor",
+      "href": "instrumentos/horizon-eie-2026-02.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl5-2026-08-two-stage",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "2o Estadio - Convidados",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao",
+      "setores": [
+        "energia-ambiente"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizon CL5 2026-08: Ciencia do Clima Two-Stage",
+      "tagline": "EUR 35-63M para investigacao fundamental em processos do sistema terrestre, pontos de viragem climaticos e ciclos biogeoquimicos.",
+      "highlight0": "EUR 5M a 9M por projeto - 7 projetos previstos",
+      "highlight1": "Universidades e centros de investigacao climatica",
+      "highlight2": "2o estadio: convidados apenas - prazo 8 out 2026",
+      "href": "instrumentos/horizon-cl5-2026-08-two-stage.html",
       "featured": false
     }
   ]
