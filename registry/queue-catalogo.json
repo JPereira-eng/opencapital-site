@@ -90,5 +90,52 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": []
+  "queue": [
+    {
+      "id": "oxy-capital",
+      "name": "Oxy Capital",
+      "source_id": "oxy-capital",
+      "catalog_type": "pe",
+      "detected_date": "2026-04-26",
+      "last_profile_update": "2026-04-26",
+      "status": "active",
+      "regulation_url": "https://oxycapital.com",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://oxycapital.com",
+        "linkedin": null,
+        "pais_sede": "PT",
+        "descricao_curta": "Gestora portuguesa de private equity e divida mezanino focada em PMEs saudaveis do sul da Europa, com presenca em Lisboa e Milao.",
+        "como_candidatar": "Formulario de contacto em oxycapital.com/contacts/. Relacoes com investidores em investors.oxycapital.com.",
+        "tese": "Capital para PMEs do sul da Europa (PT e IT) via acquisicoes minoritarias e maioritarias, aumentos de capital e financiamento mezanino. Foco em empresas com crescimento organico sustentavel que precisam de capital de crescimento ou reestruturacao.",
+        "estagios": [
+          "growth",
+          "buyout"
+        ],
+        "setores": [
+          "manufacturing",
+          "software/fintech",
+          "alimentacao e bebidas",
+          "fitness",
+          "servicos",
+          "industria diversificada"
+        ],
+        "geografia": [
+          "PT",
+          "IT"
+        ],
+        "ticket_min_eur": null,
+        "ticket_max_eur": null,
+        "ticket_sweet_eur": null,
+        "aum_eur": null,
+        "vintage": "Terceiro fundo (em deployment 2026)",
+        "portfolio_pt_exemplos": [
+          "Feedzai",
+          "Kaffa"
+        ],
+        "parceiros": []
+      },
+      "notes": "Gestora PE sediada em Lisboa. Cinco fundos (Corporate Restructuring, Revitalizar, Aquarius, Cometa, Mezzanine). Mais de 50 investimentos realizados. Foco em PMEs PT e IT saudaveis. Terceiro fundo em deployment ativo."
+    }
+  ]
 }

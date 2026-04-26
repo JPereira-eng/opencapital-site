@@ -10,9 +10,9 @@
     "open": 305,
     "closed": 171,
     "planned": 17,
-    "in_queue": 73,
+    "in_queue": 75,
     "in_watchlist": 103,
-    "in_catalogo": 0,
+    "in_catalogo": 1,
     "in_overflow": 314
   },
   "shards": {
@@ -140,8 +140,8 @@
     "startup-portugal": "2026-04-12",
     "banco-fomento": "2026-04-12",
     "autoridade-tributaria": "2026-04-19",
-    "digital-europe": "2026-04-18",
-    "cef": "2026-04-18",
+    "digital-europe": "2026-04-26",
+    "cef": "2026-04-26",
     "horizonte-europa": "2026-04-19",
     "eu4health": "2026-04-25",
     "indico-capital": "2026-04-13",
@@ -157,7 +157,7 @@
     "eu-startups": "2026-04-13",
     "esa-bic": "2026-04-26",
     "eit-digital": "2026-04-19",
-    "eit-climate": "2026-04-18",
+    "eit-climate": "2026-04-26",
     "shilling-vc": "2026-04-14",
     "portugal-ventures": "2026-04-14",
     "balcao-2030": "2026-04-14",
@@ -201,8 +201,9 @@
     "plug-and-play-portugal": "2026-04-25",
     "single-market-programme": "2026-04-26",
     "justice-programme": "2026-04-26",
-    "nova-sbe-venture-lab": "2026-04-26"
+    "nova-sbe-venture-lab": "2026-04-26",
+    "oxy-capital": "2026-04-26"
   },
   "last_scanner_run": "2026-04-26",
-  "last_updated": "2026-04-26T-monitor-r01-j1"
+  "last_updated": "2026-04-26T-scanner-r02-j1"
 }
