@@ -1473,11 +1473,18 @@
       "source": "eu-funding-tenders",
       "state": "aberto",
       "last_check": "2026-04-26"
+    },
+    {
+      "id": "horizon-miss-2026-04",
+      "file": "instrumentos/horizon-miss-2026-04.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-26"
     }
   ],
-  "count": 139,
+  "count": 140,
   "open": 57,
-  "closed": 43,
+  "closed": 44,
   "planned": 7,
   "published": 1
 }
