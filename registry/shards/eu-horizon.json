@@ -538,6 +538,27 @@
       "state": "fechado",
       "published_date": "2026-04-26",
       "last_check": "2026-04-26"
+    },
+    {
+      "id": "horizon-ju-gh-edctp3-2026-01-two-stage",
+      "file": "instrumentos/horizon-ju-gh-edctp3-2026-01-two-stage.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-26"
+    },
+    {
+      "id": "horizon-miss-2026-05-two-stage",
+      "file": "instrumentos/horizon-miss-2026-05-two-stage.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-26"
+    },
+    {
+      "id": "horizon-eic-2025-accelerator-01",
+      "file": "instrumentos/horizon-eic-2025-accelerator-01.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-26"
     }
   ],
   "instruments": [
@@ -1564,9 +1585,9 @@
       "last_check": "2026-04-26"
     }
   ],
-  "count": 151,
-  "open": 59,
-  "closed": 48,
+  "count": 154,
+  "open": 61,
+  "closed": 49,
   "planned": 7,
   "published": 11
 }

@@ -2966,16 +2966,28 @@
     "HORIZON-CL4-2026-05": "horizon-cl4-2026-05",
     "HORIZON-JU-EUROHPC-2026-COE-LH-01": "horizon-ju-eurohpc-2026-coe-lh-01",
     "HORIZON-CL4-2026-02-two-stage": "horizon-cl4-2026-02-two-stage",
-    "HORIZON-JU-GH-EDCTP3-2026-01-two-stage": "horizon-ju-gh-edctp3-2026-01-two-stage",
+    "HORIZON-JU-GH-EDCTP3-2026-01-two-stage": {
+      "source_id": "eu-funding-tenders",
+      "aviso_codigo": "HORIZON-JU-GH-EDCTP3-2026-01-two-stage",
+      "shard": "eu-horizon"
+    },
     "HORIZON-EIC-2026-AIC": "horizon-eic-2026-aic",
     "HORIZON-RAISE-2026-01": "horizon-raise-2026-01",
     "HORIZON-EUSPA-2026-SPACE": "horizon-euspa-2026-space",
     "HORIZON-JU-ER-2026-01": "horizon-ju-er-2026-01",
     "HORIZON-JU-GH-EDCTP3-2026-03": "horizon-ju-gh-edctp3-2026-03",
     "HORIZON-CL5-2026-06-Two-Stage": "horizon-cl5-2026-06-two-stage",
-    "HORIZON-MISS-2026-05-two-stage": "horizon-miss-2026-05-two-stage",
+    "HORIZON-MISS-2026-05-two-stage": {
+      "source_id": "eu-funding-tenders",
+      "aviso_codigo": "HORIZON-MISS-2026-05-two-stage",
+      "shard": "eu-horizon"
+    },
     "HORIZON-CL6-2026-02-two-stage": "horizon-cl6-2026-02-two-stage",
-    "HORIZON-EIC-2025-ACCELERATOR-01": "horizon-eic-2025-accelerator-01",
+    "HORIZON-EIC-2025-ACCELERATOR-01": {
+      "source_id": "eu-funding-tenders",
+      "aviso_codigo": "HORIZON-EIC-2025-ACCELERATOR-01",
+      "shard": "eu-horizon"
+    },
     "HORIZON-EIC-2025-EICSTEP-01": "horizon-eic-2025-eicstep-01",
     "HORIZON-CL5-2026-08-Two-Stage": "horizon-cl5-2026-08-two-stage",
     "HORIZON-EIE-2026-02": "horizon-eie-2026-02",
@@ -3048,7 +3060,11 @@
     "ESA-BIC-CENTRO-2026": "esa-bic-centro-plus-2026",
     "horizon-cl6-2026-03": "horizon-cl6-2026-03",
     "DIGITAL-2026-BESTUSE-AWARENESS": "digital-2026-bestuse-awareness",
-    "CHIPS-JU-ECS-2026": "chips-ju-ecs-2026",
+    "CHIPS-JU-ECS-2026": {
+      "source_id": "fct",
+      "aviso_codigo": "CHIPS-JU-ECS-2026",
+      "shard": "pt-other"
+    },
     "LIFE-2026-CET-DIGITAL": "life-2026-cet-digital",
     "LIFE-2026-CET-EMPOWER": "life-2026-cet-empower",
     "LIFE-2026-CET-RENEWHC": "life-2026-cet-renewhc",
