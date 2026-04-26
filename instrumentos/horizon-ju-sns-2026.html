@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizon Europe SNS JU 2026 - Redes 6G e IA: Open Capital</title>
+  <meta name="description" content="SNS JU R&I Call 2026: EUR 22 milhoes para investigacao em redes 6G e IA para telecomunicacoes. Consorcio europeu, 5 projetos esperados, prazo abril 2026.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-body{}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../biblioteca.html" class="active">Biblioteca</a></li>
+    <li><a href="../conhecimento.html">Conhecimento</a></li>
+    <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros.html">Parceiros</a>
+        <a href="../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" class="nav-cta" target="_blank">Contactar</a>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../biblioteca.html">Biblioteca</a>
+  <a href="../conhecimento.html">Conhecimento</a>
+  <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos.html">Sobre Nós</a>
+  <a href="../parceiros.html">Parceiros</a>
+  <a href="../carreiras.html">Carreiras</a>
+  <a href="https://calendly.com/opencapital" class="nav-mobile-cta" target="_blank">Contactar</a>
+</div>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../index.html">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../biblioteca.html">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">SNS JU R&amp;I Call 2026</span>
+    </nav>
+    <p class="hero-cat">Financiamento Publico - Horizonte Europa</p>
+    <h1 class="hero-title">SNS JU R&amp;I Call 2026: Redes 6G e IA para Telecomunicacoes</h1>
+    <p class="hero-tagline">Financiamento europeu para investigacao e inovacao em redes de proxima geracao e sistemas de inteligencia artificial para telecomunicacoes 6G.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotacao</span>
+        <span class="meta-value">EUR 22 milhoes</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Projetos esperados</span>
+        <span class="meta-value">5</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Prazo</span>
+        <span class="meta-value status-open">29 de abril de 2026</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Codigo</span>
+        <span class="meta-value">HORIZON-JU-SNS-2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../biblioteca.html" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O instrumento</div>
+      <h2 class="section-h2">A aposta europeia nas redes da proxima geracao</h2>
+      <p class="section-text">O SNS JU (Smart Networks and Services Joint Undertaking) e a Joint Undertaking do Horizonte Europa dedicada ao desenvolvimento de redes 5G avancadas e 6G. Criada ao abrigo do Regulamento (UE) 2021/2085, esta parceria publico-privada reune a Comissao Europeia e a industria europeia de telecomunicacoes com um objetivo claro: garantir que a Europa lidera o desenvolvimento das redes de comunicacao de proxima geracao, em vez de depender de tecnologia de terceiros.</p>
+      <p class="section-text">O R&I Work Programme 2026 representa a mais recente iteracao desse investimento estrategico. Com EUR 22 milhoes disponiveis para 5 projetos, a call foca dois vetores complementares: a criacao de datasets de IA de qualidade para treinar modelos em redes 6G, e atividades de coordenacao operacional que maximizam o impacto dos projetos SNS JU ja em curso. A data-limite de submissao e 29 de abril de 2026.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Topicos da call</div>
+      <h2 class="section-h2">Duas linhas de financiamento distintas</h2>
+      <p class="section-text">A call organiza-se em duas streams com perfis de projeto muito diferentes.</p>
+
+      <table class="art-table">
+        <thead>
+          <tr>
+            <th>Stream</th>
+            <th>Foco</th>
+            <th>Tipo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Stream B</strong></td>
+            <td>Collection, Generation and Validation of AI Datasets for 6G Networks - criacao e validacao de datasets de IA para treinar funcionalidades nativas 6G</td>
+            <td>Investigacao e Inovacao</td>
+          </tr>
+          <tr>
+            <td><strong>Stream CSA</strong></td>
+            <td>SNS Operations and Output Optimisation, 6G Devices (terminais 6G) e EU-India International Collaboration - atividades de coordenacao, disseminacao e colaboracao internacional</td>
+            <td>Coordenacao e Suporte</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="section-text">A Stream B aborda um dos problemas fundamentais do desenvolvimento de IA para telecomunicacoes: a escassez de dados reais de qualidade adequados para treinar modelos em contexto 6G. Os projetos financiados devem criar, recolher e validar conjuntos de dados que permitam desenvolver redes com IA nativa, uma capacidade central na arquitetura 6G europeia.</p>
+      <p class="section-text">A Stream CSA abrange topicos operacionais e de coordenacao. O topico de dispositivos 6G foca o desenvolvimento de terminais e equipamentos de utilizador final, enquanto a colaboracao EU-India explora sinergias em I&D com parceiros asiaticos no quadro das prioridades diplomaticas europeias em tecnologia de redes.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Contexto estrategico</div>
+      <h2 class="section-h2">Porque importa o 6G para a Europa</h2>
+      <p class="section-text">O 6G nao e apenas uma evolucao tecnica do 5G. E uma aposta de soberania tecnologica. A Europa perdeu terreno na industria de equipamentos de telecomunicacoes ao longo das ultimas decadas, com a producao de hardware concentrada em poucos fornecedores globais. O SNS JU e a resposta estrutural da UE: criar uma base de I&D europeia forte o suficiente para influenciar os standards internacionais 6G antes que estes fiquem dominados por outros blocos.</p>
+      <p class="section-text">O programa enquadra-se na Decada Digital Europeia 2030, que inclui metas de cobertura 5G completa em areas habitadas e preparacao de infraestrutura 6G. Os resultados dos projetos SNS JU alimentam diretamente as posicoes europeias nos orgaos de standardizacao como o 3GPP.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-box-title">Parceria publico-privada</div>
+        <div class="highlight-box-text">O SNS JU combina financiamento publico (Horizonte Europa) com contribuicoes da industria. As empresas membros do SNS JU participam com recursos proprios e conhecimento tecnico, criando um modelo de cofinanciamento que multiplica o impacto do euro publico investido. A participacao da industria nos consorcios candidatos e fortemente encorajada.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Elegibilidade</div>
+      <h2 class="section-h2">Quem pode candidatar-se</h2>
+      <p class="section-text">A call aplica os criterios padrao do Horizonte Europa. Os candidatos devem ser entidades estabelecidas em Estados-Membros da UE ou em paises associados ao Horizonte Europa. A maioria dos topicos exige consorcios com um minimo de tres entidades independentes de pelo menos tres paises distintos.</p>
+
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Empresas de telecomunicacoes:</strong> operadoras, fabricantes de equipamentos, fornecedores de software de rede e sistema</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Centros de investigacao e universidades:</strong> com competencias em redes sem fio, IA aplicada a telecomunicacoes, processamento de sinal e seguranca de redes</li>
+        <li><strong style="color:var(--navy);font-weight:600;">PMEs tecnologicas:</strong> especialmente no dominio do desenvolvimento de dispositivos 6G, plataformas de dados e soluções de IA para telecomunicacoes</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Membros do SNS JU:</strong> a participacao de empresas que ja integram o SNS JU como membros e especialmente valorizada na avaliacao</li>
+      </ul>
+
+      <p class="section-text">Portugal tem empresas e centros de investigacao com competencias relevantes neste dominio, nomeadamente em processamento de sinal, sistemas embebidos e desenvolvimento de plataformas de dados para telecomunicacoes. A candidatura a esta call beneficia de parceiros europeus mais proximos dos centros de decisao SNS JU, mas nao exclui entidades portuguesas com perfil tecnico forte.</p>
+    </div>
+
+    <div class="stats-row reveal" style="grid-template-columns:repeat(3,1fr);">
+      <div class="stat-cell">
+        <div class="stat-num">22<sup>M EUR</sup></div>
+        <div class="stat-label">Dotacao total</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Projetos esperados</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">6<sup>G</sup></div>
+        <div class="stat-label">Foco tecnologico</div>
+      </div>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">O SNS JU 2026 e um instrumento tecnico, de nicho e exigente. O ticket medio por projeto ronda os EUR 4,4 milhoes, o que implica consorcios de media dimensao com lideranca tecnica clara. Para entidades portuguesas, o caminho de entrada mais realista passa por identificar um lider de consorcio europeu ja estabelecido no ecossistema SNS JU e contribuir com uma capacidade tecnica especifica, em vez de liderar a candidatura diretamente.</p>
+      <p class="section-text">O topico de AI datasets (Stream B) e o mais relevante para empresas de dados e centros de I&D com experiencia em machine learning aplicado a redes de comunicacao. O topico de dispositivos 6G, dentro da Stream CSA, e menos comum neste tipo de calls e pode representar uma entrada para PMEs com competencias em hardware de telecomunicacoes.</p>
+      <p class="section-text">Dado o prazo de 29 de abril de 2026, esta call ja nao e acionavel para novas candidaturas a partir de hoje. Serve, no entanto, como referencia do tipo de proposta valorizada pelo SNS JU, util para preparar candidaturas em futuras iteracoes do programa.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Tecnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rapidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">Horizonte Europa - SNS JU</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Codigo</div>
+        <div class="sidebar-fact-val">HORIZON-JU-SNS-2026</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Dotacao</div>
+        <div class="sidebar-fact-val">EUR 22 milhoes</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Projetos esperados</div>
+        <div class="sidebar-fact-val">5</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Prazo</div>
+        <div class="sidebar-fact-val">29 de abril de 2026</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-open">Aberto</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Gestora</div>
+        <div class="sidebar-fact-val">SNS JU</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Setores alvo</div>
+        <div class="sidebar-fact-val">Telecomunicacoes, IA, Deep Tech</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Elegibilidade</div>
+        <div class="sidebar-fact-val">UE + paises associados HE</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">A preparar uma candidatura a um consorcio europeu de 6G? A nossa equipa avalia o perfil tecnico e identifica parceiros relevantes.</div>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn" target="_blank">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="eic-accelerator-2026.html" class="related-link">
+        <span class="related-link-name">EIC Accelerator 2026</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="eic-pathfinder-2026.html" class="related-link">
+        <span class="related-link-name">EIC Pathfinder 2026</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="step-scale-up-eic.html" class="related-link">
+        <span class="related-link-name">EIC STEP Scale Up</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="horizon-cl4-2026-05.html" class="related-link">
+        <span class="related-link-name">Horizon CL4 2026 Digital</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <div class="f-col-label">Biblioteca</div>
+      <ul class="f-links">
+        <li><a href="../biblioteca.html">Portugal 2030</a></li>
+        <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+        <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+        <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Plataforma</div>
+      <ul class="f-links">
+        <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../conhecimento.html">Conhecimento</a></li>
+        <li><a href="../parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Empresa</div>
+      <ul class="f-links">
+        <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="../sobre-nos.html">Equipa</a></li>
+        <li><a href="../carreiras.html">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
