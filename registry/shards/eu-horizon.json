@@ -1494,11 +1494,18 @@
       "source": "eu-funding-tenders",
       "state": "fechado",
       "last_check": "2026-04-26"
+    },
+    {
+      "id": "horizon-cl4-2026-02-two-stage",
+      "file": "instrumentos/horizon-cl4-2026-02-two-stage.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-26"
     }
   ],
-  "count": 142,
-  "open": 57,
+  "count": 143,
+  "open": 58,
   "closed": 46,
   "planned": 7,
-  "published": 2
+  "published": 3
 }
