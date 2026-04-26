@@ -338,11 +338,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2026-02-two-stage",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2026-02-two-stage.txt",
       "priority_score": 25,
-      "status": "aberto",
+      "status": "ready",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 0
     },
     {
       "id": "horizon-ju-gh-edctp3-2026-01-two-stage",
@@ -357,9 +358,12 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "aberto",
+      "status": "pending",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 1,
+      "download_error": "API 404, portal JS-rendered, WebSearch sem resultados relevantes - 2026-04-26",
+      "last_fail_date": "2026-04-26"
     },
     {
       "id": "horizon-eic-2026-aic",
@@ -372,11 +376,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2026-AIC",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-eic-2026-aic.txt",
       "priority_score": 25,
-      "status": "aberto",
+      "status": "ready",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 0
     },
     {
       "id": "horizon-raise-2026-01",
@@ -389,11 +394,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-RAISE-2026-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-raise-2026-01.txt",
       "priority_score": 25,
-      "status": "aberto",
+      "status": "ready",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 0
     },
     {
       "id": "horizon-euspa-2026-space",
@@ -406,11 +412,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EUSPA-2026-SPACE",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-euspa-2026-space.txt",
       "priority_score": 25,
-      "status": "aberto",
+      "status": "ready",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 0
     },
     {
       "id": "horizon-ju-er-2026-01",
@@ -423,11 +430,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-ER-2026-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-ju-er-2026-01.txt",
       "priority_score": 25,
-      "status": "aberto",
+      "status": "ready",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 0
     },
     {
       "id": "horizon-ju-gh-edctp3-2026-03",
@@ -440,11 +448,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-GH-EDCTP3-2026-03",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-ju-gh-edctp3-2026-03.txt",
       "priority_score": 25,
-      "status": "aberto",
+      "status": "ready",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl5-2026-06-two-stage",
@@ -459,9 +468,12 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "aberto",
+      "status": "pending",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 1,
+      "download_error": "API 404, portal JS-rendered - tentativa 2026-04-26",
+      "last_fail_date": "2026-04-26"
     },
     {
       "id": "horizon-miss-2026-05-two-stage",
@@ -476,9 +488,12 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 25,
-      "status": "aberto",
+      "status": "pending",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 1,
+      "download_error": "API 404, portal JS-rendered - tentativa 2026-04-26",
+      "last_fail_date": "2026-04-26"
     },
     {
       "id": "horizon-cl6-2026-02-two-stage",
@@ -491,11 +506,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL6-2026-02-two-stage",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl6-2026-02-two-stage.txt",
       "priority_score": 25,
-      "status": "aberto",
+      "status": "ready",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 0
     },
     {
       "id": "horizon-eic-2025-accelerator-01",
