@@ -58,8 +58,15 @@
       "source": "200m-capital",
       "state": "fechado",
       "last_check": "2026-04-25"
+    },
+    {
+      "id": "oxy-capital",
+      "file": "instrumentos/oxy-capital.html",
+      "source": "oxy-capital",
+      "state": "ativo",
+      "last_check": "2026-04-26"
     }
   ],
-  "count": 2,
+  "count": 3,
   "open": 1
 }
