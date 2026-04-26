@@ -256,24 +256,6 @@
       "last_fail_date": "2026-04-25"
     },
     {
-      "id": "horizon-eic-2026-step",
-      "name": "EIC STEP Scale Up",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "aviso_codigo": "HORIZON-EIC-2026-STEP",
-      "detected_date": "2026-04-26",
-      "deadline": "2027-06-03",
-      "budget": "300.000.000 EUR (2026)",
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2026-STEP",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/eu-funding-tenders/horizon-eic-2026-step.txt",
-      "priority_score": 25,
-      "status": "ready",
-      "fail_count": 0,
-      "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26. Abre 3 maio 2026. Equity-only, 10-30M EUR por empresa. STEP priority tech."
-    },
-    {
       "id": "horizon-ju-chips-2026-ft4-ia",
       "name": "AI-assisted Methods for Software-Defined Vehicle Engineering (Chips JU FT4)",
       "source_id": "eu-funding-tenders",

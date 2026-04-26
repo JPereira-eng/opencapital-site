@@ -1597,11 +1597,18 @@
       "source": "eu-funding-tenders",
       "state": "fechado",
       "last_check": "2026-04-27"
+    },
+    {
+      "id": "horizon-eic-2026-step",
+      "file": "instrumentos/horizon-eic-2026-step.html",
+      "source": "eu-funding-tenders",
+      "state": "previsto",
+      "last_check": "2026-04-27"
     }
   ],
-  "count": 156,
+  "count": 157,
   "open": 61,
   "closed": 51,
-  "planned": 7,
-  "published": 13
+  "planned": 8,
+  "published": 14
 }
