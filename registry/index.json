@@ -7,8 +7,8 @@
   },
   "totals": {
     "published": 505,
-    "open": 307,
-    "closed": 169,
+    "open": 305,
+    "closed": 171,
     "planned": 17,
     "in_queue": 73,
     "in_watchlist": 103,
@@ -31,8 +31,8 @@
     },
     "pt2030-norte": {
       "count": 6,
-      "open": 4,
-      "closed": 2
+      "open": 2,
+      "closed": 4
     },
     "pt2030-centro": {
       "count": 2,
@@ -101,12 +101,12 @@
     }
   },
   "last_full_cycle": "2026-04-12",
-  "last_monitor_run": "2026-04-25",
+  "last_monitor_run": "2026-04-26",
   "last_writer_run": "2026-04-26",
   "source_last_checked": {
     "portugal-2030": "2026-04-26",
-    "compete-2030": "2026-04-25",
-    "norte-2030": "2026-04-18",
+    "compete-2030": "2026-04-26",
+    "norte-2030": "2026-04-26",
     "centro-2030": "2026-04-20",
     "lisboa-2030": "2026-04-24",
     "alentejo-2030": "2026-04-25",
@@ -204,5 +204,5 @@
     "nova-sbe-venture-lab": "2026-04-26"
   },
   "last_scanner_run": "2026-04-26",
-  "last_updated": "2026-04-26T-scanner-r14-j3"
+  "last_updated": "2026-04-26T-monitor-r01-j1"
 }
