@@ -1501,11 +1501,18 @@
       "source": "eu-funding-tenders",
       "state": "aberto",
       "last_check": "2026-04-26"
+    },
+    {
+      "id": "horizon-eic-2026-aic",
+      "file": "instrumentos/horizon-eic-2026-aic.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-26"
     }
   ],
-  "count": 143,
+  "count": 144,
   "open": 58,
-  "closed": 46,
+  "closed": 47,
   "planned": 7,
-  "published": 3
+  "published": 4
 }
