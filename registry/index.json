@@ -10,10 +10,10 @@
     "open": 287,
     "closed": 164,
     "planned": 17,
-    "in_queue": 81,
+    "in_queue": 100,
     "in_watchlist": 103,
-    "in_catalogo": 0,
-    "in_overflow": 223
+    "in_catalogo": 1,
+    "in_overflow": 314
   },
   "shards": {
     "pt2030-compete": {
@@ -104,7 +104,7 @@
   "last_monitor_run": "2026-04-25",
   "last_writer_run": "2026-04-26",
   "source_last_checked": {
-    "portugal-2030": "2026-04-25",
+    "portugal-2030": "2026-04-26",
     "compete-2030": "2026-04-25",
     "norte-2030": "2026-04-18",
     "centro-2030": "2026-04-20",
@@ -117,7 +117,7 @@
     "sustentavel-2030": "2026-04-24",
     "mar-2030": "2026-04-25",
     "pat-2030": "2026-04-18",
-    "eu-funding-tenders": "2026-04-25",
+    "eu-funding-tenders": "2026-04-26",
     "ani": "2026-04-24",
     "iapmei": "2026-04-19",
     "prr": "2026-04-25",
@@ -155,7 +155,7 @@
     "f6s": "2026-04-13",
     "interreg-interact": "2026-04-25",
     "eu-startups": "2026-04-13",
-    "esa-bic": "2026-04-20",
+    "esa-bic": "2026-04-26",
     "eit-digital": "2026-04-19",
     "eit-climate": "2026-04-18",
     "shilling-vc": "2026-04-14",
@@ -198,8 +198,11 @@
     "eit-digital-challenge": "2026-04-24",
     "ppl-crowdfunding": "2026-04-25",
     "200m-capital": "2026-04-25",
-    "plug-and-play-portugal": "2026-04-25"
+    "plug-and-play-portugal": "2026-04-25",
+    "single-market-programme": "2026-04-26",
+    "justice-programme": "2026-04-26",
+    "nova-sbe-venture-lab": "2026-04-26"
   },
-  "last_scanner_run": "2026-04-25",
-  "last_updated": "2026-04-26T-writer-r13-j2"
+  "last_scanner_run": "2026-04-26",
+  "last_updated": "2026-04-26T-scanner-r14-j3"
 }
