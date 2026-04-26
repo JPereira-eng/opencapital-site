@@ -9961,7 +9961,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["energia-ambiente"],
+      "setores": [
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa - Armazenamento de Energia Off-Grid para Infraestruturas Criticas (CL5-D3-21 2026)",
       "tagline": "Investigacao em armazenamento de energia renovavel off-grid para hospitais, centros de dados e infraestruturas criticas europeias.",
@@ -9980,7 +9982,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["energia-ambiente"],
+      "setores": [
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa - Equipamentos Primarios HVDC para Redes Multiterminal do Futuro (CL5-D3-19 2026)",
       "tagline": "Desenvolvimento de equipamentos HVDC acessiveis, sem SF6 e interoperaveis para redes eletricas de alta tensao em corrente continua multiterminal.",
@@ -9999,7 +10003,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["mobilidade-transportes"],
+      "setores": [
+        "mobilidade-transportes"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa - Demonstracao em Larga Escala de Camioes Eletricos para Logistica de Longa Distancia (CL5-D5-01 2026)",
       "tagline": "Demonstracao em larga escala de camioes pesados de bateria eletrica para operacoes de logistica de longa distancia na Europa, no ambito da parceria 2ZERO.",
@@ -10018,7 +10024,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["mobilidade-transportes"],
+      "setores": [
+        "mobilidade-transportes"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa - Estaleiros do Futuro - Competitividade e Descarbonizacao da Construcao Naval (CL5-D5-12 2026)",
       "tagline": "Innovation Action ZEWT para modernizar estaleiros europeus de media e pequena dimensao e preparar a industria naval para a transicao para emissoes zero.",
@@ -10037,7 +10045,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["mobilidade-transportes"],
+      "setores": [
+        "mobilidade-transportes"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa - Portos do Futuro - Estrategias Sustentaveis e Digitais para Portos Maritimos e Interiores (CL5-D5-11 2026)",
       "tagline": "Innovation Action ZEWT para demonstrar estrategias sustentaveis e digitais replicaveis em portos maritimos e fluviais de media e pequena dimensao em toda a UE.",
@@ -10045,6 +10055,117 @@
       "highlight1": "Autoridades portuarias, operadores de terminais, tecnologia portuaria",
       "highlight2": "Nacional (UE e Paises Associados)",
       "href": "instrumentos/horizon-cl5-2026-05-d5-11.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl5-2026-05-d5-13",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Encerrado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "mobilidade-transportes",
+        "energia-ambiente"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa - Seguranca de Combustiveis de Emissoes Zero em Portos (ZEWT) (CL5-D5-13 2026)",
+      "tagline": "CSA ZEWT para desenvolver avaliacao de risco, enquadramento regulatorio e diretrizes para manuseamento seguro de combustiveis renovaveis e zero-carbono em portos.",
+      "highlight0": "EUR 2M CSA - ate 100% organizacoes publicas",
+      "highlight1": "Autoridades portuarias, reguladores maritimos, centros de investigacao",
+      "highlight2": "Nacional (UE e Paises Associados)",
+      "href": "instrumentos/horizon-cl5-2026-05-d5-13.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl5-2026-05-d5-02",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Encerrado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "mobilidade-transportes",
+        "tecnologia-digital"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa - Veiculos Eletricos Eficientes Definidos por Software (2ZERO) (CL5-D5-02 2026)",
+      "tagline": "Innovation Action 2ZERO para demonstrar EVs definidos por software com ganhos de eficiencia energetica superiores a 15% face a arquiteturas convencionais.",
+      "highlight0": "EUR 16M Innovation Action (IA) - ate 70% empresas",
+      "highlight1": "Fabricantes OEM, fornecedores Tier 1/2, universidades de engenharia",
+      "highlight2": "Nacional (UE e Paises Associados)",
+      "href": "instrumentos/horizon-cl5-2026-05-d5-02.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl5-2026-05-d5-07",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Encerrado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "mobilidade-transportes",
+        "tecnologia-digital"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa - Design e MRO de Aeronaves Assistidos por IA (CL5-D5-07 2026)",
+      "tagline": "RIA para integrar IA generativa, gemeos digitais e manutencao preditiva no ciclo de vida completo da aviacao europeia.",
+      "highlight0": "EUR 10M (ate 2 projetos x EUR 5M) - RIA",
+      "highlight1": "Fabricantes aeronauticos, MRO providers, universidades de engenharia",
+      "highlight2": "Nacional (UE e Paises Associados)",
+      "href": "instrumentos/horizon-cl5-2026-05-d5-07.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl5-2026-01-d2-01",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Encerrado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "mobilidade-transportes",
+        "energia-ambiente",
+        "industria"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa - Baterias Sustentaveis Design-to-Cost para Mobilidade (Batt4EU) (CL5-D2-01 2026)",
+      "tagline": "RIA Batt4EU para desenvolver quimicas alternativas ao NMC (LMFP, HLM, Na-ion) com processos de fabrico sustentaveis e design orientado para o custo.",
+      "highlight0": "EUR 30M Research and Innovation Action (RIA)",
+      "highlight1": "Fabricantes de baterias, OEM mobilidade, institutos de investigacao",
+      "highlight2": "Nacional (UE e Paises Associados)",
+      "href": "instrumentos/horizon-cl5-2026-01-d2-01.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl5-2026-01-d6-07",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Encerrado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "mobilidade-transportes",
+        "industria"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa - Construcao Inovadora para Infraestruturas de Transporte Resilientes (CL5-D6-07 2026)",
+      "tagline": "RIA para desenvolver e demonstrar materiais e tecnicas de construcao que reduzam em 30% as emissoes do ciclo de vida e aumentem a resiliencia de infraestruturas de transporte.",
+      "highlight0": "RIA - ate 100% para organizacoes sem fins lucrativos",
+      "highlight1": "Construtores, laboratorios de engenharia civil, autoridades de transportes",
+      "highlight2": "Nacional (UE e Paises Associados)",
+      "href": "instrumentos/horizon-cl5-2026-01-d6-07.html",
       "featured": false
     }
   ]

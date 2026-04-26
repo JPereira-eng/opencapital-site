@@ -1288,11 +1288,46 @@
     "horizon-cl5-2026-05-d5-01": true,
     "horizon-cl5-2026-05-d5-12": true,
     "horizon-cl5-2026-05-d5-11": true,
-    "horizon-cl5-2026-05-d5-13": true,
-    "horizon-cl5-2026-05-d5-02": true,
-    "horizon-cl5-2026-05-d5-07": true,
-    "horizon-cl5-2026-01-d2-01": true,
-    "horizon-cl5-2026-01-d6-07": true,
+    "horizon-cl5-2026-05-d5-13": {
+      "id": "horizon-cl5-2026-05-d5-13",
+      "aviso_codigo": "HORIZON-CL5-2026-05-D5-13",
+      "shard": "eu-horizon",
+      "href": "instrumentos/horizon-cl5-2026-05-d5-13.html",
+      "published_date": "2026-04-26",
+      "estado": "fechado"
+    },
+    "horizon-cl5-2026-05-d5-02": {
+      "id": "horizon-cl5-2026-05-d5-02",
+      "aviso_codigo": "HORIZON-CL5-2026-05-D5-02",
+      "shard": "eu-horizon",
+      "href": "instrumentos/horizon-cl5-2026-05-d5-02.html",
+      "published_date": "2026-04-26",
+      "estado": "fechado"
+    },
+    "horizon-cl5-2026-05-d5-07": {
+      "id": "horizon-cl5-2026-05-d5-07",
+      "aviso_codigo": "HORIZON-CL5-2026-05-D5-07",
+      "shard": "eu-horizon",
+      "href": "instrumentos/horizon-cl5-2026-05-d5-07.html",
+      "published_date": "2026-04-26",
+      "estado": "fechado"
+    },
+    "horizon-cl5-2026-01-d2-01": {
+      "id": "horizon-cl5-2026-01-d2-01",
+      "aviso_codigo": "HORIZON-CL5-2026-01-D2-01",
+      "shard": "eu-horizon",
+      "href": "instrumentos/horizon-cl5-2026-01-d2-01.html",
+      "published_date": "2026-04-26",
+      "estado": "fechado"
+    },
+    "horizon-cl5-2026-01-d6-07": {
+      "id": "horizon-cl5-2026-01-d6-07",
+      "aviso_codigo": "HORIZON-CL5-2026-01-D6-07",
+      "shard": "eu-horizon",
+      "href": "instrumentos/horizon-cl5-2026-01-d6-07.html",
+      "published_date": "2026-04-26",
+      "estado": "fechado"
+    },
     "horizon-cl5-2026-01-d6-09": true,
     "horizon-cl5-2026-01-d5-17": true,
     "horizon-cl5-2026-01-d2-09": true,
@@ -1425,9 +1460,7 @@
     "horizon-cl2-2025-01-transfo-03": true,
     "horizon-cl2-2025-01-transfo-02": true,
     "horizon-cl2-2025-01-democracy-11": true,
-    "plug-and-play-portugal": true,
-    "horizon-cl5-2026-03-d3-21": true,
-    "horizon-cl5-2026-03-d3-19": true
+    "plug-and-play-portugal": true
   },
   "by_aviso_codigo": {
     "185357": "185357",
@@ -2638,11 +2671,11 @@
     "HORIZON-CL5-2026-05-D5-01": true,
     "HORIZON-CL5-2026-05-D5-12": true,
     "HORIZON-CL5-2026-05-D5-11": true,
-    "HORIZON-CL5-2026-05-D5-13": true,
-    "HORIZON-CL5-2026-05-D5-02": true,
-    "HORIZON-CL5-2026-05-D5-07": true,
-    "HORIZON-CL5-2026-01-D2-01": true,
-    "HORIZON-CL5-2026-01-D6-07": true,
+    "HORIZON-CL5-2026-05-D5-13": "horizon-cl5-2026-05-d5-13",
+    "HORIZON-CL5-2026-05-D5-02": "horizon-cl5-2026-05-d5-02",
+    "HORIZON-CL5-2026-05-D5-07": "horizon-cl5-2026-05-d5-07",
+    "HORIZON-CL5-2026-01-D2-01": "horizon-cl5-2026-01-d2-01",
+    "HORIZON-CL5-2026-01-D6-07": "horizon-cl5-2026-01-d6-07",
     "HORIZON-CL5-2026-01-D6-09": true,
     "HORIZON-CL5-2026-01-D5-17": true,
     "HORIZON-CL5-2026-01-D2-09": true,
