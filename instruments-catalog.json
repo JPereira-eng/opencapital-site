@@ -11179,7 +11179,10 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao,associacao",
-      "setores": ["energia-ambiente", "mobilidade-transportes"],
+      "setores": [
+        "energia-ambiente",
+        "mobilidade-transportes"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa CL5-2026-06 MOBILITY (dois estágios)",
       "tagline": "Call de I&D para emissões em navios de longo curso e emissões não-exaustão em transporte terrestre.",
@@ -11198,7 +11201,11 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa",
-      "setores": ["tecnologia-digital", "energia-ambiente", "saude-ciencias-vida"],
+      "setores": [
+        "tecnologia-digital",
+        "energia-ambiente",
+        "saude-ciencias-vida"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EIC STEP Scale Up 2025",
       "tagline": "Investimento de equity do EIC Fund para scale-ups europeias em tecnologias digitais, cleantech e biotech.",
@@ -11217,7 +11224,11 @@
       "status_class": "status-planned",
       "fonte": "ue",
       "beneficiario": "empresa",
-      "setores": ["tecnologia-digital", "energia-ambiente", "saude-ciencias-vida"],
+      "setores": [
+        "tecnologia-digital",
+        "energia-ambiente",
+        "saude-ciencias-vida"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EIC STEP Scale Up 2026",
       "tagline": "Investimento equity do EIC Fund para scale-ups europeias em tecnologias STEP. Submissão contínua de maio 2026 a junho 2027.",
@@ -11236,7 +11247,10 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["tecnologia-digital", "mobilidade-transportes"],
+      "setores": [
+        "tecnologia-digital",
+        "mobilidade-transportes"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Chips JU FT4 - IA para Veículos Definidos por Software",
       "tagline": "€20M para métodos de IA aplicados à engenharia de software em veículos SDV. Único projeto financiado. Deadline: 4 jun 2026.",
@@ -11244,6 +11258,28 @@
       "highlight1": "Consórcios automóvel, IA e sistemas embarcados",
       "highlight2": "Deadline: 4 junho 2026",
       "href": "instrumentos/horizon-ju-chips-2026-ft4-ia.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-miss-2026-06",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao,entidade-publica,associacao",
+      "setores": [
+        "agroalimentar",
+        "energia-ambiente"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa MISS-2026-06: Solo e Adaptação Climática",
+      "tagline": "Joint Call das Missões Solo e Adaptação Climática: €20M para demonstrar soluções de resiliência dos solos a eventos extremos.",
+      "highlight0": "2 grants de €10M cada (Innovation Action)",
+      "highlight1": "Consórcios multi-país, abordagem multi-ator obrigatória",
+      "highlight2": "Min. 3 países de demonstração + 3 regiões replicantes",
+      "href": "instrumentos/horizon-miss-2026-06.html",
       "featured": false
     }
   ]
