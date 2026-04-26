@@ -491,6 +491,13 @@
       "source": "eu-funding-tenders",
       "state": "aberto",
       "last_check": "2026-04-26"
+    },
+    {
+      "id": "horizon-cl5-2026-07",
+      "file": "instrumentos/horizon-cl5-2026-07.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-26"
     }
   ],
   "instruments": [
@@ -1419,9 +1426,9 @@
       "last_check": "2026-04-26"
     }
   ],
-  "count": 108,
+  "count": 109,
   "open": 54,
-  "closed": 42,
+  "closed": 43,
   "planned": 7,
   "published": 1
 }
