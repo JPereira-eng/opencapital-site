@@ -90,5 +90,34 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": []
+  "queue": [
+    {
+      "id": "eif-european-investment-fund",
+      "name": "EIF (European Investment Fund)",
+      "source_id": "eif-european-investment-fund",
+      "catalog_type": "public-fund",
+      "detected_date": "2026-04-26",
+      "last_profile_update": "2026-04-26",
+      "status": "active",
+      "regulation_url": "https://www.eif.org",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://www.eif.org",
+        "linkedin": "https://linkedin.com/company/eif-european-investment-fund",
+        "pais_sede": "EU",
+        "descricao_curta": "Fundo europeu de fundos que co-investe com BPF e bancos portugueses, fornecendo capital de risco e garantias para PMEs e fundos VC/PE em Portugal.",
+        "como_candidatar": "Via intermediarios financeiros parceiros (BPF, bancos portugueses, fundos VC/PE com parceria EIF). Candidatura directa via typeform portal ou InvestEU equity portal.",
+        "tutela": "Grupo BEI (Banco Europeu de Investimento)",
+        "instrumentos_abertos": [
+          "Portugal Tech com BPF (VC early-stage ICT)",
+          "Portugal Growth com BPF (equity ate 1 biliao EUR)",
+          "InvestEU Programme (garantias para PMEs via bancos PT)",
+          "AGRI Portugal (garantias agricolas)",
+          "Transaction Cost Support (apoio nao reembolsavel, desde fev 2026)"
+        ],
+        "site_oficial": "https://www.eif.org/supporting-smes/eif-near-me/portugal"
+      },
+      "notes": "Perfil extraido 2026-04-26. Contacto PT/ES: David Gonzalez Martin. Historico: 56000+ PMEs portuguesas apoiadas. Parceiros PT: BPF, Santander, bancos PT (InvestEU)."
+    }
+  ]
 }
