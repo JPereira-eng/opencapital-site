@@ -1,0 +1,60 @@
+INSTRUMENTO: Horizon Europe Cluster 3 - Civil Security for Society / ECCC Cybersecurity Call 2026-02
+CODIGO: HORIZON-CL3-2026-02-CS-ECCC
+PROGRAMA: Horizon Europe - Cluster 3 Seguranca Civil para a Sociedade
+GESTORA: European Cybersecurity Competence Centre (ECCC)
+FONTE: ec.europa.eu/info/funding-tenders
+DATA DE EXTRACAO: 2026-04-26
+
+=== DOTACAO E FINANCIAMENTO ===
+Orcamento total: EUR 56,200,000
+Tipo de financiamento: Lump Sum Grant (HORIZON Lump Sum Grant Agreement)
+
+Distribuicao por topico:
+- CS-ECCC-01 (Software/hardware security): EUR 20,000,000 - 5 projetos esperados (EUR 3M-4M por projeto)
+- CS-ECCC-02 (SecureAI - IA security): EUR 21,200,000 - 5 projetos esperados (EUR 3M-4M por projeto)
+- CS-ECCC-03 (Advanced cryptographic schemes): EUR 15,000,000 - 4 projetos esperados (EUR 2M-3M por projeto)
+
+=== PRAZOS ===
+- CS-ECCC-01: Abertura 3 marco 2026; prazo de submissao 18 de setembro de 2026
+- CS-ECCC-02: prazo de submissao 16 de junho de 2026, 17:00 Bruxelas
+- CS-ECCC-03: Abertura 21 junho 2025; prazo de submissao 18 de setembro de 2026
+Procedimento: Single-stage (submissao direta, sem pre-proposta) para todos os topicos
+
+=== OBJETIVO PRINCIPAL ===
+Desenvolver metodologias e frameworks inovadoras para proteger ecosistemas de hardware e software ao longo dos seus ciclos de vida, incluindo seguranca de IA, criptografia pos-quantum e verificacao formal. A iniciativa responde as vulnerabilidades em cadeias de fornecimento globais cada vez mais complexas e ao aumento de ameacas ciberneticas sofisticadas.
+
+=== TOPICOS ===
+
+CS-ECCC-01 - Approaches and Tools for Security in Software and Hardware Development (RIA)
+Desenvolve frameworks de seguranca para cadeias de fornecimento de hardware/software com arquiteturas root-of-trust. Foco em chips confiaveis, co-processadores criptograficos, firmware self-healing e verificacao formal.
+Duas areas: (1) sistemas de hardware seguros; (2) seguranca da cadeia de fornecimento de software.
+Portfolio equilibrado: minimo 2 propostas financiadas em area (a) e 1 em area (b).
+Palavras-chave: IA, blockchain, certificacao, fabricacao de chips, criptografia post-quantum, trojans de hardware, security-by-design.
+
+CS-ECCC-02 - Enhancing Security, Privacy and Robustness of AI Models (SecureAI) (IA)
+Aborda vulnerabilidades em sistemas de IA em ciberseguranca e infraestruturas criticas. Desenvolve mecanismos para resistir a ataques adversariais, detetar poisoning e backdoors em dados de treino, e implementar IA com preservacao de privacidade (federated learning, encriptacao homomorfica). Garante conformidade com o AI Act da UE.
+Palavras-chave: robustez adversarial, federated learning, encriptacao homomorfica, AI Act, criptografia quantum-safe.
+
+CS-ECCC-03 - Advanced Cryptographic Schemes and High-Assurance Cryptographic Implementations (RIA)
+Desenvolvimento de assinaturas digitais seguras para carteiras e eIDs, implementacao de solucoes pos-quantum para autenticacao, e Software Criptografico de Alta Garantia com metodos de avaliacao automatizados.
+Palavras-chave: criptografia assimetrica, criptografia pos-quantum, eID, autenticacao, ciberseguranca.
+
+=== ELEGIBILIDADE ===
+- Entidades estabelecidas em Estados-Membros da UE e Paises Associados
+- Entidades controladas por paises nao elegiveis estao excluidas (restricao de seguranca nacional)
+- Nao restrito a PMEs
+
+=== DESPESAS ELEGIVEIS ===
+Investigacao e inovacao em ciberseguranca, desenvolvimento de software, prototipagem de hardware, verificacao formal e criptografia. Modelo de lump sum: justificacao necessaria para categorias C/D quando excedem 15% dos custos de pessoal.
+
+=== CRITERIOS DE SELECAO ===
+Criterios padrao RIA/IA do Horizonte Europa (Anexo D dos Anexos Gerais): excelencia cientifica e tecnologica, impacto (conformidade AI Act, mercado UE, padronizacao) e qualidade de implementacao.
+
+=== CONDICOES ESPECIAIS ===
+- Atividades podem envolver informacao classificada UE (EUCI) ou sensivel (SEN)
+- Resultados em materia de seguranca podem ser sensiveis - restricoes de publicacao aplicam-se
+- Contacto para candidatos: applicants@eccc.europa.eu
+
+=== FONTE ===
+https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL3-2026-02-CS-ECCC
+Topicos: HORIZON-CL3-2026-02-CS-ECCC-01, -02, -03
