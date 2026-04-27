@@ -587,6 +587,41 @@
       "state": "fechado",
       "date_added": "2026-04-27",
       "file": "instrumentos/horizon-cl5-2025-06.html"
+    },
+    {
+      "id": "horizon-eic-2025-transitionopen",
+      "file": "instrumentos/horizon-eic-2025-transitionopen.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-27"
+    },
+    {
+      "id": "horizon-miss-2025-03",
+      "file": "instrumentos/horizon-miss-2025-03.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-27"
+    },
+    {
+      "id": "horizon-eic-2025-womentech",
+      "file": "instrumentos/horizon-eic-2025-womentech.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-27"
+    },
+    {
+      "id": "horizon-miss-2025-01",
+      "file": "instrumentos/horizon-miss-2025-01.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-27"
+    },
+    {
+      "id": "horizon-widera-2025-01",
+      "file": "instrumentos/horizon-widera-2025-01.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-27"
     }
   ],
   "instruments": [
@@ -1739,9 +1774,9 @@
       "last_check": "2026-04-27"
     }
   ],
-  "count": 172,
+  "count": 177,
   "open": 68,
-  "closed": 56,
+  "closed": 61,
   "planned": 8,
   "published": 27
 }
