@@ -90,32 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "goparity",
-      "name": "GoParity",
-      "source_id": "goparity",
-      "catalog_type": "crowdfunding",
-      "detected_date": "2026-04-27",
-      "last_profile_update": "2026-04-27",
-      "status": "active",
-      "regulation_url": "https://goparity.com",
-      "priority_score": 10,
-      "profile": {
-        "website": "https://goparity.com",
-        "linkedin": null,
-        "pais_sede": "PT",
-        "descricao_curta": "Plataforma portuguesa de debt crowdfunding (crowdlending) focada em projetos de impacto ambiental e social, regulada pela CMVM.",
-        "como_candidatar": "Via secao 'Get funded' em goparity.com/organizations/get-funded. Proposta gerada em 48 horas apos simulacao online.",
-        "modelo": "debt",
-        "ticket_min_investidor_eur": 10,
-        "comissao": "Nao especificada publicamente",
-        "regulamentacao": "Regulamento UE 2020/1503 (ECSPR) - CMVM. Entidade: Power Parity, SA (NIF 514373822)",
-        "campanhas_ativas_url": "https://goparity.com/invest/open-projects",
-        "taxa_media_juro_pct": 6.49,
-        "maturidade_media_anos": 3.2
-      },
-      "notes": "Plataforma PT debt crowdlending impact. Taxa media 6,49%, maturidade media 3,2 anos. Regulada CMVM/ECSPR. Pagamentos via MangoPay SA (Luxemburgo). Perfil extraido 2026-04-27."
-    }
-  ]
+  "queue": []
 }
