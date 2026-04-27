@@ -1702,11 +1702,46 @@
       "state": "fechado",
       "date_added": "2026-04-27",
       "file": "instrumentos/horizon-ju-eurohpc-2026-qgc-02.html"
+    },
+    {
+      "id": "horizon-cl6-2025-02-two-stage",
+      "file": "instrumentos/horizon-cl6-2025-02-two-stage.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-27"
+    },
+    {
+      "id": "horizon-ju-gh-edctp3-2026-02-two-stage",
+      "file": "instrumentos/horizon-ju-gh-edctp3-2026-02-two-stage.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-27"
+    },
+    {
+      "id": "horizon-ju-er-2025-02",
+      "file": "instrumentos/horizon-ju-er-2025-02.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-27"
+    },
+    {
+      "id": "horizon-ju-sns-2025-01",
+      "file": "instrumentos/horizon-ju-sns-2025-01.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-27"
+    },
+    {
+      "id": "horizon-cl5-2025-05-two-stage",
+      "file": "instrumentos/horizon-cl5-2025-05-two-stage.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-27"
     }
   ],
-  "count": 167,
-  "open": 66,
-  "closed": 53,
+  "count": 172,
+  "open": 68,
+  "closed": 56,
   "planned": 8,
-  "published": 22
+  "published": 27
 }
