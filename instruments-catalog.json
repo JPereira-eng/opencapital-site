@@ -11396,7 +11396,9 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Research Management Facility (HORIZON-WIDERA-2026-04)",
       "tagline": "Apoio a criacao e melhoria de capacidades de gestao de investigacao em instituicoes de paises Widening. Portugal elegivel como coordenador.",
@@ -11404,6 +11406,27 @@
       "highlight1": "Instituicoes de investigacao de paises Widening (incl. Portugal como coordenador)",
       "highlight2": "Paises Widening do Horizonte Europa",
       "href": "instrumentos/horizon-widera-2026-04.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-widera-2026-01",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 24/09/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao",
+      "setores": [
+        "todos"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Teaming Synergies WIDERA 2026 (HORIZON-WIDERA-2026-01)",
+      "tagline": "Reforco da colaboracao entre Centros de Excelencia Teaming nos paises Widening. Dotacao de €7M para um unico projeto. Prazo: 24 setembro 2026.",
+      "highlight0": "€7M para um unico projeto, 100% financiado (CSA)",
+      "highlight1": "Centros de Excelencia Teaming, universidades, centros de investigacao, PME",
+      "highlight2": "Paises Widening do Horizonte Europa, incluindo Portugal",
+      "href": "instrumentos/horizon-widera-2026-01.html",
       "featured": false
     }
   ]
