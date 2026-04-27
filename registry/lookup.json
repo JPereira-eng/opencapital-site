@@ -1517,10 +1517,26 @@
     "horizon-widera-2026-01": true,
     "satcen-2025-op-0001": true,
     "horizon-ju-eurohpc-2026-qgc-02": true,
-    "horizon-miss-2025-05-two-stage": true,
-    "horizon-cl5-2026-04-two-stage": true,
-    "horizon-cl6-2026-03-two-stage": true,
-    "horizon-cl5-2025-06": true,
+    "horizon-miss-2025-05-two-stage": {
+      "shard": "eu-horizon",
+      "source_id": "eu-funding-tenders",
+      "detected_date": "2026-04-27"
+    },
+    "horizon-cl5-2026-04-two-stage": {
+      "shard": "eu-horizon",
+      "source_id": "eu-funding-tenders",
+      "detected_date": "2026-04-27"
+    },
+    "horizon-cl6-2026-03-two-stage": {
+      "shard": "eu-horizon",
+      "source_id": "eu-funding-tenders",
+      "detected_date": "2026-04-27"
+    },
+    "horizon-cl5-2025-06": {
+      "shard": "eu-horizon",
+      "source_id": "eu-funding-tenders",
+      "detected_date": "2026-04-27"
+    },
     "horizon-cl6-2025-02-two-stage": true,
     "horizon-ju-gh-edctp3-2026-02-two-stage": true,
     "horizon-ju-er-2025-02": true,
@@ -1591,6 +1607,11 @@
     "centros-qualifica-area-metropolitana-lisboa": {
       "shard": "pt-other",
       "source_id": "iefp",
+      "detected_date": "2026-04-27"
+    },
+    "brisa-ahead-start-2026": {
+      "shard": "catalogo-aceleradores",
+      "source_id": "brisa-innovation",
       "detected_date": "2026-04-27"
     }
   },

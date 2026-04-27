@@ -559,6 +559,34 @@
       "source": "eu-funding-tenders",
       "state": "fechado",
       "last_check": "2026-04-26"
+    },
+    {
+      "id": "horizon-miss-2025-05-two-stage",
+      "title": "Horizonte Europa - Missao Solo: Living Labs de Saude do Solo (HORIZON-MISS-2025-05)",
+      "state": "aberto",
+      "date_added": "2026-04-27",
+      "file": "instrumentos/horizon-miss-2025-05-two-stage.html"
+    },
+    {
+      "id": "horizon-cl5-2026-04-two-stage",
+      "title": "Horizonte Europa Cluster 5 - Clima, Energia e Mobilidade 2026 (HORIZON-CL5-2026-04)",
+      "state": "aberto",
+      "date_added": "2026-04-27",
+      "file": "instrumentos/horizon-cl5-2026-04-two-stage.html"
+    },
+    {
+      "id": "horizon-cl6-2026-03-two-stage",
+      "title": "Horizonte Europa Cluster 6 - Alimentacao, Bioeconomia e Ambiente 2026 (HORIZON-CL6-2026-03)",
+      "state": "aberto",
+      "date_added": "2026-04-27",
+      "file": "instrumentos/horizon-cl6-2026-03-two-stage.html"
+    },
+    {
+      "id": "horizon-cl5-2025-06",
+      "title": "Horizonte Europa Cluster 5 - Transicao Climatica e Mobilidade Urbana 2025 (HORIZON-CL5-2025-06)",
+      "state": "fechado",
+      "date_added": "2026-04-27",
+      "file": "instrumentos/horizon-cl5-2025-06.html"
     }
   ],
   "instruments": [
@@ -1676,9 +1704,9 @@
       "file": "instrumentos/horizon-ju-eurohpc-2026-qgc-02.html"
     }
   ],
-  "count": 163,
-  "open": 63,
-  "closed": 52,
+  "count": 167,
+  "open": 66,
+  "closed": 53,
   "planned": 8,
-  "published": 18
+  "published": 22
 }

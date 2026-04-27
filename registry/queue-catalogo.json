@@ -90,41 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "brisa-ahead-start-2026",
-      "name": "Brisa Ahead Start 2026",
-      "source_id": "brisa-innovation",
-      "catalog_type": "cvc",
-      "detected_date": "2026-04-27",
-      "last_profile_update": "2026-04-27",
-      "status": "active",
-      "regulation_url": "https://ahead.brisa.pt/spaces/1/pages/33",
-      "priority_score": 15,
-      "profile": {
-        "website": "https://grupobrisa.pt/inovacao/",
-        "linkedin": "https://linkedin.com/company/grupobrisa/",
-        "pais_sede": "PT",
-        "descricao_curta": "Programa de open innovation do Grupo Brisa para startups com solucoes em mobilidade, infraestrutura inteligente e cidades conectadas, em parceria com Plug and Play.",
-        "como_candidatar": "Formulario online em ahead.brisa.pt. Candidaturas abertas ate 17 de junho de 2026.",
-        "modelo": "non-equity",
-        "formato": "hibrido",
-        "batch_proximo": "2026",
-        "deadline_proxima": "2026-06-17",
-        "setores_foco": [
-          "mobilidade conectada",
-          "smart cities",
-          "road safety",
-          "sustainability",
-          "procurement tech",
-          "legal tech"
-        ],
-        "parceiros": [
-          "Plug and Play"
-        ],
-        "alumni_destaques": []
-      },
-      "notes": "Programa Ahead Start do Grupo Brisa. Sem componente de equity. Acesso a pilotos com unidades de negocio Brisa e a rede de VCs via Plug and Play."
-    }
-  ]
+  "queue": []
 }
