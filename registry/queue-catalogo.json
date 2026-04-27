@@ -90,32 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "galp-ventures",
-      "name": "Galp Ventures (Upcoming Energies)",
-      "source_id": "galp-ventures",
-      "catalog_type": "cvc",
-      "detected_date": "2026-04-27",
-      "last_profile_update": "2026-04-27",
-      "status": "active",
-      "regulation_url": "https://upcomingenergies.galp.com",
-      "priority_score": 10,
-      "profile": {
-        "website": "https://upcomingenergies.galp.com",
-        "linkedin": null,
-        "pais_sede": "PT",
-        "descricao_curta": "Atividade de CVC da Galp Energia focada em startups de transicao energetica, renovaveis e hidrogenia verde. Programa open innovation 'Startup the Future' com edicoes anuais.",
-        "como_candidatar": "Candidatura via plataforma Startup the Future (startupthefuture.galp.com) ou contacto direto via upcomingenergies.galp.com/en/open-calls",
-        "empresa_mae": "Galp Energia SGPS",
-        "tese": "Startups em transicao energetica, renovaveis, hidrogenia verde, mobilidade sustentavel e solucoes de descarbonizacao industrial",
-        "estagios": ["early-stage", "growth"],
-        "setores": ["energia renovavel", "hidrogenia verde", "mobilidade sustentavel", "descarbonizacao industrial", "solucoes climaticas"],
-        "geografia": ["PT", "ES", "EU"],
-        "programas_open_innovation": ["Startup the Future", "Upcoming Energies Open Calls"],
-        "contacto": "upcomingenergies.galp.com/en/open-calls"
-      },
-      "notes": "CVC da Galp. Programa open innovation Startup the Future com edicoes anuais e edicoes de 650+ candidaturas de mais de 50 paises. Plataforma Upcoming Energies para desafios abertos com pilotos e investimento. Verificado pela primeira vez em 2026-04-27."
-    }
-  ]
+  "queue": []
 }
