@@ -686,7 +686,9 @@
       "priority_score": 95,
       "status": "plano_anual",
       "notes": "FA0244/2025. CENTRO2030. FEDER.",
-      "download_error": "Plano Anual - PDF contem resumo PAA, nao regulamento publicado"
+      "download_error": "Plano Anual - PDF contem resumo PAA, nao regulamento publicado",
+      "plano_anual_last_check": "2026-04-27",
+      "plano_anual_checks": 1
     },
     {
       "id": "passivos-ambientais-de-saneamento-de-aguas-residuais-em-alta",
@@ -703,7 +705,9 @@
       "priority_score": 95,
       "status": "plano_anual",
       "notes": "FA0263/2025. SUSTENTAVEL2030. FC.",
-      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado"
+      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado",
+      "plano_anual_last_check": "2026-04-27",
+      "plano_anual_checks": 1
     },
     {
       "id": "protecao-e-defesa-do-litoral-acoes-materiais",
@@ -737,7 +741,9 @@
       "priority_score": 75,
       "status": "plano_anual",
       "notes": "FA0313/2025. CENTRO2030. FSE+.",
-      "download_error": "Plano Anual - PDF contém Resumo de Aviso do Plano Anual de Avisos"
+      "download_error": "Plano Anual - PDF contém Resumo de Aviso do Plano Anual de Avisos",
+      "plano_anual_last_check": "2026-04-27",
+      "plano_anual_checks": 1
     },
     {
       "id": "balcao-da-inclusao-unidades-moveis-em-territorios-de-baixa-densidade",
@@ -1800,7 +1806,8 @@
       "fail_count": 0,
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-04-18",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-04-27"
     },
     {
       "id": "educacao-intercultural-em-contexto-escolar",
@@ -1820,7 +1827,8 @@
       "fail_count": 0,
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-04-18",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-04-27"
     },
     {
       "id": "formacao-e-emprego-jovens-ii",
@@ -1840,7 +1848,8 @@
       "fail_count": 0,
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-04-18",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-04-27"
     },
     {
       "id": "programas-de-insercao-profissional-publicos-mais-vulneraveis",
@@ -1860,7 +1869,8 @@
       "fail_count": 0,
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-04-18",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-04-27"
     },
     {
       "id": "formacao-e-emprego-desempregados",
@@ -1880,7 +1890,8 @@
       "fail_count": 0,
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-04-18",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-04-27"
     },
     {
       "id": "infraestruturas-escolares-da-primeira-infancia-2-aviso",
