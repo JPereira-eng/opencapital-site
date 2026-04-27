@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum Grand Challenge EuroHPC 2026 | Open Capital</title>
+  <meta name="description" content="EuroHPC JU Quantum Grand Challenge: €4M em financiamento Horizonte Europa para startups europeias de computacao quantica, com acesso a €100M de divida de risco via BEI. Instrumento de referencia fechado em janeiro 2026.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:       #1A3A5C;
+      --navy-deep:  #0D1F33;
+      --gold:       #C9A96E;
+      --white:      #FFFFFF;
+      --grey-light: #E5E5E5;
+      --grey-mid:   #7A7A7A;
+      --grey-dark:  #2A2A2A;
+      --font: 'Montserrat', sans-serif;
+      --transition: all 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --shadow: 0 8px 40px rgba(26,58,92,0.10);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:var(--font); background:var(--white); color:var(--grey-dark); -webkit-font-smoothing:antialiased; }
+
+    /* NAVBAR */
+    .navbar { display:flex; align-items:center; justify-content:space-between; padding:0 40px; height:74px; background:var(--white); border-bottom:1px solid var(--grey-light); position:fixed; top:0; left:0; right:0; z-index:1000; backdrop-filter:blur(8px); }
+    .nav-logo-img { height:57px; width:auto; }
+    .nav-links { display:flex; align-items:center; gap:24px; list-style:none; margin-left:auto; }
+    .nav-links a { font-size:15px; font-weight:500; letter-spacing:0.08em; color:var(--grey-dark); text-decoration:none; transition:var(--transition); position:relative; padding-bottom:3px; white-space:nowrap; }
+    .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold); transition:width 0.3s ease; }
+    .nav-links a:hover { color:var(--navy); }
+    .nav-links a:hover::after { width:100%; }
+    .nav-links a.active { color:var(--navy); }
+    .nav-links a.active::after { width:100%; }
+    .nav-badge { font-size:10px; font-weight:600; letter-spacing:0.06em; color:var(--gold); border:1px solid var(--gold); padding:1px 4px; margin-left:3px; vertical-align:super; line-height:1; }
+    .nav-cta { font-size:16px; font-weight:600; letter-spacing:0.08em; color:var(--navy); text-decoration:none; border:1px solid var(--navy); padding:9px 18px; margin-left:28px; transition:var(--transition); white-space:nowrap; }
+    .nav-cta:hover { background:var(--navy); color:var(--white); }
+    .nav-dropdown { position:relative; }
+    .nav-dropdown-menu { position:absolute; top:100%; right:0; background:var(--white); border:1px solid var(--grey-light); min-width:160px; box-shadow:var(--shadow); display:none; z-index:100; }
+    .nav-dropdown:hover .nav-dropdown-menu { display:block; }
+    .nav-dropdown-menu a { display:block; font-size:13px; font-weight:500; letter-spacing:0.05em; color:var(--grey-dark); padding:11px 18px; text-decoration:none; transition:var(--transition); border-bottom:1px solid var(--grey-light); }
+    .nav-dropdown-menu a:last-child { border-bottom:none; }
+    .nav-dropdown-menu a:hover { color:var(--navy); background:#FAFAFA; }
+
+    /* HERO */
+    .article-hero { background:var(--navy); padding:140px 8% 80px; position:relative; margin-top:74px; }
+    .article-hero::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background:linear-gradient(to bottom, var(--gold), rgba(201,169,110,0.3) 60%, transparent); }
+    .breadcrumb { display:flex; align-items:center; gap:8px; margin-bottom:28px; }
+    .breadcrumb a { font-size:13px; font-weight:400; color:rgba(255,255,255,0.45); text-decoration:none; transition:var(--transition); }
+    .breadcrumb a:hover { color:rgba(255,255,255,0.8); }
+    .breadcrumb-sep { color:rgba(255,255,255,0.25); font-size:12px; }
+    .breadcrumb span { font-size:13px; color:rgba(255,255,255,0.65); }
+    .hero-badge { display:inline-block; font-size:10px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); border:1px solid rgba(201,169,110,0.45); padding:5px 14px; margin-bottom:20px; }
+    .hero-gold-sep { width:1px; height:44px; background:var(--gold); margin-bottom:24px; opacity:0.7; }
+    .article-hero h1 { font-size:54px; font-weight:700; color:var(--white); line-height:1.05; letter-spacing:-0.01em; margin-bottom:20px; max-width:820px; }
+    .article-hero-tagline { font-size:20px; font-weight:300; color:rgba(255,255,255,0.52); line-height:1.75; max-width:680px; margin-bottom:48px; }
+    .meta-bar { display:flex; gap:0; border-top:1px solid rgba(255,255,255,0.10); padding-top:32px; flex-wrap:wrap; }
+    .meta-item { flex:1; min-width:160px; padding-right:32px; border-right:1px solid rgba(255,255,255,0.08); margin-right:32px; }
+    .meta-item:last-child { border-right:none; margin-right:0; }
+    .meta-label { font-size:10px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.32); margin-bottom:6px; }
+    .meta-value { font-size:18px; font-weight:500; color:var(--white); }
+    .meta-value.closed { color:#E8856A; }
+
+    /* BACK BAR */
+    .back-bar { background:#FAFAFA; border-bottom:1px solid var(--grey-light); padding:14px 8%; }
+    .back-link { font-size:13px; font-weight:500; letter-spacing:0.08em; color:var(--grey-mid); text-decoration:none; transition:var(--transition); }
+    .back-link:hover { color:var(--navy); }
+
+    /* LAYOUT */
+    .article-layout { display:grid; grid-template-columns:1fr 320px; gap:64px; max-width:1200px; margin:0 auto; padding:80px 80px 96px; align-items:start; }
+    .article-sidebar { position:sticky; top:100px; }
+
+    /* ARTICLE BODY */
+    .article-section { margin-bottom:56px; }
+    .article-eyebrow { font-size:13px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+    .article-h2 { font-size:28px; font-weight:600; color:var(--navy); line-height:1.2; margin-bottom:20px; }
+    .article-body { font-size:18px; font-weight:400; color:var(--grey-dark); line-height:1.85; margin-bottom:20px; }
+    .article-body + .article-body { margin-top:0; }
+
+    /* STATS ROW */
+    .stats-row { display:grid; grid-template-columns:repeat(4, 1fr); gap:1px; background:var(--grey-light); border:1px solid var(--grey-light); margin:40px 0; }
+    .stat-block { background:var(--white); padding:28px 24px; text-align:center; }
+    .stat-value { font-size:32px; font-weight:700; color:var(--navy); line-height:1; margin-bottom:8px; }
+    .stat-label { font-size:11px; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--grey-mid); }
+
+    /* HIGHLIGHT BOX */
+    .highlight-box { border-left:3px solid var(--gold); background:#FAFAFA; padding:28px 32px; margin:36px 0; }
+    .highlight-box-title { font-size:14px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+    .highlight-box p { font-size:17px; font-weight:400; color:var(--grey-dark); line-height:1.8; }
+
+    /* BULLET LIST */
+    .diamond-list { list-style:none; margin:20px 0; }
+    .diamond-list li { display:flex; gap:14px; align-items:flex-start; margin-bottom:14px; font-size:17px; font-weight:400; color:var(--grey-dark); line-height:1.7; }
+    .diamond-list li::before { content:''; width:6px; height:6px; border:1px solid var(--gold); transform:rotate(45deg); flex-shrink:0; margin-top:8px; }
+
+    /* TWO-PHASE DIAGRAM */
+    .phase-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:32px 0; }
+    .phase-card { border:1px solid var(--grey-light); padding:28px 24px; position:relative; }
+    .phase-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; }
+    .phase-card.phase-1::before { background:var(--navy); }
+    .phase-card.phase-2::before { background:var(--gold); }
+    .phase-num { font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--grey-mid); margin-bottom:8px; }
+    .phase-title { font-size:18px; font-weight:600; color:var(--navy); margin-bottom:12px; }
+    .phase-budget { font-size:24px; font-weight:700; color:var(--navy); margin-bottom:16px; }
+    .phase-detail { font-size:15px; font-weight:400; color:var(--grey-mid); line-height:1.7; }
+
+    /* ELIGIBILITY TABLE */
+    .elig-table { width:100%; border-collapse:collapse; margin:24px 0; }
+    .elig-table th { font-size:11px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--navy); background:#FAFAFA; padding:12px 16px; text-align:left; border-bottom:2px solid var(--grey-light); }
+    .elig-table td { font-size:16px; font-weight:400; color:var(--grey-dark); padding:14px 16px; border-bottom:1px solid var(--grey-light); vertical-align:top; line-height:1.6; }
+    .elig-table tr:last-child td { border-bottom:none; }
+    .check { color:#3A8C5A; font-weight:600; }
+    .cross { color:#C0392B; font-weight:600; }
+
+    /* PERSPETIVA BOX */
+    .perspetiva-box { background:var(--navy); padding:36px 40px; margin-top:48px; }
+    .perspetiva-eyebrow { font-size:11px; font-weight:600; letter-spacing:0.26em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+    .perspetiva-box p { font-size:17px; font-weight:300; color:rgba(255,255,255,0.75); line-height:1.85; margin-bottom:14px; }
+    .perspetiva-box p:last-child { margin-bottom:0; }
+    .perspetiva-author { display:flex; align-items:center; gap:16px; margin-top:24px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.10); }
+    .perspetiva-avatar { width:44px; height:44px; background:rgba(201,169,110,0.20); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .perspetiva-avatar svg { width:22px; height:22px; }
+    .perspetiva-name { font-size:14px; font-weight:600; color:var(--white); }
+    .perspetiva-role { font-size:12px; font-weight:400; color:rgba(255,255,255,0.40); }
+
+    /* SIDEBAR */
+    .sidebar-card { border:1px solid var(--grey-light); padding:28px; margin-bottom:20px; }
+    .sidebar-card-title { font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--navy); margin-bottom:20px; padding-bottom:14px; border-bottom:1px solid var(--grey-light); }
+    .sidebar-fact { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:14px; padding-bottom:14px; border-bottom:1px solid #F5F5F5; }
+    .sidebar-fact:last-child { margin-bottom:0; padding-bottom:0; border-bottom:none; }
+    .sidebar-fact-label { font-size:11px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--grey-mid); flex-shrink:0; }
+    .sidebar-fact-value { font-size:14px; font-weight:500; color:var(--grey-dark); text-align:right; line-height:1.4; }
+    .sidebar-fact-value.closed { color:#C0392B; }
+    .sidebar-cta { background:var(--navy); padding:28px; margin-bottom:20px; }
+    .sidebar-cta-title { font-size:14px; font-weight:600; color:var(--white); margin-bottom:10px; line-height:1.4; }
+    .sidebar-cta-text { font-size:13px; font-weight:300; color:rgba(255,255,255,0.55); line-height:1.6; margin-bottom:20px; }
+    .sidebar-cta-btn { display:block; text-align:center; background:var(--gold); color:var(--white); font-size:12px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; padding:13px 20px; text-decoration:none; transition:var(--transition); }
+    .sidebar-cta-btn:hover { background:#B8945A; }
+    .related-list { list-style:none; }
+    .related-list li { border-bottom:1px solid #F5F5F5; padding:12px 0; }
+    .related-list li:last-child { border-bottom:none; }
+    .related-list a { font-size:14px; font-weight:400; color:var(--navy); text-decoration:none; line-height:1.4; transition:var(--transition); display:block; }
+    .related-list a:hover { color:var(--gold); }
+    .related-tag { display:inline-block; font-size:10px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--grey-mid); margin-top:3px; }
+
+    /* STATUS CLOSED banner */
+    .status-closed-banner { background:#FEF5F3; border:1px solid #F5C5BA; border-left:3px solid #C0392B; padding:16px 20px; margin-bottom:40px; display:flex; align-items:flex-start; gap:14px; }
+    .status-closed-banner svg { flex-shrink:0; margin-top:2px; }
+    .status-closed-banner p { font-size:15px; font-weight:400; color:var(--grey-dark); line-height:1.6; }
+    .status-closed-banner strong { color:#C0392B; }
+
+    /* DIVIDER */
+    .div-gold { height:1px; background:linear-gradient(to right, transparent, var(--gold) 40%, transparent); margin:48px 0; }
+
+    /* FOOTER */
+    .footer { background:var(--navy-deep); padding:56px 80px 34px; }
+    .footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr; gap:44px; margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.07); }
+    .f-logo-img { height:72px; width:auto; }
+    .f-desc { font-size:15px; font-weight:300; color:rgba(255,255,255,0.36); line-height:1.85; margin-top:18px; max-width:260px; }
+    .f-tagline { font-size:16px; font-weight:100; letter-spacing:0.14em; color:var(--gold); margin-top:12px; }
+    .f-col-label { font-size:11px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:rgba(255,255,255,0.24); margin-bottom:16px; }
+    .f-links { list-style:none; }
+    .f-links li { margin-bottom:9px; }
+    .f-links a { font-size:15px; font-weight:300; color:rgba(255,255,255,0.48); text-decoration:none; transition:var(--transition); letter-spacing:0.03em; }
+    .f-links a:hover { color:var(--white); }
+    .f-badge { font-size:9px; font-weight:600; letter-spacing:0.1em; color:var(--gold); border:1px solid rgba(201,169,110,0.45); padding:1px 5px; margin-left:5px; vertical-align:middle; }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+    .f-copy { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:0.05em; }
+    .f-legal { display:flex; gap:20px; }
+    .f-legal a { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); text-decoration:none; letter-spacing:0.05em; transition:var(--transition); }
+    .f-legal a:hover { color:rgba(255,255,255,0.45); }
+
+    /* SCROLL REVEAL */
+    .reveal { opacity:0; transform:translateY(22px); transition:opacity 0.55s ease, transform 0.55s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    @media (max-width:1024px) {
+      .article-layout { grid-template-columns:1fr; padding:48px 32px; }
+      .article-sidebar { position:static; }
+      .stats-row { grid-template-columns:repeat(2, 1fr); }
+      .phase-grid { grid-template-columns:1fr; }
+    }
+    @media (max-width:768px) {
+      .article-hero h1 { font-size:36px; }
+      .navbar { padding:0 20px; }
+      .footer { padding:48px 24px 28px; }
+      .footer-grid { grid-template-columns:1fr 1fr; }
+      .meta-bar { gap:24px; }
+      .meta-item { flex:none; width:50%; border-right:none; margin-right:0; padding-right:0; }
+      .stats-row { grid-template-columns:1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="../index.html">
+      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../biblioteca.html" class="active">Soluções</a></li>
+      <li><a href="../conhecimento.html">Conhecimento</a></li>
+      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades ▾</a>
+        <div class="nav-dropdown-menu">
+          <a href="../parceiros.html">Parceiros</a>
+          <a href="../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="article-hero">
+    <div class="breadcrumb">
+      <a href="../index.html">Início</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="../biblioteca.html">Soluções</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Quantum Grand Challenge EuroHPC 2026</span>
+    </div>
+    <div class="hero-gold-sep"></div>
+    <div class="hero-badge">Inovação e Tecnologia</div>
+    <h1>Quantum Grand Challenge EuroHPC 2026</h1>
+    <p class="article-hero-tagline">Programa inovador do EuroHPC JU que combina financiamento Horizonte Europa com divida de risco do BEI para catapultar startups europeias de computacao quantica para aplicacoes industriais reais.</p>
+    <div class="meta-bar">
+      <div class="meta-item">
+        <div class="meta-label">Fase 1</div>
+        <div class="meta-value">€4 000 000</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Fase 2 (BEI)</div>
+        <div class="meta-value">ate €100M</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Prazo</div>
+        <div class="meta-value closed">Fechado (Jan 2026)</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Elegibilidade</div>
+        <div class="meta-value">Startups europeias de QC</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACK BAR -->
+  <div class="back-bar">
+    <a href="../biblioteca.html" class="back-link">← Voltar ao catalogo de instrumentos</a>
+  </div>
+
+  <!-- ARTICLE LAYOUT -->
+  <div class="article-layout">
+
+    <!-- MAIN ARTICLE -->
+    <main>
+
+      <!-- STATUS CLOSED BANNER -->
+      <div class="status-closed-banner reveal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C0392B" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <p><strong>Aviso: este aviso esta fechado</strong> desde 29 de janeiro de 2026. O artigo e mantido como referencia editorial para apoio a estrategia de inovacao quantica. Consulte a Open Capital sobre oportunidades equivalentes em aberto.</p>
+      </div>
+
+      <!-- SECTION 1: CONTEXTO -->
+      <div class="article-section reveal">
+        <p class="article-eyebrow">Contexto</p>
+        <h2 class="article-h2">A computacao quantica como prioridade estrategica europeia</h2>
+        <p class="article-body">A computacao quantica deixou de ser apenas materia de investigacao academica. A corrida global entre os Estados Unidos, a China e a Europa tornou este dominio uma prioridade de soberania tecnologica — e o EuroHPC JU, a infraestrutura europeia de supercomputacao, respondeu com um instrumento sem precedentes.</p>
+        <p class="article-body">O Quantum Grand Challenge (QGC) e o primeiro mecanismo europeu que combina, numa logica de continuum, um grant Horizonte Europa para validacao tecnica com acesso a divida de risco do Banco Europeu de Investimento para escalonamento industrial. Nao e um subsidio convencional. E uma rampa de lancamento para startups que ja demonstraram viabilidade e precisam de capital para chegar ao mercado.</p>
+      </div>
+
+      <!-- STATS ROW -->
+      <div class="stats-row reveal">
+        <div class="stat-block">
+          <div class="stat-value">€4M</div>
+          <div class="stat-label">Fase 1 (Horizonte Europa)</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">€100M</div>
+          <div class="stat-label">Fase 2 (divida de risco BEI)</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">4 meses</div>
+          <div class="stat-label">Duracao da Fase 1</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Taxa de cofinanciamento</div>
+        </div>
+      </div>
+
+      <!-- SECTION 2: O MODELO DE DUAS FASES -->
+      <div class="article-section reveal">
+        <p class="article-eyebrow">O Mecanismo</p>
+        <h2 class="article-h2">Um modelo de financiamento em duas fases</h2>
+        <p class="article-body">O QGC distingue-se de qualquer outro instrumento europeu pela sua arquitetura de dois andares. A Fase 1 usa o mecanismo de grant para validar tecnologia; a Fase 2 usa o balanço do BEI para financiar escalonamento. As duas fases nao sao automaticas: o desempenho na Fase 1 determina o acesso a Fase 2.</p>
+
+        <div class="phase-grid">
+          <div class="phase-card phase-1">
+            <div class="phase-num">Fase 1</div>
+            <div class="phase-title">Validacao Tecnica</div>
+            <div class="phase-budget">€4M total</div>
+            <div class="phase-detail">Grant Horizonte Europa, 100% financiado. Duracao de 4 meses. Objetivo: desenvolvimento de roadmap tecnico e financeiro, prova de conceito, e prototipagem. Apoio consultivo do BEI durante esta fase.</div>
+          </div>
+          <div class="phase-card phase-2">
+            <div class="phase-num">Fase 2</div>
+            <div class="phase-title">Escalonamento via BEI</div>
+            <div class="phase-budget">ate €100M</div>
+            <div class="phase-detail">Instrumento InvestEU gerido pelo BEI. Divida de risco sob medida para financiar desenvolvimento industrial de longo prazo. Acesso condicionado a resultados da Fase 1. Envolve avaliacao de viabilidade pelo BEI.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HIGHLIGHT BOX -->
+      <div class="highlight-box reveal">
+        <div class="highlight-box-title">O que tornou o QGC unico</div>
+        <p>A integracao com os centros de supercomputacao do EuroHPC foi um requisito de elegibilidade, nao uma vantagem. As startups financiadas tinham acesso garantido a infraestrutura de HPC durante a Fase 1, o que permitiu testes em ambiente de computacao de escala industrial. Este modelo cria uma ligacao direta entre investigacao quantica e os maiores centros de computacao da Europa.</p>
+      </div>
+
+      <div class="div-gold"></div>
+
+      <!-- SECTION 3: O QUE FINANCIAVA -->
+      <div class="article-section reveal">
+        <p class="article-eyebrow">Ambito do Financiamento</p>
+        <h2 class="article-h2">Que atividades eram financiadas?</h2>
+        <ul class="diamond-list">
+          <li>Desenvolvimento de soluções integradas hardware-software de computacao quantica com potencial de mercado demonstravel</li>
+          <li>Elaboracao de roadmaps tecnicos e financeiros para escalonamento industrial da tecnologia</li>
+          <li>Prototipagem e prova de conceito em ambiente de supercomputacao de escala real</li>
+          <li>Integracao com centros de supercomputacao EuroHPC para testes em condicoes operacionais</li>
+          <li>Atividades de transferencia de tecnologia e preparacao para aplicacoes industriais</li>
+          <li>Avaliacao de viabilidade tecnica e economica para acesso a Fase 2 (BEI/InvestEU)</li>
+        </ul>
+      </div>
+
+      <!-- SECTION 4: ELEGIBILIDADE -->
+      <div class="article-section reveal">
+        <p class="article-eyebrow">Elegibilidade</p>
+        <h2 class="article-h2">Quem podia candidatar-se?</h2>
+        <table class="elig-table">
+          <thead>
+            <tr>
+              <th>Criterio</th>
+              <th>Detalhe</th>
+              <th>Elegivel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tipo de entidade</td>
+              <td>Startups europeias de computacao quantica</td>
+              <td class="check">Sim</td>
+            </tr>
+            <tr>
+              <td>Maturidade tecnologica</td>
+              <td>Solucoes integradas hardware-software com mercado demonstravel</td>
+              <td class="check">Obrigatoria</td>
+            </tr>
+            <tr>
+              <td>Geografica</td>
+              <td>Estados-Membros UE e paises associados ao Horizonte Europa</td>
+              <td class="check">Sim (incl. Portugal)</td>
+            </tr>
+            <tr>
+              <td>Integracao HPC</td>
+              <td>Acesso a infraestrutura EuroHPC para testes</td>
+              <td class="check">Requisito</td>
+            </tr>
+            <tr>
+              <td>Grandes empresas</td>
+              <td>Empresas estabelecidas sem perfil de startup</td>
+              <td class="cross">Nao</td>
+            </tr>
+            <tr>
+              <td>Entidades publicas</td>
+              <td>Universidades, centros de investigacao sem componente comercial</td>
+              <td class="cross">Nao</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- SECTION 5: PORTUGAL E O QGC -->
+      <div class="article-section reveal">
+        <p class="article-eyebrow">Perspetiva Nacional</p>
+        <h2 class="article-h2">Portugal e a oportunidade quantica</h2>
+        <p class="article-body">Portugal encontra-se numa posicao particular neste ecossistema. O pais esta geograficamente elegivel como estado membro da UE e como pais associado ao Horizonte Europa. O ecossistema de deeptech portugues, com foco crescente em fotonica quantica e comunicacoes quanticas, tem startups com perfil de elegibilidade para instrumentos equivalentes ao QGC.</p>
+        <p class="article-body">O QISTech, iniciativa nacional de quantum, e o Instituto Superior Tecnico (com laboratorio de computacao quantica) criam um ambiente propicio ao desenvolvimento de startups com potencial de candidatura a futuros avisos desta familia. A questao para as empresas portuguesas neste espaco nao e de elegibilidade, e de maturidade tecnologica e preparacao para apresentar roadmaps credíveis ao BEI.</p>
+      </div>
+
+      <!-- PERSPETIVA OPEN CAPITAL -->
+      <div class="perspetiva-box reveal">
+        <div class="perspetiva-eyebrow">Perspetiva Open Capital</div>
+        <p>O Quantum Grand Challenge representa um modelo que a Europa vai repetir. A combinacao de grant para validacao mais divida para escalonamento, com integracao obrigatoria em infraestrutura publica, e uma arquitetura de financiamento que reduz o risco para o investidor privado enquanto acelera a transferencia de tecnologia. A Fase 2 via BEI e o elemento mais interessante: nao e capital de risco convencional, mas permite escalonar sem diluicao excessiva para os fundadores.</p>
+        <p>Para empresas portuguesas no espaco quantico, o aviso seguinte desta familia deve ser monitorizado com antecedencia de seis a doze meses. A preparacao do dossier de candidatura, incluindo o roadmap tecnico que o BEI vai avaliar, requer tempo e especificidade que nao se constroi em poucas semanas. O momento de comecar a preparar e agora.</p>
+        <div class="perspetiva-author">
+          <div class="perspetiva-avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(201,169,110,0.8)" stroke-width="1.5">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
+          <div>
+            <div class="perspetiva-name">Mara Ferreira</div>
+            <div class="perspetiva-role">Especialista em Fundos Europeus e Horizonte Europa</div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="article-sidebar">
+
+      <!-- FACTOS RAPIDOS -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Factos Rapidos</div>
+        <div class="sidebar-fact">
+          <span class="sidebar-fact-label">Referencia</span>
+          <span class="sidebar-fact-value">HORIZON-JU-EUROHPC-2026-QGC-02</span>
+        </div>
+        <div class="sidebar-fact">
+          <span class="sidebar-fact-label">Entidade</span>
+          <span class="sidebar-fact-value">EuroHPC JU</span>
+        </div>
+        <div class="sidebar-fact">
+          <span class="sidebar-fact-label">Fase 1</span>
+          <span class="sidebar-fact-value">€4 000 000</span>
+        </div>
+        <div class="sidebar-fact">
+          <span class="sidebar-fact-label">Fase 2 (BEI)</span>
+          <span class="sidebar-fact-value">ate €100 000 000</span>
+        </div>
+        <div class="sidebar-fact">
+          <span class="sidebar-fact-label">Tipo</span>
+          <span class="sidebar-fact-value">Grant HE + divida de risco BEI</span>
+        </div>
+        <div class="sidebar-fact">
+          <span class="sidebar-fact-label">Cofinanciamento</span>
+          <span class="sidebar-fact-value">100%</span>
+        </div>
+        <div class="sidebar-fact">
+          <span class="sidebar-fact-label">Estado</span>
+          <span class="sidebar-fact-value closed">Fechado (29 Jan 2026)</span>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Monitorizar oportunidades equivalentes</div>
+        <p class="sidebar-cta-text">Fale connosco para receber alertas sobre futuros avisos EuroHPC e identificar o momento certo para comecar a preparacao.</p>
+        <a href="https://calendly.com/opencapital" target="_blank" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+
+      <!-- INSTRUMENTOS RELACIONADOS -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Instrumentos Relacionados</div>
+        <ul class="related-list">
+          <li>
+            <a href="digital-2026-bestuse-awareness.html">Common Research Framework on Information Integrity</a>
+            <span class="related-tag">Europa Digital</span>
+          </li>
+          <li>
+            <a href="horizon-widera-2026-04.html">Research Management Facility WIDERA 2026</a>
+            <span class="related-tag">Horizonte Europa</span>
+          </li>
+          <li>
+            <a href="horizon-widera-2026-01.html">Teaming Synergies WIDERA 2026</a>
+            <span class="related-tag">Horizonte Europa</span>
+          </li>
+          <li>
+            <a href="horizonte-europa.html">Horizonte Europa - Visao Geral</a>
+            <span class="related-tag">Referencia</span>
+          </li>
+          <li>
+            <a href="eic-accelerator.html">EIC Accelerator</a>
+            <span class="related-tag">Inovacao</span>
+          </li>
+        </ul>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" style="filter:brightness(0) invert(1);">
+        <p class="f-desc">Consultora estrategica especializada em financiamento empresarial, fundos europeus e instrumentos fiscais. Ajudamos empresas a crescer com menos burocracia e mais clareza.</p>
+        <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+      </div>
+      <div>
+        <p class="f-col-label">Solucoes</p>
+        <ul class="f-links">
+          <li><a href="../biblioteca.html">Portugal 2030</a></li>
+          <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+          <li><a href="../biblioteca.html">Beneficios Fiscais</a></li>
+          <li><a href="../biblioteca.html">Premios de Inovacao</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="f-col-label">Plataforma</p>
+        <ul class="f-links">
+          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">em breve</span></a></li>
+          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">em breve</span></a></li>
+          <li><a href="../conhecimento.html">Conhecimento</a></li>
+          <li><a href="../parceiros.html">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="f-col-label">Empresa</p>
+        <ul class="f-links">
+          <li><a href="../sobre-nos.html">Sobre Nos</a></li>
+          <li><a href="../sobre-nos.html">Equipa</a></li>
+          <li><a href="../carreiras.html">Carreiras</a></li>
+          <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">© 2009 Open Capital Advisory & Consultancy</span>
+      <div class="f-legal">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
