@@ -685,6 +685,41 @@
       "source": "eu-funding-tenders",
       "state": "fechado",
       "last_check": "2026-04-27"
+    },
+    {
+      "id": "horizon-msca-2025-cofund-02",
+      "file": "instrumentos/horizon-msca-2025-cofund-02.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-27"
+    },
+    {
+      "id": "horizon-widera-2025-06",
+      "file": "instrumentos/horizon-widera-2025-06.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-27"
+    },
+    {
+      "id": "horizon-ju-gh-edctp3-2025-01-two-stage",
+      "file": "instrumentos/horizon-ju-gh-edctp3-2025-01-two-stage.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-27"
+    },
+    {
+      "id": "horizon-ju-cbe-2025",
+      "file": "instrumentos/horizon-ju-cbe-2025.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-27"
+    },
+    {
+      "id": "horizon-hlth-2025-01",
+      "file": "instrumentos/horizon-hlth-2025-01.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-04-27"
     }
   ],
   "instruments": [
@@ -1872,9 +1907,9 @@
       "last_check": "2026-04-27"
     }
   ],
-  "count": 182,
+  "count": 187,
   "open": 68,
   "closed": 66,
   "planned": 8,
-  "published": 32
+  "published": 37
 }
