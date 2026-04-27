@@ -10,10 +10,10 @@
     "open": 324,
     "closed": 183,
     "planned": 18,
-    "in_queue": 56,
+    "in_queue": 100,
     "in_watchlist": 103,
-    "in_catalogo": 0,
-    "in_overflow": 314
+    "in_catalogo": 1,
+    "in_overflow": 271
   },
   "shards": {
     "pt2030-compete": {
@@ -104,7 +104,7 @@
   "last_monitor_run": "2026-04-26",
   "last_writer_run": "2026-04-27",
   "source_last_checked": {
-    "portugal-2030": "2026-04-26",
+    "portugal-2030": "2026-04-27",
     "compete-2030": "2026-04-26",
     "norte-2030": "2026-04-26",
     "centro-2030": "2026-04-20",
@@ -117,20 +117,20 @@
     "sustentavel-2030": "2026-04-24",
     "mar-2030": "2026-04-25",
     "pat-2030": "2026-04-18",
-    "eu-funding-tenders": "2026-04-26",
+    "eu-funding-tenders": "2026-04-27",
     "ani": "2026-04-24",
     "iapmei": "2026-04-26",
     "prr": "2026-04-25",
     "interreg-poctep": "2026-04-20",
     "fct": "2026-04-26",
     "aicep": "2026-04-26",
-    "iefp": "2026-04-19",
+    "iefp": "2026-04-27",
     "interreg-atlantic": "2026-04-24",
     "hadea": "2026-04-24",
     "eic-accelerator": "2026-04-24",
     "interreg-mac": "2026-04-20",
     "life-programme": "2026-04-25",
-    "erc": "2026-04-19",
+    "erc": "2026-04-27",
     "investeu": "2026-04-20",
     "interreg-sudoe": "2026-04-20",
     "interreg-euromed": "2026-04-24",
@@ -142,7 +142,7 @@
     "autoridade-tributaria": "2026-04-19",
     "digital-europe": "2026-04-26",
     "cef": "2026-04-26",
-    "horizonte-europa": "2026-04-19",
+    "horizonte-europa": "2026-04-27",
     "eu4health": "2026-04-25",
     "indico-capital": "2026-04-13",
     "armilar-ventures": "2026-04-13",
@@ -203,7 +203,8 @@
     "justice-programme": "2026-04-26",
     "nova-sbe-venture-lab": "2026-04-26",
     "oxy-capital": "2026-04-26",
-    "eif-european-investment-fund": "2026-04-26"
+    "eif-european-investment-fund": "2026-04-26",
+    "brisa-innovation": "2026-04-27"
   },
-  "last_scanner_run": "2026-04-26"
+  "last_scanner_run": "2026-04-27"
 }
