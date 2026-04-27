@@ -481,13 +481,15 @@
       "name": "Aviso CENTROS QUALIFICA - Area Metropolitana de Lisboa",
       "source_id": "iefp",
       "shard": "pt-other",
-      "status": "open",
+      "status": "ready",
       "deadline": null,
       "dotacao": null,
       "detected_date": "2026-04-27",
       "regulation_url": "https://www.iefp.pt/aviso-para-apresentacao-de-candidaturas-ao-apoio-concedido-pelo-iefp-aos-centros-qualifica-da-area-metropolitana-de-lisboa",
+      "regulation_local": "regulamentos/iefp/centros-qualifica-area-metropolitana-lisboa.txt",
       "priority_score": 15,
-      "notes": "Aviso IEFP para Centros Qualifica da AML. Sem prazo formal visivel. Programa DL 17/2024."
+      "notes": "Aviso IEFP para Centros Qualifica da AML. Sem prazo formal visivel. Programa DL 17/2024.",
+      "fail_count": 0
     },
     {
       "id": "erasmus-edu-2026-cb-vet",
@@ -518,11 +520,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl2-2025-01.txt",
       "priority_score": 25,
-      "status": "aberto",
+      "status": "ready",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 0
     },
     {
       "id": "euaf-2026-ta",
@@ -535,11 +538,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUAF-2026-TA",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/euaf-2026-ta.txt",
       "priority_score": 25,
-      "status": "aberto",
+      "status": "ready",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 0
     },
     {
       "id": "euaf-2026-trai",
@@ -552,11 +556,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUAF-2026-TRAI",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/euaf-2026-trai.txt",
       "priority_score": 25,
-      "status": "aberto",
+      "status": "ready",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl4-2025-04",
@@ -569,11 +574,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2025-04",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl4-2025-04.txt",
       "priority_score": 25,
-      "status": "aberto",
+      "status": "ready",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 0
     },
     {
       "id": "erasmus-youth-2026-cb",
@@ -586,11 +592,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-YOUTH-2026-CB",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/erasmus-youth-2026-cb.txt",
       "priority_score": 25,
-      "status": "aberto",
+      "status": "ready",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl2-2025-02-two-stage",
@@ -603,11 +610,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-02-TWO-STAGE",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl2-2025-02-two-stage.txt",
       "priority_score": 25,
-      "status": "aberto",
+      "status": "ready",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 0
     },
     {
       "id": "erasmus-edu-2026-virt-exch",
@@ -620,11 +628,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2026-VIRT-EXCH",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/erasmus-edu-2026-virt-exch.txt",
       "priority_score": 25,
-      "status": "aberto",
+      "status": "ready",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 0
     },
     {
       "id": "erasmus-sport-2026",
@@ -637,11 +646,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-SPORT-2026",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/erasmus-sport-2026.txt",
       "priority_score": 25,
-      "status": "aberto",
+      "status": "ready",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 0
     },
     {
       "id": "erasmus-sport-2026-lsncese",
@@ -654,11 +664,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-SPORT-2026-LSNCESE",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/erasmus-sport-2026-lsncese.txt",
       "priority_score": 25,
-      "status": "aberto",
+      "status": "ready",
       "regime": "aviso",
-      "notes": "SEDIA scan 2026-04-26"
+      "notes": "SEDIA scan 2026-04-26",
+      "fail_count": 0
     },
     {
       "id": "cerv-2026-citizens-contact-iba",
