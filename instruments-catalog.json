@@ -11935,7 +11935,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao,entidade-publica",
-      "setores": ["saude-ciencias-vida"],
+      "setores": [
+        "saude-ciencias-vida"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EDCTP3 Fellowship Call 2025-02",
       "tagline": "Formacao de epidemiologistas e bioestatisticos em Africa Subsaariana. Consorcio europeu-africano financiado pelo Horizonte Europa.",
@@ -11954,7 +11956,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao,entidade-publica",
-      "setores": ["saude-ciencias-vida"],
+      "setores": [
+        "saude-ciencias-vida"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EDCTP3 Redes Regionais de Excelencia 2025-03",
       "tagline": "EUR 53 milhoes para reforcar redes regionais de excelencia e consorcios de preparacao para epidemias na Africa Subsaariana.",
@@ -11973,7 +11977,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao,entidade-publica",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Premio UE Campeoes da Igualdade de Genero 2025",
       "tagline": "Tres categorias, EUR 100.000 por vencedor. Reconhecimento europeu a universidades e centros de investigacao com planos de igualdade de genero exemplares.",
@@ -11992,7 +11998,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "entidade-publica,associacao",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Ecossistemas de Inovacao Interligados 2025.2",
       "tagline": "EUR 5 milhoes para programas conjuntos entre ecossistemas de inovacao regionais e criacao de connected innovation valleys europeus.",
@@ -12011,7 +12019,11 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao,associacao",
-      "setores": ["energia-ambiente", "mobilidade-transportes", "industria"],
+      "setores": [
+        "energia-ambiente",
+        "mobilidade-transportes",
+        "industria"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa CL5 - Clima, Energia e Mobilidade 2025",
       "tagline": "EUR 636,6 milhoes no Cluster 5 em 2025 para descarbonizacao, energia limpa e mobilidade sustentavel. Chamada em duas fases, encerrada.",
@@ -12019,6 +12031,30 @@
       "highlight1": "Empresas, universidades, centros de investigacao (consorcio minimo 3 paises)",
       "highlight2": "Nacional (projetos internacionais UE)",
       "href": "instrumentos/horizon-cl5-2025-01-two-stage.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-eic-2025-pathfinderchallenges-01",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Fechado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "tecnologia-digital",
+        "saude-ciencias-vida",
+        "energia-ambiente",
+        "agroalimentar"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "EIC Pathfinder Challenges 2025",
+      "tagline": "Investigacao de ruptura em quatro temas estrategicos, financiada a 100% pela UE.",
+      "highlight0": "Ate EUR 4 milhoes por projeto, 100% financiado",
+      "highlight1": "Universidades, PME deep tech, startups, industria",
+      "highlight2": "Europa (paises associados Horizonte Europa)",
+      "href": "instrumentos/horizon-eic-2025-pathfinderchallenges-01.html",
       "featured": false
     }
   ]
