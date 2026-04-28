@@ -2,20 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "horizon-ju-cleanh2-2026-05-01",
-      "name": "Public datasets of technologies along the hydrogen value chain for life cycle (sustainability) assessment",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "regime": "aviso",
-      "status": "aberto",
-      "aviso_codigo": "HORIZON-JU-CLEANH2-2026-05-01",
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-05-01.json",
-      "deadline": null,
-      "detected_date": "2026-04-25",
-      "priority_score": 15,
-      "notes": "Call: HORIZON-JU-CLEANH2-2026"
-    },
-    {
       "id": "horizon-ju-cleanh2-2026-03-04",
       "name": "Multi-fuel SOFC powertrain for maritime transport",
       "source_id": "eu-funding-tenders",
@@ -1023,7 +1009,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "EC-COMM/TLL/2025/MVP/0522-EXA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-COMM/TLL/2025/MVP/0522-EXA",
       "deadline": null,
@@ -1031,8 +1017,8 @@
       "detected_date": "2026-04-25",
       "priority_score": 15,
       "notes": "SEDIA text=2026 p5",
-      "fail_count": 2,
-      "download_error": "EU portal JS-rendered, topicDetails JSON 404, sem call document publico (procurement tender EXA/PIN)",
+      "fail_count": 3,
+      "download_error": "EU portal JS-rendered, topicDetails JSON 404. EC-COMM/TLL e EC-COMM/ZAG sao tenders de servico de Representacoes da Comissao em Estados-Membros, nao instrumentos de financiamento. Sem call document publico. Marcado como abandoned (writer 2026-04-28).",
       "last_fail_date": "2026-04-28"
     },
     {
@@ -1041,7 +1027,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "EC-COMM/ZAG/2026/LVP/0096-EXA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-COMM/ZAG/2026/LVP/0096-EXA",
       "deadline": null,
@@ -1049,8 +1035,8 @@
       "detected_date": "2026-04-25",
       "priority_score": 15,
       "notes": "SEDIA text=2026 p5",
-      "fail_count": 2,
-      "download_error": "EU portal JS-rendered, topicDetails JSON 404, sem call document publico (procurement tender EXA/PIN)",
+      "fail_count": 3,
+      "download_error": "EU portal JS-rendered, topicDetails JSON 404. EC-COMM/TLL e EC-COMM/ZAG sao tenders de servico de Representacoes da Comissao em Estados-Membros, nao instrumentos de financiamento. Sem call document publico. Marcado como abandoned (writer 2026-04-28).",
       "last_fail_date": "2026-04-28"
     },
     {
