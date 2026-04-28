@@ -90,5 +90,41 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": []
+  "queue": [
+    {
+      "id": "startup-visa-portugal",
+      "name": "Startup Visa Portugal (IAPMEI)",
+      "source_id": "startup-visa-portugal",
+      "catalog_type": "accelerator",
+      "detected_date": "2026-04-28",
+      "last_profile_update": "2026-04-28",
+      "status": "active",
+      "regulation_url": "https://startupvisa.iapmei.pt",
+      "priority_score": 5,
+      "profile": {
+        "website": "https://www.iapmei.pt/Paginas/StartUP-Visa-en.aspx",
+        "linkedin": null,
+        "pais_sede": "PT",
+        "descricao_curta": "Programa publico portugues de visto de residencia para empreendedores nao-UE; obriga integracao em incubadora certificada e plano de negocio inovador com perspectiva internacional.",
+        "como_candidatar": "Submissao continua via portal IAPMEI; review em 30 dias uteis; contacto startup.visa@iapmei.pt; plano de negocio submetido a 1 incubadora certificada.",
+        "modelo": "equity-free",
+        "formato": "residencia",
+        "duracao_meses": null,
+        "batches_ano": null,
+        "batch_proximo": "candidatura continua",
+        "deadline_proxima": null,
+        "estipendio_eur": null,
+        "equity_pct": 0,
+        "mentorias": [],
+        "setores_foco": [
+          "tecnologia",
+          "conhecimento",
+          "atividades inovadoras com escalabilidade internacional"
+        ],
+        "alumni_destaques": [],
+        "elegibilidade": "Empreendedores nao-UE >= 18 anos; intencao de criar empresa em PT integrada em incubadora certificada; potencial volume de negocios ou ativos > 325k EUR/ano apos 5 anos; meios de subsistencia minimos 11.040 EUR; equipas ate 5 elementos."
+      },
+      "notes": "Programa publico IAPMEI de candidatura continua. Vehicle de soft-landing para empreendedores estrangeiros via incubadoras certificadas. Detalhes verificados via WebSearch 2026-04-28."
+    }
+  ]
 }

@@ -10,10 +10,10 @@
     "open": 337,
     "closed": 240,
     "planned": 18,
-    "in_queue": 76,
+    "in_queue": 100,
     "in_watchlist": 103,
     "in_catalogo": 1,
-    "in_overflow": 171
+    "in_overflow": 148
   },
   "shards": {
     "pt2030-compete": {
@@ -44,8 +44,8 @@
       "open": 4
     },
     "pt2030-other": {
-      "count": 36,
-      "open": 27,
+      "count": 37,
+      "open": 28,
       "closed": 4,
       "planned": 4
     },
@@ -118,7 +118,7 @@
     "madeira-2030": "2026-04-25",
     "acores-2030": "2026-04-24",
     "pessoas-2030": "2026-04-28",
-    "sustentavel-2030": "2026-04-24",
+    "sustentavel-2030": "2026-04-28",
     "mar-2030": "2026-04-25",
     "pat-2030": "2026-04-27",
     "eu-funding-tenders": "2026-04-28",
@@ -130,8 +130,8 @@
     "aicep": "2026-04-26",
     "iefp": "2026-04-27",
     "interreg-atlantic": "2026-04-28",
-    "hadea": "2026-04-24",
-    "eic-accelerator": "2026-04-24",
+    "hadea": "2026-04-28",
+    "eic-accelerator": "2026-04-28",
     "interreg-mac": "2026-04-27",
     "life-programme": "2026-04-25",
     "erc": "2026-04-27",
@@ -211,7 +211,8 @@
     "brisa-innovation": "2026-04-27",
     "galp-ventures": "2026-04-27",
     "goparity": "2026-04-27",
-    "core-angels-atlantic": "2026-04-28"
+    "core-angels-atlantic": "2026-04-28",
+    "startup-visa-portugal": "2026-04-28"
   },
   "last_scanner_run": "2026-04-28",
   "source-last_checked": {
@@ -225,7 +226,7 @@
     "madeira-2030": "2026-04-25",
     "acores-2030": "2026-04-24",
     "pessoas-2030": "2026-04-28",
-    "sustentavel-2030": "2026-04-24",
+    "sustentavel-2030": "2026-04-28",
     "mar-2030": "2026-04-25",
     "pat-2030": "2026-04-27",
     "eu-funding-tenders": "2026-04-28",
@@ -237,8 +238,8 @@
     "aicep": "2026-04-26",
     "iefp": "2026-04-27",
     "interreg-atlantic": "2026-04-28",
-    "hadea": "2026-04-24",
-    "eic-accelerator": "2026-04-24",
+    "hadea": "2026-04-28",
+    "eic-accelerator": "2026-04-28",
     "interreg-mac": "2026-04-27",
     "life-programme": "2026-04-25",
     "erc": "2026-04-27",
@@ -318,6 +319,7 @@
     "brisa-innovation": "2026-04-27",
     "galp-ventures": "2026-04-27",
     "goparity": "2026-04-27",
-    "core-angels-atlantic": "2026-04-28"
+    "core-angels-atlantic": "2026-04-28",
+    "startup-visa-portugal": "2026-04-28"
   }
 }
