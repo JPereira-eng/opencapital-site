@@ -1088,10 +1088,11 @@
       "budget": "8000000",
       "regulation_url": "https://sustentavel2030.gov.pt/aviso/pacs-2026-11/",
       "pdf_url": "https://sustentavel2030.gov.pt/wp-content/uploads/2026/04/Aviso-PACS-2026-11.pdf",
-      "regulation_local": null,
+      "regulation_local": "regulamentos/sustentavel-2030/ram-protecao-civil-e-gestao-integrada-de-riscos-prevencao-e-mitigacao-de-riscos-.txt",
       "priority_score": 35,
-      "status": "pending",
-      "notes": "codigo=PACS-2026-11 | programa=Sustentavel 2030 | fundo=Fundo Coesão (FC) | dotacao=8000000 | natureza=Convite | beneficiario=Secretaria Regional de Equipamentos e Infraestruturas (SREI) | nuts=Região Autónoma da Madeira | doc-level=L1/aviso"
+      "status": "ready",
+      "notes": "codigo=PACS-2026-11 | programa=Sustentavel 2030 | fundo=Fundo Coesão (FC) | dotacao=8000000 | natureza=Convite | beneficiario=Secretaria Regional de Equipamentos e Infraestruturas (SREI) | nuts=Região Autónoma da Madeira | doc-level=L1/aviso",
+      "fail_count": 0
     },
     {
       "id": "ec-comm-2026-mvp-0127-exa",
@@ -1143,9 +1144,9 @@
       "detected_date": "2026-04-25",
       "priority_score": 15,
       "notes": "SEDIA text=2026 p5",
-      "fail_count": 1,
-      "download_error": "Concurso publico institucional EU - conteudo nao indexado/nao disponivel publicamente - tentativa 2026-04-26",
-      "last_fail_date": "2026-04-26"
+      "fail_count": 2,
+      "download_error": "EU portal JS-rendered, topicDetails JSON 404, sem call document publico (procurement tender EXA/PIN)",
+      "last_fail_date": "2026-04-28"
     },
     {
       "id": "ec-comm-zag-2026-lvp-0096-exa",
@@ -1161,9 +1162,9 @@
       "detected_date": "2026-04-25",
       "priority_score": 15,
       "notes": "SEDIA text=2026 p5",
-      "fail_count": 1,
-      "download_error": "Concurso publico institucional EU - conteudo nao indexado/nao disponivel publicamente - tentativa 2026-04-26",
-      "last_fail_date": "2026-04-26"
+      "fail_count": 2,
+      "download_error": "EU portal JS-rendered, topicDetails JSON 404, sem call document publico (procurement tender EXA/PIN)",
+      "last_fail_date": "2026-04-28"
     },
     {
       "id": "ec-taxud-2025-lvp-0009-exa",
@@ -1179,9 +1180,9 @@
       "detected_date": "2026-04-25",
       "priority_score": 15,
       "notes": "SEDIA text=2026 p8",
-      "fail_count": 1,
-      "download_error": "Concurso publico institucional EU - conteudo nao indexado/nao disponivel publicamente - tentativa 2026-04-26",
-      "last_fail_date": "2026-04-26"
+      "fail_count": 2,
+      "download_error": "EU portal JS-rendered, topicDetails JSON 404, sem call document publico (procurement tender EXA/PIN)",
+      "last_fail_date": "2026-04-28"
     },
     {
       "id": "ec-fpi-2025-op-0019-pin",
@@ -1197,9 +1198,9 @@
       "detected_date": "2026-04-25",
       "priority_score": 15,
       "notes": "SEDIA text=2026 p9",
-      "fail_count": 1,
-      "download_error": "Concurso publico institucional EU - conteudo nao indexado/nao disponivel publicamente - tentativa 2026-04-26",
-      "last_fail_date": "2026-04-26"
+      "fail_count": 2,
+      "download_error": "EU portal JS-rendered, topicDetails JSON 404, sem call document publico (procurement tender EXA/PIN)",
+      "last_fail_date": "2026-04-28"
     },
     {
       "id": "ep-linc-2026-lvp-0002-exa",
@@ -1215,9 +1216,9 @@
       "detected_date": "2026-04-25",
       "priority_score": 15,
       "notes": "SEDIA text=2026 p9",
-      "fail_count": 1,
-      "download_error": "Concurso publico institucional EU - conteudo nao indexado/nao disponivel publicamente - tentativa 2026-04-26",
-      "last_fail_date": "2026-04-26"
+      "fail_count": 2,
+      "download_error": "EU portal JS-rendered, topicDetails JSON 404, sem call document publico (procurement tender EXA/PIN)",
+      "last_fail_date": "2026-04-28"
     },
     {
       "id": "cese-2026-lvp-0059-exa",
@@ -1233,9 +1234,9 @@
       "detected_date": "2026-04-25",
       "priority_score": 15,
       "notes": "SEDIA text=2026 p10",
-      "fail_count": 1,
-      "download_error": "Concurso publico institucional EU - conteudo nao indexado/nao disponivel publicamente - tentativa 2026-04-26",
-      "last_fail_date": "2026-04-26"
+      "fail_count": 2,
+      "download_error": "EU portal JS-rendered, topicDetails JSON 404, sem call document publico (procurement tender EXA/PIN)",
+      "last_fail_date": "2026-04-28"
     },
     {
       "id": "ec-echo-2025-op-0032-pin",
@@ -1251,9 +1252,9 @@
       "detected_date": "2026-04-25",
       "priority_score": 15,
       "notes": "SEDIA text=2026 p10",
-      "fail_count": 1,
-      "download_error": "Concurso publico institucional EU - conteudo nao indexado/nao disponivel publicamente - tentativa 2026-04-26",
-      "last_fail_date": "2026-04-26"
+      "fail_count": 2,
+      "download_error": "EU portal JS-rendered, topicDetails JSON 404, sem call document publico (procurement tender EXA/PIN)",
+      "last_fail_date": "2026-04-28"
     },
     {
       "id": "ep-linc-2025-lvp-0018-exa",
@@ -1269,9 +1270,9 @@
       "detected_date": "2026-04-25",
       "priority_score": 15,
       "notes": "SEDIA text=2026 p15",
-      "fail_count": 1,
-      "download_error": "Concurso publico institucional EU - conteudo nao indexado/nao disponivel publicamente - tentativa 2026-04-26",
-      "last_fail_date": "2026-04-26"
+      "fail_count": 2,
+      "download_error": "EU portal JS-rendered, topicDetails JSON 404, sem call document publico (procurement tender EXA/PIN)",
+      "last_fail_date": "2026-04-28"
     },
     {
       "id": "ec-comm-tll-2025-mvp-0467-exa",
@@ -1287,9 +1288,9 @@
       "detected_date": "2026-04-25",
       "priority_score": 15,
       "notes": "SEDIA text=2026 p15",
-      "fail_count": 1,
-      "download_error": "Concurso publico institucional EU - conteudo nao indexado/nao disponivel publicamente - tentativa 2026-04-26",
-      "last_fail_date": "2026-04-26"
+      "fail_count": 2,
+      "download_error": "EU portal JS-rendered, topicDetails JSON 404, sem call document publico (procurement tender EXA/PIN)",
+      "last_fail_date": "2026-04-28"
     },
     {
       "id": "smp-ess-2024-hbs-iba",
