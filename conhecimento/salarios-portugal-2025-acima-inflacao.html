@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salários cresceram acima da inflação em 2025: o que isto significa para as empresas | Open Capital</title>
+  <meta name="description" content="OCDE confirma: salários em Portugal subiram 4,9% em valor bruto e 2,6% em valor real em 2025. A leitura empresarial é menos óbvia do que parece.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../biblioteca.html">Biblioteca</a></li>
+      <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades</a>
+        <div class="nav-dropdown-menu">
+          <a href="../parceiros.html">Parceiros</a>
+          <a href="../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../conhecimento.html">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Mercados</span>
+      </nav>
+      <span class="hero-cat-badge">Mercados - Análise</span>
+      <h1 class="article-title">Salários cresceram acima da inflação em 2025: o que isto significa para as empresas</h1>
+      <p class="article-standfirst">Pela primeira vez em vários anos, os trabalhadores portugueses ganharam poder de compra. A OCDE confirma 4,9% de aumento nominal e 2,6% real. A leitura empresarial é mais complexa do que parece à primeira vista.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Mercados</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Abril 2026</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>9 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Luís Gomes</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+      <img src="../assets/articles/salarios-portugal-2025.png" alt="Salários cresceram acima da inflação em 2025" class="article-cover-img">
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Contexto</div>
+        <h2>Os números, primeiro</h2>
+        <p>O relatório <em>Employment Outlook 2025</em> da OCDE, divulgado este mês, traz uma fotografia rara para a economia portuguesa. Os salários nominais, antes de descontar a inflação, cresceram 4,9% face a 2024. Já líquidos do efeito dos preços, os salários reais subiram 2,6%. É a primeira vez desde o pós-pandemia que o ganho real é claramente positivo e relevante.</p>
+        <p>Portugal é, segundo a OCDE, um de 35 países, num universo de 38, onde os salários reais cresceram em 2025. Os três que ficam de fora têm cada um a sua história: choques inflacionistas locais, contracções específicas, ou simplesmente um ponto de partida em 2024 já elevado. O dado importante é o agregado: na quase totalidade dos países desenvolvidos, o trabalho recuperou poder de compra.</p>
+        <div class="stats-row cols-3 reveal">
+          <div class="stat-cell">
+            <div class="stat-num">4,9<sup>%</sup></div>
+            <div class="stat-label">Crescimento nominal</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">2,6<sup>%</sup></div>
+            <div class="stat-label">Crescimento real</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">35<sup>/38</sup></div>
+            <div class="stat-label">Países OCDE com ganho real</div>
+          </div>
+        </div>
+        <p>O contraste com os anos anteriores é o que torna estes números relevantes. Entre 2022 e 2023, a maioria dos trabalhadores portugueses viu o seu salário nominal subir, mas o real cair. A inflação corria mais depressa do que a folha de pagamentos. Em 2024, as duas curvas começaram a aproximar-se. Em 2025, finalmente cruzaram-se na direcção certa.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>O que mudou na equação</h2>
+        <p>Houve três forças a actuar em paralelo. A inflação desacelerou para perto dos 2% no segundo semestre de 2025, em linha com o objectivo do BCE. Os contratos colectivos negociados em 2024 e 2025, sobretudo na indústria, na construção e no comércio, incorporaram correcções acumuladas de anos anteriores. E a escassez de mão-de-obra em sectores específicos, da hotelaria à saúde passando pela construção civil, continuou a pressionar a tabela salarial para cima, mesmo onde os contratos colectivos não chegavam.</p>
+        <p>Nada disto é novidade para quem gere recursos humanos em Portugal. A novidade é a soma. Quando inflação baixa, contratos colectivos generosos e mercado de trabalho apertado coincidem, o resultado é exactamente este: ganho real visível para o trabalhador, pressão de custos crescente para o empregador.</p>
+        <div class="art-highlight">
+          <div class="art-highlight-label">Nota</div>
+          <div class="art-highlight-text">A OCDE alerta para um detalhe importante: apesar do crescimento de 2025, em vários países, incluindo Portugal, o salário real médio continua abaixo do nível pré-pandemia. Recuperou-se uma parte do terreno, não todo. O trabalhador português ainda compra, em média, menos com o seu salário do que comprava em 2019.</div>
+        </div>
+        <p>Esta nuance é crítica. A narrativa pública tende a celebrar o crescimento como uma normalização. Mas normalizar é diferente de recuperar. E quando se descontam factores como a evolução do preço da habitação, que cresceu acima da inflação geral, o quadro complica-se ainda mais. O salário real cresceu, mas o salário utilizável depois de pagar a renda ou a prestação cresceu menos.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <h2>O peso para as empresas</h2>
+        <p>Aqui é onde a leitura se separa da política. Para uma empresa, o que interessa não é a taxa agregada de crescimento salarial, é a posição relativa: como evoluíram os meus custos com pessoal face aos meus concorrentes, face ao meu cliente, face à minha capacidade de subir preços.</p>
+        <p>E a distribuição é desigual. Os 4,9% médios escondem realidades muito diferentes consoante o sector.</p>
+        <table class="art-table">
+          <thead>
+            <tr><th>Sector</th><th>Pressão salarial 2025</th><th>Margem de absorção</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Construção</strong></td><td>Alta, com escassez aguda</td><td>Limitada, contratos públicos pré-fixados</td></tr>
+            <tr><td><strong>Hotelaria e restauração</strong></td><td>Alta, sazonalidade amplifica</td><td>Média, possibilidade de subir preços</td></tr>
+            <tr><td><strong>Saúde e cuidados</strong></td><td>Alta, défice estrutural</td><td>Baixa no público, média no privado</td></tr>
+            <tr><td><strong>Tecnologia e serviços qualificados</strong></td><td>Alta nos perfis seniores</td><td>Alta, margens permitem absorver</td></tr>
+            <tr><td><strong>Indústria transformadora</strong></td><td>Média, indexada a contratos colectivos</td><td>Variável conforme exposição internacional</td></tr>
+            <tr><td><strong>Comércio</strong></td><td>Média, salário mínimo puxa o piso</td><td>Baixa, concorrência de preço aperta</td></tr>
+            <tr><td><strong>Agricultura</strong></td><td>Baixa, ainda muito mão-de-obra estrangeira</td><td>Variável conforme produto</td></tr>
+          </tbody>
+        </table>
+        <p>O quadro mostra o problema central. Os sectores onde a pressão salarial é mais alta nem sempre são os que conseguem repercutir esse custo no cliente final. A construção que serve obra pública, com preço fixado por concurso, paga salários crescentes contra orçamentos antigos. O comércio de proximidade vê o salário mínimo subir mas não pode subir o preço do leite ao mesmo ritmo. A saúde privada compete por enfermeiros com o público sem poder cobrar consultas como em Londres ou Madrid.</p>
+        <p>É nestes sectores que a margem está a comprimir-se de forma mais visível. E é aqui que a expressão "ganhar acima da inflação" tem outra leitura: para o trabalhador, é uma boa notícia inequívoca; para a empresa, é uma transferência de margem cujo destino depende da capacidade de produtividade compensar.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Produtividade, a variável que ninguém quer discutir</h2>
+        <p>Quando os salários crescem 4,9% e a produtividade cresce 1%, alguma coisa tem de ceder. Ou os preços sobem para o cliente final, ou a margem encolhe para o accionista, ou ambos. Em Portugal, a produtividade do trabalho cresceu cerca de 1,2% em 2025, segundo o INE. Os salários reais cresceram 2,6%. A diferença, simplificando muito, é o que sai da margem das empresas ou do bolso dos consumidores.</p>
+        <p>Esta é uma equação que não fecha indefinidamente. Os países da OCDE que combinam crescimento salarial alto com baixa produtividade são também os que vêem competitividade a erodir-se ao longo do tempo. Itália é o caso mais frequentemente citado. Portugal não está nessa zona, mas tem-se aproximado.</p>
+        <div class="pull-quote reveal">
+          <div class="pull-quote-text">"O ganho real do trabalhador português em 2025 é uma transferência de margem que só é sustentável se a produtividade subir ao mesmo ritmo. Não é o caso."</div>
+        </div>
+        <p>O que isto coloca na mesa de qualquer gestor é uma pergunta concreta: se a folha salarial vai continuar a crescer acima da inflação durante os próximos dois ou três anos, e nada indica que pare, como é que a empresa gera os ganhos de produtividade que tornam essa pressão sustentável? Sem essa resposta, a alternativa é apenas escolher quem absorve a perda: o cliente, via preço; o accionista, via margem; ou o próprio trabalhador, via redução de horas, contratações adiadas ou substituição por automação.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Três respostas que estão a aparecer no mercado</h2>
+        <p>Olhando para o que as empresas portuguesas estão efectivamente a fazer, vê-se três caminhos a serem tomados em paralelo, raramente em alternativa.</p>
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Investimento em automação selectiva.</strong> Não é a automação narrativa de "robôs vão substituir trabalhadores". É uma automação cirúrgica, focada em tarefas repetitivas de back-office, controlo de qualidade industrial e logística interna. O cálculo é simples: se o custo do trabalho subiu 5% e o custo do software ou do equipamento se mantém, a equação muda.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Reorganização de equipas em vez de aumentos generalizados.</strong> Em vez de subir 4% a toda a folha, várias empresas estão a redesenhar funções, a concentrar perfis mais qualificados nos pontos críticos e a substituir camadas intermédias por mais autonomia ou por software. O efeito agregado é semelhante ao que era um aumento médio, mas com produtividade crescente.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Renegociação da estrutura de remuneração.</strong> A componente fixa cresce no que é negociado em contrato colectivo, mas a componente variável e os benefícios não-monetários (saúde, formação, flexibilidade) ganham peso. Para o trabalhador, é remuneração; para a empresa, é uma estrutura de custos mais elástica.</li>
+        </ul>
+        <p>Nenhum destes caminhos é novo. O que mudou é a urgência. Adiar uma destas decisões em 2022 ou 2023 era um erro estratégico. Em 2026, é uma decisão financeira com efeito directo na demonstração de resultados do ano seguinte.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <h2>O que a estatística da OCDE não diz</h2>
+        <p>Há uma camada que o relatório agregado não captura e que importa nomear. O ganho real médio de 2,6% é uma média. Significa que algumas pessoas ganharam muito mais do que isso, outras pouco, outras nada. Os trabalhadores cobertos por contratos colectivos recentemente revistos ganharam mais. Os que estão fora da contratação colectiva, em sectores fragmentados, ganharam menos. Os perfis tecnológicos seniores, em competição directa com mercados europeus mais ricos, ganharam muito acima da média.</p>
+        <p>Para uma empresa, o que importa é a sua média ponderada, não a média nacional. Uma PME industrial no interior tem uma equação salarial completamente distinta de uma scale-up de software em Lisboa. A primeira pode ter uma pressão salarial inferior à média nacional. A segunda, muito superior. Aplicar o número agregado de 4,9% como termómetro do próprio negócio é, quase sempre, um erro de calibragem.</p>
+        <div class="art-highlight">
+          <div class="art-highlight-label">Atenção</div>
+          <div class="art-highlight-text">O salário mínimo nacional em Portugal subiu 6,1% em 2025, mais do que a média geral. Isto significa que empresas com folha de pagamentos concentrada no piso (comércio, restauração, limpeza, agricultura) tiveram uma pressão salarial efectiva acima dos 4,9% médios reportados pela OCDE. O agregado esconde o esforço real destes sectores.</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Onde fica o investimento empresarial nesta equação</h2>
+        <p>Há um efeito secundário do crescimento salarial que se discute pouco e merece atenção. Quando o trabalho fica mais caro em termos relativos, o capital fica relativamente mais barato. Não em termos absolutos, mas em termos de retorno marginal. Cada euro investido em equipamento, software ou tecnologia que substitua trabalho ganha um retorno mais alto do que tinha em 2022.</p>
+        <p>É um dos motivos pelos quais o investimento empresarial em activos fixos tem dado sinais de aceleração em sectores tradicionais. A indústria está a comprar máquinas. A logística está a digitalizar gestão de armazém. A construção está a importar pré-fabricação. Não é coincidência com o crescimento salarial: é consequência directa.</p>
+        <p>Para uma empresa que esteja a olhar para o seu plano de investimento dos próximos dois anos, este é um dos cálculos que deve ser refeito. Os incentivos financeiros e fiscais ao investimento, do PRR ao Portugal 2030, do SIFIDE II ao RFAI, ganharam peso relativo precisamente porque o custo da alternativa, expandir só com mais pessoas, ficou mais alto. Quem não recalibra o plano de investimento à luz desta nova equação está, na prática, a financiar o crescimento salarial sem compensar com produtividade. É uma trajectória de margem decrescente.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>O que isto significa para a sua empresa</h2>
+        <p>O regresso do crescimento real dos salários é, em si, uma boa notícia macroeconómica. Trabalhadores com mais poder de compra alimentam consumo interno, sustentam serviços, reduzem dependência de subsídios. Quem gere uma empresa em Portugal beneficia, do lado da procura, deste movimento.</p>
+        <p>Do lado dos custos, a história é outra. E é nessa segunda metade que a maioria das empresas portuguesas está pouco preparada. Continua-se a tratar o aumento salarial como linha orçamental anual a negociar, e não como variável estrutural a gerir com a mesma seriedade com que se gere a tesouraria, o stock ou a relação com o banco.</p>
+        <p>O que recomendamos a quem nos consulta sobre este tema, sobretudo a PME industriais e a empresas de serviços com forte exposição a folha salarial, é simples na formulação e exigente na execução. Primeiro, refazer o orçamento dos próximos três anos assumindo crescimento salarial real de 2% a 3% ao ano, não como cenário pessimista mas como cenário base. Segundo, identificar nas operações onde é que cada euro adicional em folha pode ser compensado por automação, por reorganização de funções, ou por subida de preços. Terceiro, calibrar o plano de investimento aproveitando os instrumentos de financiamento disponíveis para reduzir o peso do CAPEX, sabendo que o retorno marginal de cada euro investido subiu por efeito directo do encarecimento do trabalho.</p>
+        <p>Quem fizer este exercício antes do final de 2026 entra em 2027 com uma estrutura de custos preparada. Quem adiar, descobre o problema na conta de resultados.</p>
+      </div>
+
+      <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;font-style:italic;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../Retratos Equipa/retrato_luísgomes.png" alt="Luís Gomes" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Luís Gomes</div>
+            <div class="sidebar-author-role">Analista Financeiro</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Categoria</div>
+          <div class="sidebar-info-val">Mercados</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Publicado</div>
+          <div class="sidebar-info-val">Abril 2026</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Leitura</div>
+          <div class="sidebar-info-val">9 min</div>
+        </div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
+        <div class="sidebar-cta-text">Ajudamos empresas a recalibrar plano de investimento e estrutura de custos perante a pressão salarial.</div>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="kpis-pme-quais-fazem-sentido.html" class="related-item">
+          <span class="related-item-title">KPIs para PME: quais fazem sentido</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="medir-antes-automatizar-operacao.html" class="related-item">
+          <span class="related-item-title">Medir antes de automatizar a operação</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="construcao-escassez-mao-de-obra.html" class="related-item">
+          <span class="related-item-title">Construção: escassez de mão-de-obra</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo-row">
+          <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+        </div>
+        <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+      </div>
+      <div>
+        <div class="f-col-label">Biblioteca</div>
+        <ul class="f-links">
+          <li><a href="../biblioteca.html">Portugal 2030</a></li>
+          <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+          <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+          <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Plataforma</div>
+        <ul class="f-links">
+          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../conhecimento.html">Conhecimento</a></li>
+          <li><a href="../parceiros.html">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Empresa</div>
+        <ul class="f-links">
+          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="../sobre-nos.html">Equipa</a></li>
+          <li><a href="../carreiras.html">Carreiras</a></li>
+          <li><a href="https://calendly.com/opencapital">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+      <div class="f-legal">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
