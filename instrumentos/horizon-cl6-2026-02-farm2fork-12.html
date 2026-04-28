@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hub europeu de microbioma (HORIZON-CL6-2026-02-FARM2FORK-12): Open Capital</title>
+  <meta name="description" content="Coordination and Support Action Horizon Europe com €2M para criar um hub europeu de coordenação e monitorização da investigação em microbioma numa lógica One Health.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-value.status-cont{color:#2E7D52;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-body{}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-gold{color:var(--gold);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-fact-val.val-cont{color:#2E7D52;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../biblioteca.html" class="active">Biblioteca</a></li>
+    <li><a href="../conhecimento.html">Conhecimento</a></li>
+    <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros.html">Parceiros</a>
+        <a href="../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../biblioteca.html">Biblioteca</a>
+  <a href="../conhecimento.html">Conhecimento</a>
+  <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos.html">Sobre Nós</a>
+  <a href="../parceiros.html">Parceiros</a>
+  <a href="../carreiras.html">Carreiras</a>
+  <a href="https://calendly.com/opencapital" class="nav-mobile-cta">Contactar</a>
+</div>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../index.html">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../biblioteca.html">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Hub europeu de microbioma (HORIZON-CL6-2026-02-FARM2FORK-12)</span>
+    </nav>
+    <p class="hero-cat">Inovação · Horizon Europe Cluster 6 · Microbioma One Health</p>
+    <h1 class="hero-title">Hub europeu de microbioma One Health</h1>
+    <p class="hero-tagline">Coordination and Support Action com 2 milhões de euros para criar um hub europeu de coordenação e monitorização da investigação em microbioma numa lógica One Health, articulando saúde humana, agricultura, alimentação e ambiente.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotação total</span>
+        <span class="meta-value gold">€2M</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Por projeto</span>
+        <span class="meta-value">€2M</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Prazo</span>
+        <span class="meta-value status-open">Aberto até 14/04/2026</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Tipo de ação</span>
+        <span class="meta-value">CSA · 100% financiamento</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../biblioteca.html" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Enquadramento</div>
+      <h2 class="section-h2">Quando a investigação é grande mas o efeito é pequeno</h2>
+      <p class="section-text">A investigação sobre microbioma ganhou tração significativa na última década, com avanços relevantes em saúde humana (microbioma intestinal, vaginal, respiratório), agricultura (microbioma do solo, rizosfera, pós-colheita), aquicultura (microbioma de peixes e invertebrados), alimentação (microbiota fermentativa, segurança alimentar) e ambiente (ciclos biogeoquímicos, biodiversidade microbiana). Em todos estes domínios surgiu evidência de que o microbioma é determinante para outcomes de saúde, produtividade e sustentabilidade.</p>
+      <p class="section-text">A despeito desta produção científica, a investigação europeia em microbioma permanece fragmentada. Iniciativas nacionais coexistem com projetos europeus sem coordenação efetiva. Os requisitos regulatórios continuam a ser dos maiores obstáculos para traduzir investigação em soluções inovadoras. Faltam infraestruturas comuns, harmonização metodológica e canais de articulação entre Estados-Membros. O tópico HORIZON-CL6-2026-02-FARM2FORK-12 responde a este vazio com 2 milhões de euros para uma única Coordination and Support Action que crie um hub europeu, atuando como centro de recursos e órgão de monitorização da investigação em microbioma a partir de uma lógica One Health.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Dados-chave</div>
+      <h2 class="section-h2">A oportunidade em números</h2>
+      <div class="stats-row reveal" style="grid-template-columns:repeat(4,1fr);">
+        <div class="stat-cell">
+          <div class="stat-num">€2<sup>M</sup></div>
+          <div class="stat-label">Dotação total</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">1</div>
+          <div class="stat-label">Projeto a financiar</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">€2<sup>M</sup></div>
+          <div class="stat-label">Por projeto</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">100<sup>%</sup></div>
+          <div class="stat-label">Taxa financiamento</div>
+        </div>
+      </div>
+      <p class="section-text">Submissão single-stage com deadline a 14 de abril de 2026, abriu a 14 de janeiro de 2026. Como Coordination and Support Action operada em regime de lump sum, financia atividades de coordenação, mapeamento, monitorização e comunicação com 100% de custos diretos. O budget é modesto comparado com RIA tradicionais, o que faz sentido para uma CSA com função de hub: o objetivo não é executar I&D, é orquestrar o que já existe.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Âmbito técnico</div>
+      <h2 class="section-h2">O que o consórcio tem de produzir</h2>
+      <p class="section-text">A call exige construção de um hub europeu de microbioma com responsabilidades concretas. As atividades obrigatórias são:</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Centro de recursos e monitorização:</strong> estabelecimento de um hub que atue como centro de recursos e como órgão de monitorização do panorama de I&I e regulatório do microbioma; promovendo e reforçando sinergias entre esforços de coordenação existentes e iniciativas nacionais alinhadas com iniciativas europeias.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Mapeamento exaustivo:</strong> mapeamento de todos os projetos europeus em curso e passados em microbioma, infraestruturas europeias de investigação e tecnologia, e iniciativas europeias (públicas e privadas); identificação de sobreposições, sinergias e lacunas em todos os domínios do microbioma, em particular para informar futuras direções de financiamento e política.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Articulação com iniciativas existentes:</strong> colaboração com iniciativas relevantes em curso (por exemplo a World Microbiome Partnership), projetos UE financiados (por exemplo HORIZON-CL6-2026-02-FARM2FORK-11) e construção sobre os resultados de projetos UE legados em microbioma, entre outros, para garantir ação coordenada, evitar duplicação de esforços, capitalizar conquistas existentes e fomentar sinergias financeiras identificando lacunas de funding.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Avaliação de impacto:</strong> monitorização e avaliação do impacto da I&I em microbioma na população, ambiente, biodiversidade, economia europeia e competitividade, através de indicadores específicos que respondem a prioridades de políticas europeias e nacionais com ênfase em princípios One Health e em todos os tipos de microbioma.</li>
+      </ul>
+      <div class="highlight-box">
+        <div class="highlight-box-title">Sinal editorial</div>
+        <div class="highlight-box-text">A perspetiva One Health é não-negociável: o hub tem de cobrir microbioma humano, animal, vegetal, ambiental e alimentar de forma integrada. Propostas que se concentram apenas em microbioma humano (saúde) ou apenas em microbioma agrícola perdem em "Excellence". O alinhamento com a Comunicação "Building the future with nature: Boosting Biotechnology and Biomanufacturing in the EU", a EU life science strategy e a EU biodiversity strategy for 2030 é exigência explícita.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Resultados esperados</div>
+      <h2 class="section-h2">O que conta como sucesso</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">One-stop-shop de microbioma:</strong> recurso e conhecimento centralizados (informação sobre paisagem de I&I em microbioma, bases de dados, melhores práticas, avaliações de risco e segurança alimentar, aspetos relacionados com ambiente e biodiversidade, policy briefs) para stakeholders envolvidos em I&I de microbioma (investigadores, decisores políticos, reguladores).</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Orientação para decisores:</strong> guidance para decisores políticos focando o link integrado entre microbioma e a sua interconexão com saúde humana, clima, ambiente, agricultura e sistemas alimentares (com ênfase na perspetiva One Health).</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Coordenação reforçada UE:</strong> integração e coordenação reforçadas entre Estados-Membros e países associados em investigação e inovação em microbioma num contexto One Health, abrangendo todos os tipos de microbiomas.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Composição do consórcio</div>
+      <h2 class="section-h2">Quem se senta à mesa</h2>
+      <p class="section-text">Pela natureza CSA e pela cobertura One Health exigida, a composição-tipo competitiva inclui:</p>
+      <table class="art-table">
+        <thead><tr><th>Tipo de parceiro</th><th>Função no consórcio</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Lead em coordenação</strong></td><td>Organização com track record em coordenação de microbioma na Europa (EMBL-EBI, Wageningen, INRAE MetaGenoPolis, KU Leuven, Uppsala SLU).</td></tr>
+          <tr><td><strong>Microbioma humano</strong></td><td>Plataformas e centros em microbioma humano (Quadram Institute, IFR Norwich, ICAR Roma, MetaHIT legacy partners).</td></tr>
+          <tr><td><strong>Microbioma agrícola</strong></td><td>Centros em microbioma do solo e plantas (INRAE, Wageningen, Universidade de Évora-MED, IRTA, JKI Alemanha).</td></tr>
+          <tr><td><strong>Microbioma alimentar</strong></td><td>Investigação em microbiota fermentativa, segurança alimentar (Quadram, INRAE Saint-Genès, ITQB-NOVA).</td></tr>
+          <tr><td><strong>Microbioma ambiental</strong></td><td>Centros em ecologia microbiana e ciclos biogeoquímicos (Max Planck Marine Microbiology, NIOZ Holanda, CSIC Espanha).</td></tr>
+          <tr><td><strong>Infraestruturas de investigação</strong></td><td>EMBRC, MIRRI (Microbial Resource Research Infrastructure), ELIXIR, EATRIS. Asseguram articulação com infraestruturas europeias.</td></tr>
+          <tr><td><strong>Indústria e biotech</strong></td><td>Federações industriais relevantes (EuropaBio, IPiFF, EuFMD), com presença em biotechs aplicadas a microbioma.</td></tr>
+          <tr><td><strong>Reguladores e advisory</strong></td><td>EFSA, EMA observers; Joint Programming Initiatives (JPI HDHL).</td></tr>
+        </tbody>
+      </table>
+      <p class="section-text">Mínimo legal são três entidades de três Estados-Membros ou países associados. Para CSA com vocação de hub europeu, espera-se consórcio com 12-18 parceiros e cobertura mínima de 10-12 Estados-Membros, com presença obrigatória em pelo menos quatro domínios One Health (humano, agrícola, alimentar, ambiental).</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Contexto português</div>
+      <h2 class="section-h2">Onde Portugal pode entrar com peso</h2>
+      <p class="section-text">Portugal tem ângulo de entrada concreto e crescente neste tópico, articulado em vários domínios do microbioma. No microbioma humano e clínico, equipas no IGC (Instituto Gulbenkian de Ciência), iMM-Lisboa, i3S-Porto, ICVS-Braga e CINTESIS-NOVA têm produção sustentada em microbiota intestinal, microbiota e doenças metabólicas, e mecanismos imunes. No microbioma agrícola e do solo, o ITQB-NOVA, MED-Évora, CIBIO-InBIO Porto e CESAM-Aveiro têm experiência em microbioma da rizosfera, micorrizas e ecologia microbiana de solos mediterrânicos. No microbioma alimentar, o ITQB-NOVA é referência em fermentações tradicionais (queijo, vinho, fermentados portugueses) e segurança alimentar. No microbioma ambiental, o IMAR Madeira, CCMAR Algarve e CIIMAR Porto têm produção em ecologia microbiana marinha e aquicultura.</p>
+      <p class="section-text">Em infraestrutura, a participação portuguesa em ELIXIR (BioData.pt), MIRRI e EMBRC abre canais formais de articulação com infraestruturas europeias relevantes para o hub. Em biotechs portuguesas, há ecossistema crescente em microbioma aplicado: Magnetochlin (microbioma vegetal), HiloProbiotics, Mosacoa Bioscience, Promicrobia, com maturidade variável mas em expansão.</p>
+      <p class="section-text">A FCT e a ANI, como agências nacionais de financiamento, podem ser parceiros institucionais para WPs de coordenação europeia, articulando com Joint Programming Initiatives (em particular JPI HDHL "Healthy Diet for a Healthy Life" e JPI Climate). Em advisory regulatório, o INSA Ricardo Jorge e a DGAV têm presença em comités europeus relevantes (EFSA, ECDC).</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Posicionamento competitivo</div>
+      <h2 class="section-h2">Onde a proposta se ganha ou perde</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">One Health genuíno:</strong> a propost tem de cobrir os quatro domínios principais (humano, agrícola, alimentar, ambiental) com WPs próprios e parceiros especialistas em cada um. Propostas concentradas num domínio (geralmente microbioma humano) perdem em "Excellence".</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Construção sobre legacy:</strong> a call exige explicitamente capitalização sobre projetos UE legados em microbioma (MetaHIT, MyNewGut, MICROB-PREDICT, ROCIT, e outros). Sem inventário e plano de construção sobre essa base, a proposta perde em "Implementation".</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Articulação com FARM2FORK-11:</strong> a call refere explicitamente colaboração com FARM2FORK-11 (que é o tópico de RIA em microbioma agrícola). Propostas que demonstram mecanismos formais de articulação ganham em "Impact".</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Indicadores de impacto:</strong> a call exige que o hub estabeleça indicadores específicos para monitorização. Sem métrica clara de impacto sobre saúde populacional, ambiente, biodiversidade, economia e competitividade, a proposta cai em "Implementation".</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Modelo de continuidade:</strong> sendo CSA com função de hub permanente, a sustentabilidade pós-projeto é critério crítico. Propostas que não definem modelo de governance e funding pós-Horizon (memorandum entre EM, integração em ESFRI, articulação com Health Emergency and Preparedness Authority) perdem peso.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Articulação com World Microbiome Partnership:</strong> referenciada explicitamente. Sem articulação formal (membership, signing partner), a proposta perde em "Excellence".</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">Para entidades portuguesas, este tópico tem encaixe estratégico forte mas budget reduzido por parceiro. A natureza CSA e o budget total de 2M significa que budgets por parceiro estão tipicamente entre 80 mil e 250 mil euros, o que é pouco para liderar mas suficiente para participação relevante em WPs específicos. O valor estratégico está na posição que se ganha no centro do desenho da política europeia de microbioma para a próxima década.</p>
+      <p class="section-text">A recomendação prática é dupla. Primeiro, o ITQB-NOVA é a entidade portuguesa com encaixe natural mais forte, pela sua produção transversal em microbioma alimentar, agrícola e ambiental. O ITQB pode contactar coordenadores prováveis em EMBL-EBI, Wageningen Microbiology ou INRAE MetaGenoPolis, oferecendo acesso a infraestrutura de coleções microbianas (PYCC), capacidade analítica e ligação à Plataforma Portuguesa de Bioinformática (BioData.pt). Outras entidades com encaixe forte: IGC (microbioma humano e modelos animais), MED-Évora (microbioma de solos mediterrânicos), CIIMAR (microbioma aquático). O budget realista para parceiro académico português neste hub situa-se entre 100 mil e 200 mil euros.</p>
+      <p class="section-text">Segundo, biotechs portuguesas em microbioma aplicado podem entrar como parceiros associados ou em advisory boards do hub. O encaixe direto é dar visibilidade a casos de translação investigação-mercado em contexto português, contribuindo para a parte de mapping da indústria. O budget aqui é tipicamente menor (50 mil-100 mil euros) mas o efeito reputacional é alto.</p>
+      <p class="section-text">O que não funciona é entrar com proposta concentrada num único domínio do microbioma. As CSAs de hub vencem-se com cobertura One Health autêntica, com parceiros que têm produção real em humano, agrícola, alimentar e ambiental. Adicionalmente, sem articulação clara com infraestruturas europeias (EMBL-EBI, ELIXIR, MIRRI, EMBRC) e sem plano de continuidade pós-projeto, a proposta tem dificuldade em passar threshold de avaliação.</p>
+      <p class="section-text">Vale ainda nota estratégica: a UE está a posicionar microbioma como área prioritária na nova Bioeconomy Strategy, na EU Life Science Strategy e na próxima geração da Healthy Brain Initiative. O hub criado por este projeto vai ser o interlocutor europeu privilegiado para essas agendas. A participação aqui é, mais do que num projeto de I&D normal, uma posição de definição de agenda científica e regulatória europeia em microbioma até 2035, com leveraging direto sobre o próximo Framework Programme (FP10).</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">Horizon Europe Cluster 6</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Código</div>
+        <div class="sidebar-fact-val">HORIZON-CL6-2026-02-FARM2FORK-12</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tipo de ação</div>
+        <div class="sidebar-fact-val">Coordination and Support Action (CSA)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Dotação total</div>
+        <div class="sidebar-fact-val">€2.000.000</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Por projeto</div>
+        <div class="sidebar-fact-val">€2 milhões</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Projetos previstos</div>
+        <div class="sidebar-fact-val">1</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Taxa financiamento</div>
+        <div class="sidebar-fact-val">100% custos diretos</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Submissão</div>
+        <div class="sidebar-fact-val">Single-stage</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-open">Aberto até 14/04/2026</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Localização</div>
+        <div class="sidebar-fact-val">UE + países associados</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Beneficiário</div>
+        <div class="sidebar-fact-val">Universidades, infraestruturas de investigação, biotech, federações industriais</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Domínios</div>
+        <div class="sidebar-fact-val">One Health (humano, animal, vegetal, ambiental, alimentar)</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Tem produção em microbioma (humano, agrícola, alimentar ou ambiental) ou ligação a infraestruturas europeias? Falamos sobre como entrar num consórcio FARM2FORK-12.</div>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="horizon-cl6-2026-02-farm2fork-07.html" class="related-link">
+        <span class="related-link-name">FARM2FORK-07 (plataforma proteção culturas)</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="horizon-cl6-2026-02-farm2fork-02.html" class="related-link">
+        <span class="related-link-name">FARM2FORK-02 (resistência a pesticidas)</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="horizon-cl6-2026-02-farm2fork-04.html" class="related-link">
+        <span class="related-link-name">FARM2FORK-04 (melhoramento perenes)</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="horizonte-europa.html" class="related-link">
+        <span class="related-link-name">Horizonte Europa</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="portugal-2030.html" class="related-link">
+        <span class="related-link-name">Portugal 2030</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <div class="f-col-label">Biblioteca</div>
+      <ul class="f-links">
+        <li><a href="../biblioteca.html">Portugal 2030</a></li>
+        <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+        <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+        <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Plataforma</div>
+      <ul class="f-links">
+        <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../conhecimento.html">Conhecimento</a></li>
+        <li><a href="../parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Empresa</div>
+      <ul class="f-links">
+        <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="../sobre-nos.html">Equipa</a></li>
+        <li><a href="../carreiras.html">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
