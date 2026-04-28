@@ -6,11 +6,11 @@
     "last_writer_run": "2026-04-27"
   },
   "totals": {
-    "published": 586,
-    "open": 334,
-    "closed": 218,
+    "published": 591,
+    "open": 336,
+    "closed": 221,
     "planned": 18,
-    "in_queue": 100,
+    "in_queue": 95,
     "in_watchlist": 103,
     "in_catalogo": 1,
     "in_overflow": 171
@@ -57,7 +57,8 @@
       "count": 198,
       "open": 69,
       "closed": 81,
-      "planned": 8
+      "planned": 8,
+      "published": 4
     },
     "eu-other": {
       "count": 105,
@@ -98,6 +99,9 @@
     "catalogo-crowdfunding": {
       "count": 2,
       "open": 2
+    },
+    "priv-ba": {
+      "published": 1
     }
   },
   "last_full_cycle": "2026-04-12",

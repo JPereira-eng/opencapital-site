@@ -12279,7 +12279,11 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao,empresa,entidade-publica,associacao",
-      "setores": ["energia-ambiente", "industria", "economia-criativa"],
+      "setores": [
+        "energia-ambiente",
+        "industria",
+        "economia-criativa"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "New European Bauhaus Facility 2025",
       "tagline": "EUR 118 milhoes para projetos que integram sustentabilidade, inclusao e estetica na transformacao de bairros europeus.",
@@ -12298,7 +12302,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "ERC Proof of Concept 2025",
       "tagline": "EUR 150.000 por projeto para investigadores ERC explorarem o potencial comercial da sua investigacao de fronteira.",
@@ -12317,7 +12323,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao,empresa",
-      "setores": ["tecnologia-digital"],
+      "setores": [
+        "tecnologia-digital"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa CL3 - Ciberseguranca ECCC 2025",
       "tagline": "EUR 11 milhoes para Privacy Enhancing Technologies, gerido pelo Centro Europeu de Competencias em Ciberseguranca.",
@@ -12336,7 +12344,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa - Infraestruturas de Investigacao 2025",
       "tagline": "EUR 400 milhoes para consolidar, modernizar e abrir as infraestruturas de investigacao europeias.",
@@ -12355,7 +12365,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Teaming for Excellence 2025",
       "tagline": "EUR 270 milhoes para criar centros de excelencia em paises Widening, com Portugal diretamente elegivel.",
@@ -12374,7 +12386,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "entidade-publica,ensino-investigacao,associacao",
-      "setores": ["saude-ciencias-vida"],
+      "setores": [
+        "saude-ciencias-vida"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EU4Health SANTE Action Grants 2026",
       "tagline": "Subvencoes diretas da UE para projetos de saude publica em rastreio oncologico, cardiovascular, dados de saude e acesso a medicamentos.",
@@ -12393,7 +12407,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "ensino-investigacao,entidade-publica",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Erasmus+ Capacity Building Higher Education 2026",
       "tagline": "EUR 113 milhoes para consorcios de universidades europeias e de paises terceiros em Africa, Asia e America Latina.",
@@ -12412,7 +12428,9 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "entidade-publica,ensino-investigacao,associacao,empresa",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Erasmus+ Policy Experimentations 2026",
       "tagline": "EUR 54 milhoes para ensaios transnacionais de politicas inovadoras em educacao digital, IA, formacao profissional e educacao de adultos.",
@@ -12431,7 +12449,9 @@
       "status_class": "status-closed",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["tecnologia-digital"],
+      "setores": [
+        "tecnologia-digital"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Horizonte Europa CL4 Digital e Cloud 2025 (HORIZON-CL4-2025-03)",
       "tagline": "EUR 404,1 milhoes para computacao quantica, GenAI imersivo, redes Telco Edge Cloud 3C, materiais avancados para digital e tecnologias de dados.",
@@ -12450,7 +12470,9 @@
       "status_class": "status-open",
       "fonte": "priv",
       "beneficiario": "empresa,empreendedor",
-      "setores": ["energia-ambiente"],
+      "setores": [
+        "energia-ambiente"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "GoParity",
       "tagline": "Plataforma portuguesa de debt crowdfunding regulada pela CMVM, focada em projetos de impacto ambiental e social.",
@@ -12469,7 +12491,9 @@
       "status_class": "status-cont",
       "fonte": "iefp",
       "beneficiario": "entidade-publica,associacao",
-      "setores": ["todos"],
+      "setores": [
+        "todos"
+      ],
       "regiao": "lisboa",
       "title": "Centros Qualifica - Area Metropolitana de Lisboa",
       "tagline": "Apoio integral do IEFP para promotores privados de Centros Qualifica na Grande Lisboa e Peninsula de Setubal.",
@@ -12477,6 +12501,115 @@
       "highlight1": "Associacoes, IPSS, sindicatos e fundacoes com autorizacao ANQEP",
       "highlight2": "Area Metropolitana de Lisboa (Grande Lisboa e Peninsula de Setubal)",
       "href": "instrumentos/centros-qualifica-aml.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl5-2026-06-two-stage-d5-10",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Stage 1 Fechado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao,entidade-publica",
+      "setores": [
+        "mobilidade-transportes",
+        "energia-ambiente"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizon ZEWT: Eficiencia Energetica em Navios de Longo Curso",
+      "tagline": "Financiamento europeu para tecnologias que reduzam o consumo energetico em 25% em navios de longa distancia.",
+      "highlight0": "EUR 15 milhoes - Lump Sum Grant",
+      "highlight1": "Empresas, universidades, centros I&D",
+      "highlight2": "Paises membros UE e associados",
+      "href": "instrumentos/horizon-cl5-2026-06-two-stage-d5-10.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl5-2026-06-two-stage-d5-19",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Stage 1 Fechado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao,entidade-publica",
+      "setores": [
+        "mobilidade-transportes",
+        "energia-ambiente"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizon Europe: Emissoes Nao-Exhaust no Transporte Rodoviario e Ferroviario",
+      "tagline": "Investigacao europeia sobre particulas nao-exhaust em transporte terrestre, da medicao as estrategias de mitigacao.",
+      "highlight0": "EUR 15 milhoes - Action Grant",
+      "highlight1": "Empresas, universidades, centros I&D",
+      "highlight2": "Paises membros UE e associados",
+      "href": "instrumentos/horizon-cl5-2026-06-two-stage-d5-19.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl5-2026-2-prize",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 25/06/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "associacao,entidade-publica",
+      "setores": [
+        "energia-ambiente"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Premio Horizon: Inovacao na Governanca de Comunidades de Energia",
+      "tagline": "EUR 1 milhao em premios para comunidades de energia com modelos de governanca inovadores e inclusivos.",
+      "highlight0": "EUR 1 000 000 em premios - ate 10 vencedores",
+      "highlight1": "Comunidades de energia (max. 10 000 membros)",
+      "highlight2": "Paises membros UE e associados",
+      "href": "instrumentos/horizon-cl5-2026-2-prize.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl5-2026-08-two-stage-d1-06",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "fechado",
+      "status_text": "Stage 1 Fechado",
+      "status_class": "status-closed",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao,entidade-publica",
+      "setores": [
+        "energia-ambiente"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizon Europe: Ciencia do Sistema Terrestre para a Politica Climatica",
+      "tagline": "Investigacao europeia para preencher lacunas criticas na ciencia climatica identificadas pelo IPCC.",
+      "highlight0": "EUR 45 milhoes - Lump Sum Grant",
+      "highlight1": "Empresas, universidades, centros I&D",
+      "highlight2": "Paises membros UE e associados",
+      "href": "instrumentos/horizon-cl5-2026-08-two-stage-d1-06.html",
+      "featured": false
+    },
+    {
+      "id": "core-angels-atlantic",
+      "category": "priv",
+      "category_label": "Investimento Privado",
+      "estado": "aberto",
+      "status_text": "Candidatura Continua",
+      "status_class": "status-cont",
+      "fonte": "pventures",
+      "beneficiario": "empresa,empreendedor",
+      "setores": [
+        "tecnologia-digital",
+        "comercio",
+        "saude-ciencias-vida"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "COREangels Atlantic",
+      "tagline": "Rede ibero-americana de business angels para startups early-stage no corredor Brasil-Portugal-Espanha.",
+      "highlight0": "Ticket minimo EUR 50 000 - Pre-seed e Seed",
+      "highlight1": "Startups early-stage com potencial cross-border",
+      "highlight2": "Portugal, Brasil, Espanha, EUA",
+      "href": "instrumentos/core-angels-atlantic.html",
       "featured": false
     }
   ]
