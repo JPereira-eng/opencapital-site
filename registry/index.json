@@ -3,14 +3,14 @@
     "description": "Open Capital Radar v4.0 - Indice global",
     "version": "4.0",
     "migrated_from_v3": "2026-04-12",
-    "last_writer_run": "2026-04-28"
+    "last_writer_run": "2026-04-29"
   },
   "totals": {
-    "published": 631,
-    "open": 348,
+    "published": 632,
+    "open": 349,
     "closed": 248,
     "planned": 18,
-    "in_queue": 81,
+    "in_queue": 80,
     "in_watchlist": 103,
     "in_catalogo": 1,
     "in_overflow": 148
@@ -58,7 +58,7 @@
       "open": 75,
       "closed": 103,
       "planned": 8,
-      "published": 28
+      "published": 29
     },
     "eu-other": {
       "count": 105,
@@ -325,5 +325,5 @@
     "startup-visa-portugal": "2026-04-28",
     "maze-impact": "2026-04-28"
   },
-  "last_writer_run": "2026-04-28"
+  "last_writer_run": "2026-04-29"
 }
