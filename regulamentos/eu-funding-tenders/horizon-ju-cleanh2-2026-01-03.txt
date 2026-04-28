@@ -1,0 +1,74 @@
+INSTRUMENTO: HORIZON-JU-CLEANH2-2026-01-03
+NOME: Improved components and tools to increase the safety of electrolysers
+CALL: HORIZON-JU-CLEANH2-2026
+PROGRAMA: Clean Hydrogen Joint Undertaking (Horizon Europe)
+TIPO DE ACAO: HORIZON-JU-RIA (Research and Innovation Actions)
+ESTADO: Fechado (prazo: 15 de abril de 2026)
+
+DOTACAO / FINANCIAMENTO:
+- Contribuicao maxima da UE: EUR 3.000.000
+- Dotacao total do topico: EUR 105.000.000 (pool 2026 da Call)
+- Numero esperado de projetos financiados: 1
+- Modelo de financiamento: Lump Sum Grant
+
+PRAZO:
+- Prazo de submissao: 15 de abril de 2026 (fechado)
+- Resultados de avaliacao previstos: agosto de 2026
+- Propostas recebidas: 13
+
+PALAVRAS-CHAVE:
+Hydrogen, electrolysers, safety
+
+DESCRICAO:
+Este topico aborda os desafios de seguranca nos eletrolisadores de agua de baixa temperatura, focando no desenvolvimento e validacao de componentes melhorados e ferramentas integradas. A iniciativa visa a prevencao de mistura de hidrogenio e oxigenio, mitigacao de degradacao de membranas e prevencao de falhas estruturais atraves de designs inovadores e sistemas de monitorizacao em tempo real.
+
+TRL DE INICIO: 3
+TRL FINAL: 5
+
+AREAS DE FOCO:
+- Novos materiais de membrana com permeabilidade reduzida
+- Inovacoes na estrutura de elétrodos
+- Solucoes de monitorizacao e controlo baseadas em IA/ML
+- Modelacao numerica de degradacao (analise por elementos finitos)
+- Teste de validacao de stacks (1000+ horas em regimes operacionais diversos)
+- Contribuicao para protocolos de teste harmonizados da UE
+
+INDICADORES DE DESEMPENHO CHAVE:
+- Gas crossover: menor que 0,01-0,05% (PEMEL); menor que 0,05-0,1% (AEMEL); menor que 0,1-0,5% (AEL)
+- Menos de 2 falhas por 3.000 horas de operacao
+- Disponibilidade operacional maior que 95%
+- Degradacao do stack menor que 0,06% por 1.000 horas
+
+REQUISITOS MINIMOS DE STACK:
+- PEMEL: maior ou igual a 100 kWel, maior que 100 bar de pressao de saida, maior que 3,0 A/cm2 a menor que 1,9V
+- AEMEL: maior ou igual a 50 kWel, maior que 50 bar de pressao de saida, maior que 1,5 A/cm2 a menor que 1,85V
+- AEL: maior ou igual a 100 kWel, maior que 30 bar de pressao de saida, maior que 1 A/cm2 a menor que 2V
+- Emergentes: maior ou igual a 5 kWel, maior que 30 bar de pressao de saida
+
+RESULTADOS ESPERADOS:
+- Operacao segura melhorada atraves de designs de sistema e estrategias de controlo
+- Reducao de gas crossover (50% ou mais face ao estado da arte)
+- Sistemas avancados de deteicao em tempo real de degradacao
+- Aumento da vida util do eletralisador via manutencao preditiva
+- Separacao de gas superior com reducao de PFAS
+- Modelos de Analise Quantitativa de Risco
+
+CRITERIOS DE SELECAO E CONDICOES DE ELEGIBILIDADE:
+- Paises elegiveis: Estados-Membros da UE e Paises Associados
+- Criterios de elegibilidade padrao do Horizonte Europa aplicaveis
+- Mecanismo de financiamento lump sum
+- Subcontratacao restrita a paises alvo
+- Obrigacao de informacao sobre contribuicoes para normalizacao (4 anos apos o projeto)
+- Colaboracao com JRC exigida para protocolos de teste
+- Abordagem de consorcio multidisciplinar encorajada
+- Construir sobre iniciativas europeias existentes (REFHYNE, HYScale, DELYCIOUS, INSIDE, PEACE, HYPRAEL, ADVANCEPEM)
+
+DESPESAS ELEGIVEIS:
+- Desenvolvimento de componentes e ferramentas
+- Testes de validacao de stacks
+- Modelacao numerica e simulacao
+- Contribuicoes para protocolos de normalizacao
+- Analise de risco quantitativa
+
+FONTE: https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/horizon-ju-cleanh2-2026-01-03.json
+DATA DE DOWNLOAD: 2026-04-28
