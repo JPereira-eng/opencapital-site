@@ -724,7 +724,9 @@
       "priority_score": 75,
       "status": "plano_anual",
       "notes": "FA0261/2025. SUSTENTAVEL2030. FC.",
-      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado"
+      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado",
+      "plano_anual_last_check": "2026-04-28",
+      "plano_anual_checks": 1
     },
     {
       "id": "programas-intermunicipais-de-promocao-do-sucesso-escolar-pipse-iti-cim",
@@ -760,7 +762,9 @@
       "priority_score": 75,
       "status": "plano_anual",
       "notes": "FA0215/2025. CENTRO2030. FSE+.",
-      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado"
+      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado",
+      "plano_anual_last_check": "2026-04-28",
+      "plano_anual_checks": 1
     },
     {
       "id": "combate-a-privacao-material-2-aviso",
@@ -771,13 +775,15 @@
       "detected_date": "2026-04-13",
       "deadline": "2026-05-29",
       "budget": "5 000 000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/combate-a-privacao-material-2-aviso/",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/combate-a-privacao-material-2o-aviso/",
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 75,
       "status": "plano_anual",
-      "notes": "FA0202/2025. AÇORES2030. FSE+.",
-      "download_error": "Plano Anual - PDF contém Resumo de Aviso do Plano Anual de Avisos"
+      "notes": "FA0202/2025. AÇORES2030. FSE+. Slug renomeado de combate-a-privacao-material-2-aviso para combate-a-privacao-material-2o-aviso (verificado 2026-04-28).",
+      "download_error": "Plano Anual - PDF contém Resumo de Aviso do Plano Anual de Avisos",
+      "plano_anual_last_check": "2026-04-28",
+      "plano_anual_checks": 1
     },
     {
       "id": "sice-qualificacao-das-pme-operacoes-individuais",
@@ -794,7 +800,9 @@
       "priority_score": 65,
       "status": "plano_anual",
       "notes": "FA0315/2025. COMPETE2030. FEDER.",
-      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado"
+      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado",
+      "plano_anual_last_check": "2026-04-28",
+      "plano_anual_checks": 1
     },
     {
       "id": "saccct-equipamento-reequipamento-de-infraestruturas-cientificas-rniie",
@@ -811,7 +819,9 @@
       "priority_score": 65,
       "status": "plano_anual",
       "notes": "FA0513/2023. NORTE2030. FEDER.",
-      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado"
+      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado",
+      "plano_anual_last_check": "2026-04-28",
+      "plano_anual_checks": 1
     },
     {
       "id": "siqrh-formacao-empresarial-operacoes-individuais",
@@ -828,7 +838,9 @@
       "priority_score": 65,
       "status": "plano_anual",
       "notes": "FA0104/2025. COMPETE2030. FSE+.",
-      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado"
+      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado",
+      "plano_anual_last_check": "2026-04-28",
+      "plano_anual_checks": 1
     },
     {
       "id": "siqrh-formacao-empresarial-operacoes-em-conjunto",
@@ -845,7 +857,9 @@
       "priority_score": 65,
       "status": "plano_anual",
       "notes": "FA0105/2025. COMPETE2030. FSE+.",
-      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado"
+      "download_error": "Plano Anual - PDF e apenas resumo/previsao, nao e aviso publicado",
+      "plano_anual_last_check": "2026-04-28",
+      "plano_anual_checks": 1
     },
     {
       "id": "step-i-d-i-empresarial-digital-e-biotecnologia",
@@ -1049,7 +1063,9 @@
       "priority_score": 65,
       "status": "plano_anual",
       "notes": "Plano Anual de Avisos - aviso nao publicado formalmente. Regulamento era documento PAA.",
-      "download_error": "Plano Anual - ficheiro txt continha \"Resumo de Aviso do Plano Anual de Avisos\""
+      "download_error": "Plano Anual - ficheiro txt continha \"Resumo de Aviso do Plano Anual de Avisos\"",
+      "plano_anual_last_check": "2026-04-28",
+      "plano_anual_checks": 1
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-it-amp",
@@ -1066,7 +1082,9 @@
       "priority_score": 65,
       "status": "plano_anual",
       "notes": "Plano Anual de Avisos - aviso nao publicado formalmente. Regulamento era documento PAA.",
-      "download_error": "Plano Anual - ficheiro txt continha \"Resumo de Aviso do Plano Anual de Avisos\""
+      "download_error": "Plano Anual - ficheiro txt continha \"Resumo de Aviso do Plano Anual de Avisos\"",
+      "plano_anual_last_check": "2026-04-28",
+      "plano_anual_checks": 1
     },
     {
       "id": "sibt-iti-iibt-ovt-centro",
@@ -2340,7 +2358,8 @@
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "last_fail_date": null,
       "plano_anual_detected_date": "2026-04-24",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-04-28"
     },
     {
       "id": "criacao-de-redes-para-a-promocao-das-raparigas-e-mulheres-nas-areas-stem-e-tic",
