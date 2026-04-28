@@ -90,5 +90,60 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": []
+  "queue": [
+    {
+      "id": "core-angels-atlantic",
+      "name": "COREangels Atlantic",
+      "source_id": "core-angels-atlantic",
+      "catalog_type": "ba",
+      "detected_date": "2026-04-28",
+      "last_profile_update": "2026-04-28",
+      "status": "active",
+      "regulation_url": "https://www.coreangels.com/angel-groups/atlantic",
+      "priority_score": 8,
+      "profile": {
+        "website": "https://www.coreangels.com/angel-groups/atlantic",
+        "linkedin": "https://www.linkedin.com/company/coreangels-atlantic/",
+        "pais_sede": "PT",
+        "descricao_curta": "Rede ibero-americana de business angels focada em startups brasileiras a expandir para a Europa via Portugal e em startups ibericas a crescer no Brasil.",
+        "como_candidatar": "Formulario de candidatura em coreangels.com/fundraise/atlantic",
+        "tese": "Smart capital e suporte estrategico cross-border para startups early-stage entre Brasil, Portugal e Espanha",
+        "estagios": [
+          "pre-seed",
+          "seed"
+        ],
+        "setores": [
+          "Retail/E-commerce",
+          "HR Tech",
+          "Health/MedTech",
+          "Privacy Tech",
+          "B2B Software"
+        ],
+        "geografia": [
+          "PT",
+          "BR",
+          "ES",
+          "US"
+        ],
+        "ticket_min_eur": 50000,
+        "ticket_max_eur": null,
+        "ticket_sweet_eur": null,
+        "num_investidores": 40,
+        "parceiros": [
+          "Atlantic Hub",
+          "Brooder"
+        ],
+        "portfolio_pt_exemplos": [
+          "Sizebay",
+          "KnowCode",
+          "Vurdere",
+          "Palqee"
+        ],
+        "lider": "Maurizio Calcopietro",
+        "fundo_vigencia": "ate junho 2033",
+        "fundado": "2019"
+      },
+      "notes": "Rede BA ibero-americana fundada em 2019. Foco em bridge PT-BR. 40+ investidores. Todos os portfolio actuais marcados como exits."
+    }
+  ]
 }
