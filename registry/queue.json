@@ -2,22 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "horizon-ju-cleanh2-2026-01-04",
-      "name": "Innovative business models advancing renewable electrolysis integration in industry",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "regime": "aviso",
-      "status": "ready",
-      "aviso_codigo": "HORIZON-JU-CLEANH2-2026-01-04",
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-CLEANH2-2026-01-04.json",
-      "deadline": null,
-      "detected_date": "2026-04-25",
-      "priority_score": 15,
-      "notes": "Call: HORIZON-JU-CLEANH2-2026",
-      "regulation_local": "regulamentos/eu-funding-tenders/horizon-ju-cleanh2-2026-01-04.txt",
-      "fail_count": 0
-    },
-    {
       "id": "horizon-ju-cleanh2-2026-01-03",
       "name": "Improved components and tools to increase the safety of electrolysers",
       "source_id": "eu-funding-tenders",
