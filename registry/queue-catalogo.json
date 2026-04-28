@@ -90,58 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "maze-impact",
-      "name": "Maze Impact",
-      "source_id": "maze-impact",
-      "catalog_type": "vc",
-      "detected_date": "2026-04-28",
-      "last_profile_update": "2026-04-28",
-      "status": "active",
-      "regulation_url": "https://maze-impact.com",
-      "priority_score": 10,
-      "profile": {
-        "website": "https://maze-impact.com",
-        "linkedin": "https://www.linkedin.com/company/maze-impact",
-        "pais_sede": "PT",
-        "descricao_curta": "Firma de impact investing sediada em Lisboa (fundada 2013); opera o fundo Mustard Seed Maze (MSM, joint venture com Mustard Seed) e o programa Maze X de capital pre-seed para founders impact-driven.",
-        "como_candidatar": "Maze X: candidaturas online em janelas semestrais (atualmente fechadas). MSM: introducoes preferenciais via rede de fundadores e parceiros.",
-        "tese": "Equity em founders impact-driven que constroem solucoes para desafios sociais e ambientais (saude e bem-estar, mental health, futuro do trabalho e aprendizagem, producao e consumo sustentaveis, climate, social care).",
-        "estagios": [
-          "pre-seed",
-          "seed",
-          "series-a"
-        ],
-        "setores": [
-          "impact",
-          "mental health",
-          "climate tech",
-          "circular economy",
-          "social housing",
-          "future of work",
-          "healthcare",
-          "sustainable food",
-          "mobility"
-        ],
-        "geografia": [
-          "PT",
-          "EU"
-        ],
-        "ticket_min_eur": 100000,
-        "ticket_max_eur": 1000000,
-        "ticket_sweet_eur": 500000,
-        "aum_eur": 45000000,
-        "vintage": "Mustard Seed Maze (MSM, 2018) - 45M EUR; Maze X em deployment activo",
-        "portfolio_pt_exemplos": [],
-        "parceiros": [
-          "Antonio Miguel",
-          "Margarida Anselmo",
-          "Rita Casimiro",
-          "Sofia Queiroz"
-        ]
-      },
-      "notes": "Categoria vc; oferece duas vias: fundo MSM (early stage 100k-1M EUR) e programa Maze X (100k EUR via SAFE + 3 meses de aceleracao). Portfolio especifico nao publicado na homepage."
-    }
-  ]
+  "queue": []
 }
