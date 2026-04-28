@@ -2,22 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "horizon-cl5-2025-06-d2-07",
-      "name": "Driving Urban Transitions to a sustainable future (DUT) Co-Funded Partnership",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "regime": "aviso",
-      "status": "ready",
-      "aviso_codigo": "HORIZON-CL5-2025-06-D2-07",
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2025-06-D2-07.json",
-      "deadline": null,
-      "detected_date": "2026-04-25",
-      "priority_score": 15,
-      "notes": "Call: HORIZON-CL5-2025-06",
-      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2025-06-d2-07.txt",
-      "fail_count": 0
-    },
-    {
       "id": "horizon-cl5-2025-06-d1-01",
       "name": "Climate simulations data and knowledge for optimal support of IPCC Assessments and International Policy",
       "source_id": "eu-funding-tenders",
