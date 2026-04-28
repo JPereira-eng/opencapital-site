@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundos europeus: o que acontece quando há auditorias ou irregularidades | Open Capital</title>
+  <meta name="description" content="Quem audita os fundos europeus em Portugal, quando, com que poder, e o que acontece quando se encontram erros ou irregularidades. Guia completo para empresas.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../biblioteca.html">Biblioteca</a></li>
+      <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades</a>
+        <div class="nav-dropdown-menu">
+          <a href="../parceiros.html">Parceiros</a>
+          <a href="../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../conhecimento.html">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Financiamento</span>
+      </nav>
+      <span class="hero-cat-badge">Financiamento - Guia</span>
+      <h1 class="article-title">Fundos europeus: o que acontece quando há auditorias ou irregularidades</h1>
+      <p class="article-standfirst">Quem recebe fundos europeus está sujeito a uma cadeia de controlos que pode durar anos depois do projecto encerrar. Compreender quem audita, quando e com que poder, é parte da gestão do projeto.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Financiamento</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Abril 2026</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>13 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Mara Ferreira</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Contexto</div>
+        <h2>A arquitectura do controlo</h2>
+        <p>Quando uma empresa portuguesa recebe um euro de fundos europeus, esse euro arrasta consigo um sistema de controlo desenhado em Bruxelas e replicado em todos os Estados-Membros. O objectivo do sistema é simples: garantir que o dinheiro foi gasto naquilo que foi aprovado, segundo as regras que foram contratualizadas, com a documentação que demonstra cada passo. O modo como esse objectivo é cumprido é menos simples. Envolve várias entidades, em vários momentos, com poderes diferentes, e com prazos de prescrição que tornam o projecto auditável durante muitos anos depois de o último pagamento ter sido feito.</p>
+
+        <p>O regulamento que define a arquitectura é o Regulamento (UE) 2021/1060, conhecido como Regulamento das Disposições Comuns ou RDC. Cobre a generalidade dos fundos da política de coesão para 2021-2027 (FEDER, FSE+, Fundo de Coesão, FAMI, FSI, IGFE, FEAMPA), bem como o quadro de governance aplicado por extensão a outros instrumentos. O PRR tem regulamentação própria, com lógica análoga mas calendário e instrumentos específicos. O Horizonte Europa, gerido directamente pela Comissão e suas agências, segue o seu próprio modelo de auditoria, com algumas diferenças relevantes que vale a pena notar.</p>
+
+        <p>Para o beneficiário, o que interessa é compreender três coisas: quem o pode auditar, quando, e o que pode acontecer se for encontrada uma irregularidade. As respostas a estas três perguntas determinam tudo o que é preciso fazer enquanto o projecto está em execução, e bastante do que ainda é preciso fazer durante anos depois.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Quem audita o quê</h2>
+        <p>O sistema de controlo dos fundos europeus em Portugal funciona em camadas. Cada camada existe para verificar a anterior, e cada uma tem âmbito e poderes próprios. Conhecer esta arquitectura ajuda a compreender que uma operação pode ser revista mais do que uma vez, por entidades diferentes, com critérios diferentes.</p>
+
+        <p>Na primeira camada está a <strong>Autoridade de Gestão</strong>. É a entidade responsável pela execução do programa, pela aprovação das candidaturas, pelo pagamento aos beneficiários, e por uma primeira linha de verificação. Em Portugal, dependendo do programa, a Autoridade de Gestão pode ser a Agência para o Desenvolvimento e Coesão (AD&C), as Comissões de Coordenação e Desenvolvimento Regional (CCDR), o IFAP para fundos agrícolas, ou outras entidades sectoriais para programas como o Mar 2030 ou o FEAMPA. A AG faz duas coisas: verificações administrativas (sobre 100% dos pedidos de pagamento) e verificações no local (sobre uma amostra baseada em risco). Em programas geridos por organismos intermédios, parte destas funções é delegada, mas o controlo último permanece na AG.</p>
+
+        <p>Acima da AG está a <strong>Autoridade de Auditoria</strong>. Em Portugal, esta função é exercida principalmente pela Inspecção-Geral de Finanças (IGF) para a generalidade dos fundos da coesão e do PRR, e pelo Conselho de Auditorias da Agricultura para o FEAGA e o FEADER. A AA é independente da AG e tem o mandato de auditar o sistema de gestão e controlo (auditorias de sistemas) e uma amostra estatística de operações cada ano (auditorias de operações). O resultado destas auditorias alimenta o relatório anual de controlo que é enviado a Bruxelas e que sustenta a opinião de auditoria sobre o programa.</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">Em destaque</div>
+          <div class="art-highlight-text">A IGF audita por amostra. A probabilidade de uma operação individual ser auditada é baixa. A probabilidade de uma operação de grande dimensão, ou de um beneficiário com indicadores de risco, ser auditada é significativamente mais alta. A amostra é construída com critérios de risco e materialidade que privilegiam operações volumosas, beneficiários novos, e tipos de despesa historicamente problemáticos.</div>
+        </div>
+
+        <p>A camada seguinte é a <strong>Comissão Europeia</strong>. As direcções-gerais (DG REGIO para o desenvolvimento regional, DG EMPL para o social, DG AGRI para o agrícola, DG RTD para investigação) podem auditar os Estados-Membros, e nessas auditorias podem rever operações específicas. Em casos de financiamento directo da Comissão, como o Horizonte Europa, é a própria Comissão (através de auditores externos contratados, sob coordenação da Direcção-Geral de Investigação) quem audita o beneficiário directamente, sem passar por uma autoridade nacional.</p>
+
+        <p>Acima da Comissão, em sentido institucional, está o <strong>Tribunal de Contas Europeu</strong>. Não tem poder de imposição de correcções financeiras, mas a sua opinião anual sobre as contas da União, baseada num exercício de amostragem que cobre toda a despesa, alimenta a discussão pública e política sobre a integridade do sistema. Em paralelo, em Portugal, o Tribunal de Contas tem competência para auditar a aplicação dos fundos enquanto despesa pública nacional.</p>
+
+        <p>Há ainda dois actores que entram quando há suspeita de fraude. O primeiro é o <strong>OLAF</strong>, o Organismo Europeu de Luta Antifraude, que conduz investigações administrativas em casos de suspeita de fraude, corrupção, ou outras irregularidades graves contra os interesses financeiros da União. As suas conclusões podem ser enviadas para autoridades nacionais ou para a Comissão. O segundo é a <strong>Procuradoria Europeia (EPPO)</strong>, criada em 2021, que tem competência criminal sobre crimes que afectem os interesses financeiros da UE, incluindo fraude com fundos, corrupção, branqueamento de capitais relacionado, e fraude grave em IVA transfronteiriço. A EPPO opera com procuradores europeus delegados nacionais e investiga em conjunto com as polícias nacionais.</p>
+
+        <table class="art-table">
+          <thead>
+            <tr>
+              <th>Entidade</th>
+              <th>O que faz</th>
+              <th>Poder</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Autoridade de Gestão</strong></td>
+              <td>Verificações administrativas e no local</td>
+              <td>Recusa de despesa, suspensão, recuperação</td>
+            </tr>
+            <tr>
+              <td><strong>Autoridade de Auditoria (IGF)</strong></td>
+              <td>Auditorias de sistemas e operações</td>
+              <td>Detecção de irregularidades, propostas de correcção</td>
+            </tr>
+            <tr>
+              <td><strong>Comissão Europeia</strong></td>
+              <td>Auditorias a programas e operações</td>
+              <td>Correcções financeiras a Estados-Membros</td>
+            </tr>
+            <tr>
+              <td><strong>Tribunal de Contas Europeu</strong></td>
+              <td>Opinião anual sobre as contas da UE</td>
+              <td>Recomendações, sem poder vinculativo directo</td>
+            </tr>
+            <tr>
+              <td><strong>OLAF</strong></td>
+              <td>Investigações administrativas de fraude</td>
+              <td>Recomendações, encaminhamento criminal</td>
+            </tr>
+            <tr>
+              <td><strong>EPPO</strong></td>
+              <td>Investigações criminais</td>
+              <td>Acusação criminal em tribunal nacional</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>O ciclo do controlo</h2>
+        <p>Os controlos não acontecem todos no mesmo momento. Acompanham o projecto desde a candidatura, durante a execução, no encerramento, e durante anos depois. Para o gestor, ajuda compreender este calendário, porque cada fase tem documentos diferentes a manter e riscos diferentes a gerir.</p>
+
+        <p>A primeira camada de controlo é a <strong>verificação administrativa de cada pedido de pagamento</strong>. Sempre que o beneficiário submete um pedido de reembolso, a AG (ou o organismo intermédio) revê 100% das despesas declaradas, valida elegibilidade, verifica documentos de suporte, confirma cumprimento de regras de contratação pública (quando aplicável), e só depois autoriza o pagamento. Esta primeira camada é onde a maioria dos problemas é detectada, e onde a maioria dos beneficiários experimenta o controlo de forma mais directa.</p>
+
+        <p>A segunda camada é a <strong>verificação no local</strong>. Aqui, técnicos da AG visitam fisicamente a operação. Confirmam que os equipamentos comprados existem, que estão na localização declarada, que estão a ser usados para o fim previsto, que o pessoal afecto ao projecto trabalha efectivamente nele. As visitas no local não cobrem todos os projectos. São amostradas com base em critérios de risco: dimensão da operação, tipologia de despesa, novidade do beneficiário, sinais detectados em verificações administrativas anteriores.</p>
+
+        <p>A terceira camada é a <strong>auditoria de operações pela Autoridade de Auditoria</strong>. Anualmente, a IGF (ou equivalente) selecciona uma amostra estatística de operações pagas no ano contabilístico anterior. Para cada operação seleccionada, a equipa de auditoria revê toda a documentação, recalcula despesas, verifica conformidade com o contrato de financiamento, e emite uma opinião. As taxas de erro detectadas alimentam a opinião agregada sobre o programa.</p>
+
+        <p>Existe ainda uma quarta camada, menos previsível mas relevante: <strong>auditorias da Comissão Europeia</strong>. Podem acontecer a qualquer momento durante a vida do programa, e podem ter como ponto de partida tanto uma análise sistémica do programa como uma denúncia ou indicador específico. Quando a Comissão audita, pode chegar à mesma operação que já foi vista pela AG e pela IGF, mas com critérios próprios e às vezes com leituras diferentes.</p>
+
+        <p>O que muitos beneficiários não interiorizam é que o ciclo não termina com o pagamento final. Há um <strong>período de durabilidade</strong> obrigatório, durante o qual a operação tem de manter as suas características essenciais. Para a maioria dos investimentos com fundos europeus, este período é de cinco anos a contar da última prestação paga ao beneficiário, podendo estender-se a dez anos para investimentos em infraestruturas ou para projectos com auxílio de Estado significativo. Durante este período, o beneficiário não pode mudar a localização da operação para fora da UE, não pode alterar substancialmente a natureza do investimento, não pode ceder a propriedade dos bens financiados em condições que beneficiem indevidamente um terceiro, e tem de continuar a manter os documentos.</p>
+
+        <p>Acima disto está o <strong>período de retenção documental</strong>. O Regulamento das Disposições Comuns exige que o beneficiário mantenha toda a documentação contabilística e de suporte durante cinco anos a contar de 31 de Dezembro do ano em que o programa receber o último pagamento da Comissão. Para o ciclo 2021-2027, este prazo só começará a correr provavelmente entre 2030 e 2032, o que significa que documentação de operações encerradas em 2025 pode precisar de ser mantida até quase 2040. Em casos de auxílio de Estado, os prazos podem ser ainda mais longos.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <h2>As irregularidades mais comuns</h2>
+        <p>O conceito de "irregularidade" tem definição legal precisa. O Regulamento (CE, Euratom) 2988/95 define-a como qualquer violação de uma disposição do direito da União resultante de um acto ou omissão de um agente económico, que tenha ou possa ter o efeito de prejudicar o orçamento geral da União. A definição é deliberadamente ampla. Inclui erros formais, desvios procedimentais, e fraude. A diferença entre uma irregularidade administrativa e uma fraude está na intencionalidade. As consequências são diferentes, mas o ponto de partida é o mesmo.</p>
+
+        <p>Os tipos de irregularidade mais frequentes detectados em Portugal nos últimos anos repetem-se com regularidade quase desconfortável. Vale a pena conhecê-los, porque são previsíveis e, em larga medida, evitáveis com a gestão correcta do projecto.</p>
+
+        <p>O bloco maior de irregularidades vem da <strong>contratação pública</strong>. Quando o beneficiário é um sujeito obrigado a aplicar regras de contratação pública (normalmente entidades públicas, mas também entidades privadas em determinados regimes de auxílio), qualquer desvio às regras do Código dos Contratos Públicos é potencialmente uma irregularidade com correcção financeira. A escolha incorrecta de procedimento (ajuste directo onde devia ter havido concurso público), prazos demasiado curtos para apresentação de propostas, especificações técnicas que apontam para um único fornecedor, ausência de publicidade, ou modificação substancial do contrato durante a execução, são todos detectados com regularidade. A escala de correcções financeiras aplicada a estes casos é hoje a Decisão da Comissão Europeia C(2019)3452, que define taxas fixas de 5%, 10%, 25% e 100% sobre o valor do contrato afectado, consoante a gravidade.</p>
+
+        <p>Outro bloco frequente são os <strong>custos não elegíveis</strong>. Inclui despesas pagas fora do período de elegibilidade, despesas que não têm relação directa com a operação, IVA recuperável declarado como custo, despesas pagas em numerário acima dos limites legais, dupla facturação ou facturas com irregularidades formais, ajudas de custo sem comprovativo de deslocação efectiva, e remuneração de pessoal afecto ao projecto sem registo de tempos verificável.</p>
+
+        <p>Há depois a categoria das <strong>infrações à durabilidade</strong>. Empresas que mudam o equipamento financiado para outra localização sem notificação, que vendem o activo dentro do período de durabilidade, ou que mudam a natureza da actividade de forma substancial. Estas situações geram, tipicamente, devolução proporcional ao tempo restante de durabilidade não cumprido.</p>
+
+        <p>O <strong>duplo financiamento</strong> é outra categoria recorrente. Acontece quando a mesma despesa é declarada em dois programas diferentes, ou quando o beneficiário recebe outro apoio público que se sobrepõe ao financiamento europeu sem ter sido declarado e sem que o cúmulo seja permitido. Os sistemas informáticos cruzam cada vez mais dados, o que torna a detecção mais provável.</p>
+
+        <p>A <strong>publicidade obrigatória não cumprida</strong> é uma categoria menor mas frequente. Quando o beneficiário não coloca o painel obrigatório no local da operação, não inclui as referências aos fundos nos materiais de comunicação, ou não respeita as regras gráficas de identificação visual, pode ser objecto de correcção financeira específica.</p>
+
+        <p>Por fim, a categoria mais grave: <strong>falsas declarações, fraude ou conflito de interesse</strong>. Inclui facturas falsificadas, pessoal declarado como afecto ao projecto que não trabalhou efectivamente nele, declarações falsas sobre o tamanho da empresa para aceder a regimes de incentivo mais favoráveis, e situações de relação económica entre beneficiário e fornecedor não declaradas. Esta categoria deixa de ser um problema apenas administrativo e passa a ter potencial criminal.</p>
+
+        <div class="pull-quote reveal">
+          <div class="pull-quote-text">"A fronteira entre erro administrativo e fraude é estreita e está, em última análise, na intenção. Mas a documentação de uma e de outra distingue-se cedo: o erro tem rasto de boa-fé, a fraude esconde-o."</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>O que acontece quando aparece uma irregularidade</h2>
+        <p>Detectada uma irregularidade, o sistema reage de forma escalonada. A escala depende da gravidade, do impacto financeiro, e da existência ou não de indicadores de fraude. Para o beneficiário, é útil compreender o que pode acontecer em cada nível, e em que momento ainda é possível defender-se ou corrigir.</p>
+
+        <p>O primeiro nível, o mais frequente, é a <strong>recusa de despesa em sede de verificação administrativa</strong>. Antes de a despesa ser paga, a AG revê o pedido e identifica problemas. A despesa é rejeitada, total ou parcialmente. O beneficiário pode submeter alegações, juntar documentação adicional, ou aceitar a rejeição e seguir em frente. Não há nada a devolver, simplesmente não há nada a receber sobre essa despesa.</p>
+
+        <p>O segundo nível é a <strong>recuperação de pagamentos já efectuados</strong>. Quando uma irregularidade é detectada após o pagamento, a AG inicia um processo de devolução. O beneficiário recebe uma notificação formal, com identificação da irregularidade, fundamentação, e valor a devolver, e tem prazo para se pronunciar em audiência prévia. Se a decisão final mantiver a recuperação, o beneficiário paga, normalmente com juros de mora a contar da data do pagamento original. A devolução pode ser feita por compensação com pagamentos futuros do mesmo programa ou por pagamento directo.</p>
+
+        <p>O terceiro nível é a <strong>correcção financeira por taxa fixa</strong>. Quando a irregularidade tem natureza sistémica ou afecta processos cujo valor exacto da perda não é facilmente quantificável, a AG aplica uma taxa fixa sobre o valor da operação ou do contrato, segundo grelhas pré-definidas. Esta é a forma mais comum de tratar irregularidades de contratação pública. Por exemplo, um contrato com prazo demasiado curto para apresentação de propostas pode receber uma correcção de 25% sobre o valor do contrato. Um contrato sem qualquer publicidade pode receber 100%.</p>
+
+        <p>O quarto nível é a <strong>suspensão de pagamentos</strong>. Quando há indícios de irregularidade sistémica ou problemas graves no projecto, a AG pode suspender pagamentos pendentes até que a situação seja clarificada. Em casos extremos, pode anular parte ou a totalidade da operação.</p>
+
+        <p>O quinto nível é a <strong>exclusão do beneficiário</strong>. O Regulamento Financeiro da UE (Regulamento 2018/1046) prevê, no seu sistema EDES (Sistema de Detecção e Exclusão Antecipadas), a inscrição de beneficiários em situações graves numa base de dados que pode levar à exclusão de financiamento europeu durante até cinco anos. Esta inscrição é automática em casos de falência fraudulenta, condenação por delitos contra os interesses financeiros da União, ou irregularidades sistémicas comprovadas. É menos comum, mas tem efeito devastador para qualquer empresa cujo modelo de negócio dependa em parte de financiamento europeu directo ou indirecto.</p>
+
+        <p>O sexto nível, reservado a casos com indícios de fraude, envolve o <strong>encaminhamento para o OLAF e/ou para a EPPO</strong>. A AG ou a IGF, ao detectar suspeita de fraude, têm obrigação legal de comunicar. O OLAF abre investigação administrativa. Se houver indícios de crime contra os interesses financeiros da União, o caso pode ser encaminhado para a EPPO, que decide se abre investigação criminal. Em paralelo, podem correr processos no Ministério Público português. Há aqui uma tripla via possível: administrativa, criminal europeia, criminal nacional.</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">Importante</div>
+          <div class="art-highlight-text">O prazo de prescrição administrativa é, regra geral, de quatro anos a contar da prática da irregularidade, com possibilidade de interrupção e limite máximo de oito anos (Regulamento 2988/95). Em casos de fraude, não há limite prático: o caso pode ser reaberto sempre que surjam novos elementos.</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Como uma empresa se prepara</h2>
+        <p>Não há forma de eliminar o risco de auditoria. Há, sim, formas concretas de o reduzir, e de garantir que, se a auditoria chegar, o projecto resiste à inspecção. A diferença entre um beneficiário que sai bem de uma auditoria e um que sai mal está, quase sempre, em três coisas: a documentação, os processos internos, e a capacidade de explicar decisões em retrospectiva.</p>
+
+        <p><strong>A documentação é o primeiro pilar.</strong> Cada despesa associada a uma operação financiada deve ter, no mínimo, a factura, o comprovativo de pagamento (extracto bancário ou transferência), a evidência de adjudicação (orçamento, consulta a fornecedores, acta de selecção), o comprovativo de entrega ou execução, e a alocação contabilística. Para custos com pessoal, é necessário registo de tempos verificável, contrato, recibos de remuneração, e prova de cálculo da imputação ao projecto. Esta documentação tem de estar organizada, separada por operação, e disponível em formato físico ou digital durante todo o período de retenção. Um arquivo bem feito é, do ponto de vista da auditoria, metade do trabalho.</p>
+
+        <p><strong>Os processos internos são o segundo pilar.</strong> Se o beneficiário é uma entidade privada não obrigada a contratação pública, as suas regras internas de aquisição (consulta a fornecedores, decisão fundamentada de adjudicação, separação de funções) tornam-se a referência da auditoria. Se é uma entidade obrigada a contratação pública, o respeito do CCP é o que será verificado. Em ambos os casos, ter processos escritos, com aprovação documentada e fundamentação registada, é o que distingue uma operação auditável de uma operação que dependerá da memória oral de quem nela trabalhou.</p>
+
+        <p><strong>A capacidade de explicar decisões é o terceiro pilar, e é o mais subestimado.</strong> Numa auditoria, há sempre uma fase em que o auditor pergunta porquê. Por que foi escolhido este fornecedor. Por que esta despesa foi imputada a este projecto e não a outro. Por que a alteração de calendário foi feita assim. Por que a especificação técnica foi formulada nestes termos. As respostas podem ser técnicas, comerciais, regulatórias, ou de gestão. Em todos os casos, a resposta tem de ser coerente com a documentação. Empresas que separam claramente quem decide, quem documenta, e quem executa, atravessam auditorias com menos sobressaltos do que empresas onde estas funções se confundem.</p>
+
+        <p>Há ainda um conjunto de boas práticas operacionais que reduzem materialmente o risco de irregularidade. A primeira é o uso de contabilidade analítica separada para a operação financiada, com centros de custo claros e imputações documentadas. A segunda é o registo electrónico de tempos para todo o pessoal afecto a projectos, com timesheets aprovados pelo responsável hierárquico. A terceira é a manutenção de painéis e materiais de publicidade obrigatória actualizados durante todo o período de durabilidade, não apenas durante a execução. A quarta é a comunicação proactiva à AG de qualquer alteração relevante à operação: mudança de equipamento, alteração de localização, mudança de fornecedor, alteração de calendário. A maior parte das irregularidades ligadas à durabilidade resultam não de má-fé, mas de falta de comunicação atempada ao gestor do projecto.</p>
+
+        <p>Para projectos com componente de I&D financiados pelo Horizonte Europa, há especificidades adicionais. As auditorias são feitas pela Comissão directamente, normalmente através de auditores externos do quadro contratado pela DG Investigação. Os critérios de elegibilidade de pessoal são particularmente rígidos, com exigência de timesheets em formato específico e de demonstração de afectação efectiva. Custos como horas de trabalho declaradas em projecto, depreciação de equipamento, e rateio de overheads, são as zonas de risco mais auditadas neste tipo de financiamento.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>Como aplicar este conhecimento</h2>
+        <p>O sistema de auditoria dos fundos europeus assusta sobretudo quem o desconhece. Para empresas com gestão profissional do projecto, a auditoria é um exercício previsível, com regras claras e prazos definidos. Para empresas que tratam o financiamento como uma transferência sem obrigação documental subsequente, a auditoria pode ser uma surpresa cara.</p>
+
+        <p>Há quatro decisões concretas que vale a pena tomar logo no início de qualquer operação financiada. A primeira é nomear um responsável interno pelo projecto, com mandato claro para coordenar documentação e relação com a AG. A segunda é montar uma estrutura de arquivo separada, com pastas por componente de despesa, antes de a primeira factura entrar. A terceira é contratualizar com fornecedores, internamente ou com apoio externo, a obrigação de fornecer documentação compatível com auditoria europeia (que vai além da factura: inclui comprovativos de execução, registo de tempos quando aplicável, etc.). A quarta é prever, no plano financeiro do projecto, uma reserva de contingência para correcções financeiras potenciais. Não porque se espera tê-las, mas porque o seu impacto, se acontecerem, deve ser absorvível sem comprometer a operação.</p>
+
+        <p>Em projectos de maior dimensão (acima de um a dois milhões de euros de incentivo), considerar uma auditoria interna voluntária a meio do projecto. Custa pouco, é elegível em determinadas tipologias, e detecta problemas enquanto ainda há tempo para os corrigir. Empresas que fizeram esta auditoria intermédia apresentam, em média, taxas de correcção financeira final substancialmente menores do que empresas que esperaram pela auditoria oficial.</p>
+
+        <p>Para empresas que recebem fundos europeus de forma regular, vale a pena tratar a função de gestão do projecto como uma competência interna estável, e não como uma tarefa pontual. As regras mudam, mas a lógica de fundo é a mesma. Quem aprende a navegá-la cedo, beneficia dela durante muitos anos. Quem só descobre as regras quando a primeira auditoria chega, descobre-as no pior momento possível.</p>
+      </div>
+
+      <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;font-style:italic;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Mara Ferreira</div>
+            <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos da Open Capital</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Categoria</div><div class="sidebar-info-val">Financiamento</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Publicado</div><div class="sidebar-info-val">Abril 2026</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Leitura</div><div class="sidebar-info-val">13 min</div></div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Tem um projecto financiado?</div>
+        <div class="sidebar-cta-text">Apoiamos empresas na preparação de auditorias, organização documental e resposta a pedidos de esclarecimento de autoridades de gestão.</div>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="erros-comuns-candidatura-incentivos.html" class="related-item">
+          <span class="related-item-title">Erros comuns na candidatura a incentivos</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="metodos-pagamento-portugal-2030.html" class="related-item">
+          <span class="related-item-title">Métodos de pagamento no Portugal 2030</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="como-funciona-horizonte-europa.html" class="related-item">
+          <span class="related-item-title">Como funciona o Horizonte Europa</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo-row">
+          <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+        </div>
+        <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+      </div>
+      <div>
+        <div class="f-col-label">Biblioteca</div>
+        <ul class="f-links">
+          <li><a href="../biblioteca.html">Portugal 2030</a></li>
+          <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+          <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+          <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Plataforma</div>
+        <ul class="f-links">
+          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../conhecimento.html">Conhecimento</a></li>
+          <li><a href="../parceiros.html">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Empresa</div>
+        <ul class="f-links">
+          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="../sobre-nos.html">Equipa</a></li>
+          <li><a href="../carreiras.html">Carreiras</a></li>
+          <li><a href="https://calendly.com/opencapital">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+      <div class="f-legal"><a href="#">Privacidade</a><a href="#">Termos</a><a href="#">Cookies</a></div>
+    </div>
+  </footer>
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
