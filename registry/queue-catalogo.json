@@ -98,7 +98,7 @@
       "catalog_type": "ba",
       "detected_date": "2026-04-28",
       "last_profile_update": "2026-04-28",
-      "status": "active",
+      "status": "ready",
       "regulation_url": "https://www.coreangels.com/angel-groups/atlantic",
       "priority_score": 8,
       "profile": {
@@ -143,7 +143,9 @@
         "fundo_vigencia": "ate junho 2033",
         "fundado": "2019"
       },
-      "notes": "Rede BA ibero-americana fundada em 2019. Foco em bridge PT-BR. 40+ investidores. Todos os portfolio actuais marcados como exits."
+      "notes": "Rede BA ibero-americana fundada em 2019. Foco em bridge PT-BR. 40+ investidores. Todos os portfolio actuais marcados como exits.",
+      "regulation_local": "regulamentos/core-angels-atlantic/core-angels-atlantic.txt",
+      "fail_count": 0
     }
   ]
 }
