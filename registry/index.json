@@ -3,14 +3,14 @@
     "description": "Open Capital Radar v4.0 - Indice global",
     "version": "4.0",
     "migrated_from_v3": "2026-04-12",
-    "last_writer_run": "2026-04-27"
+    "last_writer_run": "2026-04-28"
   },
   "totals": {
-    "published": 611,
-    "open": 337,
+    "published": 612,
+    "open": 338,
     "closed": 240,
     "planned": 18,
-    "in_queue": 100,
+    "in_queue": 99,
     "in_watchlist": 103,
     "in_catalogo": 1,
     "in_overflow": 148
@@ -44,8 +44,8 @@
       "open": 4
     },
     "pt2030-other": {
-      "count": 37,
-      "open": 28,
+      "count": 38,
+      "open": 29,
       "closed": 4,
       "planned": 4
     },
@@ -106,7 +106,6 @@
   },
   "last_full_cycle": "2026-04-12",
   "last_monitor_run": "2026-04-28",
-  "last_writer_run": "2026-04-28",
   "source_last_checked": {
     "portugal-2030": "2026-04-28",
     "compete-2030": "2026-04-26",
