@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regime de minimis: o limite invisível dos apoios públicos | Open Capital</title>
+  <meta name="description" content="O regime de minimis fixa um teto de 300 mil euros em apoio público que cada empresa pode receber em três anos. Como funciona, o que conta e onde as empresas tropeçam.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../biblioteca.html">Biblioteca</a></li>
+      <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades</a>
+        <div class="nav-dropdown-menu">
+          <a href="../parceiros.html">Parceiros</a>
+          <a href="../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../conhecimento.html">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Financiamento</span>
+      </nav>
+      <span class="hero-cat-badge">Financiamento - Guia</span>
+      <h1 class="article-title">Regime de minimis: o limite invisível dos apoios públicos</h1>
+      <p class="article-standfirst">Trezentos mil euros em três anos. É este o teto que decide quanto apoio público uma empresa pode somar em vouchers, isenções e pequenos incentivos. Como funciona, o que conta e onde a maioria das empresas tropeça.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Financiamento</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Abril 2026</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>9 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Mara Ferreira</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Contexto</div>
+        <h2>O apoio que não precisa de pedir autorização a Bruxelas</h2>
+        <p>Quando um Estado‑Membro quer dar dinheiro público a uma empresa, a regra geral europeia é simples e inflexível: tem de notificar a Comissão Europeia, esperar autorização e demonstrar que o apoio não distorce a concorrência no mercado interno. É um processo longo, técnico e, para a esmagadora maioria dos pequenos apoios, completamente desproporcionado.</p>
+        <p>Foi para resolver esta tensão que nasceu o regime de minimis. A lógica é a do limiar: abaixo de um determinado montante, presume‑se que o apoio é demasiado pequeno para afetar o comércio entre Estados‑Membros e, portanto, não está sujeito ao crivo formal de Bruxelas. O Estado pode conceder, a empresa pode receber, e a única obrigação é registar e declarar.</p>
+        <p>Em Portugal, este regime atravessa silenciosamente uma parte enorme do ecossistema de apoios. Vouchers do IAPMEI, certas linhas do Banco de Fomento, isenções municipais de IMT, programas de internacionalização da AICEP, microcrédito, alguns avisos do Portugal 2030, prémios de inovação. Em todos eles aparece, mais cedo ou mais tarde, a frase: "auxílio enquadrado no regime de minimis".</p>
+        <p>Para quem gere uma empresa, esta frase não é decorativa. Define limites concretos a quanto apoio público a empresa pode acumular num período de três anos. E quem ignora esse teto descobre o problema da pior forma: candidaturas reprovadas, apoios revogados, montantes a devolver com juros.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Trezentos mil euros, três anos, uma empresa</h2>
+        <p>O regime atualmente em vigor é o Regulamento (UE) 2023/2831, da Comissão, que substituiu o anterior 1407/2013 a partir de 1 de janeiro de 2024 e vigora até ao final de 2030. A mudança mais visível foi o aumento do teto: passou de 200 mil para 300 mil euros por empresa, em qualquer período de três anos.</p>
+        <p>O detalhe importante é o tipo de janela temporal. Não se trata de três anos civis fixos, nem do exercício fiscal da empresa. É uma janela móvel: em qualquer momento em que a empresa receba um novo apoio, é necessário somar todos os apoios de minimis recebidos nos 36 meses anteriores. Se essa soma, com o novo, ultrapassar 300 mil euros, o novo apoio (ou a parte que excede o teto) não pode ser concedido ao abrigo do regime.</p>
+
+        <div class="stats-row cols-3 reveal">
+          <div class="stat-cell">
+            <div class="stat-num">300.000<sup>€</sup></div>
+            <div class="stat-label">Teto geral por empresa única</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">3<sup>anos</sup></div>
+            <div class="stat-label">Janela móvel de cumulação</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">2030</div>
+            <div class="stat-label">Vigência do atual regulamento</div>
+          </div>
+        </div>
+
+        <p>Há tetos específicos para alguns sectores, que convém ter em mente. As empresas que prestam serviços de interesse económico geral, as chamadas SIEG, beneficiam de um teto mais alto, de 750 mil euros, ao abrigo de um regulamento próprio. No outro extremo, agricultura primária e pescas continuam sujeitas a regulamentos de minimis sectoriais com tetos substancialmente mais baixos, e a um conjunto de restrições adicionais que vale a pena verificar caso a caso.</p>
+
+        <table class="art-table">
+          <thead>
+            <tr><th>Regime</th><th>Teto</th><th>Período</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Geral</strong></td><td>300.000 €</td><td>3 anos</td></tr>
+            <tr><td><strong>SIEG</strong></td><td>750.000 €</td><td>3 anos</td></tr>
+            <tr><td><strong>Agricultura primária</strong></td><td>50.000 €</td><td>3 anos</td></tr>
+            <tr><td><strong>Pescas e aquicultura</strong></td><td>40.000 €</td><td>3 anos</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>O que é, afinal, uma "empresa única"</h2>
+        <p>Aqui mora uma das maiores fontes de erro nas candidaturas. O teto não se aplica à pessoa coletiva isolada. Aplica‑se ao conceito de "empresa única", que o regulamento define com precisão. Duas ou mais empresas formam uma única empresa quando entre elas existe uma relação de controlo: uma detém a maioria do capital ou dos direitos de voto da outra, ou tem o direito de nomear ou destituir a maioria dos órgãos de administração, ou exerce influência dominante por contrato ou cláusula estatutária.</p>
+        <p>O efeito prático é direto. Um grupo familiar que controla três empresas distintas, todas legalmente autónomas, é uma única empresa para efeitos de minimis. Os 300 mil euros são partilhados pelas três. Se a holding já recebeu 280 mil em vouchers e a subsidiária quer concorrer a um apoio de 50 mil euros enquadrado em minimis, só pode receber 20 mil. O resto teria de procurar enquadramento noutro regime, ou ser rejeitado.</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">Atenção</div>
+          <div class="art-highlight-text">A noção de empresa única só capta relações de controlo dentro do mesmo Estado‑Membro. Filiais ou holdings noutros países não entram no cálculo. Mas isto também significa que, para grupos com várias empresas em Portugal, ignorar a cumulação intra‑grupo é o erro mais caro e mais comum.</div>
+        </div>
+
+        <p>Há uma consequência menos óbvia. Operações de M&A activam regras de transição. Quando uma empresa adquire outra, os apoios de minimis recebidos pela adquirida nos três anos anteriores passam a contar para o teto da adquirente. Em cisões, o regulamento permite uma divisão proporcional, com base no critério mais razoável dada a actividade transferida. Quem está a estruturar uma operação societária e não verifica este histórico arrisca‑se a desbloquear, em poucos meses, um problema que não estava no caderno de encargos.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>O valor que conta não é o valor do projeto</h2>
+        <p>O equívoco mais frequente, em entrevistas com candidatos, é confundir o valor total do projeto com o valor do apoio. Para o teto de minimis, conta apenas o equivalente em subvenção bruta do apoio público. Num voucher de 15 mil euros a fundo perdido, conta 15 mil. Num crédito bonificado, conta apenas a parte da bonificação, ou seja, a diferença entre o juro de mercado e o juro efectivamente pago, expressa em valor presente.</p>
+        <p>O regulamento exige que o apoio seja "transparente", o que em linguagem técnica significa apenas isto: tem de ser possível calcular com antecedência o equivalente em subvenção bruta, sem necessidade de avaliação de risco. Subvenções diretas, isenções fiscais com plafond definido, garantias até determinados limites de cobertura, empréstimos abaixo de certos montantes e prazos. Todos estes instrumentos são considerados transparentes e podem ser concedidos ao abrigo do regime.</p>
+
+        <h3>Exemplo prático de cálculo</h3>
+        <p>Imagine‑se uma PME industrial que, ao longo dos últimos três anos, acumulou os seguintes apoios em minimis: um voucher IAPMEI de 7.500 euros para diagnóstico de inovação, um apoio à internacionalização AICEP no valor equivalente a 35 mil euros, uma bonificação de juros do Banco de Fomento que valeu, em equivalente subvenção, 22 mil euros, e um benefício fiscal municipal de 18 mil euros.</p>
+        <p>Total acumulado: 82.500 euros. Margem disponível para os próximos 36 meses (a partir do primeiro apoio): 217.500 euros. Quando o primeiro voucher fizer três anos, sairá da janela e a margem aumenta. Quem candidatar agora um novo apoio terá de declarar este histórico, e o organismo gestor confirma‑o através do registo central de minimis.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Onde aparece, e onde não aparece</h2>
+        <p>Identificar instrumentos enquadrados em minimis poupa surpresas. Em Portugal, são tipicamente apoios desta natureza: vouchers IAPMEI (digital, internacionalização, comércio digital), avisos específicos do Portugal 2030 quando assim sinalizados, certas medidas COMPETE 2030 de pequena dimensão, microcrédito do Banco de Fomento, programas AICEP de pequena escala, alguns benefícios fiscais municipais e, ocasionalmente, prémios de inovação de baixo valor.</p>
+        <p>Já os grandes incentivos não cabem aqui. Sistemas como o RFAI, a DLRR ou os principais avisos de incentivos ao investimento empresarial do Portugal 2030 estão enquadrados noutros regimes, tipicamente o Regulamento Geral de Isenção por Categoria (RGIC). Estes regimes têm os seus próprios tetos, fórmulas de intensidade máxima de auxílio e regras de cumulação, mas não consomem o plafond de minimis.</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">Nota</div>
+          <div class="art-highlight-text">A confusão habitual: pensar que um apoio do Portugal 2030 conta automaticamente para o teto de minimis. Não conta. Só consomem plafond os apoios expressamente concedidos ao abrigo do regulamento de minimis, identificados como tal na decisão de financiamento. Verificar sempre a base legal do apoio antes de fazer contas.</div>
+        </div>
+
+        <p>Há também regras de cumulação entre regimes. Para o mesmo conjunto de custos elegíveis, um apoio de minimis não se pode cumular com um apoio enquadrado em RGIC se, juntos, ultrapassarem a intensidade máxima de auxílio prevista para esse tipo de despesa. Quem combina vouchers com candidaturas a sistemas de incentivos para o mesmo projeto precisa de fazer esta verificação antes de assinar contratos.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>A declaração de minimis</h2>
+        <p>Quase todos os formulários de candidatura a apoios em Portugal incluem uma declaração de minimis. A empresa indica todos os apoios desta natureza recebidos nos 36 meses anteriores: data de concessão, organismo concedente, valor em equivalente subvenção bruta. Esta declaração é uma declaração sob compromisso de honra. Falsidades, omissões ou erros têm consequências reais.</p>
+        <p>O organismo gestor cruza a declaração com o registo central, gerido em Portugal pela DGO em articulação com a IGF. Discrepâncias são detetadas. Uma omissão, mesmo involuntária, pode levar à reprovação da candidatura. Se o apoio já tiver sido concedido e mais tarde se descobrir que o teto foi ultrapassado, a parte excedentária tem de ser devolvida, com juros calculados desde a data de concessão.</p>
+
+        <div class="pull-quote reveal">
+          <div class="pull-quote-text">"O risco do regime de minimis não está no teto. Está em chegar ao teto sem saber que se chegou."</div>
+        </div>
+
+        <p>Manter uma folha de cálculo interna com todos os apoios recebidos, datas, valores e bases legais é uma prática elementar e que poupa horas de pânico no momento de uma candidatura. Para grupos com várias empresas, esta folha tem de ser consolidada ao nível da empresa única, não de cada entidade legal isolada.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Sectores e atividades excluídos</h2>
+        <p>Nem todas as empresas podem beneficiar do regime. Estão expressamente excluídos os apoios concedidos a empresas activas no sector da pesca e aquicultura quando o instrumento não seja o regulamento de minimis específico para o sector, e ainda determinadas actividades na produção primária de produtos agrícolas. Apoios a empresas em dificuldade, conforme definição comunitária, também enfrentam restrições, embora o novo regulamento de 2024 tenha flexibilizado parte destas regras.</p>
+        <p>Mais relevante para a maioria das empresas portuguesas: apoios à exportação, no sentido de financiamento direto de quantidades exportadas, criação de redes de distribuição no estrangeiro ou outros custos correntes ligados à actividade exportadora, estão excluídos. Apoios à internacionalização que financiam ações de prospeção, participação em feiras ou estudos de mercado normalmente passam o crivo, mas a fronteira não é trivial e merece análise caso a caso.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>Como aplicar este conhecimento</h2>
+        <p>Para a maioria das empresas, o regime de minimis funciona como infraestrutura silenciosa. Não aparece em titulares, não exige negociação. Mas determina, na prática, quanto apoio público a empresa consegue mobilizar nos seus primeiros anos de vida ou nas fases mais intensivas de crescimento, quando a soma de pequenos vouchers e bonificações pode acumular depressa.</p>
+        <p>Três recomendações concretas para quem gere ou planeia projetos com componente de financiamento público. Primeiro, criar e manter actualizado um registo interno consolidado de todos os apoios públicos recebidos pela empresa única, com a base legal de cada um. Sem isto, qualquer declaração feita numa candidatura é uma aposta. Segundo, em qualquer operação de M&A, fazer due diligence específica ao histórico de minimis das empresas envolvidas, porque os 36 meses anteriores acompanham a operação. Terceiro, antes de combinar instrumentos para o mesmo projeto, confirmar a base legal de cada um e as regras de cumulação entre regimes.</p>
+        <p>O regime existe para simplificar. Mal compreendido, complica. Bem gerido, é uma das ferramentas mais eficientes para captar capital público em fases iniciais de crescimento, sem o peso burocrático dos grandes sistemas de incentivos.</p>
+      </div>
+
+      <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+    </article>
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Mara Ferreira</div>
+            <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Categoria</div><div class="sidebar-info-val">Financiamento</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Publicado</div><div class="sidebar-info-val">Abril 2026</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Leitura</div><div class="sidebar-info-val">9 min</div></div>
+      </div>
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
+        <div class="sidebar-cta-text">Quer perceber se a sua empresa ainda tem margem no plafond de minimis ou como combinar instrumentos sem ultrapassar o teto?</div>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="como-interpretar-taxas-apoio.html" class="related-item">
+          <span class="related-item-title">Como interpretar taxas de apoio</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="erros-comuns-candidatura-incentivos.html" class="related-item">
+          <span class="related-item-title">Erros comuns em candidaturas a incentivos</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="como-funcionam-beneficios-fiscais-investimento.html" class="related-item">
+          <span class="related-item-title">Como funcionam os benefícios fiscais ao investimento</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo-row">
+          <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+        </div>
+        <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+      </div>
+      <div>
+        <div class="f-col-label">Biblioteca</div>
+        <ul class="f-links">
+          <li><a href="../biblioteca.html">Portugal 2030</a></li>
+          <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+          <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+          <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Plataforma</div>
+        <ul class="f-links">
+          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../conhecimento.html">Conhecimento</a></li>
+          <li><a href="../parceiros.html">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Empresa</div>
+        <ul class="f-links">
+          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="../sobre-nos.html">Equipa</a></li>
+          <li><a href="../carreiras.html">Carreiras</a></li>
+          <li><a href="https://calendly.com/opencapital">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+      <div class="f-legal"><a href="#">Privacidade</a><a href="#">Termos</a><a href="#">Cookies</a></div>
+    </div>
+  </footer>
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
