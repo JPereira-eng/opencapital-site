@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placas, cartazes e websites: regras de comunicação explicadas | Open Capital</title>
+  <meta name="description" content="Guia prático sobre as obrigações de comunicação e publicidade para beneficiários de fundos europeus em Portugal. Placas, cartazes, websites e redes sociais.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../biblioteca.html">Biblioteca</a></li>
+      <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades</a>
+        <div class="nav-dropdown-menu">
+          <a href="../parceiros.html">Parceiros</a>
+          <a href="../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../conhecimento.html">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Financiamento</span>
+      </nav>
+      <span class="hero-cat-badge">Financiamento - Guia</span>
+      <h1 class="article-title">Placas, cartazes e websites: regras de comunicação explicadas</h1>
+      <p class="article-standfirst">Quem recebe fundos europeus tem obrigações de publicidade que muitos descobrem tarde, quase sempre quando uma auditoria bate à porta. Guia prático para evitar correções financeiras que ninguém quer.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Financiamento</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Abril 2026</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>11 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Mara Ferreira</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+      <img src="../assets/articles/regrascomun_informativa.png" alt="Placas, cartazes e websites: regras de comunicação explicadas" class="article-cover-img">
+
+      <div class="article-section reveal">
+        <p>Quem recebe fundos europeus assina, sem reparar muito, uma cláusula que tem mais peso do que parece. Compromete-se a comunicar publicamente que o projecto está a ser financiado pela União Europeia. Não é cortesia institucional. É obrigação legal, e o seu incumprimento tem consequências financeiras concretas, que podem chegar à devolução parcial do incentivo recebido.</p>
+        <p>O assunto é técnico, mas a lógica subjacente é simples. A Comissão Europeia quer que os cidadãos saibam onde o dinheiro do orçamento da UE está a ser aplicado. Por isso, exige que cada beneficiário, do município que reabilita uma escola à PME que adquire um equipamento industrial co-financiado pelo Portugal 2030, mostre essa origem em locais visíveis. Placas, cartazes, websites, redes sociais, contratos com fornecedores. A obrigação atravessa todos os canais em que o projecto se torne público.</p>
+        <p>O que muda entre programas é a intensidade. Um projecto Horizonte Europa não tem as mesmas regras que um projecto cofinanciado pelo FEDER. Um beneficiário do PRR cumpre exigências ligeiramente diferentes das de um beneficiário do COMPETE 2030. As regras cruzam-se, mas não são idênticas. E é nessa diferença que muitas empresas tropeçam, em particular as que operam em mais de um programa em simultâneo.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Porque é que existem estas regras</h2>
+        <p>A obrigação de comunicação não nasceu por iniciativa portuguesa. Vem dos regulamentos europeus que enquadram cada quadro de financiamento. Para o ciclo 2021 a 2027, o regulamento de referência é o Regulamento (UE) 2021/1060, conhecido como Regulamento de Disposições Comuns (CPR), que define as regras gerais para o FEDER, FSE+, Fundo de Coesão, FAMI e outros. O artigo 50.º deste regulamento e o anexo IX são onde as obrigações de visibilidade ficam explicitadas.</p>
+        <p>A justificação tem três camadas. A primeira é democrática. O orçamento europeu é financiado pelos contribuintes dos Estados-Membros e a Comissão Europeia precisa de mostrar que esse dinheiro produz efeitos visíveis. A segunda é técnica. A visibilidade reforça a auditabilidade dos projectos: se há uma placa que diz "este equipamento foi cofinanciado por X em Y", torna-se mais difícil simular ou desviar fundos. A terceira é política. Em momentos em que a confiança na União Europeia é testada, as instituições querem que cada agricultor, cada empresário, cada técnico de saúde que beneficia do orçamento europeu reconheça concretamente essa relação.</p>
+        <p>Para os beneficiários, a leitura é diferente. Para nós, estas regras são uma componente do contrato. São condição de elegibilidade da despesa, não opção. Quem não cumpre arrisca correcções financeiras, e a Inspeção-Geral de Finanças, o Tribunal de Contas Europeu e os organismos de gestão dos programas verificam regularmente se as regras foram seguidas.</p>
+        <div class="art-highlight">
+          <div class="art-highlight-label">Importante</div>
+          <div class="art-highlight-text">A correcção financeira por falhas de comunicação pode chegar a 3% do valor do incentivo recebido em casos de incumprimento parcial, e a 100% nos casos em que se considere que a obrigação foi totalmente ignorada e não corrigida após notificação. Não é uma multa simbólica.</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>O que tem de aparecer, sempre</h2>
+        <p>Há um conjunto mínimo de elementos que todos os beneficiários, independentemente do programa ou da dimensão do projecto, têm de mostrar nas suas comunicações sobre o financiamento. Esse conjunto é o seguinte:</p>
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Emblema da União Europeia:</strong> a bandeira azul com as 12 estrelas, em formato e proporções definidas pelo manual gráfico oficial.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Texto "Cofinanciado pela União Europeia":</strong> ou variante consoante o fundo (ex: "Financiado pela União Europeia, NextGenerationEU" no caso do PRR).</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Identificação do programa:</strong> "Portugal 2030", "Plano de Recuperação e Resiliência", "Horizonte Europa", consoante o caso. Em programas regionais, identificação do programa operacional regional.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Logótipos da República Portuguesa e do Programa:</strong> obrigatórios em programas operacionais nacionais e regionais cofinanciados.</li>
+        </ul>
+        <p>A regra geral é a de que estes elementos têm de ser visualmente proporcionais. Se um beneficiário coloca o seu próprio logo num cartaz com 30 cm de altura, o emblema da UE não pode ter 2 cm. A escala tem de respeitar a importância do financiador. Cada manual gráfico (UE, AD&C, IAPMEI, Recuperar Portugal) detalha as proporções aceitáveis.</p>
+        <p>Há ainda elementos opcionais que se tornam obrigatórios em determinadas situações. O número do projecto, a designação oficial da operação, o montante de financiamento aprovado e a data de aprovação são frequentemente exigidos em placas permanentes e na descrição do projecto no website do beneficiário.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Os três grandes formatos</h2>
+        <p>As obrigações concretas de comunicação organizam-se, na prática, em três tipos de suportes: placas físicas, cartazes ou pósters, e canais digitais (website, redes sociais). A regra que determina qual destes se aplica depende da natureza e do valor do projecto.</p>
+
+        <h3>Placas permanentes</h3>
+        <p>Aplicam-se a projectos que envolvem investimento físico em infraestruturas, edifícios, equipamentos imóveis ou intervenções em espaço público. Construção de uma fábrica nova com apoio Portugal 2030, reabilitação de um edifício patrimonial, instalação de um centro tecnológico, modernização de uma escola, todos são casos típicos.</p>
+        <p>O limiar de obrigatoriedade é, regra geral, 500 mil euros de custo total do projecto cofinanciado, embora alguns programas baixem este valor para 100 mil euros em casos específicos. Acima desse valor, é obrigatório instalar uma placa permanente em local visível, dentro de seis meses após a conclusão do projecto. A placa tem de ser legível à distância normal de circulação no local, ter dimensões mínimas que dependem do tipo de obra, e manter-se durante pelo menos cinco anos após o pagamento final do incentivo (período de manutenção do investimento).</p>
+        <p>Os materiais permitidos têm de resistir a intempéries. Vinil em madeira contraplacada não é aceite numa instalação industrial exterior. As placas mais comuns são em PVC rígido, alumínio composto ou acrílico, com impressão UV ou serigrafia, montadas em estrutura de fixação metálica.</p>
+
+        <h3>Cartazes ou pósters temporários</h3>
+        <p>Aplicam-se durante a execução do projecto, antes da instalação da placa permanente. Para projectos de menor dimensão (abaixo de 500 mil euros), o cartaz substitui a placa permanente. O formato mínimo geralmente exigido é A3 (29,7 x 42 cm), embora muitos programas recomendem A2 (42 x 59,4 cm) para garantir legibilidade.</p>
+        <p>O cartaz deve ser colocado em local visível ao público, junto à entrada principal das instalações onde o projecto é executado. Numa empresa, isso significa habitualmente a recepção, ou a porta principal de acesso. Numa loja, a montra. Numa unidade industrial, o portão de entrada.</p>
+        <p>O conteúdo segue a mesma estrutura: emblema UE, texto de cofinanciamento, identificação do programa, designação do projecto, montante aprovado.</p>
+
+        <h3>Website e redes sociais</h3>
+        <p>É a obrigação que mais frequentemente é ignorada. Qualquer beneficiário que tenha website oficial é obrigado a publicar nele uma descrição do projecto cofinanciado, com os elementos mínimos referidos acima, e a manter essa publicação durante todo o período de execução e o período de manutenção subsequente.</p>
+        <p>Não basta mencionar o financiamento numa notícia que envelhece e desaparece da home page. Tem de existir uma página dedicada, acessível a partir do menu principal ou do rodapé, com a designação do projecto, sumário, datas, valor do incentivo, fonte do cofinanciamento e logótipos.</p>
+        <p>Em redes sociais, a obrigação é mais flexível. Geralmente exige-se pelo menos uma publicação que mencione o financiamento, com o emblema da UE visível, no início e no fim da execução do projecto. Algumas autoridades de gestão exigem publicações regulares ao longo da execução, sobretudo em projectos com componente cultural, social ou de divulgação.</p>
+        <div class="art-divider"></div>
+        <p>Há ainda obrigações cruzadas que muitos esquecem. Materiais de marketing, brochuras, apresentações comerciais ou catálogos que descrevam produtos ou serviços que beneficiaram do cofinanciamento devem incluir o emblema UE e a referência ao programa. O mesmo se aplica a comunicados de imprensa, estudos publicados, relatórios técnicos e qualquer documento institucional que descreva resultados do projecto.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Diferenças entre programas</h2>
+        <p>As regras gerais são europeias, mas a aplicação concreta varia entre programas. As diferenças não são dramáticas, mas existem e têm de ser respeitadas.</p>
+        <table class="art-table">
+          <thead>
+            <tr><th>Programa</th><th>Limiar de placa permanente</th><th>Texto obrigatório</th><th>Manuais de referência</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Portugal 2030</strong></td><td>500K EUR (custo total)</td><td>"Cofinanciado pela União Europeia"</td><td>Manual de Comunicação AD&C</td></tr>
+            <tr><td><strong>PRR</strong></td><td>500K EUR (custo total)</td><td>"Financiado pela União Europeia, NextGenerationEU"</td><td>Manual de Imagem do Recuperar Portugal</td></tr>
+            <tr><td><strong>Horizonte Europa</strong></td><td>Sem limiar fixo</td><td>"Funded by the European Union"</td><td>EU Funding & Tenders Communication Guidelines</td></tr>
+            <tr><td><strong>COMPETE 2030</strong></td><td>500K EUR (custo total)</td><td>"Cofinanciado pela União Europeia"</td><td>Manual COMPETE 2030</td></tr>
+            <tr><td><strong>Programas Regionais (POR Centro, POR Norte, etc.)</strong></td><td>500K EUR (custo total)</td><td>"Cofinanciado pela União Europeia"</td><td>Manuais regionais específicos</td></tr>
+          </tbody>
+        </table>
+        <p>O PRR merece atenção particular. Sendo um instrumento financiado pelo NextGenerationEU, o texto a usar é diferente do dos fundos estruturais clássicos. A confusão é frequente: empresas com projectos PRR colocam "Cofinanciado pelo Portugal 2030" e isso é, formalmente, um erro técnico. Da mesma forma, projectos Horizonte Europa não usam a marca do Portugal 2030, mesmo que sejam executados em Portugal.</p>
+        <p>O Horizonte Europa, por ser gerido directamente pela Comissão Europeia em Bruxelas, tem regras distintas. Não há limiares de placa em função de valor de investimento, mas há obrigação de incluir a referência "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or [granting authority]" em todas as publicações científicas, divulgação ou material de comunicação que decorra do projecto.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Os erros mais frequentes</h2>
+        <p>Muito do que se passa nas auditorias é repetitivo. Os mesmos erros aparecem em projectos diferentes, em sectores diferentes, em territórios diferentes. Conhece-los antes ajuda a evitá-los.</p>
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Não ter cartaz durante a execução:</strong> a empresa instala a placa final no fim do projecto e ignora o período de execução, durante o qual o cartaz é obrigatório. A auditoria detecta facilmente: basta um Street View antigo ou uma fotografia do início da obra para mostrar que não havia comunicação.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Emblema UE em proporção errada ou em cor incorrecta:</strong> o emblema tem que respeitar o azul reflex Pantone 2747, com as estrelas em amarelo Pantone 116. Versões pretas ou monocromas só são aceites em situações específicas. Um emblema redesenhado, com efeitos visuais ou cores próximas mas não exactas, é considerado incumprimento.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Página do website desactualizada ou ausente:</strong> a empresa cria a página no início, esquece-se durante a execução, e quando vem a auditoria a página ou já não existe ou tem o link partido. É uma das falhas mais comuns e mais fáceis de corrigir.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Mistura de programas:</strong> empresa que tem um projecto Portugal 2030 e outro PRR coloca os mesmos logos em ambos. Cada projecto deve identificar o seu programa concreto, com o texto correspondente.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Materiais de comunicação sem referência:</strong> brochuras de produto, vídeos institucionais, apresentações comerciais que descrevem o equipamento ou o resultado cofinanciado mas não referem o programa. Se o output beneficiou do incentivo, a referência tem de aparecer.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Placa permanente removida antes de tempo:</strong> a placa tem de manter-se durante o período de manutenção do investimento, geralmente cinco anos após o último pagamento. Removê-la antes, mesmo por motivos estéticos ou logísticos, é incumprimento.</li>
+        </ul>
+        <p>O erro mais subtil é o da identificação errada da entidade gestora. Em projectos cofinanciados por programas operacionais regionais, é comum os beneficiários colocarem como entidade gestora a Comissão de Coordenação Regional em vez do Programa Operacional propriamente dito, ou inverterem a ordem dos logótipos. Pode parecer detalhe, mas é detalhe que conta no momento da auditoria.</p>
+        <div class="pull-quote reveal">
+          <div class="pull-quote-text">"O custo de produzir uma placa correcta é dezenas a centenas de euros. O custo de uma correcção financeira por incumprimento pode ser dezenas de milhares."</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Como organizar isto na empresa</h2>
+        <p>Em empresas pequenas e médias, a obrigação de comunicação cai geralmente sobre a pessoa que escreveu a candidatura, ou sobre o gestor financeiro. Em empresas maiores, é frequentemente entregue ao departamento de marketing, sem que este perceba bem as regras técnicas. O resultado, em ambos os casos, é o mesmo: a comunicação acaba por ser feita à última hora, com pouco rigor, e gera não conformidades.</p>
+        <p>Vale a pena organizar o processo desde o início. Três passos bastam para evitar a maioria das falhas.</p>
+        <p><strong>Primeiro:</strong> identificar, no momento em que o contrato é assinado, qual o manual gráfico aplicável. Para Portugal 2030, é o Manual de Comunicação da Agência para o Desenvolvimento e Coesão (AD&C). Para o PRR, é o Manual de Imagem do Recuperar Portugal. Para o Horizonte Europa, são as guidelines da Comissão. Estes manuais estão disponíveis online, são gratuitos e contêm versões editáveis dos logótipos e modelos de placa e cartaz.</p>
+        <p><strong>Segundo:</strong> definir um responsável interno pela comunicação do projecto. Pode ser o gestor financeiro, o gestor do projecto ou um elemento do marketing, mas tem de ser uma pessoa só, com calendário definido. Cartaz no início da execução, comunicação em redes sociais nas datas-chave, página dedicada no website, placa permanente na conclusão.</p>
+        <p><strong>Terceiro:</strong> documentar tudo. Fotografias da placa instalada, screenshots da página do website, capturas das publicações em redes sociais, exemplares dos cartazes. Esta documentação tem de ser arquivada com o restante dossier do projecto e mantida durante o período de manutenção. Em auditoria, é o que demonstra cumprimento.</p>
+        <div class="art-highlight">
+          <div class="art-highlight-label">Boa prática</div>
+          <div class="art-highlight-text">Criar uma pasta digital, separada por projecto, com todas as evidências de comunicação datadas. Em alternativa, manter um caderno físico com fotografias impressas, datas e localizações. Sempre que houver auditoria, é a primeira coisa a apresentar.</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Quem fiscaliza, quando e como</h2>
+        <p>A fiscalização do cumprimento das obrigações de comunicação é multinível. Numa primeira camada, a autoridade de gestão do programa concreto (AD&C, IAPMEI, ANI, COMPETE 2030, Estrutura de Missão Recuperar Portugal, agências regionais) verifica o cumprimento durante as visitas de acompanhamento ao projecto. Estas visitas acontecem normalmente uma a duas vezes por execução, dependendo do valor do projecto e do tipo de operação.</p>
+        <p>Numa segunda camada, a Inspeção-Geral de Finanças e o Tribunal de Contas português podem realizar auditorias temáticas ou pontuais, com poderes para examinar qualquer projecto financiado por fundos europeus. Numa terceira camada, a Comissão Europeia, através da DG REGIO, DG EMPL, DG RTD e outras, e o Tribunal de Contas Europeu, realizam auditorias de sistema, em que tomam uma amostra de projectos por país e verificam todos os aspectos, incluindo a comunicação.</p>
+        <p>O que estes auditores procuram, especificamente: presença física da placa ou cartaz no local, conformidade do conteúdo (logos, texto, dimensão), presença da página dedicada no website do beneficiário, evidências em redes sociais, materiais promocionais com referência ao financiamento, e documentação que prove a comunicação durante toda a execução do projecto.</p>
+        <p>As correcções financeiras aplicáveis seguem uma escala, definida pela Decisão da Comissão C(2019) 3452 e adaptada por orientações nacionais. Tipicamente: incumprimento parcial corrigido após notificação, correcção de 1 a 2%; incumprimento parcial não corrigido, correcção de 3 a 5%; incumprimento total e persistente, correcção de 5 a 25%; incumprimento sistemático ou intencional, correcção que pode chegar a 100% da despesa elegível associada.</p>
+        <p>Convém pôr em perspectiva. Em projectos de 1 milhão de euros, uma correcção de 3% representa 30 mil euros que a empresa terá de devolver. Em projectos de 10 milhões, são 300 mil. O custo de produzir e instalar uma placa correcta, por contraste, raramente ultrapassa os 800 euros, mesmo em modelos premium. A relação custo-benefício é evidente.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>Como aplicar este conhecimento</h2>
+        <p>O cumprimento das regras de comunicação não é tarefa para deixar para o fim. Quem trata o assunto na hora da auditoria já está atrasado, e geralmente paga por isso. Quem trata na assinatura do contrato e mantém disciplina ao longo da execução nem dá pelo tema. É essa diferença que distingue empresas que executam projectos europeus com tranquilidade das que vivem em sobressalto.</p>
+        <p>Para quem está prestes a assinar um contrato de financiamento, três acções imediatas. Identificar o manual gráfico aplicável e descarregar todos os logótipos editáveis. Definir uma pessoa interna responsável pela comunicação do projecto, com mandato e prazos. Criar uma pasta de evidências, partilhada entre o gestor financeiro e o responsável de comunicação, onde todas as fotografias, capturas de ecrã e documentos comprovativos vão sendo arquivados ao longo da execução.</p>
+        <p>Para quem já tem projectos em execução e nunca pensou seriamente no tema, a recomendação é fazer uma auditoria interna. Em duas horas é possível verificar: existe cartaz visível no local? Existe placa permanente nos projectos já concluídos com mais de 500 mil euros? Existe página dedicada no website? Existe pelo menos uma publicação em redes sociais com o emblema UE? Os materiais comerciais que descrevem produtos ou equipamentos cofinanciados incluem a referência? Se a resposta a alguma destas perguntas for negativa, é preferível corrigir agora, antes de uma auditoria, do que esperar para ser notificado.</p>
+        <p>Para empresas com vários projectos em simultâneo de programas distintos, a melhor prática é centralizar o controlo da comunicação numa pessoa só, com tabela de obrigações por projecto. Excel simples chega: nome do projecto, programa, datas-chave, suportes obrigatórios, evidências disponíveis, link da página dedicada. Esta tabela, mantida actualizada, resolve 90% dos problemas que aparecem em auditoria.</p>
+        <p>Há ainda uma decisão estratégica, que não é apenas técnica. Algumas empresas tratam a comunicação dos projectos europeus como obrigação aborrecida e cumprem o mínimo. Outras usam-na como ferramenta de comunicação corporativa, integrando o emblema UE e a referência ao programa em campanhas próprias, em embalagens, em comunicados, em apresentações comerciais. Esta segunda abordagem, além de garantir cumprimento, transforma a obrigação em activo de marca: mostra ao mercado que a empresa investe, inova e tem capacidade técnica para captar e executar fundos europeus. Para um cliente, um parceiro ou um investidor, isso conta.</p>
+        <p>A Open Capital trabalha com beneficiários de fundos europeus em todas as fases, desde a candidatura até ao encerramento da execução. As regras de comunicação são uma parte pequena mas crítica desse trabalho. Pequena, porque tecnicamente não é complexa. Crítica, porque o seu incumprimento pode anular o benefício económico de todo o esforço de candidatura e execução.</p>
+      </div>
+
+      <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;font-style:italic;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Mara Ferreira</div>
+            <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Categoria</div><div class="sidebar-info-val">Financiamento</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Publicado</div><div class="sidebar-info-val">Abril 2026</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Leitura</div><div class="sidebar-info-val">11 min</div></div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Tem um projecto cofinanciado em execução?</div>
+        <div class="sidebar-cta-text">Ajudamos beneficiários a estruturar o cumprimento das obrigações de comunicação e a evitar correcções financeiras em auditoria.</div>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="fundos-europeus-auditorias-irregularidades.html" class="related-item">
+          <span class="related-item-title">Fundos europeus: o que acontece quando há auditorias ou irregularidades</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="erros-comuns-candidatura-incentivos.html" class="related-item">
+          <span class="related-item-title">Erros comuns em candidaturas a incentivos</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="metodos-pagamento-portugal-2030.html" class="related-item">
+          <span class="related-item-title">Métodos de pagamento no Portugal 2030</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo-row">
+          <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+        </div>
+        <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+      </div>
+      <div>
+        <div class="f-col-label">Biblioteca</div>
+        <ul class="f-links">
+          <li><a href="../biblioteca.html">Portugal 2030</a></li>
+          <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+          <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+          <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Plataforma</div>
+        <ul class="f-links">
+          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../conhecimento.html">Conhecimento</a></li>
+          <li><a href="../parceiros.html">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Empresa</div>
+        <ul class="f-links">
+          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="../sobre-nos.html">Equipa</a></li>
+          <li><a href="../carreiras.html">Carreiras</a></li>
+          <li><a href="https://calendly.com/opencapital">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+      <div class="f-legal"><a href="#">Privacidade</a><a href="#">Termos</a><a href="#">Cookies</a></div>
+    </div>
+  </footer>
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
