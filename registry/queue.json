@@ -2,22 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "horizon-hlth-2026-01-stayhlth-03",
-      "name": "Building public trust and outreach in the life sciences",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "regime": "aviso",
-      "status": "ready",
-      "aviso_codigo": "HORIZON-HLTH-2026-01-STAYHLTH-03",
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2026-01-STAYHLTH-03.json",
-      "deadline": null,
-      "detected_date": "2026-04-25",
-      "priority_score": 15,
-      "notes": "Call: HORIZON-HLTH-2026-01",
-      "regulation_local": "regulamentos/eu-funding-tenders/horizon-hlth-2026-01-stayhlth-03.txt",
-      "fail_count": 0
-    },
-    {
       "id": "horizon-hlth-2026-01-tool-06",
       "name": "Support to European Research Area (ERA) action on accelerating New Approach Methodologies (NAMs) to advance biomedical research and testing of medicinal products and medical devices",
       "source_id": "eu-funding-tenders",
