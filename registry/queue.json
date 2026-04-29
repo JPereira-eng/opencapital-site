@@ -2,22 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "horizon-cl6-2026-02-farm2fork-14",
-      "name": "Green Transition Food Processing Africa",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "regime": "aviso",
-      "status": "ready",
-      "aviso_codigo": "HORIZON-CL6-2026-02-FARM2FORK-14",
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL6-2026-02-FARM2FORK-14.json",
-      "deadline": null,
-      "detected_date": "2026-04-25",
-      "priority_score": 15,
-      "notes": "Call: HORIZON-CL6-2026-02",
-      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl6-2026-02-farm2fork-14.txt",
-      "fail_count": 0
-    },
-    {
       "id": "horizon-hlth-2026-01-disease-03",
       "name": "Advancing research on the prevention, diagnosis, and management of post-infection long-term conditions",
       "source_id": "eu-funding-tenders",
