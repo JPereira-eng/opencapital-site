@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A zona euro encolheu em abril e os serviços cederam primeiro | Open Capital</title>
+  <meta name="description" content="Quinze meses de crescimento travaram em abril. A indústria aguentou, os serviços recuaram, e a guerra no Médio Oriente está no centro da equação.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../biblioteca.html">Biblioteca</a></li>
+      <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades</a>
+        <div class="nav-dropdown-menu">
+          <a href="../parceiros.html">Parceiros</a>
+          <a href="../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../conhecimento.html">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Mercados</span>
+      </nav>
+      <span class="hero-cat-badge">Mercados - Análise</span>
+      <h1 class="article-title">A zona euro encolheu em abril e os serviços cederam primeiro</h1>
+      <p class="article-standfirst">Quinze meses de crescimento ininterrupto travaram em quatro semanas. A indústria aguentou. Os serviços recuaram. Por trás da quebra, uma guerra que continua a empurrar preços e confiança em sentidos opostos.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Mercados</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Abril 2026</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>8 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Luís Gomes</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+      <img src="../assets/articles/zonaeuro_trend.png" alt="A zona euro encolheu em abril e os serviços cederam primeiro" class="article-cover-img">
+
+      <div class="article-section reveal">
+        <h2>O fim de uma sequência</h2>
+        <p>A actividade económica da zona euro contraiu em abril. Foi o primeiro recuo desde dezembro de 2024, depois de quinze meses consecutivos de expansão. O índice composto de gestores de compras (PMI), a leitura mais seguida pelos mercados para acompanhar a economia europeia em tempo real, caiu de 50,9 para 49,5. Acima de 50 significa expansão. Abaixo, contracção. A diferença pode parecer pequena. Não é.</p>
+        <p>O dado foi divulgado pela S&P Global e confirma o que vários indicadores tinham começado a sinalizar nas semanas anteriores: a zona euro perdeu fôlego, e perdeu-o no setor que tinha sido o motor da retoma desde o início de 2025. Os serviços, que representam cerca de 70% do PIB da região, registaram um PMI de 49,1 em abril, contra 51,0 em março. A indústria, frequentemente o lado mais frágil da economia europeia, manteve-se em terreno expansionista.</p>
+        <p>É uma inversão pouco habitual. Durante boa parte da última década, foi a indústria a puxar para baixo enquanto os serviços compensavam. Agora é o contrário.</p>
+        <div class="stats-row cols-3 reveal">
+          <div class="stat-cell">
+            <div class="stat-num">49,5</div>
+            <div class="stat-label">PMI composto zona euro, Abril 2026</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">49,1</div>
+            <div class="stat-label">PMI serviços</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">50,4</div>
+            <div class="stat-label">PMI indústria</div>
+          </div>
+        </div>
+        <p>Por país, a fotografia é desigual. A Alemanha continua acima de 50 graças à recuperação industrial, embora os serviços tenham caído. A França, onde os serviços pesam mais e a confiança das famílias está em mínimos de 18 meses, regista a contracção mais expressiva. Itália e Espanha mostram quedas mais ligeiras. Portugal não entra directamente no PMI da zona euro, mas a economia portuguesa está estruturalmente exposta aos mesmos canais.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Onde se partiu</h2>
+        <p>Em abril, foram os serviços ligados ao consumo que mais recuaram. Restauração, alojamento, comércio retalhista, lazer e transportes. Não a totalidade dos serviços, é importante notar. As actividades empresariais, como consultoria, software ou serviços financeiros, continuaram em expansão moderada. O recuo concentrou-se onde o consumidor europeu decide gastar ou não gastar.</p>
+        <p>Há uma razão directa para isto. Quando a confiança das famílias caiu, foram as despesas adiáveis as primeiras a sentir o efeito. Um almoço fora da rotina, um fim-de-semana fora, uma compra que pode esperar. Nada disso entra na conta das empresas industriais que fornecem componentes para outras empresas. Mas tudo isso entra na conta de quem opera um restaurante, um hotel, uma loja de centro de cidade.</p>
+        <p>Os dados de tráfego em centros comerciais europeus, divulgados pela ShopperTrak na primeira semana de abril, mostraram quedas homólogas de 4 a 6 pontos percentuais. As reservas hoteleiras para a Páscoa em Espanha e Itália ficaram aquém das previsões iniciais entre 7 e 9%, segundo a STR. Os pedidos de almoço em plataformas como a Just Eat e Glovo cresceram menos do que o esperado para o período.</p>
+        <p>Não é um colapso. É um recuo deliberado, dispersado por milhões de decisões individuais que somadas alteram o sinal do indicador.</p>
+        <p>A indústria, por seu lado, está noutro ciclo. Os industriais europeus passaram dois anos em recessão técnica, com a indústria automóvel alemã a puxar a média para baixo. A recuperação iniciada em janeiro de 2026 ainda não terminou. As encomendas, sobretudo no segmento de máquinas-ferramenta, equipamento eléctrico e bens intermédios, continuam a chegar. As carteiras de encomenda em Itália e Alemanha aumentaram em fevereiro e março. Esse fluxo demora a quebrar. Mesmo que a confiança caia, as encomendas que já estão em livro são executadas.</p>
+        <div class="pull-quote reveal">
+          <div class="pull-quote-text">"Os serviços absorvem o choque psicológico em tempo real. A indústria absorve-o com seis meses de atraso."</div>
+        </div>
+        <p>Esta dinâmica é importante porque define a janela em que o problema pode escalar. Se os industriais começarem também a registar quebras de encomenda em maio e junho, o que hoje é um soluço passa a ser uma travagem mais séria. A leitura de abril, sozinha, não é decisiva. A de junho será.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>O peso do Médio Oriente</h2>
+        <p>O catalisador é geopolítico. A escalada do conflito no Médio Oriente desde o início do ano, com confrontos directos entre Israel e o Irão e a interrupção parcial do tráfego marítimo no Estreito de Ormuz e no Mar Vermelho, mexeu com duas variáveis ao mesmo tempo: o preço da energia e a confiança dos consumidores europeus.</p>
+        <p>O Brent transaccionou acima dos 96 dólares no início de abril, depois de ter rondado os 78 em fevereiro. O gás natural europeu (TTF) subiu cerca de 22% no trimestre. O custo de fretes contentorizados Ásia-Europa aumentou perto de 35% face a janeiro, segundo o índice Drewry. Estes movimentos não chegam imediatamente às prateleiras dos supermercados, mas chegam em três a seis meses. E chegam à factura energética das empresas e das famílias quase de imediato.</p>
+        <p>A inflação na zona euro, que tinha estabilizado nos 2,3% em fevereiro, voltou a acelerar para 2,6% em março e estima-se que em abril ronde os 2,8%. Não é um pico dramático. É suficiente para mexer com a percepção. Quando o cabaz semanal volta a subir, o consumidor lê isso como um regresso ao período de inflação alta de 2022 e 2023, mesmo que os números absolutos sejam muito mais baixos. A memória recente é mais forte do que o dado em si.</p>
+        <p>Os índices de confiança dos consumidores em França, Alemanha e Itália caíram entre 4 e 7 pontos em abril. As empresas reportam ao PMI da S&P uma deterioração das perspectivas de procura para os próximos meses, sobretudo em segmentos discricionários. Os planos de investimento empresarial, que tinham começado a recuperar no primeiro trimestre, voltaram a abrandar.</p>
+        <p>Há também o efeito dos preços dos combustíveis. Em Portugal, o diesel ultrapassou os 1,72 euros por litro em abril, contra 1,58 em fevereiro. A gasolina aproxima-se dos 1,80. Estes valores não são isolados. Repercutem-se em transportes, logística, turismo, agricultura. E reflectem-se no orçamento das famílias, com efeito directo na propensão para gastar fora de casa.</p>
+        <p>O Banco Central Europeu, que tinha começado a reduzir taxas em finais de 2025 e estava no caminho para mais um corte em junho, terá agora de fazer um cálculo mais difícil. Cortar para apoiar a actividade que abranda, ou esperar para confirmar que a inflação não desliza? A presidente Christine Lagarde já indicou em entrevistas recentes que o BCE será paciente. O mercado leu isso como adiamento dos cortes esperados. Os yields a 10 anos subiram em todos os principais emissores soberanos europeus.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>E para Portugal?</h2>
+        <p>Portugal está duplamente exposto. Por um lado, o turismo representa cerca de 16% do PIB e quase 9% do emprego. As reservas para a época alta dependem da confiança e da disponibilidade financeira de visitantes alemães, franceses, britânicos e holandeses, todos eles mercados em arrefecimento. As primeiras semanas de abril mostraram já uma redução de 3 a 5% nas reservas confirmadas para junho e julho em hotéis no Algarve e em Lisboa, segundo dados da AHP.</p>
+        <p>Por outro, a economia portuguesa tem uma componente industrial relevante mas concentrada em sectores expostos ao consumo europeu: têxtil e calçado, mobiliário, componentes automóveis, máquinas. Se a procura europeia abrandar nos próximos trimestres, estes sectores são os primeiros a registar redução de encomendas.</p>
+        <p>A boa notícia é que Portugal entra neste ciclo com indicadores próprios mais sólidos do que a média europeia. O PIB português cresceu 2,1% em 2025 contra 0,9% da zona euro. O desemprego está nos 6,2%, abaixo da média de 6,5% da região. O défice orçamental ficou em 0,3% e a dívida pública em 91,4% do PIB, ambos em mínimos da última década. A economia portuguesa tem mais margem para absorver um choque de procura externa do que tinha em 2023.</p>
+        <table class="art-table">
+          <thead>
+            <tr><th>Indicador</th><th>Portugal</th><th>Zona Euro</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Crescimento PIB 2025</strong></td><td>2,1%</td><td>0,9%</td></tr>
+            <tr><td><strong>Desemprego (Mar 2026)</strong></td><td>6,2%</td><td>6,5%</td></tr>
+            <tr><td><strong>Inflação (Mar 2026)</strong></td><td>2,4%</td><td>2,6%</td></tr>
+            <tr><td><strong>Défice orçamental 2025</strong></td><td>0,3%</td><td>3,1%</td></tr>
+            <tr><td><strong>Dívida pública / PIB</strong></td><td>91,4%</td><td>87,8%</td></tr>
+          </tbody>
+        </table>
+        <p>Estes indicadores não isolam o país. Mas dão-lhe uma posição relativa melhor para atravessar um período de turbulência sem pânico fiscal nem rupturas de financiamento. O verdadeiro teste será nos próximos dois trimestres, quando se perceber se a quebra abril foi um soluço ou o início de uma travagem prolongada.</p>
+        <p>Os sectores empresariais portugueses devem dividir-se em dois grupos no que toca à leitura deste momento. O primeiro é o dos sectores expostos ao consumo doméstico europeu: turismo, calçado, têxtil, mobiliário, agroalimentar exportador. Estes sectores devem preparar-se para um abrandamento concreto da procura nos próximos seis meses, com revisão de previsões, gestão prudente de stocks e contenção de capex não estratégico. O segundo grupo é o dos sectores expostos ao investimento empresarial e ao gasto público: software empresarial, consultoria, engenharia, equipamento, construção pública. Estes ainda têm tracção, sobretudo porque o Portugal 2030 e o PRR continuam a injectar liquidez no sistema.</p>
+        <p>A questão para os gestores é simples de formular e difícil de responder: em qual dos dois grupos está o vosso negócio?</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>O que isto significa para a sua empresa</h2>
+        <p>Um mês não faz tendência. A leitura de abril é um aviso, não um diagnóstico. Mas é um aviso que vale a pena escutar agora, antes de ele se confirmar.</p>
+        <p>Quem opera em sectores ligados ao consumo discricionário deve fazer três coisas nas próximas semanas. Reler os pressupostos do orçamento de 2026, sobretudo nas previsões de receita do segundo semestre. Apertar o controlo de stocks, evitando acumulação que possa transformar-se em depreciação se a procura não voltar. Rever os calendários de investimento que têm flexibilidade, separando o que é estratégico e tem de avançar do que pode esperar dois trimestres pela confirmação de cenário.</p>
+        <p>Quem opera em sectores menos expostos ao ciclo de consumo, sobretudo em B2B, em mercados públicos, em projectos financiados, ou em segmentos de exportação para fora da Europa, deve usar este período para acelerar. Os concorrentes mais expostos vão estar em modo defensivo. As janelas de candidatura ao Portugal 2030, ao PRR e ao Horizonte Europa continuam abertas. As linhas do Banco de Fomento e os incentivos à I&D, como o SIFIDE II, mantêm-se activos. Empresas que conseguirem capitalizar este momento com investimento, contratação ou aquisição estratégica entram nos próximos dois anos com vantagem competitiva clara.</p>
+        <p>A travagem europeia também tem implicações para empresas que estão a planear rondas de capital ou negociações com investidores. A volatilidade dos mercados após a leitura de abril significa que valuations podem ajustar nos próximos meses. Empresas com runway curto devem antecipar conversações. Empresas com runway longo podem esperar e usar o tempo para entregar resultados que sustentem múltiplos mais altos quando a janela reabrir.</p>
+        <p>Em qualquer caso, o pior que se pode fazer perante um indicador como o de abril é ignorá-lo. Como repetir, sem reflectir, planos desenhados para um ambiente que já não é o actual. O melhor é o oposto: assumir que pode ser o início de algo, e preparar a empresa para esse cenário sem entrar em pânico nem em paralisia.</p>
+        <p>O mês que vem dirá se abril foi o ponto baixo ou o ponto inicial. Os bons gestores não esperam para descobrir.</p>
+      </div>
+
+      <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;font-style:italic;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../Retratos Equipa/retrato_luísgomes.png" alt="Luís Gomes" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Luís Gomes</div>
+            <div class="sidebar-author-role">Analista Financeiro</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Categoria</div>
+          <div class="sidebar-info-val">Mercados</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Publicado</div>
+          <div class="sidebar-info-val">Abril 2026</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Leitura</div>
+          <div class="sidebar-info-val">8 min</div>
+        </div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
+        <div class="sidebar-cta-text">Ajudamos empresas a posicionarem-se em ciclos de incerteza, com estratégia financeira, financiamento e leitura de mercado.</div>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="fragmentacao-global-fim-globalizacao-eficiente.html" class="related-item">
+          <span class="related-item-title">Fragmentação global e o fim da globalização eficiente</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="defesa-aco-nova-politica-industrial-europeia.html" class="related-item">
+          <span class="related-item-title">Defesa e aço: a nova política industrial europeia</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="expandir-capacidade-procura-sustenta-investimento.html" class="related-item">
+          <span class="related-item-title">Expandir capacidade quando a procura sustenta o investimento</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo-row">
+          <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+        </div>
+        <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+      </div>
+      <div>
+        <div class="f-col-label">Biblioteca</div>
+        <ul class="f-links">
+          <li><a href="../biblioteca.html">Portugal 2030</a></li>
+          <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+          <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+          <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Plataforma</div>
+        <ul class="f-links">
+          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../conhecimento.html">Conhecimento</a></li>
+          <li><a href="../parceiros.html">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Empresa</div>
+        <ul class="f-links">
+          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="../sobre-nos.html">Equipa</a></li>
+          <li><a href="../carreiras.html">Carreiras</a></li>
+          <li><a href="https://calendly.com/opencapital">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+      <div class="f-legal">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
