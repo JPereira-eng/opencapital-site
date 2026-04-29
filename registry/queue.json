@@ -7,13 +7,15 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-HLTH-2026-01-DISEASE-15",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2026-01-DISEASE-15.json",
       "deadline": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "Call: HORIZON-HLTH-2026-01"
+      "notes": "Call: HORIZON-HLTH-2026-01",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-hlth-2026-01-disease-15.txt",
+      "fail_count": 0
     },
     {
       "id": "horizon-hlth-2026-01-disease-11",
@@ -21,13 +23,15 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-HLTH-2026-01-DISEASE-11",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2026-01-DISEASE-11.json",
       "deadline": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "Call: HORIZON-HLTH-2026-01"
+      "notes": "Call: HORIZON-HLTH-2026-01",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-hlth-2026-01-disease-11.txt",
+      "fail_count": 0
     },
     {
       "id": "horizon-hlth-2026-01-care-03",
@@ -1104,10 +1108,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/46813062",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/digital-2024-advanced-digital-07-keycapacity.txt",
       "priority_score": 35,
-      "status": "aberto",
-      "notes": "Call: DIGITAL-2024-ADVANCED-DIGITAL-07 (descoberto via SEDIA prefixo DIGITAL-2026)"
+      "status": "ready",
+      "notes": "Call: DIGITAL-2024-ADVANCED-DIGITAL-07 (descoberto via SEDIA prefixo DIGITAL-2026)",
+      "fail_count": 0
     },
     {
       "id": "digital-2023-skills-04-semiconductors",
@@ -1121,10 +1126,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/46014314",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/digital-2023-skills-04-semiconductors.txt",
       "priority_score": 35,
-      "status": "aberto",
-      "notes": "Call: DIGITAL-2023-SKILLS-04 (descoberto via SEDIA prefixo DIGITAL-2026)"
+      "status": "ready",
+      "notes": "Call: DIGITAL-2023-SKILLS-04 (descoberto via SEDIA prefixo DIGITAL-2026)",
+      "fail_count": 0
     },
     {
       "id": "cef-dig-2026-gateways-works",
@@ -1138,10 +1144,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CEF-DIG-2026-GATEWAYS-WORKS",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/cef-dig-2026-gateways-works.txt",
       "priority_score": 35,
-      "status": "aberto",
-      "notes": "Call: CEF-DIG-2026-GATEWAYS (descoberto via SEDIA prefixo CEF-E-2026)"
+      "status": "ready",
+      "notes": "Call: CEF-DIG-2026-GATEWAYS (descoberto via SEDIA prefixo CEF-E-2026)",
+      "fail_count": 0
     },
     {
       "id": "cef-dig-2026-gateways-studies",
@@ -1155,10 +1162,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CEF-DIG-2026-GATEWAYS-STUDIES",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/cef-dig-2026-gateways-studies.txt",
       "priority_score": 35,
-      "status": "aberto",
-      "notes": "Call: CEF-DIG-2026-GATEWAYS (descoberto via SEDIA prefixo CEF-E-2026)"
+      "status": "ready",
+      "notes": "Call: CEF-DIG-2026-GATEWAYS (descoberto via SEDIA prefixo CEF-E-2026)",
+      "fail_count": 0
     },
     {
       "id": "cef-dig-2026-smart-cables-works",
@@ -1172,10 +1180,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CEF-DIG-2026-SMART-CABLES-WORKS",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/cef-dig-2026-smart-cables-works.txt",
       "priority_score": 35,
-      "status": "aberto",
-      "notes": "Call: CEF-DIG-2026-SMART-CABLES (descoberto via SEDIA prefixo CEF-E-2026)"
+      "status": "ready",
+      "notes": "Call: CEF-DIG-2026-SMART-CABLES (descoberto via SEDIA prefixo CEF-E-2026)",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl6-2023-farm2fork-01-9",
@@ -1189,10 +1198,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/45652931",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl6-2023-farm2fork-01-9.txt",
       "priority_score": 35,
-      "status": "aberto",
-      "notes": "Call: HORIZON-CL6-2023-FARM2FORK-01 (descoberto via SEDIA prefixo CEF-DIG-2026)"
+      "status": "ready",
+      "notes": "Call: HORIZON-CL6-2023-FARM2FORK-01 (descoberto via SEDIA prefixo CEF-DIG-2026)",
+      "fail_count": 0
     },
     {
       "id": "cerv-2024-citizens-values",
@@ -1206,10 +1216,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/46357639",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/cerv-2024-citizens-values.txt",
       "priority_score": 35,
-      "status": "aberto",
-      "notes": "Call: CERV-2024-CITIZENS (descoberto via SEDIA prefixo CREA-CULT-2026)"
+      "status": "ready",
+      "notes": "Call: CERV-2024-CITIZENS (descoberto via SEDIA prefixo CREA-CULT-2026)",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl6-2024-farm2fork-01-11",
@@ -1223,10 +1234,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/45654585",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl6-2024-farm2fork-01-11.txt",
       "priority_score": 35,
-      "status": "aberto",
-      "notes": "Call: HORIZON-CL6-2024-FARM2FORK-01 (descoberto via SEDIA prefixo HORIZON-CL1-2027)"
+      "status": "ready",
+      "notes": "Call: HORIZON-CL6-2024-FARM2FORK-01 (descoberto via SEDIA prefixo HORIZON-CL1-2027)",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-05-soil-02",
