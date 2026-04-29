@@ -2,22 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "horizon-hlth-2026-01-disease-04",
-      "name": "Development of novel vaccines for viral pathogens with epidemic potential",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "regime": "aviso",
-      "status": "ready",
-      "aviso_codigo": "HORIZON-HLTH-2026-01-DISEASE-04",
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2026-01-DISEASE-04.json",
-      "deadline": null,
-      "detected_date": "2026-04-25",
-      "priority_score": 15,
-      "notes": "Call: HORIZON-HLTH-2026-01",
-      "regulation_local": "regulamentos/eu-funding-tenders/horizon-hlth-2026-01-disease-04.txt",
-      "fail_count": 0
-    },
-    {
       "id": "horizon-hlth-2026-01-tool-03",
       "name": "Integrating New Approach Methodologies (NAMs) to advance biomedical research and regulatory testing",
       "source_id": "eu-funding-tenders",
