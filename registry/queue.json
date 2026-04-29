@@ -695,7 +695,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "EC-TAXUD/2025/LVP/0009-EXA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-TAXUD/2025/LVP/0009-EXA",
       "deadline": null,
@@ -704,8 +704,9 @@
       "priority_score": 15,
       "notes": "SEDIA text=2026 p8",
       "fail_count": 3,
-      "download_error": "EU portal JS-rendered, topicDetails JSON 404, WebSearch sem call document publico (procurement tender EXA/PIN)",
-      "last_fail_date": "2026-04-28"
+      "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback",
+      "last_fail_date": "2026-04-28",
+      "abandoned_date": "2026-04-29"
     },
     {
       "id": "ec-fpi-2025-op-0019-pin",
@@ -713,7 +714,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "EC-FPI/2025/OP/0019-PIN",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-FPI/2025/OP/0019-PIN",
       "deadline": null,
@@ -722,8 +723,9 @@
       "priority_score": 15,
       "notes": "SEDIA text=2026 p9",
       "fail_count": 3,
-      "download_error": "EU portal JS-rendered, topicDetails JSON 404, WebSearch sem call document publico (procurement tender EXA/PIN)",
-      "last_fail_date": "2026-04-28"
+      "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback",
+      "last_fail_date": "2026-04-28",
+      "abandoned_date": "2026-04-29"
     },
     {
       "id": "ep-linc-2026-lvp-0002-exa",
@@ -731,7 +733,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "EP-LINC/2026/LVP/0002-EXA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EP-LINC/2026/LVP/0002-EXA",
       "deadline": null,
@@ -740,8 +742,9 @@
       "priority_score": 15,
       "notes": "SEDIA text=2026 p9",
       "fail_count": 3,
-      "download_error": "EU portal JS-rendered, topicDetails JSON 404, WebSearch sem call document publico (procurement tender EXA/PIN)",
-      "last_fail_date": "2026-04-28"
+      "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback",
+      "last_fail_date": "2026-04-28",
+      "abandoned_date": "2026-04-29"
     },
     {
       "id": "cese-2026-lvp-0059-exa",
@@ -749,7 +752,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "CESE/2026/LVP/0059-EXA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CESE/2026/LVP/0059-EXA",
       "deadline": null,
@@ -758,8 +761,9 @@
       "priority_score": 15,
       "notes": "SEDIA text=2026 p10",
       "fail_count": 3,
-      "download_error": "EU portal JS-rendered, topicDetails JSON 404, WebSearch sem call document publico (procurement tender EXA/PIN)",
-      "last_fail_date": "2026-04-28"
+      "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback",
+      "last_fail_date": "2026-04-28",
+      "abandoned_date": "2026-04-29"
     },
     {
       "id": "ec-echo-2025-op-0032-pin",
@@ -767,7 +771,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "EC-ECHO/2025/OP/0032-PIN",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-ECHO/2025/OP/0032-PIN",
       "deadline": null,
@@ -776,8 +780,9 @@
       "priority_score": 15,
       "notes": "SEDIA text=2026 p10",
       "fail_count": 3,
-      "download_error": "EU portal JS-rendered, topicDetails JSON 404, WebSearch sem call document publico (procurement tender EXA/PIN)",
-      "last_fail_date": "2026-04-28"
+      "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback",
+      "last_fail_date": "2026-04-28",
+      "abandoned_date": "2026-04-29"
     },
     {
       "id": "ep-linc-2025-lvp-0018-exa",
@@ -785,7 +790,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "EP-LINC/2025/LVP/0018-EXA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EP-LINC/2025/LVP/0018-EXA",
       "deadline": null,
@@ -794,8 +799,9 @@
       "priority_score": 15,
       "notes": "SEDIA text=2026 p15",
       "fail_count": 3,
-      "download_error": "EU portal JS-rendered, topicDetails JSON 404, WebSearch sem call document publico (procurement tender EXA/PIN)",
-      "last_fail_date": "2026-04-28"
+      "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback",
+      "last_fail_date": "2026-04-28",
+      "abandoned_date": "2026-04-29"
     },
     {
       "id": "ec-comm-tll-2025-mvp-0467-exa",
@@ -803,7 +809,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "pending",
+      "status": "abandoned",
       "aviso_codigo": "EC-COMM/TLL/2025/MVP/0467-EXA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-COMM/TLL/2025/MVP/0467-EXA",
       "deadline": null,
@@ -812,8 +818,9 @@
       "priority_score": 15,
       "notes": "SEDIA text=2026 p15",
       "fail_count": 3,
-      "download_error": "EU portal JS-rendered, topicDetails JSON 404, WebSearch sem call document publico (procurement tender EXA/PIN)",
-      "last_fail_date": "2026-04-28"
+      "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback",
+      "last_fail_date": "2026-04-28",
+      "abandoned_date": "2026-04-29"
     },
     {
       "id": "smp-ess-2024-hbs-iba",
