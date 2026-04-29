@@ -90,5 +90,33 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": []
+  "queue": [
+    {
+      "id": "apba-portugal",
+      "name": "APBA - Associacao Portuguesa de Business Angels",
+      "source_id": "apba-portugal",
+      "catalog_type": "ba",
+      "detected_date": "2026-04-29",
+      "last_profile_update": "2026-04-29",
+      "status": "closed",
+      "regulation_url": "https://investors.pt",
+      "priority_score": 5,
+      "profile": {
+        "website": "https://investors.pt",
+        "linkedin": "https://www.linkedin.com/in/apba/",
+        "pais_sede": "PT",
+        "descricao_curta": "Associacao Portuguesa Business Angels (APBA), fundada em 2006 e sediada em Lisboa. Em 2024, fundiu-se com a FNABA na nova entidade APIES (Investors Portugal). A APBA enquanto entidade autonoma deixou de existir.",
+        "como_candidatar": "Investidores e empresas devem agora dirigir-se a Investors Portugal (https://investors.pt), entidade que sucede a APBA e a FNABA",
+        "numero_membros": 150,
+        "ticket_individual_eur": null,
+        "ticket_coletivo_eur": null,
+        "setores_foco": [
+          "multissetorial",
+          "early-stage"
+        ],
+        "requisitos_apresentacao": "Pre-fusao: pitch e dossier de candidatura via website APBA. Pos-fusao: redireccionado para Investors Portugal"
+      },
+      "notes": "APBA fundada em 2006-02-16 em Lisboa. Fusao com FNABA na APIES (Investors Portugal) em 2024. APBA cessou actividade autonoma. Profile mantido como referencia historica; investors.pt e a nova entidade activa que devera ser adicionada como fonte distinta."
+    }
+  ]
 }
