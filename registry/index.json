@@ -3,14 +3,14 @@
     "description": "Open Capital Radar v4.0 - Indice global",
     "version": "4.0",
     "migrated_from_v3": "2026-04-12",
-    "last_writer_run": "2026-04-29"
+    "last_writer_run": "2026-04-30"
   },
   "totals": {
-    "published": 678,
+    "published": 679,
     "open": 379,
-    "closed": 264,
+    "closed": 265,
     "planned": 18,
-    "in_queue": 73,
+    "in_queue": 72,
     "in_watchlist": 128,
     "in_catalogo": 1,
     "in_overflow": 155
@@ -56,9 +56,9 @@
     "eu-horizon": {
       "count": 219,
       "open": 80,
-      "closed": 83,
+      "closed": 84,
       "planned": 8,
-      "published": 62
+      "published": 63
     },
     "eu-other": {
       "count": 22,
@@ -332,5 +332,5 @@
     "apba-portugal": "2026-04-29",
     "founder-institute-lisbon": "2026-04-29"
   },
-  "last_writer_run": "2026-04-29"
+  "last_writer_run": "2026-04-30"
 }

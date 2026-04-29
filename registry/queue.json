@@ -2,22 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "horizon-hlth-2026-01-disease-09",
-      "name": "Multisectoral approach to tackle chronic non-communicable diseases: implementation research maximising collaboration and coordination with sectors and in settings beyond the healthcare system (GACD)",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "regime": "aviso",
-      "status": "ready",
-      "aviso_codigo": "HORIZON-HLTH-2026-01-DISEASE-09",
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2026-01-DISEASE-09.json",
-      "deadline": null,
-      "detected_date": "2026-04-25",
-      "priority_score": 15,
-      "notes": "Call: HORIZON-HLTH-2026-01",
-      "regulation_local": "regulamentos/eu-funding-tenders/horizon-hlth-2026-01-disease-09.txt",
-      "fail_count": 0
-    },
-    {
       "id": "horizon-hlth-2026-01-envhlth-01",
       "name": "Towards a better understanding and anticipation of the impacts of climate change on health",
       "source_id": "eu-funding-tenders",
