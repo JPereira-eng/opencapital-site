@@ -1,5 +1,7 @@
 # Serie 3.1 - Template Editorial de Instrumentos
 
+REGRA CRITICA DE ORTOGRAFIA: Aplicar sempre o Acordo Ortografico de 1990 (AO90) em PT-PT. Usar as grafias atualizadas: acao (nao accao), setor/setorial (nao sector/sectorial), ativo/atividade/atual (nao activo/actividade/actual), objetivo/objeto (nao objectivo/objecto), direto/diretamente (nao directo/directamente), exato/exatamente (nao exacto/exactamente), aspeto (nao aspecto), excecao/exceto (nao exceptao/excepto), rececao (nao recepcao), adocao (nao adopcao), reacao (nao reaccao), corretor (nao correcto/correctamente), eletrico (nao electrico), otimo (nao optimo), detetar (nao detectar), afetar (nao afectar), projeto (nao projecto), arquiteto (nao arquitecto). Manter "facto", "factual", "contacto", "conviccao", "tacto" (PT-PT preserva estas). Nunca gerar artigos com ortografia pre-1990.
+
 Template editorial para artigos de instrumentos de financiamento da Open Capital Advisory & Consultancy.
 Este ficheiro define o tom, a estrutura HTML, o CSS e as regras visuais de cada artigo.
 
@@ -96,7 +98,7 @@ Se o regulamento/material disponivel no `regulation_local` tem menos de 500 pala
 **Nunca inventar informacao.** Se nao ha dados sobre taxa de juro, prazo, dotacao, criterios - nao escrever sobre esses pontos. Focar apenas no que e conhecido:
 - O que e o instrumento e o seu proposito estrategico
 - Quem e a entidade que o oferece (banco, fundo, acelerador, promotor)
-- Que tipo de empresa ou projecto se adequa
+- Que tipo de empresa ou projeto se adequa
 - Contexto do instrumento no ecossistema portugues
 - Analise critica da sua relevancia
 

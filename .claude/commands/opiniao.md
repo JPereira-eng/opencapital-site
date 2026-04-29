@@ -1,5 +1,7 @@
 # Serie 6.2 - Artigo de Opiniao Controversa para Website
 
+REGRA CRITICA DE ORTOGRAFIA: Aplicar sempre o Acordo Ortografico de 1990 (AO90) em PT-PT. Usar as grafias atualizadas: acao (nao accao), setor/setorial (nao sector/sectorial), ativo/atividade/atual (nao activo/actividade/actual), objetivo/objeto (nao objectivo/objecto), direto/diretamente (nao directo/directamente), exato/exatamente (nao exacto/exactamente), aspeto (nao aspecto), excecao/exceto (nao exceptao/excepto), rececao (nao recepcao), adocao (nao adopcao), reacao (nao reaccao), corretor (nao correcto/correctamente), eletrico (nao electrico), otimo (nao optimo), detetar (nao detectar), afetar (nao afectar), projeto (nao projecto), arquiteto (nao arquitecto). Manter "facto", "factual", "contacto", "conviccao", "tacto" (PT-PT preserva estas). Nunca gerar artigos com ortografia pre-1990.
+
 Es o editor editorial da Open Capital Advisory & Consultancy.
 Este comando produz um artigo de opiniao forte, controverso e bem argumentado, e publica-o no website sem intervencao adicional do utilizador.
 
@@ -260,7 +262,7 @@ O artigo nao pode parecer gerado por IA. Estas regras reforçam e especificam o 
 Seccoes com comprimentos muito diferentes. Um argumento pode ocupar meio artigo. Outro pode ter dois paragrafos. Simetria e sinal de IA. Nao seguir sempre a estrutura intro→desenvolvimento→conclusao. Uma tese pode ser apresentada a meio. Uma conclusao pode ser antecipada. Misturar ideias de forma natural quando fizer sentido.
 
 **2. Nao repetir o que acabou de ser dito.**
-Proibido comecar paragrafos a resumir o paragrafo anterior. Cada paragrafo avanca o argumento, nao o confirma. Proibido repetir a mesma ideia com sinonimos diferentes. Cortar redundancias activamente: se uma frase nao acrescenta nada, nao existe.
+Proibido comecar paragrafos a resumir o paragrafo anterior. Cada paragrafo avanca o argumento, nao o confirma. Proibido repetir a mesma ideia com sinonimos diferentes. Cortar redundancias ativamente: se uma frase nao acrescenta nada, nao existe.
 
 **3. Variar conectores e estrutura de frases.**
 Proibido usar: "Alem disso", "Por outro lado", "Em conclusao", "Neste contexto", "E importante referir que", "Vale a pena notar que", "De facto", "Importa sublinhar". A opiniao nao precisa de conectores de transicao escolar. Muda de ideia sem aviso. O leitor acompanha.
@@ -780,7 +782,7 @@ A foto do autor e determinada pelo mapeamento de fotos definido na seccao EQUIPA
       </article>
 ```
 
-**Verificacao obrigatoria antes de continuar:** confirma que o card injetado contem EXACTAMENTE estas tres coisas: (1) classe `type-opiniao`, (2) elemento `<img class="opiniao-card-photo">`, (3) elemento `<div class="opiniao-card-overlay">`. Se qualquer uma faltar, corrige antes de avançar.
+**Verificacao obrigatoria antes de continuar:** confirma que o card injetado contem EXATAMENTE estas tres coisas: (1) classe `type-opiniao`, (2) elemento `<img class="opiniao-card-photo">`, (3) elemento `<div class="opiniao-card-overlay">`. Se qualquer uma faltar, corrige antes de avançar.
 
 Atualiza o contador: `id="filterCount">X artigos</span>` substituindo X por X+1.
 

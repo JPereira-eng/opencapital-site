@@ -64,7 +64,7 @@ Priorizar por `priority_score` descendente, tratando ambas as filas como pool un
 
 ### Fluxo A - Regime "aviso" (items de queue.json)
 - Tem deadline formal, regulamento oficial (PDF), codigo de aviso
-- **Testes PAA APLICAM-SE.** Objectivo: evitar descarregar "Resumos do Plano Anual" em vez de regulamentos reais.
+- **Testes PAA APLICAM-SE.** Objetivo: evitar descarregar "Resumos do Plano Anual" em vez de regulamentos reais.
 - **Teste de tamanho minimo APLICA-SE** (800 palavras + "despesas elegiveis" ou "criterios de selecao")
 - Fontes tipicas: PT2030 (portugal-2030, compete-2030, norte-2030, etc), EU (eu-funding-tenders, hadea, eismea), Interreg, ANI, IAPMEI, AICEP, FCT, IEFP, PRR
 
@@ -84,7 +84,7 @@ Priorizar por `priority_score` descendente, tratando ambas as filas como pool un
 
 ## PASSO 1.5: Verificar se e Plano Anual (APENAS Fluxo A - regime "aviso", APENAS PT2030)
 
-**Este passo NAO se aplica a items de regime "catalogo". Saltar directamente para Passo 2 se `_queue_origin == "catalogo"`.**
+**Este passo NAO se aplica a items de regime "catalogo". Saltar diretamente para Passo 2 se `_queue_origin == "catalogo"`.**
 
 Para items de regime "aviso" com `source_id` que contenha "2030" ou "pessoas" E que tenham `regulation_url`:
 

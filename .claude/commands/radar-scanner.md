@@ -203,7 +203,7 @@ De cada aviso JSON, extrair:
 
 **REGRA CRITICA - FILTRO DOCUMENTO PUBLICADO (v4.2, APENAS fontes com access_method: "api"):**
 
-Objetivo: detectar se o aviso tem **regulamento/documento publicado** (vs PAA sem documento). Nomes de campos ACF variam entre portais WordPress (descoberto 2026-04-17: sustentavel-2030 usa `acf.aviso`, portugal-2030 usa `acf.pdf`). Para ser futuro-proof, a verificacao e feita em 2 niveis:
+Objetivo: detetar se o aviso tem **regulamento/documento publicado** (vs PAA sem documento). Nomes de campos ACF variam entre portais WordPress (descoberto 2026-04-17: sustentavel-2030 usa `acf.aviso`, portugal-2030 usa `acf.pdf`). Para ser futuro-proof, a verificacao e feita em 2 niveis:
 
 **Nivel 1 - Lista nominal de campos conhecidos (verificar por esta ordem):**
 ```
@@ -276,7 +276,7 @@ curl -s -X POST "https://api.tech.ec.europa.eu/search-api/prod/rest/search?apiKe
 - `facetQueries=status%3AOPEN` (apenas topics abertos, URL-encoded de `status:OPEN`)
 - `-d '{}'` (body JSON vazio, obrigatorio porque e POST)
 
-**Resposta JSON:** objecto com `results[]`. Cada resultado tem:
+**Resposta JSON:** objeto com `results[]`. Cada resultado tem:
 - `metadata.callIdentifier` — id do topic (ex: `HORIZON-CL4-2026-DIGITAL-EMERGING-01-02`)
 - `metadata.callTitle` — titulo
 - `metadata.deadlineDate` — array com ISO dates
@@ -391,13 +391,13 @@ Para fontes que nao tem API estruturada, extrair o maximo possivel:
 
 **Aplica-se quando:** a fonte selecionada para o slot 6 tem `regime: "catalogo"`. Nao aplica a avisos.
 
-**Objectivo:** extrair um **profile estruturado** da organizacao/fonte (tese, ticket, portfolio, produtos, etc.) em vez de "avisos com deadline". O writer usa este profile para popular sidebars de artigos sobre VCs, BAs, bancos, premios, etc., sem precisar de re-scrape.
+**Objetivo:** extrair um **profile estruturado** da organizacao/fonte (tese, ticket, portfolio, produtos, etc.) em vez de "avisos com deadline". O writer usa este profile para popular sidebars de artigos sobre VCs, BAs, bancos, premios, etc., sem precisar de re-scrape.
 
-**Modelo de entidade:** 1 entrada por `source_id` em `queue-catalogo.json` (upsert: se ja existir, merge). Excepcao: `platform` nao produz entrada (so produz suggestions de novas fontes a adicionar ao sources-scan.json).
+**Modelo de entidade:** 1 entrada por `source_id` em `queue-catalogo.json` (upsert: se ja existir, merge). Excecao: `platform` nao produz entrada (so produz suggestions de novas fontes a adicionar ao sources-scan.json).
 
 ---
 
-### Campos comuns do `profile` (todos os catalog_type excepto platform)
+### Campos comuns do `profile` (todos os catalog_type exceto platform)
 
 ```
 website              : string (URL canonica)
@@ -444,7 +444,7 @@ campanhas_ativas_url      : string
 
 **bank-product** (produtos bancarios para empresas):
 ```
-produtos : array de objectos {
+produtos : array de objetos {
   nome             : string (ex: "Linha Apoio Inovacao")
   tipo             : "linha-credito" | "garantia" | "leasing" | "factoring" | "outros"
   max_eur          : number | null
@@ -531,7 +531,7 @@ Quando acede a uma fonte catalogo, usar o prompt especifico para o tipo. Abaixo 
 > 2. Ticket minimo por investidor
 > 3. Comissao cobrada ao promotor e/ou investidor
 > 4. Regulamentacao (ECSPR, CMVM, outra)
-> 5. URL das campanhas activas
+> 5. URL das campanhas ativas
 > 6. Como candidatar uma campanha (processo para empresas promotoras)
 > Devolve em JSON.
 
@@ -574,7 +574,7 @@ Quando acede a uma fonte catalogo, usar o prompt especifico para o tipo. Abaixo 
 > 1. Tutela (ministerio ou entidade)
 > 2. Lista de instrumentos/linhas actualmente abertas (nomes)
 > 3. Site oficial
-> 4. Como aceder (candidatura directa, via consultor, via intermediario).
+> 4. Como aceder (candidatura direta, via consultor, via intermediario).
 > Devolve em JSON.
 
 **platform (excepcao, nao produz entrada):**
@@ -586,7 +586,7 @@ Quando acede a uma fonte catalogo, usar o prompt especifico para o tipo. Abaixo 
 
 ### Upsert em queue-catalogo.json
 
-Para fontes catalogo (excepto platform):
+Para fontes catalogo (exceto platform):
 
 1. **Procurar entrada existente** por `source_id` em `queue-catalogo.json > queue`.
 2. **Se existe:** merge dos campos novos no `profile`. Preservar `detected_date` original. Bump `last_profile_update` para hoje. Actualizar `status` se mudou (ex: "active" -> "fundraising").
@@ -631,7 +631,7 @@ Para fontes catalogo (excepto platform):
    - `inactive`: fundo esgotado, aguarda vintage seguinte
    - `closed`: encerrado (ex: accelerator descontinuado)
 
-5. **Nao adicionar a lookup.json.** A dedup de catalogo e feita directamente por `source_id` na propria queue-catalogo.json (porque a chave e 1-para-1 com sources-scan.json). Nao poluir `lookup.by_id` com IDs de catalogo.
+5. **Nao adicionar a lookup.json.** A dedup de catalogo e feita diretamente por `source_id` na propria queue-catalogo.json (porque a chave e 1-para-1 com sources-scan.json). Nao poluir `lookup.by_id` com IDs de catalogo.
 
 ### Frequencia de refresh diferenciada (v4.5)
 
@@ -644,7 +644,7 @@ Nao e igual para todos os catalog_type. Profiles mais dinamicos requerem verific
 | `public-fund` | 90 dias | Linhas publicas rotacao anual ou semestral |
 | `accelerator`, `incubator` | 30 dias | Batches abrem/fecham com frequencia; deadlines criticos |
 | `prize` | 30 dias | Deadlines e juri mudam por edicao; relevancia temporal |
-| `crowdfunding` | 30 dias | Campanhas activas mudam semanalmente |
+| `crowdfunding` | 30 dias | Campanhas ativas mudam semanalmente |
 | `platform` | 45 dias | Suggestions, nao criticas mas valem refresh medio |
 
 **Actualizacao do algoritmo de selecao do slot 6 (Passo 1):**
@@ -681,7 +681,7 @@ Para cada instrumento detectado:
 
 **Regime "aviso":** adicionar a `registry/queue.json` (ou overflow se cheio). Dedup via lookup.json. O writer le esta fila em cada run.
 
-**Regime "catalogo" (v4.5):** upsert em `registry/queue-catalogo.json` com objecto `profile` estruturado (ver Passo 2bis). Uma entrada por `source_id` — nao ha overflow, nao ha lookup separado, dedup e directa pelo id. Excepcao: `catalog_type: "platform"` nao adiciona entrada (so produz suggestions no relatorio).
+**Regime "catalogo" (v4.5):** upsert em `registry/queue-catalogo.json` com objeto `profile` estruturado (ver Passo 2bis). Uma entrada por `source_id` — nao ha overflow, nao ha lookup separado, dedup e direta pelo id. Excecao: `catalog_type: "platform"` nao adiciona entrada (so produz suggestions no relatorio).
 
 ---
 
@@ -691,7 +691,7 @@ Antes de adicionar novos items, verificar o tamanho atual da queue:
 
 **Se `queue.length < 100`:** adicionar normalmente a `queue.json`.
 
-**Se `queue.length >= 100`:** nao ir directamente para overflow. Fazer swap por prioridade:
+**Se `queue.length >= 100`:** nao ir diretamente para overflow. Fazer swap por prioridade:
 
 1. Calcular `min_score = min(queue[].priority_score)`
 2. Se `novo_item.priority_score > min_score`:
@@ -699,7 +699,7 @@ Antes de adicionar novos items, verificar o tamanho atual da queue:
    - Mover o item removido para `registry/queue-overflow.json`
    - Adicionar o novo item a `queue.json`
 3. Se `novo_item.priority_score <= min_score`:
-   - Adicionar directamente a `registry/queue-overflow.json`
+   - Adicionar diretamente a `registry/queue-overflow.json`
 
 **Regra de migracao do overflow:** Quando o scanner deteta `queue.length < 80`, migrar os items de maior priority_score do overflow para a queue ate perfazer 100 items.
 
@@ -777,7 +777,7 @@ Para fontes nao-PT2030 (EU, Interreg, etc.), usar o `shard` definido em `sources
 
 ### 5b. RELATORIO GRANULAR OBRIGATORIO
 
-**No final da execucao, produzir relatorio estruturado com TODAS as metricas por fonte.** Este relatorio torna o comportamento do scanner transparente e auditavel. Sem este detalhe, e impossivel detectar regressoes (falhas silenciosas, paginacao incompleta, filtros excessivos, dedup incorrecto).
+**No final da execucao, produzir relatorio estruturado com TODAS as metricas por fonte.** Este relatorio torna o comportamento do scanner transparente e auditavel. Sem este detalhe, e impossivel detetar regressoes (falhas silenciosas, paginacao incompleta, filtros excessivos, dedup incorreto).
 
 **Template obrigatorio por fonte — REGIME AVISO:**
 
@@ -874,7 +874,7 @@ Se qualquer falhar: **ABORTAR RUN**. Investigar item/operacao extra, corrigir, o
 
 **TESTE 2 - Invariantes absolutos (protege contra drift historico):**
 
-Os contadores em `index.json` devem SEMPRE bater com o tamanho real dos ficheiros, independentemente do que aconteceu na run. Se detectar discrepancia: auto-corrigir com log.
+Os contadores em `index.json` devem SEMPRE bater com o tamanho real dos ficheiros, independentemente do que aconteceu na run. Se detetar discrepancia: auto-corrigir com log.
 
 Verificar:
 - `index.totals.in_queue == queue.json.queue.length` ?

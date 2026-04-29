@@ -43,7 +43,7 @@ fi
 
 ## SEPARACAO CRITICA POR REGIME
 
-O monitor actua de forma DIFERENTE consoante o regime da fonte do item:
+O monitor atua de forma DIFERENTE consoante o regime da fonte do item:
 
 ### Regime "aviso" (shards: pt2030-*, eu-*, eic, interreg, pt-other)
 - Verifica **estado** (aberto/fechado/previsto)
@@ -98,7 +98,7 @@ Um unico ciclo de WebFetch retorna todos os avisos da API central. Comparar com 
 
 #### Para portais regionais PT2030 (centro-2030, lisboa-2030, alentejo-2030, etc.):
 
-Portais com WordPress API (ver `api_url` em sources-scan.json): usar a API directamente.
+Portais com WordPress API (ver `api_url` em sources-scan.json): usar a API diretamente.
 ```
 WebFetch: https://centro2030.pt/wp-json/wp/v2/aviso-2024?page=1
 ```
@@ -137,7 +137,7 @@ curl -sI "[regulation_url]" -o /dev/null -w "%{http_code}"
 
 ## PASSO 2.5: Verificacao de integridade do regulamento (APENAS regime aviso)
 
-**Objectivo:** detectar adendas, alteracoes ou novas versoes de regulamentos que normalmente sao publicadas sob o mesmo aviso_codigo mas com conteudo diferente. Um regulamento alterado pode mudar dotacao, beneficiarios, criterios - afectando o artigo.
+**Objetivo:** detetar adendas, alteracoes ou novas versoes de regulamentos que normalmente sao publicadas sob o mesmo aviso_codigo mas com conteudo diferente. Um regulamento alterado pode mudar dotacao, beneficiarios, criterios - afetando o artigo.
 
 **Este passo NAO se aplica a regime catalogo.** Saltar.
 
@@ -301,7 +301,7 @@ Se ha items com `needs_review: true`, mencionar explicitamente no commit para o 
 ## REGRAS DE SEGURANCA
 
 1. **Nunca ler todos os shards de uma vez.** Max 1-2 por run.
-2. **Nunca reescrever conteudo editorial automaticamente.** So alterar estado, prazo, dotacao (alteracoes factuais directas da fonte) e aviso de encerramento.
+2. **Nunca reescrever conteudo editorial automaticamente.** So alterar estado, prazo, dotacao (alteracoes factuais diretas da fonte) e aviso de encerramento.
 3. **Nunca reescrever artigo quando integrity hash muda.** Marcar needs_review. Writer revisa.
 4. **Nunca remover entradas de instruments-catalog.json.** So atualizar estado/prazo/dotacao.
 5. **Nunca verificar estado ou prazo em shards catalogo.** So link rot.
