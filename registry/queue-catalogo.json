@@ -90,5 +90,44 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": []
+  "queue": [
+    {
+      "id": "founder-institute-lisbon",
+      "name": "Founder Institute Lisbon",
+      "source_id": "founder-institute-lisbon",
+      "catalog_type": "accelerator",
+      "detected_date": "2026-04-29",
+      "last_profile_update": "2026-04-29",
+      "status": "active",
+      "regulation_url": "https://fi.co/s/lisbon",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://fi.co/s/lisbon",
+        "linkedin": "https://www.linkedin.com/company/the-founder-institute",
+        "pais_sede": "US",
+        "descricao_curta": "Capitulo Lisboa do Founder Institute, programa global de pre-aceleracao com duracao de 6 meses focado em transformar ideias em startups financiadas. Operacao em mais de 100 paises, com 9000+ alumni globais.",
+        "como_candidatar": "Candidatura online em fi.co/join. Entrada com fee inicial reembolsavel ate ao primeiro mes do programa.",
+        "modelo": "equity-taking",
+        "formato": "hibrido",
+        "duracao_meses": 6,
+        "batches_ano": 2,
+        "batch_proximo": "Portugal Spring 2026",
+        "deadline_proxima": null,
+        "estipendio_eur": null,
+        "equity_pct": null,
+        "mentorias": [
+          "Carlos Resende",
+          "Fernando Jardim",
+          "Jon Fath"
+        ],
+        "setores_foco": null,
+        "alumni_destaques": [
+          "Udemy",
+          "Oddbox",
+          "Checkbox"
+        ]
+      },
+      "notes": "Capitulo Lisboa do programa global Founder Institute. Modelo de pooled equity coletivo (founders pagam fee inicial + reservam pequena percentagem para o pool de alumni e mentores). Foco em founders pre-product/market-fit, complementar a aceleradores PT como BGI ou Beta-i. Verificado 2026-04-29."
+    }
+  ]
 }
