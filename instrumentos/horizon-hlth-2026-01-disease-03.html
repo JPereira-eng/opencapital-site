@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Condições crónicas pós-infecção (HORIZON-HLTH-2026-01-DISEASE-03): Open Capital</title>
+  <meta name="description" content="Research and Innovation Action Horizon Europe com €39,3M para avançar a investigação em prevenção, diagnóstico e gestão de condições crónicas pós-infecção microbiana.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-value.status-cont{color:#2E7D52;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-body{}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-gold{color:var(--gold);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-fact-val.val-cont{color:#2E7D52;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../biblioteca.html" class="active">Biblioteca</a></li>
+    <li><a href="../conhecimento.html">Conhecimento</a></li>
+    <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros.html">Parceiros</a>
+        <a href="../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../biblioteca.html">Biblioteca</a>
+  <a href="../conhecimento.html">Conhecimento</a>
+  <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos.html">Sobre Nós</a>
+  <a href="../parceiros.html">Parceiros</a>
+  <a href="../carreiras.html">Carreiras</a>
+  <a href="https://calendly.com/opencapital" class="nav-mobile-cta">Contactar</a>
+</div>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../index.html">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../biblioteca.html">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Condições crónicas pós-infecção (HORIZON-HLTH-2026-01-DISEASE-03)</span>
+    </nav>
+    <p class="hero-cat">Inovação · Horizon Europe Cluster 1 · Saúde</p>
+    <h1 class="hero-title">Investigação em condições crónicas pós-infecção</h1>
+    <p class="hero-tagline">Research and Innovation Action com 39,3 milhões de euros para avançar a prevenção, diagnóstico e gestão de condições crónicas resultantes de infecções microbianas, com base em ensaios clínicos de fase 1 e 2.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotação total</span>
+        <span class="meta-value gold">€39,3M</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Por projeto</span>
+        <span class="meta-value">€6M-€8M</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Prazo</span>
+        <span class="meta-value status-open">Aberto até 16/04/2026</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Tipo de ação</span>
+        <span class="meta-value">RIA · 100% financiamento</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../biblioteca.html" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Enquadramento</div>
+      <h2 class="section-h2">A doença que persiste depois da infeção desaparecer</h2>
+      <p class="section-text">As infeções microbianas, virais, bacterianas, parasitárias ou fúngicas, podem deixar consequências duradouras na qualidade de vida dos doentes. Inflamação persistente, dano de órgãos, capacidade funcional comprometida, fadiga crónica, disfunção cognitiva, alterações cardiovasculares e respiratórias estão documentadas em populações pós-COVID, pós-Lyme, pós-influenza grave, pós-EBV (síndromes de fadiga crónica), pós-malária e em sequelas de sépsis. Estas condições crónicas pós-infecção emergiram como desafio de saúde pública e económico em escalada, mas continuam insuficientemente compreendidas, sub-diagnosticadas e sem terapêuticas eficazes validadas.</p>
+      <p class="section-text">A pandemia COVID-19 expôs com escala sem precedente o problema do long COVID, que afeta milhões de europeus e gera custos diretos e indirectos massivos para os sistemas de saúde e para a produtividade laboral. Mas long COVID é apenas a face mais visível. As síndromes pós-infecciosas são fenómeno transversal e mal mapeado, sem registos clínicos sistemáticos, sem biomarcadores validados e sem guidelines terapêuticas robustas. O tópico HORIZON-HLTH-2026-01-DISEASE-03 mobiliza 39,3 milhões de euros para cinco projetos de Research and Innovation Action focados em prevenção, diagnóstico e gestão destas condições, com obrigatoriedade de ensaios clínicos de fase 1 ou fase 2.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Dados-chave</div>
+      <h2 class="section-h2">A oportunidade em números</h2>
+      <div class="stats-row reveal" style="grid-template-columns:repeat(4,1fr);">
+        <div class="stat-cell">
+          <div class="stat-num">€39,3<sup>M</sup></div>
+          <div class="stat-label">Dotação total</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Projetos a financiar</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">€6-8<sup>M</sup></div>
+          <div class="stat-label">Por projeto</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">100<sup>%</sup></div>
+          <div class="stat-label">Taxa financiamento</div>
+        </div>
+      </div>
+      <p class="section-text">Submissão single-stage com deadline a 16 de abril de 2026, abertura a 10 de fevereiro de 2026. Como Research and Innovation Action, financia 100% dos custos diretos. O âmbito é amplo (qualquer microorganismo causador, com exclusão explícita de cancro, que pertence à Mission on Cancer), mas a profundidade científica exigida é alta: as propostas têm de incluir clinical trials early-stage (fase 1 e fase 2 para intervenções farmacológicas), o que pressupõe consórcio com hospitais universitários, comités de ética validados e capacidade regulatória madura.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Âmbito técnico</div>
+      <h2 class="section-h2">O que o consórcio tem de produzir</h2>
+      <p class="section-text">As propostas devem cobrir a maioria de cinco áreas de investigação, todas centradas em condições crónicas que persistem após resolução da infeção inicial.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Fatores de proteção e risco:</strong> identificar fatores protetores e de risco associados ao desenvolvimento de condições pós-infecção para informar estratégias de prevenção dirigidas, integrando informação relevante como genética, epigenética, respostas imunes ou inflamatórias, e outros fatores relevantes.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Patofisiologia e biomarcadores:</strong> aumentar o entendimento da patofisiologia das condições pós-infecção (incluindo aspetos inflamatórios) para identificar biomarcadores e desenvolver abordagens diagnósticas clinicamente validadas para deteção precoce, progressão da doença e otimização terapêutica.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Intervenções terapêuticas:</strong> desenvolver e validar intervenções preventivas e/ou terapêuticas, incluindo tratamentos farmacológicos dirigidos, repurposing de fármacos existentes ou abordagens de medicina de precisão, através de ensaios clínicos early-stage (fases 1 e 2 para farmacológicos) que demonstrem segurança e eficácia clínicas.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Reabilitação de suporte:</strong> identificar abordagens efetivas de reabilitação de suporte, incluindo terapia física, intervenções cognitivas e suporte psicológico, para melhorar recuperação do doente, saúde mental e qualidade de vida; avaliar a sua efetividade.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Integração no sistema de saúde:</strong> examinar melhores práticas para integrar a gestão de doenças pós-infecciosas em cuidados primários e especializados, melhorando coordenação entre profissionais de saúde.</li>
+      </ul>
+      <div class="highlight-box">
+        <div class="highlight-box-title">Sinal editorial</div>
+        <div class="highlight-box-text">A call exige atenção específica a sexo e género, idade, deficiência, origem racial ou étnica, fatores socioeconómicos, comportamentais e de estilo de vida. Mulheres, populações vulneráveis e grupos com condições pré-existentes são prioritários. Propostas que tratem populações como bloco homogéneo perdem em "Excellence". Adicionalmente, a articulação com EHDS, EOSC e ORCHESTRA / Pathogens Portal cohorts é exigida. Engagement precoce com EMA e Health Technology Assessment quando relevantes são esperados, sinalizando que as soluções têm de chegar à prática clínica e não apenas a publicações.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Resultados esperados</div>
+      <h2 class="section-h2">O que conta como sucesso</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Estratégias evidence-based para profissionais:</strong> todos os players da cadeia de valor de healthcare com acesso a estratégias de tratamento e gestão evidence-based para condições pós-infecção, melhorando recuperação e qualidade de vida em populações diversas.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Ferramentas para autoridades de saúde pública:</strong> autoridades de saúde pública e profissionais com acesso a ferramentas efetivas de prevenção, diagnóstico e tratamento, garantindo melhor alocação de recursos.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Eficiência sistémica:</strong> sistemas de saúde melhoram eficiência e reduzem encargos económicos de longo prazo, streamlining cuidados pós-infecciosos e reduzindo disparidades no acesso a cuidados.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Política pública informada:</strong> autoridades públicas com acesso a informação evidence-based para integrar resultados de investigação em política pública, com formação de profissionais e guidelines reforçadas para gestão crónica de doença.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Composição do consórcio</div>
+      <h2 class="section-h2">Quem se senta à mesa</h2>
+      <p class="section-text">Pela natureza RIA com clinical trials, biomarker discovery e cobertura sistémica, a composição-tipo competitiva inclui:</p>
+      <table class="art-table">
+        <thead><tr><th>Tipo de parceiro</th><th>Função no consórcio</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Lead clínico</strong></td><td>Hospital universitário ou centro académico médico com track record em pós-infecção (Karolinska, Charité Berlin, AP-HP Paris, ISS Itália, Erasmus MC, KU Leuven UZ).</td></tr>
+          <tr><td><strong>Imunologia e inflamação</strong></td><td>Centro com produção em mecanismos imunes pós-infecciosos (Pasteur, MRC Cambridge, Radboudumc, IGC-PT).</td></tr>
+          <tr><td><strong>Bioinformática e ómicas</strong></td><td>Equipas em multi-omics (genómica, proteómica, metabolómica) integrada com dados clínicos (EMBL-EBI, ELIXIR nodes, INSERM, IBET-NOVA).</td></tr>
+          <tr><td><strong>Trial design e CRO</strong></td><td>Operadores de ensaios clínicos multicêntricos (ECRIN, hospitais com unidades de fase 1 acreditadas).</td></tr>
+          <tr><td><strong>Biobanks e cohorts</strong></td><td>Articulação com BBMRI-ERIC, ORCHESTRA, IDIBELL, biobanks nacionais.</td></tr>
+          <tr><td><strong>SSH</strong></td><td>Equipas em ciências sociais e humanidades (saúde pública, sociologia da saúde, ética clínica) - exigência explícita da call.</td></tr>
+          <tr><td><strong>Patient organizations</strong></td><td>Associações de doentes (Long COVID Europe, ME/CFS associations, Lyme patient organizations) - multidisciplinary cross-sectoral.</td></tr>
+          <tr><td><strong>Indústria farmacêutica e SMEs</strong></td><td>Big pharma para drug repurposing, biotech SMEs para precision medicine, IVD diagnostics SMEs - participação de SMEs encorajada explicitamente.</td></tr>
+          <tr><td><strong>EMA e HTA observers</strong></td><td>Engagement com European Medicines Agency e agências HTA nacionais.</td></tr>
+        </tbody>
+      </table>
+      <p class="section-text">Mínimo legal são três entidades de três Estados-Membros ou países associados. Para RIA com clinical trials de fase 1 e 2 e cobertura sistémica, espera-se consórcio com 14-22 parceiros e cobertura mínima de 8-12 Estados-Membros, com balanceamento entre Norte, Sul, Leste e Oeste para refletir diversidade epidemiológica e populacional europeia.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Contexto português</div>
+      <h2 class="section-h2">Onde Portugal pode entrar com peso</h2>
+      <p class="section-text">Portugal tem ângulo de entrada relevante neste tópico, articulado em vários domínios. Em investigação em mecanismos imunes pós-infecciosos, o iMM-Lisboa (Instituto de Medicina Molecular) tem produção sustentada em imunologia e infeção, com grupos como Bruno Silva-Santos (linfócitos T γδ), Helena Soares (imunologia inata), Henrique Veiga-Fernandes (immune-nervous system interactions) e Luís Graça (imunologia translacional). O i3S-Porto, ICVS-Braga e CINTESIS-NOVA têm produção em sépsis e sequelas, doenças infecciosas tropicais e biomarcadores. O IGC-Oeiras tem produção em malária e parasitologia.</p>
+      <p class="section-text">Em capacidade clínica para fase 1 e fase 2 trials, Portugal tem unidades acreditadas no Hospital de Santa Maria (CCUL), Hospital São João Porto, IPO Porto, IPO Lisboa e Hospital da Luz, com participação em ECRIN. Em síndromes pós-infecciosas em particular, Portugal tem registado coortes de long COVID em vários hospitais centrais (Santa Maria, São João, Centro Hospitalar Universitário de Coimbra) e produção académica relevante em fadiga crónica e neuro-COVID. O CHULN tem clínica de long COVID estabelecida.</p>
+      <p class="section-text">Em bioinformática e multi-omics, BioData.pt (nó português ELIXIR) e participação em BBMRI.pt oferecem articulação com infraestruturas europeias relevantes para o consórcio. Em biotechs portuguesas com encaixe direto, há ecossistema crescente em biomarcadores, diagnósticos e drug repurposing: Stab Vida, Biocant, BSIM Therapeutics, Hovione Capital portfolio. Em digital health para gestão de condições crónicas, plataformas portuguesas como Knok Healthcare, Tonic App e CompanyON podem entrar como parceiros tecnológicos.</p>
+      <p class="section-text">Em ciências sociais da saúde, o ISPUP-Porto, EpiUnit, NOVA National School of Public Health e ICS-ULisboa têm produção em saúde pública, epidemiologia e sociologia da saúde com diferenças étnicas, socioeconómicas e de género, exatamente o perfil SSH que a call exige. A Direção-Geral da Saúde (DGS) e o INSA Ricardo Jorge têm presença em comités europeus relevantes (ECDC, JA-EU-HEALTH).</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Posicionamento competitivo</div>
+      <h2 class="section-h2">Onde a proposta se ganha ou perde</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Clinical trial robusto:</strong> a call exige clinical trials de fase 1 e 2. Sem unidades de ensaios clínicos acreditadas, comités de ética validados, gestão regulatória madura e plano de recrutamento realista, a proposta cai em "Implementation". Propostas com trials apenas observacionais sem fase intervencional perdem peso significativo.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Engagement precoce com EMA:</strong> exigência explícita. Sem demonstração de scientific advice meeting planeado ou já realizado com EMA, a proposta perde "Implementation".</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Cobertura múltipla de patogénios:</strong> a call é aberta a qualquer microorganismo (vírus, bactéria, parasita, fungo). Propostas que cobrem múltiplos pathógeno-targets (ex: long COVID + post-Lyme + post-EBV) ganham em "Excellence" pela transferibilidade. Mas cobertura excessivamente ampla perde foco. O ponto ótimo é cobrir 2-4 condições com mecanismos imunes ou patofisiológicos partilhados.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Sex, gender e diversidade:</strong> exigência explícita e diferenciada. Propostas que não desagreguem dados por sexo, género, idade, etnia, status socioeconómico e que não incluam populações vulneráveis perdem peso significativo em "Excellence" e "Impact".</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Articulação com EHDS, EOSC, ORCHESTRA, Pathogens Portal:</strong> obrigatória. Sem plano FAIR data e contributo para infraestruturas emergentes, perde "Implementation".</li>
+        <li><strong style="color:var(--navy);font-weight:600;">SSH genuíno:</strong> não basta um sociólogo decorativo. A call exige contribuição efetiva de SSH para impacto societal real. Propostas com SSH presente apenas em dissemination perdem peso.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Networking e joint activities:</strong> obrigatório. Os 5 projetos selecionados têm de participar em networking conjunto. Demonstrar capacidade e disponibilidade do consórcio para isto é factor diferenciador.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">Para entidades portuguesas, este tópico é dos mais relevantes em Cluster 1 Health para 2026. A combinação de capacidade científica de excelência (iMM, IGC, i3S, ICVS), infraestrutura de ensaios clínicos com track record europeu (ECRIN, CHULN, CHUSJ), produção sólida em SSH em saúde (ISPUP, ENSP-NOVA, ICS-ULisboa) e bioinformática integrada (BioData.pt) permite participação competitiva como WP leader em vários eixos. Adicionalmente, a experiência portuguesa em gestão de coortes de long COVID e o número absoluto significativo de doentes registados em hospitais centrais oferecem base de recrutamento credível.</p>
+      <p class="section-text">A recomendação prática para entidades portuguesas é tripla. Primeiro, o iMM-Lisboa, com a sua capacidade integrada de imunologia translacional e ligação ao Hospital de Santa Maria (CCUL), é candidato natural a WP leader em mecanismos imunes e biomarker discovery, com budget tipico de WP leader em RIA Horizon entre 600 mil e 1,2 milhões de euros. Segundo, o ICVS-Braga e i3S-Porto podem assumir WPs em sépsis-related sequelae e doenças infecciosas tropicais, com budgets similares.</p>
+      <p class="section-text">Terceiro, hospitais centrais (CHULN, CHUSJ, CHUC) com unidades de ensaios clínicos podem entrar como sites de fase 1/2 trials, com budgets dependendo do número de pacientes recrutados e tipicamente entre 300 mil e 800 mil euros por site. Adicionalmente, ISPUP-Porto e ENSP-NOVA podem entrar como WP leaders em SSH e equity/diversity analysis, com budgets entre 250 mil e 500 mil euros.</p>
+      <p class="section-text">Em biotechs portuguesas, há janela direta para Stab Vida (sequenciação clínica), BSIM Therapeutics (drug repurposing computacional), Bsim TT (terapias inflamatórias) e startups em biomarcadores como Magnomics ou IDmind. As biotechs entram tipicamente com budgets entre 200 mil e 500 mil euros, com função de validação de pipeline, prototipagem de IVD ou drug screening.</p>
+      <p class="section-text">O que não funciona é entrar com proposta concentrada apenas em long COVID. A call é deliberadamente aberta a múltiplos patógenos para promover transferibilidade, e propostas long-COVID-only perdem peso pela percepção de redundância com EU-COVID-19 calls anteriores. O perfil vencedor é cluster de 2-4 condições partilhando mecanismo imunopatogénico (ex: post-viral fatigue syndromes) ou biomarcadores (ex: persistent low-grade inflammation panels). Adicionalmente, sem desenho explícito de equidade (mulheres, vulneráveis, populações migrantes) e SSH genuíno, a proposta tem dificuldade em passar threshold de "Impact".</p>
+      <p class="section-text">Vale ainda nota estratégica: este tópico é uma das fronteiras emergentes da medicina de precisão e da saúde pública europeia. As síndromes pós-infecciosas vão tornar-se uma área crescentemente regulada e com mercado terapêutico em expansão. A participação em consórcios vencedores aqui posiciona entidades portuguesas no centro da definição de standards europeus de diagnóstico, tratamento e gestão para os próximos 10 anos, com leveraging direto sobre EHDS, ORCHESTRA e os próximos avisos Cluster 1.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">Horizon Europe Cluster 1</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Código</div>
+        <div class="sidebar-fact-val">HORIZON-HLTH-2026-01-DISEASE-03</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tipo de ação</div>
+        <div class="sidebar-fact-val">Research and Innovation Action (RIA)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Dotação total</div>
+        <div class="sidebar-fact-val">€39.300.000</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Por projeto</div>
+        <div class="sidebar-fact-val">€6M a €8M</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Projetos previstos</div>
+        <div class="sidebar-fact-val">5</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Taxa financiamento</div>
+        <div class="sidebar-fact-val">100% custos diretos</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Submissão</div>
+        <div class="sidebar-fact-val">Single-stage</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-open">Aberto até 16/04/2026</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Localização</div>
+        <div class="sidebar-fact-val">UE + países associados</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Beneficiário</div>
+        <div class="sidebar-fact-val">Hospitais universitários, centros de investigação, biotech, SMEs, associações de doentes</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Foco clínico</div>
+        <div class="sidebar-fact-val">Clinical trials fase 1 e 2 obrigatórios para farmacológicos</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Exclusões</div>
+        <div class="sidebar-fact-val">Cancro (coberto pela Mission)</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Tem produção em imunologia, sépsis, long COVID, biomarcadores ou unidade de ensaios clínicos? Falamos sobre como entrar num consórcio HLTH-DISEASE-03.</div>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="horizon-hlth-2026-01-tool-05.html" class="related-link">
+        <span class="related-link-name">HLTH-TOOL-05 (ferramentas saúde)</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="horizon-hlth-2026-02-disease-12.html" class="related-link">
+        <span class="related-link-name">HLTH-DISEASE-12</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="horizon-hlth-2026-02.html" class="related-link">
+        <span class="related-link-name">Cluster 1 Saúde 2026-02</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="horizonte-europa.html" class="related-link">
+        <span class="related-link-name">Horizonte Europa</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="portugal-2030.html" class="related-link">
+        <span class="related-link-name">Portugal 2030</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <div class="f-col-label">Biblioteca</div>
+      <ul class="f-links">
+        <li><a href="../biblioteca.html">Portugal 2030</a></li>
+        <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+        <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+        <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Plataforma</div>
+      <ul class="f-links">
+        <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../conhecimento.html">Conhecimento</a></li>
+        <li><a href="../parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Empresa</div>
+      <ul class="f-links">
+        <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="../sobre-nos.html">Equipa</a></li>
+        <li><a href="../carreiras.html">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
