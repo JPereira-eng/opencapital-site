@@ -90,41 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "instituto-pedro-nunes",
-      "name": "Instituto Pedro Nunes (IPN)",
-      "source_id": "instituto-pedro-nunes",
-      "catalog_type": "incubator",
-      "detected_date": "2026-04-29",
-      "last_profile_update": "2026-04-29",
-      "status": "active",
-      "regulation_url": "https://www.ipn.pt",
-      "priority_score": 10,
-      "profile": {
-        "website": "https://www.ipn.pt",
-        "linkedin": "https://www.linkedin.com/company/ipn",
-        "pais_sede": "PT",
-        "descricao_curta": "Incubadora de base tecnologica em Coimbra ligada a Universidade de Coimbra. Apoia spin-offs academicas e startups tech com mais de 400 empresas no historico.",
-        "como_candidatar": "Submissao via pagina /incubadora/candidatura no website do IPN. Avaliacao de equipa, viabilidade tecnologica e potencial de mercado.",
-        "modelo": "equity-free",
-        "formato": "residencia",
-        "duracao_meses": null,
-        "batches_ano": null,
-        "batch_proximo": null,
-        "deadline_proxima": null,
-        "estipendio_eur": null,
-        "equity_pct": 0,
-        "mentorias": [],
-        "setores_foco": [
-          "deep tech",
-          "spin-offs UC",
-          "I&DT",
-          "tech B2B"
-        ],
-        "alumni_destaques": []
-      },
-      "notes": "Incubadora UC com 400+ empresas apoiadas (2021), 65% taxa sobrevivencia, EUBIC member. Detalhes especificos de batches/equity nao publicados na pagina principal."
-    }
-  ]
+  "queue": []
 }
