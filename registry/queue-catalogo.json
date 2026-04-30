@@ -90,5 +90,51 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": []
+  "queue": [
+    {
+      "id": "eit-health",
+      "name": "EIT Health",
+      "source_id": "eit-health",
+      "catalog_type": "accelerator",
+      "detected_date": "2026-04-30",
+      "last_profile_update": "2026-04-30",
+      "status": "active",
+      "regulation_url": "https://eithealth.eu",
+      "priority_score": 12,
+      "profile": {
+        "website": "https://eithealth.eu",
+        "linkedin": "https://www.linkedin.com/company/eithealth/",
+        "pais_sede": "EU",
+        "descricao_curta": "Knowledge and Innovation Community do EIT focada em saude. Apoia startups e scale-ups europeias em medtech, digital health, biotech, healthcare delivery e gestao de doencas via programas de aceleracao, calls de financiamento e mentoria.",
+        "como_candidatar": "Candidatura via calls especificas (Innovation Validation, New Models to Deliver Healthcare, Catapult, Fast Track, Flagships) abertas no portal eithealth.eu/get-involved/new-call-opportunities/. Cada programa tem deadline e criterios proprios.",
+        "modelo": "equity-free",
+        "formato": "hibrido",
+        "duracao_meses": null,
+        "batches_ano": null,
+        "batch_proximo": "Innovation Validation Call 2026 + Catapult 2026",
+        "deadline_proxima": null,
+        "estipendio_eur": null,
+        "equity_pct": 0,
+        "mentorias": [
+          "Executive mentoring europeu",
+          "Networking com industria, investidores e research labs",
+          "Visibilidade Nasdaq Tower (Catapult Audience Award)"
+        ],
+        "setores_foco": [
+          "medtech",
+          "digital health",
+          "AI medical devices",
+          "biotech",
+          "healthcare delivery",
+          "disease management",
+          "gene therapies",
+          "drug discovery"
+        ],
+        "alumni_destaques": [
+          "+2998 startups apoiadas (2016-2023)"
+        ]
+      },
+      "notes": "EIT Health e a KIC do EIT para saude. Multiplos programas: Innovation Validation (ate 850K EUR, max 50% proj, 24 meses, IML6 medical devices); New Models to Deliver Healthcare (UK SMEs, ate 700K EUR, 50% proj, 24 meses); Catapult (equity-free, 30K EUR + premios; Life Sciences + Health Tech; <50 funcionarios, <10 anos); Fast Track; Flagships. Profile registado 2026-04-30."
+    }
+  ]
 }

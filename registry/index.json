@@ -10,10 +10,10 @@
     "open": 405,
     "closed": 273,
     "planned": 18,
-    "in_queue": 76,
+    "in_queue": 100,
     "in_watchlist": 128,
-    "in_catalogo": 0,
-    "in_overflow": 120
+    "in_catalogo": 1,
+    "in_overflow": 174
   },
   "shards": {
     "pt2030-compete": {
@@ -125,11 +125,11 @@
     "pat-2030": "2026-04-27",
     "eu-funding-tenders": "2026-04-30",
     "ani": "2026-04-28",
-    "iapmei": "2026-04-26",
+    "iapmei": "2026-04-30",
     "prr": "2026-04-29",
     "interreg-poctep": "2026-04-27",
     "fct": "2026-04-28",
-    "aicep": "2026-04-26",
+    "aicep": "2026-04-30",
     "iefp": "2026-04-27",
     "interreg-atlantic": "2026-04-28",
     "hadea": "2026-04-28",
@@ -163,7 +163,7 @@
     "eu-startups": "2026-04-13",
     "esa-bic": "2026-04-26",
     "eit-digital": "2026-04-27",
-    "eit-climate": "2026-04-26",
+    "eit-climate": "2026-04-30",
     "shilling-vc": "2026-04-14",
     "portugal-ventures": "2026-04-14",
     "balcao-2030": "2026-04-14",
@@ -219,7 +219,8 @@
     "instituto-pedro-nunes": "2026-04-29",
     "apba-portugal": "2026-04-29",
     "founder-institute-lisbon": "2026-04-29",
-    "explorer-investments": "2026-04-30"
+    "explorer-investments": "2026-04-30",
+    "eit-health": "2026-04-30"
   },
   "last_scanner_run": "2026-04-30",
   "source-last_checked": {
@@ -238,11 +239,11 @@
     "pat-2030": "2026-04-27",
     "eu-funding-tenders": "2026-04-30",
     "ani": "2026-04-28",
-    "iapmei": "2026-04-26",
+    "iapmei": "2026-04-30",
     "prr": "2026-04-29",
     "interreg-poctep": "2026-04-27",
     "fct": "2026-04-28",
-    "aicep": "2026-04-26",
+    "aicep": "2026-04-30",
     "iefp": "2026-04-27",
     "interreg-atlantic": "2026-04-28",
     "hadea": "2026-04-28",
@@ -276,7 +277,7 @@
     "eu-startups": "2026-04-13",
     "esa-bic": "2026-04-26",
     "eit-digital": "2026-04-27",
-    "eit-climate": "2026-04-26",
+    "eit-climate": "2026-04-30",
     "shilling-vc": "2026-04-14",
     "portugal-ventures": "2026-04-14",
     "balcao-2030": "2026-04-14",
@@ -332,7 +333,8 @@
     "instituto-pedro-nunes": "2026-04-29",
     "apba-portugal": "2026-04-29",
     "founder-institute-lisbon": "2026-04-29",
-    "explorer-investments": "2026-04-30"
+    "explorer-investments": "2026-04-30",
+    "eit-health": "2026-04-30"
   },
   "last_writer_run": "2026-04-30"
 }
