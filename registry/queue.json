@@ -2,22 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "horizon-cl2-2025-01-transfo-06",
-      "name": "Evaluation and use of evidence in education policy and practice",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "regime": "aviso",
-      "status": "ready",
-      "aviso_codigo": "HORIZON-CL2-2025-01-TRANSFO-06",
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-TRANSFO-06.json",
-      "deadline": null,
-      "detected_date": "2026-04-25",
-      "priority_score": 15,
-      "notes": "Call: HORIZON-CL2-2025-01",
-      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl2-2025-01-transfo-06.txt",
-      "fail_count": 0
-    },
-    {
       "id": "horizon-cl2-2025-01-heritage-05",
       "name": "Evolution of culture in a virtualising world",
       "source_id": "eu-funding-tenders",
