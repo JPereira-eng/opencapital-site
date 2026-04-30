@@ -2,22 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "horizon-infra-2026-dev-01-02",
-      "name": "Consolidation of the research infrastructure landscape ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ pilots for strategic coordination, synergies and simplified access pathways, by large thematic clusters of pan-European research infrastructure",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "regime": "aviso",
-      "status": "ready",
-      "aviso_codigo": "HORIZON-INFRA-2026-DEV-01-02",
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-INFRA-2026-DEV-01-02.json",
-      "deadline": null,
-      "detected_date": "2026-04-25",
-      "priority_score": 15,
-      "notes": "Call: HORIZON-INFRA-2026-01",
-      "regulation_local": "regulamentos/eu-funding-tenders/horizon-infra-2026-dev-01-02.txt",
-      "fail_count": 0
-    },
-    {
       "id": "horizon-infra-2026-dev-01-05",
       "name": "Research infrastructures as accelerators of the integration of Ukraine in the European Research Area",
       "source_id": "eu-funding-tenders",
