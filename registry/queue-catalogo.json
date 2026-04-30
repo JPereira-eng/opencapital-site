@@ -90,57 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "explorer-investments",
-      "name": "Explorer Investments",
-      "source_id": "explorer-investments",
-      "catalog_type": "pe",
-      "detected_date": "2026-04-30",
-      "last_profile_update": "2026-04-30",
-      "status": "active",
-      "regulation_url": "https://www.explorerinvestments.com/",
-      "priority_score": 10,
-      "profile": {
-        "website": "https://www.explorerinvestments.com/",
-        "linkedin": "https://www.linkedin.com/company/explorer-investments/",
-        "pais_sede": "PT",
-        "descricao_curta": "Maior gestor independente de alternativos em Portugal, fundado em 2003, com mais de 20 anos de experiencia em buyouts, growth e hospitality. Sede em Lisboa (Largo Jean Monnet).",
-        "como_candidatar": "Contacto direto via partners de investimento (Andre Bandeira para investment); abordagem por estrategia (buyout, growth, hospitality). Sem formulario publico.",
-        "tese": "Investidor em ativos transformacionais e equipas em mercados privados. Pioneiro em estrategias alternativas em Portugal, com replicacao em Western Europe.",
-        "estagios": [
-          "growth",
-          "buyout"
-        ],
-        "setores": [
-          "multi-sector",
-          "hospitality"
-        ],
-        "geografia": [
-          "PT",
-          "Western Europe"
-        ],
-        "ticket_min_eur": null,
-        "ticket_max_eur": null,
-        "ticket_sweet_eur": null,
-        "aum_eur": 1800000000,
-        "vintage": "Multiplas series (Explorer I-IV em buyouts; EGF II-VI em growth; Hospitality I)",
-        "portfolio_pt_exemplos": [
-          "Micronipol",
-          "BHOUT",
-          "Octant",
-          "TotalMedia",
-          "DevScope"
-        ],
-        "parceiros": [
-          "Elizabeth Rothfield",
-          "Pedro Coutinho",
-          "Antonio Rocha e Silva",
-          "Jose Tiago Silva",
-          "Andre Bandeira"
-        ]
-      },
-      "notes": "Verificado 2026-04-30. AUM 1.8B+ EUR (fonte: PE-Industry profiles, PrivateEquityInternational). 132 investimentos historicos, 64 exits (incluindo Unbabel em 2025-08-22). Estrutura de fundos: Buyouts (Explorer I-IV), Growth (FRN, EGF II-VI), Hospitality (Hospitality I)."
-    }
-  ]
+  "queue": []
 }
