@@ -1,6 +1,7 @@
 {
   "_meta": "Dedup index - O(1) lookup by id and aviso_codigo",
   "by_id": {
+    "horizon-infra-2026-dev-01-05": true,
     "horizon-infra-2026-dev-01-02": true,
     "horizon-infra-2026-dev-01-07": true,
     "horizon-ju-cbe-2026-iaflag-04": true,
@@ -1686,6 +1687,7 @@
     "explorer-investments": true
   },
   "by_aviso_codigo": {
+    "HORIZON-INFRA-2026-DEV-01-05": "horizon-infra-2026-dev-01-05",
     "HORIZON-INFRA-2026-DEV-01-02": "horizon-infra-2026-dev-01-02",
     "HORIZON-INFRA-2026-DEV-01-07": "horizon-infra-2026-dev-01-07",
     "185357": "185357",
