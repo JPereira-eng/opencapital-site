@@ -6,13 +6,13 @@
     "last_writer_run": "2026-04-30"
   },
   "totals": {
-    "published": 718,
-    "open": 406,
+    "published": 723,
+    "open": 411,
     "closed": 277,
     "planned": 18,
-    "in_queue": 96,
+    "in_queue": 92,
     "in_watchlist": 128,
-    "in_catalogo": 1,
+    "in_catalogo": 0,
     "in_overflow": 176
   },
   "shards": {
@@ -62,9 +62,9 @@
     },
     "eu-other": {
       "count": 22,
-      "open": 91,
+      "open": 92,
       "closed": 1,
-      "published": 33
+      "published": 37
     },
     "pt-other": {
       "count": 27,
@@ -84,7 +84,7 @@
     "catalogo-vc": {
       "count": 8,
       "open": 7,
-      "published": 2
+      "published": 3
     },
     "catalogo-premios": {
       "count": 3,
