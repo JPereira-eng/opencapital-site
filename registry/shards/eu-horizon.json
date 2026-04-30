@@ -958,6 +958,13 @@
       "source": "eu-funding-tenders",
       "state": "fechado",
       "last_check": "2026-04-30"
+    },
+    {
+      "id": "horizon-eit-2025-kic-iba-h",
+      "file": "instrumentos/horizon-eit-2025-kic-iba-h.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-04-30"
     }
   ],
   "instruments": [
@@ -2747,9 +2754,9 @@
       "last_check": "2026-04-30"
     }
   ],
-  "count": 239,
-  "open": 84,
+  "count": 240,
+  "open": 85,
   "closed": 97,
   "planned": 8,
-  "published": 87
+  "published": 88
 }
