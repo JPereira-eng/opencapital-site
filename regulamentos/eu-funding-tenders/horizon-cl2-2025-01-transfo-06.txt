@@ -1,0 +1,631 @@
+# Evaluation and use of evidence in education policy and practice
+
+Identifier: HORIZON-CL2-2025-01-TRANSFO-06
+Call: HORIZON-CL2-2025-01 - Culture, Creativity and Inclusive Society - 2025
+Publication date: 2025-05-06
+
+## Actions and deadlines
+- Type: 
+
+## Budget overview
+{
+  "budgetTopicActionMap": {
+    "110725": [
+      {
+        "action": "HORIZON-CL2-2025-01-DEMOCRACY-09 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "10500000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3000000,
+        "maxContribution": 3500000
+      }
+    ],
+    "110724": [
+      {
+        "action": "HORIZON-CL2-2025-01-TRANSFO-10 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "10200000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3000000,
+        "maxContribution": 4000000
+      }
+    ],
+    "110727": [
+      {
+        "action": "HORIZON-CL2-2025-01-HERITAGE-05 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "10500000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 2500000,
+        "maxContribution": 3500000
+      }
+    ],
+    "110726": [
+      {
+        "action": "HORIZON-CL2-2025-01-TRANSFO-06 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "10200000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3400000,
+        "maxContribution": 3400000
+      }
+    ],
+    "110729": [
+      {
+        "action": "HORIZON-CL2-2025-01-DEMOCRACY-03 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "10500000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3000000,
+        "maxContribution": 3500000
+      }
+    ],
+    "110728": [
+      {
+        "action": "HORIZON-CL2-2025-01-DEMOCRACY-02 - HORIZON-CSA HORIZON Coordination and Support Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "3000000"
+        },
+        "expectedGrants": 1,
+        "minContribution": 2500000,
+        "maxContribution": 3000000
+      }
+    ],
+    "110731": [
+      {
+        "action": "HORIZON-CL2-2025-01-TRANSFO-01 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "10200000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3400000,
+        "maxContribution": 3400000
+      }
+    ],
+    "110730": [
+      {
+        "action": "HORIZON-CL2-2025-01-DEMOCRACY-04 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "7000000"
+        },
+        "expectedGrants": 2,
+        "minContribution": 3000000,
+        "maxContribution": 3500000
+      }
+    ],
+    "110733": [
+      {
+        "action": "HORIZON-CL2-2025-01-DEMOCRACY-11 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "10500000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3000000,
+        "maxContribution": 3500000
+      }
+    ],
+    "110732": [
+      {
+        "action": "HORIZON-CL2-2025-01-HERITAGE-03 - HORIZON-IA HORIZON Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "26000000"
+        },
+        "expectedGrants": 8,
+        "minContribution": 2500000,
+        "maxContribution": 4000000
+      }
+    ],
+    "110735": [
+      {
+        "action": "HORIZON-CL2-2025-01-TRANSFO-03 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "10200000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3400000,
+        "maxContribution": 3400000
+      }
+    ],
+    "110734": [
+      {
+        "action": "HORIZON-CL2-2025-01-TRANSFO-02 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "10200000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3400000,
+        "maxContribution": 3400000
+      }
+    ],
+    "110737": [
+      {
+        "action": "HORIZON-CL2-2025-01-TRANSFO-07 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "10200000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3400000,
+        "maxContribution": 3400000
+      }
+    ],
+    "110736": [
+      {
+        "action": "HORIZON-CL2-2025-01-TRANSFO-11 - HORIZON-CSA HORIZON Coordination and Support Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "2000000"
+        },
+        "expectedGrants": 1,
+        "minContribution": 2000000,
+        "maxContribution": 2000000
+      }
+    ],
+    "110739": [
+      {
+        "action": "HORIZON-CL2-2025-01-TRANSFO-08 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "15000000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3000000,
+        "maxContribution": 5000000
+      }
+    ],
+    "110738": [
+      {
+        "action": "HORIZON-CL2-2025-01-DEMOCRACY-05 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "10500000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3000000,
+        "maxContribution": 3500000
+      }
+    ],
+    "110741": [
+      {
+        "action": "HORIZON-CL2-2025-01-DEMOCRACY-08 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "10500000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3000000,
+        "maxContribution": 3500000
+      }
+    ],
+    "110740": [
+      {
+        "action": "HORIZON-CL2-2025-01-DEMOCRACY-10 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "10500000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3000000,
+        "maxContribution": 3500000
+      }
+    ],
+    "110743": [
+      {
+        "action": "HORIZON-CL2-2025-01-HERITAGE-06 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "13500000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3500000,
+        "maxContribution": 4500000
+      }
+    ],
+    "110742": [
+      {
+        "action": "HORIZON-CL2-2025-01-DEMOCRACY-01 - HORIZON-CSA HORIZON Coordination and Support Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "3500000"
+        },
+        "expectedGrants": 1,
+        "minContribution": 3000000,
+        "maxContribution": 3500000
+      }
+    ],
+    "110745": [
+      {
+        "action": "HORIZON-CL2-2025-01-HERITAGE-07 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "12000000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3000000,
+        "maxContribution": 4000000
+      }
+    ],
+    "110744": [
+      {
+        "action": "HORIZON-CL2-2025-01-TRANSFO-09 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "10200000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3400000,
+        "maxContribution": 3400000
+      }
+    ],
+    "110747": [
+      {
+        "action": "HORIZON-CL2-2025-01-TRANSFO-05 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "10200000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3400000,
+        "maxContribution": 3400000
+      }
+    ],
+    "110746": [
+      {
+        "action": "HORIZON-CL2-2025-01-HERITAGE-08 - HORIZON-CSA HORIZON Coordination and Support Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "3500000"
+        },
+        "expectedGrants": 1,
+        "minContribution": 2500000,
+        "maxContribution": 3500000
+      }
+    ],
+    "110749": [
+      {
+        "action": "HORIZON-CL2-2025-01-HERITAGE-09 - HORIZON-CSA HORIZON Coordination and Support Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "2000000"
+        },
+        "expectedGrants": 1,
+        "minContribution": 2000000,
+        "maxContribution": 2000000
+      }
+    ],
+    "110748": [
+      {
+        "action": "HORIZON-CL2-2025-01-HERITAGE-04 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "15000000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 4000000,
+        "maxContribution": 5000000
+      }
+    ],
+    "110751": [
+      {
+        "action": "HORIZON-CL2-2025-01-DEMOCRACY-12 - HORIZON-CSA HORIZON Coordination and Support Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "3500000"
+        },
+        "expectedGrants": 1,
+        "minContribution": 3000000,
+        "maxContribution": 3500000
+      }
+    ],
+    "110750": [
+      {
+        "action": "HORIZON-CL2-2025-01-DEMOCRACY-07 - HORIZON-RIA HORIZON  Research and Innovation Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "10500000"
+        },
+        "expectedGrants": 3,
+        "minContribution": 3000000,
+        "maxContribution": 3500000
+      }
+    ],
+    "110752": [
+      {
+        "action": "HORIZON-CL2-2025-01-DEMOCRACY-06 - HORIZON-CSA HORIZON Coordination and Support Actions",
+        "plannedOpeningDate": "1747267200000",
+        "deadlineModel": "single-stage",
+        "deadlineDates": [
+          "1757980800000"
+        ],
+        "budgetYearMap": {
+          "2025": "3500000"
+        },
+        "expectedGrants": 1,
+        "minContribution": 3000000,
+        "maxContribution": 3500000
+      }
+    ]
+  },
+  "budgetYearsColumns": [
+    "2025"
+  ]
+}
+
+## Keywords
+Econometrics, statistical methods, Education, special (to gifted persons, those with learning disabilities), Gender research, Social sciences, interdisciplinary, Social structure, inequalities, social mobility, interethnic relations
+
+## Description (full)
+Expected Outcome:
+
+Projects should contribute to all of the following expected outcomes:
+
+- New analysis and evaluation of education policy measures.
+- Support use of SSH research evidence by education and training policy makers and practitioners.
+- Enhanced culture of research and evaluation in education policymaking and among practitioners. Better understanding of the types of expertise and institutional settings that are more effective at informing education policies and practices with evidence. 
+Scope:
+
+The European Education Area[1] aims to improve access to quality education for all. The strategic framework for the European Education Area set the EU-level target: “The share of low-achieving 15-year-olds in reading, mathematics and science should be less than 15%, by 2030” (Council of the European Union 2021). The latest data (2022) suggest that the European Union average is much higher[2] than 15% and that pupils from low socio-economic status face a considerably higher risk of low achievement than their peers from high socio-economic background. Student performance varies widely, with differences at the student, school and education system levels. Improving educational quality and closing gaps in learning outcomes are important societal issues, and a major challenge for education systems across the European Union. There is a research gap in the empirical evaluation of education policies and practices and the understanding of the circumstances under which they are most beneficial. There is also a gap in the translation of scientific evidence into practices in educational institutions.
+
+The action must enhance interdisciplinary collaborations among researchers in education and engage diverse educational research disciplines from social sciences, the arts and humanities. The action must include the perspectives of policy makers and practitioners who look at similar topics from different angles. The action should analyse policies in at least one level of education, with a particular focus on transitions from the previous level of education and to the next. Proposals may choose to analyse and evaluate general measures for all learners or targeted and individualised support in inclusive settings. Involvement of authorities responsible for the education and training policies is essential and should be ensured. The action should enhance collaborations to improve the access of researchers to administrative data and other types of data, including surveys of children and young people, to develop new research approaches and perspectives. Therefore, close cooperation with authorities and/or other institutions owning the data is essential and should be ensured. 
+
+The action should analyse and evaluate policy measures in their context, using a mixed methods approach including qualitative and quantitative methods. Proposals can include an experimental design, using e.g. small, randomized control trials and quasi-experimental methods (such as difference-in-difference or discontinuity designs) to test the effectiveness of specific interventions in different contexts. Proposals can also include participatory research approaches. Complementarities with the projects funded under the topics HORIZON-CL2-2023-TRANSFORMATIONS-01-05, HORIZON-CL2-2023-TRANSFORMATIONS-01-06; HORIZON-CL2-2024-TRANSFORMATIONS-01-10 and Topic HORIZON-CL5-2023-D1-01-10 are encouraged.
+
+Where applicable, proposals should leverage the data and services available through European Research Infrastructures federated under the European Open Science Cloud, as well as data from relevant Data Spaces. Particular efforts should be made to ensure that the data produced in the context of this topic is FAIR (Findable, Accessible, Interoperable and Re-usable).
+
+[1] https://education.ec.europa.eu/
+
+[2] Data from the Programme of International Student Assessment (PISA) are used to measure progress towards the EU-level target and the latest data (2022) put the EU average at 26.2% for reading, 29.5% for mathematics and 24.2% for science.
+
+## Conditions
+General conditions
+
+1. Admissibility Conditions: Proposal page limit and layout
+
+As described in Annex A and Annex E of the Horizon Europe Work Programme General Annexes.
+
+Proposal page limits and layout: described in Part B of the Application Form available in the Submission System.
+
+The page limit for the Part B of the Research and Innovation (RIA) application using lump sum is 50 pages. In addition, it is mandatory to submit a detailed budget table, using the template available in the Submission System.
+
+2. Eligible Countries
+
+As described in Annex B of the Work Programme General Annexes.
+
+A number of non-EU/non-Associated Countries that are not automatically eligible for funding have made specific provisions for making funding available for their participants in Horizon Europe projects. See the information in the Horizon Europe Programme Guide.
+
+3. Other Eligible Conditions
+
+As described in Annex B of the Work Programme General Annexes.
+
+4. Financial and operational capacity and exclusion
+
+As described in Annex C of the Work Programme General Annexes.
+
+5a. Evaluation and award: Award criteria, scoring and thresholds
+
+As described in Annex D of the Work Programme General Annexes.
+
+5b. Evaluation and award: Submission and evaluation processes
+
+As described in Annex F of the Work Programme General Annexes and the Online Manual.
+
+5c. Evaluation and award: Indicative timeline for evaluation and grant agreement
+
+As described in Annex F of the Work Programme General Annexes.
+
+6. Legal and financial set-up of the grants
+
+Eligible costs will take the form of a lump sum as defined in the Decision of 7 July 2021 authorising the use of lump sum contributions under the Horizon Europe Programme – the Framework Programme for Research and Innovation (2021-2027) – and in actions under the Research and Training Programme of the European Atomic Energy Community (2021-2025). [[This decision is available on the Funding and Tenders Portal, in the reference documents section for Horizon Europe, under ‘Simplified costs decisions’ or through this link: https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/guidance/ls-decision_he_en.pdf]].
+
+In addition, as described in Annex G of the Work Programme General Annexes.
+
+Specific conditions
+ 
+
+described in the [specific topic of the Work Programme]
+
+Application and evaluation forms and model grant agreement (MGA):
+ 
+
+Application form templates — the application form specific to this call is available in the Submission System
+
+Standard application form (HE RIA, IA) 
+
+Evaluation form templates — will be used with the necessary adaptations 
+
+Standard evaluation form (HE RIA, IA) 
+
+Guidance
+
+HE Programme Guide 
+
+Model Grant Agreements (MGA)
+
+Lump Sum MGA 
+
+Call-specific instructions 
+
+Detailed budget table (HE LS) (version 3.3)
+
+Guidance: "Lump sums - what do I need to know?"
+
+Additional documents:
+ 
+
+HE Main Work Programme 2025 – 1. General Introduction
+
+HE Main Work Programme 2025 – 5. Culture, creativity and inclusive society
+
+HE Main Work Programme 2025 – 14. General Annexes
+
+HE Programme Guide
+
+HE Framework Programme 2021/695
+
+HE Specific Programme Decision 2021/764 
+
+EU Financial Regulation 2024/2509
+
+Decision authorising the use of lump sum contributions under the Horizon Europe Programme
+
+Rules for Legal Entity Validation, LEAR Appointment and Financial Capacity Assessment 
+
+EU Grants AGA — Annotated Model Grant Agreement 
+
+Funding & Tenders Portal Online Manual 
+
+Funding & Tenders Portal Terms and Conditions 
+
+Funding & Tenders Portal Privacy Statement
+
+## Support info
+Online Manual is your guide on the procedures from proposal submission to managing your grant.
+
+Horizon Europe Programme Guide contains the detailed guidance to the structure, budget and political priorities of Horizon Europe.
+
+Funding & Tenders Portal FAQ – find the answers to most frequently asked questions on submission of proposals, evaluation and grant management.
+
+Research Enquiry Service – ask questions about any aspect of European research in general and the EU Research Framework Programmes in particular.
+
+National Contact Points (NCPs) – get guidance, practical information and assistance on participation in Horizon Europe. There are also NCPs in many non-EU and non-associated countries (‘third-countries’).
+
+Enterprise Europe Network – contact your EEN national contact for advice to businesses with special focus on SMEs. The support includes guidance on the EU research funding.
+
+IT Helpdesk – contact the Funding & Tenders Portal IT helpdesk for questions such as forgotten passwords, access rights and roles, technical aspects of submission of proposals, etc.
+
+European IPR Helpdesk assists you on intellectual property issues.
+
+CEN-CENELEC Research Helpdesk and ETSI Research Helpdesk – the European Standards Organisations advise you how to tackle standardisation in your project proposal.
+
+The European Charter for Researchers and the Code of Conduct for their recruitment – consult the general principles and requirements specifying the roles, responsibilities and entitlements of researchers, employers and funders of researchers.
+
+Partner Search help you find a partner organisation for your proposal.
