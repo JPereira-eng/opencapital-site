@@ -2,36 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "ed-2025-belgium-2-fpa",
-      "name": "Selection of partners to carry out EUROPE DIRECT activities (2026-2030) in Belgium - 2",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-other",
-      "regime": "aviso",
-      "status": "previsto",
-      "aviso_codigo": "ED-2025-BELGIUM-2-FPA",
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ED-2025-BELGIUM-2-FPA",
-      "deadline": null,
-      "budget": null,
-      "detected_date": "2026-04-25",
-      "priority_score": 15,
-      "notes": "SEDIA text=2026 p28"
-    },
-    {
-      "id": "cese-2026-lvp-0049-exa",
-      "name": "CESE/2026/LVP/0049-EXA",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-other",
-      "regime": "aviso",
-      "status": "previsto",
-      "aviso_codigo": "CESE/2026/LVP/0049-EXA",
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CESE/2026/LVP/0049-EXA",
-      "deadline": null,
-      "budget": null,
-      "detected_date": "2026-04-25",
-      "priority_score": 15,
-      "notes": "SEDIA text=2026 p28"
-    },
-    {
       "id": "eda-2026-op-0004-pin",
       "name": "EDA/2026/OP/0004-PIN",
       "source_id": "eu-funding-tenders",
@@ -1582,6 +1552,38 @@
       "priority_score": 55,
       "status": "pending",
       "notes": "EIT Climate-KIC open call | source: eit-climate webfetch | candidatura aberta"
+    },
+    {
+      "id": "pppa-2026-media-freedom-hub",
+      "name": "The European Union - the media freedom hub",
+      "source_id": "digital-europe",
+      "shard": "eu-other",
+      "aviso_codigo": "PPPA-2026-MEDIA-FREEDOM-HUB",
+      "detected_date": "2026-04-30",
+      "deadline": "2026-05-28",
+      "budget": null,
+      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/PPPA-2026-MEDIA-FREEDOM-HUB",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 105,
+      "status": "pending",
+      "notes": "Pilot Project / Preparatory Action 2026 - hub europeu de liberdade de imprensa. Origem: digital-strategy.ec.europa.eu."
+    },
+    {
+      "id": "pppa-2026-citizen-platform-tv",
+      "name": "Supporting multilingual access to trusted news and public-interest information across Europe",
+      "source_id": "digital-europe",
+      "shard": "eu-other",
+      "aviso_codigo": "PPPA-2026-CITIZEN-PLATFORM-TV",
+      "detected_date": "2026-04-30",
+      "deadline": "2026-05-28",
+      "budget": null,
+      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/PPPA-2026-CITIZEN-PLATFORM-TV",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 105,
+      "status": "pending",
+      "notes": "Pilot Project / Preparatory Action 2026 - acesso multilingue a noticias e informacao de interesse publico. Origem: digital-strategy.ec.europa.eu."
     }
   ],
   "items": [
