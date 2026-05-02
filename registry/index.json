@@ -3,14 +3,14 @@
     "description": "Open Capital Radar v4.0 - Indice global",
     "version": "4.0",
     "migrated_from_v3": "2026-04-12",
-    "last_writer_run": "2026-04-30"
+    "last_writer_run": "2026-05-02"
   },
   "totals": {
-    "published": 728,
-    "open": 415,
+    "published": 729,
+    "open": 416,
     "closed": 278,
     "planned": 18,
-    "in_queue": 100,
+    "in_queue": 96,
     "in_watchlist": 128,
     "in_catalogo": 1,
     "in_overflow": 244
@@ -54,11 +54,11 @@
       "open": 6
     },
     "eu-horizon": {
-      "count": 244,
-      "open": 95,
+      "count": 245,
+      "open": 96,
       "closed": 92,
       "planned": 8,
-      "published": 87
+      "published": 88
     },
     "eu-other": {
       "count": 24,
@@ -340,5 +340,5 @@
     "pathena-ventures": "2026-04-30",
     "fabrica-startups": "2026-05-02"
   },
-  "last_writer_run": "2026-04-30"
+  "last_writer_run": "2026-05-02"
 }
