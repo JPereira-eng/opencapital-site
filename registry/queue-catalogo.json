@@ -90,5 +90,45 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": []
+  "queue": [
+    {
+      "id": "fabrica-startups",
+      "name": "Fabrica de Startups",
+      "source_id": "fabrica-startups",
+      "catalog_type": "incubator",
+      "detected_date": "2026-05-02",
+      "last_profile_update": "2026-05-02",
+      "status": "active",
+      "regulation_url": "https://www.fabricadestartups.com",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://www.fabricadestartups.com",
+        "linkedin": "https://www.linkedin.com/company/2675826",
+        "pais_sede": "PT",
+        "descricao_curta": "Incubadora/aceleradora em Lisboa, mais de 10 anos de operacao, com programas como FastStart, FastIdea e verticais (Tourism Explorers, Blue Bio Value).",
+        "como_candidatar": null,
+        "modelo": null,
+        "formato": null,
+        "duracao_meses": null,
+        "batches_ano": null,
+        "batch_proximo": null,
+        "deadline_proxima": null,
+        "estipendio_eur": null,
+        "equity_pct": null,
+        "mentorias": null,
+        "setores_foco": [
+          "turismo",
+          "biotecnologia marinha",
+          "energia"
+        ],
+        "alumni_destaques": null,
+        "metricas_acumuladas": {
+          "programas_total": "70+",
+          "empreendedores_suportados": "4500+",
+          "startups_criadas": "750+"
+        }
+      },
+      "notes": "Profile parcial: sub-paginas FastStart/FastIdea nao publicam detalhes operacionais (deadlines, equity). Re-verificar em ~30d."
+    }
+  ]
 }
