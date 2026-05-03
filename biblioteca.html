@@ -241,7 +241,7 @@
     }
     .filter-selects {
       display:flex; align-items:center; gap:8px;
-      flex-wrap:nowrap; flex:1;
+      flex-wrap:nowrap; flex:1; min-width:0;
     }
     .filter-select {
       flex:1 1 0; min-width:0;
@@ -496,6 +496,21 @@
     <!-- Filtros -->
     <div class="filter-dropdowns-row">
       <div class="filter-selects">
+        <select class="filter-select" id="filterNecessidade" onchange="applyFilters()">
+          <option value="all">Necessidade</option>
+          <option value="arranque-validacao">Arranque e validação de negócio</option>
+          <option value="contratacao-rh">Contratação de RH</option>
+          <option value="formacao-qualificacao">Formação e qualificação</option>
+          <option value="id-ciencia">I&amp;D e ciência</option>
+          <option value="digitalizacao-ia">Digitalização e IA</option>
+          <option value="investimento-produtivo">Investimento produtivo e equipamentos</option>
+          <option value="capitalizacao-crescimento">Capitalização e crescimento</option>
+          <option value="tesouraria-credito-garantias">Tesouraria, crédito e garantias</option>
+          <option value="internacionalizacao">Internacionalização</option>
+          <option value="sustentabilidade-energia-clima">Sustentabilidade, energia e clima</option>
+          <option value="impacto-social-inclusao">Impacto social e inclusão</option>
+          <option value="premios-visibilidade">Prémios e visibilidade</option>
+        </select>
         <select class="filter-select" id="filterCategory" onchange="filterCards(this.value)">
           <option value="all">Categoria</option>
           <option value="nr">Não Reembolsável</option>
@@ -738,6 +753,7 @@
       activeCategory = 'all';
       activeSearch = '';
       document.getElementById('searchInput').value = '';
+      document.getElementById('filterNecessidade').value = 'all';
       document.getElementById('filterCategory').value = 'all';
       document.getElementById('filterEstado').value = 'all';
       document.getElementById('filterFonte').value = 'all';
@@ -749,11 +765,12 @@
     }
 
     function updateSelectStyles() {
-      ['filterCategory','filterEstado','filterFonte','filterBeneficiario','filterSetor','filterRegiao'].forEach(function(id) {
+      ['filterNecessidade','filterCategory','filterEstado','filterFonte','filterBeneficiario','filterSetor','filterRegiao'].forEach(function(id) {
         var el = document.getElementById(id);
         el.classList.toggle('has-value', el.value !== 'all');
       });
       var anyActive = activeCategory !== 'all' || activeSearch ||
+        document.getElementById('filterNecessidade').value !== 'all' ||
         document.getElementById('filterEstado').value !== 'all' ||
         document.getElementById('filterFonte').value !== 'all' ||
         document.getElementById('filterBeneficiario').value !== 'all' ||
@@ -769,6 +786,7 @@
 
     /* ─── APPLY FILTERS ─── */
     function applyFilters() {
+      var fNecessidade = document.getElementById('filterNecessidade').value;
       var fEstado = document.getElementById('filterEstado').value;
       var fFonte = document.getElementById('filterFonte').value;
       var fBeneficiario = document.getElementById('filterBeneficiario').value;
@@ -779,6 +797,11 @@
         var catMatch = activeCategory === 'all' || item.category === activeCategory;
         var estadoMatch = fEstado === 'all' || item.estado === fEstado || (fEstado === 'aberto' && item.estado === 'cont');
         var fonteMatch = fFonte === 'all' || item.fonte === fFonte || (fFonte === 'pt2030' && ['compete','norte-2030'].indexOf(item.fonte) !== -1);
+
+        var necessidadeMatch = fNecessidade === 'all';
+        if (!necessidadeMatch && item.necessidades && item.necessidades.length) {
+          necessidadeMatch = item.necessidades.indexOf(fNecessidade) !== -1;
+        }
 
         var beneficiarioMatch = fBeneficiario === 'all';
         if (!beneficiarioMatch && item.beneficiario) {
@@ -803,7 +826,7 @@
                         item.highlight2.toLowerCase().indexOf(activeSearch) !== -1;
         }
 
-        return catMatch && estadoMatch && fonteMatch && beneficiarioMatch && setorMatch && regiaoMatch && searchMatch;
+        return catMatch && necessidadeMatch && estadoMatch && fonteMatch && beneficiarioMatch && setorMatch && regiaoMatch && searchMatch;
       });
 
       currentPage = 1;
