@@ -14,11 +14,12 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 115,
-      "status": "pending",
+      "status": "abandoned",
       "notes": "callId: 185510; callTitle: ; framework: 111111; toa: ",
       "fail_count": 3,
-      "download_error": "EuropeAid PROSPECT (webgate) inacessivel via WebFetch (303/JS) e API JSON F&T 404. WebSearch sem PDF publico. 2026-05-03",
-      "last_fail_date": "2026-05-03"
+      "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback (185510 Gabon Forestry-Wood). Webgate PROSPECT JS-rendered, F&T API 404, sem PDF publico em fundsforNGOs/EEAS/DevelopmentAid.",
+      "last_fail_date": "2026-05-03",
+      "abandoned_date": "2026-05-03"
     },
     {
       "id": "europeaid-186382-dd-act-bo",
@@ -29,15 +30,14 @@
       "detected_date": "2026-05-02",
       "deadline": "2026-05-19",
       "budget": null,
-      "regulation_url": "https://webgate.ec.europa.eu/prospect/external/publishedcalls.htm?callId=186382",
+      "regulation_url": "https://exteriors.gencat.cat/ca/ambits-dactuacio/afers_exteriors/ue/fons_europeus/detalls/noticia/20260410_mineria-bolivia",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/europeaid-186382-dd-act-bo.txt",
       "priority_score": 115,
-      "status": "pending",
+      "status": "ready",
       "notes": "callId: 186382; callTitle: ; framework: 111111; toa: ",
-      "fail_count": 3,
-      "download_error": "EuropeAid PROSPECT (webgate) inacessivel via WebFetch (303/JS) e API JSON F&T 404. WebSearch sem PDF publico. 2026-05-03",
-      "last_fail_date": "2026-05-03"
+      "fail_count": 0,
+      "ready_date": "2026-05-03"
     },
     {
       "id": "europeaid-186109-dd-act",
@@ -48,15 +48,14 @@
       "detected_date": "2026-05-02",
       "deadline": "2026-05-08",
       "budget": null,
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/186109PROSPECTSEN",
+      "regulation_url": "https://www2.fundsforngos.org/information-technology/cfas-strengthening-el-salvadors-digital-civil-registration-system/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/europeaid-186109-dd-act.txt",
       "priority_score": 115,
-      "status": "pending",
+      "status": "ready",
       "notes": "callId: 186109; callTitle: ; framework: 111111; toa: ",
-      "fail_count": 3,
-      "download_error": "EuropeAid PROSPECT (webgate) inacessivel via WebFetch (303/JS) e API JSON F&T 404. WebSearch sem PDF publico. 2026-05-03",
-      "last_fail_date": "2026-05-03"
+      "fail_count": 0,
+      "ready_date": "2026-05-03"
     },
     {
       "id": "europeaid-185516-dd-act-multi",
@@ -67,15 +66,14 @@
       "detected_date": "2026-05-02",
       "deadline": "2026-05-04",
       "budget": null,
-      "regulation_url": "https://webgate.ec.europa.eu/prospect/external/publishedcalls.htm?callId=185516",
+      "regulation_url": "https://www2.fundsforngos.org/environment/rfps-support-for-the-management-of-marine-protected-areas-in-gabon/amp/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/europeaid-185516-dd-act-multi.txt",
       "priority_score": 115,
-      "status": "pending",
+      "status": "ready",
       "notes": "callId: 185516; callTitle: ; framework: 111111; toa: ",
-      "fail_count": 3,
-      "download_error": "EuropeAid PROSPECT (webgate) inacessivel via WebFetch (303/JS) e API JSON F&T 404. WebSearch sem PDF publico. 2026-05-03",
-      "last_fail_date": "2026-05-03"
+      "fail_count": 0,
+      "ready_date": "2026-05-03"
     },
     {
       "id": "europeaid-185831-dd-act-sy",
@@ -88,13 +86,12 @@
       "budget": null,
       "regulation_url": "https://webgate.ec.europa.eu/prospect/external/publishedcalls.htm?callId=185831",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/europeaid-185831-dd-act-sy.txt",
       "priority_score": 115,
-      "status": "pending",
+      "status": "ready",
       "notes": "callId: 185831; callTitle: ; framework: 111111; toa: ",
-      "fail_count": 1,
-      "last_fail_date": "2026-05-03",
-      "download_error": "EuropeAid PROSPECT (webgate) inacessivel via WebFetch (303/JS) e API JSON F&T 404. WebSearch sem PDF publico. 2026-05-03"
+      "fail_count": 0,
+      "ready_date": "2026-05-03"
     },
     {
       "id": "europeaid-185446-dd-act-gt",
@@ -107,13 +104,12 @@
       "budget": null,
       "regulation_url": "https://webgate.ec.europa.eu/prospect/external/publishedcalls.htm?callId=185446",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/europeaid-185446-dd-act-gt.txt",
       "priority_score": 115,
-      "status": "pending",
+      "status": "ready",
       "notes": "callId: 185446; callTitle: ; framework: 111111; toa: ",
-      "fail_count": 2,
-      "download_error": "EuropeAid PROSPECT (webgate) inacessivel via WebFetch (303/JS) e API JSON F&T 404. WebSearch sem PDF publico. 2026-05-03",
-      "last_fail_date": "2026-05-03"
+      "fail_count": 0,
+      "ready_date": "2026-05-03"
     },
     {
       "id": "europeaid-186089-dd-act-tz",
@@ -126,13 +122,12 @@
       "budget": null,
       "regulation_url": "https://webgate.ec.europa.eu/prospect/external/publishedcalls.htm?callId=186089",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/europeaid-186089-dd-act-tz.txt",
       "priority_score": 115,
-      "status": "pending",
+      "status": "ready",
       "notes": "callId: 186089; callTitle: ; framework: 111111; toa: ",
-      "fail_count": 1,
-      "last_fail_date": "2026-05-03",
-      "download_error": "EuropeAid PROSPECT (webgate) inacessivel via WebFetch (303/JS) e API JSON F&T 404. WebSearch sem PDF publico. 2026-05-03"
+      "fail_count": 0,
+      "ready_date": "2026-05-03"
     },
     {
       "id": "europeaid-186114-dd-act-kz",
@@ -183,10 +178,12 @@
       "budget": null,
       "regulation_url": "https://webgate.ec.europa.eu/prospect/external/publishedcalls.htm?callId=185546",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/europeaid-185546-dd-act-me.txt",
       "priority_score": 115,
-      "status": "pending",
-      "notes": "callId: 185546; callTitle: ; framework: 111111; toa: "
+      "status": "ready",
+      "notes": "callId: 185546; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 0,
+      "ready_date": "2026-05-03"
     },
     {
       "id": "europeaid-186264-dd-act-lk",
@@ -263,10 +260,12 @@
       "budget": null,
       "regulation_url": "https://webgate.ec.europa.eu/prospect/external/publishedcalls.htm?callId=186065",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/europeaid-186065-dd-act-il.txt",
       "priority_score": 115,
-      "status": "pending",
-      "notes": "callId: 186065; callTitle: ; framework: 111111; toa: "
+      "status": "ready",
+      "notes": "callId: 186065; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 0,
+      "ready_date": "2026-05-03"
     },
     {
       "id": "europeaid-186141-dd-act-multi",
@@ -279,10 +278,12 @@
       "budget": null,
       "regulation_url": "https://webgate.ec.europa.eu/prospect/external/publishedcalls.htm?callId=186141",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/europeaid-186141-dd-act-multi.txt",
       "priority_score": 115,
-      "status": "pending",
-      "notes": "callId: 186141; callTitle: ; framework: 111111; toa: "
+      "status": "ready",
+      "notes": "callId: 186141; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 0,
+      "ready_date": "2026-05-03"
     },
     {
       "id": "europeaid-186350-dd-act-xk",
