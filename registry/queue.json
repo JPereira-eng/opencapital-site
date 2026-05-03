@@ -2,23 +2,6 @@
   "_meta": "Fila de instrumentos para o writer. Migrado de registry-queue.json em 2026-04-12.",
   "queue": [
     {
-      "id": "horizon-miss-2024-cross-02-01",
-      "name": "PERIFORMANCE OPEN CALL FOR BOTTOM-UP STAKEHOLDER ENGAGEMENT INITIATIVES IN CANCER RESEARCH &amp; CARE",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "aviso_codigo": "HORIZON-MISS-2024-CROSS-02-01",
-      "detected_date": "2026-04-30",
-      "deadline": "2026-05-31",
-      "budget": null,
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/46945037",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2024-cross-02-01.txt",
-      "priority_score": 65,
-      "status": "ready",
-      "notes": "SEDIA codigo: HORIZON-MISS-2024-CROSS-02-01 | status: OPEN (31094502) | text=2026 open p25",
-      "fail_count": 0
-    },
-    {
       "id": "eit-climate-primary-2026",
       "name": "EIT Climate-KIC - PRIMARY",
       "source_id": "eit-climate",
