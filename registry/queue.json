@@ -1334,6 +1334,38 @@
       "priority_score": 115,
       "status": "pending",
       "notes": "callId: 186548; callTitle: ; framework: 111111; toa: "
+    },
+    {
+      "id": "interreg-sudoe-3rd-call",
+      "name": "Interreg SUDOE - 3rd Call (Capitalisation projects)",
+      "source_id": "interreg-sudoe",
+      "shard": "interreg",
+      "aviso_codigo": "SUDOE-3RD-CALL-2026",
+      "detected_date": "2026-05-03",
+      "deadline": "2026-09-30",
+      "budget": "1.000.000 EUR (FEDER)",
+      "regulation_url": "https://interreg-sudoe.eu/en/3rd-call/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 15,
+      "status": "pending",
+      "notes": "Capitalisation projects | abre Maio 2026 (data exacta nao publicada) | deadline aprox fim Setembro 2026 | dotacao 1M EUR FEDER, max 6 projectos | temas: gestao agua, recursos agro/florestais, populacao envelhecida"
+    },
+    {
+      "id": "interreg-sudoe-4th-call",
+      "name": "Interreg SUDOE - 4th Call (Structuring projects)",
+      "source_id": "interreg-sudoe",
+      "shard": "interreg",
+      "aviso_codigo": "SUDOE-4TH-CALL-2026",
+      "detected_date": "2026-05-03",
+      "deadline": "2026-09-30",
+      "budget": "10.000.000 EUR",
+      "regulation_url": "https://interreg-sudoe.eu/en/4th-call/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 15,
+      "status": "pending",
+      "notes": "Structuring projects | abre Maio 2026 | deadline aprox fim Setembro 2026 | dotacao 10M EUR (4M incendios, 1M envelhecimento) | 1 projecto por prioridade | temas: incendios, populacao envelhecida"
     }
   ],
   "items": [
