@@ -258,7 +258,6 @@
       ],
       "necessidades": [
         "id-ciencia",
-        "digitalizacao-ia",
         "arranque-validacao"
       ]
     },
@@ -285,6 +284,7 @@
         "energia-ambiente"
       ],
       "necessidades": [
+        "id-ciencia",
         "arranque-validacao"
       ]
     },
@@ -362,6 +362,7 @@
         "tecnologia-digital"
       ],
       "necessidades": [
+        "id-ciencia",
         "investimento-produtivo"
       ]
     },
@@ -1493,7 +1494,7 @@
       ],
       "necessidades": [
         "arranque-validacao",
-        "premios-visibilidade"
+        "id-ciencia"
       ]
     },
     {
@@ -1716,7 +1717,8 @@
         "saude-ciencias-vida"
       ],
       "necessidades": [
-        "id-ciencia"
+        "id-ciencia",
+        "arranque-validacao"
       ]
     },
     {
@@ -1741,7 +1743,8 @@
       ],
       "necessidades": [
         "id-ciencia",
-        "sustentabilidade-energia-clima"
+        "sustentabilidade-energia-clima",
+        "arranque-validacao"
       ]
     },
     {
@@ -1765,7 +1768,8 @@
         "mobilidade-transportes"
       ],
       "necessidades": [
-        "arranque-validacao"
+        "arranque-validacao",
+        "capitalizacao-crescimento"
       ]
     },
     {
@@ -2528,7 +2532,8 @@
       ],
       "necessidades": [
         "id-ciencia",
-        "impacto-social-inclusao"
+        "impacto-social-inclusao",
+        "arranque-validacao"
       ]
     },
     {
@@ -2577,7 +2582,6 @@
       ],
       "necessidades": [
         "arranque-validacao",
-        "premios-visibilidade",
         "id-ciencia"
       ]
     },
@@ -2676,7 +2680,8 @@
       ],
       "necessidades": [
         "arranque-validacao",
-        "capitalizacao-crescimento"
+        "capitalizacao-crescimento",
+        "internacionalizacao"
       ]
     },
     {
@@ -2825,9 +2830,8 @@
       "href": "instrumentos/venture-incubation-program-eit-2026.html",
       "featured": false,
       "necessidades": [
-        "premios-visibilidade",
         "arranque-validacao",
-        "digitalizacao-ia"
+        "id-ciencia"
       ]
     },
     {
@@ -5652,9 +5656,9 @@
       "href": "instrumentos/horizon-eic-2026-bas-02.html",
       "featured": false,
       "necessidades": [
-        "digitalizacao-ia",
         "arranque-validacao",
-        "id-ciencia"
+        "id-ciencia",
+        "capitalizacao-crescimento"
       ]
     },
     {
@@ -5681,7 +5685,7 @@
       "href": "instrumentos/horizon-eic-2026-accelerator-01.html",
       "featured": false,
       "necessidades": [
-        "digitalizacao-ia",
+        "arranque-validacao",
         "id-ciencia",
         "capitalizacao-crescimento"
       ]
@@ -5759,7 +5763,8 @@
       "href": "instrumentos/horizon-eic-2026-pathfinderopen.html",
       "featured": false,
       "necessidades": [
-        "id-ciencia"
+        "id-ciencia",
+        "arranque-validacao"
       ]
     },
     {
@@ -5833,9 +5838,8 @@
       "href": "instrumentos/horizon-eic-2026-bas-01-ecosystem.html",
       "featured": false,
       "necessidades": [
-        "premios-visibilidade",
         "id-ciencia",
-        "investimento-produtivo"
+        "premios-visibilidade"
       ]
     },
     {
@@ -6060,8 +6064,8 @@
       "href": "instrumentos/horizon-eic-2026-bas-02-scaleup.html",
       "featured": false,
       "necessidades": [
-        "digitalizacao-ia",
         "arranque-validacao",
+        "capitalizacao-crescimento",
         "id-ciencia"
       ]
     },
@@ -6135,7 +6139,8 @@
       "href": "instrumentos/eit-health-htds-2026.html",
       "featured": false,
       "necessidades": [
-        "id-ciencia"
+        "id-ciencia",
+        "arranque-validacao"
       ]
     },
     {
@@ -6981,9 +6986,7 @@
       "href": "instrumentos/sifide-2026.html",
       "featured": false,
       "necessidades": [
-        "id-ciencia",
-        "investimento-produtivo",
-        "tesouraria-credito-garantias"
+        "id-ciencia"
       ]
     },
     {
