@@ -90,41 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "fidelidade-ventures",
-      "name": "Fidelidade Ventures",
-      "source_id": "fidelidade-ventures",
-      "catalog_type": "cvc",
-      "detected_date": "2026-05-03",
-      "last_profile_update": "2026-05-03",
-      "status": "inactive",
-      "regulation_url": "https://fidelidadeventures.com",
-      "priority_score": 5,
-      "profile": {
-        "website": "https://fidelidadeventures.com",
-        "linkedin": null,
-        "pais_sede": "PT",
-        "descricao_curta": "CVC do grupo Fidelidade (subsidiaria do Fosun International), focada em insurtech e healthtech.",
-        "como_candidatar": null,
-        "tese": null,
-        "estagios": null,
-        "setores": [
-          "insurtech",
-          "healthtech"
-        ],
-        "geografia": [
-          "PT"
-        ],
-        "ticket_min_eur": null,
-        "ticket_max_eur": null,
-        "ticket_sweet_eur": null,
-        "aum_eur": null,
-        "vintage": null,
-        "portfolio_pt_exemplos": null,
-        "parceiros": null
-      },
-      "notes": "Website fidelidadeventures.com retorna ECONNREFUSED (verificado 2026-05-03). CVC do grupo Fidelidade Seguros (subsidiaria Fosun International), ligado a inovacao em seguros (insurtech) e saude (healthtech). Profile minimo, aguardar reactivacao do website ou identificacao de novo dominio para refresh completo."
-    }
-  ]
+  "queue": []
 }
