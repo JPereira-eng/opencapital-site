@@ -257,6 +257,56 @@ Preencher o array `setores` no `instruments-catalog.json` com 1 a N codigos da t
 - PEPAC / Mar 2030 → `["agroalimentar"]` / `["mar-pescas"]`
 - Linha Banco de Fomento generica → `["todos"]`
 
+### 4g. Definir necessidades (campo invisivel)
+
+**Pergunta orientadora:** "Que necessidade da empresa este instrumento resolve?"
+
+Preencher o array `necessidades` no `instruments-catalog.json` com 1 a 3 codigos da tabela. O campo e invisivel (so usado pelo filtro "Necessidade" do catalogo), logo o artigo em si nao menciona necessidades - limita-se a explicar o que o instrumento financia.
+
+Eixo demand-side, complementar a `setores` (que e supply-side por industria). Setor responde "que tipo de empresa beneficia?". Necessidade responde "que problema/objetivo da empresa o instrumento resolve?".
+
+**Valores permitidos (12 tags fechadas, sem wildcard):**
+
+| Codigo | Necessidade que resolve |
+|---|---|
+| `arranque-validacao` | Criar empresa, validar ideia de negocio, prova de conceito, pre-receita |
+| `contratacao-rh` | Contratar pessoas, criar postos de trabalho, estagios, integracao laboral |
+| `formacao-qualificacao` | Formar e qualificar a equipa existente, upskilling, certificacao profissional |
+| `id-ciencia` | Investigacao cientifica, I&D&I, projetos academicos, ciencia aplicada |
+| `digitalizacao-ia` | Digitalizar processos, software, automacao, IA, transformacao digital |
+| `investimento-produtivo` | Investir em equipamentos, instalacoes, capacidade produtiva, ativos fixos tangiveis |
+| `capitalizacao-crescimento` | Equity, growth capital, scale-up, reforco de capitais proprios, expansao |
+| `tesouraria-credito-garantias` | Liquidez, working capital, dividas correntes, linhas de credito, garantias mutuas |
+| `internacionalizacao` | Exportar, abrir mercados externos, presenca internacional, missoes empresariais |
+| `sustentabilidade-energia-clima` | Descarbonizacao, eficiencia energetica, renovaveis, economia circular, clima |
+| `impacto-social-inclusao` | Inclusao social, economia social, comunidades vulneraveis, igualdade |
+| `premios-visibilidade` | Premios, reconhecimento, distincoes, eventos, visibilidade institucional |
+
+**Regras de decisao:**
+
+1. Atribuir 1 a 3 tags por instrumento. **Mais de 3 e sinal de etiquetagem preguicosa.**
+2. Sem wildcard "todos" - aqui forcar a escolha mesmo em instrumentos transversais. Um instrumento que financia "tudo" normalmente serve `capitalizacao-crescimento` ou `tesouraria-credito-garantias`.
+3. **Ortogonalidade com setores:** Setor = *o que a empresa e* (industria, agroalimentar). Necessidade = *o que a empresa quer fazer* (digitalizar, internacionalizar). Nao confundir.
+4. **Fronteiras criticas:**
+   - `id-ciencia` (fase de conhecimento: SIFIDE, ANI, FCT, Horizonte) vs `investimento-produtivo` (aplicacao industrial pos-I&D: RFAI, PT2030 inovacao produtiva). I&D = descobrir. Investimento produtivo = produzir.
+   - `digitalizacao-ia` vs `investimento-produtivo`. Industria 4.0 / automacao fabril = ambas. Software puro = so digitalizacao. Equipamento sem componente digital = so investimento produtivo.
+   - `arranque-validacao` (pre-receita, ideia em validacao) vs `capitalizacao-crescimento` (empresa com tracao a procura de escala). Nao misturar.
+5. Se duvida entre duas tags fechadas, escolher a mais restritiva. Nao etiquetar com 5 tags "para nao falhar".
+
+**Exemplos:**
+- SIFIDE II → `["id-ciencia"]` (fiscal puro de I&D, single-tag)
+- IEFP Estagios INICIAR → `["contratacao-rh", "formacao-qualificacao"]` (estagio = contrata + qualifica)
+- EIC Accelerator → `["arranque-validacao", "id-ciencia", "capitalizacao-crescimento"]` (startup deep tech com grant + equity)
+- RFAI → `["investimento-produtivo", "contratacao-rh"]` (exige criacao de postos)
+- COMPETE SIAC Internacionalizacao → `["internacionalizacao"]`
+- Sustentavel 2030 (descarbonizacao industrial) → `["sustentabilidade-energia-clima", "investimento-produtivo"]`
+- Vouchers IAPMEI Digitalizacao → `["digitalizacao-ia"]`
+- Linha BPF Garantida PME → `["tesouraria-credito-garantias"]`
+- Programa Bairros Mais Resilientes → `["impacto-social-inclusao"]`
+- Premios Nacionais de Inovacao COTEC → `["premios-visibilidade"]`
+- Portugal Ventures Call (early-stage tech) → `["arranque-validacao", "capitalizacao-crescimento"]`
+- ANI Born from Knowledge → `["arranque-validacao", "id-ciencia"]`
+
 ---
 
 ## PASSO 5: Atualizar catalogo
@@ -274,6 +324,7 @@ Adicionar entrada ao FINAL de `instruments-catalog.json > instruments`:
   "fonte": "[FONTE]",
   "beneficiario": "[BENEF]",
   "setores": ["[SETOR1]", "[SETOR2]"],
+  "necessidades": ["[NECESSIDADE1]", "[NECESSIDADE2]"],
   "regiao": "[REGIAO]",
   "title": "[NOME]",
   "tagline": "[TAGLINE]",
@@ -285,7 +336,7 @@ Adicionar entrada ao FINAL de `instruments-catalog.json > instruments`:
 }
 ```
 
-**Nota:** `setores` e obrigatorio. Usar valores da tabela em 4f ou `["todos"]` se transversal.
+**Nota:** `setores` e `necessidades` sao ambos obrigatorios. Usar valores das tabelas em 4f e 4g respetivamente. `setores` aceita `["todos"]` para transversais; `necessidades` nao tem wildcard, escolher 1-3 codigos sempre.
 
 **REGRA CRITICA:** Nunca editar `biblioteca.html`. Catalogo e 100% dinamico via JSON.
 
