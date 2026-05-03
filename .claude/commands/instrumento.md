@@ -57,6 +57,33 @@ Cada instrumento e diferente. O Claude tem liberdade para decidir a estrutura ed
 - Avisos e alertas (ex: "Prazo a fechar em X", "Novo aviso aberto")
 - Comparacao com instrumentos similares
 
+**Seccao obrigatoria: "Para que serve" (mapeamento das necessidades)**
+
+Todos os artigos devem incluir uma seccao explicita que mapeia o instrumento as 1-3 tags de `necessidades` definidas pelo radar-writer (passo 4g). Esta seccao torna visivel ao leitor a logica do filtro "Necessidade" da biblioteca: porque e que este instrumento aparece quando se filtra por X.
+
+**Posicao recomendada:** segunda seccao do corpo, imediatamente apos "O que e [instrumento]". O leitor ja tem o conceito, agora precisa de saber se serve para o seu caso concreto.
+
+**Estrutura padrao:**
+
+```html
+<div class="article-section reveal">
+  <div class="section-eyebrow">Para que serve</div>
+  <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
+  <p class="section-text">[1 paragrafo a enquadrar a logica: que tipo de necessidade(s) este instrumento cobre, e porque e relevante o cruzamento dessas necessidades neste instrumento especifico]</p>
+  <ul class="article-list">
+    <li><strong style="color:var(--navy);font-weight:600;">[Necessidade 1, ex: I&amp;D e ciencia]:</strong> [explicacao de 2-3 linhas concreta ao instrumento, nao generica]</li>
+    <li><strong style="color:var(--navy);font-weight:600;">[Necessidade 2]:</strong> [...]</li>
+  </ul>
+</div>
+```
+
+**Regras:**
+
+1. As necessidades listadas tem de coincidir com o array `necessidades` do `instruments-catalog.json` (definido no passo 4g do radar-writer). Se houver divergencia, e bug, alinhar.
+2. Nao listar 4+ necessidades. Se o instrumento tem mais de 3 tags no JSON, escolher as 3 mais materialmente relevantes e omitir as restantes da prosa.
+3. As explicacoes tem de ser concretas ao instrumento, nao definicoes genericas das tags. Mau: "I&D e ciencia: investigacao e desenvolvimento". Bom: "I&D e ciencia: o SIFIDE II reembolsa via deducao a coleta as despesas com pessoal tecnico afeto a I&D, contratacao de entidades acreditadas pela ANI e equipamentos."
+4. Usar os labels visiveis das tags (ex: "I&D e ciencia", "Capitalizacao e crescimento") em sentence case ou title case, nao os slugs.
+
 **PROIBIDO:**
 - Nunca incluir seccoes tipo "Passo a passo", "Guia de processo", "Como candidatar-se passo a passo", "Steps", ou qualquer lista numerada de etapas sequenciais de candidatura. O artigo nao e um manual de instrucoes. E uma ficha editorial analitica.
 
