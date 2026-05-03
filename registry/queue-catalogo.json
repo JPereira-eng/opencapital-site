@@ -90,56 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "lc-ventures",
-      "name": "LC Ventures",
-      "source_id": "lc-ventures",
-      "catalog_type": "vc",
-      "detected_date": "2026-05-03",
-      "last_profile_update": "2026-05-03",
-      "status": "active",
-      "regulation_url": "https://www.lcventures.pt/",
-      "priority_score": 15,
-      "profile": {
-        "website": "https://www.lcventures.pt/",
-        "linkedin": null,
-        "pais_sede": "PT",
-        "descricao_curta": "VC portugues fundado em 2015, focado em pre-seed e seed em software e tech, com mais de 50 empresas em portfolio.",
-        "como_candidatar": "Formulario online em /apply ou contacto via info@lcventures.pt",
-        "tese": "Pre-seed e seed em fundadores que exploram ideias inovadoras, principalmente software-only solutions, com follow-on operacional via network.",
-        "estagios": [
-          "pre-seed",
-          "seed"
-        ],
-        "setores": [
-          "software B2B",
-          "climate",
-          "community management",
-          "sustainable tourism",
-          "renewable energy"
-        ],
-        "geografia": [
-          "PT"
-        ],
-        "ticket_min_eur": null,
-        "ticket_max_eur": null,
-        "ticket_sweet_eur": 75000,
-        "aum_eur": 50000000,
-        "vintage": "LC Ventures III + Lean Innovation + ANGELS + One Planet (em deployment)",
-        "portfolio_pt_exemplos": [
-          "Cleanwatts",
-          "Homeit",
-          "Networkme",
-          "Facestore",
-          "QRPoint"
-        ],
-        "parceiros": [
-          "Pedro Falcao",
-          "Marco Soares"
-        ]
-      },
-      "notes": "VC PT em deployment activo. Multi-fundo (LCV I 9.4M, II 5M, III 1.2M, Lean 5M, ANGELS 10M, One Planet 20M). 50+ portfolio companies."
-    }
-  ]
+  "queue": []
 }

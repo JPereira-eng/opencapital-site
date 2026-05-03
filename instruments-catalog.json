@@ -19333,6 +19333,133 @@
       "highlight2": "Regiões transfronteiriças (PT: fronteira com Espanha, Norte ao Algarve)",
       "href": "instrumentos/pppa-2026-bridgeforeu2.html",
       "featured": false
+    },
+    {
+      "id": "eit-climate-primary-2026",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 17/06/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,empreendedor,ensino-investigacao,associacao",
+      "setores": [
+        "agroalimentar",
+        "energia-ambiente"
+      ],
+      "necessidades": [
+        "arranque-validacao",
+        "sustentabilidade-energia-clima"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "EIT Climate-KIC PRIMARY",
+      "tagline": "Open call europeu para projetos piloto de upcycling de residuos agricolas em consorcios europeus.",
+      "highlight0": "100K a 150K EUR por consorcio (envelope total 900K EUR, 6 a 9 projetos)",
+      "highlight1": "PME, startups, agricultores, cooperativas, universidades, ONG",
+      "highlight2": "Europeu (foco Finlandia, Grecia, Estonia)",
+      "href": "instrumentos/eit-climate-primary-2026.html",
+      "featured": false
+    },
+    {
+      "id": "eit-edtech-conference-open-call",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 23/06/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,associacao,ensino-investigacao",
+      "setores": [
+        "tecnologia-digital",
+        "economia-criativa"
+      ],
+      "necessidades": [
+        "premios-visibilidade"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "EIT EdTech Conference Open Call",
+      "tagline": "Concurso do EIT para selecionar a entidade que organiza a conferencia europeia EdTech sob a chancela do Instituto Europeu de Inovacao e Tecnologia.",
+      "highlight0": "Contrato de organizacao de conferencia europeia (dotacao definida em sede de proposta)",
+      "highlight1": "Entidades UE com track record em organizacao de eventos europeus",
+      "highlight2": "Transversal UE e paises associados ao Horizon Europe",
+      "href": "instrumentos/eit-edtech-conference-open-call.html",
+      "featured": false
+    },
+    {
+      "id": "socpl-2026-soc-dialog",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 23/07/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "associacao,entidade-publica",
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "impacto-social-inclusao"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "SOCPL Apoio ao Dialogo Social 2026",
+      "tagline": "Linha SOCPL-2026-SOC-DIALOG da Comissao Europeia para reforcar o dialogo social europeu, intersetorial e setorial, e a capacidade dos parceiros sociais.",
+      "highlight0": "13,25 milhoes EUR em 2026 (SOCPL Project Grants)",
+      "highlight1": "Parceiros sociais e organizacoes representativas (sindicatos, associacoes empresariais)",
+      "highlight2": "UE, EEE e paises candidatos",
+      "href": "instrumentos/socpl-2026-soc-dialog.html",
+      "featured": false
+    },
+    {
+      "id": "edf-2026-da-space-prs-step",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 27/11/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "tecnologia-digital",
+        "industria"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "investimento-produtivo"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "EDF Galileo PRS e NAVWAR",
+      "tagline": "Topico EDF-2026-DA-SPACE-PRS-STEP do European Defence Fund para integrar recetores Galileo PRS em sistemas de armas e centros de NAVWAR.",
+      "highlight0": "50 milhoes EUR (EDF Development Action, contribui para STEP)",
+      "highlight1": "Consorcios de industria de defesa, espacial e centros de I&D",
+      "highlight2": "Estados-Membros UE e paises associados ao EDF",
+      "href": "instrumentos/edf-2026-da-space-prs-step.html",
+      "featured": false
+    },
+    {
+      "id": "lc-ventures",
+      "category": "priv",
+      "category_label": "Investimento Privado",
+      "estado": "aberto",
+      "status_text": "Candidatura Continua",
+      "status_class": "status-cont",
+      "fonte": "lc-ventures",
+      "beneficiario": "empresa,empreendedor",
+      "setores": [
+        "tecnologia-digital",
+        "energia-ambiente"
+      ],
+      "necessidades": [
+        "arranque-validacao",
+        "capitalizacao-crescimento"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "LC Ventures",
+      "tagline": "VC portugues multi-fundo focado em pre-seed e seed em software e tech, com mais de 50 empresas em portefolio.",
+      "highlight0": "Tickets pre-seed/seed (sweet spot ~75K EUR) com follow-on multi-fundo",
+      "highlight1": "Startups portuguesas em pre-seed e seed (software-only preferencial)",
+      "highlight2": "Portugal",
+      "href": "instrumentos/lc-ventures.html",
+      "featured": false
     }
   ]
 }

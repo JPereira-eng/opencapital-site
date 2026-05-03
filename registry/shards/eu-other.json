@@ -671,6 +671,34 @@
       "source": "eu-funding-tenders",
       "state": "aberto",
       "last_check": "2026-05-03"
+    },
+    {
+      "id": "eit-climate-primary-2026",
+      "file": "instrumentos/eit-climate-primary-2026.html",
+      "source": "eit-climate",
+      "state": "aberto",
+      "last_check": "2026-05-03"
+    },
+    {
+      "id": "eit-edtech-conference-open-call",
+      "file": "instrumentos/eit-edtech-conference-open-call.html",
+      "source": "eit",
+      "state": "aberto",
+      "last_check": "2026-05-03"
+    },
+    {
+      "id": "socpl-2026-soc-dialog",
+      "file": "instrumentos/socpl-2026-soc-dialog.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-05-03"
+    },
+    {
+      "id": "edf-2026-da-space-prs-step",
+      "file": "instrumentos/edf-2026-da-space-prs-step.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-05-03"
     }
   ],
   "instruments": [
@@ -1494,8 +1522,8 @@
       "last_check": "2026-05-03"
     }
   ],
-  "count": 93,
-  "published": 48,
-  "open": 103,
+  "count": 97,
+  "published": 52,
+  "open": 107,
   "closed": 1
 }
