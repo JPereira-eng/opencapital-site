@@ -10,10 +10,10 @@
     "open": 454,
     "closed": 279,
     "planned": 18,
-    "in_queue": 61,
+    "in_queue": 100,
     "in_watchlist": 128,
-    "in_catalogo": 0,
-    "in_overflow": 244
+    "in_catalogo": 1,
+    "in_overflow": 207
   },
   "shards": {
     "pt2030-compete": {
@@ -134,7 +134,7 @@
     "interreg-atlantic": "2026-04-28",
     "hadea": "2026-04-28",
     "eic-accelerator": "2026-04-30",
-    "interreg-mac": "2026-04-27",
+    "interreg-mac": "2026-05-03",
     "life-programme": "2026-04-29",
     "erc": "2026-05-02",
     "investeu": "2026-04-27",
@@ -142,13 +142,13 @@
     "interreg-euromed": "2026-04-28",
     "interreg-urbact": "2026-04-27",
     "interreg-next-med": "2026-04-28",
-    "eit": "2026-04-27",
+    "eit": "2026-05-03",
     "startup-portugal": "2026-04-12",
     "banco-fomento": "2026-04-12",
     "autoridade-tributaria": "2026-05-03",
     "digital-europe": "2026-04-30",
     "cef": "2026-04-30",
-    "horizonte-europa": "2026-04-27",
+    "horizonte-europa": "2026-05-03",
     "eu4health": "2026-05-03",
     "indico-capital": "2026-04-13",
     "armilar-ventures": "2026-04-13",
@@ -223,7 +223,8 @@
     "eit-health": "2026-04-30",
     "pathena-ventures": "2026-04-30",
     "fabrica-startups": "2026-05-02",
-    "fidelidade-ventures": "2026-05-03"
+    "fidelidade-ventures": "2026-05-03",
+    "lc-ventures": "2026-05-03"
   },
   "last_scanner_run": "2026-05-03",
   "source-last_checked": {
