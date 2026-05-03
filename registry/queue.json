@@ -408,10 +408,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUAF-2026-TRAI-04",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/euaf-2026-trai-04.txt",
       "priority_score": 115,
-      "status": "pending",
-      "notes": "callId: EUAF-2026-TRAI; callTitle: Training, Conferences, Staff Exchanges and Studies; framework: 43251842; toa: EUAF Project Grants"
+      "status": "ready",
+      "notes": "callId: EUAF-2026-TRAI; callTitle: Training, Conferences, Staff Exchanges and Studies; framework: 43251842; toa: EUAF Project Grants",
+      "fail_count": 0
     },
     {
       "id": "euaf-2026-trai-01",
@@ -424,10 +425,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUAF-2026-TRAI-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/euaf-2026-trai-01.txt",
       "priority_score": 115,
-      "status": "pending",
-      "notes": "callId: EUAF-2026-TRAI; callTitle: Training, Conferences, Staff Exchanges and Studies; framework: 43251842; toa: EUAF Project Grants"
+      "status": "ready",
+      "notes": "callId: EUAF-2026-TRAI; callTitle: Training, Conferences, Staff Exchanges and Studies; framework: 43251842; toa: EUAF Project Grants",
+      "fail_count": 0
     },
     {
       "id": "euaf-2026-trai-03",
@@ -440,10 +442,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EUAF-2026-TRAI-03",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/euaf-2026-trai-03.txt",
       "priority_score": 115,
-      "status": "pending",
-      "notes": "callId: EUAF-2026-TRAI; callTitle: Training, Conferences, Staff Exchanges and Studies; framework: 43251842; toa: EUAF Project Grants"
+      "status": "ready",
+      "notes": "callId: EUAF-2026-TRAI; callTitle: Training, Conferences, Staff Exchanges and Studies; framework: 43251842; toa: EUAF Project Grants",
+      "fail_count": 0
     },
     {
       "id": "esf-2026-eures-tms",
@@ -456,10 +459,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ESF-2026-EURES-TMS",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/esf-2026-eures-tms.txt",
       "priority_score": 115,
-      "status": "pending",
-      "notes": "callId: ESF-2026-EURES-TMS; callTitle: EURES Targeted Mobility Scheme (TMS); framework: 43254019; toa: ESF Project Grants"
+      "status": "ready",
+      "notes": "callId: ESF-2026-EURES-TMS; callTitle: EURES Targeted Mobility Scheme (TMS); framework: 43254019; toa: ESF Project Grants",
+      "fail_count": 0
     },
     {
       "id": "pppa-2026-bridgeforeu2",
@@ -523,7 +527,10 @@
       "regulation_local": null,
       "priority_score": 115,
       "status": "pending",
-      "notes": "callId: 185510; callTitle: ; framework: 111111; toa: "
+      "notes": "callId: 185510; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 1,
+      "download_error": "PROSPECT webgate requer EU Login; JSON API 404; WebSearch sem alternativa publica",
+      "last_fail_date": "2026-05-03"
     },
     {
       "id": "edf-2026-ls-dis-ra-smero-nt",
@@ -555,7 +562,10 @@
       "regulation_local": null,
       "priority_score": 115,
       "status": "pending",
-      "notes": "callId: 186382; callTitle: ; framework: 111111; toa: "
+      "notes": "callId: 186382; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 1,
+      "download_error": "PROSPECT webgate requer EU Login; JSON API 404",
+      "last_fail_date": "2026-05-03"
     },
     {
       "id": "horizon-miss-2026-05-soil-04",
@@ -667,7 +677,10 @@
       "regulation_local": null,
       "priority_score": 115,
       "status": "pending",
-      "notes": "callId: 185979; callTitle: ; framework: 111111; toa: "
+      "notes": "callId: 185979; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 1,
+      "download_error": "PROSPECT webgate requer EU Login; JSON API 404",
+      "last_fail_date": "2026-05-03"
     },
     {
       "id": "ep-linc-subv-2026-conf-int-03",
@@ -680,10 +693,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EP-LINC-SUBV-2026-CONF-INT-03",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/ep-linc-subv-2026-conf-int-03.txt",
       "priority_score": 115,
-      "status": "pending",
-      "notes": "callId: EP-LINC-SUBV-2026-CONF-INT; callTitle: FINANCIAL SUPPORT FOR TRAINING IN CONFERENCE INTERPRETING; framework: 43697167; toa: EP Project Grants"
+      "status": "ready",
+      "notes": "callId: EP-LINC-SUBV-2026-CONF-INT; callTitle: FINANCIAL SUPPORT FOR TRAINING IN CONFERENCE INTERPRETING; framework: 43697167; toa: EP Project Grants",
+      "fail_count": 0
     },
     {
       "id": "europeaid-186109-dd-act",
@@ -699,7 +713,10 @@
       "regulation_local": null,
       "priority_score": 115,
       "status": "pending",
-      "notes": "callId: 186109; callTitle: ; framework: 111111; toa: "
+      "notes": "callId: 186109; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 1,
+      "download_error": "topic-details PROSPECTSEN nao tem JSON; WebFetch retorna so titulo (pagina JS-rendered); WebSearch sem alternativa publica",
+      "last_fail_date": "2026-05-03"
     },
     {
       "id": "europeaid-185516-dd-act-multi",
@@ -715,7 +732,10 @@
       "regulation_local": null,
       "priority_score": 115,
       "status": "pending",
-      "notes": "callId: 185516; callTitle: ; framework: 111111; toa: "
+      "notes": "callId: 185516; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 1,
+      "download_error": "PROSPECT webgate requer EU Login; JSON API 404",
+      "last_fail_date": "2026-05-03"
     },
     {
       "id": "europeaid-186514-dd-fpa-eg",
