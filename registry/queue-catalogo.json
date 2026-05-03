@@ -90,37 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "busy-angels",
-      "name": "Busy Angels",
-      "source_id": "busy-angels",
-      "catalog_type": "ba",
-      "detected_date": "2026-05-03",
-      "last_profile_update": "2026-05-03",
-      "status": "active",
-      "regulation_url": "https://busyangels.co/",
-      "priority_score": 10,
-      "profile": {
-        "website": "https://busyangels.co/",
-        "linkedin": null,
-        "pais_sede": "PT",
-        "descricao_curta": "Grupo BA portugues fundado em 2010 (Lisboa) que opera como pequeno fundo seed/early-stage com equipa de 4 partners. 30+ empresas em portfolio em digital health, clean energy, life sciences, marketplaces e consumer.",
-        "como_candidatar": "Submissao via website. Criterio: equipa com 2+ founders, fully committed.",
-        "numero_membros": null,
-        "ticket_individual_eur": 150000,
-        "ticket_coletivo_eur": null,
-        "setores_foco": [
-          "digital health",
-          "clean energy",
-          "life sciences",
-          "digital business",
-          "online marketplaces",
-          "consumer"
-        ],
-        "requisitos_apresentacao": "Submissao online via website; criterio minimo de 2 founders fully committed; 5-7 investimentos por ano"
-      },
-      "notes": "Equipa: Francisco Ferreira Pinto, Martinho Tojo, Santiago Salazar, Lurdes Gramaxo. Coinvestidores frequentes: Sabadell Venture Capital, BStartup10, Toubkal Partners. Portfolio destaques: Endado, Zaask, eSolidar. Website oficial: busyangels.co (sources-scan listava .com - corrigido). Ano fundacao: 2010-04. Estagios: Seed/Early stage."
-    }
-  ]
+  "queue": []
 }
