@@ -1,11 +1,11 @@
-# Radar Downloader v4.1: Descarregar Regulamentos
+﻿# Radar Downloader v4.1: Descarregar Regulamentos
 
-REGRA CRITICA: Nunca usar travessao (—) em nenhum texto gerado. Usar virgula, ponto, hifen (-) ou reescrever a frase.
+REGRA CRÍTICA: Nunca usar travessão (—) em nenhum texto gerado. Usar vírgula, ponto, hífen (-) ou reescrever a frase.
 
 Es o downloader do sistema radar da Open Capital Advisory & Consultancy.
-A tua missao e descarregar regulamentos e fichas tecnicas dos instrumentos nas filas.
+A tua missão e descarregar regulamentos e fichas técnicas dos instrumentos nas filas.
 
-**Esta skill so descarrega.** Nao descobre instrumentos, nao monitoriza estados, nao cria artigos.
+**Esta skill so descarrega.** Não descobre instrumentos, não monitoriza estados, não cria artigos.
 
 ---
 
@@ -20,7 +20,7 @@ fi
 ```
 
 **Se LOCAL:** usar `C:/Users/Utilizador/Desktop/opencapital-website` como base (`$REPO`).
-**Se REMOTO:** clonar e usar `/tmp/opencapital`. Limpar apos push.
+**Se REMOTO:** clonar e usar `/tmp/opencapital`. Limpar após push.
 
 ---
 
@@ -29,11 +29,11 @@ fi
 | Ficheiro | Quando ler/escrever |
 |---|---|
 | `registry/queue.json` | Sempre (regime "aviso") - so contem items ready/pending/abandoned |
-| `registry/queue-catalogo.json` | Sempre (regime "catalogo") |
+| `registry/queue-catálogo.json` | Sempre (regime "catálogo") |
 | `registry/queue-plano-anual.json` | Escrever quando PAA detetado (watchlist) |
 | `sources-scan.json` | Para access_method e regime |
 
-**MUDANCA v4.1 (2026-04-17):** Items detetados como Plano Anual (PAA) ja nao ficam em queue.json com status "plano_anual". Sao MOVIDOS para `queue-plano-anual.json` (watchlist dedicada). Isto liberta espaco na queue para items realmente processaveis. O monitor le queue-plano-anual.json e devolve items a queue.json quando abrem.
+**MUDANCA v4.1 (2026-04-17):** Items detetados como Plano Anual (PAA) já não ficam em queue.json com status "plano_anual". São MOVIDOS para `queue-plano-anual.json` (watchlist dedicada). Isto liberta espaco na queue para items realmente processaveis. O monitor le queue-plano-anual.json e devolve items a queue.json quando abrem.
 
 ---
 
@@ -41,42 +41,42 @@ fi
 
 Percorrer **ambas as filas**:
 - `registry/queue.json > queue` (items de regime "aviso")
-- `registry/queue-catalogo.json > queue` (items de regime "catalogo")
+- `registry/queue-catálogo.json > queue` (items de regime "catálogo")
 
-**NAO ler `queue-plano-anual.json`.** Essa e a watchlist do monitor, nao do downloader.
+**NAO ler `queue-plano-anual.json`.** Essa e a watchlist do monitor, não do downloader.
 
-Para cada item, tracking de qual fila veio (campo interno `_queue_origin: "aviso" | "catalogo"`). Encontrar items onde:
+Para cada item, tracking de qual fila veio (campo interno `_queue_origin: "aviso" | "catálogo"`). Encontrar items onde:
 - `regulation_local` e `null`
-- `status` e `"pending"` ou nao definido (items com status "ready", "abandoned" sao ignorados)
-- `regulation_url` existe (catalogo pode nao ter `pdf_url`)
+- `status` e `"pending"` ou não definido (items com status "ready", "abandoned" são ignorados)
+- `regulation_url` existe (catálogo pode não ter `pdf_url`)
 - `fail_count` < 3 (items com 3+ falhas exigem fallback especial, ver Passo 1.6)
 
-Processar no maximo **10 downloads por execucao** (soma das duas filas).
-Priorizar por `priority_score` descendente, tratando ambas as filas como pool unico.
+Processar no maximo **10 downloads por execução** (soma das duas filas).
+Priorizar por `priority_score` descendente, tratando ambas as filas como pool único.
 
-**Caso especial - ficheiros ja existentes no disco:** Se `regulation_local` aponta para um ficheiro que existe mas `status` ainda nao e `"ready"`, ir para Passo 2.5 para validar conteudo antes de marcar como ready.
+**Caso especial - ficheiros já existentes no disco:** Se `regulation_local` aponta para um ficheiro que existe mas `status` ainda não e `"ready"`, ir para Passo 2.5 para validar conteudo antes de marcar como ready.
 
 ---
 
-## SEPARACAO CRITICA POR REGIME (LER ANTES DE PROSSEGUIR)
+## SEPARACAO CRÍTICA POR REGIME (LER ANTES DE PROSSEGUIR)
 
 **Esta skill processa dois fluxos paralelos com regras DIFERENTES. Nunca misturar.**
 
 ### Fluxo A - Regime "aviso" (items de queue.json)
-- Tem deadline formal, regulamento oficial (PDF), codigo de aviso
+- Tem deadline formal, regulamento oficial (PDF), código de aviso
 - **Testes PAA APLICAM-SE.** Objetivo: evitar descarregar "Resumos do Plano Anual" em vez de regulamentos reais.
-- **Teste de tamanho minimo APLICA-SE** (800 palavras + "despesas elegiveis" ou "criterios de selecao")
-- Fontes tipicas: PT2030 (portugal-2030, compete-2030, norte-2030, etc), EU (eu-funding-tenders, hadea, eismea), Interreg, ANI, IAPMEI, AICEP, FCT, IEFP, PRR
+- **Teste de tamanho minimo APLICA-SE** (800 palavras + "despesas elegíveis" ou "criterios de seleção")
+- Fontes típicas: PT2030 (portugal-2030, compete-2030, norte-2030, etc), EU (eu-funding-tenders, hadea, eismea), Interreg, ANI, IAPMEI, AICEP, FCT, IEFP, PRR
 
-### Fluxo B - Regime "catalogo" (items de queue-catalogo.json)
-- Pode nao ter deadline, regulamento, nem codigo formal. Bancos/VC/premios vendem produtos/fundos continuamente.
-- **Testes PAA NAO SE APLICAM.** A deteccao PAA esta desenhada para linguagem especifica do PT2030. Um produto bancario ou fundo VC nunca dispara esses marcadores, mas se por acaso um texto tivesse uma coincidencia linguistica, nao queremos bloquear.
+### Fluxo B - Regime "catálogo" (items de queue-catálogo.json)
+- Pode não ter deadline, regulamento, nem código formal. Bancos/VC/premios vendem produtos/fundos continuamente.
+- **Testes PAA NAO SE APLICAM.** A deteccao PAA esta desenhada para linguagem específica do PT2030. Um produto bancario ou fundo VC nunca dispara esses marcadores, mas se por acaso um texto tivesse uma coincidência linguistica, não queremos bloquear.
 - **Teste de tamanho minimo NAO se aplica** com o threshold de 800 palavras. Usar threshold de 200 palavras. Paginas de produtos bancarios e fichas de fundos VC tem tipicamente 300-800 palavras.
-- **Aceitar conteudo de pagina web** (HTML) como regulamento valido. Nao exigir PDF.
-- Fontes tipicas: banco-fomento, cgd-empresas, bpi-empresas, millennium-empresas, novobanco-empresas, santander-empresas, indico-capital, armilar-ventures, faber-ventures, shilling-vc, bynd-vc, portugal-ventures, edp-innovation, premio-bpi-lacaixa, premio-gulbenkian, bgi-accelerator, startup-lisboa, beta-i, f6s, eu-startups, startup-portugal, turismo-portugal
+- **Aceitar conteudo de pagina web** (HTML) como regulamento válido. Não exigir PDF.
+- Fontes típicas: banco-fomento, cgd-empresas, bpi-empresas, millennium-empresas, novobanco-empresas, santander-empresas, indico-capital, armilar-ventures, faber-ventures, shilling-vc, bynd-vc, portugal-ventures, edp-innovation, premio-bpi-lacaixa, premio-gulbenkian, bgi-accelerator, startup-lisboa, beta-i, f6s, eu-startups, startup-portugal, turismo-portugal
 
 **Determinacao do regime para um item:**
-- Se `_queue_origin == "catalogo"`: regime = "catalogo"
+- Se `_queue_origin == "catálogo"`: regime = "catálogo"
 - Se `_queue_origin == "aviso"`: regime = "aviso"
 - Nunca derivar por outras vias. A fila de origem e autoritativa.
 
@@ -84,7 +84,7 @@ Priorizar por `priority_score` descendente, tratando ambas as filas como pool un
 
 ## PASSO 1.5: Verificar se e Plano Anual (APENAS Fluxo A - regime "aviso", APENAS PT2030)
 
-**Este passo NAO se aplica a items de regime "catalogo". Saltar diretamente para Passo 2 se `_queue_origin == "catalogo"`.**
+**Este passo NAO se aplica a items de regime "catálogo". Saltar diretamente para Passo 2 se `_queue_origin == "catálogo"`.**
 
 Para items de regime "aviso" com `source_id` que contenha "2030" ou "pessoas" E que tenham `regulation_url`:
 
@@ -96,7 +96,7 @@ Verificar se a pagina contem QUALQUER um destes textos (case-insensitive):
 - "aviso que ira ser lancado" / "aviso que irá ser lançado"
 - "plano anual de avisos"
 
-**Se qualquer um destes textos for encontrado:** MOVER item para `queue-plano-anual.json` (ver PASSO 3.5). Nao descarregar. Nao contar como falha nem como sucesso.
+**Se qualquer um destes textos for encontrado:** MOVER item para `queue-plano-anual.json` (ver PASSO 3.5). Não descarregar. Não contar como falha nem como sucesso.
 
 **Se nenhum destes textos for encontrado:** continuar para Passo 2.
 
@@ -104,22 +104,22 @@ Verificar se a pagina contem QUALQUER um destes textos (case-insensitive):
 
 ## PASSO 1.6: Fallback via WebSearch para items com 3+ falhas
 
-Items com `fail_count >= 3` ja falharam cascata normal. Antes de os marcar como `abandoned`, tentar **recuperacao de slug/URL via WebSearch**.
+Items com `fail_count >= 3` já falharam cascata normal. Antes de os marcar como `abandoned`, tentar **recuperacao de slug/URL via WebSearch**.
 
-Muitos 404s sao causados por mudancas no slug da URL (ex: "adaptacao-as-alteracoes-climaticas-2-aviso" -> "adaptacao-as-alteracoes-climaticas-2o-aviso"). Este passo recupera esses casos.
+Muitos 404s são causados por mudancas no slug da URL (ex: "adaptação-as-alteracoes-climaticas-2-aviso" -> "adaptação-as-alteracoes-climaticas-2o-aviso"). Este passo recupera esses casos.
 
-**Logica:**
+**Lógica:**
 
 1. Query: `"[aviso_codigo]" "[nome do item]" site:[dominio da fonte]`
-2. Se encontrar URL valido diferente do `regulation_url` atual:
+2. Se encontrar URL válido diferente do `regulation_url` atual:
    - Atualizar `regulation_url` no item
    - Resetar `fail_count` para 0
    - Tentar novamente a cascata normal (Passo 2)
-3. Se nao encontrar nada de novo:
-   - Marcar `status: "abandoned"`, `download_error: "URL inacessivel apos 3+ tentativas e WebSearch fallback"`
-   - **Manter o item no queue.json** (nao apagar). O monitor podera re-verificar trimestralmente.
+3. Se não encontrar nada de novo:
+   - Marcar `status: "abandoned"`, `download_error: "URL inacessivel após 3+ tentativas e WebSearch fallback"`
+   - **Manter o item no queue.json** (não apagar). O monitor podera re-verificar trimestralmente.
 
-**Items "abandoned" sao ignorados pelo downloader em runs futuras** (filtro no Passo 1). Isto evita loops infinitos em items mortos.
+**Items "abandoned" são ignorados pelo downloader em runs futuras** (filtro no Passo 1). Isto evita loops infinitos em items mortos.
 
 ---
 
@@ -146,21 +146,21 @@ Consultar `access_method` da fonte em `sources-scan.json`:
 - `"chrome"`: usar Chrome MCP (navigate + get_page_text)
 - `"websearch"`: usar WebSearch
 
-Prompt para WebFetch: "Extrai toda a informacao sobre este aviso/instrumento de financiamento: nome, codigo, dotacao, taxa de cofinanciamento, elegibilidade, despesas elegiveis, prazos, criterios de selecao, programa, fundo."
+Prompt para WebFetch: "Extrai toda a informação sobre este aviso/instrumento de financiamento: nome, código, dotacao, taxa de cofinanciamento, elegibilidade, despesas elegíveis, prazos, criterios de seleção, programa, fundo."
 
 Guardar resultado em `regulamentos/[source_id]/[id].txt`.
 
-**Nota para items PT2030:** Portais regionais sao server-rendered (WebFetch funciona). Central (portugal2030.pt) e JS-rendered (WebFetch so retorna CSS/JS).
+**Nota para items PT2030:** Portais regionais são server-rendered (WebFetch funciona). Central (portugal2030.pt) e JS-rendered (WebFetch so retorna CSS/JS).
 
 **Se WebFetch retornar < 300 palavras de conteudo real:** tratar como falha e continuar para 2b-pdf.
 
 #### 2b-pdf: PDF via WordPress media API (para portais PT2030)
 
-Se o item tem `wordpress_id` E regulamento ainda nao obtido:
+Se o item tem `wordpress_id` E regulamento ainda não obtido:
 
 1. `GET https://[portal-base]/wp-json/wp/v2/aviso-2024/[wordpress_id]` e extrair `acf.pdf`
 2. Se `acf.pdf` for null/0: sem PDF. Continuar para 2c.
-3. Se ID numerico valido: `GET https://[portal-base]/wp-json/wp/v2/media/[acf.pdf]`, extrair `source_url`
+3. Se ID numérico válido: `GET https://[portal-base]/wp-json/wp/v2/media/[acf.pdf]`, extrair `source_url`
 4. Descarregar e extrair:
    ```bash
    curl -sL "[source_url]" -o "$REPO/regulamentos/[source_id]/[id].pdf"
@@ -174,14 +174,14 @@ Se o item tem `wordpress_id` E regulamento ainda nao obtido:
    → Apagar .txt e .pdf. MOVER item para `queue-plano-anual.json` (ver PASSO 3.5). PARAR item.
 
    **TESTE B - Conteudo insuficiente (BLOQUEANTE):**
-   Se < 800 palavras E nao contem "despesas elegiveis" E nao contem "criterios de selecao"
+   Se < 800 palavras E não contem "despesas elegíveis" E não contem "criterios de seleção"
    → Apagar .txt e .pdf. Incrementar `fail_count`. Marcar `status: "pending"`, `download_error: "Resumo sem regulamento completo"`. PARAR item.
 
    **Se passou ambos:** continuar para Passo 2.5.
 
 #### 2b-horizon: API JSON para items Horizonte Europa / SEDIA
 
-Se `source_id == "eu-funding-tenders"` E regulamento nao obtido:
+Se `source_id == "eu-funding-tenders"` E regulamento não obtido:
 
 ```
 WebFetch: https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/[aviso_codigo_lowercase].json
@@ -214,11 +214,11 @@ Guardar o melhor conteudo em `regulamentos/[source_id]/[id].txt`.
 
 ---
 
-### Fluxo B (regime "catalogo") - cascata simplificada
+### Fluxo B (regime "catálogo") - cascata simplificada
 
-Para cada item de regime "catalogo", seguir esta cascata:
+Para cada item de regime "catálogo", seguir esta cascata:
 
-#### 2a-cat. Se `pdf_url` existe (raro em catalogo, mas possivel):
+#### 2a-cat. Se `pdf_url` existe (raro em catálogo, mas possível):
 
 ```bash
 mkdir -p "$REPO/regulamentos/[source_id]/"
@@ -226,14 +226,14 @@ curl -sL "[pdf_url]" -o "$REPO/regulamentos/[source_id]/[id].pdf"
 pdftotext -enc UTF-8 "$REPO/regulamentos/[source_id]/[id].pdf" "$REPO/regulamentos/[source_id]/[id].txt"
 ```
 
-#### 2b-cat. Se `regulation_url` existe (caso normal para catalogo):
+#### 2b-cat. Se `regulation_url` existe (caso normal para catálogo):
 
 Usar `access_method` da fonte:
 - `"webfetch"`: WebFetch no regulation_url
 - `"chrome"`: Chrome MCP (navigate + get_page_text)
 - `"websearch"`: WebSearch
 
-Prompt para WebFetch (adaptado a catalogo): "Extrai toda a informacao sobre este produto de financiamento, fundo de investimento, premio ou programa: nome oficial, descricao, montantes/ticket, prazos de candidatura (se existirem), elegibilidade/perfil de empresas-alvo, setores, fases/estagios, contactos. Se nao existir deadline ou dotacao, registar que e candidatura continua ou produto permanente."
+Prompt para WebFetch (adaptado a catálogo): "Extrai toda a informação sobre este produto de financiamento, fundo de investimento, premio ou programa: nome oficial, descrição, montantes/ticket, prazos de candidatura (se existirem), elegibilidade/perfil de empresas-alvo, setores, fases/estagios, contactos. Se não existir deadline ou dotacao, registar que e candidatura continua ou produto permanente."
 
 Guardar em `regulamentos/[source_id]/[id].txt`.
 
@@ -252,7 +252,7 @@ Guardar melhor resultado em `regulamentos/[source_id]/[id].txt`.
 
 ### 2.5.A - Fluxo A (regime "aviso") - VALIDACAO RIGIDA PAA
 
-**Obrigatoria para TODOS os items de regime "aviso", independentemente do metodo de download. Nunca saltar.**
+**Obrigatória para TODOS os items de regime "aviso", independentemente do metodo de download. Nunca saltar.**
 
 Ler `.txt` obtido.
 
@@ -267,31 +267,31 @@ Se contem (case-insensitive) QUALQUER um destes:
 
 → **Apagar .txt e .pdf. MOVER item para `queue-plano-anual.json` (ver PASSO 3.5). NAO ir para Passo 3. PARAR item.**
 
-Este teste captura casos em que o downloader descarregou um "Resumo de Aviso do Plano Anual" em vez de aviso publicado. Sao documentos de previsao, nao regulamentos validos.
+Este teste captura casos em que o downloader descarregou um "Resumo de Aviso do Plano Anual" em vez de aviso publicado. São documentos de previsao, não regulamentos válidos.
 
 **Se passou Teste A:** continuar para Passo 3.
 
-### 2.5.B - Fluxo B (regime "catalogo") - VALIDACAO LAX
+### 2.5.B - Fluxo B (regime "catálogo") - VALIDACAO LAX
 
-**Os testes PAA do 2.5.A NAO SE APLICAM aqui. A linguagem PAA e especifica do PT2030 e nao aparece em produtos bancarios, fundos VC ou premios. Nunca correr Teste A em catalogo.**
+**Os testes PAA do 2.5.A NAO SE APLICAM aqui. A linguagem PAA e específica do PT2030 e não aparece em produtos bancarios, fundos VC ou premios. Nunca correr Teste A em catálogo.**
 
 Ler `.txt` obtido.
 
-**TESTE C - Conteudo minimo para catalogo (NAO BLOQUEANTE, apenas warn):**
-- Se tem >= 200 palavras: valido, marcar `status: "ready"`, prosseguir para Passo 3.
+**TESTE C - Conteudo minimo para catálogo (NAO BLOQUEANTE, apenas warn):**
+- Se tem >= 200 palavras: válido, marcar `status: "ready"`, prosseguir para Passo 3.
 - Se tem < 200 palavras mas > 50: marcar `status: "ready"` com `download_note: "Conteudo breve - o writer deve complementar com WebSearch"`. Continuar para Passo 3.
-- Se tem < 50 palavras ou ficheiro vazio: marcar `status: "pending"`, `download_error: "Conteudo insuficiente"`, tentar de novo em execucao futura.
+- Se tem < 50 palavras ou ficheiro vazio: marcar `status: "pending"`, `download_error: "Conteudo insuficiente"`, tentar de novo em execução futura.
 
 **TESTE D - Link rot (NAO BLOQUEANTE):**
-Se o curl ou WebFetch devolveu 404/403/500: marcar `status: "pending"`, `download_error: "HTTP [codigo] - URL pode ter mudado"`. O monitor marcara como needs_review.
+Se o curl ou WebFetch devolveu 404/403/500: marcar `status: "pending"`, `download_error: "HTTP [código] - URL pode ter mudado"`. O monitor marcara como needs_review.
 
-**Nao e falha do downloader se um produto bancario tem pouco texto.** Muitos produtos bancarios sao descritos em 300-500 palavras. Isto e aceitavel em catalogo.
+**Não e falha do downloader se um produto bancario tem pouco texto.** Muitos produtos bancarios são descritos em 300-500 palavras. Isto e aceitavel em catálogo.
 
 ---
 
 ## PASSO 3: Atualizar queue (fila correcta)
 
-Apos validacao bem-sucedida, atualizar o item:
+Após validacao bem-sucedida, atualizar o item:
 
 ```json
 {
@@ -301,7 +301,7 @@ Apos validacao bem-sucedida, atualizar o item:
 }
 ```
 
-**IMPORTANTE:** se o item veio de `queue.json` (regime aviso), actualizar em `queue.json`. Se veio de `queue-catalogo.json`, actualizar em `queue-catalogo.json`. Nunca mover items entre filas (excepcao: PAAs vao para queue-plano-anual.json via Passo 3.5).
+**IMPORTANTE:** se o item veio de `queue.json` (regime aviso), actualizar em `queue.json`. Se veio de `queue-catálogo.json`, actualizar em `queue-catálogo.json`. Nunca mover items entre filas (excepcao: PAAs vao para queue-plano-anual.json via Passo 3.5).
 
 Se download falhar:
 ```json
@@ -313,7 +313,7 @@ Se download falhar:
 }
 ```
 
-**Se `fail_count` chegar a 3 apos este incremento:** o item fica elegivel para o Passo 1.6 (WebSearch fallback) na proxima run.
+**Se `fail_count` chegar a 3 após este incremento:** o item fica elegível para o Passo 1.6 (WebSearch fallback) na próxima run.
 
 ---
 
@@ -327,14 +327,14 @@ Quando um item e identificado como Plano Anual (Passo 1.5, Teste A em 2b-pdf ou 
    {
      ...(campos originais),
      "status": "plano_anual",
-     "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
+     "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
      "plano_anual_detected_date": "2026-04-17",
      "plano_anual_checks": 1
    }
    ```
-3. **Nao adicionar** ao lookup.json seccao plano_anual (redundante). O campo `by_id` ja garante dedup.
+3. **Não adicionar** ao lookup.json secção plano_anual (redundante). O campo `by_id` já garante dedup.
 
-**Se o item ja existe em queue-plano-anual.json** (pode acontecer se o downloader reprocessa): incrementar `plano_anual_checks`, atualizar `plano_anual_last_check` com a data actual. Nao duplicar.
+**Se o item já existe em queue-plano-anual.json** (pode acontecer se o downloader reprocessa): incrementar `plano_anual_checks`, atualizar `plano_anual_last_check` com a data actual. Não duplicar.
 
 O monitor lera este ficheiro para re-verificar se os PAAs abriram.
 
@@ -343,8 +343,8 @@ O monitor lera este ficheiro para re-verificar se os PAAs abriram.
 ## PASSO 4: Deploy
 
 ```bash
-git -C "$REPO" add registry/queue.json registry/queue-catalogo.json registry/queue-plano-anual.json regulamentos/
-git -C "$REPO" commit -m "downloader: [N] aviso + [N] catalogo ready, [N] PAAs watchlisted, [N] abandoned"
+git -C "$REPO" add registry/queue.json registry/queue-catálogo.json registry/queue-plano-anual.json regulamentos/
+git -C "$REPO" commit -m "downloader: [N] aviso + [N] catálogo ready, [N] PAAs watchlisted, [N] abandoned"
 git -C "$REPO" push origin main
 ```
 
@@ -352,20 +352,20 @@ git -C "$REPO" push origin main
 
 ## REGRAS DE SEGURANCA
 
-1. **Nunca misturar regimes.** Testes PAA SO para regime "aviso". Never apply to catalogo.
-2. **Nunca exceder 10 downloads por execucao** (soma das duas filas).
+1. **Nunca misturar regimes.** Testes PAA SO para regime "aviso". Never apply to catálogo.
+2. **Nunca exceder 10 downloads por execução** (soma das duas filas).
 3. **Nunca modificar artigos HTML ou shards.**
 4. **Sempre guardar em UTF-8.**
 5. **Se curl falhar:** tentar WebFetch como alternativa.
-6. **Se tudo falhar:** marcar download_error e continuar. Nunca parar a execucao.
-7. **Em catalogo, aceitar conteudo breve.** 200+ palavras e suficiente. Um produto bancario pode ter 300 palavras - nao e erro.
+6. **Se tudo falhar:** marcar download_error e continuar. Nunca parar a execução.
+7. **Em catálogo, aceitar conteudo breve.** 200+ palavras e suficiente. Um produto bancario pode ter 300 palavras - não e erro.
 
 ---
 
 ## RESUMO
 
 ```
-1. Ler queue.json (aviso) + queue-catalogo.json (catalogo)
+1. Ler queue.json (aviso) + queue-catálogo.json (catálogo)
 2. Encontrar items pending sem regulation_local (max 10 total, ignorar abandoned, fail_count>=3 vai ao Passo 1.6)
 3. Para cada, determinar regime pela fila de origem:
 
@@ -375,16 +375,16 @@ git -C "$REPO" push origin main
      Teste B (tamanho) no 2b-pdf: incrementar fail_count, status pending
      Se passou: status ready, fail_count=0
 
-   Fluxo B (catalogo): cascata simplificada WebFetch/PDF -> WebSearch
+   Fluxo B (catálogo): cascata simplificada WebFetch/PDF -> WebSearch
      PASSO 2.5.B (LAX): Teste C (minimo 50 palavras), Teste D (link rot)
      NUNCA aplicar testes PAA aqui
      Se conteudo >= 200: ready. Se 50-200: ready com note. Se < 50: pending + fail_count++.
 
    Items com fail_count >= 3: PASSO 1.6 (WebSearch fallback)
      Se encontrar novo URL: update + fail_count=0 + retry
-     Se nao encontrar: status "abandoned"
+     Se não encontrar: status "abandoned"
 
-4. Atualizar queue CORRECTA (aviso, catalogo ou plano-anual)
+4. Atualizar queue CORRECTA (aviso, catálogo ou plano-anual)
 5. git commit + push
-6. Reportar: "Downloader: [N] aviso ready, [N] catalogo ready, [N] PAAs watchlisted, [N] abandoned, [N] falhas."
+6. Reportar: "Downloader: [N] aviso ready, [N] catálogo ready, [N] PAAs watchlisted, [N] abandoned, [N] falhas."
 ```

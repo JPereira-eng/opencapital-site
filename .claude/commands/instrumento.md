@@ -1,67 +1,67 @@
-# Serie 3.1 - Template Editorial de Instrumentos
+﻿# Série 3.1 - Template Editorial de Instrumentos
 
-REGRA CRITICA DE ORTOGRAFIA: Aplicar sempre o Acordo Ortografico de 1990 (AO90) em PT-PT. Usar as grafias atualizadas: acao (nao accao), setor/setorial (nao sector/sectorial), ativo/atividade/atual (nao activo/actividade/actual), objetivo/objeto (nao objectivo/objecto), direto/diretamente (nao directo/directamente), exato/exatamente (nao exacto/exactamente), aspeto (nao aspecto), excecao/exceto (nao exceptao/excepto), rececao (nao recepcao), adocao (nao adopcao), reacao (nao reaccao), corretor (nao correcto/correctamente), eletrico (nao electrico), otimo (nao optimo), detetar (nao detectar), afetar (nao afectar), projeto (nao projecto), arquiteto (nao arquitecto). Manter "facto", "factual", "contacto", "conviccao", "tacto" (PT-PT preserva estas). Nunca gerar artigos com ortografia pre-1990.
+REGRA CRÍTICA DE ORTOGRAFIA: Aplicar sempre o Acordo Ortográfico de 1990 (AO90) em PT-PT. Usar as grafias atualizadas: ação (não acção), setor/setorial (não sector/sectorial), ativo/atividade/atual (não activo/actividade/actual), objetivo/objeto (não objectivo/objecto), direto/diretamente (não directo/directamente), exato/exatamente (não exacto/exactamente), aspeto (não aspecto), exceção/exceto (não exceptao/excepto), receção (não recepcao), adoção (não adopcao), reação (não reaccao), corretor (não correcto/correctamente), eletrico (não electrico), otimo (não optimo), detetar (não detectar), afetar (não afectar), projeto (não projecto), arquiteto (não arquitecto). Manter "facto", "factual", "contacto", "convicção", "tacto" (PT-PT preserva estas). Nunca gerar artigos com ortografia pre-1990.
 
 Template editorial para artigos de instrumentos de financiamento da Open Capital Advisory & Consultancy.
 Este ficheiro define o tom, a estrutura HTML, o CSS e as regras visuais de cada artigo.
 
-A selecao de autor, metadados e logica de catalogo sao definidos no radar-writer.md (que le este ficheiro antes de escrever).
+A seleção de autor, metadados e lógica de catálogo são definidos no radar-writer.md (que le este ficheiro antes de escrever).
 
-REGRA CRITICA: Nunca usar travessao (—) em nenhum texto gerado. Usar virgula, ponto, hifen (-) ou reescrever a frase.
+REGRA CRÍTICA: Nunca usar travessão (—) em nenhum texto gerado. Usar vírgula, ponto, hífen (-) ou reescrever a frase.
 
 ---
 
 ## IDENTIDADE EDITORIAL
 
 - Empresa: Open Capital Advisory & Consultancy
-- Tom: tecnico mas acessivel, rigoroso, orientado para a acao
-- Audiencia: gestores, fundadores, CFOs, decisores que avaliam instrumentos concretos de financiamento
-- Principio central: cada artigo responde a "Este instrumento e para mim? Quanto vale? Como acedo?"
+- Tom: técnico mas acessível, rigoroso, orientado para a ação
+- Audiência: gestores, fundadores, CFOs, decisores que avaliam instrumentos concretos de financiamento
+- Princípio central: cada artigo responde a "Este instrumento e para mim? Quanto vale? Como acedo?"
 
 ---
 
-## LOGICA EDITORIAL DA SERIE 3.1
+## LÓGICA EDITORIAL DA SÉRIE 3.1
 
-Esta serie cria fichas editoriais aprofundadas sobre instrumentos especificos de financiamento, fiscalidade ou investimento.
+Esta série cria fichas editoriais aprofundadas sobre instrumentos específicos de financiamento, fiscalidade ou investimento.
 
-**Raciocinio obrigatorio:**
-o que e o instrumento > quem pode aceder > quanto vale e em que condicoes > como funcionar na pratica > o que a Open Capital recomenda
+**Raciocínio obrigatório:**
+o que e o instrumento > quem pode aceder > quanto vale e em que condições > como funcionar na prática > o que a Open Capital recomenda
 
 **O que este artigo e:**
-- Ficha de referencia: clara, completa, atualizada
-- Orientacao pratica para decisores que avaliam se o instrumento se aplica ao seu caso
-- Analise critica dos pontos fortes, limitacoes e armadilhas comuns
+- Ficha de referência: clara, completa, atualizada
+- Orientação prática para decisores que avaliam se o instrumento se aplica ao seu caso
+- Análise crítica dos pontos fortes, limitações e armadilhas comuns
 
-**O que nao e:**
-- Uma mera transcricao do regulamento oficial
-- Um artigo de opiniao (esse e a Serie 6.2)
-- Uma peca de marketing vaga
+**O que não e:**
+- Uma mera transcrição do regulamento oficial
+- Um artigo de opinião (esse e a Série 6.2)
+- Uma peça de marketing vaga
 
 ---
 
 ## LIBERDADE CRIATIVA DO CORPO DO ARTIGO
 
-Cada instrumento e diferente. O Claude tem liberdade para decidir a estrutura editorial mais adequada ao instrumento especifico.
+Cada instrumento e diferente. O Claude tem liberdade para decidir a estrutura editorial mais adequada ao instrumento específico.
 
-**Building blocks disponiveis (usar os que fazem sentido, na ordem que fizer sentido):**
+**Building blocks disponíveis (usar os que fazem sentido, na ordem que fizer sentido):**
 
-- Seccoes de texto com eyebrow + titulo + paragrafos
+- Seccoes de texto com eyebrow + titulo + parágrafos
 - Listas com bullet diamond dourado
 - Caixas de destaque (highlight-box) com borda gold
 - Grelha de estatisticas (stats-row) em 2, 3 ou 4 colunas
-- Tabelas de comparacao (ex: taxas por escalao, fases de investimento)
-- Exemplos de calculo (ex: "uma empresa com 500K em I&D poupa X")
+- Tabelas de comparação (ex: taxas por escalao, fases de investimento)
+- Exemplos de cálculo (ex: "uma empresa com 500K em I&D poupa X")
 - Diagramas SVG inline simples (timelines, funis, matrizes) em navy/gold, monoline
 - Seccao de perguntas frequentes
 - Seccao "Para que tipo de empresa?"
 - Avisos e alertas (ex: "Prazo a fechar em X", "Novo aviso aberto")
-- Comparacao com instrumentos similares
+- Comparação com instrumentos similares
 
-**Seccao obrigatoria: "Para que serve" (mapeamento das necessidades)**
+**Seccao obrigatória: "Para que serve" (mapeamento das necessidades)**
 
-Todos os artigos devem incluir uma seccao explicita que mapeia o instrumento as 1-3 tags de `necessidades` definidas pelo radar-writer (passo 4g). Esta seccao torna visivel ao leitor a logica do filtro "Necessidade" da biblioteca: porque e que este instrumento aparece quando se filtra por X.
+Todos os artigos devem incluir uma secção explicita que mapeia o instrumento as 1-3 tags de `necessidades` definidas pelo radar-writer (passo 4g). Esta secção torna visivel ao leitor a lógica do filtro "Necessidade" da biblioteca: porque e que este instrumento aparece quando se filtra por X.
 
-**Posicao recomendada:** segunda seccao do corpo, imediatamente apos "O que e [instrumento]". O leitor ja tem o conceito, agora precisa de saber se serve para o seu caso concreto.
+**Posição recomendada:** segunda secção do corpo, imediatamente após "O que e [instrumento]". O leitor já tem o conceito, agora precisa de saber se serve para o seu caso concreto.
 
 **Estrutura padrao:**
 
@@ -69,9 +69,9 @@ Todos os artigos devem incluir uma seccao explicita que mapeia o instrumento as 
 <div class="article-section reveal">
   <div class="section-eyebrow">Para que serve</div>
   <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
-  <p class="section-text">[1 paragrafo a enquadrar a logica: que tipo de necessidade(s) este instrumento cobre, e porque e relevante o cruzamento dessas necessidades neste instrumento especifico]</p>
+  <p class="section-text">[1 parágrafo a enquadrar a lógica: que tipo de necessidade(s) este instrumento cobre, e porque e relevante o cruzamento dessas necessidades neste instrumento específico]</p>
   <ul class="article-list">
-    <li><strong style="color:var(--navy);font-weight:600;">[Necessidade 1, ex: I&amp;D e ciencia]:</strong> [explicacao de 2-3 linhas concreta ao instrumento, nao generica]</li>
+    <li><strong style="color:var(--navy);font-weight:600;">[Necessidade 1, ex: I&amp;D e ciencia]:</strong> [explicacao de 2-3 linhas concreta ao instrumento, não generica]</li>
     <li><strong style="color:var(--navy);font-weight:600;">[Necessidade 2]:</strong> [...]</li>
   </ul>
 </div>
@@ -79,81 +79,81 @@ Todos os artigos devem incluir uma seccao explicita que mapeia o instrumento as 
 
 **Regras:**
 
-1. As necessidades listadas tem de coincidir com o array `necessidades` do `instruments-catalog.json` (definido no passo 4g do radar-writer). Se houver divergencia, e bug, alinhar.
-2. Nao listar 4+ necessidades. Se o instrumento tem mais de 3 tags no JSON, escolher as 3 mais materialmente relevantes e omitir as restantes da prosa.
-3. As explicacoes tem de ser concretas ao instrumento, nao definicoes genericas das tags. Mau: "I&D e ciencia: investigacao e desenvolvimento". Bom: "I&D e ciencia: o SIFIDE II reembolsa via deducao a coleta as despesas com pessoal tecnico afeto a I&D, contratacao de entidades acreditadas pela ANI e equipamentos."
-4. Usar os labels visiveis das tags (ex: "I&D e ciencia", "Capitalizacao e crescimento") em sentence case ou title case, nao os slugs.
+1. As necessidades listadas tem de coincidir com o array `necessidades` do `instruments-catalog.json` (definido no passo 4g do radar-writer). Se houver divergência, e bug, alinhar.
+2. Não listar 4+ necessidades. Se o instrumento tem mais de 3 tags no JSON, escolher as 3 mais materialmente relevantes e omitir as restantes da prosa.
+3. As explicacoes tem de ser concretas ao instrumento, não definições genericas das tags. Mau: "I&D e ciencia: investigação e desenvolvimento". Bom: "I&D e ciencia: o SIFIDE II reembolsa via deducao a coleta as despesas com pessoal técnico afeto a I&D, contratacao de entidades acreditadas pela ANI e equipamentos."
+4. Usar os labels visiveis das tags (ex: "I&D e ciencia", "Capitalizacao e crescimento") em sentence case ou title case, não os slugs.
 
 **PROIBIDO:**
-- Nunca incluir seccoes tipo "Passo a passo", "Guia de processo", "Como candidatar-se passo a passo", "Steps", ou qualquer lista numerada de etapas sequenciais de candidatura. O artigo nao e um manual de instrucoes. E uma ficha editorial analitica.
+- Nunca incluir secções tipo "Passo a passo", "Guia de processo", "Como candidatar-se passo a passo", "Steps", ou qualquer lista numerada de etapas sequenciais de candidatura. O artigo não e um manual de instrucoes. E uma ficha editorial analítica.
 
-**Principios de escolha por tipo de instrumento:**
-- Instrumentos fiscais (SIFIDE, RFAI, DLRR): incluir exemplos de calculo e tabelas de taxas
+**Princípios de escolha por tipo de instrumento:**
+- Instrumentos fiscais (SIFIDE, RFAI, DLRR): incluir exemplos de cálculo e tabelas de taxas
 - Fundos europeus (PT2030, PRR): incluir diagrama de processo ou timeline de candidatura
-- Investimento privado (VC, PE): incluir diagrama de fases e comparacao de perfis
-- Premios e vouchers: incluir calendario visual e criterios de selecao
+- Investimento privado (VC, PE): incluir diagrama de fases e comparação de perfis
+- Premios e vouchers: incluir calendario visual e criterios de seleção
 
-**Elegibilidade geografica e setorial (obrigatorio quando aplicavel):**
+**Elegibilidade geografica e setorial (obrigatório quando aplicavel):**
 
-Sempre que o instrumento tenha restricoes explicitas de:
-- **Localizacao** (regioes NUTS II, territorios de baixa densidade, regioes menos desenvolvidas, areas geograficas elegiveis ou excluidas), ou
-- **CAE de atividade** (codigos CAE elegiveis, setores cobertos ou excluidos),
+Sempre que o instrumento tenha restrições explicitas de:
+- **Localizacao** (regioes NUTS II, territorios de baixa densidade, regioes menos desenvolvidas, áreas geograficas elegíveis ou excluidas), ou
+- **CAE de atividade** (códigos CAE elegíveis, setores cobertos ou excluidos),
 
-o artigo deve explicitar essas restricoes com rigor e profundidade adequados, deixando claro ao leitor empresarial se o instrumento se aplica ao seu caso. Apresentar:
+o artigo deve explicitar essas restrições com rigor e profundidade adequados, deixando claro ao leitor empresarial se o instrumento se aplica ao seu caso. Apresentar:
 
-- Que regioes/NUTS sao elegiveis (e taxas diferenciadas por regiao, se houver)
+- Que regioes/NUTS são elegíveis (e taxas diferenciadas por regiao, se houver)
 - Que CAE ou divisoes CAE estao cobertos, e quais estao explicitamente excluidos
-- Listar a divisao CAE (2 digitos) ou a seccao quando a lista de CAE a 5 digitos for longa; listar codigos completos apenas quando curtos e relevantes
+- Listar a divisao CAE (2 dígitos) ou a secção quando a lista de CAE a 5 dígitos for longa; listar códigos completos apenas quando curtos e relevantes
 - Indicar a fonte normativa (aviso, portaria, regulamento) e respetiva data quando os criterios podem variar entre avisos
 
-Usar os building blocks adequados: `highlight-box` para destacar restricoes criticas, `art-table` para taxas regionais ou listas estruturadas, `article-list` para enumerar setores.
+Usar os building blocks adequados: `highlight-box` para destacar restrições críticas, `art-table` para taxas regionais ou listas estruturadas, `article-list` para enumerar setores.
 
 Adicionalmente, sempre que aplicavel, incluir nos Factos Rapidos da sidebar:
 - `<div class="sidebar-fact-key">Localizacao</div>` com resumo (ex: "Norte, Centro, Alentejo, Algarve, Acores, Madeira" ou "Territorios de baixa densidade")
-- `<div class="sidebar-fact-key">CAE elegiveis</div>` com resumo (ex: "Industria transformadora (C), TIC (J)" ou "Transversal a todos os setores")
+- `<div class="sidebar-fact-key">CAE elegíveis</div>` com resumo (ex: "Industria transformadora (C), TIC (J)" ou "Transversal a todos os setores")
 
-**Quando NAO aplicar:** se o instrumento e transversal (qualquer empresa, qualquer regiao), nao criar seccao artificial. Indicar simplesmente nos Factos Rapidos que e transversal.
+**Quando NAO aplicar:** se o instrumento e transversal (qualquer empresa, qualquer regiao), não criar secção artificial. Indicar simplesmente nos Factos Rapidos que e transversal.
 
-**Nunca inventar codigos CAE nem regioes elegiveis.** Se o regulamento disponivel nao especifica, indicar que os criterios sao definidos no aviso de abertura e nao detalhar.
+**Nunca inventar códigos CAE nem regioes elegíveis.** Se o regulamento disponível não específica, indicar que os criterios são definidos no aviso de abertura e não detalhar.
 
-**Comprimento:** idealmente entre 1500 e 2500 palavras, ajustando a extensao a complexidade do instrumento.
+**Comprimento:** idealmente entre 1500 e 2500 palavras, ajustando a extensão a complexidade do instrumento.
 
-**Regra de fecho para material limitado (aplicavel a instrumentos de regime catalogo - bancos, VC, premios, aceleradores):**
+**Regra de fecho para material limitado (aplicavel a instrumentos de regime catálogo - bancos, VC, premios, aceleradores):**
 
-Se o regulamento/material disponivel no `regulation_local` tem menos de 500 palavras de conteudo util, produzir artigo mais curto (entre 800 e 1200 palavras em vez de 1500-2500).
+Se o regulamento/material disponível no `regulation_local` tem menos de 500 palavras de conteudo útil, produzir artigo mais curto (entre 800 e 1200 palavras em vez de 1500-2500).
 
-**Nunca inventar informacao.** Se nao ha dados sobre taxa de juro, prazo, dotacao, criterios - nao escrever sobre esses pontos. Focar apenas no que e conhecido:
-- O que e o instrumento e o seu proposito estrategico
+**Nunca inventar informação.** Se não ha dados sobre taxa de juro, prazo, dotacao, criterios - não escrever sobre esses pontos. Focar apenas no que e conhecido:
+- O que e o instrumento e o seu proposito estratégico
 - Quem e a entidade que o oferece (banco, fundo, acelerador, promotor)
 - Que tipo de empresa ou projeto se adequa
-- Contexto do instrumento no ecossistema portugues
-- Analise critica da sua relevancia
+- Contexto do instrumento no ecossistema português
+- Análise crítica da sua relevância
 
-**Nunca incluir "Como candidatar", "Passos para acesso", "Guia de candidatura" ou similares.** Esta e a identidade editorial da Open Capital: ficha analitica, nao manual. Mesmo em artigos curtos. Se o leitor quiser candidatar-se, o CTA da sidebar dirige-o para uma reuniao com a equipa.
+**Nunca incluir "Como candidatar", "Passos para acesso", "Guia de candidatura" ou similares.** Esta e a identidade editorial da Open Capital: ficha analítica, não manual. Mesmo em artigos curtos. Se o leitor quiser candidatar-se, o CTA da sidebar dirige-o para uma reuniao com a equipa.
 
 Artigos curtos mantem a mesma qualidade editorial, a mesma estrutura (navbar + hero + back-bar + corpo + sidebar + footer), os mesmos building blocks. So o corpo e mais conciso. A sidebar permanece completa (Factos Rapidos + CTA + Instrumentos Relacionados).
 
-**Layout:** dividir o conteudo em duas colunas, com a coluna da direita (sidebar) mais estreita, contendo ficha resumo e outras informacoes relevantes. A sidebar ja existe no template (Factos Rapidos + CTA + Instrumentos Relacionados).
+**Layout:** dividir o conteudo em duas colunas, com a coluna da direita (sidebar) mais estreita, contendo ficha resumo e outras informações relevantes. A sidebar já existe no template (Factos Rapidos + CTA + Instrumentos Relacionados).
 
 O artigo deve:
-- basear-se na informacao presente nos documentos fornecidos
-- evitar linguagem burocratica ou juridica sempre que possivel
-- privilegiar clareza e utilidade pratica
-- organizar a informacao de forma logica para leitores empresariais
+- basear-se na informação presente nos documentos fornecidos
+- evitar linguagem burocratica ou juridica sempre que possível
+- privilegiar clareza e utilidade prática
+- organizar a informação de forma lógica para leitores empresariais
 - evitar estruturacao artificial ou capitulos demasiado equilibrados em tamanho
 - transparecer naturalidade na escrita com tom formal
 
-**Nunca usar travessao em nenhuma circunstancia.** Usar virgula, ponto ou reescrever a frase.
+**Nunca usar travessão em nenhuma circunstancia.** Usar vírgula, ponto ou reescrever a frase.
 
 **No hero, apenas o badge de categoria pode usar dourado. Titulo, subtitulo, breadcrumb e meta-bar devem ser brancos ou brancos transparentes.**
 
-**Na sidebar, evitar texto dourado exceto para titulos de seccao (labels) e para estados de programa (ex: 'Aberto', 'Ativo'). Valores monetarios e outros dados usam navy.**
+**Na sidebar, evitar texto dourado exceto para titulos de secção (labels) e para estados de programa (ex: 'Aberto', 'Ativo'). Valores monetarios e outros dados usam navy.**
 
 ---
 
 ## REGRAS GLOBAIS DE FECHO
 
-O ultimo paragrafo do corpo do artigo deve ser sempre exatamente (em italico, visualmente distinto do corpo: font-size:15px, color:grey-mid, font-style:italic, margin-top:40px):
+O último parágrafo do corpo do artigo deve ser sempre exatamente (em italico, visualmente distinto do corpo: font-size:15px, color:grey-mid, font-style:italic, margin-top:40px):
 
 "Comentários, correções ou contrapontos são bem-vindos: geral@opencapital.pt"
 
@@ -161,16 +161,16 @@ O ultimo paragrafo do corpo do artigo deve ser sempre exatamente (em italico, vi
 
 ## TEMPLATE HTML
 
-Criar o ficheiro `instrumentos/[slug].html` com a estrutura abaixo. Os metadados (slug, autor, categoria, etc.) sao definidos pelo radar-writer antes de chamar este template.
+Criar o ficheiro `instrumentos/[slug].html` com a estrutura abaixo. Os metadados (slug, autor, categoria, etc.) são definidos pelo radar-writer antes de chamar este template.
 
-**Elementos disponiveis para o corpo do artigo:**
+**Elementos disponíveis para o corpo do artigo:**
 
 ```html
 <!-- Seccao padrao -->
 <div class="article-section reveal">
   <div class="section-eyebrow">Label dourado</div>
-  <h2 class="section-h2">Titulo da seccao</h2>
-  <p class="section-text">Paragrafo de texto...</p>
+  <h2 class="section-h2">Titulo da secção</h2>
+  <p class="section-text">Parágrafo de texto...</p>
 </div>
 
 <!-- Lista com diamond dourado -->
@@ -198,7 +198,7 @@ Criar o ficheiro `instrumentos/[slug].html` com a estrutura abaixo. Os metadados
     <div class="step-num">01</div>
     <div class="step-content">
       <div class="step-title">Titulo do passo</div>
-      <div class="step-desc">Descricao do passo...</div>
+      <div class="step-desc">Descrição do passo...</div>
     </div>
   </div>
 </div>
@@ -215,16 +215,16 @@ Criar o ficheiro `instrumentos/[slug].html` com a estrutura abaixo. Os metadados
 <div class="art-divider"></div>
 ```
 
-**Seccao Perspetiva Open Capital - obrigatoria antes do fecho:**
+**Seccao Perspetiva Open Capital - obrigatória antes do fecho:**
 ```html
 <div class="article-section reveal">
   <div class="section-eyebrow">Perspetiva Open Capital</div>
   <h2 class="section-h2">O que recomendamos</h2>
-  <p class="section-text">[Analise critica, alertas praticos, quando faz sentido candidatar, erros comuns a evitar]</p>
+  <p class="section-text">[Análise crítica, alertas práticos, quando faz sentido candidatar, erros comuns a evitar]</p>
 </div>
 ```
 
-**Paragrafo de fecho - obrigatorio como ultimo elemento:**
+**Parágrafo de fecho - obrigatório como último elemento:**
 ```html
 <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
 ```
@@ -584,13 +584,13 @@ Criar o ficheiro `instrumentos/[slug].html` com a estrutura abaixo. Os metadados
 NAO usar `val-gold` para valores monetarios, dotacoes ou taxas. Valores monetarios e outros dados usam `sidebar-fact-val` simples (cor navy).
 
 **Para estados de programa na sidebar, usar as classes de cor consistentes com os cards da Biblioteca:**
-- Estado aberto: `<div class="sidebar-fact-val val-open">Aberto ate DD/MM/AAAA</div>` (verde #2E7D52)
+- Estado aberto: `<div class="sidebar-fact-val val-open">Aberto até DD/MM/AAAA</div>` (verde #2E7D52)
 - Estado fechado: `<div class="sidebar-fact-val val-closed">Fechado</div>` (vermelho #A63228)
 - Candidatura continua: `<div class="sidebar-fact-val val-cont">Candidatura Contínua</div>` (verde #2E7D52), para instrumentos sem prazo fixo
-- Nunca usar `val-gold` para estados. O dourado e reservado para labels de seccao.
+- Nunca usar `val-gold` para estados. O dourado e reservado para labels de secção.
 
 **Para estados no hero meta-bar, usar as mesmas classes:**
-- `<span class="meta-value status-open">Aberto ate DD/MM/AAAA</span>` (verde #2E7D52)
+- `<span class="meta-value status-open">Aberto até DD/MM/AAAA</span>` (verde #2E7D52)
 - `<span class="meta-value status-closed">Fechado</span>` (vermelho #A63228)
 - `<span class="meta-value status-cont">Candidatura Contínua</span>` (verde #2E7D52), para instrumentos sem prazo fixo (EIC, candidatura permanente, etc.)
 - Nunca usar `gold` class para o estado no hero.
