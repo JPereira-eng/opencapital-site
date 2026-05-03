@@ -111,7 +111,9 @@
       "priority_score": 35,
       "status": "plano_anual",
       "notes": "FA0168/2025. Alentejo 2030. FTJ. Concurso. Publicos e Privados. PREVISTO (abre 25/05/2026).",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
+      "plano_anual_last_check": "2026-05-03",
+      "plano_anual_checks": 1
     },
     {
       "id": "respostas-locais-desafios-territoriais-iti-agua-alentejo",
@@ -128,7 +130,9 @@
       "priority_score": 35,
       "status": "plano_anual",
       "notes": "FA0174/2025. Alentejo 2030. FEDER. Concurso. Publicos e Privados. Estado: aberto.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
+      "plano_anual_last_check": "2026-05-03",
+      "plano_anual_checks": 1
     },
     {
       "id": "capacitacao-atores-redes-iti-agua-alentejo",
@@ -145,7 +149,9 @@
       "priority_score": 35,
       "status": "plano_anual",
       "notes": "FA0175/2025. Alentejo 2030. FEDER. Concurso. Publicos e Privados. Estado: aberto.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
+      "plano_anual_last_check": "2026-05-03",
+      "plano_anual_checks": 1
     },
     {
       "id": "qualificacao-espaco-publico-parcerias-coesao-alentejo",
@@ -251,7 +257,9 @@
       "priority_score": 35,
       "status": "plano_anual",
       "notes": "FA0250/2025. Alentejo 2030. FSE+. Concurso. Beneficiarios publicos. PREVISTO (abre 17/09/2026).",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
+      "plano_anual_last_check": "2026-05-03",
+      "plano_anual_checks": 1
     },
     {
       "id": "mobilidade-sustentavel-iti-alentejo",
@@ -1164,7 +1172,9 @@
       "priority_score": 45,
       "status": "plano_anual",
       "notes": "FA0286/2025. SUSTENTAVEL2030. FC.",
-      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro (resumo de aviso do plano anual de avisos)"
+      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro (resumo de aviso do plano anual de avisos)",
+      "plano_anual_last_check": "2026-05-03",
+      "plano_anual_checks": 1
     },
     {
       "id": "gestao-recursos-hidricos-acores2030",
@@ -1180,7 +1190,9 @@
       "priority_score": 35,
       "status": "plano_anual",
       "notes": "FA0583/2023. Gestao de Recursos hidricos. 6.5M EUR FEDER. ACORES2030.",
-      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro (resumo de aviso do plano anual de avisos)"
+      "download_error": "Plano Anual - conteudo PAA detectado no ficheiro (resumo de aviso do plano anual de avisos)",
+      "plano_anual_last_check": "2026-05-03",
+      "plano_anual_checks": 1
     },
     {
       "id": "formacao-da-administracao-publica-regional-e-local-cimbal",
@@ -2236,7 +2248,8 @@
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "last_fail_date": null,
       "plano_anual_detected_date": "2026-04-24",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-03"
     },
     {
       "id": "modelo-apoio-vida-independente-mavi",
@@ -2258,7 +2271,8 @@
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "last_fail_date": null,
       "plano_anual_detected_date": "2026-04-24",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-03"
     },
     {
       "id": "bolsas-ensino-superior-alunos-carenciados",
@@ -2280,7 +2294,8 @@
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "last_fail_date": null,
       "plano_anual_detected_date": "2026-04-24",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-03"
     },
     {
       "id": "acoes-mitigacao-escassez-hidrica-algarve",
@@ -2438,7 +2453,8 @@
       "fail_count": 0,
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-04-29",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-03"
     }
   ]
 }
