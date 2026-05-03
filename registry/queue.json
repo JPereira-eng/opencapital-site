@@ -244,8 +244,8 @@
       "priority_score": 115,
       "status": "pending",
       "notes": "callId: 185510; callTitle: ; framework: 111111; toa: ",
-      "fail_count": 2,
-      "download_error": "Prospect portal redireciona (303); secondary sources com conteudo insuficiente em 2026-05-03",
+      "fail_count": 3,
+      "download_error": "EuropeAid PROSPECT (webgate) inacessivel via WebFetch (303/JS) e API JSON F&T 404. WebSearch sem PDF publico. 2026-05-03",
       "last_fail_date": "2026-05-03"
     },
     {
@@ -279,8 +279,8 @@
       "priority_score": 115,
       "status": "pending",
       "notes": "callId: 186382; callTitle: ; framework: 111111; toa: ",
-      "fail_count": 2,
-      "download_error": "Prospect portal redireciona (303); secondary sources com conteudo insuficiente em 2026-05-03",
+      "fail_count": 3,
+      "download_error": "EuropeAid PROSPECT (webgate) inacessivel via WebFetch (303/JS) e API JSON F&T 404. WebSearch sem PDF publico. 2026-05-03",
       "last_fail_date": "2026-05-03"
     },
     {
@@ -394,8 +394,8 @@
       "priority_score": 115,
       "status": "pending",
       "notes": "callId: 186109; callTitle: ; framework: 111111; toa: ",
-      "fail_count": 2,
-      "download_error": "Prospect portal redireciona (303); secondary sources com conteudo insuficiente em 2026-05-03",
+      "fail_count": 3,
+      "download_error": "EuropeAid PROSPECT (webgate) inacessivel via WebFetch (303/JS) e API JSON F&T 404. WebSearch sem PDF publico. 2026-05-03",
       "last_fail_date": "2026-05-03"
     },
     {
@@ -413,8 +413,8 @@
       "priority_score": 115,
       "status": "pending",
       "notes": "callId: 185516; callTitle: ; framework: 111111; toa: ",
-      "fail_count": 2,
-      "download_error": "Prospect portal redireciona (303); secondary sources com conteudo insuficiente em 2026-05-03",
+      "fail_count": 3,
+      "download_error": "EuropeAid PROSPECT (webgate) inacessivel via WebFetch (303/JS) e API JSON F&T 404. WebSearch sem PDF publico. 2026-05-03",
       "last_fail_date": "2026-05-03"
     },
     {
@@ -479,7 +479,10 @@
       "regulation_local": null,
       "priority_score": 115,
       "status": "pending",
-      "notes": "callId: 185831; callTitle: ; framework: 111111; toa: "
+      "notes": "callId: 185831; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 1,
+      "last_fail_date": "2026-05-03",
+      "download_error": "EuropeAid PROSPECT (webgate) inacessivel via WebFetch (303/JS) e API JSON F&T 404. WebSearch sem PDF publico. 2026-05-03"
     },
     {
       "id": "europeaid-185446-dd-act-gt",
@@ -496,8 +499,8 @@
       "priority_score": 115,
       "status": "pending",
       "notes": "callId: 185446; callTitle: ; framework: 111111; toa: ",
-      "fail_count": 1,
-      "download_error": "Prospect portal redireciona (303); secondary sources com conteudo insuficiente em 2026-05-03",
+      "fail_count": 2,
+      "download_error": "EuropeAid PROSPECT (webgate) inacessivel via WebFetch (303/JS) e API JSON F&T 404. WebSearch sem PDF publico. 2026-05-03",
       "last_fail_date": "2026-05-03"
     },
     {
@@ -514,7 +517,10 @@
       "regulation_local": null,
       "priority_score": 115,
       "status": "pending",
-      "notes": "callId: 186089; callTitle: ; framework: 111111; toa: "
+      "notes": "callId: 186089; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 1,
+      "last_fail_date": "2026-05-03",
+      "download_error": "EuropeAid PROSPECT (webgate) inacessivel via WebFetch (303/JS) e API JSON F&T 404. WebSearch sem PDF publico. 2026-05-03"
     },
     {
       "id": "europeaid-186114-dd-act-kz",
@@ -530,7 +536,10 @@
       "regulation_local": null,
       "priority_score": 115,
       "status": "pending",
-      "notes": "callId: 186114; callTitle: ; framework: 111111; toa: "
+      "notes": "callId: 186114; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 1,
+      "last_fail_date": "2026-05-03",
+      "download_error": "EuropeAid PROSPECT (webgate) inacessivel via WebFetch (303/JS) e API JSON F&T 404. WebSearch sem PDF publico. 2026-05-03"
     },
     {
       "id": "europeaid-186559-dd-act-ps",
@@ -578,7 +587,10 @@
       "regulation_local": null,
       "priority_score": 115,
       "status": "pending",
-      "notes": "callId: 186111; callTitle: ; framework: 111111; toa: "
+      "notes": "callId: 186111; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 1,
+      "last_fail_date": "2026-05-03",
+      "download_error": "EuropeAid PROSPECT (webgate) inacessivel via WebFetch (303/JS) e API JSON F&T 404. WebSearch sem PDF publico. 2026-05-03"
     },
     {
       "id": "europeaid-186235-dd-act-ye",
@@ -1026,10 +1038,11 @@
       "budget": null,
       "regulation_url": "https://www.eit.europa.eu/our-activities/opportunities/eit-edtech-conference-open-call",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eit/eit-edtech-conference-open-call.txt",
       "priority_score": 55,
-      "status": "pending",
-      "notes": "EIT Urban Mobility | webfetch | EdTech Conference call"
+      "status": "ready",
+      "notes": "EIT Urban Mobility | webfetch | EdTech Conference call",
+      "fail_count": 0
     },
     {
       "id": "life-2026-strat-env-sip-two-stage",
