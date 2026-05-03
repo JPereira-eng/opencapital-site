@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCPM 2026 KAPP-EX: Exercicios de Larga Escala em Protecao Civil: Open Capital</title>
+  <meta name="description" content="Financiamento do Mecanismo de Protecao Civil da Uniao para conceber, planear e executar um exercicio multinacional de larga escala que ative o Mecanismo e teste capacidades reais de prevencao, preparacao e resposta a catastrofes.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-value.status-cont{color:#2E7D52;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-gold{color:var(--gold);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-fact-val.val-cont{color:#2E7D52;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../biblioteca.html" class="active">Biblioteca</a></li>
+    <li><a href="../conhecimento.html">Conhecimento</a></li>
+    <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros.html">Parceiros</a>
+        <a href="../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../biblioteca.html">Biblioteca</a>
+  <a href="../conhecimento.html">Conhecimento</a>
+  <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos.html">Sobre Nós</a>
+  <a href="../parceiros.html">Parceiros</a>
+  <a href="../carreiras.html">Carreiras</a>
+  <a href="https://calendly.com/opencapital" class="nav-mobile-cta">Contactar</a>
+</div>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../index.html">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../biblioteca.html">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">UCPM 2026 KAPP-EX</span>
+    </nav>
+    <p class="hero-cat">Financiamento Publico</p>
+    <h1 class="hero-title">UCPM 2026 KAPP-EX: Exercicios de Larga Escala em Protecao Civil</h1>
+    <p class="hero-tagline">Financiamento europeu para conceber, planear e executar um exercicio multinacional de larga escala que ative o Mecanismo de Protecao Civil da Uniao e teste a resposta real a catastrofes complexas.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Programa</span>
+        <span class="meta-value gold">Mecanismo Protecao Civil UE (UCPM)</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Tipo de Acao</span>
+        <span class="meta-value">UCPM Project Grant</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Beneficiarios</span>
+        <span class="meta-value">Autoridades de protecao civil</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-open">Aberto ate 19/05/2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../biblioteca.html" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Visao Geral</div>
+      <h2 class="section-h2">Treinar a resposta europeia em condicoes de catastrofe real</h2>
+      <p class="section-text">O topico UCPM-2026-KAPP-EX (Full Scale Exercises) financia projetos cujo evento central e um exercicio de larga escala (full-scale exercise) multinacional, capaz de testar em condicoes reais a ativacao do Mecanismo de Protecao Civil da Uniao (UCPM), a mobilizacao de equipas e meios da European Civil Protection Pool (ECPP) e a coordenacao operacional entre Estados Membros e o Emergency Response Coordination Centre (ERCC).</p>
+      <p class="section-text">A logica da Comissao e clara, nenhum Estado-Membro consegue treinar sozinho a resposta a uma catastrofe transfronteirica complexa. As licoes sobre incendios em Portugal e Grecia, inundacoes na Eslovenia ou na Alemanha e terramotos no Mediterraneo mostram que o sistema europeu de protecao civil precisa de praticar a sua propria operacao em ambientes simulados realistas. Este aviso paga essa pratica.</p>
+      <p class="section-text">O instrumento e relevante para Portugal nao apenas pelo perfil habitual de risco (incendios florestais, sismos, eventos meteorologicos extremos, riscos costeiros) mas tambem porque a Autoridade Nacional de Emergencia e Protecao Civil (ANEPC) e municipios em areas criticas podem coordenar consorcios europeus a partir do nosso territorio.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Objeto</div>
+      <h2 class="section-h2">O que tem de incluir um projeto KAPP-EX</h2>
+      <p class="section-text">O projeto financiado tem de cobrir o ciclo completo de um exercicio full-scale, do desenho a avaliacao final. Os beneficiarios concebem, planeiam, executam e auto-avaliam um unico exercicio multinacional, com o seguinte conjunto minimo de elementos obrigatorios:</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Cenario realista e desafiante:</strong> baseado em avaliacoes de risco nacionais ou setoriais, ligado a ameacas como incendios florestais, inundacoes, sismos, tsunamis, riscos industriais, disrupcao de infraestruturas criticas, poluicao maritima, riscos epidemicos ou CBRN.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Estruturas de comando e controlo:</strong> para o projeto e para a conducao do exercicio, com cadeia de decisao operacional clara.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Ativacao do Mecanismo:</strong> simulacao real do pedido de assistencia internacional via UCPM.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Mobilizacao de uma EU Civil Protection Team:</strong> com observadores e papeis operacionais.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Mobilizacao de meios e equipas da ECPP:</strong> recursos pre-comprometidos pelos Estados-Membros para resposta europeia conjunta.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Uso do CECIS:</strong> Common Emergency Communication and Information System, sistema de comunicacao operacional do ERCC.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">EU Host Nation Support:</strong> aplicacao das guidelines europeias sobre acolhimento de equipas estrangeiras em territorio nacional.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Avaliacao, licoes aprendidas e visibilidade UE:</strong> componentes obrigatorias de fecho do projeto.</li>
+      </ul>
+      <div class="highlight-box">
+        <div class="highlight-box-title">Cross-cutting issues</div>
+        <div class="highlight-box-text">A Comissao incentiva a integracao no exercicio de questoes transversais como genero, idade, pessoas com deficiencia, direitos humanos, sustentabilidade ambiental, praticas economicas verdes, digitalizacao, resiliencia das infraestruturas e protecao do patrimonio cultural. Nao sao requisitos formais isolados, mas reforcam a competitividade da proposta.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Beneficiarios</div>
+      <h2 class="section-h2">Quem se pode candidatar</h2>
+      <p class="section-text">O perfil tipico de candidato a KAPP-EX e o de uma autoridade de protecao civil nacional ou regional, frequentemente em consorcio com homologos de outros Estados Membros e com participacao de municipios em areas de risco identificado. Em Portugal, isto significa em primeiro lugar a ANEPC, mas tambem comandos distritais, servicos municipais de protecao civil em territorios costeiros ou florestais e entidades de gestao de catastrofes naturais.</p>
+      <p class="section-text">Universidades e centros de investigacao em risco, ciencias da seguranca e gestao de emergencias podem entrar como parceiros tecnicos com responsabilidade sobre desenho de cenario, avaliacao do exercicio e produtos de licoes aprendidas. Empresas privadas com tecnologia operacional em telecomunicacoes de emergencia, drones, sistemas C2 ou simulacao podem participar como fornecedores tecnicos relevantes para a parte simulada.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Posicionamento na Chamada</div>
+      <h2 class="section-h2">EX vs PVPP: dois caminhos distintos</h2>
+      <p class="section-text">A chamada KAPP 2026 do programa UCPM separa-se em duas linhas que respondem a logicas diferentes e que nao competem entre si. E util conhecer as duas para escolher onde a candidatura tem mais sentido:</p>
+      <table class="art-table">
+        <thead><tr><th>Linha</th><th>Foco</th><th>Output central</th></tr></thead>
+        <tbody>
+          <tr><td><strong>UCPM-2026-KAPP-EX</strong></td><td>Exercicios full-scale (este aviso)</td><td>Exercicio multinacional executado</td></tr>
+          <tr><td><strong>UCPM-2026-KAPP-PVPP</strong></td><td>Prevencao e preparacao (knowledge for action)</td><td>Conhecimento, ferramentas e capacidades institucionais</td></tr>
+        </tbody>
+      </table>
+      <p class="section-text">A linha EX e operacional, paga-se por um exercicio efetivamente realizado. A linha PVPP financia projetos de conhecimento, sensibilizacao publica, alerta precoce e capacitacao institucional, sem evento operacional unico como produto central.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Calendario</div>
+      <h2 class="section-h2">Datas-chave</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Abertura indicativa:</strong> 3 de fevereiro de 2026</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Deadline de submissao:</strong> 19 de maio de 2026</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Avaliacao e contratacao:</strong> calendario indicativo na seccao 4 do call document</li>
+      </ul>
+      <p class="section-text">A janela e curta para construir um consorcio multinacional de raiz, mas suficiente para uma autoridade portuguesa que ja participe em redes europeias de protecao civil e que tenha um cenario de exercicio em discussao com homologos.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para Que Tipo de Entidade</div>
+      <h2 class="section-h2">Quando faz sentido candidatar</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Autoridades nacionais de protecao civil:</strong> com mandato para coordenar exercicios cross-border e contactos operacionais ja estabelecidos com homologos europeus.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Comandos regionais e municipios em zonas de risco identificado:</strong> incendios, inundacoes costeiras, riscos sismicos, instalacoes industriais Seveso.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Universidades e centros de investigacao em ciencias da seguranca:</strong> como parceiros tecnicos para desenho de cenario e avaliacao.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Empresas de tecnologia operacional para emergencias:</strong> sistemas C2, comunicacoes de emergencia, sensorizacao, drones, plataformas de coordenacao, em papel de fornecedor tecnico do consorcio.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">O KAPP-EX e um instrumento operacional, nao um financiamento de estudos. Quem se candidata tem de estar em condicoes reais de mobilizar dezenas (potencialmente centenas) de operacionais durante varios dias, em coordenacao com paises terceiros, sob escrutinio de observadores da Comissao Europeia e dos restantes Estados Membros. Isto exige maturidade institucional e disponibilidade de recursos que poucas entidades portuguesas tem fora da ANEPC e de algumas autoridades regionais especializadas.</p>
+      <p class="section-text">Para empresas tecnologicas, a entrada natural e como fornecedor de plataformas e equipamentos integrados na execucao do exercicio. O consorcio nao se monta a partir da empresa, monta-se a partir da autoridade publica. A oportunidade comercial esta em ser identificado cedo como provedor de uma capacidade especifica (comunicacoes seguras, plataformas C2 multilinguagem, deteccao por drone, gemeos digitais de cenario) e entrar no consorcio antes da redacao final da proposta.</p>
+      <p class="section-text">A armadilha mais comum nestas candidaturas e subestimar a parte de avaliacao e licoes aprendidas. A Comissao avalia a qualidade do exercicio nao pela espetacularidade do dia D, mas pela solidez dos produtos pos-exercicio, relatorio de avaliacao independente, recomendacoes de politica publica, ajustamentos a doutrina operacional UCPM. Sem este pilar, mesmo um exercicio bem executado fica abaixo do limiar de pontuacao.</p>
+      <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+    </div>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Tecnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rapidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">UCPM (Uniao Civil Protection Mechanism)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Codigo</div>
+        <div class="sidebar-fact-val">UCPM-2026-KAPP-EX</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tipo</div>
+        <div class="sidebar-fact-val">UCPM Project Grant (acao)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Beneficiarios</div>
+        <div class="sidebar-fact-val">Autoridades de protecao civil</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Output central</div>
+        <div class="sidebar-fact-val">Exercicio full-scale multinacional</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Localizacao</div>
+        <div class="sidebar-fact-val">Estados Membros e paises participantes UCPM</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-open">Aberto ate 19/05/2026</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Avalie se a sua entidade tem capacidade operacional para liderar ou integrar um exercicio UCPM e prepare a estrategia de candidatura.</div>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="ucpm-2026-kapp-pvpp.html" class="related-link"><span class="related-link-name">UCPM 2026 KAPP-PVPP</span><span class="related-link-arrow">&rarr;</span></a>
+      <a href="protecao-civil-e-gestao-integrada-de-riscos-prevencao-e-mitigacao-de-r.html" class="related-link"><span class="related-link-name">Protecao Civil e Gestao de Riscos</span><span class="related-link-arrow">&rarr;</span></a>
+      <a href="horizonte-europa.html" class="related-link"><span class="related-link-name">Horizonte Europa</span><span class="related-link-arrow">&rarr;</span></a>
+      <a href="fundo-ambiental.html" class="related-link"><span class="related-link-name">Fundo Ambiental</span><span class="related-link-arrow">&rarr;</span></a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <div class="f-col-label">Biblioteca</div>
+      <ul class="f-links">
+        <li><a href="../biblioteca.html">Portugal 2030</a></li>
+        <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+        <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+        <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Plataforma</div>
+      <ul class="f-links">
+        <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../conhecimento.html">Conhecimento</a></li>
+        <li><a href="../parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-label">Empresa</div>
+      <ul class="f-links">
+        <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="../sobre-nos.html">Equipa</a></li>
+        <li><a href="../carreiras.html">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="#">Privacidade</a>
+      <a href="#">Termos</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
