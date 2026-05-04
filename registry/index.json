@@ -12,8 +12,9 @@
     "planned": 18,
     "in_queue": 80,
     "in_watchlist": 128,
-    "in_catalogo": 0,
-    "in_overflow": 207
+    "in_catalogo": 1,
+    "in_overflow": 207,
+    "in_plano_anual": 133
   },
   "shards": {
     "pt2030-compete": {
@@ -110,10 +111,10 @@
   "last_full_cycle": "2026-04-12",
   "last_monitor_run": "2026-05-03",
   "source_last_checked": {
-    "portugal-2030": "2026-05-03",
+    "portugal-2030": "2026-05-04",
     "compete-2030": "2026-04-29",
     "norte-2030": "2026-04-30",
-    "centro-2030": "2026-04-27",
+    "centro-2030": "2026-05-04",
     "lisboa-2030": "2026-04-29",
     "alentejo-2030": "2026-04-29",
     "algarve-2030": "2026-04-29",
@@ -122,8 +123,8 @@
     "pessoas-2030": "2026-04-30",
     "sustentavel-2030": "2026-04-28",
     "mar-2030": "2026-04-29",
-    "pat-2030": "2026-04-27",
-    "eu-funding-tenders": "2026-05-03",
+    "pat-2030": "2026-05-04",
+    "eu-funding-tenders": "2026-05-04",
     "ani": "2026-04-28",
     "iapmei": "2026-04-30",
     "prr": "2026-04-29",
@@ -169,7 +170,7 @@
     "balcao-2030": "2026-04-14",
     "nato-diana": "2026-04-14",
     "interreg-europe": "2026-04-30",
-    "interreg-espon": "2026-04-27",
+    "interreg-espon": "2026-05-04",
     "turismo-portugal": "2026-04-16",
     "cgd-empresas": "2026-04-14",
     "bpi-empresas": "2026-04-14",
@@ -225,14 +226,15 @@
     "fabrica-startups": "2026-05-02",
     "fidelidade-ventures": "2026-05-03",
     "lc-ventures": "2026-05-03",
-    "busy-angels": "2026-05-03"
+    "busy-angels": "2026-05-03",
+    "novabase-capital": "2026-05-04"
   },
-  "last_scanner_run": "2026-05-03",
+  "last_scanner_run": "2026-05-04",
   "source-last_checked": {
-    "portugal-2030": "2026-05-03",
+    "portugal-2030": "2026-05-04",
     "compete-2030": "2026-04-29",
     "norte-2030": "2026-04-30",
-    "centro-2030": "2026-04-27",
+    "centro-2030": "2026-05-04",
     "lisboa-2030": "2026-04-29",
     "alentejo-2030": "2026-04-29",
     "algarve-2030": "2026-04-29",
@@ -241,8 +243,8 @@
     "pessoas-2030": "2026-04-30",
     "sustentavel-2030": "2026-04-28",
     "mar-2030": "2026-04-29",
-    "pat-2030": "2026-04-27",
-    "eu-funding-tenders": "2026-05-03",
+    "pat-2030": "2026-05-04",
+    "eu-funding-tenders": "2026-05-04",
     "ani": "2026-04-28",
     "iapmei": "2026-04-30",
     "prr": "2026-04-29",
@@ -288,7 +290,7 @@
     "balcao-2030": "2026-04-14",
     "nato-diana": "2026-04-14",
     "interreg-europe": "2026-04-30",
-    "interreg-espon": "2026-04-27",
+    "interreg-espon": "2026-05-04",
     "turismo-portugal": "2026-04-16",
     "cgd-empresas": "2026-04-14",
     "bpi-empresas": "2026-04-14",
@@ -343,7 +345,8 @@
     "pathena-ventures": "2026-04-30",
     "fabrica-startups": "2026-05-02",
     "fidelidade-ventures": "2026-05-03",
-    "busy-angels": "2026-05-03"
+    "busy-angels": "2026-05-03",
+    "novabase-capital": "2026-05-04"
   },
   "last_writer_run": "2026-05-04"
 }
