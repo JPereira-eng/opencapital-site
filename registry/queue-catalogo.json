@@ -90,30 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "lisbon-business-angels-club",
-      "name": "Lisbon Business Angels Club (BADC)",
-      "source_id": "lisbon-business-angels-club",
-      "catalog_type": "ba",
-      "detected_date": "2026-05-04",
-      "last_profile_update": "2026-05-04",
-      "status": "active",
-      "regulation_url": "http://www.badelisboa.pt/",
-      "priority_score": 5,
-      "profile": {
-        "website": "http://www.badelisboa.pt/",
-        "linkedin": null,
-        "pais_sede": "PT",
-        "descricao_curta": "Clube/associacao privada sem fins lucrativos sediado em Lisboa que liga investidores a empreendedores. Realiza ~4 sessoes de apresentacao de projetos por ano, com cerca de 6 oportunidades por evento (~24 projetos/ano).",
-        "como_candidatar": "Empreendedores submetem projetos via processo do clube; promotores apresentam em sessoes presenciais a membros investidores. Membros pagam quota anual de 100 EUR para aceder a sessoes de pitch e seminarios. Detalhes do processo de investimento e contacto via http://www.badelisboa.pt/page/processo-de-investimento.",
-        "numero_membros": null,
-        "ticket_individual_eur": null,
-        "ticket_coletivo_eur": null,
-        "setores_foco": null,
-        "requisitos_apresentacao": "Submissao de projeto e selecao previa pelo clube; apresentacao em sessao presencial (pitch) a investidores membros. Cerca de 6 projetos por sessao."
-      },
-      "notes": "Entry catalog tipo BA. Site oficial: www.badelisboa.pt (certificate expired ao tentar HTTPS, conteudo via WebSearch e portal lisboa-innovation). Contactos publicos: tel 213 259 038, email geral@badelisboa.pt. Quota socio investidor: 100 EUR/ano. Cerca de 24 projetos/ano via 4 sessoes anuais. Tickets individuais e coletivos nao publicados no site institucional."
-    }
-  ]
+  "queue": []
 }

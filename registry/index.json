@@ -6,13 +6,13 @@
     "last_writer_run": "2026-05-04"
   },
   "totals": {
-    "published": 815,
-    "open": 506,
+    "published": 816,
+    "open": 507,
     "closed": 291,
     "planned": 14,
     "in_queue": 69,
     "in_watchlist": 128,
-    "in_catalogo": 1,
+    "in_catalogo": 0,
     "in_overflow": 207,
     "in_plano_anual": 133
   },
@@ -98,7 +98,8 @@
     },
     "catalogo-ba": {
       "count": 1,
-      "open": 1
+      "open": 1,
+      "published": 3
     },
     "catalogo-crowdfunding": {
       "count": 2,

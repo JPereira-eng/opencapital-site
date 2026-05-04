@@ -238,10 +238,10 @@
       "pdf_url": null,
       "regulation_local": null,
       "priority_score": 35,
-      "status": "pending",
+      "status": "abandoned",
       "notes": "callId: 186494; callTitle: ; framework: 111111; toa: ",
-      "fail_count": 2,
-      "download_error": "Call ref not findable via WebSearch nem prospect-details API (EuropeAid 186494) - tentativa em 2026-05-04",
+      "fail_count": 3,
+      "download_error": "URL inacessivel após 3+ tentativas e WebSearch fallback - prospect/EuropeAid requer autenticacao, sem PDF público encontrado",
       "last_fail_date": "2026-05-04"
     },
     {
@@ -408,10 +408,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-DIS-RA-SMERO-NT",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/edf-2026-ls-dis-ra-smero-nt.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "callId: EDF-2026-LS-DIS-RA-SMERO; callTitle: Non-thematic research actions by SMEs and research organisations; framework: 44181033; toa: EDF Lump Sum Grants"
+      "status": "ready",
+      "notes": "callId: EDF-2026-LS-DIS-RA-SMERO; callTitle: Non-thematic research actions by SMEs and research organisations; framework: 44181033; toa: EDF Lump Sum Grants",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-05-soil-04",
@@ -424,10 +425,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-05-SOIL-04",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-05-soil-04.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "callId: HORIZON-MISS-2026-05; callTitle: Supporting the implementation of the Soil Deal for Europe Mission; framework: 43108390; toa: HORIZON Innovation Actions"
+      "status": "ready",
+      "notes": "callId: HORIZON-MISS-2026-05; callTitle: Supporting the implementation of the Soil Deal for Europe Mission; framework: 43108390; toa: HORIZON Innovation Actions",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-03-ocean-01",
@@ -440,10 +442,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-03-OCEAN-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-03-ocean-01.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "callId: HORIZON-MISS-2026-03; callTitle: Supporting the implementation of the Restore our Ocean and Waters Mission; framework: 43108390; toa: HORIZON Innovation Actions"
+      "status": "ready",
+      "notes": "callId: HORIZON-MISS-2026-03; callTitle: Supporting the implementation of the Restore our Ocean and Waters Mission; framework: 43108390; toa: HORIZON Innovation Actions",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-04-cit-neb-b4p-ccri-03",
@@ -456,10 +459,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-04-CIT-NEB-B4P-CCRI-03",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-04-cit-neb-b4p-ccri-03.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "callId: HORIZON-MISS-2026-04; callTitle: Supporting the implementation of the Climate-Neutral and Smart Cities Mission; framework: 43108390; toa: HORIZON Innovation Actions"
+      "status": "ready",
+      "notes": "callId: HORIZON-MISS-2026-04; callTitle: Supporting the implementation of the Climate-Neutral and Smart Cities Mission; framework: 43108390; toa: HORIZON Innovation Actions",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-05-soil-01",
@@ -472,10 +476,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-05-SOIL-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-05-soil-01.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "callId: HORIZON-MISS-2026-05; callTitle: Supporting the implementation of the Soil Deal for Europe Mission; framework: 43108390; toa: HORIZON Coordination and Support Actions"
+      "status": "ready",
+      "notes": "callId: HORIZON-MISS-2026-05; callTitle: Supporting the implementation of the Soil Deal for Europe Mission; framework: 43108390; toa: HORIZON Coordination and Support Actions",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-05-soil-03",
@@ -488,10 +493,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-05-SOIL-03",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-05-soil-03.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "callId: HORIZON-MISS-2026-05; callTitle: Supporting the implementation of the Soil Deal for Europe Mission; framework: 43108390; toa: HORIZON Coordination and Support Actions"
+      "status": "ready",
+      "notes": "callId: HORIZON-MISS-2026-05; callTitle: Supporting the implementation of the Soil Deal for Europe Mission; framework: 43108390; toa: HORIZON Coordination and Support Actions",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-03-ocean-02",
@@ -504,10 +510,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-03-OCEAN-02",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-03-ocean-02.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "callId: HORIZON-MISS-2026-03; callTitle: Supporting the implementation of the Restore our Ocean and Waters Mission; framework: 43108390; toa: HORIZON Innovation Actions"
+      "status": "ready",
+      "notes": "callId: HORIZON-MISS-2026-03; callTitle: Supporting the implementation of the Restore our Ocean and Waters Mission; framework: 43108390; toa: HORIZON Innovation Actions",
+      "fail_count": 0
     },
     {
       "id": "interreg-sudoe-3rd-call",
@@ -554,10 +561,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/ESC-HUMAID-2021-QUAL-LABEL-FP.json",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/esc-humaid-2021-qual-label-fp.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "SEDIA OPEN topic | status_code:31094502 | call:ESC-HUMAID-2021-QUAL-LABEL"
+      "status": "ready",
+      "notes": "SEDIA OPEN topic | status_code:31094502 | call:ESC-HUMAID-2021-QUAL-LABEL",
+      "fail_count": 0
     },
     {
       "id": "life-2026-strat-env-sip-two-stage",
