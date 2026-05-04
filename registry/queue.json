@@ -342,8 +342,8 @@
       "priority_score": 35,
       "status": "pending",
       "notes": "callId: 186494; callTitle: ; framework: 111111; toa: ",
-      "fail_count": 1,
-      "download_error": "Call ref not findable via WebSearch (EuropeAid 186494) - tentativa em 2026-05-04",
+      "fail_count": 2,
+      "download_error": "Call ref not findable via WebSearch nem prospect-details API (EuropeAid 186494) - tentativa em 2026-05-04",
       "last_fail_date": "2026-05-04"
     },
     {
@@ -357,10 +357,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EURATOM-2026-NRT-01-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-euratom-2026-nrt-01-01.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "callId: HORIZON-EURATOM-2026-NRT-01; callTitle: New actions for skills and competences for safe use of current and future nuclear technologies; framework: 43298916; toa: EURATOM Coordination and Support Actions"
+      "status": "ready",
+      "notes": "callId: HORIZON-EURATOM-2026-NRT-01; callTitle: New actions for skills and competences for safe use of current and future nuclear technologies; framework: 43298916; toa: EURATOM Coordination and Support Actions",
+      "fail_count": 0
     },
     {
       "id": "edf-2026-ra-si-uww-csbi-step",
@@ -373,10 +374,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-RA-SI-UWW-CSBI-STEP",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/edf-2026-ra-si-uww-csbi-step.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "callId: EDF-2026-LS-RA-SI; callTitle: Spin-in EDF research actions implemented via lump sum grants; framework: 44181033; toa: EDF Lump Sum Grants"
+      "status": "ready",
+      "notes": "callId: EDF-2026-LS-RA-SI; callTitle: Spin-in EDF research actions implemented via lump sum grants; framework: 44181033; toa: EDF Lump Sum Grants",
+      "fail_count": 0
     },
     {
       "id": "horizon-widera-2026-03-widening-01",
@@ -389,10 +391,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-WIDERA-2026-03-WIDENING-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-widera-2026-03-widening-01.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "callId: HORIZON-WIDERA-2026-03; callTitle: Hop-on Facility; framework: 43108390; toa: HORIZON  Research and Innovation Actions"
+      "status": "ready",
+      "notes": "callId: HORIZON-WIDERA-2026-03; callTitle: Hop-on Facility; framework: 43108390; toa: HORIZON  Research and Innovation Actions",
+      "fail_count": 0
     },
     {
       "id": "edf-2026-da-acc-airdef-eatmi",
@@ -405,10 +408,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-DA-ACC-AIRDEF-EATMI",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/edf-2026-da-acc-airdef-eatmi.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "callId: EDF-2026-DA-ACC; callTitle: Development actions implemented through actual cost grants (accelerated call); framework: 44181033; toa: EDF Development Actions"
+      "status": "ready",
+      "notes": "callId: EDF-2026-DA-ACC; callTitle: Development actions implemented through actual cost grants (accelerated call); framework: 44181033; toa: EDF Development Actions",
+      "fail_count": 0
     },
     {
       "id": "renewfm-2026-invest-tech-spec",
@@ -421,10 +425,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/RENEWFM-2026-INVEST-TECH-SPEC",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/renewfm-2026-invest-tech-spec.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "callId: RENEWFM-2026-INVEST; callTitle: Renewable energy financing mechanism technology specific; framework: 43253967; toa: RENEWFM Lump Sum Grants"
+      "status": "ready",
+      "notes": "callId: RENEWFM-2026-INVEST; callTitle: Renewable energy financing mechanism technology specific; framework: 43253967; toa: RENEWFM Lump Sum Grants",
+      "fail_count": 0
     },
     {
       "id": "edf-2026-ls-da-sme-nt",
@@ -437,10 +442,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-DA-SME-NT",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/edf-2026-ls-da-sme-nt.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "callId: EDF-2026-LS-DA-SME; callTitle: Development actions, dedicated to SMEs,  implemented through lump sum grants; framework: 44181033; toa: EDF Lump Sum Grants"
+      "status": "ready",
+      "notes": "callId: EDF-2026-LS-DA-SME; callTitle: Development actions, dedicated to SMEs,  implemented through lump sum grants; framework: 44181033; toa: EDF Lump Sum Grants",
+      "fail_count": 0
     },
     {
       "id": "edf-2026-ra-air-a4r",
@@ -453,10 +459,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-RA-AIR-A4R",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/edf-2026-ra-air-a4r.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "callId: EDF-2026-RA; callTitle: Research actions implemented via actual cost grants; framework: 44181033; toa: EDF Research Actions"
+      "status": "ready",
+      "notes": "callId: EDF-2026-RA; callTitle: Research actions implemented via actual cost grants; framework: 44181033; toa: EDF Research Actions",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-03-ocean-05",
@@ -469,10 +476,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-03-OCEAN-05",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-03-ocean-05.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "callId: HORIZON-MISS-2026-03; callTitle: Supporting the implementation of the Restore our Ocean and Waters Mission; framework: 43108390; toa: HORIZON Innovation Actions"
+      "status": "ready",
+      "notes": "callId: HORIZON-MISS-2026-03; callTitle: Supporting the implementation of the Restore our Ocean and Waters Mission; framework: 43108390; toa: HORIZON Innovation Actions",
+      "fail_count": 0
     },
     {
       "id": "edf-2026-ls-dis-nt",
@@ -485,10 +493,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-DIS-NT",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/edf-2026-ls-dis-nt.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "callId: EDF-2026-LS-DIS; callTitle: Non-thematic actions targeting disruptive technologies for defence; framework: 44181033; toa: EDF Lump Sum Grants"
+      "status": "ready",
+      "notes": "callId: EDF-2026-LS-DIS; callTitle: Non-thematic actions targeting disruptive technologies for defence; framework: 44181033; toa: EDF Lump Sum Grants",
+      "fail_count": 0
     },
     {
       "id": "edf-2026-ls-dis-ra-smero-nt",
