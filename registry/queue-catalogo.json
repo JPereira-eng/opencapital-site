@@ -90,50 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "novabase-capital",
-      "name": "Novabase Capital",
-      "source_id": "novabase-capital",
-      "catalog_type": "cvc",
-      "detected_date": "2026-05-04",
-      "last_profile_update": "2026-05-04",
-      "status": "active",
-      "regulation_url": "https://www.novabasecapital.pt/en/",
-      "priority_score": 10,
-      "profile": {
-        "website": "https://www.novabasecapital.pt/en/",
-        "linkedin": null,
-        "pais_sede": "PT",
-        "descricao_curta": "CVC do Grupo Novabase para apoio a startups portuguesas de ICT, com candidatura continua via formulario online.",
-        "como_candidatar": "Formulario online em /en/application/, com campos de localizacao da empresa (regioes PT) e idade da empresa (nao fundada / <3 anos / >3 anos). Aceita ficheiros zip/doc/xls/pdf ate 10MB. Contacto: +351 213 836 300.",
-        "tese": "Apoio as melhores startups portuguesas de ICT (Information and Communication Technology), em fases iniciais de desenvolvimento.",
-        "estagios": null,
-        "setores": [
-          "ICT",
-          "fintech",
-          "industrial tech",
-          "data analytics",
-          "AR"
-        ],
-        "geografia": [
-          "PT"
-        ],
-        "ticket_min_eur": null,
-        "ticket_max_eur": null,
-        "ticket_sweet_eur": null,
-        "aum_eur": null,
-        "vintage": null,
-        "portfolio_pt_exemplos": [
-          "Feedzai",
-          "Glartek",
-          "Habit",
-          "Weezie",
-          "Bright Innovation"
-        ],
-        "parceiros": null
-      },
-      "notes": "CVC do Grupo Novabase, sediado em Parque das Nacoes, Lisboa. Foco em ICT portugues. Portfolio inclui Feedzai (fraud ML/fintech), Glartek (AR industrial), Habit (IoT analytics), Weezie (fibra otica), Bright Innovation (consultoria a fundos comunitarios). Detalhes financeiros (ticket, AUM, fund vintage) e parceiros nao publicados no website. Detected 2026-05-04."
-    }
-  ]
+  "queue": []
 }
