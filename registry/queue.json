@@ -118,10 +118,11 @@
       "budget": null,
       "regulation_url": "https://webgate.ec.europa.eu/prospect/external/publishedcalls.htm?callId=185838",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/europeaid-185838-dd-act-ma.txt",
       "priority_score": 65,
-      "status": "pending",
-      "notes": "callId: 185838; callTitle: ; framework: 111111; toa: "
+      "status": "ready",
+      "notes": "callId: 185838; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 0
     },
     {
       "id": "europeaid-186514-dd-fpa-eg",
@@ -134,10 +135,11 @@
       "budget": null,
       "regulation_url": "https://webgate.ec.europa.eu/prospect/external/publishedcalls.htm?callId=186514",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/europeaid-186514-dd-fpa-eg.txt",
       "priority_score": 65,
-      "status": "pending",
-      "notes": "callId: 186514; callTitle: ; framework: 111111; toa: "
+      "status": "ready",
+      "notes": "callId: 186514; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 0
     },
     {
       "id": "europeaid-185357-dd-act-multi",
@@ -153,7 +155,10 @@
       "regulation_local": null,
       "priority_score": 65,
       "status": "pending",
-      "notes": "callId: 185357; callTitle: ; framework: 111111; toa: "
+      "notes": "callId: 185357; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 1,
+      "download_error": "Call ref not findable via EEAS or fundsforNGOs - tentativa em 2026-05-04",
+      "last_fail_date": "2026-05-04"
     },
     {
       "id": "europeaid-186515-dd-act-me",
@@ -166,10 +171,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/186515PROSPECTSEN",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/europeaid-186515-dd-act-me.txt",
       "priority_score": 65,
-      "status": "pending",
-      "notes": "callId: 186515; callTitle: ; framework: 111111; toa: "
+      "status": "ready",
+      "notes": "callId: 186515; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 0
     },
     {
       "id": "europeaid-186559-dd-act-ps",
@@ -182,10 +188,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/186559PROSPECTSEN",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/europeaid-186559-dd-act-ps.txt",
       "priority_score": 65,
-      "status": "pending",
-      "notes": "callId: 186559; callTitle: ; framework: 111111; toa: "
+      "status": "ready",
+      "notes": "callId: 186559; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 0
     },
     {
       "id": "europeaid-185599-dd-act-multi",
@@ -201,7 +208,10 @@
       "regulation_local": null,
       "priority_score": 65,
       "status": "pending",
-      "notes": "callId: 185599; callTitle: ; framework: 111111; toa: "
+      "notes": "callId: 185599; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 1,
+      "download_error": "Call ref not findable via EEAS or fundsforNGOs - tentativa em 2026-05-04",
+      "last_fail_date": "2026-05-04"
     },
     {
       "id": "europeaid-186235-dd-act-ye",
@@ -214,10 +224,11 @@
       "budget": null,
       "regulation_url": "https://webgate.ec.europa.eu/prospect/external/publishedcalls.htm?callId=186235",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/europeaid-186235-dd-act-ye.txt",
       "priority_score": 65,
-      "status": "pending",
-      "notes": "callId: 186235; callTitle: ; framework: 111111; toa: "
+      "status": "ready",
+      "notes": "callId: 186235; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 0
     },
     {
       "id": "europeaid-186255-dd-act-tj",
@@ -230,10 +241,11 @@
       "budget": null,
       "regulation_url": "https://webgate.ec.europa.eu/prospect/external/publishedcalls.htm?callId=186255",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/europeaid-186255-dd-act-tj.txt",
       "priority_score": 65,
-      "status": "pending",
-      "notes": "callId: 186255; callTitle: ; framework: 111111; toa: "
+      "status": "ready",
+      "notes": "callId: 186255; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 0
     },
     {
       "id": "europeaid-186375-dd-act-ug",
@@ -246,10 +258,11 @@
       "budget": null,
       "regulation_url": "https://webgate.ec.europa.eu/prospect/external/publishedcalls.htm?callId=186375",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/europeaid-186375-dd-act-ug.txt",
       "priority_score": 65,
-      "status": "pending",
-      "notes": "callId: 186375; callTitle: ; framework: 111111; toa: "
+      "status": "ready",
+      "notes": "callId: 186375; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 0
     },
     {
       "id": "europeaid-185928-dh-act-cy",
@@ -262,10 +275,11 @@
       "budget": null,
       "regulation_url": "https://webgate.ec.europa.eu/prospect/external/publishedcalls.htm?callId=185928",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/europeaid-185928-dh-act-cy.txt",
       "priority_score": 65,
-      "status": "pending",
-      "notes": "callId: 185928; callTitle: ; framework: 111111; toa: "
+      "status": "ready",
+      "notes": "callId: 185928; callTitle: ; framework: 111111; toa: ",
+      "fail_count": 0
     },
     {
       "id": "europeaid-186556-dd-act-do",
