@@ -214,6 +214,13 @@
       "source": "ifap-pdr",
       "state": "aberto",
       "last_check": "2026-04-29"
+    },
+    {
+      "id": "fundo-ambiental-ac-03-2026-resiliencia-sistema-eletrico",
+      "file": "instrumentos/fundo-ambiental-ac-03-2026-resiliencia-sistema-eletrico.html",
+      "source": "fundo-ambiental",
+      "state": "aberto",
+      "last_check": "2026-05-05"
     }
   ],
   "instruments": [
@@ -232,6 +239,6 @@
       "last_check": "2026-04-19"
     }
   ],
-  "count": 1,
-  "open": 1
+  "count": 29,
+  "open": 24
 }

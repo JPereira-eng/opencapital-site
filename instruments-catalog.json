@@ -21195,6 +21195,134 @@
       "highlight2": "UE 27 mais Ucrania e Suica; nao limitado a paises com nuclear",
       "href": "instrumentos/horizon-euratom-2026-01-08.html",
       "featured": false
+    },
+    {
+      "id": "fundo-ambiental-ac-03-2026-resiliencia-sistema-eletrico",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 20/05/2026",
+      "status_class": "status-open",
+      "fonte": "fundo-ambiental",
+      "beneficiario": "ensino-investigacao",
+      "setores": [
+        "energia-ambiente"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "sustentabilidade-energia-clima"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve",
+      "title": "Fundo Ambiental AC 03/2026 - Resiliencia do SEN",
+      "tagline": "Aviso-Convite do Fundo Ambiental para estudo tecnico, economico e regulatorio sobre adaptacao do Sistema Eletrico Nacional as alteracoes climaticas.",
+      "highlight0": "250.000 EUR a 100% nao reembolsavel",
+      "highlight1": "INESC-ID com consorcio (INESC-TEC, NOVA FCT, LNEG)",
+      "highlight2": "Portugal Continental",
+      "href": "instrumentos/fundo-ambiental-ac-03-2026-resiliencia-sistema-eletrico.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-eie-2023-connect-03-01",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 17/09/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "energia-ambiente",
+        "industria"
+      ],
+      "necessidades": [
+        "sustentabilidade-energia-clima",
+        "id-ciencia"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "RIVCircular Open Call (Horizon EIE Connect 03-01)",
+      "tagline": "Cascade FSTP do Connected Regional Innovation Valleys do Horizonte Europa para projetos interregionais de economia circular.",
+      "highlight0": "Ate 600.000 EUR por terceiro (teto regulamentar FSTP)",
+      "highlight1": "PME, startups deep tech, centros de I&D, clusters",
+      "highlight2": "UE e paises associados ao Horizonte Europa",
+      "href": "instrumentos/horizon-eie-2023-connect-03-01.html",
+      "featured": false
+    },
+    {
+      "id": "edf-2026-da-ground-mrl",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 29/09/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "industria",
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "investimento-produtivo"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "EDF-2026-DA-GROUND-MRL: Sistema Europeu de Lancamento Multiplo",
+      "tagline": "Topico EDF-DA do European Defence Fund para estudos e design de sistemas de lancamento multiplo de foguetes europeus.",
+      "highlight0": "25 milhoes EUR (orcamento indicativo do topico)",
+      "highlight1": "Consorcios industriais e cientificos europeus",
+      "highlight2": "Estados-Membros UE e paises associados ao EDF",
+      "href": "instrumentos/edf-2026-da-ground-mrl.html",
+      "featured": false
+    },
+    {
+      "id": "edf-2026-da-sens-cew-step",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 29/09/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "tecnologia-digital",
+        "industria"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "digitalizacao-ia"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "EDF-2026-DA-SENS-CEW-STEP: Sistema Cognitivo de Guerra Eletronica",
+      "tagline": "Topico EDF-DA do European Defence Fund para sistema cognitivo de Electronic Warfare com analise inteligente RESM e CESM via IA e ML.",
+      "highlight0": "24 milhoes EUR (orcamento indicativo do topico)",
+      "highlight1": "Primes de defesa, integradores tech, centros de I&D",
+      "highlight2": "Estados-Membros UE e paises associados ao EDF",
+      "href": "instrumentos/edf-2026-da-sens-cew-step.html",
+      "featured": false
+    },
+    {
+      "id": "edf-2026-da-protmob-dmm",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 29/09/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "digitalizacao-ia",
+        "id-ciencia"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "EDF-2026-DA-PROTMOB-DMM: Sistema Digital de Mobilidade Militar",
+      "tagline": "Topico EDF-DA do European Defence Fund para sistema digital seguro de permits e clearance da mobilidade militar transfronteirica europeia.",
+      "highlight0": "9 milhoes EUR (orcamento indicativo do topico)",
+      "highlight1": "Primes C4ISR, integradores tech, PME tech defesa",
+      "highlight2": "Estados-Membros UE e paises associados ao EDF",
+      "href": "instrumentos/edf-2026-da-protmob-dmm.html",
+      "featured": false
     }
   ]
 }

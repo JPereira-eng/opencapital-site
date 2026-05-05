@@ -1098,6 +1098,13 @@
       "source": "eu-funding-tenders",
       "state": "fechado",
       "last_check": "2026-05-03"
+    },
+    {
+      "id": "horizon-eie-2023-connect-03-01",
+      "file": "instrumentos/horizon-eie-2023-connect-03-01.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-05-05"
     }
   ],
   "instruments": [
@@ -3048,9 +3055,9 @@
       "last_check": "2026-05-05"
     }
   ],
-  "count": 160,
-  "open": 98,
+  "count": 155,
+  "open": 76,
   "closed": 97,
   "planned": 8,
-  "published": 101
+  "published": 102
 }
