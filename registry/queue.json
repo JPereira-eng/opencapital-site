@@ -1192,10 +1192,11 @@
       "budget": "10.000.000 EUR",
       "regulation_url": "https://compete2030.gov.pt/avisos/siid-internacionalizacao-de-id-operacoes-de-id-industrial-a-escala-europeia/",
       "pdf_url": "https://compete2030.gov.pt/wp-content/uploads/2026/04/MPr-2026-04_SIID_Internacionalizacao-ID_Operacoes-ID-industrial-a-Escala-Europeia_vf.pdf",
-      "regulation_local": null,
+      "regulation_local": "regulamentos/ani/siid-internacionalizacao-id-industrial-escala-europeia-mpr-2026-04.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "Concurso. Programa SIID, FEDER COMPETE2030 7M + Lisboa 1M + Algarve 2M. Beneficiarios: PME, Small Mid Caps, ENESII em copromocao. Detectado via ani (slot 3) - nao estava no PT2030 API central."
+      "status": "ready",
+      "notes": "Concurso. Programa SIID, FEDER COMPETE2030 7M + Lisboa 1M + Algarve 2M. Beneficiarios: PME, Small Mid Caps, ENESII em copromocao. Detectado via ani (slot 3) - nao estava no PT2030 API central.",
+      "fail_count": 0
     },
     {
       "id": "sice-internacionalizacao-pme-operacoes-conjunto-mpr-2025-14",
@@ -1208,10 +1209,11 @@
       "budget": "151.500.000 EUR",
       "regulation_url": "https://compete2030.gov.pt/avisos/sice-internacionalizacao-das-pme-operacoes-em-conjunto-mpr-2025-14/",
       "pdf_url": "https://www.compete2030.gov.pt/wp-content/uploads/2024/09/Aviso-Proj-Conjuntos_MPr-2025-14-republicacao-09-12-2025_VF.pdf",
-      "regulation_local": null,
+      "regulation_local": "regulamentos/ani/sice-internacionalizacao-pme-operacoes-conjunto-mpr-2025-14.txt",
       "priority_score": 85,
-      "status": "pending",
-      "notes": "Concurso. Programa COMPETE2030 FEDER 150M + Lisboa 0.5M + Algarve 1M. Beneficiarios: associacoes empresariais, camaras de comercio, agencias regionais de turismo, ENESII. Republicacao 09-12-2025. Detectado via ani (slot 3)."
+      "status": "ready",
+      "notes": "Concurso. Programa COMPETE2030 FEDER 150M + Lisboa 0.5M + Algarve 1M. Beneficiarios: associacoes empresariais, camaras de comercio, agencias regionais de turismo, ENESII. Republicacao 09-12-2025. Detectado via ani (slot 3).",
+      "fail_count": 0
     },
     {
       "id": "concursos-ecs-de-2026-da-parceria-europeia-chips-ju",
@@ -1224,10 +1226,11 @@
       "budget": "3.500.000 EUR",
       "regulation_url": "https://www.fct.pt/concursos/concursos-ecs-de-2026-da-parceria-europeia-chips-ju",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/fct/concursos-ecs-de-2026-da-parceria-europeia-chips-ju.txt",
       "priority_score": 115,
-      "status": "pending",
-      "notes": "Concurso. Project Outline 07-mai-2026; Full Project 17-set-2026. Compromisso FCT 3.5M EUR. Maximo 250K EUR por entidade. Beneficiarios: ENESII e empresas. Participacoes nacionais devem incluir pelo menos uma empresa portuguesa. Programa Horizon Europe Chips JU - Componente ECS. Detectado via fct (slot 4)."
+      "status": "ready",
+      "notes": "Concurso. Project Outline 07-mai-2026; Full Project 17-set-2026. Compromisso FCT 3.5M EUR. Maximo 250K EUR por entidade. Beneficiarios: ENESII e empresas. Participacoes nacionais devem incluir pelo menos uma empresa portuguesa. Programa Horizon Europe Chips JU - Componente ECS. Detectado via fct (slot 4).",
+      "fail_count": 0
     },
     {
       "id": "prima-concurso-2026-seccao-2",
@@ -1240,10 +1243,11 @@
       "budget": "1.200.000 EUR",
       "regulation_url": "https://www.fct.pt/concursos/prima-concurso-2026-seccao-2",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/fct/prima-concurso-2026-seccao-2.txt",
       "priority_score": 115,
-      "status": "pending",
-      "notes": "Concurso. 1ª Fase 15-mai-2026; 2ª Fase 29-set-2026. Compromisso FCT 1.2M EUR. Maximo 250K EUR (coord PT) ou 120K EUR (participacao PT) por consorcio. Beneficiarios: instituicoes ensino superior, laboratorios Estado, ONG I&D, empresas. Programa PRIMA (Mediterranean). Detectado via fct (slot 4)."
+      "status": "ready",
+      "notes": "Concurso. 1ª Fase 15-mai-2026; 2ª Fase 29-set-2026. Compromisso FCT 1.2M EUR. Maximo 250K EUR (coord PT) ou 120K EUR (participacao PT) por consorcio. Beneficiarios: instituicoes ensino superior, laboratorios Estado, ONG I&D, empresas. Programa PRIMA (Mediterranean). Detectado via fct (slot 4).",
+      "fail_count": 0
     },
     {
       "id": "concurso-de-projetos-de-computacao-avancada-6-ed-a0-a1-lote-d",
@@ -1256,10 +1260,11 @@
       "budget": null,
       "regulation_url": "https://www.fct.pt/concursos/concurso-de-projetos-de-computacao-avancada-6-ed-a0-a1-lote-d-",
       "pdf_url": "https://files.dre.pt/2s/2022/01/004000000/0013100139.pdf",
-      "regulation_local": null,
+      "regulation_local": "regulamentos/fct/concurso-de-projetos-de-computacao-avancada-6-ed-a0-a1-lote-d.txt",
       "priority_score": 105,
-      "status": "pending",
-      "notes": "Concurso. Tipologias A0 (Experimental) e A1 (Desenvolvimento), lote D. Beneficiarios: instituicoes I&D, laboratorios colaborativos, infraestruturas C&T, ENESII, empresas em I&D pre-concorrencial, pessoas singulares em PT. Programa Rede Nacional de Computacao Avancada (RNCA). Detectado via fct (slot 4)."
+      "status": "ready",
+      "notes": "Concurso. Tipologias A0 (Experimental) e A1 (Desenvolvimento), lote D. Beneficiarios: instituicoes I&D, laboratorios colaborativos, infraestruturas C&T, ENESII, empresas em I&D pre-concorrencial, pessoas singulares em PT. Programa Rede Nacional de Computacao Avancada (RNCA). Detectado via fct (slot 4).",
+      "fail_count": 0
     },
     {
       "id": "concurso-de-projetos-de-computacao-avancada-6-ed-a2-a3-lote-d",
@@ -1272,10 +1277,11 @@
       "budget": null,
       "regulation_url": "https://www.fct.pt/concursos/concurso-de-projetos-de-computacao-avancada-6-ed-a2-a3-lote-d-",
       "pdf_url": "https://files.dre.pt/2s/2022/01/004000000/0013100139.pdf",
-      "regulation_local": null,
+      "regulation_local": "regulamentos/fct/concurso-de-projetos-de-computacao-avancada-6-ed-a2-a3-lote-d.txt",
       "priority_score": 105,
-      "status": "pending",
-      "notes": "Concurso. Tipologias A2 e A3, lote D. Beneficiarios: instituicoes I&D, laboratorios colaborativos, infraestruturas C&T, ENESII, empresas em I&D pre-concorrencial, pessoas singulares em PT. Programa Rede Nacional de Computacao Avancada (RNCA). Detectado via fct (slot 4)."
+      "status": "ready",
+      "notes": "Concurso. Tipologias A2 e A3, lote D. Beneficiarios: instituicoes I&D, laboratorios colaborativos, infraestruturas C&T, ENESII, empresas em I&D pre-concorrencial, pessoas singulares em PT. Programa Rede Nacional de Computacao Avancada (RNCA). Detectado via fct (slot 4).",
+      "fail_count": 0
     },
     {
       "id": "programa-portugal-berkeley-1",
@@ -1288,10 +1294,11 @@
       "budget": null,
       "regulation_url": "https://www.fct.pt/concursos/programa-portugal-berkeley-1",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/fct/programa-portugal-berkeley-1.txt",
       "priority_score": 5,
-      "status": "pending",
-      "notes": "Bolsas. Manifestacao de interesse continua. Ate 8 candidatos/ano. Cobre VSPA, visto DS-2019, taxas IES Berkeley; candidato cobre viagem/alojamento/seguro. Beneficiarios: estudantes doutoramento em IES portuguesas, qualquer area cientifica. Estadia ate 6 meses. Parceria FCT-FLAD-UC Berkeley. Detectado via fct (slot 4)."
+      "status": "ready",
+      "notes": "Bolsas. Manifestacao de interesse continua. Ate 8 candidatos/ano. Cobre VSPA, visto DS-2019, taxas IES Berkeley; candidato cobre viagem/alojamento/seguro. Beneficiarios: estudantes doutoramento em IES portuguesas, qualquer area cientifica. Estadia ate 6 meses. Parceria FCT-FLAD-UC Berkeley. Detectado via fct (slot 4).",
+      "fail_count": 0
     },
     {
       "id": "mmm-capitalisation-call-thematic-projects-sustainable-tourism",
@@ -1304,10 +1311,11 @@
       "budget": "6.000.000 EUR",
       "regulation_url": "https://interreg-euro-med.eu/en/get-involved/#CallsForProposals",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/interreg-euromed/mmm-capitalisation-call-thematic-projects-sustainable-tourism.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "Concurso (status Planned). Abertura 01-set-2026; deadline 30-set-2026. Dotacao indicativa 6M EUR. Prioridades PO1/PO2 (turismo sustentavel). Mediterranean Mainstreaming Capitalisation. Deadline e data_inicio sujeitos a aprovacao do Monitoring Committee. Detectado via interreg-euromed (slot 5)."
+      "status": "ready",
+      "notes": "Concurso (status Planned). Abertura 01-set-2026; deadline 30-set-2026. Dotacao indicativa 6M EUR. Prioridades PO1/PO2 (turismo sustentavel). Mediterranean Mainstreaming Capitalisation. Deadline e data_inicio sujeitos a aprovacao do Monitoring Committee. Detectado via interreg-euromed (slot 5).",
+      "fail_count": 0
     }
   ],
   "items": []
