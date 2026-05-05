@@ -3,16 +3,16 @@
     "description": "Open Capital Radar v4.0 - Indice global",
     "version": "4.0",
     "migrated_from_v3": "2026-04-12",
-    "last_writer_run": "2026-05-04"
+    "last_writer_run": "2026-05-05"
   },
   "totals": {
-    "published": 816,
-    "open": 507,
+    "published": 821,
+    "open": 509,
     "closed": 291,
-    "planned": 14,
-    "in_queue": 78,
+    "planned": 17,
+    "in_queue": 73,
     "in_watchlist": 128,
-    "in_catalogo": 1,
+    "in_catalogo": 0,
     "in_overflow": 207,
     "in_plano_anual": 133
   },
@@ -55,11 +55,11 @@
       "open": 6
     },
     "eu-horizon": {
-      "count": 154,
-      "open": 108,
+      "count": 155,
+      "open": 109,
       "closed": 97,
       "planned": 8,
-      "published": 109
+      "published": 110
     },
     "eu-other": {
       "count": 55,
@@ -74,18 +74,19 @@
       "published": 3
     },
     "interreg": {
-      "count": 5,
+      "count": 8,
       "open": 3,
-      "planned": 2
+      "planned": 5,
+      "published": 3
     },
     "catalogo-bancos": {
       "count": 2,
       "open": 2
     },
     "catalogo-vc": {
-      "count": 11,
-      "open": 9,
-      "published": 6
+      "count": 12,
+      "open": 10,
+      "published": 7
     },
     "catalogo-premios": {
       "count": 3,
@@ -353,5 +354,5 @@
     "lisbon-business-angels-club": "2026-05-04",
     "hcapital": "2026-05-05"
   },
-  "last_writer_run": "2026-05-04"
+  "last_writer_run": "2026-05-05"
 }

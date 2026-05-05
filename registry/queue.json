@@ -364,23 +364,6 @@
       "fail_count": 0
     },
     {
-      "id": "horizon-miss-2026-03-ocean-05",
-      "name": "Regional  (sea-basins) components of the EU Digital Twin Ocean",
-      "source_id": "eu-funding-tenders",
-      "shard": "eu-horizon",
-      "aviso_codigo": "HORIZON-MISS-2026-03-OCEAN-05",
-      "detected_date": "2026-05-02",
-      "deadline": "2026-09-23",
-      "budget": null,
-      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-03-OCEAN-05",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-03-ocean-05.txt",
-      "priority_score": 15,
-      "status": "ready",
-      "notes": "callId: HORIZON-MISS-2026-03; callTitle: Supporting the implementation of the Restore our Ocean and Waters Mission; framework: 43108390; toa: HORIZON Innovation Actions",
-      "fail_count": 0
-    },
-    {
       "id": "edf-2026-ls-dis-nt",
       "name": "Non-thematic actions targeting disruptive technologies for defence",
       "source_id": "eu-funding-tenders",
@@ -514,40 +497,6 @@
       "priority_score": 15,
       "status": "ready",
       "notes": "callId: HORIZON-MISS-2026-03; callTitle: Supporting the implementation of the Restore our Ocean and Waters Mission; framework: 43108390; toa: HORIZON Innovation Actions",
-      "fail_count": 0
-    },
-    {
-      "id": "interreg-sudoe-3rd-call",
-      "name": "Interreg SUDOE - 3rd Call (Capitalisation projects)",
-      "source_id": "interreg-sudoe",
-      "shard": "interreg",
-      "aviso_codigo": "SUDOE-3RD-CALL-2026",
-      "detected_date": "2026-05-03",
-      "deadline": "2026-09-30",
-      "budget": "1.000.000 EUR (FEDER)",
-      "regulation_url": "https://interreg-sudoe.eu/en/3rd-call/",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/interreg-sudoe/interreg-sudoe-3rd-call.txt",
-      "priority_score": 15,
-      "status": "ready",
-      "notes": "Capitalisation projects | abre Maio 2026 (data exacta nao publicada) | deadline aprox fim Setembro 2026 | dotacao 1M EUR FEDER, max 6 projectos | temas: gestao agua, recursos agro/florestais, populacao envelhecida",
-      "fail_count": 0
-    },
-    {
-      "id": "interreg-sudoe-4th-call",
-      "name": "Interreg SUDOE - 4th Call (Structuring projects)",
-      "source_id": "interreg-sudoe",
-      "shard": "interreg",
-      "aviso_codigo": "SUDOE-4TH-CALL-2026",
-      "detected_date": "2026-05-03",
-      "deadline": "2026-09-30",
-      "budget": "10.000.000 EUR",
-      "regulation_url": "https://interreg-sudoe.eu/en/4th-call/",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/interreg-sudoe/interreg-sudoe-4th-call.txt",
-      "priority_score": 15,
-      "status": "ready",
-      "notes": "Structuring projects | abre Maio 2026 | deadline aprox fim Setembro 2026 | dotacao 10M EUR (4M incendios, 1M envelhecimento) | 1 projecto por prioridade | temas: incendios, populacao envelhecida",
       "fail_count": 0
     },
     {
@@ -1298,23 +1247,6 @@
       "priority_score": 5,
       "status": "ready",
       "notes": "Bolsas. Manifestacao de interesse continua. Ate 8 candidatos/ano. Cobre VSPA, visto DS-2019, taxas IES Berkeley; candidato cobre viagem/alojamento/seguro. Beneficiarios: estudantes doutoramento em IES portuguesas, qualquer area cientifica. Estadia ate 6 meses. Parceria FCT-FLAD-UC Berkeley. Detectado via fct (slot 4).",
-      "fail_count": 0
-    },
-    {
-      "id": "mmm-capitalisation-call-thematic-projects-sustainable-tourism",
-      "name": "Interreg Euro-MED — MMM Capitalisation Call: Thematic Projects (Sustainable Tourism)",
-      "source_id": "interreg-euromed",
-      "shard": "interreg",
-      "aviso_codigo": "EuroMED-MMM-2026-Tourism",
-      "detected_date": "2026-05-05",
-      "deadline": "2026-09-30",
-      "budget": "6.000.000 EUR",
-      "regulation_url": "https://interreg-euro-med.eu/en/get-involved/#CallsForProposals",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/interreg-euromed/mmm-capitalisation-call-thematic-projects-sustainable-tourism.txt",
-      "priority_score": 15,
-      "status": "ready",
-      "notes": "Concurso (status Planned). Abertura 01-set-2026; deadline 30-set-2026. Dotacao indicativa 6M EUR. Prioridades PO1/PO2 (turismo sustentavel). Mediterranean Mainstreaming Capitalisation. Deadline e data_inicio sujeitos a aprovacao do Monitoring Committee. Detectado via interreg-euromed (slot 5).",
       "fail_count": 0
     }
   ],
