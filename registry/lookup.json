@@ -1825,10 +1825,6 @@
     "cef-e-2026-pci-pmi-works": true,
     "cef-e-2026-pci-pmi-studies": true,
     "europeaid-186548-dd-act-multi": true,
-    "europeaid-185838-dd-act-ma": true,
-    "europeaid-186514-dd-fpa-eg": true,
-    "europeaid-185357-dd-act-multi": true,
-    "europeaid-186515-dd-act-me": true,
     "lisbon-business-angels-club": true,
     "iefp-apoios-a-contratacao": true,
     "calamidades-apoios": true,
@@ -1858,7 +1854,15 @@
     "novabase-capital": true,
     "pacs-2026-14": true,
     "pacs-2026-13": true,
-    "pacs-2026-12": true
+    "pacs-2026-12": true,
+    "siid-internacionalizacao-id-industrial-escala-europeia-mpr-2026-04": true,
+    "sice-internacionalizacao-pme-operacoes-conjunto-mpr-2025-14": true,
+    "concursos-ecs-de-2026-da-parceria-europeia-chips-ju": true,
+    "prima-concurso-2026-seccao-2": true,
+    "concurso-de-projetos-de-computacao-avancada-6-ed-a0-a1-lote-d": true,
+    "concurso-de-projetos-de-computacao-avancada-6-ed-a2-a3-lote-d": true,
+    "programa-portugal-berkeley-1": true,
+    "mmm-capitalisation-call-thematic-projects-sustainable-tourism": true
   },
   "by_aviso_codigo": {
     "EuropeAid/186548/DD/ACT/Multi": "europeaid-186548-dd-act-multi",
@@ -3486,7 +3490,6 @@
     "EUAF-2026-TRAI-02": "euaf-2026-trai-02",
     "RENEWFM-2026-INVEST-TECH-SPEC": "renewfm-2026-invest-tech-spec",
     "EDF-2026-LS-DA-SME-NT": "edf-2026-ls-da-sme-nt",
-    "EuropeAid/185838/DD/ACT/MA": "europeaid-185838-dd-act-ma",
     "HORIZON-JU-ER-2026-FA7-01": "horizon-ju-er-2026-fa7-01",
     "EDF-2026-RA-AIR-A4R": "edf-2026-ra-air-a4r",
     "EUBA-EFSA-2025-PLANTS-05-02-Lot2": "euba-efsa-2025-plants-05-02-lot2",
@@ -3508,10 +3511,7 @@
     "HORIZON-MISS-2026-03-OCEAN-02": "horizon-miss-2026-03-ocean-02",
     "EuropeAid/185979/DD/ACT/": "europeaid-185979-dd-act",
     "EP-LINC-SUBV-2026-CONF-INT-03": "ep-linc-subv-2026-conf-int-03",
-    "EuropeAid/186514/DD/FPA/EG": "europeaid-186514-dd-fpa-eg",
     "HORIZON-JU-ER-2026-FA6FA7-01": "horizon-ju-er-2026-fa6fa7-01",
-    "EuropeAid/185357/DD/ACT/Multi": "europeaid-185357-dd-act-multi",
-    "EuropeAid/186515/DD/ACT/ME": "europeaid-186515-dd-act-me",
     "EuropeAid/185446/DD/ACT/GT": "europeaid-185446-dd-act-gt",
     "HORIZON-WIDERA-2026-05-WIDENING-01": "horizon-widera-2026-05-widening-01",
     "EuropeAid/186089/DD/ACT/TZ": "europeaid-186089-dd-act-tz",
@@ -3559,7 +3559,15 @@
     "EuropeAid/186264/DD/ACT/Multi": "europeaid-186264-dd-act-lk",
     "PACS-2026-14": "pacs-2026-14",
     "PACS-2026-13": "pacs-2026-13",
-    "PACS-2026-12": "pacs-2026-12"
+    "PACS-2026-12": "pacs-2026-12",
+    "MPr-2026-04": "siid-internacionalizacao-id-industrial-escala-europeia-mpr-2026-04",
+    "MPR-2025-14": "sice-internacionalizacao-pme-operacoes-conjunto-mpr-2025-14",
+    "FCT/Chips-JU/2026": "concursos-ecs-de-2026-da-parceria-europeia-chips-ju",
+    "FCT/PRIMA/2026/S2": "prima-concurso-2026-seccao-2",
+    "FCT/CPCA/2024/01": "concurso-de-projetos-de-computacao-avancada-6-ed-a0-a1-lote-d",
+    "FCT/CPCA/2025/01": "concurso-de-projetos-de-computacao-avancada-6-ed-a2-a3-lote-d",
+    "Portugal_Berkeley_Program_2026": "programa-portugal-berkeley-1",
+    "EuroMED-MMM-2026-Tourism": "mmm-capitalisation-call-thematic-projects-sustainable-tourism"
   },
   "plano_anual": {
     "acoes-inovadoras-desafio-demografico-parcerias-coesao-alentejo": {
