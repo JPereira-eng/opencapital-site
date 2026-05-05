@@ -7,9 +7,9 @@
   },
   "totals": {
     "published": 831,
-    "open": 519,
-    "closed": 291,
-    "planned": 17,
+    "open": 516,
+    "closed": 293,
+    "planned": 18,
     "in_queue": 100,
     "in_watchlist": 128,
     "in_catalogo": 0,
@@ -24,16 +24,17 @@
       "planned": 1
     },
     "pt2030-pessoas": {
-      "count": 2,
-      "open": 1
+      "count": 3,
+      "open": 1,
+      "closed": 2
     },
     "pt2030-central": {
       "count": 0
     },
     "pt2030-norte": {
-      "count": 7,
+      "count": 6,
       "open": 3,
-      "closed": 4
+      "closed": 3
     },
     "pt2030-centro": {
       "count": 2,
@@ -42,7 +43,8 @@
     },
     "pt2030-lisboa": {
       "count": 4,
-      "open": 4
+      "open": 3,
+      "planned": 1
     },
     "pt2030-other": {
       "count": 49,
@@ -111,18 +113,18 @@
     }
   },
   "last_full_cycle": "2026-04-12",
-  "last_monitor_run": "2026-05-04",
+  "last_monitor_run": "2026-05-05",
   "source_last_checked": {
     "portugal-2030": "2026-05-05",
     "compete-2030": "2026-04-29",
-    "norte-2030": "2026-04-30",
+    "norte-2030": "2026-05-05",
     "centro-2030": "2026-05-04",
     "lisboa-2030": "2026-04-29",
     "alentejo-2030": "2026-04-29",
     "algarve-2030": "2026-04-29",
     "madeira-2030": "2026-04-30",
     "acores-2030": "2026-04-29",
-    "pessoas-2030": "2026-04-30",
+    "pessoas-2030": "2026-05-05",
     "sustentavel-2030": "2026-05-04",
     "mar-2030": "2026-04-29",
     "pat-2030": "2026-05-04",
@@ -237,14 +239,14 @@
   "source-last_checked": {
     "portugal-2030": "2026-05-05",
     "compete-2030": "2026-04-29",
-    "norte-2030": "2026-04-30",
+    "norte-2030": "2026-05-05",
     "centro-2030": "2026-05-04",
     "lisboa-2030": "2026-04-29",
     "alentejo-2030": "2026-04-29",
     "algarve-2030": "2026-04-29",
     "madeira-2030": "2026-04-30",
     "acores-2030": "2026-04-29",
-    "pessoas-2030": "2026-04-30",
+    "pessoas-2030": "2026-05-05",
     "sustentavel-2030": "2026-05-04",
     "mar-2030": "2026-04-29",
     "pat-2030": "2026-05-04",
