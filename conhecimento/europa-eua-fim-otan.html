@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Europa, Estados Unidos e o fim de uma aliança | Open Capital</title>
+  <meta name="description" content="A guerra no Médio Oriente expôs uma fratura mais antiga entre a Europa e os Estados Unidos. A defesa europeia continua dependente de Washington, e cada vez mais sozinha.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../biblioteca.html">Biblioteca</a></li>
+      <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades</a>
+        <div class="nav-dropdown-menu">
+          <a href="../parceiros.html">Parceiros</a>
+          <a href="../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../index.html">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../conhecimento.html">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Estratégia</span>
+      </nav>
+      <span class="hero-cat-badge">Estratégia · Geopolítica</span>
+      <h1 class="article-title">Europa, Estados Unidos e o fim de uma aliança</h1>
+      <p class="article-standfirst">A guerra no Médio Oriente expôs uma fratura mais antiga. A Europa não está pronta para se defender sozinha, e Washington parece cada vez menos disposto a fazê-lo por ela.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Estratégia</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Maio 2026</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>14 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Luís Gomes</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+      <img src="../assets/articles/fimdanato_youtube.webp" alt="Europa, Estados Unidos e o fim de uma aliança" class="article-cover-img">
+
+      <div class="article-section reveal">
+        <p>A atenção da geopolítica continua quase toda virada para o Médio Oriente. O cessar-fogo com o Irão arrasta-se, o estreito de Ormuz abre e fecha, e ninguém sabe ao certo até onde vai a escalada. É natural que assim seja. Mas há uma consequência paralela desta guerra que não é menos importante do que o seu desfecho militar, e que provavelmente terá efeitos mais duradouros para a Europa: a relação entre os Estados Unidos e a União Europeia entrou em rutura aberta.</p>
+        <p>A Europa não está envolvida diretamente no conflito. Não foi atingida fisicamente. Mas politicamente e estrategicamente, está a pagar uma fatura pesada. O que se passou nas últimas semanas confirmou uma tendência que se vinha a desenhar há anos. Talvez estejamos perto do momento em que os Estados Unidos abandonam mesmo a OTAN. E vale a pena perceber em que ponto está a discussão, que opções tem a Europa, e o que isto significa para quem gere ou constrói empresas neste continente.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Diagnóstico</div>
+        <h2>O sinal que a Europa enviou</h2>
+        <p>Quando a guerra com o Irão escalou, os principais países europeus recusaram-se a ajudar Washington. Não foi apenas Espanha, que já vinha a manter uma postura abertamente crítica e a recusar cumprir as metas de despesa em defesa exigidas por Trump. Foram também o Reino Unido, a França e a Itália a impor restrições ao uso das suas bases e pistas de aterragem para ataques contra o Irão. As regras mudaram várias vezes ao longo de poucos dias. Primeiro proibido, depois autorizado para reabastecimento, depois autorizado para ataque, depois novamente proibido. Para um continente cuja segurança depende inteiramente do guarda-chuva americano, este é um sinal de uma dureza inédita.</p>
+        <p>O caso mais embaraçoso foi o de França. O Governo francês recusou apoio militar aos Estados Unidos e, em paralelo, pagou dois milhões de dólares ao Irão para garantir o trânsito dos seus navios no estreito de Ormuz. O contraste é difícil de defender diante de um aliado.</p>
+        <p>Mais revelador ainda foi o caso italiano. Giorgia Meloni é, em teoria, a líder europeia ideologicamente mais próxima de Trump. Esteve na sua tomada de posse, é elogiada publicamente pela Casa Branca, partilha a mesma matriz política. E, ainda assim, recusou o uso das bases italianas. A explicação não está na ideologia, está na sobrevivência política. A opinião pública europeia, e em particular a italiana, virou-se claramente contra Trump. Para se manter no poder, Meloni teve de se afastar dele. O mesmo padrão repete-se em partidos de direita radical como o AfD na Alemanha. Trump deixou de ser ativo eleitoral em qualquer setor do eleitorado europeu.</p>
+        <div class="art-highlight">
+          <div class="art-highlight-label">O que está em jogo</div>
+          <div class="art-highlight-text">Trump já avisou que da próxima vez que a Europa for atacada, não conte com os Estados Unidos. A retirada da OTAN deixou de ser hipótese remota para passar a ser ameaça com data marcada.</div>
+        </div>
+        <p>Há, claro, motivos para a frieza europeia. A retórica de Trump sobre a Gronelândia foi agressiva. As negociações que Washington tem conduzido sobre o cessar-fogo na Ucrânia favorecem visivelmente a Rússia. E houve falta de comunicação prévia antes do ataque ao Irão. Tudo somado, faz sentido que a Europa esteja desconfortável. O problema é que escolheu confrontar quando não tem alternativa pronta para tomar o lugar do que está a recusar.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Três caminhos, nenhum simples</h2>
+        <p>Em teoria, a Europa tem três opções para resolver a sua equação de defesa.</p>
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Manter os Estados Unidos:</strong> reconhecer que a OTAN só funciona com Washington a comandá-la, e ajustar o comportamento europeu em conformidade. Isto exigiria parar de provocar e começar a entregar.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Construir uma defesa europeia integrada:</strong> criar uma estrutura supranacional, com indústria, comando e financiamento comuns. Uma espécie de Pentágono europeu.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Reforçar cada exército nacional:</strong> aumentar despesa em defesa em cada país, manter a soberania militar individual, e coordenar a ação em conjunto perante uma ameaça russa.</li>
+        </ul>
+        <p>O primeiro caminho exige pragmatismo, e a Europa parece estar a fazer o oposto. Em todo o pacote de medidas adotadas durante a guerra com o Irão, o sinal foi exatamente este: que tanto faz se Washington fica ou parte. Esta postura tem custos. Trump já decidiu que custos haverá.</p>
+        <p>O terceiro caminho parece o mais natural, e é em parte aquele que está a ser seguido. A maioria dos países europeus já cumpre o limiar dos 2% do PIB em despesa de defesa. Cerca de 24 dos 32 membros da OTAN. A promessa atual é chegar a 3,5% até 2035. Trump fala em 5%. Mas o problema europeu não é apenas quanto se gasta. É como se gasta. E aqui entra um obstáculo que muito do debate público ignora.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <h2>O problema é estrutural, não de orçamento</h2>
+        <p>A OTAN funciona porque os Estados Unidos preenchem todas as lacunas. Comando supremo, inteligência, capacidade espacial, infraestrutura tecnológica, fornecimento massivo de munição e equipamento, soldados em quantidade. Os exércitos europeus enchem nichos. Cada país tem uma indústria de defesa nacional, com armamentos próprios, calibres próprios, cadeias logísticas separadas. Multiplique-se isto por 27 países da União Europeia, e tem-se uma estrutura desenhada para não funcionar em conjunto.</p>
+        <p>Aumentar despesa neste modelo não resolve o problema. Pode até agravá-lo. Encomendar mais tanques alemães, mais aviões franceses e mais navios italianos sem coordenação produz redundância e ineficiência. O dinheiro vai ser gasto, e a capacidade militar continuará fragmentada.</p>
+        <div class="stats-row cols-3 reveal">
+          <div class="stat-cell">
+            <div class="stat-num">2<sup>%</sup></div>
+            <div class="stat-label">Meta atual de despesa em defesa (PIB)</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">3,5<sup>%</sup></div>
+            <div class="stat-label">Meta prometida até 2035</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">5<sup>%</sup></div>
+            <div class="stat-label">Exigência de Trump</div>
+          </div>
+        </div>
+        <p>Há também um problema de demografia e cultura. A Ucrânia está a resistir há anos com uma população relativamente jovem, com espírito guerreiro, com determinação existencial. A Alemanha, mesmo com história militar pesada, entrou nas últimas décadas num período cultural pacifista, antinuclear, com restrições constitucionais e orçamentais. Desligou as suas centrais nucleares civis depois do acidente japonês. Tem o partido verde mais forte do mundo. Transformar isto numa potência militar capaz de combater leva tempo, e leva muito mais do que dinheiro. O mesmo se passa noutros países europeus, em variações próprias. Comparar uma Europa fragmentada e desarmada com a Ucrânia em guerra não é realista. É mais provável que vários países europeus simplesmente cedam diante de uma ameaça russa, em vez de combater.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>O Pentágono europeu, e por que pode não acontecer</h2>
+        <p>A solução teoricamente mais coerente é a construção de uma defesa europeia integrada. Uma estrutura em Bruxelas que emita dívida comum, financie despesa militar, adquira equipamentos uniformes para todos os países, e construa uma força militar onde os soldados são enviados pelos Estados-membros. Algo equivalente, na defesa, ao que o euro fez na economia: uma cedência parcial de soberania para ganhar escala.</p>
+        <p>O argumento contra esta opção costuma ser a soberania. Mas é um argumento que não resiste à análise. Nenhum país europeu tem hoje verdadeira soberania militar. Os exércitos nacionais são fachada operacional sobre uma defesa terceirizada aos Estados Unidos desde o fim da Segunda Guerra Mundial. Recusar criar uma defesa europeia comum em nome de uma soberania militar que já não existe é uma fantasia útil para os establecimentos militares nacionais, não uma posição estratégica defensável.</p>
+        <p>A vontade política existe, em parte. As sondagens recentes mostram que a maioria dos europeus não confia na capacidade do seu próprio exército para defender o país perante as ameaças do século XXI. E confia significativamente mais nas instituições europeias. Há uma janela de legitimidade democrática que poderia ser aproveitada.</p>
+        <p>Os obstáculos reais estão noutro sítio.</p>
+        <h3>Quem paga</h3>
+        <p>Uma defesa europeia integrada implica transferência fiscal entre países. O dinheiro para armar a Itália sairia dos contribuintes alemães e holandeses. Se a crise da dívida soberana mostrou alguma coisa, foi que o Norte da Europa não gosta de financiar o Sul. Estender essa lógica ao armamento adiciona explosivos a um terreno que já é instável.</p>
+        <h3>O contrato social alemão</h3>
+        <p>A economia alemã está fundamentada num modelo industrial exportador. Uma defesa europeia integrada implicaria distribuir cadeias industriais pelos vários países: tanques na Alemanha, mísseis em França, munições em Itália. A Alemanha perderia uma parte da sua capacidade industrial num momento em que já está a ser pressionada pela concorrência chinesa e pela perda da energia barata russa. Vender esta cedência à sociedade alemã, num só pacote com a transferência fiscal e a militarização, parece insustentável.</p>
+        <h3>Não há acordo sobre qual é a ameaça</h3>
+        <p>Sondagens junto de governantes e especialistas europeus classificam os países em cinco categorias de perceção de ameaça russa.</p>
+        <table class="art-table">
+          <thead><tr><th>Categoria</th><th>Posição</th><th>Países típicos</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1</strong></td><td>A Rússia não é uma ameaça relevante</td><td>Portugal, Espanha, Itália</td></tr>
+            <tr><td><strong>2</strong></td><td>É uma ameaça, mas não a principal</td><td>França</td></tr>
+            <tr><td><strong>3</strong></td><td>É uma ameaça igual a outras</td><td>Alemanha, Suíça, Holanda</td></tr>
+            <tr><td><strong>4</strong></td><td>É a principal ameaça, mas não a única</td><td>Noruega, Suécia</td></tr>
+            <tr><td><strong>5</strong></td><td>É a única ameaça que importa</td><td>Finlândia, Polónia, Bálticos</td></tr>
+          </tbody>
+        </table>
+        <p>A primeira categoria é a que tem o maior número de países da União Europeia. Quem está na categoria cinco partilha pouco ou nada com quem está na categoria um. Construir uma indústria de defesa comum exige acordo sobre que armas fazem sentido. E armas para conter a Rússia nuclear são diferentes de armas para conter ameaças terroristas no Sahel. Sem acordo sobre a ameaça, não há acordo sobre o equipamento.</p>
+        <h3>O risco de implosão política</h3>
+        <p>Avançar com uma defesa europeia integrada exigiria um novo tratado. Os tratados europeus do passado foram sempre processos politicamente instáveis. Houve referendos perdidos, ratificações que passaram por uma margem mínima, divisões internas profundas. Lançar agora um tratado sobre uma matéria tão sensível como a defesa, com uma Alemanha rearmada no centro, pode acabar por produzir o oposto do que pretende. Em vez de unir a Europa, fragmenta-a.</p>
+        <div class="pull-quote reveal">
+          <div class="pull-quote-text">"Recusar uma defesa europeia comum em nome de uma soberania militar que já não existe é uma fantasia útil, não uma posição estratégica."</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>O dilema nuclear</h2>
+        <p>Mesmo que tudo isto fosse resolvido, ficaria por resolver a questão mais difícil: o guarda-chuva nuclear. A defesa da Europa contra a Rússia depende, em última instância, de capacidade de dissuasão atómica. E aqui os números são esmagadores.</p>
+        <div class="stats-row cols-3 reveal">
+          <div class="stat-cell">
+            <div class="stat-num">~290</div>
+            <div class="stat-label">Ogivas nucleares de França</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">~220</div>
+            <div class="stat-label">Ogivas nucleares do Reino Unido</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">~5.000</div>
+            <div class="stat-label">Ogivas nucleares da Rússia</div>
+          </div>
+        </div>
+        <p>Apenas dois países europeus possuem armas nucleares: França e Reino Unido. A França tem capacidade de segundo ataque por via de submarinos nucleares, o que tecnicamente é o que se exige a uma força de dissuasão. O Reino Unido tem números semelhantes. Em conjunto, somam pouco mais de 500 ogivas. A Rússia tem perto de 5.000. Esta diferença é, ela própria, um incentivo para um primeiro ataque russo desenhado para destruir o arsenal franco-britânico.</p>
+        <p>A França ofereceu publicamente o seu guarda-chuva nuclear ao resto da Europa. Países como a Alemanha responderam com cautela: aceitam, desde que os Estados Unidos não se retirem completamente. A razão é simples. A dissuasão nuclear depende de duas coisas: capacidade técnica para retaliar e disponibilidade percebida para o fazer. A Polónia poderia, com algum esforço, acreditar na capacidade técnica francesa. Acreditar que Paris lançaria uma ogiva nuclear porque a Rússia atingiu uma cidade polaca com uma arma tática é mais difícil. E se não há credibilidade percebida, não há dissuasão.</p>
+        <p>A alternativa seria criar uma força nuclear europeia comum, financiada por todos, com França e Reino Unido a contribuir com parte do arsenal inicial. Mas a decisão de lançar teria de ficar com uma autoridade supranacional sem legitimidade democrática direta. Imaginar um conselho europeu a decidir sobre o uso de armas atómicas, em tempo real, perante uma agressão a um único Estado-membro, é um exercício de ficção institucional. Moscovo não acreditaria.</p>
+        <p>Resta a opção mais radical: cada país europeu armar-se nuclearmente. A Polónia já manifestou interesse, e a Alemanha teria capacidade técnica. Mas para Berlim avançar é preciso desfazer décadas de cultura pacifista, restrições legais e constitucionais, e uma desativação completa do parque nuclear civil. Quanto tempo isso demora? Anos, no mínimo. E qual a reação política à ideia de uma Alemanha nuclear, dentro e fora da Europa? Provavelmente desencadearia uma corrida nuclear global. Pode ser, ainda assim, a única saída no longo prazo.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Uma Europa enfraquecida, não uma Europa autónoma</h2>
+        <p>O secretário-geral da OTAN, Mark Rutte, tem repetido publicamente que a Europa não existe sem os Estados Unidos do ponto de vista da segurança. É uma posição realista do ponto de vista militar, mas tem um custo político. Sinaliza ao movimento político à volta de Trump que a Europa é o que ele diz que é: uma aliada fraca, dependente, que recebe sem entregar. A estratégia de apaziguamento não tem produzido resultados. O desrespeito americano cresce em paralelo com a submissão europeia.</p>
+        <p>Israel, em comparação, tem feito o oposto. Demonstra ativamente que é um aliado capaz de entregar, de arriscar soldados, de partilhar responsabilidade. É essa demonstração de utilidade estratégica que sustenta a relação. A Europa não está a fazer nada disso.</p>
+        <p>O resultado provável das próximas etapas é uma Europa simultaneamente menos protegida pelos Estados Unidos e incapaz de se proteger sozinha. Um continente confuso, fragmentado, a multiplicar despesa em defesa sem ganho real de capacidade. A Rússia vai ler isto como oportunidade. Não é impossível assistir a um movimento russo ainda nesta década, em função de como esta história se desenrolar.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>Como aplicar este conhecimento</h2>
+        <p>Para uma empresa portuguesa, o instinto é tratar este tipo de discussão como ruído distante. A defesa europeia, a OTAN, o nuclear, são matérias de chancelarias. Não são. As decisões que estão a ser tomadas neste período vão moldar a política industrial europeia, a alocação de fundos comunitários, e a estrutura de custos de uma série de setores nos próximos dez a quinze anos.</p>
+        <p>Há três pontos práticos a reter para quem gere ou constrói uma empresa em Portugal:</p>
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Defesa vai canalizar capital europeu.</strong> Se a Europa avançar com despesa nos 3,5% do PIB, ou eventualmente nos 5%, é uma das maiores reafectações de recursos da última geração. Setores adjacentes (tecnologia dual-use, cibersegurança, logística, materiais avançados) vão ser puxados. Empresas portuguesas com posicionamento técnico nestas áreas devem mapear desde já o pipeline de programas europeus de defesa.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">A política industrial europeia vai mudar.</strong> A retirada parcial dos Estados Unidos força a União Europeia a reforçar autonomia estratégica também em energia, semicondutores, matérias-primas críticas. O Portugal 2030, o COMPETE 2030, e a próxima geração de fundos vão refletir esta orientação. As empresas que se posicionarem cedo nestes vetores vão ter mais acesso a financiamento.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Risco geopolítico passa a ser operacional.</strong> Empresas com cadeias de fornecimento que dependem de estabilidade transatlântica precisam de reavaliar exposição. Um cenário de rutura formal entre Washington e Bruxelas teria efeitos imediatos em comércio, dados, padrões técnicos e proteção militar. Faz sentido começar a fazer esse exercício de stress test enquanto ainda é exercício teórico.</li>
+        </ul>
+        <p>A Open Capital acompanha, em vários dos seus mandatos, empresas cuja estratégia depende deste tipo de leitura. Não para fazer geopolítica, mas para ler corretamente o ciclo de incentivos, de financiamento e de procura que vai emergir nos próximos anos. Ignorar este pano de fundo é deixar dinheiro em cima da mesa.</p>
+      </div>
+
+      <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../Retratos Equipa/retrato_luísgomes.png" alt="Luís Gomes" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Luís Gomes</div>
+            <div class="sidebar-author-role">Analista Financeiro</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Categoria</div><div class="sidebar-info-val">Estratégia</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Publicado</div><div class="sidebar-info-val">Maio 2026</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Leitura</div><div class="sidebar-info-val">14 min</div></div>
+      </div>
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Como é que isto afeta a sua empresa?</div>
+        <div class="sidebar-cta-text">Defesa, autonomia estratégica europeia e fundos comunitários estão a ser realinhados. Falamos consigo sobre como posicionar a sua empresa.</div>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="defesa-aco-nova-politica-industrial-europeia.html" class="related-item">
+          <span class="related-item-title">Defesa e aço, a nova política industrial europeia</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="fragmentacao-global-fim-globalizacao-eficiente.html" class="related-item">
+          <span class="related-item-title">Fragmentação global e o fim da globalização eficiente</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="tarifas-trump-impacto-empresas-portuguesas.html" class="related-item">
+          <span class="related-item-title">Tarifas Trump, impacto em empresas portuguesas</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo-row">
+          <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
+        </div>
+        <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+      </div>
+      <div>
+        <div class="f-col-label">Biblioteca</div>
+        <ul class="f-links">
+          <li><a href="../biblioteca.html">Portugal 2030</a></li>
+          <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+          <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+          <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Plataforma</div>
+        <ul class="f-links">
+          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+          <li><a href="../conhecimento.html">Conhecimento</a></li>
+          <li><a href="../parceiros.html">Parceiros</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-label">Empresa</div>
+        <ul class="f-links">
+          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="../sobre-nos.html">Equipa</a></li>
+          <li><a href="../carreiras.html">Carreiras</a></li>
+          <li><a href="https://calendly.com/opencapital">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+      <div class="f-legal"><a href="#">Privacidade</a><a href="#">Termos</a><a href="#">Cookies</a></div>
+    </div>
+  </footer>
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
