@@ -1,4 +1,4 @@
-﻿# Radar Scanner v4.6: Descoberta de Novos Instrumentos
+﻿# Radar Scanner v4.7: Descoberta de Novos Instrumentos
 
 REGRA CRÍTICA: Nunca usar travessão (—) em nenhum texto gerado. Usar vírgula, ponto, hífen (-) ou reescrever a frase.
 
@@ -32,21 +32,23 @@ fi
 
 ---
 
-## FICHEIROS DE ESTADO (v4.2)
+## FICHEIROS DE ESTADO (v4.7)
 
 | Ficheiro | Conteudo | Quando ler |
 |---|---|---|
 | `registry/index.json` | contadores globais | Sempre |
 | `registry/queue.json` | fila de instrumentos | Sempre |
+| `registry/queue-plano-anual.json` | watchlist PAA (leitura para promoção lateral, escrita ao promover) | Sempre |
 | `registry/lookup.json` | dedup O(1) por id/código | Sempre |
 | `sources-scan.json` | fontes com access_method, shard | Sempre |
 
-**NAO TOCAR** em `registry/queue-plano-anual.json` (watchlist do monitor/downloader). O scanner não deve ler nem escrever neste ficheiro. A dedup via `lookup.json` já garante que items PAA não são re-descobertos.
+**MUDANÇA v4.7 (2026-04-30):** O scanner passa a ler e escrever em `registry/queue-plano-anual.json` exclusivamente para a operação de **promoção lateral PAA → aviso** (ver PASSO 3.5). O scanner não descobre items para a watchlist (essa continua a ser responsabilidade do downloader); apenas remove items que detete já publicados ao cruzar a watchlist com dados frescos da API.
 
 **Leitura no inicio:**
 ```
 Read $REPO/registry/index.json
 Read $REPO/registry/queue.json
+Read $REPO/registry/queue-plano-anual.json
 Read $REPO/registry/lookup.json
 Read $REPO/sources-scan.json
 ```
@@ -673,6 +675,97 @@ Para cada instrumento detectado:
 5. **Verificacao por titulo:** Se >= 80% similar a um item existente (mesma fonte): skip
 6. Se novo e não filtrado: adicionar a queue (ver Passo 4 para destino correto por regime)
 
+**MUDANÇA v4.7:** Antes de fazer skip definitivo nos passos 3 e 4 (lookup hit), aplicar **PASSO 3.5 (Promoção lateral PAA → aviso)**. Apenas para fontes regime "aviso" com `access_method: "api"`.
+
+---
+
+## PASSO 3.5: Promoção lateral PAA → aviso (v4.7)
+
+**Objetivo:** quando o scanner vê um item já conhecido (lookup hit) durante o scan de uma fonte API PT2030, verificar se esse item está na watchlist `queue-plano-anual.json`. Se estiver, e se o TESTE A (FILTRO DOCUMENTO PUBLICADO, ver PASSO 2) passar nos dados frescos da API, **promover o item da watchlist para `queue.json` sem esperar pela rotação do monitor**.
+
+**Motivação (2026-04-30):** Caso real do `FA0147/2025` (SIBT Alentejo). Item adicionado à watchlist em 13/04/2026. Aviso real publicado em Março no portal central PT2030. Scanner via o codigo todos os dias mas fazia skip por dedup. Monitor demorava ~13 dias a re-verificar (10 items/run em 133+). Resultado: aviso aberto e não promovido por 22 dias. A promoção lateral resolve isto: dado que o scanner já tem dados frescos em mão, basta uma verificação extra antes do skip.
+
+### Quando se aplica
+
+Apenas quando **todas** as condições são verdadeiras:
+- Fonte é regime "aviso" (não catálogo)
+- `access_method: "api"` (portais WordPress PT2030)
+- O item já existe em `lookup.by_aviso_codigo[código]` ou `lookup.by_id[id]` (ou seja, ia ser skipped no PASSO 3)
+
+Para fontes não-API (webfetch, chrome, websearch) este passo não se aplica — não é possível correr TESTE A com confiança sem campo ACF estruturado.
+
+### Lógica
+
+```
+[Item ia ser skipped no PASSO 3 por lookup hit]
+
+a. Carregar queue-plano-anual.json (uma vez por run, no início; indexar por aviso_codigo).
+   watchlist_by_codigo = { item.aviso_codigo: item for item in watchlist.queue if item.aviso_codigo }
+
+b. Cruzar codigo do item atual com a watchlist:
+   - Se NÃO está na watchlist: skip normal (comportamento v4.6).
+   - Se ESTÁ na watchlist: continuar para passo c.
+
+c. Aplicar TESTE A (FILTRO DOCUMENTO PUBLICADO, ver PASSO 2) aos dados frescos
+   da API que o scanner acabou de ler:
+   - Nível 1: campos ACF conhecidos (acf.pdf, acf.aviso, acf.ficheiro, etc.)
+   - Nível 2: fallback genérico (URLs/IDs de documento)
+
+   Se TESTE A FALHA (Nível 1 e Nível 2 ambos falham):
+     skip normal. Item permanece intacto na watchlist.
+     Registar no relatório: "[id] continua PAA via API central, watchlist intacta."
+
+   Se TESTE A PASSA (regulamento publicado):
+     PROMOVER (passo d).
+
+d. Promoção:
+   1. Localizar item em queue-plano-anual.json (por aviso_codigo) e remover.
+   2. Verificar consistência: o id ou codigo já está em queue.json?
+      - Se SIM (corrupção prévia): NÃO adicionar duplicado. Apenas remover da watchlist.
+        Registar warning: "[id] já existia em queue.json — watchlist limpa, sem duplicar."
+      - Se NÃO: continuar para passo 3.
+   3. Construir entrada nova para queue.json:
+      - id: manter o original da watchlist (NÃO regenerar slug)
+      - name: usar dados frescos da API
+      - aviso_codigo: manter (canónico)
+      - source_id: a fonte que está a executar o scan (ex: "portugal-2030")
+      - shard: aplicar regras de routing do PASSO 4 com base em acf.programa[]
+      - detected_date: manter o original da watchlist (data de primeira deteção)
+      - promotion_date: hoje (NOVO campo v4.7)
+      - promoted_from_paa: true (NOVO campo v4.7, audit trail)
+      - deadline: data fresca da API (acf.data_fim)
+      - budget: dotação fresca da API (acf.df)
+      - regulation_url: link fresco da API (acf.link)
+      - pdf_url: URL do PDF se disponível
+      - regulation_local: null (downloader vai descarregar)
+      - status: "pending"
+      - download_error: removido
+      - priority_score: recalcular com regras do PASSO 4
+      - notes: prefixar com "PROMOVIDO de PAA em [data] via [source_id]." + dados base
+   4. Adicionar a queue.json (respeitar limite 100 + swap por prioridade do PASSO 4).
+   5. lookup.json: NÃO mexer. O codigo/id já lá estão (foi precisamente o lookup hit
+      que disparou este passo). A promoção não gera nova entrada no lookup.
+```
+
+### Cruzamento por `aviso_codigo`, não por `id`
+
+Crítico: o `id` na watchlist pode diferir do que o scanner geraria hoje (slug evoluiu, ou foi atribuído antes da regra de slug estabilizar). O `aviso_codigo` é canónico e único — usar como chave primária do cruzamento.
+
+**Exemplo real do SIBT Alentejo:**
+- Watchlist tem `id: "sistema-incentivos-base-territorial-alentejo"`
+- Scanner hoje geraria `id: "sistema-de-incentivos-de-base-territorial-alentejo"` (com hífen extra)
+- Match por id falha. Match por `FA0147/2025` funciona.
+
+### Edge cases
+
+**Race condition intra-run.** O scanner pode rodar duas fontes que veem o mesmo aviso (ex: `portugal-2030` central + `alentejo-2030` regional). A primeira promove. Quando a segunda chega ao mesmo codigo, a watchlist já não o tem. O cruzamento falha, item sofre skip normal. Sem duplicados.
+
+**Watchlist dessincronizada.** Se o item está em queue-plano-anual.json mas também já está em queue.json (bug anterior), promover criaria duplicado. O passo d.2 deteta este caso: limpa a watchlist mas não adiciona à queue.json. Reportar warning.
+
+**TESTE A falha persistente.** Item permanece na watchlist em todas as runs. O monitor continua a tentar com a sua própria lógica (ver radar-monitor PASSO 2.6). Sem downside — apenas atraso na promoção, igual ao comportamento v4.6.
+
+**Item promovido tinha priority_score na watchlist mas tem outro na queue.** Sempre recalcular com regras do PASSO 4 baseadas em dados frescos, ignorando priority_score antigo da watchlist.
+
 ---
 
 ## PASSO 4: Adicionar novos a fila
@@ -796,6 +889,11 @@ Para fontes não-PT2030 (EU, Interreg, etc.), usar o `shard` definido em `source
     - Já em lookup.by_aviso_codigo: N ignorados
     - Já em lookup.by_id: N ignorados
     - Titulo >= 80% similar: N ignorados
+  Promoções laterais PAA -> aviso (v4.7, apenas access_method "api"):
+    - Items conhecidos cruzados com watchlist: N
+    - Items na watchlist com TESTE A falhado (continuam PAA): N
+    - Items PROMOVIDOS para queue.json: N
+      - [id] (codigo): [nome curto]
   NOVOS adicionados a queue.json: N
 ```
 
@@ -833,14 +931,17 @@ Totais da run:
   - Total ignorados por dedup: N
   - Total NOVOS aviso: N
   - Total NOVOS catálogo: N
+  - Total promoções laterais PAA -> aviso (v4.7): N
 
 Estado da queue:
   - queue.json antes: N
-  - queue.json depois: N (delta = novos_aviso - migrados_para_overflow + migrados_do_overflow)
+  - queue.json depois: N (delta = novos_aviso + promocoes_paa - migrados_para_overflow + migrados_do_overflow)
   - queue-catálogo.json antes: N
   - queue-catálogo.json depois: N (delta = novos_catalogo)
   - queue-overflow.json antes: N
   - queue-overflow.json depois: N
+  - queue-plano-anual.json antes: N
+  - queue-plano-anual.json depois: N (delta = -promocoes_paa)
 
 Operacoes de overflow (se houver):
   - Items movidos queue -> overflow: N (priority_score min: X)
@@ -860,15 +961,17 @@ Antes de qualquer `git add`, validar que as contagens batem certo. Uma discrepan
 **TESTE 1 - Delta esperado (bug da run atual):**
 
 ```
-expected_queue_delta = novos_aviso - movidos_para_overflow + movidos_do_overflow
+expected_queue_delta = novos_aviso + promocoes_paa - movidos_para_overflow + movidos_do_overflow
 expected_queue_catalogo_delta = novos_catalogo
 expected_overflow_delta = movidos_para_overflow - movidos_do_overflow
+expected_plano_anual_delta = -promocoes_paa
 ```
 
 Verificar:
 - `queue.json.queue.length == queue_antes + expected_queue_delta` ?
 - `queue-catálogo.json.queue.length == queue_catalogo_antes + expected_queue_catalogo_delta` ?
 - `queue-overflow.json.queue.length == overflow_antes + expected_overflow_delta` ?
+- `queue-plano-anual.json.queue.length == plano_anual_antes + expected_plano_anual_delta` ? (v4.7)
 
 Se qualquer falhar: **ABORTAR RUN**. Investigar item/operacao extra, corrigir, ou reverter.
 
@@ -902,6 +1005,18 @@ Se faltar: adicionar ao lookup com log:
 SANITY WARNING: [id] em queue.json mas ausente de lookup.by_id. Adicionado.
 ```
 
+**TESTE 4 - Coerencia de promoção lateral PAA → aviso (v4.7):**
+
+Apenas se houver promoções nesta run.
+
+Verificar:
+- Cada item promovido tem `promoted_from_paa: true` e `promotion_date` definido em queue.json?
+- Cada item promovido NÃO está em queue-plano-anual.json?
+- Cada item promovido tem entrada em lookup.by_id e lookup.by_aviso_codigo (já lá estavam pré-promoção)?
+- `queue-plano-anual.json.queue.length == plano_anual_antes - promocoes_paa` ?
+
+Se qualquer falhar: **ABORTAR RUN**. Promoção incoerente significa perda de dados — possível duplicado ou item perdido.
+
 **Se TODOS os testes passam (ou foram auto-corrigidos):** prosseguir para 6b com relatorio dos warnings emitidos.
 
 Este sanity check existe porque em runs anteriores foram reportados "3 novos" quando `in_queue` subiu 7 (TESTE 1), e mais recentemente (2026-04-17) foi detectado que `in_queue=94` enquanto queue.json tinha 37 items (TESTE 2) - um drift legado que o TESTE 1 não apanha.
@@ -909,10 +1024,12 @@ Este sanity check existe porque em runs anteriores foram reportados "3 novos" qu
 ### 6b. Commit e push
 
 ```bash
-git -C "$REPO" add registry/index.json registry/queue.json registry/queue-catálogo.json registry/queue-overflow.json registry/lookup.json sources-scan.json
-git -C "$REPO" commit -m "scanner: [N fontes], [N novos aviso], [N novos catálogo]"
+git -C "$REPO" add registry/index.json registry/queue.json registry/queue-catálogo.json registry/queue-overflow.json registry/queue-plano-anual.json registry/lookup.json sources-scan.json
+git -C "$REPO" commit -m "scanner: [N fontes], [N novos aviso], [N novos catálogo], [N promoções PAA]"
 git -C "$REPO" push origin main
 ```
+
+Mencionar promoções PAA no commit message apenas se N > 0.
 
 Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push origin main`
 
@@ -923,15 +1040,15 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
 1. **Nunca duplicar items.** Usar lookup.json para dedup O(1).
 2. **Nunca filtrar por beneficiario.** Todos os tipos de organizacoes são incluidos.
 3. **Nunca exceder 6 fontes por execução.**
-4. **Nunca modificar artigos HTML ou shards de publicados.** So modifica queue e lookup.
+4. **Nunca modificar artigos HTML ou shards de publicados.** Só modifica queue.json, queue-catálogo.json, queue-overflow.json, queue-plano-anual.json (apenas para promoções laterais — remover items promovidos), lookup.json e index.json.
 5. **Se WebFetch/Chrome falhar:** registar o erro e continuar para a próxima fonte.
 
 ---
 
-## RESUMO (v4.5)
+## RESUMO (v4.7)
 
 ```
-1. Ler index.json + queue.json + queue-catálogo.json + lookup.json + sources-scan.json
+1. Ler index.json + queue.json + queue-catálogo.json + queue-plano-anual.json + lookup.json + sources-scan.json
 2. Selecionar até 6 fontes:
    - Slots 1-2: HIGH permanentes SEM cooldown (portugal-2030 + eu-funding-tenders sempre)
    - Slots 3-5: MEDIUM rotativos com FALLBACK GARANTIDO (v4.3 - slots nunca vazios):
@@ -949,13 +1066,21 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
    - Catálogo (v4.5): Passo 2bis, prompt por catalog_type, extrair profile estruturado,
      upsert em queue-catálogo.json por source_id, sem lookup, sem cap
    - Platform: scraping so produz suggestions no relatorio, não adiciona a queue
-4. Manter contadores internos: novos_aviso, novos_catalogo, profiles_atualizados, movidos_overflow
+3b. Promoção lateral PAA -> aviso (v4.7, apenas regime aviso + access_method "api"):
+   - Para cada item conhecido (lookup hit): cruzar codigo com queue-plano-anual.json
+   - Se está na watchlist: aplicar TESTE A nos dados frescos da API
+   - Se TESTE A passa: mover item watchlist -> queue.json (preservar id, atualizar dados,
+     marcar promoted_from_paa=true e promotion_date), sem mexer em lookup
+   - Se TESTE A falha: skip normal, item permanece na watchlist
+   - Latência de promoção: 13d (rotação do monitor) -> 1d (próxima run do scanner)
+4. Manter contadores internos: novos_aviso, novos_catalogo, profiles_atualizados, movidos_overflow, promocoes_paa
 5. Atualizar index.json e source_last_checked
 5b. Produzir RELATORIO GRANULAR:
-   - Aviso: URLs verificados, items retornados, filtros, dedup, novos
+   - Aviso: URLs verificados, items retornados, filtros, dedup, promoções PAA, novos
    - Catálogo (v4.5): acção (INSERT/UPDATE/SKIP-PLATFORM), % campos extraidos, status detectado
-6a. SANITY CHECK (3 testes): delta + invariantes absolutos + coerência lookup. Auto-correct com WARNING.
-6b. git commit + push (incluindo queue-catálogo.json se alterado)
+6a. SANITY CHECK (4 testes em v4.7): delta + invariantes absolutos + coerência lookup +
+    coerência promoção lateral. Auto-correct com WARNING; abortar se promoção incoerente.
+6b. git commit + push (incluindo queue-plano-anual.json se houve promoções)
 7. Reportar relatorio granular completo
 
 DISTRIBUICAO ACTUAL (v4.6, aplicado 2026-04-17 após expansão para 130 fontes):
