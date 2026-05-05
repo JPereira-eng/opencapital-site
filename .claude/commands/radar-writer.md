@@ -1,4 +1,4 @@
-﻿# Radar Writer v4.1: Criação de Artigos em Sprint
+﻿# Radar Writer v4.2: Criação de Artigos em Sprint
 
 REGRA CRÍTICA: Nunca usar travessão (—) em nenhum texto gerado. Usar vírgula, ponto, hífen (-) ou reescrever a frase.
 
@@ -26,13 +26,14 @@ fi
 
 ---
 
-## FICHEIROS DE ESTADO (v4.0)
+## FICHEIROS DE ESTADO (v4.2)
 
-| Ficheiro | Quando ler |
+| Ficheiro | Quando ler/escrever |
 |---|---|
 | `registry/index.json` | Sempre |
-| `registry/queue.json` | Sempre (regime "aviso" - avisos com deadline formal) |
-| `registry/queue-catálogo.json` | Sempre (regime "catálogo" - bancos, VC, premios, aceleradores) |
+| `registry/queue.json` | Sempre (regime "aviso") - escrita ao remover items concluídos ou PAA disfarçados |
+| `registry/queue-catálogo.json` | Sempre (regime "catálogo") - escrita ao remover items concluídos ou PAA |
+| `registry/queue-plano-anual.json` | Escrita quando defesa anti-PAA (PASSO 1.5) deteta PAA disfarçado |
 | `.claude/commands/instrumento.md` | **OBRIGATÓRIO antes de escrever** |
 
 ---
@@ -96,6 +97,37 @@ O slot 5 (catálogo) não e afectado por esta regra — segue FIFO normal.
 **IGNORAR completamente** items com `status: "plano_anual"` - são previsoes do plano anual, não avisos publicados. Não contar, não processar, não remover da queue.
 
 Selecionar os primeiros 5 (ou menos) para este batch.
+
+---
+
+## PASSO 1.5: Defesa anti-PAA pre-flight (v4.7.1, 2026-05-05)
+
+**Razão:** Em 2026-05-05, o radar-scanner v4.7 promoveu 114 items PAA por engano (acf.pdf populado mas com PAA placeholder, não com regulamento real). Embora o scanner v4.7.1 corrija isto via verificação 2-tier, o writer adiciona aqui defesa em profundidade. Catches: bugs futuros do scanner, items legados com status pendente herdado, qualquer anomalia onde regulamento local seja PAA.
+
+**Para cada item selecionado nos 5 slots, ANTES de prosseguir para Passo 2:**
+
+1. Determinar caminho do regulamento local: `regulamentos/[source_id]/[id].txt`
+2. Se o ficheiro **não existe**:
+   - Item ainda não foi descarregado pelo downloader. **Skip + remover do batch.**
+   - Não devolver à watchlist (não sabemos se é PAA). Apenas evitar escrita prematura.
+   - Log: "[id] sem regulamento local; downloader ainda não processou. Skip."
+3. Se o ficheiro **existe**, ler conteúdo e procurar **case-insensitive** por qualquer keyword PAA:
+   - `"Plano Anual de Avisos"`
+   - `"Resumo de Aviso do Plano"`
+   - `"Aviso a publicar em:"`
+   - `"PAA202"` (qualquer ano)
+   - `"previsão aproximada"` / `"previsao aproximada"`
+4. **Se encontrar qualquer keyword:**
+   - Item é PAA disfarçado de aviso publicado. **Não escrever.**
+   - Mover item de `queue.json` (ou `queue-catálogo.json`) para `queue-plano-anual.json`:
+     - Status: `plano_anual`
+     - `download_error: "PAA detectado pelo writer pre-flight em [data] (palavra-chave: [match])"`
+     - Apagar `regulation_local` (path) e o ficheiro físico para forçar re-download
+   - Adicionar warning ao relatório do batch
+   - Selecionar item alternativo da queue para este slot (próximo elegível)
+5. **Se não encontrar:** prosseguir normalmente para Passo 2.
+
+**Regra de paranoia:** este passo corre SEMPRE, mesmo em items com `status: "ready"`. O custo é trivial (1 grep por item) e os danos editoriais de um falso negativo (artigo público sobre PAA) seriam graves.
 
 **REGRA CRÍTICA - O QUE E "PUBLICADO":**
 Um item esta publicado SE E SOMENTE SE existir o ficheiro `instrumentos/[id].html` no repositorio.

@@ -1,4 +1,4 @@
-﻿# Radar Scanner v4.7: Descoberta de Novos Instrumentos
+﻿# Radar Scanner v4.7.1: Descoberta de Novos Instrumentos
 
 REGRA CRÍTICA: Nunca usar travessão (—) em nenhum texto gerado. Usar vírgula, ponto, hífen (-) ou reescrever a frase.
 
@@ -706,17 +706,52 @@ b. Cruzar codigo do item atual com a watchlist:
    - Se NÃO está na watchlist: skip normal (comportamento v4.6).
    - Se ESTÁ na watchlist: continuar para passo c.
 
-c. Aplicar TESTE A (FILTRO DOCUMENTO PUBLICADO, ver PASSO 2) aos dados frescos
-   da API que o scanner acabou de ler:
-   - Nível 1: campos ACF conhecidos (acf.pdf, acf.aviso, acf.ficheiro, etc.)
-   - Nível 2: fallback genérico (URLs/IDs de documento)
+c. **Verificação de promoção em 2 tiers (v4.7.1, 2026-05-05).**
 
-   Se TESTE A FALHA (Nível 1 e Nível 2 ambos falham):
-     skip normal. Item permanece intacto na watchlist.
-     Registar no relatório: "[id] continua PAA via API central, watchlist intacta."
+   **Razão da mudança:** A v4.7 confiava no TESTE A surface-level (acf.pdf populado).
+   Run de teste 2026-05-05 promoveu 114 items, todos falsos positivos: a API central
+   PT2030 popula `acf.pdf` com o documento PAA placeholder (ficheiros batch
+   `unnamed-file.pdf-X.octet-stream` em `/2026/01/`), não com o regulamento real.
+   A verificação correta TEM de inspecionar o conteúdo do documento, não só a sua
+   presença. A v4.7.1 introduz 2 tiers: heurística rápida + fallback de conteúdo.
 
-   Se TESTE A PASSA (regulamento publicado):
-     PROMOVER (passo d).
+   **Tier 1 - Heurística de filename (cheap, 1 request extra):**
+
+   1. Extrair `acf.pdf` ou equivalente (lista nominal Nível 1, ver PASSO 2).
+   2. Resolver para `source_url` via `GET /wp-json/wp/v2/media/<id>`.
+   3. Examinar o filename (último segmento do URL):
+      - Se contém `unnamed-file` OU termina em `.octet-stream` OU não termina em `.pdf`:
+        → **CONFIRMADO PAA**. Skip definitivo. Item permanece na watchlist.
+        Registar: "[id] PAA confirmado via filename heuristic ([filename])."
+      - Caso contrário: continuar para Tier 2.
+
+   **Tier 2 - Verificação de conteúdo (deep, 1 PDF download):**
+
+   Aplica-se quando o filename pode ser real (não obviamente PAA). Mimetiza exatamente
+   a TESTE A do downloader (PASSO 2b-pdf), garantindo consistência sistémica.
+
+   1. Descarregar o PDF: `curl -sL "<source_url>" -o /tmp/promote-check-<codigo>.pdf`
+   2. Extrair texto: `pdftotext -enc UTF-8 /tmp/promote-check-<codigo>.pdf /tmp/promote-check-<codigo>.txt`
+   3. Procurar **case-insensitive** qualquer das keywords PAA:
+      - `"Plano Anual de Avisos"`
+      - `"Resumo de Aviso do Plano"`
+      - `"Aviso a publicar em:"`
+      - `"PAA202"` (qualquer ano: PAA2025, PAA2026, etc.)
+      - `"previsão aproximada"` / `"previsao aproximada"`
+   4. Decisão:
+      - **Se encontrar qualquer keyword:** CONFIRMADO PAA. Apagar PDF/TXT temp. Skip.
+        Registar: "[id] PAA confirmado via content check (keyword: [match])."
+      - **Se NÃO encontrar nenhuma keyword:** REGULAMENTO REAL. Apagar PDF/TXT temp.
+        PROMOVER (passo d).
+        Registar: "[id] regulamento real confirmado via content check, promovendo."
+
+   5. Falha de descarga ou pdftotext: **assumir PAA por conservadorismo**. Skip.
+      Registar: "[id] verificação Tier 2 falhou ([erro]), assumindo PAA."
+
+   **Conservadorismo:** em caso de qualquer ambiguidade ou erro, NÃO promover.
+   Falso negativo (deixar real aviso na watchlist) é safe — monitor recupera.
+   Falso positivo (promover PAA) envenena queue + risca o writer publicar artigos
+   sobre avisos não abertos.
 
 d. Promoção:
    1. Localizar item em queue-plano-anual.json (por aviso_codigo) e remover.
@@ -1045,7 +1080,7 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
 
 ---
 
-## RESUMO (v4.7)
+## RESUMO (v4.7.1)
 
 ```
 1. Ler index.json + queue.json + queue-catálogo.json + queue-plano-anual.json + lookup.json + sources-scan.json
@@ -1066,13 +1101,18 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
    - Catálogo (v4.5): Passo 2bis, prompt por catalog_type, extrair profile estruturado,
      upsert em queue-catálogo.json por source_id, sem lookup, sem cap
    - Platform: scraping so produz suggestions no relatorio, não adiciona a queue
-3b. Promoção lateral PAA -> aviso (v4.7, apenas regime aviso + access_method "api"):
+3b. Promoção lateral PAA -> aviso (v4.7.1, apenas regime aviso + access_method "api"):
    - Para cada item conhecido (lookup hit): cruzar codigo com queue-plano-anual.json
-   - Se está na watchlist: aplicar TESTE A nos dados frescos da API
-   - Se TESTE A passa: mover item watchlist -> queue.json (preservar id, atualizar dados,
-     marcar promoted_from_paa=true e promotion_date), sem mexer em lookup
-   - Se TESTE A falha: skip normal, item permanece na watchlist
-   - Latência de promoção: 13d (rotação do monitor) -> 1d (próxima run do scanner)
+   - Se está na watchlist: aplicar verificação em 2 tiers:
+     - Tier 1 (filename heuristic): resolver acf.pdf -> source_url, examinar filename.
+       Se contém "unnamed-file" ou ".octet-stream" ou não termina em ".pdf" -> PAA, skip.
+     - Tier 2 (content check, só se Tier 1 passa): download PDF, pdftotext, grep PAA
+       keywords ("Plano Anual de Avisos", "Resumo de Aviso do Plano",
+       "Aviso a publicar em:", "PAA202", "previsão aproximada"). Se hit -> PAA, skip.
+   - Promove apenas se Tier 1 + Tier 2 passam (sem keywords PAA): mover watchlist
+     -> queue.json, marcar promoted_from_paa=true e promotion_date.
+   - Conservadorismo: erro/ambiguidade em qualquer tier -> NÃO promover (safe).
+   - Latência: 1-2d (próxima run scanner) vs 13d (rotação monitor antiga)
 4. Manter contadores internos: novos_aviso, novos_catalogo, profiles_atualizados, movidos_overflow, promocoes_paa
 5. Atualizar index.json e source_last_checked
 5b. Produzir RELATORIO GRANULAR:

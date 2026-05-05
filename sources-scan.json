@@ -1363,9 +1363,10 @@
       "name": "IFAP (PDR2020/PEPAC)",
       "priority": "medium",
       "access_method": "webfetch",
-      "access_status": "unverified",
-      "url_avisos": "https://www.ifap.pt/avisos",
-      "notes": "Instituto de Financiamento da Agricultura e Pescas. Avisos PDR2020 + PEPAC (PAC 2023-2027) para agro-industria e pescas.",
+      "access_status": "needs_verification",
+      "url_avisos": "https://www.ifap.pt/web/portal/inicio/avisos-de-abertura-de-candidaturas",
+      "url_avisos_legacy": "https://www.ifap.pt/avisos",
+      "notes": "Instituto de Financiamento da Agricultura e Pescas. Avisos PDR2020 + PEPAC (PAC 2023-2027) para agro-industria e pescas. URL legacy /avisos servia concursos de RH (descoberto 2026-05-05). URL atual precisa de verificacao manual (potencial Chrome MCP).",
       "regime": "aviso",
       "shard": "other"
     }
