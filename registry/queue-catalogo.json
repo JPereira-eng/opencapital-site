@@ -90,50 +90,5 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "olisipo-way",
-      "name": "Olisipo Way",
-      "source_id": "olisipo-way",
-      "catalog_type": "vc",
-      "detected_date": "2026-05-05",
-      "last_profile_update": "2026-05-05",
-      "status": "active",
-      "regulation_url": "https://www.olisipoway.com/",
-      "priority_score": 10,
-      "profile": {
-        "website": "https://www.olisipoway.com/",
-        "linkedin": "https://www.linkedin.com/company/olisipo-way",
-        "pais_sede": "PT",
-        "descricao_curta": "Olisipo Way e o brace de capital de risco e ecossistema de inovacao da Olisipo, focado em pre-seed/seed para empresas portuguesas de tecnologia/IT.",
-        "como_candidatar": "Comunidade aberta com mais de 50 empresas. Pitch via website ou networking via comunidade Olisipo. Sem janela formal de candidatura.",
-        "tese": "Investe em iniciativas em fase inicial com potencial de impacto significativo no setor de Tecnologias de Informacao, frequentemente em pre-seed.",
-        "estagios": [
-          "pre-seed",
-          "seed"
-        ],
-        "setores": [
-          "FinTech",
-          "AI/Big Data",
-          "Blockchain",
-          "Payments",
-          "DeepTech",
-          "LegalTech",
-          "Sales/Marketing tech",
-          "Enterprise Applications"
-        ],
-        "geografia": [
-          "PT"
-        ],
-        "ticket_min_eur": 45000,
-        "ticket_max_eur": 140000,
-        "ticket_sweet_eur": 90000,
-        "aum_eur": null,
-        "vintage": null,
-        "portfolio_pt_exemplos": null,
-        "parceiros": null
-      },
-      "notes": "Profile criado em 2026-05-05 via slot catalog (vc, never-checked). Ticket size em USD na fonte (50K-150K, sweet 100K) convertido para EUR aproximado. Portfolio: 41 empresas (May 2024). Comunidade Olisipo Way: ~50 empresas. Site principal usa JS-rendering, profile baseado em fontes secundarias (Crunchbase, Tracxn, Lisboa Innovation)."
-    }
-  ]
+  "queue": []
 }
