@@ -528,10 +528,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2026-STRAT-ENV-SIP-two-stage",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/life-2026-strat-env-sip-two-stage.txt",
       "priority_score": 15,
-      "status": "aberto",
-      "notes": "Call: LIFE-2026-STRAT-ENV-SIP-two (descoberto via SEDIA prefixo LIFE-2026)"
+      "status": "ready",
+      "notes": "Call: LIFE-2026-STRAT-ENV-SIP-two (descoberto via SEDIA prefixo LIFE-2026)",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl2-2025-01-democracy-04",
@@ -587,13 +588,15 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-CL2-2025-01-TRANSFO-02",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-TRANSFO-02.json",
       "deadline": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "Call: HORIZON-CL2-2025-01"
+      "notes": "Call: HORIZON-CL2-2025-01",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl2-2025-01-transfo-02.txt",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl2-2025-01-democracy-11",
@@ -601,13 +604,15 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-horizon",
       "regime": "aviso",
-      "status": "aberto",
+      "status": "ready",
       "aviso_codigo": "HORIZON-CL2-2025-01-DEMOCRACY-11",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2025-01-DEMOCRACY-11.json",
       "deadline": null,
       "detected_date": "2026-04-25",
       "priority_score": 15,
-      "notes": "Call: HORIZON-CL2-2025-01"
+      "notes": "Call: HORIZON-CL2-2025-01",
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl2-2025-01-democracy-11.txt",
+      "fail_count": 0
     },
     {
       "id": "ec-comm-2026-mvp-0127-exa",
@@ -1006,10 +1011,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-05-SOIL-02",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-05-soil-02.txt",
       "priority_score": 15,
-      "status": "aberto",
-      "notes": "Call: HORIZON-MISS-2026-05-SOIL (descoberto via SEDIA prefixo HORIZON-MISS-2026)"
+      "status": "ready",
+      "notes": "Call: HORIZON-MISS-2026-05-SOIL (descoberto via SEDIA prefixo HORIZON-MISS-2026)",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-03-ocean-03",
@@ -1023,10 +1029,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-03-OCEAN-03",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-03-ocean-03.txt",
       "priority_score": 15,
-      "status": "aberto",
-      "notes": "Call: HORIZON-MISS-2026-03-OCEAN (descoberto via SEDIA prefixo HORIZON-MISS-2026)"
+      "status": "ready",
+      "notes": "Call: HORIZON-MISS-2026-03-OCEAN (descoberto via SEDIA prefixo HORIZON-MISS-2026)",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-04-cit-02",
@@ -1040,10 +1047,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-04-CIT-02",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-04-cit-02.txt",
       "priority_score": 15,
-      "status": "aberto",
-      "notes": "Call: HORIZON-MISS-2026-04-CIT (descoberto via SEDIA prefixo HORIZON-MISS-2026)"
+      "status": "ready",
+      "notes": "Call: HORIZON-MISS-2026-04-CIT (descoberto via SEDIA prefixo HORIZON-MISS-2026)",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-03-ocean-04",
@@ -1057,10 +1065,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-03-OCEAN-04",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-03-ocean-04.txt",
       "priority_score": 15,
-      "status": "aberto",
-      "notes": "Call: HORIZON-MISS-2026-03-OCEAN (descoberto via SEDIA prefixo HORIZON-MISS-2026)"
+      "status": "ready",
+      "notes": "Call: HORIZON-MISS-2026-03-OCEAN (descoberto via SEDIA prefixo HORIZON-MISS-2026)",
+      "fail_count": 0
     },
     {
       "id": "horizon-miss-2026-04-cit-01",
@@ -1074,10 +1083,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2026-04-CIT-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2026-04-cit-01.txt",
       "priority_score": 15,
-      "status": "aberto",
-      "notes": "Call: HORIZON-MISS-2026-04-CIT (descoberto via SEDIA prefixo HORIZON-MISS-2026)"
+      "status": "ready",
+      "notes": "Call: HORIZON-MISS-2026-04-CIT (descoberto via SEDIA prefixo HORIZON-MISS-2026)",
+      "fail_count": 0
     },
     {
       "id": "edf-2026-ls-ra-challenge-digit-aisao",
@@ -1091,10 +1101,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-RA-CHALLENGE-DIGIT-AISAO",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/edf-2026-ls-ra-challenge-digit-aisao.txt",
       "priority_score": 15,
-      "status": "aberto",
-      "notes": "Call: EDF-2026-LS-RA-CHALLENGE-DIGIT (descoberto via SEDIA prefixo DIGITAL-2026)"
+      "status": "ready",
+      "notes": "Call: EDF-2026-LS-RA-CHALLENGE-DIGIT (descoberto via SEDIA prefixo DIGITAL-2026)",
+      "fail_count": 0
     },
     {
       "id": "edf-2026-ls-ra-challenge-digit-aisap-step",
@@ -1108,10 +1119,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EDF-2026-LS-RA-CHALLENGE-DIGIT-AISAP-STEP",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/edf-2026-ls-ra-challenge-digit-aisap-step.txt",
       "priority_score": 15,
-      "status": "aberto",
-      "notes": "Call: EDF-2026-LS-RA-CHALLENGE-DIGIT-AISAP (descoberto via SEDIA prefixo DIGITAL-2026)"
+      "status": "ready",
+      "notes": "Call: EDF-2026-LS-RA-CHALLENGE-DIGIT-AISAP (descoberto via SEDIA prefixo DIGITAL-2026)",
+      "fail_count": 0
     },
     {
       "id": "horizon-ju-gh-edctp3-2026-03-digit-02",
