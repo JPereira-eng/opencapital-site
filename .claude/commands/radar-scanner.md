@@ -1,4 +1,4 @@
-﻿# Radar Scanner v4.7.2: Descoberta de Novos Instrumentos
+﻿# Radar Scanner v4.8: Descoberta de Novos Instrumentos
 
 REGRA CRÍTICA: Nunca usar travessão (—) em nenhum texto gerado. Usar vírgula, ponto, hífen (-) ou reescrever a frase.
 
@@ -729,7 +729,14 @@ a. Carregar queue-plano-anual.json (uma vez por run, no início; indexar por avi
 
 b. Cruzar codigo do item atual com a watchlist:
    - Se NÃO está na watchlist: skip normal (comportamento v4.6).
-   - Se ESTÁ na watchlist: continuar para passo c.
+   - Se ESTÁ na watchlist: verificar `paa_status` (v4.8):
+     - **Se `paa_status == "published_externamente"`:** SKIP TOTAL.
+       O PAA é metadata obsoleta — sabemos que o aviso real foi publicado externamente
+       (via news post, ver PASSO 3.6). Não promover, não tentar TESTE A.
+       Razão: a verificação 2-tier ia falhar (acf.pdf continua a apontar PAA placeholder)
+       e seria desperdício. Item permanece na watchlist como sinalizado para revisão manual.
+       Registar: "[id] paa_status=published_externamente, desconsiderado."
+     - Senão (`paa_status == "planejado"` ou ausente): continuar para passo c.
 
 c. **Verificação de promoção em 2 tiers (v4.7.1, 2026-05-05).**
 
@@ -825,6 +832,162 @@ Crítico: o `id` na watchlist pode diferir do que o scanner geraria hoje (slug e
 **TESTE A falha persistente.** Item permanece na watchlist em todas as runs. O monitor continua a tentar com a sua própria lógica (ver radar-monitor PASSO 2.6). Sem downside — apenas atraso na promoção, igual ao comportamento v4.6.
 
 **Item promovido tinha priority_score na watchlist mas tem outro na queue.** Sempre recalcular com regras do PASSO 4 baseadas em dados frescos, ignorando priority_score antigo da watchlist.
+
+---
+
+---
+
+## PASSO 3.6: Detecção de publicação via news post (v4.8)
+
+**Objetivo:** detectar se um item PAA na watchlist já tem aviso real publicado, usando os news posts dos portais (regional, temático, ou agregador). Quando match, sinalizar item com `paa_status: "published_externamente"`. Não promove, não move — apenas sinaliza.
+
+**Razão:** descoberto 2026-05-05 que portais PT2030 anunciam abertura de avisos via news post (`/wp-json/wp/v2/posts`) mas frequentemente NÃO atualizam a página do PAA (acf.pdf, modified date) nem o regulamento na library. O único sinal público fiável de "PAA → real" é o news post. Caso confirmatório: SIBT Alentejo (FA0147/2025), aviso real publicado 27/03/2026 via news post mas página do PAA stuck em 05/01/2026.
+
+**Limite assumido (Opção 1, 2026-05-05):** se um aviso é publicado SEM news post correspondente (ex: regulamento direto no Balcão dos Fundos sem anúncio público), o sistema não detecta. Aceita-se este limite. Não tentamos sinais externos alternativos (DRE, WebSearch, balcao, time heuristics) porque o ratio sinal/ruído seria baixo e geraria falsos positivos.
+
+### Quando se aplica
+
+Apenas quando:
+- Existem items na watchlist com `paa_status: "planejado"` (ou ausente) cujo `source_id` corresponde a um portal com endpoint `/wp-json/wp/v2/posts` acessível
+- Aplica-se a **portais regionais E temáticos** (alentejo-2030, centro-2030, lisboa-2030, etc.; pessoas-2030, sustentavel-2030, mar-2030, pat-2030)
+- NÃO se aplica a portugal-2030 central (não publica news; a news vem dos portais regionais/temáticos)
+- NÃO se aplica a fontes EU (eu-funding-tenders, hadea, etc. — diferente arquitetura, status já no detail JSON)
+
+### Lógica
+
+```
+Para cada portal regional/temático com items watchlist planejados:
+  
+  a. Construir lista de items relevantes:
+     items = [w for w in watchlist if w.source_id == portal AND
+              w.paa_status in (None, "planejado")]
+  
+  b. Se items vazio: skip portal.
+  
+  c. Determinar janela temporal:
+     # Para limitar volume, fetch só news posts dos últimos 90 dias
+     # ou desde o detected_date mais antigo dos items relevantes.
+     min_detected = min(item.detected_date for item in items)
+     after_date = max(min_detected, hoje - 90 dias)
+  
+  d. Fetch paginado de news posts:
+     base = portal_url do source
+     GET {base}/wp-json/wp/v2/posts?after={after_date}T00:00:00&per_page=50&orderby=date&order=desc&_fields=id,slug,date,title,content,link
+     # Continuar paginando até resposta vazia, ou cap de 200 posts
+  
+  e. Para cada news post, extrair texto completo (título + content stripped of HTML):
+     text_lower = (title + " " + content_stripped).lower()
+  
+  f. Verificar keywords de abertura no título OU content:
+     opening_keywords = [
+       "aberto novo aviso", "aberto o aviso",
+       "abertas as candidaturas", "abertas candidaturas",
+       "aberto concurso", "aberto novo concurso",
+       "publicado novo aviso", "novo aviso de abertura",
+       "abertura de aviso", "abertura do aviso",
+       "lança aviso", "lanca aviso",
+       "está aberto", "esta aberto"
+     ]
+     has_opening = any(kw in text_lower for kw in opening_keywords)
+     
+     Se NÃO has_opening: skip post (não é announcement de abertura).
+  
+  g. Para cada item da watchlist relevante, tentar match:
+     # Match 1: aviso_codigo aparece literal no content
+     codigo_in_text = item.aviso_codigo in (title + content)
+     
+     # Match 2: nome do instrumento (>=70% das palavras significativas)
+     # Tokenizar nome (remover stop words PT: de, do, da, e, para, etc.)
+     # Se >=70% dos tokens significativos do item.name aparecem no title+content do post: match
+     name_tokens_match = fuzzy_token_match(item.name, text, threshold=0.7)
+     
+     match = codigo_in_text OR name_tokens_match
+     
+     Se match E post.date > item.detected_date:
+        # PUBLICATION DETECTED
+        item.paa_status = "published_externamente"
+        item.news_post_url = post.link
+        item.news_post_date = post.date.split("T")[0]
+        item.news_post_title = post.title
+        Registar no relatório.
+        # Não fazer break — o mesmo PAA pode ter múltiplos news posts
+        # mas guardamos só o primeiro match.
+  
+  h. Salvar queue-plano-anual.json após processar todos os items do portal.
+```
+
+### Cuidados de implementação
+
+**Stop words para tokenization:** considerar `de, do, da, dos, das, e, para, em, com, no, na, nos, nas, ao, à, aos, às, o, a, os, as, um, uma`. Tokens significativos = palavras com ≥4 caracteres não-stop-word.
+
+**Threshold fuzzy 70%:** empirico. SIBT Alentejo: nome "Sistema de Incentivos de Base Territorial - Alentejo" → tokens significativos `[sistema, incentivos, base, territorial, alentejo]`. News post 27/03 título "Aberto novo aviso SIBT de 5 milhões de euros para apoiar micro e pequenas empresas no Alentejo" → contém `sistema, incentivos, base, territorial, alentejo` (tokens "SIBT" é abreviação, contar como `[sistema, incentivos, base, territorial]`). Match: 5/5 = 100%.
+
+**Falsos positivos potenciais:** posts genéricos sobre "candidaturas abertas" mencionando vários instrumentos. Mitigação: requer match >= 70% E codigo OU >= 80% dos tokens. Em caso de ambiguidade, conservadorismo (não marcar).
+
+**Cap por run:** processar no máximo **5 portais com news scan por run** (cap de tokens). Se houver mais portais com items watchlist, alternar runs (rotacionar pelos `source_last_news_check`).
+
+### Adicionar campo `source_last_news_check` ao index.json
+
+Análogo a `source_last_checked` mas para news scan:
+```json
+"source_last_news_check": {
+  "alentejo-2030": "2026-05-05",
+  "centro-2030": "2026-04-30",
+  ...
+}
+```
+
+Selecionar portais por antiguidade desta data, dentro do cap de 5 portais/run.
+
+### Schema da watchlist (queue-plano-anual.json)
+
+Items podem agora ter campos adicionais:
+
+```json
+{
+  "id": "...",
+  "aviso_codigo": "FA####/YYYY",
+  ...campos atuais...,
+  "paa_status": "planejado" | "published_externamente",
+  "news_post_url": "https://...",
+  "news_post_date": "YYYY-MM-DD",
+  "news_post_title": "..."
+}
+```
+
+`paa_status` ausente é equivalente a `"planejado"` (default backward-compatible).
+
+### Atualizar relatorio granular (PASSO 5b)
+
+Nova secção no template:
+```
+News post scan (v4.8):
+  Portais scanned nesta run: N
+  Items watchlist relevantes (planejados): N
+  News posts examinados (<=90d): N
+  Posts com keywords de abertura: N
+  Items SINALIZADOS published_externamente nesta run: N
+    - [id] (codigo): match com [news_post_title] ([data])
+```
+
+E nos totais:
+```
+Total items sinalizados como published_externamente nesta run: N
+queue-plano-anual.json: items "planejado" antes / depois (delta = -N)
+queue-plano-anual.json: items "published_externamente" antes / depois (delta = +N)
+```
+
+### Sanity check (PASSO 6a)
+
+TESTE 5 (novo) - Coerência da sinalização v4.8:
+
+Verificar para cada item recém-sinalizado:
+- `paa_status == "published_externamente"` ?
+- `news_post_url` é URL válido (string http/https, não vazio) ?
+- `news_post_date >= item.detected_date` ?
+- Item permanece em queue-plano-anual.json (não foi movido) ?
+
+Se qualquer falhar: WARNING (não abortar — sinalização parcial é melhor que nada).
 
 ---
 
@@ -1105,7 +1268,7 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
 
 ---
 
-## RESUMO (v4.7.1)
+## RESUMO (v4.8)
 
 ```
 1. Ler index.json + queue.json + queue-catálogo.json + queue-plano-anual.json + lookup.json + sources-scan.json
@@ -1128,16 +1291,26 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
    - Platform: scraping so produz suggestions no relatorio, não adiciona a queue
 3b. Promoção lateral PAA -> aviso (v4.7.1, apenas regime aviso + access_method "api"):
    - Para cada item conhecido (lookup hit): cruzar codigo com queue-plano-anual.json
-   - Se está na watchlist: aplicar verificação em 2 tiers:
+   - Se está na watchlist com paa_status="published_externamente" (v4.8): SKIP TOTAL.
+     PAA é metadata obsoleta, aviso real foi sinalizado via news post (PASSO 3.6).
+   - Se está na watchlist com paa_status="planejado": aplicar verificação em 2 tiers:
      - Tier 1 (filename heuristic): resolver acf.pdf -> source_url, examinar filename.
        Se contém "unnamed-file" ou ".octet-stream" ou não termina em ".pdf" -> PAA, skip.
      - Tier 2 (content check, só se Tier 1 passa): download PDF, pdftotext, grep PAA
        keywords ("Plano Anual de Avisos", "Resumo de Aviso do Plano",
        "Aviso a publicar em:", "PAA202", "previsão aproximada"). Se hit -> PAA, skip.
-   - Promove apenas se Tier 1 + Tier 2 passam (sem keywords PAA): mover watchlist
-     -> queue.json, marcar promoted_from_paa=true e promotion_date.
+   - Promove apenas se Tier 1 + Tier 2 passam: mover watchlist -> queue.json, marcar
+     promoted_from_paa=true e promotion_date.
    - Conservadorismo: erro/ambiguidade em qualquer tier -> NÃO promover (safe).
-   - Latência: 1-2d (próxima run scanner) vs 13d (rotação monitor antiga)
+3c. Detecção de publicação via news post (v4.8, apenas portais regionais/temáticos):
+   - Cap 5 portais/run, ordenados por source_last_news_check antiguidade
+   - Para cada portal com items watchlist planejados, fetch /wp-json/wp/v2/posts dos
+     últimos 90 dias
+   - Match item ↔ news post: aviso_codigo literal OU >=70% tokens significativos do
+     nome do instrumento, com keywords de abertura no título/content
+   - Match → marcar item paa_status="published_externamente" + news_post_url +
+     news_post_date. Não promove, não move.
+   - Limite assumido: avisos publicados sem news post não são detectados (Opção 1).
 4. Manter contadores internos: novos_aviso, novos_catalogo, profiles_atualizados, movidos_overflow, promocoes_paa
 5. Atualizar index.json e source_last_checked
 5b. Produzir RELATORIO GRANULAR:

@@ -1,4 +1,4 @@
-﻿# Radar Monitor v4.1: Verificacao de Estados e Integridade
+﻿# Radar Monitor v4.2: Verificacao de Estados e Integridade
 
 REGRA CRÍTICA: Nunca usar travessão (—) em nenhum texto gerado. Usar vírgula, ponto, hífen (-) ou reescrever a frase.
 
@@ -195,14 +195,17 @@ Para cada item do shard com `regulation_local` apontando para PDF existente:
 
 **MUDANCA v4.1:** Ler `registry/queue-plano-anual.json` (não `lookup.json`). Contem items detectados como Plano Anual pelo downloader que podem ter aberto entretanto.
 
+**MUDANCA v4.2 (2026-05-05):** Items com `paa_status: "published_externamente"` (sinalizados pelo scanner v4.8 PASSO 3.6 via news post) são DESCONSIDERADOS pelo monitor. Razão: já sabemos que o aviso real foi publicado externamente, mas o portal do PAA continua stuck no placeholder. Re-verificar via TESTE A no PDF do PAA seria desperdício (vai sempre falhar). Estes items ficam na watchlist como sinalizados para revisão manual; o monitor não tenta promovê-los.
+
 **Max 10 items por run** (duplicou vs v4.0, dado que agora existe ficheiro dedicado).
 
 **Ordem de seleção:**
-1. Items com `plano_anual_last_check` mais antigo (ou sem check ainda)
-2. Em caso de empate: items com `priority_score` mais alto
-3. Ignorar items já verificados ha menos de 7 dias
+1. **Filtrar primeiro:** items com `paa_status == "published_externamente"` são EXCLUÍDOS desta seleção (desconsiderados pelo monitor)
+2. Items com `plano_anual_last_check` mais antigo (ou sem check ainda)
+3. Em caso de empate: items com `priority_score` mais alto
+4. Ignorar items já verificados ha menos de 7 dias
 
-Para cada item na watchlist:
+Para cada item na watchlist (apenas items `paa_status == "planejado"` ou ausente):
 1. Verificar na API da fonte se o aviso já tem regulamento publicado
 2. Para fontes PT2030 com API WordPress: `GET https://[portal]/wp-json/wp/v2/aviso-2024?slug=[id]` e verificar se `acf.pdf` agora aponta para regulamento real. Descarregar PDF rapidamente (1-2 paginas) e correr TESTE A (PAA detection).
 3. Para outras fontes: WebFetch na URL e verificar se ha PDF de regulamento
