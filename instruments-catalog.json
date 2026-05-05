@@ -813,6 +813,86 @@
       ]
     },
     {
+      "id": "patent-box",
+      "category": "fiscal",
+      "category_label": "Incentivo Fiscal",
+      "estado": "aberto",
+      "status_text": "Em vigor",
+      "status_class": "status-cont",
+      "fonte": "autoridade-tributaria",
+      "beneficiario": "empresa",
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Patent Box - Regime de Propriedade Intelectual",
+      "tagline": "Exclusao de 85% dos rendimentos de patentes, desenhos industriais e software registado da materia coletavel de IRC.",
+      "highlight0": "85% de exclusao",
+      "highlight1": "Empresas Privadas",
+      "highlight2": "Nacional",
+      "href": "instrumentos/patent-box.html",
+      "featured": false,
+      "setores": [
+        "tic-software",
+        "id-investigacao",
+        "industria-transformadora"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "capitalizacao-crescimento"
+      ]
+    },
+    {
+      "id": "ice",
+      "category": "fiscal",
+      "category_label": "Incentivo Fiscal",
+      "estado": "aberto",
+      "status_text": "Em vigor",
+      "status_class": "status-cont",
+      "fonte": "autoridade-tributaria",
+      "beneficiario": "empresa",
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "ICE - Incentivo a Capitalizacao das Empresas",
+      "tagline": "Deducao ao lucro tributavel dos aumentos liquidos de capitais proprios. Majoracao de 20% em 2026 (ultimo ano).",
+      "highlight0": "Euribor + spread + majoracao",
+      "highlight1": "Empresas Privadas",
+      "highlight2": "Nacional",
+      "href": "instrumentos/ice.html",
+      "featured": false,
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "capitalizacao-crescimento",
+        "investimento-produtivo"
+      ]
+    },
+    {
+      "id": "rfai",
+      "category": "fiscal",
+      "category_label": "Incentivo Fiscal",
+      "estado": "aberto",
+      "status_text": "Em vigor até 31/12/2027",
+      "status_class": "status-cont",
+      "fonte": "autoridade-tributaria",
+      "beneficiario": "empresa",
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "RFAI - Regime Fiscal de Apoio ao Investimento",
+      "tagline": "Deduza ate 30% do investimento produtivo na coleta de IRC. Em vigor ate 31/12/2027.",
+      "highlight0": "Ate 30% de deducao",
+      "highlight1": "Empresas Privadas",
+      "highlight2": "Nacional",
+      "href": "instrumentos/rfai.html",
+      "featured": false,
+      "setores": [
+        "industria-transformadora",
+        "turismo-hotelaria",
+        "tic-software",
+        "id-investigacao"
+      ],
+      "necessidades": [
+        "investimento-produtivo",
+        "capitalizacao-crescimento"
+      ]
+    },
+    {
       "id": "sifide-ii-candidaturas-2025",
       "category": "fiscal",
       "category_label": "Incentivo Fiscal",
