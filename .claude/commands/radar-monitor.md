@@ -59,6 +59,22 @@ O monitor atua de forma DIFERENTE consoante o regime da fonte do item:
 
 ---
 
+## PASSO 0.5: Auto-fecho por data expirada (fail-safe)
+
+**Antes** de qualquer verificação de fonte externa, executar passagem local de fail-safe sobre TODOS os shards de regime "aviso":
+
+Para cada item com `estado: "aberto"` e `data_fim` definida:
+- Se `data_fim < hoje`: marcar como `estado: "fechado"`, atualizar `status_text` para "Fechado", `status_class` para "status-closed", e propagar a alteração ao `instruments-catalog.json`.
+- Adicionar campo `auto_closed: true` no item do shard (para distinguir de fechos confirmados pela fonte).
+
+**Justificação:** o monitor depende da fonte para confirmar fechos, mas algumas fontes mantêm avisos visíveis como "abertos" durante dias após a deadline (inércia administrativa). O fail-safe garante que datas passadas nunca permanecem visíveis no catálogo como abertas.
+
+**Não substitui a verificação da fonte.** A regra "items fechado: verificar 1 por cada 5 abertos" continua aplicável e deteta prorrogações posteriores. Se a fonte confirmar que o aviso foi prorrogado, o item é reaberto na verificação seguinte (com novo `data_fim`).
+
+Esta passagem é rápida (leitura local, sem WebFetch) e não conta para o limite de 1-2 shards por run.
+
+---
+
 ## PASSO 1: Selecionar shard a verificar
 
 Ler `registry/index.json`. Selecionar **1-2 shards** por run, priorizando:
