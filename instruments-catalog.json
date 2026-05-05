@@ -20362,6 +20362,140 @@
       "highlight2": "Lisboa (Grande Lisboa)",
       "href": "instrumentos/lisbon-business-angels-club.html",
       "featured": false
+    },
+    {
+      "id": "hcapital",
+      "category": "priv",
+      "category_label": "Investimento Privado",
+      "estado": "aberto",
+      "status_text": "Ativo",
+      "status_class": "status-cont",
+      "fonte": "pventures",
+      "beneficiario": "empresa,empreendedor",
+      "setores": [
+        "energia-ambiente",
+        "mobilidade-transportes",
+        "industria",
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "arranque-validacao",
+        "capitalizacao-crescimento"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "HCapital Partners",
+      "tagline": "Sociedade portuguesa independente de private equity e venture capital. Tres fundos cobrem desde tecnologia em fase inicial (New Ideas II) ate growth e buyout em empresas maduras (HCapital I e II). Foco em energia, mobilidade smart, industria e dados, com geografia PT e ES.",
+      "highlight0": "VC seed/Series A + PE growth/buyout no mesmo gestor",
+      "highlight1": "Empresas portuguesas tech industriais e empresas maduras com escala internacional",
+      "highlight2": "Portugal, Espanha, UE",
+      "href": "instrumentos/hcapital.html",
+      "featured": false
+    },
+    {
+      "id": "interreg-sudoe-3rd-call",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "previsto",
+      "status_text": "Previsto, abertura maio 2026",
+      "status_class": "status-planned",
+      "fonte": "ue",
+      "beneficiario": "entidade-publica,ensino-investigacao,associacao",
+      "setores": [
+        "agroalimentar",
+        "energia-ambiente",
+        "saude-ciencias-vida"
+      ],
+      "necessidades": [
+        "sustentabilidade-energia-clima",
+        "id-ciencia"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve",
+      "title": "Interreg SUDOE: 3.º Aviso (Capitalização)",
+      "tagline": "3.º aviso do Interreg SUDOE para projetos de capitalização que disseminam resultados validados em três áreas: gestão de água, agro-floresta e envelhecimento populacional. Cooperação obrigatória entre PT, ES, FR e Andorra.",
+      "highlight0": "1M EUR FEDER, 6 projetos a aprovar (2 por tema)",
+      "highlight1": "Centros I&D, autoridades públicas, agências e associações",
+      "highlight2": "PT continental, ES (exceto Canárias), FR sul, Andorra",
+      "href": "instrumentos/interreg-sudoe-3rd-call.html",
+      "featured": false
+    },
+    {
+      "id": "interreg-sudoe-4th-call",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "previsto",
+      "status_text": "Previsto, abertura maio 2026",
+      "status_class": "status-planned",
+      "fonte": "ue",
+      "beneficiario": "entidade-publica,ensino-investigacao,associacao",
+      "setores": [
+        "energia-ambiente",
+        "saude-ciencias-vida"
+      ],
+      "necessidades": [
+        "sustentabilidade-energia-clima",
+        "impacto-social-inclusao"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve",
+      "title": "Interreg SUDOE: 4.º Aviso (Estruturantes)",
+      "tagline": "4.º aviso do Interreg SUDOE para projetos estruturantes em incendios florestais e envelhecimento populacional. Dois projetos transnacionais a aprovar entre PT, ES e FR, com forte exigencia de partners institucionais.",
+      "highlight0": "10M EUR para 2 projetos (4M incendios + 1M envelhecimento + custos)",
+      "highlight1": "Organismos nacionais, autoridades regionais, servicos operacionais",
+      "highlight2": "PT continental, ES (exceto Canárias), FR sul (sem Andorra)",
+      "href": "instrumentos/interreg-sudoe-4th-call.html",
+      "featured": false
+    },
+    {
+      "id": "mmm-capitalisation-call-thematic-projects-sustainable-tourism",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "previsto",
+      "status_text": "Previsto, abertura set 2026",
+      "status_class": "status-planned",
+      "fonte": "ue",
+      "beneficiario": "entidade-publica,associacao,ensino-investigacao,empresa",
+      "setores": [
+        "turismo",
+        "energia-ambiente"
+      ],
+      "necessidades": [
+        "sustentabilidade-energia-clima",
+        "internacionalizacao"
+      ],
+      "regiao": "algarve",
+      "title": "Euro-MED MMM Capitalisation: Sustainable Tourism",
+      "tagline": "Aviso de capitalizacao MMM (Mediterranean Mainstreaming Mission) do Interreg Euro-MED dedicado a missao Sustainable Tourism. Foco em adaptacao climatica, economia circular e biodiversidade no setor turistico mediterranico.",
+      "highlight0": "6M EUR para capitalizar resultados Euro-MED, Interreg, Horizon, LIFE",
+      "highlight1": "Entidades publicas, associacoes, ensino, empresas com track record europeu",
+      "highlight2": "Algarve (unica regiao PT elegivel) + 13 paises mediterranicos",
+      "href": "instrumentos/mmm-capitalisation-call-thematic-projects-sustainable-tourism.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-miss-2026-03-ocean-05",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto até 23/09/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao,entidade-publica,empresa,associacao",
+      "setores": [
+        "mar-pescas",
+        "tecnologia-digital",
+        "energia-ambiente"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "digitalizacao-ia"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizon Mission Ocean: Componentes Regionais do Digital Twin Ocean",
+      "tagline": "Aviso HORIZON-MISS-2026-03-OCEAN-05 financia 4 projetos (1 por bacia maritima europeia) que constroem os componentes regionais do EU Digital Twin Ocean dentro do EDITO, com integracao de dados, modelos preditivos e cenarios what-if.",
+      "highlight0": "19,4M EUR para 4 projetos (4M-4,85M EUR cada)",
+      "highlight1": "Centros I&D, autoridades publicas, empresas oceanograficas e digital twin",
+      "highlight2": "Bacia atlantica e artica para entidades PT (todo o territorio nacional)",
+      "href": "instrumentos/horizon-miss-2026-03-ocean-05.html",
+      "featured": false
     }
   ]
 }
