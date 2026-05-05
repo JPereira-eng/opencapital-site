@@ -1,4 +1,4 @@
-﻿# Radar Scanner v4.7.1: Descoberta de Novos Instrumentos
+﻿# Radar Scanner v4.7.2: Descoberta de Novos Instrumentos
 
 REGRA CRÍTICA: Nunca usar travessão (—) em nenhum texto gerado. Usar vírgula, ponto, hífen (-) ou reescrever a frase.
 
@@ -254,36 +254,55 @@ Muitos avisos aparecem tanto na API central (portugal2030.pt) como nas APIs regi
 
 ### Se `access_method: "api"` (eu-funding-tenders):
 
-**AVISO CRITICO v4.3 — A API SEDIA REQUER HTTP POST, NUNCA GET**
+**AVISO CRITICO v4.7.2 (2026-05-05) — A API SEDIA REQUER POST + MULTIPART/FORM-DATA**
 
-A API `https://api.tech.ec.europa.eu/search-api/prod/rest/search` responde com **HTTP 405 (Method Not Allowed)** a pedidos GET. O WebFetch tool **so suporta GET**, portanto e **incompativel** com esta API.
+A API `https://api.tech.ec.europa.eu/search-api/prod/rest/search` tem 3 particularidades não-óbvias que ate v4.7.1 estavam mal implementadas (resultando em retorno de 642K topics indistintos com filtros ignorados):
 
-**NAO USAR WebFetch para eu-funding-tenders. USAR SEMPRE Bash + curl -X POST.**
+1. **HTTP POST obrigatório** (GET → 405 Method Not Allowed)
+2. **Body é `multipart/form-data` com 3 campos blob**, não JSON puro. `-d '{}'` é silenciosamente ignorado.
+3. **Filtros via campo `query` (Elasticsearch-style)**, NÃO via parâmetro `facetQueries` (que apenas alimenta os contadores das facetas no UI, não filtra resultados).
 
-Se o agente tentar WebFetch nesta fonte, vai falhar com 405 e desistir — foi o que aconteceu na run de teste 2026-04-17T20:00. Esta nota existe para evitar repeticao desse erro.
+**`status` usa IDs numéricos da taxonomia EU**, não strings:
+- `31094501` = Open (submissão ativa)
+- `31094502` = Forthcoming (abre em breve)
+- `31094503` = Closed
 
-**Comando correto (Bash):**
+**Comando correto (testado 2026-05-05, retorna 351 topics OPEN reais vs 642K antes):**
 ```bash
-curl -s -X POST "https://api.tech.ec.europa.eu/search-api/prod/rest/search?apiKey=SEDIA&text=**&pageSize=200&pageNumber=1&facetQueries=status%3AOPEN" \
-  -H "Content-Type: application/json" \
-  -H "Accept: application/json" \
-  -d '{}' > /tmp/sedia_page_1.json
+curl -s -X POST \
+  "https://api.tech.ec.europa.eu/search-api/prod/rest/search?apiKey=SEDIA&text=***&pageSize=100&pageNumber=1" \
+  -F 'query={"bool":{"must":[{"terms":{"status":["31094501"]}},{"terms":{"type":["1","2","8"]}}]}};type=application/json' \
+  -F 'sort={"field":"deadlineDate","order":"ASC"};type=application/json' \
+  -F 'languages=["en"];type=application/json' \
+  > /tmp/sedia_page_1.json
 ```
 
 **Parametros chave:**
-- `apiKey=SEDIA` (obrigatório)
-- `text=**` (wildcard, devolve tudo)
-- `pageSize=200` (maximo útil)
+- `apiKey=SEDIA` (obrigatório, query string)
+- `text=***` (TRÊS asteriscos, não dois — wildcard correto)
+- `pageSize=100` (com 351 results e cap 150 novos/run, basta ~4 paginas)
 - `pageNumber=N` (paginar)
-- `facetQueries=status%3AOPEN` (apenas topics abertos, URL-encoded de `status:OPEN`)
-- `-d '{}'` (body JSON vazio, obrigatório porque e POST)
+- `-F 'query=...'` (multipart blob: filtros Elasticsearch-style)
+  - `terms` (lista de valores) ou `term` (singular)
+  - `bool.must` para AND, `bool.should` para OR
+  - `type: ["1","2","8"]` filtra grants. `["0"]` = tenders. Omitir = ambos.
+- `-F 'sort=...'` (multipart blob: ordenação)
+- `-F 'languages=...'` (multipart blob OBRIGATÓRIO — sem este a API rejeita)
+
+**NÃO usar `facetQueries=status%3AOPEN`.** É um parâmetro decorativo que alimenta o UI; não filtra. Causa do bug v4.6/v4.7.1.
+
+**Para programa específico (opcional):** adicionar ao `query.bool.must`:
+```
+{"terms":{"frameworkProgramme":["43108390"]}}  # 43108390 = Horizon Europe
+```
+Mapa completo de IDs em `ajruben/sedia-api-fetchers` no GitHub (referência canónica para esta API).
 
 **Resposta JSON:** objeto com `results[]`. Cada resultado tem:
 - `metadata.callIdentifier` — id do topic (ex: `HORIZON-CL4-2026-DIGITAL-EMERGING-01-02`)
 - `metadata.callTitle` — titulo
 - `metadata.deadlineDate` — array com ISO dates
 - `metadata.indicativeBudget` — orçamento
-- `metadata.status` — OPEN / FORTHCOMING / CLOSED
+- `metadata.status` — agora será sempre `["31094501"]` (filtramos a montante)
 - `url` — URL do topic no portal
 
 **Lógica de paginacao progressiva — o lookup.json e o marcador de progresso:**
@@ -304,15 +323,19 @@ A SEDIA API tem centenas ou milhares de topics abertos. Não e possível process
 
 **Justificacao cap 150 (v4.2):** SEDIA tem milhares de topics. Com cap 50, cobertura total demora ~40 runs. Com cap 150, reduz-se para ~14 runs. Custo de tokens escala linearmente mas e absorvido pela ausencia de necessidade de re-runs.
 
-**Implementação (Bash + curl):**
+**Implementação (Bash + curl, v4.7.2):**
 ```bash
 pageNumber=1
 novos_encontrados=0
 
 enquanto [novos_encontrados -lt 150]:
-  curl -s -X POST "https://api.tech.ec.europa.eu/search-api/prod/rest/search?apiKey=SEDIA&text=**&pageSize=200&pageNumber=$pageNumber&facetQueries=status%3AOPEN" \
-    -H "Content-Type: application/json" -d '{}' > /tmp/sedia_page_$pageNumber.json
-  
+  curl -s -X POST \
+    "https://api.tech.ec.europa.eu/search-api/prod/rest/search?apiKey=SEDIA&text=***&pageSize=100&pageNumber=$pageNumber" \
+    -F 'query={"bool":{"must":[{"terms":{"status":["31094501"]}},{"terms":{"type":["1","2","8"]}}]}};type=application/json' \
+    -F 'sort={"field":"deadlineDate","order":"ASC"};type=application/json' \
+    -F 'languages=["en"];type=application/json' \
+    > /tmp/sedia_page_$pageNumber.json
+
   se results[] vazio: parar (fim do catálogo)
 
   para cada topic in results[]:
@@ -328,9 +351,11 @@ enquanto [novos_encontrados -lt 150]:
   pageNumber += 1
 ```
 
+**Cap revisto v4.7.2:** Com filtragem correta retornando ~351 topics OPEN (vs 642K antes), o cap de 150 novos/run cobre 43% do catálogo aberto numa run, ou seja ~3 runs para cobertura completa em vez de 14. Manter cap em 150 conserva conservadorismo de tokens.
+
 **Registar no relatorio granular:** paginas percorridas, topics vistos, topics skip (dedup), topics novos com detalhes.
 
-**Nota importante:** O parametro `facetQueries=status%3AOPEN` já filtra a listagem, mas confirmar sempre `metadata.status` no detalhe buscado. Topics com status FORTHCOMING, CLOSED ou AWARDED: skip sem buscar detalhes completos.
+**Nota importante:** A query do POST já filtra `status: 31094501` (Open). Confirmar sempre no detalhe: se `actions[0].status.abbreviation` ≠ "OPEN" no `topicDetails/<id>.json`, skip (eventual race condition entre paginação e fechamento).
 
 ### Se `access_method: "webfetch"`:
 
