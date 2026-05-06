@@ -92,52 +92,6 @@
   },
   "queue": [
     {
-      "id": "change-partners",
-      "name": "Change Partners",
-      "source_id": "change-partners",
-      "catalog_type": "vc",
-      "detected_date": "2026-05-06",
-      "last_profile_update": "2026-05-06",
-      "status": "active",
-      "regulation_url": "https://www.changepartners.pt",
-      "priority_score": 5,
-      "profile": {
-        "website": "https://www.changepartners.pt",
-        "linkedin": null,
-        "pais_sede": "PT",
-        "descricao_curta": "VC portuguesa baseada no Porto, fundada em 1989. Sector-agnostica, foco em rondas seed/Series A em empresas portuguesas com ambicao internacional.",
-        "como_candidatar": "Contacto directo via website ou intro preferencial.",
-        "tese": "Investir em empreendedores portugueses com ambicao de crescimento e expansao internacional. Foco em independent VC e top 3 industria PT em rentabilidade.",
-        "estagios": [
-          "seed",
-          "series-a"
-        ],
-        "setores": [
-          "sector-agnostico",
-          "life sciences",
-          "enterprise applications",
-          "food and agriculture tech"
-        ],
-        "geografia": [
-          "PT"
-        ],
-        "ticket_min_eur": null,
-        "ticket_max_eur": null,
-        "ticket_sweet_eur": null,
-        "aum_eur": null,
-        "vintage": null,
-        "portfolio_pt_exemplos": [
-          "Exogenus Therapeutics",
-          "GuestCentric",
-          "Biomode"
-        ],
-        "parceiros": [
-          "Mario Pinto (Founder/Chairman)"
-        ]
-      },
-      "notes": "Verificacao 2026-05-06: site institucional retornou conteudo vazio em fetch directo. Profile baseado em fontes secundarias (Tracxn, RocketReach). Equipa de 6 (3 partners). Fundo SCR independente. URL em sources-scan.json (changepartners.com) estava errado, corrigido para changepartners.pt."
-    },
-    {
       "id": "k-fund",
       "name": "K Fund",
       "source_id": "k-fund",
