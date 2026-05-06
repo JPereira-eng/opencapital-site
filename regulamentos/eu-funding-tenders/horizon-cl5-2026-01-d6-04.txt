@@ -1,0 +1,130 @@
+# Integration of human driving behaviour in the validation of CCAM systems (CCAM Partnership)
+
+Identificador: HORIZON-CL5-2026-01-D6-04
+Call: HORIZON-CL5-2026-01
+Tipo de ação: {'status': {'id': 31094503, 'abbreviation': 'Closed', 'description': 'Closed'}, 'types': [{'typeOfAction': 'HORIZON-RIA HORIZON  Research and Innovation Actions', 'typeOfMGA': [{'id': 43027849, 'abbreviation': 'HORIZON-AG-LS', 'description': 'HORIZON Lump Sum Grant'}]}], 'plannedOpeningDate': '1758758400000', 'submissionProcedure': {}, 'deadlineDates': ['1768867200000']}
+
+## Descrição
+
+Expected Outcome:
+
+Project results are expected to contribute to all of the following expected outcomes: 
+
+ - Validated human behavioural models representing the variety of human driving behaviour in safety-relevant scenarios, shared through a common repository and to be used: 
+ - to define pass criteria/ assessment criteria for CCAM systems in type approval schemes, consumer testing campaigns and industrial development processes; 
+ - to design safe, human-like behaviour of CCAM systems that can be anticipated easily by all road users and is acceptable to both CCAM vehicle occupants and all road users. 
+ - Application of such human behavioural models in the virtual safety validation of CCAM systems to realistically represent the behaviour of human-driven vehicles in closed loop simulations of mixed traffic, thereby reflecting the variety of human driving behaviour, including behaviour in complex real-world and emergency conditions. Scope:
+
+The deployment of CCAM systems in mixed traffic will mean intense interaction with all road users such as the human drivers of other vehicles as well as pedestrians and riders of two-wheelers. These interactions (including implicit and explicit communication by humans and CCAM systems) will play a crucial role in the acceptance and thereby the penetration of CCAM systems in future road transport. CCAM systems will have to show safe and human-like driving behaviour, so that their decisions and actions can be anticipated easily by all road users, respecting the variety of typical driving behaviour across different countries as well as the need for CCAM systems to respect traffic rules and support road safety.
+
+This will require validated models of explicit and implicit human driving behaviour to design and validate such system behaviour. These models will be needed in closed loop simulations of CCAM systems in mixed traffic to realistically represent the reactions of human drivers in other vehicles to the behaviour of a CCAM system. Models representing human driving behaviour are being developed by the projects i4Driving[1] and BERTHA[2] for selected fields of application, i.e. they will be calibrated for a limited number of scenarios. Bringing together and building upon the results of these projects – in particular a simulation library and an innovative methodology to account for uncertainty from i4Driving and a scalable, probabilistic driver behavioural model from BERTHA, research is needed to extend the fields of application that these projects are addressing with a focus on representing driver behaviour in a multitude of safety-critical scenarios, considering the variation and statistical distribution of human behavioural patterns and the factors influencing such behaviour, including the parallel execution of non-driving related tasks.
+
+To achieve high degrees of robustness and applicability in a wide range of scenarios, detailed calibration and parameterisation is necessary, as driver behaviour depends on factors such as the road infrastructure, vehicle types, traffic conditions and rules, as well as regional influences and driver experiences / demographics, e.g., gender, age and other relevant social variables. Considering the deviation of average from ideal human driving behaviour, proposed actions must also validate the models for their extended fields of application, going well beyond the applications and degrees of validation accomplished by the above-mentioned projects under HORIZON-CL5-2022-D6-01-03. Proposed actions are thus expected to raise the technology readiness of such models to TRL 5. Data for parameterisation and validation should be captured by monitoring real human drivers in driving simulators and/or real traffic considering what is happening inside and outside the vehicle.
+
+Proposed actions should integrate, to the extent possible, the validated models in the virtual validation and verification approaches as developed in the projects HEADSTART[3] and SUNRISE[4] and complemented by the project SYNERGIES[5]. Successful integration should be demonstrated in various safety-relevant scenarios as provided by the action(s) funded under HORIZON-CL5-2023-D6-01-02[6]. Models should be shared via the federated data exchange platform for CCAM to be developed by an action under HORIZON-CL5-2025-D6-06[7].
+
+Proposals are encouraged to also explore additional fields of application of validated driver behaviour models, while the integration of relevant expertise from social sciences and humanities (SSH) is expected.
+
+To achieve the expected outcomes, international cooperation is encouraged with research stakeholders in Japan and the United States but also with other relevant strategic partners in third countries. Such cooperation should exploit synergies as far as possible in capturing data for the parametrisation and validation of behavioural models, while considering regional and cultural differences as well as specificities of respective road infrastructures.
+
+This topic implements the co-programmed European Partnership on ‘Connected, Cooperative and Automated Mobility’ (CCAM). As such, projects resulting from this topic will be expected to report on results to the European Partnership ‘Connected, Cooperative and Automated Mobility’ (CCAM) in support of the monitoring of its KPIs.
+
+Projects resulting from this topic are expected to apply the European Common Evaluation Methodology (EU-CEM) for CCAM[8].
+
+Projects funded under this topic are encouraged to explore potential complementarities with the activities of the European Commission's Joint Research Centre’s Sustainable, Smart, and Safe Mobility Unit and, where appropriate, establish formal collaboration.
+
+null
+
+Activities are expected to achieve TRL 5 by the end of the project – see General Annex B. Activities may start at any TRL.
+
+[1] Integrated 4D driver modelling under uncertainty, grant agreement ID: 101076165.
+
+[2] BEhavioural ReplicaTion of Human drivers for CCAM, grant agreement ID: 101076360.
+
+[3] Harmonised European solutions for testing automated road transport, grant agreement id: 824309.
+
+[4] Safety assUraNce fRamework for connected, automated mobIlity SystEms, grant agreement ID: 101069573.
+
+[5] Real and synthetic scenarios generated for the development, training, virtual testing and validation of CCAM systems, grant agreement ID: 101146542.
+
+[6] Generation of scenarios for development, training, virtual testing and validation of CCAM systems
+
+[7] Federated CCAM data exchange platform (see below).
+
+[8] See the evaluation methodology here.
+
+## Condições
+
+">General conditions1. Admissibility Conditions: Proposal page limit and layoutdescribed in Annex A and Annex E of the Horizon Europe Work Programme General Annexes.
+
+Proposal page limits and layout: described in Part B of the Application Form available in the Submission System.
+
+2. Eligible Countriesdescribed in Annex B of the Work Programme General Annexes.
+
+A number of non-EU/non-Associated Countries that are not automatically eligible for funding have made specific provisions for making funding available for their participants in Horizon Europe projects. See the information in the Horizon Europe Programme Guide.
+
+3. Other Eligible ConditionsThe following exceptions apply: subject to restrictions for the protection of European communication networks.
+
+described in Annex B of the Work Programme General Annexes.
+
+4. Financial and operational capacity and exclusiondescribed in Annex C of the Work Programme General Annexes.
+
+5a. Evaluation and award: Award criteria, scoring and thresholdsare described in Annex D of the Work Programme General Annexes.
+
+5b. Evaluation and award: Submission and evaluation processesare described in Annex F of the Work Programme General Annexes and the Online Manual.
+
+5c. Evaluation and award: Indicative timeline for evaluation and grant agreementdescribed in Annex F of the Work Programme General Annexes.
+
+6. Legal and financial set-up of the grantsEligible costs will take the form of a lump sum as defined in the Decision of 7 July 2021 authorising the use of lump sum contributions under the Horizon Europe Programme – the Framework Programme for Research and Innovation (2021-2027) – and in actions under the Research and Training Programme of the European Atomic Energy Community (2021-2025). [[This decision is available on the Funding and Tenders Portal, in the reference documents section for Horizon Europe, under ‘Simplified costs decisions’ or through this link: https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/guidance/ls-decision_he_en.pdf]].
+
+described in Annex G of the Work Programme General Annexes.
+
+Specific conditions 
+
+Application and evaluation forms and model grant agreement (MGA): Application form templates — the application form specific to this call is available in the Submission System
+
+Standard application form (HE RIA, IA)
+
+Evaluation form templates — will be used with the necessary adaptations
+
+Standard evaluation form (HE RIA, IA) 
+
+Guidance
+
+HE Programme Guide 
+
+Model Grant Agreements (MGA)
+
+Lump Sum MGA 
+
+Call-specific instructions 
+
+Detailed budget table (HE LS) 
+
+Guidance: "Lump sums - what do I need to know?"
+
+Additional documents: HE Main Work Programme 2025 – 1. General Introduction
+
+HE Main Work Programme 2025 – 8. Climate, Energy and Mobility
+
+HE Main Work Programme 2025 – 14. General Annexes
+
+HE Programme Guide
+
+HE Framework Programme 2021/695
+
+HE Specific Programme Decision 2021/764 
+
+EU Financial Regulation 2024/2509
+
+Decision authorising the use of lump sum contributions under the Horizon Europe Programme
+
+Rules for Legal Entity Validation, LEAR Appointment and Financial Capacity Assessment 
+
+EU Grants AGA — Annotated Model Grant Agreement 
+
+Funding & Tenders Portal Online Manual 
+
+Funding & Tenders Portal Terms and Conditions 
+
+Funding & Tenders Portal Privacy Statement

@@ -1,0 +1,141 @@
+# Federated CCAM data exchange platform (CCAM Partnership)
+
+Identificador: HORIZON-CL5-2026-01-D6-06
+Call: HORIZON-CL5-2026-01
+Tipo de ação: {'status': {'id': 31094503, 'abbreviation': 'Closed', 'description': 'Closed'}, 'types': [{'typeOfAction': 'HORIZON-IA HORIZON Innovation Actions', 'typeOfMGA': [{'id': 43027849, 'abbreviation': 'HORIZON-AG-LS', 'description': 'HORIZON Lump Sum Grant'}]}], 'plannedOpeningDate': '1758758400000', 'submissionProcedure': {}, 'deadlineDates': ['1768867200000']}
+
+## Descrição
+
+Expected Outcome:
+
+Project results are expected to contribute to all of the following expected outcomes:
+
+ - Overview of CCAM-specific limitations of current data exchange solutions and existing dataspaces related to interfaces, harmonised ontologies and taxonomies, standards, formats, monetisation / compensation;
+ - Mapping of information and reference data needs for KPIs collected by Member States and Associated Countries (where relevant and to the extent possible), related to impacts of CCAM technologies and solutions;
+ - Federated sustainable CCAM Data Exchange Platform that facilitates sharing of data for both large-scale demonstrations and deployment, interfacing existing data spaces and improving the exchange, availability, and accessibility of data for the development, testing and deployment of CCAM services (including but not limited to Digital Twins, digital scenario representations, safety assurance and validation, ADS regulation monitoring, driver behaviour, AI model training, and the collection of national/EU level statistics and Key Performance Indicators);
+ - Proposed governance structure for the Data Exchange Platform with a sustainability plan and viable business model. Scope:
+
+Data sharing plays a pivotal role in supporting R&I, enabling deployment, and enhancing the competitiveness of the CCAM industry. Within the realm of data sharing, there are two distinct categories of data that are particularly pertinent: mobility data, and data for research and development. The common European mobility data space[1] aims to facilitate mobility data access and sharing, and is supported by projects, notably from the Digital Europe Programme. This mobility data space will facilitate the sharing of data related to mobility patterns, traffic flow, and other macroscopic aspects that are essential for the development of CCAM solutions. Within the research, testing and deployment of CCAM solutions for the automotive as well as infrastructure sectors, there is a need for a dedicated data space tailored specifically to the requirements of CCAM stakeholders. This CCAM Data Space demands a more granular and extensive array of data to cater to the needs of both Tier X suppliers, Original Equipment Manufacturers (OEMs), traffic managers and infrastructure providers, particularly in terms of vehicle and traffic safety considerations. Specific aspects related to ongoing regulatory developments would need to be considered (e.g. Automated Driving Systems and General Safety regulations, adaption of type approval to the AI Act, including trustworthy AI integration).
+
+Several data spaces exist or are being developed in Europe for CCAM in specific R&I initiatives. The FAME[2] project has released a CCAM Data Sharing Framework (DSF) 2.0 describing best practices in data sharing and will develop a CCAM Federated Data Space as a proof of concept to facilitate the exchange of research and test data across R&I projects. Several CCAM Partnership R&I projects expressed interest in making data available and reusing data from other projects through the FAME Test Data Space, once it will be operational. The scenario-based validation approach for safety argumentation in highly automated functions will result in an integration of various scenario databases facilitated by a federated layer, as developed in project SUNRISE[3] and SYNERGIES[4]. However, this integration falls short of constituting a comprehensive Data Space approach, both for new data sets and extensions of existing datasets. To achieve full Data Space functionality for CCAM, significant enhancements are required in terms of developing connectors, APIs, and protocols for seamless data exchange. Additionally, there is a need to refine user profile management systems and establish robust contractual frameworks to govern data access and usage rights. A generic data space blueprint and building blocks are being developed and governed by the Data Space Support Centre[5]. In parallel, the DeployEMDS[6] builds a decentralised technical infrastructure and common governance mechanisms for urban mobility use cases in 9 cities and regions across Europe.
+
+Consequently, substantial efforts are necessary to fully integrate these approaches into a cohesive and efficient Data Space environment that can effectively support the diverse needs of the CCAM research community and industry. Moreover, extensive datasets are also indispensable for the development of low-level modules such as driver monitoring systems, perception systems, and decision-making algorithms, as well as for sensors like GNSS, radar, cameras, and lidar. While projects like AIthena[7] and AWARE2ALL[8] have generated valuable datasets, the lack of centralised storage and access hampers their utility. Therefore, there is a strong need to incorporate such datasets into a unified CCAM Data Space that is aligned with the data space blueprint, taking advantage of the common building blocks. 
+
+By establishing robust interfaces, ontologies, and data management architectures, the CCAM research community and industry can effectively utilise and repurpose existing data, thereby reducing costs, and facilitating the development and validation of CCAM solutions, including the creation of digital twins through synthetic data. The enhanced sharing of data across the CCAM stakeholders should also benefit national authorities, and operators in their efforts to collect KPIs to monitor wider impacts of CCAM solutions including on safety, economy, and society.
+
+Proposed actions for this topic are expected to address all of the following aspects:
+
+ - Identify how to further evolve the data spaces for CCAM applications, connecting existing dataspaces and bridging data gaps;
+ - Identify harmonisation and standardisation needs for taxonomies, interfaces, and data formats to push CCAM data exchange and extend and implement the CCAM taxonomies in the CCAM Test Data Space;
+ - Identify information needs and reference data for KPIs collected from Member States and Associated Countries (where relevant and to the extent possible) of i.e. high-level socio-economic statistics, accidents, infrastructure, vehicles;
+ - Establish a Federated CCAM Data Exchange Platform with tools and governance, including a viable business model to ensure the durability of the platform, which facilitates sharing of data for industry, social partners, authorities and academia that are supporting specific use cases related to: large-scale demonstrations, generation and maintenance of digital twins and representation of scenarios (for development or validation), performance and safety assessment, driver behaviour data from real and synthetic driving conditions, ADS regulation monitoring, AI model training, and common information source for national/EU level statistics and Key Performance Indicators;
+ - Identify and describe methods/algorithms/processes to refine and use data for the specific use cases tackled by the Platform;
+ - Identify the effects of the EU General Data Protection Legislation (GDPR) on AI learning workflows and possible mitigation measures. A strong alignment with the common European mobility data space and related projects[9] is expected. The work should ensure coherence and interoperability with other common European data spaces, especially regarding its cross-sectoral blueprint and building blocks, by aligning with the Data Spaces Support Centre and by using, as far as possible, the smart cloud-to-edge middleware platform Simpl[10]. The work should build on the outcomes of the FAME project and the FAME Test Data Space (Data Sharing - Connected Automated Driving). Finally, links with related activities under the future European Digital Infrastructure Consortium (EDIC) for Mobility and Logistics Data and cooperation with the CCAM Partnership’s States Representative Group (SRG) is expected. Particular attention should be dedicated towards establishing interoperability standards for data sharing within and across data ecosystems, through the implementation of the FAIR data principles and leveraging already adopted practices, especially in relevant European common data spaces.
+
+In order to achieve the expected outcomes, international cooperation is encouraged in particular with Japan and the United States but also with other relevant strategic partners in third countries.
+
+This topic implements the co-programmed European Partnership on ‘Connected, Cooperative and Automated Mobility’ (CCAM). As such, projects resulting from this topic will be expected to report on results to the European Partnership ‘Connected, Cooperative and Automated Mobility’ (CCAM) in support of the monitoring of its KPIs.
+
+Projects resulting from this topic are expected to apply the European Common Evaluation Methodology (EU-CEM) for CCAM[11].
+
+null
+
+Activities are expected to achieve TRL 6-7 by the end of the project – see General Annex B. Activities may start at any TRL.
+
+[1] Creating a common European mobility data space - European Commission (europa.eu)
+
+[2] Framework for coordination of Automated Mobility in Europe, grant agreement ID: 101069898.
+
+[3] Safety assUraNce fRamework for connected, automated mobIlity SystEms, grant agreement ID: 101069573.
+
+[4] Real and synthetic scenarios generated for the development, training, virtual testing and validation of CCAM systems, grant agreement ID: 101146542.
+
+[5] Data Spaces Blueprint 
+
+[6] See for more information: https://deployemds.eu/
+
+[7] AI-based CCAM: Trustworthy, Explainable, and Accountable, grant agreement ID: 101076754.
+
+[8] Safety systems and human-machine interfaces oriented to diverse population towards future scenarios with increasing share of highly automated vehicles, grant agreement ID: 101076868.
+
+[9] The awarded proposal should build on the outcomes of the preparatory action PrepDSpace4Mobility and the EMDS study under CEF. It should collaborate and align the deployEMDS project and the future action under call DIGITAL-2024-CLOUD-AI-06-MOBSPACE.
+
+[10] More information here.
+
+[11] See the evaluation methodology here.
+
+## Condições
+
+">General conditions1. Admissibility Conditions: Proposal page limit and layoutdescribed in Annex A and Annex E of the Horizon Europe Work Programme General Annexes.
+
+Proposal page limits and layout: described in Part B of the Application Form available in the Submission System.
+
+2. Eligible Countriesdescribed in Annex B of the Work Programme General Annexes.
+
+A number of non-EU/non-Associated Countries that are not automatically eligible for funding have made specific provisions for making funding available for their participants in Horizon Europe projects. See the information in the Horizon Europe Programme Guide.
+
+3. Other Eligible ConditionsThe following exceptions apply: subject to restrictions for the protection of European communication networks.
+
+described in Annex B of the Work Programme General Annexes.
+
+4. Financial and operational capacity and exclusiondescribed in Annex C of the Work Programme General Annexes.
+
+5a. Evaluation and award: Award criteria, scoring and thresholdsare described in Annex D of the Work Programme General Annexes.
+
+5b. Evaluation and award: Submission and evaluation processesare described in Annex F of the Work Programme General Annexes and the Online Manual.
+
+5c. Evaluation and award: Indicative timeline for evaluation and grant agreementdescribed in Annex F of the Work Programme General Annexes.
+
+6. Legal and financial set-up of the grantsEligible costs will take the form of a lump sum as defined in the Decision of 7 July 2021 authorising the use of lump sum contributions under the Horizon Europe Programme – the Framework Programme for Research and Innovation (2021-2027) – and in actions under the Research and Training Programme of the European Atomic Energy Community (2021-2025). [[This decision is available on the Funding and Tenders Portal, in the reference documents section for Horizon Europe, under ‘Simplified costs decisions’ or through this link: https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/guidance/ls-decision_he_en.pdf]].
+
+described in Annex G of the Work Programme General Annexes.
+
+Specific conditions 
+
+Application and evaluation forms and model grant agreement (MGA): Application form templates — the application form specific to this call is available in the Submission System
+
+Standard application form (HE RIA, IA)
+
+Evaluation form templates — will be used with the necessary adaptations
+
+Standard evaluation form (HE RIA, IA) 
+
+Guidance
+
+HE Programme Guide 
+
+Model Grant Agreements (MGA)
+
+Lump Sum MGA 
+
+Call-specific instructions 
+
+Detailed budget table (HE LS) 
+
+Guidance: "Lump sums - what do I need to know?"
+
+Additional documents: HE Main Work Programme 2025 – 1. General Introduction
+
+HE Main Work Programme 2025 – 8. Climate, Energy and Mobility
+
+HE Main Work Programme 2025 – 14. General Annexes
+
+HE Programme Guide
+
+HE Framework Programme 2021/695
+
+HE Specific Programme Decision 2021/764 
+
+EU Financial Regulation 2024/2509
+
+Decision authorising the use of lump sum contributions under the Horizon Europe Programme
+
+Rules for Legal Entity Validation, LEAR Appointment and Financial Capacity Assessment 
+
+EU Grants AGA — Annotated Model Grant Agreement 
+
+Funding & Tenders Portal Online Manual 
+
+Funding & Tenders Portal Terms and Conditions 
+
+Funding & Tenders Portal Privacy Statement

@@ -1,0 +1,152 @@
+# Real time monitoring of regulated and non-regulated emissions from all types of vessels and other port activities in order to enforce emission limits in waterfront cities
+
+Identificador: HORIZON-CL5-2026-01-D5-17
+Call: HORIZON-CL5-2026-01
+Tipo de ação: {'status': {'id': 31094503, 'abbreviation': 'Closed', 'description': 'Closed'}, 'types': [{'typeOfAction': 'HORIZON-IA HORIZON Innovation Actions', 'typeOfMGA': [{'id': 43027846, 'abbreviation': 'HORIZON-AG', 'description': 'HORIZON Action Grant Budget-Based'}]}], 'plannedOpeningDate': '1758758400000', 'submissionProcedure': {}, 'deadlineDates': ['1768867200000']}
+
+## Descrição
+
+Expected Outcome:
+
+To support the Zero Pollution Action Plan and the Smart and Sustainable Mobility Strategy as well as the implementation of the Climate-Neutral and Smart Cities Mission, project results are expected to contribute to all of the following expected outcomes:
+
+ - Real-time demonstration of on-board tamper-proof and remote measurement techniques for a wide range of pollutants (including pollutants from alternative fuels and non-regulated pollutants) from vessel emissions, allowing shipowners to measure the emissions during operation and contributing to the current monitoring and enforcing activities of public authorities, such as port and maritime authorities and with the potential to be used for future compliance monitoring;
+ - Development of broadly accepted harmonised methods to measure real sailing emissions, including coastal, open seas and inland waterway with potential to be used for future compliance monitoring;
+ - Development of an automatic reporting and verification system solution that helps shipping companies to comply with current and future regulation and for maritime, inland and port authorities to monitor and control the actual ship emissions derived from the data exchanged;
+ - Contribution to the delivery of better emission factors for emissions inventories and projections, especially for harmful substances and fuel mixtures for which little knowledge exists today and ultimately contributing to the establishment of a broadly accepted method for measuring and calculating real sailing emissions of a ship;
+ - Identification of real-world releases of harmful substances which are currently not controlled by regulations and excessive releases of substances already controlled in open seas and in-port activities;
+ - Innovative technologies and systems to monitor, measure and identify the source of pollution in ports beyond vessels, including other transport modes, port operations and industries active in the port environment are made available for public authorities;
+ - Recommendations for improved certification and testing to better cover real world situations;
+ - Support of local, regional, national and international emissions reduction and air quality plans and noise action plans by providing real-world emission information and measuring the actual impact of control measures and strategies on concentrations and/or deposition of pollutants;
+ - Identification of risk areas for potential violations to emission limits. Scope:
+
+There is a pressing need to measure accurately the different types of emissions in coastal and port environments located near to cities, because of their negative impact on the environment and human health. Ports, as intricate environments showcasing a variety of vessels including novel designs, pose a challenge to the development of standardised technologies capable of collecting and assessing real-time pollutant emissions data from these ships docking at ports. This is vital for enforcing emissions limits and validating the data for enforcement purposes.
+
+Moreover, emissions in ports stem from other sources, such as port operations (e.g., cargo handling, towing, fuel storage, and bunkering) or even other industrial activities (directly or indirectly linked to transport, e.g., fisheries) taking place within the port area. Additionally, ports are frequently situated near industrial zones, making it crucial to possess an accurate and, where possible, real-time understanding of the types, origins, and intensity of pollutant and noise emissions generated in and around a port area.
+
+The shift from heavy fuel oils to alternative fuels in the context of the regulatory framework[1] set to achieve the objectives of the Green Deal requires further research actions; recent evidence from research and monitoring projects has shown that new fuels being considered and GHG emission-control technologies used on-board vessels may result in emissions of other harmful pollutants that are not sufficiently controlled. In some cases, unexpected side effects of emission abatement may arise which might require regulatory action[2].
+
+Further to such undesired releases, it is crucial to ensure that vessels comply with regulations in force, in coastal areas, at open sea and in inland waterways. Projects under call LC-MG-1-1-2018 of Horizon 2020 showed that remote measurement of SOx emissions using stationary or mobile techniques can significantly increase the cost-effectiveness of compliance monitoring. It is important to explore whether remote or on-board techniques can be extended to the monitoring of additional pollutants such as CH4, NOx, N2O, NH3, UFP, BC, formaldehyde, PM[3], as well as the Particle Number (PN), NPAHs and to provide internationally harmonised methods and reporting procedures where such measurements can be used within an enhanced compliance monitoring framework in the future. These methods should also have the potential to be used as evidence for law enforcement to enable independent prosecution of violations. Furthermore, there is a need to develop engine testing procedures that better represent operational patterns in order for the emission values from test cycles to accurately represent real emissions.
+
+Limited surveillance measurements at open seas show a different compliance (lower compliance) behaviour for sulphur emissions compared to measurements in coastal regions. Therefore, it is important to identify risk areas for violations and to establish techniques for monitoring in these areas as well. It is of equally great importance to develop harmonised/standardised monitoring methods that could be used as evidence for sanctions in the future.
+
+Assessment of the real-world performance of emission control, in particular for Tier III vessels, is therefore required to make sure that current NOx regulations achieve and sustain the emission reductions that these regulations are designed for. Further, certification testing should be modified to better address real world conditions. Moreover, potential ammonia slip from urea consumption needs to be identified, and N2O emission levels need to be determined to ensure that GHG reduction efforts are not thwarted.
+
+In addition, no established method for identifying NOx emissions that exceed existing standards under real sailing operation is currently in place. Based on different remote or on-board measurement techniques, harmonised methods, and reporting procedures to identify exceedances of expected emission levels needs to be designed and put in action, at least for informative reasons – as no enforcement of low NOx under real operation is currently in place.
+
+With CH4 being a potent GHG, any uncontrolled releases from LNG powered vessels significantly compromise any lower carbon benefits of the LNG as a fuel. Moreover, although boil-off gas (BOG) should be reliquefied or used on-board, records of BOG release to the atmosphere have been reported. The extent of any remaining current problem needs to be identified and measurements on methane slip from actual vessels need to identify the extent of emissions, considering potential needs for methane emission limits (for the engines as well as for the fuel storage onboard and the bunkering process). The problem with methane slip will also remain with the use of bio-methane as fuel.
+
+New fuels are considered in the effort to decarbonise shipping, with the most prominent being ammonia (NH3), methanol (MeOH) and hydrogen. There is currently limited evidence on new pollution dimensions induced by such fuels, including ultrafine particles of non-carbonaceous origin, N2O and NH3 emissions, NPAH, Formaldehyde PM, NOx, etc. Measurements on actual marine engines and vessels using such fuels need to provide new evidence in the pool of data forming so that early measures are taken before such new fuels become widespread in actual use, in case such new emissions prove to be at a level that constitute health hazards or environmental risks. Zero carbon fuels like NH3 and H2, as well as dual-fuel engines and CO2 capture onboard require different remote measurement methods, since CO2 is no longer a stable and dominant reference gas in the exhaust plume. Alternative options in sensing and calculation method need to be introduced.
+
+Demonstration must be undertaken within a real operational environment. In the collection and analysis of remote as well as static sensing data for the monitoring of emissions and air pollutants, the accuracy of the sensors and the quality and verifiability of the data obtained are of particular importance. Potential risks and problems in data collection and sensor technology, in particular as regards the identification of the source of the pollution, should be analysed in detail. A verifiable methodology is also required for processing and interpreting the data in the next step. Issues such as access to data, data storage and associated security aspects (including the assessment of cyber security of interoperable systems) should be fully considered. Particular efforts should be made to ensure that the data produced in the context of this topic is FAIR[4].
+
+To address all these highlighted issues, proposals are expected to undertake all the following R&I activities:
+
+ - Map high emission activities and demonstrate port, coastal, inland and open sea monitoring techniques for at least NOx, BC, N2O, UFP, NH3, CH4,, PM as well as PN and NMVOC (or any other related pollutants), during normal operation of ships which includes dynamic engine loads of all ship types (including port service vessels) and suitable for zero carbon fuels, dual-fuel engines and carbon capture. All the emission measurements should be integrated through static and remote sensing in order to share data;
+ - Demonstration of the developed measuring technologies in 6 different TEN-T ports, (of which 3 Core and 3 Comprehensive ports, covering at least three sea basins of the Black, Mediterranean, North Sea, N. Atlantic and Baltic Seas). Out of these 6 ports at least one should be classified as a TEN-T inland-waterway only port according to Annex II of the TEN-T Regulation. At least one of the ports should be situated in a city participating in the Cities Mission and activities should feed into the implementation of the Climate City Contract (CCC), with abatement measures and port-city collaborative governance approaches to match or enhance CCC commitments. The selection of ports should be such as to cover a wide range of emission profiles and take into consideration the complexity of emission sources in order to ensure that the outcome is representative and can be replicated to other ports;
+ - Identify, differentiate and measure in real time at or near possible sources of emissions (e.g., individual vessel, specific port operations, industrial installations within and very close to the port area) under complex (geographical, layout, mixed space uses and other) conditions and variable weather conditions. The calibration of the measurement systems and the reproducibility of the results should be demonstrated;
+ - Development of a methodology for assessing pollution within the port area including emissions from all transport modes, port operations and industries located in the port area;
+ - Identify the impact of emissions in ports and nearby cities and propose mitigating measures and plans for municipalities and port authorities, including ports in which municipalities are not directly involved in the management of port authorities and terminals;
+ - Development of Real-Time Decision Support Systems (RT DSS) for ships, onboard ship operations, ship operators to look into data collected to enable port and maritime authorities to make decisions about rebates;
+ - Development of harmonised monitoring techniques and an automatic reporting and verification system solution helping shipowners to comply with current and future EU and international regulation as well as public authorities to monitor and control emissions from the data exchanged;
+ - Harmonise/standardise monitoring techniques and reporting (taking also into consideration the CountEmissions EU rules) with the potential to be used for legal prosecution; develop recommendations for improved certification and testing for real world situations;
+ - Increase evidence to feed pool of data for regulated and non-regulated pollutants from vessels;
+ - Identify pollutants from new fuels used for shipping decarbonisation;
+ - Develop protocol(s) for the measurement of BC, UFP, and PN from vessels;
+ - Develop engine testing methods to better mimic real-world emissions and propose a vessel grading system methodology with respect to its emissions comparable to EURO classification of road vehicles. Proposals should demonstrate how they will engage with authorities and local communities in disseminating results in proportion to their expected impacts. Relevant authorities include the European Commission, the Bonn Agreement, Helcom, the IMO, and national, regional, and local competent authorities etc. while local communities are primarily, but not limited to, major port cities and coastal areas in the EU.
+
+Proposals are encouraged to explore and use the results from previous EU-funded projects such as SCIPPER (Horizon 2020), EMERGE (Horizon 2020) and Green C Ports (CEF), Interreg Clean North Sea Shipping and LIFE CLINSH (CLean Inland SHipping) as well as develop complementarities with relevant activities funded under the Horizon Europe call on “Advanced transport emissions monitoring networks” (HORIZON-CL5-2023-D5-01-18) and activities developing satellite-based measurements (Cluster 4 Destination 5 (Space) and EUSPA), focusing on remaining gaps not covered by these projects. Duplication of activities should be avoided.
+
+Proposals are encouraged to include and consider the fisheries sectors and fishing vessels, considering their potential intersections with the use of alternative fuels in ports when relevant. Consideration of projects such as HORIZON-MISS-2023-OCEAN-01-05 and PPPA-2024-FISHVESSELDEMO may prove beneficial. 
+
+The funded projects should share their experience and good practices with the projects selected under the topic of the EU Ocean & Waters Mission on “Restoring waterfront cities and their ports /maritime infrastructures (HORIZON-MISS-2025-03-OCEAN-05) and links should also be established with the projects funded under topic HORIZON-CL4-SPACE-2025-01-46: Innovative Earth observation services in support of maritime litter detection and ship source pollution policies. 
+
+This topic has been co-programmed and is contributing to the implementation of the Zero-Emission Waterborne Transport (ZEWT) partnership and of the Climate Neutral and Smart Cities Mission.
+
+null
+
+Activities are expected to achieve TRL 7-8 by the end of the project – see General Annex B. Activities may start at any TRL.
+
+[1] The IMO's 2023 GHG Strategy targets net-zero greenhouse gas emissions from international shipping by 2050, with interim goals for 2030 and 2040. Measures include the adoption of lower-carbon fuels such as methanol and ammonia. In the EU, initiatives like FuelEU Maritime and ETS inclusion will drive this transition while regulations address harmful emissions like sulphur and nitrogen oxides, with Tier III NOx limits enforced. Discussions also focus on Black Carbon emissions in the Arctic and health impacts of ultrafine particles.
+
+[2] For example, evidence shows that the introduced Tiers may not be effective in controlling NOx emissions in real vessel operation, scrubbers may result in the formation of new ultra-fine particles, ammonia combustion potentially leads to the formation of nitrous oxide and ammonia slip, methanol combustion may lead to the production of formaldehyde, LNG may result in the slip of methane, etc. Obviously, any strategy targeting the control of GHG or air pollutants should not result in negative side-effects such as the release of harmful pollutants which are today not covered by regulations.
+
+[3] CH4 – methane; NOx - nitrogen oxides; N20 – nitrous oxide; UFP – ultra-fine particles; BC – black carbon; PM – particulate matter.
+
+[4] Findable, Accessible, Interoperable and Reusable
+
+## Condições
+
+">General conditions1. Admissibility Conditions: Proposal page limit and layoutThe page limit of the application is 70 pages.
+
+described in Annex A and Annex E of the Horizon Europe Work Programme General Annexes.
+
+Proposal page limits and layout: described in Part B of the Application Form available in the Submission System.
+
+2. Eligible Countriesdescribed in Annex B of the Work Programme General Annexes.
+
+A number of non-EU/non-Associated Countries that are not automatically eligible for funding have made specific provisions for making funding available for their participants in Horizon Europe projects. See the information in the Horizon Europe Programme Guide.
+
+3. Other Eligible ConditionsThe following exceptions apply: subject to restrictions for the protection of European communication networks.
+
+At least one of the ports must be situated in a city participating in the Climate-Neutral and Smart Cities Mission. The demonstration activities must take place in a real operational environment.
+
+described in Annex B of the Work Programme General Annexes.
+
+4. Financial and operational capacity and exclusiondescribed in Annex C of the Work Programme General Annexes.
+
+5a. Evaluation and award: Award criteria, scoring and thresholdsare described in Annex D of the Work Programme General Annexes.
+
+5b. Evaluation and award: Submission and evaluation processesare described in Annex F of the Work Programme General Annexes and the Online Manual.
+
+5c. Evaluation and award: Indicative timeline for evaluation and grant agreementdescribed in Annex F of the Work Programme General Annexes.
+
+6. Legal and financial set-up of the grantsGrants awarded under this topic will be linked to the following action(s):
+
+HORIZON-MISS-2021-CIT-02-03
+
+Collaboration with the Cities Mission Platform is essential and projects must ensure that appropriate provisions for activities and resources aimed at enforcing this collaboration are included in the work plan of the proposal. The collaboration with the Mission Platform must be formalised through a Memorandum of Understanding to be concluded as soon as possible after the project starting date.
+
+described in Annex G of the Work Programme General Annexes.
+
+Specific conditions 
+
+Application and evaluation forms and model grant agreement (MGA): Application form templates — the application form specific to this call is available in the Submission System
+
+Standard application form (HE RIA, IA)
+
+Evaluation form templates — will be used with the necessary adaptations
+
+Standard evaluation form (HE RIA, IA) 
+
+Guidance
+
+HE Programme Guide 
+
+Model Grant Agreements (MGA)
+
+HE MGA 
+
+Additional documents: HE Main Work Programme 2025 – 1. General Introduction
+
+HE Main Work Programme 2025 – 8. Climate, Energy and Mobility
+
+HE Main Work Programme 2025 – 14. General Annexes
+
+HE Programme Guide
+
+HE Framework Programme 2021/695
+
+HE Specific Programme Decision 2021/764 
+
+EU Financial Regulation 2024/2509
+
+Rules for Legal Entity Validation, LEAR Appointment and Financial Capacity Assessment 
+
+EU Grants AGA — Annotated Model Grant Agreement 
+
+Funding & Tenders Portal Online Manual 
+
+Funding & Tenders Portal Terms and Conditions 
+
+Funding & Tenders Portal Privacy Statement

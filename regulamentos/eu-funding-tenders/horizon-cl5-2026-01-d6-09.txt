@@ -1,0 +1,148 @@
+# Reliable data and practices to measure and calculate transport emissions in multimodal transport chains
+
+Identificador: HORIZON-CL5-2026-01-D6-09
+Call: HORIZON-CL5-2026-01
+Tipo de ação: {'status': {'id': 31094503, 'abbreviation': 'Closed', 'description': 'Closed'}, 'types': [{'typeOfAction': 'HORIZON-CSA HORIZON Coordination and Support Actions', 'typeOfMGA': [{'id': 43027849, 'abbreviation': 'HORIZON-AG-LS', 'description': 'HORIZON Lump Sum Grant'}]}], 'plannedOpeningDate': '1758758400000', 'submissionProcedure': {}, 'deadlineDates': ['1768867200000']}
+
+## Descrição
+
+Expected Outcome:
+
+Project results are expected to contribute to all the following outcomes:
+
+ - Input is provided for the implementation of the existing and forthcoming Union’s regulatory initiatives related to measurement, calculation and reporting of emissions in transport, such as Regulation (EU) 2023/1805 (FuelEU Maritime)[1], Regulation (EU) 2023/2405 (ReFuelEU Aviation)[2], and the recent Commission’s proposal for the Regulation on the accounting of greenhouse gas emissions of transport services (CountEmissions EU)[3];
+ - Methodological components are developed and proposed to complement the methodology for accounting emissions provided under the Commission’s proposal on CountEmissions EU. Scope:
+
+Greenhouse gas (GHG) emissions from transport represent around 25% of total man-made GHG emissions and continue to grow. The negative impact of these is further strengthened by the existence of other external costs of transport, including air pollution, noise, congestion and accidents. The EU, Member States and industry have made considerable efforts to reduce transport-related GHG emissions and associated external costs.
+
+Accurate and reliable information on emissions is an important tool to increase effectiveness of specific emission reduction measures undertaken by public authorities and businesses. Over the past 15 years, a lot of progress has been made at EU level and globally through new regulatory actions and continuing collaboration between actors to improve the transparency of transport GHG emissions and external costs monitoring. This is manifested through:
+
+ - Regulatory initiatives including Regulation (EU) 2023/1805 (FuelEU Maritime)[1], Regulation (EU) 2023/2405 (ReFuelEU Aviation)[2], Regulation (EU) 2015/757 (EU MRV)[6] and especially, the recent Commission’s proposal for the Regulation on the accounting of greenhouse gas emissions of transport services (CountEmissions EU)[3], and Directive (EU) 2023/2413 (Renewable Energy Directive);
+ - Relevant EU research projects, including “Carbon Footprint of Freight Transport” (COFRET), “Logistics Emissions Accounting & Reduction Network” (LEARN) and the on-going “Creating Legitimate Emission Factors for Verified GHG Emission Reductions in Transport” (CLEVER)[8];
+ - Standardisation work, including ISO 14083, the official international standard developed between November 2019 and October 2022 and published in March 2023 as part of the 14000 family of ISO GHG-related standards[9];
+ - Regular updates of the Handbook on the External Costs of Transport[10];
+ - Industry initiatives, such as the Global Logistics Emissions Council (GLEC) Framework, the industry-led guideline for GHG calculation and reporting in the global logistics sector. Building on the initiatives listed above, proposals should undertake further work to ensure that:
+
+ - The full climate impact of transport operations is covered in a comprehensive and consistent way;
+ - Relevant open items identified in the emissions accounting reference methodology set out under the Commission’s proposal on CountEmissions EU can be scientifically clarified and closed;
+ - Any detailed tweaks to the methodology that have come to light through application can be developed and tested in view of the implementation of the CountEmissions EU framework;
+ - New technologies, such as generative Artificial Intelligence, are considered in developing datasets and methodologies;
+ - Relevant data is available for the proper implementation and seamless integration of requirements set in other EU climate related legislation in transport, including Regulations on Fuel EU Maritime, ReFuelEU Aviation, EU MRV, and Regulation (EU) 2020/1056 on electronic freight transport information[11]. The Action will play a central role in contributing to the establishment of an unambiguous scientific framework aimed to tackle emissions in transport. However, the Action should also facilitate alignment between EU policy development and market implementation, especially towards enabling market-based accounting approaches that would support proactive investment in low emission fuels and associated transport services. 
+
+The proposals should address all of the following aspects:
+
+ - Explore, assess and establish the state of the art regarding issues of measuring and calculating specific types of transport-related emissions for which there is no clear consensus on the market, in particular: 
+ - black carbon emissions, which primarily result from the combustion of fossil fuels in compression ignition engines; 
+ - radiative forcing, which has been suggested as having a strong supplementary climate impact at high altitude and is already included in an inconsistent manner across some, but not all, transport GHG reporting programs; 
+ - GHG emissions from vehicle manufacturing and scrappage, which, although not directly linked to transport operations, do contribute to overall life cycle transport emissions; 
+ - GHG emissions that result from the installation of transport infrastructure, which would need to include the definition of rules for the combination of operational and life cycle emission calculations into a meaningful and consistent presentation format; 
+ - GHG emissions related to the maintenance operations associated with transport operations that are currently excluded; 
+ - GHG emissions from information and communication technology (ICT) equipment and data servers that support the delivery of transport operations. 
+ - Clarify specific methodological issues for enabling more accurate quantification of emissions and setting proper incentives towards efficient and sustainable transport options, addressing in particular: 
+ - a detailed methodology for GHG emissions stemming from temperature-controlled transport and cool chain operations; 
+ - allocation of GHG air transport emissions across passengers and freight transported on the same aircraft. 
+ - Based on relevant European/national/sectorial repositories, explore, assess and contribute to an EU core dataset of default values for GHG emissions intensity of transport services, including for supporting relevant EU regulatory initiatives (such as CountEmissions EU);
+ - Building on the results of the CLEVER project, where relevant, update the list of applicable GHG emission factors for emissions stemming from energy production, distribution and use, in particular in the context of relevant EU regulatory initiatives (such as CountEmissions EU). Consistency with data and methodologies in current energy legislation such as Directive (EU) 2023/2413 (Renewable Energy Directive)[12] must be ensured;
+ - Define R&I gaps on emissions accounting of transport and provide scientifically sound recommendations to address those gaps to improve the existing GHG emissions measuring framework. The project’s main governance (e.g. Steering Group, Advisory Board) is expected to provide for direct involvement of all relevant stakeholders.
+
+Mechanisms to ensure coordination between other ongoing or selected projects (e.g. CLEVER) during their implementation should be put in place where applicable.
+
+[1] Regulation (EU) 2023/1805 of the European Parliament and of the Council of 13 September 2023 on the use of renewable and low-carbon fuels in maritime transport, and amending Directive 2009/16/EC
+
+[2] Regulation (EU) 2023/2405 of the European Parliament and of the Council of 18 October 2023 on ensuring a level playing field for sustainable air transport
+
+[3] COM(2023) 441 final
+
+[4] Regulation (EU) 2023/1805 of the European Parliament and of the Council of 13 September 2023 on the use of renewable and low-carbon fuels in maritime transport, and amending Directive 2009/16/EC
+
+[5] Regulation (EU) 2023/2405 of the European Parliament and of the Council of 18 October 2023 on ensuring a level playing field for sustainable air transport
+
+[6] Regulation (EU) 2015/757 of the European Parliament and of the Council of 29 April 2015 on the monitoring, reporting and verification of carbon dioxide emissions from maritime transport, and amending Directive 2009/16/EC
+
+[7] COM(2023) 441 final
+
+[8] https://emissionfactors.eu/
+
+[9] This standard has also been formally adopted by the European Committee for Standardisation (CEN) under the reference CEN ISO 14083
+
+[10] https://op.europa.eu/en/publication-detail/-/publication/9781f65f-8448-11ea-bf12-01aa75ed71a1
+
+[11] Regulation (EU) 2020/1056 of the European Parliament and of the Council of 15 July 2020 on electronic freight transport information
+
+[12] Directive (EU) 2023/2413 of the European Parliament and of the Council of 18 October 2023 amending Directive (EU) 2018/2001, Regulation (EU) 2018/1999 and Directive 98/70/EC as regards the promotion of energy from renewable sources, and repealing Council Directive (EU) 2015/652
+
+## Condições
+
+">General conditions1. Admissibility Conditions: Proposal page limit and layoutdescribed in Annex A and Annex E of the Horizon Europe Work Programme General Annexes.
+
+Proposal page limits and layout: described in Part B of the Application Form available in the Submission System.
+
+2. Eligible Countriesdescribed in Annex B of the Work Programme General Annexes.
+
+A number of non-EU/non-Associated Countries that are not automatically eligible for funding have made specific provisions for making funding available for their participants in Horizon Europe projects. See the information in the Horizon Europe Programme Guide.
+
+3. Other Eligible ConditionsThe following exceptions apply: subject to restrictions for the protection of European communication networks.
+
+described in Annex B of the Work Programme General Annexes.
+
+4. Financial and operational capacity and exclusiondescribed in Annex C of the Work Programme General Annexes.
+
+5a. Evaluation and award: Award criteria, scoring and thresholdsare described in Annex D of the Work Programme General Annexes.
+
+5b. Evaluation and award: Submission and evaluation processesare described in Annex F of the Work Programme General Annexes and the Online Manual.
+
+5c. Evaluation and award: Indicative timeline for evaluation and grant agreementdescribed in Annex F of the Work Programme General Annexes.
+
+6. Legal and financial set-up of the grantsEligible costs will take the form of a lump sum as defined in the Decision of 7 July 2021 authorising the use of lump sum contributions under the Horizon Europe Programme – the Framework Programme for Research and Innovation (2021-2027) – and in actions under the Research and Training Programme of the European Atomic Energy Community (2021-2025). [[This decision is available on the Funding and Tenders Portal, in the reference documents section for Horizon Europe, under ‘Simplified costs decisions’ or through this link: https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/guidance/ls-decision_he_en.pdf]].
+
+described in Annex G of the Work Programme General Annexes.
+
+Specific conditions 
+
+Application and evaluation forms and model grant agreement (MGA): Application form templates — the application form specific to this call is available in the Submission System
+
+Standard application form (HE CSA)
+
+Evaluation form templates — will be used with the necessary adaptations 
+
+Standard evaluation form (HE CSA) 
+
+Guidance
+
+HE Programme Guide 
+
+Model Grant Agreements (MGA)
+
+Lump Sum MGA 
+
+Call-specific instructions 
+
+Detailed budget table (HE LS) 
+
+Guidance: "Lump sums - what do I need to know?"
+
+Additional documents: HE Main Work Programme 2025 – 1. General Introduction
+
+HE Main Work Programme 2025 – 8. Climate, Energy and Mobility
+
+HE Main Work Programme 2025 – 14. General Annexes
+
+HE Programme Guide
+
+HE Framework Programme 2021/695
+
+HE Specific Programme Decision 2021/764 
+
+EU Financial Regulation 2024/2509
+
+Decision authorising the use of lump sum contributions under the Horizon Europe Programme
+
+Rules for Legal Entity Validation, LEAR Appointment and Financial Capacity Assessment 
+
+EU Grants AGA — Annotated Model Grant Agreement 
+
+Funding & Tenders Portal Online Manual 
+
+Funding & Tenders Portal Terms and Conditions 
+
+Funding & Tenders Portal Privacy Statement
