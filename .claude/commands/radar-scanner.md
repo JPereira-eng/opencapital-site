@@ -1,4 +1,4 @@
-﻿# Radar Scanner v4.8: Descoberta de Novos Instrumentos
+﻿# Radar Scanner v4.8.1: Descoberta de Novos Instrumentos
 
 REGRA CRÍTICA: Nunca usar travessão (—) em nenhum texto gerado. Usar vírgula, ponto, hífen (-) ou reescrever a frase.
 
@@ -903,15 +903,21 @@ Para cada portal regional/temático com items watchlist planejados:
      
      match = codigo_in_text OR name_tokens_match
      
-     Se match E post.date > item.detected_date:
+     Se match:
         # PUBLICATION DETECTED
+        # NOTA v4.8.1 (2026-05-06): removida a regra "post.date > item.detected_date".
+        # Razão: items podem entrar na watchlist DEPOIS da publicação real (ex: SIBT
+        # Alentejo: news post 27/03/2026, item detetado 13/04/2026). A regra antiga
+        # bloqueava este caso. A janela de 90 dias do fetch (passo d) já limita
+        # naturalmente a ambiguidade temporal — qualquer match dentro dessa janela
+        # com keywords específicas de abertura é sinal fiável.
         item.paa_status = "published_externamente"
         item.news_post_url = post.link
         item.news_post_date = post.date.split("T")[0]
         item.news_post_title = post.title
         Registar no relatório.
         # Não fazer break — o mesmo PAA pode ter múltiplos news posts
-        # mas guardamos só o primeiro match.
+        # mas guardamos só o primeiro match (o mais recente, dado que paginámos desc).
   
   h. Salvar queue-plano-anual.json após processar todos os items do portal.
 ```
@@ -979,12 +985,14 @@ queue-plano-anual.json: items "published_externamente" antes / depois (delta = +
 
 ### Sanity check (PASSO 6a)
 
-TESTE 5 (novo) - Coerência da sinalização v4.8:
+TESTE 5 (novo, v4.8.1) - Coerência da sinalização:
 
 Verificar para cada item recém-sinalizado:
 - `paa_status == "published_externamente"` ?
 - `news_post_url` é URL válido (string http/https, não vazio) ?
-- `news_post_date >= item.detected_date` ?
+- `news_post_date` está dentro da janela de fetch (últimos 90 dias) ?
+  - **Nota v4.8.1:** removido o requisito `news_post_date >= item.detected_date`.
+    Items podem ser detetados após publicação (ver PASSO 3.6 para racional).
 - Item permanece em queue-plano-anual.json (não foi movido) ?
 
 Se qualquer falhar: WARNING (não abortar — sinalização parcial é melhor que nada).
