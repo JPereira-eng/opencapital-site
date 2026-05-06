@@ -92,59 +92,6 @@
   },
   "queue": [
     {
-      "id": "k-fund",
-      "name": "K Fund",
-      "source_id": "k-fund",
-      "catalog_type": "vc",
-      "detected_date": "2026-05-06",
-      "last_profile_update": "2026-05-06",
-      "status": "active",
-      "regulation_url": "https://www.kfund.vc",
-      "priority_score": 10,
-      "profile": {
-        "website": "https://www.kfund.vc",
-        "linkedin": "https://www.linkedin.com/company/kfund-vc",
-        "pais_sede": "ES",
-        "descricao_curta": "VC iberico fundado em 2016, sediado em Madrid com escritorios em Barcelona e Lisboa. Foco em seed e Series A para empresas digital-first em Espanha, Sul da Europa e LatAm. AUM superior a 285M EUR.",
-        "como_candidatar": "Contacto via website kfund.vc; intro preferencial via networking. Equipa com presenca em Lisboa para deal sourcing iberico.",
-        "tese": "Investimento early-stage em empresas digital-first com modelos escalaveis. Foco crescente em AI-powered SME software, fintech, foodtech, logistica e dual-use technologies. Champion da evolucao do ecossistema iberico.",
-        "estagios": [
-          "seed",
-          "series-a"
-        ],
-        "setores": [
-          "AI",
-          "B2B SaaS",
-          "fintech",
-          "foodtech",
-          "logistica",
-          "data/tech",
-          "dual-use tech"
-        ],
-        "geografia": [
-          "ES",
-          "PT",
-          "Southern Europe",
-          "LatAm"
-        ],
-        "ticket_min_eur": 100000,
-        "ticket_max_eur": 10000000,
-        "ticket_sweet_eur": null,
-        "aum_eur": 285000000,
-        "vintage": "K Fund V (2024-)",
-        "portfolio_pt_exemplos": [],
-        "parceiros": [
-          "Inaki Arrola",
-          "Carina Szpilka",
-          "Ian Noel",
-          "Pablo Ventura",
-          "Sergio Alvarez Leiva",
-          "Maria de Lera Auersperg"
-        ]
-      },
-      "notes": "Fundo VC iberico em deployment activo. Fundo V (70M EUR) lancado em 2024 com foco AI/cloud para Espanha + Sul Europa. Total AUM acumulado >285M EUR. Equipa de 19 membros. Portfolio inclui unicornio Factorial e exits Boopos/Hubtype. Presenca fisica em Lisboa = relevancia direta para PT. Exemplos PT especificos nao confirmados via website oficial; investimentos PT confirmar via portfolio detalhado em proxima run."
-    },
-    {
       "id": "kibo-ventures",
       "name": "Kibo Ventures",
       "source_id": "kibo-ventures",
