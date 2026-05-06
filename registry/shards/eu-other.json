@@ -67,15 +67,17 @@
       "id": "emfaf-2026-pia-msp",
       "file": "instrumentos/emfaf-2026-pia-msp.html",
       "source": "cef",
-      "state": "aberto",
-      "last_check": "2026-04-14"
+      "state": "fechado",
+      "last_check": "2026-05-06",
+      "auto_closed": true
     },
     {
       "id": "innovation-fund-2025-net-zero",
       "file": "instrumentos/innovation-fund-2025-net-zero.html",
       "source": "cef",
-      "state": "aberto",
-      "last_check": "2026-04-14"
+      "state": "fechado",
+      "last_check": "2026-05-06",
+      "auto_closed": true
     },
     {
       "id": "eit-health-innovation-validation-2026",
@@ -109,9 +111,10 @@
       "id": "ewa-advance-programme-2026",
       "file": "instrumentos/ewa-advance-programme-2026.html",
       "source": "eit",
-      "state": "aberto",
+      "state": "fechado",
       "deadline": "2026-04-26",
-      "last_check": "2026-04-16"
+      "last_check": "2026-05-06",
+      "auto_closed": true
     },
     {
       "id": "risingfoodstars-2026",
@@ -250,8 +253,9 @@
       "id": "eco-albania-2026-2028",
       "file": "instrumentos/eco-albania-2026-2028.html",
       "source": "eit",
-      "state": "aberto",
-      "last_check": "2026-04-20"
+      "state": "fechado",
+      "last_check": "2026-05-06",
+      "auto_closed": true
     },
     {
       "id": "dee-prize-2019",
@@ -271,15 +275,17 @@
       "id": "cerv-2026-citizens-civ",
       "file": "instrumentos/cerv-2026-citizens-civ.html",
       "source": "cerv",
-      "state": "aberto",
-      "last_check": "2026-04-23"
+      "state": "fechado",
+      "last_check": "2026-05-06",
+      "auto_closed": true
     },
     {
       "id": "crea-cult-2026-coop",
       "file": "instrumentos/crea-cult-2026-coop.html",
       "source": "creative-europe",
-      "state": "aberto",
-      "last_check": "2026-04-23"
+      "state": "fechado",
+      "last_check": "2026-05-06",
+      "auto_closed": true
     },
     {
       "id": "crea-media-2026-tvonline-1",
@@ -1969,10 +1975,17 @@
       "source": "eu-funding-tenders",
       "state": "aberto",
       "last_check": "2026-05-06"
+    },
+    {
+      "id": "edf-2026-ls-ra-si-enerenv-ntfe",
+      "file": "instrumentos/edf-2026-ls-ra-si-enerenv-ntfe.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-05-06"
     }
   ],
-  "count": 126,
-  "published": 131,
-  "open": 99,
+  "count": 127,
+  "published": 132,
+  "open": 100,
   "closed": 24
 }
