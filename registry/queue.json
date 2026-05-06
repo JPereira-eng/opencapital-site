@@ -711,24 +711,6 @@
       "fail_count": 0
     },
     {
-      "id": "promocao-das-artes-e-oficios",
-      "name": "Promocao das Artes e Oficios (IEFP)",
-      "source_id": "iefp",
-      "shard": "pt-other",
-      "aviso_codigo": null,
-      "detected_date": "2026-05-02",
-      "deadline": null,
-      "budget": null,
-      "regulation_url": "https://www.iefp.pt/promocao-das-artes-e-oficios",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/iefp/promocao-das-artes-e-oficios.txt",
-      "priority_score": 15,
-      "status": "ready",
-      "notes": "IEFP medida ativa, candidatura continua/permanente",
-      "fail_count": 0,
-      "download_date": "2026-05-06"
-    },
-    {
       "id": "reabilitacao-profissional",
       "name": "Reabilitacao Profissional (IEFP)",
       "source_id": "iefp",
