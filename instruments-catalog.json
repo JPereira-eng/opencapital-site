@@ -21932,6 +21932,33 @@
       "highlight2": "Nacional",
       "href": "instrumentos/reabilitacao-profissional.html",
       "featured": false
+    },
+    {
+      "id": "regionais-e-setoriais",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto até 31/12/2026",
+      "status_class": "status-open",
+      "fonte": "iefp",
+      "beneficiario": "empresa,empreendedor",
+      "setores": [
+        "turismo",
+        "comercio",
+        "economia-criativa"
+      ],
+      "necessidades": [
+        "contratacao-rh",
+        "formação-qualificação"
+      ],
+      "regiao": "algarve",
+      "title": "FormAlgarve: Apoios Regionais e Setoriais",
+      "tagline": "Programa do IEFP para o Algarve que apoia conversão de contratos a termo em sem termo (9 x IAS) e formação de trabalhadores em hotelaria, turismo, comércio e setores afins.",
+      "highlight0": "Até €4.834,17 por contrato + formação",
+      "highlight1": "Empresas algarvias com sazonalidade",
+      "highlight2": "Algarve",
+      "href": "instrumentos/regionais-e-setoriais.html",
+      "featured": false
     }
   ]
 }
