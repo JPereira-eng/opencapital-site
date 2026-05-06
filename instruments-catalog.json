@@ -21493,6 +21493,26 @@
       "highlight2": "Nacional",
       "href": "instrumentos/cheque-formacao.html",
       "featured": false
+    },
+    {
+      "id": "ativar-pt",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Candidatura Contínua",
+      "status_class": "status-cont",
+      "fonte": "iefp",
+      "beneficiario": "empreendedor",
+      "setores": ["todos"],
+      "necessidades": ["digitalizacao-ia", "formacao-qualificacao"],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "ATIVAR.PT Jovem + Digital",
+      "tagline": "Programa de formação profissional em competências digitais para jovens 18-35 anos inscritos no IEFP, com bolsa, alimentação e transporte cobertos.",
+      "highlight0": "Formação gratuita + bolsa",
+      "highlight1": "Jovens 18-35 com 12.º ano ou superior",
+      "highlight2": "Nacional",
+      "href": "instrumentos/ativar-pt.html",
+      "featured": false
     }
   ]
 }
