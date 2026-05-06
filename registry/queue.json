@@ -608,10 +608,11 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-WIDERA-2027-01-WIDENING-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-widera-2027-01.txt",
       "priority_score": 15,
-      "status": "pending",
-      "notes": "Topic SEDIA. Detectado via API EU Funding & Tenders (slot 1 HIGH)."
+      "status": "ready",
+      "notes": "Topic SEDIA. Detectado via API EU Funding & Tenders (slot 1 HIGH).",
+      "fail_count": 0
     }
   ],
   "items": [],
