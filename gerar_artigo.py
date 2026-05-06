@@ -387,50 +387,9 @@ ARTICLE_TEMPLATE = """<!DOCTYPE html>
     </aside>
   </div>
 
-  <footer class="footer">
-    <div class="footer-grid">
-      <div>
-        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
-        <p class="f-desc">Assessoria estratégica em financiamento, fiscalidade e investimento. Ajudamos empresas a aceder ao capital certo, no momento certo.</p>
-        <p class="f-tagline">Capital, made clear.</p>
-      </div>
-      <div>
-        <div class="f-col-label">Soluções</div>
-        <ul class="f-links">
-          <li><a href="../biblioteca.html">Portugal 2030</a></li>
-          <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
-          <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
-          <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="f-col-label">Plataforma</div>
-        <ul class="f-links">
-          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
-          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
-          <li><a href="../conhecimento.html">Conhecimento</a></li>
-          <li><a href="../parceiros.html">Parceiros</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="f-col-label">Empresa</div>
-        <ul class="f-links">
-          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
-          <li><a href="../sobre-nos.html">Equipa</a></li>
-          <li><a href="../carreiras.html">Carreiras</a></li>
-          <li><a href="../index.html#contactar">Contacto</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
-      <div class="f-legal">
-        <a href="#">Privacidade</a>
-        <a href="#">Termos</a>
-        <a href="#">Cookies</a>
-      </div>
-    </div>
-  </footer>
+  <!-- FOOTER:START -->
+<!-- preenchido por build_footer.py — nao editar manualmente -->
+<!-- FOOTER:END -->
 
   <script>
     const navbar = document.getElementById('navbar');
@@ -581,6 +540,14 @@ def guardar_artigo(data: dict) -> Path:
         data["slug"] = slug
 
     filepath.write_text(html, encoding="utf-8")
+    # Preenche o footer a partir de _partials/footer.html
+    try:
+        subprocess.run(
+            ["python", str(BASE_DIR / "build_footer.py"), str(filepath)],
+            check=True, capture_output=True, text=True,
+        )
+    except (subprocess.CalledProcessError, FileNotFoundError) as e:
+        print(f"  [aviso] build_footer.py falhou: {e}")
     return filepath
 
 # ---------------------------------------------------------------------------

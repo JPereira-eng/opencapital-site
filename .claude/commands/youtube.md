@@ -696,47 +696,9 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa.
     </aside>
   </div>
 
-  <footer class="footer">
-    <div class="footer-grid">
-      <div>
-        <div class="f-logo-row">
-          <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img">
-        </div>
-        <p class="f-tagline">O capital de que a sua empresa precisa.</p>
-      </div>
-      <div>
-        <div class="f-col-label">Biblioteca</div>
-        <ul class="f-links">
-          <li><a href="../biblioteca.html">Portugal 2030</a></li>
-          <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
-          <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
-          <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="f-col-label">Plataforma</div>
-        <ul class="f-links">
-          <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
-          <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
-          <li><a href="../conhecimento.html">Conhecimento</a></li>
-          <li><a href="../parceiros.html">Parceiros</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="f-col-label">Empresa</div>
-        <ul class="f-links">
-          <li><a href="../sobre-nos.html">Sobre Nós</a></li>
-          <li><a href="../sobre-nos.html">Equipa</a></li>
-          <li><a href="../carreiras.html">Carreiras</a></li>
-          <li><a href="https://calendly.com/opencapital">Contacto</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
-      <div class="f-legal"><a href="#">Privacidade</a><a href="#">Termos</a><a href="#">Cookies</a></div>
-    </div>
-  </footer>
+  <!-- FOOTER:START -->
+<!-- preenchido por build_footer.py — nao editar manualmente -->
+<!-- FOOTER:END -->
   <script>
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});

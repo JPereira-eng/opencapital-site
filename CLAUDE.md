@@ -642,16 +642,37 @@ O objetivo é prosa premium e confiante, não prosa enfática ou panfletária.
 
 ---
 
+## 🦶 FOOTER PARTIAL — SINGLE SOURCE OF TRUTH
+
+O footer vive num único ficheiro: `_partials/footer.html`. Páginas HTML usam marcadores:
+
+```html
+<!-- FOOTER:START -->
+<!-- FOOTER:END -->
+```
+
+O conteúdo entre os marcadores é gerado pelo script `build_footer.py`, que substitui `[[PREFIX]]` no partial pelo `../` adequado à profundidade do ficheiro.
+
+**Regras para skills e agentes que criam páginas HTML:**
+1. **Nunca embeber `<footer class="footer">...</footer>` em templates de skills.** Emitir apenas os dois marcadores no sítio onde o footer entraria.
+2. **Após criar o ficheiro, correr:** `python build_footer.py [path/ficheiro.html]` (preenche o footer naquele ficheiro específico).
+3. **Para alterações ao footer (link novo, copyright, etc.):** editar `_partials/footer.html` e correr `python build_footer.py` (sem args, processa todo o repo).
+
+O CSS do footer (`.footer`, `.f-legal`, `.footer-grid`, etc.) continua dentro do `<style>` de cada página/skill — só o markup é centralizado.
+
+---
+
 ## 🚀 AUTO-DEPLOY RULE
 
 **Every skill/command that creates or modifies site files MUST auto-deploy at the end.**
 
 After completing any skill (e.g. `/trend`, `/instrumento`, or any future command), follow these steps automatically without asking the user:
 
-1. `git add` the specific files created or modified by the skill
-2. `git commit` with a descriptive message (in Portuguese, lowercase, following the repo's commit style)
-3. If on `main`: `git push origin main`
-4. If on a worktree/branch: `git checkout main && git merge <branch> && git push origin main`
+1. Se a skill criou um ficheiro HTML novo: `python build_footer.py [path]` (preenche o footer)
+2. `git add` the specific files created or modified by the skill
+3. `git commit` with a descriptive message (in Portuguese, lowercase, following the repo's commit style)
+4. If on `main`: `git push origin main`
+5. If on a worktree/branch: `git checkout main && git merge <branch> && git push origin main`
 
 This ensures GitHub Pages deploys every change immediately. Never skip this step. Never ask "should I commit?" or "should I push?" after a skill completes.
 
@@ -666,3 +687,4 @@ If a push fails (e.g. conflict), inform the user and attempt to resolve.
 | v1.0 | — | Initial design system |
 | v1.2 | — | Hero illustration, navbar logo image, carousel, site structure |
 | v1.3 | 2026-03-22 | +25% typography scale (non-titles) · Nav sentence case · Logo 57px · "Em breve" as superscript · Nav right-aligned · Sobre Nós + Carreiras merged into dropdown |
+| v1.4 | 2026-05-06 | Footer centralizado em `_partials/footer.html` + `build_footer.py`. Skills emitem marcadores em vez de footer HTML. Drift inter-página eliminado. |
