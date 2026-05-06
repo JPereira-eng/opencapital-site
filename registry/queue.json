@@ -668,6 +668,22 @@
       "status": "ready",
       "notes": "callId: EDF-2026-LS-DIS-RA-SMERO; callTitle: Non-thematic research actions by SMEs and research organisations; framework: 44181033; toa: EDF Lump Sum Grants",
       "fail_count": 0
+    },
+    {
+      "id": "horizon-widera-2027-01",
+      "name": "EIC Pre-accelerator - Widening",
+      "source_id": "eu-funding-tenders",
+      "shard": "eu-horizon",
+      "aviso_codigo": "HORIZON-WIDERA-2027-01",
+      "detected_date": "2026-05-06",
+      "deadline": "2027-11-18",
+      "budget": null,
+      "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-WIDERA-2027-01-WIDENING-01",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 15,
+      "status": "pending",
+      "notes": "Topic SEDIA. Detectado via API EU Funding & Tenders (slot 1 HIGH)."
     }
   ],
   "items": [],
