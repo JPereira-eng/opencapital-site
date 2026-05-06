@@ -1,4 +1,4 @@
-﻿# Radar Scanner v4.8.1: Descoberta de Novos Instrumentos
+﻿# Radar Scanner v4.9: Descoberta de Novos Instrumentos
 
 REGRA CRÍTICA: Nunca usar travessão (—) em nenhum texto gerado. Usar vírgula, ponto, hífen (-) ou reescrever a frase.
 
@@ -195,13 +195,41 @@ De cada aviso JSON, extrair:
 - `link` - URL canonica da pagina do aviso (OBRIGATÓRIO como regulation_url)
 - `acf.código` (ex: "FA0212/2025") - chave de deduplicacao
 - `title.rendered` - nome do aviso
-- `acf.data_inicio` / `acf.data_fim` - datas (formato YYYYMMDD)
+- `acf.data_inicio` / `acf.data_fim` - datas (suportar formatos YYYYMMDD E DD/MM/YYYY E YYYY-MM-DD; portais regionais usam formatos mistos, descoberto 2026-05-06)
 - `acf.df` - dotacao financeira
-- `acf.programa[]` - programas
+- **`acf.programa[]` - programas (OBRIGATÓRIO armazenar como lista no item, v4.9)**
 - `acf.fundo[]` - fundo EU
 - `acf.beneficiario[]` - elegibilidade (registar mas NAO filtrar)
 - `acf.natureza` - Concurso/Convite
 - `acf.pdf` - ID do media WordPress
+
+**REGRA CRÍTICA v4.9 - Mapeamento programa → regional_portals:**
+
+Cada item adicionado a queue.json ou queue-plano-anual.json **DEVE** ter os campos:
+- `programa: [str]` - lista de identificadores de programa (ex: `["ALENTEJO2030", "ALGARVE2030"]`) extraídos diretamente de `acf.programa[]`. Normalizar removendo espaços/cedilhas (ex: `"AÇORES 2030"` → `"ACORES2030"`).
+- `regional_portals: [str]` - lista de slugs de portais derivada de `programa[]` via mapping abaixo.
+
+**Mapping canónico programa → portal slug (manter sincronizado com sources-scan.json):**
+
+```
+ALENTEJO2030     → alentejo-2030
+ALGARVE2030      → algarve-2030
+ACORES2030       → acores-2030
+MADEIRA2030      → madeira-2030
+CENTRO2030       → centro-2030
+LISBOA2030       → lisboa-2030
+NORTE2030        → norte-2030
+COMPETE2030      → compete-2030
+PESSOAS2030      → pessoas-2030
+SUSTENTAVEL2030  → sustentavel-2030
+MAR2030          → mar-2030
+PAT2030          → pat-2030
+FAMI2030         → (sem portal próprio, ignorar)
+```
+
+Items multi-programa têm múltiplos `regional_portals`. Items sem programa parseável têm `regional_portals: []` (não serão scaneados via news scan; aceita-se como limite).
+
+**Razão (v4.9, 2026-05-06):** descoberto que items detetados via API central PT2030 ficavam com `source_id: "portugal-2030"` mas pertencem materialmente a portais regionais/temáticos. O `source_id` identifica DE ONDE foi descoberto (canal técnico); `regional_portals[]` identifica AS QUE pertence (canal editorial). Ambos são necessários: source_id para deduplicação, regional_portals para news scan e routing editorial.
 
 **REGRA CRÍTICA - FILTRO DOCUMENTO PUBLICADO (v4.2, APENAS fontes com access_method: "api"):**
 
@@ -848,37 +876,51 @@ Crítico: o `id` na watchlist pode diferir do que o scanner geraria hoje (slug e
 ### Quando se aplica
 
 Apenas quando:
-- Existem items na watchlist com `paa_status: "planejado"` (ou ausente) cujo `source_id` corresponde a um portal com endpoint `/wp-json/wp/v2/posts` acessível
+- Existem items na watchlist com `paa_status: "planejado"` (ou ausente) cujo `regional_portals[]` (v4.9) inclui pelo menos um portal com endpoint `/wp-json/wp/v2/posts` acessível
 - Aplica-se a **portais regionais E temáticos** (alentejo-2030, centro-2030, lisboa-2030, etc.; pessoas-2030, sustentavel-2030, mar-2030, pat-2030)
 - NÃO se aplica a portugal-2030 central (não publica news; a news vem dos portais regionais/temáticos)
 - NÃO se aplica a fontes EU (eu-funding-tenders, hadea, etc. — diferente arquitetura, status já no detail JSON)
+- Items com `regional_portals: []` (sem programa parseável) ficam fora — limite aceite v4.9
 
-### Lógica
+### Lógica (v4.9 — iterar por item, não por portal)
 
 ```
-Para cada portal regional/temático com items watchlist planejados:
-  
-  a. Construir lista de items relevantes:
-     items = [w for w in watchlist if w.source_id == portal AND
-              w.paa_status in (None, "planejado")]
-  
-  b. Se items vazio: skip portal.
-  
-  c. Determinar janela temporal:
-     # Para limitar volume, fetch só news posts dos últimos 90 dias
-     # ou desde o detected_date mais antigo dos items relevantes.
-     min_detected = min(item.detected_date for item in items)
-     after_date = max(min_detected, hoje - 90 dias)
-  
-  d. Fetch paginado de news posts:
-     base = portal_url do source
-     GET {base}/wp-json/wp/v2/posts?after={after_date}T00:00:00&per_page=50&orderby=date&order=desc&_fields=id,slug,date,title,content,link
-     # Continuar paginando até resposta vazia, ou cap de 200 posts
-  
-  e. Para cada news post, extrair texto completo (título + content stripped of HTML):
-     text_lower = (title + " " + content_stripped).lower()
-  
-  f. Verificar keywords de abertura no título OU content:
+PRE-PROCESSING - Construir cache de news posts por portal:
+
+a. Identificar todos os portais necessários:
+   portals_needed = set()
+   for item in watchlist:
+     if item.paa_status in (None, "planejado"):
+       portals_needed.update(item.regional_portals or [])
+   
+   # Mas limitar a 5 portais/run (cap de tokens)
+   # Ordenar por source_last_news_check antiguidade, escolher 5 mais antigos
+   portals_to_scan = sorted(portals_needed, key=lambda p: source_last_news_check.get(p, "0"))[:5]
+
+b. Para cada portal in portals_to_scan, fetch news cache:
+   # Janela 90 dias
+   after_date = hoje - 90 dias
+   GET {portal_base}/wp-json/wp/v2/posts?after={after_date}T00:00:00&per_page=50&orderby=date&order=desc&_fields=id,slug,date,title,content,link
+   # Continuar paginando até resposta vazia, ou cap de 200 posts
+   news_cache[portal] = posts
+
+PROCESSING - Para cada item da watchlist (planejado):
+
+c. Determinar portais a verificar para este item:
+   item_portals = item.regional_portals (lista, pode ter 1 ou mais)
+   # Filtrar pelos que estão no cache (foram scaneados nesta run)
+   item_portals_active = [p for p in item_portals if p in news_cache]
+   
+   Se item_portals_active vazio: skip item (não tem portal scaneado nesta run).
+
+d. Para cada portal in item_portals_active:
+   # Iterar news posts do cache
+   posts = news_cache[portal]
+
+e. Para cada news post no cache do portal:
+   text_lower = (title + " " + content_stripped).lower()
+
+f. Verificar keywords de abertura no título OU content:
      opening_keywords = [
        "aberto novo aviso", "aberto o aviso",
        "abertas as candidaturas", "abertas candidaturas",
@@ -954,6 +996,8 @@ Items podem agora ter campos adicionais:
   "id": "...",
   "aviso_codigo": "FA####/YYYY",
   ...campos atuais...,
+  "programa": ["ALENTEJO2030", "ALGARVE2030"],
+  "regional_portals": ["alentejo-2030", "algarve-2030"],
   "paa_status": "planejado" | "published_externamente",
   "news_post_url": "https://...",
   "news_post_date": "YYYY-MM-DD",
@@ -962,6 +1006,7 @@ Items podem agora ter campos adicionais:
 ```
 
 `paa_status` ausente é equivalente a `"planejado"` (default backward-compatible).
+`programa[]` e `regional_portals[]` ausentes (legacy items) significam que item não é elegível para news scan v4.9 — limite aceite (preferível a falsos positivos por scanning errado).
 
 ### Atualizar relatorio granular (PASSO 5b)
 

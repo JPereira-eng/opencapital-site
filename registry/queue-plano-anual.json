@@ -18,7 +18,13 @@
       "notes": "FA0880/2024. NORTE2030. FEDER. Concurso. Beneficiarios privados (micro e pequenas empresas). Co-financiamento 60%. Pagina ainda mostra apenas previsao - sem regulamento publicado (verificado 2026-04-26).",
       "download_error": "Plano Anual - pagina mostra apenas previsao, sem aviso formal publicado (verificado 2026-04-26)",
       "plano_anual_last_check": "2026-04-26",
-      "plano_anual_checks": 5
+      "plano_anual_checks": 5,
+      "programa": [
+        "NORTE2030"
+      ],
+      "regional_portals": [
+        "norte-2030"
+      ]
     },
     {
       "id": "sibt-cim-alto-minho-norte",
@@ -37,7 +43,13 @@
       "notes": "FA0876/2024. NORTE2030. FEDER. Concurso. Beneficiarios privados (micro e pequenas empresas). Co-financiamento 60%. Pagina ainda mostra apenas previsao - sem regulamento publicado (verificado 2026-04-26).",
       "download_error": "Plano Anual - pagina mostra apenas previsao, sem aviso formal publicado (verificado 2026-04-26)",
       "plano_anual_last_check": "2026-04-26",
-      "plano_anual_checks": 4
+      "plano_anual_checks": 4,
+      "programa": [
+        "NORTE2030"
+      ],
+      "regional_portals": [
+        "norte-2030"
+      ]
     },
     {
       "id": "apoio-a-infraestruturas-de-base-tecnologica-da-regiao-do-medio-tejo-ft",
@@ -56,7 +68,13 @@
       "notes": "FA0245/2025. CENTRO2030. FTJ.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_last_check": "2026-05-04",
-      "plano_anual_checks": 3
+      "plano_anual_checks": 3,
+      "programa": [
+        "CENTRO2030"
+      ],
+      "regional_portals": [
+        "centro-2030"
+      ]
     },
     {
       "id": "execucao-da-edl-do-gal-costeiro-do-barlavento-do-algarve-destinado-a-v",
@@ -75,7 +93,13 @@
       "notes": "FA0273/2025. MAR2030. FEAMPA.",
       "download_error": "Plano Anual - API slug nao encontrado, item provavel PAA",
       "plano_anual_last_check": "2026-05-04",
-      "plano_anual_checks": 3
+      "plano_anual_checks": 3,
+      "programa": [
+        "MAR2030"
+      ],
+      "regional_portals": [
+        "mar-2030"
+      ]
     },
     {
       "id": "execucao-da-edl-do-gal-litoral-rural-aldeias-de-mar-litoral-rural-proj",
@@ -94,7 +118,13 @@
       "notes": "FA0312/2023. MAR2030. FEAMPA.",
       "download_error": "Plano Anual - API slug nao encontrado, item provavel PAA",
       "plano_anual_last_check": "2026-05-04",
-      "plano_anual_checks": 3
+      "plano_anual_checks": 3,
+      "programa": [
+        "MAR2030"
+      ],
+      "regional_portals": [
+        "mar-2030"
+      ]
     },
     {
       "id": "execucao-da-edl-do-gal-litoral-rural-capacitacao-das-associacoes-de-pe",
@@ -113,7 +143,13 @@
       "notes": "FA0236/2025. MAR2030. FEAMPA.",
       "download_error": "Plano Anual - API slug nao encontrado, item provavel PAA",
       "plano_anual_last_check": "2026-04-25",
-      "plano_anual_checks": 2
+      "plano_anual_checks": 2,
+      "programa": [
+        "MAR2030"
+      ],
+      "regional_portals": [
+        "mar-2030"
+      ]
     },
     {
       "id": "execucao-da-edl-do-gal-litoral-rural-sistema-de-apoio-ao-investimento-",
@@ -132,7 +168,13 @@
       "notes": "FA0176/2025. MAR2030. FEAMPA.",
       "download_error": "Plano Anual - PDF contém Resumo de Aviso do Plano Anual de Avisos",
       "plano_anual_last_check": "2026-04-25",
-      "plano_anual_checks": 2
+      "plano_anual_checks": 2,
+      "programa": [
+        "MAR2030"
+      ],
+      "regional_portals": [
+        "mar-2030"
+      ]
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-it-cim-tamega-e-sousa",
@@ -151,7 +193,13 @@
       "notes": "Plano Anual de Avisos - aviso nao publicado formalmente. Regulamento era documento PAA.",
       "download_error": "Plano Anual - ficheiro txt continha \"Resumo de Aviso do Plano Anual de Avisos\"",
       "plano_anual_last_check": "2026-04-28",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 1,
+      "programa": [
+        "NORTE2030"
+      ],
+      "regional_portals": [
+        "norte-2030"
+      ]
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-it-amp",
@@ -170,7 +218,13 @@
       "notes": "Plano Anual de Avisos - aviso nao publicado formalmente. Regulamento era documento PAA.",
       "download_error": "Plano Anual - ficheiro txt continha \"Resumo de Aviso do Plano Anual de Avisos\"",
       "plano_anual_last_check": "2026-04-28",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 1,
+      "programa": [
+        "NORTE2030"
+      ],
+      "regional_portals": [
+        "norte-2030"
+      ]
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-iibt-do-pinhal-interior",
@@ -186,7 +240,13 @@
       "regulation_local": null,
       "priority_score": 0,
       "status": "plano_anual",
-      "notes": "PAA - Plano Anual. Nao e aviso publicado."
+      "notes": "PAA - Plano Anual. Nao e aviso publicado.",
+      "programa": [
+        "CENTRO2030"
+      ],
+      "regional_portals": [
+        "centro-2030"
+      ]
     },
     {
       "id": "distribuicao-indireta-de-generos-alimentares-cartao-eletronico",
@@ -207,7 +267,13 @@
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-04-18",
       "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-04-27"
+      "plano_anual_last_check": "2026-04-27",
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "regional_portals": [
+        "madeira-2030"
+      ]
     },
     {
       "id": "educacao-intercultural-em-contexto-escolar",
@@ -228,7 +294,9 @@
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-04-18",
       "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-04-27"
+      "plano_anual_last_check": "2026-04-27",
+      "programa": [],
+      "regional_portals": []
     },
     {
       "id": "formacao-e-emprego-jovens-ii",
@@ -249,7 +317,13 @@
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-04-18",
       "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-04-27"
+      "plano_anual_last_check": "2026-04-27",
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "regional_portals": [
+        "madeira-2030"
+      ]
     },
     {
       "id": "programas-de-insercao-profissional-publicos-mais-vulneraveis",
@@ -270,7 +344,13 @@
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-04-18",
       "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-04-27"
+      "plano_anual_last_check": "2026-04-27",
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "regional_portals": [
+        "madeira-2030"
+      ]
     },
     {
       "id": "formacao-e-emprego-desempregados",
@@ -291,7 +371,13 @@
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-04-18",
       "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-04-27"
+      "plano_anual_last_check": "2026-04-27",
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "regional_portals": [
+        "madeira-2030"
+      ]
     },
     {
       "id": "criacao-de-redes-para-a-promocao-das-raparigas-e-mulheres-nas-areas-stem-e-tic",
@@ -351,7 +437,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: CENTRO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "CENTRO2030"
+      ],
+      "regional_portals": [
+        "centro-2030"
+      ]
     },
     {
       "id": "siid-id-empresarial-operacoes-algarve",
@@ -368,7 +460,17 @@
       "priority_score": 45,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030,ALGARVE2030,COMPETE2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "programa": [
+        "ALENTEJO2030",
+        "ALGARVE2030",
+        "COMPETE2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030",
+        "algarve-2030",
+        "compete-2030"
+      ]
     },
     {
       "id": "infraestruturas-equipamentos-tecnologicos-iti-agua-alentejo",
@@ -386,7 +488,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "acoes-coletivas-transferencia-conhecimento-alentejo",
@@ -413,7 +521,13 @@
       "paa_status": "published_externamente",
       "news_post_url": "https://alentejo.portugal2030.pt/2026/03/03/alentejo-2030-abre-concurso-com-3-milhoes-de-euros-para-reforcar-a-transferencia-de-conhecimento-cientifico-e-tecnologico-na-regiao/",
       "news_post_date": "2026-03-03",
-      "news_post_title": "Alentejo 2030 abre concurso com 3 milhões de euros para reforçar a transferência de conhecimento científico e tecnológico na região"
+      "news_post_title": "Alentejo 2030 abre concurso com 3 milhões de euros para reforçar a transferência de conhecimento científico e tecnológico na região",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "sistema-incentivos-base-territorial-alentejo",
@@ -435,7 +549,13 @@
       "paa_status": "published_externamente",
       "news_post_url": "https://alentejo.portugal2030.pt/2026/03/27/aberto-novo-aviso-sibt-de-5-milhoes-de-euros-para-apoiar-micro-e-pequenas-empresas-no-alentejo/",
       "news_post_date": "2026-03-27",
-      "news_post_title": "Aberto novo aviso SIBT de 5 milhões de euros para apoiar micro e pequenas empresas no Alentejo"
+      "news_post_title": "Aberto novo aviso SIBT de 5 milhões de euros para apoiar micro e pequenas empresas no Alentejo",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "sibt-inovacao-modernizacao-pme-algarve",
@@ -457,7 +577,13 @@
       "paa_status": "published_externamente",
       "news_post_url": "https://algarve.portugal2030.pt/2026/02/27/sistema-de-incentivos-de-base-territorial-inovacao-e-modernizacao-para-o-aumento-da-producao-e-criacao-de-novas-empresas-d-negocios/",
       "news_post_date": "2026-02-27",
-      "news_post_title": "Sistema de Incentivos de Base Territorial &#8211; Inovação E Modernização para o aumento da Produção e Criação de Novas Empresas d Negócios"
+      "news_post_title": "Sistema de Incentivos de Base Territorial &#8211; Inovação E Modernização para o aumento da Produção e Criação de Novas Empresas d Negócios",
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "regional_portals": [
+        "algarve-2030"
+      ]
     },
     {
       "id": "acoes-promocao-destino-acores-3-aviso",
@@ -474,7 +600,13 @@
       "priority_score": 45,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "programa": [
+        "ACORES2030"
+      ],
+      "regional_portals": [
+        "acores-2030"
+      ]
     },
     {
       "id": "valorizacao-economica-conhecimento-empresas-acores",
@@ -491,7 +623,13 @@
       "priority_score": 25,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "programa": [
+        "ACORES2030"
+      ],
+      "regional_portals": [
+        "acores-2030"
+      ]
     },
     {
       "id": "idt-economia-hipocarbonica-adaptacao-climatica-acores",
@@ -508,7 +646,13 @@
       "priority_score": 25,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "programa": [
+        "ACORES2030"
+      ],
+      "regional_portals": [
+        "acores-2030"
+      ]
     },
     {
       "id": "sice-qualificacao-das-pme-operacoes-individuais",
@@ -531,7 +675,13 @@
       "plano_anual_notes": [
         "2026-05-05: API metadata complete - API: pdf=252635, df=20000000, data_fim=2026-06-30. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run."
       ],
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "COMPETE2030"
+      ],
+      "regional_portals": [
+        "compete-2030"
+      ]
     },
     {
       "id": "step-i-d-i-empresarial-digital-e-biotecnologia",
@@ -548,7 +698,15 @@
       "priority_score": 45,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALGARVE2030,COMPETE2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "programa": [
+        "ALGARVE2030",
+        "COMPETE2030"
+      ],
+      "regional_portals": [
+        "algarve-2030",
+        "compete-2030"
+      ]
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-ram-iii",
@@ -566,7 +724,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: MADEIRA2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "regional_portals": [
+        "madeira-2030"
+      ]
     },
     {
       "id": "apoio-a-infraestruturas-de-base-tecnologica-regulamento-step",
@@ -589,7 +753,13 @@
       "plano_anual_notes": [
         "2026-05-05: API metadata complete - API: pdf=252696, df=25000000, data_fim=2026-05-15. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run."
       ],
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "CENTRO2030"
+      ],
+      "regional_portals": [
+        "centro-2030"
+      ]
     },
     {
       "id": "step-inovacao-produtiva-digital-e-biotecnologia",
@@ -606,7 +776,15 @@
       "priority_score": 45,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALGARVE2030,COMPETE2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "programa": [
+        "ALGARVE2030",
+        "COMPETE2030"
+      ],
+      "regional_portals": [
+        "algarve-2030",
+        "compete-2030"
+      ]
     },
     {
       "id": "saccct-equipamento-reequipamento-de-infraestruturas-cientificas-rniie",
@@ -624,7 +802,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: NORTE2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "NORTE2030"
+      ],
+      "regional_portals": [
+        "norte-2030"
+      ]
     },
     {
       "id": "gestao-agua-recursos-hidricos-alentejo",
@@ -646,7 +830,13 @@
       "paa_status": "published_externamente",
       "news_post_url": "https://alentejo.portugal2030.pt/2026/02/19/alentejo-2030-lanca-aviso-para-gestao-da-agua-para-mitigar-efeitos-das-cheias/",
       "news_post_date": "2026-02-19",
-      "news_post_title": "Alentejo 2030 lança aviso para Gestão da Água para mitigar efeitos das cheias"
+      "news_post_title": "Alentejo 2030 lança aviso para Gestão da Água para mitigar efeitos das cheias",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "passivos-ambientais-pedreiras-alentejo",
@@ -664,7 +854,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "eficiencia-energetica-habitacao-social-alentejo",
@@ -686,7 +882,13 @@
       "paa_status": "published_externamente",
       "news_post_url": "https://alentejo.portugal2030.pt/2026/04/08/alentejo-2030-abre-candidaturas-para-reforco-da-eficiencia-energetica-na-habitacao-social/",
       "news_post_date": "2026-04-08",
-      "news_post_title": "Alentejo 2030 abre candidaturas para reforço da eficiência energética na habitação social"
+      "news_post_title": "Alentejo 2030 abre candidaturas para reforço da eficiência energética na habitação social",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "medidas-adaptacao-climatica-gestao-riscos-alentejo",
@@ -704,7 +906,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "funcionamento-2030-oc",
@@ -722,7 +930,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: MADEIRA2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "regional_portals": [
+        "madeira-2030"
+      ]
     },
     {
       "id": "gestao-recursos-hidricos-acores2030",
@@ -739,7 +953,13 @@
       "priority_score": 75,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "programa": [
+        "ACORES2030"
+      ],
+      "regional_portals": [
+        "acores-2030"
+      ]
     },
     {
       "id": "protecao-civil-gestao-riscos-2-aviso-acores",
@@ -756,7 +976,13 @@
       "priority_score": 25,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "programa": [
+        "ACORES2030"
+      ],
+      "regional_portals": [
+        "acores-2030"
+      ]
     },
     {
       "id": "ciclo-agua-reutilizacao-resiliencia-2-aviso-acores",
@@ -773,7 +999,13 @@
       "priority_score": 25,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "programa": [
+        "ACORES2030"
+      ],
+      "regional_portals": [
+        "acores-2030"
+      ]
     },
     {
       "id": "ciclo-agua-alta-baixa-2-aviso-acores",
@@ -790,7 +1022,13 @@
       "priority_score": 25,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "programa": [
+        "ACORES2030"
+      ],
+      "regional_portals": [
+        "acores-2030"
+      ]
     },
     {
       "id": "adaptacao-as-alteracoes-climaticas-2-aviso",
@@ -807,7 +1045,13 @@
       "priority_score": 25,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "programa": [
+        "ACORES2030"
+      ],
+      "regional_portals": [
+        "acores-2030"
+      ]
     },
     {
       "id": "cua-reutilizacao-resiliencia-modernizacao-alentejo",
@@ -825,7 +1069,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "autoconsumo-comunidades-energia-renovavel-alentejo",
@@ -843,7 +1093,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "reformulacao-da-estacao-de-transferencia-da-zona-leste-e-de-triagem-da",
@@ -861,7 +1117,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "protecao-e-defesa-do-litoral-acoes-materiais",
@@ -884,7 +1146,13 @@
       "plano_anual_notes": [
         "2026-05-05: API metadata complete - API: pdf=252756, df=5500000, data_fim=2026-05-29. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run."
       ],
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "medidas-de-adaptacao-as-alteracoes-climaticas-4-aviso",
@@ -902,7 +1170,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "intervencoes-de-gestao-conservacao-reflorestacao-e-ordenamento-da-flor",
@@ -920,7 +1194,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "eficiencia-energetica-na-administracao-publica-central",
@@ -938,7 +1218,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "infraestruturas-de-valorizacao-de-residuos-urbanos-em-alta-ru",
@@ -956,7 +1242,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "gestao-de-residuos-urbanos-acoes-imateriais",
@@ -974,7 +1266,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "desenvolver-sistemas-redes-e-formas-de-armazenamento-energeticos-intel",
@@ -1009,7 +1307,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALGARVE2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "regional_portals": [
+        "algarve-2030"
+      ]
     },
     {
       "id": "passivos-ambientais-de-saneamento-de-aguas-residuais-em-alta",
@@ -1032,7 +1336,13 @@
       "plano_anual_notes": [
         "2026-05-05: API metadata complete - API: pdf=252778, df=40000000, data_fim=2026-05-29. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run."
       ],
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "empreendimento-hidraulico-de-fins-multiplos-do-crato-barragem-do-pisao",
@@ -1050,7 +1360,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "estudos-mobilidade-urbana-sustentavel",
@@ -1072,7 +1388,13 @@
       "paa_status": "published_externamente",
       "news_post_url": "https://sustentavel2030.gov.pt/ja-estao-abertas-as-candidaturas-a-2-a-edicao-dos-premios-dos-fundos-europeus/",
       "news_post_date": "2026-04-22",
-      "news_post_title": "Já estão abertas as candidaturas à 2.ª edição dos Prémios dos Fundos Europeus!"
+      "news_post_title": "Já estão abertas as candidaturas à 2.ª edição dos Prémios dos Fundos Europeus!",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "rede-ferroviaria-das-areas-metropolitanas-mobilidade-urbana-sustentave",
@@ -1090,7 +1412,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "mobilidade-sustentavel-iti-alentejo",
@@ -1108,7 +1436,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "medidas-de-adaptacao-as-alteracoes-climaticas",
@@ -1126,7 +1460,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "execucao-da-edl-do-gal-adrepes-costeiro-projeto-ancora-reativacao-de-u",
@@ -1144,7 +1484,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: MAR2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "MAR2030"
+      ],
+      "regional_portals": [
+        "mar-2030"
+      ]
     },
     {
       "id": "acoes-mitigacao-escassez-hidrica-algarve",
@@ -1162,7 +1508,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "formacao-da-administracao-publica-regional-e-local-cimbal",
@@ -1180,7 +1532,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "tesp-ciclo-formativo-2026-2028-alentejo",
@@ -1198,7 +1556,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "equipamentos-hospitalares-hospital-central-alentejo",
@@ -1216,7 +1580,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "equipamentos-infraestruturas-portuarias-raa-3aviso",
@@ -1234,7 +1604,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "formacao-empresarial-individual",
@@ -1252,7 +1628,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: MADEIRA2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "regional_portals": [
+        "madeira-2030"
+      ]
     },
     {
       "id": "formacoes-modulares-certificadas",
@@ -1270,7 +1652,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: MADEIRA2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "regional_portals": [
+        "madeira-2030"
+      ]
     },
     {
       "id": "siqrh-formacao-empresarial-operacoes-individuais",
@@ -1288,7 +1676,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: COMPETE2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "COMPETE2030"
+      ],
+      "regional_portals": [
+        "compete-2030"
+      ]
     },
     {
       "id": "inovcontacto",
@@ -1306,7 +1700,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: COMPETE2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "COMPETE2030"
+      ],
+      "regional_portals": [
+        "compete-2030"
+      ]
     },
     {
       "id": "siqrh-formacao-empresarial-operacoes-em-conjunto",
@@ -1324,7 +1724,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: COMPETE2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "COMPETE2030"
+      ],
+      "regional_portals": [
+        "compete-2030"
+      ]
     },
     {
       "id": "pepac-missoes",
@@ -1342,7 +1748,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: COMPETE2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "COMPETE2030"
+      ],
+      "regional_portals": [
+        "compete-2030"
+      ]
     },
     {
       "id": "programas-intermunicipais-de-promocao-do-sucesso-escolar-pipse-iti-cim",
@@ -1365,7 +1777,13 @@
       "plano_anual_notes": [
         "2026-05-05: API metadata complete - API: pdf=252896, df=7491761, data_fim=2026-05-29. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run."
       ],
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "CENTRO2030"
+      ],
+      "regional_portals": [
+        "centro-2030"
+      ]
     },
     {
       "id": "balcao-da-inclusao-unidades-moveis-em-territorios-de-baixa-densidade",
@@ -1388,7 +1806,13 @@
       "plano_anual_notes": [
         "2026-05-05: API metadata complete - API: pdf=252894, df=5739164, data_fim=2026-05-29. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run."
       ],
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "CENTRO2030"
+      ],
+      "regional_portals": [
+        "centro-2030"
+      ]
     },
     {
       "id": "apoios-a-contratacao",
@@ -1406,7 +1830,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ]
     },
     {
       "id": "apoio-sem-abrigo-algarve",
@@ -1424,7 +1854,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALGARVE2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "regional_portals": [
+        "algarve-2030"
+      ]
     },
     {
       "id": "formacao-de-formadores-docentes-e-tutores",
@@ -1442,7 +1878,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: MADEIRA2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "regional_portals": [
+        "madeira-2030"
+      ]
     },
     {
       "id": "modelo-apoio-vida-independente-mavi",
@@ -1460,7 +1902,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALGARVE2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "regional_portals": [
+        "algarve-2030"
+      ]
     },
     {
       "id": "programa-escolhas-algarve",
@@ -1478,7 +1926,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALGARVE2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "regional_portals": [
+        "algarve-2030"
+      ]
     },
     {
       "id": "combate-a-privacao-material-2-aviso",
@@ -1500,6 +1954,12 @@
       "plano_anual_checks": 1,
       "plano_anual_notes": [
         "2026-05-05: API metadata complete - API: pdf=252938, df=5000000, data_fim=2026-05-29. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run."
+      ],
+      "programa": [
+        "ACORES2030"
+      ],
+      "regional_portals": [
+        "acores-2030"
       ]
     },
     {
@@ -1517,7 +1977,13 @@
       "priority_score": 45,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "programa": [
+        "ACORES2030"
+      ],
+      "regional_portals": [
+        "acores-2030"
+      ]
     },
     {
       "id": "infraestruturas-escolares-da-primeira-infancia-2-aviso",
@@ -1534,7 +2000,13 @@
       "priority_score": 25,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "programa": [
+        "ACORES2030"
+      ],
+      "regional_portals": [
+        "acores-2030"
+      ]
     },
     {
       "id": "cursos-profissionais-ano-letivo-2026-2027-escolas-privadas-e-outras",
@@ -1552,7 +2024,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ]
     },
     {
       "id": "servicos-de-psicologia-e-orientacao",
@@ -1570,7 +2048,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ]
     },
     {
       "id": "cursos-profissionais-ano-letivo-2026-2027-escolas-publicas",
@@ -1588,7 +2072,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ]
     },
     {
       "id": "parcerias-inovacao-social-alentejo",
@@ -1611,7 +2101,13 @@
       "plano_anual_notes": [
         "2026-05-05: API metadata complete - API: pdf=252926, df=900000, data_fim=2026-05-20. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run."
       ],
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "contratos-impacto-social-alentejo-2026",
@@ -1629,7 +2125,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "centros-qualifica-algarve",
@@ -1647,7 +2149,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALGARVE2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "regional_portals": [
+        "algarve-2030"
+      ]
     },
     {
       "id": "parcerias-inovacao-social-algarve",
@@ -1674,7 +2182,13 @@
       "paa_status": "published_externamente",
       "news_post_url": "https://algarve.portugal2030.pt/2026/04/22/candidate-o-seu-projeto-a-2-a-edicao-dos-premios-dos-fundos-europeus-ja-estao-abertas-as-candidaturas-a-2-a-edicao-dos-premios-dos-fundos-europeus-ate-17-de-julho-de-2026-de-visibilidade-ao-impacto/",
       "news_post_date": "2026-04-22",
-      "news_post_title": "Candidate o seu projeto à 2.ª edição dos Prémios dos Fundos Europeus!  Já estão abertas as candidaturas à 2.ª edição dos Prémios dos Fundos Europeus até 17 de julho de 2026. Dê visibilidade ao impacto do seu projeto e participe!"
+      "news_post_title": "Candidate o seu projeto à 2.ª edição dos Prémios dos Fundos Europeus!  Já estão abertas as candidaturas à 2.ª edição dos Prémios dos Fundos Europeus até 17 de julho de 2026. Dê visibilidade ao impacto do seu projeto e participe!",
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "regional_portals": [
+        "algarve-2030"
+      ]
     },
     {
       "id": "centros-especializados-em-qualificacao-de-adultos-e-processos-de-rvcc-",
@@ -1692,7 +2206,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ]
     },
     {
       "id": "vida-ativa-emprego-qualificado",
@@ -1710,7 +2230,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ]
     },
     {
       "id": "formacoes-modulares-certificadas-pessoas2030",
@@ -1728,7 +2254,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ]
     },
     {
       "id": "formacao-avancada",
@@ -1746,7 +2278,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ]
     },
     {
       "id": "bolsas-de-ensino-superior-para-alunos-carenciados-ano-letivo-2026-2027",
@@ -1764,7 +2302,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ]
     },
     {
       "id": "apoio-tecnico-e-financeiro-a-organizacoes-da-sociedade-civil-que-atuam",
@@ -1786,7 +2330,13 @@
       "paa_status": "published_externamente",
       "news_post_url": "https://pessoas2030.gov.pt/2026/04/09/pessoas-2030-lanca-para-apoiar-organizacoes-nao-governamentais-ong-na-area-da-igualdade-e-nao-discriminacao/",
       "news_post_date": "2026-04-09",
-      "news_post_title": "PESSOAS 2030 lança aviso para apoiar Organizações Não Governamentais (ONG) na área da igualdade e não discriminação"
+      "news_post_title": "PESSOAS 2030 lança aviso para apoiar Organizações Não Governamentais (ONG) na área da igualdade e não discriminação",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ]
     },
     {
       "id": "acoes-de-sensibilizacao-e-campanhas",
@@ -1804,7 +2354,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ]
     },
     {
       "id": "formacao-publicos-estrategicos-xenofobia-discriminacao",
@@ -1822,7 +2378,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ]
     },
     {
       "id": "cursos-cef-escolas-publicas-2026-2027",
@@ -1840,7 +2402,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ]
     },
     {
       "id": "cursos-cef-cefjam-escolas-privadas-2026-2027",
@@ -1858,7 +2426,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ]
     },
     {
       "id": "capacitacao-atores-redes-iti-agua-alentejo",
@@ -1876,7 +2450,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "refuncionalizacao-espacos-coletivos-alentejo",
@@ -1894,7 +2474,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "servicos-recursos-digitais-valorizacao-territorios-alentejo",
@@ -1912,7 +2498,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "qualificacao-espaco-publico-parcerias-coesao-alentejo",
@@ -1930,7 +2522,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "produtos-turisticos-subregionais-iti-alentejo",
@@ -1948,7 +2546,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "modelo-de-apoio-a-vida-independente-mavi",
@@ -1966,7 +2570,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ]
     },
     {
       "id": "centros-nacionais-de-apoio-a-integracao-de-migrantes-cnaim-mediacao-na",
@@ -1984,7 +2594,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ]
     },
     {
       "id": "infraestruturas-equipamentos-tecnologicos-ftj-alentejo",
@@ -2002,7 +2618,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "participacao-individual-formacao-ftj-alentejo",
@@ -2020,7 +2642,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "intervencao-integrada-de-base-territorial-do-pinhal-interior-iibt-alde",
@@ -2038,7 +2666,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: CENTRO2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "CENTRO2030"
+      ],
+      "regional_portals": [
+        "centro-2030"
+      ]
     },
     {
       "id": "respostas-locais-desafios-territoriais-iti-agua-alentejo",
@@ -2056,7 +2690,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "funcionamento-de-cit-multifuncoes-e-espacos-equiparados",
@@ -2073,7 +2713,9 @@
       "priority_score": 25,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: FAMI2030. Natureza: Convite. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "programa": [],
+      "regional_portals": []
     },
     {
       "id": "centros-locais-de-apoio-a-integracao-de-migrantes-claim",
@@ -2090,7 +2732,9 @@
       "priority_score": 45,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: FAMI2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "programa": [],
+      "regional_portals": []
     },
     {
       "id": "assistencia-tecnica-organismo-intermedio-da-regiao-autonoma-da-madeira",
@@ -2108,7 +2752,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "estudos-e-avaliacoes-do-plano-global-de-avaliacao-do-portugal-2030-202",
@@ -2126,7 +2776,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PAT2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "PAT2030"
+      ],
+      "regional_portals": [
+        "pat-2030"
+      ]
     },
     {
       "id": "assistencia-tecnica-2027-a-2029",
@@ -2144,7 +2800,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "digitalizacao-espacos-cidadao-iti-algarve",
@@ -2166,7 +2828,13 @@
       "paa_status": "published_externamente",
       "news_post_url": "https://algarve.portugal2030.pt/2026/03/30/digitalizacao-para-a-eficiencia-de-servicos-aos-cidadaos-e-empresas-na-administracao-local-espacos-cidadao-iti-cim-amal/",
       "news_post_date": "2026-03-30",
-      "news_post_title": "Digitalização para a eficiência de serviços aos cidadãos e empresas na Administração Local – Espaços Cidadão (ITI CIM AMAL)"
+      "news_post_title": "Digitalização para a eficiência de serviços aos cidadãos e empresas na Administração Local – Espaços Cidadão (ITI CIM AMAL)",
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "regional_portals": [
+        "algarve-2030"
+      ]
     },
     {
       "id": "incubadoras-base-nao-tecnologica-algarve",
@@ -2184,7 +2852,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALGARVE2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "regional_portals": [
+        "algarve-2030"
+      ]
     },
     {
       "id": "siid-empreendedorismo-qualificado-algarve",
@@ -2202,7 +2876,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALGARVE2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "regional_portals": [
+        "algarve-2030"
+      ]
     },
     {
       "id": "nucleos-idt-ambiente-empresarial-acores",
@@ -2219,7 +2899,13 @@
       "priority_score": 15,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "programa": [
+        "ACORES2030"
+      ],
+      "regional_portals": [
+        "acores-2030"
+      ]
     },
     {
       "id": "vale-inovacao-acores",
@@ -2236,7 +2922,13 @@
       "priority_score": 15,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)"
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "programa": [
+        "ACORES2030"
+      ],
+      "regional_portals": [
+        "acores-2030"
+      ]
     },
     {
       "id": "gestao-agua-conservacao-hidricos-iti-alentejo",
@@ -2254,7 +2946,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "conservacao-natureza-biodiversidade-alentejo",
@@ -2272,7 +2970,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ]
     },
     {
       "id": "inqueritos-de-mobilidade-nas-areas-metropolitana-de-lisboa-e-do-porto",
@@ -2290,7 +2994,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "execucao-da-edl-do-gal-pesca-sotavento-algarveinvestimentos-que-contri",
@@ -2308,7 +3018,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: MAR2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "MAR2030"
+      ],
+      "regional_portals": [
+        "mar-2030"
+      ]
     },
     {
       "id": "reabilitacao-da-aerogare-do-aerodromo-de-sao-jorge",
@@ -2326,7 +3042,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ]
     },
     {
       "id": "qualificacao-de-pessoas-com-deficiencia-e-ou-incapacidade",
@@ -2344,7 +3066,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: MADEIRA2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "regional_portals": [
+        "madeira-2030"
+      ]
     },
     {
       "id": "contratos-de-impacto-social",
@@ -2362,7 +3090,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: CENTRO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "CENTRO2030"
+      ],
+      "regional_portals": [
+        "centro-2030"
+      ]
     },
     {
       "id": "centros-especializados-em-qualificacao-de-adultos-e-processos-de-recon",
@@ -2380,7 +3114,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: MADEIRA2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "regional_portals": [
+        "madeira-2030"
+      ]
     },
     {
       "id": "contratos-impacto-social-algarve",
@@ -2398,7 +3138,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALGARVE2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "regional_portals": [
+        "algarve-2030"
+      ]
     },
     {
       "id": "cursos-tesp-26-28-algarve",
@@ -2416,7 +3162,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALGARVE2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "regional_portals": [
+        "algarve-2030"
+      ]
     },
     {
       "id": "bolsas-ensino-superior-alunos-carenciados",
@@ -2434,7 +3186,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALGARVE2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "regional_portals": [
+        "algarve-2030"
+      ]
     },
     {
       "id": "cnaim-algarve",
@@ -2452,7 +3210,13 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALGARVE2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes"
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "regional_portals": [
+        "algarve-2030"
+      ]
     }
   ]
 }
