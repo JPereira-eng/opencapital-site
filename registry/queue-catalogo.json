@@ -143,6 +143,61 @@
         ]
       },
       "notes": "Fundo VC iberico em deployment activo. Fundo V (70M EUR) lancado em 2024 com foco AI/cloud para Espanha + Sul Europa. Total AUM acumulado >285M EUR. Equipa de 19 membros. Portfolio inclui unicornio Factorial e exits Boopos/Hubtype. Presenca fisica em Lisboa = relevancia direta para PT. Exemplos PT especificos nao confirmados via website oficial; investimentos PT confirmar via portfolio detalhado em proxima run."
+    },
+    {
+      "id": "kibo-ventures",
+      "name": "Kibo Ventures",
+      "source_id": "kibo-ventures",
+      "catalog_type": "vc",
+      "detected_date": "2026-05-06",
+      "last_profile_update": "2026-05-06",
+      "status": "active",
+      "regulation_url": "https://kiboventures.com",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://kiboventures.com",
+        "linkedin": "https://www.linkedin.com/company/kibo-ventures",
+        "pais_sede": "ES",
+        "descricao_curta": "Plataforma de VC e Private Equity europeia fundada em 2012 em Madrid. Mais de 500M EUR sob gestao em 6 fundos, 81 empresas investidas e 22 saidas (incluindo IPO Nasdaq). Tese focada em empoderar founders europeus a abordar grandes desafios tecnologicos.",
+        "como_candidatar": "Contacto via website. Sem formulario publico de candidatura visivel; intro preferencial via networking europeu de tech.",
+        "tese": "Empoderar founders europeus a enderecar grandes desafios tecnologicos e escalar globalmente. Investimento em empresas tech-driven em fase early-stage, com platform Kibo Nzyme para growth/PE.",
+        "estagios": [
+          "seed",
+          "series-a",
+          "series-b"
+        ],
+        "setores": [
+          "fintech",
+          "proptech",
+          "logistica",
+          "AI",
+          "gaming",
+          "B2B SaaS",
+          "deep tech"
+        ],
+        "geografia": [
+          "ES",
+          "EU",
+          "Iberia"
+        ],
+        "ticket_min_eur": null,
+        "ticket_max_eur": null,
+        "ticket_sweet_eur": null,
+        "aum_eur": 500000000,
+        "vintage": "6 fundos desde 2012; fundo inicial 43M EUR",
+        "portfolio_pt_exemplos": [],
+        "parceiros": [
+          "Aquilino Pena",
+          "Javier Torremocha",
+          "Jose Maria Amusategui",
+          "Sonia Fernandez",
+          "Jordi Vidal",
+          "Juan Lopez",
+          "Joaquin Rebuelta",
+          "Valeria Loewe"
+        ]
+      },
+      "notes": "Fundo VC espanhol historico (fundado 2012). Plataforma com dois bracos: Kibo Ventures (early-stage) + Kibo Nzyme (growth/PE, 2022). Portfolio com 81 empresas e 22 exits (incl. Nasdaq IPO). Sem empresas portuguesas explicitamente identificadas via website; foco geografico Espanha+Europa, com relevancia indirecta para PT via tese ibérica e empresas com operacao em Portugal. Sunir Kapoor entrou como Non-Executive Chairman em Out/2025."
     }
   ]
 }
