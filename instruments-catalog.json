@@ -21463,8 +21463,13 @@
       "status_class": "status-cont",
       "fonte": "iefp",
       "beneficiario": "empresa",
-      "setores": ["todos"],
-      "necessidades": ["contratacao-rh", "formacao-qualificacao"],
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "contratacao-rh",
+        "formacao-qualificacao"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Apoios à Contratação IEFP: +Emprego e Emprego +Talento",
       "tagline": "Apoios diretos a empregadores que contratam sem termo desempregados ou jovens qualificados, com majorações até +140% sobre o valor base.",
@@ -21483,8 +21488,12 @@
       "status_class": "status-cont",
       "fonte": "iefp",
       "beneficiario": "empresa,empreendedor",
-      "setores": ["todos"],
-      "necessidades": ["formacao-qualificacao"],
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "formacao-qualificacao"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Cheque-Formação IEFP",
       "tagline": "Financiamento direto de formação profissional certificada DGERT, para ativos empregados, desempregados e empregadores, até €500 por formando.",
@@ -21503,8 +21512,13 @@
       "status_class": "status-cont",
       "fonte": "iefp",
       "beneficiario": "empreendedor",
-      "setores": ["todos"],
-      "necessidades": ["digitalizacao-ia", "formacao-qualificacao"],
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "digitalizacao-ia",
+        "formacao-qualificacao"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "ATIVAR.PT Jovem + Digital",
       "tagline": "Programa de formação profissional em competências digitais para jovens 18-35 anos inscritos no IEFP, com bolsa, alimentação e transporte cobertos.",
@@ -21523,8 +21537,12 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "entidade-publica,associacao,ensino-investigacao",
-      "setores": ["todos"],
-      "necessidades": ["impacto-social-inclusao"],
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "impacto-social-inclusao"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "ESF-2026-POW: Destacamento de Trabalhadores",
       "tagline": "Cooperação transnacional entre autoridades públicas e parceiros sociais para reforçar informação e fiscalização de trabalhadores destacados na UE.",
@@ -21543,8 +21561,13 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,entidade-publica",
-      "setores": ["energia-ambiente"],
-      "necessidades": ["sustentabilidade-energia-clima", "investimento-produtivo"],
+      "setores": [
+        "energia-ambiente"
+      ],
+      "necessidades": [
+        "sustentabilidade-energia-clima",
+        "investimento-produtivo"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "CEF Energy 2026: Works (PCI/PMI)",
       "tagline": "Subvenção a obras em projetos PCI e PMI da segunda lista da União para redes de eletricidade, gás, smart grids, hidrogénio e CO2.",
@@ -21563,8 +21586,14 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["mar-pescas", "tecnologia-digital"],
-      "necessidades": ["id-ciencia", "investimento-produtivo"],
+      "setores": [
+        "mar-pescas",
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "investimento-produtivo"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EDF-2026-DA-NAVAL-EMSAS: Plataformas Navais Semi-Autónomas",
       "tagline": "Tópico do Fundo Europeu de Defesa para desenvolver uma plataforma rápida e modular semi-autónoma de média dimensão para defesa costeira e missões em ambiente litoral.",
@@ -21583,8 +21612,14 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["industria", "tecnologia-digital"],
-      "necessidades": ["id-ciencia", "investimento-produtivo"],
+      "setores": [
+        "industria",
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "investimento-produtivo"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EDF-2026-DA-MATCOMP-SMT-STEP: Têxteis Inteligentes Multifuncionais",
       "tagline": "Tópico EDF para desenvolver têxteis inteligentes e multifuncionais para uniformes e sistemas de soldado, com camuflagem dinâmica anti-drone e proteção integrada.",
@@ -21603,8 +21638,13 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["mobilidade-transportes", "tecnologia-digital"],
-      "necessidades": ["id-ciencia"],
+      "setores": [
+        "mobilidade-transportes",
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "id-ciencia"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EDF-2026-RA-PROTMOB-FMLA: Aeronave Ligeira Multirol",
       "tagline": "Tópico de investigação aplicada do EDF para conceber uma aeronave turboélice monomotor de baixo custo, multirol, capaz de apoio aéreo direto, anti-drone, ISR e coordenação de ataque.",
@@ -21623,8 +21663,15 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["energia-ambiente", "industria"],
-      "necessidades": ["id-ciencia", "sustentabilidade-energia-clima", "investimento-produtivo"],
+      "setores": [
+        "energia-ambiente",
+        "industria"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "sustentabilidade-energia-clima",
+        "investimento-produtivo"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EDF-2026-DA-ENERENV-HPES-STEP: Sistemas de Energia Militar de Alto Desempenho",
       "tagline": "Tópico EDF para sistemas energéticos militares de alto desempenho com foco em hidrogénio, conversão e armazenamento, ligados a redes de bases operacionais. Cleantech dual-use.",
@@ -21643,8 +21690,14 @@
       "status_class": "status-open",
       "fonte": "ue",
       "beneficiario": "empresa,ensino-investigacao",
-      "setores": ["tecnologia-digital", "mobilidade-transportes"],
-      "necessidades": ["id-ciencia", "investimento-produtivo"],
+      "setores": [
+        "tecnologia-digital",
+        "mobilidade-transportes"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "investimento-produtivo"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "EDF-2026-DA-AIR-STFS: Tecnologias Inteligentes para Caça de Próxima Geração",
       "tagline": "Tópico EDF para arquiteturas e tecnologias-chave de aviónica modular integrada para caça de próxima geração, em contexto defence air cloud, plataformas tripuladas e não tripuladas.",
@@ -21663,8 +21716,13 @@
       "status_class": "status-open",
       "fonte": "iefp",
       "beneficiario": "empresa,empreendedor",
-      "setores": ["todos"],
-      "necessidades": ["tesouraria-credito-garantias", "contratacao-rh"],
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "tesouraria-credito-garantias",
+        "contratacao-rh"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve",
       "title": "Calamidades, Incentivo Extraordinário 2026",
       "tagline": "Apoio do IEFP para empregadores e trabalhadores independentes afetados pelas tempestades de janeiro e fevereiro de 2026, focado na manutenção de salários e rendimentos.",
@@ -21683,8 +21741,13 @@
       "status_class": "status-cont",
       "fonte": "iefp",
       "beneficiario": "empresa,empreendedor",
-      "setores": ["todos"],
-      "necessidades": ["formacao-qualificacao", "digitalizacao-ia"],
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "formacao-qualificacao",
+        "digitalizacao-ia"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Cheque-Formação + Digital",
       "tagline": "Apoio individual à formação certificada em competências digitais, até €750 por trabalhador e por ano, financiado pelo PRR via investimento TD-C16-I01.",
@@ -21703,8 +21766,13 @@
       "status_class": "status-closed",
       "fonte": "iefp",
       "beneficiario": "empresa,associacao",
-      "setores": ["todos"],
-      "necessidades": ["formacao-qualificacao", "digitalizacao-ia"],
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "formacao-qualificacao",
+        "digitalizacao-ia"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Formação Emprego + Digital",
       "tagline": "Projetos coletivos de formação em competências digitais para trabalhadores de empresas, confederações empregadoras e entidades da economia social, financiados pelo PRR.",
@@ -21723,8 +21791,13 @@
       "status_class": "status-closed",
       "fonte": "iefp",
       "beneficiario": "empresa,associacao,ensino-investigacao",
-      "setores": ["todos"],
-      "necessidades": ["formacao-qualificacao", "digitalizacao-ia"],
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "formacao-qualificacao",
+        "digitalizacao-ia"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "Líder + Digital",
       "tagline": "Apoio do IEFP a consórcios universidade-empresa para qualificar gestores e líderes na transformação digital, com financiamento por custo unitário e foco em PME.",
@@ -21743,8 +21816,14 @@
       "status_class": "status-cont",
       "fonte": "iefp",
       "beneficiario": "empreendedor,empresa",
-      "setores": ["todos"],
-      "necessidades": ["arranque-validacao", "tesouraria-credito-garantias", "contratacao-rh"],
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "arranque-validacao",
+        "tesouraria-credito-garantias",
+        "contratacao-rh"
+      ],
       "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
       "title": "PAECPE: Apoio ao Empreendedorismo",
       "tagline": "Programa do IEFP que combina antecipação do subsídio de desemprego, microcrédito e linhas INVEST+ para criar empresa ou auto-emprego, com apoio técnico gratuito.",
@@ -21752,6 +21831,30 @@
       "highlight1": "Desempregados, jovens 18-35 e independentes",
       "highlight2": "Nacional",
       "href": "instrumentos/empreendedorismo.html",
+      "featured": false
+    },
+    {
+      "id": "incentivo-ao-trabalho-jovem",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto até 30/06/2026",
+      "status_class": "status-open",
+      "fonte": "iefp",
+      "beneficiario": "empreendedor",
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "contratacao-rh"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve",
+      "title": "IRT Jovem: Incentivo ao Regresso ao Trabalho para Jovens",
+      "tagline": "Apoio financeiro do IEFP a jovens com menos de 30 anos a receber subsídio de desemprego que aceitem novo contrato. Complemento de 25% (a termo) ou 35% (sem termo) sobre o subsídio.",
+      "highlight0": "25% a 35% do subsídio de desemprego",
+      "highlight1": "Jovens desempregados <30 anos",
+      "highlight2": "Portugal continental",
+      "href": "instrumentos/incentivo-ao-trabalho-jovem.html",
       "featured": false
     }
   ]
