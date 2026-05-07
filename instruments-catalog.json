@@ -23981,6 +23981,135 @@
       "highlight2": "Nacional (programa europeu)",
       "href": "instrumentos/horizon-cl3-2026-01-fct-04.html",
       "featured": false
+    },
+    {
+      "id": "eit-women2invest",
+      "category": "outros",
+      "category_label": "Outros",
+      "estado": "aberto",
+      "status_text": "Aberto até 07/06/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,empreendedor",
+      "setores": [
+        "tecnologia-digital",
+        "saude-ciencias-vida"
+      ],
+      "necessidades": [
+        "formação-qualificação",
+        "contratacao-rh"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Women2Invest",
+      "tagline": "Programa pan-europeu do EIT que combina formação executiva em venture capital com colocação remunerada em fundos VC.",
+      "highlight0": "Estágio remunerado pago integralmente",
+      "highlight1": "Mulheres STEAM, último ano ou até 7 anos pós-graduação",
+      "highlight2": "Pan-europeu (UE + países associados)",
+      "href": "instrumentos/eit-women2invest.html",
+      "featured": false
+    },
+    {
+      "id": "eit-venture-incubation-program",
+      "category": "hib",
+      "category_label": "Híbridos",
+      "estado": "aberto",
+      "status_text": "Aberto até 09/06/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,empreendedor",
+      "setores": [
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "arranque-validacao",
+        "id-ciencia"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Venture Incubation Program (28DIGITAL)",
+      "tagline": "Incubação europeia para startups deep-tech com Growth Package de €5.000 e prémios até €25.000, em troca de 5% equity SAFE.",
+      "highlight0": "€5.000 Growth Package + €25.000 em prémios",
+      "highlight1": "Startups deep-tech constituídas em 2025+",
+      "highlight2": "27 Estados-Membros UE + países associados",
+      "href": "instrumentos/eit-venture-incubation-program.html",
+      "featured": false
+    },
+    {
+      "id": "eit-strategic-innovation-open-call",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto até 18/06/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,entidade-pública,ensino-investigação",
+      "setores": [
+        "mobilidade-transportes",
+        "energia-ambiente"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "sustentabilidade-energia-clima"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "EIT Urban Mobility Strategic Innovation Open Call",
+      "tagline": "Convite estratégico do EIT Urban Mobility com €60M para 2026-2028 e cofinanciamento até 65% em mobilidade urbana sustentável.",
+      "highlight0": "Até €2M por projeto, 65% cofinanciamento EIT",
+      "highlight1": "Consórcios multi-país (UE + Horizon Europe)",
+      "highlight2": "Pan-europeu",
+      "href": "instrumentos/eit-strategic-innovation-open-call.html",
+      "featured": false
+    },
+    {
+      "id": "eit-innonext-call",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto até 31/07/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,empreendedor",
+      "setores": [
+        "tecnologia-digital",
+        "saude-ciencias-vida"
+      ],
+      "necessidades": [
+        "contratacao-rh",
+        "formação-qualificação"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "InnoNext",
+      "tagline": "Iniciativa EIC e EIT que financia integralmente estágios de inovação de 3 a 6 meses entre talentos e startups das KICs.",
+      "highlight0": "Estágio totalmente financiado, 3 a 6 meses",
+      "highlight1": "Talentos EIT-labelled, Alumni e pós-doc; startups KICs",
+      "highlight2": "Ecossistema EIT pan-europeu",
+      "href": "instrumentos/eit-innonext-call.html",
+      "featured": false
+    },
+    {
+      "id": "eit-urban-mobility-explained-umx-open-call",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto até 29/09/2026",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,entidade-pública,ensino-investigação,associacao",
+      "setores": [
+        "mobilidade-transportes",
+        "energia-ambiente"
+      ],
+      "necessidades": [
+        "formação-qualificação",
+        "sustentabilidade-energia-clima"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Urban Mobility Explained (UMX) Open Call",
+      "tagline": "Convite do EIT Urban Mobility com até €700.000 por proposta para serviços de formação profissional em mobilidade urbana sustentável.",
+      "highlight0": "Até €700.000 por proposta",
+      "highlight1": "PME, universidades, cidades, grandes empresas",
+      "highlight2": "Pan-europeu (UE + países associados Horizon)",
+      "href": "instrumentos/eit-urban-mobility-explained-umx-open-call.html",
+      "featured": false
     }
   ]
 }
