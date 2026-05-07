@@ -17,7 +17,7 @@
       "source": "norte-2030",
       "state": "aberto",
       "deadline": "2026-05-29",
-      "last_check": "2026-05-05"
+      "last_check": "2026-05-07"
     },
     {
       "id": "norte2030-infraestruturas-acolhimento-empresarial",
@@ -25,7 +25,7 @@
       "source": "norte-2030",
       "state": "aberto",
       "deadline": "2026-06-30",
-      "last_check": "2026-05-05"
+      "last_check": "2026-05-07"
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-it-cim-terras-de-tras-os-mon",
@@ -50,7 +50,7 @@
       "file": "instrumentos/norte2030-2026-4-assistencia-tecnica-oi-sistema-incentivos.html",
       "source": "norte-2030",
       "state": "aberto",
-      "last_check": "2026-05-05",
+      "last_check": "2026-05-07",
       "deadline": "2026-05-29",
       "aviso_codigo": "NORTE2030-2026-4"
     }
@@ -63,5 +63,9 @@
       "state": "fechado",
       "last_check": "2026-04-17"
     }
-  ]
+  ],
+  "count": 7,
+  "open": 3,
+  "closed": 4,
+  "planned": 0
 }
