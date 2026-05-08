@@ -271,78 +271,6 @@
       "source": "ani",
       "state": "aberto",
       "last_check": "2026-05-08"
-    }
-  ],
-  "instruments": [
-    {
-      "id": "programa-apoio-crescer-com-o-turismo",
-      "file": "instrumentos/programa-apoio-crescer-com-o-turismo.html",
-      "source": "turismo-portugal",
-      "state": "aberto",
-      "last_check": "2026-04-15"
-    },
-    {
-      "id": "sifide-2026",
-      "file": "instrumentos/sifide-2026.html",
-      "source": "autoridade-tributaria",
-      "state": "aberto",
-      "last_check": "2026-04-19"
-    },
-    {
-      "id": "iefp-apoios-a-contratacao",
-      "file": "instrumentos/iefp-apoios-a-contratacao.html",
-      "source": "iefp",
-      "state": "aberto",
-      "last_check": "2026-05-06"
-    },
-    {
-      "id": "cheque-formacao",
-      "file": "instrumentos/cheque-formacao.html",
-      "source": "iefp",
-      "state": "aberto",
-      "last_check": "2026-05-06"
-    },
-    {
-      "id": "ativar-pt",
-      "file": "instrumentos/ativar-pt.html",
-      "source": "iefp",
-      "state": "aberto",
-      "last_check": "2026-05-06"
-    },
-    {
-      "id": "calamidades-apoios",
-      "file": "instrumentos/calamidades-apoios.html",
-      "source": "iefp",
-      "state": "aberto",
-      "last_check": "2026-05-06"
-    },
-    {
-      "id": "cheque-formacao-digital",
-      "file": "instrumentos/cheque-formacao-digital.html",
-      "source": "iefp",
-      "state": "aberto",
-      "last_check": "2026-05-06"
-    },
-    {
-      "id": "formacao-emprego-digital",
-      "file": "instrumentos/formacao-emprego-digital.html",
-      "source": "iefp",
-      "state": "fechado",
-      "last_check": "2026-05-06"
-    },
-    {
-      "id": "lider-digital",
-      "file": "instrumentos/lider-digital.html",
-      "source": "iefp",
-      "state": "fechado",
-      "last_check": "2026-05-06"
-    },
-    {
-      "id": "empreendedorismo",
-      "file": "instrumentos/empreendedorismo.html",
-      "source": "iefp",
-      "state": "aberto",
-      "last_check": "2026-05-06"
     },
     {
       "id": "aveiro-smart-connected-spaces-2026",
@@ -353,5 +281,6 @@
     }
   ],
   "count": 37,
-  "open": 30
+  "open": 31,
+  "published": 37
 }
