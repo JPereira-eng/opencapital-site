@@ -92,22 +92,6 @@
   },
   "queue": [
     {
-      "id": "selo-id-ani-ongoing",
-      "name": "Selo ID - Reconhecimento de Idoneidade I&D (ANI)",
-      "source_id": "ani",
-      "shard": "pt-other",
-      "aviso_codigo": null,
-      "detected_date": "2026-05-08",
-      "deadline": null,
-      "budget": "Reconhecimento (sem valor monetario direto). Habilita acesso a SIFIDE - recuperacao ate 82,5% do investimento I&D.",
-      "regulation_url": "https://ani.pt/selo-id-reconhecimento-de-idoneidade-na-pratica-de-atividades-de-id/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 60,
-      "status": "ready",
-      "notes": "Selo emitido pela ANI, valido 12 anos. Submissao continua via plataforma SIFIDE. Atualizacao 2025: simplificacao para startups incubadas, reconhecimento condicional para empresas novas, eliminacao de revisoes externas."
-    },
-    {
       "id": "estatuto-startup-scaleup-portugal",
       "name": "Reconhecimento Estatuto de Startup e Scaleup (Lei 21/2023)",
       "source_id": "startup-portugal",
