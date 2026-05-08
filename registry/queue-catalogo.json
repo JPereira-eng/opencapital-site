@@ -92,22 +92,6 @@
   },
   "queue": [
     {
-      "id": "estatuto-startup-scaleup-portugal",
-      "name": "Reconhecimento Estatuto de Startup e Scaleup (Lei 21/2023)",
-      "source_id": "startup-portugal",
-      "shard": "pt-other",
-      "aviso_codigo": null,
-      "detected_date": "2026-05-08",
-      "deadline": null,
-      "budget": "Reconhecimento (gratuito, valido 3 anos com renovacao automatica)",
-      "regulation_url": "https://startupportugal.com/pt/estatuto-startup/",
-      "pdf_url": "https://startupportugal.com/wp-content/uploads/2024/02/Manual-de-Procedimentos-Reconhecimento-do-Estatuto-de-Startup-e-Scale-Up.pdf",
-      "regulation_local": null,
-      "priority_score": 60,
-      "status": "ready",
-      "notes": "Lei 21/2023 + Portaria 401/2023. Decisao em 5 dias uteis. Beneficios: empreendedorismo, inovacao. Requisitos startup: <10 anos, <50M volume negocios, reconhecimento Tech Sector ou ANI, ronda VC ou investimento BPF. Scaleup: criterios de Tech Visa."
-    },
-    {
       "id": "selos-maturidade-digital-incm",
       "name": "Selos de Maturidade Digital (INCM)",
       "source_id": "incm-selos-digital",
