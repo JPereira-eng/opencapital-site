@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+Disallow: /node_modules/
+Disallow: /_partials/
+Disallow: /scripts/
+Disallow: /memory/
+Disallow: /registry/
+Disallow: /regulamentos/
+Disallow: /*.json$
+Disallow: /*.py$
+Disallow: /*.md$
+
+Sitemap: https://opencapital.pt/sitemap.xml
