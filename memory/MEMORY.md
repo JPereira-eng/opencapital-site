@@ -1,0 +1,3 @@
+- [Editorial article structure](feedback_editorial_structure.md) — h2/eyebrow caps and voice rules for `conhecimento/` articles, to avoid over-titled corporate feel
+- [User collaboration style](feedback_collaboration_style.md) — wants tradeoff tables before any scope-touching work, "Avança" greenlights one unit not the whole roadmap
+- [Biblioteca necessidades taxonomy](project_biblioteca_taxonomy.md) — 12-tag closed taxonomy on biblioteca filter, locked, requires triple-edit (HTML + skill + JSON) to change
