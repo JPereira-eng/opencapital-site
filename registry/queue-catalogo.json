@@ -92,22 +92,6 @@
   },
   "queue": [
     {
-      "id": "perseo-iberdrola-catalogo",
-      "name": "PERSEO - Iberdrola International Startup Programme",
-      "source_id": "perseo-iberdrola",
-      "shard": "catalogo-vc",
-      "aviso_codigo": null,
-      "detected_date": "2026-05-08",
-      "deadline": null,
-      "budget": ">200.000.000 EUR investidos no portfolio. PoCs/pilots + GET TechSeed Fund + Andromeda SustainableTech Fund.",
-      "regulation_url": "https://www.iberdrola.com/about-us/our-innovation-model/international-startup-program-perseo",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 50,
-      "status": "ready",
-      "notes": "Programa CVC Iberdrola desde 2008. Foco: energia, IA, digitalizacao, automacao, smart energy efficiency, EV charging, solar. IPOs: Wallbox e Stem (2021). Mais recente investimento: Barbara (Network Mgmt SW, Fev 2026)."
-    },
-    {
       "id": "sogrape-ventures-beta-capital",
       "name": "Sogrape Ventures (gerido por Beta Capital)",
       "source_id": "sogrape-ventures",
