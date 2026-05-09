@@ -92,22 +92,6 @@
   },
   "queue": [
     {
-      "id": "selos-maturidade-digital-incm",
-      "name": "Selos de Maturidade Digital (INCM)",
-      "source_id": "incm-selos-digital",
-      "shard": "pt-other",
-      "aviso_codigo": null,
-      "detected_date": "2026-05-08",
-      "deadline": null,
-      "budget": "30.000.000 EUR (PRR componente 16) - certificacao de 15.000 entidades",
-      "regulation_url": "https://selosmaturidadedigital.incm.pt/",
-      "pdf_url": "https://files.incm.pt/SMD/PDF/RegulamentoMarca_SelosMaturidadeDigital.INCM.pdf",
-      "regulation_local": null,
-      "priority_score": 55,
-      "status": "ready",
-      "notes": "Plano de Acao Transicao Digital (RCM 30/2020). Certificacao bronze/prata/ouro em 4 dimensoes: Sustentabilidade, Ciberseguranca, Privacidade, Acessibilidade. Financiado PRR Investimento TD-C16-i03."
-    },
-    {
       "id": "ctt-1520-startup-program",
       "name": "CTT 1520 Startup Program",
       "source_id": "ctt-1520",
