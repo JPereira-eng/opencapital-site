@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+  <title>Opinião | Open Capital</title>
+  <meta name="description" content="Posições da Open Capital sobre temas que afetam o tecido empresarial português.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/conhecimento-hubs.css">
+  <style>
+    /* breadcrumb sobre fundo navy */
+    .feature-breadcrumb { padding:96px 80px 24px; background:var(--navy); }
+    .feature-breadcrumb a { color:rgba(255,255,255,0.32); text-decoration:none; font-size:13px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; transition:var(--transition); }
+    .feature-breadcrumb a:hover { color:rgba(255,255,255,0.72); }
+    .feature-breadcrumb .breadcrumb-sep { color:rgba(255,255,255,0.16); margin:0 10px; }
+    .feature-breadcrumb .breadcrumb-current { color:rgba(255,255,255,0.72); font-size:13px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; }
+    @media(max-width:768px){ .feature-breadcrumb { padding:96px 28px 18px; } }
+
+    /* destaque dinamico em fundo navy */
+    .opinion-feature {
+      background:var(--navy); color:var(--white);
+      padding:24px 80px 96px;
+      position:relative; overflow:hidden;
+    }
+    .opinion-feature::before { content:''; position:absolute; top:-120px; right:-120px; width:520px; height:520px; border-radius:50%; background:radial-gradient(circle, rgba(201,169,110,0.07) 0%, transparent 70%); pointer-events:none; }
+    .opinion-feature-grid {
+      display:grid; grid-template-columns: 1fr 1.2fr; gap:64px; align-items:center;
+      max-width:1280px; margin:0 auto; position:relative; z-index:1;
+    }
+    .opinion-feature-photo {
+      width:100%; aspect-ratio:3/4; max-width:420px; object-fit:cover; object-position:top center;
+      filter:grayscale(20%);
+    }
+    .opinion-feature-content .feature-eyebrow {
+      font-size:13px; font-weight:600; letter-spacing:0.30em; text-transform:uppercase; color:var(--gold); margin-bottom:18px;
+    }
+    .opinion-feature-content .feature-title {
+      font-size:54px; font-weight:700; line-height:1.05; letter-spacing:-0.015em; color:var(--white); margin-bottom:24px;
+    }
+    .opinion-feature-content .feature-tagline {
+      font-size:19px; font-weight:300; color:rgba(255,255,255,0.72); line-height:1.7; margin-bottom:36px; max-width:560px;
+    }
+    .opinion-feature-content .feature-meta {
+      font-size:13px; font-weight:400; color:rgba(255,255,255,0.48); letter-spacing:0.04em; margin-bottom:32px;
+    }
+    .opinion-feature-content .feature-meta strong { color:var(--white); font-weight:600; }
+    .opinion-feature-content .feature-meta-sep { color:rgba(255,255,255,0.24); margin:0 12px; }
+    .opinion-feature-cta {
+      display:inline-block; font-size:13px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase;
+      color:var(--white); background:transparent; border:1px solid var(--gold); padding:14px 32px;
+      text-decoration:none; transition:var(--transition);
+    }
+    .opinion-feature-cta:hover { background:var(--gold); color:var(--navy); }
+
+    @media(max-width:1024px){
+      .opinion-feature-grid { grid-template-columns: 1fr; gap:40px; }
+      .opinion-feature-content .feature-title { font-size:38px; }
+    }
+    @media(max-width:768px){
+      .opinion-feature { padding:20px 28px 64px; }
+      .opinion-feature-content .feature-title { font-size:32px; }
+    }
+
+    /* grid em fundo branco com restantes opinioes */
+    .articles-section { background:var(--white); padding:64px 80px 96px; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR:START -->
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../biblioteca.html" data-nav="biblioteca">Biblioteca</a></li>
+    <li><a href="../conhecimento.html" data-nav="conhecimento">Conhecimento</a></li>
+    <li><a href="../capital-simulator.html" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business.html" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos.html" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros.html">Parceiros</a>
+        <a href="../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../biblioteca.html">Biblioteca</a>
+  <a href="../conhecimento.html">Conhecimento</a>
+  <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos.html">Sobre Nós</a>
+  <a href="../parceiros.html">Parceiros</a>
+  <a href="../carreiras.html">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+<nav class="feature-breadcrumb">
+  <a href="../index.html">Início</a>
+  <span class="breadcrumb-sep">/</span>
+  <a href="../conhecimento.html">Conhecimento</a>
+  <span class="breadcrumb-sep">/</span>
+  <span class="breadcrumb-current">Opinião</span>
+</nav>
+
+<section class="opinion-feature" id="opinionFeature">
+  <!-- conteudo dinamico do destaque -->
+  <div class="opinion-feature-grid" id="opinionFeatureGrid">
+    <p style="color:rgba(255,255,255,0.32);padding:48px;">A carregar...</p>
+  </div>
+</section>
+
+<section class="articles-section">
+  <div class="articles-grid" id="articlesGrid">
+    <!-- restantes opinioes em cards standard -->
+  </div>
+</section>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../biblioteca.html">Portugal 2030</a></li>
+        <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+        <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+        <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../conhecimento.html">Conhecimento</a></li>
+        <li><a href="../parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="../sobre-nos.html">Equipa</a></li>
+        <li><a href="../carreiras.html">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../privacidade.html">Privacidade</a>
+      <a href="../termos.html">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburger) hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+
+  function buildOpinionCard(a) {
+    const photo = a.opinion_photo
+      ? '../' + a.opinion_photo
+      : (a.autor_foto ? '../Retratos Equipa/' + a.autor_foto : '');
+    const author = a.opinion_author_card || a.autor || '';
+    const title = a.opinion_title || a.card_title || a.title || '';
+    return ''
+      + '<article class="article-card type-opiniao reveal" data-category="opiniao" data-href="../' + a.href + '">'
+      + '<img src="' + photo + '" alt="' + author.replace(/"/g, '&quot;') + '" class="opiniao-card-photo">'
+      + '<div class="opiniao-card-overlay">'
+      + '<div class="opiniao-card-meta">'
+      + '<span class="opiniao-card-author">' + author + '</span>'
+      + '<span class="opiniao-card-badge">Opinião</span>'
+      + '</div>'
+      + '<h3 class="opiniao-card-title">' + title + '</h3>'
+      + '<span class="opiniao-card-cta">Ler artigo</span>'
+      + '</div>'
+      + '</article>';
+  }
+
+  function buildFeature(a) {
+    const photo = a.opinion_photo
+      ? '../' + a.opinion_photo
+      : (a.autor_foto ? '../Retratos Equipa/' + a.autor_foto : '');
+    const author = a.opinion_author_card || a.autor || '';
+    const title = a.opinion_title || a.card_title || a.title || '';
+    const tagline = a.tagline || a.meta_description || '';
+    const dateLabel = a.art_date || a.data_publicacao || '';
+    return ''
+      + '<img src="' + photo + '" alt="' + author.replace(/"/g, '&quot;') + '" class="opinion-feature-photo">'
+      + '<div class="opinion-feature-content">'
+      + '<div class="feature-eyebrow">A última opinião</div>'
+      + '<h1 class="feature-title">' + title + '</h1>'
+      + '<p class="feature-tagline">' + tagline + '</p>'
+      + '<div class="feature-meta"><strong>' + author + '</strong>'
+      + (dateLabel ? '<span class="feature-meta-sep">·</span>' + dateLabel : '')
+      + '</div>'
+      + '<a href="../' + a.href + '" class="opinion-feature-cta">Ler artigo</a>'
+      + '</div>';
+  }
+
+  fetch('../conhecimento-catalog.json')
+    .then(r => r.json())
+    .then(data => {
+      const articles = (data.articles || [])
+        .filter(a => a.subseccao === 'opiniao')
+        .sort((a, b) => (b.data_publicacao || '').localeCompare(a.data_publicacao || ''));
+
+      if (articles.length === 0) {
+        document.getElementById('opinionFeatureGrid').innerHTML = '<p style="color:rgba(255,255,255,0.32);padding:48px;">Sem opiniões publicadas no momento.</p>';
+        return;
+      }
+
+      // Primeiro = destaque dinamico
+      document.getElementById('opinionFeatureGrid').innerHTML = buildFeature(articles[0]);
+
+      // Restantes = grid normal
+      const grid = document.getElementById('articlesGrid');
+      grid.innerHTML = articles.slice(1).map(buildOpinionCard).join('');
+      document.querySelectorAll('.article-card').forEach(c => {
+        c.addEventListener('click', (e) => {
+          if (e.target.tagName === 'A') return;
+          const href = c.dataset.href;
+          if (href) window.location.href = href;
+        });
+        obs.observe(c);
+      });
+    })
+    .catch(err => {
+      console.error('Erro a carregar catalogo:', err);
+    });
+</script>
+</body>
+</html>
