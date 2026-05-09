@@ -1187,6 +1187,242 @@
       "status": "ready",
       "notes": "topic: HORIZON-MISS-2027-03-OCEAN-05; call: HORIZON-MISS-2027-03; framework: 43108390; SEDIA p3",
       "fail_count": 0
+    },
+    {
+      "id": "desenvolver-sistemas-redes-e-formas-de-armazenamento-energeticos-intel",
+      "name": "Desenvolver sistemas, redes e formas de armazenamento energéticos inteligentes fora da RTE-E",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0002/2025",
+      "detected_date": "2026-04-13",
+      "deadline": "2026-09-30",
+      "budget": 15000000,
+      "regulation_url": "https://portugal2030.pt/aviso-2024/desenvolver-sistemas-redes-e-formas-de-armazenamento-energeticos-inteligentes-fora-da-rte-e/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 45,
+      "status": "pending",
+      "fail_count": 0,
+      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: . Natureza: Concurso. Doc: L1:pdf. | Promovido do plano_anual em 2026-05-09 - aviso publicado.",
+      "programa": null,
+      "regional_portals": null,
+      "promoted_from_paa": "2026-05-09"
+    },
+    {
+      "id": "rede-ferroviaria-das-areas-metropolitanas-mobilidade-urbana-sustentave",
+      "name": "Rede ferroviária das Áreas Metropolitanas - Mobilidade urbana sustentável na Área Metropolitana de Lisboa",
+      "source_id": "sustentavel-2030",
+      "shard": "pt2030-other",
+      "aviso_codigo": "FA0578/2024",
+      "detected_date": "2026-04-13",
+      "deadline": "2027-04-30",
+      "budget": 147930000,
+      "regulation_url": "https://portugal2030.pt/aviso-2024/rede-ferroviaria-das-areas-metropolitanas-mobilidade-urbana-sustentavel-na-area-metropolitana-de-lisboa/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 45,
+      "status": "pending",
+      "fail_count": 0,
+      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf. | Promovido do plano_anual em 2026-05-09 - aviso publicado.",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ],
+      "promoted_from_paa": "2026-05-09"
+    },
+    {
+      "id": "medidas-de-adaptacao-as-alteracoes-climaticas",
+      "name": "Medidas de adaptação às alterações climáticas",
+      "source_id": "sustentavel-2030",
+      "shard": "pt2030-other",
+      "aviso_codigo": "FA0154/2025",
+      "detected_date": "2026-04-13",
+      "deadline": "2026-08-31",
+      "budget": 33500000,
+      "regulation_url": "https://portugal2030.pt/aviso-2024/medidas-de-adaptacao-as-alteracoes-climaticas/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 45,
+      "status": "pending",
+      "fail_count": 0,
+      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf. | Promovido do plano_anual em 2026-05-09 - aviso publicado.",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ],
+      "promoted_from_paa": "2026-05-09"
+    },
+    {
+      "id": "equipamentos-infraestruturas-portuarias-raa-3aviso",
+      "name": "Aquisição de equipamentos e intervenção em Infraestruturas portuárias da RAA - 3º aviso",
+      "source_id": "sustentavel-2030",
+      "shard": "pt2030-other",
+      "aviso_codigo": "FA0288/2025",
+      "detected_date": "2026-04-24",
+      "deadline": "2027-04-30",
+      "budget": 15365450,
+      "regulation_url": "https://portugal2030.pt/aviso-2024/aquisicao-de-equipamentos-e-intervencao-em-infraestruturas-portuarias-da-raa-3o-aviso/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 45,
+      "status": "pending",
+      "fail_count": 0,
+      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf. | Promovido do plano_anual em 2026-05-09 - aviso publicado.",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ],
+      "promoted_from_paa": "2026-05-09"
+    },
+    {
+      "id": "apoios-a-contratacao",
+      "name": "Apoios à Contratação",
+      "source_id": "pessoas-2030",
+      "shard": "pt2030-pessoas",
+      "aviso_codigo": "FA0222/2025",
+      "detected_date": "2026-04-13",
+      "deadline": "2026-12-31",
+      "budget": 68000000,
+      "regulation_url": "https://portugal2030.pt/aviso-2024/apoios-a-contratacao/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 45,
+      "status": "pending",
+      "fail_count": 0,
+      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Convite. Doc: L1:pdf. | Promovido do plano_anual em 2026-05-09 - aviso publicado.",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ],
+      "promoted_from_paa": "2026-05-09"
+    },
+    {
+      "id": "cursos-cet-2-aviso-acores",
+      "name": "Cursos de Especialização Tecnológica (CET) - 2º Aviso",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0203/2025",
+      "detected_date": "2026-04-13",
+      "deadline": "2026-07-31",
+      "budget": 2000000,
+      "regulation_url": "https://portugal2030.pt/aviso-2024/cursos-de-especializacao-tecnologica-cet-2o-aviso/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 45,
+      "status": "pending",
+      "fail_count": 0,
+      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf. | Promovido do plano_anual em 2026-05-09 - aviso publicado.",
+      "programa": [
+        "ACORES2030"
+      ],
+      "regional_portals": [
+        "acores-2030"
+      ],
+      "promoted_from_paa": "2026-05-09"
+    },
+    {
+      "id": "cursos-profissionais-ano-letivo-2026-2027-escolas-privadas-e-outras",
+      "name": "Cursos profissionais - ano letivo 2026/2027 - Escolas Privadas e outras",
+      "source_id": "pessoas-2030",
+      "shard": "pt2030-pessoas",
+      "aviso_codigo": "FA0140/2025",
+      "detected_date": "2026-04-17",
+      "deadline": "2026-08-31",
+      "budget": 230000000,
+      "regulation_url": "https://portugal2030.pt/aviso-2024/cursos-profissionais-ano-letivo-2026-2027-escolas-privadas-e-outras/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 45,
+      "status": "pending",
+      "fail_count": 0,
+      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Concurso. Doc: L1:pdf. | Promovido do plano_anual em 2026-05-09 - aviso publicado.",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ],
+      "promoted_from_paa": "2026-05-09"
+    },
+    {
+      "id": "cursos-profissionais-ano-letivo-2026-2027-escolas-publicas",
+      "name": "Cursos profissionais - ano letivo 2026/2027 - Escolas Públicas",
+      "source_id": "pessoas-2030",
+      "shard": "pt2030-pessoas",
+      "aviso_codigo": "FA0139/2025",
+      "detected_date": "2026-04-17",
+      "deadline": "2026-08-31",
+      "budget": 45000000,
+      "regulation_url": "https://portugal2030.pt/aviso-2024/cursos-profissionais-ano-letivo-2026-2027-escolas-publicas/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 45,
+      "status": "pending",
+      "fail_count": 0,
+      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Concurso. Doc: L1:pdf. | Promovido do plano_anual em 2026-05-09 - aviso publicado.",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ],
+      "promoted_from_paa": "2026-05-09"
+    },
+    {
+      "id": "centros-especializados-em-qualificacao-de-adultos-e-processos-de-rvcc-",
+      "name": "Centros especializados em qualificação de adultos e processos de RVCC (Centros Qualifica)",
+      "source_id": "pessoas-2030",
+      "shard": "pt2030-pessoas",
+      "aviso_codigo": "FA0224/2025",
+      "detected_date": "2026-04-13",
+      "deadline": "2026-12-31",
+      "budget": 60000000,
+      "regulation_url": "https://portugal2030.pt/aviso-2024/centros-especializados-em-qualificacao-de-adultos-e-processos-de-rvcc-centros-qualifica/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 45,
+      "status": "pending",
+      "fail_count": 0,
+      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Concurso. Doc: L1:pdf. | Promovido do plano_anual em 2026-05-09 - aviso publicado.",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ],
+      "promoted_from_paa": "2026-05-09"
+    },
+    {
+      "id": "vida-ativa-emprego-qualificado",
+      "name": "Vida Ativa Emprego Qualificado",
+      "source_id": "pessoas-2030",
+      "shard": "pt2030-pessoas",
+      "aviso_codigo": "FA0083/2025",
+      "detected_date": "2026-04-17",
+      "deadline": "2026-12-31",
+      "budget": 71250000,
+      "regulation_url": "https://portugal2030.pt/aviso-2024/vida-ativa-emprego-qualificado/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 45,
+      "status": "pending",
+      "fail_count": 0,
+      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Convite. Doc: L1:pdf. | Promovido do plano_anual em 2026-05-09 - aviso publicado.",
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "regional_portals": [
+        "pessoas-2030"
+      ],
+      "promoted_from_paa": "2026-05-09"
     }
   ],
   "items": [],

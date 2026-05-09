@@ -5,18 +5,19 @@
     "migrated_from_v3": "2026-04-12",
     "last_writer_run": "2026-05-09",
     "last_scanner_run": "2026-05-09",
-    "last_index_rebuild": "2026-05-09"
+    "last_index_rebuild": "2026-05-09",
+    "last_monitor_run": "2026-05-09"
   },
   "totals": {
-    "published": 1037,
-    "open": 361,
-    "closed": 147,
-    "planned": 23,
-    "in_queue": 65,
+    "published": 552,
+    "open": 371,
+    "closed": 149,
+    "planned": 36,
+    "in_queue": 14,
     "in_watchlist": 119,
     "in_catalogo": 14,
     "in_overflow": 395,
-    "in_plano_anual": 131
+    "in_plano_anual": 121
   },
   "shards": {
     "catalogo-aceleradores": {
@@ -117,11 +118,11 @@
       "published": 6
     },
     "pt2030-other": {
-      "count": 25,
-      "open": 20,
-      "closed": 3,
-      "planned": 2,
-      "published": 24
+      "count": 50,
+      "open": 30,
+      "closed": 5,
+      "planned": 15,
+      "published": 49
     },
     "pt2030-pessoas": {
       "count": 3,
@@ -131,21 +132,21 @@
     }
   },
   "last_full_cycle": "2026-04-12",
-  "last_monitor_run": "2026-05-08",
+  "last_monitor_run": "2026-05-09",
   "source_last_checked": {
     "portugal-2030": "2026-05-09",
     "compete-2030": "2026-05-08",
     "norte-2030": "2026-05-07",
     "centro-2030": "2026-05-07",
     "lisboa-2030": "2026-05-06",
-    "alentejo-2030": "2026-05-06",
-    "algarve-2030": "2026-05-06",
-    "madeira-2030": "2026-05-06",
-    "acores-2030": "2026-05-06",
-    "pessoas-2030": "2026-05-08",
-    "sustentavel-2030": "2026-05-08",
+    "alentejo-2030": "2026-05-09",
+    "algarve-2030": "2026-05-09",
+    "madeira-2030": "2026-05-09",
+    "acores-2030": "2026-05-09",
+    "pessoas-2030": "2026-05-09",
+    "sustentavel-2030": "2026-05-09",
     "mar-2030": "2026-05-09",
-    "pat-2030": "2026-05-08",
+    "pat-2030": "2026-05-09",
     "eu-funding-tenders": "2026-05-09",
     "ani": "2026-05-08",
     "iapmei": "2026-05-08",
