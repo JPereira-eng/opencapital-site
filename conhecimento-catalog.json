@@ -57,7 +57,8 @@
       "imagem_src": "assets/articles/cargahoraria_trend.png",
       "excerpt": "39,7 horas por semana, 2.068 euros de salário médio. Portugal é o 5.º país da UE que mais trabalha e um dos que pior paga. Leitura para empresas.",
       "art_date": "Maio 2026",
-      "cat_legacy": "mercados"
+      "cat_legacy": "mercados",
+      "featured": true
     },
     {
       "slug": "pme-portuguesas-credito-mais-capital-menos",
@@ -72,7 +73,8 @@
       "cat_legacy": "opiniao",
       "opinion_photo": "Retratos Equipa/retrato_marianacosta.png",
       "opinion_author_card": "Mariana Costa",
-      "opinion_title": "As PME portuguesas têm crédito a mais e capital a menos"
+      "opinion_title": "As PME portuguesas têm crédito a mais e capital a menos",
+      "featured": true
     },
     {
       "slug": "europa-eua-fim-otan",
@@ -90,7 +92,8 @@
       "imagem_src": "assets/articles/fimdanato_youtube.webp",
       "excerpt": "A guerra no Médio Oriente expôs a fratura entre Europa e EUA. A Europa não está pronta para se defender sozinha.",
       "art_date": "Maio 2026",
-      "cat_legacy": "estrategia"
+      "cat_legacy": "estrategia",
+      "featured": true
     },
     {
       "slug": "china-taiwan-fratura-cadeias-valor",
@@ -108,7 +111,8 @@
       "imagem_src": "assets/articles/china-taiwan-fratura-cadeias-valor.webp",
       "excerpt": "A tensão no estreito de Taiwan aproxima-se de um ponto de viragem. O que está em jogo para empresas europeias dependentes de semicondutores e logística asiática.",
       "art_date": "Maio 2026",
-      "cat_legacy": "mercados"
+      "cat_legacy": "mercados",
+      "featured": true
     },
     {
       "slug": "zona-euro-contracao-abril-impacto-medio-oriente",
@@ -126,7 +130,8 @@
       "imagem_src": "assets/articles/zonaeuro_trend.png",
       "excerpt": "Quinze meses de expansão interrompidos. A indústria aguentou, os serviços recuaram, e a guerra no Médio Oriente está no centro da equação.",
       "art_date": "Abril 2026",
-      "cat_legacy": "mercados"
+      "cat_legacy": "mercados",
+      "featured": true
     },
     {
       "slug": "venda-novobanco-bpce-banca-portuguesa",
@@ -144,7 +149,8 @@
       "imagem_src": "assets/articles/novobanco_trend.png",
       "excerpt": "A BPCE compra Novo Banco por mais de 6,4 mil milhões. Lone Star encaixa 4,8 mil milhões; Estado, 1,6 mil milhões. O que muda na banca portuguesa.",
       "art_date": "Abril 2026",
-      "cat_legacy": "mercados"
+      "cat_legacy": "mercados",
+      "featured": true
     },
     {
       "slug": "salarios-portugal-2025-acima-inflacao",
@@ -162,7 +168,8 @@
       "imagem_src": "assets/articles/salarios-portugal-2025.png",
       "excerpt": "OCDE confirma 4,9% de aumento nominal e 2,6% real em Portugal. Para o trabalhador, é boa notícia. Para a empresa, é uma transferência de margem que exige resposta.",
       "art_date": "Abril 2026",
-      "cat_legacy": "mercados"
+      "cat_legacy": "mercados",
+      "featured": true
     },
     {
       "slug": "regras-comunicacao-fundos-europeus-placas-cartazes-websites",
@@ -181,7 +188,8 @@
       "imagem_src": "assets/articles/regrascomun_informativa.png",
       "excerpt": "Quem recebe fundos europeus tem obrigações de publicidade que muitos descobrem tarde. Guia para evitar correcções financeiras.",
       "art_date": "Abril 2026",
-      "cat_legacy": "financiamento"
+      "cat_legacy": "financiamento",
+      "featured": false
     },
     {
       "slug": "regime-de-minimis",
@@ -200,7 +208,8 @@
       "imagem_src": "assets/articles/bandeira_trend.png",
       "excerpt": "300 mil euros em três anos. É este o teto que decide quanto apoio público uma empresa pode somar em vouchers, isenções e pequenos incentivos.",
       "art_date": "Abril 2026",
-      "cat_legacy": "financiamento"
+      "cat_legacy": "financiamento",
+      "featured": false
     },
     {
       "slug": "produtividade-portuguesa-problema-da-gestao",
@@ -215,7 +224,8 @@
       "cat_legacy": "opiniao",
       "opinion_photo": "Retratos Equipa/retrato_marianacosta.png",
       "opinion_author_card": "Mariana Costa",
-      "opinion_title": "O elo mais fraco da produtividade portuguesa não é o trabalhador"
+      "opinion_title": "O elo mais fraco da produtividade portuguesa não é o trabalhador",
+      "featured": true
     },
     {
       "slug": "portugal-gnl-russo-renovaveis-pressao-bruxelas",
@@ -233,7 +243,8 @@
       "imagem_src": "assets/articles/energia_trend.png",
       "excerpt": "A Comissão Europeia reconhece o esforço português desde 2022, mas pressiona para o corte total. As renováveis já cobrem 36,6% do consumo energético.",
       "art_date": "Abril 2026",
-      "cat_legacy": "mercados"
+      "cat_legacy": "mercados",
+      "featured": true
     },
     {
       "slug": "fundos-europeus-auditorias-irregularidades",
@@ -252,7 +263,8 @@
       "imagem_src": "assets/articles/auditoria2_informativo.png",
       "excerpt": "Quem audita, quando, com que poder, e o que acontece quando se encontram erros. Guia prático para empresas com projectos financiados.",
       "art_date": "Abril 2026",
-      "cat_legacy": "financiamento"
+      "cat_legacy": "financiamento",
+      "featured": false
     },
     {
       "slug": "expandir-capacidade-procura-sustenta-investimento",
@@ -271,7 +283,8 @@
       "imagem_src": "assets/articles/aumentarcapacidade_informativo.jpg",
       "excerpt": "Aumentar capacidade é decisão de mercado e financeira. Como validar a procura antes de investir, e evitar o peso do excesso.",
       "art_date": "Abril 2026",
-      "cat_legacy": "estrategia"
+      "cat_legacy": "estrategia",
+      "featured": true
     },
     {
       "slug": "defesa-aco-nova-politica-industrial-europeia",
@@ -289,7 +302,8 @@
       "imagem_src": "assets/articles/açoUE_trend.png",
       "excerpt": "A UE travou quase metade das importações de aço e aplicou tarifas de 50 por cento ao excesso. O que muda para as empresas.",
       "art_date": "Abril 2026",
-      "cat_legacy": "mercados"
+      "cat_legacy": "mercados",
+      "featured": true
     },
     {
       "slug": "contratos-publicos-tribunal-contas-ninguem-despedido",
@@ -304,7 +318,8 @@
       "cat_legacy": "opiniao",
       "opinion_photo": "Retratos Equipa/retrato_jorgepereira.png",
       "opinion_author_card": "Jorge Pereira",
-      "opinion_title": "Sessenta por cento dos contratos públicos são ilegais. E daí?"
+      "opinion_title": "Sessenta por cento dos contratos públicos são ilegais. E daí?",
+      "featured": true
     },
     {
       "slug": "construcao-escassez-mao-de-obra",
@@ -322,7 +337,8 @@
       "imagem_src": "assets/articles/construcao-escassez-mao-de-obra.jpg",
       "excerpt": "Robotização, modularização e novos modelos de negócio estão a redesenhar a construção europeia. O que significa para quem opera no setor em Portugal.",
       "art_date": "Abril 2026",
-      "cat_legacy": "mercados"
+      "cat_legacy": "mercados",
+      "featured": false
     },
     {
       "slug": "como-funcionam-beneficios-fiscais-investimento",
@@ -341,7 +357,8 @@
       "imagem_src": "assets/articles/como-funcionam-beneficios-fiscais-investimento.png",
       "excerpt": "Guia prático sobre RFAI, DLRR, SIFIDE II e benefícios contratuais.",
       "art_date": "Abril 2026",
-      "cat_legacy": "fiscalidade"
+      "cat_legacy": "fiscalidade",
+      "featured": false
     },
     {
       "slug": "carga-fiscal-pais-rico-estado-pais-pobre",
@@ -356,7 +373,8 @@
       "cat_legacy": "opiniao",
       "opinion_photo": "Retratos Equipa/retrato_jorgepereira.png",
       "opinion_author_card": "Jorge Pereira",
-      "opinion_title": "Carga fiscal de país rico. Estado de país pobre."
+      "opinion_title": "Carga fiscal de país rico. Estado de país pobre.",
+      "featured": false
     },
     {
       "slug": "bolha-ia-o-que-os-mercados-dizem",
@@ -374,7 +392,8 @@
       "imagem_src": "assets/articles/bolha-ia-o-que-os-mercados-dizem.png",
       "excerpt": "Burry curto, Buffett com caixa recorde, OpenAI a meio bilião sem dar lucro. Leitura dos sinais que importam no ciclo da IA.",
       "art_date": "Abril 2026",
-      "cat_legacy": "mercados"
+      "cat_legacy": "mercados",
+      "featured": false
     },
     {
       "slug": "backlash-data-centers-custo-infraestrutura-digital",
@@ -392,7 +411,8 @@
       "imagem_src": "assets/articles/DataCenter_trend.png",
       "excerpt": "Investidores e comunidades pressionam Amazon, Microsoft e Google por consumo de água, energia e uso do solo. O que muda para quem depende de nuvem e IA.",
       "art_date": "Abril 2026",
-      "cat_legacy": "mercados"
+      "cat_legacy": "mercados",
+      "featured": false
     },
     {
       "slug": "automacao-vs-digitalizacao",
@@ -411,7 +431,8 @@
       "imagem_src": "assets/articles/automacao-vs-digitalizacao.jpg",
       "excerpt": "Digitalizar não é automatizar. Perceba o que distingue os dois conceitos e como cada um transforma operações.",
       "art_date": "Abril 2026",
-      "cat_legacy": "estrategia"
+      "cat_legacy": "estrategia",
+      "featured": false
     },
     {
       "slug": "como-funciona-horizonte-europa",
@@ -430,7 +451,8 @@
       "imagem_src": "assets/articles/como-funciona-horizonte-europa.png",
       "excerpt": "95,5 mil milhões de euros para I&D e inovação. O que é o Horizonte Europa, como funciona e que oportunidades cria para empresas portuguesas.",
       "art_date": "Março 2026",
-      "cat_legacy": "financiamento"
+      "cat_legacy": "financiamento",
+      "featured": false
     },
     {
       "slug": "fragmentacao-global-fim-globalizacao-eficiente",
@@ -448,7 +470,8 @@
       "imagem_src": "assets/articles/fragmentacao-global-fim-globalizacao-eficiente.avif",
       "excerpt": "Nearshoring, tarifas e blocos rivais. A globalização eficiente acabou. O que significa para quem gere empresas em Portugal?",
       "art_date": "Fevereiro 2026",
-      "cat_legacy": "estrategia"
+      "cat_legacy": "estrategia",
+      "featured": false
     },
     {
       "slug": "recuo-esg-ue-competitividade",
@@ -466,7 +489,8 @@
       "imagem_src": "assets/articles/esgeu_trend.jpg",
       "excerpt": "A UE enfraqueceu partes centrais das leis de sustentabilidade corporativa. O que muda para as empresas portuguesas.",
       "art_date": "Dezembro 2025",
-      "cat_legacy": "mercados"
+      "cat_legacy": "mercados",
+      "featured": false
     },
     {
       "slug": "ai-act-o-que-muda-para-empresas",
@@ -485,7 +509,8 @@
       "imagem_src": "assets/articles/Aiact_informativo.jpg",
       "excerpt": "Guia prático sobre o primeiro regulamento mundial de IA: obrigações, prazos e impacto concreto para empresas que usam ou desenvolvem inteligência artificial.",
       "art_date": "Setembro 2025",
-      "cat_legacy": "inovacao"
+      "cat_legacy": "inovacao",
+      "featured": false
     },
     {
       "slug": "preparar-ronda-investimento-startup",
@@ -504,7 +529,8 @@
       "imagem_src": "assets/articles/venturecapitalstartup_informativo.jpg",
       "excerpt": "Quando faz sentido levantar capital, quanto pedir, que investidores abordar e o que esperar de um term sheet.",
       "art_date": "Agosto 2025",
-      "cat_legacy": "financiamento"
+      "cat_legacy": "financiamento",
+      "featured": false
     },
     {
       "slug": "tarifas-trump-impacto-empresas-portuguesas",
@@ -522,7 +548,8 @@
       "imagem_src": "assets/articles/tarifastrump_trend.jpg",
       "excerpt": "Análise ao pacote tarifário de abril de 2025 e às implicações concretas para exportadores e cadeias de valor europeias.",
       "art_date": "Maio 2025",
-      "cat_legacy": "mercados"
+      "cat_legacy": "mercados",
+      "featured": false
     },
     {
       "slug": "tipos-de-inovacao",
@@ -541,7 +568,8 @@
       "imagem_src": "assets/articles/tipos de inovação_informativos.jpg",
       "excerpt": "Produto, processo, modelo de negócio, organizacional, incremental, disruptiva. Um guia sobre os tipos de inovação e o que cada um significa.",
       "art_date": "Abril 2025",
-      "cat_legacy": "inovacao"
+      "cat_legacy": "inovacao",
+      "featured": false
     },
     {
       "slug": "rearmamento-europeu-prioridade-ue",
@@ -559,7 +587,8 @@
       "imagem_src": "assets/articles/Rearmamentoeuropeu_trend.avif",
       "excerpt": "A UE mobiliza 800 mil milhões de euros para defesa. O que isto significa para a indústria e o capital privado europeu.",
       "art_date": "Abril 2025",
-      "cat_legacy": "mercados"
+      "cat_legacy": "mercados",
+      "featured": false
     },
     {
       "slug": "o-que-e-um-projeto-id",
@@ -578,7 +607,8 @@
       "imagem_src": "assets/articles/R&amp;D_informativo.jpg",
       "excerpt": "O que distingue investigação e desenvolvimento de uma melhoria normal. Critérios, exemplos e implicações para quem candidata a SIFIDE ou PT2030.",
       "art_date": "Março 2025",
-      "cat_legacy": "inovacao"
+      "cat_legacy": "inovacao",
+      "featured": false
     },
     {
       "slug": "mercado-externo-oportunidade-real-ou-hipotese",
@@ -597,7 +627,8 @@
       "imagem_src": "assets/articles/mercado-externo-oportunidade-real-ou-hipotese.jpg",
       "excerpt": "Um filtro prático para distinguir procura verdadeira de narrativa atraente, antes de comprometer capital na entrada num novo mercado.",
       "art_date": "Janeiro 2025",
-      "cat_legacy": "mercados"
+      "cat_legacy": "mercados",
+      "featured": false
     },
     {
       "slug": "medir-antes-automatizar-operacao",
@@ -616,7 +647,8 @@
       "imagem_src": "assets/articles/antesdeautomatizar_informativo.jpg",
       "excerpt": "Automatizar sem medir é institucionalizar o caos. Os indicadores que têm de estar no papel antes de qualquer investimento.",
       "art_date": "Janeiro 2025",
-      "cat_legacy": "estrategia"
+      "cat_legacy": "estrategia",
+      "featured": false
     },
     {
       "slug": "contratar-para-crescer-ou-tapar-falhas",
@@ -635,7 +667,8 @@
       "imagem_src": "assets/articles/errosacontratarRH_informativo.jpg",
       "excerpt": "Nem toda a contratação é sinal de crescimento. Um guia prático para distinguir capacidade nova de encobrimento de problemas.",
       "art_date": "Dezembro 2024",
-      "cat_legacy": "estrategia"
+      "cat_legacy": "estrategia",
+      "featured": false
     },
     {
       "slug": "erros-comuns-candidatura-incentivos",
@@ -654,7 +687,8 @@
       "imagem_src": "assets/articles/erroscomunsincentivos_instrumento.png",
       "excerpt": "Os erros mais frequentes em candidaturas não estão no preenchimento. Estão na preparação, no orçamento e na narrativa técnica.",
       "art_date": "Setembro 2024",
-      "cat_legacy": "financiamento"
+      "cat_legacy": "financiamento",
+      "featured": false
     },
     {
       "slug": "como-interpretar-taxas-apoio",
@@ -673,7 +707,8 @@
       "imagem_src": "assets/articles/interpretartaxas_informativo.png",
       "excerpt": "Uma taxa de 50% não significa metade do investimento. Como ler avisos e regulamentos sem transformar um número em promessa.",
       "art_date": "Agosto 2024",
-      "cat_legacy": "financiamento"
+      "cat_legacy": "financiamento",
+      "featured": false
     },
     {
       "slug": "metodos-pagamento-portugal-2030",
@@ -692,7 +727,8 @@
       "imagem_src": "assets/articles/interpretartaxasdeapoio_informativo.png",
       "excerpt": "Adiantamentos, reembolsos e saldo final. Como funcionam os pedidos de pagamento no PT2030 e o que cada modalidade exige da empresa.",
       "art_date": "Junho 2024",
-      "cat_legacy": "financiamento"
+      "cat_legacy": "financiamento",
+      "featured": false
     },
     {
       "slug": "capacidade-instalada-o-que-e",
@@ -711,7 +747,8 @@
       "imagem_src": "assets/articles/capacidade_instalada_informativo.png",
       "excerpt": "Um conceito que parece técnico mas que determina margens, decisões de investimento e a capacidade real de responder ao mercado.",
       "art_date": "Maio 2024",
-      "cat_legacy": "estrategia"
+      "cat_legacy": "estrategia",
+      "featured": false
     },
     {
       "slug": "esg-o-que-importa-para-pme",
@@ -730,7 +767,8 @@
       "imagem_src": "assets/articles/esg-informativo.jpg",
       "excerpt": "A sigla tornou-se omnipresente e pouco clara. Um guia prático para perceber o que uma PME deve fazer, e o que pode ignorar por agora.",
       "art_date": "Abril 2024",
-      "cat_legacy": "estrategia"
+      "cat_legacy": "estrategia",
+      "featured": false
     },
     {
       "slug": "identificar-gargalos-operacao-servicos",
@@ -749,7 +787,8 @@
       "imagem_src": "assets/articles/bottleneck-informativo.png",
       "excerpt": "Em serviços os gargalos escondem-se. Um método em cinco passos para encontrar onde a operação realmente trava.",
       "art_date": "Janeiro 2024",
-      "cat_legacy": "estrategia"
+      "cat_legacy": "estrategia",
+      "featured": false
     },
     {
       "slug": "identificar-gargalos-operacao-industrial",
@@ -768,7 +807,8 @@
       "imagem_src": "assets/articles/bottleneck-informativo-industrial.png",
       "excerpt": "Na fábrica, o gargalo raramente é a máquina mais cara. Um método em seis passos para o encontrar e decidir onde investir.",
       "art_date": "Janeiro 2024",
-      "cat_legacy": "estrategia"
+      "cat_legacy": "estrategia",
+      "featured": false
     },
     {
       "slug": "rgpd-o-que-as-empresas-precisam-saber",
@@ -787,7 +827,8 @@
       "imagem_src": "assets/articles/rgpd_informativo.png",
       "excerpt": "O RGPD não é apenas uma obrigação legal. Define como as empresas gerem dados pessoais, com coimas que chegam a 4% do volume de negócios global.",
       "art_date": "Dezembro 2023",
-      "cat_legacy": "estrategia"
+      "cat_legacy": "estrategia",
+      "featured": false
     },
     {
       "slug": "kpis-pme-quais-fazem-sentido",
@@ -806,7 +847,8 @@
       "imagem_src": "assets/articles/kpis-pme-quais-fazem-sentido.jpg",
       "excerpt": "Um guia prático para PMEs que querem medir o que realmente importa e tomar decisões mais rápidas e informadas.",
       "art_date": "Outubro 2023",
-      "cat_legacy": "estrategia"
+      "cat_legacy": "estrategia",
+      "featured": false
     },
     {
       "slug": "contratos-publicos-guia-para-empresas",
@@ -825,7 +867,8 @@
       "imagem_src": "assets/articles/contratos-publicos-guia-para-empresas.webp",
       "excerpt": "O Estado compra mais de 15 mil milhões de euros por ano. A maioria das PME nunca concorreu. Um guia prático sobre como funciona a contratação pública.",
       "art_date": "Outubro 2023",
-      "cat_legacy": "estrategia"
+      "cat_legacy": "estrategia",
+      "featured": false
     }
   ]
 }

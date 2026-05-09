@@ -1329,30 +1329,69 @@
   );
 
   /* ─── CARROSSEL EDITORIAL · MARQUEE CONTINUO ─── */
-  /* Fetch dinamico de conhecimento.html — cards marcados data-featured="true" */
-  /* Duplica os cards para criar loop infinito perfeito via CSS animation */
-  fetch('conhecimento.html')
-    .then(r => r.ok ? r.text() : Promise.reject(r.status))
-    .then(html => {
+  /* Fetch dinamico de conhecimento-catalog.json (fonte unica desde 2026-05-09) */
+  /* Filtros: featured=true, subseccao != regulamentos (decisao editorial: regulamentos */
+  /*          e seccao de referencia, fora dos destaques editoriais da homepage) */
+  /* Ordenacao: data_publicacao desc. Duplicado para loop infinito via CSS animation. */
+  const PLACEHOLDER_SVG = '<svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" stroke="rgba(201,169,110,0.18)" stroke-width="1"/><polyline points="8,38 18,22 28,30 40,12" stroke="rgba(201,169,110,0.55)" stroke-width="1.2" fill="none"/><circle cx="18" cy="22" r="2" fill="rgba(201,169,110,0.4)"/><circle cx="40" cy="12" r="2" fill="rgba(201,169,110,0.4)"/></svg>';
+
+  function buildCarouselCard(a) {
+    const link = document.createElement('a');
+    link.href = a.href;
+    link.className = 'article-card';
+    if (a.subseccao === 'opiniao') {
+      link.classList.add('type-opiniao');
+      const photo = a.opinion_photo || (a.autor_foto ? 'Retratos Equipa/' + a.autor_foto : '');
+      const author = a.opinion_author_card || a.autor || '';
+      const title = a.opinion_title || a.card_title || a.title || '';
+      link.innerHTML = ''
+        + '<img src="' + photo + '" alt="' + author.replace(/"/g, '&quot;') + '" class="opiniao-card-photo">'
+        + '<div class="opiniao-card-overlay">'
+        + '<div class="opiniao-card-meta">'
+        + '<span class="opiniao-card-author">' + author + '</span>'
+        + '<span class="opiniao-card-badge">Opinião</span>'
+        + '</div>'
+        + '<h3 class="opiniao-card-title">' + title + '</h3>'
+        + '<span class="opiniao-card-cta">Ler artigo</span>'
+        + '</div>';
+    } else {
+      const imgHTML = a.imagem_src ? '<img src="' + a.imagem_src + '" alt="' + (a.title || '').replace(/"/g, '&quot;') + '">' : PLACEHOLDER_SVG;
+      const catClass = a.cat_class || 'cat-mercados';
+      const catLabel = a.cat_label || 'Atualidade';
+      const tempo = a.tempo_leitura || '';
+      const tempoHTML = tempo ? '<span class="art-read-time">Leitura: ' + tempo + '</span>' : '';
+      const dateLabel = a.art_date || a.data_publicacao || '';
+      const title = a.card_title || a.title || '';
+      const excerpt = a.excerpt || a.tagline || '';
+      link.innerHTML = ''
+        + '<div class="article-card-img">' + imgHTML + '</div>'
+        + '<div class="article-card-body">'
+        + '<div class="article-card-header">'
+        + '<span class="art-cat-badge ' + catClass + '">' + catLabel + '</span>'
+        + tempoHTML
+        + '</div>'
+        + '<h3 class="article-card-title">' + title + '</h3>'
+        + '<p class="article-card-excerpt">' + excerpt + '</p>'
+        + '<div class="article-card-footer">'
+        + '<span class="art-date">' + dateLabel + '</span>'
+        + '<span class="art-link">Ler</span>'
+        + '</div>'
+        + '</div>';
+    }
+    return link;
+  }
+
+  fetch('conhecimento-catalog.json')
+    .then(r => r.ok ? r.json() : Promise.reject(r.status))
+    .then(data => {
       const track = document.getElementById('carouselTrack');
       if (!track) return;
-      const doc = new DOMParser().parseFromString(html, 'text/html');
-      const featured = doc.querySelectorAll('.article-card[data-featured="true"]');
+      const featured = (data.articles || [])
+        .filter(a => a.featured === true && a.subseccao !== 'regulamentos')
+        .sort((a, b) => (b.data_publicacao || '').localeCompare(a.data_publicacao || ''));
       if (featured.length === 0) return;
       track.innerHTML = '';
-      featured.forEach(card => {
-        // Converter <article> ou <div> para <a> clicavel usando data-href
-        const href = card.dataset.href || '#';
-        const a = document.createElement('a');
-        a.href = href;
-        // Copiar classes, preservando article-card e variantes (type-opiniao)
-        a.className = card.className
-          .replace(/\breveal(-d\d)?\b/g, '')
-          .replace(/\bhidden\b/g, '')
-          .trim();
-        a.innerHTML = card.innerHTML;
-        track.appendChild(a);
-      });
+      featured.forEach(art => track.appendChild(buildCarouselCard(art)));
       // Duplicar para loop infinito
       const originals = Array.from(track.children);
       originals.forEach(card => track.appendChild(card.cloneNode(true)));
