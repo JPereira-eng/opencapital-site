@@ -92,22 +92,6 @@
   },
   "queue": [
     {
-      "id": "aws-startup-loft-emea",
-      "name": "AWS Startup Loft Accelerator EMEA",
-      "source_id": "aws-startup-loft",
-      "shard": "catalogo-aceleradores",
-      "aviso_codigo": null,
-      "detected_date": "2026-05-08",
-      "deadline": null,
-      "budget": "AWS Activate: ate 25.000 USD em creditos AWS + 5K Business Support + 80 self-paced labs",
-      "regulation_url": "https://aws-startup-lofts.com/emea/program/accelerator",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 50,
-      "status": "ready",
-      "notes": "Programa AWS de 10 semanas, equity-free, sem deadline (rolling). 4 pilares: Technology, Product, Go-to-market, Funding. Para startups EMEA early-stage com prototipo/PoC."
-    },
-    {
       "id": "ccc-centro-ciberseguranca",
       "name": "Apoio em Ciberseguranca - CCC-Centro",
       "source_id": "ccc-centro",
