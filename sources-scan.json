@@ -20,7 +20,9 @@
       "superset_note": "API central cobre ~220 avisos de ~1500+ totais. Portais regionais tem avisos adicionais. Nunca filtrar por beneficiario.",
       "shard": "pt2030-compete",
       "dedup_key": "codigo (FA####/YYYY format, unique across all programs)",
-      "regime": "aviso"
+      "regime": "aviso",
+      "cap": -1,
+      "cooldown_days": 7
     },
     {
       "id": "balcao-2030",
@@ -29,7 +31,9 @@
       "access_method": "websearch",
       "access_status": "blocked-auth",
       "url_avisos": "https://balcao.portugal2030.pt/Balcao2030.idp/RequestHandler",
-      "regime": "aviso"
+      "regime": "aviso",
+      "cap": -1,
+      "cooldown_days": 7
     },
     {
       "id": "compete-2030",
@@ -39,7 +43,9 @@
       "access_status": "ok",
       "url_avisos": "https://www.compete2030.gov.pt/avisos",
       "shard": "pt2030-compete",
-      "regime": "aviso"
+      "regime": "aviso",
+      "cap": -1,
+      "cooldown_days": 3
     },
     {
       "id": "pessoas-2030",
@@ -52,7 +58,9 @@
       "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia ou erro 400)",
       "shard": "pt2030-pessoas",
       "note": "30 avisos (3 paginas). Mesma estrutura ACF que PT2030 central.",
-      "regime": "aviso"
+      "regime": "aviso",
+      "cap": -1,
+      "cooldown_days": 3
     },
     {
       "id": "mar-2030",
@@ -62,7 +70,9 @@
       "access_status": "partial",
       "url_avisos": "https://mar2030.gov.pt/",
       "shard": "pt2030-other",
-      "regime": "aviso"
+      "regime": "aviso",
+      "cap": -1,
+      "cooldown_days": 7
     },
     {
       "id": "sustentavel-2030",
@@ -76,7 +86,9 @@
       "api_note": "ATENCAO: endpoint e /aviso, nao /aviso-2024. Codigos PACS-YYYY-NN.",
       "shard": "pt2030-other",
       "note": "8 avisos (1 pagina). Endpoint diferente dos outros portais.",
-      "regime": "aviso"
+      "regime": "aviso",
+      "cap": -1,
+      "cooldown_days": 3
     },
     {
       "id": "pat-2030",
@@ -89,7 +101,9 @@
       "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia ou erro 400)",
       "shard": "pt2030-other",
       "note": "Mesma estrutura ACF que PT2030 central.",
-      "regime": "aviso"
+      "regime": "aviso",
+      "cap": -1,
+      "cooldown_days": 7
     },
     {
       "id": "norte-2030",
@@ -100,7 +114,9 @@
       "url_avisos": "https://www.norte2030.pt/concursos/",
       "shard": "pt2030-norte",
       "note": "API REST da 401. Usar WebFetch na pagina de concursos. 29 abertos / 171 total (verificado 2026-04-12)",
-      "regime": "aviso"
+      "regime": "aviso",
+      "cap": -1,
+      "cooldown_days": 3
     },
     {
       "id": "centro-2030",
@@ -113,7 +129,9 @@
       "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia ou erro 400)",
       "shard": "pt2030-centro",
       "note": "12 avisos (2 paginas). Mesma estrutura ACF que PT2030 central.",
-      "regime": "aviso"
+      "regime": "aviso",
+      "cap": -1,
+      "cooldown_days": 7
     },
     {
       "id": "lisboa-2030",
@@ -126,7 +144,9 @@
       "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia ou erro 400)",
       "shard": "pt2030-lisboa",
       "note": "5 avisos (1 pagina). Mesma estrutura ACF que PT2030 central.",
-      "regime": "aviso"
+      "regime": "aviso",
+      "cap": -1,
+      "cooldown_days": 7
     },
     {
       "id": "alentejo-2030",
@@ -139,7 +159,9 @@
       "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia ou erro 400)",
       "shard": "pt2030-other",
       "note": "40+ avisos (4+ paginas). Mesma estrutura ACF que PT2030 central.",
-      "regime": "aviso"
+      "regime": "aviso",
+      "cap": -1,
+      "cooldown_days": 7
     },
     {
       "id": "algarve-2030",
@@ -152,7 +174,9 @@
       "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia ou erro 400)",
       "shard": "pt2030-other",
       "note": "20 avisos (2 paginas). Mesma estrutura ACF que PT2030 central.",
-      "regime": "aviso"
+      "regime": "aviso",
+      "cap": -1,
+      "cooldown_days": 7
     },
     {
       "id": "acores-2030",
@@ -165,7 +189,9 @@
       "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia ou erro 400)",
       "shard": "pt2030-other",
       "note": "10+ avisos (1+ paginas). Mesma estrutura ACF que PT2030 central.",
-      "regime": "aviso"
+      "regime": "aviso",
+      "cap": -1,
+      "cooldown_days": 7
     },
     {
       "id": "madeira-2030",
@@ -178,7 +204,9 @@
       "api_pagination": "page=N (10 resultados/pagina, percorrer ate resposta vazia ou erro 400)",
       "shard": "pt2030-other",
       "note": "10+ avisos (1+ paginas). Mesma estrutura ACF que PT2030 central.",
-      "regime": "aviso"
+      "regime": "aviso",
+      "cap": -1,
+      "cooldown_days": 7
     },
     {
       "id": "ani",

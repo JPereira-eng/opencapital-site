@@ -9,11 +9,16 @@ A tua missão e navegar fontes de financiamento e descobrir novos instrumentos.
 
 **REGRAS DE PROCESSAMENTO CRITICAS:**
 1. **NUNCA criar ficheiros temporarios** (avisos_portugal2030.json, new_open_avisos.json, temp_*.json, ou qualquer outro ficheiro intermedio). Processar tudo em memoria na sessao. Criar ficheiros temporarios causa bloqueios de contexto e perde dados.
-2. **Cap diferenciado por fonte:**
-   - `eu-funding-tenders`: **150 novos items/run** (superset EU com milhares de topics, profundidade aumentada em v4.2)
-   - Todas as outras fontes: **50 novos items/run**
-   Se uma fonte tiver mais items novos do que o seu cap, adicionar apenas os N com maior priority_score (prazo mais urgente + dotacao maior). Os restantes serão descobertos em runs futuras quando o lookup os identificar como ausentes.
-3. **Processar fonte a fonte**, adicionando imediatamente ao queue.json/overflow após cada fonte. Não acumular todos os avisos de todas as fontes antes de escrever.
+2. **Cap por fonte (v4.10, 2026-05-09):**
+   - Cada fonte em `sources-scan.json` pode ter campo `cap` que sobrepõe o default.
+   - `cap: -1` significa **sem limite** (apanhar todos os items novos da fonte). Aplica-se a todas as fontes PT2030 (universo finito, vale a pena fazer sweep completo a cada visita).
+   - `cap: N` (N > 0): apanhar no máximo N items.
+   - **Default se cap omisso:**
+     - `eu-funding-tenders`: 150 items/run (superset EU com milhares de topics).
+     - Todas as outras: 50 items/run.
+   Se uma fonte tiver mais items novos do que o seu cap (e cap > 0), adicionar apenas os N com maior priority_score. Os restantes serão descobertos em runs futuras.
+3. **Cooldown por fonte (v4.10):** cada fonte em `sources-scan.json` pode ter campo `cooldown_days`. Se omisso, aplicar default por priority (HIGH=0, MEDIUM=7, LOW=14). Os 4 portais PT2030 mais activos (`compete-2030`, `norte-2030`, `pessoas-2030`, `sustentavel-2030`) têm `cooldown_days: 3` para garantir cobertura quase diaria sem promover a HIGH.
+4. **Processar fonte a fonte**, adicionando imediatamente ao queue.json/overflow após cada fonte. Não acumular todos os avisos de todas as fontes antes de escrever.
 
 ---
 
@@ -91,11 +96,11 @@ Se uma destas fontes falhar (erro de acesso), registar o erro e continuar. Não 
 
 1. **Fontes medium NUNCA verificadas** (absent from `source_last_checked`) — prioridade absoluta, adicionar até preencher as 3 slots.
 
-2. **Fontes medium verificadas ha >7 dias** (ordenar por mais antiga primeiro) — adicionar até preencher as 3 slots.
+2. **Fontes medium verificadas ha mais que o seu `cooldown_days`** (default 7 dias se omisso; 3 dias para os 4 portais PT2030 activos). Ordenar por mais antiga primeiro, adicionar até preencher as 3 slots.
 
 3. **Fontes low NUNCA verificadas** — adicionar até preencher as 3 slots.
 
-4. **Fontes low verificadas ha >14 dias** (ordenar por mais antiga primeiro) — adicionar até preencher as 3 slots.
+4. **Fontes low verificadas ha mais que o seu `cooldown_days`** (default 14 dias se omisso). Ordenar por mais antiga primeiro, adicionar até preencher as 3 slots.
 
 5. **FALLBACK (v4.3 — crítico):** Se após passos 1-4 ainda restam slots vazios, completar com **fontes medium/low mais antigas MESMO DENTRO do cooldown** (ordenar por `source_last_checked` mais antigo primeiro, independentemente do dia-limite). Preencher as 3 slots em pleno.
 

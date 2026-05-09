@@ -34,7 +34,7 @@ fi
 | `registry/queue.json` | Sempre (regime "aviso") - escrita ao remover items concluídos ou PAA disfarçados |
 | `registry/queue-catálogo.json` | Sempre (regime "catálogo") - escrita ao remover items concluídos ou PAA |
 | `registry/queue-plano-anual.json` | Escrita quando defesa anti-PAA (PASSO 1.5) deteta PAA disfarçado |
-| `.claude/commands/instrumento.md` | **OBRIGATÓRIO antes de escrever** |
+| `.claude/commands/instrumento-template.md` | **OBRIGATÓRIO antes de escrever** |
 
 ---
 
@@ -145,7 +145,7 @@ Se encontrares items na queue que NAO tem ficheiro HTML: são trabalho por fazer
 
 **ANTES de escrever qualquer artigo:**
 ```
-Read .claude/commands/instrumento.md
+Read .claude/commands/instrumento-template.md
 ```
 
 Este ficheiro contem o template HTML completo, classes CSS, estrutura da navbar, hero, sidebar e footer. NUNCA escrever sem ter lido.
