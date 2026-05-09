@@ -716,56 +716,67 @@ Não incluir secção "Perspetiva Open Capital". Não incluir h2 final. Não inc
 </a>
 ```
 
-### Passo 4 - Injetar card em conhecimento.html
+### Passo 4 - Atualizar `conhecimento-catalog.json` (fonte unica)
 
-Le `conhecimento.html`. Injeta imediatamente após `<div class="articles-grid" id="articlesGrid">`.
+Adicionar entrada ao FINAL do array `articles` em `conhecimento-catalog.json`. Este JSON e a fonte unica que alimenta o hub `opiniao.html` e os destaques editoriais. **Nao editar `conhecimento.html`** - esse ficheiro foi descontinuado pela reestruturacao de 2026-05-09.
 
-**⚠️ CRITICO — FORMATO EXCLUSIVO DE OPINIAO:**
-Os outros cards em `conhecimento.html` usam `article-card-img` + `article-card-body`. Esse formato e PROIBIDO aqui. Ignorar completamente o padrao dos outros cards. O card de opinião tem estrutura própria: foto do autor em full-bleed com overlay gradient. Se gerares um card com `article-card-img` ou `article-card-body`, o resultado esta errado.
-
-A foto do autor e determinada pelo mapeamento de fotos definido na secção EQUIPA acima.
-
-```html
-
-      <!-- Article: [TITULO] -->
-      <article class="article-card type-opinião reveal"
-               data-category="opinião"
-               data-featured="true"
-               data-href="conhecimento/[SLUG].html">
-        <img src="Retratos Equipa/[AUTOR_FOTO]" alt="[AUTOR]" class="opinião-card-photo">
-        <div class="opinião-card-overlay">
-          <div class="opinião-card-meta">
-            <span class="opinião-card-author">[AUTOR]</span>
-            <span class="opinião-card-badge">Opinião</span>
-          </div>
-          <h3 class="opinião-card-title">[TITULO]</h3>
-          <span class="opinião-card-cta">Ler artigo</span>
-        </div>
-      </article>
+```json
+{
+  "slug": "[SLUG]",
+  "title": "[TITULO sem | Open Capital]",
+  "tagline": "[1-2 frases que enquadram a tese]",
+  "subseccao": "opiniao",
+  "autor": "[Nome]",
+  "autor_foto": "[ficheiro png]",
+  "data_publicacao": "AAAA-MM",
+  "href": "conhecimento/[SLUG].html",
+  "meta_description": "[meta description SEO 150-160 chars]",
+  "art_date": "[Mes AAAA, ex: Maio 2026]",
+  "opinion_photo": "Retratos Equipa/[AUTOR_FOTO]",
+  "opinion_author_card": "[AUTOR]",
+  "opinion_title": "[TITULO]",
+  "featured": true
+}
 ```
 
-**Verificacao obrigatória antes de continuar:** confirma que o card injetado contem EXATAMENTE estas tres coisas: (1) classe `type-opinião`, (2) elemento `<img class="opinião-card-photo">`, (3) elemento `<div class="opinião-card-overlay">`. Se qualquer uma faltar, corrige antes de avançar.
+**Validar:** o slug nao deve aparecer ja no JSON (evitar duplicados).
 
-Atualiza o contador: `id="filterCount">X artigos</span>` substituindo X por X+1.
+**Featured:** marcar `featured: true`. Manter entre 9 e 12 artigos com `featured: true` em simultaneo. Se ja existem 12, definir `featured: false` no mais antigo. Artigos da seccao `regulamentos` sao excluidos dos destaques.
 
-### Passo 5 - Gerir destaques do carrossel (single source of truth)
+**FORMATO EXCLUSIVO DE OPINIAO:** o hub `/conhecimento/opiniao.html` renderiza dinamicamente os cards usando os campos `opinion_photo`, `opinion_author_card` e `opinion_title`, produzindo cards com foto autor full-bleed + overlay (estrutura distinta dos outros hubs). Estes 3 campos sao obrigatorios na entrada da Opiniao.
 
-**Arquitectura:** o carrossel editorial na homepage (`index.html`) faz `fetch('conhecimento.html')` e clona automaticamente todos os cards marcados com `data-featured="true"`. Não ha duplicacao de HTML.
+### Passo 5 - Auto-validacao de paridade
 
-**Regra:** manter entre 9 e 12 artigos em destaque em simultaneo.
+Apos os passos 1-4, validar localmente:
 
-1. O novo artigo já foi injectado com `data-featured="true"` no Passo 4.
-2. Contar quantos cards tem `data-featured="true"` em `conhecimento.html`. Se > 12, remover o atributo dos mais antigos (em baixo na lista) até ficar com 12.
-3. Não tocar em `index.html`. O carrossel actualiza-se sozinho.
+1. Existe `conhecimento/[SLUG].html`? Se nao: ABORTAR com erro grave.
+2. O slug aparece em `conhecimento-catalog.json` exatamente uma vez? Se 0: re-aplicar Passo 4. Se >1: remover duplicados.
+3. `subseccao == "opiniao"` na entrada nova? Se nao: corrigir.
+4. Os 3 campos especificos (`opinion_photo`, `opinion_author_card`, `opinion_title`) estao todos preenchidos?
+5. Total de artigos com `featured: true` <= 12? Se nao: ajustar.
 
-### Passo 6 - Deploy
+### Passo 6 - Build do footer
 
 ```bash
-git add conhecimento/[SLUG].html conhecimento.html
-git commit -m "artigo opinião: [TITULO]"
-git push
+python build_footer.py "conhecimento/[SLUG].html"
 ```
 
-### Passo 7 - Confirmar
+### Passo 7 - Deploy
 
-Informa: titulo publicado, autor selecionado e cargo, URL relativo, confirmacao de que o card foi marcado como `data-featured="true"` (carrossel actualiza-se automaticamente).
+```bash
+git add conhecimento/[SLUG].html conhecimento-catalog.json
+git commit -m "opiniao: [TITULO]"
+git push origin main
+```
+
+Se push falhar: `git stash && git pull --rebase && git stash pop && git push`.
+
+### Passo 8 - Confirmar
+
+Apos deploy com sucesso, informar:
+- Titulo do artigo publicado.
+- Autor selecionado e respetivo cargo.
+- URL: `conhecimento/[slug].html`.
+- Subseccao: `opiniao` -> aparece no destaque dinamico de `/conhecimento/opiniao.html` se for o mais recente, ou no grid de cards.
+- Confirmacao de que `featured: true` e que ha entre 9 e 12 artigos em destaque.
+- Commit hash. GitHub Pages fara deploy via push.

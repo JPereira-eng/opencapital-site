@@ -717,82 +717,70 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa.
 </a>
 ```
 
-### Passo 4 - Injetar o card em conhecimento.html
+### Passo 4 - Atualizar `conhecimento-catalog.json` (fonte unica)
 
-Le `conhecimento.html`. Injeta imediatamente após `<div class="articles-grid" id="articlesGrid">`:
+Adicionar entrada ao FINAL do array `articles` em `conhecimento-catalog.json`. Este JSON e a fonte unica que alimenta os hubs (`atualidade.html`, etc.) e os destaques editoriais. **Nao editar `conhecimento.html`** - esse ficheiro foi descontinuado pela reestruturacao de 2026-05-09.
 
-Se `IMAGEM_SRC` tiver valor:
-```html
-
-      <!-- Article: [TITULO] -->
-      <article class="article-card reveal"
-               data-category="[CATEGORIA]"
-               data-featured="true"
-               data-href="conhecimento/[SLUG].html">
-        <div class="article-card-img">
-          <img src="[IMAGEM_SRC]" alt="[TITULO]">
-        </div>
-        <div class="article-card-body">
-          <div class="article-card-header">
-            <span class="art-cat-badge [CAT_CLASS]">[CATEGORIA_DISPLAY]</span>
-            <span class="art-read-time">Leitura: [TEMPO_LEITURA_COMPACTO]</span>
-          </div>
-          <h3 class="article-card-title">[TITULO]</h3>
-          <p class="article-card-excerpt">[EXCERPT]</p>
-          <div class="article-card-footer">
-            <span class="art-date">[DATE_PT]</span>
-            <a href="conhecimento/[SLUG].html" class="art-link">Ler</a>
-          </div>
-        </div>
-      </article>
+```json
+{
+  "slug": "[SLUG]",
+  "title": "[TITULO sem | Open Capital]",
+  "tagline": "[1-2 frases que enquadram o video]",
+  "subseccao": "atualidade",
+  "autor": "[Nome]",
+  "autor_foto": "[ficheiro png]",
+  "data_publicacao": "AAAA-MM",
+  "href": "conhecimento/[SLUG].html",
+  "meta_description": "[meta description SEO 150-160 chars]",
+  "cat_class": "[cat-mercados | cat-estrategia | cat-financiamento | cat-fiscalidade | cat-inovacao]",
+  "cat_label": "[Mercados | Estratégia | Financiamento | Fiscalidade | Inovação]",
+  "tempo_leitura": "[Xmin]",
+  "imagem_src": "[assets/articles/[slug].webp ou vazio]",
+  "excerpt": "[1-2 frases para o card no hub]",
+  "art_date": "[Mes AAAA, ex: Maio 2026]",
+  "card_title": "[Titulo curto para o card]",
+  "cat_legacy": "[mercados | estrategia | financiamento | fiscalidade | inovacao]",
+  "video_url": "[URL do YouTube original]",
+  "featured": true
+}
 ```
 
-Se `IMAGEM_SRC` estiver vazio (placeholder):
-```html
+**Validar:** o slug nao deve aparecer ja no JSON (evitar duplicados).
 
-      <!-- Article: [TITULO] -->
-      <article class="article-card reveal"
-               data-category="[CATEGORIA]"
-               data-featured="true"
-               data-href="conhecimento/[SLUG].html">
-        <div class="article-card-img">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" stroke="rgba(201,169,110,0.18)" stroke-width="1"/><polyline points="8,38 18,22 28,30 40,12" stroke="rgba(201,169,110,0.55)" stroke-width="1.2" fill="none"/><circle cx="18" cy="22" r="2" fill="rgba(201,169,110,0.4)"/><circle cx="40" cy="12" r="2" fill="rgba(201,169,110,0.4)"/></svg>
-        </div>
-        <div class="article-card-body">
-          <div class="article-card-header">
-            <span class="art-cat-badge [CAT_CLASS]">[CATEGORIA_DISPLAY]</span>
-            <span class="art-read-time">Leitura: [TEMPO_LEITURA_COMPACTO]</span>
-          </div>
-          <h3 class="article-card-title">[TITULO]</h3>
-          <p class="article-card-excerpt">[EXCERPT]</p>
-          <div class="article-card-footer">
-            <span class="art-date">[DATE_PT]</span>
-            <a href="conhecimento/[SLUG].html" class="art-link">Ler</a>
-          </div>
-        </div>
-      </article>
-```
+**Featured:** marcar `featured: true` para artigos que entram nos destaques editoriais da homepage. Manter entre 9 e 12 artigos com `featured: true` em simultaneo. Se ja existem 12 com este flag, definir `featured: false` no mais antigo. Artigos da seccao `regulamentos` sao excluidos dos destaques.
 
-Atualiza o contador: `id="filterCount">X artigos</span>` substituindo X por X+1.
+### Passo 5 - Auto-validacao de paridade
 
-### Passo 5 - Gerir destaques do carrossel (single source of truth)
+Apos os passos 1-4, validar localmente:
 
-**Arquitectura:** o carrossel editorial na homepage (`index.html`) faz `fetch('conhecimento.html')` e clona automaticamente todos os cards marcados com `data-featured="true"`. Não ha duplicacao de HTML.
+1. Existe `conhecimento/[SLUG].html`? Se nao: ABORTAR com erro grave.
+2. O slug aparece em `conhecimento-catalog.json` exatamente uma vez? Se 0: re-aplicar Passo 4. Se >1: remover duplicados.
+3. `subseccao == "atualidade"` na entrada nova? Se nao: corrigir.
+4. Total de artigos com `featured: true` <= 12? Se nao: ajustar.
 
-**Regra:** manter entre 9 e 12 artigos em destaque em simultaneo.
-
-1. O novo artigo já foi injectado com `data-featured="true"` no Passo 4.
-2. Contar quantos cards tem `data-featured="true"` em `conhecimento.html`. Se > 12, remover o atributo dos mais antigos (em baixo na lista) até ficar com 12.
-3. Não tocar em `index.html`. O carrossel actualiza-se sozinho.
-
-### Passo 6 - Deploy
+### Passo 6 - Build do footer
 
 ```bash
-git add conhecimento/[SLUG].html conhecimento.html
-git commit -m "artigo youtube: [TITULO]"
-git push
+python build_footer.py "conhecimento/[SLUG].html"
 ```
 
-### Passo 7 - Confirmar
+### Passo 7 - Deploy
 
-Informa: titulo publicado, autor selecionado e cargo, metodo usado para obter transcrição (servico automatico ou paste manual), URL relativo, confirmacao de que o card foi marcado como `data-featured="true"` (carrossel actualiza-se automaticamente).
+```bash
+git add conhecimento/[SLUG].html conhecimento-catalog.json
+git commit -m "youtube: [TITULO]"
+git push origin main
+```
+
+Se push falhar: `git stash && git pull --rebase && git stash pop && git push`.
+
+### Passo 8 - Confirmar
+
+Apos deploy com sucesso, informar:
+- Titulo do artigo publicado.
+- Autor selecionado e respetivo cargo.
+- Metodo usado para obter transcricao (servico automatico ou paste manual).
+- URL: `conhecimento/[slug].html`.
+- Subseccao: `atualidade` -> aparece automaticamente em `/conhecimento/atualidade.html` e nos destaques de `index.html`.
+- Confirmacao de que `featured: true` e que ha entre 9 e 12 artigos em destaque.
+- Commit hash. GitHub Pages fara deploy via push.
