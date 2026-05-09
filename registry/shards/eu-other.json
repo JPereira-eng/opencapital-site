@@ -1024,6 +1024,13 @@
       "source": "eu-funding-tenders",
       "state": "aberto",
       "last_check": "2026-05-09"
+    },
+    {
+      "id": "euipo-sme-fund-2026",
+      "file": "instrumentos/euipo-sme-fund-2026.html",
+      "source": "euipo-sme-fund",
+      "state": "aberto",
+      "last_check": "2026-05-09"
     }
   ],
   "instruments": [
@@ -2204,9 +2211,9 @@
       "last_check": "2026-05-09"
     }
   ],
-  "count": 142,
-  "published": 138,
-  "open": 103,
+  "count": 143,
+  "published": 139,
+  "open": 104,
   "closed": 32,
   "planned": 2
 }
