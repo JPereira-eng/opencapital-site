@@ -4,13 +4,14 @@
     "version": "4.0",
     "migrated_from_v3": "2026-04-12",
     "last_writer_run": "2026-05-09",
-    "last_scanner_run": "2026-05-09"
+    "last_scanner_run": "2026-05-09",
+    "last_index_rebuild": "2026-05-09"
   },
   "totals": {
-    "published": 1030,
-    "open": 687,
-    "closed": 307,
-    "planned": 32,
+    "published": 1037,
+    "open": 361,
+    "closed": 147,
+    "planned": 23,
     "in_queue": 65,
     "in_watchlist": 119,
     "in_catalogo": 14,
@@ -18,47 +19,46 @@
     "in_plano_anual": 131
   },
   "shards": {
-    "pt2030-compete": {
-      "count": 13,
-      "open": 10,
-      "closed": 2,
-      "planned": 1
+    "catalogo-aceleradores": {
+      "count": 14,
+      "open": 14,
+      "published": 14
     },
-    "pt2030-pessoas": {
-      "count": 3,
-      "open": 1,
-      "closed": 2
-    },
-    "pt2030-central": {
-      "count": 0
-    },
-    "pt2030-norte": {
-      "count": 6,
-      "open": 3,
-      "closed": 3
-    },
-    "pt2030-centro": {
-      "count": 2,
-      "open": 1,
-      "closed": 1
-    },
-    "pt2030-lisboa": {
+    "catalogo-ba": {
       "count": 4,
       "open": 3,
-      "planned": 1
+      "closed": 1,
+      "published": 4
     },
-    "pt2030-other": {
-      "count": 49,
-      "open": 43,
-      "closed": 5,
-      "planned": 1
+    "catalogo-bancos": {
+      "count": 2,
+      "open": 2,
+      "published": 2
+    },
+    "catalogo-crowdfunding": {
+      "count": 2,
+      "open": 2,
+      "published": 2
+    },
+    "catalogo-premios": {
+      "count": 6,
+      "open": 3,
+      "closed": 1,
+      "published": 6
+    },
+    "catalogo-vc": {
+      "count": 20,
+      "open": 16,
+      "closed": 2,
+      "published": 20
     },
     "eic": {
       "count": 6,
-      "open": 6
+      "open": 6,
+      "published": 6
     },
     "eu-horizon": {
-      "count": 240,
+      "count": 236,
       "open": 132,
       "closed": 93,
       "planned": 11,
@@ -69,49 +69,65 @@
       "open": 106,
       "closed": 33,
       "planned": 2,
-      "published": 156
-    },
-    "pt-other": {
-      "count": 48,
-      "open": 40,
-      "closed": 5,
-      "published": 22
+      "published": 140
     },
     "interreg": {
       "count": 8,
       "open": 3,
       "planned": 5,
-      "published": 3
-    },
-    "catalogo-bancos": {
-      "count": 2,
-      "open": 2
-    },
-    "catalogo-vc": {
-      "count": 14,
-      "open": 12,
-      "published": 9
-    },
-    "catalogo-premios": {
-      "count": 3,
-      "open": 2
-    },
-    "catalogo-aceleradores": {
-      "count": 15,
-      "open": 15,
       "published": 8
     },
-    "catalogo-ba": {
+    "priv-ba": {
       "count": 1,
       "open": 1,
-      "published": 3
-    },
-    "catalogo-crowdfunding": {
-      "count": 2,
-      "open": 2
-    },
-    "priv-ba": {
       "published": 1
+    },
+    "pt-other": {
+      "count": 40,
+      "open": 34,
+      "closed": 6,
+      "published": 40
+    },
+    "pt2030-central": {
+      "count": 0
+    },
+    "pt2030-centro": {
+      "count": 2,
+      "open": 1,
+      "closed": 1,
+      "published": 2
+    },
+    "pt2030-compete": {
+      "count": 15,
+      "open": 11,
+      "closed": 2,
+      "planned": 2,
+      "published": 10
+    },
+    "pt2030-lisboa": {
+      "count": 4,
+      "open": 3,
+      "planned": 1,
+      "published": 4
+    },
+    "pt2030-norte": {
+      "count": 6,
+      "open": 3,
+      "closed": 3,
+      "published": 6
+    },
+    "pt2030-other": {
+      "count": 25,
+      "open": 20,
+      "closed": 3,
+      "planned": 2,
+      "published": 24
+    },
+    "pt2030-pessoas": {
+      "count": 3,
+      "open": 1,
+      "closed": 2,
+      "published": 3
     }
   },
   "last_full_cycle": "2026-04-12",

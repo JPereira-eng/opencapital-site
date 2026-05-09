@@ -199,7 +199,19 @@ Para cada item do shard com `regulation_local` apontando para PDF existente:
 
 **Max 10 items por run** (duplicou vs v4.0, dado que agora existe ficheiro dedicado).
 
-**Ordem de seleção:**
+### POLITICA DE COBERTURA MINIMA (v4.3, 2026-05-09)
+
+**Problema detectado:** auditoria a 2026-05-09 revelou que 65% dos items da watchlist (85 de 131) tinham `plano_anual_checks: 0`, ou seja nunca tinham sido revisitados. Items entram e ficam parados.
+
+**Regra de cobertura:**
+
+1. **Floor obrigatorio:** o monitor DEVE verificar pelo menos **5 items por run** com `plano_anual_checks: 0` (nunca verificados antes), se existirem. Estes contam dentro do limite de 10.
+2. **Ordem dentro deste floor:** `priority_score` descendente, depois `detected_date` ascendente (mais antigos primeiro).
+3. **Slots restantes (max 5):** seguir a ordem de seleção normal abaixo.
+4. **Cobertura completa garantida:** com este floor, uma watchlist de 131 items e revisitada por inteiro em ~26 runs (2-3 semanas a um run/dia). Antes desta regra, eram precisos ~6 meses ou mais.
+5. **Auto-archive (proteccao contra acumulacao):** items com `plano_anual_checks >= 8` E sem mudanca em nenhuma das verificacoes E `detected_date` ha mais de 180 dias devem ser movidos para `registry/queue-plano-anual-archive.json`. Saem da watchlist activa. Continuam acessiveis para auditoria mas não consomem slots.
+
+**Ordem de seleção (ordem normal, aplicada DEPOIS do floor):**
 1. **Filtrar primeiro:** items com `paa_status == "published_externamente"` são EXCLUÍDOS desta seleção (desconsiderados pelo monitor)
 2. Items com `plano_anual_last_check` mais antigo (ou sem check ainda)
 3. Em caso de empate: items com `priority_score` mais alto

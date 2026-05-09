@@ -388,12 +388,32 @@ Para cada artigo criado:
 "by_id": { "[slug]": true },
 "by_aviso_codigo": { "[código]": "[slug]" }
 ```
-4. **Atualizar index** (`registry/index.json`):
-   - `totals.published` + N
-   - `totals.in_queue` - N
-   - `totals.[open/planned]` + N
-   - Shard counters
-   - `last_writer_run`: hoje
+4. **Calcular SHA1 do regulamento e gravar em `registry/integrity.json`** (apenas regime aviso):
+   ```
+   sha1sum "$REPO/regulamentos/[source_id]/[slug].txt" (ou .pdf)
+   ```
+   Adicionar entrada:
+   ```json
+   "[slug]": { "sha1": "[hash]", "checked": "[hoje]", "size": [bytes], "source_dir": "[source_id]", "file": "[slug].txt" }
+   ```
+   Esta operacao garante que o monitor pode detectar adendas/revisoes no futuro. Saltar para regime catálogo (sem regulamento formal).
+
+5. **Atualizar index** (`registry/index.json`):
+   - **Totals globais:** `totals.published` + 1, `totals.in_queue` - 1, `totals.[open/planned]` + 1
+   - **Counters por shard (OBRIGATORIO, nunca omitir):** para o shard tocado, incrementar TODOS estes campos correctos:
+     - `count` + 1
+     - `published` + 1 (ESSENCIAL — campo historicamente em falta nos shards PT2030; nunca deixar este passo de fora)
+     - `open` + 1 OU `planned` + 1 OU `closed` + 1 conforme o estado do item
+   - `_meta.last_writer_run`: hoje
+   - Se algum dos campos `published`/`open`/`closed`/`planned` ainda nao existir no objeto do shard, criar com valor 1 (nunca assumir que ja existe).
+
+6. **Auto-validacao de paridade (v4.3, 2026-05-09):**
+   Apos os passos 1-5, validar localmente:
+   - O ficheiro `instrumentos/[slug].html` existe? Se não: ABORTAR e reportar erro grave.
+   - O slug aparece em `instruments-catalog.json` exactamente uma vez? Se aparece 0 vezes: re-aplicar passo 5 da skill (adicionar entrada). Se aparece >1 vez: remover duplicados mantendo o primeiro.
+   - O slug aparece no shard correcto? Se não: re-aplicar passo 6.2.
+   - O slug aparece em `lookup.json > by_id`? Se não: re-aplicar passo 6.3.
+   Esta verificacao deteta regressoes onde o agente cria o HTML mas falha ou pula passos seguintes (causa raiz dos 13 orfaos detectados em 2026-05-09).
 
 ---
 

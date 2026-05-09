@@ -7697,30 +7697,6 @@
       ]
     },
     {
-      "id": "horizon-cl4-2026-04-human-02",
-      "category": "nr",
-      "category_label": "Nao Reembolsavel",
-      "estado": "fechado",
-      "status_text": "Fechado",
-      "status_class": "status-closed",
-      "fonte": "ue",
-      "beneficiario": "empresa,ensino-investigacao",
-      "setores": [
-        "tecnologia-digital"
-      ],
-      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
-      "title": "Web 4.0 e Open Internet Stack para Mundos Virtuais 2026",
-      "tagline": "Financiamento europeu para arquiteturas abertas da Web 4.0 e aplicacoes de mundos virtuais de codigo aberto.",
-      "highlight0": "Ate 8.4M EUR por projeto em RIA",
-      "highlight1": "Empresas, universidades, centros de investigacao",
-      "highlight2": "Nacional (candidatura europeia)",
-      "href": "instrumentos/horizon-cl4-2026-04-human-02.html",
-      "featured": false,
-      "necessidades": [
-        "id-ciencia"
-      ]
-    },
-    {
       "id": "horizon-cl2-2026-01-transfo-02",
       "category": "nr",
       "category_label": "Nao Reembolsavel",
@@ -12097,31 +12073,6 @@
       ]
     },
     {
-      "id": "nova-sbe-venture-lab",
-      "category": "outros",
-      "category_label": "Outros",
-      "estado": "aberto",
-      "status_text": "Candidatura Continua",
-      "status_class": "status-cont",
-      "fonte": "outros",
-      "beneficiario": "empreendedor",
-      "setores": [
-        "todos"
-      ],
-      "regiao": "lisboa",
-      "title": "NOVA SBE Venture Lab",
-      "tagline": "Pre-incubadora equity-free da NOVA SBE em Cascais. Apoio a fundadores em fase de ideia e MVP com co-working, mentoria e acesso ao ecossistema da universidade.",
-      "highlight0": "Equity-free, sem prazo fixo de candidatura",
-      "highlight1": "Fundadores em fase de ideia e MVP",
-      "highlight2": "Cascais (campus NOVA SBE)",
-      "href": "instrumentos/nova-sbe-venture-lab.html",
-      "featured": false,
-      "necessidades": [
-        "arranque-validacao",
-        "capitalizacao-crescimento"
-      ]
-    },
-    {
       "id": "preciseu-personalised-medicine-2026",
       "category": "nr",
       "category_label": "Nao Reembolsavel",
@@ -14268,31 +14219,6 @@
         "id-ciencia",
         "investimento-produtivo",
         "sustentabilidade-energia-clima"
-      ]
-    },
-    {
-      "id": "galp-ventures",
-      "category": "priv",
-      "category_label": "Investimento Privado",
-      "estado": "aberto",
-      "status_text": "Ativo",
-      "status_class": "status-cont",
-      "fonte": "pventures",
-      "beneficiario": "empresa,empreendedor",
-      "setores": [
-        "energia-ambiente"
-      ],
-      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
-      "title": "Galp Ventures - Upcoming Energies",
-      "tagline": "CVC da Galp para startups de transicao energetica, renovaveis e descarbonizacao.",
-      "highlight0": "Investimento em early-stage e growth, sem ticket publico definido",
-      "highlight1": "Startups de energia, clima e mobilidade sustentavel",
-      "highlight2": "Portugal, Espanha, Europa",
-      "href": "instrumentos/galp-ventures.html",
-      "featured": false,
-      "necessidades": [
-        "sustentabilidade-energia-clima",
-        "arranque-validacao"
       ]
     },
     {
@@ -26015,6 +25941,329 @@
       "highlight2": "Regiao Centro",
       "href": "instrumentos/ccc-centro-ciberseguranca.html",
       "featured": false
+    },
+    {
+      "id": "edf-2026-ls-da-sme-nt",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa",
+      "regiao": "nacional",
+      "title": "EDF-2026-LS-DA-SME-NT",
+      "tagline": "Tópico do Fundo Europeu de Defesa que aloca 30 milhões de euros a consórcios liderados por PME para amadurecer produtos e tecnologias de defesa em qualquer área de interesse, com gestão da Agência Europeia de Defesa.",
+      "highlight0": "Até 30 M€ para consórcios liderados por PME",
+      "highlight1": "PME e startups defesa",
+      "highlight2": "Estados-Membros UE",
+      "href": "instrumentos/edf-2026-ls-da-sme-nt.html",
+      "featured": false,
+      "setores": [
+        "industria",
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "investimento-produtivo"
+      ]
+    },
+    {
+      "id": "edf-2026-ls-dis-nt",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa",
+      "regiao": "nacional",
+      "title": "EDF-2026-LS-DIS-NT",
+      "tagline": "Tópico do Fundo Europeu de Defesa que aloca 27 milhões de euros a tecnologias disruptivas em qualquer área de interesse para defesa, com tetos de 3 milhões por proposta e duração típica de 12 a 24 meses.",
+      "highlight0": "27 M€ para tecnologias disruptivas em defesa",
+      "highlight1": "PME, centros I&D, grandes empresas",
+      "highlight2": "Estados-Membros UE",
+      "href": "instrumentos/edf-2026-ls-dis-nt.html",
+      "featured": false,
+      "setores": [
+        "tecnologia-digital",
+        "industria"
+      ],
+      "necessidades": [
+        "id-ciencia"
+      ]
+    },
+    {
+      "id": "edf-2026-ls-dis-ra-smero-nt",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa",
+      "regiao": "nacional",
+      "title": "EDF-2026-LS-DIS-RA-SMERO-NT",
+      "tagline": "Tópico EDF de 35 milhões de euros para PME (coordenador) e organizações de investigação que conduzem investigação em tecnologias disruptivas para defesa, com lump sum a 100% e business coaching incluído.",
+      "highlight0": "35 M€ para investigação disruptiva PME-led",
+      "highlight1": "PME coordenadoras + RTOs",
+      "highlight2": "Estados-Membros UE",
+      "href": "instrumentos/edf-2026-ls-dis-ra-smero-nt.html",
+      "featured": false,
+      "setores": [
+        "tecnologia-digital",
+        "industria"
+      ],
+      "necessidades": [
+        "id-ciencia"
+      ]
+    },
+    {
+      "id": "edf-2026-ra-air-a4r",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa",
+      "regiao": "nacional",
+      "title": "EDF-2026-RA-AIR-A4R",
+      "tagline": "Tópico de investigação do Fundo Europeu de Defesa que aloca 20 milhões de euros para desenvolver sensores, fusão de dados e algoritmos que permitam reabastecimento ar-ar sem intervenção humana, incluindo aeronaves não tripuladas.",
+      "highlight0": "20 M€ para reabastecimento aéreo autónomo",
+      "highlight1": "PME, RTOs, indústria defesa",
+      "highlight2": "Estados-Membros UE",
+      "href": "instrumentos/edf-2026-ra-air-a4r.html",
+      "featured": false,
+      "setores": [
+        "tecnologia-digital",
+        "industria",
+        "mobilidade-transportes"
+      ],
+      "necessidades": [
+        "id-ciencia"
+      ]
+    },
+    {
+      "id": "estagios-iefp",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto",
+      "status_class": "status-open",
+      "fonte": "iefp",
+      "beneficiario": "empresa",
+      "regiao": "nacional",
+      "title": "Estágios IEFP",
+      "tagline": "Programa estruturante de estágios profissionais cofinanciado pelo Pessoas 2030. Comparticipação até 80% da bolsa, seis meses de duração e até vinte estágios anuais por empregador.",
+      "highlight0": "Comparticipação até 80% sobre IAS",
+      "highlight1": "Empresas, jovens NEET",
+      "highlight2": "Nacional",
+      "href": "instrumentos/estagios-iefp.html",
+      "featured": false,
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "contratacao-rh",
+        "formacao-qualificacao"
+      ]
+    },
+    {
+      "id": "europeaid-185599-dd-act-multi",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "associacao",
+      "regiao": "nacional",
+      "title": "EuropeAid 185599",
+      "tagline": "Quarta edicao do programa NDICI Global Europe para paz, coesao social e empoderamento economico nas zonas fronteiricas entre RDC, Ruanda e Burundi. Concept note ate 1 de junho de 2026.",
+      "highlight0": "Programa NDICI Global Europe",
+      "highlight1": "OSC, fundações, organismos públicos",
+      "highlight2": "Internacional",
+      "href": "instrumentos/europeaid-185599-dd-act-multi.html",
+      "featured": false,
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "impacto-social-inclusao"
+      ]
+    },
+    {
+      "id": "europeaid-186571-dd-act-za",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "associacao",
+      "regiao": "nacional",
+      "title": "EuropeAid 186571",
+      "tagline": "Convocatoria NDICI Global Europe para sociedade civil, direitos humanos e accountability ESG na Africa do Sul. Ate 1,2 milhoes de euros por projeto, alinhada com CSRD e CSDDD. Submissao ate 23 de julho de 2026.",
+      "highlight0": "Convocatória NDICI Global Europe",
+      "highlight1": "OSC, organismos direitos humanos",
+      "highlight2": "Internacional",
+      "href": "instrumentos/europeaid-186571-dd-act-za.html",
+      "featured": false,
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "impacto-social-inclusao"
+      ]
+    },
+    {
+      "id": "fundos-sifide-2-2026",
+      "category": "fiscal",
+      "category_label": "Incentivos Fiscais",
+      "estado": "aberto",
+      "status_text": "Aberto",
+      "status_class": "status-open",
+      "fonte": "at",
+      "beneficiario": "empresa",
+      "regiao": "nacional",
+      "title": "Fundos SIFIDE II 2026",
+      "tagline": "Investir em venture capital certificado pela ANI e deduzir a coleta de IRC a taxa base de 32,5%. Uma forma legal de transformar tesouraria ociosa em posicao de capital, com beneficio fiscal imediato.",
+      "highlight0": "Dedução à coleta IRC a taxa base de 32,5%",
+      "highlight1": "Empresas IRC sujeito passivo",
+      "highlight2": "Nacional",
+      "href": "instrumentos/fundos-sifide-2-2026.html",
+      "featured": false,
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "id-ciencia"
+      ]
+    },
+    {
+      "id": "iniciativa-alma",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto",
+      "status_class": "status-open",
+      "fonte": "iefp",
+      "beneficiario": "empreendedor",
+      "regiao": "nacional",
+      "title": "Iniciativa ALMA",
+      "tagline": "Programa europeu Aim, Learn, Master, Achieve, gerido pelo IEFP em Portugal. Até oito meses entre formação inicial, estágio noutro Estado-Membro da UE e reintegração no mercado nacional.",
+      "highlight0": "Mobilidade europeia até 8 meses",
+      "highlight1": "Jovens NEET 18-29 anos",
+      "highlight2": "Nacional",
+      "href": "instrumentos/iniciativa-alma.html",
+      "featured": false,
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "formacao-qualificacao",
+        "impacto-social-inclusao"
+      ]
+    },
+    {
+      "id": "kibo-ventures",
+      "category": "priv",
+      "category_label": "Investimento Privado",
+      "estado": "cont",
+      "status_text": "Aberto",
+      "status_class": "status-cont",
+      "fonte": "pventures",
+      "beneficiario": "empresa",
+      "regiao": "nacional",
+      "title": "Kibo Ventures",
+      "tagline": "Plataforma de venture capital e private equity fundada em Madrid em 2012, com mais de 500 milhões de euros sob gestão em 6 fundos, 81 empresas investidas e 22 saídas, incluindo um IPO Nasdaq.",
+      "highlight0": "> 500 M€ AUM em 6 fundos VC/PE",
+      "highlight1": "Startups tech early-stage e growth",
+      "highlight2": "Espanha, Europa",
+      "href": "instrumentos/kibo-ventures.html",
+      "featured": false,
+      "setores": [
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "arranque-validacao",
+        "capitalizacao-crescimento"
+      ]
+    },
+    {
+      "id": "lay-off-iefp",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto",
+      "status_class": "status-open",
+      "fonte": "iefp",
+      "beneficiario": "empresa",
+      "regiao": "nacional",
+      "title": "Lay-off",
+      "tagline": "Cofinanciamento do IEFP para a componente formativa do regime de lay-off aprovado pela Segurança Social. Cobre bolsa de formação e custos pedagógicos.",
+      "highlight0": "Cofinanciamento da formação em lay-off",
+      "highlight1": "Empresas em lay-off Segurança Social",
+      "highlight2": "Nacional",
+      "href": "instrumentos/lay-off-iefp.html",
+      "featured": false,
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "formacao-qualificacao",
+        "tesouraria-credito-garantias"
+      ]
+    },
+    {
+      "id": "pppa-2026-born-digital",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "associacao",
+      "regiao": "nacional",
+      "title": "PPPA-2026-BORN-DIGITAL",
+      "tagline": "Projeto-piloto da Comissão Europeia para mapear o estado de preservação do património digital nativo, identificar barreiras legais e propor um roteiro europeu de boas práticas.",
+      "highlight0": "Projeto-piloto Comissão Europeia",
+      "highlight1": "Instituições culturais, museus, arquivos",
+      "highlight2": "Estados-Membros UE",
+      "href": "instrumentos/pppa-2026-born-digital.html",
+      "featured": false,
+      "setores": [
+        "economia-criativa"
+      ],
+      "necessidades": [
+        "digitalizacao-ia"
+      ]
+    },
+    {
+      "id": "trabalho-socialmente-necessario",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto",
+      "status_class": "status-open",
+      "fonte": "iefp",
+      "beneficiario": "entidade-publica",
+      "regiao": "nacional",
+      "title": "Trabalho Socialmente Necessário (Programa MAIS)",
+      "tagline": "Programa MAIS do IEFP: duas medidas (Mais Ativação e Mais Inclusão) para integrar desempregados subsidiados e beneficiários de prestações sociais em projetos de utilidade coletiva.",
+      "highlight0": "Mais Ativação e Mais Inclusão",
+      "highlight1": "Entidades públicas, IPSS, ONG",
+      "highlight2": "Nacional",
+      "href": "instrumentos/trabalho-socialmente-necessario.html",
+      "featured": false,
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "contratacao-rh",
+        "impacto-social-inclusao"
+      ]
     }
   ]
 }
