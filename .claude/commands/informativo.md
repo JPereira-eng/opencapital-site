@@ -66,23 +66,42 @@ Regras de routing. Aplicar pela ordem indicada, parar na primeira que encaixar:
 
 ---
 
-## LÓGICA EDITORIAL DA SÉRIE 2.1
+## LÓGICA EDITORIAL DA SÉRIE 2.1 (REVISTA 2026-05-09)
 
-Esta série explica temas técnicos, regulatorios, programaticos ou metodologicos de forma clara e útil.
+Esta série explica regulamentos, leis, programas, instrumentos, conceitos e metodologias com prioridade aos factos. Não é opinião nem ensaio. É manual de referência editorial.
 
-Não parte de um facto do momento. Parte de um tema que precisa de ser compreendido.
+**Princípio dominante: facto + prática. Opinião apenas quando o leitor pode ler mal a fonte e ficar prejudicado por isso.**
 
-**Raciocínio obrigatório:**
-tema complexo > organização da informação > explicacao clara > utilidade prática
+O leitor que chega a esta secção quer saber **como é**, **o que muda na prática** e **como se aplica** ao caso da sua empresa. Quer entender uma realidade exterior à empresa (uma lei, um programa, um conceito) que a afeta. Não quer saber o que pensamos sobre se a lei é boa ou má.
+
+**Estrutura modular do artigo (não simétrica, mas coerente):**
+
+1. **Isto é assim.** O que diz a fonte (lei, regulamento, regulação, ficha técnica). Texto factual com referência normativa quando aplicável (artigo, decreto, despacho).
+2. **O que é na prática.** Tradução do legalês ou tecniquês para linguagem de gestor. Exemplos concretos de situações cobertas e não cobertas. Quem é elegível, quem não é, em que condições.
+3. **Quais as alterações na prática (se aplicável).** Se é uma atualização (lei nova, alteração regulatória, novo aviso), o que muda em concreto: novo dever, novo prazo, novo limite, novo benefício, novo procedimento. Comparar antes vs depois quando faz sentido.
+4. **Onde isto encaixa.** Como o tema se relaciona com decisões empresariais já existentes. Sem opinião sobre se a regra é justa, eficiente ou desejável. Apenas: como uma empresa deve enquadrar isto na sua operação.
+5. **Quando o framework não chega (opcional).** Avisar o leitor quando o regulamento é ambíguo, quando uma leitura literal pode induzir em erro, quando uma situação concreta não está coberta. Esta secção é a única em que opinião editorial é admitida, e mesmo aqui é serviço, não tese.
+6. **Perspetiva Open Capital (obrigatória, sempre).** Como a equipa pensa este tema na prática quando trabalha com clientes. Fica circunscrita a esta secção final.
 
 **O que este artigo responde:**
-- o que e isto
-- como funciona
-- para que serve
-- quem pode beneficiar
-- como se aplica na prática
+- O que é isto, e o que diz a norma.
+- Para quem se aplica e em que condições.
+- O que muda em concreto, quando é atualização.
+- Como se aplica na prática.
 
-**O que o sistema faz com as fontes fornecidas:** le, sintetiza, filtra ruido, organiza, explica em linguagem clara, traduz relevância prática.
+**O que NÃO faz:**
+- Não é tese ardente. Se há posição forte, é `/opiniao`.
+- Não é gancho de notícia. Se o foco é o impacto de algo que aconteceu, é `/trend`.
+- Não é framework de decisão de gestão. Se é "como decidir entre X e Y", é `/estrategia`.
+- Não enche secções com opinião disfarçada. Cada parágrafo factual pesa mais do que cinco parágrafos analíticos.
+
+**Limites editoriais reforçados (mais apertados que CLAUDE.md global):**
+- Antíteses ("não é X, é Y"): **máximo 1 por artigo**, e idealmente zero. Esta série não é local para retórica de contraste.
+- Perguntas retóricas: **máximo 1 por artigo**.
+- Frases curtas isoladas para efeito ("É isto."): **máximo 1 por artigo**.
+- Sem tese forte. Sem posição beligerante. Sem juízo moral sobre a regulação.
+
+**O que o sistema faz com as fontes fornecidas:** lê, sintetiza, filtra ruído, organiza, explica em linguagem clara, traduz aplicação prática. **Não comenta** se a fonte é boa ou má. Não toma posição sobre o quadro normativo.
 
 ---
 
@@ -204,6 +223,19 @@ H2s são pausas editoriais, não etiquetas de organização. Se o leitor pode pa
 O último parágrafo do corpo do artigo deve ser sempre exatamente (em italico, visualmente distinto do corpo: font-size:15px, color:grey-mid, font-style:italic, margin-top:40px):
 
 "Comentários, correções ou contrapontos são bem-vindos: geral@opencapital.pt"
+
+---
+
+## SUBGRUPO - ESCOLHA OBRIGATÓRIA
+
+Cada artigo da Série 2.1 e classificado num dos 4 subgrupos da seccao Regulamentos e Conceitos. Aplicar o fluxograma na primeira que encaixar:
+
+1. O artigo trata de **lei, regulamento ou diretiva** (texto normativo formal: lei nacional, regulamento UE, diretiva, decreto-lei, despacho)? -> `regulamentos-leis`
+2. O artigo explica **um programa ou instrumento de financiamento** (Horizonte Europa, Portugal 2030, PRR, COMPETE, programas setoriais)? -> `programas-instrumentos`
+3. O artigo define um **conceito ou metrica** (capacidade instalada, projeto I&D, beneficios fiscais ao investimento, KPI tecnico)? -> `conceitos-metricas`
+4. O artigo explica **um procedimento, boa pratica ou processo operacional** (como interpretar taxas de apoio, regras de comunicacao de fundos, erros comuns em candidaturas, metodos de pagamento)? -> `procedimentos-boas-praticas`
+
+A skill grava o subgrupo escolhido em `conhecimento-catalog.json` na entrada do artigo. O hub `regulamentos.html` agrupa visualmente os artigos por subgrupo na renderizacao.
 
 ---
 
@@ -557,82 +589,70 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa.
 </a>
 ```
 
-### Passo 4 - Injetar o card em conhecimento.html
+### Passo 4 - Atualizar `conhecimento-catalog.json` (fonte unica da verdade)
 
-Le `conhecimento.html`. Injeta imediatamente após `<div class="articles-grid" id="articlesGrid">`:
+Adicionar entrada ao FINAL do array `articles` em `conhecimento-catalog.json`:
 
-Se `IMAGEM_SRC` tiver valor:
-```html
-
-      <!-- Article: [TITULO] -->
-      <article class="article-card reveal"
-               data-category="[CATEGORIA]"
-               data-featured="true"
-               data-href="conhecimento/[SLUG].html">
-        <div class="article-card-img">
-          <img src="[IMAGEM_SRC]" alt="[TITULO]">
-        </div>
-        <div class="article-card-body">
-          <div class="article-card-header">
-            <span class="art-cat-badge [CAT_CLASS]">[CATEGORIA_DISPLAY]</span>
-            <span class="art-read-time">Leitura: [TEMPO_LEITURA_COMPACTO]</span>
-          </div>
-          <h3 class="article-card-title">[TITULO]</h3>
-          <p class="article-card-excerpt">[EXCERPT]</p>
-          <div class="article-card-footer">
-            <span class="art-date">[DATE_PT]</span>
-            <a href="conhecimento/[SLUG].html" class="art-link">Ler</a>
-          </div>
-        </div>
-      </article>
+```json
+{
+  "slug": "[SLUG]",
+  "title": "[TITULO sem | Open Capital]",
+  "tagline": "[1-2 frases que enquadram o tema]",
+  "subseccao": "regulamentos",
+  "subgrupo": "[regulamentos-leis | programas-instrumentos | conceitos-metricas | procedimentos-boas-praticas]",
+  "autor": "[Nome]",
+  "autor_foto": "[ficheiro png]",
+  "data_publicacao": "AAAA-MM",
+  "href": "conhecimento/[SLUG].html",
+  "meta_description": "[meta description SEO 150-160 chars]"
+}
 ```
 
-Se `IMAGEM_SRC` estiver vazio (placeholder):
-```html
+**Validar:** o slug nao deve aparecer ja no JSON (evitar duplicados). Se aparecer, abortar e reportar.
 
-      <!-- Article: [TITULO] -->
-      <article class="article-card reveal"
-               data-category="[CATEGORIA]"
-               data-featured="true"
-               data-href="conhecimento/[SLUG].html">
-        <div class="article-card-img">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" stroke="rgba(201,169,110,0.18)" stroke-width="1"/><polyline points="8,38 18,22 28,30 40,12" stroke="rgba(201,169,110,0.55)" stroke-width="1.2" fill="none"/><circle cx="18" cy="22" r="2" fill="rgba(201,169,110,0.4)"/><circle cx="40" cy="12" r="2" fill="rgba(201,169,110,0.4)"/></svg>
-        </div>
-        <div class="article-card-body">
-          <div class="article-card-header">
-            <span class="art-cat-badge [CAT_CLASS]">[CATEGORIA_DISPLAY]</span>
-            <span class="art-read-time">Leitura: [TEMPO_LEITURA_COMPACTO]</span>
-          </div>
-          <h3 class="article-card-title">[TITULO]</h3>
-          <p class="article-card-excerpt">[EXCERPT]</p>
-          <div class="article-card-footer">
-            <span class="art-date">[DATE_PT]</span>
-            <a href="conhecimento/[SLUG].html" class="art-link">Ler</a>
-          </div>
-        </div>
-      </article>
-```
+O hub `regulamentos.html` (criado na Fase 5) le este JSON em runtime e renderiza a listagem documental agrupada por subgrupo. **Nao ha card a injetar em HTML estatico.** A propria entrada no JSON faz a peca aparecer no hub.
 
-Atualiza o contador: `id="filterCount">X artigos</span>` substituindo X por X+1.
+### Passo 5 - NAO atualizar destaques na homepage
 
-### Passo 5 - Gerir destaques do carrossel (single source of truth)
+**Decisao editorial fixa (2026-05-09):** artigos de Regulamentos e Conceitos sao excluidos dos destaques editoriais da homepage. A homepage destaca apenas artigos de Atualidade, Opiniao e Estrategia.
 
-**Arquitectura:** o carrossel editorial na homepage (`index.html`) faz `fetch('conhecimento.html')` e clona automaticamente todos os cards marcados com `data-featured="true"`. Não ha duplicacao de HTML.
+Razao: a homepage e fachada e fala diretamente ao decisor. Regulamentos e Conceitos e seccao de referencia, nao de descoberta visual. O leitor que precisa do artigo vai la intencionalmente atraves do dropdown.
 
-**Regra:** manter entre 9 e 12 artigos em destaque em simultaneo.
+**Acao concreta:** nao tocar em `index.html`. Nao adicionar `featured: true` no JSON.
 
-1. O novo artigo já foi injectado com `data-featured="true"` no Passo 4.
-2. Contar quantos cards tem `data-featured="true"` em `conhecimento.html`. Se > 12, remover o atributo dos mais antigos (em baixo na lista) até ficar com 12.
-3. Não tocar em `index.html`. O carrossel actualiza-se sozinho.
-
-### Passo 6 - Deploy
+### Passo 6 - Build do footer
 
 ```bash
-git add conhecimento/[SLUG].html conhecimento.html
-git commit -m "artigo informativo: [TITULO]"
-git push
+python build_footer.py "conhecimento/[SLUG].html"
 ```
 
-### Passo 7 - Confirmar
+Preenche os marcadores `<!-- FOOTER:START --> ... <!-- FOOTER:END -->` no novo ficheiro.
 
-Informa: titulo publicado, autor selecionado e cargo, fontes processadas, URL relativo, confirmacao de que o card foi marcado como `data-featured="true"` (carrossel actualiza-se automaticamente).
+### Passo 7 - Auto-validacao de paridade
+
+Apos os passos 1-6, validar localmente:
+
+1. Existe `conhecimento/[SLUG].html`? Se nao: ABORTAR com erro grave.
+2. O slug aparece em `conhecimento-catalog.json` exatamente uma vez? Se 0: re-aplicar Passo 4. Se >1: remover duplicados mantendo o primeiro.
+3. O subgrupo escolhido e um dos 4 validos? Se nao: corrigir.
+
+### Passo 8 - Deploy
+
+```bash
+git add conhecimento/[SLUG].html conhecimento-catalog.json
+git commit -m "regulamentos: [TITULO curto]"
+git push origin main
+```
+
+Se push falhar: `git stash && git pull --rebase && git stash pop && git push`.
+
+### Passo 9 - Reportar
+
+Informar:
+- Titulo publicado.
+- Autor selecionado e cargo.
+- **Subgrupo atribuido** (regulamentos-leis, programas-instrumentos, conceitos-metricas, ou procedimentos-boas-praticas).
+- URL: `conhecimento/[SLUG].html`.
+- Confirmacao de que aparece automaticamente em `conhecimento/regulamentos.html` (hub).
+- Confirmacao de que NAO aparece nos destaques de `index.html` (decisao editorial).
+- Commit hash.
