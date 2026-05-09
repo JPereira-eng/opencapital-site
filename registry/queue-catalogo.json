@@ -92,22 +92,6 @@
   },
   "queue": [
     {
-      "id": "armilar-venture-partners-catalogo",
-      "name": "Armilar Venture Partners",
-      "source_id": "armilar-ventures",
-      "shard": "catalogo-vc",
-      "aviso_codigo": null,
-      "detected_date": "2026-05-08",
-      "deadline": null,
-      "budget": "Tickets seed/early-stage. AUM 260M EUR. Latest fund: 120M EUR.",
-      "regulation_url": "https://www.armilar.com/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 55,
-      "status": "ready",
-      "notes": "VC portuguesa fundada em 2000. Deep-tech, early-stage. Portfolio inclui OutSystems, Feedzai, Sword Health (3 unicornios, 1 IPO, 14 aquisicoes). Foco Iberia para seed; expandido para Europa/EUA em Series A+."
-    },
-    {
       "id": "fundo-nos-5g-armilar",
       "name": "Fundo NOS 5G (gerido pela Armilar)",
       "source_id": "armilar-ventures",
@@ -284,5 +268,5 @@
       "notes": "DIH portugues PRODUTECH integrado no consortio DIH-squared. Apoia startups e scale-ups (seed-Series A) em robotica e fabrico agil. Pitch event anual com VCs. PRODUTECH integra EUHubs4Data."
     }
   ],
-  "updated": "2026-05-08"
+  "updated": "2026-05-09"
 }
