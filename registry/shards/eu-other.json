@@ -988,6 +988,34 @@
       "source": "eit-urban-mobility",
       "state": "aberto",
       "last_check": "2026-05-08"
+    },
+    {
+      "id": "scale-her-2026",
+      "file": "instrumentos/scale-her-2026.html",
+      "source": "scale-her",
+      "state": "aberto",
+      "last_check": "2026-05-09"
+    },
+    {
+      "id": "jarvis-open-call-2-2026",
+      "file": "instrumentos/jarvis-open-call-2-2026.html",
+      "source": "jarvis-eu",
+      "state": "aberto",
+      "last_check": "2026-05-09"
+    },
+    {
+      "id": "jewel-eurocluster-nzt-2026",
+      "file": "instrumentos/jewel-eurocluster-nzt-2026.html",
+      "source": "jewel-eurocluster",
+      "state": "aberto",
+      "last_check": "2026-05-09"
+    },
+    {
+      "id": "aiod-platform-oc-2026",
+      "file": "instrumentos/aiod-platform-oc-2026.html",
+      "source": "aiod-platform",
+      "state": "aberto",
+      "last_check": "2026-05-09"
     }
   ],
   "instruments": [
@@ -2168,7 +2196,7 @@
       "last_check": "2026-05-09"
     }
   ],
-  "count": 137,
+  "count": 141,
   "published": 137,
   "open": 102,
   "closed": 32,
