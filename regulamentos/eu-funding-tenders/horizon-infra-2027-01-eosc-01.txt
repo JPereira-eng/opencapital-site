@@ -1,0 +1,193 @@
+Title: Expanding and deepening the EOSC Federation (EOSC Partnership)
+Identifier: HORIZON-INFRA-2027-01-EOSC-01
+Call: HORIZON-INFRA-2027-01 - Research Infrastructures 2027
+
+Framework Programme: Horizon Europe (HORIZON)
+Programme Division: Horizon Europe (HORIZON)
+Programme Division: Excellent Science
+Programme Division: Research infrastructures
+
+Type of Action: 
+
+Budget budgetTopicActionMap: {'113137': [{'action': 'HORIZON-INFRA-2027-DEV-01-03 - HORIZON-RIA HORIZON  Research and Innovation Actions', 'plannedOpeningDate': '1804550400000', 'deadlineModel': 'single-stage', 'deadlineDates': ['1813017600000'], 'budgetYearMap': {'2027': '29500000'}, 'expectedGrants': 8, 'minContribution': 3000000, 'maxContribution': 4500000}], '113136': [{'action': 'HORIZON-INFRA-2027-TECH-01-01 - HORIZON-RIA HORIZON  Research and Innovation Actions', 'plannedOpeningDate': '1804550400000', 'deadlineModel': 'single-stage', 'deadlineDates': ['1813017600000'], 'budgetYearMap': {'2027': '30000000'}, 'expectedGrants': 2, 'minContribution': 10000000, 'maxContribution': 15000000}], '113138': [{'action': 'HORIZON-INFRA-2027-01-EOSC-02 - HORIZON-CSA HORIZON Coordination and Support Actions', 'plannedOpeningDate': '1804550400000', 'deadlineModel': 'single-stage', 'deadlineDates': ['1813017600000'], 'budgetYearMap': {'2027': '8000000'}, 'expectedGrants': 2, 'minContribution': 2500000, 'maxContribution': 4000000}], '113129': [{'action': 'HORIZON-INFRA-2027-DEV-01-02 - HORIZON-RIA HORIZON  Research and Innovation Actions', 'plannedOpeningDate': '1804550400000', 'deadlineModel': 'single-stage', 'deadlineDates': ['1813017600000'], 'budgetYearMap': {'2027': '20000000'}, 'expectedGrants': 4, 'minContribution': 2000000, 'maxContribution': 5000000}], '113131': [{'action': 'HORIZON-INFRA-2027-TECH-01-02 - HORIZON-RIA HORIZON  Research and Innovation Actions', 'plannedOpeningDate': '1804550400000', 'deadlineModel': 'single-stage', 'deadlineDates': ['1813017600000'], 'budgetYearMap': {'2027': '30000000'}, 'expectedGrants': 3, 'minContribution': 7000000, 'maxContribution': 12000000}], '113130': [{'action': 'HORIZON-INFRA-2027-01-EOSC-01 - HORIZON-COFUND HORIZON Programme Cofund Actions', 'plannedOpeningDate': '1804550400000', 'deadlineModel': 'single-stage', 'deadlineDates': ['1813017600000'], 'budgetYearMap': {'2027': '40000000'}, 'expectedGrants': 1, 'minContribution': 40000000, 'maxContribution': 40000000}], '113133': [{'action': 'HORIZON-INFRA-2027-DEV-01-01 - HORIZON-CSA HORIZON Coordination and Support Actions', 'plannedOpeningDate': '1804550400000', 'deadlineModel': 'single-stage', 'deadlineDates': ['1813017600000'], 'budgetYearMap': {'2027': '30000000'}, 'expectedGrants': 9, 'minContribution': 1500000, 'maxContribution': 3500000}], '113132': [{'action': 'HORIZON-INFRA-2027-SERV-01-01 - HORIZON-RIA HORIZON  Research and Innovation Actions', 'plannedOpeningDate': '1804550400000', 'deadlineModel': 'single-stage', 'deadlineDates': ['1813017600000'], 'budgetYearMap': {'2027': '105000000'}, 'expectedGrants': 3, 'minContribution': 35000000, 'maxContribution': 35000000}], '113135': [{'action': 'HORIZON-INFRA-2027-SERV-01-03 - HORIZON-RIA HORIZON  Research and Innovation Actions', 'plannedOpeningDate': '1804550400000', 'deadlineModel': 'single-stage', 'deadlineDates': ['1813017600000'], 'budgetYearMap': {'2027': '12000000'}, 'expectedGrants': 4, 'minContribution': 3000000, 'maxContribution': 3000000}], '113134': [{'action': 'HORIZON-INFRA-2027-SERV-01-02 - HORIZON-RIA HORIZON  Research and Innovation Actions', 'plannedOpeningDate': '1804550400000', 'deadlineModel': 'single-stage', 'deadlineDates': ['1813017600000'], 'budgetYearMap': {'2027': '35000000'}, 'expectedGrants': 6, 'minContribution': 6000000, 'maxContribution': 6000000}]}
+Budget budgetYearsColumns: ['2027']
+
+DESCRIPTION:
+Expected Outcome:
+
+ Project results are expected to contribute to the following outcomes:
+
+ 
+- The EOSC Federation provides to EOSC users with state-of-the-art digital services addressing their needs to store, process and share data, run software, models and workflows, and collaborate with their peers. 
+- Research and digital infrastructures and other organisations providing scientific services are equipped with appropriate structures and technical, legal and coordination mechanisms to onboard, manage and sustainably operate digital tools and services in the EOSC Federation. 
+- Investments across Europe in the provision of FAIR scientific data and services within EOSC are more aligned and coordinated, achieving economies of scale and more efficient use of digital resources. Scope:
+
+ In order to carry out typical research workflows, researchers need to use a broad range of digital services such as data storage, computing, applications, and collaboration tools. Such services are often cost-intensive and their provision is restricted, e.g. to researchers within a country/region or a specific thematic area. The EOSC Federation aims to provide a trusted, sovereign and secure environment to researchers in Europe to use high-quality, FAIR research data and run research workflows, with a focus on cross-disciplinary and cross-country research collaboration.
+
+ The aim of the topic is to set up an EOSC Federation-wide mechanism that enables multiple organisations to seamlessly offer such digital services, and to support the sustained provision of these services to EOSC users. It also aims to enlarge the EOSC Federation by supporting the expansion of Nodes as gateways through which multiple organisations can offer their resources, such as data and services, to EOSC users.
+
+ Proposals should cover the following activities:
+
+ 1) Provide seamless, user-friendly access to EOSC users to digital services for typical research workflows such as data storage, computing, applications, and collaboration tools, through a fully integrated EOSC Federation-wide system.
+
+ 
+- Gather requirements and analyse needs of researchers and EOSC users for such services and how they can best complement and integrate with existing resources in the EOSC Federation. 
+- Support developing and embedding a Federation-wide resource management and accounting system for the efficient provision of such services across the Federation, building on the design principles of the ‘virtual credit allocation’ system of the EOSC EU Node and any further development in the EOSC Federation. 
+- Provide access to EOSC users to such services, based on the researchers' and EOSC users' needs and requirements and making use of a Federation-wide resource management and accounting system and harmonised access policies, in line with the principles and guidelines of transnational and virtual access to European Research Infrastructures and related EOSC Federation policies. 
+- Upgrade the EOSC user experience through deep, back-end, cross-provider integration of key digital services covering the full research lifecycle, achieving a user-friendly and robust environment. 
+- Develop, test and demonstrate business models for the effective management of the supply and demand of such services, as well as for their long-term sustainable provision in the EOSC Federation, beyond the end of the project’s duration. 
+- Develop guidelines to facilitate a harmonised approach to the acquisition and provision of such services that supports research data sovereignty and research security in Europe, ensuring a trusted, secure and sovereign EOSC Federation. 
+- Establish mechanisms for continuous feedback and improvement, including indicators for monitoring the quality and usage of the services, building on and further developing existing mechanisms of the EOSC Federation, and ensuring that the evolving needs and requirements of EOSC users are met by the EOSC Federation. These activities should be fully concerted and aligned with related parallel activities carried out by the EOSC Federation.
+
+ 2) Support the broadening, integration and structuring of the participation of research communities in the EOSC Federation through
+
+ 
+- the development and establishment of intra-Node coordination mechanisms and organisational models to enable EOSC Nodes to effectively represent broad communities and multiple organisations in the EOSC Federation, 
+- the development and use of digital capabilities, and of options for harmonised legal arrangements, such as contractual or service-level agreements, for onboarding and sustainably provisioning communities’ services through EOSC Nodes, 
+- broadening organisations’ engagement with and contribution to the EOSC Federation, including underrepresented thematic research communities or geographic areas. Proposals should implement the activities through the organisation of joint calls that provide grants to third parties.
+
+ The joint calls should be open to organisations that participate or are interested to participate in the EOSC Federation either by operating an EOSC Node or by onboarding their identified resources to the EOSC Federation, in line with the relevant criteria set by the EOSC Federation.
+
+ Proposed activities should be driven by current gaps and needs of scientific communities, digital infrastructures and service providers. Proposals should clearly demonstrate how they will contribute to addressing these needs and increasing the uptake of the EOSC Federation by researchers.
+
+ The activities should comply with and contribute to the continuous update and upgrade of related EOSC Federation policies and standards, including technical and interoperability standards, the use of open standards, harmonised access and use policies, and cybersecurity [1] .
+
+ Proposals should include a robust and credible plan for the long-term, beyond the project’s duration, sustained operation of the services that they will make available in the EOSC Federation, and any other relevant project results.
+
+ For what concerns provision of access to digital services by third parties funded under the joint calls, proposals should include a list of the digital services that will be supported through the joint calls. The third parties funded under the joint calls should identify the specific digital services that they will provide for access and the amount of access made available to EOSC users, allocating budget according to users’ demand and making use of the Federation-wide resource management and accounting system. These third parties should also fulfil further conditions and requirements described in the ‘Virtual Access Activities’ part of the ‘Specific Features for Research Infrastructures’ section of this Work Programme, for what concerns publicity of the access offered, determining the access costs, and setting criteria for access by EOSC users in line with the EOSC Federation access policies. Proposals are expected to address compliance with these specific conditions and notably ensure that the selected third parties will provide appropriate documentation to support and justify the amount of access provided and corresponding costs.
+
+ Projects are encouraged to explore synergies with relevant EU initiatives such as EuroHPC. To ensure coherence and complementarity of outcomes, funded projects are expected to cooperate with each other and with relevant initiatives and projects contributing to the development of the EOSC Federation including actions awarded under the topics HORIZON-INFRA-2023-01-EOSC-04, HORIZON-INFRA-2024-EOSC-02-01, HORIZON-INFRA-2025-01-EOSC-01, HORIZON-INFRA-2026-01-EOSC-01 and closely interact with the organisational setup of the EOSC Federation. To this extent, proposals should provide for dedicated activities and earmark appropriate resources. This topic implements the co-programmed European Partnership for the European Open Science Cloud [2] .
+
+ [1] As described in the EOSC Federation Handbook and other relevant documentation potentially adopted by the EOSC Federation.
+
+ [2] https://eosc.eu/partnership/
+
+CONDITIONS:
+"> General conditions 1. Admissibility Conditions: Proposal page limit and layout described in Annex A and Annex E of the Horizon Europe Work Programme General Annexes.
+
+ Proposal page limits and layout: described in Part B of the Application Form available in the Submission System.
+
+ 2. Eligible Countries described in Annex B of the Work Programme General Annexes.
+
+ A number of non-EU/non-Associated Countries that are not automatically eligible for funding have made specific provisions for making funding available for their participants in Horizon Europe projects. See the information in the Horizon Europe Programme Guide .
+
+ 3. Other Eligible Conditions Subject to restrictions for the protection of European communication networks.
+
+ described in Annex B of the Work Programme General Annexes.
+
+ 4. Financial and operational capacity and exclusion described in Annex C of the Work Programme General Annexes.
+
+ 5a. Evaluation and award: Award criteria, scoring and thresholds are described in Annex D of the Work Programme General Annexes.
+
+ 5b. Evaluation and award: Submission and evaluation processes The following additions to the general award criteria apply: 
+
+ For the ‘Impact’ criterion, the following aspects will also be taken into account: 
+
+ The extent to which the proposed work incorporates the necessary coordination efforts and resources with other relevant projects and the European Open Science Cloud (EOSC) governance structure in the context of the EOSC Partnership.
+
+ are described in Annex F of the Work Programme General Annexes and the Online Manual .
+
+ 5c. Evaluation and award: Indicative timeline for evaluation and grant agreement described in Annex F of the Work Programme General Annexes.
+
+ 6. Legal and financial set-up of the grants Beneficiaries may provide financial support to third parties. The support to third parties can only be provided in the form of grants. Financial support provided by the participants to third parties is the primary activity of the action in order to be able to achieve its objectives. Given the type of action and its level of ambition, as well as that access to certain types of digital services can be costly and that activities other than access will also be supported, the maximum amount to be granted to each third party is EUR 2.00 million.
+
+ The funding rate is 50% of the eligible costs. This is justified as the provision of digital services to users of the EOSC Federation and the broadening and integration of research communities in the EOSC Federation are activities with strong European added value that are typically not supported by national funding bodies.
+
+ At least 20% of the total financial support to third parties must be open to entities eligible for funding as described in the General Annex B, therefore it must not have any additional geographic restrictions for eligibility for funding.
+
+ Beneficiaries will be subject to the following additional access rights:
+
+ 
+- Each beneficiary must grant royalty-free access to its results to the EOSC Association for monitoring and developing policies and strategies for the European Open Science Cloud. Each beneficiary must also provide directly to the EOSC Association the information the beneficiary deems necessary for monitoring and developing policies and strategies for the EOSC. 
+- Each beneficiary must grant royalty-free access to its intellectual property rights which are part of the results and are needed for further developing the EOSC to legal entities identified by the granting authority and established in Member States or countries associated to the Horizon Europe Framework Programme. Such access rights are limited to non- commercial use. described in Annex G of the Work Programme General Annexes.
+
+ Specific conditions described in the specific topic of the Work Programme
+
+ 
+ Application and evaluation forms and model grant agreement (MGA): Application form templates — the application form specific to this call is available in the Submission System 
+
+ Standard application form (HE RIA, IA) 
+
+ Standard application form (HE CSA) 
+
+ Evaluation form templates — will be used with the necessary adaptations &#xa0;
+
+ Standard evaluation form (HE RIA, IA) &#xa0;
+
+ Standard evaluation form (HE CSA) &#xa0;
+
+ Guidance 
+
+ HE Programme Guide &#xa0;
+
+ Model Grant Agreements (MGA) 
+
+ HE MGA &#xa0;
+
+ Lump Sum MGA &#xa0;
+
+ Framework Partnership Agreement FPA &#xa0;
+
+ Call-specific instructions &#xa0;
+
+ Detailed budget table (HE LS) &#xa0;
+
+ Information on financial support to third parties (HE) &#xa0;
+
+ Information on clinical studies (HE) &#xa0;
+
+ Guidance: "Lump sums - what do I need to know?" 
+
+ Additional documents: HE Main Work Programme 2025 – 1. General Introduction 
+
+ HE Main Work Programme 2025 – 3. Research Infrastructures 
+
+ HE Main Work Programme 2026-2027 – 15. General Annexes 
+
+ HE Programme Guide 
+
+ HE Framework Programme 2021/695 
+
+ HE Specific Programme Decision 2021/764 
+
+ EU Financial Regulation 2024/2509 
+
+ Decision authorising the use of lump sum contributions under the Horizon Europe Programme 
+
+ Rules for Legal Entity Validation, LEAR Appointment and Financial Capacity Assessment 
+
+ EU Grants AGA — Annotated Model Grant Agreement 
+
+ Funding & Tenders Portal Online Manual 
+
+ Funding & Tenders Portal Terms and Conditions &#xa0;
+
+ Funding & Tenders Portal Privacy Statement
+
+SUPPORT INFO:
+Online Manual is your guide on the procedures from proposal submission to managing your grant.
+
+ Horizon Europe Programme Guide contains the detailed guidance to the structure, budget and political priorities of Horizon Europe.
+
+ Funding & Tenders Portal FAQ – find the answers to most frequently asked questions on submission of proposals, evaluation and grant management.
+
+ Research Enquiry Service – ask questions about any aspect of European research in general and the EU Research Framework Programmes in particular.
+
+ National Contact Points (NCPs) – get guidance, practical information and assistance on participation in Horizon Europe. There are also NCPs in many non-EU and non-associated countries (‘third-countries’).
+
+ Enterprise Europe Network – contact your EEN national contact for advice to businesses with special focus on SMEs. The support includes guidance on the EU research funding.
+
+ IT Helpdesk – contact the Funding & Tenders Portal IT helpdesk for questions such as forgotten passwords, access rights and roles, technical aspects of submission of proposals, etc.
+
+ European IPR Helpdesk assists you on intellectual property issues.
+
+ CEN-CENELEC Research Helpdesk and ETSI Research Helpdesk – the European Standards Organisations advise you how to tackle standardisation in your project proposal.
+
+ The European Charter for Researchers and the Code of Conduct for their recruitment – consult the general principles and requirements specifying the roles, responsibilities and entitlements of researchers, employers and funders of researchers.
+
+ Partner Search help you find a partner organisation for your proposal.
+
+CALL DETAILS:
+  hasForthcomingTopics: False
+  hasOpenTopics: False
+  allClosedTopics: False
