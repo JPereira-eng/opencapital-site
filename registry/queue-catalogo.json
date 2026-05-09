@@ -92,24 +92,6 @@
   },
   "queue": [
     {
-      "id": "sogrape-ventures-beta-capital",
-      "name": "Sogrape Ventures (gerido por Beta Capital)",
-      "source_id": "sogrape-ventures",
-      "shard": "catalogo-vc",
-      "aviso_codigo": null,
-      "detected_date": "2026-05-08",
-      "deadline": null,
-      "budget": "5.000.000 EUR (CVC fund)",
-      "regulation_url": "https://ventures.sogrape.com/pt",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/sogrape-ventures/sogrape-ventures-beta-capital.txt",
-      "priority_score": 50,
-      "status": "ready",
-      "notes": "CVC Sogrape lancado fim 2023, gerido pela Beta Capital. Foco: precision viticulture, low-alcohol alternative beverages, tracability/authenticity, packaging, beverage AI/ML. Primeiro investimento: Candam Tech (1,1M EUR).",
-      "fail_count": 0,
-      "last_download_date": "2026-05-10"
-    },
-    {
       "id": "transatlantic-highway-ventures-catalogo",
       "name": "Transatlantic Highway Ventures",
       "source_id": "transatlantic-highway",
@@ -238,5 +220,5 @@
       "last_download_date": "2026-05-10"
     }
   ],
-  "updated": "2026-05-09"
+  "updated": "2026-05-10"
 }

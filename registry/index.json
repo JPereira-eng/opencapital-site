@@ -3,19 +3,19 @@
     "description": "Open Capital Radar v4.0 - Indice global",
     "version": "4.0",
     "migrated_from_v3": "2026-04-12",
-    "last_writer_run": "2026-05-09",
+    "last_writer_run": "2026-05-10",
     "last_scanner_run": "2026-05-09",
     "last_index_rebuild": "2026-05-09",
     "last_monitor_run": "2026-05-09"
   },
   "totals": {
-    "published": 572,
-    "open": 387,
+    "published": 577,
+    "open": 388,
     "closed": 149,
-    "planned": 40,
-    "in_queue": 50,
+    "planned": 44,
+    "in_queue": 46,
     "in_watchlist": 131,
-    "in_catalogo": 8,
+    "in_catalogo": 7,
     "in_overflow": 395,
     "in_plano_anual": 131
   },
@@ -48,10 +48,10 @@
       "published": 6
     },
     "catalogo-vc": {
-      "count": 24,
-      "open": 20,
+      "count": 25,
+      "open": 21,
       "closed": 2,
-      "published": 24
+      "published": 25
     },
     "eic": {
       "count": 6,
@@ -59,11 +59,11 @@
       "published": 6
     },
     "eu-horizon": {
-      "count": 249,
+      "count": 253,
       "open": 141,
       "closed": 93,
-      "planned": 15,
-      "published": 248
+      "planned": 19,
+      "published": 252
     },
     "eu-other": {
       "count": 143,
