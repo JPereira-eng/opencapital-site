@@ -27289,6 +27289,132 @@
       "highlight2": "Estados-Membros UE e Países Associados",
       "href": "instrumentos/horizon-cl5-2027-01-d1-09.html",
       "featured": false
+    },
+    {
+      "id": "horizon-widera-2027-05-era-01",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "previsto",
+      "status_text": "Previsto: abertura 08/12/2026",
+      "status_class": "status-planned",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigação,associacao,entidade-pública",
+      "setores": [
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "id-ciencia"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa WIDERA ERA-01 (2027): Politicas institucionais de acesso aberto via retencao de direitos",
+      "tagline": "Topico Pillar I do programa WIDERA com 2 milhoes de euros para ajudar organizacoes europeias de I&D a tornarem permanente o acesso aberto as suas publicacoes cientificas.",
+      "highlight0": "2M EUR (1 grant CSA, lump sum 100%)",
+      "highlight1": "Universidades, bibliotecas, financiadores publicos de I&D",
+      "highlight2": "UE e Paises Associados",
+      "href": "instrumentos/horizon-widera-2027-05-era-01.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-widera-2027-05-era-03",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "previsto",
+      "status_text": "Previsto: abertura 08/12/2026",
+      "status_class": "status-planned",
+      "fonte": "ue",
+      "beneficiario": "entidade-pública,associacao,ensino-investigação",
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "premios-visibilidade"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa WIDERA ERA-03 (2027): Science comes to town 2029",
+      "tagline": "6 milhoes de euros para um programa europeu de um ano em 3 a 6 cidades anfitrias, com EUCYS e EU TalentOn 2029 como peca central.",
+      "highlight0": "6M EUR (1 grant CSA)",
+      "highlight1": "Cidades, organizacoes culturais e cientificas, parceiros locais I&D",
+      "highlight2": "UE e Paises Associados (3 a 6 cidades)",
+      "href": "instrumentos/horizon-widera-2027-05-era-03.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl4-2027-space-03-83",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "previsto",
+      "status_text": "Previsto: deadline 02/09/2027",
+      "status_class": "status-planned",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigação",
+      "setores": [
+        "industria",
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "investimento-produtivo"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa CL4 SPACE 03-83 (2027): Componentes EEE criticos para autonomia espacial UE",
+      "tagline": "Topico do Cluster 4 Space dedicado a maturacao de componentes eletricos, eletronicos e eletromecanicos criticos para reduzir dependencia da UE em missoes espaciais estrategicas.",
+      "highlight0": "TRL 6 alvo, cadeia de abastecimento UE-first",
+      "highlight1": "Industria espacial, microeletronica, centros de I&D",
+      "highlight2": "UE e Paises Associados",
+      "href": "instrumentos/horizon-cl4-2027-space-03-83.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl4-2027-space-03-71",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "previsto",
+      "status_text": "Previsto: deadline 02/09/2027",
+      "status_class": "status-planned",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigação",
+      "setores": [
+        "tecnologia-digital",
+        "energia-ambiente"
+      ],
+      "necessidades": [
+        "id-ciencia"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa CL4 SPACE 03-71 (2027): Quantum Space Gravimetry",
+      "tagline": "Topico do Cluster 4 Space que financia a maturacao de tecnologias quanticas para gravimetria espacial, alinhado com a Quantum Europe Strategy.",
+      "highlight0": "TRL 4-6 alvo, duas areas tecnicas (BECs, emergentes)",
+      "highlight1": "Laboratorios de fisica quantica, industria espacial, fotonica",
+      "highlight2": "UE e Paises Associados",
+      "href": "instrumentos/horizon-cl4-2027-space-03-71.html",
+      "featured": false
+    },
+    {
+      "id": "lince-capital",
+      "category": "priv",
+      "category_label": "Investimento Privado",
+      "estado": "aberto",
+      "status_text": "Candidatura Continua",
+      "status_class": "status-cont",
+      "fonte": "pventures",
+      "beneficiario": "empresa,empreendedor",
+      "setores": [
+        "saude-ciencias-vida",
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "arranque-validacao",
+        "capitalização-crescimento"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Lince Capital",
+      "tagline": "Sociedade portuguesa de capital de risco com 550 milhoes de euros sob gestao, especializada em digital health, healthtech e software escalavel com vocacao europeia.",
+      "highlight0": "Tickets 250K a 5M+ EUR (seed/late seed)",
+      "highlight1": "Startups portuguesas com vocacao europeia",
+      "highlight2": "Nacional",
+      "href": "instrumentos/lince-capital.html",
+      "featured": false
     }
   ]
 }

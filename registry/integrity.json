@@ -4224,7 +4224,7 @@
     },
     "horizon-infra-2027-tech-01-01": {
       "sha1": "06c21fc2d922954deb303d3704ae72ebdadce34b",
-      "checked": "2026-05-09",
+      "checked": "2026-05-10",
       "size": 15653,
       "source_dir": "eu-funding-tenders",
       "file": "horizon-infra-2027-tech-01-01.txt"
@@ -6462,13 +6462,6 @@
       "source_dir": "eu-funding-tenders",
       "file": "horizon-cl5-2027-01-d1-10.txt"
     },
-    "horizon-infra-2027-tech-01-01": {
-      "sha1": "06c21fc2d922954deb303d3704ae72ebdadce34b",
-      "checked": "2026-05-10",
-      "size": 15653,
-      "source_dir": "eu-funding-tenders",
-      "file": "horizon-infra-2027-tech-01-01.txt"
-    },
     "horizon-infra-2027-dev-01-02": {
       "sha1": "f1bac7a3679bd687438a7e488cf2672bf43a363c",
       "checked": "2026-05-10",
@@ -6518,5 +6511,33 @@
       "source_dir": "eu-funding-tenders",
       "file": "horizon-widera-2027-05-era-05.txt"
     }
+  },
+  "horizon-widera-2027-05-era-01": {
+    "sha1": "8158c8e6254f5ef4d0570a9abe497e00c9cd4d66",
+    "checked": "2026-05-10",
+    "size": 7805,
+    "source_dir": "eu-funding-tenders",
+    "file": "horizon-widera-2027-05-era-01.txt"
+  },
+  "horizon-widera-2027-05-era-03": {
+    "sha1": "8c33b38d6824ad9a3bd5af1a4008c03cdf134f05",
+    "checked": "2026-05-10",
+    "size": 9974,
+    "source_dir": "eu-funding-tenders",
+    "file": "horizon-widera-2027-05-era-03.txt"
+  },
+  "horizon-cl4-2027-space-03-83": {
+    "sha1": "544ed9e658af1f96e267abecf26faccf058a285a",
+    "checked": "2026-05-10",
+    "size": 3673,
+    "source_dir": "eu-funding-tenders",
+    "file": "horizon-cl4-2027-space-03-83.txt"
+  },
+  "horizon-cl4-2027-space-03-71": {
+    "sha1": "f7f6a7e02fad3d3ecd4ed536d1ee4949c01af817",
+    "checked": "2026-05-10",
+    "size": 6634,
+    "source_dir": "eu-funding-tenders",
+    "file": "horizon-cl4-2027-space-03-71.txt"
   }
 }
