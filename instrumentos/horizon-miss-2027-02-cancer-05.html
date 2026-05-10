@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizonte Europa MISS-2027-02-CANCER-05: Aquisição Pré-Comercial de Soluções Oncológicas Acessíveis | Open Capital</title>
+  <meta name="description" content="Tópico de Pre-commercial Procurement da Missão Cancer para tecnologias, dispositivos e medicamentos oncológicos acessíveis aos sistemas de saúde europeus.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-caret{width:9px;height:5px;margin-left:4px;display:inline-block;vertical-align:middle;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:180px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:620px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-value.status-cont{color:#2E7D52;font-weight:600;}
+    .meta-value.status-planned{color:#C9A96E;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-gold{color:var(--gold);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-fact-val.val-cont{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-planned{color:#C9A96E;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../biblioteca.html" data-nav="biblioteca" class="active">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../conhecimento/atualidade.html" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../conhecimento/atualidade.html">Atualidade</a>
+        <a href="../conhecimento/opiniao.html">Opinião</a>
+        <a href="../conhecimento/estrategia.html">Estratégia e Gestão</a>
+        <a href="../conhecimento/regulamentos.html">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../capital-simulator.html" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business.html" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos.html" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros.html">Parceiros</a>
+        <a href="../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../biblioteca.html">Biblioteca</a>
+  <a href="../conhecimento/atualidade.html">Conhecimento</a>
+  <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos.html">Sobre Nós</a>
+  <a href="../parceiros.html">Parceiros</a>
+  <a href="../carreiras.html">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../index.html">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../biblioteca.html">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Horizonte Europa MISS-2027-02-CANCER-05</span>
+    </nav>
+    <p class="hero-cat">Financiamento Público</p>
+    <h1 class="hero-title">Aquisição Pré-Comercial para Soluções Oncológicas Acessíveis</h1>
+    <p class="hero-tagline">Tópico de Pre-commercial Procurement que financia consórcios de procurers públicos para desenvolvimento de tecnologias, dispositivos e medicamentos oncológicos cost-effective para sistemas de saúde europeus.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Programa</span>
+        <span class="meta-value gold">Horizonte Europa - Missão Cancer</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Call</span>
+        <span class="meta-value">HORIZON-MISS-2027-02</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Modelo</span>
+        <span class="meta-value">PCP - Pre-commercial Procurement</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-planned">Previsto (call 2027)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../biblioteca.html" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Contexto e Enquadramento</div>
+      <h2 class="section-h2">O que é o tópico HORIZON-MISS-2027-02-CANCER-05</h2>
+      <p class="section-text">A oncologia europeia tem progredido em sobrevivência clínica, mas mantém um problema estrutural de acesso. Tecnologias eficazes existem, frequentemente são desenvolvidas dentro da própria Europa, mas chegam aos sistemas de saúde a preços que limitam adoção, ou desfasadas no tempo face às necessidades clínicas. A consequência prática é desigualdade de acesso entre Estados-Membros, regiões e perfis socioeconómicos de doentes oncológicos.</p>
+      <p class="section-text">O tópico HORIZON-MISS-2027-02-CANCER-05 inscreve-se na Missão Cancer e adopta um instrumento específico, raramente usado em outras missões: Pre-commercial Procurement, ou PCP. Em vez de financiar diretamente investigadores ou empresas, financia consórcios de procurers públicos com necessidades clínicas semelhantes, que se associam para comprar conjuntamente o desenvolvimento de soluções inovadoras adaptadas aos seus sistemas de saúde. A inovação resulta da pressão coordenada do lado da procura, não de propostas tecnológicas isoladas.</p>
+      <p class="section-text">O foco é deliberadamente pragmático. Aceitam-se propostas para uma tecnologia ou dispositivo específico, mas também propostas que combinam várias inovações em soluções end-to-end. A condição transversal é affordability comprovada: as soluções resultantes têm de ser cost-efficient, seguras e demonstrar melhorias de outcomes para doentes a viver com cancro ou a sobreviver a cancro.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para que serve</div>
+      <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
+      <p class="section-text">A natureza do PCP, com saída esperada em soluções clinicamente validadas e prontas para mercado em vários sistemas de saúde europeus, posiciona o tópico simultaneamente como instrumento de I&amp;D&amp;I aplicada e como gatilho de investimento produtivo no setor da saúde. Não financia investigação básica nem cobre comercialização final, financia o ciclo intermédio em que tecnologia europeia validada se transforma em produto procurado pelo Estado.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">I&amp;D e ciência:</strong> o PCP financia o desenvolvimento orientado pelos requisitos clínicos dos procurers, com prototipagem, ensaios e refinamento iterativo. Inclui transferência e adaptação de soluções de outros setores para a saúde, e validação clínica em pelo menos cinco países da UE e Países Associados.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Investimento produtivo:</strong> o desenho do tópico cria first customer references que aceleram a entrada em mercado dos fornecedores selecionados, em particular startups, spin-offs, scale-ups e PME europeias. As soluções vencedoras ficam em condições de escalar industrialmente com procura institucional já comprometida.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Funcionamento do PCP</div>
+      <h2 class="section-h2">Como o instrumento opera</h2>
+      <p class="section-text">O Pre-commercial Procurement segue uma lógica diferente das ações típicas Research and Innovation. O beneficiário do grant é um consórcio de procurers públicos, não os fornecedores. Esses procurers usam o financiamento europeu, complementado pelos seus próprios orçamentos, para lançar concurso público de aquisição de I&amp;D em fases competitivas. Os fornecedores respondem ao concurso público lançado pelos procurers, não recebem financiamento direto do tópico.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Open market consultation:</strong> antes de lançar a aquisição, os procurers organizam consulta aberta ao mercado para validar a maturidade das soluções existentes e desenhar especificações realistas. É um requisito explícito do tópico.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Concurso pan-europeu:</strong> os procurers publicam o concurso de tenders abertamente em toda a Europa. A diversidade de fornecedores é desejável, e startups, spin-offs e PME têm peso importante na ambição declarada do tópico.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Fast-track ou follow-up procurement:</strong> os procurers declaram intenção de comprar pelo menos uma solução resultante. Podem fazê-lo dentro do PCP, em modo fast-track com orçamento já reservado, ou através de procurement subsequente com deliverable de preparação incluído na proposta.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Validação clínica multi-país:</strong> as soluções selecionadas são clinicamente validadas, pilotadas ou escaladas pelos procurers em pelo menos cinco países diferentes da UE e Países Associados. É a garantia de transferibilidade.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Envolvimento de end-users:</strong> equipas clínicas, doentes oncológicos, cuidadores e representantes de doentes são envolvidos com peso real, não como observadores. O tópico exige uso de modelos de participative research.</li>
+      </ul>
+      <div class="highlight-box">
+        <div class="highlight-box-title">Quem é o beneficiário direto</div>
+        <div class="highlight-box-text">Os beneficiários elegíveis para a subvenção são consórcios de procurers públicos com necessidades clínicas comuns, idealmente acompanhados por procurers privados. As empresas, centros de investigação e developers tecnológicos não recebem financiamento direto deste tópico, respondem ao concurso público lançado pelos procurers vencedores. Esta distinção é estrutural e altera quem deve liderar a candidatura.</div>
+      </div>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Estrutura do Financiamento</div>
+      <h2 class="section-h2">Modelo de subvenção e parâmetros</h2>
+      <p class="section-text">À data de publicação do tópico, a dotação específica e o número de projetos a financiar são definidos no aviso formal a publicar pela Comissão Europeia, em alinhamento com o Work Programme 2026-2027 das Missões. As condições gerais aplicáveis seguem os Anexos do Work Programme do Horizonte Europa.</p>
+      <table class="art-table">
+        <thead>
+          <tr>
+            <th>Parâmetro</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Programa</strong></td><td>Horizonte Europa - Pilar II - Missões</td></tr>
+          <tr><td><strong>Missão</strong></td><td>Cancer Mission</td></tr>
+          <tr><td><strong>Call</strong></td><td>HORIZON-MISS-2027-02</td></tr>
+          <tr><td><strong>Tipo de ação</strong></td><td>PCP - Pre-commercial Procurement</td></tr>
+          <tr><td><strong>Beneficiários</strong></td><td>Consórcios de procurers públicos (com privados, opcional)</td></tr>
+          <tr><td><strong>Validação clínica</strong></td><td>Mínimo 5 países UE/Associados</td></tr>
+          <tr><td><strong>Limiar de avaliação</strong></td><td>4 (Excelência), 4 (Impacto), 4 (Implementação), cumulativo 12</td></tr>
+          <tr><td><strong>Deadline indicativo</strong></td><td>21 de setembro de 2027</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Elegibilidade e Consórcio</div>
+      <h2 class="section-h2">Quem pode candidatar-se</h2>
+      <p class="section-text">A elegibilidade segue as regras gerais do Horizonte Europa, com a especificidade do PCP. São elegíveis pessoas coletivas de Estados-Membros e Países Associados, mas o consórcio liderante tem de ser composto por procurers públicos com necessidades clínicas comuns. Tipicamente são serviços nacionais ou regionais de saúde, agências hospitalares, organizações de aquisição centralizada para saúde, autoridades regionais com tutela hospitalar.</p>
+      <div class="highlight-box">
+        <div class="highlight-box-title">Composição típica de consórcio competitivo</div>
+        <div class="highlight-box-text">Cinco a oito procurers públicos de pelo menos cinco países da UE ou Países Associados, com necessidade clínica comum bem definida e orçamento próprio mobilizado. Um ou mais procurers privados em complemento, frequentemente operadores hospitalares privados ou seguradoras, opcional. Uma equipa de coordenação especializada em PCP, frequentemente externa, com experiência em open market consultation e em concursos pan-europeus de inovação. Equipas clínicas em hospitais oncológicos europeus de referência. Representantes de doentes oncológicos com mandato real. Apoio jurídico em direito europeu de contratação pública.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Posicionamento Português</div>
+      <h2 class="section-h2">Oportunidade para o sistema de saúde nacional</h2>
+      <p class="section-text">Portugal tem uma posição interessante para participar como procurer neste tipo de PCP, em particular através do Serviço Nacional de Saúde, dos Centros Hospitalares de referência oncológica, dos Institutos Portugueses de Oncologia em Lisboa, Porto e Coimbra, ou de SPMS na vertente de aquisição centralizada. A participação como procurer permite acesso prioritário a soluções clinicamente validadas e a influência direta sobre o desenho dos requisitos.</p>
+      <p class="section-text">Para empresas portuguesas em healthtech, medtech, biotecnologia oncológica, plataformas digitais de saúde ou em produção de medicamentos, o tópico não financia diretamente, mas cria oportunidades concretas de mercado quando os concursos forem lançados. A presença em rede com procurers ativos e a antecipação de especificações é um caminho mais robusto do que esperar que as oportunidades surjam por publicação. A Open Capital recomenda que empresas com soluções diferenciadoras façam mapeamento ativo dos consórcios de procurers em formação, para se posicionarem cedo no momento dos tenders.</p>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">PCP em saúde é um instrumento exigente e relativamente pouco conhecido fora dos serviços nacionais com tradição de inovação contratada. Para entidades portuguesas, a recomendação é distinguir desde o início duas posições muito diferentes. Como procurer, a candidatura exige liderança institucional, comprometimento orçamental real para a fase de aquisição e capacidade jurídica para conduzir concurso pan-europeu nos tempos estabelecidos. Como fornecedor, o foco deve ser presença antecipada nos consórcios em formação e preparação técnica para responder a tenders com especificações desafiantes.</p>
+      <p class="section-text">Vemos três configurações típicas em propostas competitivas. A primeira é um consórcio liderado por uma agência nacional de aquisição centralizada com cinco a sete países parceiros e uma necessidade clínica clara. A segunda é uma rede de hospitais oncológicos de referência que une forças para procurar uma solução tecnológica específica que nenhum deles teria escala individual para impor. A terceira, mais rara mas relevante, é um consórcio liderado por uma autoridade regional de saúde com forte tradição de inovação e apoio explícito de outras autoridades regionais europeias com problemas semelhantes.</p>
+      <p class="section-text">A fragilidade mais comum em propostas neste tópico é subestimar a maturidade institucional necessária para conduzir o PCP. Um procurer com pouco histórico de aquisição inovadora, sem orçamento mobilizado e sem equipa jurídica preparada para concursos pan-europeus, dificilmente passa o limiar de Implementação na avaliação. Para SNS, IPO, SPMS, autoridades regionais, hospitais privados ou seguradoras com interesse em explorar este tópico, sugerimos uma conversa preliminar focada em três pontos: identificação da necessidade clínica que justifica o PCP, mapeamento de procurers parceiros europeus com problemas equivalentes, e dimensionamento da governação interna e da capacidade jurídica que o instrumento exige durante e depois da execução.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">Horizonte Europa - Missões</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Missão</div>
+        <div class="sidebar-fact-val">Cancer Mission</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Call</div>
+        <div class="sidebar-fact-val">HORIZON-MISS-2027-02</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tipo de ação</div>
+        <div class="sidebar-fact-val">PCP - Pre-commercial Procurement</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Beneficiários</div>
+        <div class="sidebar-fact-val">Consórcios de procurers públicos</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Validação</div>
+        <div class="sidebar-fact-val">5 países mínimo</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Localização</div>
+        <div class="sidebar-fact-val">UE e Países Associados</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-planned">Previsto (call 2027)</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Quer enquadrar a sua agência de aquisição pública ou o seu hospital num consórcio europeu de PCP em oncologia?</div>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn" target="_blank">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="horizon-miss-2027-02-cancer-03.html" class="related-link">
+        <span class="related-link-name">Missão Cancer 2027-02 CANCER-03</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="horizon-miss-2027-02-cancer-04.html" class="related-link">
+        <span class="related-link-name">Missão Cancer 2027-02 CANCER-04</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="horizon-miss-2026-04-pcp-cit-01.html" class="related-link">
+        <span class="related-link-name">Missão PCP-CIT-01 (2026)</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="horizonte-europa.html" class="related-link">
+        <span class="related-link-name">Horizonte Europa</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../biblioteca.html">Portugal 2030</a></li>
+        <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+        <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+        <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../conhecimento.html">Conhecimento</a></li>
+        <li><a href="../parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="../sobre-nos.html">Equipa</a></li>
+        <li><a href="../carreiras.html">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../privacidade.html">Privacidade</a>
+      <a href="../termos.html">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
