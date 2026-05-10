@@ -92,24 +92,6 @@
   },
   "queue": [
     {
-      "id": "shilling-vc-catalogo",
-      "name": "Shilling VC (Founders Fund + Opportunity Fund)",
-      "source_id": "shilling-vc",
-      "shard": "catalogo-vc",
-      "aviso_codigo": null,
-      "detected_date": "2026-05-08",
-      "deadline": null,
-      "budget": "Tickets 100.000 EUR-1M (Founders Fund pre-seed/seed). Opportunity Fund 50M EUR (Series A+). AUM 52M EUR.",
-      "regulation_url": "https://www.shilling.vc/",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/shilling-vc/shilling-vc-catalogo.txt",
-      "priority_score": 55,
-      "status": "ready",
-      "notes": "VC portuguesa desde 2011. Setores: fintech, healthcare, IA, consumer, biotech, commerce. Portfolio: Sword Health, Unbabel, Bizay, Uniplaces, Talka. 84 investimentos (11 nos ultimos 12 meses, Jan 2026).",
-      "fail_count": 0,
-      "last_download_date": "2026-05-10"
-    },
-    {
       "id": "daskapital-catalogo",
       "name": "Daskapital - Crowdfunding Platform",
       "source_id": "daskapital",
