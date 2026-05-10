@@ -247,7 +247,21 @@
 
   <!-- ─── NAVBAR ─── -->
   <!-- NAVBAR:START -->
-<style>.nav-caret{display:inline-block;font-size:9px;margin-left:5px;color:rgba(255,255,255,0.45);transition:transform .25s ease, color .25s ease;vertical-align:middle;line-height:1;}.navbar.scrolled .nav-caret{color:rgba(26,58,92,0.55);}.nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}</style>
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
 <nav class="navbar" id="navbar">
   <a href="index.html" class="nav-logo">
     <img src="logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
@@ -255,7 +269,7 @@
   <ul class="nav-links">
     <li><a href="biblioteca.html" data-nav="biblioteca">Biblioteca</a></li>
     <li class="nav-dropdown">
-      <a href="conhecimento/atualidade.html" data-nav="conhecimento">Conhecimento <span class="nav-caret" aria-hidden="true">&#9662;</span></a>
+      <a href="conhecimento/atualidade.html" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <div class="nav-dropdown-menu">
         <a href="conhecimento/atualidade.html">Atualidade</a>
         <a href="conhecimento/opiniao.html">Opinião</a>
@@ -267,7 +281,7 @@
     <li><a href="tech2business.html" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
     <li><a href="sobre-nos.html" data-nav="sobre-nos">Sobre Nós</a></li>
     <li class="nav-dropdown">
-      <a href="#" data-nav="oportunidades">Oportunidades <span class="nav-caret" aria-hidden="true">&#9662;</span></a>
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <div class="nav-dropdown-menu">
         <a href="parceiros.html">Parceiros</a>
         <a href="carreiras.html">Carreiras</a>
