@@ -90,25 +90,6 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [
-    {
-      "id": "produtech-dih-factor",
-      "name": "DIH-squared / DIH2 Factor (PRODUTECH DIH Platform)",
-      "source_id": "produtech-dih",
-      "shard": "catalogo-aceleradores",
-      "aviso_codigo": null,
-      "detected_date": "2026-05-08",
-      "deadline": null,
-      "budget": "Acesso a VCs investors + apoio teste/validacao em fabrica",
-      "regulation_url": "https://dih-squared.eu/content/dih%C2%B2-factor",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/produtech-dih/produtech-dih-factor.txt",
-      "priority_score": 50,
-      "status": "ready",
-      "notes": "DIH portugues PRODUTECH integrado no consortio DIH-squared. Apoia startups e scale-ups (seed-Series A) em robotica e fabrico agil. Pitch event anual com VCs. PRODUTECH integra EUHubs4Data.",
-      "fail_count": 0,
-      "last_download_date": "2026-05-10"
-    }
-  ],
+  "queue": [],
   "updated": "2026-05-10"
 }

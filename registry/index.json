@@ -9,21 +9,21 @@
     "last_monitor_run": "2026-05-09"
   },
   "totals": {
-    "published": 611,
-    "open": 394,
+    "published": 612,
+    "open": 395,
     "closed": 149,
     "planned": 72,
     "in_queue": 17,
     "in_watchlist": 131,
-    "in_catalogo": 1,
+    "in_catalogo": 0,
     "in_overflow": 395,
     "in_plano_anual": 131
   },
   "shards": {
     "catalogo-aceleradores": {
-      "count": 14,
-      "open": 14,
-      "published": 14
+      "count": 15,
+      "open": 15,
+      "published": 15
     },
     "catalogo-ba": {
       "count": 4,
