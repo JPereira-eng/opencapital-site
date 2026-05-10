@@ -28210,6 +28210,32 @@
       "highlight2": "Norte, Centro, Alentejo, Algarve, Lisboa (RCI)",
       "href": "instrumentos/sitce-descarbonizacao-eficiencia-energetica-mpr-2026-01.html",
       "featured": false
+    },
+    {
+      "id": "horizon-miss-2027-02-cancer-01",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "previsto",
+      "status_text": "Previsto (call 2027)",
+      "status_class": "status-planned",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao,empresa",
+      "setores": [
+        "saude-ciencias-vida",
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "digitalizacao-ia"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Missão Cancer 2027 CANCER-01 - Genómica Funcional",
+      "tagline": "Tópico Horizon Cancer Mission para identificação e validação de novos alvos terapêuticos via genómica funcional, single-cell e spatial omics em cancros pediátricos e raros",
+      "highlight0": "RIA - grant tradicional",
+      "highlight1": "Centros de I&D, IPO, biotechs, PME",
+      "highlight2": "UE e Países Associados",
+      "href": "instrumentos/horizon-miss-2027-02-cancer-01.html",
+      "featured": false
     }
   ]
 }
