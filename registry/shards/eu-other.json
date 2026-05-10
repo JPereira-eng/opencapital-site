@@ -1048,6 +1048,13 @@
       "source": "eit-climate",
       "state": "aberto",
       "last_check": "2026-05-10"
+    },
+    {
+      "id": "primary-eit-climate-2026",
+      "file": "instrumentos/primary-eit-climate-2026.html",
+      "source": "eit-climate",
+      "state": "aberto",
+      "last_check": "2026-05-10"
     }
   ],
   "instruments": [
@@ -2228,9 +2235,9 @@
       "last_check": "2026-05-09"
     }
   ],
-  "count": 144,
-  "published": 140,
-  "open": 105,
+  "count": 145,
+  "published": 141,
+  "open": 106,
   "closed": 32,
   "planned": 2
 }
