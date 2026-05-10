@@ -92,24 +92,6 @@
   },
   "queue": [
     {
-      "id": "trind-ventures-catalogo",
-      "name": "Trind Ventures - Seed Stage Venture Fund",
-      "source_id": "trind-ventures",
-      "shard": "catalogo-vc",
-      "aviso_codigo": null,
-      "detected_date": "2026-05-08",
-      "deadline": null,
-      "budget": "Tickets 100.000 EUR-1M (seed). Follow-on ate 5M. Fund total: 55M EUR.",
-      "regulation_url": "https://trind.vc/",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/trind-ventures/trind-ventures-catalogo.txt",
-      "priority_score": 50,
-      "status": "ready",
-      "notes": "VC baseado em Tallinn (com escritorios Helsinki, Munich). Seed stage focado em startups europeias. Foco: B2C, C2C, marketplaces, ecommerce, consumer-component B2B PLG. Portfolio inclui Fractory, Ready Player Me.",
-      "fail_count": 0,
-      "last_download_date": "2026-05-10"
-    },
-    {
       "id": "indico-founders-program-catalogo",
       "name": "Indico Founders Program (Indico Capital Partners)",
       "source_id": "indico-capital",
