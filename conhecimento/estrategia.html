@@ -27,6 +27,14 @@
     .subtema-count { font-size:13px; font-weight:400; color:var(--grey-mid); margin-left:auto; }
     .subtema-empty { padding:24px 0; color:var(--grey-mid); font-size:15px; font-weight:300; font-style:italic; }
     @media(max-width:768px){ .subtema-section { padding:32px 28px 16px; } .subtema-h2 { font-size:20px; } }
+
+    /* Override inline para garantir consistencia com .art-read-time */
+    .article-card .art-author-tag {
+      font-size:11px !important; font-weight:300 !important; color:var(--grey-mid) !important;
+      letter-spacing:0.06em !important; text-transform:none !important;
+      background:none !important; border:none !important; padding:0 !important;
+    }
+    .article-card .art-author-tag::before { display:none !important; content:none !important; }
   </style>
 </head>
 <body>

@@ -28,6 +28,14 @@
     .hub-footer-link a { font-size:14px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--navy); text-decoration:none; padding-bottom:3px; border-bottom:1px solid var(--gold); }
     .hub-footer-link a:hover { color:var(--gold); }
     @media(max-width:768px){ .hub-footer-link { padding:32px 28px; } }
+
+    /* Override inline para garantir consistencia com .art-read-time */
+    .article-card .art-author-tag {
+      font-size:11px !important; font-weight:300 !important; color:var(--grey-mid) !important;
+      letter-spacing:0.06em !important; text-transform:none !important;
+      background:none !important; border:none !important; padding:0 !important;
+    }
+    .article-card .art-author-tag::before { display:none !important; content:none !important; }
   </style>
 </head>
 <body>
