@@ -28057,6 +28057,33 @@
       "highlight2": "UE e Países Associados",
       "href": "instrumentos/horizon-cl3-2027-02-cs-eccc-02.html",
       "featured": false
+    },
+    {
+      "id": "horizon-miss-2027-03-ocean-03",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "previsto",
+      "status_text": "Previsto (call 2027)",
+      "status_class": "status-planned",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao,empresa,entidade-publica",
+      "setores": [
+        "mar-pescas",
+        "energia-ambiente",
+        "mobilidade-transportes"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Missao Oceano: Portos Verdes, Circulares e Resilientes",
+      "tagline": "Topico para acelerar transicao de portos europeus para sustentabilidade, circularidade e resiliencia climatica",
+      "highlight0": "Subvencao para projetos de demonstracao em 4 portos europeus",
+      "highlight1": "Autoridades portuarias, empresas, centros de investigacao",
+      "highlight2": "UE e Paises Associados",
+      "href": "instrumentos/horizon-miss-2027-03-ocean-03.html",
+      "featured": false,
+      "necessidades": [
+        "sustentabilidade-energia-clima",
+        "id-ciencia"
+      ]
     }
   ]
 }
