@@ -28110,6 +28110,31 @@
         "id-ciencia",
         "investimento-produtivo"
       ]
+    },
+    {
+      "id": "horizon-miss-2027-02-cancer-06",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "previsto",
+      "status_text": "Previsto (call 2027)",
+      "status_class": "status-planned",
+      "fonte": "ue",
+      "beneficiario": "associacao,entidade-publica,ensino-investigacao",
+      "setores": [
+        "saude-ciencias-vida"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Missao Cancer: Qualidade de Vida em Sobreviventes Jovens",
+      "tagline": "Rede de instituicoes de caridade e agencias de financiamento que apoiam projetos de qualidade de vida em criancas, adolescentes e jovens adultos sobreviventes de cancro",
+      "highlight0": "Lump sum para rede de charities e funding agencies oncologicas",
+      "highlight1": "Charities, agencias de financiamento, hospitais, centros de investigacao",
+      "highlight2": "UE e Paises Associados",
+      "href": "instrumentos/horizon-miss-2027-02-cancer-06.html",
+      "featured": false,
+      "necessidades": [
+        "id-ciencia",
+        "impacto-social-inclusao"
+      ]
     }
   ]
 }
