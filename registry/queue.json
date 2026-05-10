@@ -1434,6 +1434,28 @@
       "priority_score": 15,
       "status": "pending",
       "notes": "SEDIA topic. Framework programme id: 43108390. Detectado via API search com filtro status=Open."
+    },
+    {
+      "id": "sitce-descarbonizacao-eficiencia-energetica-mpr-2026-01",
+      "name": "SITCE - Descarbonizacao e Eficiencia Energetica",
+      "source_id": "compete-2030",
+      "shard": "pt2030-compete",
+      "aviso_codigo": "MPR-2026-01",
+      "detected_date": "2026-05-10",
+      "deadline": "2026-12-30",
+      "budget": "165000000",
+      "regulation_url": "https://compete2030.gov.pt/avisos/sitce-descarbonizacao-e-eficiencia-energetica-mpr-2026-01/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 35,
+      "status": "pending",
+      "programa": [
+        "COMPETE2030"
+      ],
+      "regional_portals": [
+        "compete-2030"
+      ],
+      "notes": "codigo: MPR-2026-01 | programa: COMPETE2030 | data_fim: 2026-12-30 | natureza: Concurso (3 fases) | estado: aberto (fase 3 ate 30/12/2026) | beneficiario: empresas qualquer dimensao + Grandes Empresas RCI | FEDER 165M EUR + dotacao nacional ate 150M/ano | doc_field: webfetch_confirmed"
     }
   ],
   "items": [],
