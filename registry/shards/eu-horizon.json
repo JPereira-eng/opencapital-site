@@ -1807,6 +1807,13 @@
       "source": "eu-funding-tenders",
       "state": "previsto",
       "last_check": "2026-05-10"
+    },
+    {
+      "id": "horizon-infra-2027-dev-01-03",
+      "file": "instrumentos/horizon-infra-2027-dev-01-03.html",
+      "source": "eu-funding-tenders",
+      "state": "previsto",
+      "last_check": "2026-05-10"
     }
   ],
   "instruments": [
@@ -3953,9 +3960,9 @@
       "last_check": "2026-05-09"
     }
   ],
-  "count": 255,
+  "count": 256,
   "open": 143,
   "closed": 93,
-  "planned": 19,
-  "published": 254
+  "planned": 20,
+  "published": 255
 }
