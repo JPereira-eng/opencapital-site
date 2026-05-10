@@ -11,66 +11,77 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/conhecimento-hubs.css">
   <style>
-    /* breadcrumb sobre fundo navy */
-    .feature-breadcrumb { padding:96px 80px 24px; background:var(--navy); }
-    .feature-breadcrumb a { color:rgba(255,255,255,0.32); text-decoration:none; font-size:13px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; transition:var(--transition); }
-    .feature-breadcrumb a:hover { color:rgba(255,255,255,0.72); }
-    .feature-breadcrumb .breadcrumb-sep { color:rgba(255,255,255,0.16); margin:0 10px; }
-    .feature-breadcrumb .breadcrumb-current { color:rgba(255,255,255,0.72); font-size:13px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; }
-    @media(max-width:768px){ .feature-breadcrumb { padding:96px 28px 18px; } }
+    /* breadcrumb compacto sobre fundo branco */
+    .editorial-breadcrumb { padding:104px 80px 16px; background:var(--white); }
+    .editorial-breadcrumb a { color:var(--grey-mid); text-decoration:none; font-size:13px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; transition:var(--transition); }
+    .editorial-breadcrumb a:hover { color:var(--navy); }
+    .editorial-breadcrumb .breadcrumb-sep { color:var(--grey-light); margin:0 10px; }
+    .editorial-breadcrumb .breadcrumb-current { color:var(--navy); font-size:13px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; }
+    @media(max-width:768px){ .editorial-breadcrumb { padding:96px 28px 14px; } }
 
-    /* destaque dinamico em fundo navy */
-    .opinion-feature {
-      background:var(--navy); color:var(--white);
-      padding:24px 80px 96px;
-      position:relative; overflow:hidden;
+    /* hero minimalista estilo nota editorial */
+    .editorial-feature {
+      background:var(--white);
+      padding:48px 80px 56px;
+      border-bottom:2px solid var(--gold);
     }
-    .opinion-feature::before { content:''; position:absolute; top:-120px; right:-120px; width:520px; height:520px; border-radius:50%; background:radial-gradient(circle, rgba(201,169,110,0.07) 0%, transparent 70%); pointer-events:none; }
-    .opinion-feature-grid {
-      display:grid; grid-template-columns: 1fr 1.2fr; gap:64px; align-items:center;
-      max-width:1280px; margin:0 auto; position:relative; z-index:1;
+    .editorial-feature-grid {
+      display:grid; grid-template-columns: 220px 1fr; gap:56px; align-items:center;
+      max-width:1080px; margin:0 auto;
     }
-    .opinion-feature-photo {
-      width:100%; aspect-ratio:3/4; max-width:420px; object-fit:cover; object-position:top center;
-      filter:grayscale(20%);
+    .editorial-feature-photo {
+      width:200px; height:200px; border-radius:50%;
+      object-fit:cover; object-position:top center;
+      border:1px solid var(--grey-light);
+      filter:grayscale(15%);
     }
-    .opinion-feature-content .feature-eyebrow {
-      font-size:13px; font-weight:600; letter-spacing:0.30em; text-transform:uppercase; color:var(--gold); margin-bottom:18px;
+    .editorial-feature-content { padding-left:8px; }
+    .editorial-eyebrow {
+      font-size:11px; font-weight:600; letter-spacing:0.30em; text-transform:uppercase;
+      color:var(--gold); margin-bottom:12px;
     }
-    .opinion-feature-content .feature-title {
-      font-size:54px; font-weight:700; line-height:1.05; letter-spacing:-0.015em; color:var(--white); margin-bottom:24px;
+    .editorial-author-name {
+      font-size:24px; font-weight:600; color:var(--navy); margin-bottom:14px; letter-spacing:0.005em;
     }
-    .opinion-feature-content .feature-tagline {
-      font-size:19px; font-weight:300; color:rgba(255,255,255,0.72); line-height:1.7; margin-bottom:36px; max-width:560px;
+    .editorial-feature-title {
+      font-size:32px; font-weight:700; line-height:1.18; color:var(--navy);
+      font-style:italic; margin-bottom:20px; letter-spacing:-0.005em;
     }
-    .opinion-feature-content .feature-meta {
-      font-size:13px; font-weight:400; color:rgba(255,255,255,0.48); letter-spacing:0.04em; margin-bottom:32px;
+    .editorial-feature-meta {
+      font-size:13px; font-weight:300; color:var(--grey-mid); margin-bottom:18px;
     }
-    .opinion-feature-content .feature-meta strong { color:var(--white); font-weight:600; }
-    .opinion-feature-content .feature-meta-sep { color:rgba(255,255,255,0.24); margin:0 12px; }
-    .opinion-feature-cta {
-      display:inline-block; font-size:13px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase;
-      color:var(--white); background:transparent; border:1px solid var(--gold); padding:14px 32px;
-      text-decoration:none; transition:var(--transition);
+    .editorial-feature-link {
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:13px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase;
+      color:var(--navy); text-decoration:none; padding-bottom:3px;
+      border-bottom:1px solid var(--gold);
+      transition:var(--transition);
     }
-    .opinion-feature-cta:hover { background:var(--gold); color:var(--navy); }
+    .editorial-feature-link:hover { color:var(--gold); }
 
-    @media(max-width:1024px){
-      .opinion-feature-grid { grid-template-columns: 1fr; gap:40px; }
-      .opinion-feature-content .feature-title { font-size:38px; }
-    }
     @media(max-width:768px){
-      .opinion-feature { padding:20px 28px 64px; }
-      .opinion-feature-content .feature-title { font-size:32px; }
+      .editorial-feature { padding:32px 28px 40px; }
+      .editorial-feature-grid { grid-template-columns: 1fr; gap:24px; text-align:left; }
+      .editorial-feature-photo { width:140px; height:140px; }
+      .editorial-feature-title { font-size:24px; }
+      .editorial-author-name { font-size:20px; }
     }
 
-    /* grid em fundo branco com restantes opinioes */
-    .articles-section { background:var(--white); padding:64px 80px 96px; }
+    /* secao "Outras opinioes" + grid */
+    .others-section { background:var(--white); padding:64px 80px 96px; }
+    .others-header {
+      font-size:32px; font-weight:700; color:var(--navy); margin-bottom:32px; letter-spacing:-0.005em;
+    }
+    @media(max-width:768px){ .others-section { padding:40px 28px 64px; } .others-header { font-size:24px; margin-bottom:20px; } }
+
+    /* sem destaque (zero opinioes) */
+    .editorial-empty { padding:96px 80px; text-align:center; color:var(--grey-mid); font-size:16px; font-style:italic; }
   </style>
 </head>
 <body>
 
 <!-- NAVBAR:START -->
+<style>.nav-caret{display:inline-block;font-size:9px;margin-left:5px;color:rgba(255,255,255,0.45);transition:transform .25s ease, color .25s ease;vertical-align:middle;line-height:1;}.navbar.scrolled .nav-caret{color:rgba(26,58,92,0.55);}.nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}</style>
 <nav class="navbar" id="navbar">
   <a href="../index.html" class="nav-logo">
     <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
@@ -78,7 +89,7 @@
   <ul class="nav-links">
     <li><a href="../biblioteca.html" data-nav="biblioteca">Biblioteca</a></li>
     <li class="nav-dropdown">
-      <a href="../conhecimento/atualidade.html" data-nav="conhecimento">Conhecimento</a>
+      <a href="../conhecimento/atualidade.html" data-nav="conhecimento">Conhecimento <span class="nav-caret" aria-hidden="true">&#9662;</span></a>
       <div class="nav-dropdown-menu">
         <a href="../conhecimento/atualidade.html">Atualidade</a>
         <a href="../conhecimento/opiniao.html">Opinião</a>
@@ -90,7 +101,7 @@
     <li><a href="../tech2business.html" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
     <li><a href="../sobre-nos.html" data-nav="sobre-nos">Sobre Nós</a></li>
     <li class="nav-dropdown">
-      <a href="#" data-nav="oportunidades">Oportunidades</a>
+      <a href="#" data-nav="oportunidades">Oportunidades <span class="nav-caret" aria-hidden="true">&#9662;</span></a>
       <div class="nav-dropdown-menu">
         <a href="../parceiros.html">Parceiros</a>
         <a href="../carreiras.html">Carreiras</a>
@@ -116,7 +127,7 @@
 </div>
 <!-- NAVBAR:END -->
 
-<nav class="feature-breadcrumb">
+<nav class="editorial-breadcrumb">
   <a href="../index.html">Início</a>
   <span class="breadcrumb-sep">/</span>
   <a href="../conhecimento.html">Conhecimento</a>
@@ -124,16 +135,16 @@
   <span class="breadcrumb-current">Opinião</span>
 </nav>
 
-<section class="opinion-feature" id="opinionFeature">
-  <!-- conteudo dinamico do destaque -->
-  <div class="opinion-feature-grid" id="opinionFeatureGrid">
-    <p style="color:rgba(255,255,255,0.32);padding:48px;">A carregar...</p>
+<section class="editorial-feature" id="editorialFeature">
+  <div class="editorial-feature-grid" id="editorialFeatureGrid">
+    <p class="editorial-empty">A carregar...</p>
   </div>
 </section>
 
-<section class="articles-section">
+<section class="others-section">
+  <h2 class="others-header">Outras opiniões</h2>
   <div class="articles-grid" id="articlesGrid">
-    <!-- restantes opinioes em cards standard -->
+    <!-- restantes opinioes em cards type-opiniao standard -->
   </div>
 </section>
 
@@ -225,18 +236,15 @@
       : (a.autor_foto ? '../Retratos Equipa/' + a.autor_foto : '');
     const author = a.opinion_author_card || a.autor || '';
     const title = a.opinion_title || a.card_title || a.title || '';
-    const tagline = a.tagline || a.meta_description || '';
     const dateLabel = a.art_date || a.data_publicacao || '';
     return ''
-      + '<img src="' + photo + '" alt="' + author.replace(/"/g, '&quot;') + '" class="opinion-feature-photo">'
-      + '<div class="opinion-feature-content">'
-      + '<div class="feature-eyebrow">A última opinião</div>'
-      + '<h1 class="feature-title">' + title + '</h1>'
-      + '<p class="feature-tagline">' + tagline + '</p>'
-      + '<div class="feature-meta"><strong>' + author + '</strong>'
-      + (dateLabel ? '<span class="feature-meta-sep">·</span>' + dateLabel : '')
-      + '</div>'
-      + '<a href="../' + a.href + '" class="opinion-feature-cta">Ler artigo</a>'
+      + '<img src="' + photo + '" alt="' + author.replace(/"/g, '&quot;') + '" class="editorial-feature-photo">'
+      + '<div class="editorial-feature-content">'
+      + '<div class="editorial-eyebrow">Última opinião</div>'
+      + '<div class="editorial-author-name">' + author + '</div>'
+      + '<h1 class="editorial-feature-title">' + title + '</h1>'
+      + (dateLabel ? '<div class="editorial-feature-meta">' + dateLabel + '</div>' : '')
+      + '<a href="../' + a.href + '" class="editorial-feature-link">Ler artigo &rarr;</a>'
       + '</div>';
   }
 
@@ -248,24 +256,30 @@
         .sort((a, b) => (b.data_publicacao || '').localeCompare(a.data_publicacao || ''));
 
       if (articles.length === 0) {
-        document.getElementById('opinionFeatureGrid').innerHTML = '<p style="color:rgba(255,255,255,0.32);padding:48px;">Sem opiniões publicadas no momento.</p>';
+        document.getElementById('editorialFeatureGrid').innerHTML = '<p class="editorial-empty">Sem opiniões publicadas.</p>';
+        document.querySelector('.others-section').style.display = 'none';
         return;
       }
 
-      // Primeiro = destaque dinamico
-      document.getElementById('opinionFeatureGrid').innerHTML = buildFeature(articles[0]);
+      // Primeiro = destaque editorial minimalista
+      document.getElementById('editorialFeatureGrid').innerHTML = buildFeature(articles[0]);
 
       // Restantes = grid normal
       const grid = document.getElementById('articlesGrid');
-      grid.innerHTML = articles.slice(1).map(buildOpinionCard).join('');
-      document.querySelectorAll('.article-card').forEach(c => {
-        c.addEventListener('click', (e) => {
-          if (e.target.tagName === 'A') return;
-          const href = c.dataset.href;
-          if (href) window.location.href = href;
+      const others = articles.slice(1);
+      if (others.length === 0) {
+        document.querySelector('.others-section').style.display = 'none';
+      } else {
+        grid.innerHTML = others.map(buildOpinionCard).join('');
+        document.querySelectorAll('.article-card').forEach(c => {
+          c.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') return;
+            const href = c.dataset.href;
+            if (href) window.location.href = href;
+          });
+          obs.observe(c);
         });
-        obs.observe(c);
-      });
+      }
     })
     .catch(err => {
       console.error('Erro a carregar catalogo:', err);
