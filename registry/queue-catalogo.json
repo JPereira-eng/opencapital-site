@@ -92,25 +92,6 @@
   },
   "queue": [
     {
-      "id": "daskapital-catalogo",
-      "name": "Daskapital - Crowdfunding Platform",
-      "source_id": "daskapital",
-      "shard": "catalogo-crowdfunding",
-      "aviso_codigo": null,
-      "detected_date": "2026-05-08",
-      "deadline": null,
-      "budget": "Crowdlending (medio prazo, ativos fixos) + Crowdfactoring (curto prazo, faturas)",
-      "regulation_url": "https://daskapital.eu/",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/daskapital/daskapital-catalogo.txt",
-      "priority_score": 45,
-      "status": "ready",
-      "notes": "Plataforma portuguesa de crowdfunding. Modelos: Equity, Debt, Tokenized. Produtos: Daslending (medio prazo) e Dasfactoring (curto prazo via creditos a receber).",
-      "fail_count": 0,
-      "download_note": "Homepage publica e laconica - o writer deve complementar com WebSearch para taxas e exemplos especificos",
-      "last_download_date": "2026-05-10"
-    },
-    {
       "id": "produtech-dih-factor",
       "name": "DIH-squared / DIH2 Factor (PRODUTECH DIH Platform)",
       "source_id": "produtech-dih",
