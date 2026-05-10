@@ -143,6 +143,8 @@
 
     @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
     @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+      .instrument-closed-notice{display:flex;align-items:flex-start;gap:12px;background:#FDF8F0;border-left:3px solid var(--gold);padding:18px 22px;margin-bottom:36px;}
+    .instrument-closed-notice span{font-size:16px;font-weight:300;color:var(--grey-dark);line-height:1.7;}
   </style>
 </head>
 <body>
@@ -223,7 +225,7 @@
       <div class="meta-sep"></div>
       <div class="meta-item">
         <span class="meta-label">Estado</span>
-        <span class="meta-value status-open">Aberto</span>
+        <span class="meta-value status-closed">Fechado em Aberto</span>
       </div>
     </div>
   </div>
@@ -236,7 +238,12 @@
 <div class="article-layout">
   <article class="article-body">
 
-    <div class="article-section reveal">
+    
+    <div class="instrument-closed-notice">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="0.5" fill="#C9A96E"/></svg>
+      <span>Este instrumento encontra-se <strong>encerrado</strong>. As candidaturas ja nao estao abertas.</span>
+    </div>
+<div class="article-section reveal">
       <div class="section-eyebrow">Contexto e urgencia</div>
       <h2 class="section-h2">A vulnerabilidade silenciosa da internet europeia</h2>
       <p class="section-text">Mais de 95% do trafego de dados intercontinental circula por cabos submarinos de fibra otica. Sao estruturas fisicas, tendidas no fundo do mar, altamente vulneraveis a acidentes maritimos, a terramotos e, cada vez mais reconhecido nas politicas europeias de defesa, a acoes deliberadas de sabotagem. A resiliencia digital da Europa depende, em grande medida, da capacidade de reparar rapidamente estas infraestruturas quando falham.</p>
@@ -321,7 +328,7 @@
       </div>
       <div class="sidebar-fact">
         <div class="sidebar-fact-key">Estado</div>
-        <div class="sidebar-fact-val val-open">Aberto</div>
+        <div class="sidebar-fact-val val-closed">Fechado</div>
       </div>
     </div>
 

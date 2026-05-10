@@ -6,13 +6,13 @@
     "last_writer_run": "2026-05-10",
     "last_scanner_run": "2026-05-10",
     "last_index_rebuild": "2026-05-09",
-    "last_monitor_run": "2026-05-09"
+    "last_monitor_run": "2026-05-10"
   },
   "totals": {
-    "published": 612,
-    "open": 395,
-    "closed": 149,
-    "planned": 72,
+    "published": 582,
+    "open": 374,
+    "closed": 161,
+    "planned": 45,
     "in_queue": 17,
     "in_watchlist": 131,
     "in_catalogo": 0,
@@ -43,16 +43,15 @@
     },
     "catalogo-premios": {
       "count": 6,
-      "open": 3,
+      "open": 5,
       "closed": 1,
       "published": 6
     },
     "catalogo-vc": {
-      "count": 29,
-      "open": 25,
+      "count": 30,
+      "open": 26,
       "closed": 2,
-      "published": 29,
-      "planned": 0
+      "published": 30
     },
     "eic": {
       "count": 6,
@@ -60,29 +59,28 @@
       "published": 6
     },
     "eu-horizon": {
-      "count": 277,
-      "open": 141,
-      "closed": 93,
-      "planned": 43,
-      "published": 276
+      "count": 269,
+      "open": 140,
+      "closed": 94,
+      "planned": 35,
+      "published": 269
     },
     "eu-other": {
       "count": 143,
-      "open": 108,
-      "closed": 33,
+      "open": 98,
+      "closed": 43,
       "planned": 2,
-      "published": 142
+      "published": 143
     },
     "interreg": {
       "count": 8,
-      "open": 3,
-      "planned": 5,
+      "open": 5,
+      "planned": 3,
       "published": 8
     },
     "priv-ba": {
-      "count": 1,
-      "open": 1,
-      "published": 1
+      "count": 0,
+      "published": 0
     },
     "pt-other": {
       "count": 41,
@@ -91,7 +89,8 @@
       "published": 41
     },
     "pt2030-central": {
-      "count": 0
+      "count": 0,
+      "published": 0
     },
     "pt2030-centro": {
       "count": 2,
@@ -104,13 +103,14 @@
       "open": 11,
       "closed": 2,
       "planned": 2,
-      "published": 10
+      "published": 15
     },
     "pt2030-lisboa": {
       "count": 4,
-      "open": 3,
+      "open": 2,
       "planned": 1,
-      "published": 4
+      "published": 4,
+      "closed": 1
     },
     "pt2030-norte": {
       "count": 6,
@@ -119,11 +119,11 @@
       "published": 6
     },
     "pt2030-other": {
-      "count": 50,
-      "open": 30,
+      "count": 25,
+      "open": 18,
       "closed": 5,
-      "planned": 15,
-      "published": 49
+      "planned": 2,
+      "published": 25
     },
     "pt2030-pessoas": {
       "count": 3,
@@ -133,26 +133,26 @@
     }
   },
   "last_full_cycle": "2026-04-12",
-  "last_monitor_run": "2026-05-09",
+  "last_monitor_run": "2026-05-10",
   "source_last_checked": {
     "portugal-2030": "2026-05-10",
     "compete-2030": "2026-05-08",
     "norte-2030": "2026-05-07",
     "centro-2030": "2026-05-07",
-    "lisboa-2030": "2026-05-09",
-    "alentejo-2030": "2026-05-09",
+    "lisboa-2030": "2026-05-10",
+    "alentejo-2030": "2026-05-10",
     "algarve-2030": "2026-05-09",
     "madeira-2030": "2026-05-09",
     "acores-2030": "2026-05-09",
-    "pessoas-2030": "2026-05-09",
-    "sustentavel-2030": "2026-05-09",
+    "pessoas-2030": "2026-05-10",
+    "sustentavel-2030": "2026-05-10",
     "mar-2030": "2026-05-09",
-    "pat-2030": "2026-05-09",
+    "pat-2030": "2026-05-10",
     "eu-funding-tenders": "2026-05-10",
     "ani": "2026-05-08",
     "iapmei": "2026-05-08",
     "prr": "2026-05-08",
-    "interreg-poctep": "2026-05-09",
+    "interreg-poctep": "2026-05-10",
     "fct": "2026-05-08",
     "aicep": "2026-05-09",
     "iefp": "2026-05-09",
@@ -163,9 +163,9 @@
     "life-programme": "2026-05-08",
     "erc": "2026-05-10",
     "investeu": "2026-05-10",
-    "interreg-sudoe": "2026-05-06",
-    "interreg-euromed": "2026-05-09",
-    "interreg-urbact": "2026-05-07",
+    "interreg-sudoe": "2026-05-10",
+    "interreg-euromed": "2026-05-10",
+    "interreg-urbact": "2026-05-10",
     "interreg-next-med": "2026-05-09",
     "eit": "2026-05-08",
     "startup-portugal": "2026-04-12",
@@ -184,7 +184,7 @@
     "premio-gulbenkian": "2026-04-13",
     "bgi-accelerator": "2026-04-13",
     "f6s": "2026-04-13",
-    "interreg-interact": "2026-05-09",
+    "interreg-interact": "2026-05-10",
     "eu-startups": "2026-04-13",
     "esa-bic": "2026-05-10",
     "eit-digital": "2026-05-07",
@@ -194,7 +194,7 @@
     "balcao-2030": "2026-04-14",
     "nato-diana": "2026-04-14",
     "interreg-europe": "2026-05-06",
-    "interreg-espon": "2026-05-08",
+    "interreg-espon": "2026-05-10",
     "turismo-portugal": "2026-04-16",
     "cgd-empresas": "2026-04-14",
     "bpi-empresas": "2026-04-14",

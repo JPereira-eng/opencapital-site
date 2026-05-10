@@ -192,6 +192,10 @@
 
     .reveal { opacity:0; transform:translateY(22px); transition:opacity 0.55s ease, transform 0.55s ease; }
     .reveal.visible { opacity:1; transform:translateY(0); }
+      .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .instrument-closed-notice{display:flex;align-items:flex-start;gap:12px;background:#FDF8F0;border-left:3px solid var(--gold);padding:18px 22px;margin-bottom:36px;}
+    .instrument-closed-notice span{font-size:16px;font-weight:300;color:var(--grey-dark);line-height:1.7;}
   </style>
 </head>
 <body>
@@ -264,7 +268,7 @@
     </div>
     <div class="meta-item">
       <div class="meta-label">Prazo de Candidatura</div>
-      <div class="meta-value status-open">7 Maio 2026</div>
+      <div class="meta-value status-closed">Fechado em 7 Maio 2026</div>
     </div>
     <div class="meta-item">
       <div class="meta-label">Subvencao Maxima</div>
@@ -288,7 +292,12 @@
   <!-- ARTICLE BODY -->
   <article class="article-body">
 
-    <section class="reveal">
+    
+    <div class="instrument-closed-notice">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="0.5" fill="#C9A96E"/></svg>
+      <span>Este instrumento encontra-se <strong>encerrado</strong>. As candidaturas ja nao estao abertas.</span>
+    </div>
+<section class="reveal">
       <div class="highlight-box alert">
         <div class="highlight-box-label">Prazo aproxima-se</div>
         <p>A segunda janela de candidatura encerra a <strong>7 de maio de 2026 as 17h00 CET</strong>. Se tem um projeto de animacao em fase de pre-producao ou producao inicial, o tempo de preparacao do dossier e reduzido. Recomendamos iniciar a estruturacao da candidatura imediatamente, com particular atencao ao financiamento de terceiros (min. 40%) e ao comprometimento dos broadcasters.</p>

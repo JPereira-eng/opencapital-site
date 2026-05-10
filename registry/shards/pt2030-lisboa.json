@@ -8,8 +8,10 @@
       "id": "lisboa2030-2026-step-fase2",
       "file": "instrumentos/lisboa2030-2026-step-fase2.html",
       "source": "lisboa-2030",
-      "state": "aberto",
-      "last_check": "2026-04-29"
+      "state": "fechado",
+      "last_check": "2026-05-10",
+      "auto_closed": true,
+      "notes": "Verificacao 2026-05-10: deadline 30/04/2026 (API lisboa2030 confirmed) - aviso encerrado."
     },
     {
       "id": "siid-id-empresarial-demonstradores-individuais-copromocao",
@@ -18,21 +20,21 @@
       "state": "previsto",
       "demoted_from_open": "2026-05-05",
       "demoted_reason": "PAA preview - aviso ainda nao publicado formalmente (verificado no portal Portugal 2030)",
-      "last_check": "2026-05-05"
+      "last_check": "2026-05-10"
     },
     {
       "id": "siid-internacionalizacao-id-industrial-escala-europeia",
       "file": "instrumentos/siid-internacionalizacao-id-industrial-escala-europeia.html",
       "source": "lisboa-2030",
       "state": "aberto",
-      "last_check": "2026-04-29"
+      "last_check": "2026-05-10"
     },
     {
       "id": "sice-inovacao-produtiva-outros-territorios",
       "file": "instrumentos/sice-inovacao-produtiva-outros-territorios.html",
       "source": "lisboa-2030",
       "state": "aberto",
-      "last_check": "2026-04-29"
+      "last_check": "2026-05-10"
     }
   ]
 }

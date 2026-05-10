@@ -2099,7 +2099,13 @@
       ],
       "regional_portals": [
         "pessoas-2030"
-      ]
+      ],
+      "plano_anual_last_check": "2026-05-10",
+      "plano_anual_checks": 1,
+      "plano_anual_status": "placeholder_1.5mb",
+      "data_inicio_api": "2026-09-01",
+      "data_fim_api": "2026-12-31",
+      "plano_anual_note": "PDF ja tem 1.5MB mas filename ainda e placeholder unnamed-file"
     },
     {
       "id": "formacao-avancada",
@@ -2123,7 +2129,12 @@
       ],
       "regional_portals": [
         "pessoas-2030"
-      ]
+      ],
+      "plano_anual_last_check": "2026-05-10",
+      "plano_anual_checks": 1,
+      "plano_anual_status": "placeholder",
+      "data_inicio_api": "2026-09-01",
+      "data_fim_api": "2026-12-31"
     },
     {
       "id": "bolsas-de-ensino-superior-para-alunos-carenciados-ano-letivo-2026-2027",
@@ -2147,7 +2158,12 @@
       ],
       "regional_portals": [
         "pessoas-2030"
-      ]
+      ],
+      "plano_anual_last_check": "2026-05-10",
+      "plano_anual_checks": 1,
+      "plano_anual_status": "placeholder",
+      "data_inicio_api": "2026-05-04",
+      "data_fim_api": "2026-08-31"
     },
     {
       "id": "apoio-tecnico-e-financeiro-a-organizacoes-da-sociedade-civil-que-atuam",
@@ -2271,7 +2287,11 @@
       ],
       "regional_portals": [
         "pessoas-2030"
-      ]
+      ],
+      "plano_anual_last_check": "2026-05-10",
+      "plano_anual_checks": 1,
+      "plano_anual_status": "slug_not_found",
+      "plano_anual_note": "API empty - URL na watchlist aponta para escolas-publicas mas item id tem escolas-privadas; verificar slug"
     },
     {
       "id": "capacitacao-atores-redes-iti-agua-alentejo",
@@ -2415,7 +2435,12 @@
       ],
       "regional_portals": [
         "pessoas-2030"
-      ]
+      ],
+      "plano_anual_last_check": "2026-05-10",
+      "plano_anual_checks": 1,
+      "plano_anual_status": "placeholder",
+      "data_inicio_api": "2026-09-01",
+      "data_fim_api": "2026-12-31"
     },
     {
       "id": "centros-nacionais-de-apoio-a-integracao-de-migrantes-cnaim-mediacao-na",
@@ -2535,7 +2560,11 @@
       ],
       "regional_portals": [
         "alentejo-2030"
-      ]
+      ],
+      "plano_anual_last_check": "2026-05-10",
+      "plano_anual_checks": 1,
+      "plano_anual_status": "slug_not_found",
+      "plano_anual_note": "API empty response - slug pode ter sido alterado"
     },
     {
       "id": "funcionamento-de-cit-multifuncoes-e-espacos-equiparados",
@@ -2573,7 +2602,12 @@
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: FAMI2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
       "programa": [],
-      "regional_portals": []
+      "regional_portals": [],
+      "plano_anual_last_check": "2026-05-10",
+      "plano_anual_checks": 1,
+      "plano_anual_status": "placeholder",
+      "data_inicio_api": "2026-05-04",
+      "data_fim_api": "2026-08-31"
     },
     {
       "id": "assistencia-tecnica-organismo-intermedio-da-regiao-autonoma-da-madeira",
@@ -2621,7 +2655,12 @@
       ],
       "regional_portals": [
         "pat-2030"
-      ]
+      ],
+      "plano_anual_last_check": "2026-05-10",
+      "plano_anual_checks": 1,
+      "plano_anual_status": "placeholder",
+      "data_inicio_api": "2026-06-15",
+      "data_fim_api": "2026-07-31"
     },
     {
       "id": "assistencia-tecnica-2027-a-2029",
@@ -3086,7 +3125,10 @@
       "promoted_from_paa": "2026-05-09",
       "download_error": "PAA detectado no PDF (Teste A)",
       "plano_anual_detected_date": "2026-05-09",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-10",
+      "plano_anual_status": "slug_not_found",
+      "plano_anual_note": "API empty response - slug pode ter sido alterado"
     },
     {
       "id": "rede-ferroviaria-das-areas-metropolitanas-mobilidade-urbana-sustentave",
@@ -3113,7 +3155,12 @@
       "promoted_from_paa": "2026-05-09",
       "download_error": "Aviso futuro (data_inicio=2026-12-02)",
       "plano_anual_detected_date": "2026-05-09",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-10",
+      "plano_anual_status": "placeholder_1.4mb",
+      "data_inicio_api": "2026-12-02",
+      "data_fim_api": "2027-04-30",
+      "plano_anual_note": "PDF ja tem 1.4MB mas filename ainda e placeholder unnamed-file"
     },
     {
       "id": "medidas-de-adaptacao-as-alteracoes-climaticas",
