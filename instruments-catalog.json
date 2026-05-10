@@ -28160,6 +28160,30 @@
         "id-ciencia",
         "impacto-social-inclusao"
       ]
+    },
+    {
+      "id": "horizon-miss-2027-02-cancer-03",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "previsto",
+      "status_text": "Previsto (call 2027)",
+      "status_class": "status-planned",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao,empresa,entidade-publica",
+      "setores": [
+        "saude-ciencias-vida"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Missao Cancer: Ensaios Fase 1 em Cancros Raros",
+      "tagline": "Ensaios first-in-human de medicamentos guiados por biomarcadores e intervencoes multi-modais para doentes com cancros raros ou subtipos raros",
+      "highlight0": "Lump sum para ensaios clinicos fase 1 em cancros raros",
+      "highlight1": "Hospitais, centros oncologicos, biotech, academia, charities",
+      "highlight2": "UE e Paises Associados",
+      "href": "instrumentos/horizon-miss-2027-02-cancer-03.html",
+      "featured": false,
+      "necessidades": [
+        "id-ciencia"
+      ]
     }
   ]
 }
