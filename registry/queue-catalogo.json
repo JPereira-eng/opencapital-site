@@ -92,24 +92,6 @@
   },
   "queue": [
     {
-      "id": "indico-founders-program-catalogo",
-      "name": "Indico Founders Program (Indico Capital Partners)",
-      "source_id": "indico-capital",
-      "shard": "catalogo-vc",
-      "aviso_codigo": null,
-      "detected_date": "2026-05-08",
-      "deadline": null,
-      "budget": "100.000 EUR (investimento por startup, fund 125M)",
-      "regulation_url": "https://www.indicocapital.com/",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/indico-capital/indico-founders-program-catalogo.txt",
-      "priority_score": 55,
-      "status": "ready",
-      "notes": "Programa pre-seed de 12 meses (6 meses presencial Indico + Google for Startups). Tech, sustainability, ocean. Powered by Google for Startups. Setores Indico: Web3, SaaS, AI, IoT, Fintech, Cybersecurity (Pre-Seed a Series C).",
-      "fail_count": 0,
-      "last_download_date": "2026-05-10"
-    },
-    {
       "id": "lince-capital-catalogo",
       "name": "Lince Capital",
       "source_id": "lince-capital",
