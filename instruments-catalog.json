@@ -27161,6 +27161,34 @@
       "featured": false
     },
     {
+      "id": "horizon-euratom-2027-01-01",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "previsto",
+      "status_text": "Previsto: abertura 15/09/2026",
+      "status_class": "status-planned",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigação",
+      "setores": [
+        "energia-ambiente",
+        "industria",
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "investimento-produtivo",
+        "sustentabilidade-energia-clima"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "EURATOM 2027-01-01: Tecnologias-chave para centrais de fusão",
+      "tagline": "Primeira chamada da European Partnership on Fusion Energy. 32M EUR para componentes TRL 6-8 em plasma heating, magnetes HTS e diagnostics & control.",
+      "highlight0": "32M EUR (3 grants 10M EUR, taxa 60% / 100% non-profit)",
+      "highlight1": "Indústria fusão, PME deep tech, institutos I&D",
+      "highlight2": "UE 27 + Ucrânia + Suíça (apenas)",
+      "href": "instrumentos/horizon-euratom-2027-01-01.html",
+      "featured": false
+    },
+    {
       "id": "horizon-cl5-2027-01-d1-07",
       "category": "nr",
       "category_label": "Não Reembolsável",
