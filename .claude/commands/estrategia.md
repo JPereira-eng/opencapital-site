@@ -193,6 +193,12 @@ Ler `conhecimento/automacao-vs-digitalizacao.html` para extrair o template HTML 
 
 Aplicar literalmente a lógica editorial da Série 5.1 (passos 1-6 do raciocínio obrigatório). Comprimento: 1500-2500 palavras. Building blocks à vontade desde que sirvam o framework.
 
+**OBRIGATORIO:** incluir, antes de `</body>` no HTML produzido, a tag:
+```html
+<script src="../assets/js/back-link.js" defer></script>
+```
+Esta tag e essencial para que o link "Voltar ao Conhecimento" no back-bar seja atualizado dinamicamente para apontar a sub-seccao correta (Estrategia e Gestao). Sem ela, o fallback estatico aponta a Atualidade e o leitor pode achar estranho.
+
 ### 5. Atualizar `conhecimento-catalog.json`
 
 Adicionar entrada ao FINAL do array `articles`:
