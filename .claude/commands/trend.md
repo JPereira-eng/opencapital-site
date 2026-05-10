@@ -483,7 +483,6 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
         <span class="breadcrumb-sep">/</span>
         <span class="breadcrumb-current">[BREADCRUMB_CAT]</span>
       </nav>
-      <span class="hero-cat-badge">[BADGE_TEXT]</span>
       <h1 class="article-title">[TITULO]</h1>
       <p class="article-standfirst">[STANDFIRST]</p>
       <div class="article-meta-bar">

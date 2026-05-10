@@ -388,6 +388,16 @@
       font-size:10px; font-weight:600; letter-spacing:0.16em;
       text-transform:uppercase; padding:4px 10px;
     }
+    /* Tag de autor no carrossel (substitui badge categoria desde 2026-05-10) */
+    .carousel-section .art-author-tag {
+      font-size:11px; font-weight:600; letter-spacing:0.06em;
+      color:var(--navy); text-transform:none;
+      display:inline-flex; align-items:center;
+    }
+    .carousel-section .art-author-tag::before {
+      content:''; display:inline-block; width:14px; height:1px;
+      background:var(--gold); margin-right:8px;
+    }
     .carousel-section .cat-financiamento { background:rgba(26,58,92,0.08); color:var(--navy); }
     .carousel-section .cat-fiscalidade   { background:rgba(42,42,42,0.06); color:var(--grey-dark); }
     .carousel-section .cat-estrategia    { background:rgba(201,169,110,0.10); color:#8A6535; }
@@ -1357,8 +1367,7 @@
         + '</div>';
     } else {
       const imgHTML = a.imagem_src ? '<img src="' + a.imagem_src + '" alt="' + (a.title || '').replace(/"/g, '&quot;') + '">' : PLACEHOLDER_SVG;
-      const catClass = a.cat_class || 'cat-mercados';
-      const catLabel = a.cat_label || 'Atualidade';
+      const author = a.autor || '';
       const tempo = a.tempo_leitura || '';
       const tempoHTML = tempo ? '<span class="art-read-time">Leitura: ' + tempo + '</span>' : '';
       const dateLabel = a.art_date || a.data_publicacao || '';
@@ -1368,7 +1377,7 @@
         + '<div class="article-card-img">' + imgHTML + '</div>'
         + '<div class="article-card-body">'
         + '<div class="article-card-header">'
-        + '<span class="art-cat-badge ' + catClass + '">' + catLabel + '</span>'
+        + '<span class="art-author-tag">' + author + '</span>'
         + tempoHTML
         + '</div>'
         + '<h3 class="article-card-title">' + title + '</h3>'

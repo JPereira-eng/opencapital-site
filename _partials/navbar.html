@@ -1,4 +1,11 @@
-<style>.nav-caret{display:inline-block;font-size:9px;margin-left:5px;color:rgba(255,255,255,0.45);transition:transform .25s ease, color .25s ease;vertical-align:middle;line-height:1;}.navbar.scrolled .nav-caret{color:rgba(26,58,92,0.55);}.nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}</style>
+<style>
+  .nav-caret{display:inline-block;font-size:12px;margin-left:6px;color:rgba(255,255,255,0.55);transition:transform .25s ease, color .25s ease;vertical-align:middle;line-height:1;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.6);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+</style>
 <nav class="navbar" id="navbar">
   <a href="[[PREFIX]]index.html" class="nav-logo">
     <img src="[[PREFIX]]logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">

@@ -185,8 +185,7 @@
     const imgHTML = a.imagem_src
       ? '<img src="../' + a.imagem_src + '" alt="' + (a.title || '').replace(/"/g, '&quot;') + '">'
       : PLACEHOLDER_SVG;
-    const catClass = a.cat_class || 'cat-mercados';
-    const catLabel = a.cat_label || 'Atualidade';
+    const author = a.autor || '';
     const tempo = a.tempo_leitura || '';
     const tempoHTML = tempo ? '<span class="art-read-time">Leitura: ' + tempo + '</span>' : '';
     const dateLabel = a.art_date || a.data_publicacao || '';
@@ -199,7 +198,7 @@
       + '<div class="article-card-img">' + imgHTML + '</div>'
       + '<div class="article-card-body">'
       + '<div class="article-card-header">'
-      + '<span class="art-cat-badge ' + catClass + '">' + catLabel + '</span>'
+      + '<span class="art-author-tag">' + author + '</span>'
       + tempoHTML
       + '</div>'
       + '<h3 class="article-card-title">' + title + '</h3>'

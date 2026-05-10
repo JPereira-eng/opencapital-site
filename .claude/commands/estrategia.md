@@ -137,7 +137,7 @@ Read conhecimento/automacao-vs-digitalizacao.html
 Este é um exemplar de Estratégia e Gestão. Reproduzir literalmente:
 - Bloco `<head>` com favicons, fonts, CSS variables, navbar styles, article-hero, article-layout, sidebar styles, article building blocks (`article-section`, `art-highlight`, `art-table`, `art-divider`, `steps-list`).
 - Marcador `<!-- NAVBAR:START --> ... <!-- NAVBAR:END -->` (preenchido depois pelo build_navbar.py se necessário).
-- `article-hero` com breadcrumb, `hero-cat-badge` (formato "Estratégia e Gestão - [tipo]"), `article-title`, `article-standfirst`, `article-meta-bar` (Categoria, Data, Leitura, Autor).
+- `article-hero` com breadcrumb, `article-title`, `article-standfirst`, `article-meta-bar` (Categoria, Data, Leitura, Autor). NAO incluir `hero-cat-badge` (eyebrow dourado) - foi removido por decisao editorial em 2026-05-10 por ser redundante com a meta-bar.
 - `back-bar` com link de volta a `../conhecimento.html` (após Fase 7, este link passa a ser `../conhecimento/estrategia.html`).
 - `article-layout` com `article-body` + `article-sidebar`.
 - Sidebar com bloco do autor (foto, nome, cargo) e card de CTA "Falar com um especialista" -> `https://calendly.com/opencapital`.
