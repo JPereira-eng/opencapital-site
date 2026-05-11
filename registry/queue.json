@@ -1735,26 +1735,6 @@
       "priority_score": 510
     },
     {
-      "id": "acoes-coletivas-transferencia-conhecimento-alentejo",
-      "name": "Ações Coletivas – Transferência do conhecimento científico e tecnológico",
-      "codigo": "FA0146/2025",
-      "aviso_codigo": "FA0146/2025",
-      "source_id": "alentejo-2030",
-      "shard": "pt2030-other",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-02-23",
-      "data_fim": "2026-05-29",
-      "deadline": "2026-05-29",
-      "budget_eur": 3000000.0,
-      "regulation_url": 252595,
-      "pdf_url": 252595,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 540
-    },
-    {
       "id": "sibt-alentejo-2026",
       "name": "Sistema de Incentivos de base territorial",
       "codigo": "FA0147/2025",
@@ -2053,8 +2033,10 @@
       "regulation_local": null,
       "status": "pending",
       "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 550
+      "fail_count": 1,
+      "priority_score": 550,
+      "download_error": "Post not found in WP API (slug/codigo/name)",
+      "last_fail_date": "2026-05-11"
     },
     {
       "id": "inovacao-2030-3-aviso",
@@ -2137,26 +2119,6 @@
       "priority_score": 510
     },
     {
-      "id": "apoio-a-infraestruturas-de-base-tecnologica-regulamento-step",
-      "name": "Apoio a Infraestruturas de Base Tecnológica – Regulamento STEP",
-      "codigo": "FA0244/2025",
-      "aviso_codigo": "FA0244/2025",
-      "source_id": "centro-2030",
-      "shard": "pt2030-centro",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-02-16",
-      "data_fim": "2026-05-15",
-      "deadline": "2026-05-15",
-      "budget_eur": 25000000.0,
-      "regulation_url": 252696,
-      "pdf_url": 252696,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 560
-    },
-    {
       "id": "step-inovacao-produtiva-digital-e-biotecnologia",
       "name": "STEP – Inovação Produtiva – Digital e Biotecnologia",
       "codigo": "FA0075/2025",
@@ -2193,8 +2155,10 @@
       "regulation_local": null,
       "status": "pending",
       "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 550
+      "fail_count": 1,
+      "priority_score": 550,
+      "download_error": "Post not found in WP API (slug/codigo/name)",
+      "last_fail_date": "2026-05-11"
     },
     {
       "id": "gestao-agua-recursos-hidricos-alentejo",
@@ -2533,8 +2497,10 @@
       "regulation_local": null,
       "status": "pending",
       "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 540
+      "fail_count": 1,
+      "priority_score": 540,
+      "download_error": "Post not found in WP API (slug/codigo/name)",
+      "last_fail_date": "2026-05-11"
     },
     {
       "id": "protecao-e-defesa-do-litoral-acoes-materiais",
@@ -2553,8 +2519,10 @@
       "regulation_local": null,
       "status": "pending",
       "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 540
+      "fail_count": 1,
+      "priority_score": 540,
+      "download_error": "acf.pdf empty, post content insufficient (1 words)",
+      "last_fail_date": "2026-05-11"
     },
     {
       "id": "medidas-de-adaptacao-as-alteracoes-climaticas-4-aviso",
@@ -2714,8 +2682,10 @@
       "regulation_local": null,
       "status": "pending",
       "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 560
+      "fail_count": 1,
+      "priority_score": 560,
+      "download_error": "acf.pdf empty, post content insufficient (1 words)",
+      "last_fail_date": "2026-05-11"
     },
     {
       "id": "empreendimento-hidraulico-de-fins-multiplos-do-crato-barragem-do-pisao",
@@ -3274,8 +3244,10 @@
       "regulation_local": null,
       "status": "pending",
       "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 550
+      "fail_count": 1,
+      "priority_score": 550,
+      "download_error": "Post not found in WP API (slug/codigo/name)",
+      "last_fail_date": "2026-05-11"
     },
     {
       "id": "inovcontacto",
@@ -3314,8 +3286,10 @@
       "regulation_local": null,
       "status": "pending",
       "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 550
+      "fail_count": 1,
+      "priority_score": 550,
+      "download_error": "Post not found in WP API (slug/codigo/name)",
+      "last_fail_date": "2026-05-11"
     },
     {
       "id": "pepac-missoes",
@@ -3416,26 +3390,6 @@
       "state": "aberto",
       "fail_count": 0,
       "priority_score": 500
-    },
-    {
-      "id": "programas-intermunicipais-de-promocao-do-sucesso-escolar-pipse-iti-cim",
-      "name": "Programas InterMunicipais de Promoção do Sucesso Escolar (PIPSE) – ITI-CIM- 2ª fase",
-      "codigo": "FA0313/2025",
-      "aviso_codigo": "FA0313/2025",
-      "source_id": "centro-2030",
-      "shard": "pt2030-centro",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-03-02",
-      "data_fim": "2026-05-29",
-      "deadline": "2026-05-29",
-      "budget_eur": 749176158.0,
-      "regulation_url": 252896,
-      "pdf_url": 252896,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 560
     },
     {
       "id": "balcao-da-inclusao-unidades-moveis-em-territorios-de-baixa-densidade",
