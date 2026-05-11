@@ -9,7 +9,7 @@
     {
       "id": "portugal-2030",
       "name": "Portugal 2030 (API central)",
-      "priority": "high",
+      "priority": "medium",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://portugal2030.pt/avisos/",
@@ -22,7 +22,8 @@
       "dedup_key": "codigo (FA####/YYYY format, unique across all programs)",
       "regime": "aviso",
       "cap": -1,
-      "cooldown_days": 7
+      "cooldown_days": 7,
+      "scan_destination": "watchlist"
     },
     {
       "id": "balcao-2030",
@@ -38,19 +39,19 @@
     {
       "id": "compete-2030",
       "name": "COMPETE 2030",
-      "priority": "medium",
-      "access_method": "webfetch",
+      "priority": "high",
+      "access_method": "chrome",
       "access_status": "ok",
       "url_avisos": "https://www.compete2030.gov.pt/avisos",
       "shard": "pt2030-compete",
       "regime": "aviso",
       "cap": -1,
-      "cooldown_days": 3
+      "cooldown_days": 2
     },
     {
       "id": "pessoas-2030",
       "name": "Pessoas 2030",
-      "priority": "medium",
+      "priority": "high",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://pessoas2030.gov.pt/",
@@ -60,24 +61,24 @@
       "note": "30 avisos (3 paginas). Mesma estrutura ACF que PT2030 central.",
       "regime": "aviso",
       "cap": -1,
-      "cooldown_days": 3
+      "cooldown_days": 2
     },
     {
       "id": "mar-2030",
       "name": "MAR 2030",
-      "priority": "medium",
+      "priority": "high",
       "access_method": "chrome",
       "access_status": "partial",
       "url_avisos": "https://mar2030.gov.pt/",
       "shard": "pt2030-other",
       "regime": "aviso",
       "cap": -1,
-      "cooldown_days": 7
+      "cooldown_days": 2
     },
     {
       "id": "sustentavel-2030",
       "name": "Sustentavel 2030",
-      "priority": "medium",
+      "priority": "high",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://sustentavel2030.gov.pt/avisos/",
@@ -88,12 +89,12 @@
       "note": "8 avisos (1 pagina). Endpoint diferente dos outros portais.",
       "regime": "aviso",
       "cap": -1,
-      "cooldown_days": 3
+      "cooldown_days": 2
     },
     {
       "id": "pat-2030",
       "name": "Programa de Assistencia Tecnica 2030",
-      "priority": "low",
+      "priority": "medium",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://pat.portugal2030.pt/",
@@ -108,7 +109,7 @@
     {
       "id": "norte-2030",
       "name": "Norte 2030",
-      "priority": "medium",
+      "priority": "high",
       "access_method": "webfetch",
       "access_status": "ok",
       "url_avisos": "https://www.norte2030.pt/concursos/",
@@ -116,12 +117,12 @@
       "note": "API REST da 401. Usar WebFetch na pagina de concursos. 29 abertos / 171 total (verificado 2026-04-12)",
       "regime": "aviso",
       "cap": -1,
-      "cooldown_days": 3
+      "cooldown_days": 2
     },
     {
       "id": "centro-2030",
       "name": "Centro 2030",
-      "priority": "low",
+      "priority": "high",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://centro2030.pt/avisos/",
@@ -131,12 +132,12 @@
       "note": "12 avisos (2 paginas). Mesma estrutura ACF que PT2030 central.",
       "regime": "aviso",
       "cap": -1,
-      "cooldown_days": 7
+      "cooldown_days": 2
     },
     {
       "id": "lisboa-2030",
       "name": "Lisboa 2030",
-      "priority": "low",
+      "priority": "high",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://lisboa.portugal2030.pt/avisos/",
@@ -146,12 +147,12 @@
       "note": "5 avisos (1 pagina). Mesma estrutura ACF que PT2030 central.",
       "regime": "aviso",
       "cap": -1,
-      "cooldown_days": 7
+      "cooldown_days": 2
     },
     {
       "id": "alentejo-2030",
       "name": "Alentejo 2030",
-      "priority": "low",
+      "priority": "high",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://alentejo.portugal2030.pt/avisos/",
@@ -161,12 +162,12 @@
       "note": "40+ avisos (4+ paginas). Mesma estrutura ACF que PT2030 central.",
       "regime": "aviso",
       "cap": -1,
-      "cooldown_days": 7
+      "cooldown_days": 2
     },
     {
       "id": "algarve-2030",
       "name": "Algarve 2030",
-      "priority": "low",
+      "priority": "high",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://algarve.portugal2030.pt/avisos/",
@@ -176,12 +177,12 @@
       "note": "20 avisos (2 paginas). Mesma estrutura ACF que PT2030 central.",
       "regime": "aviso",
       "cap": -1,
-      "cooldown_days": 7
+      "cooldown_days": 2
     },
     {
       "id": "acores-2030",
       "name": "Acores 2030",
-      "priority": "low",
+      "priority": "high",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://acores.portugal2030.pt/avisos/",
@@ -191,12 +192,12 @@
       "note": "10+ avisos (1+ paginas). Mesma estrutura ACF que PT2030 central.",
       "regime": "aviso",
       "cap": -1,
-      "cooldown_days": 7
+      "cooldown_days": 2
     },
     {
       "id": "madeira-2030",
       "name": "Madeira 2030",
-      "priority": "low",
+      "priority": "high",
       "access_method": "api",
       "access_status": "ok",
       "url_avisos": "https://madeira.portugal2030.pt/avisos/",
@@ -206,7 +207,7 @@
       "note": "10+ avisos (1+ paginas). Mesma estrutura ACF que PT2030 central.",
       "regime": "aviso",
       "cap": -1,
-      "cooldown_days": 7
+      "cooldown_days": 2
     },
     {
       "id": "ani",

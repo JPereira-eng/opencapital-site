@@ -1117,6 +1117,33 @@ Se qualquer falhar: WARNING (não abortar — sinalização parcial é melhor qu
 
 **Regime "catálogo" (v4.5):** upsert em `registry/queue-catálogo.json` com objeto `profile` estruturado (ver Passo 2bis). Uma entrada por `source_id` — não ha overflow, não ha lookup separado, dedup e direta pelo id. Excecao: `catalog_type: "platform"` não adiciona entrada (so produz suggestions no relatorio).
 
+### Regra `scan_destination` (v4.11, 2026-05-11) — fontes "watchlist-only"
+
+Fontes com `scan_destination: "watchlist"` no `sources-scan.json` têm tratamento especial:
+
+**Aplicável a:** `portugal-2030` (portal central PT2030 que publica PAA summaries, não regulamentos reais).
+
+**Comportamento:**
+- Items detetados nessas fontes **NÃO entram em `queue.json`**.
+- Vão **diretamente para `queue-plano-anual.json`** (watchlist), com priority_score calculado normalmente (v4.11 fórmula).
+- Servem como sinalização de calendário e cross-reference para o monitor.
+- O monitor (PASSO 2.6) cruza com fontes Tier 1 (regionais) e promove para queue.json quando encontra match.
+
+**Pseudocódigo:**
+```python
+fonte_cfg = sources_scan[source_id]
+destino = fonte_cfg.get('scan_destination', 'queue')  # default: queue
+if destino == 'watchlist':
+    queue_plano_anual.queue.append(novo_item)
+    save(queue_plano_anual.json)
+    # lookup atualizado DEPOIS (ver "ordem de escrita obrigatória")
+else:
+    # comportamento normal (queue.json + overflow se cheio)
+    ...
+```
+
+**Racional:** o portal central PT2030 (`portugal-2030`) é uma vitrine previsional. As 220 entries que tem são maioritariamente PAA (Plano Anual de Avisos) cujos regulamentos reais vivem nos 11 portais regionais sob códigos diferentes (e.g., FA0263 central = PACS-2026-07 sustentavel). Capturar avisos do central diretamente para queue ativa gerava trabalho desperdiçado (downloader detetava PAA e movia para watchlist mais tarde). Esta regra antecipa esse routing.
+
 ---
 
 ### Regime "aviso" - Limite de queue com swap por prioridade

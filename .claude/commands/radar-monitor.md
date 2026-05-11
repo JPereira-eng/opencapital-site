@@ -250,6 +250,118 @@ Para cada item na watchlist (apenas items `paa_status == "planejado"` ou ausente
 
 ---
 
+## PASSO 2.7: Cross-portal matching para PAAs com data_inicio passada (v4.11, 2026-05-11)
+
+**Contexto:** o portal central `portugal-2030` publica entries previsionais (PAA summaries). Quando o aviso real abre, é frequentemente publicado nos portais REGIONAIS sob código diferente (e.g., FA0263 central = PACS-2026-07 sustentavel). O PASSO 2.6 verifica se o central atualizou o PAA para regulamento real, mas isto frequentemente NUNCA acontece. Este passo procura o aviso real nos portais regionais.
+
+**Aplicável a:** items em `queue-plano-anual.json` onde:
+- `source_id == "portugal-2030"` (entry veio do central) OU `paa_status == "published_externamente"`
+- `acf.data_inicio < hoje` (aviso teoricamente já abriu)
+- `plano_anual_checks >= 1` (PASSO 2.6 já tentou via central pelo menos 1 vez sem sucesso)
+
+**Algoritmo:**
+
+```python
+# 1. Identificar portal regional candidato baseado em acf.programa[]
+PROGRAM_TO_PORTAL = {
+    'COMPETE':    'compete-2030',
+    'PESSOAS':    'pessoas-2030',
+    'NORTE':      'norte-2030',
+    'CENTRO':     'centro-2030',
+    'LISBOA':     'lisboa-2030',
+    'ALENTEJO':   'alentejo-2030',
+    'ALGARVE':    'algarve-2030',
+    'ACORES':     'acores-2030',
+    'MADEIRA':    'madeira-2030',
+    'MAR':        'mar-2030',
+    'SUSTENTAVEL':'sustentavel-2030',
+    'PAT':        'pat-2030',
+}
+
+programas = item.get('acf_programa', [])  # capturado pelo scanner
+portais_candidatos = []
+for p in programas:
+    for key, portal in PROGRAM_TO_PORTAL.items():
+        if key in p.upper():
+            portais_candidatos.append(portal)
+portais_candidatos = list(set(portais_candidatos))  # dedup
+
+# 2. Para cada portal candidato, fetch da API e procurar match
+for portal_id in portais_candidatos:
+    portal_cfg = sources_scan[portal_id]
+    api_url = portal_cfg.get('api_url') or portal_cfg.get('url')
+    if not api_url: continue
+
+    avisos = fetch_api(api_url, per_page=100, all_pages=True)
+
+    # 3. Title fuzzy match (>= 85% similaridade)
+    for av in avisos:
+        title_regional = av['title']['rendered']
+        similaridade = title_similarity(item['name'], title_regional)
+        if similaridade >= 0.85:
+            # MATCH ENCONTRADO
+            match_aviso = av
+            match_portal = portal_id
+            break
+    if match_aviso: break
+
+# 4. Se match encontrado, promover para queue.json com dados regionais
+if match_aviso:
+    novo_item = construir_item_a_partir_de_aviso(match_aviso, match_portal)
+    novo_item['priority_score'] = recompute_score_v4_11(novo_item)  # 500+
+    novo_item['cross_portal_match'] = {
+        'original_codigo': item['aviso_codigo'],
+        'original_portal': item['source_id'],
+        'matched_portal': match_portal,
+        'matched_codigo': match_aviso['acf']['codigo'],
+        'title_similarity': similaridade,
+    }
+    queue.append(novo_item)
+    save(queue.json)
+    # remover da watchlist (ordem crítica: queue primeiro)
+    queue_plano_anual.queue.remove(item)
+    save(queue_plano_anual.json)
+    log(f'cross-portal match: {item.aviso_codigo} (central) -> {match_aviso.acf.codigo} ({match_portal})')
+
+# 5. Se nenhum match após verificar todos os candidatos:
+#    Apenas incrementar plano_anual_checks (comportamento normal do 2.6)
+```
+
+**Função `title_similarity`:**
+```python
+def title_similarity(a: str, b: str) -> float:
+    """Levenshtein-based similarity normalizada [0,1]. Strip HTML entities
+    primeiro (e.g., &#8211; -> -)."""
+    from html import unescape
+    import re
+    a = re.sub(r'\s+', ' ', unescape(a).lower().strip())
+    b = re.sub(r'\s+', ' ', unescape(b).lower().strip())
+    # implementação Levenshtein normalizada ou difflib.SequenceMatcher
+    from difflib import SequenceMatcher
+    return SequenceMatcher(None, a, b).ratio()
+```
+
+**Limites por run:**
+- Cross-portal matching aplica-se a no máximo **5 items por run** (custo: 5 fetches API + similarity checks)
+- Items elegíveis ordenados por priority_score desc (PT2030 com 500+ vão primeiro)
+
+**Salvaguardas:**
+- Threshold mínimo 85% para evitar falsos positivos
+- Se múltiplos matches >= 85%, escolher o de maior similarity
+- Se programa não mapear para nenhum portal regional (e.g., apenas "PT2030" genérico), pular item
+
+**Relatório no final do monitor run:**
+```
+Cross-portal matching (PASSO 2.7):
+  Items elegíveis: N (PAAs com data_inicio passada)
+  Items processados: min(N, 5)
+  Matches encontrados: M
+  Promovidos para queue: M (com cross_portal_match preenchido)
+  Sem match: N - M (permanecem na watchlist)
+```
+
+---
+
 ## PASSO 3: Registar alteracoes
 
 ### Se estado mudou (aberto -> fechado) - regime aviso apenas:
