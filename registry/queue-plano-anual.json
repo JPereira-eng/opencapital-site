@@ -514,7 +514,7 @@
       "priority_score": 530,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: MADEIRA2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
       "programa": [
         "MADEIRA2030"
@@ -522,13 +522,18 @@
       "regional_portals": [
         "madeira-2030"
       ],
-      "plano_anual_last_check": "2026-05-08",
-      "plano_anual_checks": 1,
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 2,
       "plano_anual_note": "Monitor 2026-05-08: API portugal-2030 retorna acf.pdf valido. Downloader deve correr TESTE A para confirmar/promover.",
       "paa_status": "published_externamente",
       "news_post_url": "https://madeira.portugal2030.pt/2026/02/09/madeira-2030-lanca-aviso-convite-para-apoio-as-estruturas-locais-de-emprego/",
       "news_post_date": "2026-02-09",
-      "news_post_title": "Madeira 2030 lança Aviso-Convite para Apoio às Estruturas Locais de Emprego"
+      "news_post_title": "Madeira 2030 lança Aviso-Convite para Apoio às Estruturas Locais de Emprego",
+      "codigo": "FA0135/2025",
+      "data_inicio": "2026-09-30",
+      "data_fim": "2026-10-30",
+      "budget_eur": 15000000.0,
+      "state": "previsto"
     },
     {
       "id": "autoconsumo-comunidades-energia-renovavel-alentejo",
@@ -652,7 +657,7 @@
       "priority_score": 530,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
       "programa": [
         "SUSTENTAVEL2030"
@@ -660,9 +665,14 @@
       "regional_portals": [
         "sustentavel-2030"
       ],
-      "plano_anual_last_check": "2026-05-08",
-      "plano_anual_checks": 1,
-      "plano_anual_note": "Monitor 2026-05-08: API portugal-2030 retorna acf.pdf valido. Downloader deve correr TESTE A para confirmar/promover."
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 2,
+      "plano_anual_note": "Monitor 2026-05-08: API portugal-2030 retorna acf.pdf valido. Downloader deve correr TESTE A para confirmar/promover.",
+      "codigo": "FA0260/2025",
+      "data_inicio": "2026-04-01",
+      "data_fim": "2027-03-31",
+      "budget_eur": 40000000.0,
+      "state": "aberto"
     },
     {
       "id": "infraestruturas-de-valorizacao-de-residuos-urbanos-em-alta-ru",
@@ -679,7 +689,7 @@
       "priority_score": 530,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
       "programa": [
         "SUSTENTAVEL2030"
@@ -687,9 +697,14 @@
       "regional_portals": [
         "sustentavel-2030"
       ],
-      "plano_anual_last_check": "2026-05-08",
-      "plano_anual_checks": 1,
-      "plano_anual_note": "Monitor 2026-05-08: API portugal-2030 retorna acf.pdf valido. Downloader deve correr TESTE A para confirmar/promover."
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 2,
+      "plano_anual_note": "Monitor 2026-05-08: API portugal-2030 retorna acf.pdf valido. Downloader deve correr TESTE A para confirmar/promover.",
+      "codigo": "FA0281/2025",
+      "data_inicio": "2026-03-02",
+      "data_fim": "2027-02-26",
+      "budget_eur": 60000000.0,
+      "state": "aberto"
     },
     {
       "id": "gestao-de-residuos-urbanos-acoes-imateriais",
@@ -2100,12 +2115,17 @@
       "programa": null,
       "regional_portals": null,
       "promoted_from_paa": "2026-05-09",
-      "download_error": "PAA detectado no PDF (Teste A)",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-09",
-      "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-05-10",
+      "plano_anual_checks": 3,
+      "plano_anual_last_check": "2026-05-12",
       "plano_anual_status": "slug_not_found",
-      "plano_anual_note": "API empty response - slug pode ter sido alterado"
+      "plano_anual_note": "API empty response - slug pode ter sido alterado",
+      "codigo": "FA0002/2025",
+      "data_inicio": "2026-05-01",
+      "data_fim": "2026-09-30",
+      "budget_eur": 15000000.0,
+      "state": "aberto"
     },
     {
       "id": "rede-ferroviaria-das-areas-metropolitanas-mobilidade-urbana-sustentave",
@@ -2130,14 +2150,19 @@
         "sustentavel-2030"
       ],
       "promoted_from_paa": "2026-05-09",
-      "download_error": "Aviso futuro (data_inicio=2026-12-02)",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-09",
-      "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-05-10",
+      "plano_anual_checks": 3,
+      "plano_anual_last_check": "2026-05-12",
       "plano_anual_status": "placeholder_1.4mb",
       "data_inicio_api": "2026-12-02",
       "data_fim_api": "2027-04-30",
-      "plano_anual_note": "PDF ja tem 1.4MB mas filename ainda e placeholder unnamed-file"
+      "plano_anual_note": "PDF ja tem 1.4MB mas filename ainda e placeholder unnamed-file",
+      "codigo": "FA0578/2024",
+      "data_inicio": "2026-12-02",
+      "data_fim": "2027-04-30",
+      "budget_eur": 147930000.0,
+      "state": "previsto"
     },
     {
       "id": "medidas-de-adaptacao-as-alteracoes-climaticas",
@@ -2162,10 +2187,15 @@
         "sustentavel-2030"
       ],
       "promoted_from_paa": "2026-05-09",
-      "download_error": "Aviso futuro (data_inicio=2026-06-01)",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-09",
-      "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-05-11"
+      "plano_anual_checks": 3,
+      "plano_anual_last_check": "2026-05-12",
+      "codigo": "FA0154/2025",
+      "data_inicio": "2026-06-01",
+      "data_fim": "2026-08-31",
+      "budget_eur": 33500000.0,
+      "state": "previsto"
     },
     {
       "id": "equipamentos-infraestruturas-portuarias-raa-3aviso",
@@ -2645,7 +2675,103 @@
         "matched_at": "2026-05-11"
       },
       "plano_anual_detected_date": "2026-05-11"
+    },
+    {
+      "id": "step-i-d-i-empresarial-digital-e-biotecnologia",
+      "name": "STEP – I&D&I Empresarial – Digital e Biotecnologia",
+      "codigo": "FA0076/2025",
+      "aviso_codigo": "FA0076/2025",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "detected_date": "2026-05-11",
+      "data_inicio": "2026-01-30",
+      "data_fim": "2026-09-30",
+      "deadline": "2026-09-30",
+      "budget_eur": 210000000.0,
+      "regulation_url": 252698,
+      "pdf_url": 252698,
+      "regulation_local": null,
+      "status": "plano_anual",
+      "state": "aberto",
+      "fail_count": 0,
+      "priority_score": 530,
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
+      "plano_anual_detected_date": "2026-05-12",
+      "plano_anual_checks": 1,
+      "plano_anual_last_check": "2026-05-12"
+    },
+    {
+      "id": "step-inovacao-produtiva-digital-e-biotecnologia",
+      "name": "STEP – Inovação Produtiva – Digital e Biotecnologia",
+      "codigo": "FA0075/2025",
+      "aviso_codigo": "FA0075/2025",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "detected_date": "2026-05-11",
+      "data_inicio": "2026-01-30",
+      "data_fim": "2026-09-30",
+      "deadline": "2026-09-30",
+      "budget_eur": 401000000.0,
+      "regulation_url": 252694,
+      "pdf_url": 252694,
+      "regulation_local": null,
+      "status": "plano_anual",
+      "state": "aberto",
+      "fail_count": 0,
+      "priority_score": 530,
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
+      "plano_anual_detected_date": "2026-05-12",
+      "plano_anual_checks": 1,
+      "plano_anual_last_check": "2026-05-12"
+    },
+    {
+      "id": "gestao-recursos-hidricos-acores2030",
+      "name": "Gestão de Recursos hídricos",
+      "codigo": "FA0583/2023",
+      "aviso_codigo": "FA0583/2023",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "detected_date": "2026-05-11",
+      "data_inicio": "2026-01-02",
+      "data_fim": "2026-06-30",
+      "deadline": "2026-06-30",
+      "budget_eur": 6500000.0,
+      "regulation_url": 252732,
+      "pdf_url": 252732,
+      "regulation_local": null,
+      "status": "plano_anual",
+      "state": "aberto",
+      "fail_count": 0,
+      "priority_score": 530,
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
+      "plano_anual_detected_date": "2026-05-12",
+      "plano_anual_checks": 1,
+      "plano_anual_last_check": "2026-05-12"
+    },
+    {
+      "id": "medidas-de-adaptacao-as-alteracoes-climaticas-4-aviso",
+      "name": "Medidas de adaptação às alterações Climáticas – 4.º Aviso",
+      "codigo": "FA0262/2025",
+      "aviso_codigo": "FA0262/2025",
+      "source_id": "sustentavel-2030",
+      "shard": "pt2030-other",
+      "detected_date": "2026-05-11",
+      "data_inicio": "2026-03-02",
+      "data_fim": "2026-06-30",
+      "deadline": "2026-06-30",
+      "budget_eur": 2500000.0,
+      "regulation_url": 252754,
+      "pdf_url": 252754,
+      "regulation_local": null,
+      "status": "plano_anual",
+      "state": "aberto",
+      "fail_count": 0,
+      "priority_score": 530,
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
+      "plano_anual_detected_date": "2026-05-12",
+      "plano_anual_checks": 1,
+      "plano_anual_last_check": "2026-05-12"
     }
   ],
-  "updated": "2026-05-11"
+  "updated": "2026-05-12"
 }
