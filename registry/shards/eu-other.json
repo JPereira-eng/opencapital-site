@@ -157,9 +157,13 @@
       "id": "neb-mentors-open-call-2026",
       "file": "instrumentos/neb-mentors-open-call-2026.html",
       "source": "eit",
-      "state": "aberto",
+      "state": "fechado",
       "deadline": "2026-05-11",
-      "last_check": "2026-05-08"
+      "last_check": "2026-05-12",
+      "estado": "fechado",
+      "auto_closed": true,
+      "status_text": "Fechado",
+      "status_class": "status-closed"
     },
     {
       "id": "scaleup-promotion-initiative-eit-2026",
@@ -2246,5 +2250,6 @@
   "published": 142,
   "open": 107,
   "closed": 32,
-  "planned": 2
+  "planned": 2,
+  "_meta": {}
 }
