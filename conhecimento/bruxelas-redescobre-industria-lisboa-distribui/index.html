@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bruxelas redescobre a indústria. Lisboa continua a distribuir. | Open Capital</title>
+  <meta name="description" content="A Europa abandonou meio século de neutralidade industrial. Portugal, que nunca a praticou, prepara-se para responder com subsídio repartido. Uma leitura histórica.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-signature{font-size:13px;font-weight:500;letter-spacing:0.06em;color:var(--grey-mid);margin-top:40px;padding-top:20px;border-top:1px solid var(--grey-light);}
+    .article-coda{font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:32px;line-height:1.7;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <a href="../../" class="nav-logo">
+      <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../../biblioteca.html">Biblioteca</a></li>
+      <li><a href="../../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades</a>
+        <div class="nav-dropdown-menu">
+          <a href="../../parceiros.html">Parceiros</a>
+          <a href="../../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../../">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../../conhecimento.html">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Opinião</span>
+      </nav>
+      <h1 class="article-title">Bruxelas redescobre a indústria. Lisboa continua a distribuir.</h1>
+      <p class="article-standfirst">A Europa abandonou meio século de neutralidade industrial. Portugal, que nunca a praticou de verdade, prepara-se para responder com a única ferramenta que sempre soube manejar: o subsídio repartido.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Opinião</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Maio 2026</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>12 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>André Carvalho</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+      <div class="article-section reveal">
+        <p>Em outubro de 1933, num decreto publicado pelo Diário do Governo entre artigos de rotina, o Estado Novo institucionalizou aquilo a que viria a chamar-se condicionamento industrial. Doravante, abrir uma fábrica em Portugal, ampliá-la, ou simplesmente mudá-la de sítio dependia de autorização ministerial. A medida foi apresentada como racionalização, como instrumento de planeamento, como expressão de um Estado que finalmente se interessava pela economia. Era, no fundo, o contrário. Era a consagração da inércia, da proteção dos incumbentes, da paralisia institucionalizada de quase quarenta anos de industrialização portuguesa.</p>
+
+        <p>O condicionamento foi a política industrial portuguesa do século XX. Não escolhia setores. Não fixava prioridades nacionais. Não definia capacidade produtiva. Distribuía licenças. Quem já produzia continuava a produzir. Quem queria começar tinha de pedir autorização a um funcionário que via no recém-chegado, sobretudo, uma ameaça à estabilidade do que existia. Salazar, contrariamente ao mito, não defendia a indústria portuguesa. Defendia a indústria que existia, que era diferente, e que muitas vezes era pequena, ineficiente e politicamente bem relacionada.</p>
+
+        <p>Cinco décadas depois, em 1972, Marcello Caetano aboliu finalmente o condicionamento numa das poucas tentativas sérias de modernização tardia do regime. A reforma era boa. Chegava tarde. No ano seguinte, o choque petrolífero apanhou a Europa em transição estrutural, e Portugal num ponto particularmente exposto: a meio caminho entre uma estrutura produtiva herdada de Salazar e uma economia europeia que estava prestes a mudar de natureza, sem que nem o regime moribundo nem a oposição emergente tivessem a mais pequena ideia do que pretendiam, em substância, que o país viesse a produzir.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <p>Os anos seguintes foram de improviso. As nacionalizações de 1975 entregaram ao Estado um parque industrial heterogéneo que ninguém sabia governar, e que poucos tinham vontade de governar para além do imediato. A política industrial portuguesa, nos quinze anos seguintes, esgotou-se em manter vivos sectores que já estavam mortos e em pedir empréstimos ao Fundo Monetário Internacional para pagar salários. Em 1977 e em 1983, Portugal esteve duas vezes à beira da insolvência soberana. Em nenhuma das duas se discutiu, com qualquer profundidade, o que o país produzia, ou o que devia passar a produzir.</p>
+
+        <p>Quando Portugal aderiu à Comunidade Económica Europeia, em janeiro de 1986, encontrou Bruxelas no momento exato em que esta abandonava a ideia de política industrial enquanto domínio legítimo de atuação europeia. O Ato Único Europeu, assinado nesse mesmo ano, consagrava o mercado interno e a política de concorrência como pilares estruturantes da integração. Jacques Delors, que conduzia a Comissão, tinha ainda uma visão de Europa industrial, mas estava a perdê-la para uma geração de comissários e funcionários influenciados pela viragem reaganiana e thatcheriana, que via na intervenção sectorial um vestígio gaullista a superar. Nos anos seguintes, qualquer apoio público a um sector específico passou a ser examinado com suspeita. Política industrial tornou-se palavra desconfortável em Bruxelas, e logo em Lisboa.</p>
+
+        <p>Portugal aderiu, portanto, a uma Europa que estava a deixar de pensar em indústria. E entrou nessa Europa sem nunca ter pensado, ele próprio, naquilo que queria ser industrialmente. Aceitou o consenso de Bruxelas como quem aceita o conselho firme de um adulto a uma criança que nem sequer tinha formulado a pergunta.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <p>Daí em diante, a política industrial portuguesa foi substituída por uma engenharia de transferências. Os fundos estruturais, que entre 1986 e 2020 transferiram para Portugal o equivalente a uma fração significativa do PIB anual médio acumulado, foram desenhados em Bruxelas com lógica essencialmente horizontal: apoiavam regiões, infraestruturas, formação, modernização genérica, raramente sectores específicos. Quando Portugal podia desenhar a aplicação interna desses fundos, repetia a lógica. O QCA III, o QREN, o Portugal 2020, agora o Portugal 2030: quatro gerações de programas em que o critério estruturante foi quase sempre a elegibilidade horizontal, não a aposta vertical.</p>
+
+        <p>O resultado é conhecido por quem se dá ao trabalho de o ler. Portugal recebeu dinheiro a fio e construiu autoestradas, equipamentos sociais, alguma capacidade tecnológica dispersa, universidades melhoradas. Mas não construiu cadeias de valor robustas em sectores onde dizia, ano após ano, querer estar. O perfil das principais exportações portuguesas em 2026 não é radicalmente diferente do perfil de 1995: calçado e têxteis, componentes automóvel, cortiça, produtos agroalimentares transformados, alguns serviços. A composição moveu-se, mas pouco, e em direções que ninguém escolheu deliberadamente. A economia portuguesa especializou-se em produzir aquilo que conseguia produzir, não aquilo que decidira produzir.</p>
+
+        <p>Tudo isto se justificou, durante décadas, com uma certeza intelectual que era também uma cómoda: o Estado, dizia-se, não sabe escolher vencedores. Foi a frase que se ouviu em comissões parlamentares, em conferências do IAPMEI, em artigos de opinião de quase todos os semanários, em pareceres ministeriais. Tinha o mérito de ser parcialmente verdadeira, e o defeito de servir de pretexto para não fazer nada. Era a frase que Friedrich Hayek viu repetir-se com triunfo numa Europa que, em 2024, descobriu que afinal nem sempre era assim.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <h2>2024, outra vez</h2>
+
+      <div class="article-section reveal">
+        <p>Em setembro de 2024, Mario Draghi publicou para a Comissão Europeia um relatório de quase quatrocentas páginas sobre a competitividade da União. O documento, redigido na prosa contida de quem foi presidente do Banco Central Europeu, descrevia uma Europa que tinha perdido o passo durante duas décadas. A produtividade europeia, comparada com a norte-americana, divergiu consistentemente. O investimento em tecnologias de fronteira, o domínio das cadeias de baterias, semicondutores, hidrogénio verde, biotecnologia avançada, era pequeno, fragmentado e dependente. O relatório recomendava, sem qualquer rodeio, política industrial: escolha de sectores, investimento público massivo, instrumentos comuns europeus de financiamento, tolerância à concentração empresarial em sectores estratégicos. Enrico Letta, no relatório sobre o mercado interno publicado meses antes, ia exatamente na mesma direção.</p>
+
+        <p>Tudo isto se traduziu em legislação. O Chips Act, o Net-Zero Industry Act, o Critical Raw Materials Act, todos aprovados entre 2022 e 2025, são a expressão jurídica daquilo a que Bruxelas finalmente chama, sem embaraço, o seu regresso à política industrial. Foi preciso uma combinação de choques de natureza histórica para que isto acontecesse: a pandemia que partiu cadeias de abastecimento que se julgavam intocáveis, a guerra na Ucrânia que partiu o pressuposto energético da última década, o Inflation Reduction Act de Biden em 2022 que partiu o pressuposto de cooperação atlântica em política industrial, e a tensão tecnológica com a China que partiu o pressuposto de que a interdependência era apenas comercial. Foi preciso isto tudo para que o consenso anti-intervencionista dos quarenta anos anteriores fosse, finalmente, reexaminado.</p>
+
+        <p>E Portugal, este Portugal de 2026, com seis biliões de euros do PRR a fechar e o Portugal 2030 a meio caminho, prepara-se para responder. Resta saber como.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <p>A resposta portuguesa, lida com generosidade, é que está em curso. Lida com lucidez, é que está a repetir-se. O PRR distribuiu por dezenas de avisos, centenas de instrumentos, milhares de beneficiários. Cada ministério defendeu a sua quota, cada região fez valer a sua representação, cada associação setorial reivindicou o seu envelope, cada autarquia conseguiu a sua menção. O Portugal 2030 segue o mesmo desenho, com sofisticações administrativas que não alteram a lógica. O Banco Português de Fomento, criado em 2020 com a missão declarada de financiar a transformação produtiva, mantém um balanço modesto e uma intervenção tímida. O IAPMEI continua a distribuir vouchers de inovação cuja eficácia foi várias vezes posta em causa pelo próprio Tribunal de Contas em relatórios sucessivos.</p>
+
+        <p>Não existe, em 2026, um documento público assinado por um governo português que indique, com clareza administrativa e disposição orçamental real, quais são os três, quatro, cinco sectores em que o país vai apostar, ao longo da próxima década, capital concentrado, regulação adaptada e capacidade institucional dedicada. Há discursos sobre a tecnologia. Há referências à transição energética. Há menções vagas à defesa. Não há escolhas. E a ausência de escolha é, em si mesma, uma escolha, embora a tradição administrativa portuguesa prefira chamar-lhe equilíbrio.</p>
+
+        <p>E, no entanto, as bases existem. A Bosch de Braga emprega milhares de pessoas numa cadeia automóvel que está em plena reconversão para o veículo elétrico. A Critical Manufacturing, com origem na Maia, é fornecedora global do sector dos semicondutores. Sines tem o porto de águas profundas, a interconexão energética com a península e o cabo submarino que poderiam ancorar uma cadeia europeia de hidrogénio verde. A Galp e a Navigator investem em transição. A indústria portuguesa de defesa, desmantelada nos anos noventa com uma rapidez que ainda hoje se discute, começa a reorganizar-se em torno da OGMA, da Edisoft, da TEKEVER e de meia dúzia de PMEs especializadas em sistemas não tripulados e em comunicações seguras. A capacidade industrial existe. Está dispersa. Aguarda direção.</p>
+
+        <p>Mas escolher implica recusar. E recusar implica ter coragem política para dizer, na hora do orçamento de Estado, que este sector recebe e aquele não. Implica explicar a um deputado eleito por um distrito do interior por que razão o programa de apoio às oficinas tradicionais é mais pequeno do que o programa de apoio aos materiais críticos. Implica resistir à arquitetura institucional portuguesa, lentamente construída ao longo de quarenta anos para distribuir, não para concentrar; para conciliar, não para selecionar; para tranquilizar interesses estabelecidos, não para forçar transições. Implica, em suma, fazer aquilo que Portugal não fez em 1972, quando o condicionamento se desfez sem nada de substantivo o substituir. E que não fez em 1986, quando entrou numa Europa que estava a esquecer-se da indústria, sem nunca ter pensado verdadeiramente na sua.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <p>O argumento contrário tem mérito, e seria desonesto não o reconhecer. Pode dizer-se que escolher sectores é arriscado, que o Estado tem informação imperfeita, que o passado europeu de campeões nacionais protegidos não foi sempre gentil com a Alitalia, com a Renault dos anos oitenta, com a Saab, com a Olivetti. Tudo verdadeiro, tudo documentado, tudo conhecido por quem leu Tony Judt e a história do pós-guerra europeu. E, no entanto, tudo isto era conhecido também em Bruxelas, que apesar disso decidiu, em 2024, que o risco maior já não é o de escolher mal. É o de não escolher.</p>
+
+        <p>Há uma observação de Judt, no fim daquele livro extenso sobre a Europa do pós-guerra, que se torna útil aqui. Notava Judt que os países europeus passaram o século XX a oscilar entre dois excessos: o de querer fazer tudo, do qual resultaram as ruínas planificadas do leste e as ineficiências persistentes do oeste, e o de querer não fazer nada, do qual resultaram as décadas anémicas do final do século, em que se construiu pouco que valesse mesmo a pena. A virtude, sugeria, estava algures no meio, mas era difícil de encontrar precisamente porque pressupunha aquilo que mais escasseia em democracias maduras: o gosto pela responsabilidade da escolha, sabendo que a escolha vai descontentar alguém em particular para servir o todo.</p>
+
+        <p>Portugal, em 2026, está perante uma janela rara que não estava prevista. Bruxelas reabriu o espaço político para fazer política industrial, e fê-lo com uma severidade legislativa que dispensa pedidos de licença. Há dinheiro europeu em escala histórica, ainda que com calendário curto. Há sectores com cadeias de valor portuguesas reais, e não fictícias. Há uma elite técnica suficientemente formada para desenhar instrumentos sectoriais sofisticados. Falta, e tem faltado há quase um século, a vontade política de escolher menos para conseguir mais.</p>
+
+        <p>A história portuguesa do século XX guarda esta lição com algum sarcasmo silencioso. Sempre que o país teve oportunidade séria de escolher o que queria produzir, escolheu não escolher. E todas as vezes, a década seguinte demonstrou, com vagar, que isso também é uma escolha. Apenas mais cara, e quase sempre mais tardia.</p>
+
+        <p>Quando os fundos europeus desta geração pararem, algures entre 2031 e 2034, a pergunta que importa não será quanto recebemos. Será o que ficou cá dentro. E essa, como em 1972, como em 1986, é uma pergunta que precisa de ser feita agora, enquanto ainda há tempo para que a resposta dependa de nós.</p>
+      </div>
+
+      <p class="article-coda" style="font-size:12px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a></p>
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../../Retratos Equipa/retrato_andrecarvalho.png" alt="André Carvalho" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">André Carvalho</div>
+            <div class="sidebar-author-role">Senior Advisor da Open Capital</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Categoria</div><div class="sidebar-info-val">Opinião</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Publicado</div><div class="sidebar-info-val">Maio 2026</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Leitura</div><div class="sidebar-info-val">12 min</div></div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
+        <div class="sidebar-cta-text">A sua empresa está posicionada nos sectores que a Europa decidiu apoiar nos próximos dez anos? Falemos da estratégia certa para captar capital industrial.</div>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="../defesa-aco-nova-politica-industrial-europeia/index.html" class="related-item">
+          <span class="related-item-title">Defesa e aço: a nova política industrial europeia</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="../rearmamento-europeu-prioridade-ue/index.html" class="related-item">
+          <span class="related-item-title">Rearmamento europeu: prioridade da UE</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="../fragmentacao-global-fim-globalizacao-eficiente/index.html" class="related-item">
+          <span class="related-item-title">Fragmentação global e o fim da globalização eficiente</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+  <script src="../../assets/js/back-link.js" defer></script>
+</body>
+</html>
