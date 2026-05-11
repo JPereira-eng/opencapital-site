@@ -28781,6 +28781,33 @@
       "highlight2": "Mínimo 3 países UE/associados",
       "href": "instrumentos/horizon-eie-2027-01.html",
       "featured": false
+    },
+    {
+      "id": "horizon-cl5-2027-05",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto até 15/09/2027",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigação,entidade-pública",
+      "setores": [
+        "energia-ambiente",
+        "industria"
+      ],
+      "necessidades": [
+        "sustentabilidade-energia-clima",
+        "investimento-produtivo",
+        "id-ciencia"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizon CL5 LDES Batteries 2027 (HORIZON-CL5-2027-05-D2-08)",
+      "tagline": "Tópico D2-08 da call CL5 BATTERIES and ENERGY 2027: demonstração system-level de armazenamento estacionário de longa duração acima de 8 horas, na parceria Batt4EU.",
+      "highlight0": "Demonstração TRL 6-7 de baterias LDES system-level",
+      "highlight1": "Industrial, utilities, RTOs, startups deep-tech",
+      "highlight2": "Europa (consórcios UE e países associados)",
+      "href": "instrumentos/horizon-cl5-2027-05.html",
+      "featured": false
     }
   ]
 }
