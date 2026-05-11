@@ -1116,15 +1116,55 @@ Items detetados via API central (`source_id: "portugal-2030"`) devem ser encamin
 
 Para fontes não-PT2030 (EU, Interreg, etc.), usar o `shard` definido em `sources-scan.json`.
 
-**Cálculo do priority_score:**
-- Prazo < 30 dias: +100
-- Prazo 30-60 dias: +50
-- Prazo 60-90 dias: +20
-- Prazo null (candidatura continua/permanente): +10
-- Dotacao > 10M EUR: +30
-- Dotacao > 1M EUR: +10
-- Fonte priority "high": +15
-- Fonte priority "medium": +5
+**Cálculo do priority_score (v4.11, 2026-05-11):**
+
+⚠️ **NOTA CRÍTICA:** O campo `priority` (high/medium/low) em `sources-scan.json` controla APENAS a alocação de slots no PASSO 1 (descoberta). **NÃO é usado neste cálculo.** A pontuação aqui depende de **listas explícitas de `source_id`** definidas abaixo. Não confundir "fonte HIGH" (campo priority do sources-scan) com "fonte família PT2030" (lista explícita).
+
+**Eixo 1 — Fonte (max +30, substituído por handicap se for família PT2030):**
+
+```
+Família PT2030 (handicap absurdo): +500
+  {portugal-2030, compete-2030, norte-2030, centro-2030, lisboa-2030,
+   alentejo-2030, algarve-2030, pessoas-2030, sustentavel-2030,
+   madeira-2030, acores-2030}
+
+Horizon Europe: +30
+  {eu-horizon}
+
+Nacionais estratégicos: +25
+  {banco-fomento, ani, iapmei, iefp, prr, aicep, fct}
+
+EU outros: +20
+  {eu-funding-tenders, eic, eea-grants, cef, crea, cerv, interreg, eu-other}
+
+Catálogos e restantes: +10
+  (catalogo-vc, catalogo-ba, catalogo-bancos, catalogo-aceleradores,
+   catalogo-premios, catalogo-crowdfunding, e qualquer source_id fora
+   das listas acima)
+```
+
+**Eixo 2 — Dotação (max +30):**
+- +30 Dotação > 10M EUR
+- +10 Dotação > 1M EUR (e <= 10M)
+- 0  <= 1M ou desconhecida
+
+**Eixo 3 — Prazo (max +30):**
+- +30 Prazo < 30 dias
+- +20 Prazo 30-60 dias
+- +10 Prazo 60-90 dias
+- 0  Prazo > 90 dias ou null
+
+**Regra para itens família PT2030:** o handicap +500 **SUBSTITUI** o bonus do Eixo 1 (não soma). Eixos 2 e 3 aplicam-se normalmente.
+
+**Exemplos:**
+- PT2030 médio (5M EUR, 90 dias): 500 + 10 + 10 = **520**
+- PT2030 ridículo (sem dotação, prazo longo): 500 + 0 + 0 = **500**
+- Horizon urgente (50M EUR, 15 dias): 30 + 30 + 30 = **90**
+- Nacional estratégico médio: 25 + 10 + 10 = **45**
+- EU funding tenders genérico: 20 + 0 + 0 = **20**
+- Catálogo VC: 10 + 0 + 0 = **10**
+
+**Garantia editorial:** mínimo PT2030 (500) > máximo não-PT2030 (90). Família PT2030 fica sempre 5-6× acima de qualquer outra fonte, independentemente de prazo ou dotação.
 
 **Também adicionar ao lookup.json:**
 ```json
