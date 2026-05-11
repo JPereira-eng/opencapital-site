@@ -255,14 +255,22 @@ Para cada item na watchlist (apenas items `paa_status == "planejado"` ou ausente
 **Contexto:** o portal central `portugal-2030` publica entries previsionais (PAA summaries). Quando o aviso real abre, é frequentemente publicado nos portais REGIONAIS sob código diferente (e.g., FA0263 central = PACS-2026-07 sustentavel). O PASSO 2.6 verifica se o central atualizou o PAA para regulamento real, mas isto frequentemente NUNCA acontece. Este passo procura o aviso real nos portais regionais.
 
 **Aplicável a:** items em `queue-plano-anual.json` onde:
-- `source_id == "portugal-2030"` (entry veio do central) OU `paa_status == "published_externamente"`
-- `acf.data_inicio < hoje` (aviso teoricamente já abriu)
-- `plano_anual_checks >= 1` (PASSO 2.6 já tentou via central pelo menos 1 vez sem sucesso)
+- `source_id` está na **FAMILIA_PT2030** (qualquer dos 11 portais: portugal-2030, compete-2030, norte-2030, centro-2030, lisboa-2030, alentejo-2030, algarve-2030, pessoas-2030, sustentavel-2030, madeira-2030, acores-2030)
+- `data_inicio < hoje` (aviso teoricamente já abriu)
+- `plano_anual_checks >= 1` (PASSO 2.6 já tentou via fonte original pelo menos 1 vez sem sucesso)
+
+⚠️ **CRÍTICO (correção 2026-05-12):** o critério inicial v4.11 limitava-se a `source_id == "portugal-2030"`, o que excluía a maioria da watchlist (items já com source regional). Agora aceita TODA a família PT2030 — quando o portal original deu PAA, tenta encontrar correspondência nos OUTROS 10 portais regionais.
 
 **Algoritmo:**
 
 ```python
-# 1. Identificar portal regional candidato baseado em acf.programa[]
+FAMILIA_PT2030 = {
+    'portugal-2030', 'compete-2030', 'norte-2030', 'centro-2030',
+    'lisboa-2030', 'alentejo-2030', 'algarve-2030', 'pessoas-2030',
+    'sustentavel-2030', 'madeira-2030', 'acores-2030', 'pat-2030',
+}
+
+# 1. Identificar portais regionais CANDIDATOS (excluindo o source atual)
 PROGRAM_TO_PORTAL = {
     'COMPETE':    'compete-2030',
     'PESSOAS':    'pessoas-2030',
@@ -278,13 +286,24 @@ PROGRAM_TO_PORTAL = {
     'PAT':        'pat-2030',
 }
 
-programas = item.get('acf_programa', [])  # capturado pelo scanner
-portais_candidatos = []
-for p in programas:
-    for key, portal in PROGRAM_TO_PORTAL.items():
-        if key in p.upper():
-            portais_candidatos.append(portal)
-portais_candidatos = list(set(portais_candidatos))  # dedup
+source_atual = item.get('source_id', '')
+# Preferir lista pre-calculada se existir
+portais_pre = item.get('regional_portals', [])
+# Fallback: derivar de programa
+programas = item.get('programa') or item.get('acf_programa', []) or []
+if isinstance(programas, str): programas = [programas]
+portais_candidatos = list(portais_pre)
+if not portais_candidatos:
+    for p in programas:
+        for key, portal in PROGRAM_TO_PORTAL.items():
+            if key in str(p).upper():
+                portais_candidatos.append(portal)
+portais_candidatos = list(set(portais_candidatos))
+# Excluir o próprio source (não procurar onde já falhou)
+portais_candidatos = [p for p in portais_candidatos if p != source_atual]
+# Último recurso: se nenhum candidato derivado, tentar TODOS os regionais
+if not portais_candidatos:
+    portais_candidatos = [p for p in FAMILIA_PT2030 if p != source_atual and p != 'portugal-2030']
 
 # 2. Para cada portal candidato, fetch da API e procurar match
 for portal_id in portais_candidatos:
