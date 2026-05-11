@@ -20,7 +20,7 @@ def update_for_article(slug, aviso_codigo, shard_name, source_id, estado, queue_
     sh = load(shard_path)
     new_item = {
         "id": slug,
-        "file": f"instrumentos/{slug}.html",
+        "file": f"instrumentos/{slug}/index.html",
         "source": source_id,
         "state": estado,
         "last_check": TODAY

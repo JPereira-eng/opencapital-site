@@ -79,9 +79,13 @@ def collect_files(args: list[str]) -> list[Path]:
     if args:
         return [Path(a).resolve() for a in args]
     files = []
-    for d in SCAN_DIRS:
-        if d.exists():
-            files.extend(sorted(d.glob("*.html")))
+    # Estrutura clean URLs: paginas vivem em pasta/index.html.
+    # Procurar todos os index.html sob ROOT (excluindo node_modules, .git, etc.)
+    EXCLUDE_PARTS = {"node_modules", ".git", ".claude", "_partials", "assets", "registry"}
+    for p in sorted(ROOT.rglob("*.html")):
+        if any(part in EXCLUDE_PARTS for part in p.relative_to(ROOT).parts):
+            continue
+        files.append(p)
     return files
 
 
