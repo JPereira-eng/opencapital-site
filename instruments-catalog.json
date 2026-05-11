@@ -28571,6 +28571,137 @@
       "highlight2": "UE, Paises Associados, USA",
       "href": "instrumentos/horizon-hlth-2026-03.html",
       "featured": false
+    },
+    {
+      "id": "horizon-cl5-2027-04-two-stage",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto até 14/04/2027",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigação,entidade-pública",
+      "setores": [
+        "energia-ambiente",
+        "mobilidade-transportes",
+        "industria",
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "sustentabilidade-energia-clima"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa CL5-2027-04 Two-Stage (D2-07): Baterias Batt4EU e IAM4EU",
+      "tagline": "Conceitos de bateria de próxima geração com materiais avançados, em três áreas alternativas (baixo custo, alta performance, estacionário) com TRL 4-5 e modelo lump sum.",
+      "highlight0": "Lump sum 100%, three-area portfolio",
+      "highlight1": "Centros tecnológicos, RTOs, PME e grandes empresas",
+      "highlight2": "Europa (consórcio multi-país)",
+      "href": "instrumentos/horizon-cl5-2027-04-two-stage.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-msca-2027-se-01",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto até 15/04/2027",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigação,entidade-pública",
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "formação-qualificação"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "MSCA Staff Exchanges 2027",
+      "tagline": "Janela 2027 das Marie Sklodowska-Curie Staff Exchanges: mobilidade internacional, intersetorial e interdisciplinar de pessoal de I&D entre organizações académicas e não académicas.",
+      "highlight0": "Lump sum, secondments financiados",
+      "highlight1": "Universidades, RTOs, PME, grandes empresas",
+      "highlight2": "Internacional (UE + países associados + terceiros)",
+      "href": "instrumentos/horizon-msca-2027-se-01.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-cl6-2027-03",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto até 11/05/2027",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigação,entidade-pública",
+      "setores": [
+        "agroalimentar",
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "digitalização-ia"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa CL6-2027-03 (GOVERNANCE-04): IA para Agricultura e Silvicultura",
+      "tagline": "Tópico GOVERNANCE-04 da call CL6-2027-03 do Horizonte Europa, dedicado a soluções de IA que apoiem aconselhamento informado a agricultores, silvicultores e advisors, com TRL 8.",
+      "highlight0": "Lump sum, TRL 8, multi-actor approach",
+      "highlight1": "Universidades, RTOs, PME tech, cooperativas, advisors",
+      "highlight2": "Europa (consórcio multi-país)",
+      "href": "instrumentos/horizon-cl6-2027-03.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-msca-2027-citizens-01",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto até 08/06/2027",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigação,entidade-pública",
+      "setores": [
+        "economia-criativa",
+        "todos"
+      ],
+      "necessidades": [
+        "premios-visibilidade",
+        "formação-qualificação"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "MSCA and Citizens 2027 (European Researchers' Night + Schools)",
+      "tagline": "Janela 2027 da linha MSCA Citizens, financia em CSA lump sum a European Researchers' Night e a iniciativa Researchers at Schools, até EUR 350 mil por proposta.",
+      "highlight0": "Até EUR 350 mil por proposta",
+      "highlight1": "Universidades, fundações, museus, autarquias",
+      "highlight2": "Nacional / Europa",
+      "href": "instrumentos/horizon-msca-2027-citizens-01.html",
+      "featured": false
+    },
+    {
+      "id": "horizon-infra-2027-01",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto até 15/06/2027",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigação,entidade-pública",
+      "setores": [
+        "tecnologia-digital",
+        "todos"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "investimento-produtivo"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa INFRA-2027-01 (TECH-01-01): Co-criação de Tecnologias para RIs",
+      "tagline": "Tópico TECH-01-01 da call INFRA-2027-01: financia parcerias entre RIs ESFRI/ERIC e atores industriais para co-criação de tecnologias avançadas, com PCP e FSTP até EUR 500 mil.",
+      "highlight0": "FSTP até EUR 500 mil por terceiro, PCP admitido",
+      "highlight1": "RIs ESFRI/ERIC, indústria, startups deep-tech, RTOs",
+      "highlight2": "Europa (nós de RIs em vários Estados-Membros)",
+      "href": "instrumentos/horizon-infra-2027-01.html",
+      "featured": false
     }
   ]
 }
