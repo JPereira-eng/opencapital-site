@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Standardização Digital Internacional CL4 2027 (HORIZON-CL4-2027-04-HUMAN-07): Open Capital</title>
+  <meta name="description" content="HORIZON-CL4-2027-04-HUMAN-07: 7 M€ CSA para reforçar participação europeia em normas digitais internacionais. 75% mínimo via FSTP até 60K€ por terceiro.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-value.status-cont{color:#2E7D52;font-weight:600;}
+    .meta-value.status-planned{color:var(--gold);font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-gold{color:var(--gold);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-fact-val.val-cont{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-planned{color:var(--gold);font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../index.html" class="nav-logo">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../biblioteca.html" class="active">Biblioteca</a></li>
+    <li><a href="../conhecimento.html">Conhecimento</a></li>
+    <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros.html">Parceiros</a>
+        <a href="../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../biblioteca.html">Biblioteca</a>
+  <a href="../conhecimento.html">Conhecimento</a>
+  <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos.html">Sobre Nós</a>
+  <a href="../parceiros.html">Parceiros</a>
+  <a href="../carreiras.html">Carreiras</a>
+  <a href="https://calendly.com/opencapital" class="nav-mobile-cta">Contactar</a>
+</div>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../index.html">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../biblioteca.html">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Standardização Digital Internacional CL4 2027</span>
+    </nav>
+    <p class="hero-cat">Financiamento Público</p>
+    <h1 class="hero-title">Standardização Digital Internacional CL4 2027</h1>
+    <p class="hero-tagline">7 milhões de euros para uma única ação CSA que mobiliza a participação europeia em normas digitais internacionais, com 75% mínimo redistribuído via concursos abertos a peritos de PME, investigação e open-source.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotação 2027</span>
+        <span class="meta-value gold">€7 milhões</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Tipo de ação</span>
+        <span class="meta-value">HORIZON-CSA, lump sum</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Deadline</span>
+        <span class="meta-value">27/11/2027</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-planned">Previsto</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../biblioteca.html" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O que é</div>
+      <h2 class="section-h2">A facilidade europeia para influenciar normas digitais globais</h2>
+      <p class="section-text">O HORIZON-CL4-2027-04-HUMAN-07 é uma Coordination and Support Action única, financiada com 7 milhões de euros para constituir uma facilidade que reforça a presença europeia em organizações internacionais de normalização digital. A lógica é simples: as normas técnicas (ITU, ISO, IEC, IEEE, 3GPP, W3C) decidem como funcionam tecnologias críticas como 5G/6G, IA, computação em nuvem, web semântica ou cibersegurança. Quem tem peritos nas salas onde estas normas são escritas determina a competitividade industrial dos próximos dez anos.</p>
+      <p class="section-text">A ação seleciona um único consórcio, com financiamento a 100% via lump sum, para gerir um programa de apoio financeiro a terceiros (FSTP) que cubra deslocações, participação em working groups, organização de reuniões internacionais em solo europeu, análises de gap, foresight de tecnologias emergentes e ações de divulgação. O foco está em PME, investigação académica, comunidades open-source e organizações da sociedade civil, perfis tradicionalmente sub-representados em fóruns de normalização dominados por grandes operadores americanos e asiáticos.</p>
+      <p class="section-text">A facilidade dá continuidade a um arco de iniciativas já existente: ICT-40-2017, ICT-45-2020, HORIZON-CL4-2022-RESILIENCE-01-21 e HORIZON-CL4-2024-HUMAN-03-04, mais conhecidas no ecossistema pela referência operacional StandICT.eu. O novo aviso atualiza esse trabalho ao quadro político mais recente, com âncora explícita na Estratégia Europeia de Normalização, no Apply AI Strategy e no Competitiveness Compass.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para que serve</div>
+      <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
+      <p class="section-text">Esta CSA cobre dois eixos complementares. Por um lado, financia ciência e investigação aplicada à normalização (gap analyses, foresight, mapping de landscapes técnicos). Por outro, materializa uma estratégia de internacionalização dos peritos europeus em fóruns de normalização global, com ferramentas concretas (FSTP, formação, apoio logístico) que removem as barreiras práticas à participação.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">I&amp;D e ciência:</strong> a facilidade financia análises de landscape e foresight em tecnologias prioritárias (IA, cibersegurança, identidade digital, redes 6G, dados industriais), atividades de natureza analítica e científica que exigem capacidade de investigação aplicada e contacto direto com a evolução das normas.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Internacionalização:</strong> 75% mínimo do orçamento europeu vai diretamente para peritos individuais ou organizações que se deslocam a reuniões internacionais (ITU em Genebra, ISO em Genebra, 3GPP em rotações globais, IEEE nos EUA, etc.). É um instrumento de internacionalização técnica, não comercial, mas com retorno comercial indireto via influência em standards futuros.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Estrutura financeira</div>
+      <h2 class="section-h2">Lump sum integral, com transferência obrigatória para terceiros</h2>
+      <p class="section-text">O modelo de custos é lump sum, ou seja, montante fixo definido na proposta e pago contra entrega de outputs. Não há reporte detalhado de custos por categoria, mas a auditoria incide sobre a entrega efetiva dos pacotes de trabalho. A dotação total da ação é de 7 milhões de euros, a totalidade alocada a um único consórcio.</p>
+
+      <div class="stats-row reveal" style="grid-template-columns:repeat(3,1fr);">
+        <div class="stat-cell">
+          <div class="stat-num">€7<sup>M</sup></div>
+          <div class="stat-label">Dotação total da ação</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">75<sup>%</sup></div>
+          <div class="stat-label">Mínimo via FSTP a terceiros</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">€60<sup>K</sup></div>
+          <div class="stat-label">Máximo FSTP por terceiro</div>
+        </div>
+      </div>
+
+      <p class="section-text">A regra dos 75% via Financial Support to Third Parties é a peça central deste desenho. O consórcio vencedor não recebe o dinheiro para si: recebe-o para redistribuir através de concursos abertos a peritos europeus de PME, academia, comunidades open-source e investigação. Cada beneficiário individual pode receber até 60.000 euros para cobrir custos associados à participação em normalização internacional. Restam 25% para gestão, gap analyses, foresight, eventos e comunicação.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-box-title">Implicação para PME portuguesas</div>
+        <div class="highlight-box-text">Mesmo PME e centros de investigação que não façam parte do consórcio vencedor podem aceder a este financiamento via FSTP, candidatando-se aos concursos abertos lançados pelo consórcio entre 2028 e 2031. Acompanhar StandICT.eu e canais sucessores será essencial para captar estas janelas.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Atividades exigidas</div>
+      <h2 class="section-h2">Quatro pilares operacionais que a proposta tem de cobrir</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Facilidade de gestão de peritos:</strong> infraestrutura administrativa que permite identificar, financiar e acompanhar peritos europeus em working groups internacionais. Inclui plataforma de matching, gestão dos concursos FSTP, reporting e medição de impacto.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Apoio a reuniões internacionais em solo europeu:</strong> quando uma organização de normalização realiza encontro relevante na UE, a facilidade pode cofinanciar a logística e atrair perfis europeus subrepresentados. Vantagem geográfica para reduzir custos de deslocação.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Landscape e gap analyses:</strong> mapeamento sistemático de áreas digitais prioritárias (Rolling Plan for ICT Standardisation), identificação de standards em desenvolvimento, análise de presença europeia versus chinesa e americana, recomendações para a Comissão e Estados-Membros.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Comunicação e ferramentas de divulgação:</strong> materiais educativos, kits para PME e investigadores, campanhas que tornem visível o valor estratégico da normalização. Esta dimensão é cultural e tipicamente subestimada.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Áreas técnicas prioritárias</div>
+      <h2 class="section-h2">Que normas estão no radar do Rolling Plan ICT Standardisation</h2>
+      <p class="section-text">A facilidade tem de operar em alinhamento com o Rolling Plan for ICT Standardisation, documento anual da Comissão que define prioridades. Áreas tipicamente cobertas e onde Portugal tem ou pode ter presença relevante:</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Inteligência artificial e governança de IA:</strong> standards de transparência, robustez, avaliação de risco, alinhamento com o AI Act. ISO/IEC JTC 1/SC 42 é o foco principal.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Cibersegurança e identidade digital:</strong> ENISA, ETSI, ISO/IEC 27000. Implementação técnica do EU Digital Identity Wallet.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Redes 6G e edge computing:</strong> 3GPP, ETSI MEC. A próxima geração móvel é o palco onde normas determinam roleturos comerciais inteiros.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Dados, semântica e interoperabilidade:</strong> W3C, OASIS, suporte técnico aos data spaces europeus, Common European Data Spaces.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Computação quântica e pós-quântica:</strong> ISO/IEC, NIST PQC migration. Janela política e técnica em formação.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Web 4.0 e mundos virtuais:</strong> articulação com o Virtual Worlds Partnership e standards de interoperabilidade que evitem lock-in proprietário.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perfil de candidato</div>
+      <h2 class="section-h2">Quem pode liderar e quem pode entrar como FSTP</h2>
+      <p class="section-text">A facilidade tem dois níveis de participação distintos, com perfis de elegibilidade diferentes.</p>
+
+      <table class="art-table">
+        <thead><tr><th>Nível</th><th>Quem encaixa</th><th>Como acede</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Consórcio coordenador</strong></td><td>Consórcio europeu com experiência prévia em gestão de programas de normalização (StandICT.eu, AIOTI, ETSI alumni), capacidade administrativa de gerir concursos FSTP e relacionamento com SDOs internacionais</td><td>Resposta direta ao aviso até 27/11/2027</td></tr>
+          <tr><td><strong>Beneficiário FSTP</strong></td><td>PME tecnológica europeia, investigador académico, contributor open-source, organização da sociedade civil com interesse em standards específicos</td><td>Concursos abertos lançados pelo consórcio coordenador entre 2028 e 2031, até 60K€ por beneficiário</td></tr>
+        </tbody>
+      </table>
+
+      <p class="section-text">Para Portugal, o caminho mais provável é o segundo: PME e centros de investigação portugueses entrarem como FSTP em domínios onde já têm peritos ativos (cibersegurança, identidade digital, IA, IoT industrial). A coordenação é menos provável, exceto se houver consorciação com institutos europeus consolidados como Fraunhofer, CEA, INESC TEC, IMEC ou universidades técnicas com track-record em standards bodies.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Países elegíveis e propriedade intelectual</div>
+      <h2 class="section-h2">Regras gerais Horizon Europe</h2>
+      <p class="section-text">A elegibilidade segue o Anexo B do Work Programme General Annexes: UE-27, países associados ao Horizon Europe (Reino Unido, Noruega, Israel, Suíça em condições específicas, Ucrânia entre outros). Países terceiros podem participar com regras particulares de financiamento detalhadas no Programme Guide.</p>
+      <p class="section-text">A cláusula de propriedade intelectual é a habitual em Horizonte Europa: beneficiários que pretendam transferir propriedade ou conceder licenças exclusivas devem notificar previamente a autoridade de financiamento (HaDEA), que pode opor-se até quatro anos após o fim da ação. Para uma CSA de normalização, esta cláusula tem peso menor que em Innovation Actions, dado que o output é maioritariamente conhecimento público (normas, guidelines, gap analyses).</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">Este aviso tem dois leitores distintos e a recomendação é diferente para cada um. Para entidades com massa crítica em normalização (institutos europeus consolidados, alumni do StandICT.eu), o caminho lógico é tentar coordenar ou integrar consórcio coordenador. A janela é estreita: concorre praticamente o ecossistema que já fez StandICT.eu, e a competição será sobre quem propõe melhor governança, métricas de impacto mais robustas e uma estratégia FSTP mais inclusiva. Diferenciação por capacidade de chegar a beneficiários sub-representados (Sul da Europa, países da coesão, comunidades open-source) é vantagem competitiva real.</p>
+      <p class="section-text">Para a maioria das PME e centros de investigação portugueses, o caminho útil não é candidatar-se ao aviso principal, é preparar-se para os concursos FSTP que serão lançados a partir de 2028. Isso significa três coisas práticas: identificar agora em que organização de normalização vale a pena ter presença, mapear o working group exato e a sua agenda, e ter perito interno disponível para participar com financiamento até 60K€. Sem este trabalho preparatório, quando o concurso abrir a empresa não terá tempo de organizar candidatura competitiva.</p>
+      <p class="section-text">Setores portugueses onde vemos maior alinhamento: cibersegurança (Synopsys, S21sec, INOV, INESC TEC), IoT industrial e edge (Critical, Bosch Portugal), identidade digital (Multicert, AMA via projetos europeus), IA aplicada (Unbabel, Feedzai). Universidades como o IST, FEUP, UMinho e UA têm já presença em alguns SDOs e podem capitalizar.</p>
+      <p class="section-text">Recomendamos avaliação anterior à abertura do aviso para identificar se vale a pena tentar o coordenador. Para FSTP, recomendamos preparação durante 2027 e 2028 com mapeamento de standards prioritários e identificação de candidatos europeus a quem propor consorciação. A Open Capital pode apoiar nesse mapeamento e na ligação a redes europeias de normalização.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Programa</div><div class="sidebar-fact-val">Horizonte Europa, Cluster 4</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Call</div><div class="sidebar-fact-val">HORIZON-CL4-2027-04</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Tópico</div><div class="sidebar-fact-val">HUMAN-07</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Tipo de ação</div><div class="sidebar-fact-val">HORIZON-CSA, lump sum</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Dotação 2027</div><div class="sidebar-fact-val">€7 milhões</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Grants previstos</div><div class="sidebar-fact-val">1 (consórcio único)</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">FSTP mínimo</div><div class="sidebar-fact-val">75% do total</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">FSTP por terceiro</div><div class="sidebar-fact-val">Até €60.000</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Continuidade</div><div class="sidebar-fact-val">Sucede StandICT.eu</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Países elegíveis</div><div class="sidebar-fact-val">UE + países associados HE</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Deadline</div><div class="sidebar-fact-val">27/11/2027</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Estado</div><div class="sidebar-fact-val val-planned">Previsto, deadline 27/11/2027</div></div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Quer mapear oportunidades FSTP em normalização digital internacional para a sua organização?</div>
+      <a href="https://calendly.com/opencapital" target="_blank" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="horizonte-europa.html" class="related-link"><span class="related-link-name">Horizonte Europa</span><span class="related-link-arrow">&rarr;</span></a>
+      <a href="horizon-cl4-2027-04-data-09.html" class="related-link"><span class="related-link-name">Eficiência Energética Data Centres IA CL4 2027</span><span class="related-link-arrow">&rarr;</span></a>
+      <a href="horizon-cl4-2027-04-digital-emerging-11.html" class="related-link"><span class="related-link-name">EU Frontier AI Initiative CL4 2027</span><span class="related-link-arrow">&rarr;</span></a>
+      <a href="horizon-cl4-2027-04-data-08.html" class="related-link"><span class="related-link-name">Pilotos 3C Telco Edge Cloud CL4 2027</span><span class="related-link-arrow">&rarr;</span></a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../biblioteca.html">Portugal 2030</a></li>
+        <li><a href="../biblioteca.html">Fundos de Investimento</a></li>
+        <li><a href="../biblioteca.html">Benefícios Fiscais</a></li>
+        <li><a href="../biblioteca.html">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../capital-simulator.html">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../tech2business.html">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../conhecimento.html">Conhecimento</a></li>
+        <li><a href="../parceiros.html">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+        <li><a href="../sobre-nos.html">Equipa</a></li>
+        <li><a href="../carreiras.html">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../privacidade.html">Privacidade</a>
+      <a href="../termos.html">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
