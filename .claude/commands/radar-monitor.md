@@ -360,9 +360,10 @@ def title_similarity(a: str, b: str) -> float:
     return SequenceMatcher(None, a, b).ratio()
 ```
 
-**Limites por run:**
-- Cross-portal matching aplica-se a no máximo **5 items por run** (custo: 5 fetches API + similarity checks)
+**Limites por run (v4.11.2, 2026-05-12):**
+- Cross-portal matching aplica-se a no máximo **15 items por run** (custo: 15 × ~9 fetches API + similarity checks, ~135 curls total, sem custo LLM)
 - Items elegíveis ordenados por priority_score desc (PT2030 com 500+ vão primeiro)
+- Com 100+ PAAs em watchlist, este cap garante ciclo completo de cobertura em ~7 dias (vs 20 dias com cap 5)
 
 **Salvaguardas:**
 - Threshold mínimo 85% para evitar falsos positivos
