@@ -179,6 +179,86 @@ Se o item tem `wordpress_id` E regulamento ainda não obtido:
 
    **Se passou ambos:** continuar para Passo 2.5.
 
+#### 2b-acf-all: Re-fetch API e inspecionar TODOS os campos ACF (v4.11, 2026-05-11)
+
+Se 2b-pdf não obteve PDF E item é PT2030 (source_id em família PT2030):
+
+1. `GET https://[portal-base]/wp-json/wp/v2/aviso-2024/[wordpress_id]` (ou pelo slug se id desconhecido)
+2. Inspecionar **TODOS** os campos da resposta, não só `acf.pdf`:
+   - `acf.pdf` (já tentado em 2b-pdf)
+   - `acf.regulamento`, `acf.ficha_tecnica`, `acf.anexos[]`, `acf.documentos[]`
+   - `acf.aviso_documento`, `acf.documento_oficial`, `acf.programa_documento`
+   - Qualquer campo cujo valor seja:
+     - URL terminado em `.pdf`
+     - ID numérico (resolver via `/wp/v2/media/[id]` → `source_url`)
+     - Array de URLs/IDs (iterar)
+
+3. Para cada URL candidato encontrado:
+   ```bash
+   curl -sL -I "[url]"  # HEAD primeiro para verificar Content-Type
+   ```
+   Se Content-Type contém `application/pdf` E Content-Length > 10000:
+   ```bash
+   curl -sL "[url]" -o "$REPO/regulamentos/[source_id]/[id].pdf"
+   pdftotext -enc UTF-8 ... [id].txt
+   ```
+   Aplicar TESTE A e TESTE B (Passo 2b-pdf).
+
+4. Se vários candidatos retornam PDF válido, usar o de **maior tamanho** (heurística: regulamentos completos > resumos).
+
+5. Reportar no relatorio final qual campo deu sucesso (`fallback_field: "acf.regulamento"` no item da queue).
+
+Se nenhum campo ACF deu PDF válido: continuar para 2b-heur.
+
+#### 2b-heur: Heurística por código de aviso e padrão de URL (v4.11, 2026-05-11)
+
+Se 2b-acf-all falhou E item é PT2030:
+
+Os portais PT2030 alojam PDFs em padrões consistentes. Construir candidatos e tentar HEAD requests (cheap, sem descarregar pesado).
+
+1. Extrair componentes:
+   - `codigo` (e.g., FA0212/2025 → variantes: `FA0212-2025`, `FA0212_2025`, `aviso-FA0212`)
+   - `data_inicio` ou `detected_date` (YYYY-MM-DD → ano/mês para path)
+   - `slug` (do post WordPress, e.g., `sistema-incentivos-base-territorial-ovt`)
+
+2. Construir candidatos baseados no `source_id`:
+
+   **Para portugal-2030.pt / compete-2030.pt:**
+   ```
+   https://[portal]/wp-content/uploads/{YYYY}/{MM}/[variant].pdf
+   ```
+   onde [variant] cicla por:
+     - codigo com `-` (FA0212-2025)
+     - codigo com `_` (FA0212_2025)
+     - `aviso-` + codigo
+     - slug curto (primeiras 50 chars)
+     - `aviso_` + slug
+
+   **Para portais regionais (norte-2030, centro-2030, etc.):**
+   ```
+   https://[portal-base]/wp-content/uploads/{YYYY}/{MM}/[variant].pdf
+   https://[portal-base]/aviso/[slug]/regulamento.pdf
+   https://[portal-base]/aviso/[slug]/[codigo].pdf
+   ```
+
+3. Para cada candidato (max 8 tentativas):
+   ```bash
+   curl -sL -I "[candidato]" -o /dev/null -w "%{http_code} %{content_type}"
+   ```
+   Se HTTP 200 E Content-Type contém `application/pdf`:
+   ```bash
+   curl -sL "[candidato]" -o "$REPO/regulamentos/[source_id]/[id].pdf"
+   ```
+   Aplicar TESTE A e TESTE B.
+
+4. **Limite:** parar após primeiro PDF válido ou após esgotar candidatos.
+
+5. Reportar no item da queue: `fallback_url_pattern: "wp-content/uploads/YYYY/MM/<codigo>-<year>.pdf"`.
+
+Se nenhum candidato retornou PDF válido: continuar para 2b-horizon (se EU) ou 2c (WebSearch genérico).
+
+**Salvaguarda anti-DDoS:** cap de 8 candidatos por item. Se múltiplos items do mesmo portal acumulam falhas (>50 candidatos numa run), pausa 30s entre tentativas para o portal afetado.
+
 #### 2b-horizon: API JSON para items Horizonte Europa / SEDIA
 
 Se `source_id == "eu-funding-tenders"` E regulamento não obtido:
@@ -309,9 +389,12 @@ Se download falhar:
   "download_error": "PDF 404 - tentativa em 2026-04-16",
   "status": "pending",
   "fail_count": [incrementar],
-  "last_fail_date": "2026-04-16"
+  "last_fail_date": "2026-04-16",
+  "fallback_tried": ["2a", "2b", "2b-pdf", "2b-acf-all", "2b-heur"]
 }
 ```
+
+**Campo `fallback_tried` (v4.11):** lista das estratégias já tentadas para este item (códigos dos passos: `2a`, `2b`, `2b-pdf`, `2b-acf-all`, `2b-heur`, `2b-horizon`, `2b-eu-pdf`, `2c`). Permite no Passo 1.6 saltar estratégias já esgotadas, e auditar no relatorio final qual estratégia teve sucesso por item.
 
 **Se `fail_count` chegar a 3 após este incremento:** o item fica elegível para o Passo 1.6 (WebSearch fallback) na próxima run.
 

@@ -60,6 +60,66 @@ Read $REPO/sources-scan.json
 
 ---
 
+## PASSO 0.5: SELF-HEAL DE FANTASMAS (v4.11, OBRIGATÓRIO)
+
+**Antes de fazer qualquer scan novo**, validar que o `lookup.json` está coerente com o estado real do sistema. Items registados no lookup mas inexistentes em queue/overflow/watchlist/shards são **fantasmas** (produto de falhas passadas de escrita). Removê-los do lookup permite que o próximo scan os re-detete normalmente.
+
+**Algoritmo:**
+
+```python
+# 1. Construir conjunto de TODOS os slugs conhecidos pelo sistema
+locais = set()
+
+# 1a. Items publicados (em todos os shards)
+for shard in registry/shards/*.json:
+    for item in shard.items:
+        locais.add(item.id)
+
+# 1b. Items em queues ativas
+for it in registry/queue.json > queue:           locais.add(it.id)
+for it in registry/queue-overflow.json > queue:  locais.add(it.id)
+for it in registry/queue-plano-anual.json > queue: locais.add(it.id)
+for it in registry/queue-catalogo.json > queue:  locais.add(it.id)
+
+# 2. Auditar lookup.by_id
+fantasmas_id = []
+for slug in list(lookup['by_id'].keys()):
+    if slug not in locais:
+        fantasmas_id.append(slug)
+        del lookup['by_id'][slug]
+
+# 3. Auditar lookup.by_aviso_codigo (slugs apontados podem ser fantasmas)
+fantasmas_codigo = []
+for codigo, slug in list(lookup['by_aviso_codigo'].items()):
+    if slug not in locais:
+        fantasmas_codigo.append((codigo, slug))
+        del lookup['by_aviso_codigo'][codigo]
+
+# 4. Persistir lookup atualizado
+save(lookup.json)
+
+# 5. Relatar no output
+print(f"[self-heal] fantasmas removidos: by_id={len(fantasmas_id)}, by_codigo={len(fantasmas_codigo)}")
+for codigo, slug in fantasmas_codigo[:10]:
+    print(f"  - {codigo} -> {slug}")
+```
+
+**Custo:** ~50ms por run, zero tokens LLM (Python puro, embebido na sessão do scanner).
+
+**Garantia:** drift detetado a cada execução. Mesmo que apareçam novos bugs no futuro, o sistema **auto-corrige na próxima execução** do scanner.
+
+**No relatorio final do PASSO 5b**, incluir bloco:
+```
+Self-heal pre-run:
+  Fantasmas removidos do lookup.by_id: N
+  Fantasmas removidos do lookup.by_aviso_codigo: N
+  Items afetados: [lista de slugs]
+```
+
+Se o número for >0 em runs consecutivas, **investigar**: pode indicar que o reorder writes do PASSO 4 não está a ser respeitado.
+
+---
+
 ## PASSO 1: Selecionar fontes a verificar
 
 Verificar no maximo **6 fontes por execução**: **5 slots para regime "aviso" + 1 slot para regime "catálogo"**.
@@ -1171,6 +1231,23 @@ Catálogos e restantes: +10
 "by_id": { "novo-slug": true },
 "by_aviso_codigo": { "FA####/YYYY": "novo-slug" }
 ```
+
+⚠️ **ORDEM DE ESCRITA OBRIGATÓRIA (v4.11, 2026-05-11) — previne items fantasma:**
+
+A escrita do `lookup.json` **NUNCA** deve preceder a confirmação de que o item foi persistido em `queue.json` (ou destino apropriado: overflow, watchlist). Sequência correta:
+
+```
+1. queue.append(novo_item)            # estrutura em memória
+2. save(queue.json)                   # persistir no disco
+3. SE save falhou → abortar (NÃO escrever lookup)
+4. lookup.by_id[slug] = true          # só após queue OK
+5. lookup.by_aviso_codigo[codigo] = slug
+6. save(lookup.json)
+```
+
+**Racional:** se `lookup` é atualizado antes da queue, e a escrita da queue falha (race condition, IO error, processo interrompido), o item fica marcado como "já visto" no lookup mas **não existe em nenhuma queue ativa**. O próximo scanner re-deteta o item da API, encontra hit em `lookup.by_aviso_codigo`, e descarta como duplicado. **Item perdido permanentemente.** Este foi o bug que produziu ~141 fantasmas PT2030 detetados em 2026-05-11.
+
+**Mesma regra para writer:** ao publicar artigo, escrever **primeiro** o ficheiro HTML + atualizar shard, **depois** atualizar lookup. Nunca o inverso.
 
 ---
 
