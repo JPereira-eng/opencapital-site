@@ -1408,8 +1408,12 @@
       const track = document.getElementById('carouselTrack');
       if (!track) return;
       const featured = (data.articles || [])
+        .map((a, _idx) => ({ ...a, _idx }))
         .filter(a => a.featured === true && a.subseccao !== 'regulamentos')
-        .sort((a, b) => (b.data_publicacao || '').localeCompare(a.data_publicacao || ''));
+        .sort((a, b) => {
+          const d = (b.data_publicacao || '').localeCompare(a.data_publicacao || '');
+          return d !== 0 ? d : b._idx - a._idx;
+        });
       if (featured.length === 0) return;
       track.innerHTML = '';
       featured.forEach(art => track.appendChild(buildCarouselCard(art)));

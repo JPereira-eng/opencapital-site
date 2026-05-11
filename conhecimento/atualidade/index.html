@@ -238,8 +238,12 @@
     .then(data => {
       const grid = document.getElementById('articlesGrid');
       const articles = (data.articles || [])
+        .map((a, _idx) => ({ ...a, _idx }))
         .filter(a => a.subseccao === 'atualidade')
-        .sort((a, b) => (b.data_publicacao || '').localeCompare(a.data_publicacao || ''));
+        .sort((a, b) => {
+          const d = (b.data_publicacao || '').localeCompare(a.data_publicacao || '');
+          return d !== 0 ? d : b._idx - a._idx;
+        });
       grid.innerHTML = articles.map(buildCard).join('');
       // Make cards clickable + trigger reveal
       document.querySelectorAll('.article-card').forEach(c => {

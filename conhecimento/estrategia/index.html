@@ -223,13 +223,18 @@
   fetch('../../conhecimento-catalog.json')
     .then(r => r.json())
     .then(data => {
-      const articles = (data.articles || []).filter(a => a.subseccao === 'estrategia');
+      const articles = (data.articles || [])
+        .map((a, _idx) => ({ ...a, _idx }))
+        .filter(a => a.subseccao === 'estrategia');
       const container = document.getElementById('subtemasContainer');
       let html = '';
       SUBTEMAS.forEach(s => {
         const items = articles
           .filter(a => a.subtema === s.key)
-          .sort((a, b) => (b.data_publicacao || '').localeCompare(a.data_publicacao || ''));
+          .sort((a, b) => {
+            const d = (b.data_publicacao || '').localeCompare(a.data_publicacao || '');
+            return d !== 0 ? d : b._idx - a._idx;
+          });
         const count = items.length;
         html += '<section class="subtema-section" id="subtema-' + s.key + '">';
         html += '<div class="subtema-header">';
