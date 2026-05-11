@@ -218,7 +218,8 @@
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "last_fail_date": null,
       "plano_anual_detected_date": "2026-04-24",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-11"
     },
     {
       "id": "reforcar-a-capacidade-de-lideranca-de-mulheres-no-mercado-de-trabalho",
@@ -551,7 +552,9 @@
       ],
       "regional_portals": [
         "alentejo-2030"
-      ]
+      ],
+      "plano_anual_last_check": "2026-05-11",
+      "plano_anual_checks": 1
     },
     {
       "id": "reformulacao-da-estacao-de-transferencia-da-zona-leste-e-de-triagem-da",
@@ -630,7 +633,9 @@
       ],
       "regional_portals": [
         "sustentavel-2030"
-      ]
+      ],
+      "plano_anual_last_check": "2026-05-11",
+      "plano_anual_checks": 1
     },
     {
       "id": "eficiencia-energetica-na-administracao-publica-central",
@@ -708,7 +713,9 @@
       ],
       "regional_portals": [
         "sustentavel-2030"
-      ]
+      ],
+      "plano_anual_last_check": "2026-05-11",
+      "plano_anual_checks": 1
     },
     {
       "id": "sitce-economia-circular-algarve",
@@ -2185,7 +2192,8 @@
       "promoted_from_paa": "2026-05-09",
       "download_error": "Aviso futuro (data_inicio=2026-10-01)",
       "plano_anual_detected_date": "2026-05-09",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-11"
     },
     {
       "id": "apoios-a-contratacao",
@@ -2240,7 +2248,8 @@
       "promoted_from_paa": "2026-05-09",
       "download_error": "PAA detectado no PDF (Teste A)",
       "plano_anual_detected_date": "2026-05-09",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-11"
     },
     {
       "id": "vida-ativa-emprego-qualificado",
@@ -2267,7 +2276,8 @@
       "promoted_from_paa": "2026-05-09",
       "download_error": "Aviso futuro (data_inicio=2026-09-01)",
       "plano_anual_detected_date": "2026-05-09",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-11"
     },
     {
       "id": "infraestruturas-equipamentos-tecnologicos-iti-agua-alentejo",
@@ -2346,7 +2356,8 @@
       "priority_score": 540,
       "download_error": "Plano Anual detected during download (marker: 'plano anual de avisos')",
       "plano_anual_detected_date": "2026-05-11",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-11"
     },
     {
       "id": "siid-id-empresarial-individuais-copromocao",
@@ -2368,7 +2379,9 @@
       "fail_count": 0,
       "priority_score": 530,
       "notes": "FA0069/2025. SIID I&D Empresarial. 30M EUR FEDER. Programas: ALENTEJO, ALGARVE, COMPETE. Beneficiario: Privada. Concurso. Abertura 30/09/2026 - fecho 31/12/2026. Apoio a projetos de I&D individuais...",
-      "download_error": "PAA detectado pelo writer pre-flight em 2026-05-11 (palavra-chave: plano anual de avisos)"
+      "download_error": "PAA detectado pelo writer pre-flight em 2026-05-11 (palavra-chave: plano anual de avisos)",
+      "plano_anual_last_check": "2026-05-11",
+      "plano_anual_checks": 1
     },
     {
       "id": "formacoes-modulares-certificadas-nacional",
@@ -2390,7 +2403,9 @@
       "fail_count": 0,
       "priority_score": 530,
       "notes": "FA0298/2025. Formacoes Modulares Certificadas. 150M EUR FSE+. Programa PESSOAS2030. Beneficiario: Publica e Privada. Concurso. Abertura 01/09/2026 - fecho 31/12/2026. Formacao profissional modular ...",
-      "download_error": "PAA detectado pelo writer pre-flight em 2026-05-11 (palavra-chave: previsao aproximada)"
+      "download_error": "PAA detectado pelo writer pre-flight em 2026-05-11 (palavra-chave: previsao aproximada)",
+      "plano_anual_last_check": "2026-05-11",
+      "plano_anual_checks": 1
     },
     {
       "id": "programa-de-seguranca-ferroviaria-supressao-de-pns",
