@@ -32,6 +32,13 @@
       "last_check": "2026-05-05",
       "needs_review": true,
       "review_reason": "URL no portal pessoas2030 retorna 404 e PESSOAS-2026-2 nao aparece na API. Verificar manualmente."
+    },
+    {
+      "id": "capacitacao-para-a-inclusao-pessoas-2030",
+      "file": "instrumentos/capacitacao-para-a-inclusao-pessoas-2030/index.html",
+      "source": "pessoas-2030",
+      "state": "fechado",
+      "last_check": "2026-05-12"
     }
   ],
   "instruments": [
@@ -85,7 +92,8 @@
       "last_check": "2026-04-30"
     }
   ],
-  "count": 8,
+  "count": 9,
   "open": 7,
-  "published": 4
+  "published": 5,
+  "closed": 1
 }
