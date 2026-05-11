@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hardware para Mundos Virtuais (HORIZON-CL4-2027-04-HUMAN-01): Open Capital</title>
+  <meta name="description" content="Tópico CL4-2027-04-HUMAN-01 do Horizonte Europa: 39 milhões para 8 projetos de hardware avançado XR, haptics e BCI sob a Virtual Worlds Partnership.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:180px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:620px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-planned{color:#C9A96E;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-planned{color:#C9A96E;font-weight:600;}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca/">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Hardware Mundos Virtuais CL4 2027</span>
+    </nav>
+    <p class="hero-cat">Financiamento Público &middot; Horizonte Europa</p>
+    <h1 class="hero-title">Hardware avançado para Mundos Virtuais</h1>
+    <p class="hero-tagline">Tópico HUMAN-01 da call CL4-2027-04: 39 milhões de euros distribuídos por 8 consórcios europeus que desenhem a próxima geração de headsets XR, haptics, wearables e interfaces neuronais não invasivas.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotação 2027</span>
+        <span class="meta-value gold">€39 milhões</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Grants</span>
+        <span class="meta-value">8 previstos</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Grant unitário</span>
+        <span class="meta-value">€4,8 a €5,6 milhões</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-planned">Previsto, deadline 18/03/2027</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca/" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O que é</div>
+      <h2 class="section-h2">A camada hardware da soberania europeia em XR</h2>
+      <p class="section-text">O tópico HORIZON-CL4-2027-04-HUMAN-01 financia investigação aplicada na componente hardware dos mundos virtuais: headsets XR, microdisplays, óticas avançadas, atuadores hápticos, sensores de movimento, dispositivos vestíveis, interfaces cérebro-computador (BCI) não invasivas e chips dedicados à imersão multissensorial. O objetivo declarado é tornar a próxima geração de equipamento imersivo capaz de estimular todos os sentidos, visão, audição, tato, olfato e força, com qualidade e miniaturização suficientes para uso prolongado em ambientes industriais e sociais.</p>
+      <p class="section-text">O orçamento de 2027 são 39 milhões de euros, distribuídos por 8 projetos esperados, com grants entre 4,8 e 5,6 milhões de euros cada um. Esta granularidade é deliberada: a Comissão prefere financiar várias linhas paralelas de I&amp;D especializadas (haptics, BCI, ótica de microdisplay, integração multimodal) do que concentrar a verba num único grande consórcio. Cada proposta é, na prática, um ataque a uma combinação específica de componentes.</p>
+      <p class="section-text">A duração típica recomendada é de 36 meses, partindo de TRL 3 (provas de conceito laboratorial) e visando TRL 5 (validação em ambiente relevante) no fim do projeto. Este intervalo coloca a call claramente no terreno de I&amp;D pré-comercial, não em desenvolvimento de produto final. O tópico implementa a co-programmed European Partnership on Virtual Worlds.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para que serve</div>
+      <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
+      <p class="section-text">É um instrumento clássico de I&amp;D pré-competitivo: grant em fundo perdido, parcialmente complementar a investimento privado, com objetivo de avanço técnico. Combina financiamento de I&amp;D científica com potencial de transferência tecnológica para empresas integradoras de XR.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">I&amp;D e ciência:</strong> 100% da call é I&amp;D pré-competitiva em hardware imersivo. Beneficiários típicos são universidades técnicas, centros de I&amp;D em ótica, eletrónica e neurociência aplicada, e empresas tecnológicas com unidade de investigação dedicada. O TRL 3 a 5 garante que a componente científica é central, não cosmética.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Digitalização e IA:</strong> indiretamente, mas de forma material. Os algoritmos de sincronização multimodal, modelação preditiva de feedback háptico, processamento de sinais BCI, computer vision e síntese de áudio espacial são todos componentes de software inteligente que viajam dentro destas propostas de hardware. Quem desenvolve hardware imersivo hoje desenvolve software inteligente em paralelo.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Estrutura técnica</div>
+      <h2 class="section-h2">O que cada proposta tem de fazer</h2>
+      <p class="section-text">A scope formal do tópico exige que cada proposta entregue cinco coisas, ainda que com peso variável conforme a especialização do consórcio:</p>
+
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Integração multimodal:</strong> não basta desenvolver um componente isolado. Cada projeto tem de integrar diferentes modalidades sensoriais (visão, áudio, toque, force-feedback, com olfato opcional) num único dispositivo testado, com sincronização cuidada entre elas.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Demonstradores em casos de uso reais:</strong> propostas têm de demonstrar utilidade num cenário industrial ou social concreto, não em laboratório fechado. Indústria, formação técnica, telemedicina, design industrial, treino militar e cultural são exemplos típicos.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Miniaturização e fiabilidade:</strong> requisitos explícitos de eficiência energética, robustez, peso reduzido e interoperabilidade. O regulamento exige dispositivos compactos e fiáveis, não protótipos de bancada.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Componente SSH significativa:</strong> Social Sciences and Humanities têm de estar envolvidas com peso real, não decorativo. Aceitação social, ergonomia, perceção humana, dimensão cultural, ética e inclusão são linhas obrigatórias de trabalho.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Contribuição para standards europeus:</strong> as propostas devem alavancar standards abertos existentes em XR e contribuir para o trabalho de standardização em curso. Cada projeto vencedor deve produzir output normativo, não apenas resultados técnicos.</li>
+      </ul>
+
+      <div class="highlight-box">
+        <div class="highlight-box-title">Cláusula de transferência de propriedade</div>
+        <div class="highlight-box-text">O regulamento contém uma cláusula relevante para a defesa estratégica europeia: beneficiários que pretendam transferir propriedade ou conceder licenças exclusivas sobre resultados têm de notificar a DG CNECT e a HaDEA antes da transferência. A autoridade concedente pode opor-se à transferência ou licenciamento exclusivo até 4 anos após o fim da ação. Esta cláusula é importante para PME que pensem em vender IP gerado a compradores extra-UE.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Tipo de ação e financiamento</div>
+      <h2 class="section-h2">RIA com 100% de cofinanciamento</h2>
+      <p class="section-text">Trata-se de uma Research and Innovation Action (HORIZON-RIA), o que significa taxa de financiamento de 100% para todas as entidades, lucrativas e não lucrativas. Em prática, todo o orçamento elegível é coberto pelo grant, sem necessidade de capital próprio ou cofinanciamento empresarial.</p>
+
+      <div class="stats-row reveal" style="grid-template-columns:repeat(3,1fr);">
+        <div class="stat-cell">
+          <div class="stat-num">8<sup>grants</sup></div>
+          <div class="stat-label">Projetos previstos</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">5,2<sup>M€</sup></div>
+          <div class="stat-label">Grant médio por projeto</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">36<sup>meses</sup></div>
+          <div class="stat-label">Duração típica</div>
+        </div>
+      </div>
+
+      <p class="section-text">O modelo de consórcio típico para um projeto deste tipo combina três a cinco entidades, incluindo: uma universidade técnica ou centro de I&amp;D líder em ótica, eletrónica ou neurociência aplicada; uma ou duas PME tecnológicas com capacidade de prototipagem (sensores, atuadores, eletrónica embebida); um integrador industrial que sirva de validador em caso de uso; e uma entidade SSH (universidade, instituto de design, observatório social) que garanta a componente humana e a aceitação social.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">Esta call interessa a três tipos de entidade portuguesa, e por razões diferentes. Universidades técnicas e centros de I&amp;D com competência em ótica, eletrónica avançada, neurociência computacional ou design imersivo são candidatos diretos a integrar consórcios europeus. Há massa crítica nacional em haptics e BCI em pelo menos três instituições de referência, e a janela competitiva está aberta com 8 projetos esperados (não é uma call winner-takes-all como a DIGITAL-EMERGING-04).</p>
+      <p class="section-text">PME portuguesas de hardware especializado, sensores, eletrónica embebida ou software de simulação imersiva podem entrar como parceiros nicho. O perfil ideal é uma empresa com produto técnico já em mercado em vertical adjacente (instrumentação industrial, dispositivos médicos, sensores IoT), capacidade de prototipagem rápida, e que consiga adaptar o seu produto-base a um caso de uso XR específico dentro do consórcio. A taxa de financiamento de 100% torna a participação economicamente atraente mesmo para tarefas de média dimensão.</p>
+      <p class="section-text">Empresas industriais utilizadoras (fabricantes, integradores de sistema, operadores logísticos, hospitais universitários) podem entrar como demonstrador de caso de uso. Não é o papel mais lucrativo financeiramente, mas é o que abre acesso antecipado à tecnologia desenvolvida, com benefício competitivo claro à medida que o mercado XR industrial amadureça em 2028 e 2029.</p>
+      <p class="section-text">O calendário aperta. Com deadline em março de 2027 e propostas competitivas a exigirem entre 6 e 9 meses de articulação prévia, a janela útil de constituição de consórcio fecha no final do verão de 2026. Quem ainda não tem conversas formais com partners europeus em curso, está fora de tempo para liderar. É possível, ainda assim, entrar como parceiro WP-leader em consórcios já em formação até dezembro de 2026. Estamos disponíveis para apoiar a triagem de papéis e o posicionamento junto de consortia em construção.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Programa</div><div class="sidebar-fact-val">Horizonte Europa, Cluster 4</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Call</div><div class="sidebar-fact-val">HORIZON-CL4-2027-04</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Tópico</div><div class="sidebar-fact-val">HUMAN-01</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Tipo de ação</div><div class="sidebar-fact-val">HORIZON-RIA, 100%</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Dotação 2027</div><div class="sidebar-fact-val">€39 milhões</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Grants previstos</div><div class="sidebar-fact-val">8</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Grant unitário</div><div class="sidebar-fact-val">€4,8 a €5,6 milhões</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Duração</div><div class="sidebar-fact-val">~36 meses</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">TRL</div><div class="sidebar-fact-val">3 a 5</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Partnership</div><div class="sidebar-fact-val">Virtual Worlds Partnership</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">SSH obrigatório</div><div class="sidebar-fact-val">Sim, com peso material</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Países elegíveis</div><div class="sidebar-fact-val">UE + países associados HE</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Modelo</div><div class="sidebar-fact-val">Single-stage</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Deadline</div><div class="sidebar-fact-val">18/03/2027</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Estado</div><div class="sidebar-fact-val val-planned">Previsto, deadline 18/03/2027</div></div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Quer posicionar a sua equipa ou empresa num consórcio Virtual Worlds CL4-2027-04 HUMAN-01?</div>
+      <a href="https://calendly.com/opencapital" target="_blank" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../horizonte-europa/" class="related-link"><span class="related-link-name">Horizonte Europa</span><span class="related-link-arrow">&rarr;</span></a>
+      <a href="../horizon-cl4-2027-04-digital-emerging-04/" class="related-link"><span class="related-link-name">Apply AI Innovation Booster CL4 2027</span><span class="related-link-arrow">&rarr;</span></a>
+      <a href="../horizon-cl4-2027-04-digital-emerging-05/" class="related-link"><span class="related-link-name">Apply AI Robotics CL4 2027</span><span class="related-link-arrow">&rarr;</span></a>
+      <a href="../horizon-cl4-2027-05-digital-emerging-03/" class="related-link"><span class="related-link-name">Photonic Devices CL4 2027</span><span class="related-link-arrow">&rarr;</span></a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

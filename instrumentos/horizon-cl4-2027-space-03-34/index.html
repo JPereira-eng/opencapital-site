@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizonte Europa CL4-2027 SPACE 03-34: Missoes de demonstracao Earth Observation e SatCom: Open Capital</title>
+  <meta name="description" content="Topico Horizonte Europa CL4-2027-SPACE-03-34 dedicado a maturacao de tecnologias de medio a alto TRL para preparar missoes de demonstracao colaborativas em Earth Observation e SatCom.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-value.status-planned{color:var(--gold);font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-gold{color:var(--gold);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-fact-val.val-planned{color:var(--gold);font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca/">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">CL4 SPACE 03-34 (2027)</span>
+    </nav>
+    <p class="hero-cat">Financiamento Público</p>
+    <h1 class="hero-title">Horizonte Europa CL4-2027 SPACE 03-34: Missoes de demonstracao Earth Observation e SatCom</h1>
+    <p class="hero-tagline">Topico do Cluster 4 Space dedicado a maturacao de tecnologias de medio a alto TRL e a preparacao de missoes de demonstracao colaborativas em Observacao da Terra e telecomunicacoes por satelite, no ambito da Space Partnership.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Cluster</span>
+        <span class="meta-value gold">CL4 - Digital, Industria e Espaco</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">TRL alvo</span>
+        <span class="meta-value">TRL 7-8 (final do projeto)</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Prazo</span>
+        <span class="meta-value">Submissao até 02/09/2027</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-planned">Previsto na call HORIZON-CL4-2027-03</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca/" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O que e</div>
+      <h2 class="section-h2">O ponto onde a tecnologia digital sobe para preparar uma missao de demonstracao</h2>
+      <p class="section-text">O HORIZON-CL4-2027-SPACE-03-34 pertence a call HORIZON-CL4-2027-03 SPACE no quadro do Horizonte Europa, integrado na co-programmed European Partnership on Globally Competitive Space Systems (Space Partnership). Cobre tecnologias digitais para os dominios da Earth Observation (EO) e das telecomunicacoes por satelite (SatCom), e a sua especificidade reside no patamar de maturidade exigido: este e o topico de medio a alto TRL, com objetivo final de preparar missoes de demonstracao colaborativas EO + SatCom.</p>
+      <p class="section-text">A leitura cruzada com o topico irmao 03-33 e essencial para perceber o que o 03-34 e e o que nao e. Enquanto 03-33 financia building blocks digitais cedo no ciclo de maturacao (TRL 4-5), 03-34 financia a passagem dessas tecnologias para um patamar onde podem ser integradas num demonstrador end-to-end, idealmente com qualificacao espacial e prontidao para uso comercial. A divisao de trabalho e deliberada: a UE quer alimentar o pipeline em duas fases articuladas, evitando saltos tecnologicos arriscados.</p>
+      <p class="section-text">A ambicao macro e dupla. Manter uma quota significativa do mercado global de conetividade nas maos da industria europeia, e desenvolver capacidades de servico EO e SatCom mais flexiveis, reativas e seguras para utilizadores comerciais e institucionais.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para que serve</div>
+      <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
+      <p class="section-text">A Open Capital classifica este topico como instrumento de I&amp;D e ciencia, com forte componente de digitalizacao e IA. As duas necessidades sao indissociaveis aqui porque o topico financia a maturacao tecnologica final, na zona em que a investigacao aplicada se encontra com a integracao industrial.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">I&amp;D e ciencia:</strong> as actividades sao maioritariamente de desenvolvimento experimental aplicado e de integracao tecnologica de alto nivel. Inclui validacao em ambiente representativo (TRL 7) e demonstracao em ambiente operacional (TRL 8), o que pressupoe maturidade cientifica solida na base.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Digitalizacao e IA:</strong> o topico ancora-se em tecnologias digitais, software, processamento on-board, IA aplicada a sistemas espaciais, fusao de dados multi-fonte e arquiteturas cloud para EO. A digitalizacao do segmento espacial e o eixo central, e a IA aparece explicitamente como tema transversal a sistemas EO + SatCom.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Resultados esperados</div>
+      <h2 class="section-h2">Os seis outcomes que a proposta deve servir</h2>
+      <p class="section-text">A proposta deve contribuir para um ou mais dos seguintes outcomes, declarando-os de forma explicita.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Setor espacial europeu competitivo e sustentavel:</strong> reforco do tecido industrial e da sua capacidade de produzir sistemas com qualidade competitiva a nivel global.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Quota relevante no mercado global de conetividade:</strong> garantia de que a industria europeia mantem presenca significativa no mercado de servicos SatCom, em concorrencia com operadores extra-UE.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Payloads e tecnologias avancadas:</strong> componentes EO e SatCom com saltos qualitativos relativamente ao estado atual.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">IA transversal a sistemas espaciais:</strong> integracao de IA em todo o sistema espacial, do processamento on-board a operacao da constelacao.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Seguranca reforcada dos servicos:</strong> tecnologias avancadas para protecao dos servicos SatCom e EO, no segmento solo e no segmento espaco.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Demonstrador end-to-end:</strong> demonstrador colaborativo que combine EO e SatCom para solucoes espaciais integradas, capaz de provar arquiteturas em ambiente representativo ou em orbita.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Areas de R&amp;I</div>
+      <h2 class="section-h2">Tres frentes que a proposta pode cobrir</h2>
+      <p class="section-text">A proposta pode contribuir para uma ou mais das areas listadas, mas tem de identificar de forma clara e inequivoca a area principal.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">End-to-End SatCom mission capabilities:</strong> servicos SatCom seguros, satelites como nos de rede e infraestrutura digital on-ground para teste e melhoria da eficiencia operacional.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Earth Observation (EO):</strong> equipamento, subsistemas, aplicacoes e servicos EO. Inclui melhor processamento de dados (performance ou prazo), fusao smart de dados multi-fonte, interoperabilidade entre missoes EO, miniaturizacao do design dos instrumentos, interfaces no segmento solo, arquiteturas cloud de alta performance, otica adaptativa e ativa, e eletronica de maior potencia.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Building blocks comuns EO + SatCom:</strong> capacidades de processamento on-board, payload de processamento de alta performance para suportar capacidades de rede espacial, reducao de impacto ambiental das missoes, maturacao de tecnologias e produtos de seguranca, identificacao e mitigacao de ameacas, e estacoes de solo hibridas RF + otica para servicos de anchoring.</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <div class="highlight-box-title">Ligacao com 03-33</div>
+      <div class="highlight-box-text">A proposta tem de demonstrar como a sua maturacao tecnologica encaixa com o pipeline UE. Idealmente, integra tecnologias maturadas em projetos 03-33 ou em chamadas anteriores SPACE, e leva-as ao patamar de demonstracao. Propostas isoladas, sem ancoragem no ecossistema digital pre-existente, tendem a ser penalizadas em coerencia estrategica.</div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Maturidade tecnologica</div>
+      <h2 class="section-h2">TRL 7-8 como ponto de chegada, ISO 16290:2013 como norma</h2>
+      <div class="stats-row reveal" style="grid-template-columns:repeat(2,1fr);">
+        <div class="stat-cell">
+          <div class="stat-num">TRL 7-8<sup></sup></div>
+          <div class="stat-label">Maturidade tecnologica alvo no fim do projeto</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">ISO 16290<sup>:2013</sup></div>
+          <div class="stat-label">Norma de referencia (setor espacial)</div>
+        </div>
+      </div>
+      <p class="section-text">A baliza TRL 7-8 e exigente. TRL 7 corresponde a demonstracao de prototipo de sistema em ambiente operacional, frequentemente em testes de voo ou ambiente representativo de uso. TRL 8 corresponde a sistema completo qualificado por demonstracao em ambiente operacional. Ambos os patamares exigem componentes hardware e software ja substancialmente maduros, e implicam que o consorcio tenha capacidade industrial para conduzir testes de qualificacao a este nivel. Propostas dominadas por R&amp;D inicial, sem trajetoria de escalada, sao incompativeis com este topico.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Componentes UE</div>
+      <h2 class="section-h2">Building blocks europeus para autonomia tecnologica</h2>
+      <p class="section-text">A proposta deve usar tecnologias e building blocks UE, incluindo a nivel de componente, e descrever de forma clara como esses componentes contribuem para a autonomia tecnologica europeia. Esta exigencia e critica num topico de TRL alto: a Comissao quer evitar que o demonstrador final dependa de elementos extra-UE com restricoes a exportacao ou riscos de cadeia de abastecimento. A leitura desta exigencia e parte integrante da avaliacao da dimensao de impacto.</p>
+      <p class="section-text">Para PMEs portuguesas com tecnologia diferenciadora em hardware ou software para sistemas espaciais, este e um ponto de entrada concreto. Componentes ja maturados em chamadas anteriores podem ser propostos como building blocks UE no demonstrador integrado.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Articulacao com o ecossistema</div>
+      <h2 class="section-h2">Complementaridade com Horizon, programas nacionais e ESA</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Horizon Europa e H2020:</strong> as actividades propostas devem complementar projetos ja financiados, em particular projetos do topico 03-33 onde tecnologias TRL 4-5 estao em maturacao. Re-financiamento puro e bloqueado.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Programas nacionais:</strong> a proposta deve declarar como se relaciona com programas espaciais nacionais e como os mesmos sao alavancados.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">ESA:</strong> distincao explicita face a actividades em curso na Agencia Espacial Europeia. ESA tem programas proprios de demonstracao em orbita; a UE financia aqui o segmento que ESA nao cobre, em particular dimensoes comerciais e de mercado de conetividade.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Composicao do consorcio</div>
+      <h2 class="section-h2">Industria, PMEs e ciencia em parceria, com saida comercial</h2>
+      <p class="section-text">A Comissao espera consorcios que combinem industria, PMEs, instituicoes de investigacao e infraestruturas, e academia. Para um topico de TRL alto, o equilibrio do consorcio e particularmente importante: sem industria ancora capaz de levar a tecnologia para mercado, a proposta perde credibilidade na dimensao de impacto. As propostas devem mostrar como aceleram a transicao da inovacao tecnologica para uso comercial em espaco, seja por demonstracao em ambiente terrestre relevante, seja por demonstracao em orbita.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Calendario e processo</div>
+      <h2 class="section-h2">Datas-chave previstas</h2>
+      <table class="art-table">
+        <thead><tr><th>Marco</th><th>Data</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Call</strong></td><td>HORIZON-CL4-2027-03 (SPACE)</td></tr>
+          <tr><td><strong>Prazo de submissao</strong></td><td>02/09/2027</td></tr>
+          <tr><td><strong>Quadro estrategico</strong></td><td>Strategic Research and Innovation Agenda da Space Partnership</td></tr>
+          <tr><td><strong>Norma de TRL</strong></td><td>ISO 16290:2013</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">O 03-34 e um topico de fim de pipeline. So faz sentido para entidades com tecnologia ja amadurecida, capacidade de qualificacao espacial e capacidade industrial para conduzir um demonstrador integrado. Em Portugal, o universo qualificado e estreito: GMV-PT, Tekever, Edisoft, Critical Software, Spinworks, alguns laboratorios universitarios em Coimbra e Lisboa, e operadores como Connect by Cellnex que operam infraestrutura terrestre relacionada com SatCom.</p>
+      <p class="section-text">A logica realista para entidades portuguesas e quase sempre a integracao em consorcios liderados por primes europeus (Airbus Defence and Space, Thales Alenia, OHB, Telespazio, SES) ou por institutos com track record de coordenacao em Horizon Europa. Liderar consorcios neste topico exige escala industrial e historico em Horizon SPACE, que poucas entidades nacionais conseguem demonstrar a este nivel.</p>
+      <p class="section-text">Tres pontos a antecipar. Primeiro, a articulacao explicita com o pipeline 03-33 e chamadas anteriores deve estar logo na introducao da proposta. A Comissao quer ver coerencia, nao islands of excellence. Segundo, a dimensao IA do outcome 4 e uma porta de entrada subutilizada: empresas com competencias em IA aplicada a observacao da Terra ou a gestao de constelacoes podem entrar como work package leader em propostas lideradas por primes. Terceiro, o requisito de TRL 7-8 obriga a um plano de testes muito concreto, com facility identificada, e a um plano de exploracao com clientes finais (institucionais ou comerciais) ja envolvidos. Propostas vagas neste ponto raramente passam.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Tecnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rapidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">Horizonte Europa, CL4 Space</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Topico</div>
+        <div class="sidebar-fact-val">HORIZON-CL4-2027-SPACE-03-34</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Foco</div>
+        <div class="sidebar-fact-val">Missoes de demonstracao EO + SatCom</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Partnership</div>
+        <div class="sidebar-fact-val">Globally Competitive Space Systems</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">TRL alvo</div>
+        <div class="sidebar-fact-val">TRL 7-8 (ISO 16290:2013)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tipo de entidade</div>
+        <div class="sidebar-fact-val">Industria, PMEs, I&amp;D, academia</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Localizacao</div>
+        <div class="sidebar-fact-val">UE e Paises Associados</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-planned">Previsto na call HORIZON-CL4-2027-03</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Prazo de submissao</div>
+        <div class="sidebar-fact-val">02/09/2027</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">A sua empresa tem tecnologia EO ou SatCom em fase avancada de maturacao? Vamos discutir o encaixe num demonstrador europeu.</div>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../horizon-cl4-2027-space-03-33/" class="related-link">
+        <span class="related-link-name">CL4 SPACE 03-33: Digital enablers EO + SatCom</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-cl4-2027-space-03-83/" class="related-link">
+        <span class="related-link-name">CL4 SPACE 03-83: Componentes EEE criticos</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizonte-europa/" class="related-link">
+        <span class="related-link-name">Horizonte Europa</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../eic-accelerator/" class="related-link">
+        <span class="related-link-name">EIC Accelerator</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

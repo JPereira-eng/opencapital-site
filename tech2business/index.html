@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<title>Tech2Business: Open Capital Advisory & Consultancy</title>
+  <meta name="description" content="Descubra com base científica quais as soluções tecnológicas mais adequadas ao seu negócio: e o impacto real esperado nas suas variáveis-chave.">
+  <link rel="stylesheet" href="/assets/fonts/montserrat.css">
+  <style>
+    :root {
+      --navy:       #1A3A5C;
+      --navy-deep:  #0D1F33;
+      --gold:       #C9A96E;
+      --white:      #FFFFFF;
+      --grey-light: #E5E5E5;
+      --grey-mid:   #7A7A7A;
+      --grey-dark:  #2A2A2A;
+      --font: 'Montserrat', sans-serif;
+      --transition: all 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --shadow: 0 8px 40px rgba(26,58,92,0.10);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:var(--font); background:var(--white); color:var(--grey-dark); -webkit-font-smoothing:antialiased; }
+
+    /* ── NAVBAR ── */
+    .navbar { display:flex; align-items:center; justify-content:space-between; padding:0 48px; height:74px; position:fixed; top:0; left:0; right:0; z-index:200; background:var(--navy); border-bottom:1px solid rgba(255,255,255,0.07); transition:var(--transition); }
+    .navbar.scrolled { background:rgba(255,255,255,0.97); backdrop-filter:blur(20px); border-bottom:1px solid var(--grey-light); }
+    .nav-logo { display:flex; align-items:center; text-decoration:none; flex-shrink:0; }
+    .nav-logo-img { height:57px; width:auto; display:block; filter:brightness(0) invert(1); transition:var(--transition); }
+    .navbar.scrolled .nav-logo-img { filter:none; }
+    .nav-logo-fallback { display:none; align-items:center; gap:10px; }
+    .nav-logo-fallback .nav-mark { width:36px; height:36px; border:1px solid rgba(255,255,255,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:var(--gold); }
+    .navbar.scrolled .nav-logo-fallback .nav-mark { border-color:var(--navy); color:var(--navy); }
+    .nav-logo-fallback .nav-wordmark { display:flex; flex-direction:column; gap:2px; }
+    .nav-logo-fallback .nav-name { font-size:14px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--white); }
+    .nav-logo-fallback .nav-sub  { font-size:9px; font-weight:300; letter-spacing:0.20em; text-transform:uppercase; color:rgba(255,255,255,0.32); }
+    .navbar.scrolled .nav-logo-fallback .nav-name { color:var(--navy); }
+    .navbar.scrolled .nav-logo-fallback .nav-sub  { color:var(--grey-mid); }
+    .nav-links { display:flex; align-items:center; gap:24px; list-style:none; margin-left:auto; }
+    .nav-links a { font-size:15px; font-weight:500; letter-spacing:0.08em; text-transform:none; color:rgba(255,255,255,0.68); text-decoration:none; transition:var(--transition); position:relative; padding-bottom:3px; white-space:nowrap; }
+    .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold); transition:width 0.3s ease; }
+    .nav-links a:hover { color:var(--white); }
+    .nav-links a:hover::after, .nav-links a.active::after { width:100%; }
+    .nav-links a.active { color:var(--white); }
+    .navbar.scrolled .nav-links a { color:var(--grey-dark); }
+    .navbar.scrolled .nav-links a:hover, .navbar.scrolled .nav-links a.active { color:var(--navy); }
+    .nav-badge { font-size:10px; font-weight:600; letter-spacing:0.06em; text-transform:none; color:var(--gold); border:1px solid var(--gold); padding:1px 4px; margin-left:3px; vertical-align:super; line-height:1; }
+    .nav-dropdown { position:relative; }
+    .nav-dropdown > a::after { content:''; }
+    .nav-dropdown-arrow { display:inline-block; margin-left:5px; width:6px; height:6px; border-right:1px solid currentColor; border-bottom:1px solid currentColor; transform:rotate(45deg) translateY(-2px); transition:transform 0.25s ease; vertical-align:middle; opacity:0.6; }
+    .nav-dropdown:hover .nav-dropdown-arrow { transform:rotate(-135deg) translateY(-2px); opacity:1; }
+    .nav-dropdown-menu { position:absolute; top:calc(100% + 14px); left:50%; transform:translateX(-50%) translateY(-6px); background:var(--white); border:1px solid var(--grey-light); min-width:160px; opacity:0; visibility:hidden; transition:opacity 0.22s ease, transform 0.22s ease; box-shadow:var(--shadow); z-index:200; }
+    .nav-dropdown:hover .nav-dropdown-menu { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
+    .nav-dropdown-menu a { display:block; padding:12px 20px; font-size:13px; font-weight:500; letter-spacing:0.05em; text-transform:none; color:var(--grey-dark); text-decoration:none; border-bottom:1px solid var(--grey-light); transition:var(--transition); white-space:nowrap; }
+    .nav-dropdown-menu a:last-child { border-bottom:none; }
+    .nav-dropdown-menu a:hover { color:var(--navy); background:#FAFAFA; padding-left:24px; }
+    .nav-dropdown-menu a::after { display:none !important; }
+    .navbar:not(.scrolled) .nav-dropdown-menu { background:var(--navy-deep); border-color:rgba(255,255,255,0.08); }
+    .navbar:not(.scrolled) .nav-dropdown-menu a { color:rgba(255,255,255,0.60); border-color:rgba(255,255,255,0.06); }
+    .navbar:not(.scrolled) .nav-dropdown-menu a:hover { color:var(--white); background:rgba(255,255,255,0.05); }
+    .nav-cta { font-size:16px; font-weight:600; letter-spacing:0.08em; text-transform:none; color:var(--white); text-decoration:none; border:1px solid rgba(255,255,255,0.28); padding:9px 18px; margin-left:28px; transition:var(--transition); white-space:nowrap; }
+    .nav-cta:hover { border-color:var(--white); background:rgba(255,255,255,0.08); }
+    .navbar.scrolled .nav-cta { color:var(--navy); border-color:var(--navy); }
+    .navbar.scrolled .nav-cta:hover { background:var(--navy); color:var(--white); }
+    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
+    .nav-hamburger span { display:block; width:22px; height:1px; background:var(--white); transition:var(--transition); }
+    .navbar.scrolled .nav-hamburger span { background:var(--navy); }
+    .nav-mobile-menu { display:none; position:fixed; top:74px; left:0; right:0; background:var(--navy); padding:24px 32px 32px; border-bottom:1px solid rgba(255,255,255,0.07); z-index:199; }
+    .nav-mobile-menu.open { display:block; }
+    .nav-mobile-menu a { display:block; font-size:15px; font-weight:500; letter-spacing:0.05em; text-transform:none; color:rgba(255,255,255,0.7); text-decoration:none; padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.06); transition:var(--transition); }
+    .nav-mobile-menu a:hover { color:var(--white); }
+    .nav-mobile-cta { display:inline-block !important; margin-top:22px; font-size:14px; font-weight:600; color:var(--white) !important; border:1px solid rgba(255,255,255,0.28); padding:12px 24px; }
+
+    /* ── FAIXA DE AVISO ── */
+    .launch-bar { position:fixed; top:74px; left:0; right:0; z-index:190; background:var(--navy-deep); border-bottom:1px solid rgba(201,169,110,0.20); display:flex; align-items:center; justify-content:center; gap:12px; padding:9px 48px; }
+    .launch-bar-dot { width:6px; height:6px; background:var(--gold); animation:pulse-dot 2s ease-in-out infinite; flex-shrink:0; }
+    @keyframes pulse-dot { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.4; transform:scale(0.7); } }
+    .launch-bar-text { font-size:12px; font-weight:500; letter-spacing:0.12em; color:rgba(255,255,255,0.55); white-space:nowrap; }
+    .launch-bar-text strong { color:rgba(255,255,255,0.85); font-weight:600; }
+    .launch-bar-sep { font-size:10px; color:rgba(255,255,255,0.15); }
+    .launch-bar-link { font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); text-decoration:none; border-bottom:1px solid rgba(201,169,110,0.35); padding-bottom:1px; transition:var(--transition); white-space:nowrap; }
+    .launch-bar-link:hover { border-color:var(--gold); }
+
+    /* ── HERO ── */
+    .hero { background:var(--navy); min-height:100vh; display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:72px; padding:158px 80px 80px; position:relative; overflow:hidden; }
+    .hero::before { content:''; position:absolute; top:-180px; right:-180px; width:560px; height:560px; background:radial-gradient(circle, rgba(201,169,110,0.05) 0%, transparent 65%); pointer-events:none; }
+    .hero::after  { content:''; position:absolute; bottom:-80px; left:25%; width:380px; height:380px; background:radial-gradient(circle, rgba(201,169,110,0.04) 0%, transparent 65%); pointer-events:none; }
+    .hero-gold-bar { position:absolute; left:0; top:0; bottom:0; width:3px; background:linear-gradient(to bottom, var(--gold) 0%, rgba(201,169,110,0.2) 60%, transparent 100%); }
+    .hero-left { position:relative; z-index:1; }
+    .hero-status-badge { display:inline-flex; align-items:center; gap:8px; border:1px solid rgba(201,169,110,0.35); padding:6px 14px; margin-bottom:24px; }
+    .hero-status-badge-dot { width:5px; height:5px; background:var(--gold); animation:pulse-dot 2s ease-in-out infinite; }
+    .hero-status-badge-text { font-size:10px; font-weight:600; letter-spacing:0.26em; text-transform:uppercase; color:var(--gold); }
+    .hero-h1 { font-size:52px; font-weight:700; color:var(--white); line-height:1.08; letter-spacing:-0.015em; margin-bottom:24px; }
+    .hero-h1 em { font-style:normal; color:var(--gold); font-weight:300; }
+    .hero-sub { font-size:18px; font-weight:300; color:rgba(255,255,255,0.52); line-height:1.85; max-width:460px; margin-bottom:36px; }
+    .hero-modes { display:flex; gap:12px; margin-bottom:36px; flex-wrap:wrap; }
+    .hero-mode-tag { display:flex; align-items:center; gap:8px; font-size:11px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.50); border:1px solid rgba(255,255,255,0.12); padding:7px 14px; }
+    .hero-mode-tag-dot { width:4px; height:4px; background:var(--gold); transform:rotate(45deg); flex-shrink:0; }
+    .hero-cta-row { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+    .btn-hero-primary { display:inline-flex; align-items:center; gap:10px; font-family:var(--font); font-size:13px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; background:var(--gold); color:var(--white); padding:15px 32px; border:none; cursor:pointer; text-decoration:none; transition:var(--transition); }
+    .btn-hero-primary:hover { background:#B8945A; transform:translateY(-1px); box-shadow:0 6px 20px rgba(201,169,110,0.28); }
+    .btn-hero-ghost { display:inline-flex; align-items:center; gap:8px; font-family:var(--font); font-size:13px; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.55); background:transparent; border:1px solid rgba(255,255,255,0.18); padding:14px 28px; cursor:pointer; text-decoration:none; transition:var(--transition); }
+    .btn-hero-ghost:hover { color:var(--white); border-color:rgba(255,255,255,0.45); }
+    .hero-note { font-size:12px; font-weight:300; color:rgba(255,255,255,0.28); margin-top:20px; letter-spacing:0.04em; }
+
+    /* ── MOCK CONVERSACIONAL ── */
+    .hero-right { position:relative; z-index:1; }
+    .mock-ui-wrap { position:relative; }
+    .mock-ui-overlay { position:absolute; inset:0; z-index:10; background:rgba(13,31,51,0.75); backdrop-filter:blur(3px); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; }
+    .mock-overlay-badge { font-size:10px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); border:1px solid rgba(201,169,110,0.40); padding:5px 14px; }
+    .mock-overlay-label { font-size:13px; font-weight:600; letter-spacing:0.20em; text-transform:uppercase; color:rgba(255,255,255,0.60); }
+    .mock-overlay-sub { font-size:11px; font-weight:300; color:rgba(255,255,255,0.28); text-align:center; line-height:1.6; }
+    .mock-conv { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.10); padding:28px; }
+    .mock-conv-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:22px; padding-bottom:14px; border-bottom:1px solid rgba(255,255,255,0.06); }
+    .mock-conv-title { font-size:10px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:rgba(255,255,255,0.25); }
+    .mock-conv-status { display:flex; align-items:center; gap:6px; font-size:10px; font-weight:500; color:rgba(255,255,255,0.25); }
+    .mock-conv-dot { width:5px; height:5px; background:var(--gold); border-radius:50%; animation:pulse-dot 2s ease-in-out infinite; }
+    .mock-msg { margin-bottom:12px; }
+    .mock-msg-sys { display:flex; gap:10px; align-items:flex-start; }
+    .mock-msg-sys-icon { width:20px; height:20px; background:rgba(201,169,110,0.12); border:1px solid rgba(201,169,110,0.22); display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:3px; }
+    .mock-bubble-sys { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.07); padding:10px 14px; font-size:13px; font-weight:300; color:rgba(255,255,255,0.58); line-height:1.65; }
+    .mock-msg-user { display:flex; justify-content:flex-end; }
+    .mock-bubble-user { background:rgba(201,169,110,0.10); border:1px solid rgba(201,169,110,0.18); padding:10px 14px; font-size:13px; font-weight:400; color:rgba(255,255,255,0.72); line-height:1.65; max-width:88%; }
+    .mock-divider { height:1px; background:rgba(255,255,255,0.06); margin:18px 0; }
+    .mock-results-label { font-size:10px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.20); margin-bottom:14px; }
+    .mock-sol-item { display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid rgba(255,255,255,0.05); }
+    .mock-sol-item:last-child { border-bottom:none; }
+    .mock-sol-rank { font-size:11px; font-weight:700; color:rgba(201,169,110,0.55); width:18px; flex-shrink:0; }
+    .mock-sol-name { font-size:12px; font-weight:500; color:rgba(255,255,255,0.70); flex:1; }
+    .mock-sol-impact { font-size:12px; font-weight:600; color:var(--gold); white-space:nowrap; }
+    .mock-conf { font-size:9px; font-weight:600; letter-spacing:0.10em; text-transform:uppercase; padding:2px 7px; white-space:nowrap; }
+    .conf-alta  { background:rgba(201,169,110,0.12); color:var(--gold); border:1px solid rgba(201,169,110,0.25); }
+    .conf-media { background:rgba(255,255,255,0.04); color:rgba(255,255,255,0.32); border:1px solid rgba(255,255,255,0.10); }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal { opacity:0; transform:translateY(24px); transition:opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    /* ── SECÇÕES ── */
+    .section-white { padding:96px 80px; background:var(--white); }
+    .section-navy  { padding:96px 80px; background:var(--navy); }
+    .section-grey  { padding:96px 80px; background:#FAFAFA; }
+    .s-eyebrow { font-size:11px; font-weight:600; letter-spacing:0.34em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    .s-h2 { font-size:36px; font-weight:600; color:var(--navy); line-height:1.15; letter-spacing:0.01em; margin-bottom:16px; }
+    .s-h2-white { color:var(--white); }
+    .s-lead { font-size:18px; font-weight:300; color:var(--grey-mid); line-height:1.85; max-width:560px; margin-bottom:52px; }
+    .s-lead-white { color:rgba(255,255,255,0.48); }
+
+    /* ── COMO FUNCIONA ── */
+    .process-wrap { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--grey-light); border:1px solid var(--grey-light); }
+    .process-card { background:var(--white); padding:44px 36px; }
+    .process-phase { font-size:10px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+    .process-num { font-size:52px; font-weight:700; color:var(--grey-light); line-height:1; margin-bottom:20px; }
+    .process-title { font-size:20px; font-weight:600; color:var(--navy); margin-bottom:12px; }
+    .process-body { font-size:15px; font-weight:300; color:var(--grey-mid); line-height:1.85; }
+    .process-wide { grid-column:1 / -1; background:#FAFAFA; display:grid; grid-template-columns:1fr 1fr; gap:48px; padding:44px 48px; align-items:center; }
+    .process-wide-phase { font-size:10px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+    .process-wide-title { font-size:22px; font-weight:600; color:var(--navy); margin-bottom:16px; line-height:1.3; }
+    .process-wide-body { font-size:15px; font-weight:300; color:var(--grey-mid); line-height:1.85; }
+    .science-box { background:var(--navy); padding:28px 32px; }
+    .science-item { display:flex; align-items:flex-start; gap:12px; padding:11px 0; border-bottom:1px solid rgba(255,255,255,0.06); }
+    .science-item:last-child { border-bottom:none; }
+    .science-diamond { width:5px; height:5px; border:1px solid var(--gold); transform:rotate(45deg); flex-shrink:0; margin-top:6px; }
+    .science-text { font-size:13px; font-weight:300; color:rgba(255,255,255,0.52); line-height:1.65; }
+    .science-text strong { color:rgba(255,255,255,0.80); font-weight:500; }
+
+    /* ── OUTPUTS ── */
+    .outputs-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.06); }
+    .output-card { background:var(--navy); padding:36px 28px; position:relative; overflow:hidden; transition:var(--transition); }
+    .output-card::before { content:''; position:absolute; top:0; left:0; width:0; height:2px; background:var(--gold); transition:width 0.4s ease; }
+    .output-card:hover::before { width:100%; }
+    .output-card:hover { background:#1F4570; }
+    .output-num { font-size:11px; font-weight:700; color:rgba(201,169,110,0.35); letter-spacing:0.10em; margin-bottom:16px; }
+    .output-title { font-size:16px; font-weight:600; color:var(--white); margin-bottom:10px; line-height:1.3; }
+    .output-desc { font-size:13px; font-weight:300; color:rgba(255,255,255,0.42); line-height:1.75; }
+
+    /* ── DOIS MODOS ── */
+    .modes-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+    .mode-card { background:var(--white); border:1px solid var(--grey-light); padding:44px 36px; position:relative; overflow:hidden; transition:var(--transition); }
+    .mode-card::before { content:''; position:absolute; top:0; left:0; width:0; height:2px; background:var(--gold); transition:width 0.4s ease; }
+    .mode-card:hover { box-shadow:var(--shadow); transform:translateY(-3px); }
+    .mode-card:hover::before { width:100%; }
+    .mode-tag { font-size:10px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; display:block; }
+    .mode-icon { margin-bottom:20px; }
+    .mode-title { font-size:24px; font-weight:600; color:var(--navy); margin-bottom:14px; }
+    .mode-desc { font-size:16px; font-weight:300; color:var(--grey-mid); line-height:1.85; margin-bottom:24px; }
+    .mode-list { display:flex; flex-direction:column; gap:9px; }
+    .mode-item { display:flex; align-items:flex-start; gap:10px; font-size:14px; font-weight:300; color:var(--grey-dark); line-height:1.6; }
+    .mode-item::before { content:''; width:4px; height:4px; background:var(--gold); transform:rotate(45deg); flex-shrink:0; margin-top:7px; }
+
+    /* ── DIFERENCIAL CIENTÍFICO ── */
+    .science-section-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+    .science-pillars { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:44px; }
+    .sci-pillar { border:1px solid rgba(255,255,255,0.08); padding:22px 20px; transition:var(--transition); }
+    .sci-pillar:hover { border-color:rgba(201,169,110,0.30); }
+    .sci-pillar-title { font-size:13px; font-weight:600; color:var(--white); margin-bottom:6px; }
+    .sci-pillar-desc { font-size:12px; font-weight:300; color:rgba(255,255,255,0.38); line-height:1.65; }
+    .trace-box { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); padding:32px; }
+    .trace-label-header { font-size:10px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.22); margin-bottom:20px; }
+    .trace-item { display:flex; align-items:flex-start; gap:14px; padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.05); }
+    .trace-item:last-child { border-bottom:none; }
+    .trace-line { width:2px; height:32px; background:linear-gradient(to bottom, var(--gold), rgba(201,169,110,0.15)); flex-shrink:0; margin-top:4px; }
+    .trace-key { font-size:11px; font-weight:600; color:rgba(255,255,255,0.48); margin-bottom:3px; letter-spacing:0.04em; }
+    .trace-val { font-size:12px; font-weight:300; color:rgba(255,255,255,0.28); line-height:1.5; }
+
+    /* ── CTA FINAL ── */
+    .cta-section { background:var(--navy-deep); padding:96px 80px; position:relative; overflow:hidden; }
+    .cta-section::before { content:''; position:absolute; top:-160px; right:-160px; width:520px; height:520px; background:radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 65%); pointer-events:none; }
+    .cta-inner { max-width:680px; margin:0 auto; text-align:center; position:relative; z-index:1; }
+    .cta-eyebrow { font-size:11px; font-weight:600; letter-spacing:0.34em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; }
+    .cta-h2 { font-size:40px; font-weight:700; color:var(--white); line-height:1.1; letter-spacing:-0.01em; margin-bottom:20px; }
+    .cta-sub { font-size:17px; font-weight:300; color:rgba(255,255,255,0.45); line-height:1.85; margin-bottom:44px; }
+    .cta-form { display:flex; max-width:480px; margin:0 auto 14px; }
+    .cta-email { flex:1; padding:14px 18px; font-family:var(--font); font-size:14px; font-weight:300; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-right:none; color:var(--white); outline:none; transition:var(--transition); }
+    .cta-email::placeholder { color:rgba(255,255,255,0.20); }
+    .cta-email:focus { border-color:rgba(201,169,110,0.40); }
+    .cta-btn { font-family:var(--font); font-size:12px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; background:var(--gold); color:var(--white); border:none; padding:14px 24px; cursor:pointer; transition:var(--transition); white-space:nowrap; }
+    .cta-btn:hover { background:#B8945A; }
+    .cta-success { display:none; padding:14px 0; font-size:14px; color:var(--gold); letter-spacing:0.04em; }
+    .cta-note { font-size:12px; font-weight:300; color:rgba(255,255,255,0.22); margin-bottom:44px; }
+    .cta-divider { display:flex; align-items:center; gap:16px; margin-bottom:32px; }
+    .cta-divider::before, .cta-divider::after { content:''; flex:1; height:1px; background:rgba(255,255,255,0.08); }
+    .cta-divider-txt { font-size:11px; font-weight:400; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.22); white-space:nowrap; }
+    .cta-talk { display:inline-flex; align-items:center; gap:10px; font-family:var(--font); font-size:13px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--white); border:1px solid rgba(255,255,255,0.22); padding:14px 32px; text-decoration:none; transition:var(--transition); }
+    .cta-talk:hover { border-color:var(--white); background:rgba(255,255,255,0.06); }
+
+    /* ── FOOTER ── */
+    .footer { background:var(--navy-deep); padding:56px 80px 34px; border-top:1px solid rgba(255,255,255,0.06); }
+    .footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr; gap:44px; margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.07); }
+    .f-logo-img { height:72px; width:auto; filter:brightness(0) invert(1); }
+    .f-desc { font-size:15px; font-weight:300; color:rgba(255,255,255,0.36); line-height:1.85; margin-top:18px; max-width:260px; }
+    .f-tagline { font-size:16px; font-weight:100; letter-spacing:0.14em; color:var(--gold); margin-top:12px; }
+    .f-col-label { font-size:11px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:rgba(255,255,255,0.24); margin-bottom:16px; }
+    .f-links { list-style:none; }
+    .f-links li { margin-bottom:9px; }
+    .f-links a { font-size:15px; font-weight:300; color:rgba(255,255,255,0.48); text-decoration:none; transition:var(--transition); letter-spacing:0.03em; }
+    .f-links a:hover { color:var(--white); }
+    .f-badge { font-size:9px; font-weight:600; letter-spacing:0.1em; color:var(--gold); border:1px solid rgba(201,169,110,0.45); padding:1px 5px; margin-left:5px; vertical-align:middle; }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+    .f-copy { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:0.05em; }
+    .f-legal a { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); text-decoration:none; letter-spacing:0.05em; transition:var(--transition); }
+    .f-legal a:hover { color:rgba(255,255,255,0.45); }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:1024px) {
+      .hero { grid-template-columns:1fr; padding:120px 48px 64px; }
+      .hero-right { display:none; }
+      .process-wide { grid-template-columns:1fr; gap:28px; }
+      .modes-grid { grid-template-columns:1fr; }
+      .science-section-grid { grid-template-columns:1fr; gap:48px; }
+      .outputs-grid { grid-template-columns:1fr 1fr; }
+      .footer-grid { grid-template-columns:1fr 1fr; }
+    }
+    @media(max-width:768px) {
+      .nav-links { display:none; } .nav-cta { display:none; } .nav-hamburger { display:flex; }
+      .launch-bar { padding:8px 20px; flex-wrap:wrap; gap:6px; }
+      .launch-bar-text { font-size:11px; white-space:normal; text-align:center; }
+      .hero { padding:140px 24px 56px; }
+      .hero-h1 { font-size:34px; }
+      .section-white, .section-navy, .section-grey, .cta-section { padding:64px 24px; }
+      .process-wrap { grid-template-columns:1fr; }
+      .process-wide { padding:32px 24px; }
+      .outputs-grid { grid-template-columns:1fr; }
+      .science-pillars { grid-template-columns:1fr; }
+      .cta-form { flex-direction:column; }
+      .cta-email { border-right:1px solid rgba(255,255,255,0.12); border-bottom:none; }
+      .footer { padding:48px 24px 28px; }
+      .footer-grid { grid-template-columns:1fr; gap:32px; }
+      .footer-bottom { flex-direction:column; align-items:flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════ NAVBAR ═══════ -->
+<!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../" class="nav-logo">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../conhecimento/atualidade/">Atualidade</a>
+        <a href="../conhecimento/opiniao/">Opinião</a>
+        <a href="../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros/">Parceiros</a>
+        <a href="../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../biblioteca/">Biblioteca</a>
+  <a href="../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos/">Sobre Nós</a>
+  <a href="../parceiros/">Parceiros</a>
+  <a href="../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+  <!-- ═══════ FAIXA DE AVISO ═══════ -->
+  <div class="launch-bar">
+    <div class="launch-bar-dot"></div>
+    <span class="launch-bar-text">Tech2Business está em <strong>desenvolvimento</strong>: lançamento previsto <strong>Q3 2026</strong></span>
+    <span class="launch-bar-sep">·</span>
+    <a href="#notificar" class="launch-bar-link">Ser notificado →</a>
+  </div>
+
+  <!-- ═══════ HERO ═══════ -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-status-badge">
+        <div class="hero-status-badge-dot"></div>
+        <span class="hero-status-badge-text">Em desenvolvimento · Lançamento Q3 2026</span>
+      </div>
+      <h1 class="hero-h1">Qual é a tecnologia<br>certa para<br><em>o seu negócio?</em></h1>
+      <p class="hero-sub">Descreva os seus problemas. Nós calculamos quais as soluções tecnológicas com maior impacto real para a sua empresa: com dados, níveis de confiança e premissas explícitas.</p>
+      <div class="hero-modes">
+        <div class="hero-mode-tag"><div class="hero-mode-tag-dot"></div>Simulador</div>
+        <div class="hero-mode-tag"><div class="hero-mode-tag-dot"></div>Marketplace</div>
+      </div>
+      <div class="hero-cta-row">
+        <a href="#notificar" class="btn-hero-primary">
+          Ser notificado do lançamento
+          <svg width="14" height="9" viewBox="0 0 14 9" fill="none"><path d="M1 4.5h12M9 1l4 3.5L9 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="https://calendly.com/opencapital" target="_blank" class="btn-hero-ghost">Falar com a equipa</a>
+      </div>
+      <p class="hero-note">Lançamento previsto: Q3 2026 · Gratuito · Sem registo</p>
+    </div>
+
+    <div class="hero-right">
+      <div class="mock-ui-wrap">
+        <div class="mock-ui-overlay">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" style="opacity:0.60">
+            <rect x="8" y="16" width="20" height="14" stroke="rgba(255,255,255,0.55)" stroke-width="1.2"/>
+            <path d="M12 16v-5a6 6 0 0112 0v5" stroke="rgba(255,255,255,0.55)" stroke-width="1.2" stroke-linecap="round"/>
+            <circle cx="18" cy="23" r="2" fill="rgba(255,255,255,0.55)"/>
+          </svg>
+          <div class="mock-overlay-badge">Em breve</div>
+          <div class="mock-overlay-label">Disponível em Q3 2026</div>
+          <div class="mock-overlay-sub">Registe-se abaixo para ser<br>notificado no lançamento</div>
+        </div>
+        <div class="mock-conv" style="padding:0; overflow:hidden;">
+          <!-- HEADER -->
+          <div class="mock-conv-header" style="padding:14px 18px; border-bottom:1px solid rgba(255,255,255,0.07);">
+            <span class="mock-conv-title">Tech2Business · Simulador</span>
+            <div class="mock-conv-status"><div class="mock-conv-dot"></div>Simulação concluída</div>
+          </div>
+          <!-- TWO-PANEL BODY -->
+          <div style="display:grid; grid-template-columns:1fr 1.4fr; height:100%;">
+            <!-- LEFT: PROFILE -->
+            <div style="padding:16px 14px; border-right:1px solid rgba(255,255,255,0.07); font-size:11px; font-weight:300; color:rgba(255,255,255,0.45); line-height:1.7;">
+              <div style="font-size:10px; font-weight:600; letter-spacing:0.20em; text-transform:uppercase; color:rgba(255,255,255,0.22); margin-bottom:12px;">Perfil simulado</div>
+              <div style="margin-bottom:10px;">
+                <div style="font-size:12px; font-weight:600; color:rgba(255,255,255,0.70); margin-bottom:2px;">Restaurante casual dining</div>
+                <div>Lisboa · 60 lugares · 10 col.</div>
+              </div>
+              <div style="height:1px; background:rgba(255,255,255,0.06); margin:10px 0;"></div>
+              <div style="margin-bottom:8px; font-size:11px; color:rgba(255,255,255,0.40);">120 refeições/dia · 6 dias/sem.</div>
+              <div style="margin-bottom:10px; font-size:11px; color:rgba(255,255,255,0.40);">Orçamento: €150–300/mês</div>
+              <div style="height:1px; background:rgba(255,255,255,0.06); margin:10px 0;"></div>
+              <div style="font-size:10px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.22); margin-bottom:8px;">Prioridades</div>
+              <div style="display:flex; flex-direction:column; gap:5px;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span>Reduzir desperdício</span>
+                  <div style="display:flex; gap:2px;">
+                    <div style="width:10px; height:3px; background:var(--gold);"></div>
+                    <div style="width:10px; height:3px; background:var(--gold);"></div>
+                    <div style="width:10px; height:3px; background:var(--gold);"></div>
+                    <div style="width:10px; height:3px; background:var(--gold); opacity:0.3;"></div>
+                    <div style="width:10px; height:3px; background:var(--gold); opacity:0.3;"></div>
+                  </div>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span>Reduzir subcontrat.</span>
+                  <div style="display:flex; gap:2px;">
+                    <div style="width:10px; height:3px; background:var(--gold);"></div>
+                    <div style="width:10px; height:3px; background:var(--gold);"></div>
+                    <div style="width:10px; height:3px; background:var(--gold); opacity:0.3;"></div>
+                    <div style="width:10px; height:3px; background:var(--gold); opacity:0.3;"></div>
+                    <div style="width:10px; height:3px; background:var(--gold); opacity:0.3;"></div>
+                  </div>
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span>Melhorar margem</span>
+                  <div style="display:flex; gap:2px;">
+                    <div style="width:10px; height:3px; background:var(--gold);"></div>
+                    <div style="width:10px; height:3px; background:var(--gold);"></div>
+                    <div style="width:10px; height:3px; background:var(--gold); opacity:0.3;"></div>
+                    <div style="width:10px; height:3px; background:var(--gold); opacity:0.3;"></div>
+                    <div style="width:10px; height:3px; background:var(--gold); opacity:0.3;"></div>
+                  </div>
+                </div>
+              </div>
+              <div style="height:1px; background:rgba(255,255,255,0.06); margin:10px 0;"></div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-size:10px; color:rgba(255,255,255,0.25);">Qualidade dos dados</span>
+                <span style="font-size:11px; font-weight:600; color:var(--gold);">71%</span>
+              </div>
+              <div style="margin-top:6px; font-size:9px; color:rgba(255,255,255,0.22); font-style:italic; line-height:1.5;">"outsourcing_hours_month estimado por benchmark"</div>
+            </div>
+            <!-- RIGHT: RESULTS -->
+            <div style="padding:14px 14px; display:flex; flex-direction:column; gap:8px; overflow:hidden;">
+              <div style="font-size:10px; font-weight:600; letter-spacing:0.20em; text-transform:uppercase; color:rgba(255,255,255,0.22); margin-bottom:4px;">Top 3 soluções</div>
+              <!-- Result #1 -->
+              <div style="border:1px solid rgba(201,169,110,0.25); padding:10px 12px; position:relative;">
+                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:6px;">
+                  <div style="font-size:12px; font-weight:600; color:var(--gold);">ADECI: Desperdício Alimentar</div>
+                  <div style="font-size:13px; font-weight:700; color:var(--gold);">87</div>
+                </div>
+                <div style="font-size:9px; color:rgba(255,255,255,0.28); margin-bottom:6px; text-transform:uppercase; letter-spacing:0.10em;">Operações &amp; Sustentabilidade</div>
+                <div style="display:flex; align-items:center; gap:5px; margin-bottom:8px;">
+                  <div style="width:6px; height:6px; background:var(--gold); border-radius:50%;"></div>
+                  <span style="font-size:9px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold);">Confiança alta</span>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:4px;">
+                  <div style="font-size:11px; color:rgba(255,255,255,0.65);">→ Desperdício: <strong style="color:var(--gold);">−18% a −24%</strong> <span style="font-size:9px; color:rgba(255,255,255,0.28);">· dado fornecido</span></div>
+                  <div style="font-size:11px; color:rgba(255,255,255,0.65);">→ Benefício líquido: <strong style="color:var(--gold);">+€620 a +€980/mês</strong></div>
+                  <div style="font-size:11px; color:rgba(255,255,255,0.65);">→ Payback: <strong style="color:rgba(255,255,255,0.80);">5 a 8 meses</strong></div>
+                </div>
+              </div>
+              <!-- Result #2 -->
+              <div style="border:1px solid rgba(255,255,255,0.08); padding:10px 12px;">
+                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:6px;">
+                  <div style="font-size:12px; font-weight:600; color:rgba(255,255,255,0.65);">Factorial: Gestão RH &amp; Escalas</div>
+                  <div style="font-size:13px; font-weight:700; color:rgba(255,255,255,0.55);">74</div>
+                </div>
+                <div style="font-size:9px; color:rgba(255,255,255,0.28); margin-bottom:6px; text-transform:uppercase; letter-spacing:0.10em;">Recursos Humanos &amp; Produtividade</div>
+                <div style="display:flex; align-items:center; gap:5px; margin-bottom:8px;">
+                  <div style="width:6px; height:6px; background:var(--gold); opacity:0.45; border-radius:50%;"></div>
+                  <span style="font-size:9px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.35);">Confiança média</span>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:4px;">
+                  <div style="font-size:11px; color:rgba(255,255,255,0.50);">→ Subcontrat.: <strong style="color:rgba(255,255,255,0.70);">−15% a −22%</strong> <span style="font-size:9px; color:rgba(255,255,255,0.25);">· benchmark</span></div>
+                  <div style="font-size:11px; color:rgba(255,255,255,0.50);">→ Poupança: <strong style="color:rgba(255,255,255,0.70);">€380 a €560/mês</strong></div>
+                  <div style="font-size:11px; color:rgba(255,255,255,0.50);">→ Tempo escalas: <strong style="color:rgba(255,255,255,0.70);">−65%</strong></div>
+                </div>
+              </div>
+              <!-- Result #3 -->
+              <div style="border:1px solid rgba(255,255,255,0.06); padding:10px 12px;">
+                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+                  <div style="font-size:11px; font-weight:600; color:rgba(255,255,255,0.45);">Deliverect: Canais Online</div>
+                  <div style="font-size:12px; font-weight:700; color:rgba(255,255,255,0.35);">61</div>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:3px; margin-top:6px;">
+                  <div style="font-size:10px; color:rgba(255,255,255,0.35);">→ Erros de pedido: −80% a −90%</div>
+                  <div style="font-size:10px; color:rgba(255,255,255,0.35);">→ Faturação online: +8% a +14%</div>
+                </div>
+              </div>
+              <!-- Note -->
+              <div style="font-size:9px; color:rgba(255,255,255,0.20); text-align:center; margin-top:2px; line-height:1.5;">Modelo determinístico v1.0 · Score = 35% Fit + 45% Impacto + 20% Confiança</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ O PROBLEMA ═══════ -->
+  <section class="section-grey reveal">
+    <div style="max-width:720px;">
+      <div class="s-eyebrow">O problema</div>
+      <h2 class="s-h2">Decisões tecnológicas sem dados custam caro.</h2>
+      <p style="font-size:18px; font-weight:300; color:var(--grey-mid); line-height:1.85; margin-bottom:20px;">A maioria das empresas escolhe tecnologia com base em propostas de fornecedores ou recomendações informais. Sem comparação objectiva. Sem impacto calculado.</p>
+      <p style="font-size:18px; font-weight:300; color:var(--grey-dark); line-height:1.85;">O Tech2Business resolve isso. Descreva os seus problemas. Nós simulamos o impacto de cada solução nas variáveis do seu negócio: e apresentamos os resultados com evidência.</p>
+    </div>
+  </section>
+
+  <!-- ═══════ COMO FUNCIONA ═══════ -->
+  <section class="section-white reveal">
+    <div class="s-eyebrow">Como funciona</div>
+    <h2 class="s-h2">Como funciona.</h2>
+    <p class="s-lead">Quatro passos. Sem fricção desnecessária.</p>
+    <div class="process-wrap">
+      <div class="process-card reveal">
+        <div class="process-phase">Passo 01</div>
+        <div class="process-num">01</div>
+        <div class="process-title">Descreva o seu negócio e os seus problemas</div>
+        <p class="process-body">Setor, dimensão, desafios principais. A plataforma faz as perguntas certas: só as necessárias.</p>
+      </div>
+      <div class="process-card reveal">
+        <div class="process-phase">Passo 02</div>
+        <div class="process-num">02</div>
+        <div class="process-title">Defina o que é prioritário</div>
+        <p class="process-body">Reduzir custos, aumentar margem, melhorar produtividade. Defina o que importa mais para o seu negócio.</p>
+      </div>
+      <div class="process-wide reveal">
+        <div>
+          <div class="process-wide-phase">Passo 03</div>
+          <div class="process-wide-title">Calculamos o impacto</div>
+          <p class="process-wide-body">Um motor de cálculo determinístico: não um chatbot: estima o impacto de cada solução nas variáveis do seu negócio. Com nível de confiança e premissas explícitas.</p>
+        </div>
+        <div class="science-box">
+          <div style="font-size:10px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.30); margin-bottom:16px;">Passo 04: Resultado</div>
+          <div style="font-size:16px; font-weight:600; color:var(--white); margin-bottom:12px; line-height:1.3;">Receba o ranking das melhores soluções</div>
+          <p style="font-size:13px; font-weight:300; color:rgba(255,255,255,0.50); line-height:1.75; margin-bottom:16px;">Ordenadas por impacto real para o seu perfil. Com dados suficientes para decidir: sem depender de propostas comerciais.</p>
+          <div class="science-item"><div class="science-diamond"></div><div class="science-text">Ranking com score por solução</div></div>
+          <div class="science-item"><div class="science-diamond"></div><div class="science-text">Impacto estimado por variável de negócio</div></div>
+          <div class="science-item"><div class="science-diamond"></div><div class="science-text">Nível de confiança e premissas de cada estimativa</div></div>
+          <div class="science-item"><div class="science-diamond"></div><div class="science-text">Próximos passos recomendados para cada solução</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ O QUE RECEBE ═══════ -->
+  <section class="section-navy">
+    <div class="s-eyebrow">O que recebes</div>
+    <h2 class="s-h2 s-h2-white">Seis outputs. Todos rastreáveis.</h2>
+    <p class="s-lead s-lead-white" style="margin-bottom:48px;">Cada resultado tem origem declarada, nível de confiança e premissas visíveis. Nada é vago.</p>
+    <div class="outputs-grid reveal">
+      <div class="output-card">
+        <div class="output-num">01</div>
+        <div class="output-title">Ranking de soluções</div>
+        <p class="output-desc">As soluções ordenadas por impacto calculado para o seu perfil específico. Não para o mercado em geral.</p>
+      </div>
+      <div class="output-card">
+        <div class="output-num">02</div>
+        <div class="output-title">Impacto por variável</div>
+        <p class="output-desc">Faturação, margem, desperdício, produtividade, custos. Para cada solução, estimativa em percentagem ou valor absoluto.</p>
+      </div>
+      <div class="output-card">
+        <div class="output-num">03</div>
+        <div class="output-title">Nível de confiança</div>
+        <p class="output-desc">Alto, médio ou baixo: e a explicação de o que determinou esse nível. Sem números falsos.</p>
+      </div>
+      <div class="output-card">
+        <div class="output-num">04</div>
+        <div class="output-title">Porquê esta solução</div>
+        <p class="output-desc">O raciocínio por trás de cada recomendação. Que dados do seu perfil pesaram mais na decisão.</p>
+      </div>
+      <div class="output-card">
+        <div class="output-num">05</div>
+        <div class="output-title">Dados que pesaram mais</div>
+        <p class="output-desc">As variáveis do seu perfil que mais influenciaram o resultado. Para saber onde investir em mais dados.</p>
+      </div>
+      <div class="output-card">
+        <div class="output-num">06</div>
+        <div class="output-title">Próximos passos</div>
+        <p class="output-desc">O que fazer a seguir. Pré-requisitos, critérios para avaliar fornecedores, e quando faz sentido envolver um especialista.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ DOIS MODOS ═══════ -->
+  <section class="section-grey">
+    <div class="s-eyebrow">A plataforma</div>
+    <h2 class="s-h2">Simulador e Marketplace.</h2>
+    <p class="s-lead">Dois módulos para dois momentos diferentes. O Simulador indica o que escolher. O Marketplace ajuda a comparar.</p>
+    <div class="modes-grid">
+      <div class="mode-card reveal">
+        <span class="mode-tag">Modo 1</span>
+        <div class="mode-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M4 28l6-9 5 4 4-6 5 4 4-7" stroke="#1A3A5C" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="16" cy="7" r="4" stroke="#C9A96E" stroke-width="1.3"/>
+            <path d="M16 11v5" stroke="#C9A96E" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="mode-title">Simulador</div>
+        <p class="mode-desc">Descreva o seu negócio. A plataforma faz as perguntas necessárias, calcula o impacto de cada solução e devolve um ranking com dados para decidir.</p>
+        <div class="mode-list">
+          <div class="mode-item">Diagnóstico por entrevista adaptativa</div>
+          <div class="mode-item">Cálculo determinístico de impacto por variável</div>
+          <div class="mode-item">Ranking personalizado com score por solução</div>
+          <div class="mode-item">Nível de confiança explícito em cada estimativa</div>
+          <div class="mode-item">Relatório exportável</div>
+        </div>
+      </div>
+      <div class="mode-card reveal">
+        <span class="mode-tag">Modo 2</span>
+        <div class="mode-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="4" y="4" width="10" height="10" stroke="#1A3A5C" stroke-width="1.3"/>
+            <rect x="18" y="4" width="10" height="10" stroke="#1A3A5C" stroke-width="1.3"/>
+            <rect x="4" y="18" width="10" height="10" stroke="#1A3A5C" stroke-width="1.3"/>
+            <rect x="18" y="18" width="10" height="10" stroke="#C9A96E" stroke-width="1.3"/>
+          </svg>
+        </div>
+        <div class="mode-title">Marketplace</div>
+        <p class="mode-desc">Catálogo de soluções por setor. Com fichas detalhadas, casos de uso documentados e critérios para avaliar fornecedores sem depender das suas propostas.</p>
+        <div class="mode-list">
+          <div class="mode-item">Catálogo por setor e tipo de problema</div>
+          <div class="mode-item">Fichas com impactos documentados por caso de uso</div>
+          <div class="mode-item">Pré-requisitos de implementação por solução</div>
+          <div class="mode-item">Critérios objectivos para selecção de fornecedores</div>
+          <div class="mode-item">Integração com os resultados do Simulador</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ DIFERENCIAL CIENTÍFICO ═══════ -->
+  <section class="section-navy">
+    <div class="science-section-grid reveal">
+      <div>
+        <div class="s-eyebrow">O que nos distingue</div>
+        <h2 class="s-h2 s-h2-white">Os resultados são calculados. Não gerados.</h2>
+        <p style="font-size:17px; font-weight:300; color:rgba(255,255,255,0.52); line-height:1.85; margin-bottom:18px;">Qualquer ferramenta gera uma lista. O que distingue o Tech2Business é que os impactos não vêm de um modelo de linguagem: vêm de modelos matemáticos determinísticos, calibrados com benchmarks sectoriais.</p>
+        <p style="font-size:17px; font-weight:300; color:rgba(255,255,255,0.52); line-height:1.85;">Sabe que modelo gerou cada resultado, com que dados e com que nível de confiança. A decisão é sua. Nós garantimos que tem dados reais para a tomar.</p>
+        <div class="science-pillars">
+          <div class="sci-pillar">
+            <div class="sci-pillar-title">Motor determinístico</div>
+            <div class="sci-pillar-desc">Os impactos vêm de modelos matemáticos: não de estimativas do LLM. Pode auditar cada resultado.</div>
+          </div>
+          <div class="sci-pillar">
+            <div class="sci-pillar-title">Transparência total</div>
+            <div class="sci-pillar-desc">Sabe que modelo gerou o quê, com que dados e com que nível de confiança. Sem caixas negras.</div>
+          </div>
+          <div class="sci-pillar">
+            <div class="sci-pillar-title">Confiança explícita</div>
+            <div class="sci-pillar-desc">Cada estimativa tem um nível de confiança: alto, médio ou baixo: e indica que dados faltaram ou foram estimados.</div>
+          </div>
+          <div class="sci-pillar">
+            <div class="sci-pillar-title">Benchmarks do seu setor</div>
+            <div class="sci-pillar-desc">Quando faltam dados da sua empresa, usamos benchmarks reais do setor para manter a qualidade das estimativas.</div>
+          </div>
+        </div>
+      </div>
+      <div class="trace-box">
+        <div class="trace-label-header">Exemplo de output: Restaurante casual dining</div>
+        <div class="trace-item">
+          <div class="trace-line"></div>
+          <div>
+            <div class="trace-key">Solução recomendada</div>
+            <div class="trace-val">ADECI: Gestão de Desperdício Alimentar</div>
+          </div>
+        </div>
+        <div class="trace-item">
+          <div class="trace-line"></div>
+          <div>
+            <div class="trace-key">Impacto simulado</div>
+            <div class="trace-val">−18% a −24% desperdício · +€620 a +€980 benefício líquido mensal · payback 5–8 meses</div>
+          </div>
+        </div>
+        <div class="trace-item">
+          <div class="trace-line"></div>
+          <div>
+            <div class="trace-key">Nível de confiança</div>
+            <div class="trace-val">Alto: calculado com base em desperdício declarado de 12% sobre custo de compras</div>
+          </div>
+        </div>
+        <div class="trace-item">
+          <div class="trace-line"></div>
+          <div>
+            <div class="trace-key">Modelo utilizado</div>
+            <div class="trace-val">food-waste-impact-v1.0 · calibrado Q1 2026 · 34 restaurantes de referência</div>
+          </div>
+        </div>
+        <div class="trace-item">
+          <div class="trace-line" style="background:linear-gradient(to bottom, rgba(201,169,110,0.35), transparent)"></div>
+          <div>
+            <div class="trace-key">Variáveis com maior peso</div>
+            <div class="trace-val">Desperdício alimentar (dado fornecido) · Volume de refeições/dia · Custo médio de compras</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ CTA FINAL ═══════ -->
+  <section class="cta-section" id="notificar">
+    <div class="cta-inner reveal">
+      <div class="cta-eyebrow">Lançamento em Q3 2026</div>
+      <h2 class="cta-h2">Avise-me quando estiver disponível.</h2>
+      <p class="cta-sub">Deixe o seu contacto. Entramos em contacto quando o seu setor estiver pronto.</p>
+      <div id="formWrap">
+        <div class="cta-form">
+          <input type="email" class="cta-email" id="notifyEmail" placeholder="o.seu@email.pt">
+          <button class="cta-btn" onclick="handleNotify()">Notifique-me</button>
+        </div>
+        <p class="cta-note">Sem spam. Só contactamos quando o seu setor estiver disponível.</p>
+      </div>
+      <div class="cta-success" id="notifySuccess">✦ &nbsp;Registado. Entramos em contacto quando o seu setor estiver disponível.</div>
+      <div class="cta-divider">
+        <span class="cta-divider-txt">ou fala connosco diretamente</span>
+      </div>
+      <a href="https://calendly.com/opencapital" target="_blank" class="cta-talk">
+        Falar com a equipa Open Capital
+        <svg width="14" height="9" viewBox="0 0 14 9" fill="none"><path d="M1 4.5h12M9 1l4 3.5L9 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════ FOOTER ═══════ -->
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../conhecimento/">Conhecimento</a></li>
+        <li><a href="../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../sobre-nos/">Equipa</a></li>
+        <li><a href="../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../privacidade/">Privacidade</a>
+      <a href="../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+  <!-- ═══════ JS ═══════ -->
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+
+    function handleNotify() {
+      const val = document.getElementById('notifyEmail').value.trim();
+      if (!val || !val.includes('@')) {
+        document.getElementById('notifyEmail').style.borderColor = 'rgba(201,169,110,0.6)';
+        document.getElementById('notifyEmail').focus();
+        return;
+      }
+      document.getElementById('formWrap').style.display = 'none';
+      document.getElementById('notifySuccess').style.display = 'block';
+    }
+    document.getElementById('notifyEmail').addEventListener('keydown', e => {
+      if (e.key === 'Enter') handleNotify();
+    });
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.07 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

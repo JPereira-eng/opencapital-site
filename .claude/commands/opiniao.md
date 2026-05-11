@@ -407,7 +407,7 @@ Não perguntes mais informação. Constroi a tese e o artigo a partir do input.
 
 ### Passo 3 - Escrever e guardar o artigo HTML
 
-Cria `conhecimento/[slug].html`.
+Cria `conhecimento/[slug]/index.html`.
 
 **Elementos disponíveis para o corpo:**
 
@@ -608,20 +608,20 @@ Não incluir secção "Perspetiva Open Capital". Não incluir h2 final. Não inc
 </head>
 <body>
   <nav class="navbar" id="navbar">
-    <a href="../index.html" class="nav-logo">
-      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    <a href="../../" class="nav-logo">
+      <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
     </a>
     <ul class="nav-links">
-      <li><a href="../biblioteca.html">Biblioteca</a></li>
-      <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
-      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
-      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
-      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li><a href="../../biblioteca.html">Biblioteca</a></li>
+      <li><a href="../../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../../sobre-nos.html">Sobre Nós</a></li>
       <li class="nav-dropdown">
         <a href="#">Oportunidades</a>
         <div class="nav-dropdown-menu">
-          <a href="../parceiros.html">Parceiros</a>
-          <a href="../carreiras.html">Carreiras</a>
+          <a href="../../parceiros.html">Parceiros</a>
+          <a href="../../carreiras.html">Carreiras</a>
         </div>
       </li>
     </ul>
@@ -632,9 +632,9 @@ Não incluir secção "Perspetiva Open Capital". Não incluir h2 final. Não inc
   <section class="article-hero">
     <div class="article-hero-inner">
       <nav class="breadcrumb">
-        <a href="../index.html">Início</a>
+        <a href="../../">Início</a>
         <span class="breadcrumb-sep">/</span>
-        <a href="../conhecimento.html">Conhecimento</a>
+        <a href="../../conhecimento.html">Conhecimento</a>
         <span class="breadcrumb-sep">/</span>
         <span class="breadcrumb-current">[BREADCRUMB_CAT]</span>
       </nav>
@@ -653,13 +653,13 @@ Não incluir secção "Perspetiva Open Capital". Não incluir h2 final. Não inc
   </section>
 
   <div class="back-bar">
-    <a href="../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+    <a href="../../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
   </div>
 
   <div class="article-layout">
     <article class="article-body">
       <!-- Se IMAGEM_SRC tiver valor, incluir como primeiro elemento do article-body: -->
-      <img src="[IMAGEM_SRC]" alt="[TITULO]" class="article-cover-img">
+      <img src="../[IMAGEM_SRC]" alt="[TITULO]" class="article-cover-img">
       <!-- Se IMAGEM_SRC estiver vazio, não incluir a tag img -->
 
       [CORPO_DO_ARTIGO]
@@ -668,7 +668,7 @@ Não incluir secção "Perspetiva Open Capital". Não incluir h2 final. Não inc
       <div class="sidebar-author">
         <div class="sidebar-author-label">Autor</div>
         <div class="sidebar-author-inner">
-          <img src="../Retratos Equipa/[AUTOR_FOTO]" alt="[AUTOR]" class="sidebar-author-photo">
+          <img src="../../Retratos Equipa/[AUTOR_FOTO]" alt="[AUTOR]" class="sidebar-author-photo">
           <div>
             <div class="sidebar-author-name">[AUTOR]</div>
             <div class="sidebar-author-role">[AUTOR_CARGO]</div>
@@ -703,14 +703,14 @@ Não incluir secção "Perspetiva Open Capital". Não incluir h2 final. Não inc
     const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
-  <script src="../assets/js/back-link.js" defer></script>
+  <script src="../../assets/js/back-link.js" defer></script>
 </body>
 </html>
 ```
 
 **Artigos relacionados na sidebar:**
 ```html
-<a href="[slug].html" class="related-item">
+<a href="../[slug]/index.html" class="related-item">
   <span class="related-item-title">[Titulo curto]</span>
   <span class="related-item-arrow">&rarr;</span>
 </a>
@@ -729,7 +729,7 @@ Adicionar entrada ao FINAL do array `articles` em `conhecimento-catalog.json`. E
   "autor": "[Nome]",
   "autor_foto": "[ficheiro png]",
   "data_publicacao": "AAAA-MM",
-  "href": "conhecimento/[SLUG].html",
+  "href": "conhecimento/[SLUG]/index.html",
   "meta_description": "[meta description SEO 150-160 chars]",
   "art_date": "[Mes AAAA, ex: Maio 2026]",
   "opinion_photo": "Retratos Equipa/[AUTOR_FOTO]",
@@ -743,13 +743,13 @@ Adicionar entrada ao FINAL do array `articles` em `conhecimento-catalog.json`. E
 
 **Featured:** marcar `featured: true`. Manter entre 9 e 12 artigos com `featured: true` em simultaneo. Se ja existem 12, definir `featured: false` no mais antigo. Artigos da seccao `regulamentos` sao excluidos dos destaques.
 
-**FORMATO EXCLUSIVO DE OPINIAO:** o hub `/conhecimento/opiniao.html` renderiza dinamicamente os cards usando os campos `opinion_photo`, `opinion_author_card` e `opinion_title`, produzindo cards com foto autor full-bleed + overlay (estrutura distinta dos outros hubs). Estes 3 campos sao obrigatorios na entrada da Opiniao.
+**FORMATO EXCLUSIVO DE OPINIAO:** o hub `/conhecimento/opiniao/index.html` renderiza dinamicamente os cards usando os campos `opinion_photo`, `opinion_author_card` e `opinion_title`, produzindo cards com foto autor full-bleed + overlay (estrutura distinta dos outros hubs). Estes 3 campos sao obrigatorios na entrada da Opiniao.
 
 ### Passo 5 - Auto-validacao de paridade
 
 Apos os passos 1-4, validar localmente:
 
-1. Existe `conhecimento/[SLUG].html`? Se nao: ABORTAR com erro grave.
+1. Existe `conhecimento/[SLUG]/index.html`? Se nao: ABORTAR com erro grave.
 2. O slug aparece em `conhecimento-catalog.json` exatamente uma vez? Se 0: re-aplicar Passo 4. Se >1: remover duplicados.
 3. `subseccao == "opiniao"` na entrada nova? Se nao: corrigir.
 4. Os 3 campos especificos (`opinion_photo`, `opinion_author_card`, `opinion_title`) estao todos preenchidos?
@@ -758,13 +758,13 @@ Apos os passos 1-4, validar localmente:
 ### Passo 6 - Build do footer
 
 ```bash
-python build_footer.py "conhecimento/[SLUG].html"
+python build_footer.py "conhecimento/[SLUG]/index.html"
 ```
 
 ### Passo 7 - Deploy
 
 ```bash
-git add conhecimento/[SLUG].html conhecimento-catalog.json
+git add conhecimento/[SLUG]/index.html conhecimento-catalog.json
 git commit -m "opiniao: [TITULO]"
 git push origin main
 ```
@@ -776,7 +776,7 @@ Se push falhar: `git stash && git pull --rebase && git stash pop && git push`.
 Apos deploy com sucesso, informar:
 - Titulo do artigo publicado.
 - Autor selecionado e respetivo cargo.
-- URL: `conhecimento/[slug].html`.
-- Subseccao: `opiniao` -> aparece no destaque dinamico de `/conhecimento/opiniao.html` se for o mais recente, ou no grid de cards.
+- URL: `conhecimento/[slug]/index.html`.
+- Subseccao: `opiniao` -> aparece no destaque dinamico de `/conhecimento/opiniao/index.html` se for o mais recente, ou no grid de cards.
 - Confirmacao de que `featured: true` e que ha entre 9 e 12 artigos em destaque.
 - Commit hash. GitHub Pages fara deploy via push.

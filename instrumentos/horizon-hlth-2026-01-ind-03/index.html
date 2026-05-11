@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<title>Regulatory science para tecnologias de saúde patient-centred (HORIZON-HLTH-2026-01-IND-03): Open Capital</title>
+  <meta name="description" content="Research and Innovation Action Horizon Europe com €20M para melhorar metodologias regulatórias e frameworks de evidência para medical devices, IVDs, AI e software as a medical device, com foco em RWD, NAMs e modelos de IA.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-value.status-cont{color:#2E7D52;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-body{}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-gold{color:var(--gold);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-fact-val.val-cont{color:#2E7D52;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca/">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Regulatory science (HORIZON-HLTH-2026-01-IND-03)</span>
+    </nav>
+    <p class="hero-cat">Inovação · Horizon Europe Cluster 1 · Indústria saúde</p>
+    <h1 class="hero-title">Regulatory science para tecnologias de saúde patient-centred</h1>
+    <p class="hero-tagline">Research and Innovation Action com 20 milhões de euros para construir metodologias regulatórias e frameworks de evidência ao longo do ciclo de vida de medical devices, IVDs, AI e software as a medical device.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotação total</span>
+        <span class="meta-value gold">€20M</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Por projeto</span>
+        <span class="meta-value">€4M-€6M</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Prazo</span>
+        <span class="meta-value status-closed">Fechado em 16/04/2026</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Tipo de ação</span>
+        <span class="meta-value">RIA · 100% financiamento</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca/" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Contexto</div>
+      <h2 class="section-h2">Por que a regulação de medical devices não tem dado conta</h2>
+      <p class="section-text">A inovação em tecnologias de saúde não-farmacológicas explodiu na última década. Medical devices implantáveis cada vez mais sofisticados, in vitro diagnostics multiplexados, software as a medical device (SaMD) com inteligência artificial, organ-on-chip e microfluidic devices para diagnóstico point-of-care, wearables médicos. O quadro regulatório europeu, sustentado pelos regulamentos MDR (Medical Devices Regulation) e IVDR (In Vitro Diagnostic Regulation) em vigor desde 2017 e 2022, foi desenhado para responder a esta onda mas tem sofrido de tensões crónicas: prazos de notified body assessment, requisitos de evidência clínica em domínios onde randomized controlled trials são inviáveis, e frameworks regulatórios pouco adaptados a IA.</p>
+      <p class="section-text">A consequência é dupla. Por um lado, dispositivos europeus competitivos saem para FDA primeiro, com perda de soberania industrial e clínica. Por outro, dispositivos verdadeiramente inovadores levam tempo desproporcional a chegar ao mercado europeu, prejudicando doentes que poderiam beneficiar mais cedo. O HORIZON-HLTH-2026-01-IND-03 ataca a raiz: melhorar a ciência regulatória que sustenta as decisões de mercado e cobertura.</p>
+      <div class="highlight-box">
+        <div class="highlight-box-title">Sinal editorial</div>
+        <div class="highlight-box-text">Esta call não é sobre desenvolver dispositivos. É sobre construir os métodos pelos quais dispositivos serão avaliados nas próximas décadas. O alvo são metodologias replicáveis em Real World Data, New Approach Methodologies e modelos de IA que possam ser adotadas por EMA, notified bodies e agências HTA. É regulatory science, não product development.</p>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O que é o instrumento</div>
+      <h2 class="section-h2">Estrutura, dotação e regras de submissão</h2>
+      <p class="section-text">O HORIZON-HLTH-2026-01-IND-03 é uma Research and Innovation Action do Cluster 1 Saúde, na destination Maintaining an innovative, sustainable and globally competitive health-related industry. Como RIA, financia investigação aplicada com componente translacional, com taxa de financiamento de 100% sobre custos diretos e overhead flat de 25%.</p>
+      <div class="stats-row reveal" style="grid-template-columns:repeat(4,1fr);">
+        <div class="stat-cell">
+          <div class="stat-num">€20<sup>M</sup></div>
+          <div class="stat-label">Dotação total</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">4-6</div>
+          <div class="stat-label">Projetos a financiar</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">€4-6<sup>M</sup></div>
+          <div class="stat-label">Por projeto</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">100<sup>%</sup></div>
+          <div class="stat-label">Taxa financiamento</div>
+        </div>
+      </div>
+      <p class="section-text">Submissão single-stage, com abertura a 10 de fevereiro de 2026 e encerramento a 16 de abril de 2026. Como RIA com foco regulatório, espera-se TRL 4 a 7, com prova de conceito metodológica em casos de uso reais. Dispositivos microfluídicos (diagnostics e organ-on-chip) são identificados como case studies ideais para produzir evidência regulatory-grade e pilotar abordagens de regulatory sandbox.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Âmbito</div>
+      <h2 class="section-h2">As frentes metodológicas</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Real World Data e Real World Evidence:</strong> desenvolvimento e validação de metodologias robustas para gerar evidência regulatory-grade a partir de RWD (registos clínicos eletrónicos, registos de dispositivos, claims, dados de wearables), com técnicas de causal inference, target trial emulation e propensity score adjustment.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">New Approach Methodologies:</strong> alternativas a animal testing e abordagens computacionais para avaliação de segurança e eficácia, incluindo organ-on-chip, in silico models, digital twins de doente, virtual physiological human.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Modelos de IA na regulação:</strong> frameworks para validação, monitorização contínua e auditoria de algoritmos de IA em SaMD, com tratamento de model drift, performance degradation, robustez a populações diferentes da de treino, explicabilidade e fairness.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Ciclo de vida lifecycle:</strong> abordagem que cobre todas as fases do dispositivo, do early development à pós-market surveillance, com particular ênfase em continuous evidence generation pós-CE marking.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Microfluidic devices como case study:</strong> diagnostics microfluídicos, organ-on-chip e lab-on-chip aplicados como ambiente de teste para os métodos desenvolvidos, gerando evidência operacional para EMA e notified bodies.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Regulatory sandbox approaches:</strong> pilotagem de abordagens de sandbox em articulação com EMA, notified bodies (TÜV, BSI, DEKRA, IMQ) e agências competentes, permitindo validação de tecnologias inovadoras em ambiente regulatório controlado.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Patient-centred outcomes:</strong> integração de patient-reported outcomes, patient experience data e patient preference information nos frameworks de avaliação, alinhada com tendências FDA e EMA.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Resultados esperados</div>
+      <h2 class="section-h2">O que conta como sucesso</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Decisores e reguladores com metodologias melhoradas:</strong> EMA, notified bodies e agências HTA com acesso acelerado a metodologias evidence-driven validadas, facilitando avaliações de impacto e eficiência de novas tecnologias de saúde.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Time-to-market reduzido:</strong> dispositivos verdadeiramente inovadores chegam mais cedo aos doentes europeus, sem comprometer segurança e qualidade.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Soberania industrial europeia:</strong> indústria europeia em medical devices, IVDs e SaMD com vantagem competitiva por acesso a metodologias regulatórias avançadas, reduzindo a tendência de saída para FDA primeiro.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Frameworks IA implementáveis:</strong> ferramentas e protocolos para validação contínua de algoritmos médicos integrados em produtos comerciais, com adoção por EMA e notified bodies.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Articulação MDR / IVDR / AI Act:</strong> contribuição para coerência regulatória entre MDR, IVDR e o emergente AI Act, evitando fragmentação para fabricantes.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Composição do consórcio</div>
+      <h2 class="section-h2">Quem se senta à mesa</h2>
+      <table class="art-table">
+        <thead><tr><th>Tipo de parceiro</th><th>Função no consórcio</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Lead em regulatory science</strong></td><td>Centro com produção em ciência regulatória e farmacoeconomia (Utrecht WHO CC, Imperial College Centre for Health Policy, EUREGHA, EurekaInst, Erasmus iBMG).</td></tr>
+          <tr><td><strong>EMA e ENVI agencies</strong></td><td>European Medicines Agency como observador formal ou parceiro consultivo, e agências competentes nacionais para medical devices (BfArM Alemanha, ANSM França, INFARMED Portugal).</td></tr>
+          <tr><td><strong>Notified bodies</strong></td><td>TÜV SÜD, BSI, DEKRA, IMQ ou equivalentes, fornecendo perspetiva real sobre conformity assessment e bottlenecks operacionais.</td></tr>
+          <tr><td><strong>Centros académicos em microfluidics e organ-on-chip</strong></td><td>Imperial College, ETH Zurich, KU Leuven, MIT Iberoamerica, Wyss Institute affiliates, INL Braga, ITQB-NOVA.</td></tr>
+          <tr><td><strong>Equipas em IA médica e validação</strong></td><td>Centros com produção em medical AI validation, model evaluation, fairness e robustness (Karolinska AI lab, INRIA, Imperial AI4Health, ELLIS clinical sites).</td></tr>
+          <tr><td><strong>Indústria medtech e SaMD</strong></td><td>EFPIA Devices, MedTech Europe, COCIR, com fabricantes (Siemens Healthineers, Philips, Roche Diagnostics, Bio-Rad), além de SMEs em SaMD.</td></tr>
+          <tr><td><strong>Centros em Real World Data</strong></td><td>EHDEN, ENCePP, EU PAS Register, com capacidade de implementar OMOP CDM, target trial emulation e advanced epidemiology.</td></tr>
+          <tr><td><strong>Centros HTA</strong></td><td>EUnetHTA, NICE, IQWiG, IDIBAPS Barcelona, com expertise em HTA de dispositivos e SaMD.</td></tr>
+          <tr><td><strong>Patient organizations</strong></td><td>EUPATI, EPF, com estruturas para patient preference elicitation e patient-reported outcomes.</td></tr>
+          <tr><td><strong>SSH em ciência regulatória</strong></td><td>Equipas em sociology of regulation, regulatory studies, ciência política de inovação tecnológica.</td></tr>
+        </tbody>
+      </table>
+      <p class="section-text">Mínimo legal de três entidades de três Estados-Membros ou países associados. Para uma RIA com 4 a 6 milhões por projeto, cobertura multissectorial e exigência de pilotagem com EMA e notified bodies, o consórcio competitivo tem 14 a 22 parceiros e cobertura mínima de 8 a 10 Estados-Membros.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Posicionamento competitivo</div>
+      <h2 class="section-h2">Onde a proposta se ganha ou perde</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Engagement formal com EMA:</strong> sem letter of support de EMA ou de notified body, a proposta perde Implementation. Não basta mencionar que o output será relevante para regulação, é preciso evidência operacional do diálogo.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Casos de uso reais e validados:</strong> propostas que se limitem a desenvolver frameworks teóricos sem validação em casos reais perdem peso. Microfluidic devices ou organ-on-chip são case studies ideais explicitamente sinalizados pela call.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Articulação MDR / IVDR / AI Act:</strong> propostas que tratem regulação como silos perdem em Excellence. A novidade é precisamente a coerência entre MDR (dispositivos), IVDR (diagnósticos), AI Act (algoritmos) e GDPR (dados).</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Capacidade RWD com data spaces europeus:</strong> EHDS connectivity, EHDEN data partners, OMOP CDM expertise são standard mínimo para credibilidade em metodologias RWD/RWE.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">NAMs com tradução prática:</strong> propostas em NAMs sem ligação a casos reais de aplicação regulatória perdem Impact. EURL ECVAM, JRC e iniciativas EPAA são parceiros credibilizadores.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Patient preference rigoroso:</strong> integração de patient preference information seguindo guidance MDIC, FDA e EMA, não apenas patient surveys casuais.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Open methodologies e replicabilidade:</strong> output do projeto tem de ser usável por terceiros. Frameworks proprietários ou caixa-preta perdem em Impact pela limitação de adoção regulatória.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Contexto português</div>
+      <h2 class="section-h2">Onde Portugal pode entrar com peso</h2>
+      <p class="section-text">Portugal tem ângulos credíveis em vários eixos. Em microfluidics e organ-on-chip, o INL (International Iberian Nanotechnology Laboratory) em Braga tem reputação europeia e produção em microfluidic devices para diagnóstico, com projetos H2020 e Horizon Europe relevantes. O INESC MN (Microsistemas e Nanotecnologias) tem capacidade em manufacturing, miniaturization e integration de dispositivos microfluídicos. O i3S-Porto e ITQB-NOVA têm produção em organ-on-chip aplicado a doenças específicas.</p>
+      <p class="section-text">Em IA médica e validação, o IST-INESC ID (Lisboa), Champalimaud Foundation Centre for the Unknown e Universidade do Porto têm produção em medical AI, image processing e validation methodology. Champalimaud em particular tem reputação internacional em neuroscience AI applications. O LIP Lisbon e CEISUC-Coimbra completam o ecossistema.</p>
+      <p class="section-text">Em ciência regulatória, INFARMED tem participação em comités europeus relevantes (CHMP, COMP, MDCG) e oferece interlocução credível como agência competente. NOVA SBE e NOVA Medical School têm produção em farmacoeconomia e HTA. ARSI (Apoio Regulatório a Setores da Indústria) e a APHP (Associação Portuguesa de Hospitais Privados) têm relação direta com fabricantes.</p>
+      <p class="section-text">Em RWD e EHRs, CINTESIS-Porto tem participação em ENCePP, EHDEN e DARWIN EU. SPMS (Serviços Partilhados do Ministério da Saúde) gere infraestrutura nacional de saúde digital. Para empresas, há ecossistema crescente de medtech e SaMD em Portugal: Magnomics (PCR molecular diagnostics), Magnetic Field Therapeutics, Sword Health (digital MSK), Tonic App, Knok Healthcare. Estas empresas podem entrar como SMEs com capacidade de testar metodologias regulatórias em produtos reais.</p>
+      <p class="section-text">Para entidades portuguesas, o ângulo realista é WP partner em microfluidics (INL, INESC MN, ITQB-NOVA), em IA médica (Champalimaud, IST), em ciência regulatória (INFARMED, NOVA Medical School, NOVA SBE) ou em RWD (CINTESIS, SPMS). Budget tipico de WP partner em RIA Cluster 1 industry destination: 350 mil a 800 mil euros por entidade.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">A regulatory science aplicada a tecnologias de saúde patient-centred é uma das áreas estratégicas mais subexploradas pelo ecossistema português. Há produção académica e industrial em medtech e em IA médica, mas há ainda escassa investigação em metodologias regulatórias dessas mesmas tecnologias. Esta call abre uma janela rara para fechar essa lacuna.</p>
+      <p class="section-text">A recomendação prática é tripla. Primeiro, para INL Braga, com a sua capacidade já reconhecida em microfluidics e organ-on-chip, é candidato natural a WP leader em case study microfluidics, com budget de 700 mil a 1,2 milhões. A integração com IST-INESC ID (validação de IA aplicada a diagnostics) e com Champalimaud (digital twins) fortalece a candidatura. Segundo, para INFARMED, a entrada como agência competente em consórcio liderado por EMA-affiliated centre é janela direta para influência regulatória europeia, com budget tipico de 200 mil a 400 mil para participação institucional.</p>
+      <p class="section-text">Terceiro, para CINTESIS, EHDEN e ENCePP partner português, o ângulo é contribuição metodológica em RWD/RWE com casos reais de validação para tecnologias de saúde. Budget como WP partner: 400 mil a 700 mil euros. Para empresas medtech e SaMD portuguesas (Magnomics, Sword Health, Tonic App, Knok), entrada como SMEs em consórcios europeus com budgets entre 250 mil e 500 mil euros, com retorno em validação regulatória dos seus próprios produtos.</p>
+      <p class="section-text">O que não funciona é entrar com proposta concentrada apenas em IA, ou apenas em microfluidics, sem visão integrada lifecycle. Adicionalmente, sem capacidade de articulação operacional com EMA, INFARMED e notified bodies, propostas perdem Implementation. O posicionamento realista para entidades portuguesas é WP partner em consórcios liderados por centros europeus de regulatory science (Utrecht WHO CC, Imperial College, Erasmus iBMG), capturando agregadamente 1,5 a 3 milhões distribuídos por 4 a 6 entidades portuguesas.</p>
+      <p class="section-text">Vale ainda nota estratégica: o futuro EU AI Act, em vigor desde 2024, e a sua articulação com MDR e IVDR são uma das fronteiras regulatórias europeias da próxima década. Tecnologias de saúde com componente IA serão objeto de cruzamento normativo cada vez mais complexo. Centros portugueses que participem neste consórcio ganham acesso direto à fronteira metodológica e posicionam-se como interlocutores credíveis na implementação europeia. Para a indústria portuguesa medtech e digital health, isto significa diferencial competitivo concreto nos próximos 5 a 10 anos.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">Horizon Europe Cluster 1</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Código</div>
+        <div class="sidebar-fact-val">HORIZON-HLTH-2026-01-IND-03</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tipo de ação</div>
+        <div class="sidebar-fact-val">Research and Innovation Action (RIA)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Dotação total</div>
+        <div class="sidebar-fact-val">€20.000.000</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Por projeto</div>
+        <div class="sidebar-fact-val">€4M a €6M</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Projetos previstos</div>
+        <div class="sidebar-fact-val">4 a 6</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Taxa financiamento</div>
+        <div class="sidebar-fact-val">100% custos diretos</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">TRL alvo</div>
+        <div class="sidebar-fact-val">4 a 7</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Submissão</div>
+        <div class="sidebar-fact-val">Single-stage</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-closed">Fechado em 16/04/2026</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Localização</div>
+        <div class="sidebar-fact-val">UE + países associados</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Beneficiário</div>
+        <div class="sidebar-fact-val">Centros regulatory science, agências competentes, notified bodies, indústria medtech, SaMD, SMEs, microfluidics centers</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Foco</div>
+        <div class="sidebar-fact-val">RWD/RWE, NAMs, IA médica, regulatory sandbox, microfluidics como case study</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Trabalha em microfluidics, organ-on-chip, IA médica, RWD ou ciência regulatória de medical devices? Falamos sobre como entrar em consórcios IND-03 ou preparar a próxima edição.</div>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../horizon-hlth-2026-01-disease-15/" class="related-link">
+        <span class="related-link-name">HLTH-DISEASE-15 (SRIA cardiovascular)</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-hlth-2026-01-disease-11/" class="related-link">
+        <span class="related-link-name">HLTH-DISEASE-11 (sexo e género CVD)</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-hlth-2026-01-care-03/" class="related-link">
+        <span class="related-link-name">HLTH-CARE-03 (low-value care)</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizonte-europa/" class="related-link">
+        <span class="related-link-name">Horizonte Europa</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../portugal-2030/" class="related-link">
+        <span class="related-link-name">Portugal 2030</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EUIPO SME Fund 2026: Open Capital</title>
+  <meta name="description" content="EUIPO SME Fund 2026: vouchers ate 75% para registo de patentes e variedades vegetais. Programa europeu de 60 milhoes EUR para PME proteger propriedade intelectual.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-value.status-cont{color:#2E7D52;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-body{}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-divider-gold{height:1px;background:linear-gradient(to right,var(--gold),transparent);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-gold{color:var(--gold);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-fact-val.val-cont{color:#2E7D52;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca/">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">EUIPO SME Fund 2026</span>
+    </nav>
+    <p class="hero-cat">Inovação</p>
+    <h1 class="hero-title">EUIPO SME Fund 2026</h1>
+    <p class="hero-tagline">Vouchers da Comissão Europeia para reembolsar PME que protejam patentes, marcas, desenhos e variedades vegetais.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotação 2026</span>
+        <span class="meta-value gold">€60 milhões</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Reembolso</span>
+        <span class="meta-value">Ate 90%</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Deadline</span>
+        <span class="meta-value">4 dez 2026</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-open">Aberto</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca/" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O que é</div>
+      <h2 class="section-h2">Reembolso europeu para PME que registem propriedade intelectual</h2>
+      <p class="section-text">O EUIPO SME Fund é uma iniciativa da Comissão Europeia, gerida pelo Instituto da Propriedade Intelectual da União Europeia (EUIPO), que reembolsa parcialmente as PME pelos custos associados à proteção de direitos de propriedade intelectual. A edição de 2026 corre entre 2 de fevereiro e 4 de dezembro de 2026, com uma dotação total de 60 milhões de euros.</p>
+      <p class="section-text">O modelo é simples e atípico no panorama europeu: a empresa apresenta uma candidatura para receber um voucher, paga depois as taxas oficiais do registo, e recebe o reembolso de uma percentagem dessas despesas. Não exige consórcios, não obriga a relatórios técnicos, não impõe critérios de inovação. A única condição material é ser PME estabelecida na União Europeia.</p>
+      <p class="section-text">A grande característica desta edição de 2026 é a procura. O Voucher 1 (IP Scan) e o Voucher 2 (Marcas e Desenhos) esgotaram cedo a sua dotação e estão fechados a novas candidaturas. Permanecem ativos o Voucher 3 (Patentes) e o Voucher 4 (Variedades Vegetais Comunitárias), que são também os que individualmente mais valem por candidatura.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para que serve</div>
+      <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
+      <p class="section-text">O EUIPO SME Fund cobre uma necessidade muito específica: financiar a fase inicial e mais pesada da carteira de propriedade intelectual de uma PME. Não financia I&amp;D nem capital fixo, mas sim a tradução do trabalho de inovação em ativos legalmente protegidos.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Prémios e visibilidade:</strong> os vouchers funcionam como prémio de reembolso por uma ação legal concreta. A PME paga o registo de patente, marca ou variedade vegetal e a EUIPO devolve uma fração elevada do valor. É a única linha europeia que paga diretamente PME individuais sem exigência de projeto consorciado.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Investigação e ciência:</strong> a vertente Voucher 3 (patentes) cobre o ato final do ciclo de I&amp;D, a proteção da invenção. Para empresas com investimento prévio em I&amp;D (incluindo via SIFIDE II), a candidatura ao SME Fund fecha a cadeia entre investigação financiada e ativo intangível protegido.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Os quatro vouchers</div>
+      <h2 class="section-h2">Estrutura dos vouchers e taxas de reembolso</h2>
+      <table class="art-table">
+        <thead><tr><th>Voucher</th><th>Cobertura</th><th>Reembolso</th><th>Estado em maio 2026</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Voucher 1 (IP Scan)</strong></td><td>Diagnóstico personalizado da carteira de PI por especialista nacional. Identifica direitos a registar, riscos e estratégia.</td><td>90% das taxas, ate €1.260</td><td>Esgotado</td></tr>
+          <tr><td><strong>Voucher 2 (Marcas e Desenhos)</strong></td><td>Registo de marcas e desenhos a nível nacional, regional, UE e internacional (sistema Madrid).</td><td>75% nacional/UE; 50% internacional, ate €700</td><td>Esgotado</td></tr>
+          <tr><td><strong>Voucher 3 (Patentes)</strong></td><td>Pesquisa, registo e validação de patentes nacionais e europeias. Inclui pesquisa de estado da arte (state-of-the-art search).</td><td>75% das taxas: ate €1.000 nacional, ate €2.500 EU</td><td>Aberto</td></tr>
+          <tr><td><strong>Voucher 4 (Variedades Vegetais)</strong></td><td>Registo de variedades vegetais junto do Community Plant Variety Office (CPVO).</td><td>75% das taxas oficiais</td><td>Aberto</td></tr>
+        </tbody>
+      </table>
+      <p class="section-text">O reembolso aplica-se sempre às taxas oficiais cobradas pelos institutos de PI (nacionais como o INPI em Portugal, regionais como o EUIPO ou o EPO, e internacionais como o WIPO). Não cobre honorários de advogados ou agentes oficiais de propriedade industrial, que correm por conta da empresa.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Numeros chave</div>
+      <h2 class="section-h2">A dimensão da edição 2026</h2>
+      <div class="stats-row reveal" style="grid-template-columns:repeat(4,1fr);">
+        <div class="stat-cell">
+          <div class="stat-num">€60<sup>M</sup></div>
+          <div class="stat-label">Dotação total 2026</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">90<sup>%</sup></div>
+          <div class="stat-label">Reembolso máximo (IP Scan)</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">€2.500</div>
+          <div class="stat-label">Teto patente UE</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">100K+</div>
+          <div class="stat-label">PME apoiadas desde lançamento</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Elegibilidade</div>
+      <h2 class="section-h2">Quem pode candidatar-se</h2>
+      <p class="section-text">A elegibilidade é uniforme nos quatro vouchers e segue a definição europeia de PME (Recomendação 2003/361/CE):</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Microempresa, pequena ou média empresa:</strong> menos de 250 trabalhadores e volume de negócios anual ate 50 milhões de euros, ou balanço total ate 43 milhões de euros.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Estabelecimento na União Europeia:</strong> sede fiscal num Estado-Membro. Empresas portuguesas são elegíveis automaticamente.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Sem cumulação proibida:</strong> uma PME não pode receber mais do que um voucher do mesmo tipo na mesma janela temporal, mas pode combinar vouchers diferentes (ex: patente nacional + marca UE).</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Sem componente fiscal:</strong> o reembolso EUIPO é compatível com a dedução SIFIDE ou outros benefícios fiscais nacionais, desde que não haja duplicação na mesma despesa concreta.</li>
+      </ul>
+      <p class="section-text">Empresas em situação económica difícil, em processo de insolvência ou com dívidas em mora à União Europeia ficam excluídas. Esta verificação é feita automaticamente no portal do EUIPO no momento da candidatura.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Mecânica do voucher</div>
+      <h2 class="section-h2">Como funciona o ciclo de candidatura e reembolso</h2>
+      <p class="section-text">O processo segue uma lógica de pré-aprovação seguida de execução e reembolso, e é integralmente digital através do portal do EUIPO:</p>
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <div class="step-title">Submissão da candidatura</div>
+            <div class="step-desc">A PME submete o pedido de voucher no portal EUIPO, indicando o tipo de proteção pretendida e os territórios alvo. Avaliação tipicamente dentro de 15 dias úteis.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <div class="step-title">Atribuição do voucher</div>
+            <div class="step-desc">Se aprovada, a PME recebe um voucher com validade de 4 meses (prorrogável por mais 2). O voucher é nominal e tem um valor máximo associado.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <div class="step-title">Execução das despesas</div>
+            <div class="step-desc">A PME submete o pedido de registo junto do instituto competente (INPI nacional, EUIPO regional, EPO europeu, etc.), paga as taxas oficiais e guarda comprovativos.</div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <div class="step-title">Pedido de reembolso</div>
+            <div class="step-desc">Dentro do prazo de validade do voucher, a PME submete o pedido de reembolso anexando faturas e comprovativos de pagamento. O reembolso é processado tipicamente em 30-45 dias úteis.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para quem faz sentido</div>
+      <h2 class="section-h2">Perfis de empresa que beneficiam mais</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Startups deep tech e biotech:</strong> tipicamente têm múltiplas patentes a registar entre o seriado A e B. Voucher 3 cobre 75% das taxas oficiais, libertando capital próprio para R&amp;D.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Empresas que internacionalizam:</strong> proteger marcas e desenhos em mercados europeus secundários é caro. O Voucher 2 (quando reabra em edições futuras) financia ate 75% das taxas regionais e UE.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Empresas agrícolas e do agroalimentar:</strong> o Voucher 4 é praticamente exclusivo deste setor. Variedades vegetais novas (sementes, plantas, frutos) podem ser registadas no CPVO com reembolso de 75% das taxas.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">PME com produtos B2C de design:</strong> mobiliário, calçado, têxtil, eletrónica de consumo. O registo de desenhos é a forma mais económica de proteger a aparência distintiva de um produto.</li>
+      </ul>
+      <div class="highlight-box">
+        <div class="highlight-box-title">Antecipar 2027</div>
+        <div class="highlight-box-text">Se a empresa precisa de IP Scan ou de Voucher 2 (marcas e desenhos), a janela de 2026 já fechou para esses produtos. Vale a pena planear a candidatura para o início de janeiro de 2027, assim que a edição abrir. Histórico mostra que estes dois vouchers esgotam dentro de 2 a 3 meses.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Articulação com outros instrumentos</div>
+      <h2 class="section-h2">Como se cruza com a fiscalidade e o financiamento da inovação</h2>
+      <p class="section-text">O EUIPO SME Fund opera num espaço próprio que raramente concorre com outros instrumentos. Pelo contrário, articula-se com eles de forma natural:</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Com SIFIDE II:</strong> as despesas de registo de patente são parcialmente elegíveis em SIFIDE como custos de proteção da inovação. Se a PME usa o EUIPO Voucher 3 para reembolsar 75% das taxas oficiais, pode considerar os restantes 25% no apuramento SIFIDE, evitando duplicação.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Com Patent Box:</strong> as patentes registadas com apoio EUIPO podem qualificar para o regime fiscal Patent Box português, que reduz a tributação dos rendimentos provenientes da exploração de patentes. O voucher financia o registo, o Patent Box reduz a tributação dos resultados.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Com Horizon Europe e PT2030:</strong> projetos de inovação com cofinanciamento podem incluir registo de PI nas suas despesas elegíveis, mas em valores tipicamente limitados. O EUIPO Voucher complementa esses orçamentos para empresas que querem reforçar a proteção da PI gerada.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">O EUIPO SME Fund é dos instrumentos mais subutilizados pelas PME portuguesas, e ao mesmo tempo dos mais simples de aceder. A maioria das empresas portuguesas que registam patentes ou marcas nacionais paga as taxas integralmente sem saber que pode recuperar 75% delas via reembolso europeu. O custo de oportunidade é direto: cada patente nacional não candidatada significa cerca de 750 euros de reembolso perdido.</p>
+      <p class="section-text">A primeira recomendação prática é mapear a carteira de PI antes de pedir o voucher. Antes de candidatar-se ao Voucher 3, vale a pena perceber quantos pedidos de patente faz sentido submeter no horizonte de 12 meses, em que territórios, e se há proteção complementar de marca ou desenho a fazer. Uma candidatura para uma única taxa de pesquisa é desperdício do voucher; uma candidatura que prepara um pacote de 3 a 5 ações em sequência maximiza o valor recuperado.</p>
+      <p class="section-text">A segunda recomendação é monitorizar a abertura da edição 2027 com atenção. Os vouchers 1 e 2 esgotaram em 2026 dentro de poucos meses. Para empresas que precisem de IP Scan ou de proteção de marca em vários mercados, marcar no calendário a abertura da próxima edição (tipicamente entre janeiro e fevereiro) e ter a candidatura preparada para submeter no primeiro dia faz a diferença entre obter o voucher ou ficar de fora.</p>
+      <p class="section-text">A terceira recomendação é encarar este instrumento como complemento, não como substituto. O EUIPO Voucher financia o registo, mas a estratégia de propriedade intelectual é o que cria valor real. Empresas que tratam o registo de patente como ato administrativo isolado capturam pouco. Empresas que integram a PI numa estratégia mais ampla, articulada com Patent Box, com SIFIDE, com licenciamento ativo, é que retiram o ROI verdadeiro do investimento em proteção.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_sofiacosta.png" alt="Sofia Costa" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Sofia Costa</div>
+          <div class="sidebar-author-role">Especialista I&amp;D e Inovação</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rapidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">EUIPO SME Fund</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Gestão</div>
+        <div class="sidebar-fact-val">EUIPO + Comissão Europeia</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Dotação 2026</div>
+        <div class="sidebar-fact-val">€60 milhões</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Janela</div>
+        <div class="sidebar-fact-val">2 fev a 4 dez 2026</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Vouchers ativos</div>
+        <div class="sidebar-fact-val">V3 (Patentes), V4 (Variedades)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Reembolso patentes</div>
+        <div class="sidebar-fact-val">75% (ate €2.500 EU)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Elegibilidade</div>
+        <div class="sidebar-fact-val">PME estabelecida na UE</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-open">Aberto até 04/12/2026</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Quer perceber se faz sentido candidatar-se aos vouchers EUIPO e como integrar com SIFIDE ou Patent Box?</div>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../fundos-sifide-2-2026/" class="related-link">
+        <span class="related-link-name">SIFIDE II 2026</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../eic-accelerator-2026/" class="related-link">
+        <span class="related-link-name">EIC Accelerator 2026</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../eic-pathfinder-2026/" class="related-link">
+        <span class="related-link-name">EIC Pathfinder 2026</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -163,7 +163,7 @@ O último parágrafo do corpo do artigo deve ser sempre exatamente (em italico, 
 
 ## TEMPLATE HTML
 
-Criar o ficheiro `instrumentos/[slug].html` com a estrutura abaixo. Os metadados (slug, autor, categoria, etc.) são definidos pelo radar-writer antes de chamar este template.
+Criar o ficheiro `instrumentos/[slug]/index.html` com a estrutura abaixo. Os metadados (slug, autor, categoria, etc.) são definidos pelo radar-writer antes de chamar este template.
 
 **Elementos disponíveis para o corpo do artigo:**
 
@@ -407,20 +407,20 @@ Criar o ficheiro `instrumentos/[slug].html` com a estrutura abaixo. Os metadados
 <body>
 
 <nav class="navbar" id="navbar">
-  <a href="../index.html" class="nav-logo">
-    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
   </a>
   <ul class="nav-links">
-    <li><a href="../biblioteca.html" class="active">Biblioteca</a></li>
-    <li><a href="../conhecimento.html">Conhecimento</a></li>
-    <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
-    <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
-    <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+    <li><a href="../../biblioteca.html" class="active">Biblioteca</a></li>
+    <li><a href="../../conhecimento.html">Conhecimento</a></li>
+    <li><a href="../../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos.html">Sobre Nós</a></li>
     <li class="nav-dropdown">
       <a href="#">Oportunidades</a>
       <div class="nav-dropdown-menu">
-        <a href="../parceiros.html">Parceiros</a>
-        <a href="../carreiras.html">Carreiras</a>
+        <a href="../../parceiros.html">Parceiros</a>
+        <a href="../../carreiras.html">Carreiras</a>
       </div>
     </li>
   </ul>
@@ -428,22 +428,22 @@ Criar o ficheiro `instrumentos/[slug].html` com a estrutura abaixo. Os metadados
   <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-mobile-menu" id="mobileMenu">
-  <a href="../biblioteca.html">Biblioteca</a>
-  <a href="../conhecimento.html">Conhecimento</a>
-  <a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
-  <a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
-  <a href="../sobre-nos.html">Sobre Nós</a>
-  <a href="../parceiros.html">Parceiros</a>
-  <a href="../carreiras.html">Carreiras</a>
+  <a href="../../biblioteca.html">Biblioteca</a>
+  <a href="../../conhecimento.html">Conhecimento</a>
+  <a href="../../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos.html">Sobre Nós</a>
+  <a href="../../parceiros.html">Parceiros</a>
+  <a href="../../carreiras.html">Carreiras</a>
   <a href="https://calendly.com/opencapital" class="nav-mobile-cta">Contactar</a>
 </div>
 
 <section class="article-hero">
   <div class="article-hero-inner">
     <nav class="breadcrumb">
-      <a href="../index.html">Início</a>
+      <a href="../../">Início</a>
       <span class="breadcrumb-sep">/</span>
-      <a href="../biblioteca.html">Biblioteca</a>
+      <a href="../../biblioteca.html">Biblioteca</a>
       <span class="breadcrumb-sep">/</span>
       <span class="breadcrumb-current">[NOME_INSTRUMENTO]</span>
     </nav>
@@ -475,7 +475,7 @@ Criar o ficheiro `instrumentos/[slug].html` com a estrutura abaixo. Os metadados
 </section>
 
 <div class="back-bar">
-  <a href="../biblioteca.html" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+  <a href="../../biblioteca.html" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
 </div>
 
 <div class="article-layout">
@@ -487,7 +487,7 @@ Criar o ficheiro `instrumentos/[slug].html` com a estrutura abaixo. Os metadados
     <div class="sidebar-author">
       <div class="sidebar-author-label">Autor</div>
       <div class="sidebar-author-inner">
-        <img src="../Retratos Equipa/[AUTOR_FOTO]" alt="[AUTOR]" class="sidebar-author-photo">
+        <img src="../../Retratos Equipa/[AUTOR_FOTO]" alt="[AUTOR]" class="sidebar-author-photo">
         <div>
           <div class="sidebar-author-name">[AUTOR]</div>
           <div class="sidebar-author-role">[AUTOR_CARGO]</div>
@@ -557,7 +557,7 @@ NAO usar `val-gold` para valores monetarios, dotacoes ou taxas. Valores monetari
 
 **Formato dos instrumentos relacionados na sidebar:**
 ```html
-<a href="portugal-2030.html" class="related-link">
+<a href="../portugal-2030.html" class="related-link">
   <span class="related-link-name">Portugal 2030</span>
   <span class="related-link-arrow">&rarr;</span>
 </a>

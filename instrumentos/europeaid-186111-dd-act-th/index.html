@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<title>EuropeAid 186111: Governacao Democratica na Tailandia: Open Capital</title>
+  <meta name="description" content="EuropeAid 186111: Programa NDICI Direitos Humanos e Democracia para a Tailandia, OSC tailandesas em direitos humanos, governacao democratica e participacao inclusiva. Submissao ate 29/05/2026.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-value.status-cont{color:#2E7D52;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-gold{color:var(--gold);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-fact-val.val-cont{color:#2E7D52;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Inicio</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca/">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">EuropeAid 186111 Tailandia</span>
+    </nav>
+    <p class="hero-cat">Financiamento Publico</p>
+    <h1 class="hero-title">EuropeAid 186111: Governacao Democratica e Direitos Humanos na Tailandia</h1>
+    <p class="hero-tagline">Programa NDICI Direitos Humanos e Democracia para a Tailandia. Subvencoes a OSC tailandesas em direitos humanos, participacao inclusiva (mulheres, juventude, minorias), governacao do setor publico e desenvolvimento social.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Programa</span>
+        <span class="meta-value gold">NDICI HRD (Human Rights &amp; Democracy)</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Codigo</span>
+        <span class="meta-value">EuropeAid/186111/DD/ACT/TH</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Submissao</span>
+        <span class="meta-value">Online via PROSPECT</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-open">Aberto ate 29/05/2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca/" class="back-link">&larr; Voltar ao catalogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Visao Geral</div>
+      <h2 class="section-h2">Programa HRD para um pais em recalibracao democratica</h2>
+      <p class="section-text">A EuropeAid/186111/DD/ACT/TH apoia organizacoes da sociedade civil tailandesas que trabalham em direitos humanos, governacao democratica e participacao inclusiva. E uma materializacao nacional do Programa Tematico Direitos Humanos e Democracia (HRD) do NDICI Global Europe, gerido pela Delegacao da Uniao Europeia em Banguecoque.</p>
+      <p class="section-text">Os direitos humanos e a democracia sao um dos eixos historicamente mais carregados politicamente das call NDICI, e a Tailandia e um terreno particularmente sensivel apos as eleicoes de 2023, a dissolucao do Move Forward Party em 2024 e os debates parlamentares em curso sobre reforma constitucional. A UE escolheu apoiar a sociedade civil tailandesa como contraparte autonoma no acompanhamento destas reformas, com call dedicada a participacao das OSC em politicas publicas e na realizacao de direitos fundamentais.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para que serve</div>
+      <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
+      <p class="section-text">Esta call serve uma necessidade dominante e relativamente focada, a de impacto social estruturado em pais terceiro com forte componente de direitos humanos e participacao inclusiva.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Impacto social e inclusao:</strong> a totalidade da accao visa empoderar grupos vulneraveis (mulheres, juventude, minorias etnicas e religiosas, refugiados, populacoes em situacao de exclusao) e a sociedade civil tailandesa que trabalha pelos seus direitos. E uma call de impacto social puro, dirigida a periodo de transicao politica e democratica.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Eixos de Intervencao</div>
+      <h2 class="section-h2">As quatro linhas de accao</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Reforco da governacao democratica e instituicoes participativas:</strong> apoio a mecanismos de participacao publica, descentralizacao, transparencia institucional, observacao eleitoral, monitorizacao parlamentar.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Promocao dos direitos humanos e liberdades fundamentais:</strong> apoio juridico, monitorizacao de violacoes, protecao de defensores de direitos humanos, liberdade de expressao, liberdade de associacao.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Participacao inclusiva em processos de decisao:</strong> mulheres, jovens, minorias etnicas e religiosas, populacoes urbanas precarias, comunidades das fronteiras norte e sul, sao alvo prioritario.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Capacitacao das OSC tailandesas em accountability e advocacia:</strong> reforco de plataformas e redes da sociedade civil para participacao em politicas publicas, formacao em advocacia legislativa, ferramentas de monitorizacao.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Setores Abrangidos</div>
+      <h2 class="section-h2">As areas tematicas elegiveis</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Genero e direitos humanos:</strong> igualdade de genero, violencia baseada em genero, direitos reprodutivos, LGBTIQ.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Desenvolvimento social:</strong> inclusao de grupos marginalizados, acesso a servicos publicos, protecao social.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Juventude e bem-estar infantil:</strong> participacao juvenil em decisao publica, protecao da crianca, educacao civica.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Governacao do setor publico:</strong> transparencia, anti-corrupcao, qualidade dos servicos publicos, responsabilizacao.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Elegibilidade</div>
+      <h2 class="section-h2">Quem pode candidatar-se</h2>
+      <p class="section-text">A call HRD tem regras de elegibilidade tipicamente abertas, mais alargadas do que as call CSO regulares:</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Tipologia:</strong> pessoas coletivas sem fins lucrativos, ONG, OSC, fundacoes. Universidades sem fins lucrativos podem entrar quando comprovem natureza nao governamental.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Estabelecimento:</strong> a particularidade do programa HRD e que e abertamente global. Sao elegiveis entidades com sede em qualquer pais (sem prejuizo das limitacoes inerentes a natureza e objetivos da accao), incluindo nao-Estados-Membros UE.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Localizacao da accao:</strong> as accoes tem de ser implementadas na Tailandia.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Parcerias com OSC tailandesas:</strong> incentivadas e tipicamente decisivas no scoring. Em paises com restricoes ao espaco civico, a Comissao tende a valorizar consorcios mistos com presenca operacional local credenciada.</li>
+      </ul>
+      <div class="highlight-box">
+        <div class="highlight-box-title">Confirmacao de Tetos e Cofinanciamento</div>
+        <div class="highlight-box-text">A dotacao total da call, os tetos minimos e maximos por proposta, a percentagem maxima de cofinanciamento UE e a obrigatoriedade ou nao de FSTP (financial support to third parties) nao foram divulgados publicamente fora da pagina PROSPECT do aviso. Em call HRD a este nivel de risco politico, o cofinanciamento UE pode chegar a 95 por cento dos custos totais elegiveis. Confirmacao integral na Guia para Solicitantes obrigatoria.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Contexto Estrategico</div>
+      <h2 class="section-h2">Porque a UE alarga investimento em HRD na Tailandia</h2>
+      <p class="section-text">A Tailandia e parceiro estrategico da UE em ASEAN. As negociacoes do Acordo de Comercio Livre UE-Tailandia avancaram em 2024 e 2025, e a Comissao tem sublinhado que a sua densidade democratica deve ser acompanhada por compromisso visivel com direitos humanos. Esta call e instrumento dessa logica, financia sociedade civil tailandesa que documenta, monitora e advoga por reformas, em paralelo com a aproximacao economica.</p>
+      <p class="section-text">Para a Comissao, justica de genero, governacao do setor publico e participacao inclusiva sao os tres alicerces que distinguem cooperacao com Tailandia de cooperacao puramente economica. Investir em organizacoes que acompanham reforma constitucional, observam eleicoes e protegem defensores de direitos humanos e a aposta de que o ecossistema civico que se estiver de pe daqui a tres anos sera o unico capaz de sustentar reformas politicas mais profundas.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Aplicacao em Portugal</div>
+      <h2 class="section-h2">Quando faz sentido a uma entidade portuguesa entrar</h2>
+      <p class="section-text">Portugal nao tem comunidade significativa de organizacoes com track record tailandes direto, ao contrario de Franca, Reino Unido, Alemanha ou Holanda, que mantem programas de cooperacao em direitos humanos no Sudeste Asiatico ha decadas. A barreira a entrada como lead applicant e por isso material para qualquer entidade portuguesa sem presenca operacional regional.</p>
+      <p class="section-text">Existem porem dois cenarios em que a entrada como co-applicant pode fazer sentido. Primeiro, organizacoes portuguesas com expertise tematica especifica (igualdade de genero, monitorizacao parlamentar, observacao eleitoral, direitos digitais) que possam complementar consorcios liderados por OSC com presenca regional. Segundo, fundacoes ou centros academicos com ligacao a redes europeias estabelecidas em ASEAN (FORUM-ASIA, AsiaDHRRA, EU-Asia Centre).</p>
+      <p class="section-text">Em ambos os cenarios, a entrada nao se constroi a quatro semanas do prazo. So organizacoes com decisao previa de internacionalizar para Sudeste Asiatico ou com ligacao previa a redes regionais devem considerar este aviso especifico.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">A EuropeAid 186111 e uma call HRD relativamente nichada, com regras de elegibilidade abertas mas tetos e regras especificas por confirmar via PROSPECT. Para a maioria das organizacoes portuguesas, e instrumento de leitura estrategica mais do que de candidatura imediata.</p>
+      <p class="section-text">Tres recomendacoes para quem esteja a avaliar entrar. Primeira, ler integralmente a Guia para Solicitantes antes de qualquer decisao. As call HRD tem detalhes operacionais (tetos por proposta, regras FSTP, criterios de avaliacao) que so estao no documento oficial e que mudam call a call mesmo dentro do mesmo programa. Segunda, nao improvisar parceiros tailandeses. Em pais com espaco civico sob pressao, a credibilidade do parceiro local e o filtro que mais discrimina propostas. Diligencia reputacional, validacao com redes regionais credenciadas e desenho cuidadoso da governacao do consorcio sao decisivos. Terceira, considerar entrada como expertise tematica europeia em consorcios ja existentes, e via mais realista do que liderar.</p>
+      <p class="section-text">Para a Open Capital, este instrumento e relevante mapear no perimetro de cooperacao internacional dos clientes do setor terceiro, das fundacoes e dos centros academicos. Faz mais sentido como prolongamento natural de organizacoes que ja construiram presenca regional no Sudeste Asiatico do que como instrumento de internacionalizacao oportunista.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentarios, correcoes ou contrapontos sao bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Tecnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rapidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">NDICI HRD (Direitos Humanos e Democracia)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Codigo</div>
+        <div class="sidebar-fact-val">EuropeAid/186111/DD/ACT/TH</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Eixos</div>
+        <div class="sidebar-fact-val">4 (governacao, direitos, participacao, capacitacao OSC)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Elegibilidade</div>
+        <div class="sidebar-fact-val">Aberta globalmente (HRD); accao na Tailandia</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Setores</div>
+        <div class="sidebar-fact-val">Genero, juventude, minorias, governacao publica</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Localizacao</div>
+        <div class="sidebar-fact-val">Tailandia</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Submissao</div>
+        <div class="sidebar-fact-val">Online via PROSPECT</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-open">Aberto ate 29/05/2026</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Esta a avaliar entrar como co-applicant numa call HRD ou a estruturar consorcio em Sudeste Asiatico? Marque uma reuniao com a equipa.</div>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../europeaid-185446-dd-act-gt/" class="related-link">
+        <span class="related-link-name">EuropeAid 185446 Guatemala</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../europeaid-185831-dd-act-sy/" class="related-link">
+        <span class="related-link-name">EuropeAid 185831 Siria</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../europeaid-186089-dd-act-tz/" class="related-link">
+        <span class="related-link-name">EuropeAid 186089 Tanzania</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../europeaid-186382-dd-act-bo/" class="related-link">
+        <span class="related-link-name">EuropeAid 186382 Bolivia</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reciclagem de Baterias BATT4EU CL5 2027 (HORIZON-CL5-2027-02-D2-05): Open Capital</title>
+  <meta name="description" content="HORIZON-CL5-2027-02-D2-05: 18,8 M€ Innovation Action para 2 projetos que melhoram processos europeus de reciclagem de baterias Li-ion. TRL 6-7, EU Batteries Regulation.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-value.status-cont{color:#2E7D52;font-weight:600;}
+    .meta-value.status-planned{color:var(--gold);font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-gold{color:var(--gold);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-fact-val.val-cont{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-planned{color:var(--gold);font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca/">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Reciclagem de Baterias BATT4EU CL5 2027</span>
+    </nav>
+    <p class="hero-cat">Financiamento Público</p>
+    <h1 class="hero-title">Reciclagem de Baterias BATT4EU CL5 2027</h1>
+    <p class="hero-tagline">18,8 milhões de euros para dois projetos europeus que melhoram a flexibilidade e eficiência de processos industriais de reciclagem de baterias Li-ion, alinhados com a EU Batteries Regulation.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotação 2027</span>
+        <span class="meta-value gold">€18,8 milhões</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Tipo de ação</span>
+        <span class="meta-value">HORIZON-IA</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Deadline</span>
+        <span class="meta-value">01/11/2027</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-planned">Previsto</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca/" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O que é</div>
+      <h2 class="section-h2">A próxima geração de processos europeus de reciclagem de baterias Li-ion</h2>
+      <p class="section-text">O HORIZON-CL5-2027-02-D2-05 é uma Innovation Action dotada de 18,8 milhões de euros, dividida em dois grants de 9,4 milhões cada, com o objetivo de modernizar a infraestrutura europeia de reciclagem de baterias Li-ion. Não é investigação básica nem demonstração inicial: o objetivo é melhorar processos já à escala industrial, tornando-os mais flexíveis (capazes de processar feedstocks variados), mais adaptáveis (a químicas de bateria emergentes) e mais eficientes (em recuperação de materiais e custo).</p>
+      <p class="section-text">A ação opera no quadro da Parceria Europeia em Baterias (BATT4EU), iniciativa público-privada que articula investigação europeia em toda a cadeia de valor da bateria. Para esta call específica, o foco é estreito: melhorar o que já existe, não inventar processo novo. Os projetos arrancam em TRL 6 (sistema demonstrado em ambiente relevante) e devem chegar a TRL 7 (sistema demonstrado em ambiente operacional). Significa que o consórcio vencedor tem de ter acesso a infraestrutura industrial real, não apenas laboratório ou planta-piloto.</p>
+      <p class="section-text">O contexto regulatório é determinante. A EU Batteries Regulation, em vigor desde 2023 e com obrigações progressivas até 2031, fixa metas vinculativas de eficiência de reciclagem (taxas de recuperação por material) e de conteúdo reciclado em baterias novas (lítio, cobalto, níquel, chumbo). A indústria europeia tem de cumprir estas metas, e a reciclagem atual não consegue chegar lá com os processos existentes. Esta call é a resposta da Comissão a essa lacuna.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para que serve</div>
+      <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
+      <p class="section-text">A ação responde a duas necessidades simultâneas e indissociáveis. Por um lado, é instrumento de descarbonização e economia circular: melhorar reciclagem reduz dependência europeia de matérias-primas críticas importadas e fecha o ciclo de vida das baterias, peça central da transição energética. Por outro, exige investimento produtivo real em infraestrutura industrial, dado que o salto de TRL 6 para 7 implica adaptação de plantas existentes ou construção de demonstradores industriais.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Sustentabilidade, energia e clima:</strong> a reciclagem de baterias é peça crítica da estratégia europeia de matérias-primas críticas (Critical Raw Materials Act) e da circularidade da cadeia de valor das baterias. Esta call avança especificamente recuperação de lítio, cobalto, níquel e materiais para black mass de qualidade que possa reentrar em produção de baterias novas, fechando o loop industrial.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Investimento produtivo:</strong> a passagem de TRL 6 para 7 implica investimento em planta industrial existente ou nova, com integração de equipamentos hidrometalúrgicos ou pirometalúrgicos otimizados, sistemas de pré-tratamento digital, e capacidade de processar lotes de composição variável. É inovação aplicada com impacto na linha de produção, não apenas tecnologia em laboratório.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Estrutura financeira</div>
+      <h2 class="section-h2">Dois grants de €9,4 M, IA, TRL 6 a 7</h2>
+
+      <div class="stats-row reveal" style="grid-template-columns:repeat(4,1fr);">
+        <div class="stat-cell">
+          <div class="stat-num">€18,8<sup>M</sup></div>
+          <div class="stat-label">Dotação total</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">2<sup>grants</sup></div>
+          <div class="stat-label">Projetos selecionados</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">€9,4<sup>M</sup></div>
+          <div class="stat-label">Por projeto</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">6<sup>→7</sup></div>
+          <div class="stat-label">TRL inicial e final</div>
+        </div>
+      </div>
+
+      <p class="section-text">É HORIZON-IA (Innovation Action) com Action Grant Budget-Based, ou seja, taxa de financiamento padrão de 70% para entidades lucrativas e 100% para entidades não lucrativas. O orçamento por projeto (9,4 milhões) é dimensão substancial que permite consórcios de oito a quinze parceiros e investimento em infraestrutura experimental significativa. A integração com o Joint Research Centre (JRC) é possível como membro do consórcio sem financiamento ou como parceiro associado, sem participação na preparação da proposta, dada a sua relevância em sustentabilidade e circularidade industrial.</p>
+      <p class="section-text">A obrigação de cumprir Safe and Sustainable by Design (SSbD) framework da Comissão para avaliação de segurança química e sustentabilidade do material é importante. Esta framework está a ser progressivamente exigida em todas as ações industriais Horizon, e força os projetos a integrar avaliação de risco químico e ambiental desde o desenho dos processos.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Resultados obrigatórios</div>
+      <h2 class="section-h2">Quatro outputs que a proposta tem de demonstrar</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Eficiência de custo e recuperação:</strong> melhorar simultaneamente o custo unitário do processo de reciclagem e a percentagem de materiais recuperados, em comparação com baselines atuais documentados.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Processamento de feedstocks diversos:</strong> demonstrar capacidade de reciclar tanto sucata de produção (composição conhecida e relativamente homogénea) como baterias Li-ion em fim de vida com químicas mistas (NMC, LFP, LCO em proporções variáveis).</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Redução de dependência de importação:</strong> melhorar competitividade europeia através de aumento de oferta interna de matérias-primas via reciclagem, particularmente lítio, cobalto e níquel.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Conformidade demonstrada com EU Batteries Regulation:</strong> evidência empírica que os processos atingem ou superam as metas regulamentares de eficiência de reciclagem e taxas de recuperação por material.</li>
+      </ul>
+
+      <div class="highlight-box">
+        <div class="highlight-box-title">Compliance regulatório como critério de avaliação</div>
+        <div class="highlight-box-text">A demonstração de compliance com a EU Batteries Regulation não é apenas check técnico no final do projeto. É integrada nos critérios de avaliação da proposta. Consórcios sem demonstração credível de como os processos vão cumprir as metas regulamentares de 2031 (90% recuperação Co e Ni, 80% Li, 50% conteúdo reciclado em novas baterias) têm dificuldade em pontuar nos critérios de impacto.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Componentes técnicas</div>
+      <h2 class="section-h2">Onde residem as oportunidades de inovação</h2>
+
+      <table class="art-table">
+        <thead><tr><th>Componente</th><th>Foco técnico</th><th>Oportunidades de I&amp;D</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Pré-tratamento digital</strong></td><td>Triagem automatizada, classificação de químicas, separação de componentes</td><td>Visão computacional, sensores espectroscópicos, IA de classificação em linha</td></tr>
+          <tr><td><strong>Black mass processing</strong></td><td>Conversão de massa preta em materiais battery-grade puros</td><td>Inovações químicas e mecânicas em processamento de black mass</td></tr>
+          <tr><td><strong>Hidrometalurgia</strong></td><td>Lixiviação seletiva, extração líquido-líquido, precipitação controlada</td><td>Solventes mais seguros, redução de consumo de água e ácidos, processos low-carbon</td></tr>
+          <tr><td><strong>Pirometalurgia</strong></td><td>Fusão e separação térmica para recuperação metálica</td><td>Eficiência energética, redução de emissões, recuperação de lítio (tradicionalmente perdido)</td></tr>
+          <tr><td><strong>Modelação ambiental</strong></td><td>Avaliação tecno-económica e LCA completa</td><td>Modelos integrados de pegada carbónica, water footprint, eutrofização</td></tr>
+        </tbody>
+      </table>
+
+      <p class="section-text">Os planos de exploração têm de incluir estratégias preliminares de escalabilidade, comercialização e deployment, com indicação de fontes de financiamento futuras (incluindo o Innovation Fund europeu). Esta articulação com pipeline financeiro é importante: a Comissão quer evitar projetos que terminem em demonstração industrial e não consigam escalar para produção comercial.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perfil do consórcio</div>
+      <h2 class="section-h2">Recicladores industriais + tech providers + utilizadores</h2>
+      <p class="section-text">O perfil ideal de consórcio combina três tipos de parceiros. Primeiro, reciclador industrial europeu com planta operacional onde os novos processos serão demonstrados (Umicore na Bélgica, Northvolt Revolt na Suécia, Glencore Recycling, BASF na Alemanha, Erion na Itália, ou players emergentes em Polónia, Espanha e Portugal). Segundo, fornecedores de tecnologia em pré-tratamento digital, química de processo, equipamento metalúrgico (institutos como Fraunhofer ISI, CEA, VTT, ou empresas tecnológicas especializadas). Terceiro, fabricantes de células de bateria europeus interessados em fechar o ciclo (CATL Europa, ACC, Verkor, Northvolt) que validam que o material reciclado entra em produção sem comprometer qualidade.</p>
+      <p class="section-text">A obrigação de chegar a TRL 7 implica que o consórcio tem de ter sítio industrial real para demonstração. Isto exclui consórcios apenas académicos, e privilegia parcerias indústria-investigação consolidadas. O reporte ao European Partnership on Batteries para monitorização de KPIs é obrigatório, criando densidade adicional de governance.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Calendário e elegibilidade</div>
+      <h2 class="section-h2">Janela de seis meses entre abertura e deadline</h2>
+      <p class="section-text">A abertura está prevista para 1 de abril de 2027 com deadline a 1 de novembro de 2027, dando aproximadamente sete meses para preparar a proposta. É janela razoável para uma Innovation Action complexa com componente industrial, mas implica que a constituição do consórcio e o pré-acordo industrial sobre uso da planta de demonstração têm de estar finalizados antes da abertura.</p>
+      <p class="section-text">A elegibilidade segue Annex B do Work Programme General Annexes. Para componentes de observação satelital (eventualmente úteis para tracking de fluxos de resíduos a nível europeu) há requisito de Copernicus e/ou Galileo/EGNOS. As cláusulas de transferência de propriedade e licenciamento exclusivo têm peso material aqui: a tecnologia desenvolvida pode ter valor estratégico para fabricantes de baterias asiáticos, e a Comissão reserva-se o direito de objetar a transferências de IP até quatro anos após o fim da ação.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">Esta call é estrategicamente relevante para Portugal por uma razão particular: o país está a desenvolver capacidade industrial em baterias (projetos âncora em Sines com lítio, planos de células em discussão, fábricas de cátodos em estudo) e o ecossistema de reciclagem é incipiente, mas com janela de oportunidade para construção. A entrada europeia neste tema permite ligação a fluxos de feedstock, transferência tecnológica, e consorciação com recicladores europeus consolidados.</p>
+      <p class="section-text">O encaixe português realista é como parceiro pleno em consórcio europeu, não como coordenador. A coordenação tende a vir de recicladores de larga escala (Umicore, Northvolt Revolt, BASF) que têm planta industrial validada. Para Portugal, há três caminhos potenciais: (1) participação de empresas nacionais de reciclagem de eletrónicos com interesse em diversificar para baterias (Ambigest, Sinergiae, Ecolezíria), (2) participação de centros de I&amp;D com competência em hidrometalurgia ou processamento mineral (LNEG, INEGI, IST, U. Aveiro), (3) participação de empresas em formação na cadeia portuguesa de baterias com interesse em fechar circularidade (eventuais joint ventures lítio-cátodo).</p>
+      <p class="section-text">O período útil de preparação é o segundo semestre de 2026 e o primeiro de 2027. Implica três passos sequenciais: identificar parceiros industriais europeus em formação ou com appetite para alargar consórcios, desenhar contributo técnico português específico (componente de tratamento digital, química de processo de baixo impacto, ou validação de recovery de lítio), e formalizar pré-acordo industrial sobre acesso a planta de demonstração. Sem este último ponto, a candidatura não é credível.</p>
+      <p class="section-text">Para empresas industriais portuguesas com interesse em entrar na cadeia de valor de baterias (incluindo fluxo de matéria-prima reciclada), esta é uma das poucas janelas europeias com financiamento substancial e com horizonte temporal suficiente para construir capacidade. Recomendamos avaliação técnica e estratégica antes do final de 2026. A Open Capital pode apoiar a identificação de parceiros europeus relevantes e o desenho do pacote português de contribuição.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Programa</div><div class="sidebar-fact-val">Horizonte Europa, Cluster 5</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Call</div><div class="sidebar-fact-val">HORIZON-CL5-2027-02</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Tópico</div><div class="sidebar-fact-val">D2-05</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Tipo de ação</div><div class="sidebar-fact-val">HORIZON-IA budget-based</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Dotação 2027</div><div class="sidebar-fact-val">€18,8 milhões</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Grants previstos</div><div class="sidebar-fact-val">2</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Grant unitário</div><div class="sidebar-fact-val">€9,4 milhões</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">TRL</div><div class="sidebar-fact-val">6 → 7</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Parceria</div><div class="sidebar-fact-val">BATT4EU</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Quadro regulatório</div><div class="sidebar-fact-val">EU Batteries Regulation</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Framework SSbD</div><div class="sidebar-fact-val">Obrigatória</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">JRC</div><div class="sidebar-fact-val">Possível como zero-funded</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Países elegíveis</div><div class="sidebar-fact-val">UE + países associados HE</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Abertura</div><div class="sidebar-fact-val">01/04/2027</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Deadline</div><div class="sidebar-fact-val">01/11/2027</div></div>
+      <div class="sidebar-fact"><div class="sidebar-fact-key">Estado</div><div class="sidebar-fact-val val-planned">Previsto, deadline 01/11/2027</div></div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Quer posicionar a sua empresa em consórcio europeu de reciclagem industrial de baterias?</div>
+      <a href="https://calendly.com/opencapital" target="_blank" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../horizonte-europa/" class="related-link"><span class="related-link-name">Horizonte Europa</span><span class="related-link-arrow">&rarr;</span></a>
+      <a href="../horizon-cl5-2027-02-d3-08/" class="related-link"><span class="related-link-name">SET Plan Combustíveis Renováveis CL5 2027</span><span class="related-link-arrow">&rarr;</span></a>
+      <a href="../horizon-cl4-2027-04-data-09/" class="related-link"><span class="related-link-name">Eficiência Energética Data Centres IA CL4 2027</span><span class="related-link-arrow">&rarr;</span></a>
+      <a href="../prr/" class="related-link"><span class="related-link-name">PRR</span><span class="related-link-arrow">&rarr;</span></a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -117,7 +117,7 @@ Aplicar **literalmente** o template HTML de `instrumento-template.md`:
 1. Substituir todos os placeholders `[NOME_INSTRUMENTO]`, `[HERO_TAGLINE]`, `[META_FACT_*]`, `[CORPO_DO_ARTIGO]`, `[AUTOR]`, `[AUTOR_FOTO]`, `[AUTOR_CARGO]`, `[SIDEBAR_FACTOS]`, `[SIDEBAR_CTA_TEXT]`, `[INSTRUMENTOS_RELACIONADOS]`.
 2. Compor o corpo seguindo a logica editorial da Serie 3.1 (raciocinio obrigatorio, building blocks adequados ao tipo de instrumento, secao "Para que serve" obrigatoria, "Perspetiva Open Capital" obrigatoria antes do fecho, paragrafo de fecho fixo).
 3. Respeitar todas as regras criticas: AO90, sem travessao, sem `hero-gold-line`, sem secoes "Como candidatar", classes de cor consistentes para estado.
-4. Escrever em `instrumentos/[slug].html`.
+4. Escrever em `instrumentos/[slug]/index.html`.
 
 **Comprimento:** 1500-2500 palavras (regra geral). 800-1200 palavras se material de regime catalogo limitado.
 
@@ -147,7 +147,7 @@ Adicionar entrada ao FINAL de `instruments-catalog.json > instruments`:
   "highlight0": "[beneficio principal]",
   "highlight1": "[beneficiarios]",
   "highlight2": "[localizacoes]",
-  "href": "instrumentos/[slug].html",
+  "href": "instrumentos/[slug]/index.html",
   "featured": false
 }
 ```
@@ -162,7 +162,7 @@ Adicionar entrada ao FINAL de `instruments-catalog.json > instruments`:
 
 Em `registry/shards/[shard].json`, adicionar:
 ```json
-{ "id": "[slug]", "file": "instrumentos/[slug].html", "source": "[source_id]", "state": "[estado]", "last_check": "[hoje]" }
+{ "id": "[slug]", "file": "instrumentos/[slug]/index.html", "source": "[source_id]", "state": "[estado]", "last_check": "[hoje]" }
 ```
 
 ### 6b. Adicionar ao lookup (dedup O(1))
@@ -209,7 +209,7 @@ Em `registry/index.json`:
 
 Apos os passos 4-6, validar localmente que tudo ficou alinhado:
 
-1. Existe `instrumentos/[slug].html`? Se nao: ABORTAR e reportar erro grave.
+1. Existe `instrumentos/[slug]/index.html`? Se nao: ABORTAR e reportar erro grave.
 2. O slug aparece em `instruments-catalog.json` exatamente uma vez? Se 0: re-aplicar passo 5. Se >1: remover duplicados (manter o primeiro).
 3. O slug aparece no shard correto em `registry/shards/[shard].json`? Se nao: re-aplicar passo 6a.
 4. O slug aparece em `registry/lookup.json > by_id`? Se nao: re-aplicar passo 6b.
@@ -221,7 +221,7 @@ Esta verificacao deteta o tipo de regressao que originou os 13 orfaos detectados
 ## PASSO 8: Build do footer
 
 ```bash
-python build_footer.py instrumentos/[slug].html
+python build_footer.py instrumentos/[slug]/index.html
 ```
 
 Preenche os marcadores `<!-- FOOTER:START --> ... <!-- FOOTER:END -->` no novo ficheiro.
@@ -233,7 +233,7 @@ Preenche os marcadores `<!-- FOOTER:START --> ... <!-- FOOTER:END -->` no novo f
 Regra global do CLAUDE.md: toda a skill que cria/modifica ficheiros do site deve fazer commit + push automaticamente.
 
 ```bash
-git -C "$REPO" add instrumentos/[slug].html instruments-catalog.json registry/
+git -C "$REPO" add instrumentos/[slug]/index.html instruments-catalog.json registry/
 git -C "$REPO" commit -m "instrumento: [nome do instrumento] (manual)"
 git -C "$REPO" push origin main
 ```
@@ -265,7 +265,7 @@ Input manual ($ARGUMENTS)
 1. Ler instrumento-template.md (regras + template)
 2. Processar input + validacao anti-PAA
 3. Definir metadados editoriais (slug, autor, categorias, setores, necessidades, shard)
-4. Criar instrumentos/[slug].html via template
+4. Criar instrumentos/[slug]/index.html via template
 5. Adicionar entrada a instruments-catalog.json
 6a-d. Atualizar shard + lookup + integrity + index
 7. Auto-validacao de paridade

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<title>Tarifas de Trump: o que muda para as empresas portuguesas | Open Capital</title>
+  <meta name="description" content="Análise às tarifas anunciadas pela administração Trump em abril de 2025 e às implicações concretas para exportadores, industriais e cadeias de valor europeias.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../../">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Mercados</span>
+      </nav>
+      <h1 class="article-title">Tarifas de Trump: o que muda para as empresas portuguesas</h1>
+      <p class="article-standfirst">A administração Trump reintroduziu, em abril de 2025, o instrumento tarifário como eixo central da política económica americana. Os efeitos já se sentem em Portugal, e vão durar.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Mercados</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Maio 2025</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>11 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Luís Gomes</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../atualidade/" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+      <img src="../../assets/articles/tarifastrump_trend.jpg" alt="Tarifas de Trump: o que muda para as empresas portuguesas" class="article-cover-img" style="object-position:center top;">
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Os factos</div>
+        <h2>O que foi anunciado a 2 de abril</h2>
+        <p>A 2 de abril de 2025, Donald Trump subiu ao palanque do Rose Garden e apresentou, sob a designação de "Liberation Day", o maior pacote tarifário americano em cerca de um século. A ordem executiva estabelece uma tarifa universal de 10% sobre praticamente todas as importações que entram nos Estados Unidos, em vigor desde 5 de abril. Por cima dessa base, foram aplicadas tarifas "recíprocas" específicas para um conjunto de parceiros comerciais, com percentagens que variam entre 11% e 50%.</p>
+        <p>A União Europeia foi colocada no escalão dos 20%. A China começou nos 34% e, após uma sequência de retaliações mútuas, chegou aos 145% antes de uma trégua negociada a 12 de maio em Genebra ter reduzido a tarifa americana sobre produtos chineses para 30% durante 90 dias. O Vietname foi atingido com 46%, o Japão com 24%, a Coreia do Sul com 25%. Para alguns produtos existem regimes específicos: o aço e o alumínio mantêm a tarifa de 25% introduzida em março, os automóveis carregam uma sobretaxa de 25% adicional desde 3 de abril, e componentes farmacêuticos e semicondutores foram temporariamente excluídos.</p>
+        <p>A 9 de abril, sete dias depois do anúncio original, Trump suspendeu por 90 dias a aplicação das tarifas recíprocas acima dos 10% para quase todos os países, incluindo a UE. A justificação oficial foi "dar espaço a negociações". A justificação não oficial, que vários membros da administração deixaram passar em off, foi a reação dos mercados: o S&P 500 perdeu 10,5% em duas sessões, o rendimento das Treasuries a 10 anos disparou acima de 4,5%, e o dólar recuou de forma visível contra o euro e o iene.</p>
+        <p>A suspensão termina a 8 de julho. Não é claro, neste momento, o que acontece depois.</p>
+      </div>
+
+      <div class="art-highlight reveal">
+        <div class="art-highlight-label">Contexto</div>
+        <div class="art-highlight-text">A tarifa efetiva média aplicada pelos EUA aos seus parceiros passou de cerca de 2,5% no início de 2025 para aproximadamente 22,5% no pico de abril. É o nível mais alto desde a Smoot-Hawley Tariff Act de 1930. Mesmo com a suspensão parcial, a tarifa média efetiva fica em torno dos 15%, seis vezes superior ao ponto de partida.</div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">A dimensão</div>
+        <h2>Os números que importam reter</h2>
+        <div class="stats-row cols-4">
+          <div class="stat-cell">
+            <div class="stat-num">10<sup>%</sup></div>
+            <div class="stat-label">Tarifa base universal</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">20<sup>%</sup></div>
+            <div class="stat-label">Tarifa recíproca sobre a UE</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">90</div>
+            <div class="stat-label">Dias de suspensão</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">€6,1<sup>MM</sup></div>
+            <div class="stat-label">Exportações PT para os EUA em 2024</div>
+          </div>
+        </div>
+        <p>Os Estados Unidos são o terceiro maior destino de bens exportados por Portugal, depois de Espanha e França. Em 2024, as exportações portuguesas para o mercado americano atingiram 6,1 mil milhões de euros, cerca de 7,1% do total. Em alguns setores específicos, a dependência é muito mais alta: cortiça, têxtil, calçado, vinhos, azeite, máquinas e componentes automóveis concentram mais de 60% desse valor.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">O efeito direto</div>
+        <h2>Quem, em Portugal, vai sentir primeiro</h2>
+        <p>A tarifa de 10% que já está em vigor, e a de 20% que pode voltar em julho, não afetam todos os exportadores da mesma forma. O impacto depende de três variáveis: o peso do mercado americano no volume de negócios, a margem operacional da empresa, e a elasticidade do produto face ao preço final.</p>
+
+        <table class="art-table">
+          <thead>
+            <tr><th>Setor</th><th>Exposição aos EUA</th><th>Vulnerabilidade</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Cortiça</strong></td><td>Cerca de 30% das exportações do setor</td><td>Alta. Produto premium, sem substituto americano de escala, mas competidor direto com tampas sintéticas.</td></tr>
+            <tr><td><strong>Têxtil e vestuário</strong></td><td>9% das exportações do setor</td><td>Média-alta. Margens apertadas e concorrência asiática com tarifas ainda mais punitivas, o que compensa parcialmente.</td></tr>
+            <tr><td><strong>Calçado</strong></td><td>8% das exportações do setor</td><td>Média. Portugal está posicionado no segmento médio-alto, menos sensível a preço.</td></tr>
+            <tr><td><strong>Vinhos e azeite</strong></td><td>14% e 11%, respetivamente</td><td>Alta. Concorrem com produção interna americana e com Itália, Espanha e Chile.</td></tr>
+            <tr><td><strong>Componentes automóveis</strong></td><td>Indireta, via Alemanha e França</td><td>Muito alta se a tarifa sobre automóveis europeus se mantiver.</td></tr>
+            <tr><td><strong>Máquinas e moldes</strong></td><td>11% do setor</td><td>Média. Portugal tem vantagem técnica em moldes, difícil de substituir no curto prazo.</td></tr>
+          </tbody>
+        </table>
+
+        <p>Há uma distinção que merece atenção. Para a cortiça ou para moldes de injeção, onde Portugal é líder tecnológico mundial, a tarifa é um custo que o cliente americano acaba por absorver em larga medida, porque não tem alternativa. Para vinhos ou calçado, onde existem alternativas, a tarifa transfere procura para competidores não tarifados ou menos tarifados. É uma diferença entre perda de margem e perda de mercado. As empresas deviam saber, hoje, em qual dos dois casos estão.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">O efeito indireto</div>
+        <h2>O canal alemão e o canal cambial</h2>
+        <p>Uma parte substancial do que Portugal exporta para os EUA não vai diretamente. Vai incorporada em produtos alemães, franceses e italianos. Componentes automóveis, têxteis técnicos, peças metálicas, eletrónica embebida. Se os Estados Unidos desaceleram as compras à Alemanha, Portugal sente-o em cascata, com desfasamento de dois ou três trimestres, muitas vezes sem que o gestor perceba que a causa é uma tarifa do outro lado do Atlântico.</p>
+        <p>O canal cambial é o segundo vetor silencioso. Desde o anúncio, o euro valorizou cerca de 6% face ao dólar. Em abril passou a barreira dos 1,14 pela primeira vez em três anos. Para quem exporta em dólares, cada ponto percentual de valorização do euro come diretamente a margem. Para quem importa matérias-primas cotadas em dólar (petróleo, químicos, comodities agrícolas), há alívio. Mas a conta final depende da estrutura específica de cada empresa, e poucas empresas fizeram esse cálculo com detalhe.</p>
+      </div>
+
+      <div class="pull-quote reveal">
+        <div class="pull-quote-text">"A tarifa é o sintoma visível. O problema estratégico é perceber que o comércio internacional deixou de ser um ambiente estável para se tornar um campo onde as regras mudam com a frequência de um ciclo eleitoral."</div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">O que está em jogo</div>
+        <h2>Não é uma negociação. É um regime novo</h2>
+        <p>Aqui começa a parte da análise onde a neutralidade é um erro. Há uma tentação, em muitos relatórios que têm saído nas últimas semanas, de tratar isto como uma disputa comercial pontual, resolvida com cimeiras e compromissos. Não é. É uma mudança de regime.</p>
+        <p>O que Trump executou em abril não foi um movimento tático para extrair concessões. Foi a instalação, por decreto executivo, de uma arquitetura tarifária permanente, construída sobre a International Emergency Economic Powers Act, que confere ao Presidente poderes quase ilimitados para impor restrições comerciais em nome de uma "emergência económica nacional". A moldura legal permite retirar, reimpor, e modular tarifas a qualquer momento, sem passagem pelo Congresso. O instrumento não tem data de validade.</p>
+        <p>Mesmo que em julho se chegue a um acordo com a UE que reduza a tarifa recíproca de 20% para, digamos, 5%, a tarifa base de 10% universal muito provavelmente fica. E o mecanismo para voltar a subir, sempre que convier politicamente, está instalado. Quem planeia uma estratégia de internacionalização para os próximos cinco anos partindo do pressuposto de que o regime comercial americano é estável, está a planear a partir de uma premissa que já não é verdadeira.</p>
+        <p>A segunda leitura é menos imediata mas mais importante. Este pacote tarifário não é o primeiro sinal, é a confirmação de um processo que já se desenhava há anos. A fragmentação do comércio global não começou em abril de 2025. Começou com as tarifas sobre a China em 2018, acelerou com a Covid, ganhou peso geopolítico com a invasão da Ucrânia em 2022, e consolidou-se agora. O comércio internacional está a deixar de ser um sistema único e a transformar-se em três ou quatro blocos parcialmente isolados: América, China, Europa, e uma periferia mutável no meio.</p>
+        <p>Para uma empresa portuguesa, isto significa que a lógica de "vender para onde faz sentido" está a ser substituída por "vender para onde é politicamente viável vender". É uma diferença qualitativa, não quantitativa.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Resposta europeia</div>
+        <h2>Bruxelas prepara-se, devagar</h2>
+        <p>A Comissão Europeia respondeu com uma lista inicial de contra-tarifas sobre 21 mil milhões de euros de produtos americanos (motas Harley, whisky do Kentucky, soja, automóveis), aprovada a 9 de abril e imediatamente suspensa por 90 dias para espelhar o gesto de Washington. Em paralelo, está a ser preparado um segundo pacote de retaliação que chegaria aos 95 mil milhões, incluindo Boeing, bourbon, e serviços digitais. Se o acordo não acontecer em julho, esse segundo pacote pode ser ativado.</p>
+        <p>Em simultâneo, a UE acelerou a aprovação do acordo comercial com o Mercosul, reabriu o dossier com a Índia, e avançou com o Clean Industrial Deal, que alinha política industrial, descarbonização e segurança económica num pacote único. O rearmamento europeu, com o plano ReArm Europe de 800 mil milhões de euros, entra na mesma lógica: menos dependência estratégica dos EUA, mais capacidade europeia própria.</p>
+        <p>A direção é clara. A velocidade é a habitual. Bruxelas vai chegar lá, mas não a tempo de compensar o choque do próximo ano e meio.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Recomendações</div>
+        <h2>O que uma empresa exposta deve fazer agora</h2>
+        <p>Para uma empresa que exporta para os EUA, direta ou indiretamente, há um conjunto de decisões que não podem esperar pela resolução política. Algumas são defensivas, outras são estruturais.</p>
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Reavaliar contratos em dólares:</strong> qualquer contrato assinado antes de abril com preços em USD deve ser revisto. Se o euro continuar a valorizar, a margem desaparece silenciosamente. Cobertura cambial deixa de ser opcional.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Mapear exposição indireta:</strong> saber quanto do volume de negócios depende de clientes europeus que vendem aos EUA é tão importante como saber quanto se vende diretamente ao mercado americano. Muitas PME não sabem.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Diversificar mercado:</strong> Mercosul, Índia, Sudeste Asiático, Médio Oriente. A ideia de que "o mercado americano compensa tudo" deixou de ser operacional. Empresas que hoje dependem de um só destino externo têm um problema de concentração que a tarifa tornou visível.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Repensar cadeias de fornecimento:</strong> fornecedores americanos de insumos críticos podem tornar-se um passivo se houver retaliação europeia. Identificar alternativas europeias ou asiáticas, mesmo que marginalmente mais caras, reduz risco.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Pricing e repasse:</strong> decidir, com base em elasticidade real e não em palpite, que percentagem da tarifa pode ser repassada ao cliente americano e que percentagem tem de ser absorvida. Este cálculo determina se o negócio nos EUA continua a fazer sentido ou não.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Aproveitar incentivos à diversificação:</strong> há linhas do Portugal 2030 e do COMPETE 2030 que apoiam expressamente estratégias de internacionalização para mercados fora da UE e EUA. Não foram desenhadas para este choque, mas servem.</li>
+        </ul>
+      </div>
+
+      <div class="art-highlight reveal">
+        <div class="art-highlight-label">Atenção</div>
+        <div class="art-highlight-text">Há o risco óbvio de paralisia. Empresas que suspendem decisões à espera de clarificação política vão encontrar-se, em julho, exatamente na mesma posição em que estão hoje, mas com menos tempo para reagir. A decisão mais cara, neste contexto, é não decidir.</div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>O que isto significa para a sua empresa</h2>
+        <p>A leitura que retiramos, para os clientes com quem trabalhamos e para os que nos procuram nestes últimos trinta dias, é que a resposta tática (cobertura cambial, ajuste de preço, negociação com clientes americanos) é a parte fácil. Toda a gente percebe que tem de a fazer. O que distingue as empresas que vão sair mais fortes deste ciclo é a resposta estrutural.</p>
+        <p>E a resposta estrutural começa por admitir uma coisa desconfortável: a aposta implícita em muitos planos de internacionalização dos últimos quinze anos, a ideia de que o mundo se tornaria cada vez mais aberto, é uma aposta que deixou de pagar. O capital produtivo, o capital humano, o capital reputacional que uma empresa portuguesa construiu a pensar num mercado global integrado vai continuar a ter valor, mas de outra forma. A pergunta não é "como voltar a ter acesso ao mercado americano como antes". A pergunta é "onde quero que esteja a minha empresa dentro de cinco anos, num mundo em que os blocos comerciais são mais fechados do que são hoje".</p>
+        <p>Não há resposta única. Para uma empresa de cortiça, provavelmente significa consolidar a liderança técnica e diversificar geograficamente o peso de cada bloco, sem abandonar nenhum. Para uma empresa de moldes, significa subir na cadeia de valor, tornar-se imprescindível tecnologicamente para que a tarifa seja absorvida pelo cliente. Para uma empresa têxtil, pode significar encurtar a distância ao cliente, apostar em mercados europeus de maior valor acrescentado, e reduzir a dependência americana antes que ela se transforme em passivo.</p>
+        <p>Há também uma componente financeira. Diversificar mercados custa dinheiro. Subir na cadeia de valor custa mais. Reconfigurar a cadeia de fornecimento custa tempo e caixa. Quem tem estrutura de capital apertada vai sentir esta transição de forma muito mais dura do que quem pensou, há três ou quatro anos, em reforçar equity ou em aceder a linhas de financiamento de longo prazo para o investimento produtivo. O momento de tratar dessa questão era ontem, e continua a ser hoje. Em julho, com o choque potencialmente agravado, será demasiado tarde.</p>
+        <p>A última observação é política, mas com consequências operacionais. Este regime tarifário, seja qual for o seu desfecho nos próximos meses, marca o fim de uma era. O mundo em que uma empresa portuguesa podia planear a exportação para os EUA da mesma forma que planeava a exportação para a Alemanha, como se ambos fossem mercados estáveis regidos por regras previsíveis, acabou. Quem aceitar isto mais cedo terá mais tempo para se reposicionar. Quem continuar a tratar as tarifas como uma anomalia passageira vai acordar, num dia de 2026, a perguntar-se por que razão perdeu quota de mercado para competidores italianos ou espanhóis que se mexeram primeiro.</p>
+      </div>
+
+      <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../../Retratos Equipa/retrato_luísgomes.png" alt="Luís Gomes" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Luís Gomes</div>
+            <div class="sidebar-author-role">Analista Financeiro</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Categoria</div>
+          <div class="sidebar-info-val">Mercados</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Publicado</div>
+          <div class="sidebar-info-val">Maio 2025</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Leitura</div>
+          <div class="sidebar-info-val">11 min</div>
+        </div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
+        <div class="sidebar-cta-text">Ajudamos empresas a reavaliar exposição cambial, diversificar mercados e aceder a financiamento para reconfigurar cadeias de valor num contexto de fragmentação comercial.</div>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="../fragmentacao-global-fim-globalizacao-eficiente/" class="related-item">
+          <span class="related-item-title">Fragmentação global: o fim da globalização eficiente</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="../rearmamento-europeu-prioridade-ue/" class="related-item">
+          <span class="related-item-title">Rearmamento europeu: prioridade estratégica da UE</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+<script src="../../assets/js/back-link.js" defer></script>
+</body>
+</html>

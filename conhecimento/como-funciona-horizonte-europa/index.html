@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<title>Como funciona o Horizonte Europa: guia para empresas | Open Capital</title>
+  <meta name="description" content="O maior programa europeu de financiamento à investigação e inovação, explicado para quem gere empresas. Estrutura, pilares, orçamento e oportunidades.">
+  <link rel="stylesheet" href="/assets/fonts/montserrat.css">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+  <!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../../">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Financiamento</span>
+      </nav>
+      <h1 class="article-title">Como funciona o Horizonte Europa: guia para empresas</h1>
+      <p class="article-standfirst">O maior programa europeu de financiamento à investigação e inovação, explicado para quem gere empresas e toma decisões de investimento em I&D.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Financiamento</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Março 2026</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>9 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Pedro Nunes</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../atualidade/" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+
+      <img src="../../assets/articles/como-funciona-horizonte-europa.png" alt="Como funciona o Horizonte Europa: guia para empresas" class="article-cover-img">
+
+      <div class="article-section reveal">
+        <p>Quando uma empresa portuguesa com 40 colaboradores, dedicada ao desenvolvimento de sensores para agricultura de precisão, recebe um financiamento de 2,3 milhões de euros a fundo perdido para desenvolver um protótipo em parceria com uma universidade holandesa e uma PME espanhola, esse dinheiro vem do Horizonte Europa. E a maioria dos gestores portugueses não sabe que este programa existe, ou assume que é reservado a grandes centros de investigação.</p>
+        <p>É uma assunção errada. O Horizonte Europa foi desenhado precisamente para incluir empresas. E não empresas teóricas: empresas reais, com produtos, clientes e problemas concretos de inovação que precisam de financiamento para resolver.</p>
+        <p>Este guia explica como o programa funciona, que oportunidades cria e como uma empresa pode, na prática, aceder a ele.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Enquadramento</div>
+        <h2>O que é o Horizonte Europa</h2>
+        <p>O Horizonte Europa é o programa-quadro da União Europeia para investigação e inovação, cobrindo o período 2021-2027. Sucede ao Horizonte 2020 e é, em termos absolutos, o maior programa de financiamento público à I&D do mundo. O orçamento total ascende a 95,5 mil milhões de euros, dos quais 5,4 mil milhões provêm do NextGenerationEU, o fundo de recuperação pós-pandemia.</p>
+        <p>O programa financia projetos colaborativos de investigação e inovação em praticamente todos os setores: saúde, digital, energia, clima, alimentação, transportes, segurança, espaço, materiais avançados. Não é um programa setorial. É um programa temático com uma ambição transversal.</p>
+      </div>
+
+      <div class="stats-row cols-3 reveal">
+        <div class="stat-cell">
+          <div class="stat-num">95,5<sup>mil M€</sup></div>
+          <div class="stat-label">Orçamento total 2021-2027</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Pilares estruturantes</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Missões da UE definidas</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <p>A diferença fundamental em relação a programas nacionais como o Portugal 2030 é o nível de ambição e a exigência de colaboração transnacional. No Horizonte Europa, os projetos são tipicamente consórcios de entidades de vários países europeus. Uma empresa portuguesa não concorre sozinha. Concorre integrada num consórcio com parceiros complementares de outros Estados-membros.</p>
+        <p>Isto tem implicações práticas: obriga a trabalhar em rede, a dominar o inglês técnico, a ter capacidade de gestão de projetos internacionais. Mas também significa que a empresa acede a financiamento de escala incomparável com o que existe a nível nacional. Um projeto de investigação colaborativa pode facilmente ultrapassar os 5 milhões de euros, com taxas de financiamento que chegam aos 100% para investigação e 70% para inovação.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Génese</div>
+        <h2>De onde vem e porque existe</h2>
+        <p>O Horizonte Europa não nasceu do nada. É o resultado de um processo de consulta e avaliação que a Comissão Europeia conduziu ao longo de vários anos, mobilizando peritos, governos, universidades e o setor privado. A avaliação intercalar do Horizonte 2020 revelou duas coisas: o programa anterior tinha gerado resultados de investigação de qualidade, mas a transferência desses resultados para o mercado era insuficiente. A inovação ficava presa nos laboratórios.</p>
+        <p>Em 2017, o chamado relatório Lamy, formalmente intitulado "Lab-Fab-App", propôs uma reformulação profunda. A mensagem central era simples: a Europa precisa de investir mais em investigação, mas precisa sobretudo de garantir que essa investigação chega às empresas e se transforma em produtos, serviços e empregos. O relatório recomendava duplicar o orçamento e introduzir uma lógica orientada por missões.</p>
+      </div>
+
+      <div class="pull-quote reveal">
+        <div class="pull-quote-text">"O relatório Lamy propôs uma reformulação profunda: a Europa precisa de garantir que a investigação chega às empresas e se transforma em produtos, serviços e empregos."</div>
+      </div>
+
+      <div class="article-section reveal">
+        <p>A professora Mariana Mazzucato, economista da University College London, foi uma das vozes mais influentes neste processo. O seu trabalho sobre política de inovação orientada por missões convenceu a Comissão a criar um mecanismo novo dentro do programa: as Missões da UE, desafios concretos com metas mensuráveis que a investigação europeia deve ajudar a resolver.</p>
+        <p>A proposta formal da Comissão surgiu em 2018. O Parlamento Europeu e o Conselho chegaram a acordo provisório em março e abril de 2019, e o acordo político final, incluindo o orçamento definitivo de 95,5 mil milhões, foi fechado em dezembro de 2020. O programa entrou em vigor em 2021.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Arquitetura</div>
+        <h2>Os três pilares do programa</h2>
+        <p>O Horizonte Europa está organizado em três pilares, cada um com uma lógica distinta. Compreender esta estrutura é essencial para saber onde uma empresa se pode posicionar.</p>
+
+        <h3>Pilar I: Ciência de Excelência</h3>
+        <p>Este pilar financia investigação fundamental, sem aplicação comercial imediata. É o domínio do Conselho Europeu de Investigação (ERC), das bolsas Marie Skłodowska-Curie e das infraestruturas de investigação. Para a maioria das empresas, este pilar não é o ponto de entrada direto. Mas importa conhecê-lo por duas razões: primeiro, porque as bolsas ERC podem financiar investigadores que depois se tornam cofundadores de spin-offs; segundo, porque as infraestruturas de investigação financiadas neste pilar podem ser utilizadas por empresas em regime de acesso aberto.</p>
+
+        <h3>Pilar II: Desafios Globais e Competitividade Industrial</h3>
+        <p>Este é o pilar mais relevante para empresas. Está organizado em seis clusters temáticos que cobrem as grandes prioridades europeias. Cada cluster abre concursos específicos (chamados "calls") ao longo do programa.</p>
+      </div>
+
+      <table class="art-table reveal">
+        <thead>
+          <tr>
+            <th>Cluster</th>
+            <th>Tema</th>
+            <th>Exemplos de áreas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1</strong></td>
+            <td>Saúde</td>
+            <td>Diagnóstico, doenças raras, saúde digital, pandemias</td>
+          </tr>
+          <tr>
+            <td><strong>2</strong></td>
+            <td>Cultura, Criatividade e Sociedade Inclusiva</td>
+            <td>Democracia, património, indústrias culturais</td>
+          </tr>
+          <tr>
+            <td><strong>3</strong></td>
+            <td>Segurança Civil</td>
+            <td>Cibersegurança, proteção de infraestruturas, gestão de crises</td>
+          </tr>
+          <tr>
+            <td><strong>4</strong></td>
+            <td>Digital, Indústria e Espaço</td>
+            <td>IA, robótica, materiais avançados, fabrico, espaço</td>
+          </tr>
+          <tr>
+            <td><strong>5</strong></td>
+            <td>Clima, Energia e Mobilidade</td>
+            <td>Renováveis, hidrogénio, baterias, transportes limpos</td>
+          </tr>
+          <tr>
+            <td><strong>6</strong></td>
+            <td>Alimentação, Bioeconomia e Recursos Naturais</td>
+            <td>Agricultura sustentável, mar, biodiversidade, economia circular</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="article-section reveal">
+        <p>É neste pilar que se concentra a maior fatia do orçamento e onde as empresas, especialmente PMEs com capacidade de I&D, encontram as oportunidades mais diretas. Os projetos típicos envolvem consórcios de 8 a 15 parceiros de 5 a 10 países, com durações de 3 a 5 anos.</p>
+
+        <h3>Pilar III: Europa Inovadora</h3>
+        <p>O terceiro pilar é talvez o mais relevante para empresas de menor dimensão. Inclui o Conselho Europeu de Inovação (EIC), criado especificamente para financiar inovação disruptiva. O EIC tem dois instrumentos principais:</p>
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">EIC Pathfinder:</strong> para investigação visionária em fase inicial, com potencial de criar tecnologias radicalmente novas</li>
+          <li><strong style="color:var(--navy);font-weight:600;">EIC Accelerator:</strong> para startups e PMEs com inovações prontas para escalar, combinando subvenção (até 2,5 milhões de euros) com investimento em capital (até 15 milhões de euros)</li>
+        </ul>
+        <p>O EIC Accelerator é, provavelmente, o instrumento mais atrativo para empresas portuguesas com produtos inovadores perto do mercado. Uma startup de deeptech que precisa de capital para escalar pode receber, num único processo, financiamento a fundo perdido e investimento de capital gerido pelo fundo do EIC. É um modelo único na Europa.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Missões</div>
+        <h2>As cinco Missões da UE</h2>
+        <p>Uma das inovações mais discutidas do Horizonte Europa é o conceito de "Missões". Inspiradas no modelo da missão Apollo, são desafios concretos com objetivos mensuráveis para 2030. Não são apenas programas de financiamento. São compromissos políticos da Comissão Europeia para resolver problemas específicos, mobilizando vários instrumentos em simultâneo.</p>
+      </div>
+
+      <div class="art-highlight reveal">
+        <div class="art-highlight-label">As cinco missões definidas</div>
+        <div class="art-highlight-text">
+          <strong style="color:var(--navy);">1. Adaptação às alterações climáticas</strong>, incluindo transformação social.<br>
+          <strong style="color:var(--navy);">2. Cancro</strong>, com o objetivo de melhorar a vida de mais de 3 milhões de pessoas até 2030.<br>
+          <strong style="color:var(--navy);">3. Oceanos, mares e águas</strong> saudáveis e restaurados.<br>
+          <strong style="color:var(--navy);">4. Cidades inteligentes e neutras em carbono</strong>, com 100 cidades europeas como laboratório.<br>
+          <strong style="color:var(--navy);">5. Saúde dos solos e alimentação</strong>, com um pacto para o solo até 2030.
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <p>Para empresas, as missões são relevantes porque concentram financiamento em problemas definidos. Uma empresa que trabalha em tecnologia de monitorização da qualidade do solo, por exemplo, pode encontrar nas missões um enquadramento natural para o seu projeto de inovação. A missão não financia diretamente. Funciona como um chapéu que orienta e prioriza os concursos dentro dos clusters do Pilar II.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Na prática</div>
+        <h2>Como funciona o acesso ao financiamento</h2>
+        <p>O processo de candidatura ao Horizonte Europa é diferente do que a maioria das empresas portuguesas conhece nos programas nacionais. Não é mais difícil, necessariamente. É diferente.</p>
+        <p>O ciclo começa com a publicação dos Programas de Trabalho, documentos que detalham os concursos abertos para cada cluster e instrumento num dado período, tipicamente bienal. Cada concurso especifica o tema, o orçamento disponível, o tipo de ação (investigação, inovação, apoio à coordenação), o número esperado de projetos e os critérios de avaliação.</p>
+        <p>Uma empresa que identifique um concurso relevante precisa, na maioria dos casos, de integrar um consórcio. Isto significa encontrar parceiros noutros países, negociar papéis e orçamentos, e submeter uma proposta conjunta. A Comissão disponibiliza ferramentas para facilitar esta procura de parceiros, e os Pontos de Contacto Nacionais (em Portugal, a ANI, Agência Nacional de Inovação) oferecem apoio gratuito.</p>
+
+        <h3>O que a avaliação valoriza</h3>
+        <p>As propostas são avaliadas por painéis independentes de peritos em três critérios: excelência científica e técnica, impacto esperado e qualidade da implementação. O peso de cada critério varia conforme o tipo de ação. Nas ações de inovação mais próximas do mercado, o impacto e a exploração comercial pesam mais do que a excelência científica pura.</p>
+      </div>
+
+      <div class="art-highlight reveal">
+        <div class="art-highlight-label">Taxas de financiamento</div>
+        <div class="art-highlight-text">
+          Ações de investigação (Research and Innovation Actions): até <strong style="color:var(--navy);">100%</strong> dos custos elegíveis. Ações de inovação (Innovation Actions): até <strong style="color:var(--navy);">70%</strong> dos custos elegíveis, com exceção para entidades sem fins lucrativos, que podem receber 100%. O EIC Accelerator combina subvenção (até 2,5 M€) com investimento em capital (até 15 M€).
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <p>Um aspeto que distingue o Horizonte Europa dos programas nacionais é a simplicidade relativa da justificação de custos. O programa utiliza um modelo de custos com taxa fixa de 25% para custos indiretos, o que elimina a necessidade de justificar ao cêntimo as despesas gerais. Para empresas habituadas à burocracia do Portugal 2030, este detalhe pode parecer menor. Não é.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Parcerias</div>
+        <h2>Parcerias Europeias: um modelo dentro do modelo</h2>
+        <p>O Horizonte Europa introduziu um sistema reforçado de Parcerias Europeias, que são estruturas de cofinanciamento entre a Comissão e consórcios de Estados-membros, indústria ou outras entidades. Existem três tipos: cofinanciadas, coprogramadas e institucionalizadas.</p>
+        <p>Para uma empresa, o que importa saber é que muitas destas parcerias abrem os seus próprios concursos, frequentemente com regras simplificadas e com foco em setores específicos. A Clean Hydrogen Joint Undertaking, por exemplo, financia projetos de hidrogénio verde. A Key Digital Technologies (agora Chips JU) financia projetos em semicondutores e eletrónica avançada. A Innovative Health Initiative financia projetos na fronteira entre saúde e tecnologia.</p>
+        <p>Estas parcerias movimentam dezenas de milhares de milhões de euros ao longo do programa e são frequentemente subestimadas por empresas que se focam apenas nos concursos "standard" do Horizonte Europa.</p>
+      </div>
+
+      <div class="stats-row cols-4 reveal">
+        <div class="stat-cell">
+          <div class="stat-num">49</div>
+          <div class="stat-label">Parcerias Europeias</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">100<sup>%</sup></div>
+          <div class="stat-label">Financiamento em ações de investigação</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">70<sup>%</sup></div>
+          <div class="stat-label">Financiamento em ações de inovação</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">15<sup>M€</sup></div>
+          <div class="stat-label">Capital máximo EIC Accelerator</div>
+        </div>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Portugal</div>
+        <h2>O que isto significa para empresas portuguesas</h2>
+        <p>Portugal tem uma relação ambivalente com o Horizonte Europa. Por um lado, as instituições de investigação portuguesas, universidades e laboratórios participam ativamente e com resultados acima da média em várias áreas. Por outro, a participação empresarial é significativamente inferior ao que a dimensão do tecido económico justificaria.</p>
+        <p>As razões são conhecidas. Falta de experiência em projetos internacionais, dificuldade em encontrar parceiros, percepção de que o programa é exclusivo para grandes empresas ou centros de investigação, e a barreira linguística (todas as propostas são escritas em inglês). Nenhuma destas razões é intransponível.</p>
+
+        <h3>Quem pode candidatar-se</h3>
+        <p>Qualquer entidade legal estabelecida num Estado-membro da UE ou num país associado ao programa pode participar. Isto inclui empresas de qualquer dimensão, universidades, centros de investigação, organizações sem fins lucrativos, administração pública. As PMEs são explicitamente incentivadas e o programa tem metas quantitativas para a sua participação.</p>
+        <p>O EIC Accelerator é aberto a candidaturas individuais de empresas, sem necessidade de consórcio. Uma startup portuguesa com uma inovação deeptech pode candidatar-se sozinha. Os restantes instrumentos do Pilar II requerem consórcio, tipicamente com um mínimo de três entidades de três países diferentes.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h3>A Agência Nacional de Inovação como porta de entrada</h3>
+        <p>A ANI funciona como Ponto de Contacto Nacional para o Horizonte Europa em Portugal. Oferece apoio gratuito a entidades que queiram candidatar-se: ajuda na identificação de concursos relevantes, revisão de propostas, procura de parceiros internacionais e informação sobre regras de participação. É um recurso subutilizado pela maioria das empresas portuguesas e é, sem dúvida, o primeiro contacto que qualquer empresa interessada deve fazer.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Diferenças</div>
+        <h2>Horizonte Europa vs. Portugal 2030: programas diferentes, lógicas diferentes</h2>
+        <p>A tentação de comparar o Horizonte Europa com o Portugal 2030 é natural, mas enganadora. São programas com objetivos, escalas e culturas de execução completamente distintos.</p>
+      </div>
+
+      <table class="art-table reveal">
+        <thead>
+          <tr>
+            <th>Dimensão</th>
+            <th>Horizonte Europa</th>
+            <th>Portugal 2030</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Escala</strong></td>
+            <td>Europeia, projetos transnacionais</td>
+            <td>Nacional/regional</td>
+          </tr>
+          <tr>
+            <td><strong>Consórcio</strong></td>
+            <td>Obrigatório (exceto EIC Accelerator)</td>
+            <td>Individual ou consórcio nacional</td>
+          </tr>
+          <tr>
+            <td><strong>Língua</strong></td>
+            <td>Inglês</td>
+            <td>Português</td>
+          </tr>
+          <tr>
+            <td><strong>Taxa de financiamento</strong></td>
+            <td>70%-100%</td>
+            <td>25%-85% (varia por tipologia)</td>
+          </tr>
+          <tr>
+            <td><strong>Foco</strong></td>
+            <td>Investigação e inovação na fronteira</td>
+            <td>Modernização, competitividade, coesão</td>
+          </tr>
+          <tr>
+            <td><strong>Complexidade da candidatura</strong></td>
+            <td>Alta, mas processo transparente</td>
+            <td>Média, com forte componente administrativa</td>
+          </tr>
+          <tr>
+            <td><strong>Custos indiretos</strong></td>
+            <td>25% taxa fixa (flat rate)</td>
+            <td>Variável, justificação detalhada</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="article-section reveal">
+        <p>Uma empresa não tem de escolher entre os dois. Pode, e deve, utilizar ambos de forma complementar. O Portugal 2030 pode financiar a modernização de uma linha de produção. O Horizonte Europa pode financiar o desenvolvimento de uma tecnologia nova que depois será integrada nessa mesma linha. São instrumentos que se articulam, não que competem entre si.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>Como aplicar este conhecimento</h2>
+        <p>O Horizonte Europa não é um programa para todas as empresas. É um programa para empresas que fazem, ou querem fazer, investigação e inovação com ambição internacional. Se a sua empresa desenvolve tecnologia própria, tem capacidade de I&D interna (mesmo que pequena) e opera num setor alinhado com as prioridades europeias, o programa é uma fonte de financiamento que não pode ignorar.</p>
+        <p>O primeiro passo concreto é contactar a ANI e pedir uma sessão de orientação. É gratuito e não compromete. O segundo passo é mapear os concursos abertos no portal Funding & Tenders da Comissão Europeia e verificar se algum se alinha com a atividade de I&D da empresa. O terceiro é começar a construir rede: participar em eventos de matchmaking, contactar universidades e centros de investigação que trabalham na mesma área, e identificar parceiros potenciais noutros países.</p>
+        <p>Para empresas que nunca participaram, o EIC Accelerator é frequentemente o melhor ponto de entrada, porque permite candidatura individual e combina subvenção com capital. Para empresas com experiência em projetos colaborativos, os concursos do Pilar II oferecem financiamento substancial para desenvolver tecnologia em consórcio.</p>
+        <p>O programa tem ritmo próprio. Os concursos abrem em datas específicas, com prazos de submissão que exigem preparação antecipada. Uma candidatura competitiva ao Horizonte Europa demora tipicamente 3 a 6 meses a preparar. Quem começa hoje está a posicionar-se para os concursos do próximo programa de trabalho.</p>
+      </div>
+
+      <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+    </article>
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../../Retratos Equipa/retrato_pedronunes.png" alt="Pedro Nunes" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Pedro Nunes</div>
+            <div class="sidebar-author-role">Consultor de Financiamento</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Categoria</div><div class="sidebar-info-val">Financiamento</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Publicado</div><div class="sidebar-info-val">Março 2026</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Leitura</div><div class="sidebar-info-val">9 min</div></div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Dados-chave</div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Orçamento</div><div class="sidebar-info-val">95,5 mil milhões €</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Período</div><div class="sidebar-info-val">2021-2027</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Pilares</div><div class="sidebar-info-val">3 pilares, 6 clusters</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Financiamento máx.</div><div class="sidebar-info-val">Até 100% (investigação)</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Ponto de contacto PT</div><div class="sidebar-info-val">ANI (Agência Nacional de Inovação)</div></div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
+        <div class="sidebar-cta-text">Quer perceber como o Horizonte Europa se aplica à sua empresa?</div>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+<script src="../../assets/js/back-link.js" defer></script>
+</body>
+</html>

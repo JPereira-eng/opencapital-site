@@ -8,7 +8,7 @@ Uso:
 
 O agente:
   1. Gera um artigo editorial completo em HTML
-  2. Guarda-o em conhecimento/[slug].html
+  2. Guarda-o em conhecimento/[slug]/index.html
   3. Injeta o card do artigo em conhecimento.html
   4. Atualiza o contador de artigos
 """
@@ -287,33 +287,33 @@ ARTICLE_TEMPLATE = """<!DOCTYPE html>
 <body>
 
   <nav class="navbar" id="navbar">
-    <a href="../index.html" class="nav-logo">
-      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img" onerror="this.style.display='none'">
+    <a href="../../" class="nav-logo">
+      <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img" onerror="this.style.display='none'">
     </a>
     <ul class="nav-links">
-      <li><a href="../biblioteca.html">Soluções</a></li>
-      <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
-      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
-      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
-      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li><a href="../../biblioteca.html">Soluções</a></li>
+      <li><a href="../../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../../sobre-nos.html">Sobre Nós</a></li>
       <li class="nav-dropdown">
         <a href="#">Oportunidades</a>
         <div class="nav-dropdown-menu">
-          <a href="../parceiros.html">Parceiros</a>
-          <a href="../carreiras.html">Carreiras</a>
+          <a href="../../parceiros.html">Parceiros</a>
+          <a href="../../carreiras.html">Carreiras</a>
         </div>
       </li>
     </ul>
-    <a href="../index.html#contactar" class="nav-cta">Contactar</a>
+    <a href="../../#contactar" class="nav-cta">Contactar</a>
     <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
   </nav>
 
   <section class="article-hero">
     <div class="article-hero-inner">
       <nav class="breadcrumb">
-        <a href="../index.html">Início</a>
+        <a href="../../">Início</a>
         <span class="breadcrumb-sep">/</span>
-        <a href="../conhecimento.html">Conhecimento</a>
+        <a href="../../conhecimento.html">Conhecimento</a>
         <span class="breadcrumb-sep">/</span>
         <span class="breadcrumb-current">{breadcrumb_cat}</span>
       </nav>
@@ -334,7 +334,7 @@ ARTICLE_TEMPLATE = """<!DOCTYPE html>
   </section>
 
   <div class="back-bar">
-    <a href="../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+    <a href="../../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
   </div>
 
   <div class="article-layout">
@@ -366,20 +366,20 @@ ARTICLE_TEMPLATE = """<!DOCTYPE html>
       <div class="sidebar-cta">
         <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
         <div class="sidebar-cta-text">{sidebar_cta_text}</div>
-        <a href="../index.html#contactar" class="sidebar-cta-btn">Falar com um especialista</a>
+        <a href="../../#contactar" class="sidebar-cta-btn">Falar com um especialista</a>
       </div>
 
       <div class="sidebar-card">
         <div class="sidebar-related-label">Artigos relacionados</div>
-        <a href="como-funciona-horizonte-europa.html" class="related-item">
+        <a href="../como-funciona-horizonte-europa.html" class="related-item">
           <span class="related-item-title">Como funciona o Horizonte Europa</span>
           <span class="related-item-arrow">&rarr;</span>
         </a>
-        <a href="preparar-ronda-investimento-startup.html" class="related-item">
+        <a href="../preparar-ronda-investimento-startup.html" class="related-item">
           <span class="related-item-title">Preparar uma ronda de investimento na sua startup</span>
           <span class="related-item-arrow">&rarr;</span>
         </a>
-        <a href="ai-act-o-que-muda-para-empresas.html" class="related-item">
+        <a href="../ai-act-o-que-muda-para-empresas.html" class="related-item">
           <span class="related-item-title">AI Act: o que muda para as empresas</span>
           <span class="related-item-arrow">&rarr;</span>
         </a>
@@ -408,7 +408,7 @@ CARD_TEMPLATE = """
       <!-- Article: {titulo} -->
       <article class="article-card{type_class} reveal"
                data-category="{categoria}"
-               data-href="conhecimento/{slug}.html">
+               data-href="../{slug}.html">
         <div class="article-card-header">
           <span class="art-cat-badge {cat_class}">{categoria_display}</span>
           <span class="art-read-time">{tempo_leitura}</span>
@@ -417,7 +417,7 @@ CARD_TEMPLATE = """
         <p class="article-card-excerpt">{excerpt}</p>
         <div class="article-card-footer">
           <span class="art-date">{date_pt}</span>
-          <a href="conhecimento/{slug}.html" class="art-link">Ler</a>
+          <a href="../conhecimento/{slug}.html" class="art-link">Ler</a>
         </div>
       </article>"""
 

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aveiro Smart Connected Spaces Test Bed 2026: Open Capital</title>
+  <meta name="description" content="Open Call 2026 do test bed de Aveiro liderado pelo PCI e Altice Labs. Infraestrutura para validar pilotos em comunicações, sensing e IA. Ideal para startups e PME tecnológicas.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-value.status-cont{color:#2E7D52;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-gold{color:var(--gold);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-fact-val.val-cont{color:#2E7D52;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca/">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Aveiro Smart Connected Spaces 2026</span>
+    </nav>
+    <p class="hero-cat">Inovação</p>
+    <h1 class="hero-title">Aveiro Smart Connected Spaces Test Bed 2026</h1>
+    <p class="hero-tagline">Open call para validar pilotos de tecnologia em ambiente real, com acesso a infraestrutura de ponta de Aveiro: 5G, IoT, sensing, IA, mobilidade e logística portuária.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Benefício</span>
+        <span class="meta-value gold">Acesso a test bed e mentoria</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Equity</span>
+        <span class="meta-value">Zero</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Elegibilidade</span>
+        <span class="meta-value">PME e startups</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-open">Aberto até 15/05/2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca/" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O que é</div>
+      <h2 class="section-h2">Um laboratório vivo onde a tecnologia encontra a cidade</h2>
+      <p class="section-text">O Aveiro Smart Connected Spaces Test Bed é uma infraestrutura partilhada de teste e validação de tecnologia em ambiente real, instalada em Aveiro e Ílhavo e estendida ao Porto de Aveiro e zona marítima envolvente. Resulta de um consórcio liderado pelo PCI - Parque de Ciência e Inovação, com a Altice Labs como entidade beneficiária principal, e envolve a Universidade de Aveiro, o Instituto de Telecomunicações, a TICE.PT, o Ocean Forum e a autoridade portuária. O propósito do test bed é eliminar o atrito entre o protótipo e o mercado: empresas com soluções em comunicações, sensing, automação ou inteligência artificial encontram aqui um terreno preparado para testar à escala, com utilizadores reais, em condições que dificilmente conseguiriam replicar em laboratório próprio.</p>
+      <p class="section-text">A Open Call 2026 é o canal pelo qual PME e startups candidatam pilotos a integrar o programa. O objetivo declarado do consórcio é atingir 59 pilotos validados em produção até final de 2025, e a chamada de 2026 alarga essa janela a casos de uso adicionais. A participação é gratuita para as empresas selecionadas, e o test bed não captura equity. O retorno do consórcio vem da consolidação de Aveiro como polo de referência em comunicações inteligentes e da geração de tração comercial para os parceiros tecnológicos da rede.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para que serve</div>
+      <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
+      <p class="section-text">O test bed é particularmente útil para empresas em duas situações: validar uma ideia tecnológica antes de comprometer capital próprio em escala, ou demonstrar tração técnica perante clientes e investidores. Não substitui financiamento, mas reduz drasticamente o custo e o tempo de prova de conceito.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Arranque e validação:</strong> equipas com produto em fase concept ou prototype acedem a infraestrutura urbana e portuária ativa, sensores instalados, redes de comunicação experimentais e utilizadores piloto. Permite validar hipóteses técnicas e de mercado sem montar a infraestrutura de raiz, o que tipicamente custa mais do que o próprio MVP.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">I&amp;D e ciência:</strong> o consórcio integra centros de I&amp;D (UA, IT, TICE) e empresa âncora (Altice Labs) com competências em redes, fotónica, IA aplicada e cidades inteligentes. As equipas selecionadas beneficiam de mentoria técnica e podem articular o piloto com programas de doutoramento, projetos europeus ou candidaturas posteriores ao SIFIDE II.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Áreas Cobertas</div>
+      <h2 class="section-h2">Onde o test bed faz diferença</h2>
+      <p class="section-text">O scope tecnológico cobre quatro grandes domínios, cada um sustentado por infraestrutura física e parceiros de domínio:</p>
+      <table class="art-table">
+        <thead><tr><th>Domínio</th><th>O que é testável</th><th>Parceiro âncora</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Comunicações</strong></td><td>Redes 5G, fotónica, edge computing, conectividade marítima e portuária, integração IoT</td><td>Altice Labs, IT</td></tr>
+          <tr><td><strong>Sensing e ambiente</strong></td><td>Sensores urbanos, qualidade do ar, ruído, monitorização da água e zona costeira</td><td>UA, Ocean Forum</td></tr>
+          <tr><td><strong>Mobilidade e logística</strong></td><td>Tráfego, transportes públicos, operações portuárias, logística de mercadoria</td><td>Porto de Aveiro</td></tr>
+          <tr><td><strong>IA aplicada e dados</strong></td><td>Modelos de visão, predição operacional, gémeos digitais, automação industrial</td><td>TICE.PT, Altice Labs</td></tr>
+        </tbody>
+      </table>
+      <p class="section-text">A infraestrutura do Aveiro Tech City Living Lab agrega capacidades de sensing, computação e conectividade num ambiente urbano denso, e o Porto de Aveiro fornece um cenário industrial-marítimo controlado mas operacional. Esta combinação é rara: poucos test beds europeus oferecem simultaneamente cidade, água e indústria sob o mesmo guarda-chuva técnico.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Quem pode candidatar-se</div>
+      <h2 class="section-h2">Perfil das empresas elegíveis</h2>
+      <p class="section-text">A Open Call 2026 dirige-se a PME e startups com solução tecnológica madura o suficiente para piloto em ambiente real. A maturidade requerida não é a de produto comercializado mas sim a de protótipo funcional pronto a operar fora de laboratório. Casos típicos: equipas que terminaram um SIFIDE II ou um projeto Horizon e precisam de validar o trabalho em terreno; empresas seed com primeiros clientes a precisar de demonstrações industriais robustas; spin-offs académicos da UA ou de outras universidades que pretendam migrar do papel para a indústria.</p>
+      <p class="section-text">Os setores explicitamente cobertos pelo consórcio são ICT, Mar e Pescas e Cidades Inteligentes, mas a leitura prática é mais aberta: qualquer projeto que dependa de comunicações, sensing ou IA aplicada a ambiente urbano ou portuário tem cabimento. A geografia do candidato não é restritiva, embora a presença física na região centro durante o piloto seja necessária. Equipas internacionais podem candidatar-se desde que tenham capacidade de deslocar a operação para Aveiro.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Benefícios</div>
+      <h2 class="section-h2">O que entra no pacote</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Acesso à infraestrutura:</strong> uso de redes, sensores e ambiente operacional sem custo de capex próprio. Em equivalente de mercado, montar uma testbed comparável custaria centenas de milhares de euros e exigiria parcerias institucionais difíceis de articular.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Mentoria técnica:</strong> apoio dos centros de I&amp;D do consórcio (UA, IT, TICE) e da equipa de inovação da Altice Labs, com competências em arquitetura de sistemas, integração e otimização.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Visibilidade institucional:</strong> integração na rede do PCI e exposição a parceiros corporativos, autarquias e investidores que utilizam o test bed como filtro de qualidade.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Validação para candidaturas seguintes:</strong> um piloto bem documentado num test bed reconhecido fortalece materialmente candidaturas a Portugal 2030, Horizon, EIC Accelerator ou rondas de investimento privado.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Zero diluição:</strong> o programa não captura equity. A propriedade intelectual da empresa permanece com a empresa, com regras a definir caso a caso quando há cocriação técnica com parceiros do consórcio.</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <div class="highlight-box-title">Atenção ao calendário e à cocriação</div>
+      <div class="highlight-box-text">A janela de candidatura termina a 15 de maio de 2026 e a alocação de slots de infraestrutura é por ordem de seleção. Pilotos que envolvam cocriação técnica com parceiros do consórcio devem clarificar à partida as condições de propriedade intelectual e de confidencialidade. Pequena fricção contratual no início poupa litígio no fim.</div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Contexto</div>
+      <h2 class="section-h2">Aveiro como polo de inovação</h2>
+      <p class="section-text">O test bed integra-se numa estratégia maior do PCI e da Universidade de Aveiro para consolidar Aveiro como cluster ICT e cidade inteligente de referência ibérica. O Aveiro Tech City Living Lab, lançado em parceria com o município, transformou parte do tecido urbano numa infraestrutura monitorizada com sensores, redes 5G e plataformas de dados. A combinação com a Altice Labs (centro de inovação da Altice Portugal) e com a presença histórica do IT (Instituto de Telecomunicações) cria uma densidade técnica em comunicações que poucos territórios em Portugal oferecem.</p>
+      <p class="section-text">Para empresas em fase precoce, esta densidade é o ativo material do test bed. Não é apenas a infraestrutura: é o ecossistema que rodeia a infraestrutura. Engenheiros que entendem o estado da arte em fotónica, doutorandos com tese em IA aplicada, clientes corporativos a observar o que se passa, autarquia disponível para piloto público. O programa é um atalho para esse ecossistema.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">Para empresas tecnológicas em fase de protótipo ou produto inicial, o Aveiro Smart Connected Spaces é dos instrumentos mais subaproveitados em Portugal. A combinação de zero diluição, infraestrutura de qualidade e ecossistema técnico é difícil de replicar fora de uma testbed europeia financiada por Horizon. Para muitas equipas, vale mais participar aqui do que entrar num acelerador genérico que pede equity em troca de mentoria.</p>
+      <p class="section-text">Aviso prático: o test bed não substitui financiamento. As empresas selecionadas têm de manter a sua operação durante o piloto, e os custos de pessoal, deslocação e estadia em Aveiro continuam por conta da equipa. A nossa sugestão é articular a candidatura com instrumentos de receita ou capital paralelo, por exemplo, um SIFIDE II que cubra o trabalho técnico do piloto, ou uma ronda pre-seed que financie a operação durante os meses de presença em Aveiro. Nesse desenho integrado, o test bed funciona como acelerador de validação técnica e de credibilidade institucional.</p>
+      <p class="section-text">A candidatura ganha quando demonstra três coisas: clareza sobre a hipótese técnica a validar, capacidade de operar fora do laboratório próprio durante o piloto, e contexto futuro do produto após o test bed. Pilotos que terminam sem plano de comercialização passam pelo radar do consórcio sem deixar marca. Pilotos com clientes pré-comprometidos para a versão pós-piloto são os que tipicamente convertem em casos de referência.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_sofiacosta.png" alt="Sofia Costa" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Sofia Costa</div>
+          <div class="sidebar-author-role">Especialista I&amp;D e Inovação</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">Test bed setorial</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Promotor</div>
+        <div class="sidebar-fact-val">PCI / Altice Labs</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Localização</div>
+        <div class="sidebar-fact-val">Aveiro, Ílhavo, Porto de Aveiro</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Setores</div>
+        <div class="sidebar-fact-val">ICT, Smart Cities, Mar e Pescas</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Benefício</div>
+        <div class="sidebar-fact-val">Acesso a infraestrutura, mentoria</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Equity</div>
+        <div class="sidebar-fact-val">Zero</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-open">Aberto até 15/05/2026</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Candidatar com método</div>
+      <div class="sidebar-cta-text">Quer estruturar uma candidatura ao test bed de Aveiro alinhada com SIFIDE II ou ronda paralela? Falamos consigo.</div>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../amcc-testbed-mediacall-2026/" class="related-link">
+        <span class="related-link-name">AMCC Test Bed Media Call</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../sifide-ii-candidaturas-2025/" class="related-link">
+        <span class="related-link-name">SIFIDE II</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../born-from-knowledge-ani/" class="related-link">
+        <span class="related-link-name">Born from Knowledge ANI</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../selo-id-ani-ongoing/" class="related-link">
+        <span class="related-link-name">Selo ID ANI</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../deep2start-ani-2025-01/" class="related-link">
+        <span class="related-link-name">Deep2Start ANI</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

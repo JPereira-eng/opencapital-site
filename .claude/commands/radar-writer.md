@@ -248,7 +248,7 @@ Cada card tem 3 highlights com função fixa:
 
 ### 4e. Criar artigo
 
-Criar `instrumentos/[slug].html` seguindo TODAS as regras do CLAUDE.md e do template instrumento.md.
+Criar `instrumentos/[slug]/index.html` seguindo TODAS as regras do CLAUDE.md e do template instrumento.md.
 
 ### 4f. Definir setores (campo invisivel)
 
@@ -363,7 +363,7 @@ Adicionar entrada ao FINAL de `instruments-catalog.json > instruments`:
   "highlight0": "[BENEFICIO_PRINCIPAL]",
   "highlight1": "[BENEFICIARIOS]",
   "highlight2": "[LOCALIZACOES]",
-  "href": "instrumentos/[SLUG].html",
+  "href": "instrumentos/[SLUG]/index.html",
   "featured": false
 }
 ```
@@ -381,7 +381,7 @@ Para cada artigo criado:
 1. **Remover da queue correcta**: se o item veio de `queue.json` remover de `queue.json`; se veio de `queue-catálogo.json` remover de `queue-catálogo.json`
 2. **Adicionar ao shard** (`registry/shards/[shard].json`):
 ```json
-{ "id": "[slug]", "file": "instrumentos/[slug].html", "source": "[source_id]", "state": "[estado]", "last_check": "[hoje]" }
+{ "id": "[slug]", "file": "instrumentos/[slug]/index.html", "source": "[source_id]", "state": "[estado]", "last_check": "[hoje]" }
 ```
 3. **Adicionar ao lookup** (`registry/lookup.json`):
 ```json
@@ -409,7 +409,7 @@ Para cada artigo criado:
 
 6. **Auto-validacao de paridade (v4.3, 2026-05-09):**
    Apos os passos 1-5, validar localmente:
-   - O ficheiro `instrumentos/[slug].html` existe? Se não: ABORTAR e reportar erro grave.
+   - O ficheiro `instrumentos/[slug]/index.html` existe? Se não: ABORTAR e reportar erro grave.
    - O slug aparece em `instruments-catalog.json` exactamente uma vez? Se aparece 0 vezes: re-aplicar passo 5 da skill (adicionar entrada). Se aparece >1 vez: remover duplicados mantendo o primeiro.
    - O slug aparece no shard correcto? Se não: re-aplicar passo 6.2.
    - O slug aparece em `lookup.json > by_id`? Se não: re-aplicar passo 6.3.
@@ -422,7 +422,7 @@ Para cada artigo criado:
 ### 7a. Commit por artigo (após cada artigo criado nos passos 4-6):
 
 ```bash
-git -C "$REPO" add instrumentos/[slug].html instruments-catalog.json registry/
+git -C "$REPO" add instrumentos/[slug]/index.html instruments-catalog.json registry/
 git -C "$REPO" commit -m "instrumento: [nome do instrumento]"
 ```
 

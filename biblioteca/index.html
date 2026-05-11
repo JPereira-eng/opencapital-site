@@ -1,0 +1,888 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<title>Soluções | Open Capital Advisory & Consultancy</title>
+  <meta name="description" content="Biblioteca completa de instrumentos de financiamento, fiscalidade e investimento disponíveis em Portugal. Mais de 18 instrumentos organizados por categoria.">
+  <link rel="stylesheet" href="/assets/fonts/montserrat.css">
+  <style>
+
+    /* ─── RESET & VARIABLES ──────────────────────── */
+    :root {
+      --navy:       #1A3A5C;
+      --navy-deep:  #0D1F33;
+      --gold:       #C9A96E;
+      --white:      #FFFFFF;
+      --grey-light: #E5E5E5;
+      --grey-mid:   #7A7A7A;
+      --grey-dark:  #2A2A2A;
+      --font: 'Montserrat', sans-serif;
+      --transition: all 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --shadow: 0 8px 40px rgba(26,58,92,0.10);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:var(--font); background:var(--white); color:var(--grey-dark); -webkit-font-smoothing:antialiased; }
+
+    /* ─── TYPOGRAPHY ─────────────────────────────── */
+    .t-eyebrow { font-size:14px; font-weight:600; letter-spacing:0.30em; text-transform:uppercase; color:var(--gold); }
+    .t-h1      { font-size:54px; font-weight:700; letter-spacing:-0.01em; color:var(--navy); line-height:1.05; }
+    .t-h2      { font-size:36px; font-weight:600; letter-spacing:0.01em;  color:var(--navy); line-height:1.15; }
+    .t-h3      { font-size:28px; font-weight:500; letter-spacing:0.03em;  color:var(--navy); }
+    .t-tagline { font-size:24px; font-weight:100; letter-spacing:0.14em;  color:var(--navy); }
+    .t-body    { font-size:18px; font-weight:400; color:var(--grey-dark); line-height:1.85; max-width:580px; }
+    .t-small   { font-size:15px; font-weight:300; letter-spacing:0.04em;  color:var(--grey-mid); }
+
+    /* ─── NAVBAR ─────────────────────────────────── */
+    .navbar {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 48px; height:74px;
+      position:fixed; top:0; left:0; right:0; z-index:200;
+      background:var(--navy);
+      border-bottom:1px solid rgba(255,255,255,0.07);
+      transition:var(--transition);
+    }
+    .navbar.scrolled {
+      background:rgba(255,255,255,0.97);
+      backdrop-filter:blur(20px);
+      -webkit-backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--grey-light);
+    }
+    .nav-logo { display:flex; align-items:center; text-decoration:none; }
+    .nav-logo-img { height:57px; width:auto; display:block; filter:brightness(0) invert(1); transition:var(--transition); }
+    .navbar.scrolled .nav-logo-img { filter:none; }
+    .nav-logo-fallback { display:none; align-items:center; gap:10px; }
+    .nav-logo-fallback .nav-mark { width:36px; height:36px; border:1px solid rgba(255,255,255,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:var(--gold); }
+    .navbar.scrolled .nav-logo-fallback .nav-mark { border-color:var(--navy); color:var(--navy); }
+    .nav-logo-fallback .nav-wordmark { display:flex; flex-direction:column; gap:2px; }
+    .nav-logo-fallback .nav-name { font-size:14px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--white); }
+    .nav-logo-fallback .nav-sub  { font-size:9px; font-weight:300; letter-spacing:0.20em; text-transform:uppercase; color:rgba(255,255,255,0.32); }
+    .navbar.scrolled .nav-logo-fallback .nav-name { color:var(--navy); }
+    .navbar.scrolled .nav-logo-fallback .nav-sub  { color:var(--grey-mid); }
+
+    .nav-links { display:flex; align-items:center; gap:24px; list-style:none; margin-left:auto; }
+    .nav-links a {
+      font-size:15px; font-weight:500; letter-spacing:0.08em; text-transform:none;
+      color:rgba(255,255,255,0.68); text-decoration:none;
+      transition:var(--transition); position:relative; padding-bottom:3px; white-space:nowrap;
+    }
+    .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold); transition:width 0.3s ease; }
+    .nav-links a:hover { color:var(--white); }
+    .nav-links a:hover::after,
+    .nav-links a.active::after { width:100%; }
+    .nav-links a.active { color:var(--white); }
+    .navbar.scrolled .nav-links a { color:var(--grey-dark); }
+    .navbar.scrolled .nav-links a:hover,
+    .navbar.scrolled .nav-links a.active { color:var(--navy); }
+
+    .nav-badge {
+      font-size:10px; font-weight:600; letter-spacing:0.06em; text-transform:none;
+      color:var(--gold); border:1px solid var(--gold);
+      padding:1px 4px; margin-left:3px;
+      vertical-align:super; line-height:1;
+    }
+
+    /* Dropdown */
+    .nav-dropdown { position:relative; }
+    .nav-dropdown > a::after { content:''; }
+    .nav-dropdown-arrow {
+      display:inline-block; margin-left:5px;
+      width:6px; height:6px;
+      border-right:1px solid currentColor; border-bottom:1px solid currentColor;
+      transform:rotate(45deg) translateY(-2px);
+      transition:transform 0.25s ease;
+      vertical-align:middle; opacity:0.6;
+    }
+    .nav-dropdown:hover .nav-dropdown-arrow { transform:rotate(-135deg) translateY(-2px); opacity:1; }
+    .nav-dropdown-menu {
+      position:absolute; top:calc(100% + 14px); left:50%;
+      transform:translateX(-50%) translateY(-6px);
+      background:var(--white); border:1px solid var(--grey-light);
+      min-width:160px; opacity:0; visibility:hidden;
+      transition:opacity 0.22s ease, transform 0.22s ease;
+      box-shadow:var(--shadow); z-index:200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu {
+      opacity:1; visibility:visible;
+      transform:translateX(-50%) translateY(0);
+    }
+    .nav-dropdown-menu a {
+      display:block; padding:12px 20px;
+      font-size:13px; font-weight:500; letter-spacing:0.05em; text-transform:none;
+      color:var(--grey-dark); text-decoration:none;
+      border-bottom:1px solid var(--grey-light);
+      transition:var(--transition); white-space:nowrap;
+    }
+    .nav-dropdown-menu a:last-child { border-bottom:none; }
+    .nav-dropdown-menu a:hover { color:var(--navy); background:#FAFAFA; padding-left:24px; }
+    .nav-dropdown-menu a::after { display:none !important; }
+    .navbar:not(.scrolled) .nav-dropdown-menu { background:var(--navy-deep); border-color:rgba(255,255,255,0.08); }
+    .navbar:not(.scrolled) .nav-dropdown-menu a { color:rgba(255,255,255,0.60); border-color:rgba(255,255,255,0.06); }
+    .navbar:not(.scrolled) .nav-dropdown-menu a:hover { color:var(--white); background:rgba(255,255,255,0.05); }
+
+    .nav-cta {
+      font-size:16px; font-weight:600; letter-spacing:0.08em; text-transform:none;
+      color:var(--white); text-decoration:none;
+      border:1px solid rgba(255,255,255,0.28); padding:9px 18px;
+      margin-left:28px; transition:var(--transition); white-space:nowrap;
+    }
+    .nav-cta:hover { border-color:var(--white); background:rgba(255,255,255,0.08); }
+    .navbar.scrolled .nav-cta { color:var(--navy); border-color:var(--navy); }
+    .navbar.scrolled .nav-cta:hover { background:var(--navy); color:var(--white); }
+
+    /* Hamburger */
+    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
+    .nav-hamburger span { display:block; width:22px; height:1px; background:var(--white); transition:var(--transition); }
+    .navbar.scrolled .nav-hamburger span { background:var(--navy); }
+
+    /* Mobile menu */
+    .nav-mobile-menu { display:none; position:fixed; top:74px; left:0; right:0; background:var(--navy-deep); padding:24px 32px 32px; border-bottom:1px solid rgba(255,255,255,0.07); z-index:199; }
+    .nav-mobile-menu.open { display:block; }
+    .nav-mobile-menu a { display:block; font-size:15px; font-weight:500; letter-spacing:0.05em; color:rgba(255,255,255,0.7); text-decoration:none; padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.06); transition:var(--transition); }
+    .nav-mobile-menu a:hover { color:var(--white); }
+    .nav-mobile-cta { display:inline-block !important; margin-top:22px; font-size:14px; font-weight:600; letter-spacing:0.08em; color:var(--white) !important; text-decoration:none; border:1px solid rgba(255,255,255,0.28); padding:12px 24px; transition:var(--transition); }
+
+    /* ─── SCROLL REVEAL ──────────────────────────── */
+    .reveal { opacity:0; transform:translateY(22px); transition:opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal-d1 { transition-delay:0.06s; }
+    .reveal-d2 { transition-delay:0.12s; }
+    .reveal-d3 { transition-delay:0.18s; }
+    .reveal-d4 { transition-delay:0.24s; }
+    .reveal-d5 { transition-delay:0.30s; }
+    .reveal-d6 { transition-delay:0.36s; }
+
+    /* ─── PAGE HERO ───────────────────────────────── */
+    .page-hero {
+      background:var(--navy);
+      padding:120px 80px 44px;
+      position:relative; overflow:hidden;
+      display:flex; flex-direction:column; justify-content:flex-end;
+    }
+    .page-hero::before {
+      content:'';
+      position:absolute; top:-120px; right:-120px;
+      width:440px; height:440px; border-radius:50%;
+      background:radial-gradient(circle, rgba(201,169,110,0.07) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .page-hero::after {
+      content:'';
+      position:absolute; bottom:0; left:0; right:0;
+      height:1px; background:rgba(255,255,255,0.06);
+    }
+    .hero-breadcrumb {
+      font-size:12px; font-weight:400; letter-spacing:0.14em;
+      color:rgba(255,255,255,0.32); margin-bottom:28px;
+      display:flex; align-items:center; gap:8px;
+    }
+    .hero-breadcrumb a { color:rgba(255,255,255,0.32); text-decoration:none; transition:var(--transition); }
+    .hero-breadcrumb a:hover { color:rgba(255,255,255,0.65); }
+    .hero-breadcrumb span { color:rgba(255,255,255,0.18); }
+    .hero-line { width:1px; height:44px; background:linear-gradient(to bottom, var(--gold), transparent); margin-bottom:22px; }
+    .hero-eyebrow { font-size:14px; font-weight:600; letter-spacing:0.34em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    .hero-h1 { font-size:54px; font-weight:700; color:var(--white); line-height:1.07; letter-spacing:-0.01em; margin-bottom:16px; max-width:680px; }
+    .hero-sub { font-size:20px; font-weight:300; color:rgba(255,255,255,0.62); line-height:1.6; max-width:580px; letter-spacing:0.02em; }
+
+    /* ─── INTRO BLOCK ─────────────────────────────── */
+    .intro-block { background:var(--white); padding:64px 80px 24px; }
+    .intro-inner { max-width:960px; margin:0 auto; position:relative; padding-left:24px; }
+    .intro-inner::before {
+      content:''; position:absolute; left:0; top:6px; bottom:6px;
+      width:2px; background:var(--gold);
+    }
+    .intro-text {
+      font-size:18px; font-weight:300; color:var(--grey-dark);
+      line-height:1.85; letter-spacing:0.01em;
+    }
+
+    /* ─── FILTER SECTION ─────────────────────────────── */
+    .filter-section {
+      position:sticky; top:74px; z-index:150;
+      background:var(--white);
+      border-bottom:1px solid var(--grey-light);
+      padding:0 80px;
+    }
+    /* Search row */
+    .filter-search-row {
+      display:flex; align-items:center; justify-content:center;
+      gap:16px; padding:18px 0 14px;
+      max-width:1200px; margin:0 auto;
+      border-bottom:1px solid var(--grey-light);
+    }
+    .search-wrapper {
+      flex:1; max-width:560px; position:relative;
+      display:flex; align-items:center;
+      border:1px solid var(--grey-light);
+      background:#FAFAFA;
+      transition:var(--transition);
+    }
+    .search-wrapper:focus-within { border-color:var(--navy); background:var(--white); box-shadow:0 0 0 3px rgba(26,58,92,0.05); }
+    .search-icon-left {
+      flex-shrink:0; width:18px; height:18px; color:var(--grey-mid);
+      margin:0 12px 0 14px; transition:var(--transition);
+    }
+    .search-wrapper:focus-within .search-icon-left { color:var(--navy); }
+    .search-input {
+      flex:1; font-family:var(--font); font-size:15px; font-weight:400;
+      letter-spacing:0.02em; color:var(--grey-dark); background:transparent;
+      border:none; outline:none; padding:11px 14px 11px 0;
+    }
+    .search-input::placeholder { color:var(--grey-mid); font-weight:300; letter-spacing:0.04em; }
+    .filter-count {
+      font-size:12px; font-weight:300; color:var(--grey-mid);
+      white-space:nowrap; letter-spacing:0.04em;
+    }
+    /* Dropdowns row */
+    .filter-dropdowns-row {
+      display:flex; align-items:center; justify-content:center;
+      gap:10px; padding:12px 0;
+      max-width:1360px; margin:0 auto;
+    }
+    .filter-selects {
+      display:flex; align-items:center; gap:8px;
+      flex-wrap:nowrap; flex:1; min-width:0;
+    }
+    .filter-select {
+      flex:1 1 0; min-width:0;
+      font-family:var(--font); font-size:12px; font-weight:500;
+      letter-spacing:0.06em; text-transform:uppercase;
+      color:var(--grey-mid); background:var(--white);
+      border:1px solid var(--grey-light); border-radius:0;
+      padding:8px 32px 8px 14px; cursor:pointer;
+      transition:var(--transition);
+      -webkit-appearance:none; -moz-appearance:none; appearance:none;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpolyline points='1,1 5,5 9,1' fill='none' stroke='%237A7A7A' stroke-width='1'/%3E%3C/svg%3E");
+      background-repeat:no-repeat; background-position:right 12px center;
+      text-overflow:ellipsis; white-space:nowrap; overflow:hidden;
+    }
+    .filter-select:hover { border-color:var(--navy); color:var(--navy); }
+    .filter-select:focus { outline:none; border-color:var(--navy); color:var(--navy); }
+    .filter-select.has-value { color:var(--navy); border-color:var(--navy); font-weight:600; }
+    .filter-clear {
+      font-family:var(--font); font-size:11px; font-weight:500;
+      letter-spacing:0.08em; text-transform:uppercase; color:var(--grey-mid);
+      background:transparent; border:1px solid var(--grey-light);
+      padding:8px 14px; cursor:pointer;
+      transition:var(--transition); white-space:nowrap;
+    }
+    .filter-clear:hover { color:var(--navy); border-color:var(--navy); }
+    .filter-clear.hidden { display:none; }
+
+    /* ─── INSTRUMENTS SECTION ─────────────────────── */
+    .instruments-section { padding:60px 80px; background:var(--white); }
+    .instruments-grid {
+      display:grid; grid-template-columns:repeat(3,1fr);
+      gap:1px; background:var(--grey-light);
+      border:1px solid var(--grey-light);
+      max-width:1200px; margin:0 auto;
+    }
+    .instrument-card {
+      background:var(--white); padding:36px 32px;
+      position:relative; overflow:hidden;
+      cursor:pointer; transition:var(--transition);
+      display:flex; flex-direction:column;
+    }
+    .instrument-card::before {
+      content:''; position:absolute; top:0; left:0;
+      width:0; height:2px; background:var(--gold);
+      transition:width 0.4s ease;
+    }
+    .instrument-card:hover { box-shadow:var(--shadow); transform:translateY(-2px); z-index:2; }
+    .instrument-card:hover::before { width:100%; }
+    .instrument-card.hidden { display:none; }
+
+    .card-header { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:20px; gap:10px; }
+    .cat-badge { font-size:10px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; padding:4px 10px; flex-shrink:0; }
+    .cat-nr     { background:rgba(26,58,92,0.08); color:var(--navy); }
+    .cat-priv   { background:rgba(201,169,110,0.12); color:#8A6535; }
+    .cat-div    { background:rgba(42,42,42,0.06); color:var(--grey-dark); }
+    .cat-hib    { background:rgba(26,58,92,0.05); color:var(--navy); border:1px solid rgba(26,58,92,0.15); }
+    .cat-fiscal { background:rgba(201,169,110,0.08); color:#8A6535; border:1px solid rgba(201,169,110,0.2); }
+    .cat-outros { background:rgba(122,122,122,0.08); color:var(--grey-mid); border:1px solid rgba(122,122,122,0.15); }
+
+    .status-pill { font-size:9px; font-weight:500; letter-spacing:0.10em; text-transform:uppercase; color:var(--grey-mid); white-space:nowrap; flex-shrink:0; }
+    .status-open   { color:#2E7D52; font-weight:600; }
+    .status-cont   { color:#2E7D52; font-weight:600; }
+    .status-closed { color:#A63228; font-weight:600; }
+
+    .card-title { font-size:20px; font-weight:600; color:var(--navy); line-height:1.25; margin-bottom:8px; }
+    .card-tagline { font-size:14px; font-weight:300; color:var(--grey-mid); line-height:1.6; margin-bottom:20px; flex:1; }
+    .card-divider { height:1px; background:var(--grey-light); margin-bottom:16px; }
+    .card-highlights { display:flex; flex-direction:column; gap:10px; margin-bottom:24px; }
+    .card-highlight { display:flex; align-items:center; gap:10px; font-size:13px; font-weight:300; color:var(--grey-dark); }
+    .card-highlight-dot { width:4px; height:4px; background:var(--gold); flex-shrink:0; }
+    .card-cta {
+      font-size:11px; font-weight:600; letter-spacing:0.20em; text-transform:uppercase;
+      color:var(--navy); text-decoration:none;
+      display:inline-flex; align-items:center; gap:8px;
+      background:none; border:none; cursor:pointer;
+      font-family:var(--font); padding:0; transition:var(--transition);
+      margin-top:auto;
+    }
+    .card-cta::after { content:'→'; font-weight:300; font-size:13px; transition:var(--transition); }
+    .card-cta:hover { color:var(--gold); }
+
+    /* No results */
+    .no-results { display:none; grid-column:1/-1; padding:80px 40px; text-align:center; background:var(--white); }
+    .no-results.visible { display:block; }
+    .no-results-text { font-size:16px; font-weight:300; color:var(--grey-mid); letter-spacing:0.04em; }
+
+    /* card click navigation */
+    .instrument-card { cursor:pointer; }
+
+    /* ─── FOOTER ──────────────────────────────────── */
+    .footer { background:var(--navy-deep); padding:56px 80px 34px; }
+    .footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr; gap:44px; margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.07); }
+
+    .f-logo-img { height:72px; width:auto; display:block; filter:brightness(0) invert(1); opacity:0.85; }
+    .f-desc    { font-size:15px; font-weight:300; color:rgba(255,255,255,0.36); line-height:1.85; margin-top:16px; max-width:248px; }
+    .f-tagline { font-size:15px; font-weight:100; letter-spacing:0.14em; color:var(--gold); margin-top:12px; }
+
+    .f-col-label { font-size:9px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:rgba(255,255,255,0.24); margin-bottom:16px; }
+    .f-links { list-style:none; padding:0; }
+    .f-links li { margin-bottom:9px; }
+    .f-links a  { font-size:15px; font-weight:300; color:rgba(255,255,255,0.48); text-decoration:none; transition:var(--transition); letter-spacing:0.03em; }
+    .f-links a:hover { color:var(--white); }
+    .f-badge { font-size:7px; font-weight:600; letter-spacing:0.1em; color:var(--gold); border:1px solid rgba(201,169,110,0.45); padding:1px 5px; margin-left:5px; vertical-align:middle; }
+
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+    .f-copy { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:0.05em; }
+    .f-legal { display:flex; gap:20px; }
+    .f-legal a { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); text-decoration:none; letter-spacing:0.05em; transition:var(--transition); }
+    .f-legal a:hover { color:rgba(255,255,255,0.45); }
+
+    /* ─── RESPONSIVE ──────────────────────────────── */
+    @media (max-width: 1100px) {
+      .filter-section { padding:0 24px; }
+      .instruments-grid { grid-template-columns:repeat(2,1fr); }
+      .filter-selects { flex-wrap:wrap; }
+      .filter-select { flex:1 1 calc(33.333% - 6px); }
+    }
+    @media (max-width: 1024px) {
+      .footer-grid { grid-template-columns:1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .navbar { padding:0 24px; }
+      .nav-links { display:none; }
+      .nav-cta { display:none; }
+      .nav-hamburger { display:flex; }
+
+      .page-hero { padding:120px 24px 52px; }
+      .hero-h1 { font-size:36px; }
+      .hero-sub { font-size:16px; }
+      .page-hero { padding:100px 24px 36px; }
+      .intro-block { padding:40px 24px 8px; }
+      .intro-text { font-size:15px; line-height:1.75; }
+
+      .filter-search-row { padding:14px 0 12px; }
+      .search-input { font-size:15px; }
+      .filter-dropdowns-row { flex-wrap:wrap; justify-content:flex-start; gap:6px; padding:10px 0; }
+      .filter-select { font-size:10px; padding:6px 26px 6px 10px; }
+
+      .instruments-section { padding:32px 20px; }
+      .instruments-grid { grid-template-columns:1fr; }
+      .instrument-card { padding:28px 24px; }
+
+      .modal-body { padding:28px 24px 36px; }
+      .modal-hero { padding:36px 24px 32px; }
+      .modal-title { font-size:26px; }
+      .modal-footer { padding:20px 24px; flex-direction:column; align-items:flex-start; }
+      .modal-status { margin-left:0; }
+
+      .footer { padding:40px 24px 28px; }
+      .footer-grid { grid-template-columns:1fr; gap:32px; }
+    }
+
+
+    /* ─── PAGINATION ──────────────────────────────── */
+    .catalog-pagination {
+      display:flex; align-items:center; justify-content:center;
+      gap:8px; padding:40px 80px 20px; max-width:1200px; margin:0 auto;
+    }
+    .page-btn {
+      font-family:var(--font); font-size:13px; font-weight:500;
+      letter-spacing:0.06em; color:var(--grey-mid);
+      background:var(--white); border:1px solid var(--grey-light);
+      padding:10px 16px; cursor:pointer; transition:var(--transition);
+    }
+    .page-btn:hover { border-color:var(--navy); color:var(--navy); }
+    .page-btn.active { background:var(--navy); color:var(--white); border-color:var(--navy); }
+
+    /* ─── LOADING STATE ───────────────────────────── */
+    .catalog-loading {
+      grid-column:1/-1; padding:80px 40px; text-align:center;
+    }
+    .catalog-loading-text {
+      font-size:15px; font-weight:300; color:var(--grey-mid); letter-spacing:0.04em;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../" class="nav-logo">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../conhecimento/atualidade/">Atualidade</a>
+        <a href="../conhecimento/opiniao/">Opinião</a>
+        <a href="../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros/">Parceiros</a>
+        <a href="../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../biblioteca/">Biblioteca</a>
+  <a href="../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos/">Sobre Nós</a>
+  <a href="../parceiros/">Parceiros</a>
+  <a href="../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+  <!-- ─── PAGE HERO ──────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="hero-breadcrumb">
+      <a href="../">Início</a>
+      <span>/</span>
+      <span style="color:rgba(255,255,255,0.55);">Biblioteca</span>
+    </div>
+    <p class="hero-eyebrow">Biblioteca de Instrumentos</p>
+    <h1 class="hero-h1">Capital disponível para a sua empresa.</h1>
+    <p class="hero-sub">Todo o capital ao alcance da sua empresa, num só lugar.</p>
+  </section>
+
+  <!-- ─── FILTER SECTION (search + dropdowns) ─────── -->
+  <div class="filter-section" id="filterSection">
+    <!-- Pesquisa -->
+    <div class="filter-search-row">
+      <div class="search-wrapper">
+        <svg class="search-icon-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar por nome, tipo, programa..." autocomplete="off" oninput="searchCards(this.value)">
+      </div>
+      <span class="filter-count" id="filterCount"></span>
+    </div>
+    <!-- Filtros -->
+    <div class="filter-dropdowns-row">
+      <div class="filter-selects">
+        <select class="filter-select" id="filterNecessidade" onchange="applyFilters()">
+          <option value="all">Necessidade</option>
+          <option value="arranque-validacao">Arranque e validação de negócio</option>
+          <option value="contratacao-rh">Contratação de RH</option>
+          <option value="formacao-qualificacao">Formação e qualificação</option>
+          <option value="id-ciencia">I&amp;D e ciência</option>
+          <option value="digitalizacao-ia">Digitalização e IA</option>
+          <option value="investimento-produtivo">Investimento produtivo e equipamentos</option>
+          <option value="capitalizacao-crescimento">Capitalização e crescimento</option>
+          <option value="tesouraria-credito-garantias">Tesouraria, crédito e garantias</option>
+          <option value="internacionalizacao">Internacionalização</option>
+          <option value="sustentabilidade-energia-clima">Sustentabilidade, energia e clima</option>
+          <option value="impacto-social-inclusao">Impacto social e inclusão</option>
+          <option value="premios-visibilidade">Prémios e visibilidade</option>
+        </select>
+        <select class="filter-select" id="filterCategory" onchange="filterCards(this.value)">
+          <option value="all">Categoria</option>
+          <option value="nr">Não Reembolsável</option>
+          <option value="priv">Investimento Privado</option>
+          <option value="div">Dívida</option>
+          <option value="hib">Híbridos</option>
+          <option value="fiscal">Incentivos Fiscais</option>
+          <option value="outros">Outros</option>
+        </select>
+        <select class="filter-select" id="filterEstado" onchange="applyFilters()">
+          <option value="all">Estado</option>
+          <option value="aberto">Aberto</option>
+          <option value="fechado">Fechado</option>
+        </select>
+        <select class="filter-select" id="filterFonte" onchange="applyFilters()">
+          <option value="all">Fonte</option>
+          <option value="pt2030">Portugal 2030</option>
+          <option value="ue">União Europeia</option>
+          <option value="ani">ANI</option>
+          <option value="iapmei">IAPMEI</option>
+          <option value="bfomento">Banco de Fomento</option>
+          <option value="aicep">AICEP</option>
+          <option value="at">Autoridade Tributária</option>
+          <option value="iefp">IEFP</option>
+          <option value="fct">FCT</option>
+          <option value="turismo">Turismo de Portugal</option>
+          <option value="pventures">Portugal Ventures</option>
+          <option value="prr">PRR</option>
+        </select>
+        <select class="filter-select" id="filterBeneficiario" onchange="applyFilters()">
+          <option value="all">Beneficiário</option>
+          <option value="empresa">Empresas Privadas</option>
+          <option value="entidade-publica">Entidades Públicas</option>
+          <option value="associacao">Associações</option>
+          <option value="ensino-investigacao">Ensino e Investigação</option>
+          <option value="empreendedor">Empreendedores</option>
+        </select>
+        <select class="filter-select" id="filterSetor" onchange="applyFilters()">
+          <option value="all">Setor</option>
+          <option value="agroalimentar">Agroalimentar</option>
+          <option value="comercio">Comércio</option>
+          <option value="economia-criativa">Economia Criativa e Cultura</option>
+          <option value="energia-ambiente">Energia e Ambiente</option>
+          <option value="industria">Indústria</option>
+          <option value="mar-pescas">Mar e Pescas</option>
+          <option value="mobilidade-transportes">Mobilidade e Transportes</option>
+          <option value="saude-ciencias-vida">Saúde e Ciências da Vida</option>
+          <option value="tecnologia-digital">Tecnologia e Digital</option>
+          <option value="turismo">Turismo</option>
+        </select>
+        <select class="filter-select" id="filterRegiao" onchange="applyFilters()">
+          <option value="all">Região</option>
+          <option value="norte">Norte</option>
+          <option value="centro">Centro</option>
+          <option value="lisboa">Lisboa</option>
+          <option value="alentejo">Alentejo</option>
+          <option value="algarve">Algarve</option>
+          <option value="acores">Açores</option>
+          <option value="madeira">Madeira</option>
+        </select>
+      </div>
+      <button class="filter-clear" id="filterClear" onclick="clearAllFilters()">Limpar filtros</button>
+    </div>
+  </div>
+
+  <!-- ─── INSTRUMENTS GRID ──────────────────────────── -->
+  <section class="instruments-section" id="instrumentos">
+    <div class="instruments-grid" id="instrumentsGrid">
+      <!-- Cards loaded dynamically from instruments-catalog.json -->
+    </div>
+    <div class="catalog-pagination" id="pagination"></div>
+  </section>
+
+  <!-- ─── FOOTER ─────────────────────────────────────── -->
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../conhecimento/">Conhecimento</a></li>
+        <li><a href="../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../sobre-nos/">Equipa</a></li>
+        <li><a href="../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../privacidade/">Privacidade</a>
+      <a href="../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+  <!-- ─── JAVASCRIPT ────────────────────────────────── -->
+  <script>
+    /* ─────────────────────────────────────────────────
+       DYNAMIC CATALOG — loads from instruments-catalog.json
+    ───────────────────────────────────────────────── */
+    var catalogData = [];
+    var filteredData = [];
+    var currentPage = 1;
+    var ITEMS_PER_PAGE = 50;
+    var activeCategory = 'all';
+    var activeSearch = '';
+
+    /* ─── HTML ESCAPE ─── */
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    /* ─── RENDER CARDS ─── */
+    function renderCards() {
+      var grid = document.getElementById('instrumentsGrid');
+      var start = (currentPage - 1) * ITEMS_PER_PAGE;
+      var pageData = filteredData.slice(start, start + ITEMS_PER_PAGE);
+
+      grid.innerHTML = '';
+
+      if (filteredData.length === 0) {
+        grid.innerHTML = '<div class="no-results visible" style="display:block"><p class="no-results-text">Nenhum instrumento encontrado. Tente outro termo de pesquisa.</p></div>';
+        renderPagination();
+        return;
+      }
+
+      pageData.forEach(function(item) {
+        var card = document.createElement('div');
+        card.className = 'instrument-card visible';
+        card.dataset.category = item.category;
+        card.dataset.estado = item.estado;
+        card.dataset.fonte = item.fonte;
+        card.dataset.beneficiario = item.beneficiario;
+        card.dataset.regiao = item.regiao;
+        card.dataset.id = item.id;
+        if (item.featured) card.dataset.featured = 'true';
+        if (item.href) {
+          card.dataset.href = item.href;
+          card.style.cursor = 'pointer';
+          card.addEventListener('click', function(e) {
+            if (!e.target.closest('button') && !e.target.closest('a')) {
+              window.location.href = item.href;
+            }
+          });
+        }
+
+        var regioesArr = (item.regiao || '').split(',').filter(Boolean);
+        var regiaoDisplay = regioesArr.length >= 4 ? 'Várias Regiões' : item.highlight2;
+
+        card.innerHTML =
+          '<div class="card-header">' +
+            '<span class="cat-badge cat-' + escapeHtml(item.category) + '">' + escapeHtml(item.category_label) + '</span>' +
+            '<span class="status-pill ' + escapeHtml(item.status_class) + '">' + escapeHtml(item.status_text) + '</span>' +
+          '</div>' +
+          '<h3 class="card-title">' + escapeHtml(item.title) + '</h3>' +
+          '<p class="card-tagline">' + escapeHtml(item.tagline) + '</p>' +
+          '<div class="card-divider"></div>' +
+          '<div class="card-highlights">' +
+            (item.highlight0 ? '<div class="card-highlight"><span class="card-highlight-dot"></span>' + escapeHtml(item.highlight0) + '</div>' : '') +
+            '<div class="card-highlight"><span class="card-highlight-dot"></span>' + escapeHtml(item.highlight1) + '</div>' +
+            '<div class="card-highlight"><span class="card-highlight-dot"></span>' + escapeHtml(regiaoDisplay) + '</div>' +
+          '</div>' +
+          '<span class="card-cta">Mais Informações</span>';
+
+        grid.appendChild(card);
+      });
+
+      renderPagination();
+    }
+
+    /* ─── PAGINATION ─── */
+    function renderPagination() {
+      var container = document.getElementById('pagination');
+      var totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
+
+      if (totalPages <= 1) {
+        container.innerHTML = '';
+        return;
+      }
+
+      var html = '';
+      if (currentPage > 1) {
+        html += '<button class="page-btn" onclick="goToPage(' + (currentPage - 1) + ')">\u2190 Anterior</button>';
+      }
+      for (var i = 1; i <= totalPages; i++) {
+        html += '<button class="page-btn' + (i === currentPage ? ' active' : '') + '" onclick="goToPage(' + i + ')">' + i + '</button>';
+      }
+      if (currentPage < totalPages) {
+        html += '<button class="page-btn" onclick="goToPage(' + (currentPage + 1) + ')">Seguinte \u2192</button>';
+      }
+      container.innerHTML = html;
+    }
+
+    function goToPage(page) {
+      currentPage = page;
+      renderCards();
+      document.getElementById('instrumentos').scrollIntoView({behavior:'smooth'});
+    }
+
+    /* ─── FILTER FUNCTIONS ─── */
+    function filterCards(cat) {
+      activeCategory = cat;
+      var sel = document.getElementById('filterCategory');
+      if (sel) sel.classList.toggle('has-value', cat !== 'all');
+      applyFilters();
+    }
+
+    function searchCards(query) {
+      activeSearch = query.toLowerCase().trim();
+      applyFilters();
+    }
+
+    function clearAllFilters() {
+      activeCategory = 'all';
+      activeSearch = '';
+      document.getElementById('searchInput').value = '';
+      document.getElementById('filterNecessidade').value = 'all';
+      document.getElementById('filterCategory').value = 'all';
+      document.getElementById('filterEstado').value = 'all';
+      document.getElementById('filterFonte').value = 'all';
+      document.getElementById('filterBeneficiario').value = 'all';
+      document.getElementById('filterSetor').value = 'all';
+      document.getElementById('filterRegiao').value = 'all';
+      updateSelectStyles();
+      applyFilters();
+    }
+
+    function updateSelectStyles() {
+      ['filterNecessidade','filterCategory','filterEstado','filterFonte','filterBeneficiario','filterSetor','filterRegiao'].forEach(function(id) {
+        var el = document.getElementById(id);
+        el.classList.toggle('has-value', el.value !== 'all');
+      });
+      var anyActive = activeCategory !== 'all' || activeSearch ||
+        document.getElementById('filterNecessidade').value !== 'all' ||
+        document.getElementById('filterEstado').value !== 'all' ||
+        document.getElementById('filterFonte').value !== 'all' ||
+        document.getElementById('filterBeneficiario').value !== 'all' ||
+        document.getElementById('filterSetor').value !== 'all' ||
+        document.getElementById('filterRegiao').value !== 'all';
+      document.getElementById('filterClear').classList.toggle('hidden', !anyActive);
+    }
+
+    function updateCount(count) {
+      var el = document.getElementById('filterCount');
+      el.textContent = count === 1 ? '1 instrumento' : count + ' instrumentos';
+    }
+
+    /* ─── APPLY FILTERS ─── */
+    function applyFilters() {
+      var fNecessidade = document.getElementById('filterNecessidade').value;
+      var fEstado = document.getElementById('filterEstado').value;
+      var fFonte = document.getElementById('filterFonte').value;
+      var fBeneficiario = document.getElementById('filterBeneficiario').value;
+      var fSetor = document.getElementById('filterSetor').value;
+      var fRegiao = document.getElementById('filterRegiao').value;
+
+      filteredData = catalogData.filter(function(item) {
+        var catMatch = activeCategory === 'all' || item.category === activeCategory;
+        var estadoMatch = fEstado === 'all' || item.estado === fEstado || (fEstado === 'aberto' && item.estado === 'cont');
+        var fonteMatch = fFonte === 'all' || item.fonte === fFonte || (fFonte === 'pt2030' && ['compete','norte-2030'].indexOf(item.fonte) !== -1);
+
+        var necessidadeMatch = fNecessidade === 'all';
+        if (!necessidadeMatch && item.necessidades && item.necessidades.length) {
+          necessidadeMatch = item.necessidades.indexOf(fNecessidade) !== -1;
+        }
+
+        var beneficiarioMatch = fBeneficiario === 'all';
+        if (!beneficiarioMatch && item.beneficiario) {
+          beneficiarioMatch = item.beneficiario.split(',').indexOf(fBeneficiario) !== -1;
+        }
+
+        var setorMatch = fSetor === 'all';
+        if (!setorMatch && item.setores && item.setores.length) {
+          setorMatch = item.setores.indexOf('todos') !== -1 || item.setores.indexOf(fSetor) !== -1;
+        }
+
+        var regiaoMatch = fRegiao === 'all';
+        if (!regiaoMatch && item.regiao) {
+          regiaoMatch = item.regiao.split(',').indexOf(fRegiao) !== -1;
+        }
+
+        var searchMatch = true;
+        if (activeSearch) {
+          searchMatch = item.title.toLowerCase().indexOf(activeSearch) !== -1 ||
+                        item.tagline.toLowerCase().indexOf(activeSearch) !== -1 ||
+                        item.highlight1.toLowerCase().indexOf(activeSearch) !== -1 ||
+                        item.highlight2.toLowerCase().indexOf(activeSearch) !== -1;
+        }
+
+        return catMatch && necessidadeMatch && estadoMatch && fonteMatch && beneficiarioMatch && setorMatch && regiaoMatch && searchMatch;
+      });
+
+      currentPage = 1;
+      renderCards();
+      updateCount(filteredData.length);
+      updateSelectStyles();
+    }
+
+    /* ─── LOAD CATALOG ─── */
+    (function() {
+      var grid = document.getElementById('instrumentsGrid');
+      grid.innerHTML = '<div class="catalog-loading"><p class="catalog-loading-text">A carregar instrumentos...</p></div>';
+      document.getElementById('filterClear').classList.add('hidden');
+
+      fetch('../instruments-catalog.json')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          catalogData = data.instruments || [];
+          applyFilters();
+        })
+        .catch(function(err) {
+          console.error('Erro ao carregar catalogo:', err);
+          grid.innerHTML = '<div class="no-results visible" style="display:block"><p class="no-results-text">Erro ao carregar instrumentos. Recarregue a pagina.</p></div>';
+        });
+    })();
+
+    /* ─── NAVBAR SCROLL ─── */
+    var navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', function() {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* ─── HAMBURGER ─── */
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', function() {
+      mobileMenu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

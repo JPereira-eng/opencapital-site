@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<title>Termos e Condições: Grupo Open Capital</title>
+  <meta name="description" content="Termos e Condições de utilização do website opencapital.pt e das plataformas Capital Simulator e Tech2Business do Grupo Open Capital.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:       #1A3A5C;
+      --navy-deep:  #0D1F33;
+      --gold:       #C9A96E;
+      --white:      #FFFFFF;
+      --grey-light: #E5E5E5;
+      --grey-mid:   #7A7A7A;
+      --grey-dark:  #2A2A2A;
+      --font: 'Montserrat', sans-serif;
+      --transition: all 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --shadow: 0 8px 40px rgba(26,58,92,0.10);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:var(--font); background:var(--white); color:var(--grey-dark); -webkit-font-smoothing:antialiased; }
+
+    /* ─── NAVBAR ─── */
+    .navbar { display:flex; align-items:center; justify-content:space-between; padding:0 48px; height:74px; position:fixed; top:0; left:0; right:0; z-index:200; background:var(--navy); border-bottom:1px solid rgba(255,255,255,0.07); transition:var(--transition); }
+    .navbar.scrolled { background:rgba(255,255,255,0.97); backdrop-filter:blur(20px); border-bottom:1px solid var(--grey-light); }
+    .nav-logo { display:flex; align-items:center; text-decoration:none; flex-shrink:0; }
+    .nav-logo-img { height:57px; width:auto; display:block; filter:brightness(0) invert(1); transition:var(--transition); }
+    .navbar.scrolled .nav-logo-img { filter:none; }
+    .nav-links { display:flex; align-items:center; gap:24px; list-style:none; margin-left:auto; }
+    .nav-links a { font-size:15px; font-weight:500; letter-spacing:0.08em; text-transform:none; color:rgba(255,255,255,0.68); text-decoration:none; transition:var(--transition); position:relative; padding-bottom:3px; white-space:nowrap; }
+    .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold); transition:width 0.3s ease; }
+    .nav-links a:hover { color:var(--white); }
+    .nav-links a:hover::after { width:100%; }
+    .navbar.scrolled .nav-links a { color:var(--grey-dark); }
+    .navbar.scrolled .nav-links a:hover { color:var(--navy); }
+    .nav-badge { font-size:10px; font-weight:600; letter-spacing:0.06em; text-transform:none; color:var(--gold); border:1px solid var(--gold); padding:1px 4px; margin-left:3px; vertical-align:super; line-height:1; }
+    .nav-dropdown { position:relative; }
+    .nav-dropdown-arrow { display:inline-block; margin-left:5px; width:6px; height:6px; border-right:1px solid currentColor; border-bottom:1px solid currentColor; transform:rotate(45deg) translateY(-2px); transition:transform 0.25s ease; vertical-align:middle; opacity:0.6; }
+    .nav-dropdown:hover .nav-dropdown-arrow { transform:rotate(-135deg) translateY(-2px); opacity:1; }
+    .nav-dropdown-menu { position:absolute; top:calc(100% + 14px); left:50%; transform:translateX(-50%) translateY(-6px); background:var(--white); border:1px solid var(--grey-light); min-width:160px; opacity:0; visibility:hidden; transition:opacity 0.22s ease, transform 0.22s ease; box-shadow:var(--shadow); z-index:200; }
+    .nav-dropdown:hover .nav-dropdown-menu { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
+    .nav-dropdown-menu a { display:block; padding:12px 20px; font-size:13px; font-weight:500; letter-spacing:0.05em; text-transform:none; color:var(--grey-dark); text-decoration:none; border-bottom:1px solid var(--grey-light); transition:var(--transition); white-space:nowrap; }
+    .nav-dropdown-menu a:last-child { border-bottom:none; }
+    .nav-dropdown-menu a:hover { color:var(--navy); background:#FAFAFA; padding-left:24px; }
+    .nav-dropdown-menu a::after { display:none !important; }
+    .navbar:not(.scrolled) .nav-dropdown-menu { background:var(--navy-deep); border-color:rgba(255,255,255,0.08); }
+    .navbar:not(.scrolled) .nav-dropdown-menu a { color:rgba(255,255,255,0.60); border-color:rgba(255,255,255,0.06); }
+    .navbar:not(.scrolled) .nav-dropdown-menu a:hover { color:var(--white); background:rgba(255,255,255,0.05); }
+    .nav-cta { font-size:16px; font-weight:600; letter-spacing:0.08em; text-transform:none; color:var(--white); text-decoration:none; border:1px solid rgba(255,255,255,0.28); padding:9px 18px; margin-left:28px; transition:var(--transition); white-space:nowrap; }
+    .nav-cta:hover { border-color:var(--white); background:rgba(255,255,255,0.08); }
+    .navbar.scrolled .nav-cta { color:var(--navy); border-color:var(--navy); }
+    .navbar.scrolled .nav-cta:hover { background:var(--navy); color:var(--white); }
+    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
+    .nav-hamburger span { display:block; width:22px; height:1px; background:var(--white); transition:var(--transition); }
+    .navbar.scrolled .nav-hamburger span { background:var(--navy); }
+    .nav-mobile-menu { display:none; position:fixed; top:74px; left:0; right:0; background:var(--navy); padding:24px 32px 32px; border-bottom:1px solid rgba(255,255,255,0.07); z-index:199; }
+    .nav-mobile-menu.open { display:block; }
+    .nav-mobile-menu a { display:block; font-size:15px; font-weight:500; letter-spacing:0.05em; text-transform:none; color:rgba(255,255,255,0.7); text-decoration:none; padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.06); transition:var(--transition); }
+    .nav-mobile-menu a:hover { color:var(--white); }
+    .nav-mobile-cta { display:inline-block !important; margin-top:22px; font-size:14px; font-weight:600; color:var(--white) !important; border:1px solid rgba(255,255,255,0.28); padding:12px 24px; }
+    @media(max-width:768px) { .nav-links { display:none; } .nav-cta { display:none; } .nav-hamburger { display:flex; } }
+
+    /* ─── DOC PAGE ─── */
+    .doc-page { padding-top:74px; background:var(--white); }
+    .doc-header { position:relative; padding:96px 8% 56px; }
+    .doc-title { font-size:72px; font-weight:800; color:var(--grey-dark); line-height:1.0; letter-spacing:-0.02em; max-width:720px; }
+    .doc-wrap { padding:48px 8% 96px; }
+    .doc-p { font-size:16px; font-weight:400; color:var(--grey-dark); line-height:1.75; margin-bottom:18px; }
+    .doc-p a { color:var(--navy); text-decoration:underline; text-underline-offset:3px; }
+    .doc-p a:hover { color:var(--gold); }
+    .doc-h2 { font-size:22px; font-weight:700; color:var(--grey-dark); letter-spacing:-0.005em; margin-top:44px; margin-bottom:18px; }
+    .doc-h2:first-of-type { margin-top:32px; }
+    .doc-sub { font-size:16px; font-weight:400; color:var(--grey-dark); line-height:1.75; margin-bottom:14px; }
+    .doc-sub strong { font-weight:700; color:var(--grey-dark); }
+    .doc-update { margin-top:56px; padding-top:24px; border-top:1px solid var(--grey-light); font-size:14px; color:var(--grey-mid); }
+    .doc-update strong { color:var(--grey-dark); font-weight:600; }
+
+    /* ─── FOOTER ─── */
+    .footer { background:var(--navy-deep); padding:56px 80px 34px; }
+    .footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr; gap:44px; margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.07); }
+    .f-logo-row { display:flex; align-items:center; gap:10px; }
+    .f-logo-img { height:72px; width:auto; display:block; filter:brightness(0) invert(1); opacity:0.88; }
+    .f-tagline { font-size:16px; font-weight:100; letter-spacing:0.14em; color:var(--gold); margin-top:12px; }
+    .f-col-label { font-size:11px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:rgba(255,255,255,0.24); margin-bottom:16px; }
+    .f-links { list-style:none; }
+    .f-links li { margin-bottom:9px; }
+    .f-links a { font-size:15px; font-weight:300; color:rgba(255,255,255,0.48); text-decoration:none; transition:var(--transition); letter-spacing:0.03em; }
+    .f-links a:hover { color:var(--white); }
+    .f-badge { font-size:9px; font-weight:600; letter-spacing:0.1em; color:var(--gold); border:1px solid rgba(201,169,110,0.45); padding:1px 5px; margin-left:5px; vertical-align:middle; }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+    .f-copy { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:0.05em; }
+    .f-legal { display:flex; gap:22px; }
+    .f-legal a { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); text-decoration:none; letter-spacing:0.05em; transition:var(--transition); }
+    .f-legal a:hover { color:rgba(255,255,255,0.45); }
+
+    @media(max-width:768px) {
+      .doc-header { padding:64px 24px 32px; }
+      .doc-title { font-size:44px; }
+      .doc-wrap { padding:32px 24px 72px; width:100%; }
+      .doc-h2 { font-size:19px; margin-top:36px; }
+      .footer { padding:48px 24px 28px; }
+      .footer-grid { grid-template-columns:1fr; gap:32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── NAVBAR ─── -->
+  <!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../" class="nav-logo">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../conhecimento/atualidade/">Atualidade</a>
+        <a href="../conhecimento/opiniao/">Opinião</a>
+        <a href="../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros/">Parceiros</a>
+        <a href="../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../biblioteca/">Biblioteca</a>
+  <a href="../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos/">Sobre Nós</a>
+  <a href="../parceiros/">Parceiros</a>
+  <a href="../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+  <!-- ─── DOC ─── -->
+  <section class="doc-page">
+    <header class="doc-header">
+      <h1 class="doc-title">Termos<br>e Condições</h1>
+    </header>
+
+    <div class="doc-wrap">
+
+      <p class="doc-p">Os presentes Termos e Condições regulam o acesso e a utilização do website opencapital.pt, das plataformas Capital Simulator e Tech2Business, bem como de todos os serviços digitais disponibilizados pelo Grupo Open Capital, fixando os direitos e obrigações das partes envolvidas.</p>
+
+      <p class="doc-p">A utilização dos referidos recursos digitais pressupõe a leitura, compreensão e aceitação integral dos presentes Termos e Condições, os quais se complementam com a <a href="../privacidade/">Política de Privacidade</a>, por esta integrada por remissão.</p>
+
+      <h2 class="doc-h2">1. Objeto e âmbito de aplicação</h2>
+      <p class="doc-sub"><strong>1.1.</strong> Os presentes Termos e Condições aplicam-se à totalidade dos recursos digitais operados pelo Grupo Open Capital, designadamente:</p>
+      <p class="doc-sub"><strong>1.2.</strong> O website institucional opencapital.pt, incluindo todas as suas páginas e subdomínios, a Biblioteca de instrumentos, a secção Conhecimento, Sobre Nós, Parceiros e Carreiras.</p>
+      <p class="doc-sub"><strong>1.3.</strong> A plataforma Capital Simulator, destinada à simulação de cenários de capital e financiamento, em regime de pré-lançamento e acesso progressivo.</p>
+      <p class="doc-sub"><strong>1.4.</strong> A plataforma Tech2Business, destinada à avaliação de maturidade tecnológica e conversão comercial, em regime de pré-lançamento e acesso progressivo.</p>
+      <p class="doc-sub"><strong>1.5.</strong> Os demais serviços digitais complementares, incluindo o agendamento através do Calendly, as comunicações por email e os formulários de contacto.</p>
+
+      <h2 class="doc-h2">2. Identificação do titular</h2>
+      <p class="doc-sub"><strong>2.1.</strong> Os recursos digitais referidos são operados pelo Grupo Open Capital, entidade que pode ser contactada através do endereço de correio eletrónico <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a>.</p>
+      <p class="doc-sub"><strong>2.2.</strong> O Grupo Open Capital reserva-se o direito de transferir, ceder ou atribuir a gestão dos recursos digitais a outras entidades do mesmo grupo económico, sem que tal implique alteração substancial dos presentes Termos e Condições.</p>
+
+      <h2 class="doc-h2">3. Aceitação dos Termos e Condições</h2>
+      <p class="doc-sub"><strong>3.1.</strong> O acesso e utilização dos recursos digitais do Grupo Open Capital implicam o reconhecimento, pelo utilizador, de que leu, compreendeu e aceitou integralmente os presentes Termos e Condições.</p>
+      <p class="doc-sub"><strong>3.2.</strong> O utilizador que não concorde com qualquer das disposições aqui estabelecidas deverá abster-se de utilizar os referidos recursos.</p>
+      <p class="doc-sub"><strong>3.3.</strong> Para funcionalidades que venham a exigir a criação de conta, nomeadamente no Capital Simulator e no Tech2Business, poderá ser solicitada a aceitação expressa adicional dos presentes Termos no momento do registo.</p>
+
+      <h2 class="doc-h2">4. Natureza do conteúdo e ausência de aconselhamento</h2>
+      <p class="doc-sub"><strong>4.1.</strong> Todo o conteúdo disponibilizado através dos recursos digitais do Grupo Open Capital reveste natureza meramente informativa e divulgativa, não constituindo, em caso algum, aconselhamento financeiro, fiscal, jurídico, contabilístico ou de investimento personalizado.</p>
+      <p class="doc-sub"><strong>4.2.</strong> As fichas de instrumentos, artigos da secção Conhecimento, análises comparativas, estimativas, exemplos de cálculo e quaisquer outros conteúdos editoriais são elaborados com base em informação pública disponível à data de publicação, podendo encontrar-se desatualizados ou não refletir alterações regulamentares ou interpretativas posteriores.</p>
+      <p class="doc-sub"><strong>4.3.</strong> Qualquer decisão de natureza empresarial, financeira, fiscal ou de submissão a programas de apoio deverá ser tomada com base na consulta direta dos regulamentos oficiais e avisos de abertura emitidos pelas autoridades competentes, no aconselhamento profissional específico ao caso concreto, e na verificação atualizada dos prazos, elegibilidade e requisitos aplicáveis.</p>
+      <p class="doc-sub"><strong>4.4.</strong> O Grupo Open Capital declina qualquer responsabilidade por decisões tomadas exclusivamente com base no conteúdo publicado nos seus recursos digitais.</p>
+
+      <h2 class="doc-h2">5. Propriedade intelectual</h2>
+      <p class="doc-sub"><strong>5.1.</strong> Todo o conteúdo disponibilizado através dos recursos digitais, incluindo, sem caráter exaustivo, textos, artigos, fichas de instrumentos, análises, relatórios, imagens, ilustrações, ícones, infografias, estrutura editorial, identidade visual, logótipo, sistema de design, tipografia, código-fonte, algoritmos e modelos de simulação, é protegido por direitos de autor e direitos conexos.</p>
+      <p class="doc-sub"><strong>5.2.</strong> O referido conteúdo é propriedade do Grupo Open Capital ou encontra-se legitimamente licenciado por terceiros, sendo a sua reprodução, distribuição, modificação, adaptação, tradução, publicação ou utilização comercial, no todo ou em parte, expressamente interdita sem autorização escrita prévia.</p>
+      <p class="doc-sub"><strong>5.3.</strong> É permitida a citação pontual do conteúdo em contextos jornalísticos, académicos ou profissionais, desde que acompanhada de referência clara à fonte (Grupo Open Capital, com indicação da ligação para a página original) e sem que tal desvirtue o sentido ou alcance do conteúdo citado.</p>
+
+      <h2 class="doc-h2">6. Utilização permitida e proibida</h2>
+      <p class="doc-sub"><strong>6.1.</strong> O utilizador obriga-se a utilizar os recursos digitais de forma lícita, conforme a boa-fé, os bons costumes e o respeito pelos direitos de terceiros.</p>
+      <p class="doc-sub"><strong>6.2.</strong> É expressamente proibida a utilização de ferramentas automatizadas de extração em massa (scraping, crawling, harvesting), incluindo bots, scripts, agregadores ou agentes de inteligência artificial, para recolha sistemática de conteúdo, sem autorização escrita prévia do Grupo Open Capital.</p>
+      <p class="doc-sub"><strong>6.3.</strong> É igualmente proibida a utilização do conteúdo publicado para fins de treino, ajustamento ou avaliação de modelos de inteligência artificial, generativa ou não, sem autorização expressa do Grupo Open Capital.</p>
+      <p class="doc-sub"><strong>6.4.</strong> É vedada a cópia, revenda, republicação ou redistribuição de conteúdo em plataformas concorrentes, agregadores ou redes sociais, apresentando-o como original.</p>
+      <p class="doc-sub"><strong>6.5.</strong> São ainda proibidos quaisquer atos de engenharia reversa, descompilação ou tentativa de obtenção do código-fonte de algoritmos, modelos ou funcionalidades integrados nas plataformas.</p>
+      <p class="doc-sub"><strong>6.6.</strong> É estritamente proibida a introdução de malware, vírus, código malicioso ou quaisquer elementos suscetíveis de comprometer a integridade, disponibilidade ou segurança dos sistemas, bem como a tentativa de acesso não autorizado a áreas restritas, contas de outros utilizadores ou infraestrutura técnica.</p>
+      <p class="doc-sub"><strong>6.7.</strong> O incumprimento do disposto no presente artigo poderá determinar a suspensão imediata do acesso, sem prejuízo da responsabilidade civil e criminal a que possa haver lugar.</p>
+
+      <h2 class="doc-h2">7. Capital Simulator</h2>
+      <p class="doc-sub"><strong>7.1.</strong> O Capital Simulator é uma plataforma de simulação destinada a auxiliar empresas e empreendedores na identificação de cenários de capital e financiamento adequados ao respetivo perfil.</p>
+      <p class="doc-sub"><strong>7.2.</strong> Os resultados apresentados constituem estimativas indicativas, baseadas nos dados introduzidos pelo utilizador e em parâmetros médios do mercado vigentes à data, não configurando proposta contratual, oferta de financiamento, garantia de aprovação em qualquer instrumento, nem compromisso de qualquer natureza por parte do Grupo Open Capital.</p>
+      <p class="doc-sub"><strong>7.3.</strong> O utilizador é o único responsável pela veracidade, atualidade e legitimidade dos dados que introduz na plataforma, sendo que a introdução de informação falsa, desatualizada ou obtida de forma ilícita invalida os resultados obtidos e poderá configurar má-fé processual.</p>
+      <p class="doc-sub"><strong>7.4.</strong> Os resultados da simulação devem ser utilizados como ponto de partida para análise, não podendo constituir base única ou suficiente para qualquer decisão empresarial ou financeira.</p>
+      <p class="doc-sub"><strong>7.5.</strong> O Grupo Open Capital reserva-se o direito de suspender, modificar, limitar ou descontinuar, a qualquer momento e sem aviso prévio, funcionalidades, cenários ou o próprio serviço do Capital Simulator.</p>
+
+      <h2 class="doc-h2">8. Tech2Business</h2>
+      <p class="doc-sub"><strong>8.1.</strong> O Tech2Business é uma plataforma de avaliação de maturidade tecnológica e conversão comercial, destinada a empresas inovadoras.</p>
+      <p class="doc-sub"><strong>8.2.</strong> O diagnóstico, os scores e as recomendações produzidas pelo Tech2Business constituem uma análise estruturada, elaborada a partir das respostas do utilizador, segundo metodologia proprietária do Grupo Open Capital, não substituindo auditoria técnica independente, due diligence, ou avaliação formal para efeitos de angariação de capital, licenciamento ou acreditação.</p>
+      <p class="doc-sub"><strong>8.3.</strong> A informação técnica, comercial ou estratégica submetida pelo utilizador é tratada em regime de confidencialidade, nos termos definidos na <a href="../privacidade/">Política de Privacidade</a>.</p>
+      <p class="doc-sub"><strong>8.4.</strong> Os relatórios, scores e recomendações gerados pertencem ao utilizador para utilização interna e partilha com investidores, parceiros ou clientes, no âmbito da sua atividade. A metodologia, os modelos de avaliação e os referenciais comparativos permanecem propriedade exclusiva do Grupo Open Capital.</p>
+      <p class="doc-sub"><strong>8.5.</strong> O Tech2Business não substitui, para qualquer efeito, os processos formais de validação tecnológica exigidos por programas específicos, nem os respetivos organismos competentes.</p>
+
+      <h2 class="doc-h2">9. Contas de utilizador</h2>
+      <p class="doc-sub"><strong>9.1.</strong> Determinadas funcionalidades, designadamente no Capital Simulator e no Tech2Business, poderão exigir a criação de conta, aplicando-se, nesse caso, o disposto no presente artigo.</p>
+      <p class="doc-sub"><strong>9.2.</strong> O utilizador é inteiramente responsável pela confidencialidade das credenciais de acesso e por todas as atividades realizadas através da sua conta, obrigando-se a notificar o Grupo Open Capital, de imediato, de qualquer utilização não autorizada, através do endereço <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a>.</p>
+      <p class="doc-sub"><strong>9.3.</strong> O Grupo Open Capital reserva-se o direito de suspender ou encerrar contas em caso de violação dos presentes Termos e Condições, suspeita de uso fraudulento ou inatividade prolongada.</p>
+      <p class="doc-sub"><strong>9.4.</strong> O utilizador poderá solicitar o encerramento da sua conta a qualquer momento, sem prejuízo da conservação de dados imposta por lei.</p>
+
+      <h2 class="doc-h2">10. Links e serviços de terceiros</h2>
+      <p class="doc-sub"><strong>10.1.</strong> Os recursos digitais do Grupo Open Capital contêm ligações (links) para websites e serviços operados por terceiros, nomeadamente a plataforma Calendly, portais institucionais (Balcão dos Fundos, IAPMEI, AICEP, Comissão Europeia, entre outros) e documentos oficiais em formato eletrónico.</p>
+      <p class="doc-sub"><strong>10.2.</strong> Os referidos recursos externos regem-se pelos respetivos termos e políticas de privacidade, não podendo o Grupo Open Capital ser responsabilizado pelo respetivo conteúdo, disponibilidade, práticas ou políticas.</p>
+
+      <h2 class="doc-h2">11. Disponibilidade do serviço</h2>
+      <p class="doc-sub"><strong>11.1.</strong> O Grupo Open Capital diligencia para manter os seus recursos digitais acessíveis em condições de normalidade, não garantindo, todavia, a sua disponibilidade ininterrupta, nem a ausência de falhas técnicas, interrupções de manutenção ou indisponibilidades imputáveis à infraestrutura ou a serviços de terceiros.</p>
+      <p class="doc-sub"><strong>11.2.</strong> Não é igualmente garantida a compatibilidade com todos os dispositivos, browsers ou sistemas operativos, nem a permanência indefinida de qualquer funcionalidade, conteúdo ou plataforma.</p>
+      <p class="doc-sub"><strong>11.3.</strong> O Grupo Open Capital reserva-se o direito de, a todo o tempo e sem aviso prévio, suspender, modificar, atualizar, limitar ou descontinuar, total ou parcialmente, qualquer dos recursos digitais, incluindo o Capital Simulator e o Tech2Business.</p>
+      <p class="doc-sub"><strong>11.4.</strong> As comunicações anteriores relativas a funcionalidades previstas ou em desenvolvimento não constituem compromisso contratual vinculativo quanto ao seu lançamento, prazo ou âmbito.</p>
+
+      <h2 class="doc-h2">12. Limitação de responsabilidade</h2>
+      <p class="doc-sub"><strong>12.1.</strong> Nos limites permitidos pela lei aplicável, o Grupo Open Capital não será responsabilizado por quaisquer decisões empresariais, financeiras ou de investimento tomadas com base na informação publicada ou nos outputs das plataformas.</p>
+      <p class="doc-sub"><strong>12.2.</strong> O Grupo Open Capital não se responsabiliza por perdas indiretas, lucros cessantes, perdas de oportunidade, dano reputacional, ou por qualquer dano que não seja direta e exclusivamente imputável a dolo ou negligência grosseira sua.</p>
+      <p class="doc-sub"><strong>12.3.</strong> Excluem-se igualmente do âmbito da responsabilidade do Grupo Open Capital as falhas técnicas, indisponibilidades ou perdas de dados imputáveis a subcontratantes, operadores de infraestrutura ou fornecedores de conectividade, bem como os atos, omissões ou conteúdos de terceiros.</p>
+      <p class="doc-sub"><strong>12.4.</strong> O Grupo Open Capital não se responsabiliza pelos resultados obtidos a partir de dados incorretos, desatualizados ou falsos introduzidos pelo próprio utilizador, nem por qualquer utilização dos recursos digitais em violação dos presentes Termos e Condições.</p>
+      <p class="doc-sub"><strong>12.5.</strong> Em qualquer caso, e sem prejuízo dos limites legalmente imperativos, a responsabilidade global do Grupo Open Capital perante qualquer utilizador não excederá o valor efetivamente pago por este, pelos serviços, no período dos últimos doze meses, sendo, na utilização gratuita dos recursos, limitada ao montante máximo de €100 (cem euros).</p>
+
+      <h2 class="doc-h2">13. Proteção de dados pessoais</h2>
+      <p class="doc-sub"><strong>13.1.</strong> O tratamento de dados pessoais no âmbito da utilização dos recursos digitais do Grupo Open Capital rege-se pela <a href="../privacidade/">Política de Privacidade</a>, que integra, por remissão, os presentes Termos e Condições.</p>
+      <p class="doc-sub"><strong>13.2.</strong> A aceitação dos presentes Termos implica o reconhecimento, pelo utilizador, de que tomou conhecimento integral da referida Política de Privacidade.</p>
+
+      <h2 class="doc-h2">14. Alterações aos Termos e Condições</h2>
+      <p class="doc-sub"><strong>14.1.</strong> O Grupo Open Capital reserva-se o direito de alterar os presentes Termos e Condições sempre que se verifiquem alterações legais, tecnológicas ou operacionais que o justifiquem, designadamente em virtude da evolução das plataformas Capital Simulator e Tech2Business.</p>
+      <p class="doc-sub"><strong>14.2.</strong> A versão em vigor, em cada momento, é a que se encontra publicada nesta página, com indicação da respetiva data de atualização.</p>
+      <p class="doc-sub"><strong>14.3.</strong> A continuação da utilização dos recursos digitais após a publicação de versão alterada constitui aceitação dos novos Termos e Condições.</p>
+
+      <h2 class="doc-h2">15. Lei aplicável e foro competente</h2>
+      <p class="doc-sub"><strong>15.1.</strong> Os presentes Termos e Condições regem-se pela lei portuguesa, com exclusão das regras de conflitos de leis.</p>
+      <p class="doc-sub"><strong>15.2.</strong> Para a resolução de qualquer litígio emergente da utilização dos recursos digitais do Grupo Open Capital, as partes elegem, com renúncia expressa a qualquer outro, o Tribunal da Comarca da sede do Grupo Open Capital.</p>
+      <p class="doc-sub"><strong>15.3.</strong> Nos termos da Lei n.º 144/2015, de 8 de setembro, informa-se que, em caso de litígio de consumo, o utilizador pode recorrer à Direção-Geral do Consumidor (<a href="https://www.consumidor.gov.pt" target="_blank">www.consumidor.gov.pt</a>) ou às entidades de resolução alternativa de litígios de consumo territorialmente competentes.</p>
+
+      <h2 class="doc-h2">16. Disposições finais</h2>
+      <p class="doc-sub"><strong>16.1.</strong> A eventual declaração de invalidade, ilegalidade ou inexequibilidade de qualquer disposição dos presentes Termos e Condições não afetará a validade e eficácia das restantes disposições, devendo a disposição inválida ser substituída, na medida do possível, por outra que preserve a intenção original das partes.</p>
+      <p class="doc-sub"><strong>16.2.</strong> A não exigência, pelo Grupo Open Capital, do cumprimento pontual de qualquer disposição dos presentes Termos não constitui renúncia ao direito de a exigir posteriormente.</p>
+
+      <p class="doc-update"><strong>Última atualização:</strong> junho de 2023</p>
+
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../conhecimento/">Conhecimento</a></li>
+        <li><a href="../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../sobre-nos/">Equipa</a></li>
+        <li><a href="../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../privacidade/">Privacidade</a>
+      <a href="../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) navbar.classList.add('scrolled');
+      else navbar.classList.remove('scrolled');
+    });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+  </script>
+
+</body>
+</html>

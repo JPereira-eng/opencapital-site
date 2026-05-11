@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+  <title>Regulamentos e Conceitos | Open Capital</title>
+  <meta name="description" content="Regulamentos, leis e conceitos, traduzidos para quem precisa de os aplicar.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/conhecimento-hubs.css">
+  <style>
+    .hub-hero { padding:120px 80px 56px; background:var(--white); }
+    .hub-hero .breadcrumb { margin-bottom:32px; }
+    .hub-hero .hero-eyebrow { font-size:13px; font-weight:600; letter-spacing:0.30em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+    .hub-hero .hero-h1 { font-size:54px; font-weight:700; letter-spacing:-0.01em; color:var(--navy); line-height:1.05; margin-bottom:16px; }
+    .hub-hero .hero-sub { font-size:19px; font-weight:300; color:var(--grey-mid); max-width:760px; line-height:1.6; }
+    @media(max-width:768px){ .hub-hero { padding:96px 28px 40px; } .hub-hero .hero-h1 { font-size:36px; } }
+
+    /* search bar */
+    .doc-search-bar { padding:0 80px 32px; background:var(--white); }
+    .doc-search-input {
+      width:100%; max-width:520px; padding:14px 18px;
+      font-family:var(--font); font-size:15px; font-weight:300; color:var(--grey-dark);
+      background:var(--white); border:1px solid var(--grey-light); outline:none;
+      transition:var(--transition); border-radius:0;
+    }
+    .doc-search-input::placeholder { color:var(--grey-light); }
+    .doc-search-input:focus { border-color:var(--navy); box-shadow:0 0 0 3px rgba(26,58,92,0.05); }
+    @media(max-width:768px){ .doc-search-bar { padding:0 28px 24px; } }
+
+    /* documental list */
+    .doc-list-section { padding:32px 80px 96px; background:var(--white); }
+    .doc-subgroup { margin-bottom:64px; }
+    .doc-subgroup:last-child { margin-bottom:0; }
+    .doc-subgroup-header {
+      font-size:12px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase;
+      color:var(--gold); margin-bottom:24px; padding-bottom:14px; border-bottom:1px solid var(--grey-light);
+    }
+    .doc-entry {
+      display:block; padding:24px 0; border-bottom:1px solid var(--grey-light);
+      text-decoration:none; transition:var(--transition);
+    }
+    .doc-entry:hover { background:#FAFAFA; padding-left:8px; }
+    .doc-entry:hover .doc-entry-title { color:var(--gold); }
+    .doc-entry:last-child { border-bottom:none; }
+    .doc-entry-title {
+      font-size:22px; font-weight:700; color:var(--navy); line-height:1.3; margin-bottom:8px;
+      transition:var(--transition);
+    }
+    .doc-entry-meta {
+      font-size:13px; font-weight:400; letter-spacing:0.04em; color:var(--grey-mid); margin-bottom:8px;
+    }
+    .doc-entry-meta-sep { color:var(--grey-light); margin:0 8px; }
+    .doc-entry-desc {
+      font-size:15px; font-weight:300; color:var(--grey-dark); line-height:1.7; max-width:780px;
+    }
+    .doc-empty { padding:24px 0; color:var(--grey-mid); font-size:15px; font-style:italic; }
+    .doc-no-results { padding:48px 0; color:var(--grey-mid); font-size:16px; text-align:center; }
+
+    @media(max-width:768px){
+      .doc-list-section { padding:16px 28px 64px; }
+      .doc-entry-title { font-size:19px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+<section class="hub-hero">
+  <nav class="breadcrumb">
+    <a href="../../">Início</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="../">Conhecimento</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Regulamentos e Conceitos</span>
+  </nav>
+  <div class="hero-eyebrow">Regulamentos e Conceitos</div>
+  <h1 class="hero-h1">Regulamentos e Conceitos</h1>
+  <p class="hero-sub">Regulamentos, leis e conceitos, traduzidos para quem precisa de os aplicar.</p>
+</section>
+
+<div class="doc-search-bar">
+  <input type="text" id="docSearch" class="doc-search-input" placeholder="Pesquisar por título...">
+</div>
+
+<section class="doc-list-section">
+  <div id="docContainer">
+    <!-- preenchido em runtime -->
+  </div>
+</section>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburger) hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+
+  const SUBGRUPOS = [
+    { key: 'regulamentos-leis',         label: 'Regulamentos e Leis' },
+    { key: 'programas-instrumentos',    label: 'Programas e Instrumentos Explicados' },
+    { key: 'conceitos-metricas',        label: 'Conceitos e Métricas' },
+    { key: 'procedimentos-boas-praticas', label: 'Procedimentos e Boas Práticas' },
+  ];
+
+  let allArticles = [];
+
+  function buildEntry(a) {
+    const title = a.title || a.card_title || '';
+    const dateLabel = a.art_date || a.data_publicacao || '';
+    const author = a.autor || '';
+    const desc = a.tagline || a.meta_description || '';
+    const metaParts = [];
+    if (dateLabel) metaParts.push(dateLabel);
+    if (author) metaParts.push(author);
+    const metaHTML = metaParts.join('<span class="doc-entry-meta-sep">·</span>');
+    return ''
+      + '<a href="../../' + a.href + '" class="doc-entry">'
+      + '<h3 class="doc-entry-title">' + title + '</h3>'
+      + (metaHTML ? '<div class="doc-entry-meta">' + metaHTML + '</div>' : '')
+      + (desc ? '<div class="doc-entry-desc">' + desc + '</div>' : '')
+      + '</a>';
+  }
+
+  function render(filter) {
+    const container = document.getElementById('docContainer');
+    const filterLower = (filter || '').toLowerCase().trim();
+    const filtered = filterLower
+      ? allArticles.filter(a => (a.title || '').toLowerCase().includes(filterLower))
+      : allArticles;
+
+    if (filterLower && filtered.length === 0) {
+      container.innerHTML = '<p class="doc-no-results">Nenhum artigo corresponde a "' + filter + '".</p>';
+      return;
+    }
+
+    let html = '';
+    SUBGRUPOS.forEach(g => {
+      const items = filtered
+        .filter(a => a.subgrupo === g.key)
+        .sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+      if (items.length === 0 && filterLower) return; // esconder grupos vazios em pesquisa
+      html += '<div class="doc-subgroup">';
+      html += '<div class="doc-subgroup-header">' + g.label + '</div>';
+      if (items.length === 0) {
+        html += '<p class="doc-empty">Em breve.</p>';
+      } else {
+        html += items.map(buildEntry).join('');
+      }
+      html += '</div>';
+    });
+    container.innerHTML = html;
+  }
+
+  fetch('../../conhecimento-catalog.json')
+    .then(r => r.json())
+    .then(data => {
+      allArticles = (data.articles || []).filter(a => a.subseccao === 'regulamentos');
+      render('');
+      // Search debounced
+      let timer;
+      document.getElementById('docSearch').addEventListener('input', (e) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => render(e.target.value), 120);
+      });
+    })
+    .catch(err => {
+      console.error('Erro a carregar catalogo:', err);
+      document.getElementById('docContainer').innerHTML = '<p class="doc-no-results">Não foi possível carregar os artigos.</p>';
+    });
+</script>
+</body>
+</html>

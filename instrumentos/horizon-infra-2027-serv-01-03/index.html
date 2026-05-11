@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizonte Europa INFRA: Acesso transnacional a RI (SERV-01-03 2027): Open Capital</title>
+  <meta name="description" content="HORIZON-INFRA-2027-SERV-01-03: 12M EUR para 4 grants RIA que financiam acesso transnacional a infraestruturas de investigação europeias para uma comunidade alargada de utilizadores.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-value.status-cont{color:#2E7D52;font-weight:600;}
+    .meta-value.status-planned{color:var(--gold);font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-gold{color:var(--gold);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-fact-val.val-cont{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-planned{color:var(--gold);font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca/">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">INFRA SERV-01-03 Acesso transnacional</span>
+    </nav>
+    <p class="hero-cat">Financiamento Público</p>
+    <h1 class="hero-title">Horizonte Europa INFRA: Acesso transnacional a infraestruturas de investigação (SERV-01-03 2027)</h1>
+    <p class="hero-tagline">12M EUR para 4 grants RIA, 3M EUR cada, que financiam acesso transnacional e virtual a serviços de RI europeias para uma comunidade alargada de utilizadores.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotação</span>
+        <span class="meta-value gold">12M EUR (4 grants)</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Tipo de ação</span>
+        <span class="meta-value">HORIZON-RIA</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-planned">Previsto: deadline 15/06/2027</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Per projeto</span>
+        <span class="meta-value">3M EUR (fixo)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca/" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O que é</div>
+      <h2 class="section-h2">Pagar para abrir a porta a quem vem de fora</h2>
+      <p class="section-text">O HORIZON-INFRA-2027-SERV-01-03 financia consórcios que se comprometem a oferecer acesso transnacional ou virtual a serviços de infraestruturas de investigação europeias, com foco no alargamento da base de utilizadores. A lógica do tópico é simples. As infraestruturas de investigação europeias estão geograficamente concentradas, e o acesso por investigadores de países sem essas infraestruturas é frequentemente bloqueado por custos, complexidade ou desconhecimento. Este grant paga, em parte, esse acesso.</p>
+      <p class="section-text">A diferença em relação aos outros tópicos SERV é o âmbito mais distribuído: 4 grants de 3M EUR cada, em vez de 1 ou 3 grants de dezenas de milhões. Esta dispersão sugere intenção de cobrir áreas científicas mais especializadas ou nichos onde a comunidade de utilizadores é menor mas estratégica.</p>
+      <p class="section-text">A ação é Research and Innovation Action (RIA), o que aqui significa que parte do trabalho não é apenas operacional (dar acesso), mas também desenvolvimento de novos serviços, integração com EOSC, e ações pro-activas de outreach a comunidades sub-representadas.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para que serve</div>
+      <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
+      <p class="section-text">O tópico encaixa em duas necessidades distintas do quadro Open Capital, ambas aplicáveis em contexto de organização científica.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">I&amp;D e ciência:</strong> os utilizadores finais financiados são grupos de investigação de toda a Europa. O grant cobre o acesso destes grupos a tempo de máquina, a serviços de dados, ou a equipamentos científicos avançados que normalmente seriam inacessíveis. É infraestrutura de I&D em estado puro.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Internacionalização:</strong> a call valoriza explicitamente o alargamento da base de utilizadores a países sub-representados e a investigadores em fase inicial de carreira. Para Portugal, isto cria uma janela direta: investigadores portugueses passam a poder candidatar-se a tempo de uso em RIs europeias com financiamento direto da iniciativa.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Estrutura e dotação</div>
+      <h2 class="section-h2">4 grants, 3M EUR cada (fixo)</h2>
+      <p class="section-text">A dotação total é 12M EUR para 4 grants, com contribuição fixa de 3M EUR por grant. A fixação do valor é incomum no Horizon e é deliberada: garante que cada consórcio recebe o suficiente para uma operação de acesso credível, sem forçar o trade-off entre dimensão científica e capacidade financeira.</p>
+      <div class="stats-row reveal" style="grid-template-columns:repeat(4,1fr);">
+        <div class="stat-cell">
+          <div class="stat-num">12M<sup>EUR</sup></div>
+          <div class="stat-label">Dotação total</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Grants esperados</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">3M<sup>EUR</sup></div>
+          <div class="stat-label">Por grant (fixo)</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">100K<sup>EUR</sup></div>
+          <div class="stat-label">Máximo FSTP por terceiro</div>
+        </div>
+      </div>
+      <p class="section-text">A modalidade financeira é mista. Os custos de acesso transnacional e virtual seguem unit costs, definidos pela Decision authorising the use of unit costs do MGA. O resto do orçamento (atividades de outreach, networking, integração de dados, gestão) segue o modelo standard de actual costs. É uma combinação que recompensa consórcios com track record operacional em access provision: quem já gere acesso a uma RI sabe quanto custa um access unit.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O que a proposta tem de cobrir</div>
+      <h2 class="section-h2">Três aspetos obrigatórios</h2>
+      <p class="section-text">A call exige que a proposta aborde os três aspetos seguintes em conjunto. Não basta oferecer acesso, é preciso oferecer acesso com integração e outreach.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Portfolio amplo de serviços de RI,</strong> incluindo infraestruturas financiadas pelo Cohesion Policy quando relevantes para o domínio científico, e cobrindo data services. Toda a oferta deve estar focada em integrar uma comunidade alargada no ecossistema europeu de RI.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Bidirectional exchanges</strong> entre investigadores e grupos de toda a European Research Area, incluindo networking, programas curtos de troca, e interação direta presencial sempre que possível.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Outreach pró-ativo</strong> para aumentar consciência sobre os serviços disponíveis, com atividades específicas para investigadores em fase inicial de carreira em países-alvo.</li>
+      </ul>
+      <div class="highlight-box">
+        <div class="highlight-box-title">FSTP até 100K EUR por terceiro</div>
+        <div class="highlight-box-text">A call permite financial support to third parties até 100K EUR por entidade. Este montante é deliberadamente baixo, justificado pelos custos operacionais elevados de RI estado-da-arte. As FSTP podem ser combinadas com as calls de acesso transnacional, criando um processo único onde o user group e a infraestrutura terceira que oferece o acesso se candidatam em conjunto.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Quem pode ser beneficiário</div>
+      <h2 class="section-h2">Mínimo de duas ESFRI Landmarks ou ERICs</h2>
+      <p class="section-text">As propostas devem incluir, como beneficiários, pelo menos duas ESFRI Landmarks ou dois ERICs. Esta dupla âncora é mais exigente do que noutros tópicos da call. A racional é que o acesso transnacional credível exige uma rede operacional com escala mínima: uma só infraestrutura raramente cobre o domínio científico todo.</p>
+      <p class="section-text">Para um ESFRI Landmark que não seja ERIC nem organização internacional europeia, o beneficiário deve ser a entidade jurídica que aloja a infraestrutura no país lead. Para um ERIC distribuído, o beneficiário tem de ser o ERIC, não os nós nacionais individualmente.</p>
+      <p class="section-text">O Joint Research Centre (JRC) pode participar como beneficiário com zero financiamento, ou como associated partner. O JRC não participa na preparação ou submissão da proposta, e a colaboração formaliza-se após aprovação. Para propostas onde o JRC ofereça access valuable, isto é uma porta interessante.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Critério de avaliação reforçado</div>
+      <h2 class="section-h2">Excellence pesa também no acesso, não só na ciência</h2>
+      <p class="section-text">No critério Excellence, para além dos sub-critérios standard, a avaliação considera explicitamente em que medida o acesso (transnacional ou virtual) oferece infraestruturas estado-da-arte de interesse europeu, com serviços de elevada qualidade, e habilita os utilizadores a fazer investigação excelente.</p>
+      <p class="section-text">Em prática, isto significa que o consórcio tem de provar duas coisas: que as infraestruturas oferecidas são estado-da-arte no seu domínio, e que os processos de seleção de utilizadores garantem que o acesso vai para grupos de investigação de qualidade. Propostas com infraestruturas relevantes mas processos de seleção opacos perdem pontos.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Posição na call INFRA-2027-01</div>
+      <h2 class="section-h2">Onde encaixa neste programa</h2>
+      <p class="section-text">A família SERV da call INFRA-2027-01 tem três tópicos com perfis distintos. Vale a pena situá-los para escolher o veículo certo.</p>
+      <table class="art-table">
+        <thead><tr><th>Tópico</th><th>Foco</th><th>Dotação</th><th>Per projeto</th></tr></thead>
+        <tbody>
+          <tr><td><strong>SERV-01-01</strong></td><td>Acesso a RI estado-da-arte (larga escala)</td><td>105M EUR / 3 grants</td><td>35M EUR (fixo)</td></tr>
+          <tr><td><strong>SERV-01-02</strong></td><td>Acesso a RI especializadas (média escala)</td><td>35M EUR / 6 grants</td><td>6M EUR (fixo)</td></tr>
+          <tr><td><strong>SERV-01-03 (este)</strong></td><td>Acesso e wider community (pequena escala)</td><td>12M EUR / 4 grants</td><td>3M EUR (fixo)</td></tr>
+        </tbody>
+      </table>
+      <p class="section-text">Os três tópicos têm modalidade idêntica (RIA, unit costs para acesso) mas escalas diferentes. O SERV-01-01 dirige-se a infraestruturas com utilização massiva e custos por unidade altos (sincrotrões, fontes de neutrões, supercomputação). O SERV-01-02 dirige-se a infraestruturas distribuídas com utilização média. O SERV-01-03 (este) é o veículo para domínios científicos mais especializados ou para iniciativas focadas explicitamente no alargamento da comunidade de utilizadores. Para uma proposta portuguesa que entra como participante (nunca como líder único), o SERV-01-03 é o tópico onde a dimensão e o foco em widening countries criam mais espaço.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Calendário</div>
+      <h2 class="section-h2">Janela única em junho de 2027</h2>
+      <table class="art-table">
+        <thead><tr><th>Marco</th><th>Data</th><th>Nota</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Abertura prevista</strong></td><td>Janeiro de 2027</td><td>Single-stage</td></tr>
+          <tr><td><strong>Deadline de submissão</strong></td><td>15 de junho de 2027</td><td>Page limit 100 páginas</td></tr>
+          <tr><td><strong>Avaliação e Grant Agreement</strong></td><td>Final de 2027 / 2028</td><td>Padrão Horizon</td></tr>
+          <tr><td><strong>Duração típica</strong></td><td>4 a 5 anos</td><td>Inclui ciclos de calls de acesso</td></tr>
+        </tbody>
+      </table>
+      <p class="section-text">A duração longa é necessária porque a operação de access provision não acontece de uma vez. Há tipicamente 2 a 3 ciclos de calls de acesso ao longo do projeto, espaçados de 12 a 18 meses, com user groups selecionados em cada ciclo. Esta cadência também explica a exigência de FSTP combinada com calls de acesso: simplifica a gestão administrativa de dezenas de user groups por ciclo.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">A oportunidade portuguesa neste tópico tem dois ângulos distintos que vale a pena separar com clareza. Para infraestruturas de investigação portuguesas que operam serviços de RI estado-da-arte (e há algumas, particularmente em ciências marinhas, biotecnologia, astrofísica e computação), o tópico abre a possibilidade de entrar como co-beneficiária num consórcio europeu, com mínimo de duas ESFRI Landmarks ou ERICs como âncora. A entrada da infraestrutura portuguesa pode ser via FSTP a 100K EUR por ciclo de acesso, mas idealmente é como beneficiária plena se já estiver formalmente incluída numa ESFRI ou ERIC ativa.</p>
+      <p class="section-text">Para investigadores e grupos portugueses sem infraestrutura própria, a oportunidade é diferente: aproveitar as calls de acesso que estes consórcios irão organizar a partir do ano 2 do projeto. Submeter user proposals para uso de tempo de máquina, dados, ou serviços avançados em RIs europeias, com cobertura de custos pela infraestrutura europeia. Isto é particularmente valioso para investigadores em fase inicial de carreira ou para grupos que querem aceder a equipamento que Portugal não tem.</p>
+      <p class="section-text">A armadilha clássica nestes tópicos é considerar a candidatura como liderança portuguesa. Não é. A infraestrutura de coordenação fica em consórcios já estabelecidos (CERN, ESO, EMBL e nós nacionais associados, ou ERICs como CESSDA, ECRIN, ESS). A entrada portuguesa é como participante com massa crítica suficiente para ser parte do core scientific. Quem tenta liderar do zero perde tempo. A recomendação operacional é monitorizar os tópicos da call INFRA-2027-01 quando abrir e contactar os pontos focais nacionais cedo (FCT, NCP Horizon Infrastructures) para perceber em que consórcios em preparação Portugal pode entrar como participante credível.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">Horizon Europe</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Pilar</div>
+        <div class="sidebar-fact-val">Excellent Science</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa-divisão</div>
+        <div class="sidebar-fact-val">Research Infrastructures</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tipo de ação</div>
+        <div class="sidebar-fact-val">HORIZON-RIA</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Modalidade</div>
+        <div class="sidebar-fact-val">Unit costs (acesso) + actual costs</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Dotação total</div>
+        <div class="sidebar-fact-val">12M EUR</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Per projeto</div>
+        <div class="sidebar-fact-val">3M EUR (fixo)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Grants esperados</div>
+        <div class="sidebar-fact-val">4</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Máx. FSTP por terceiro</div>
+        <div class="sidebar-fact-val">100K EUR</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Deadline</div>
+        <div class="sidebar-fact-val">15/06/2027</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-planned">Previsto</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">A sua infraestrutura de investigação portuguesa quer entrar num consórcio europeu de access provision? Vamos avaliar o caminho.</div>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../horizon-infra-2027-dev-01-03/" class="related-link">
+        <span class="related-link-name">INFRA DEV-01-03 Consolidação RI</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-infra-2027-01-eosc-01/" class="related-link">
+        <span class="related-link-name">INFRA EOSC-01 Federation</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-infra-2027-dev-01-01/" class="related-link">
+        <span class="related-link-name">INFRA DEV-01-01 Preparatory phase</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizonte-europa/" class="related-link">
+        <span class="related-link-name">Horizonte Europa</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

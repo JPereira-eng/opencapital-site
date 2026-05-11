@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<title>Chips JU - Concursos ECS 2026 (FCT): Open Capital</title>
+  <meta name="description" content="Co-financiamento da FCT para entidades portuguesas em consórcios Chips JU 2026. Topicos: fotonica, IA, 6G, saude. Fase 1 encerra 7 maio 2026.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-body{}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca/">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Chips JU ECS 2026</span>
+    </nav>
+    <p class="hero-cat">Financiamento Publico</p>
+    <h1 class="hero-title">Chips JU - Concursos ECS 2026</h1>
+    <p class="hero-tagline">Co-financiamento nacional pela FCT para entidades portuguesas em consórcios europeus de componentes e sistemas eletrónicos. Prazo urgente: Fase 1 encerra a 7 de maio.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotacao FCT</span>
+        <span class="meta-value">€3.500.000</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Max por Entidade</span>
+        <span class="meta-value">€250.000</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Deadline Fase 1</span>
+        <span class="meta-value">7 maio 2026</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-open">Aberto</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca/" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Contexto</div>
+      <h2 class="section-h2">O que e a Chips Joint Undertaking</h2>
+      <p class="section-text">A Chips JU (Chips Joint Undertaking) e a parceria institucionalizada da UE para I&D em componentes e sistemas eletrónicos, criada ao abrigo do Horizonte Europa e do Chips Act europeu. O seu objetivo estratégico e reforcar a autonomia tecnológica da Europa no setor dos semicondutores e sistemas eletrónicos, reduzindo a dependência de fornecedores externos em tecnologias criticas.</p>
+      <p class="section-text">Os concursos ECS (Electronic Components and Systems) de 2026 cobrem um conjunto alargado de topicos de investigacao e inovacao, desde fotoónica e eletrónica de potencia até sistemas de IA para veiculos e comunicacoes 6G. A FCT disponibiliza 3,5 milhoes de euros em co-financiamento nacional para entidades portuguesas que participem nestes consórcios.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Topicos Elegíveis</div>
+      <h2 class="section-h2">Focus Topics e Concursos de 2026</h2>
+      <p class="section-text">Os concursos ECS 2026 organizam-se em dois regimes: concursos globais (bottom-up, abertos a qualquer topico da agenda ECS) e concursos de foco tematico (Focus Topics). Os Focus Topics têm precedência na distribuicao do financiamento nacional.</p>
+      <table class="art-table">
+        <thead>
+          <tr>
+            <th>Focus Topic</th>
+            <th>Ambito</th>
+            <th>Tipo de Accao</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>FT1 - Power Electronics</strong></td>
+            <td>Eletrónica de potencia e conversao de energia</td>
+            <td>IA</td>
+          </tr>
+          <tr>
+            <td><strong>FT2 - Photonics</strong></td>
+            <td>Sistemas fotoónicos integrados</td>
+            <td>IA</td>
+          </tr>
+          <tr>
+            <td><strong>FT3 - Health</strong></td>
+            <td>Componentes eletrónicos para aplicacoes de saude</td>
+            <td>IA (Resilience)</td>
+          </tr>
+          <tr>
+            <td><strong>FT4 - Software-Defined Vehicle</strong></td>
+            <td>Metodos IA para engenharia de veiculos definidos por software</td>
+            <td>IA</td>
+          </tr>
+          <tr>
+            <td><strong>6G</strong></td>
+            <td>Sistemas de comunicacao radio 6G</td>
+            <td>RIA / IA</td>
+          </tr>
+          <tr>
+            <td><strong>Autonomous Driving</strong></td>
+            <td>Ecossistema de stack de conducao autonoma</td>
+            <td>RIA</td>
+          </tr>
+          <tr>
+            <td><strong>Supply Chain Resilience</strong></td>
+            <td>Resiliencia da cadeia de abastecimento ECS europeia</td>
+            <td>CSA</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="section-text">Alem dos Focus Topics, os concursos globais (HORIZON-JU-Chips-2026-IA e HORIZON-JU-Chips-2026-RIA) sao bottom-up: qualquer proposta alinhada com a Agenda Estrategica ECS SRIA 2026 e elegivel, sem restricao tematica.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Elegibilidade e Co-financiamento</div>
+      <h2 class="section-h2">Quem pode candidatar-se e quanto vale</h2>
+      <p class="section-text">Para aceder ao co-financiamento nacional da FCT, a entidade portuguesa deve participar num consórcio internacional Chips JU como coordenador ou parceiro. Ha um requisito obrigatorio que distingue estes concursos de outros programas europeus: o consórcio nacional deve incluir pelo menos uma empresa portuguesa, independentemente do tipo de accao ou topico.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-box-title">Requisito Critico</div>
+        <div class="highlight-box-text">Todas as participacoes nacionais devem incluir obrigatoriamente pelo menos uma empresa portuguesa. Candidaturas compostas exclusivamente por entidades academicas ou institutos de investigacao nao sao elegíveis para o co-financiamento FCT.</div>
+      </div>
+
+      <table class="art-table">
+        <thead>
+          <tr>
+            <th>Tipo de Entidade</th>
+            <th>Innovation Actions (IA)</th>
+            <th>Research Actions (RIA)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>ENESII</strong> (institutos, universidades, centros de I&D)</td>
+            <td>65% co-financiamento</td>
+            <td>65% co-financiamento</td>
+          </tr>
+          <tr>
+            <td><strong>PME</strong> (até 249 colaboradores)</td>
+            <td>25% co-financiamento</td>
+            <td>30% co-financiamento</td>
+          </tr>
+          <tr>
+            <td><strong>Grande Empresa</strong> (250+ colaboradores)</td>
+            <td>30% co-financiamento</td>
+            <td>25% co-financiamento</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="section-text">O limite de 250.000 euros por entidade e por projeto aplica-se ao financiamento FCT. O financiamento europeu direto da Chips JU e contabilizado separadamente e pode ser substancialmente superior, dependendo do papel no consórcio e do topico.</p>
+      <p class="section-text">Tres concursos especificos (HORIZON-JU-Chips-2026-3-RIA, CSA Supply Chain e SDV-CSA) sao 100% financiados pela UE, sem componente nacional FCT. Para estes, a participacao portuguesa nao tem encargo para o orcamento nacional.</p>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Calendario</div>
+      <h2 class="section-h2">Prazos e estrutura de dois estágios</h2>
+
+      <div class="highlight-box">
+        <div class="highlight-box-title">Prazo Urgente - Fase 1</div>
+        <div class="highlight-box-text">A submissao do Project Outline (Fase 1) para os concursos globais IA e RIA encerra a 7 de maio de 2026. Consórcios com participacao portuguesa devem garantir que o parceiro nacional esta identificado e os dados FCT estao preparados antes desta data.</div>
+      </div>
+
+      <div class="stats-row reveal" style="grid-template-columns:repeat(3,1fr);">
+        <div class="stat-cell">
+          <div class="stat-num">7<sup>mai</sup></div>
+          <div class="stat-label">Fase 1 (Project Outline)</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">17<sup>set</sup></div>
+          <div class="stat-label">Fase 2 (Full Proposal)</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">7<sup>jul</sup></div>
+          <div class="stat-label">Abertura concursos Resilience FT</div>
+        </div>
+      </div>
+
+      <p class="section-text">Os concursos de Resilience (FT1-FT3, 2-RIA, 3-RIA) funcionam em fase unica com submissao a partir de 7 de julho de 2026 e encerramento a 17 de setembro. Nao exigem Project Outline previo. A abertura geral das candidaturas foi a 3 de fevereiro de 2026.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Avaliacao e Selecao</div>
+      <h2 class="section-h2">Como funciona o processo de avaliacao</h2>
+      <p class="section-text">A avaliacao e conduzida por paineis de peritos convocados pela Chips JU, que produzem uma ranking list por concurso. A selecao final e formalizada pela Public Authorities Board, composta pelos representantes dos estados-membros e paises associados.</p>
+      <p class="section-text">Apos a selecao europeia, cada agencia de financiamento nacional formaliza o seu co-financiamento com base na lista aprovada. No caso de Portugal, e a FCT que emite a decisao de co-financiamento para as entidades nacionais seleccionadas.</p>
+      <p class="section-text">O processo OCD (Ownership Control Declaration) foi introduzido nestes concursos, exigindo declaracao sobre a estrutura de propriedade e controlo das entidades participantes. E um requsito adicional que deve ser preparado antecipadamente.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">A Chips JU 2026 e uma das oportunidades mais relevantes para empresas portuguesas nos setores de tecnologia embarcada, veiculo elétrico, saude digital e telecomunicacoes 6G. O requisito de empresa portuguesa no consórcio e uma vantagem competitiva para PMEs nacionais que consigam posicionar-se como parceiros de consórcios europeus, mesmo sem serem coordenadoras.</p>
+      <p class="section-text">O prazo de 7 de maio para a Fase 1 deixa pouco tempo para estruturar um consórcio de raiz. As candidaturas com maior probabilidade de sucesso ja têm parceiros europeus identificados. Se ainda nao foi feito esse contacto, o caminho mais realista e juntar-se a um consórcio em formacao via portal de parceiros da Chips JU ou redes sectoriais como a AENEAS ou a Inside.</p>
+      <p class="section-text">O teto de 250.000 euros por entidade limita o interesse de grandes entidades de investigacao que habitualmente absorvem volumes superiores em projetos europeus. Para empresas industriais de media dimensao nos setores FT1 a FT4, o perfil de risco-retorno do co-financiamento FCT e atractivo.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Tecnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rapidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-open">Aberto</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">Chips Joint Undertaking</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Dotacao FCT 2026</div>
+        <div class="sidebar-fact-val">€3.500.000</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Max por Entidade</div>
+        <div class="sidebar-fact-val">€250.000</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Deadline Fase 1</div>
+        <div class="sidebar-fact-val">7 maio 2026 (urgente)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Deadline Fase 2</div>
+        <div class="sidebar-fact-val">17 setembro 2026</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Elegibilidade</div>
+        <div class="sidebar-fact-val">ENESII, PME, Grandes Empresas</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Requisito consorcio</div>
+        <div class="sidebar-fact-val">Min. 1 empresa PT obrigatoria</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Entidade nacional</div>
+        <div class="sidebar-fact-val">FCT</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Tem uma empresa nos setores de eletrónica, veiculo elétrico ou tecnologia 6G? Ajudamos a identificar parceiros de consórcio e a preparar a candidatura FCT.</div>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn" target="_blank">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../eic-accelerator-2026/" class="related-link">
+        <span class="related-link-name">EIC Accelerator 2026</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../eic-pathfinder-2026/" class="related-link">
+        <span class="related-link-name">EIC Pathfinder 2026</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-cl4-2026-data-ai/" class="related-link">
+        <span class="related-link-name">Horizonte Europa - Digital e IA</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../step-scale-up-eic/" class="related-link">
+        <span class="related-link-name">EIC STEP Scale Up</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

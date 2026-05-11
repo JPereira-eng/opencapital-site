@@ -249,7 +249,7 @@ Verifica sempre a pasta `conhecimento/` para os artigos mais recentes e relevant
 
 ### Passo 3 - Escrever e guardar o artigo HTML
 
-Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
+Cria o ficheiro `conhecimento/[slug]/index.html` com a estrutura completa abaixo.
 
 **Elementos disponíveis para o corpo do artigo:**
 
@@ -453,20 +453,20 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
 <body>
 
   <nav class="navbar" id="navbar">
-    <a href="../index.html" class="nav-logo">
-      <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    <a href="../../" class="nav-logo">
+      <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
     </a>
     <ul class="nav-links">
-      <li><a href="../biblioteca.html">Biblioteca</a></li>
-      <li><a href="../conhecimento.html" class="active">Conhecimento</a></li>
-      <li><a href="../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
-      <li><a href="../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
-      <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+      <li><a href="../../biblioteca.html">Biblioteca</a></li>
+      <li><a href="../../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../../sobre-nos.html">Sobre Nós</a></li>
       <li class="nav-dropdown">
         <a href="#">Oportunidades</a>
         <div class="nav-dropdown-menu">
-          <a href="../parceiros.html">Parceiros</a>
-          <a href="../carreiras.html">Carreiras</a>
+          <a href="../../parceiros.html">Parceiros</a>
+          <a href="../../carreiras.html">Carreiras</a>
         </div>
       </li>
     </ul>
@@ -477,9 +477,9 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
   <section class="article-hero">
     <div class="article-hero-inner">
       <nav class="breadcrumb">
-        <a href="../index.html">Início</a>
+        <a href="../../">Início</a>
         <span class="breadcrumb-sep">/</span>
-        <a href="../conhecimento.html">Conhecimento</a>
+        <a href="../../conhecimento.html">Conhecimento</a>
         <span class="breadcrumb-sep">/</span>
         <span class="breadcrumb-current">[BREADCRUMB_CAT]</span>
       </nav>
@@ -498,13 +498,13 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
   </section>
 
   <div class="back-bar">
-    <a href="../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+    <a href="../../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
   </div>
 
   <div class="article-layout">
     <article class="article-body">
       <!-- Se IMAGEM_SRC tiver valor, incluir como primeiro elemento do article-body: -->
-      <img src="[IMAGEM_SRC]" alt="[TITULO]" class="article-cover-img">
+      <img src="../[IMAGEM_SRC]" alt="[TITULO]" class="article-cover-img">
       <!-- Se IMAGEM_SRC estiver vazio, não incluir a tag img -->
 
       [CORPO_DO_ARTIGO]
@@ -514,7 +514,7 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
       <div class="sidebar-author">
         <div class="sidebar-author-label">Autor</div>
         <div class="sidebar-author-inner">
-          <img src="../Retratos Equipa/[AUTOR_FOTO]" alt="[AUTOR]" class="sidebar-author-photo">
+          <img src="../../Retratos Equipa/[AUTOR_FOTO]" alt="[AUTOR]" class="sidebar-author-photo">
           <div>
             <div class="sidebar-author-name">[AUTOR]</div>
             <div class="sidebar-author-role">[AUTOR_CARGO]</div>
@@ -561,14 +561,14 @@ Cria o ficheiro `conhecimento/[slug].html` com a estrutura completa abaixo.
     const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
-  <script src="../assets/js/back-link.js" defer></script>
+  <script src="../../assets/js/back-link.js" defer></script>
 </body>
 </html>
 ```
 
 **Formato dos artigos relacionados na sidebar:**
 ```html
-<a href="[slug].html" class="related-item">
+<a href="../[slug]/index.html" class="related-item">
   <span class="related-item-title">[Titulo curto]</span>
   <span class="related-item-arrow">&rarr;</span>
 </a>
@@ -587,7 +587,7 @@ Adicionar entrada ao FINAL do array `articles` em `conhecimento-catalog.json`. E
   "autor": "[Nome]",
   "autor_foto": "[ficheiro png]",
   "data_publicacao": "AAAA-MM",
-  "href": "conhecimento/[SLUG].html",
+  "href": "conhecimento/[SLUG]/index.html",
   "meta_description": "[meta description SEO 150-160 chars]",
   "cat_class": "[cat-mercados | cat-estrategia | cat-financiamento | cat-fiscalidade | cat-inovacao]",
   "cat_label": "[Mercados | Estratégia | Financiamento | Fiscalidade | Inovação]",
@@ -609,7 +609,7 @@ Adicionar entrada ao FINAL do array `articles` em `conhecimento-catalog.json`. E
 
 Apos os passos 1-4, validar localmente:
 
-1. Existe `conhecimento/[SLUG].html`? Se nao: ABORTAR com erro grave.
+1. Existe `conhecimento/[SLUG]/index.html`? Se nao: ABORTAR com erro grave.
 2. O slug aparece em `conhecimento-catalog.json` exatamente uma vez? Se 0: re-aplicar Passo 4. Se >1: remover duplicados mantendo o primeiro.
 3. `subseccao == "atualidade"` na entrada nova? Se nao: corrigir.
 4. Total de artigos com `featured: true` <= 12? Se nao: definir `featured: false` nos mais antigos ate ficar com 12.
@@ -617,13 +617,13 @@ Apos os passos 1-4, validar localmente:
 ### Passo 6 - Build do footer
 
 ```bash
-python build_footer.py "conhecimento/[SLUG].html"
+python build_footer.py "conhecimento/[SLUG]/index.html"
 ```
 
 ### Passo 7 - Deploy
 
 ```bash
-git add conhecimento/[SLUG].html conhecimento-catalog.json
+git add conhecimento/[SLUG]/index.html conhecimento-catalog.json
 git commit -m "trend: [TITULO]"
 git push origin main
 ```
@@ -635,7 +635,7 @@ Se push falhar: `git stash && git pull --rebase && git stash pop && git push`.
 Apos deploy com sucesso, informar:
 - Titulo do artigo publicado.
 - Autor selecionado e respetivo cargo.
-- URL: `conhecimento/[slug].html`.
-- Subseccao: `atualidade` -> aparece automaticamente em `/conhecimento/atualidade.html` e nos destaques de `index.html`.
+- URL: `conhecimento/[slug]/index.html`.
+- Subseccao: `atualidade` -> aparece automaticamente em `/conhecimento/atualidade/index.html` e nos destaques de `index.html`.
 - Confirmacao de que `featured: true` e que ha entre 9 e 12 artigos em destaque.
 - Commit hash. GitHub Pages fara deploy via push.

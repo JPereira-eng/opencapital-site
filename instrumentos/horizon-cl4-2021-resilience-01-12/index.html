@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<title>Horizon Europe: Revestimentos Metalicos Seguros e Sustentaveis por Concepcao (RIA): Open Capital</title>
+  <meta name="description" content="HORIZON-CL4-2021-RESILIENCE-01-12: EUR 19 milhoes para substituir substancias toxicas como o cromo hexavalente em revestimentos metalicos por alternativas seguras e sustentaveis. RIA, Cluster 4.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:44px;font-weight:700;color:var(--white);line-height:1.08;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:32px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Inicio</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca/">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Horizon Europe CL4-2021-RESILIENCE-01-12</span>
+    </nav>
+    <p class="hero-cat">Financiamento Publico</p>
+    <h1 class="hero-title">Horizon Europe: Revestimentos Metalicos Seguros e Sustentaveis por Concepcao (RIA)</h1>
+    <p class="hero-tagline">EUR 19 milhoes para substituir substancias toxicas em revestimentos metalicos industriais por alternativas seguras, sustentaveis e integradas em principios de economia circular.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotacao</span>
+        <span class="meta-value">EUR 19 milhoes</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Tipo de Acao</span>
+        <span class="meta-value">RIA (Research and Innovation Action)</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Cluster</span>
+        <span class="meta-value">Cluster 4 - Digital, Industria e Espaco</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-open">Aberto</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca/" class="back-link">&larr; Voltar ao catalogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O Problema Central</div>
+      <h2 class="section-h2">Revestimentos Metalicos: Uma Industria Indispensavel com um Problema Cronico de Toxicidade</h2>
+      <p class="section-text">Os revestimentos metalicos e as superficies tratadas estao em praticamente todos os produtos industriais: pecas de automoveis, componentes aeroespaciais, equipamentos medicos, eletronicos, ferramentas de corte, maquinaria industrial. Protegem contra a corrosao, melhoram a dureza, reduzem o atrito e aumentam a longevidade dos produtos. Sao, por isso, componentes criticos da competitividade industrial.</p>
+      <p class="section-text">O problema e que os revestimentos metalicos convencionais recorrem frequentemente a substancias altamente toxicas para atingir as suas propriedades de desempenho. O cromo hexavalente (Cr VI), utilizado em cromagem dura e em revestimentos de conversao, e um dos exemplos mais conhecidos: carcinogenico, mutageno e extremamente toxico para o ambiente aquatico. O regulamento REACH da UE restringe progressivamente o seu uso, criando uma pressao crescente sobre a industria para encontrar alternativas. O topico HORIZON-CL4-2021-RESILIENCE-01-12, com uma dotacao de EUR 19 milhoes, financia precisamente esse esforco de substituicao.</p>
+    </div>
+
+    <div class="highlight-box">
+      <div class="highlight-box-title">O principio Safe-and-Sustainable-by-Design (SSbD)</div>
+      <div class="highlight-box-text">O conceito SSbD, promovido pela Comissao Europeia no quadro da Estrategia de Sustentabilidade para Quimicos, vai alem da simples substituicao de substancias perigosas. Implica que a seguranca e a sustentabilidade sejam consideradas desde o inicio do processo de design do material ou produto, evitando que se criem novas preocupacoes ao substituir as antigas. Um revestimento SSbD e simultaneamente eficaz, nao perigoso para humanos e ambiente, e integravel em circuitos de economia circular.</div>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Substancias Alvo</div>
+      <h2 class="section-h2">O que se Pretende Substituir e Por Que</h2>
+      <p class="section-text">O topico identifica as classes de substancias problematicas que os projetos devem abordar, com base nos riscos para a saude humana, o ambiente e o potencial de acumulacao nos ecossistemas.</p>
+
+      <table class="art-table">
+        <thead>
+          <tr>
+            <th>Substancia Problematica</th>
+            <th>Aplicacao Tipica</th>
+            <th>Problema Principal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Cromo Hexavalente (Cr VI)</strong></td>
+            <td>Cromagem dura, revestimentos de conversao, primers anticorrosao</td>
+            <td>Carcinogenico, mutageno, reprotoxico. Restringido pelo REACH (SVHC)</td>
+          </tr>
+          <tr>
+            <td><strong>Elementos de Terras Raras Pesadas (HREE)</strong></td>
+            <td>Revestimentos de alta performance, barreiras termicas em turbinas</td>
+            <td>Criticos em termos de abastecimento, com impacto ambiental significativo na mineracao</td>
+          </tr>
+          <tr>
+            <td><strong>Metais do Grupo da Platina (PGM)</strong></td>
+            <td>Revestimentos de alta condutividade, catalisadores de superficie</td>
+            <td>Materiais criticos e escassos, com elevado impacto de custo e dependencia de importacao</td>
+          </tr>
+          <tr>
+            <td><strong>Outros metais pesados e biocidas</strong></td>
+            <td>Anticorrosao, antifouling em aplicacoes navais e offshore</td>
+            <td>Toxicidade aquatica, acumulacao em sedimentos e organismos marinhos</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Resultados Esperados</div>
+      <h2 class="section-h2">O que os Projetos Devem Demonstrar</h2>
+      <p class="section-text">O programa de trabalho define resultados concretos que os projetos selecionados devem produzir. A ambicao e criar uma nova geracao de revestimentos metalicos que cumpram simultaneamente criterios de desempenho, seguranca e circularidade.</p>
+
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Novos sistemas de revestimento sem substancias toxicas:</strong> Desenvolver e validar alternativas a Cr VI, HREE, PGM e outros agentes problematicos, com desempenho tecnico equivalente ou superior em aplicacoes industriais relevantes.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Integracao em principios de economia circular:</strong> Os novos revestimentos devem ser concebidos para facilitar a reciclagem e recuperacao dos metais no fim de vida dos produtos, evitando que os materiais de revestimento se tornem contaminantes nos fluxos de residuos.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Demonstracao em cadeia de valor real:</strong> Validar os novos sistemas em condicoes industriais reais, em colaboracao com utilizadores finais das cadeias de valor automovel, aeroespacial, eletronico ou de maquinaria.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Avaliacao do ciclo de vida:</strong> Demonstrar que os novos sistemas sao superior aos convencionais nao apenas em seguranca quimica, mas tambem na pegada ambiental global ao longo de todo o ciclo de vida.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Solucoes anti-corrosao e anti-biofouling:</strong> Desenvolver revestimentos especificos para aplicacoes exigentes como ambientes marinhos, onde a toxicidade dos biocidas convencionais e um problema critico para os ecossistemas costeiros.</li>
+      </ul>
+
+      <div class="stats-row" style="grid-template-columns:repeat(3,1fr);">
+        <div class="stat-cell">
+          <div class="stat-num">EUR 19<sup>M</sup></div>
+          <div class="stat-label">Dotacao total</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">RIA</div>
+          <div class="stat-label">Research and Innovation Action</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">SSbD</div>
+          <div class="stat-label">Safe and Sustainable by Design</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Aplicacoes e Setores</div>
+      <h2 class="section-h2">Onde Estes Revestimentos Sao Criticos</h2>
+      <p class="section-text">Os revestimentos metalicos sao uma tecnologia transversal presente em multiplos setores industriais. Os projetos podem focar-se num setor especifico ou demonstrar abordagens transversais. Os setores com maior urgencia regulatoria e maior potencial de impacto sao:</p>
+
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Automovel:</strong> Cromagem decorativa e funcional de componentes exteriores e interiores, revestimentos anti-corrosao de peças de carroçaria e estruturais. Com a transicao para VE, surgem novos requisitos de revestimentos para baterias e motores eletricos.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Aeroespacial e defesa:</strong> Cromagem dura em trens de aterragem, hidraulica, eixos e componentes de motor onde os requisitos de resistencia ao desgaste e anticorrosao sao extremamente exigentes e as alternativas devem ter desempenho igual ou superior.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Industria naval e offshore:</strong> Revestimentos antifouling em cascos de navios e estruturas offshore, onde os biocidas toxicos sao a norma atual mas criam severos impactos nos ecossistemas marinhos.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Eletronico e microeletronico:</strong> Revestimentos condutores de alta performance em circuitos impressos, conectores e dispositivos semicondutores, onde a miniaturizacao cria desafios especificos para os processos de aplicacao.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Maquinaria e ferramentas:</strong> Revestimentos de dureza extrema em ferramentas de corte, matrizes de injecao e componentes de maquinaria sujeitos a elevado desgaste, onde o Cr VI tem sido difcil de substituir por razoes de desempenho.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que Recomendamos</h2>
+      <p class="section-text">Este topico tem uma vantagem clara face a outros do mesmo Work Programme: existe uma pressao regulatoria real (REACH, restricoes ao Cr VI) que cria um mercado de adocao imediato para as solucoes desenvolvidas. Os projetos nao dependem de um mercado hipoteticamente interessado, a industria esta sob pressao para encontrar alternativas e vai adotar as que funcionar.</p>
+      <p class="section-text">Com EUR 19 milhoes de dotacao, este e um dos topicos mais financiados da call RESILIENCE-01, o que indica a prioridade da Comissao e tambem a expectativa de projetos de maior dimensao e ambicao. Consórcio que incluam utilizadores finais das cadeias de valor relevantes (fabricantes de automoveis, fabricantes de equipamentos aeroespaciais, OEM de maquinaria industrial) estao em vantagem significativa, pois demonstram que as solucoes desenvolvidas tem adocao garantida.</p>
+      <p class="section-text">Para empresas portuguesas, o setor dos moldes e ferramentas (onde Portugal tem reconhecida competencia internacional) e especialmente relevante: as ferramentas de injecao de plastico usam extensivamente revestimentos de cromo duro e outros metais, criando uma oportunidade natural para entidades como o CENTIMFE, o INEGI ou empresas do cluster de moldes de Marinha Grande integrarem este tipo de proposta.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Tecnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rapidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Codigo</div>
+        <div class="sidebar-fact-val">HORIZON-CL4-2021-RESILIENCE-01-12</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tipo de Acao</div>
+        <div class="sidebar-fact-val">RIA - Research and Innovation Action</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Dotacao Total</div>
+        <div class="sidebar-fact-val">EUR 19 milhoes</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">Horizon Europe, Cluster 4</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Abordagem</div>
+        <div class="sidebar-fact-val">Safe and Sustainable by Design (SSbD)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">CAE Elegiveis</div>
+        <div class="sidebar-fact-val">Transversal - industria transformadora</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-open">Aberto</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">A sua empresa usa revestimentos metalicos ou pertence a cadeia de valor automovel, aeroespacial ou de ferramentas? Avaliemos o potencial de candidatura.</div>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn" target="_blank">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../horizon-cl4-2021-resilience-01-10/" class="related-link">
+        <span class="related-link-name">Horizon: Plasticos Reciclados (RIA)</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-cl4-2026-01-mat-prod-01/" class="related-link">
+        <span class="related-link-name">Horizon CL4 - Materiais e Producao 2026</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-cl4-2025-05-materials-51/" class="related-link">
+        <span class="related-link-name">Horizon CL4 - Advanced Materials 2025</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-cl6-2026-01-zeropollution/" class="related-link">
+        <span class="related-link-name">Horizon CL6 - Zero Pollution 2026</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<title>RFAI - Regime Fiscal de Apoio ao Investimento: Open Capital</title>
+  <meta name="description" content="Guia completo ao RFAI: deduza ate 30% do investimento produtivo na coleta de IRC. Taxas regionais, CAE elegiveis, manutencao e exemplos de calculo.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.status-cont{color:#2E7D52;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+
+    .calculo-box{background:var(--navy);padding:32px;margin:28px 0;}
+    .calculo-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+    .calculo-row{display:flex;justify-content:space-between;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.08);gap:16px;}
+    .calculo-row:last-of-type{border-bottom:none;}
+    .calculo-desc{font-size:14px;font-weight:300;color:rgba(255,255,255,0.62);line-height:1.5;}
+    .calculo-val{font-size:15px;font-weight:600;color:var(--white);white-space:nowrap;}
+    .calculo-total{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:20px;border-top:1px solid rgba(201,169,110,0.3);}
+    .calculo-total-desc{font-size:13px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);}
+    .calculo-total-val{font-size:22px;font-weight:700;color:var(--white);}
+
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-cont{color:#2E7D52;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca/">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">RFAI</span>
+    </nav>
+    <p class="hero-cat">Incentivo Fiscal</p>
+    <h1 class="hero-title">RFAI: Regime Fiscal de Apoio ao Investimento</h1>
+    <p class="hero-tagline">Deduza até 30% do investimento produtivo diretamente na coleta de IRC. Em vigor até 31 de dezembro de 2027.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dedução máxima</span>
+        <span class="meta-value">30% até €15M</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Limite à coleta</span>
+        <span class="meta-value">50% IRC</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Reporte</span>
+        <span class="meta-value">10 anos</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-cont">Em vigor até 31/12/2027</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca/" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O que é</div>
+      <h2 class="section-h2">Um crédito fiscal para investimento produtivo</h2>
+      <p class="section-text">O RFAI é o principal instrumento fiscal português para apoiar empresas que investem em capacidade produtiva. Está previsto nos artigos 22.º a 26.º do Código Fiscal do Investimento (Decreto-Lei 162/2014) e regulado pela Portaria 297/2015. Funciona como crédito fiscal: a empresa deduz uma percentagem do valor investido diretamente à coleta de IRC do exercício.</p>
+      <p class="section-text">A diferença face a um subsídio é prática. Não há candidatura prévia, não há júri, não há rateio de dotações. A empresa avalia a elegibilidade do seu investimento, aplica o benefício no Modelo 22 e mantém um dossier fiscal específico que sustenta a operação em caso de inspeção. O instrumento está em vigor até 31 de dezembro de 2027, na sequência da prorrogação do regime europeu de auxílios com finalidade regional.</p>
+      <p class="section-text">Apesar de transversal a quase todos os setores produtivos, o RFAI tem uma lógica geográfica acentuada. As regiões menos desenvolvidas oferecem taxas três vezes superiores às áreas metropolitanas, o que reflete a função do regime: canalizar investimento privado para territórios que, sem incentivo, perderiam projetos para outras geografias.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para que serve</div>
+      <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
+      <p class="section-text">O RFAI cobre dois ângulos complementares de uma mesma decisão estratégica: o reforço da capacidade produtiva instalada e o crescimento da base de ativos da empresa. Não é um regime para I&amp;D nem para inovação não material, é um regime para quem investe em fábrica, equipamento ou infraestrutura.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Investimento produtivo:</strong> o RFAI premeia diretamente a aquisição de ativos fixos tangíveis afetos à atividade operacional, como equipamento industrial, linhas de produção, instalações fabris ou armazéns. É o instrumento fiscal mais direto para baixar o custo efetivo de um investimento de capital.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Capitalização e crescimento:</strong> ao reduzir o IRC efetivo no exercício do investimento e nos seguintes (via reporte), o regime liberta cash-flow que pode ser reinvestido. Empresas em fase de expansão usam o RFAI para acelerar planos plurianuais sem comprometer o serviço da dívida.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Taxas regionais</div>
+      <h2 class="section-h2">Quanto vale por região</h2>
+      <p class="section-text">A taxa de dedução depende da região onde o investimento é fisicamente instalado. Não é a sede da empresa que conta, é a localização do ativo. A divisão segue o mapa de auxílios regionais aprovado pela Comissão Europeia ao abrigo das Orientações para os auxílios regionais 2022-2027.</p>
+
+      <table class="art-table">
+        <thead>
+          <tr><th>Região</th><th>Taxa até €15M</th><th>Taxa acima de €15M</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Norte</strong></td><td>30%</td><td>10%</td></tr>
+          <tr><td><strong>Centro</strong></td><td>30%</td><td>10%</td></tr>
+          <tr><td><strong>Alentejo</strong></td><td>30%</td><td>10%</td></tr>
+          <tr><td><strong>Açores</strong></td><td>30%</td><td>10%</td></tr>
+          <tr><td><strong>Madeira</strong></td><td>30%</td><td>10%</td></tr>
+          <tr><td><strong>Algarve</strong></td><td>10%</td><td>10%</td></tr>
+          <tr><td><strong>Grande Lisboa</strong></td><td>10%</td><td>10%</td></tr>
+          <tr><td><strong>Península de Setúbal</strong></td><td>10%</td><td>10%</td></tr>
+        </tbody>
+      </table>
+
+      <p class="section-text">O escalão dos €15M aplica-se por projeto de investimento, não por exercício. Investimentos faseados que ultrapassem este limiar veem o excedente cair para 10%, mesmo nas regiões mais favorecidas. Nas três zonas com taxa única de 10%, o regime é menos atrativo e justifica avaliação caso a caso, especialmente face ao SIFIDE II ou ao ICE.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-box-title">Atenção: limites de auxílio regional</div>
+        <div class="highlight-box-text">A dedução RFAI conta para o limite de auxílio regional total que a empresa pode acumular num projeto. Esse limite varia entre 15% (Lisboa) e 50% (Açores) para grandes empresas, com majoração de 10 a 20 pontos percentuais para PME. Acumular RFAI com Portugal 2030 ou outro auxílio regional no mesmo investimento exige verificação prévia destes plafonds.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Aplicações relevantes</div>
+      <h2 class="section-h2">Que ativos são elegíveis</h2>
+      <p class="section-text">Nem todo o investimento conta para o RFAI. A lei distingue claramente entre aplicações relevantes (que entram para o cálculo da dedução) e ativos excluídos. A regra prática é simples: equipamentos e infraestruturas afetos à produção são tipicamente elegíveis; bens de uso administrativo, viaturas ligeiras e mobiliário não.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Ativos fixos tangíveis elegíveis:</strong> equipamento industrial, máquinas, ferramentas de produção, sistemas informáticos afetos à atividade produtiva, linhas de fabrico, edifícios industriais e comerciais novos ou ampliados.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Ativos fixos tangíveis excluídos:</strong> terrenos (exceto exploração mineira ou agrícola elegível), edifícios não industriais nem comerciais, viaturas ligeiras de passageiros, mobiliário de escritório e artigos de conforto ou decoração.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Ativos intangíveis:</strong> patentes, licenças, know-how e transferências de tecnologia adquiridas a entidades não relacionadas. Para grandes empresas, estes ativos não podem representar mais de 50% das aplicações relevantes do projeto.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Equipamentos em segunda mão:</strong> apenas elegíveis para PME, e desde que comprovado que não foram já alvo de qualquer outro auxílio público.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Tipologia do investimento</div>
+      <h2 class="section-h2">O que conta como "investimento inicial"</h2>
+      <p class="section-text">O RFAI só se aplica a "investimento inicial", conceito definido pelo regime europeu de auxílios regionais. Isto exclui investimentos de manutenção, substituição simples ou modernização incremental sem ganho de capacidade. A empresa tem de demonstrar que o projeto se enquadra numa de quatro tipologias.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Criação de novo estabelecimento:</strong> abertura de uma nova unidade produtiva, com localização e infraestrutura próprias, distinta de unidades existentes.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Aumento de capacidade:</strong> expansão substancial da capacidade produtiva de um estabelecimento existente, geralmente medida em volume de output ou capacidade instalada.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Diversificação da produção:</strong> introdução de produtos ou serviços que não eram antes produzidos pelo estabelecimento, ainda que aproveitando parte da estrutura existente.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Alteração fundamental do processo:</strong> mudança radical do processo produtivo de um estabelecimento existente, com substituição material da tecnologia ou método de produção.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Setores</div>
+      <h2 class="section-h2">CAE elegíveis e excluídos</h2>
+      <p class="section-text">O âmbito setorial do RFAI é amplo, mas não universal. Cobre indústria, turismo, atividades tecnológicas e parte significativa dos serviços. Está, no entanto, fechado a sectores onde o direito europeu da concorrência limita os auxílios regionais.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Indústrias extrativas e transformadoras:</strong> CAE 05 a 33, abrangendo desde extração de minérios até fabrico de equipamentos eletrónicos.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Alojamento e restauração:</strong> CAE 55 e 56, incluindo hotelaria e empreendimentos turísticos.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Edição, software e audiovisual:</strong> CAE 58 a 63, cobrindo programação informática, atividades de informação e produção de conteúdos.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Investigação científica e desenvolvimento:</strong> atividades de I&amp;D quando articuladas com investimento em ativos.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Atividades administrativas de apoio ao turismo:</strong> agências, operadores e serviços de reservas.</li>
+      </ul>
+      <p class="section-text">Sectores explicitamente excluídos do RFAI: siderurgia, carvão, pesca e aquicultura, agricultura primária, construção naval, fibras sintéticas, transportes (aéreo, marítimo, rodoviário) e produção, distribuição e infraestruturas de energia. As exclusões resultam diretamente das regras europeias de auxílios regionais e não admitem derrogação nacional.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Exemplos de cálculo</div>
+      <h2 class="section-h2">Quanto vale na prática</h2>
+      <p class="section-text">Os três cenários abaixo ilustram como o benefício escala com a região, a dimensão do investimento e o IRC apurado. As taxas aplicadas correspondem ao investimento inicial elegível, antes de aplicação de outros benefícios fiscais.</p>
+
+      <div class="calculo-box">
+        <div class="calculo-title">Cenário 1: PME industrial no Centro, investimento €2M</div>
+        <div class="calculo-row">
+          <span class="calculo-desc">Aplicações relevantes (equipamento de produção)</span>
+          <span class="calculo-val">2.000.000 EUR</span>
+        </div>
+        <div class="calculo-row">
+          <span class="calculo-desc">Taxa aplicável (30% sobre €2M na região Centro)</span>
+          <span class="calculo-val">30%</span>
+        </div>
+        <div class="calculo-total">
+          <span class="calculo-total-desc">Dedução à coleta IRC</span>
+          <span class="calculo-total-val">600.000 EUR</span>
+        </div>
+      </div>
+
+      <div class="calculo-box">
+        <div class="calculo-title">Cenário 2: Grande empresa em Lisboa, investimento €10M</div>
+        <div class="calculo-row">
+          <span class="calculo-desc">Aplicações relevantes (linha de produção)</span>
+          <span class="calculo-val">10.000.000 EUR</span>
+        </div>
+        <div class="calculo-row">
+          <span class="calculo-desc">Taxa aplicável (10% na Grande Lisboa)</span>
+          <span class="calculo-val">10%</span>
+        </div>
+        <div class="calculo-total">
+          <span class="calculo-total-desc">Dedução à coleta IRC</span>
+          <span class="calculo-total-val">1.000.000 EUR</span>
+        </div>
+      </div>
+
+      <div class="calculo-box">
+        <div class="calculo-title">Cenário 3: Grande empresa no Norte, investimento €25M</div>
+        <div class="calculo-row">
+          <span class="calculo-desc">Aplicações relevantes até €15M (taxa de 30%)</span>
+          <span class="calculo-val">4.500.000 EUR</span>
+        </div>
+        <div class="calculo-row">
+          <span class="calculo-desc">Aplicações relevantes acima de €15M (taxa de 10% sobre €10M)</span>
+          <span class="calculo-val">1.000.000 EUR</span>
+        </div>
+        <div class="calculo-total">
+          <span class="calculo-total-desc">Dedução total à coleta IRC</span>
+          <span class="calculo-total-val">5.500.000 EUR</span>
+        </div>
+      </div>
+
+      <p class="section-text">Em qualquer cenário, a dedução está limitada a 50% da coleta de IRC do exercício. O excesso reporta-se até 10 períodos fiscais seguintes, o que torna o RFAI especialmente eficaz em empresas com IRC alto e estável.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Manutenção e penalizações</div>
+      <h2 class="section-h2">Obrigações pós-investimento</h2>
+      <p class="section-text">O RFAI não é um benefício imediato e definitivo. A empresa assume duas obrigações materiais durante um período mínimo: manter os ativos investidos no estabelecimento e manter os postos de trabalho líquidos criados em consequência do projeto.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Manutenção dos ativos:</strong> 3 anos para PME, 5 anos para grandes empresas, contados da data de aquisição. Inclui obrigação de manter o ativo afeto ao mesmo fim na mesma região.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Criação líquida de postos de trabalho:</strong> obrigatória, e mantida durante 3 anos (PME) ou 5 anos (grandes empresas). Não basta contratar, é preciso aumentar líquidamente o número total de trabalhadores face à média dos 12 meses anteriores ao projeto.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Penalização por incumprimento:</strong> alienação antecipada, encerramento do estabelecimento ou redução do quadro de pessoal abaixo do nível pré-investimento obrigam a devolver o benefício acrescido de juros compensatórios.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Limites e cumulação</div>
+      <h2 class="section-h2">Como integra com outros benefícios</h2>
+      <p class="section-text">O RFAI tem dois limites quantitativos a respeitar dentro do mesmo exercício e três regras de cumulação com outros instrumentos.</p>
+
+      <div class="stats-row reveal" style="grid-template-columns:repeat(3,1fr);">
+        <div class="stat-cell">
+          <div class="stat-num">50<sup>%</sup></div>
+          <div class="stat-label">Limite à coleta de IRC</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">10<sup>anos</sup></div>
+          <div class="stat-label">Reporte do excesso</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">3 a 5<sup>anos</sup></div>
+          <div class="stat-label">Manutenção do investimento</div>
+        </div>
+      </div>
+
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Cumula com SIFIDE II:</strong> sim, desde que as despesas elegíveis sejam diferentes. Um equipamento usado em I&amp;D pode entrar no SIFIDE pelas despesas correntes e no RFAI pela aquisição do ativo.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Não cumula com DLRR/ICE no mesmo investimento:</strong> a mesma aplicação relevante não pode beneficiar de RFAI e ICE simultaneamente. A escolha depende da estrutura financeira da empresa e do retorno comparado.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Limite de auxílio regional total:</strong> a dedução RFAI conta para o teto regional. Acumular RFAI com Portugal 2030 num mesmo projeto requer verificação para não ultrapassar o plafond aplicável à dimensão da empresa e à região.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Obrigações declarativas</div>
+      <h2 class="section-h2">Documentação a manter</h2>
+      <p class="section-text">A operacionalização do RFAI assenta num dossier fiscal específico que a empresa tem de constituir e conservar durante todo o período de manutenção do investimento, acrescido do prazo de prescrição. O dossier sustenta a dedução em caso de inspeção tributária e é a única prova material da elegibilidade.</p>
+      <ul class="article-list">
+        <li>Memória descritiva do projeto de investimento com identificação da tipologia (criação, aumento, diversificação, alteração)</li>
+        <li>Cálculo das aplicações relevantes com identificação individual de cada ativo, fatura e mapa de amortizações</li>
+        <li>Demonstração de criação líquida de postos de trabalho com média de pessoal antes e depois do projeto</li>
+        <li>Demonstração do limite de auxílio regional aplicável com cumulações declaradas</li>
+        <li>Modelo 22 com Anexo D preenchido, e Modelo 4 quando aplicável</li>
+      </ul>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">O RFAI é o regime fiscal de investimento com a melhor relação valor-complexidade do quadro português. Não exige candidatura, não há rateio, a empresa aplica e prova. Mas é também o regime onde mais empresas perdem benefício por má preparação técnica do dossier.</p>
+      <p class="section-text">O erro mais frequente é tratar o RFAI como benefício automático. A elegibilidade requer enquadramento explícito numa das quatro tipologias de investimento inicial, e o teste é qualitativo, não basta dizer "comprámos máquinas". Tem de demonstrar que aumentou capacidade, ou diversificou, ou alterou fundamentalmente o processo. Inspeções recentes da Autoridade Tributária têm sido particularmente exigentes neste ponto.</p>
+      <p class="section-text">O segundo erro é subaproveitar o reporte. Empresas com IRC volátil deduzem o que cabe no exercício e esquecem o saldo. O RFAI permite reportar o excesso até 10 anos, o que faz dele especialmente útil para empresas em fase de expansão com prejuízos fiscais nos primeiros exercícios pós-investimento.</p>
+      <p class="section-text">A regra prática que aplicamos com clientes é planear o investimento antes de o realizar, não depois. Avaliar a região, dimensionar o projeto contra o limiar dos €15M, decidir a cumulação com Portugal 2030 ou ICE, e desenhar o calendário de aquisições para maximizar o aproveitamento da coleta. Quem deixa o RFAI para a equipa de contabilidade no fecho do exercício deduz menos do que devia.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_andrecarvalho.png" alt="André Carvalho" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">André Carvalho</div>
+          <div class="sidebar-author-role">Técnico de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-cont">Em vigor até 31/12/2027</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tipo</div>
+        <div class="sidebar-fact-val">Crédito fiscal IRC</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Taxa máxima</div>
+        <div class="sidebar-fact-val">30% até €15M, 10% acima</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Localização</div>
+        <div class="sidebar-fact-val">Norte, Centro, Alentejo, Açores e Madeira a 30%; Algarve, Lisboa e Setúbal a 10%</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">CAE elegíveis</div>
+        <div class="sidebar-fact-val">Indústria (C), turismo (I), TIC (J), I&amp;D (M). Excluídos: agricultura primária, pesca, energia, transportes, siderurgia, carvão, construção naval</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Limite à coleta</div>
+        <div class="sidebar-fact-val">50% IRC, sem limite nos 3 primeiros exercícios</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Reporte</div>
+        <div class="sidebar-fact-val">10 períodos fiscais</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Manutenção</div>
+        <div class="sidebar-fact-val">3 anos PME, 5 anos grandes empresas</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Base legal</div>
+        <div class="sidebar-fact-val">CFI (DL 162/2014), arts. 22.º a 26.º</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Avaliamos o enquadramento RFAI do seu projeto, a cumulação com outros benefícios e a estruturação documental do dossier fiscal.</div>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../sifide-ii-candidaturas-2025/" class="related-link">
+        <span class="related-link-name">SIFIDE II</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../../biblioteca/" class="related-link">
+        <span class="related-link-name">Portugal 2030</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../../biblioteca/" class="related-link">
+        <span class="related-link-name">ICE</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../patent-box/" class="related-link">
+        <span class="related-link-name">Patent Box</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

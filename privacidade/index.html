@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<title>Política de Privacidade: Grupo Open Capital</title>
+  <meta name="description" content="Política de privacidade do Grupo Open Capital. Como tratamos os dados pessoais recolhidos através do website, Calendly e contactos por email, ao abrigo do RGPD.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:       #1A3A5C;
+      --navy-deep:  #0D1F33;
+      --gold:       #C9A96E;
+      --white:      #FFFFFF;
+      --grey-light: #E5E5E5;
+      --grey-mid:   #7A7A7A;
+      --grey-dark:  #2A2A2A;
+      --font: 'Montserrat', sans-serif;
+      --transition: all 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --shadow: 0 8px 40px rgba(26,58,92,0.10);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:var(--font); background:var(--white); color:var(--grey-dark); -webkit-font-smoothing:antialiased; }
+
+    /* ─── NAVBAR ─── */
+    .navbar { display:flex; align-items:center; justify-content:space-between; padding:0 48px; height:74px; position:fixed; top:0; left:0; right:0; z-index:200; background:var(--navy); border-bottom:1px solid rgba(255,255,255,0.07); transition:var(--transition); }
+    .navbar.scrolled { background:rgba(255,255,255,0.97); backdrop-filter:blur(20px); border-bottom:1px solid var(--grey-light); }
+    .nav-logo { display:flex; align-items:center; text-decoration:none; flex-shrink:0; }
+    .nav-logo-img { height:57px; width:auto; display:block; filter:brightness(0) invert(1); transition:var(--transition); }
+    .navbar.scrolled .nav-logo-img { filter:none; }
+    .nav-links { display:flex; align-items:center; gap:24px; list-style:none; margin-left:auto; }
+    .nav-links a { font-size:15px; font-weight:500; letter-spacing:0.08em; text-transform:none; color:rgba(255,255,255,0.68); text-decoration:none; transition:var(--transition); position:relative; padding-bottom:3px; white-space:nowrap; }
+    .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold); transition:width 0.3s ease; }
+    .nav-links a:hover { color:var(--white); }
+    .nav-links a:hover::after { width:100%; }
+    .navbar.scrolled .nav-links a { color:var(--grey-dark); }
+    .navbar.scrolled .nav-links a:hover { color:var(--navy); }
+    .nav-badge { font-size:10px; font-weight:600; letter-spacing:0.06em; text-transform:none; color:var(--gold); border:1px solid var(--gold); padding:1px 4px; margin-left:3px; vertical-align:super; line-height:1; }
+    .nav-dropdown { position:relative; }
+    .nav-dropdown-arrow { display:inline-block; margin-left:5px; width:6px; height:6px; border-right:1px solid currentColor; border-bottom:1px solid currentColor; transform:rotate(45deg) translateY(-2px); transition:transform 0.25s ease; vertical-align:middle; opacity:0.6; }
+    .nav-dropdown:hover .nav-dropdown-arrow { transform:rotate(-135deg) translateY(-2px); opacity:1; }
+    .nav-dropdown-menu { position:absolute; top:calc(100% + 14px); left:50%; transform:translateX(-50%) translateY(-6px); background:var(--white); border:1px solid var(--grey-light); min-width:160px; opacity:0; visibility:hidden; transition:opacity 0.22s ease, transform 0.22s ease; box-shadow:var(--shadow); z-index:200; }
+    .nav-dropdown:hover .nav-dropdown-menu { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
+    .nav-dropdown-menu a { display:block; padding:12px 20px; font-size:13px; font-weight:500; letter-spacing:0.05em; text-transform:none; color:var(--grey-dark); text-decoration:none; border-bottom:1px solid var(--grey-light); transition:var(--transition); white-space:nowrap; }
+    .nav-dropdown-menu a:last-child { border-bottom:none; }
+    .nav-dropdown-menu a:hover { color:var(--navy); background:#FAFAFA; padding-left:24px; }
+    .nav-dropdown-menu a::after { display:none !important; }
+    .navbar:not(.scrolled) .nav-dropdown-menu { background:var(--navy-deep); border-color:rgba(255,255,255,0.08); }
+    .navbar:not(.scrolled) .nav-dropdown-menu a { color:rgba(255,255,255,0.60); border-color:rgba(255,255,255,0.06); }
+    .navbar:not(.scrolled) .nav-dropdown-menu a:hover { color:var(--white); background:rgba(255,255,255,0.05); }
+    .nav-cta { font-size:16px; font-weight:600; letter-spacing:0.08em; text-transform:none; color:var(--white); text-decoration:none; border:1px solid rgba(255,255,255,0.28); padding:9px 18px; margin-left:28px; transition:var(--transition); white-space:nowrap; }
+    .nav-cta:hover { border-color:var(--white); background:rgba(255,255,255,0.08); }
+    .navbar.scrolled .nav-cta { color:var(--navy); border-color:var(--navy); }
+    .navbar.scrolled .nav-cta:hover { background:var(--navy); color:var(--white); }
+    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
+    .nav-hamburger span { display:block; width:22px; height:1px; background:var(--white); transition:var(--transition); }
+    .navbar.scrolled .nav-hamburger span { background:var(--navy); }
+    .nav-mobile-menu { display:none; position:fixed; top:74px; left:0; right:0; background:var(--navy); padding:24px 32px 32px; border-bottom:1px solid rgba(255,255,255,0.07); z-index:199; }
+    .nav-mobile-menu.open { display:block; }
+    .nav-mobile-menu a { display:block; font-size:15px; font-weight:500; letter-spacing:0.05em; text-transform:none; color:rgba(255,255,255,0.7); text-decoration:none; padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.06); transition:var(--transition); }
+    .nav-mobile-menu a:hover { color:var(--white); }
+    .nav-mobile-cta { display:inline-block !important; margin-top:22px; font-size:14px; font-weight:600; color:var(--white) !important; border:1px solid rgba(255,255,255,0.28); padding:12px 24px; }
+    @media(max-width:768px) { .nav-links { display:none; } .nav-cta { display:none; } .nav-hamburger { display:flex; } }
+
+    /* ─── DOC PAGE ─── */
+    .doc-page { padding-top:74px; background:var(--white); }
+    .doc-header { position:relative; padding:96px 8% 56px; }
+    .doc-title { font-size:72px; font-weight:800; color:var(--grey-dark); line-height:1.0; letter-spacing:-0.02em; max-width:640px; }
+    .doc-wrap { padding:48px 8% 96px; }
+    .doc-p { font-size:16px; font-weight:400; color:var(--grey-dark); line-height:1.75; margin-bottom:18px; }
+    .doc-p a { color:var(--navy); text-decoration:underline; text-underline-offset:3px; }
+    .doc-p a:hover { color:var(--gold); }
+    .doc-h2 { font-size:22px; font-weight:700; color:var(--grey-dark); letter-spacing:-0.005em; margin-top:44px; margin-bottom:18px; }
+    .doc-h2:first-of-type { margin-top:32px; }
+    .doc-sub { font-size:16px; font-weight:400; color:var(--grey-dark); line-height:1.75; margin-bottom:14px; }
+    .doc-sub strong { font-weight:700; color:var(--grey-dark); }
+    .doc-update { margin-top:56px; padding-top:24px; border-top:1px solid var(--grey-light); font-size:14px; color:var(--grey-mid); }
+    .doc-update strong { color:var(--grey-dark); font-weight:600; }
+
+    /* ─── FOOTER ─── */
+    .footer { background:var(--navy-deep); padding:56px 80px 34px; }
+    .footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr; gap:44px; margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.07); }
+    .f-logo-row { display:flex; align-items:center; gap:10px; }
+    .f-logo-img { height:72px; width:auto; display:block; filter:brightness(0) invert(1); opacity:0.88; }
+    .f-tagline { font-size:16px; font-weight:100; letter-spacing:0.14em; color:var(--gold); margin-top:12px; }
+    .f-col-label { font-size:11px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:rgba(255,255,255,0.24); margin-bottom:16px; }
+    .f-links { list-style:none; }
+    .f-links li { margin-bottom:9px; }
+    .f-links a { font-size:15px; font-weight:300; color:rgba(255,255,255,0.48); text-decoration:none; transition:var(--transition); letter-spacing:0.03em; }
+    .f-links a:hover { color:var(--white); }
+    .f-badge { font-size:9px; font-weight:600; letter-spacing:0.1em; color:var(--gold); border:1px solid rgba(201,169,110,0.45); padding:1px 5px; margin-left:5px; vertical-align:middle; }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+    .f-copy { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:0.05em; }
+    .f-legal { display:flex; gap:22px; }
+    .f-legal a { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); text-decoration:none; letter-spacing:0.05em; transition:var(--transition); }
+    .f-legal a:hover { color:rgba(255,255,255,0.45); }
+
+    @media(max-width:768px) {
+      .doc-header { padding:64px 24px 32px; }
+      .doc-title { font-size:44px; }
+      .doc-wrap { padding:32px 24px 72px; width:100%; }
+      .doc-h2 { font-size:19px; margin-top:36px; }
+      .footer { padding:48px 24px 28px; }
+      .footer-grid { grid-template-columns:1fr; gap:32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── NAVBAR ─── -->
+  <!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../" class="nav-logo">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../conhecimento/atualidade/">Atualidade</a>
+        <a href="../conhecimento/opiniao/">Opinião</a>
+        <a href="../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros/">Parceiros</a>
+        <a href="../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../biblioteca/">Biblioteca</a>
+  <a href="../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos/">Sobre Nós</a>
+  <a href="../parceiros/">Parceiros</a>
+  <a href="../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+  <!-- ─── DOC ─── -->
+  <section class="doc-page">
+    <header class="doc-header">
+      <h1 class="doc-title">Política<br>de Privacidade</h1>
+    </header>
+
+    <div class="doc-wrap">
+
+      <p class="doc-p">O Grupo Open Capital, na qualidade de entidade responsável pelo tratamento de dados, está empenhado em proteger a privacidade e os dados pessoais dos seus clientes e utilizadores do website, pelo que elaborou e adotou a presente política e as práticas aqui descritas, cuja leitura aconselha.</p>
+
+      <p class="doc-p">A presente política de privacidade regula a recolha e tratamento dos dados pessoais fornecidos pelos clientes e utilizadores do website opencapital.pt, assim como o exercício dos seus direitos relativamente a estes dados, nos termos da legislação em vigor, designadamente do Regulamento Geral de Proteção de Dados (RGPD).</p>
+
+      <h2 class="doc-h2">1. Do que trata esta política?</h2>
+      <p class="doc-sub"><strong>1.1.</strong> Esta Política de Privacidade explica como recolhemos e tratamos os dados pessoais que são necessários para o fornecimento de serviços disponibilizados através do website e dos canais digitais do Grupo Open Capital.</p>
+      <p class="doc-sub"><strong>1.2.</strong> O objetivo é que a recolha e tratamento dos dados sejam levados a cabo da melhor forma, pretendendo esta política descrever as práticas adotadas para esse efeito.</p>
+      <p class="doc-sub"><strong>1.3.</strong> A utilização do website implica o conhecimento e a aceitação desta Política de Privacidade.</p>
+
+      <h2 class="doc-h2">2. O que são dados pessoais?</h2>
+      <p class="doc-sub"><strong>2.1.</strong> Dados pessoais são todas as informações relativas a uma pessoa e que a identificam, ou tornam identificável, independentemente da natureza e suporte das informações, incluindo o som e a imagem da pessoa.</p>
+      <p class="doc-sub"><strong>2.2.</strong> Por identificável deve entender-se uma pessoa que possa ser identificada, direta ou indiretamente, designadamente por referência a um número de identificação ou a outros elementos específicos da sua identidade física, fisiológica, psíquica, económica, cultural ou social.</p>
+      <p class="doc-sub"><strong>2.3.</strong> O Grupo Open Capital assume que os dados recolhidos foram inseridos pelo respetivo titular ou que a sua inserção foi autorizada pelo mesmo, sendo estes verdadeiros e exatos.</p>
+
+      <h2 class="doc-h2">3. Quem é o responsável pelo tratamento?</h2>
+      <p class="doc-sub"><strong>3.1.</strong> A entidade responsável pelo tratamento dos dados pessoais descritos nesta política é o Grupo Open Capital.</p>
+      <p class="doc-sub"><strong>3.2.</strong> Para qualquer questão relativa a proteção de dados, o titular pode contactar o Grupo Open Capital através do email <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a>.</p>
+      <p class="doc-sub"><strong>3.3.</strong> O Grupo Open Capital não nomeou Encarregado de Proteção de Dados (DPO), por não se verificarem os critérios previstos no artigo 37.º do RGPD.</p>
+
+      <h2 class="doc-h2">4. Que dados pessoais tratamos?</h2>
+      <p class="doc-sub"><strong>4.1.</strong> O website opencapital.pt não tem formulários de recolha direta de dados. Os dados pessoais são tratados nos seguintes contextos:</p>
+      <p class="doc-sub"><strong>4.2.</strong> <strong>Agendamentos através do Calendly.</strong> Quando marca uma reunião com o Grupo Open Capital através do botão <em>Contactar</em>, é encaminhado para a plataforma Calendly, que recolhe nome, endereço de email, e eventual mensagem ou informação adicional que preencha.</p>
+      <p class="doc-sub"><strong>4.3.</strong> <strong>Contactos por email.</strong> Quando nos escreve para <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a>, tratamos o seu nome, endereço de email, e o conteúdo da mensagem.</p>
+      <p class="doc-sub"><strong>4.4.</strong> <strong>Candidaturas profissionais.</strong> No âmbito de candidaturas a vagas ou candidaturas espontâneas, tratamos os dados constantes do currículo e da carta de apresentação, designadamente dados identificativos, percurso académico, experiência profissional e contactos.</p>
+      <p class="doc-sub"><strong>4.5.</strong> <strong>Dados técnicos de navegação.</strong> A infraestrutura técnica do website (GitHub Pages e Cloudflare) gera automaticamente registos com o endereço IP, tipo de browser, páginas visitadas, data e hora de acesso, para finalidades de segurança, estatística agregada e prevenção de abuso.</p>
+
+      <h2 class="doc-h2">5. Finalidades e fundamentos legais</h2>
+      <p class="doc-sub"><strong>5.1.</strong> O tratamento de dados pessoais pelo Grupo Open Capital tem por base um dos fundamentos previstos no artigo 6.º do RGPD, consoante a finalidade:</p>
+      <p class="doc-sub"><strong>5.2.</strong> Resposta a pedidos de contacto, marcação de reuniões e diligências pré-contratuais, com base no interesse legítimo e nas diligências a pedido do titular (artigo 6.º, n.º 1, alíneas b) e f)).</p>
+      <p class="doc-sub"><strong>5.3.</strong> Prestação dos serviços de consultoria contratados, com base na execução do contrato (artigo 6.º, n.º 1, alínea b)).</p>
+      <p class="doc-sub"><strong>5.4.</strong> Cumprimento de obrigações legais, nomeadamente fiscais e contabilísticas, com base na obrigação legal (artigo 6.º, n.º 1, alínea c)).</p>
+      <p class="doc-sub"><strong>5.5.</strong> Gestão de candidaturas profissionais, com base em diligências pré-contratuais e consentimento (artigo 6.º, n.º 1, alíneas a) e b)).</p>
+      <p class="doc-sub"><strong>5.6.</strong> Segurança, integridade do website e prevenção de utilização abusiva, com base no interesse legítimo (artigo 6.º, n.º 1, alínea f)).</p>
+      <p class="doc-sub"><strong>5.7.</strong> O Grupo Open Capital não utiliza os dados pessoais para envio de comunicações de marketing, newsletters, nem para qualquer finalidade secundária sem o consentimento expresso do titular.</p>
+
+      <h2 class="doc-h2">6. Prazos de conservação</h2>
+      <p class="doc-sub"><strong>6.1.</strong> Os dados pessoais são conservados apenas pelo tempo necessário à finalidade para que foram recolhidos, ou pelos prazos impostos por lei.</p>
+      <p class="doc-sub"><strong>6.2.</strong> Contactos e pedidos de informação sem seguimento contratual: até 24 meses após o último contacto.</p>
+      <p class="doc-sub"><strong>6.3.</strong> Dados de clientes e documentação contratual: durante a vigência do contrato e 10 anos após o seu termo, nos termos do Código do IRC e do Código do IVA.</p>
+      <p class="doc-sub"><strong>6.4.</strong> Candidaturas profissionais não selecionadas: até 12 meses, salvo consentimento expresso para conservação em base de talento.</p>
+      <p class="doc-sub"><strong>6.5.</strong> Registos técnicos de navegação: até 12 meses, de acordo com as políticas dos subcontratantes.</p>
+      <p class="doc-sub"><strong>6.6.</strong> Findos os respetivos prazos, os dados são eliminados ou anonimizados de forma irreversível.</p>
+
+      <h2 class="doc-h2">7. Com quem partilhamos os dados?</h2>
+      <p class="doc-sub"><strong>7.1.</strong> O Grupo Open Capital não vende, aluga nem cede dados pessoais a terceiros para fins comerciais.</p>
+      <p class="doc-sub"><strong>7.2.</strong> Os dados podem ser partilhados, dentro do estritamente necessário, com subcontratantes tecnológicos que operam infraestrutura ou ferramentas utilizadas pelo Grupo Open Capital, designadamente Calendly (agendamento), GitHub (alojamento do website), Cloudflare (CDN e proteção), e provedor de correio eletrónico.</p>
+      <p class="doc-sub"><strong>7.3.</strong> Os dados podem ainda ser partilhados com prestadores de serviços profissionais sujeitos a dever de confidencialidade, como contabilistas, advogados ou auditores, quando tal se revele necessário ao cumprimento das obrigações legais.</p>
+      <p class="doc-sub"><strong>7.4.</strong> O Grupo Open Capital só comunica dados a autoridades públicas quando exista obrigação legal de comunicação, nomeadamente à autoridade tributária, tribunais ou entidades reguladoras competentes.</p>
+      <p class="doc-sub"><strong>7.5.</strong> Todos os subcontratantes estão vinculados por contratos que asseguram padrões de proteção equivalentes aos do RGPD.</p>
+
+      <h2 class="doc-h2">8. Transferências internacionais</h2>
+      <p class="doc-sub"><strong>8.1.</strong> Algumas ferramentas utilizadas pelo Grupo Open Capital são operadas por empresas com sede nos Estados Unidos da América, designadamente a Calendly LLC, a GitHub Inc. e a Cloudflare Inc.</p>
+      <p class="doc-sub"><strong>8.2.</strong> Tais transferências estão salvaguardadas pelos mecanismos previstos no capítulo V do RGPD, nomeadamente o EU-US Data Privacy Framework e as Cláusulas Contratuais Tipo aprovadas pela Comissão Europeia.</p>
+      <p class="doc-sub"><strong>8.3.</strong> Para conhecer em detalhe as práticas de cada subcontratante, o titular pode consultar a <a href="https://calendly.com/legal/privacy-notice" target="_blank">Política de Privacidade da Calendly</a>, a <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank">Política de Privacidade do GitHub</a> e a <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Política de Privacidade da Cloudflare</a>.</p>
+
+      <h2 class="doc-h2">9. Os seus direitos</h2>
+      <p class="doc-sub"><strong>9.1.</strong> Nos termos dos artigos 15.º a 22.º do RGPD, o titular dos dados tem, a qualquer momento, direito de acesso, retificação, apagamento, limitação do tratamento, oposição, portabilidade e, quando aplicável, direito a retirar o consentimento.</p>
+      <p class="doc-sub"><strong>9.2.</strong> O exercício destes direitos pode ser efetuado através do email <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a>. O Grupo Open Capital responderá no prazo máximo de 30 dias.</p>
+      <p class="doc-sub"><strong>9.3.</strong> Podem ser solicitados elementos adicionais para confirmação da identidade do titular antes de ser dado seguimento ao pedido.</p>
+      <p class="doc-sub"><strong>9.4.</strong> O titular tem ainda o direito de apresentar reclamação à autoridade de controlo nacional, a Comissão Nacional de Proteção de Dados (<a href="https://www.cnpd.pt" target="_blank">www.cnpd.pt</a>).</p>
+
+      <h2 class="doc-h2">10. Segurança dos dados</h2>
+      <p class="doc-sub"><strong>10.1.</strong> O Grupo Open Capital adota medidas técnicas e organizativas adequadas para proteger os dados pessoais contra destruição, perda, alteração, divulgação ou acesso não autorizado.</p>
+      <p class="doc-sub"><strong>10.2.</strong> Estas medidas incluem, entre outras, comunicações em HTTPS, autenticação forte nos sistemas internos, acesso restrito à informação com base na necessidade de saber, e seleção criteriosa de subcontratantes que cumpram padrões equivalentes.</p>
+      <p class="doc-sub"><strong>10.3.</strong> Em caso de violação de dados pessoais suscetível de resultar em risco elevado para os direitos e liberdades do titular, o Grupo Open Capital cumprirá os deveres de notificação à CNPD e de comunicação aos titulares, nos termos dos artigos 33.º e 34.º do RGPD.</p>
+
+      <h2 class="doc-h2">11. Cookies</h2>
+      <p class="doc-sub"><strong>11.1.</strong> O website opencapital.pt não utiliza cookies próprios de tracking, perfilagem ou publicidade.</p>
+      <p class="doc-sub"><strong>11.2.</strong> Podem existir cookies estritamente necessários definidos pela Cloudflare, para efeitos de segurança e integridade da ligação, e pela Calendly, quando o utilizador acede à funcionalidade de agendamento.</p>
+      <p class="doc-sub"><strong>11.3.</strong> Não são utilizadas ferramentas de analytics comerciais, como Google Analytics, Meta Pixel ou LinkedIn Insight Tag.</p>
+      <p class="doc-sub"><strong>11.4.</strong> O titular pode, a qualquer momento, gerir a utilização de cookies através das definições de privacidade do seu navegador.</p>
+
+      <h2 class="doc-h2">12. Menores</h2>
+      <p class="doc-sub"><strong>12.1.</strong> Os serviços do Grupo Open Capital dirigem-se exclusivamente a empresas, empresários e profissionais, não sendo recolhidos conscientemente dados pessoais de menores de 16 anos.</p>
+      <p class="doc-sub"><strong>12.2.</strong> Caso seja detetado que um menor forneceu dados pessoais, o Grupo Open Capital procederá à sua eliminação imediata.</p>
+
+      <h2 class="doc-h2">13. Alterações à presente política</h2>
+      <p class="doc-sub"><strong>13.1.</strong> A presente política poderá ser atualizada sempre que existam alterações legais, tecnológicas ou operacionais que o justifiquem.</p>
+      <p class="doc-sub"><strong>13.2.</strong> A versão em vigor será, em cada momento, a que se encontra publicada nesta página, com indicação da data de atualização.</p>
+      <p class="doc-sub"><strong>13.3.</strong> Recomenda-se a consulta periódica. Alterações materiais serão comunicadas com destaque, quando aplicável.</p>
+
+      <p class="doc-update"><strong>Última atualização:</strong> junho de 2023</p>
+
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../conhecimento/">Conhecimento</a></li>
+        <li><a href="../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../sobre-nos/">Equipa</a></li>
+        <li><a href="../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../privacidade/">Privacidade</a>
+      <a href="../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) navbar.classList.add('scrolled');
+      else navbar.classList.remove('scrolled');
+    });
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+  </script>
+
+</body>
+</html>

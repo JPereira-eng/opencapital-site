@@ -128,17 +128,17 @@ A skill grava o subtema escolhido em `conhecimento-catalog.json` na entrada do a
 
 ## TEMPLATE HTML
 
-O artigo final é gravado em `conhecimento/[slug].html` seguindo a estrutura visual já em uso pelos outros artigos de conhecimento. Para garantir consistência total, **antes de escrever, ler um artigo de referência**:
+O artigo final é gravado em `conhecimento/[slug]/index.html` seguindo a estrutura visual já em uso pelos outros artigos de conhecimento. Para garantir consistência total, **antes de escrever, ler um artigo de referência**:
 
 ```
-Read conhecimento/automacao-vs-digitalizacao.html
+Read conhecimento/automacao-vs-digitalizacao/index.html
 ```
 
 Este é um exemplar de Estratégia e Gestão. Reproduzir literalmente:
 - Bloco `<head>` com favicons, fonts, CSS variables, navbar styles, article-hero, article-layout, sidebar styles, article building blocks (`article-section`, `art-highlight`, `art-table`, `art-divider`, `steps-list`).
 - Marcador `<!-- NAVBAR:START --> ... <!-- NAVBAR:END -->` (preenchido depois pelo build_navbar.py se necessário).
 - `article-hero` com breadcrumb, `article-title`, `article-standfirst`, `article-meta-bar` (Categoria, Data, Leitura, Autor). NAO incluir `hero-cat-badge` (eyebrow dourado) - foi removido por decisao editorial em 2026-05-10 por ser redundante com a meta-bar.
-- `back-bar` com link de volta a `../conhecimento.html` (após Fase 7, este link passa a ser `../conhecimento/estrategia.html`).
+- `back-bar` com link de volta a `../conhecimento.html` (após Fase 7, este link passa a ser `../conhecimento/estrategia/index.html`).
 - `article-layout` com `article-body` + `article-sidebar`.
 - Sidebar com bloco do autor (foto, nome, cargo) e card de CTA "Falar com um especialista" -> `https://calendly.com/opencapital`.
 - Marcador `<!-- FOOTER:START --> ... <!-- FOOTER:END -->`.
@@ -176,7 +176,7 @@ Identificar a **pergunta central** que o artigo vai responder. Se não encaixar 
 
 ### 2. Ler artigo de referência
 
-Ler `conhecimento/automacao-vs-digitalizacao.html` para extrair o template HTML completo (head + CSS + estrutura de hero/sidebar/footer).
+Ler `conhecimento/automacao-vs-digitalizacao/index.html` para extrair o template HTML completo (head + CSS + estrutura de hero/sidebar/footer).
 
 ### 3. Definir metadados
 
@@ -195,7 +195,7 @@ Aplicar literalmente a lógica editorial da Série 5.1 (passos 1-6 do raciocíni
 
 **OBRIGATORIO:** incluir, antes de `</body>` no HTML produzido, a tag:
 ```html
-<script src="../assets/js/back-link.js" defer></script>
+<script src="../../assets/js/back-link.js" defer></script>
 ```
 Esta tag e essencial para que o link "Voltar ao Conhecimento" no back-bar seja atualizado dinamicamente para apontar a sub-seccao correta (Estrategia e Gestao). Sem ela, o fallback estatico aponta a Atualidade e o leitor pode achar estranho.
 
@@ -213,12 +213,12 @@ Adicionar entrada ao FINAL do array `articles`:
   "autor": "[Nome]",
   "autor_foto": "[ficheiro png]",
   "data_publicacao": "AAAA-MM",
-  "href": "conhecimento/[slug].html",
+  "href": "conhecimento/[slug]/index.html",
   "meta_description": "[meta description SEO 150-160 chars]"
 }
 ```
 
-### 6. Injetar card no hub `conhecimento/estrategia.html`
+### 6. Injetar card no hub `conhecimento/estrategia/index.html`
 
 (Após a Fase 5 ter criado o ficheiro). Adicionar card no grid do subtema correspondente. O hub renderiza dinamicamente a partir do JSON, ou tem cards estáticos. **Verificar o que existe e adaptar.** Se for renderização dinâmica, basta atualizar o JSON. Se for estática, injetar o card manualmente.
 
@@ -229,8 +229,8 @@ Em `index.html`, secção "Conhecimento": substituir o card mais antigo dos dest
 ### 8. Build footer e deploy
 
 ```bash
-python build_footer.py "conhecimento/[slug].html"
-git add conhecimento/[slug].html conhecimento-catalog.json conhecimento/estrategia.html index.html
+python build_footer.py "conhecimento/[slug]/index.html"
+git add conhecimento/[slug]/index.html conhecimento-catalog.json conhecimento/estrategia/index.html index.html
 git commit -m "estrategia: [titulo curto]"
 git push origin main
 ```
@@ -245,7 +245,7 @@ Se push falhar: `git stash && git pull --rebase && git stash pop && git push`.
 2. Nunca publicar artigo de Estratégia e Gestão se ele encaixar melhor em /trend, /opiniao ou /informativo. Avisar o utilizador e sugerir a skill correta.
 3. Sempre atualizar `conhecimento-catalog.json` com a nova entrada. Sem isto, o hub `estrategia.html` não mostra o artigo.
 4. Sempre fazer build do footer e push automático ao final (regra global do CLAUDE.md).
-5. Auto-validacao final: confirmar que existe `conhecimento/[slug].html`, que o slug aparece exactamente uma vez em `conhecimento-catalog.json`, e que o card aparece no hub correto. Se algo falhar, reportar erro grave e não fechar a tarefa.
+5. Auto-validacao final: confirmar que existe `conhecimento/[slug]/index.html`, que o slug aparece exactamente uma vez em `conhecimento-catalog.json`, e que o card aparece no hub correto. Se algo falhar, reportar erro grave e não fechar a tarefa.
 
 ---
 
@@ -266,5 +266,5 @@ Input ($ARGUMENTS)
 8. build_footer.py + git add + commit + push
     |
     v
-Reportar: "Artigo [slug] publicado em /conhecimento/estrategia.html. Subtema: [subtema]. Commit: [hash]."
+Reportar: "Artigo [slug] publicado em /conhecimento/estrategia/index.html. Subtema: [subtema]. Commit: [hash]."
 ```

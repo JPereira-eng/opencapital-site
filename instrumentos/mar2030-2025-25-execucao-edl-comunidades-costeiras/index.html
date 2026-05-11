@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<title>MAR2030-2025-25 - EDL GAL A2S Comunidades Costeiras: Open Capital</title>
+  <meta name="description" content="Aviso MAR2030-2025-25 financia projetos de Economia Azul nas zonas costeiras de Cascais, Mafra e Sintra, atraves da EDL do GAL A2S. Dotacao FEAMPA de 78.709 EUR. Candidaturas abertas ate 30/06/2026.">
+  <link rel="stylesheet" href="/assets/fonts/montserrat.css">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+
+    /* NAVBAR */
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+
+    /* ARTICLE HERO */
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:580px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.status-open{color:#5EC48A;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+
+    /* BACK BAR */
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+
+    /* ARTICLE LAYOUT */
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+
+    /* TAXA TABLE */
+    .rate-table{width:100%;border-collapse:collapse;margin:24px 0;}
+    .rate-table th{font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;border-bottom:2px solid var(--grey-light);background:#FAFAFA;}
+    .rate-table td{font-size:16px;font-weight:300;color:var(--grey-dark);padding:13px 16px;border-bottom:1px solid var(--grey-light);line-height:1.5;}
+    .rate-table tr:last-child td{border-bottom:none;}
+    .rate-table td:last-child{font-weight:600;color:var(--navy);text-align:right;}
+    .rate-highlight td{background:rgba(26,58,92,0.03);}
+    .rate-top td{background:rgba(201,169,110,0.06);}
+    .rate-top td:last-child{color:var(--gold);}
+
+    /* PROFILE CARDS */
+    .profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;}
+    .profile-card{background:#FAFAFA;border:1px solid var(--grey-light);padding:22px 20px;position:relative;overflow:hidden;}
+    .profile-card::before{content:'';position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width 0.4s ease;}
+    .profile-card:hover::before{width:100%;}
+    .profile-card-title{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:8px;letter-spacing:0.04em;}
+    .profile-card-text{font-size:14px;font-weight:300;color:var(--grey-mid);line-height:1.7;}
+
+    /* SIDEBAR */
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+
+    /* SCROLL REVEAL */
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+
+    /* FOOTER */
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}.profile-grid{grid-template-columns:1fr;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}.profile-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca/">Soluções</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">EDL GAL A2S - Comunidades Costeiras</span>
+    </nav>
+    <p class="hero-cat">Financiamento Público</p>
+    <h1 class="hero-title">Execução da EDL do GAL A2S - Comunidades Costeiras</h1>
+    <p class="hero-tagline">Apoio FEAMPA a projetos de Economia Azul nas zonas costeiras de Cascais, Mafra e Sintra, através da EDL do GAL A2S.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotação FEAMPA</span>
+        <span class="meta-value">78.709 EUR</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Taxa máx.</span>
+        <span class="meta-value">100% (interesse coletivo / pequena pesca)</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Área</span>
+        <span class="meta-value">Cascais, Mafra e Sintra (costa)</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-open">Aberto até 30/06/2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca/" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Contexto</div>
+      <h2 class="section-h2">O que é a DLBC e o papel do GAL A2S neste território</h2>
+      <p class="section-text">O Desenvolvimento Local de Base Comunitária (DLBC) é uma metodologia europeia que delega nas comunidades locais a definição das suas próprias prioridades de desenvolvimento. Em vez de programas desenhados a nível central, o DLBC constitui Grupos de Ação Local (GAL) compostos por atores do território: autarquias, associações, empresas, investigadores e cidadãos. Estes GAL elaboram uma Estratégia de Desenvolvimento Local (EDL) adaptada à realidade concreta do seu território e gerem diretamente os fundos europeus alocados.</p>
+      <p class="section-text">O GAL A2S (Associação para o Desenvolvimento Sustentável da Região Saloia) é o grupo que representa os municípios costeiros da Grande Lisboa Norte: Cascais, Mafra e Sintra. O território A2S tem uma identidade muito própria ligada ao Atlântico. A vila de Ericeira é reconhecida como World Surfing Reserve, Cascais mantém uma tradição pesqueira com raízes profundas, e toda a faixa costeira partilha um ecossistema marinho valioso e ameaçado pelas pressões do turismo e das alterações climáticas.</p>
+      <p class="section-text">A EDL do GAL A2S estrutura-se em torno de três objetivos estratégicos: dinamizar a Economia Azul local, melhorar a qualidade de vida das populações costeiras e incrementar o conhecimento sobre o oceano e a orla costeira. O aviso MAR2030-2025-25 é o instrumento que materializa financeiramente esta estratégia, mobilizando fundos do FEAMPA (Fundo Europeu dos Assuntos Marítimos, das Pescas e da Aquicultura) para projetos concretos dentro deste território.</p>
+    </div>
+
+    <div class="stats-row reveal" style="grid-template-columns:repeat(4,1fr);">
+      <div class="stat-cell">
+        <div class="stat-num">78,7<sup>k</sup></div>
+        <div class="stat-label">Dotação FEAMPA</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">100<sup>%</sup></div>
+        <div class="stat-label">Taxa máxima possível</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">2<sup>anos</sup></div>
+        <div class="stat-label">Duração máx. operação</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">3<sup>conc.</sup></div>
+        <div class="stat-label">Municípios abrangidos</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O que pode ser apoiado</div>
+      <h2 class="section-h2">Oito tipologias de intervenção alinhadas com a Economia Azul</h2>
+      <p class="section-text">O aviso MAR2030-2025-25 não financia apenas setor pesqueiro em sentido estrito. A lógica da DLBC é mais ampla: qualquer projeto que contribua para o desenvolvimento sustentável das comunidades costeiras pode ser elegível, desde que enquadrado numa das seguintes tipologias:</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Empreendedorismo, emprego e desenvolvimento económico</strong> - apoio a startups e empresas da Economia Azul, criação de postos de trabalho qualificados nas zonas costeiras.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Sustentabilidade ambiental e ação climática</strong> - energias renováveis, descarbonização, eficiência energética, economia circular aplicada ao setor marítimo.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Inovação e conhecimento científico e tecnológico</strong> - projetos de I&amp;D aplicada, prototipagem, transferência de tecnologia para operadores do mar.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Parcerias, cooperação e redes colaborativas</strong> - consórcios entre pescadores, investigadores e empresas; projetos interterritoriaisde partilha de boas práticas.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Desenvolvimento sociocultural e inclusão social</strong> - coesão das comunidades piscatórias, acesso a serviços, apoio a grupos vulneráveis dependentes do mar.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Capacitação: sensibilização, qualificação e formação profissional</strong> - literacia oceânica, formação para pescadores e aquicultores, certificações profissionais no setor.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Preservação, valorização e dinamização do património</strong> - gastronomia do mar, etnografia piscatória, musealização de técnicas tradicionais de pesca.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Desenvolvimento e valorização de produtos e infraestruturas locais</strong> - pesca artesanal como produto turístico, lota como espaço de experiência, equipamentos portuários de pequena escala.</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box reveal">
+      <div class="highlight-box-title">Prorrogação de prazo</div>
+      <div class="highlight-box-text">As candidaturas foram prorrogadas e estão abertas até 30 de junho de 2026. O prazo original terminava a 19 de dezembro de 2025. Esta extensão oferece mais tempo para preparar candidaturas sólidas, mas não deve ser interpretada como ausência de urgência: a dotação total é limitada a 78.709 EUR em fundos FEAMPA.</div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Taxas de apoio</div>
+      <h2 class="section-h2">A taxa varia consoante o perfil do beneficiário</h2>
+      <p class="section-text">Uma das características mais relevantes deste aviso é a diferenciação significativa nas taxas de apoio público. Projetos de interesse coletivo com beneficiário coletivo e características inovadoras, bem como operações de pequena pesca costeira, podem alcançar 100% de financiamento público. Esta regra é estratégica: privilegia projetos sem fins lucrativos diretos e com impacto comunitário alargado.</p>
+      <table class="rate-table">
+        <thead>
+          <tr>
+            <th>Perfil do beneficiário</th>
+            <th>Taxa de apoio público</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Regra geral (todos os outros casos)</td>
+            <td>50%</td>
+          </tr>
+          <tr class="rate-highlight">
+            <td>Organizações de pescadores</td>
+            <td>60%</td>
+          </tr>
+          <tr class="rate-highlight">
+            <td>Organizações de produtores</td>
+            <td>75%</td>
+          </tr>
+          <tr class="rate-top">
+            <td>Pequena pesca costeira, organismos públicos, operações de interesse coletivo com beneficiário coletivo e características inovadoras</td>
+            <td>100%</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="section-text">Para empresas privadas, aplica-se adicionalmente o regime de minimis: o apoio cumulativo nos últimos três anos não pode exceder 300.000 EUR por empresa única. As empresas devem ser micro ou pequenas (conforme certificado IAPMEI) para serem elegíveis neste aviso.</p>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para que tipo de projeto?</div>
+      <h2 class="section-h2">Perfis de candidatos e casos de uso típicos</h2>
+      <p class="section-text">A amplitude das tipologias elegíveis cria oportunidades para perfis muito distintos. Estes são os cenários em que vemos mais potencial neste aviso:</p>
+      <div class="profile-grid">
+        <div class="profile-card">
+          <div class="profile-card-title">Startup de Economia Azul</div>
+          <div class="profile-card-text">Empresa nascente com produto ou serviço inovador dirigido à pesca artesanal, aquacultura ou turismo náutico, sediada no território A2S. Taxa de 50% (regra geral), com possibilidade de 100% se a operação tiver caráter coletivo e inovador.</div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-card-title">Associação de pescadores</div>
+          <div class="profile-card-text">Organização que representa comunidades piscatórias de Cascais, Ericeira ou Sintra. Elegível a 60% (organização de pescadores) ou 100% se o projeto for de interesse coletivo. Candidatura ideal para infraestruturas partilhadas ou programas de formação.</div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-card-title">Município ou entidade pública</div>
+          <div class="profile-card-text">Autarquias de Cascais, Mafra ou Sintra e outras entidades públicas. Taxa de 100%. Projetos de valorização patrimonial, infraestruturas portuárias de pequena escala, sinalética costeira ou programas de literacia oceânica.</div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-card-title">Investigador ou centro de investigação</div>
+          <div class="profile-card-text">Entidade de I&amp;D com projeto de monitorização, modelação ou inovação tecnológica aplicada ao ecossistema costeiro do território A2S. A proximidade ao potencial de Área Marinha Protegida valoriza projetos de ciência aplicada.</div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-card-title">Operador de turismo náutico</div>
+          <div class="profile-card-text">Micro ou pequena empresa de desportos náuticos, turismo de pesca ou experiências marítimas, com sede no território elegível. Custos como aquisição de equipamentos, embarcações turísticas e campanhas de marketing são elegíveis.</div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-card-title">Entidade de formação profissional</div>
+          <div class="profile-card-text">Operador de formação com cursos dirigidos a profissionais do mar. A componente de capacitação é explicitamente apoiada, incluindo literacia oceânica, qualificações técnicas para pescadores e formação em práticas sustentáveis.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Custos elegíveis</div>
+      <h2 class="section-h2">O que pode ser financiado concretamente</h2>
+      <p class="section-text">A lista de custos elegíveis é ampla e cobre tanto investimentos físicos como atividades imateriais. Os principais exemplos previstos no aviso incluem:</p>
+      <ul class="article-list">
+        <li>Construção, modernização ou adaptação de edifícios, instalações e infraestruturas ligadas à atividade marítima e costeira</li>
+        <li>Aquisição ou adaptação de máquinas e equipamentos para operadores do setor</li>
+        <li>Equipamentos informáticos, incluindo software de gestão ou monitorização</li>
+        <li>Equipamentos de produção de energia renovável para autoconsumo (painéis solares, micro-eólica)</li>
+        <li>Aquisição ou adaptação de embarcações turísticas ou com propulsão por energias renováveis</li>
+        <li>Equipamentos para desportos náuticos e turismo ativo no mar</li>
+        <li>Materiais de divulgação, sinalética e painéis interpretativos do território costeiro</li>
+        <li>Campanhas de marketing, comunicação e publicidade dos produtos e recursos locais</li>
+        <li>Registo ou aquisição de propriedade industrial ou intelectual</li>
+        <li>Estudos, consultorias, auditorias e certificações</li>
+        <li>Formação profissional, qualificação e programas de literacia oceânica</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">Uma dotação pequena com impacto estratégico desproporcionado</h2>
+      <p class="section-text">Os 78.709 EUR de dotação FEAMPA podem parecer modestos quando comparados com avisos do Portugal 2030 ou do PRR que movimentam dezenas de milhões. Mas este raciocínio falha na análise do impacto territorial real. O GAL A2S cobre uma faixa costeira de elevada densidade económica e turística, com projetos âncora como a World Surfing Reserve de Ericeira e a identidade marítima de Cascais. Neste contexto, um projeto bem estruturado de 30.000 EUR pode ter um efeito demonstrador e catalítico muito acima do seu valor nominal.</p>
+      <p class="section-text">A nossa recomendação vai em dois sentidos. Primeiro, para organizações sem fins lucrativos e entidades públicas: este é o aviso certo. A taxa de 100% para operações de interesse coletivo com caráter inovador significa que a contrapartida privada pode ser zero. O GAL A2S está ativamente à procura de projetos que consolidem a identidade costeira do território e criem benefício coletivo duradouro.</p>
+      <p class="section-text">Segundo, para empresas privadas: a taxa de 50% na regra geral exige análise cuidada da relação custo-benefício. Com uma dotação total limitada, a competição pode ser significativa para os projetos empresariais. Recomendamos focar em atividades imateriais de menor custo (formação, consultoria, certificações, estudos de mercado) onde o rácio apoio/esforço administrativo é mais favorável.</p>
+      <p class="section-text">O prazo prorrogado até junho de 2026 é uma oportunidade para preparar uma candidatura sólida, mas a dotação limita o número de projetos aprovados. Iniciativas que demonstrem alinhamento claro com os três objetivos da EDL do A2S, especialmente o Objetivo 1 (Economia Azul) e o Objetivo 3 (conhecimento sobre o Oceano), têm maior probabilidade de financiamento.</p>
+    </div>
+
+    <p class="section-text reveal" style="font-style:italic;font-size:15px;color:var(--grey-mid);margin-top:40px;">Achou este artigo útil? Explore o nosso catálogo para mais instrumentos do MAR2030 e de outros programas europeus de financiamento à Economia Azul e ao desenvolvimento territorial costeiro.</p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Código</div>
+        <div class="sidebar-fact-val">MAR2030-2025-25</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">GAL</div>
+        <div class="sidebar-fact-val">A2S - Região Saloia</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Fundo</div>
+        <div class="sidebar-fact-val">FEAMPA</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Dotação FEAMPA</div>
+        <div class="sidebar-fact-val">78.709 EUR</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Taxa base</div>
+        <div class="sidebar-fact-val">50% (até 100% em casos específicos)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Beneficiários</div>
+        <div class="sidebar-fact-val">Entidades públicas e privadas; empresas micro/pequenas</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Prazo (prorrogado)</div>
+        <div class="sidebar-fact-val">30 de junho de 2026</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Duração</div>
+        <div class="sidebar-fact-val">Até 2 anos</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Minimis</div>
+        <div class="sidebar-fact-val">Máx. 300.000 EUR / 3 anos</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-open">Aberto (prorrogado)</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">A sua empresa ou organização está sediada nas zonas costeiras de Cascais, Ericeira ou Sintra? Fale connosco para avaliar a elegibilidade.</div>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn" target="_blank">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../apoio-compensacao-custos-suplementares-pesca-aquicultura-ram-2025/" class="related-link">
+        <span class="related-link-name">Custos Suplementares Pesca RAM</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../aquisicao-de-equipamentos-e-intervencao-em-infraestruturas-portuarias-/" class="related-link">
+        <span class="related-link-name">Infraestruturas Portuárias</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../mar2030-2026-13-portos-pesca-lotas-abrigos/" class="related-link">
+        <span class="related-link-name">Portos de Pesca e Abrigos (MAR2030-2026-13)</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../portugal-2030/" class="related-link">
+        <span class="related-link-name">Portugal 2030</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

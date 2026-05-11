@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<title>Capital Simulator: Open Capital Advisory & Consultancy</title>
+  <meta name="description" content="Descubra em minutos quais as soluções de capital mais adequadas ao perfil da sua empresa. Gratuito, sem registo.">
+  <link rel="stylesheet" href="/assets/fonts/montserrat.css">
+  <style>
+    :root {
+      --navy:       #1A3A5C;
+      --navy-deep:  #0D1F33;
+      --gold:       #C9A96E;
+      --white:      #FFFFFF;
+      --grey-light: #E5E5E5;
+      --grey-mid:   #7A7A7A;
+      --grey-dark:  #2A2A2A;
+      --font: 'Montserrat', sans-serif;
+      --transition: all 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --shadow: 0 8px 40px rgba(26,58,92,0.10);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:var(--font); background:var(--white); color:var(--grey-dark); -webkit-font-smoothing:antialiased; }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 48px; height:74px; position:fixed; top:0; left:0; right:0;
+      z-index:200; background:var(--navy);
+      border-bottom:1px solid rgba(255,255,255,0.07);
+      transition:var(--transition);
+    }
+    .navbar.scrolled {
+      background:rgba(255,255,255,0.97);
+      backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--grey-light);
+    }
+    .nav-logo { display:flex; align-items:center; text-decoration:none; flex-shrink:0; }
+    .nav-logo-img { height:57px; width:auto; display:block; filter:brightness(0) invert(1); transition:var(--transition); }
+    .navbar.scrolled .nav-logo-img { filter:none; }
+    .nav-logo-fallback { display:none; align-items:center; gap:10px; }
+    .nav-logo-fallback .nav-mark { width:36px; height:36px; border:1px solid rgba(255,255,255,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; color:var(--gold); }
+    .navbar.scrolled .nav-logo-fallback .nav-mark { border-color:var(--navy); color:var(--navy); }
+    .nav-logo-fallback .nav-wordmark { display:flex; flex-direction:column; gap:2px; }
+    .nav-logo-fallback .nav-name { font-size:14px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--white); }
+    .nav-logo-fallback .nav-sub  { font-size:9px; font-weight:300; letter-spacing:0.20em; text-transform:uppercase; color:rgba(255,255,255,0.32); }
+    .navbar.scrolled .nav-logo-fallback .nav-name { color:var(--navy); }
+    .navbar.scrolled .nav-logo-fallback .nav-sub  { color:var(--grey-mid); }
+    .nav-links { display:flex; align-items:center; gap:24px; list-style:none; margin-left:auto; }
+    .nav-links a {
+      font-size:15px; font-weight:500; letter-spacing:0.08em;
+      text-transform:none; color:rgba(255,255,255,0.68);
+      text-decoration:none; transition:var(--transition);
+      position:relative; padding-bottom:3px; white-space:nowrap;
+    }
+    .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:var(--gold); transition:width 0.3s ease; }
+    .nav-links a:hover { color:var(--white); }
+    .nav-links a:hover::after, .nav-links a.active::after { width:100%; }
+    .nav-links a.active { color:var(--white); }
+    .navbar.scrolled .nav-links a { color:var(--grey-dark); }
+    .navbar.scrolled .nav-links a:hover, .navbar.scrolled .nav-links a.active { color:var(--navy); }
+    .nav-badge { font-size:10px; font-weight:600; letter-spacing:0.06em; text-transform:none; color:var(--gold); border:1px solid var(--gold); padding:1px 4px; margin-left:3px; vertical-align:super; line-height:1; }
+    .nav-dropdown { position:relative; }
+    .nav-dropdown > a::after { content:''; }
+    .nav-dropdown-arrow { display:inline-block; margin-left:5px; width:6px; height:6px; border-right:1px solid currentColor; border-bottom:1px solid currentColor; transform:rotate(45deg) translateY(-2px); transition:transform 0.25s ease; vertical-align:middle; opacity:0.6; }
+    .nav-dropdown:hover .nav-dropdown-arrow { transform:rotate(-135deg) translateY(-2px); opacity:1; }
+    .nav-dropdown-menu { position:absolute; top:calc(100% + 14px); left:50%; transform:translateX(-50%) translateY(-6px); background:var(--white); border:1px solid var(--grey-light); min-width:160px; opacity:0; visibility:hidden; transition:opacity 0.22s ease, transform 0.22s ease; box-shadow:var(--shadow); z-index:200; }
+    .nav-dropdown:hover .nav-dropdown-menu { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
+    .nav-dropdown-menu a { display:block; padding:12px 20px; font-size:13px; font-weight:500; letter-spacing:0.05em; text-transform:none; color:var(--grey-dark); text-decoration:none; border-bottom:1px solid var(--grey-light); transition:var(--transition); white-space:nowrap; }
+    .nav-dropdown-menu a:last-child { border-bottom:none; }
+    .nav-dropdown-menu a:hover { color:var(--navy); background:#FAFAFA; padding-left:24px; }
+    .nav-dropdown-menu a::after { display:none !important; }
+    .navbar:not(.scrolled) .nav-dropdown-menu { background:var(--navy-deep); border-color:rgba(255,255,255,0.08); }
+    .navbar:not(.scrolled) .nav-dropdown-menu a { color:rgba(255,255,255,0.60); border-color:rgba(255,255,255,0.06); }
+    .navbar:not(.scrolled) .nav-dropdown-menu a:hover { color:var(--white); background:rgba(255,255,255,0.05); }
+    .nav-cta { font-size:16px; font-weight:600; letter-spacing:0.08em; text-transform:none; color:var(--white); text-decoration:none; border:1px solid rgba(255,255,255,0.28); padding:9px 18px; margin-left:28px; transition:var(--transition); white-space:nowrap; }
+    .nav-cta:hover { border-color:var(--white); background:rgba(255,255,255,0.08); }
+    .navbar.scrolled .nav-cta { color:var(--navy); border-color:var(--navy); }
+    .navbar.scrolled .nav-cta:hover { background:var(--navy); color:var(--white); }
+    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
+    .nav-hamburger span { display:block; width:22px; height:1px; background:var(--white); transition:var(--transition); }
+    .navbar.scrolled .nav-hamburger span { background:var(--navy); }
+    .nav-mobile-menu { display:none; position:fixed; top:74px; left:0; right:0; background:var(--navy); padding:24px 32px 32px; border-bottom:1px solid rgba(255,255,255,0.07); z-index:199; }
+    .nav-mobile-menu.open { display:block; }
+    .nav-mobile-menu a { display:block; font-size:15px; font-weight:500; letter-spacing:0.05em; text-transform:none; color:rgba(255,255,255,0.7); text-decoration:none; padding:13px 0; border-bottom:1px solid rgba(255,255,255,0.06); transition:var(--transition); }
+    .nav-mobile-menu a:hover { color:var(--white); }
+    .nav-mobile-cta { display:inline-block !important; margin-top:22px; font-size:14px; font-weight:600; color:var(--white) !important; border:1px solid rgba(255,255,255,0.28); padding:12px 24px; }
+
+    /* ── HERO ── */
+    .hero {
+      background:var(--navy); min-height:100vh;
+      display:grid; grid-template-columns:1fr 1fr;
+      align-items:center; gap:80px;
+      padding:158px 80px 80px;
+      position:relative; overflow:hidden;
+    }
+    .hero::before {
+      content:''; position:absolute; top:-200px; right:-200px;
+      width:600px; height:600px;
+      background:radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 65%);
+      pointer-events:none;
+    }
+    .hero::after {
+      content:''; position:absolute; bottom:-100px; left:30%;
+      width:400px; height:400px;
+      background:radial-gradient(circle, rgba(201,169,110,0.04) 0%, transparent 65%);
+      pointer-events:none;
+    }
+    .hero-gold-bar { position:absolute; left:0; top:0; bottom:0; width:3px; background:linear-gradient(to bottom, var(--gold) 0%, rgba(201,169,110,0.2) 60%, transparent 100%); }
+
+    .hero-left { position:relative; z-index:1; }
+    .hero-eyebrow { font-size:11px; font-weight:600; letter-spacing:0.34em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; }
+    .hero-h1 { font-size:52px; font-weight:700; color:var(--white); line-height:1.08; letter-spacing:-0.015em; margin-bottom:24px; }
+    .hero-h1 em { font-style:normal; color:var(--gold); font-weight:300; }
+    .hero-sub { font-size:18px; font-weight:300; color:rgba(255,255,255,0.52); line-height:1.85; max-width:460px; margin-bottom:40px; }
+    .hero-badges { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:40px; }
+    .hero-badge { font-size:11px; font-weight:500; letter-spacing:0.10em; text-transform:uppercase; color:rgba(255,255,255,0.40); border:1px solid rgba(255,255,255,0.12); padding:5px 12px; }
+    .hero-cta-row { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+    .btn-hero-primary { display:inline-flex; align-items:center; gap:10px; font-family:var(--font); font-size:13px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; background:var(--gold); color:var(--white); padding:15px 32px; border:none; cursor:pointer; text-decoration:none; transition:var(--transition); }
+    .btn-hero-primary:hover { background:#B8945A; transform:translateY(-1px); box-shadow:0 6px 20px rgba(201,169,110,0.28); }
+    .btn-hero-ghost { display:inline-flex; align-items:center; gap:8px; font-family:var(--font); font-size:13px; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.55); background:transparent; border:1px solid rgba(255,255,255,0.18); padding:14px 28px; cursor:pointer; text-decoration:none; transition:var(--transition); }
+    .btn-hero-ghost:hover { color:var(--white); border-color:rgba(255,255,255,0.45); }
+    .hero-note { font-size:12px; font-weight:300; color:rgba(255,255,255,0.28); margin-top:20px; letter-spacing:0.04em; }
+
+    /* ── MOCK UI (hero right) ── */
+    .hero-right { position:relative; z-index:1; }
+    .mock-ui {
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.10);
+      padding:32px;
+    }
+    .mock-ui-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:20px; }
+    .mock-ui-title { font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.30); }
+    .mock-ui-dot { width:6px; height:6px; background:var(--gold); }
+    .mock-textarea {
+      width:100%; min-height:110px; background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.08); padding:16px 18px;
+      font-family:var(--font); font-size:14px; font-weight:300;
+      color:rgba(255,255,255,0.55); line-height:1.7; resize:none; outline:none;
+      transition:var(--transition);
+    }
+    .mock-textarea:focus { border-color:rgba(201,169,110,0.35); color:rgba(255,255,255,0.75); }
+    .mock-textarea::placeholder { color:rgba(255,255,255,0.22); }
+    .mock-action-row { display:flex; align-items:center; justify-content:space-between; margin-top:14px; margin-bottom:28px; }
+    .mock-hint { font-size:11px; font-weight:300; color:rgba(255,255,255,0.22); letter-spacing:0.04em; }
+    .mock-btn { font-family:var(--font); font-size:11px; font-weight:600; letter-spacing:0.20em; text-transform:uppercase; background:var(--gold); color:var(--white); border:none; padding:10px 22px; cursor:pointer; transition:var(--transition); }
+    .mock-btn:hover { background:#B8945A; }
+
+    .mock-divider { height:1px; background:rgba(255,255,255,0.06); margin-bottom:22px; }
+    .mock-results-label { font-size:10px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:rgba(255,255,255,0.22); margin-bottom:14px; }
+
+    .mock-result-item { display:flex; align-items:center; gap:14px; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.05); }
+    .mock-result-item:last-child { border-bottom:none; }
+    .mock-fit-bar-wrap { width:52px; flex-shrink:0; }
+    .mock-fit-bar-bg { height:3px; background:rgba(255,255,255,0.08); }
+    .mock-fit-bar-fill { height:3px; background:var(--gold); }
+    .mock-result-name { font-size:13px; font-weight:500; color:rgba(255,255,255,0.70); flex:1; letter-spacing:0.02em; }
+    .mock-result-amount { font-size:12px; font-weight:300; color:rgba(255,255,255,0.35); white-space:nowrap; }
+    .mock-result-tag { font-size:9px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; padding:2px 7px; }
+    .tag-nr { background:rgba(201,169,110,0.12); color:var(--gold); border:1px solid rgba(201,169,110,0.25); }
+    .tag-r  { background:rgba(255,255,255,0.04); color:rgba(255,255,255,0.35); border:1px solid rgba(255,255,255,0.10); }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal { opacity:0; transform:translateY(24px); transition:opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    /* ── SECTION: COMO FUNCIONA ── */
+    .section-white { padding:96px 80px; background:var(--white); }
+    .section-navy  { padding:96px 80px; background:var(--navy); }
+    .section-grey  { padding:96px 80px; background:#FAFAFA; }
+    .section-eyebrow { font-size:11px; font-weight:600; letter-spacing:0.34em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    .section-h2 { font-size:36px; font-weight:600; color:var(--navy); line-height:1.15; letter-spacing:0.01em; margin-bottom:16px; }
+    .section-h2-white { color:var(--white); }
+    .section-lead { font-size:18px; font-weight:300; color:var(--grey-mid); line-height:1.85; max-width:540px; margin-bottom:56px; }
+    .section-lead-white { color:rgba(255,255,255,0.48); }
+
+    .steps-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--grey-light); border:1px solid var(--grey-light); }
+    .step-card { background:var(--white); padding:44px 36px; position:relative; overflow:hidden; }
+    .step-num { font-size:56px; font-weight:700; color:var(--grey-light); line-height:1; margin-bottom:24px; letter-spacing:-0.02em; }
+    .step-title { font-size:19px; font-weight:600; color:var(--navy); margin-bottom:12px; line-height:1.3; }
+    .step-body { font-size:16px; font-weight:300; color:var(--grey-mid); line-height:1.85; }
+    .step-card::after { content:''; position:absolute; bottom:0; right:0; width:40px; height:40px; border-top:1px solid var(--grey-light); border-left:1px solid var(--grey-light); }
+
+    /* ── SECTION: O QUE RECEBE ── */
+    .outputs-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.06); }
+    .output-card { background:var(--navy); padding:32px 24px; position:relative; overflow:hidden; transition:var(--transition); }
+    .output-card::before { content:''; position:absolute; top:0; left:0; width:0; height:2px; background:var(--gold); transition:width 0.4s ease; }
+    .output-card:hover::before { width:100%; }
+    .output-card:hover { background:#1F4570; }
+    .output-icon { margin-bottom:20px; }
+    .output-title { font-size:15px; font-weight:600; color:var(--white); line-height:1.3; margin-bottom:10px; }
+    .output-desc { font-size:13px; font-weight:300; color:rgba(255,255,255,0.42); line-height:1.7; }
+
+    /* ── SECTION: PARA QUEM É ── */
+    .profiles-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .profile-card { background:var(--white); border:1px solid var(--grey-light); padding:40px 32px; position:relative; overflow:hidden; transition:var(--transition); cursor:default; }
+    .profile-card::before { content:''; position:absolute; top:0; left:0; width:0; height:2px; background:var(--gold); transition:width 0.4s ease; }
+    .profile-card:hover { box-shadow:var(--shadow); transform:translateY(-3px); }
+    .profile-card:hover::before { width:100%; }
+    .profile-label { font-size:10px; font-weight:600; letter-spacing:0.24em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    .profile-title { font-size:21px; font-weight:600; color:var(--navy); margin-bottom:14px; line-height:1.3; }
+    .profile-desc { font-size:15px; font-weight:300; color:var(--grey-mid); line-height:1.85; margin-bottom:24px; }
+    .profile-instruments { display:flex; flex-direction:column; gap:8px; }
+    .profile-instrument { display:flex; align-items:center; gap:10px; font-size:13px; font-weight:400; color:var(--grey-dark); }
+    .profile-instrument::before { content:''; width:4px; height:4px; background:var(--gold); transform:rotate(45deg); flex-shrink:0; }
+
+    /* ── SECTION: VALOR ── */
+    .value-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+    .value-left .section-h2 { margin-bottom:28px; }
+    .value-stat-row { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:48px; }
+    .value-stat { border-left:2px solid var(--gold); padding-left:20px; }
+    .value-stat-num { font-size:32px; font-weight:700; color:var(--navy); line-height:1; margin-bottom:6px; }
+    .value-stat-label { font-size:13px; font-weight:300; color:var(--grey-mid); line-height:1.6; }
+
+    .value-right { display:flex; flex-direction:column; gap:16px; }
+    .compare-row { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--grey-light); }
+    .compare-cell { padding:20px 24px; background:var(--white); }
+    .compare-cell.navy-cell { background:var(--navy); }
+    .compare-label-header { font-size:10px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; margin-bottom:4px; }
+    .compare-label-header.gold { color:var(--gold); }
+    .compare-label-header.grey { color:rgba(255,255,255,0.30); }
+    .compare-text { font-size:14px; font-weight:300; line-height:1.65; }
+    .compare-text.white { color:rgba(255,255,255,0.65); }
+    .compare-text.dark { color:var(--grey-mid); }
+    .compare-check { display:flex; align-items:center; gap:8px; font-size:14px; font-weight:400; }
+    .compare-check.ok { color:rgba(255,255,255,0.80); }
+    .compare-check.no { color:var(--grey-mid); text-decoration:line-through; opacity:0.5; }
+    .compare-check-icon { flex-shrink:0; }
+
+    /* ── CTA FINAL ── */
+    .cta-section { background:var(--navy-deep); padding:96px 80px; position:relative; overflow:hidden; }
+    .cta-section::before { content:''; position:absolute; top:-160px; right:-160px; width:520px; height:520px; background:radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 65%); pointer-events:none; }
+    .cta-inner { max-width:680px; margin:0 auto; text-align:center; position:relative; z-index:1; }
+    .cta-eyebrow { font-size:11px; font-weight:600; letter-spacing:0.34em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; }
+    .cta-h2 { font-size:40px; font-weight:700; color:var(--white); line-height:1.1; letter-spacing:-0.01em; margin-bottom:20px; }
+    .cta-sub { font-size:17px; font-weight:300; color:rgba(255,255,255,0.45); line-height:1.85; margin-bottom:44px; }
+    .cta-notify-form { display:flex; gap:0; max-width:480px; margin:0 auto 28px; }
+    .cta-email-input { flex:1; padding:14px 18px; font-family:var(--font); font-size:14px; font-weight:300; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-right:none; color:var(--white); outline:none; transition:var(--transition); }
+    .cta-email-input::placeholder { color:rgba(255,255,255,0.20); }
+    .cta-email-input:focus { border-color:rgba(201,169,110,0.40); }
+    .cta-notify-btn { font-family:var(--font); font-size:12px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; background:var(--gold); color:var(--white); border:none; padding:14px 24px; cursor:pointer; transition:var(--transition); white-space:nowrap; }
+    .cta-notify-btn:hover { background:#B8945A; }
+    .cta-notify-success { display:none; text-align:center; padding:14px 0; font-size:14px; font-weight:400; color:var(--gold); letter-spacing:0.04em; }
+    .cta-note { font-size:12px; font-weight:300; color:rgba(255,255,255,0.22); margin-bottom:44px; }
+    .cta-divider { display:flex; align-items:center; gap:16px; margin-bottom:32px; }
+    .cta-divider::before, .cta-divider::after { content:''; flex:1; height:1px; background:rgba(255,255,255,0.08); }
+    .cta-divider-text { font-size:11px; font-weight:400; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.22); white-space:nowrap; }
+    .cta-talk-btn { display:inline-flex; align-items:center; gap:10px; font-family:var(--font); font-size:13px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--white); border:1px solid rgba(255,255,255,0.22); padding:14px 32px; text-decoration:none; transition:var(--transition); }
+    .cta-talk-btn:hover { border-color:var(--white); background:rgba(255,255,255,0.06); }
+
+    /* ── FOOTER ── */
+    .footer { background:var(--navy-deep); padding:56px 80px 34px; border-top:1px solid rgba(255,255,255,0.06); }
+    .footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr; gap:44px; margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.07); }
+    .f-logo-img { height:72px; width:auto; filter:brightness(0) invert(1); }
+    .f-desc { font-size:15px; font-weight:300; color:rgba(255,255,255,0.36); line-height:1.85; margin-top:18px; max-width:260px; }
+    .f-tagline { font-size:16px; font-weight:100; letter-spacing:0.14em; color:var(--gold); margin-top:12px; }
+    .f-col-label { font-size:11px; font-weight:600; letter-spacing:0.28em; text-transform:uppercase; color:rgba(255,255,255,0.24); margin-bottom:16px; }
+    .f-links { list-style:none; }
+    .f-links li { margin-bottom:9px; }
+    .f-links a { font-size:15px; font-weight:300; color:rgba(255,255,255,0.48); text-decoration:none; transition:var(--transition); letter-spacing:0.03em; }
+    .f-links a:hover { color:var(--white); }
+    .f-badge { font-size:9px; font-weight:600; letter-spacing:0.1em; color:var(--gold); border:1px solid rgba(201,169,110,0.45); padding:1px 5px; margin-left:5px; vertical-align:middle; }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+    .f-copy { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:0.05em; }
+    .f-legal a { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); text-decoration:none; letter-spacing:0.05em; transition:var(--transition); }
+    .f-legal a:hover { color:rgba(255,255,255,0.45); }
+
+    /* ── AVISO FAIXA ── */
+    .launch-bar {
+      position:fixed; top:74px; left:0; right:0; z-index:190;
+      background:var(--navy-deep); border-bottom:1px solid rgba(201,169,110,0.20);
+      display:flex; align-items:center; justify-content:center; gap:12px;
+      padding:9px 48px; transition:var(--transition);
+    }
+    .launch-bar-dot {
+      width:6px; height:6px; background:var(--gold);
+      animation:pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%,100% { opacity:1; transform:scale(1); }
+      50% { opacity:0.4; transform:scale(0.7); }
+    }
+    .launch-bar-text {
+      font-size:12px; font-weight:500; letter-spacing:0.12em;
+      color:rgba(255,255,255,0.55); white-space:nowrap;
+    }
+    .launch-bar-text strong { color:rgba(255,255,255,0.85); font-weight:600; }
+    .launch-bar-link {
+      font-size:11px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase;
+      color:var(--gold); text-decoration:none; border-bottom:1px solid rgba(201,169,110,0.35);
+      padding-bottom:1px; transition:var(--transition); white-space:nowrap;
+    }
+    .launch-bar-link:hover { border-color:var(--gold); }
+    .launch-bar-sep { font-size:10px; color:rgba(255,255,255,0.15); }
+
+    /* ── HERO BADGE ── */
+    .hero-status-badge {
+      display:inline-flex; align-items:center; gap:8px;
+      border:1px solid rgba(201,169,110,0.35); padding:6px 14px;
+      margin-bottom:24px;
+    }
+    .hero-status-badge-dot {
+      width:5px; height:5px; background:var(--gold);
+      animation:pulse-dot 2s ease-in-out infinite;
+    }
+    .hero-status-badge-text {
+      font-size:10px; font-weight:600; letter-spacing:0.26em;
+      text-transform:uppercase; color:var(--gold);
+    }
+
+    /* ── MOCK UI OVERLAY ── */
+    .mock-ui-wrap { position:relative; }
+    .mock-ui-overlay {
+      position:absolute; inset:0; z-index:10;
+      background:rgba(13,31,51,0.72);
+      backdrop-filter:blur(3px);
+      display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px;
+    }
+    .mock-overlay-icon { opacity:0.70; }
+    .mock-overlay-label {
+      font-size:13px; font-weight:600; letter-spacing:0.26em;
+      text-transform:uppercase; color:rgba(255,255,255,0.60);
+    }
+    .mock-overlay-sub {
+      font-size:11px; font-weight:300; letter-spacing:0.10em;
+      color:rgba(255,255,255,0.28); text-align:center; line-height:1.6;
+    }
+    .mock-overlay-badge {
+      font-size:10px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase;
+      color:var(--gold); border:1px solid rgba(201,169,110,0.40); padding:5px 14px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:1100px) {
+      .outputs-grid { grid-template-columns:repeat(3,1fr); }
+    }
+    @media(max-width:1024px) {
+      .hero { grid-template-columns:1fr; gap:48px; padding:120px 48px 64px; }
+      .hero-right { display:none; }
+      .value-grid { grid-template-columns:1fr; gap:48px; }
+      .profiles-grid { grid-template-columns:1fr 1fr; }
+      .steps-grid { grid-template-columns:1fr; }
+      .footer-grid { grid-template-columns:1fr 1fr; }
+    }
+    @media(max-width:768px) {
+      .nav-links { display:none; } .nav-cta { display:none; } .nav-hamburger { display:flex; }
+      .launch-bar { padding:8px 20px; flex-wrap:wrap; gap:6px; text-align:center; }
+      .launch-bar-text { font-size:11px; }
+      .hero { padding:140px 24px 56px; }
+      .hero-h1 { font-size:36px; }
+      .section-white, .section-navy, .section-grey, .cta-section { padding:64px 24px; }
+      .profiles-grid { grid-template-columns:1fr; }
+      .outputs-grid { grid-template-columns:1fr 1fr; }
+      .value-stat-row { grid-template-columns:1fr; }
+      .cta-notify-form { flex-direction:column; }
+      .cta-email-input { border-right:1px solid rgba(255,255,255,0.12); border-bottom:none; }
+      .footer { padding:48px 24px 28px; }
+      .footer-grid { grid-template-columns:1fr; gap:32px; }
+      .footer-bottom { flex-direction:column; align-items:flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════ NAVBAR ════════════════════════════ -->
+<!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../" class="nav-logo">
+    <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../conhecimento/atualidade/">Atualidade</a>
+        <a href="../conhecimento/opiniao/">Opinião</a>
+        <a href="../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../parceiros/">Parceiros</a>
+        <a href="../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../biblioteca/">Biblioteca</a>
+  <a href="../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../sobre-nos/">Sobre Nós</a>
+  <a href="../parceiros/">Parceiros</a>
+  <a href="../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+  <!-- ═══════════════════════════ FAIXA DE AVISO ════════════════════════════ -->
+  <div class="launch-bar" id="launchBar">
+    <div class="launch-bar-dot"></div>
+    <span class="launch-bar-text">Capital Simulator está em <strong>desenvolvimento</strong>: lançamento previsto <strong>Q3 2026</strong></span>
+    <span class="launch-bar-sep">·</span>
+    <a href="#notificar" class="launch-bar-link">Ser notificado →</a>
+  </div>
+
+  <!-- ═══════════════════════════ HERO ════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-status-badge">
+        <div class="hero-status-badge-dot"></div>
+        <span class="hero-status-badge-text">Em desenvolvimento · Lançamento Q3 2026</span>
+      </div>
+      <h1 class="hero-h1">O mapa do capital<br>que a sua empresa<br><em>merece ter.</em></h1>
+      <p class="hero-sub">Descreva a sua empresa em linguagem natural. Em minutos, recebe uma análise personalizada de todos os instrumentos de capital disponíveis: desde subsídios europeus a incentivos fiscais e investimento privado.</p>
+      <div class="hero-badges">
+        <span class="hero-badge">Gratuito</span>
+        <span class="hero-badge">Sem registo</span>
+        <span class="hero-badge">Resultados em minutos</span>
+        <span class="hero-badge">20+ instrumentos</span>
+      </div>
+      <div class="hero-cta-row">
+        <a href="#notificar" class="btn-hero-primary">
+          Ser notificado do lançamento
+          <svg width="14" height="9" viewBox="0 0 14 9" fill="none"><path d="M1 4.5h12M9 1l4 3.5L9 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="https://calendly.com/opencapital" target="_blank" class="btn-hero-ghost">Falar com a equipa</a>
+      </div>
+      <p class="hero-note">Lançamento previsto: Q3 2026</p>
+    </div>
+
+    <div class="hero-right">
+      <div class="mock-ui-wrap">
+      <div class="mock-ui-overlay">
+        <svg class="mock-overlay-icon" width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <rect x="8" y="16" width="20" height="14" rx="0" stroke="rgba(255,255,255,0.50)" stroke-width="1.2"/>
+          <path d="M12 16v-5a6 6 0 0112 0v5" stroke="rgba(255,255,255,0.50)" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="18" cy="23" r="2" fill="rgba(255,255,255,0.50)"/>
+        </svg>
+        <div class="mock-overlay-badge">Em breve</div>
+        <div class="mock-overlay-label">Disponível em Q3 2026</div>
+        <div class="mock-overlay-sub">Registe-se abaixo para ser<br>notificado no lançamento</div>
+      </div>
+      <div class="mock-ui">
+        <div class="mock-ui-header">
+          <span class="mock-ui-title">Descreva a sua empresa</span>
+          <div class="mock-ui-dot"></div>
+        </div>
+        <textarea class="mock-textarea" placeholder="Ex: Somos uma PME do setor industrial com 38 colaboradores, em fase de expansão para mercados ibéricos. Precisamos de financiar €1,2M em nova linha de produção e certificações. Temos I&D ativo e resultados positivos nos últimos 3 anos..."></textarea>
+        <div class="mock-action-row">
+          <span class="mock-hint">Seja concreto: melhores dados = melhores resultados</span>
+          <button class="mock-btn">Analisar perfil</button>
+        </div>
+        <div class="mock-divider"></div>
+        <div class="mock-results-label">Instrumentos identificados para o seu perfil</div>
+        <div class="mock-result-item">
+          <div class="mock-fit-bar-wrap">
+            <div class="mock-fit-bar-bg"><div class="mock-fit-bar-fill" style="width:92%"></div></div>
+          </div>
+          <span class="mock-result-name">Portugal 2030: SI2E</span>
+          <span class="mock-result-tag tag-nr">Não reimb.</span>
+          <span class="mock-result-amount">até €600K</span>
+        </div>
+        <div class="mock-result-item">
+          <div class="mock-fit-bar-wrap">
+            <div class="mock-fit-bar-bg"><div class="mock-fit-bar-fill" style="width:85%"></div></div>
+          </div>
+          <span class="mock-result-name">RFAI: Regime Fiscal</span>
+          <span class="mock-result-tag tag-nr">Dedução</span>
+          <span class="mock-result-amount">25–40%</span>
+        </div>
+        <div class="mock-result-item">
+          <div class="mock-fit-bar-wrap">
+            <div class="mock-fit-bar-bg"><div class="mock-fit-bar-fill" style="width:74%"></div></div>
+          </div>
+          <span class="mock-result-name">Banco de Fomento: PME</span>
+          <span class="mock-result-tag tag-r">Reimb.</span>
+          <span class="mock-result-amount">até €1,5M</span>
+        </div>
+        <div class="mock-result-item">
+          <div class="mock-fit-bar-wrap">
+            <div class="mock-fit-bar-bg"><div class="mock-fit-bar-fill" style="width:60%"></div></div>
+          </div>
+          <span class="mock-result-name">SIFIDE II: I&amp;D</span>
+          <span class="mock-result-tag tag-nr">Crédito fiscal</span>
+          <span class="mock-result-amount">32,5%</span>
+        </div>
+      </div>
+      </div><!-- /.mock-ui-wrap -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ COMO FUNCIONA ════════════════════════════ -->
+  <section class="section-white reveal">
+    <div class="section-eyebrow">Como funciona</div>
+    <h2 class="section-h2">Três passos. Um mapa completo.</h2>
+    <p class="section-lead">Sem formulários complicados. Sem reuniões preliminares. O Capital Simulator usa o seu input em linguagem natural para gerar uma análise estruturada e acionável.</p>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num">01</div>
+        <div class="step-title">Descreva a sua empresa</div>
+        <p class="step-body">Introduza em texto livre o setor, dimensão, fase de crescimento, objetivos e o montante de que necessita. Não é preciso ter dados financeiros completos: o contexto já chega para começar.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">02</div>
+        <div class="step-title">O simulador analisa o seu perfil</div>
+        <p class="step-body">O Capital Simulator cruza o seu perfil com mais de 20 instrumentos de capital: financiamento público nacional e europeu, investimento privado, incentivos fiscais, prémios de inovação: e calcula o nível de adequação a cada um.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">03</div>
+        <div class="step-title">Recebe o seu mapa de capital</div>
+        <p class="step-body">Um relatório claro com os instrumentos elegíveis, montantes estimados, condições de cada solução e os próximos passos recomendados para avançar: incluindo a opção de falar com a equipa Open Capital para executar o caminho identificado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ O QUE RECEBE ════════════════════════════ -->
+  <section class="section-navy">
+    <div class="section-eyebrow">O que recebe</div>
+    <h2 class="section-h2 section-h2-white">Cinco dimensões de análise.<br>Numa só simulação.</h2>
+    <p class="section-lead section-lead-white" style="margin-bottom:48px;">O resultado não é uma lista genérica: é uma análise específica ao perfil da sua empresa.</p>
+    <div class="outputs-grid reveal">
+      <div class="output-card">
+        <div class="output-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="3" width="22" height="22" stroke="#C9A96E" stroke-width="1.2"/><path d="M8 14h12M8 9h8M8 19h5" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="output-title">Instrumentos elegíveis</div>
+        <p class="output-desc">Lista dos programas e instrumentos de capital para os quais a sua empresa tem perfil de acesso real: não uma lista genérica.</p>
+      </div>
+      <div class="output-card">
+        <div class="output-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4v20M4 14h20" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round"/><circle cx="14" cy="14" r="8" stroke="#C9A96E" stroke-width="1.2"/></svg>
+        </div>
+        <div class="output-title">Estimativa de montantes</div>
+        <p class="output-desc">Para cada instrumento elegível, uma estimativa do montante disponível com base no perfil e nos limites regulamentares de cada programa.</p>
+      </div>
+      <div class="output-card">
+        <div class="output-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 20L10 12l5 4 4-6 5 4" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24h20" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="output-title">Condições de cada solução</div>
+        <p class="output-desc">Reembolsável vs. não reembolsável, prazos de execução, requisitos de elegibilidade e natureza do instrumento: em linguagem clara.</p>
+      </div>
+      <div class="output-card">
+        <div class="output-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#C9A96E" stroke-width="1.2"/><path d="M14 8v6l4 2" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="output-title">Nível de adequação</div>
+        <p class="output-desc">Cada instrumento é avaliado com um indicador de adequação ao perfil da empresa: para que saiba onde focar energia e recursos.</p>
+      </div>
+      <div class="output-card">
+        <div class="output-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M8 20l-4 4V8a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H8z" stroke="#C9A96E" stroke-width="1.2" stroke-linejoin="round"/><path d="M10 12h8M10 16h5" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="output-title">Próximos passos</div>
+        <p class="output-desc">Recomendações concretas sobre como avançar em cada instrumento: prazos de candidatura, documentação necessária, e quando faz sentido envolver um advisor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ PARA QUEM É ════════════════════════════ -->
+  <section class="section-grey">
+    <div class="section-eyebrow">Para quem é</div>
+    <h2 class="section-h2">Qualquer empresa.<br>Em qualquer fase.</h2>
+    <p class="section-lead">Do empreendedor em fase de arranque à PME consolidada em processo de internacionalização: o Capital Simulator adapta-se ao perfil de cada empresa.</p>
+    <div class="profiles-grid">
+      <div class="profile-card reveal">
+        <div class="profile-label">Startups &amp; Scale-ups</div>
+        <div class="profile-title">Empresa em fase inicial ou de crescimento acelerado</div>
+        <p class="profile-desc">Procura financiamento para validar o produto, escalar a equipa ou entrar em novos mercados. Tipicamente sem historial longo, mas com potencial demonstrável.</p>
+        <div class="profile-instruments">
+          <div class="profile-instrument">Portugal 2030: Startups</div>
+          <div class="profile-instrument">EIC Accelerator (Horizonte Europa)</div>
+          <div class="profile-instrument">Business Angels &amp; Venture Capital</div>
+          <div class="profile-instrument">Prémios de Inovação IAPMEI</div>
+        </div>
+      </div>
+      <div class="profile-card reveal">
+        <div class="profile-label">PMEs em crescimento</div>
+        <div class="profile-title">Empresa estabelecida com projeto de expansão ou modernização</div>
+        <p class="profile-desc">Historial de resultados, equipa estruturada, e um projeto concreto de investimento: em capacidade produtiva, tecnologia, certificações ou novos mercados.</p>
+        <div class="profile-instruments">
+          <div class="profile-instrument">Portugal 2030: SI2E &amp; SICE</div>
+          <div class="profile-instrument">RFAI &amp; DLRR: Benefícios fiscais</div>
+          <div class="profile-instrument">Banco de Fomento: Linhas PME</div>
+          <div class="profile-instrument">SIFIDE II: I&amp;D empresarial</div>
+        </div>
+      </div>
+      <div class="profile-card reveal">
+        <div class="profile-label">Internacionalização</div>
+        <div class="profile-title">Empresa em processo de entrada em mercados externos</div>
+        <p class="profile-desc">Projeto definido de presença internacional: exportação, abertura de estruturas no exterior, participação em feiras, certificações internacionais ou parcerias estratégicas.</p>
+        <div class="profile-instruments">
+          <div class="profile-instrument">AICEP: Internacionalização</div>
+          <div class="profile-instrument">Portugal 2030: Componente export</div>
+          <div class="profile-instrument">Horizonte Europa: Consórcios</div>
+          <div class="profile-instrument">Private Equity: Expansão</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ VALOR DIFERENCIADOR ════════════════════════════ -->
+  <section class="section-white">
+    <div class="value-grid reveal">
+      <div class="value-left">
+        <div class="section-eyebrow">A diferença</div>
+        <h2 class="section-h2">O acesso a capital não devia ser assim tão opaco.</h2>
+        <p style="font-size:17px; font-weight:300; color:var(--grey-mid); line-height:1.85; margin-bottom:20px;">Em Portugal, perceber quais as soluções de capital disponíveis para uma empresa específica exige semanas de pesquisa, reuniões de diagnóstico e, muitas vezes, um especialista dedicado.</p>
+        <p style="font-size:17px; font-weight:300; color:var(--grey-mid); line-height:1.85;">O Capital Simulator elimina essa barreira. Não substitui o advisor: prepara o decisor para chegar ao advisor com clareza sobre o que quer e o que pode obter.</p>
+        <div class="value-stat-row">
+          <div class="value-stat">
+            <div class="value-stat-num">20+</div>
+            <div class="value-stat-label">Instrumentos de capital cobertos na análise</div>
+          </div>
+          <div class="value-stat">
+            <div class="value-stat-num">&lt; 5min</div>
+            <div class="value-stat-label">Da descrição ao mapa de capital completo</div>
+          </div>
+          <div class="value-stat">
+            <div class="value-stat-num">€0</div>
+            <div class="value-stat-label">Custo. Gratuito, sem registo, sem compromisso</div>
+          </div>
+          <div class="value-stat">
+            <div class="value-stat-num">100%</div>
+            <div class="value-stat-label">Personalizado ao perfil específico da empresa</div>
+          </div>
+        </div>
+      </div>
+      <div class="value-right">
+        <div class="compare-row">
+          <div class="compare-cell navy-cell">
+            <div class="compare-label-header gold">Capital Simulator</div>
+          </div>
+          <div class="compare-cell">
+            <div class="compare-label-header grey" style="color:var(--grey-mid);">Processo tradicional</div>
+          </div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-cell navy-cell">
+            <div class="compare-check ok">
+              <svg class="compare-check-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="#C9A96E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Resultados em minutos
+            </div>
+          </div>
+          <div class="compare-cell">
+            <div class="compare-check no">Semanas de pesquisa</div>
+          </div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-cell navy-cell">
+            <div class="compare-check ok">
+              <svg class="compare-check-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="#C9A96E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Linguagem natural: sem formulários
+            </div>
+          </div>
+          <div class="compare-cell">
+            <div class="compare-check no">Formulários técnicos complexos</div>
+          </div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-cell navy-cell">
+            <div class="compare-check ok">
+              <svg class="compare-check-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="#C9A96E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Análise personalizada ao perfil real
+            </div>
+          </div>
+          <div class="compare-cell">
+            <div class="compare-check no">Informação genérica e dispersa</div>
+          </div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-cell navy-cell">
+            <div class="compare-check ok">
+              <svg class="compare-check-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="#C9A96E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Gratuito. Sem registo. Sempre disponível.
+            </div>
+          </div>
+          <div class="compare-cell">
+            <div class="compare-check no">Reunião de diagnóstico paga</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CTA FINAL ════════════════════════════ -->
+  <section class="cta-section" id="notificar">
+    <div class="cta-inner reveal">
+      <div class="cta-eyebrow">Lançamento em Q3 2026</div>
+      <h2 class="cta-h2">Seja o primeiro a saber.</h2>
+      <p class="cta-sub">Deixe o seu email e avisamos assim que o Capital Simulator estiver disponível. Sem spam: uma notificação, quando lançarmos.</p>
+      <div id="notifyFormWrap">
+        <div class="cta-notify-form">
+          <input type="email" class="cta-email-input" id="notifyEmail" placeholder="o.seu@email.pt">
+          <button class="cta-notify-btn" onclick="handleNotify()">Notifique-me</button>
+        </div>
+        <p class="cta-note">Sem spam. Apenas uma notificação quando lançarmos.</p>
+      </div>
+      <div class="cta-notify-success" id="notifySuccess">
+        ✦ &nbsp;Ficou registado. Avisamos assim que lançarmos.
+      </div>
+      <div class="cta-divider">
+        <span class="cta-divider-text">ou, se preferir falar connosco agora</span>
+      </div>
+      <a href="https://calendly.com/opencapital" target="_blank" class="cta-talk-btn">
+        Falar com a equipa Open Capital
+        <svg width="14" height="9" viewBox="0 0 14 9" fill="none"><path d="M1 4.5h12M9 1l4 3.5L9 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ════════════════════════════ -->
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../conhecimento/">Conhecimento</a></li>
+        <li><a href="../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../sobre-nos/">Equipa</a></li>
+        <li><a href="../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../privacidade/">Privacidade</a>
+      <a href="../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+  <!-- ═══════════════════════════ JS ════════════════════════════ -->
+  <script>
+    // ── Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // ── Hamburger
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+
+    // ── Email notify
+    function handleNotify() {
+      const val = document.getElementById('notifyEmail').value.trim();
+      if (!val || !val.includes('@')) {
+        document.getElementById('notifyEmail').style.borderColor = 'rgba(201,169,110,0.6)';
+        document.getElementById('notifyEmail').focus();
+        return;
+      }
+      document.getElementById('notifyFormWrap').style.display = 'none';
+      document.getElementById('notifySuccess').style.display = 'block';
+    }
+
+    // Enter key on email input
+    document.getElementById('notifyEmail').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') handleNotify();
+    });
+
+    // ── Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.07 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>

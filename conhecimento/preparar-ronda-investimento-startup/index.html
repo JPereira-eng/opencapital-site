@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<title>Preparar uma ronda de investimento na sua startup | Open Capital</title>
+  <meta name="description" content="Guia prático para fundadores que estão a considerar levantar capital: quando faz sentido, quanto pedir, que investidores abordar, como se calcula a valuation e o que esperar de um term sheet.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+  <!-- NAVBAR:START -->
+<style>
+  /* Chevron SVG minimalista para dropdowns */
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  /* Garantir espaco minimo entre logo e nav-links em ecras estreitos */
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  /* Badge "em breve" subtil (estilo do index, aplicado a tudo desde 2026-05-10) */
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">— Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../../">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Financiamento</span>
+      </nav>
+      <h1 class="article-title">Preparar uma ronda de investimento na sua startup</h1>
+      <p class="article-standfirst">Um guia para fundadores que estão a considerar levantar capital: quando faz sentido, quanto pedir, que investidores abordar, como se constrói uma valuation e o que esperar de um term sheet.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Financiamento</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Agosto 2025</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>14 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Mariana Costa</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../atualidade/" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+      <img src="../../assets/articles/venturecapitalstartup_informativo.jpg" alt="Preparar uma ronda de investimento na sua startup" class="article-cover-img">
+
+      <div class="article-section reveal">
+        <p>Há uma frase que se repete nas conversas com fundadores portugueses: "Acho que está na altura de levantar uma ronda." Quase sempre, essa frase chega antes das perguntas que realmente importam. Antes de decidir o tamanho. Antes de perceber que tipo de investidor faz sentido. Antes, sobretudo, de ter a certeza de que uma ronda de investimento é o instrumento certo para o problema que a empresa tem.</p>
+        <p>Levantar capital é útil. Não é neutro. Cada euro que entra em equity tem um custo implícito que raramente aparece no Excel: dilui propriedade, introduz expectativas de crescimento, altera a governance da empresa e fixa uma direção que depois é difícil de reverter. Este artigo foi escrito para a fase anterior à decisão. Para o fundador que está a ponderar, não para o que já tem uma ronda aberta.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">O primeiro filtro</div>
+        <h2>Precisa mesmo de capital de risco?</h2>
+        <p>Nem todas as empresas devem levantar venture capital. Dizê-lo em Portugal é quase contraintuitivo, porque o ecossistema empurra para a lógica "levantar o mais depressa possível", mas é onde qualquer conversa séria começa.</p>
+        <p>O capital de risco faz sentido num tipo específico de negócio: um negócio que pode crescer muito, depressa, e cuja tese de valor depende de atingir escala antes dos concorrentes. Um SaaS B2B com unit economics que melhoram com volume. Uma fintech que precisa de construir massa crítica para monetizar. Uma empresa de hardware tecnológico que tem de financiar ciclos de R&D longos antes do produto gerar receita. Nestes casos, o custo do equity compensa: sem ele, a empresa chega tarde, e chegar tarde é, na prática, não chegar.</p>
+        <p>Noutro tipo de empresas, o cálculo é muito diferente. Uma consultora de 15 pessoas que cresce 20% ao ano, com margem sólida, não precisa de VC. Uma marca de consumo que pode crescer organicamente com receita própria, também não. Uma empresa industrial que investe em equipamento com retorno previsível tem instrumentos melhores: dívida, leasing, Banco de Fomento, incentivos não reembolsáveis. Em qualquer destes casos, uma ronda de equity dilui os fundadores sem acelerar materialmente o negócio.</p>
+        <div class="art-highlight">
+          <div class="art-highlight-label">Teste simples</div>
+          <div class="art-highlight-text">Se conseguir descrever um plano realista em que a empresa atinge os seus objetivos sem levantar capital, provavelmente não precisa de o levantar. Se, pelo contrário, a única forma de a tese funcionar é acelerar com dinheiro externo, então faz sentido avançar. O capital é combustível, não motor.</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Quando</div>
+        <h2>O momento certo raramente é o momento óbvio</h2>
+        <p>Há um erro clássico: levantar cedo demais, quando a empresa ainda não tem sinais suficientes para justificar uma valuation razoável, e acabar com uma diluição grande em troca de pouco dinheiro. Há outro, igualmente frequente: levantar tarde demais, quando a tesouraria está quase a zero, a negociação passa a ser feita sob pressão e o poder desloca-se todo para o investidor.</p>
+        <p>O timing ideal tem três componentes. Primeiro, um sinal de validação claro. No seed, isto pode ser tração inicial, contratos-piloto, retenção de utilizadores, uma métrica que demonstre que o problema existe e a solução funciona. Na Série A, já não basta: o investidor quer ver receita recorrente, crescimento mensal sustentado, unit economics que começam a fazer sentido. Segundo, runway. A regra prática é iniciar o processo quando ainda restam entre 9 e 12 meses de caixa. Menos do que isso, e o processo corre mal. Terceiro, um plano convincente para o que o capital vai fazer. Dizer "contratar equipa" é insuficiente. Dizer "triplicar a equipa comercial para passar de €50K para €200K de MRR nos próximos 18 meses, com base nesta taxa de conversão" é outra coisa.</p>
+        <p>Para quem nunca levantou, a duração do processo costuma ser subestimada. Entre o primeiro contacto com investidores e o dinheiro entrar na conta, é realista contar 4 a 6 meses numa ronda seed, e 6 a 9 meses numa Série A. Se o fundador está a começar a pensar na ronda hoje, o capital só trabalha efetivamente na empresa no próximo ano.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Dimensionar</div>
+        <h2>Quanto pedir</h2>
+        <p>Há uma tentação de "pedir mais, para estar descansado". Funciona mal. Levantar acima do que o plano justifica obriga a defender uma valuation que a empresa ainda não sustenta, e cria expectativas de crescimento que depois apertam a próxima ronda. Levantar abaixo deixa a empresa sem folga para errar.</p>
+        <p>O número certo sai de um exercício simples: que marcos preciso de atingir para fazer a próxima ronda em boas condições, e quanto me custa lá chegar com uma margem de segurança de 3 a 6 meses? Se a próxima ronda exige €1 milhão de MRR, se chegar lá exige 18 meses de burn a €80K mensais, então o número é €1,44 milhões de burn acumulado, mais um buffer. O exercício parece mecânico mas evita duas falhas: levantar para sobreviver em vez de progredir, e levantar para crescer depressa sem ter clareza sobre o que significa "depressa".</p>
+        <div class="pull-quote reveal">
+          <div class="pull-quote-text">"Uma ronda não financia o presente. Financia a capacidade de chegar ao ponto seguinte em condições de negociar melhor."</div>
+        </div>
+        <p>A pergunta paralela é a da diluição. Em Portugal, como internacionalmente, a norma em rondas seed é uma diluição entre 15% e 25%. Na Série A, entre 15% e 25% também, idealmente na extremidade inferior. Uma diluição muito acima destes valores numa ronda tardia é sinal de que algo está a correr mal na negociação, ou de que o fundador levantou com uma valuation demasiado modesta. Acumular diluições superiores a 60% até à Série B costuma comprometer o incentivo da equipa fundadora e sinaliza mal para rondas futuras.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Onde bater à porta</div>
+        <h2>Que tipo de investidor faz sentido</h2>
+        <p>O mercado de capital privado para startups em Portugal tem camadas diferentes. Cada uma serve estágios e montantes distintos. Confundir as camadas é um dos erros mais caros que um fundador pode cometer: abordar um fundo errado para o momento da empresa consome semanas sem gerar nada e queima reputação.</p>
+        <h3>Friends, family and fools (FFF)</h3>
+        <p>É a ronda informal inicial, tipicamente entre €20K e €100K. Serve para financiar o pré-produto: protótipo, validação inicial, primeiras contratações. Os tickets são pequenos, os termos são simples (frequentemente notas convertíveis ou participações minoritárias diretas), e o critério de decisão é mais pessoal do que financeiro.</p>
+        <h3>Business angels</h3>
+        <p>Tickets de €25K a €250K, individuais ou em sindicato. O angel certo traz três coisas: capital, experiência operacional no sector, e acesso a uma rede relevante. Portugal tem várias redes organizadas (APBA, Busy Angels, Lisbon Angels), e cada vez mais fundadores que exitaram tornam-se angels ativos. Uma ronda pré-seed ou seed inicial tipicamente combina 3 a 8 angels.</p>
+        <h3>Fundos seed e micro-VC</h3>
+        <p>Tickets de €250K a €1,5M. É aqui que entram os primeiros fundos institucionais: Faber, Armilar, Indico, Iberis, Portugal Ventures, entre outros. A decisão deixa de ser puramente sobre a ideia e passa a ser sobre a equipa, o mercado e os primeiros sinais de tração. O processo de due diligence é muito mais formal.</p>
+        <h3>Séries A e B</h3>
+        <p>Tickets de €2M a €15M na Série A, de €10M a €40M na Série B. Em Portugal, este espaço é pequeno e largamente preenchido por fundos internacionais (Atomico, Kima, Index, Speedinvest) que participam em rondas lideradas ou co-lideradas com investidores locais. O nível de exigência em métricas, governance e equipa executiva é qualitativamente diferente das fases anteriores.</p>
+        <h3>Alternativas ao equity clássico</h3>
+        <p>Vale a pena conhecer. Equity crowdfunding (Seedrs, Raize) para rondas pequenas com dispersão de investidores. Venture debt, em fases mais avançadas, para complementar equity sem diluir. Revenue-based financing, para negócios com receita recorrente estável. Incentivos não reembolsáveis (PT2030, PRR, Horizonte Europa) são quase sempre complemento, não substituto, mas podem estender significativamente o runway.</p>
+        <div class="art-highlight">
+          <div class="art-highlight-label">Regra prática</div>
+          <div class="art-highlight-text">O investidor certo para o estágio seguinte raramente é o mesmo que para o estágio atual. Fazer uma lista de fundos por fase do ciclo, não por proximidade geográfica ou conveniência, é o primeiro passo de preparação.</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Valuation</div>
+        <h2>Como se calcula e o que realmente determina o número</h2>
+        <p>A pergunta "quanto vale a minha empresa" é a que causa mais ansiedade aos fundadores e, paradoxalmente, a menos útil antes da ronda. A valuation não é um número que se calcula à parte e depois se propõe ao investidor. É um resultado negocial, determinado por oferta, procura, evidência e benchmarks de mercado.</p>
+        <p>Isto dito, há métodos que ajudam a chegar a um intervalo defensável. Nas fases iniciais, onde não há receita significativa, os métodos tradicionais (DCF, múltiplos de EBITDA) não funcionam. Os investidores usam, na prática, três aproximações:</p>
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Benchmarks comparáveis:</strong> que valuations têm feito empresas da mesma fase, no mesmo sector, com métricas parecidas. É o método mais influente.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Método do retorno esperado:</strong> o investidor parte do retorno que quer obter (tipicamente 10x a 20x em VC) e trabalha para trás até à valuation atual.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Scorecard method:</strong> ajusta a valuation-base do mercado com fatores como qualidade da equipa, tamanho do mercado, tração, concorrência e necessidade de capital adicional.</li>
+        </ul>
+        <p>Em 2025 e 2026, os intervalos típicos em Portugal são os seguintes, com variação significativa consoante sector e tração:</p>
+        <table class="art-table">
+          <thead>
+            <tr><th>Fase</th><th>Valuation pré-money (intervalo típico)</th><th>Ticket</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Pré-seed</strong></td><td>€1M - €3M</td><td>€100K - €500K</td></tr>
+            <tr><td><strong>Seed</strong></td><td>€3M - €10M</td><td>€500K - €2M</td></tr>
+            <tr><td><strong>Série A</strong></td><td>€10M - €30M</td><td>€2M - €8M</td></tr>
+            <tr><td><strong>Série B</strong></td><td>€30M - €100M</td><td>€8M - €25M</td></tr>
+          </tbody>
+        </table>
+        <p>Os números acima não são limites rígidos. Empresas com tração excecional sobem muito acima deste intervalo, e empresas com fundamentos fracos conseguem, com dificuldade, ficar abaixo. A valuation da sua ronda é, em última análise, a que um investidor credível aceitar pagar.</p>
+        <p>Dois conceitos que é essencial perceber antes de entrar na negociação. <strong style="color:var(--navy);">Pré-money</strong> é o valor da empresa antes do investimento entrar. <strong style="color:var(--navy);">Post-money</strong> é o valor depois. Se o pré-money é €6M e o investidor entra com €2M, o post-money é €8M, e a participação do investidor é 25% (2 em 8). Confundir os dois no term sheet é erro comum e caro.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">O que é avaliado</div>
+        <h2>O que os investidores realmente procuram</h2>
+        <p>Há um contraste que aparece quase sempre nas primeiras conversas de um fundador com VCs: o fundador quer falar de produto e da tecnologia; o investidor quer falar de mercado, equipa e capacidade de execução. Perceber esta assimetria muda a forma como se prepara o pitch.</p>
+        <p>Uma decisão de investimento em fase inicial assenta em quatro eixos. A <strong style="color:var(--navy);">equipa</strong>, que é o fator mais determinante até à Série A: quem são os fundadores, que experiência têm no problema que estão a resolver, que track record de execução demonstraram, como se complementam. O <strong style="color:var(--navy);">mercado</strong>: é suficientemente grande, está a crescer, e é acessível. Tração: que sinais há de que clientes realmente querem isto. E <strong style="color:var(--navy);">unit economics</strong>: o modelo económico funciona à escala ou só funciona enquanto se está a queimar dinheiro.</p>
+        <p>Conforme a empresa avança, o peso muda. Numa Série B, a equipa continua a contar, mas as métricas financeiras passam a dominar. O investidor quer ver LTV/CAC saudável, payback periods razoáveis, margens brutas consistentes com o sector, retenção mensal e anual. Se estes números não estão arrumados internamente, a due diligence vai expô-los.</p>
+        <div class="art-highlight">
+          <div class="art-highlight-label">Conversa frequente</div>
+          <div class="art-highlight-text">"O nosso produto é melhor que o da concorrência." É uma frase que não passa nem o primeiro filtro num fundo VC. O que passa é "estes são os dados que mostram que clientes trocam o concorrente por nós, e esta é a razão estrutural porque é difícil replicar". Ser melhor não chega. Ser estruturalmente difícil de copiar, sim.</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Preparação</div>
+        <h2>Os materiais e o processo</h2>
+        <p>Antes de iniciar contactos, há seis peças que têm de estar prontas. A falta de qualquer delas transmite desorganização e custa credibilidade logo nas primeiras reuniões.</p>
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">Deck de investimento:</strong> 10 a 15 slides, com problema, solução, mercado, tração, modelo de negócio, equipa, concorrência, plano financeiro e uso dos fundos. Curto. Claro. Desenhado para ser lido sem o fundador ao lado.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Modelo financeiro:</strong> três a cinco anos, com as premissas explícitas, cenário base e cenário conservador. O investidor vai pressionar as premissas; se não estão defensáveis, melhor saber antes dele.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Dashboard de métricas:</strong> as métricas que o investidor espera ver no seu sector. Para SaaS: MRR, churn, CAC, LTV, NRR. Para marketplace: GMV, take rate, cohortes. Para e-commerce: AOV, CAC, repeat rate.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Cap table:</strong> quem tem quê, que vesting, que opções estão por atribuir. Cap tables desarrumados ou com opções prometidas verbalmente são uma bandeira vermelha clássica.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">Data room:</strong> contratos principais, documentação legal da empresa, IP, contratos de trabalho dos fundadores, auditorias e relatórios anteriores se existirem. Não é preciso estar completo no dia 1, mas tem de estar pronto para a fase de due diligence.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">One-pager:</strong> resumo de uma página para enviar em primeiro contacto. Frequentemente subvalorizado. É o que determina se o investidor marca a reunião ou não.</li>
+        </ul>
+        <p>O processo em si tem uma cadência típica. Primeiras reuniões informais para feedback (2 a 4 semanas). Processo estruturado com reuniões de pitch (4 a 6 semanas). Term sheets e negociação (2 a 4 semanas). Due diligence formal após assinatura do term sheet (6 a 10 semanas). Fecho legal (2 a 4 semanas). Cada fase tem os seus riscos, e o fundador está a gerir simultaneamente o processo, a empresa e a sua própria energia, que é limitada.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Term sheet</div>
+        <h2>O que está em cima da mesa para além da valuation</h2>
+        <p>A valuation é o número que mais chama a atenção, mas há cláusulas num term sheet que podem pesar tanto quanto. Algumas são padrão e não devem ser motivo de fricção. Outras merecem leitura atenta, porque condicionam os direitos económicos e o controlo da empresa durante os próximos 5 a 10 anos.</p>
+        <table class="art-table">
+          <thead>
+            <tr><th>Cláusula</th><th>O que é</th><th>Padrão razoável</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Liquidation preference</strong></td><td>Prioridade do investidor em caso de venda da empresa</td><td>1x non-participating</td></tr>
+            <tr><td><strong>Anti-dilution</strong></td><td>Protege o investidor em rondas descendentes</td><td>Broad-based weighted average</td></tr>
+            <tr><td><strong>Pro-rata rights</strong></td><td>Direito de manter percentagem em rondas futuras</td><td>Normal atribuir</td></tr>
+            <tr><td><strong>Board seats</strong></td><td>Lugares no conselho</td><td>1 para lead investor na seed; 2 na Série A</td></tr>
+            <tr><td><strong>Vesting fundadores</strong></td><td>Equity dos fundadores sujeito a vesting</td><td>4 anos, cliff de 1 ano</td></tr>
+            <tr><td><strong>Drag-along</strong></td><td>Força minorias a acompanhar venda aprovada pela maioria</td><td>Com limites de proteção ao fundador</td></tr>
+            <tr><td><strong>Opções (ESOP)</strong></td><td>Pool de opções para a equipa</td><td>10% a 15%, criado pré-money</td></tr>
+          </tbody>
+        </table>
+        <p>Dois pormenores que valem especial atenção. Primeiro, <strong style="color:var(--navy);">liquidation preference</strong>: "1x non-participating" é justo e quase universal em fases iniciais. Termos mais agressivos (2x, participating, com juros acumulados) aparecem em rondas problemáticas e devem ser um sinal de alerta. Segundo, a criação do <strong style="color:var(--navy);">pool de opções pré-money versus post-money</strong>: se o pool é criado pré-money, a diluição é absorvida apenas pelos fundadores; se é post-money, é partilhada com o investidor. A diferença em diluição efetiva pode ser significativa, apesar de parecer um pormenor técnico.</p>
+        <div class="pull-quote reveal">
+          <div class="pull-quote-text">"Um term sheet não é um documento legal. É um mapa do que o investidor quer controlar e do que está disposto a deixar de fora."</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Erros recorrentes</div>
+        <h2>O que corre mal, e porquê</h2>
+        <p>Há um catálogo de erros que se repete em processos de fundraising em Portugal. Todos fundadores acham que não os vão cometer. Muitos cometem.</p>
+        <ul class="art-list">
+          <li>Começar o processo tarde demais, com caixa curta, e negociar sob pressão. O investidor sente a urgência e aproveita-a.</li>
+          <li>Abordar demasiados fundos em simultâneo, sem curadoria, e queimar contactos em reuniões mal preparadas.</li>
+          <li>Prometer aos investidores uma valuation que não é sustentada pelos dados. O número cola na cabeça, e quando a due diligence expõe a fragilidade, a confiança desaparece.</li>
+          <li>Subestimar o desgaste pessoal. Fundadores que gerem a ronda e a empresa ao mesmo tempo, sem apoio, deterioram ambas.</li>
+          <li>Aceitar o primeiro term sheet por alívio. A primeira oferta raramente é a melhor. Ter dois ou três em cima da mesa muda a negociação.</li>
+          <li>Não envolver advogados especializados em venture capital desde cedo. Cláusulas mal compreendidas hoje custam caro daqui a três anos.</li>
+          <li>Dizer "sim" a investidores que trazem dinheiro mas não trazem mais nada, ou que trazem comportamentos tóxicos. O cap table vive com a empresa durante a década seguinte.</li>
+        </ul>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Depois da ronda</div>
+        <h2>O dia seguinte, que ninguém discute antes</h2>
+        <p>O dinheiro entra. Vem em seguida uma sensação estranha de descompressão e, logo atrás, uma pressão nova. A partir do momento em que há investidores institucionais na tabela, a empresa deixa de ser apenas dos fundadores. Há reporting mensal. Há board meetings trimestrais. Há métricas que precisam de subir de forma visível e consistente, porque cada board meeting avalia progressão. Há investidores que vão querer pró-rata na próxima ronda, e há outros que vão sair na secundária. A relação com o capital muda a natureza da empresa.</p>
+        <p>Fundadores bem preparados para este dia são os que, desde cedo, criam disciplinas que parecem exageradas quando a equipa é de 10 pessoas mas são essenciais quando é de 50: reportings internos mensais, accounting limpo, contratos em ordem, clareza sobre o caminho para a próxima ronda. A ronda seed é treino para a Série A. A Série A é treino para a Série B. Cada uma é, também, um filtro para fundadores que não constroem os sistemas que a fase seguinte exige.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>Como aplicar este conhecimento</h2>
+        <p>Três recomendações concretas para quem está hoje a considerar uma ronda.</p>
+        <p>Primeiro, antes de mais nada, clarifique se precisa mesmo de equity. Reserve uma semana só para este exercício. Explore alternativas sérias: dívida, Banco de Fomento, venture debt, incentivos não reembolsáveis, bootstrapping com receita. Se, depois de olhar para as alternativas, a ronda continua a fazer sentido, entra na conversa com confiança. Se não, poupou meses e diluição.</p>
+        <p>Segundo, construa a lista de investidores como se fosse uma lista de comerciais de topo: segmentada, com prioridades claras, com introduções preparadas. Abordar 40 fundos de forma genérica rende menos que abordar 15 com mensagem ajustada a cada um e uma introdução qualificada. Qualidade do acesso determina qualidade do processo.</p>
+        <p>Terceiro, não faça isto sozinho. Um fundador que gere simultaneamente a empresa, a ronda e o processo legal toma más decisões por exaustão. Um advisor experiente, um mentor que já levantou, um CFO fracionado ou um consultor financeiro com histórico em fundraising não é um luxo. É uma proteção contra os erros caros que este artigo descreve.</p>
+        <p>A Open Capital acompanha fundadores nesta fase: do diagnóstico inicial sobre se uma ronda faz sentido, à preparação do processo, construção do deck e do modelo financeiro, até à negociação do term sheet. Se está a considerar uma ronda, o momento certo para a primeira conversa é antes de abrir o processo, não durante.</p>
+        <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+      </div>
+
+    </article>
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../../Retratos Equipa/retrato_marianacosta.png" alt="Mariana Costa" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Mariana Costa</div>
+            <div class="sidebar-author-role">Finance Lead</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Categoria</div><div class="sidebar-info-val">Financiamento</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Publicado</div><div class="sidebar-info-val">Agosto 2025</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Leitura</div><div class="sidebar-info-val">14 min</div></div>
+      </div>
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Precisa de apoio nesta area?</div>
+        <div class="sidebar-cta-text">Está a considerar uma ronda de investimento? Podemos ajudar a clarificar se faz sentido, preparar o processo e apoiar a negociação.</div>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+<script src="../../assets/js/back-link.js" defer></script>
+</body>
+</html>
