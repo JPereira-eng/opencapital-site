@@ -187,7 +187,7 @@ Ler `conhecimento/automacao-vs-digitalizacao/index.html` para extrair o template
 - `subtema`: 1 dos 7 (regra do fluxograma acima)
 - `autor`: aplicar tabela
 - `tempo_leitura`: estimar (1 min por 250 palavras)
-- `data_publicacao`: mês actual em formato "Mês AAAA"
+- `data_publicacao`: data actual em formato `AAAA-MM-DD` (campo invisível, usado para ordenação)
 
 ### 4. Escrever o corpo
 
@@ -212,7 +212,7 @@ Adicionar entrada ao FINAL do array `articles`:
   "subtema": "[subtema escolhido]",
   "autor": "[Nome]",
   "autor_foto": "[ficheiro png]",
-  "data_publicacao": "AAAA-MM",
+  "data_publicacao": "AAAA-MM-DD",
   "href": "conhecimento/[slug]/index.html",
   "meta_description": "[meta description SEO 150-160 chars]"
 }

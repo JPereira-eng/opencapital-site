@@ -586,7 +586,7 @@ Adicionar entrada ao FINAL do array `articles` em `conhecimento-catalog.json`. E
   "subseccao": "atualidade",
   "autor": "[Nome]",
   "autor_foto": "[ficheiro png]",
-  "data_publicacao": "AAAA-MM",
+  "data_publicacao": "AAAA-MM-DD",
   "href": "conhecimento/[SLUG]/index.html",
   "meta_description": "[meta description SEO 150-160 chars]",
   "cat_class": "[cat-mercados | cat-estrategia | cat-financiamento | cat-fiscalidade | cat-inovacao]",
