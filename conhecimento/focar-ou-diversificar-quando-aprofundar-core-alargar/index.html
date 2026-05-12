@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+  <title>Focar ou diversificar: quando aprofundar o core e quando alargar | Open Capital</title>
+  <meta name="description" content="Framework para decidir entre concentrar no core ou expandir para novos produtos e segmentos. Critérios: maturidade, capacidade, sinergias e concentração.">
+  <link rel="stylesheet" href="/assets/fonts/montserrat.css">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+  <!-- NAVBAR:START -->
+<style>
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../../">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Estratégia e Gestão</span>
+      </nav>
+      <h1 class="article-title">Focar ou diversificar: quando aprofundar o core e quando alargar</h1>
+      <p class="article-standfirst">A pergunta surge em quase todas as empresas que crescem: aproveitar oportunidades adjacentes ou continuar a aprofundar o que já se faz bem. Um framework para decidir com critério, antes de comprometer capital, atenção e tempo de equipa.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Estratégia e Gestão</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Maio 2026</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>10 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Inês Teixeira</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../atualidade/" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">A pergunta</div>
+        <h2>"Tenho oportunidades à frente. Devo concentrar ou expandir?"</h2>
+        <p>Uma empresa de software portuguesa, com 35 colaboradores e cinco anos de operação, atinge um ponto previsível na sua trajetória. O produto core ganhou tração num setor específico, a base de clientes está estável, as margens são positivas. Aparecem então três oportunidades em simultâneo: um cliente importante pede uma extensão do produto para outro caso de uso, um parceiro propõe entrar num setor adjacente onde o conhecimento técnico é transferível, e a equipa comercial identifica um segmento internacional que parece subexplorado.</p>
+        <p>O fundador faz a pergunta que todos os fundadores fazem nesta fase: devo continuar a aprofundar o core ou abraçar uma destas frentes? E, se sim, qual?</p>
+        <p>A pergunta é legítima e raramente é mal colocada. O que costuma falhar é o método para responder. A discussão organiza-se em torno do potencial de cada oportunidade, do retorno esperado, do entusiasmo da equipa. Raramente em torno dos verdadeiros critérios que distinguem uma expansão sustentável de uma diluição de foco.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">O erro intuitivo</div>
+        <h2>Por que a resposta intuitiva costuma ser otimista</h2>
+        <p>Quando o core funciona, a empresa ganha confiança. E é precisamente essa confiança que distorce a leitura das oportunidades adjacentes. O raciocínio implícito é: "se conseguimos vencer aqui, conseguimos vencer ali também, com algumas adaptações". O problema é que esse "ali" raramente é um espelho do "aqui".</p>
+        <p>Há três distorções recorrentes neste tipo de decisão.</p>
+        <p>A primeira é confundir <strong>capacidade técnica</strong> com <strong>capacidade de mercado</strong>. Uma empresa pode ter a tecnologia, a equipa e o produto certos para servir um novo segmento e mesmo assim não ter o canal, a credibilidade ou o ciclo de venda apropriado. Saber resolver o problema é metade do trabalho. A outra metade é convencer um mercado que ainda não conhece a empresa.</p>
+        <p>A segunda é sobrestimar as sinergias. "Já temos a equipa de desenvolvimento, é só alargar." Na prática, uma equipa que serve duas linhas de produto perde foco em ambas, ou seleciona implicitamente uma para favorecer. As sinergias técnicas existem; as sinergias de gestão são quase sempre menores do que parecem.</p>
+        <p>A terceira é subestimar o custo de oportunidade no próprio core. Cada hora de atenção do CEO dedicada à nova frente é uma hora que não está a aprofundar o produto principal, a reter o cliente existente ou a melhorar a operação atual. Em mercados onde a competição ainda não saturou, o custo de oportunidade no core costuma ser superior ao retorno marginal da expansão.</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">Princípio orientador</div>
+          <div class="art-highlight-text">A decisão entre focar e diversificar não deve partir do potencial das oportunidades adjacentes. Deve partir do estado do mercado core. Se ainda há espaço para aprofundar, esse é, na maioria dos casos, o investimento de maior retorno marginal.</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Critérios</div>
+        <h2>Quatro critérios para tomar a decisão com método</h2>
+        <p>Em vez de uma resposta universal, o que faz sentido é avaliar a situação concreta da empresa contra quatro critérios objetivos. Cada critério desloca o veredito para um dos lados. A decisão final emerge da combinação.</p>
+
+        <h3>1. Maturidade do mercado core</h3>
+        <p>O critério mais determinante e o mais ignorado. Antes de perguntar se vale a pena entrar noutro mercado, é preciso saber se o atual ainda tem espaço por preencher. Três sinais ajudam a medir a maturidade real:</p>
+        <ul class="art-list">
+          <li><strong>Penetração efetiva.</strong> Que fração do mercado endereçável a empresa já atingiu? Se a quota é inferior a 15% num mercado em crescimento, a saturação ainda não chegou e a expansão para fora é, quase sempre, prematura.</li>
+          <li><strong>Ritmo de crescimento orgânico.</strong> Se o core continua a crescer a dois dígitos sem esforço comercial proporcional, o mercado ainda está a puxar. Em mercados saturados, o crescimento exige investimento crescente em aquisição.</li>
+          <li><strong>Margem em evolução.</strong> Em mercados imaturos, a margem por cliente tende a melhorar com escala. Em mercados saturados, a margem comprime à medida que a empresa luta pelos clientes marginais.</li>
+        </ul>
+        <p>Se os três sinais apontam para um mercado ainda longe da saturação, o critério aponta para aprofundar.</p>
+
+        <h3>2. Capacidade real de execução em paralelo</h3>
+        <p>A pergunta não é se a empresa <em>pode</em> entrar numa nova frente. É se pode fazê-lo sem degradar o core. Uma empresa com 35 colaboradores e uma operação ainda em consolidação não tem, normalmente, capacidade de gestão para executar duas frentes em paralelo. O CEO não pode duplicar-se. A equipa comercial não pode bissetar a atenção. O produto não pode ramificar sem dívida técnica.</p>
+        <p>O teste prático tem três perguntas:</p>
+        <ul class="art-list">
+          <li>Existe alguém na empresa, abaixo do CEO, com a senioridade, autonomia e mandato para liderar a nova frente sem precisar de check-ins semanais com a liderança? Se a resposta é não, a expansão vai consumir tempo do topo.</li>
+          <li>A operação atual está estabilizada o suficiente para correr seis meses sem intervenção do fundador? Se ainda há fogos para apagar todas as semanas, abrir uma nova frente é convidar mais fogos.</li>
+          <li>O balanço aguenta um período de investimento sem retorno na nova frente, sem comprometer a capacidade de financiamento do core? A maioria das empresas subavalia o cash flow necessário para uma expansão até dar resultado.</li>
+        </ul>
+
+        <h3>3. Sinergias reais versus sinergias retóricas</h3>
+        <p>Quase todas as propostas de expansão são justificadas por sinergias. A questão é distinguir as que são reais das que são narrativas para tornar a decisão mais palatável. Uma sinergia é real quando reduz, de forma mensurável, o custo de servir o novo mercado em comparação com servi-lo de raiz.</p>
+        <p>Exemplos de sinergias reais:</p>
+        <ul class="art-list">
+          <li>Tecnologia base reutilizável que reduz em 60 a 80% o tempo de desenvolvimento do novo produto.</li>
+          <li>Canal comercial que serve em simultâneo o core e o novo segmento sem aumento proporcional de equipa.</li>
+          <li>Marca reconhecida pelo cliente-tipo do novo segmento, reduzindo o ciclo de venda em pelo menos 30%.</li>
+        </ul>
+        <p>Exemplos de sinergias retóricas:</p>
+        <ul class="art-list">
+          <li>"Temos a equipa de engenharia", quando a nova frente exige competências técnicas que essa equipa não tem.</li>
+          <li>"Conhecemos o setor", quando o conhecimento é de um sub-segmento e o novo cliente está num sub-segmento adjacente com lógicas próprias.</li>
+          <li>"Já fazemos algo parecido", quando o "parecido" cobre 20% da proposta de valor e os restantes 80% têm de ser construídos.</li>
+        </ul>
+        <p>A diferença é simples de testar: se a empresa estimar o custo de servir o novo mercado <em>como se começasse do zero</em>, qual é a redução efetiva trazida pelas sinergias propostas? Se a redução for inferior a 40%, a sinergia é provavelmente retórica.</p>
+
+        <h3>4. Risco de concentração de receita</h3>
+        <p>O último critério introduz uma dimensão defensiva. Se 70% ou mais da receita depende de um único setor, geografia ou tipo de cliente, a empresa está exposta a um choque exógeno que pode comprometer a operação. Nesse caso, a diversificação não é uma escolha de crescimento; é uma escolha de resiliência.</p>
+        <p>Os limiares práticos:</p>
+        <ul class="art-list">
+          <li><strong>Concentração inferior a 50% num único segmento.</strong> O risco é manejável. O critério não obriga a diversificar.</li>
+          <li><strong>Entre 50% e 70%.</strong> Zona de atenção. A diversificação faz sentido como cobertura de risco, mas não justifica abandonar foco.</li>
+          <li><strong>Acima de 70%.</strong> Zona de exposição. Uma segunda perna de receita passa a ser um imperativo, não uma opção.</li>
+        </ul>
+        <p>Empresas com concentração alta encontram-se numa armadilha aparente: o core ainda é rentável, mas a sua continuidade depende de fatores fora do controlo da empresa (um cliente grande, uma regulação, uma tendência setorial). Aqui, a diversificação parcial é defensiva e estratégica em simultâneo.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Aplicação</div>
+        <h2>Como combinar os quatro critérios</h2>
+        <p>Os critérios não pesam todos o mesmo em todas as situações. A combinação típica produz quatro perfis de decisão.</p>
+
+        <table class="art-table">
+          <thead>
+            <tr>
+              <th>Perfil</th>
+              <th>Sinais</th>
+              <th>Decisão recomendada</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Core em expansão</strong></td>
+              <td>Mercado imaturo, baixa penetração, concentração moderada</td>
+              <td>Aprofundar. O retorno marginal no core é superior. Resistir à tentação adjacente.</td>
+            </tr>
+            <tr>
+              <td><strong>Core estável, capacidade folgada</strong></td>
+              <td>Mercado em maturação, execução robusta, sinergias reais</td>
+              <td>Expandir com prudência. Uma segunda frente bem escolhida, com mandato claro de liderança.</td>
+            </tr>
+            <tr>
+              <td><strong>Core dependente</strong></td>
+              <td>Concentração superior a 70%, mercado em desaceleração</td>
+              <td>Diversificar por resiliência. Mesmo que o ROI seja inferior ao core, reduz risco existencial.</td>
+            </tr>
+            <tr>
+              <td><strong>Core saturado</strong></td>
+              <td>Penetração elevada, margem em compressão, crescimento difícil</td>
+              <td>Diversificar é mandatório. A pergunta deixa de ser <em>se</em> e passa a ser <em>onde</em>.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>A maioria das empresas em crescimento que coloca esta pergunta encontra-se no primeiro perfil. Convencem-se de que estão no segundo. E a decisão final, sem método, pende quase sempre para a expansão. Não por análise, mas por entusiasmo.</p>
+
+        <div class="pull-quote reveal">
+          <div class="pull-quote-text">"A maior parte das oportunidades que parecem perdidas se não forem aproveitadas continuam disponíveis dois anos depois, quando o core já está mais sólido. As que de facto se fecham costumam ser as menos relevantes."</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Sinais quantitativos</div>
+        <h2>O que medir para saber em que perfil se está</h2>
+        <p>O framework só funciona se a empresa conseguir avaliar-se contra ele. Cinco métricas, lidas em conjunto, dão um diagnóstico razoável.</p>
+
+        <div class="stats-row cols-2 reveal">
+          <div class="stat-cell">
+            <div class="stat-num">&lt;15<sup>%</sup></div>
+            <div class="stat-label">Quota no mercado endereçável: sinal de imaturidade</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">&gt;25<sup>%</sup></div>
+            <div class="stat-label">Crescimento anual orgânico do core: mercado ainda puxa</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">&gt;70<sup>%</sup></div>
+            <div class="stat-label">Concentração de receita num segmento: zona de exposição</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">&gt;40<sup>%</sup></div>
+            <div class="stat-label">Redução de custo atribuível a sinergias reais: limiar mínimo</div>
+          </div>
+        </div>
+
+        <p>Faltava uma quinta: a percentagem do tempo do CEO atualmente alocada à operação corrente. Se for superior a 60%, não há largura de banda de gestão para uma segunda frente. Esse número, ao contrário dos outros, é raramente medido. E é o que mais frequentemente decide se a expansão funciona ou colapsa.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Limites do framework</div>
+        <h2>Quando os quatro critérios não decidem sozinhos</h2>
+        <p>Há situações em que a aplicação dos critérios produz um resultado ambíguo, ou em que dimensões externas pesam mais do que a análise interna sugere.</p>
+        <p>A primeira é quando o setor está em transformação estrutural. Uma empresa que serve um mercado em transição (tecnológica, regulatória ou de modelo de negócio) pode ter sinais de saúde no core que não captam a deterioração futura. O framework olha para o presente; em mercados em rutura, o presente é enganador. Nestes casos, a diversificação antecipatória pode ser legítima mesmo com critérios a sugerir foco.</p>
+        <p>A segunda é quando aparece uma janela competitiva genuína. Se um concorrente importante se retira de um segmento, se uma aquisição abre acesso a um canal, se uma regulação cria um nicho protegido, a decisão deixa de ser sobre maturidade do core e passa a ser sobre custo de oportunidade temporal. Janelas curtas justificam exceções.</p>
+        <p>A terceira é quando a equipa fundadora tem energia residual que não está a ser absorvida pelo core. Esta dimensão é difícil de quantificar mas real. Uma empresa onde os fundadores estão a aborrecer-se com a operação atual e onde essa frustração começa a contaminar a cultura pode beneficiar de uma nova frente como motor de renovação interna. É um argumento legítimo, mas raramente é apresentado com a honestidade necessária.</p>
+        <p>Em todas estas situações, o framework continua útil. Não decide sozinho, mas força a explicitar o que está em jogo. Ao identificar que se está a sair dos quatro critérios, a empresa torna-se consciente do tipo de aposta que está a fazer.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>Como pensamos esta decisão na prática</h2>
+        <p>Quando trabalhamos com empresas em fase de crescimento, esta pergunta aparece de duas formas. Numa primeira versão, o gestor já decidiu expandir e procura validação. Numa segunda, o gestor está dividido e procura método. As duas situações exigem abordagens diferentes.</p>
+        <p>Na primeira, o nosso papel é desconfortável mas necessário: trazer os critérios à mesa e testar se a decisão já tomada resiste a eles. Em metade dos casos, resiste. Na outra metade, a empresa percebe que a decisão tem componentes emocionais ou narrativas que não passam o filtro dos critérios. Não significa abandonar o projeto; significa redimensioná-lo.</p>
+        <p>Na segunda, o trabalho é mais analítico. Mapear o estado do mercado core, quantificar a capacidade de execução real, isolar as sinergias mensuráveis das retóricas, avaliar a concentração de receita. O resultado raramente é uma resposta limpa. É uma fotografia honesta, contra a qual a decisão se torna mais robusta.</p>
+        <p>Em ambos os casos, há uma observação que repetimos. Uma expansão bem-sucedida raramente é executada por uma empresa que continua dependente da intervenção do fundador na operação corrente. A condição prévia da diversificação não é a oportunidade. É a maturidade de gestão. Empresas que constroem essa maturidade ganham, por extensão, o direito de expandir. As que não constroem, expandem na mesma e descobrem mais tarde que a expansão não compensou o custo do foco perdido.</p>
+        <p>A pergunta "focar ou diversificar" é, em última análise, uma pergunta sobre o que a empresa é hoje, não sobre o que pode ser amanhã. Responder bem exige resistir à narrativa do crescimento por qualquer caminho e privilegiar o crescimento pelo caminho certo. Em muitas situações, esse caminho é a quinta versão do mesmo produto, não a primeira de um novo.</p>
+      </div>
+
+      <p style="font-size:13px;color:var(--grey-mid);margin-top:48px;font-style:italic;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a></p>
+
+    </article>
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../../Retratos Equipa/retrato_inêsteixeira.png" alt="Inês Teixeira" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Inês Teixeira</div>
+            <div class="sidebar-author-role">Consultora</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Categoria</div><div class="sidebar-info-val">Estratégia e Gestão</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Subtema</div><div class="sidebar-info-val">Estratégia e decisão</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Publicado</div><div class="sidebar-info-val">Maio 2026</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Leitura</div><div class="sidebar-info-val">10 min</div></div>
+      </div>
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
+        <div class="sidebar-cta-text">Quer testar a sua decisão de expansão contra critérios objetivos antes de comprometer capital?</div>
+        <a href="https://calendly.com/opencapital" target="_blank" class="sidebar-cta-btn">Falar com um especialista</a>
+      </div>
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="../expandir-capacidade-procura-sustenta-investimento/" class="related-item">
+          <span class="related-item-title">Expandir capacidade: como saber se a procura sustenta o investimento</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="../contratar-para-crescer-ou-tapar-falhas/" class="related-item">
+          <span class="related-item-title">Contratar para crescer ou para tapar falhas</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="../mercado-externo-oportunidade-real-ou-hipotese/" class="related-item">
+          <span class="related-item-title">Mercado externo: oportunidade real ou hipótese</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+  <script src="../../assets/js/back-link.js" defer></script>
+</body>
+</html>
