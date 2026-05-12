@@ -9,7 +9,7 @@
       "file": "instrumentos/eic-accelerator-2026.html",
       "source": "eic-accelerator",
       "state": "aberto",
-      "last_check": "2026-05-06",
+      "last_check": "2026-05-12",
       "deadline": "2026-07-08",
       "notas": "Cut-off Step 2 06/05/2026 atingido. Proximo cut-off Step 2: 08/07/2026 (cut-offs subsequentes: 02/09, 04/11/2026). Step 1 (short) continua continuo."
     },
@@ -18,35 +18,37 @@
       "file": "instrumentos/step-scale-up-eic.html",
       "source": "eic-accelerator",
       "state": "aberto",
-      "last_check": "2026-05-06"
+      "last_check": "2026-05-12"
     },
     {
       "id": "eic-pathfinder-2026",
       "file": "instrumentos/eic-pathfinder-2026.html",
       "source": "eic-accelerator",
       "state": "aberto",
-      "last_check": "2026-05-06"
+      "last_check": "2026-05-12",
+      "notas": "Pathfinder Open: deadline 12/05/2026. Pathfinder Challenges: deadline 28/10/2026. Verificado via eic.ec.europa.eu em 2026-05-12."
     },
     {
       "id": "eic-transition-2026",
       "file": "instrumentos/eic-transition-2026.html",
       "source": "eic-accelerator",
       "state": "aberto",
-      "last_check": "2026-05-06"
+      "last_check": "2026-05-12",
+      "notas": "Transition 2026: deadline 16/09/2026 (single cut-off). Verificado via eic.ec.europa.eu em 2026-05-12."
     },
     {
       "id": "horizon-eic-2026-bas-02",
       "file": "instrumentos/horizon-eic-2026-bas-02.html",
       "source": "eu-funding-tenders",
       "state": "aberto",
-      "last_check": "2026-05-06"
+      "last_check": "2026-05-12"
     },
     {
       "id": "horizon-eic-2026-accelerator-01",
       "file": "instrumentos/horizon-eic-2026-accelerator-01.html",
       "source": "eu-funding-tenders",
       "state": "aberto",
-      "last_check": "2026-05-06"
+      "last_check": "2026-05-12"
     },
     {
       "id": "eic-step-scale-up-2026",
@@ -60,5 +62,9 @@
   "published": 7,
   "open": 7,
   "closed": 0,
-  "planned": 0
+  "planned": 0,
+  "_meta": {
+    "last_monitor_run": "2026-05-12",
+    "notes": "Verificado via eic.ec.europa.eu e Funding Tenders portal em 2026-05-12. Nenhuma alteracao factual de estado/prazo/dotacao."
+  }
 }

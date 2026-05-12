@@ -11,68 +11,79 @@
     "updated": "2026-05-12"
   },
   "totals": {
-    "published": 661,
+    "published": 669,
     "open": 414,
-    "closed": 163,
-    "planned": 83,
-    "in_queue": 165,
-    "in_watchlist": 121,
+    "closed": 164,
+    "planned": 87,
+    "in_queue": 148,
+    "in_watchlist": 137,
     "in_catalogo": 0,
-    "in_overflow": 285,
-    "in_plano_anual": 121
+    "in_overflow": 279,
+    "in_plano_anual": 137
   },
   "shards": {
     "catalogo-aceleradores": {
       "count": 15,
       "open": 15,
-      "published": 15
+      "published": 15,
+      "closed": 0,
+      "planned": 0
     },
     "catalogo-ba": {
       "count": 4,
       "open": 3,
       "closed": 1,
-      "published": 4
+      "published": 4,
+      "planned": 0
     },
     "catalogo-bancos": {
       "count": 2,
       "open": 2,
-      "published": 2
+      "published": 2,
+      "closed": 0,
+      "planned": 0
     },
     "catalogo-crowdfunding": {
       "count": 3,
       "open": 3,
-      "published": 3
+      "published": 3,
+      "closed": 0,
+      "planned": 0
     },
     "catalogo-premios": {
       "count": 6,
-      "open": 5,
+      "open": 3,
       "closed": 1,
-      "published": 6
+      "published": 6,
+      "planned": 0
     },
     "catalogo-vc": {
       "count": 30,
       "open": 26,
       "closed": 2,
-      "published": 30
+      "published": 30,
+      "planned": 0
     },
     "eic": {
-      "count": 6,
-      "open": 6,
-      "published": 6
+      "count": 7,
+      "open": 7,
+      "published": 7,
+      "closed": 0,
+      "planned": 0
     },
     "eu-horizon": {
-      "count": 673,
-      "open": 336,
-      "closed": 226,
-      "planned": 111,
-      "published": 673,
+      "count": 344,
+      "open": 173,
+      "closed": 94,
+      "planned": 77,
+      "published": 344,
       "updated": "2026-05-12"
     },
     "eu-other": {
-      "count": 316,
-      "published": 316,
-      "open": 222,
-      "closed": 92,
+      "count": 150,
+      "published": 150,
+      "open": 103,
+      "closed": 45,
       "planned": 2,
       "updated": "2026-05-12"
     },
@@ -80,28 +91,37 @@
       "count": 8,
       "open": 5,
       "planned": 3,
-      "published": 8
+      "published": 8,
+      "closed": 0
     },
     "priv-ba": {
       "count": 0,
-      "published": 0
+      "published": 0,
+      "open": 0,
+      "closed": 0,
+      "planned": 0
     },
     "pt-other": {
       "count": 41,
       "open": 35,
       "closed": 6,
       "published": 41,
-      "updated": "2026-05-12"
+      "updated": "2026-05-12",
+      "planned": 0
     },
     "pt2030-central": {
       "count": 0,
-      "published": 0
+      "published": 0,
+      "open": 0,
+      "closed": 0,
+      "planned": 0
     },
     "pt2030-centro": {
       "count": 2,
       "open": 1,
       "closed": 1,
-      "published": 2
+      "published": 2,
+      "planned": 0
     },
     "pt2030-compete": {
       "count": 16,
@@ -119,25 +139,26 @@
       "closed": 1
     },
     "pt2030-norte": {
-      "count": 8,
-      "open": 4,
-      "closed": 4,
-      "published": 8,
-      "updated": "2026-05-12"
-    },
-    "pt2030-other": {
-      "count": 25,
-      "open": 18,
-      "closed": 5,
-      "planned": 2,
-      "published": 25
-    },
-    "pt2030-pessoas": {
-      "count": 8,
+      "count": 7,
       "open": 4,
       "closed": 3,
-      "published": 8,
-      "planned": 1,
+      "published": 7,
+      "updated": "2026-05-12",
+      "planned": 0
+    },
+    "pt2030-other": {
+      "count": 26,
+      "open": 19,
+      "closed": 5,
+      "planned": 2,
+      "published": 26
+    },
+    "pt2030-pessoas": {
+      "count": 4,
+      "open": 1,
+      "closed": 3,
+      "published": 4,
+      "planned": 0,
       "updated": "2026-05-12"
     }
   },

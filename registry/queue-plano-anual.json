@@ -45,7 +45,7 @@
       "notes": "FA0876/2024. NORTE2030. FEDER. Concurso. Beneficiarios privados (micro e pequenas empresas). Co-financiamento 60%. Pagina ainda mostra apenas previsao - sem regulamento publicado (verificado 2026-04-26).",
       "download_error": "Plano Anual - pagina mostra apenas previsao, sem aviso formal publicado (verificado 2026-04-26)",
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 5,
+      "plano_anual_checks": 6,
       "programa": [
         "NORTE2030"
       ],
@@ -53,7 +53,9 @@
         "norte-2030"
       ],
       "programa_code": "NORTE2030",
-      "codigo_api": "FA0876/2024"
+      "codigo_api": "FA0876/2024",
+      "cross_portal_attempted": "2026-05-12",
+      "cross_portal_result": "no_destination_api"
     },
     {
       "id": "execucao-da-edl-do-gal-costeiro-do-barlavento-do-algarve-destinado-a-v",
@@ -172,14 +174,16 @@
       "status": "plano_anual",
       "notes": "Plano Anual de Avisos - aviso nao publicado formalmente. Regulamento era documento PAA.",
       "download_error": "Plano Anual - ficheiro txt continha \"Resumo de Aviso do Plano Anual de Avisos\"",
-      "plano_anual_last_check": "2026-04-28",
-      "plano_anual_checks": 1,
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 2,
       "programa": [
         "NORTE2030"
       ],
       "regional_portals": [
         "norte-2030"
-      ]
+      ],
+      "cross_portal_attempted": "2026-05-12",
+      "cross_portal_result": "no_match_in_norte_2030"
     },
     {
       "id": "educacao-intercultural-em-contexto-escolar",
@@ -342,8 +346,8 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: COMPETE2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual detected during download (marker: 'plano anual de avisos')",
-      "plano_anual_last_check": "2026-05-11",
-      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 3,
       "plano_anual_notes": [
         "2026-05-05: API metadata complete - API: pdf=252635, df=20000000, data_fim=2026-06-30. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run."
       ],
@@ -355,7 +359,9 @@
         "compete-2030"
       ],
       "programa_code": "COMPETE2030",
-      "codigo_api": "FA0315/2025"
+      "codigo_api": "FA0315/2025",
+      "cross_portal_attempted": "2026-05-12",
+      "cross_portal_result": "no_destination_api"
     },
     {
       "id": "apoio-a-infraestruturas-de-base-tecnologica-regulamento-step",
@@ -665,8 +671,8 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual detected during download (marker: 'plano anual de avisos')",
-      "plano_anual_last_check": "2026-05-11",
-      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 3,
       "plano_anual_notes": [
         "2026-05-05: API metadata complete - API: pdf=252756, df=5500000, data_fim=2026-05-29. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run."
       ],
@@ -678,7 +684,9 @@
         "sustentavel-2030"
       ],
       "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0261/2025"
+      "codigo_api": "FA0261/2025",
+      "cross_portal_attempted": "2026-05-12",
+      "cross_portal_result": "no_destination_api"
     },
     {
       "id": "intervencoes-de-gestao-conservacao-reflorestacao-e-ordenamento-da-flor",
@@ -1101,10 +1109,12 @@
       "regional_portals": [
         "compete-2030"
       ],
-      "plano_anual_last_check": "2026-05-11",
-      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 3,
       "programa_code": "COMPETE2030",
-      "codigo_api": "FA0104/2025"
+      "codigo_api": "FA0104/2025",
+      "cross_portal_attempted": "2026-05-12",
+      "cross_portal_result": "no_destination_api"
     },
     {
       "id": "inovcontacto",
@@ -1157,10 +1167,12 @@
       "regional_portals": [
         "compete-2030"
       ],
-      "plano_anual_last_check": "2026-05-11",
-      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 3,
       "programa_code": "COMPETE2030",
-      "codigo_api": "FA0105/2025"
+      "codigo_api": "FA0105/2025",
+      "cross_portal_attempted": "2026-05-12",
+      "cross_portal_result": "no_destination_api"
     },
     {
       "id": "pepac-missoes",
@@ -1421,7 +1433,10 @@
         "pessoas-2030"
       ],
       "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0034/2025"
+      "codigo_api": "FA0034/2025",
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 1,
+      "plano_anual_status": "not_found_in_api"
     },
     {
       "id": "cursos-cef-escolas-publicas-2026-2027",
@@ -1656,7 +1671,9 @@
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: FAMI2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
       "programa": [],
-      "regional_portals": []
+      "regional_portals": [],
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 1
     },
     {
       "id": "assistencia-tecnica-organismo-intermedio-da-regiao-autonoma-da-madeira",
@@ -1682,7 +1699,10 @@
         "sustentavel-2030"
       ],
       "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0289/2025"
+      "codigo_api": "FA0289/2025",
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 1,
+      "plano_anual_status": "not_found_in_api"
     },
     {
       "id": "estudos-e-avaliacoes-do-plano-global-de-avaliacao-do-portugal-2030-202",
@@ -1743,11 +1763,13 @@
       "regional_portals": [
         "sustentavel-2030"
       ],
-      "plano_anual_last_check": "2026-05-11",
-      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 3,
       "plano_anual_note": "Monitor 2026-05-08: API portugal-2030 retorna acf.pdf valido. Downloader deve correr TESTE A para confirmar/promover.",
       "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0286/2025"
+      "codigo_api": "FA0286/2025",
+      "cross_portal_attempted": "2026-05-12",
+      "cross_portal_result": "no_destination_api"
     },
     {
       "id": "digitalizacao-espacos-cidadao-iti-algarve",
@@ -3461,7 +3483,9 @@
       "priority_score": 530,
       "status": "pending",
       "notes": "Natureza: Concurso. Programa: ALGARVE2030,COMPETE2030. State: aberto.",
-      "paa_status": "planejado"
+      "paa_status": "planejado",
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 1
     },
     {
       "id": "step-inovacao-produtiva-digital-e-biotecnologia",
@@ -3490,7 +3514,9 @@
       "priority_score": 530,
       "status": "pending",
       "notes": "Natureza: Concurso. Programa: ALGARVE2030,COMPETE2030. State: aberto.",
-      "paa_status": "planejado"
+      "paa_status": "planejado",
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 1
     },
     {
       "id": "valorizacao-economica-conhecimento-empresas-acores",
@@ -3513,12 +3539,14 @@
       "priority_score": 510,
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 1,
+      "plano_anual_checks": 2,
       "plano_anual_source_post": 15483,
       "plano_anual_portal": "https://acores.portugal2030.pt",
       "fallback_tried": [
         "2b-acf-all"
-      ]
+      ],
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_status": "not_found_in_api"
     },
     {
       "id": "idt-economia-hipocarbonica-adaptacao-climatica-acores",
@@ -3541,12 +3569,14 @@
       "priority_score": 510,
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 1,
+      "plano_anual_checks": 2,
       "plano_anual_source_post": 15481,
       "plano_anual_portal": "https://acores.portugal2030.pt",
       "fallback_tried": [
         "2b-acf-all"
-      ]
+      ],
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_status": "not_found_in_api"
     },
     {
       "id": "protecao-civil-gestao-riscos-2-aviso-acores",
@@ -3569,12 +3599,14 @@
       "priority_score": 510,
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 1,
+      "plano_anual_checks": 2,
       "plano_anual_source_post": 15501,
       "plano_anual_portal": "https://acores.portugal2030.pt",
       "fallback_tried": [
         "2b-acf-all"
-      ]
+      ],
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_status": "not_found_in_api"
     },
     {
       "id": "ciclo-agua-reutilizacao-resiliencia-2-aviso-acores",
@@ -3597,12 +3629,14 @@
       "priority_score": 510,
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 1,
+      "plano_anual_checks": 2,
       "plano_anual_source_post": 15509,
       "plano_anual_portal": "https://acores.portugal2030.pt",
       "fallback_tried": [
         "2b-acf-all"
-      ]
+      ],
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_status": "not_found_in_api"
     },
     {
       "id": "eficiencia-energetica-na-administracao-publica-central",
