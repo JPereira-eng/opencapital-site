@@ -15,11 +15,11 @@
     "open": 408,
     "closed": 162,
     "planned": 83,
-    "in_queue": 169,
-    "in_watchlist": 138,
+    "in_queue": 176,
+    "in_watchlist": 119,
     "in_catalogo": 0,
     "in_overflow": 285,
-    "in_plano_anual": 138
+    "in_plano_anual": 119
   },
   "shards": {
     "catalogo-aceleradores": {
@@ -90,7 +90,8 @@
       "count": 41,
       "open": 35,
       "closed": 6,
-      "published": 41
+      "published": 41,
+      "updated": "2026-05-12"
     },
     "pt2030-central": {
       "count": 0,
@@ -107,7 +108,8 @@
       "open": 12,
       "closed": 2,
       "planned": 2,
-      "published": 16
+      "published": 16,
+      "updated": "2026-05-12"
     },
     "pt2030-lisboa": {
       "count": 4,
@@ -145,7 +147,7 @@
     "portugal-2030": "2026-05-12",
     "compete-2030": "2026-05-10",
     "norte-2030": "2026-05-10",
-    "centro-2030": "2026-05-10",
+    "centro-2030": "2026-05-12",
     "lisboa-2030": "2026-05-10",
     "alentejo-2030": "2026-05-12",
     "algarve-2030": "2026-05-12",

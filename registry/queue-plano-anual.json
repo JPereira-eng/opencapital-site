@@ -690,74 +690,6 @@
       "codigo_api": "FA0932/2024"
     },
     {
-      "id": "eficiencia-energetica-na-administracao-publica-central",
-      "name": "Eficiência Energética na Administração Pública Central",
-      "source_id": "sustentavel-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0260/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2027-03-31",
-      "budget": 40000000,
-      "regulation_url": "https://portugal2030.pt/aviso-2024/eficiencia-energetica-na-administracao-publica-central/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 530,
-      "status": "plano_anual",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
-      "programa": [
-        "SUSTENTAVEL2030"
-      ],
-      "regional_portals": [
-        "sustentavel-2030"
-      ],
-      "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 3,
-      "plano_anual_note": "Monitor 2026-05-08: API portugal-2030 retorna acf.pdf valido. Downloader deve correr TESTE A para confirmar/promover.",
-      "codigo": "FA0260/2025",
-      "data_inicio": "2026-04-01",
-      "data_fim": "2027-03-31",
-      "budget_eur": 40000000.0,
-      "state": "aberto",
-      "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0260/2025"
-    },
-    {
-      "id": "infraestruturas-de-valorizacao-de-residuos-urbanos-em-alta-ru",
-      "name": "Infraestruturas de valorização de Resíduos Urbanos em alta (RU)",
-      "source_id": "sustentavel-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0281/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2027-02-26",
-      "budget": 60000000,
-      "regulation_url": "https://portugal2030.pt/aviso-2024/infraestruturas-de-valorizacao-de-residuos-urbanos-em-alta-ru/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 530,
-      "status": "plano_anual",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
-      "programa": [
-        "SUSTENTAVEL2030"
-      ],
-      "regional_portals": [
-        "sustentavel-2030"
-      ],
-      "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 3,
-      "plano_anual_note": "Monitor 2026-05-08: API portugal-2030 retorna acf.pdf valido. Downloader deve correr TESTE A para confirmar/promover.",
-      "codigo": "FA0281/2025",
-      "data_inicio": "2026-03-02",
-      "data_fim": "2027-02-26",
-      "budget_eur": 60000000.0,
-      "state": "aberto",
-      "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0281/2025"
-    },
-    {
       "id": "gestao-de-residuos-urbanos-acoes-imateriais",
       "name": "Gestão de Resíduos Urbanos - ações imateriais",
       "source_id": "sustentavel-2030",
@@ -1358,32 +1290,6 @@
       "codigo_api": "FA0239/2025"
     },
     {
-      "id": "modelo-apoio-vida-independente-mavi",
-      "name": "Modelo de Apoio à Vida Independente (MAVI)",
-      "source_id": "algarve-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0311/2025",
-      "detected_date": "2026-04-24",
-      "deadline": "2027-01-29",
-      "budget": 2400000,
-      "regulation_url": "https://portugal2030.pt/aviso-2024/modelo-de-apoio-a-vida-independente-mavi-2/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 510,
-      "status": "plano_anual",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALGARVE2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
-      "programa": [
-        "ALGARVE2030"
-      ],
-      "regional_portals": [
-        "algarve-2030"
-      ],
-      "programa_code": "ALGARVE2030",
-      "codigo_api": "FA0311/2025"
-    },
-    {
       "id": "servicos-de-psicologia-e-orientacao",
       "name": "Serviços de Psicologia e Orientação",
       "source_id": "pessoas-2030",
@@ -1410,32 +1316,6 @@
       "codigo_api": "FA0223/2025",
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_checks": 1
-    },
-    {
-      "id": "centros-qualifica-algarve",
-      "name": "Centros especializados de qualificação de adultos e processos RVCC (Centros Qualifica)",
-      "source_id": "algarve-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0307/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-12-30",
-      "budget": 2400000,
-      "regulation_url": "https://portugal2030.pt/aviso-2024/centros-especializados-de-qualificacao-de-adultos-e-processos-rvcc-centros-qualifica/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 510,
-      "status": "plano_anual",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALGARVE2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
-      "programa": [
-        "ALGARVE2030"
-      ],
-      "regional_portals": [
-        "algarve-2030"
-      ],
-      "programa_code": "ALGARVE2030",
-      "codigo_api": "FA0307/2025"
     },
     {
       "id": "formacao-avancada",
@@ -1469,49 +1349,6 @@
       "codigo_api": "FA0218/2025"
     },
     {
-      "id": "bolsas-de-ensino-superior-para-alunos-carenciados-ano-letivo-2026-2027",
-      "name": "Bolsas de ensino superior para alunos carenciados – ano letivo 2026/2027",
-      "source_id": "pessoas-2030",
-      "shard": "pt2030-pessoas",
-      "aviso_codigo": "FA0217/2025",
-      "detected_date": "2026-05-11",
-      "deadline": "2026-08-31",
-      "budget": 110000000,
-      "regulation_url": 252974,
-      "pdf_url": 252974,
-      "regulation_local": null,
-      "priority_score": 530,
-      "status": "plano_anual",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Convite. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
-      "programa": [
-        "PESSOAS2030"
-      ],
-      "regional_portals": [
-        "pessoas-2030"
-      ],
-      "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 3,
-      "plano_anual_status": "placeholder",
-      "data_inicio_api": "2026-05-04",
-      "data_fim_api": "2026-08-31",
-      "codigo": "FA0217/2025",
-      "data_inicio": "2026-05-04",
-      "data_fim": "2026-08-31",
-      "budget_eur": 110000000.0,
-      "state": "aberto",
-      "fail_count": 2,
-      "last_fail_date": "2026-05-12",
-      "fallback_tried": [
-        "api-fetch",
-        "api-fetch"
-      ],
-      "plano_anual_detected_date": "2026-05-12",
-      "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0217/2025"
-    },
-    {
       "id": "apoio-tecnico-e-financeiro-a-organizacoes-da-sociedade-civil-que-atuam",
       "name": "Apoio técnico e financeiro a organizações da sociedade civil que atuam na área da igualdade e não discriminação",
       "source_id": "pessoas-2030",
@@ -1540,32 +1377,6 @@
       ],
       "programa_code": "PESSOAS2030",
       "codigo_api": "FA0226/2025"
-    },
-    {
-      "id": "acoes-de-sensibilizacao-e-campanhas",
-      "name": "Ações de sensibilização e campanhas",
-      "source_id": "pessoas-2030",
-      "shard": "pt2030-pessoas",
-      "aviso_codigo": "FA0227/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-12-31",
-      "budget": 1650000,
-      "regulation_url": "https://portugal2030.pt/aviso-2024/acoes-de-sensibilizacao-e-campanhas/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 510,
-      "status": "plano_anual",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
-      "programa": [
-        "PESSOAS2030"
-      ],
-      "regional_portals": [
-        "pessoas-2030"
-      ],
-      "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0227/2025"
     },
     {
       "id": "formacao-publicos-estrategicos-xenofobia-discriminacao",
@@ -1648,32 +1459,6 @@
       "plano_anual_note": "API empty - URL na watchlist aponta para escolas-publicas mas item id tem escolas-privadas; verificar slug",
       "programa_code": "PESSOAS2030",
       "codigo_api": "FA0141/2025"
-    },
-    {
-      "id": "capacitacao-atores-redes-iti-agua-alentejo",
-      "name": "Capacitação de Atores e Redes - ITI Água e Ecossistemas de Paisagem",
-      "source_id": "alentejo-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0175/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-09-30",
-      "budget": 1100000,
-      "regulation_url": "https://portugal2030.pt/aviso-2024/capacitacao-de-atores-e-redes-iti-agua-e-ecossistemas-de-paisagem/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 510,
-      "status": "plano_anual",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
-      "programa": [
-        "ALENTEJO2030"
-      ],
-      "regional_portals": [
-        "alentejo-2030"
-      ],
-      "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0175/2025"
     },
     {
       "id": "refuncionalizacao-espacos-coletivos-alentejo",
@@ -1780,32 +1565,6 @@
       "codigo_api": "FA0278/2025"
     },
     {
-      "id": "centros-nacionais-de-apoio-a-integracao-de-migrantes-cnaim-mediacao-na",
-      "name": "Centros Nacionais de Apoio à Integração de Migrantes (CNAIM) - Mediação nas lojas AIMA",
-      "source_id": "pessoas-2030",
-      "shard": "pt2030-pessoas",
-      "aviso_codigo": "FA0228/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-12-31",
-      "budget": 3500000,
-      "regulation_url": "https://portugal2030.pt/aviso-2024/centros-nacionais-de-apoio-a-integracao-de-migrantes-cnaim-mediacao-nas-lojas-aima/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 510,
-      "status": "plano_anual",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Convite. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
-      "programa": [
-        "PESSOAS2030"
-      ],
-      "regional_portals": [
-        "pessoas-2030"
-      ],
-      "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0228/2025"
-    },
-    {
       "id": "participacao-individual-formacao-ftj-alentejo",
       "name": "Participação individual na formação (FTJ)",
       "source_id": "alentejo-2030",
@@ -1830,32 +1589,6 @@
       ],
       "programa_code": "ALENTEJO2030",
       "codigo_api": "FA0233/2025"
-    },
-    {
-      "id": "intervencao-integrada-de-base-territorial-do-pinhal-interior-iibt-alde",
-      "name": "Intervenção Integrada de Base Territorial do Pinhal Interior (IIBT) - Aldeias do Pinhal",
-      "source_id": "centro-2030",
-      "shard": "pt2030-centro",
-      "aviso_codigo": "FA0237/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-12-30",
-      "budget": 4500000,
-      "regulation_url": "https://portugal2030.pt/aviso-2024/intervencao-integrada-de-base-territorial-do-pinhal-interior-iibt-aldeias-do-pinhal/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 510,
-      "status": "plano_anual",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: CENTRO2030. Natureza: Convite. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
-      "programa": [
-        "CENTRO2030"
-      ],
-      "regional_portals": [
-        "centro-2030"
-      ],
-      "programa_code": "CENTRO2030",
-      "codigo_api": "FA0237/2025"
     },
     {
       "id": "respostas-locais-desafios-territoriais-iti-agua-alentejo",
@@ -2288,37 +2021,6 @@
       "codigo_api": "FA0309/2025"
     },
     {
-      "id": "desenvolver-sistemas-redes-e-formas-de-armazenamento-energeticos-intel",
-      "name": "Desenvolver sistemas, redes e formas de armazenamento energéticos inteligentes fora da RTE-E",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-central",
-      "aviso_codigo": "FA0002/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-09-30",
-      "budget": 15000000,
-      "regulation_url": "https://portugal2030.pt/aviso-2024/desenvolver-sistemas-redes-e-formas-de-armazenamento-energeticos-inteligentes-fora-da-rte-e/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 530,
-      "status": "plano_anual",
-      "fail_count": 0,
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: . Natureza: Concurso. Doc: L1:pdf. | Promovido do plano_anual em 2026-05-09 - aviso publicado.",
-      "programa": null,
-      "regional_portals": null,
-      "promoted_from_paa": "2026-05-09",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
-      "plano_anual_detected_date": "2026-05-09",
-      "plano_anual_checks": 4,
-      "plano_anual_last_check": "2026-05-12",
-      "plano_anual_status": "slug_not_found",
-      "plano_anual_note": "API empty response - slug pode ter sido alterado",
-      "codigo": "FA0002/2025",
-      "data_inicio": "2026-05-01",
-      "data_fim": "2026-09-30",
-      "budget_eur": 15000000.0,
-      "state": "aberto"
-    },
-    {
       "id": "rede-ferroviaria-das-areas-metropolitanas-mobilidade-urbana-sustentave",
       "name": "Rede ferroviária das Áreas Metropolitanas - Mobilidade urbana sustentável na Área Metropolitana de Lisboa",
       "source_id": "sustentavel-2030",
@@ -2543,70 +2245,6 @@
       "codigo_api": "FA0234/2025"
     },
     {
-      "id": "cursos-profissionais-ano-letivo-2026-2027-escolas-privadas-e-outras",
-      "name": "Cursos profissionais - ano letivo 2026/2027 - Escolas Privadas e outras",
-      "source_id": "pessoas-2030",
-      "shard": "pt2030-pessoas",
-      "aviso_codigo": "FA0140/2025",
-      "detected_date": "2026-04-17",
-      "data_inicio": "2026-05-04",
-      "deadline": "2026-08-31",
-      "budget": "230000000 EUR",
-      "regulation_url": "https://portugal2030.pt/aviso-2024/cursos-profissionais-ano-letivo-2026-2027-escolas-privadas-e-outras/",
-      "pdf_url": "https://portugal2030.pt/wp-json/wp/v2/media/252932",
-      "regulation_local": null,
-      "priority_score": 530,
-      "status": "plano_anual",
-      "notes": "Detetado como PAA pelo downloader em 2026-05-11. Pagina contem 'previsao aproximada' e 'plano anual de avisos'.",
-      "fail_count": 0,
-      "programa": [
-        "PESSOAS2030"
-      ],
-      "regional_portals": [
-        "pessoas-2030"
-      ],
-      "download_error": "PAA detectado no PDF descarregado (Teste A)",
-      "plano_anual_detected_date": "2026-05-11",
-      "plano_anual_checks": 3,
-      "plano_anual_last_check": "2026-05-12",
-      "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0140/2025"
-    },
-    {
-      "id": "protecao-civil-e-gestao-integrada-de-riscos-prevencao-e-mitigacao-de-r",
-      "name": "Proteção civil e gestão integrada de riscos – Prevenção e mitigação  de riscos associados a derrocada de taludes ou para suporte de terras – 3º aviso",
-      "codigo": "FA0036/2025",
-      "aviso_codigo": "FA0036/2025",
-      "source_id": "sustentavel-2030",
-      "shard": "pt2030-other",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-04-01",
-      "data_fim": "2026-07-31",
-      "deadline": "2026-07-31",
-      "budget_eur": 16500000.0,
-      "regulation_url": 252760,
-      "pdf_url": 252760,
-      "regulation_local": null,
-      "status": "plano_anual",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 540,
-      "download_error": "Plano Anual detected during download (marker: 'plano anual de avisos')",
-      "plano_anual_detected_date": "2026-05-11",
-      "plano_anual_checks": 4,
-      "plano_anual_last_check": "2026-05-12",
-      "cross_portal_attempts": [
-        {
-          "date": "2026-05-12",
-          "portal_tried": "pessoas-2030",
-          "best_similarity": null,
-          "result": "no match >= 0.85"
-        }
-      ],
-      "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0036/2025"
-    },
-    {
       "id": "siid-id-empresarial-individuais-copromocao",
       "name": "SIID – I&D Empresarial – Operações Individuais e em Copromoção",
       "codigo": "FA0069/2025",
@@ -2657,134 +2295,6 @@
       "codigo_api": "FA0298/2025"
     },
     {
-      "id": "programa-de-seguranca-ferroviaria-supressao-de-pns",
-      "name": "Programa de Segurança Ferroviária – Supressão de PNs",
-      "codigo": "FA0156/2025",
-      "aviso_codigo": "FA0156/2025",
-      "source_id": "sustentavel-2030",
-      "shard": "pt2030-other",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-05-04",
-      "data_fim": "2026-07-31",
-      "deadline": "2026-07-31",
-      "budget_eur": 413795672.0,
-      "regulation_url": 252816,
-      "pdf_url": 252816,
-      "regulation_local": null,
-      "status": "plano_anual",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 540,
-      "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
-      "plano_anual_detected_date": "2026-05-11",
-      "plano_anual_checks": 3,
-      "plano_anual_last_check": "2026-05-12",
-      "cross_portal_attempts": [
-        {
-          "date": "2026-05-12",
-          "portal_tried": "pessoas-2030",
-          "best_similarity": null,
-          "result": "no match >= 0.85"
-        }
-      ],
-      "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0156/2025"
-    },
-    {
-      "id": "parcerias-inovacao-social-algarve",
-      "name": "Parcerias para a Inovação Social",
-      "codigo": "FA0290/2025",
-      "aviso_codigo": "FA0290/2025",
-      "source_id": "algarve-2030",
-      "shard": "pt2030-other",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-03-23",
-      "data_fim": "2026-05-29",
-      "deadline": "2026-05-29",
-      "budget_eur": 1500000.0,
-      "regulation_url": 252920,
-      "pdf_url": 252920,
-      "regulation_local": null,
-      "status": "plano_anual",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 540,
-      "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
-      "plano_anual_detected_date": "2026-05-11",
-      "plano_anual_checks": 3,
-      "plano_anual_last_check": "2026-05-12",
-      "cross_portal_attempts": [
-        {
-          "date": "2026-05-12",
-          "portal_tried": "pessoas-2030",
-          "best_similarity": null,
-          "result": "no match >= 0.85"
-        }
-      ],
-      "programa_code": "ALGARVE2030",
-      "codigo_api": "FA0290/2025"
-    },
-    {
-      "id": "acoes-inovadoras-desafio-demografico-parcerias-coesao-alentejo",
-      "name": "Ações inovadoras para responder ao desafio demográfico- Parcerias para a Coesão Não Urbanas",
-      "codigo": "FA0177/2025",
-      "aviso_codigo": "FA0177/2025",
-      "source_id": "alentejo-2030",
-      "shard": "pt2030-other",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-03-02",
-      "data_fim": "2026-05-15",
-      "deadline": "2026-05-15",
-      "budget_eur": 1270000.0,
-      "regulation_url": 252998,
-      "pdf_url": 252998,
-      "regulation_local": null,
-      "status": "plano_anual",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 540,
-      "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
-      "plano_anual_detected_date": "2026-05-11",
-      "plano_anual_checks": 3,
-      "plano_anual_last_check": "2026-05-12",
-      "cross_portal_attempts": [
-        {
-          "date": "2026-05-12",
-          "portal_tried": "pessoas-2030",
-          "best_similarity": null,
-          "result": "no match >= 0.85"
-        }
-      ],
-      "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0177/2025"
-    },
-    {
-      "id": "capacitacao-atores-redes-parcerias-coesao-nao-urbanas-alentejo",
-      "name": "Capacitação de atores e redes – Parcerias para a Coesão Não Urbanas",
-      "codigo": "FA0190/2025",
-      "aviso_codigo": "FA0190/2025",
-      "source_id": "alentejo-2030",
-      "shard": "pt2030-other",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-03-20",
-      "data_fim": "2026-05-29",
-      "deadline": "2026-05-29",
-      "budget_eur": 2000000.0,
-      "regulation_url": 253000,
-      "pdf_url": 253000,
-      "regulation_local": null,
-      "status": "plano_anual",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 540,
-      "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
-      "plano_anual_detected_date": "2026-05-11",
-      "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-05-12",
-      "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0190/2025"
-    },
-    {
       "id": "sistema-de-incentivos-de-base-territorial-it-amp",
       "name": "Sistema de Incentivos de base territorial",
       "source_id": "alentejo-2030",
@@ -2821,32 +2331,6 @@
       "plano_anual_detected_date": "2026-05-11",
       "programa_code": "ALENTEJO2030",
       "codigo_api": "FA0147/2025"
-    },
-    {
-      "id": "medidas-de-adaptacao-as-alteracoes-climaticas-4-aviso",
-      "name": "Medidas de adaptação às alterações Climáticas – 4.º Aviso",
-      "codigo": "FA0262/2025",
-      "aviso_codigo": "FA0262/2025",
-      "source_id": "sustentavel-2030",
-      "shard": "pt2030-other",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-03-02",
-      "data_fim": "2026-06-30",
-      "deadline": "2026-06-30",
-      "budget_eur": 2500000.0,
-      "regulation_url": 252754,
-      "pdf_url": 252754,
-      "regulation_local": null,
-      "status": "plano_anual",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 530,
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
-      "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-05-12",
-      "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0262/2025"
     },
     {
       "id": "sibt-alentejo-2026",
@@ -3348,29 +2832,6 @@
       "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FEDER. Detetado via portugal-2030 (scan_destination=watchlist)."
     },
     {
-      "id": "centros-locais-de-apoio-a-integracao-de-migrantes-claim",
-      "name": "Centros Locais de Apoio à Integração de Migrantes (CLAIM)",
-      "codigo": "FA0321/2025",
-      "aviso_codigo": "FA0321/2025",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-central",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-05-04",
-      "data_fim": "2026-08-31",
-      "deadline": "2026-08-31",
-      "budget_eur": 395062433.0,
-      "regulation_url": 253032,
-      "pdf_url": 253032,
-      "regulation_local": null,
-      "status": "plano_anual",
-      "state": "aberto",
-      "priority_score": 530,
-      "download_error": "Plano Anual - PDF descarregado e Resumo do PAA, nao aviso publicado",
-      "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1
-    },
-    {
       "id": "apoio-a-infraestruturas-de-base-tecnologica-da-regiao-do-medio-tejo-ft",
       "name": "Apoio a Infraestruturas de Base Tecnológica da Região do Médio Tejo (FTJ)",
       "source_id": "centro-2030",
@@ -3553,9 +3014,11 @@
       "download_error": "Plano Anual - PDF descarregado e Resumo do PAA, nao aviso publicado",
       "plano_anual_detected_date": "2026-05-12",
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1,
+      "plano_anual_checks": 2,
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0306/2025"
+      "codigo_api": "FA0306/2025",
+      "needs_review": true,
+      "review_reason": "codigo MISMATCH: watchlist tem FA0290/2025 (pertence a ALGARVE2030); aviso ALENTEJO2030 real e FA0306/2025. Needs_review."
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-ram-iii",
@@ -3684,7 +3147,7 @@
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1,
+      "plano_anual_checks": 2,
       "plano_anual_notes": [
         "2026-05-05: API metadata complete - API: pdf=252926, df=900000, data_fim=2026-05-20. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run."
       ],
@@ -3707,7 +3170,9 @@
       },
       "plano_anual_detected_date": "2026-05-12",
       "programa_code": "ALGARVE2030",
-      "codigo_api": "FA0290/2025"
+      "codigo_api": "FA0290/2025",
+      "needs_review": true,
+      "review_reason": "codigo MISMATCH: watchlist tem FA0290/2025 (pertence a ALGARVE2030); aviso ALENTEJO2030 real e FA0306/2025. Needs_review."
     },
     {
       "id": "formacoes-modulares-certificadas-pessoas2030",
@@ -3819,7 +3284,7 @@
       ],
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 2,
+      "plano_anual_checks": 3,
       "plano_anual_last_check": "2026-05-12",
       "codigo": "FA0307/2025",
       "cross_portal_match": {
@@ -3831,7 +3296,9 @@
         "matched_at": "2026-05-11"
       },
       "programa_code": "ALGARVE2030",
-      "codigo_api": "FA0307/2025"
+      "codigo_api": "FA0307/2025",
+      "needs_review": true,
+      "review_reason": "Duplicado de centros-qualifica-algarve (mesma codigo FA0307/2025, ja promovido a queue)."
     },
     {
       "id": "tratamento-em-estacoes-de-tratamento-de-aguas-residuais-etar-para-prod",
@@ -3871,38 +3338,6 @@
       "priority_score": 500,
       "plano_anual_checks": 0,
       "notes": "Re-adicionado à watchlist em 2026-05-12 após depublicação por suspeita PAA (sem regulamento técnico real). Aguarda detecção de regulamento real pelo monitor (PASSO 2.6 ou 2.7)."
-    },
-    {
-      "id": "sibt-iti-iibt-ovt-centro",
-      "name": "Sistema de Incentivos de Base Territorial  – projetos enquadrados na ITI IIBT OVT",
-      "codigo": "FA0212/2025",
-      "aviso_codigo": "FA0212/2025",
-      "source_id": "centro-2030",
-      "shard": "pt2030-centro",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-04-17",
-      "data_fim": "2026-07-17",
-      "deadline": "2026-07-17",
-      "budget_eur": 2000000.0,
-      "regulation_url": 252629,
-      "pdf_url": 252629,
-      "regulation_local": null,
-      "status": "plano_anual",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 520,
-      "programa_code": "CENTRO2030",
-      "codigo_api": "FA0212/2025",
-      "fallback_tried": [
-        "2b-pdf",
-        "2b-acf-all"
-      ],
-      "wordpress_id": 17059,
-      "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
-      "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-05-12",
-      "plano_anual_status": "url_removed"
     },
     {
       "id": "acoes-promocao-destino-acores-3-aviso",
@@ -3959,132 +3394,6 @@
       "plano_anual_checks": 2,
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_status": "url_removed"
-    },
-    {
-      "id": "combate-a-privacao-material-2-aviso",
-      "name": "Combate à privação material &#8211; 2º Aviso",
-      "source_id": "acores-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0202/2025",
-      "detected_date": "2026-05-12",
-      "deadline": "20260105",
-      "budget": null,
-      "regulation_url": "https://acores.portugal2030.pt/aviso-2024/combate-a-privacao-material-2o-aviso/",
-      "pdf_url": null,
-      "priority_score": 540,
-      "status": "plano_anual",
-      "fail_count": 0,
-      "data_inicio": "20260105",
-      "human_code": "FA0202/2025",
-      "programa_code": [
-        "AÇORES2030"
-      ],
-      "cross_portal_match": {
-        "original_codigo": "FA0202/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "acores-2030",
-        "matched_codigo": "FA0202/2025",
-        "title_similarity": 1.0,
-        "code_match": true
-      },
-      "notes": "Cross-portal match via PASSO 2.7. PAA original em portugal-2030 (FA0202/2025), aviso real publicado em acores-2030 sob mesmo codigo.",
-      "download_error": "Plano Anual - confirmado via Passo 1.5 WebFetch (marcadores: previsao aproximada, aviso que ira ser lancado)",
-      "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 1,
-      "regulation_local": null
-    },
-    {
-      "id": "step-i-d-i-empresarial-digital-e-biotecnologia",
-      "name": "STEP &#8211; I&#038;D&#038;I Empresarial &#8211; Digital e Biotecnologia",
-      "source_id": "algarve-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0076/2025",
-      "detected_date": "2026-05-12",
-      "deadline": "30/09/2026",
-      "budget": null,
-      "regulation_url": "https://algarve.portugal2030.pt/aviso-2024/step-idi-empresarial-digital-e-biotecnologia/",
-      "pdf_url": null,
-      "priority_score": 540,
-      "status": "plano_anual",
-      "fail_count": 0,
-      "data_inicio": "30/01/2026",
-      "human_code": "FA0076/2025",
-      "programa_code": "",
-      "cross_portal_match": {
-        "original_codigo": "FA0076/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "algarve-2030",
-        "matched_codigo": "FA0076/2025",
-        "title_similarity": 1.0,
-        "code_match": true
-      },
-      "notes": "Cross-portal match via PASSO 2.7. PAA original em portugal-2030 (FA0076/2025), aviso real publicado em algarve-2030 sob mesmo codigo.",
-      "download_error": "Plano Anual - confirmado via Passo 1.5 WebFetch (marcadores: previsao aproximada, aviso que ira ser lancado)",
-      "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 1,
-      "regulation_local": null
-    },
-    {
-      "id": "step-inovacao-produtiva-digital-e-biotecnologia",
-      "name": "STEP &#8211; Inovação Produtiva &#8211; Digital e Biotecnologia",
-      "source_id": "algarve-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0075/2025",
-      "detected_date": "2026-05-12",
-      "deadline": "30/09/2026",
-      "budget": null,
-      "regulation_url": "https://algarve.portugal2030.pt/aviso-2024/step-inovacao-produtiva-digital-e-biotecnologia/",
-      "pdf_url": null,
-      "priority_score": 540,
-      "status": "plano_anual",
-      "fail_count": 0,
-      "data_inicio": "30/01/2026",
-      "human_code": "FA0075/2025",
-      "programa_code": "",
-      "cross_portal_match": {
-        "original_codigo": "FA0075/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "algarve-2030",
-        "matched_codigo": "FA0075/2025",
-        "title_similarity": 1.0,
-        "code_match": true
-      },
-      "notes": "Cross-portal match via PASSO 2.7. PAA original em portugal-2030 (FA0075/2025), aviso real publicado em algarve-2030 sob mesmo codigo.",
-      "download_error": "Plano Anual - confirmado via Passo 1.5 WebFetch (marcadores: previsao aproximada, aviso que ira ser lancado)",
-      "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 1,
-      "regulation_local": null
-    },
-    {
-      "id": "gestao-recursos-hidricos-acores2030",
-      "name": "Gestão de Recursos hídricos",
-      "source_id": "acores-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0583/2023",
-      "detected_date": "2026-05-12",
-      "deadline": "30/06/2026",
-      "budget": null,
-      "regulation_url": "https://acores.portugal2030.pt/aviso-2024/gestao-de-recursos-hidricos/",
-      "pdf_url": null,
-      "priority_score": 540,
-      "status": "plano_anual",
-      "fail_count": 0,
-      "data_inicio": "20260201",
-      "human_code": "FA0583/2023",
-      "programa_code": "",
-      "cross_portal_match": {
-        "original_codigo": "FA0583/2023",
-        "original_portal": "portugal-2030",
-        "matched_portal": "acores-2030",
-        "matched_codigo": "FA0583/2023",
-        "title_similarity": 1.0,
-        "code_match": true
-      },
-      "notes": "Cross-portal match via PASSO 2.7. PAA original em portugal-2030 (FA0583/2023), aviso real publicado em acores-2030 sob mesmo codigo.",
-      "download_error": "Plano Anual - confirmado via Passo 1.5 WebFetch (marcadores: previsao aproximada, aviso que ira ser lancado)",
-      "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 1,
-      "regulation_local": null
     }
   ],
   "updated": "2026-05-12"
