@@ -16,10 +16,10 @@
     "closed": 164,
     "planned": 87,
     "in_queue": 148,
-    "in_watchlist": 137,
+    "in_watchlist": 135,
     "in_catalogo": 0,
     "in_overflow": 279,
-    "in_plano_anual": 137
+    "in_plano_anual": 135
   },
   "shards": {
     "catalogo-aceleradores": {
@@ -121,7 +121,8 @@
       "open": 1,
       "closed": 1,
       "published": 2,
-      "planned": 0
+      "planned": 0,
+      "updated": "2026-05-12"
     },
     "pt2030-compete": {
       "count": 16,

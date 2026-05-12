@@ -55,7 +55,12 @@
       "programa_code": "NORTE2030",
       "codigo_api": "FA0876/2024",
       "cross_portal_attempted": "2026-05-12",
-      "cross_portal_result": "no_destination_api"
+      "cross_portal_result": "no_destination_api",
+      "last_websearch_attempt": "2026-05-12",
+      "websearch_attempts": 1,
+      "plano_anual_notes": [
+        "2026-05-12: PASSO 2.7 E4. WebSearch \"CIM Alto Minho\" - so referencias PAA, sem PDF aviso separado."
+      ]
     },
     {
       "id": "execucao-da-edl-do-gal-costeiro-do-barlavento-do-algarve-destinado-a-v",
@@ -73,13 +78,16 @@
       "status": "plano_anual",
       "notes": "FA0273/2025. MAR2030. FEAMPA.",
       "download_error": "Plano Anual - API slug nao encontrado, item provavel PAA",
-      "plano_anual_last_check": "2026-05-04",
-      "plano_anual_checks": 3,
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 4,
       "programa": [
         "MAR2030"
       ],
       "regional_portals": [
         "mar-2030"
+      ],
+      "plano_anual_notes": [
+        "2026-05-12: Confirmado PAA via portugal-2030 central API: FA0273/2025 PDF em /unnamed-file.pdf-101.octet-stream contem \"Resumo de Aviso do Plano Anual de Avisos\". Data_fim PAA 30/04/2026 ja passou - aviso devia ter aberto. Sem regulamento real publicado."
       ]
     },
     {
@@ -183,7 +191,12 @@
         "norte-2030"
       ],
       "cross_portal_attempted": "2026-05-12",
-      "cross_portal_result": "no_match_in_norte_2030"
+      "cross_portal_result": "no_match_in_norte_2030",
+      "last_websearch_attempt": "2026-05-12",
+      "websearch_attempts": 1,
+      "plano_anual_notes": [
+        "2026-05-12: PASSO 2.7 E4. WebSearch \"Tamega e Sousa\" - candidato URL norte2030.pt/storage/.../Aviso_SI_Base_Territorial_IT_Vf_Tamega_e_Sousa.pdf retorna 403 (norte2030 bloqueia bots). PDF pode existir mas nao verificavel via curl. Reverificar quando access_method=chrome."
+      ]
     },
     {
       "id": "educacao-intercultural-em-contexto-escolar",
@@ -420,7 +433,12 @@
       "plano_anual_last_check": "2026-05-11",
       "plano_anual_checks": 2,
       "programa_code": "NORTE2030",
-      "codigo_api": "FA0513/2023"
+      "codigo_api": "FA0513/2023",
+      "last_websearch_attempt": "2026-05-12",
+      "websearch_attempts": 1,
+      "plano_anual_notes": [
+        "2026-05-12: PASSO 2.7 E4. WebSearch SACCCT - so resultados PAA, sem PDF separado."
+      ]
     },
     {
       "id": "gestao-agua-recursos-hidricos-alentejo",
@@ -1114,7 +1132,12 @@
       "programa_code": "COMPETE2030",
       "codigo_api": "FA0104/2025",
       "cross_portal_attempted": "2026-05-12",
-      "cross_portal_result": "no_destination_api"
+      "cross_portal_result": "no_destination_api",
+      "last_websearch_attempt": "2026-05-12",
+      "websearch_attempts": 1,
+      "plano_anual_notes": [
+        "2026-05-12: PASSO 2.7 E4. WebSearch site:portugal2030.pt \"SIQRH\" - so PAA central, sem PDF separado."
+      ]
     },
     {
       "id": "inovcontacto",
@@ -2318,7 +2341,9 @@
       "notes": "FA0069/2025. SIID I&D Empresarial. 30M EUR FEDER. Programas: ALENTEJO, ALGARVE, COMPETE. Beneficiario: Privada. Concurso. Abertura 30/09/2026 - fecho 31/12/2026. Apoio a projetos de I&D individuais...",
       "download_error": "PAA detectado pelo writer pre-flight em 2026-05-11 (palavra-chave: plano anual de avisos)",
       "plano_anual_last_check": "2026-05-11",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 1,
+      "needs_review": true,
+      "review_reason": "Duplicado de \"siid-id-empresarial-operacoes-algarve\" (mesma aviso_codigo). Considerar remocao."
     },
     {
       "id": "formacoes-modulares-certificadas-nacional",
@@ -2406,7 +2431,9 @@
       "notes": "FA0147/2025. SIBT Alentejo. 5M EUR FEDER. Programa ALENTEJO2030. Beneficiario: Privada. Concurso. Abertura 20/03/2026 - fecho 30/09/2026. Incentivos de base territorial para PME no Alentejo.",
       "download_error": "PAA detectado pelo writer pre-flight em 2026-05-12 (palavra-chave: paa202)",
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0147/2025"
+      "codigo_api": "FA0147/2025",
+      "needs_review": true,
+      "review_reason": "Duplicado de \"sistema-de-incentivos-de-base-territorial-it-amp\" (mesma aviso_codigo). Considerar remocao."
     },
     {
       "id": "tratamento-em-estacoes-de-tratamento-de-aguas-residuais-etar-para-producao-de-ag",
@@ -2431,7 +2458,9 @@
         "sustentavel-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: SUSTENTAVEL2030. Fundo: FC. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: SUSTENTAVEL2030. Fundo: FC. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "needs_review": true,
+      "review_reason": "Duplicado de \"tratamento-em-estacoes-de-tratamento-de-aguas-residuais-etar-para-prod\" (mesma aviso_codigo). Considerar remocao."
     },
     {
       "id": "aguas-residuais-em-alta",
@@ -2531,7 +2560,9 @@
         "sustentavel-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Convite. Beneficiarios: Pública. Programa: SUSTENTAVEL2030. Fundo: FC. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Convite. Beneficiarios: Pública. Programa: SUSTENTAVEL2030. Fundo: FC. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "needs_review": true,
+      "review_reason": "Duplicado de \"linha-norte-estacao-do-oriente-terminal-tecnico\" (mesma aviso_codigo). Considerar remocao."
     },
     {
       "id": "infraestrutura-portuaria-rte-porto-de-lisboa-3-o-aviso-navegabilidade-do-estuari",
@@ -2918,7 +2949,12 @@
       },
       "plano_anual_detected_date": "2026-05-12",
       "programa_code": "CENTRO2030",
-      "codigo_api": "FA0245/2025"
+      "codigo_api": "FA0245/2025",
+      "last_websearch_attempt": "2026-05-12",
+      "websearch_attempts": 1,
+      "plano_anual_notes": [
+        "2026-05-12: PASSO 2.7 E4. WebSearch Medio Tejo FTJ - so resultados PAA aggregate, sem PDF aviso separado."
+      ]
     },
     {
       "id": "distribuicao-indireta-de-generos-alimentares-cartao-eletronico",
@@ -3267,7 +3303,9 @@
       },
       "plano_anual_detected_date": "2026-05-12",
       "programa_code": "MADEIRA2030",
-      "codigo_api": "FA0097/2025"
+      "codigo_api": "FA0097/2025",
+      "needs_review": true,
+      "review_reason": "Duplicado de \"formacoes-modulares-certificadas\" (mesma aviso_codigo). Considerar remocao."
     },
     {
       "id": "modelo-de-apoio-a-vida-independente-mavi",
@@ -3455,68 +3493,6 @@
       "plano_anual_checks": 2,
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_status": "url_removed"
-    },
-    {
-      "id": "step-i-d-i-empresarial-digital-e-biotecnologia",
-      "name": "STEP – I&D&I Empresarial – Digital e Biotecnologia",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-central",
-      "aviso_codigo": "FA0076/2025",
-      "codigo_api": "FA0076/2025",
-      "programa": [
-        "ALGARVE2030",
-        "COMPETE2030"
-      ],
-      "programa_code": "ALGARVE2030",
-      "regional_portals": [
-        "algarve-2030",
-        "compete-2030"
-      ],
-      "detected_date": "2026-05-12",
-      "deadline": "2026-09-30",
-      "data_inicio": "2026-01-30",
-      "state": "aberto",
-      "budget": 210000000,
-      "regulation_url": "https://portugal2030.pt/aviso-2024/step-idi-empresarial-digital-e-biotecnologia/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 530,
-      "status": "pending",
-      "notes": "Natureza: Concurso. Programa: ALGARVE2030,COMPETE2030. State: aberto.",
-      "paa_status": "planejado",
-      "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1
-    },
-    {
-      "id": "step-inovacao-produtiva-digital-e-biotecnologia",
-      "name": "STEP – Inovação Produtiva – Digital e Biotecnologia",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-central",
-      "aviso_codigo": "FA0075/2025",
-      "codigo_api": "FA0075/2025",
-      "programa": [
-        "ALGARVE2030",
-        "COMPETE2030"
-      ],
-      "programa_code": "ALGARVE2030",
-      "regional_portals": [
-        "algarve-2030",
-        "compete-2030"
-      ],
-      "detected_date": "2026-05-12",
-      "deadline": "2026-09-30",
-      "data_inicio": "2026-01-30",
-      "state": "aberto",
-      "budget": 401000000,
-      "regulation_url": "https://portugal2030.pt/aviso-2024/step-inovacao-produtiva-digital-e-biotecnologia/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 530,
-      "status": "pending",
-      "notes": "Natureza: Concurso. Programa: ALGARVE2030,COMPETE2030. State: aberto.",
-      "paa_status": "planejado",
-      "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1
     },
     {
       "id": "valorizacao-economica-conhecimento-empresas-acores",
@@ -3737,8 +3713,11 @@
       "promoted_date": "2026-05-12",
       "priority_score": 540,
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 0,
-      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real."
+      "plano_anual_checks": 1,
+      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real.",
+      "plano_anual_notes": [
+        "2026-05-12: Sustentavel-2030 API nao tem FA0036/2025 (usa codigos PACS-YYYY-NN). Item permanece PAA. Necessario cross-portal match por titulo."
+      ]
     },
     {
       "id": "programa-de-seguranca-ferroviaria-supressao-de-pns",
@@ -3754,8 +3733,11 @@
       "promoted_date": "2026-05-12",
       "priority_score": 540,
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 0,
-      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real."
+      "plano_anual_checks": 1,
+      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real.",
+      "plano_anual_notes": [
+        "2026-05-12: Sustentavel-2030 API nao tem FA0156/2025 (usa codigos PACS-YYYY-NN). Item permanece PAA. Necessario cross-portal match por titulo."
+      ]
     },
     {
       "id": "parcerias-inovacao-social-algarve",
@@ -3771,8 +3753,13 @@
       "promoted_date": "2026-05-12",
       "priority_score": 540,
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 0,
-      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real."
+      "plano_anual_checks": 1,
+      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real.",
+      "plano_anual_notes": [
+        "2026-05-12: Confirmado PAA via algarve-2030 API: FA0290/2025 PDF em /unnamed-file.pdf-165.octet-stream contem \"Resumo de Aviso do Plano Anual de Avisos\". DUPLICADO de parcerias-inovacao-social-alentejo (mesma aviso_codigo)."
+      ],
+      "needs_review": true,
+      "review_reason": "Duplicado de \"parcerias-inovacao-social-alentejo\" (mesma aviso_codigo). Considerar remocao."
     },
     {
       "id": "acoes-inovadoras-desafio-demografico-parcerias-coesao-alentejo",
@@ -3788,8 +3775,11 @@
       "promoted_date": "2026-05-12",
       "priority_score": 540,
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 0,
-      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real."
+      "plano_anual_checks": 1,
+      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real.",
+      "plano_anual_notes": [
+        "2026-05-12: Confirmado PAA via alentejo-2030 API: FA0177/2025 PDF em /unnamed-file.pdf-204-1.octet-stream contem \"Resumo de Aviso do Plano Anual de Avisos\". Data_fim oficial 15/05/2026 - aviso teoricamente abre nos proximos 3 dias."
+      ]
     },
     {
       "id": "capacitacao-atores-redes-parcerias-coesao-nao-urbanas-alentejo",
@@ -3805,8 +3795,11 @@
       "promoted_date": "2026-05-12",
       "priority_score": 540,
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 0,
-      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real."
+      "plano_anual_checks": 1,
+      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real.",
+      "plano_anual_notes": [
+        "2026-05-12: Confirmado PAA via alentejo-2030 API: FA0190/2025 PDF em /unnamed-file.pdf-205-1.octet-stream contem \"Resumo de Aviso do Plano Anual de Avisos\"."
+      ]
     },
     {
       "id": "medidas-de-adaptacao-as-alteracoes-climaticas-4-aviso",

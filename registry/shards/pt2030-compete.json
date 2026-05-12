@@ -120,7 +120,10 @@
       "source": "compete-2030",
       "state": "previsto",
       "aviso_codigo": "FA0317/2025",
-      "last_check": "2026-04-25",
+      "last_check": "2026-05-12",
+      "notes": "Verificacao 2026-05-12: FA0317/2025 nao retorna na API portugal2030. Aviso FA0105/2025 SIQRH Formacao Empresarial Operacoes em conjunto encontrado aberto (deadline 30/06/2026, dotacao 40M EUR). Possivel reconciliacao: PAA FA0317 abriu como FA0105. Scanner deve criar entrada nova; este item podera ser removido.",
+      "needs_review": true,
+      "review_reason": "Codigo FA0317/2025 desapareceu da API. Aviso equivalente publicado como FA0105/2025. Avaliar substituicao do item.",
       "programa_code": "COMPETE2030"
     },
     {
@@ -147,7 +150,9 @@
       "source": "portugal-2030",
       "state": "aberto",
       "deadline": "2026-09-30",
-      "last_check": "2026-04-25"
+      "aviso_codigo": "FA0107/2025",
+      "last_check": "2026-05-12",
+      "notes": "Verificacao 2026-05-12 via API portugal2030: FA0107/2025 confirmado aberto, data_fim 30/09/2026, dotacao 115M EUR."
     },
     {
       "id": "sitce-descarbonizacao-eficiencia-energetica-mpr-2026-01",
