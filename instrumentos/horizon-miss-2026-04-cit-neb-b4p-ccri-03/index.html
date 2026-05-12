@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission Cities NEB B4P CCRI-03 Economia Circular na Construção: Open Capital</title>
+  <meta name="description" content="Horizon Mission Cities CIT-NEB-B4P-CCRI-03 cofinancia 47,5 milhões em projetos de economia circular na construção, de edifício a escala urbana, com 3 cidades por consórcio.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-value.status-cont{color:#2E7D52;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-gold{color:var(--gold);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-fact-val.val-cont{color:#2E7D52;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca.html" class="active">Biblioteca</a></li>
+    <li><a href="../../conhecimento.html">Conhecimento</a></li>
+    <li><a href="../../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos.html">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros.html">Parceiros</a>
+        <a href="../../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca.html">Biblioteca</a>
+  <a href="../../conhecimento.html">Conhecimento</a>
+  <a href="../../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos.html">Sobre Nós</a>
+  <a href="../../parceiros.html">Parceiros</a>
+  <a href="../../carreiras.html">Carreiras</a>
+  <a href="https://calendly.com/opencapital" class="nav-mobile-cta">Contactar</a>
+</div>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca.html">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Mission Cities CIT-NEB-B4P-CCRI-03</span>
+    </nav>
+    <p class="hero-cat">Inovação</p>
+    <h1 class="hero-title">Mission Cities CIT-NEB-B4P-CCRI-03: Economia Circular na Construção</h1>
+    <p class="hero-tagline">Quarenta e sete milhões e meio de euros para Innovation Actions que introduzam modelos de economia circular no setor da construção, do edifício à escala da cidade.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Dotação total</span>
+        <span class="meta-value gold">47,5 milhões €</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Contribuição UE</span>
+        <span class="meta-value">9,5 M€ por projeto</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">TRL alvo</span>
+        <span class="meta-value">7 a 8</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Tipo</span>
+        <span class="meta-value">Innovation Action</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca.html" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O que é</div>
+      <h2 class="section-h2">Quatro iniciativas europeias num único concurso</h2>
+      <p class="section-text">O tópico HORIZON-MISS-2026-04-CIT-NEB-B4P-CCRI-03 cruza simultaneamente quatro iniciativas centrais da política europeia: a Mission Climate-Neutral and Smart Cities, o New European Bauhaus (NEB), a Parceria Europeia Built4People (B4P) e a EU Circular Cities and Regions Initiative (CCRI). O acrónimo composto não é decorativo. Cada uma destas iniciativas tem governance própria, indicadores próprios e obrigações próprias, e o consórcio vencedor tem de articular-se formalmente com todas.</p>
+      <p class="section-text">A dotação total do tópico é de 47,5 milhões de euros, com financiamento típico de 9,5 milhões por projeto, sugerindo cinco grants. A maturidade alvo (TRL 7 a 8) coloca o tópico claramente fora de investigação fundamental e dentro do território de demonstração à escala real, em três cidades europeias, ao longo do ciclo de vida de edifícios e da estrutura urbana.</p>
+      <p class="section-text">O objetivo é claro: usar princípios de circularidade na construção para reduzir emissões de gases com efeito de estufa ao longo do ciclo de vida, usar recursos com mais eficiência, e tornar economicamente atrativa a reutilização de materiais de construção numa escala que hoje ainda é marginal. O instrumento desafia a indústria europeia da construção a passar de retórica para deployment, com tools e business models que tenham real market potential.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para que serve</div>
+      <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
+      <p class="section-text">O tópico cruza três eixos: sustentabilidade aplicada à construção, investimento produtivo em deployment urbano, e digitalização através de plataformas e ferramentas que sustentam novos modelos de negócio circulares.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Sustentabilidade, energia e clima:</strong> redução mensurável de GHG ao longo do ciclo de vida de edifícios, redução do uso de materiais virgens, aumento de reuso e reciclagem na construção, contribuindo para cidades climate-neutral.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Investimento produtivo:</strong> demonstração em três cidades implica investimento real em equipamento, processos e infraestrutura de urban mining, banks de materiais e marketplaces de produtos reclaim.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Digitalização e IA:</strong> diagnóstico e caracterização de performance de produtos usados, inventários de materiais reaproveitáveis, GHG inventories de edifícios, marketplace tools, todos requerem componente digital substantiva.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Resultados esperados</div>
+      <h2 class="section-h2">Três outcomes vinculativos</h2>
+      <p class="section-text">Os projetos vencedores comprometeram-se a produzir resultados mensuráveis em três frentes:</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Tools e soluções à escala distrito ou cidade:</strong> aumento mensurável do número de ferramentas e soluções a nível de distrito ou cidade que suportem a aplicação de modelos de economia circular pelos stakeholders públicos e privados do setor.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Redução de uso de materiais:</strong> diminuição mensurável do uso de materiais virgens e aumento de reuso e reciclagem na construção, resultado da introdução de novos business models replicáveis.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Redução de energia e GHG do parque construído:</strong> redução mensurável do consumo energético e das emissões de gases com efeito de estufa ao longo do ciclo de vida de edifícios e do parque construído (residencial e não residencial), via atividades circulares ao nível do edifício, distrito e cidade.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Âmbito do projeto</div>
+      <h2 class="section-h2">As seis linhas de trabalho obrigatórias</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Tools de circularidade à escala distrito/cidade:</strong> incluindo urban mining, reuso e reciclagem de produtos e materiais, uso de biomateriais secundários, design adaptativo e renovação alinhada com prevenção de resíduos.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Diagnóstico de produtos usados:</strong> soluções para caracterização de condição e potencial de reuso de produtos e resíduos de demolição, criação de inventários e marketplaces com material banks.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">GHG inventories de edifícios:</strong> inventários whole life-cycle para suportar decisões alinhadas com a Energy Performance of Buildings Directive (EPBD) recast.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Barreiras regulatórias e standards:</strong> contribuição para reduzir barreiras e desenvolver standards, quando relevante.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Integração de cadeias de valor:</strong> envolvimento ativo de todos os stakeholders relevantes (SMEs, proprietários, autoridades locais, sociedade civil, decisores políticos).</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Demonstração em três cidades:</strong> em pelo menos três cidades de três Estados-Membros ou Países Associados diferentes, com cidades como beneficiárias, e pelo menos uma das 112 cidades selecionadas pela Mission Climate-Neutral and Smart Cities.</li>
+      </ul>
+      <div class="highlight-box">
+        <div class="highlight-box-title">Cooperação obrigatória</div>
+        <div class="highlight-box-text">O consórcio tem de formalizar um Memorandum of Understanding com a Cities Mission Platform o mais cedo possível após o início do projeto. Ações de disseminação têm de ligar-se ao NEB hub, B4P, CCRI e plataforma da Cities Mission. Esta integração não é opcional.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Elegibilidade crítica</div>
+      <h2 class="section-h2">Três cidades, três países, uma Mission city</h2>
+      <p class="section-text">O critério de elegibilidade adicional é vinculativo e elimina muitas candidaturas à partida: pelo menos três cidades, representadas pelas suas autoridades locais ou por entidade com consentimento explícito da autoridade local, cada uma de um Estado-Membro ou País Associado diferente, têm de participar como beneficiárias. Pelo menos uma destas três tem de estar entre as 112 cidades selecionadas para a EU Mission on Climate-Neutral and Smart Cities.</p>
+      <p class="section-text">Para Portugal, há três cidades nessa lista das 112: Lisboa, Porto e Guimarães. Qualquer consórcio que queira incluir um país terceiro tem assim de cooptar uma destas três e duas cidades adicionais em dois outros países UE/Associados. A boa notícia é que três cidades portuguesas com perfil distinto (capital, segunda cidade, cidade média criativa) abrem várias combinações possíveis com cidades alemãs, espanholas, italianas ou nórdicas.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Estrutura financeira</div>
+      <h2 class="section-h2">Lump sum e expected portfolio</h2>
+      <div class="stats-row reveal" style="grid-template-columns:repeat(4,1fr);">
+        <div class="stat-cell">
+          <div class="stat-num">47.5<sup>M€</sup></div>
+          <div class="stat-label">Dotação total</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">9.5<sup>M€</sup></div>
+          <div class="stat-label">Por projeto</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Grants esperados</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Cidades por consórcio</div>
+        </div>
+      </div>
+      <p class="section-text">O modelo é lump sum, ao abrigo da Decisão da Comissão de 7 de julho de 2021. Innovation Actions tipicamente cofinanciam 70% dos custos elegíveis em regime tradicional. Em lump sum a lógica é diferente: o orçamento total acordado é libertado contra deliverables, sem reconciliação despesa-a-despesa, mas com escrutínio técnico apertado em cada milestone.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">Este é um dos concursos com maior potencial estratégico para Portugal nesta janela do Horizon. A construção é um dos setores mais carbono-intensivos da economia portuguesa, com taxas de reuso muito abaixo da média europeia. Existe simultaneamente um stock construído que precisa de renovação em larga escala e uma rede de operadores nacionais (Mota-Engil, Teixeira Duarte, Casais, Steni, Buildup, Sonae Sierra, Vanguard Properties) com escala para participar em demonstradores credíveis.</p>
+      <p class="section-text">A primeira armadilha é o consórcio das três cidades. A obrigatoriedade de que cidades participem como beneficiárias formais, não como observadoras ou utilizadoras dos resultados, é um teste de capacidade institucional pesado. Câmaras municipais portuguesas raramente têm equipas dedicadas a candidaturas Horizon. Lisboa e Porto são as exceções óbvias, com Lisboa E-Nova e a estrutura técnica do Porto a operarem nesse perímetro. Guimarães tem track record menor mas maior agilidade política. Qualquer das três pode liderar a parceria portuguesa, mas o trabalho de preparação tem de começar agora.</p>
+      <p class="section-text">A segunda nota é sobre a integração das quatro iniciativas (Mission Cities, NEB, B4P, CCRI). Cada uma tem comunidade, vocabulário e indicadores próprios. Consórcios que demonstrem familiaridade real com as quatro, idealmente com parceiros que já operam em projetos NetZeroCities, B4P pilots ou CCRI flagship cities, partem com vantagem clara. Quem nunca interagiu com estas comunidades é improvável vencer.</p>
+      <p class="section-text">A terceira recomendação é técnica. A combinação de "TRL 7-8" com "três cidades demonstradoras" significa que o consórcio tem de chegar à submissão com tecnologia já validada em ambiente operacional. Não é um projeto para protótipos. É um projeto para escalar soluções que já funcionam em piloto, idealmente com cartas de compromisso de proprietários de edifícios para acolher demonstradores, com acordos com câmaras municipais para urban mining em derrubadas planeadas, e com modelos económicos de negócio testados em pelo menos uma cidade.</p>
+      <p class="section-text">Por fim, vale notar a oportunidade lateral. Empresas portuguesas com inovação em soluções de circularidade na construção (urban mining startups, software de inventário de materiais, plataformas de marketplace para produtos reclaim, biomateriais cuja matéria-prima vem de resíduos agrícolas) podem ser parceiros estratégicos para consórcios coordenados por entidades alemãs, holandesas ou italianas com tradição mais consolidada. Não é preciso liderar o consórcio para extrair valor estratégico do projeto. O work package certo, com budget significativo e visibilidade, abre porta a contratos posteriores em mercados europeus de maior dimensão.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Código</div>
+        <div class="sidebar-fact-val">HORIZON-MISS-2026-04-CIT-NEB-B4P-CCRI-03</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">Horizonte Europa, Mission Cities</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Dotação total</div>
+        <div class="sidebar-fact-val">47,5 milhões €</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Por projeto</div>
+        <div class="sidebar-fact-val">~9,5 milhões €</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tipo de Ação</div>
+        <div class="sidebar-fact-val">Innovation Action, lump sum</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">TRL alvo</div>
+        <div class="sidebar-fact-val">7 a 8</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Cidades obrigatórias</div>
+        <div class="sidebar-fact-val">3 cidades, 3 países, 1 Mission city</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Cidades PT da Mission</div>
+        <div class="sidebar-fact-val">Lisboa, Porto, Guimarães</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Pensa integrar um consórcio Mission Cities?</div>
+      <div class="sidebar-cta-text">Apoiamos câmaras municipais, empresas de construção e startups portuguesas no posicionamento estratégico em consórcios europeus de circularidade urbana.</div>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../horizon-miss-2026-04-cit-01/" class="related-link">
+        <span class="related-link-name">Mission Cities CIT-01</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-miss-2026-04-cit-02/" class="related-link">
+        <span class="related-link-name">Mission Cities CIT-02</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-miss-2026-05-soil-01/" class="related-link">
+        <span class="related-link-name">Mission Soil SOIL-01</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-miss-2026-03-ocean-03/" class="related-link">
+        <span class="related-link-name">Mission Ocean OCEAN-03</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
