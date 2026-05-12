@@ -22,7 +22,8 @@
       "aviso_codigo": "FA0075/2025",
       "last_check": "2026-05-11",
       "needs_review": true,
-      "review_reason": "Prazo prolongado de 30/04/2026 para 30/09/2026 (confirmado em portugal2030.pt API). Dotacao parece ter aumentado de 301M para 401M EUR FEDER + 400M EUR COMPETE2030. Writer deve revisar conteudo do artigo (dotacao, fases, condicoes)."
+      "review_reason": "Prazo prolongado de 30/04/2026 para 30/09/2026 (confirmado em portugal2030.pt API). Dotacao parece ter aumentado de 301M para 401M EUR FEDER + 400M EUR COMPETE2030. Writer deve revisar conteudo do artigo (dotacao, fases, condicoes).",
+      "programa_code": "COMPETE2030"
     },
     {
       "id": "step-inovacao-produtiva-energia",
@@ -33,7 +34,8 @@
       "aviso_codigo": "FA0110/2025",
       "last_check": "2026-05-03",
       "needs_review": true,
-      "review_reason": "Prazo prolongado de 30/04/2026 para 30/09/2026 (confirmado em portugal2030.pt API). Dotacao pode ter mudado. Writer deve revisar conteudo do artigo."
+      "review_reason": "Prazo prolongado de 30/04/2026 para 30/09/2026 (confirmado em portugal2030.pt API). Dotacao pode ter mudado. Writer deve revisar conteudo do artigo.",
+      "programa_code": "COMPETE2030"
     },
     {
       "id": "step-idi-empresarial-energia",
@@ -44,7 +46,8 @@
       "aviso_codigo": "FA0107/2025",
       "last_check": "2026-05-03",
       "needs_review": true,
-      "review_reason": "Prazo prolongado de 30/04/2026 para 30/09/2026 (confirmado em portugal2030.pt API). Dotacao pode ter mudado. Writer deve revisar conteudo do artigo."
+      "review_reason": "Prazo prolongado de 30/04/2026 para 30/09/2026 (confirmado em portugal2030.pt API). Dotacao pode ter mudado. Writer deve revisar conteudo do artigo.",
+      "programa_code": "COMPETE2030"
     },
     {
       "id": "step-idi-empresarial-digital-biotecnologia",
@@ -55,7 +58,8 @@
       "aviso_codigo": "FA0076/2025",
       "last_check": "2026-05-11",
       "needs_review": true,
-      "review_reason": "Prazo prolongado de 30/04/2026 para 30/09/2026 (confirmado em portugal2030.pt API). Dotacao pode ter mudado. Writer deve revisar conteudo do artigo."
+      "review_reason": "Prazo prolongado de 30/04/2026 para 30/09/2026 (confirmado em portugal2030.pt API). Dotacao pode ter mudado. Writer deve revisar conteudo do artigo.",
+      "programa_code": "COMPETE2030"
     },
     {
       "id": "siac-digitalizacao-transformacao-digital",
@@ -63,7 +67,8 @@
       "source": "compete-2030",
       "state": "aberto",
       "deadline": "2026-05-29",
-      "last_check": "2026-05-08"
+      "last_check": "2026-05-08",
+      "programa_code": "COMPETE2030"
     },
     {
       "id": "sitce-descarbonizacao-eficiencia-energetica",
@@ -71,7 +76,8 @@
       "source": "compete-2030",
       "state": "aberto",
       "deadline": "2026-05-29",
-      "last_check": "2026-05-08"
+      "last_check": "2026-05-08",
+      "programa_code": "COMPETE2030"
     },
     {
       "id": "siac-acoes-coletivas-internacionalizacao",
@@ -79,7 +85,8 @@
       "source": "compete-2030",
       "state": "aberto",
       "deadline": "2026-05-29",
-      "last_check": "2026-05-08"
+      "last_check": "2026-05-08",
+      "programa_code": "COMPETE2030"
     },
     {
       "id": "sice-internacionalizacao-pme",
@@ -87,7 +94,8 @@
       "source": "compete-2030",
       "state": "aberto",
       "deadline": "2026-06-30",
-      "last_check": "2026-05-08"
+      "last_check": "2026-05-08",
+      "programa_code": "COMPETE2030"
     },
     {
       "id": "sice-qualificacao-pme-operacoes-individuais",
@@ -95,7 +103,8 @@
       "state": "fechado",
       "aviso_codigo": "MPr-2024-4",
       "notas": "fechado em 2025-01-30 (fase 2). Confirmado compete2030.gov.pt 2026-04-16. Sem artigo publicado.",
-      "last_check": "2026-04-25"
+      "last_check": "2026-04-25",
+      "programa_code": "COMPETE2030"
     },
     {
       "id": "siqrh-formacao-empresarial-individual",
@@ -103,14 +112,16 @@
       "state": "fechado",
       "aviso_codigo": "COMPETE2030-2025-1",
       "notas": "fechado - prazo expirado em 2025-04-30. Confirmado compete2030.gov.pt 2026-04-16. Sem artigo publicado.",
-      "last_check": "2026-04-25"
+      "last_check": "2026-04-25",
+      "programa_code": "COMPETE2030"
     },
     {
       "id": "siqrh-formacao-empresarial-conjunto",
       "source": "compete-2030",
       "state": "previsto",
       "aviso_codigo": "FA0317/2025",
-      "last_check": "2026-04-25"
+      "last_check": "2026-04-25",
+      "programa_code": "COMPETE2030"
     },
     {
       "id": "formacao-executivos-compete",
@@ -143,7 +154,8 @@
       "file": "instrumentos/sitce-descarbonizacao-eficiencia-energetica-mpr-2026-01.html",
       "source": "compete-2030",
       "state": "aberto",
-      "last_check": "2026-05-10"
+      "last_check": "2026-05-10",
+      "programa_code": "COMPETE2030"
     }
   ],
   "count": 15,

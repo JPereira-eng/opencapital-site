@@ -13,7 +13,8 @@
       "state": "fechado",
       "last_check": "2026-05-05",
       "data_fim": "2026-04-30",
-      "auto_closed": true
+      "auto_closed": true,
+      "programa_code": "PESSOAS2030"
     },
     {
       "id": "estagios-alma-pessoas2030",
@@ -22,7 +23,8 @@
       "state": "fechado",
       "last_check": "2026-05-05",
       "data_fim": "2026-04-30",
-      "auto_closed": true
+      "auto_closed": true,
+      "programa_code": "PESSOAS2030"
     },
     {
       "id": "aviso-pessoas-2026-2-igualdade",
@@ -31,14 +33,16 @@
       "state": "aberto",
       "last_check": "2026-05-05",
       "needs_review": true,
-      "review_reason": "URL no portal pessoas2030 retorna 404 e PESSOAS-2026-2 nao aparece na API. Verificar manualmente."
+      "review_reason": "URL no portal pessoas2030 retorna 404 e PESSOAS-2026-2 nao aparece na API. Verificar manualmente.",
+      "programa_code": "PESSOAS2030"
     },
     {
       "id": "capacitacao-para-a-inclusao-pessoas-2030",
       "file": "instrumentos/capacitacao-para-a-inclusao-pessoas-2030/index.html",
       "source": "pessoas-2030",
       "state": "fechado",
-      "last_check": "2026-05-12"
+      "last_check": "2026-05-12",
+      "programa_code": "PESSOAS2030"
     }
   ],
   "instruments": [

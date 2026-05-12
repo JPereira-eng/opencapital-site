@@ -4522,7 +4522,9 @@
       "pdf_url": null,
       "regulation_local": "regulamentos/mar-2030/mar2030-2026-6-reposicao-capacidade-produtiva-aquicola.txt",
       "priority_score": 10,
-      "status": "ready"
+      "status": "ready",
+      "programa_code": "MAR2030",
+      "codigo_api": "MAR2030-2026-6"
     },
     {
       "id": "vale-spin-off-acores",
@@ -4539,7 +4541,9 @@
       "priority_score": 500,
       "status": "pending",
       "notes": "Vale Spin-off, Acores 2030",
-      "download_error": "HTTP 404 - pagina nao encontrada em 2026-04-14"
+      "download_error": "HTTP 404 - pagina nao encontrada em 2026-04-14",
+      "programa_code": "ACORES2030",
+      "codigo_api": "FA0608/2023"
     },
     {
       "id": "vale-direitos-propriedade-intelectual-acores",
@@ -4556,7 +4560,9 @@
       "priority_score": 500,
       "status": "pending",
       "notes": "Vale Direitos de Propriedade Intelectual, Acores 2030",
-      "download_error": "HTTP 404 ou pagina inacessivel em 2026-04-14"
+      "download_error": "HTTP 404 ou pagina inacessivel em 2026-04-14",
+      "programa_code": "ACORES2030",
+      "codigo_api": "FA0610/2023"
     },
     {
       "id": "vale-certificacao-id-acores",
@@ -4573,7 +4579,9 @@
       "priority_score": 500,
       "status": "pending",
       "notes": "Vale Certificacao I&D, Acores 2030",
-      "download_error": "HTTP 404 ou pagina inacessivel em 2026-04-14"
+      "download_error": "HTTP 404 ou pagina inacessivel em 2026-04-14",
+      "programa_code": "ACORES2030",
+      "codigo_api": "FA0611/2023"
     },
     {
       "id": "eea-grants-fundo-bilateral-1c",
