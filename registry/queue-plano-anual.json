@@ -146,14 +146,15 @@
       "status": "plano_anual",
       "notes": "FA0176/2025. MAR2030. FEAMPA.",
       "download_error": "Plano Anual - PDF contém Resumo de Aviso do Plano Anual de Avisos",
-      "plano_anual_last_check": "2026-04-25",
-      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 3,
       "programa": [
         "MAR2030"
       ],
       "regional_portals": [
         "mar-2030"
-      ]
+      ],
+      "plano_anual_status": "url_removed"
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-it-cim-tamega-e-sousa",
@@ -246,9 +247,10 @@
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "last_fail_date": null,
       "plano_anual_detected_date": "2026-04-24",
-      "plano_anual_checks": 1,
+      "plano_anual_checks": 2,
       "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0437/2023"
+      "codigo_api": "FA0437/2023",
+      "plano_anual_last_check": "2026-05-12"
     },
     {
       "id": "acoes-coletivas-transferencia-conhecimento-alentejo",
@@ -711,7 +713,7 @@
         "sustentavel-2030"
       ],
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 2,
+      "plano_anual_checks": 3,
       "plano_anual_note": "Monitor 2026-05-08: API portugal-2030 retorna acf.pdf valido. Downloader deve correr TESTE A para confirmar/promover.",
       "codigo": "FA0260/2025",
       "data_inicio": "2026-04-01",
@@ -745,7 +747,7 @@
         "sustentavel-2030"
       ],
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 2,
+      "plano_anual_checks": 3,
       "plano_anual_note": "Monitor 2026-05-08: API portugal-2030 retorna acf.pdf valido. Downloader deve correr TESTE A para confirmar/promover.",
       "codigo": "FA0281/2025",
       "data_inicio": "2026-03-02",
@@ -1121,7 +1123,9 @@
         "madeira-2030"
       ],
       "programa_code": "MADEIRA2030",
-      "codigo_api": "FA0097/2025"
+      "codigo_api": "FA0097/2025",
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 1
     },
     {
       "id": "siqrh-formacao-empresarial-operacoes-individuais",
@@ -1175,7 +1179,9 @@
         "compete-2030"
       ],
       "programa_code": "COMPETE2030",
-      "codigo_api": "FA0293/2025"
+      "codigo_api": "FA0293/2025",
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 1
     },
     {
       "id": "siqrh-formacao-empresarial-operacoes-em-conjunto",
@@ -1229,7 +1235,9 @@
         "compete-2030"
       ],
       "programa_code": "COMPETE2030",
-      "codigo_api": "FA0294/2025"
+      "codigo_api": "FA0294/2025",
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 1
     },
     {
       "id": "programas-intermunicipais-de-promocao-do-sucesso-escolar-pipse-iti-cim",
@@ -1317,7 +1325,9 @@
         "algarve-2030"
       ],
       "programa_code": "ALGARVE2030",
-      "codigo_api": "FA0310/2025"
+      "codigo_api": "FA0310/2025",
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 1
     },
     {
       "id": "formacao-de-formadores-docentes-e-tutores",
@@ -1397,7 +1407,9 @@
         "pessoas-2030"
       ],
       "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0223/2025"
+      "codigo_api": "FA0223/2025",
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 1
     },
     {
       "id": "centros-qualifica-algarve",
@@ -1480,7 +1492,7 @@
         "pessoas-2030"
       ],
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 2,
+      "plano_anual_checks": 3,
       "plano_anual_status": "placeholder",
       "data_inicio_api": "2026-05-04",
       "data_fim_api": "2026-08-31",
@@ -2296,7 +2308,7 @@
       "promoted_from_paa": "2026-05-09",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-09",
-      "plano_anual_checks": 3,
+      "plano_anual_checks": 4,
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_status": "slug_not_found",
       "plano_anual_note": "API empty response - slug pode ter sido alterado",
@@ -2370,7 +2382,7 @@
       "promoted_from_paa": "2026-05-09",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-09",
-      "plano_anual_checks": 3,
+      "plano_anual_checks": 4,
       "plano_anual_last_check": "2026-05-12",
       "codigo": "FA0154/2025",
       "data_inicio": "2026-06-01",
@@ -2465,7 +2477,7 @@
       "promoted_from_paa": "2026-05-09",
       "download_error": "PAA detectado no PDF descarregado (Teste A)",
       "plano_anual_detected_date": "2026-05-09",
-      "plano_anual_checks": 3,
+      "plano_anual_checks": 4,
       "plano_anual_last_check": "2026-05-12",
       "programa_code": "PESSOAS2030",
       "codigo_api": "FA0139/2025"
@@ -2555,7 +2567,7 @@
       ],
       "download_error": "PAA detectado no PDF descarregado (Teste A)",
       "plano_anual_detected_date": "2026-05-11",
-      "plano_anual_checks": 2,
+      "plano_anual_checks": 3,
       "plano_anual_last_check": "2026-05-12",
       "programa_code": "PESSOAS2030",
       "codigo_api": "FA0140/2025"
@@ -2581,7 +2593,7 @@
       "priority_score": 540,
       "download_error": "Plano Anual detected during download (marker: 'plano anual de avisos')",
       "plano_anual_detected_date": "2026-05-11",
-      "plano_anual_checks": 3,
+      "plano_anual_checks": 4,
       "plano_anual_last_check": "2026-05-12",
       "cross_portal_attempts": [
         {
@@ -2665,7 +2677,7 @@
       "priority_score": 540,
       "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-11",
-      "plano_anual_checks": 2,
+      "plano_anual_checks": 3,
       "plano_anual_last_check": "2026-05-12",
       "cross_portal_attempts": [
         {
@@ -2677,38 +2689,6 @@
       ],
       "programa_code": "SUSTENTAVEL2030",
       "codigo_api": "FA0156/2025"
-    },
-    {
-      "id": "combate-a-privacao-material-2-aviso",
-      "name": "Combate à privação material – 2º Aviso",
-      "codigo": "FA0202/2025",
-      "aviso_codigo": "FA0202/2025",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-central",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-05-01",
-      "data_fim": "2026-05-29",
-      "deadline": "2026-05-29",
-      "budget_eur": 5000000.0,
-      "regulation_url": 252938,
-      "pdf_url": 252938,
-      "regulation_local": null,
-      "status": "plano_anual",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 540,
-      "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
-      "plano_anual_detected_date": "2026-05-11",
-      "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-05-12",
-      "cross_portal_attempts": [
-        {
-          "date": "2026-05-12",
-          "portal_tried": "pessoas-2030",
-          "best_similarity": null,
-          "result": "no match >= 0.85"
-        }
-      ]
     },
     {
       "id": "parcerias-inovacao-social-algarve",
@@ -2731,7 +2711,7 @@
       "priority_score": 540,
       "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-11",
-      "plano_anual_checks": 2,
+      "plano_anual_checks": 3,
       "plano_anual_last_check": "2026-05-12",
       "cross_portal_attempts": [
         {
@@ -2765,7 +2745,7 @@
       "priority_score": 540,
       "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-11",
-      "plano_anual_checks": 2,
+      "plano_anual_checks": 3,
       "plano_anual_last_check": "2026-05-12",
       "cross_portal_attempts": [
         {
@@ -2799,8 +2779,8 @@
       "priority_score": 540,
       "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-11",
-      "plano_anual_checks": 1,
-      "plano_anual_last_check": "2026-05-11",
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-12",
       "programa_code": "ALENTEJO2030",
       "codigo_api": "FA0190/2025"
     },
@@ -2843,78 +2823,6 @@
       "codigo_api": "FA0147/2025"
     },
     {
-      "id": "step-i-d-i-empresarial-digital-e-biotecnologia",
-      "name": "STEP – I&D&I Empresarial – Digital e Biotecnologia",
-      "codigo": "FA0076/2025",
-      "aviso_codigo": "FA0076/2025",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-central",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-01-30",
-      "data_fim": "2026-09-30",
-      "deadline": "2026-09-30",
-      "budget_eur": 210000000.0,
-      "regulation_url": 252698,
-      "pdf_url": 252698,
-      "regulation_local": null,
-      "status": "plano_anual",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 530,
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
-      "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 1,
-      "plano_anual_last_check": "2026-05-12"
-    },
-    {
-      "id": "step-inovacao-produtiva-digital-e-biotecnologia",
-      "name": "STEP – Inovação Produtiva – Digital e Biotecnologia",
-      "codigo": "FA0075/2025",
-      "aviso_codigo": "FA0075/2025",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-central",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-01-30",
-      "data_fim": "2026-09-30",
-      "deadline": "2026-09-30",
-      "budget_eur": 401000000.0,
-      "regulation_url": 252694,
-      "pdf_url": 252694,
-      "regulation_local": null,
-      "status": "plano_anual",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 530,
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
-      "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 1,
-      "plano_anual_last_check": "2026-05-12"
-    },
-    {
-      "id": "gestao-recursos-hidricos-acores2030",
-      "name": "Gestão de Recursos hídricos",
-      "codigo": "FA0583/2023",
-      "aviso_codigo": "FA0583/2023",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-central",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-01-02",
-      "data_fim": "2026-06-30",
-      "deadline": "2026-06-30",
-      "budget_eur": 6500000.0,
-      "regulation_url": 252732,
-      "pdf_url": 252732,
-      "regulation_local": null,
-      "status": "plano_anual",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 530,
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
-      "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 1,
-      "plano_anual_last_check": "2026-05-12"
-    },
-    {
       "id": "medidas-de-adaptacao-as-alteracoes-climaticas-4-aviso",
       "name": "Medidas de adaptação às alterações Climáticas – 4.º Aviso",
       "codigo": "FA0262/2025",
@@ -2935,7 +2843,7 @@
       "priority_score": 530,
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 1,
+      "plano_anual_checks": 2,
       "plano_anual_last_check": "2026-05-12",
       "programa_code": "SUSTENTAVEL2030",
       "codigo_api": "FA0262/2025"
@@ -3992,7 +3900,9 @@
       "wordpress_id": 17059,
       "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_status": "url_removed"
     },
     {
       "id": "acoes-promocao-destino-acores-3-aviso",
@@ -4018,7 +3928,9 @@
       ],
       "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_status": "url_removed"
     },
     {
       "id": "cursos-cet-2-aviso-acores",
@@ -4044,7 +3956,9 @@
       ],
       "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_status": "url_removed"
     }
   ],
   "updated": "2026-05-12"
