@@ -2076,8 +2076,14 @@
       "regulation_local": null,
       "status": "pending",
       "state": "previsto",
-      "fail_count": 0,
-      "priority_score": 530
+      "fail_count": 2,
+      "priority_score": 530,
+      "download_error": "API erro: HTTP 404 (id) e slug lookup falhou (200)",
+      "last_fail_date": "2026-05-12",
+      "fallback_tried": [
+        "api-fetch",
+        "api-fetch"
+      ]
     },
     {
       "id": "reabilitacao-da-aerogare-do-aerodromo-de-sao-jorge",
@@ -2256,8 +2262,14 @@
       "regulation_local": null,
       "status": "pending",
       "state": "previsto",
-      "fail_count": 0,
-      "priority_score": 530
+      "fail_count": 2,
+      "priority_score": 530,
+      "download_error": "API erro: HTTP 404 (id) e slug lookup falhou (200)",
+      "last_fail_date": "2026-05-12",
+      "fallback_tried": [
+        "api-fetch",
+        "api-fetch"
+      ]
     },
     {
       "id": "apoio-sem-abrigo-algarve",
@@ -2278,26 +2290,6 @@
       "state": "previsto",
       "fail_count": 0,
       "priority_score": 510
-    },
-    {
-      "id": "formacao-de-formadores-docentes-e-tutores",
-      "name": "Formação de Formadores, Docentes e Tutores",
-      "codigo": "FA0239/2025",
-      "aviso_codigo": "FA0239/2025",
-      "source_id": "madeira-2030",
-      "shard": "pt2030-other",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-06-01",
-      "data_fim": "2026-07-01",
-      "deadline": "2026-07-01",
-      "budget_eur": 1500000.0,
-      "regulation_url": 252882,
-      "pdf_url": 252882,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "previsto",
-      "fail_count": 0,
-      "priority_score": 530
     },
     {
       "id": "centros-especializados-em-qualificacao-de-adultos-e-processos-de-recon",
@@ -2480,26 +2472,6 @@
       "priority_score": 510
     },
     {
-      "id": "cursos-profissionais-ano-letivo-2026-2027-escolas-privadas-e-outras",
-      "name": "Cursos profissionais – ano letivo 2026/2027 – Escolas Privadas e outras",
-      "codigo": "FA0140/2025",
-      "aviso_codigo": "FA0140/2025",
-      "source_id": "pessoas-2030",
-      "shard": "pt2030-pessoas",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-05-04",
-      "data_fim": "2026-08-31",
-      "deadline": "2026-08-31",
-      "budget_eur": 230000000.0,
-      "regulation_url": 252932,
-      "pdf_url": 252932,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 530
-    },
-    {
       "id": "servicos-de-psicologia-e-orientacao",
       "name": "Serviços de Psicologia e Orientação",
       "codigo": "FA0223/2025",
@@ -2520,26 +2492,6 @@
       "priority_score": 510
     },
     {
-      "id": "cursos-profissionais-ano-letivo-2026-2027-escolas-publicas",
-      "name": "Cursos profissionais – ano letivo 2026/2027  – Escolas Públicas",
-      "codigo": "FA0139/2025",
-      "aviso_codigo": "FA0139/2025",
-      "source_id": "pessoas-2030",
-      "shard": "pt2030-pessoas",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-05-04",
-      "data_fim": "2026-08-31",
-      "deadline": "2026-08-31",
-      "budget_eur": 45000000.0,
-      "regulation_url": 252928,
-      "pdf_url": 252928,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 530
-    },
-    {
       "id": "parcerias-inovacao-social-alentejo",
       "name": "Parcerias para a Inovação Social",
       "codigo": "FA0306/2025",
@@ -2556,8 +2508,14 @@
       "regulation_local": null,
       "status": "pending",
       "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 530
+      "fail_count": 2,
+      "priority_score": 530,
+      "download_error": "API erro: HTTP 404 (id) e slug lookup falhou (200)",
+      "last_fail_date": "2026-05-12",
+      "fallback_tried": [
+        "api-fetch",
+        "api-fetch"
+      ]
     },
     {
       "id": "contratos-impacto-social-alentejo-2026",
@@ -2616,28 +2574,14 @@
       "regulation_local": null,
       "status": "pending",
       "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 530
-    },
-    {
-      "id": "vida-ativa-emprego-qualificado",
-      "name": "Vida Ativa Emprego Qualificado",
-      "codigo": "FA0083/2025",
-      "aviso_codigo": "FA0083/2025",
-      "source_id": "pessoas-2030",
-      "shard": "pt2030-pessoas",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-09-01",
-      "data_fim": "2026-12-31",
-      "deadline": "2026-12-31",
-      "budget_eur": 71250000.0,
-      "regulation_url": 252946,
-      "pdf_url": 252946,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "previsto",
-      "fail_count": 0,
-      "priority_score": 530
+      "fail_count": 2,
+      "priority_score": 530,
+      "download_error": "API erro: HTTP 404 (id) e slug lookup falhou (200)",
+      "last_fail_date": "2026-05-12",
+      "fallback_tried": [
+        "api-fetch",
+        "api-fetch"
+      ]
     },
     {
       "id": "formacao-avancada",
@@ -2656,8 +2600,14 @@
       "regulation_local": null,
       "status": "pending",
       "state": "previsto",
-      "fail_count": 0,
-      "priority_score": 530
+      "fail_count": 2,
+      "priority_score": 530,
+      "download_error": "API erro: HTTP 404 (id) e slug lookup falhou (200)",
+      "last_fail_date": "2026-05-12",
+      "fallback_tried": [
+        "api-fetch",
+        "api-fetch"
+      ]
     },
     {
       "id": "distribuicao-indireta-de-generos-alimentares-cartao-eletronico",
@@ -2696,8 +2646,14 @@
       "regulation_local": null,
       "status": "pending",
       "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 530
+      "fail_count": 2,
+      "priority_score": 530,
+      "download_error": "API erro: HTTP 404 (id) e slug lookup falhou (200)",
+      "last_fail_date": "2026-05-12",
+      "fallback_tried": [
+        "api-fetch",
+        "api-fetch"
+      ]
     },
     {
       "id": "apoio-tecnico-e-financeiro-a-organizacoes-da-sociedade-civil-que-atuam",

@@ -1245,7 +1245,7 @@
       "priority_score": 530,
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: MADEIRA2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
+      "download_error": "PAA detectado no PDF descarregado (Teste A)",
       "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
       "programa": [
         "MADEIRA2030"
@@ -1253,8 +1253,8 @@
       "regional_portals": [
         "madeira-2030"
       ],
-      "plano_anual_last_check": "2026-05-07",
-      "plano_anual_checks": 1
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 2
     },
     {
       "id": "modelo-apoio-vida-independente-mavi",
@@ -2286,10 +2286,10 @@
         "pessoas-2030"
       ],
       "promoted_from_paa": "2026-05-09",
-      "download_error": "PAA detectado no PDF (Teste A)",
+      "download_error": "PAA detectado no PDF descarregado (Teste A)",
       "plano_anual_detected_date": "2026-05-09",
-      "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-05-11"
+      "plano_anual_checks": 3,
+      "plano_anual_last_check": "2026-05-12"
     },
     {
       "id": "vida-ativa-emprego-qualificado",
@@ -2314,10 +2314,10 @@
         "pessoas-2030"
       ],
       "promoted_from_paa": "2026-05-09",
-      "download_error": "Aviso futuro (data_inicio=2026-09-01)",
+      "download_error": "PAA detectado no PDF descarregado (Teste A)",
       "plano_anual_detected_date": "2026-05-09",
-      "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-05-11"
+      "plano_anual_checks": 3,
+      "plano_anual_last_check": "2026-05-12"
     },
     {
       "id": "infraestruturas-equipamentos-tecnologicos-iti-agua-alentejo",
@@ -2370,10 +2370,10 @@
       "regional_portals": [
         "pessoas-2030"
       ],
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
+      "download_error": "PAA detectado no PDF descarregado (Teste A)",
       "plano_anual_detected_date": "2026-05-11",
-      "plano_anual_checks": 1,
-      "plano_anual_last_check": "2026-05-11"
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-12"
     },
     {
       "id": "protecao-civil-e-gestao-integrada-de-riscos-prevencao-e-mitigacao-de-r",
