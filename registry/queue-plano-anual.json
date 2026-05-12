@@ -371,10 +371,11 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: COMPETE2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual detected during download (marker: 'plano anual de avisos')",
-      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_last_check": "2026-05-13",
       "plano_anual_checks": 3,
       "plano_anual_notes": [
-        "2026-05-05: API metadata complete - API: pdf=252635, df=20000000, data_fim=2026-06-30. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run."
+        "2026-05-05: API metadata complete - API: pdf=252635, df=20000000, data_fim=2026-06-30. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run.",
+        "2026-05-13: PASSO 2.7 E4 WebSearch: PDF de 2024 (call anterior); nao corresponde a operacao 04/2026."
       ],
       "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
       "programa": [
@@ -387,7 +388,9 @@
       "codigo_api": "FA0315/2025",
       "cross_portal_attempted": "2026-05-12",
       "cross_portal_result": "no_destination_api",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "last_websearch_attempt": "2026-05-13",
+      "websearch_attempts": 1
     },
     {
       "id": "apoio-a-infraestruturas-de-base-tecnologica-regulamento-step",
@@ -405,10 +408,11 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: CENTRO2030. Natureza: Concurso. Doc: L1:pdf.",
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "plano_anual_last_check": "2026-05-11",
+      "plano_anual_last_check": "2026-05-13",
       "plano_anual_checks": 2,
       "plano_anual_notes": [
-        "2026-05-05: API metadata complete - API: pdf=252696, df=25000000, data_fim=2026-05-15. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run."
+        "2026-05-05: API metadata complete - API: pdf=252696, df=25000000, data_fim=2026-05-15. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run.",
+        "2026-05-13: PASSO 2.7 E4 WebSearch: so PAA doc 2026-01."
       ],
       "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
       "programa": [
@@ -419,7 +423,9 @@
       ],
       "programa_code": "CENTRO2030",
       "codigo_api": "FA0244/2025",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "last_websearch_attempt": "2026-05-13",
+      "websearch_attempts": 1
     },
     {
       "id": "saccct-equipamento-reequipamento-de-infraestruturas-cientificas-rniie",
@@ -832,10 +838,11 @@
       "status": "plano_anual",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: SUSTENTAVEL2030. Natureza: Convite. Doc: L1:pdf.",
       "download_error": "Plano Anual detected during download (marker: 'plano anual de avisos')",
-      "plano_anual_last_check": "2026-05-11",
+      "plano_anual_last_check": "2026-05-13",
       "plano_anual_checks": 2,
       "plano_anual_notes": [
-        "2026-05-05: API metadata complete - API: pdf=252778, df=40000000, data_fim=2026-05-29. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run."
+        "2026-05-05: API metadata complete - API: pdf=252778, df=40000000, data_fim=2026-05-29. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run.",
+        "2026-05-13: PASSO 2.7 E4 WebSearch: 0 resultados."
       ],
       "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
       "programa": [
@@ -846,7 +853,9 @@
       ],
       "programa_code": "SUSTENTAVEL2030",
       "codigo_api": "FA0263/2025",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "last_websearch_attempt": "2026-05-13",
+      "websearch_attempts": 1
     },
     {
       "id": "empreendimento-hidraulico-de-fins-multiplos-do-crato-barragem-do-pisao",
@@ -1537,7 +1546,12 @@
       ],
       "programa_code": "PESSOAS2030",
       "codigo_api": "FA0142/2025",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "plano_anual_last_check": "2026-05-13",
+      "plano_anual_checks": 1,
+      "plano_anual_notes": [
+        "2026-05-13: PASSO 2.6 - placeholder."
+      ]
     },
     {
       "id": "cursos-cef-cefjam-escolas-privadas-2026-2027",
@@ -1595,7 +1609,12 @@
       ],
       "programa_code": "ALENTEJO2030",
       "codigo_api": "FA0183/2025",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "plano_anual_last_check": "2026-05-13",
+      "plano_anual_checks": 1,
+      "plano_anual_notes": [
+        "2026-05-13: PASSO 2.6 - placeholder."
+      ]
     },
     {
       "id": "servicos-recursos-digitais-valorizacao-territorios-alentejo",
@@ -1622,7 +1641,12 @@
       ],
       "programa_code": "ALENTEJO2030",
       "codigo_api": "FA0189/2025",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "plano_anual_last_check": "2026-05-13",
+      "plano_anual_checks": 1,
+      "plano_anual_notes": [
+        "2026-05-13: PASSO 2.6 - placeholder."
+      ]
     },
     {
       "id": "qualificacao-espaco-publico-parcerias-coesao-alentejo",
@@ -1649,7 +1673,12 @@
       ],
       "programa_code": "ALENTEJO2030",
       "codigo_api": "FA0180/2025",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "plano_anual_last_check": "2026-05-13",
+      "plano_anual_checks": 1,
+      "plano_anual_notes": [
+        "2026-05-13: PASSO 2.6 - placeholder."
+      ]
     },
     {
       "id": "produtos-turisticos-subregionais-iti-alentejo",
@@ -1676,7 +1705,12 @@
       ],
       "programa_code": "ALENTEJO2030",
       "codigo_api": "FA0278/2025",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "plano_anual_last_check": "2026-05-13",
+      "plano_anual_checks": 1,
+      "plano_anual_notes": [
+        "2026-05-13: PASSO 2.6 - placeholder."
+      ]
     },
     {
       "id": "participacao-individual-formacao-ftj-alentejo",
@@ -1703,7 +1737,12 @@
       ],
       "programa_code": "ALENTEJO2030",
       "codigo_api": "FA0233/2025",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "plano_anual_last_check": "2026-05-13",
+      "plano_anual_checks": 1,
+      "plano_anual_notes": [
+        "2026-05-13: PASSO 2.6 - placeholder."
+      ]
     },
     {
       "id": "respostas-locais-desafios-territoriais-iti-agua-alentejo",
@@ -2470,7 +2509,7 @@
       "status": "plano_anual",
       "notes": "Plano Anual de Avisos - aviso nao publicado formalmente. Regulamento era documento PAA.",
       "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
-      "plano_anual_last_check": "2026-05-11",
+      "plano_anual_last_check": "2026-05-13",
       "plano_anual_checks": 1,
       "programa": [
         "NORTE2030"
@@ -2491,7 +2530,12 @@
       "plano_anual_detected_date": "2026-05-11",
       "programa_code": "ALENTEJO2030",
       "codigo_api": "FA0147/2025",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "last_websearch_attempt": "2026-05-13",
+      "websearch_attempts": 1,
+      "plano_anual_notes": [
+        "2026-05-13: PASSO 2.7 E4 WebSearch: so PAA doc 2026-01."
+      ]
     },
     {
       "id": "sibt-alentejo-2026",
@@ -2518,7 +2562,12 @@
       "codigo_api": "FA0147/2025",
       "needs_review": true,
       "review_reason": "Duplicado de \"sistema-de-incentivos-de-base-territorial-it-amp\" (mesma aviso_codigo). Considerar remocao.",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "plano_anual_last_check": "2026-05-13",
+      "plano_anual_checks": 1,
+      "plano_anual_notes": [
+        "2026-05-13: PASSO 2.6 - not-found-in-api."
+      ]
     },
     {
       "id": "tratamento-em-estacoes-de-tratamento-de-aguas-residuais-etar-para-producao-de-ag",
@@ -2938,7 +2987,12 @@
       ],
       "paa_status": "planejado",
       "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FEDER. Detetado via portugal-2030 (scan_destination=watchlist).",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "plano_anual_last_check": "2026-05-13",
+      "plano_anual_checks": 1,
+      "plano_anual_notes": [
+        "2026-05-13: PASSO 2.6 - not-found-in-api."
+      ]
     },
     {
       "id": "investigacao-2030-8211-iii",
@@ -3884,15 +3938,18 @@
       "promoted_from_paa": true,
       "promoted_date": "2026-05-12",
       "priority_score": 540,
-      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_last_check": "2026-05-13",
       "plano_anual_checks": 1,
       "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real.",
       "plano_anual_notes": [
-        "2026-05-12: Confirmado PAA via algarve-2030 API: FA0290/2025 PDF em /unnamed-file.pdf-165.octet-stream contem \"Resumo de Aviso do Plano Anual de Avisos\". DUPLICADO de parcerias-inovacao-social-alentejo (mesma aviso_codigo)."
+        "2026-05-12: Confirmado PAA via algarve-2030 API: FA0290/2025 PDF em /unnamed-file.pdf-165.octet-stream contem \"Resumo de Aviso do Plano Anual de Avisos\". DUPLICADO de parcerias-inovacao-social-alentejo (mesma aviso_codigo).",
+        "2026-05-13: PASSO 2.7 E4 WebSearch: so doc de reuniao do CA Algarve 2024, sem aviso real."
       ],
       "needs_review": true,
       "review_reason": "Duplicado de \"parcerias-inovacao-social-alentejo\" (mesma aviso_codigo). Considerar remocao.",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "last_websearch_attempt": "2026-05-13",
+      "websearch_attempts": 1
     },
     {
       "id": "acoes-inovadoras-desafio-demografico-parcerias-coesao-alentejo",
@@ -4001,7 +4058,12 @@
       "estado": "aberto",
       "paa_status": "planejado",
       "notes": "Programa: ALGARVE2030,COMPETE2030. Natureza: Concurso. Beneficiario: Pública, Privada. Estado: aberto. (scan_destination=watchlist)",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "plano_anual_last_check": "2026-05-13",
+      "plano_anual_checks": 1,
+      "plano_anual_notes": [
+        "2026-05-13: PASSO 2.6 - placeholder."
+      ]
     },
     {
       "id": "step-inovacao-produtiva-digital-e-biotecnologia",
@@ -4032,7 +4094,12 @@
       "estado": "aberto",
       "paa_status": "planejado",
       "notes": "Programa: ALGARVE2030,COMPETE2030. Natureza: Concurso. Beneficiario: Privada. Estado: aberto. (scan_destination=watchlist)",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "plano_anual_last_check": "2026-05-13",
+      "plano_anual_checks": 1,
+      "plano_anual_notes": [
+        "2026-05-13: PASSO 2.6 - placeholder."
+      ]
     },
     {
       "id": "ciclo-agua-alta-baixa-2-aviso-acores",
@@ -4277,6 +4344,6 @@
       "plano_anual_checks": 1
     }
   ],
-  "updated": "2026-05-12",
+  "updated": "2026-05-13",
   "_updated": "2026-05-13"
 }
