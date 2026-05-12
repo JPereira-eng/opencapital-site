@@ -982,10 +982,16 @@
       "budget": null,
       "regulation_url": "https://cinea.ec.europa.eu/funding-opportunities/calls-proposals/climate-change-mitigation-0_en",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/life-programme/life-2026-sap-ccm.txt",
       "priority_score": 10,
-      "status": "pending",
-      "notes": "Codigo: LIFE-2026-SAP-CCM. LIFE Programme 2026 call. Detectado via CINEA. Fonte: life-programme. Pode estar Forthcoming no portal F&T (topic ainda não publicado, mas anunciado oficialmente pelo CINEA com deadline confirmado)."
+      "status": "ready",
+      "notes": "Codigo: LIFE-2026-SAP-CCM. LIFE Programme 2026 call. Detectado via CINEA. Fonte: life-programme. Pode estar Forthcoming no portal F&T (topic ainda não publicado, mas anunciado oficialmente pelo CINEA com deadline confirmado).",
+      "fail_count": 0,
+      "download_error": null,
+      "fallback_tried": [
+        "webfetch",
+        "topic-api"
+      ]
     },
     {
       "id": "life-2026-sap-cgi",
@@ -998,10 +1004,16 @@
       "budget": null,
       "regulation_url": "https://cinea.ec.europa.eu/funding-opportunities/calls-proposals/climate-governance-and-information-0_en",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/life-programme/life-2026-sap-cgi.txt",
       "priority_score": 10,
-      "status": "pending",
-      "notes": "Codigo: LIFE-2026-SAP-CGI. LIFE Programme 2026 call. Detectado via CINEA. Fonte: life-programme. Pode estar Forthcoming no portal F&T (topic ainda não publicado, mas anunciado oficialmente pelo CINEA com deadline confirmado)."
+      "status": "ready",
+      "notes": "Codigo: LIFE-2026-SAP-CGI. LIFE Programme 2026 call. Detectado via CINEA. Fonte: life-programme. Pode estar Forthcoming no portal F&T (topic ainda não publicado, mas anunciado oficialmente pelo CINEA com deadline confirmado).",
+      "fail_count": 0,
+      "download_error": null,
+      "fallback_tried": [
+        "webfetch",
+        "topic-api"
+      ]
     },
     {
       "id": "life-2026-ta-snaps",
@@ -1014,10 +1026,16 @@
       "budget": null,
       "regulation_url": "https://cinea.ec.europa.eu/funding-opportunities/calls-proposals/technical-assistance-preparation-snaps-1_en",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/life-programme/life-2026-ta-snaps.txt",
       "priority_score": 10,
-      "status": "pending",
-      "notes": "Codigo: LIFE-2026-TA-SNAPs. LIFE Programme 2026 call. Detectado via CINEA. Fonte: life-programme. Pode estar Forthcoming no portal F&T (topic ainda não publicado, mas anunciado oficialmente pelo CINEA com deadline confirmado)."
+      "status": "ready",
+      "notes": "Codigo: LIFE-2026-TA-SNAPs. LIFE Programme 2026 call. Detectado via CINEA. Fonte: life-programme. Pode estar Forthcoming no portal F&T (topic ainda não publicado, mas anunciado oficialmente pelo CINEA com deadline confirmado).",
+      "fail_count": 0,
+      "download_error": null,
+      "fallback_tried": [
+        "webfetch",
+        "topic-api"
+      ]
     },
     {
       "id": "life-2026-ta-sips-env",
@@ -1030,10 +1048,16 @@
       "budget": null,
       "regulation_url": "https://cinea.ec.europa.eu/funding-opportunities/calls-proposals/technical-assistance-preparation-sips-environment-1_en",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/life-programme/life-2026-ta-sips-env.txt",
       "priority_score": 10,
-      "status": "pending",
-      "notes": "Codigo: LIFE-2026-TA-SIPs-ENV. LIFE Programme 2026 call. Detectado via CINEA. Fonte: life-programme. Pode estar Forthcoming no portal F&T (topic ainda não publicado, mas anunciado oficialmente pelo CINEA com deadline confirmado)."
+      "status": "ready",
+      "notes": "Codigo: LIFE-2026-TA-SIPs-ENV. LIFE Programme 2026 call. Detectado via CINEA. Fonte: life-programme. Pode estar Forthcoming no portal F&T (topic ainda não publicado, mas anunciado oficialmente pelo CINEA com deadline confirmado).",
+      "fail_count": 0,
+      "download_error": null,
+      "fallback_tried": [
+        "webfetch",
+        "topic-api"
+      ]
     },
     {
       "id": "life-2026-ta-sips-clima",
@@ -1046,10 +1070,16 @@
       "budget": null,
       "regulation_url": "https://cinea.ec.europa.eu/funding-opportunities/calls-proposals/technical-assistance-preparation-sips-climate-0_en",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/life-programme/life-2026-ta-sips-clima.txt",
       "priority_score": 10,
-      "status": "pending",
-      "notes": "Codigo: LIFE-2026-TA-SIPs-CLIMA. LIFE Programme 2026 call. Detectado via CINEA. Fonte: life-programme. Pode estar Forthcoming no portal F&T (topic ainda não publicado, mas anunciado oficialmente pelo CINEA com deadline confirmado)."
+      "status": "ready",
+      "notes": "Codigo: LIFE-2026-TA-SIPs-CLIMA. LIFE Programme 2026 call. Detectado via CINEA. Fonte: life-programme. Pode estar Forthcoming no portal F&T (topic ainda não publicado, mas anunciado oficialmente pelo CINEA com deadline confirmado).",
+      "fail_count": 0,
+      "download_error": null,
+      "fallback_tried": [
+        "webfetch",
+        "topic-api"
+      ]
     },
     {
       "id": "life-2026-csa-multilevel",
@@ -2018,35 +2048,6 @@
       "codigo_api": "FA0048/2025"
     },
     {
-      "id": "apoios-a-contratacao",
-      "name": "Apoios à Contratação",
-      "codigo": "FA0222/2025",
-      "aviso_codigo": "FA0222/2025",
-      "source_id": "pessoas-2030",
-      "shard": "pt2030-pessoas",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-09-01",
-      "data_fim": "2026-12-31",
-      "deadline": "2026-12-31",
-      "budget_eur": 68000000.0,
-      "regulation_url": 252888,
-      "pdf_url": 252888,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "previsto",
-      "fail_count": 3,
-      "priority_score": 530,
-      "download_error": "No PDF found via API for codigo FA0222/2025",
-      "last_fail_date": "2026-05-12",
-      "fallback_tried": [
-        "api-fetch",
-        "api-fetch",
-        "2b-pdf"
-      ],
-      "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0222/2025"
-    },
-    {
       "id": "apoio-sem-abrigo-algarve",
       "name": "Apoio a pessoas em situação de sem-abrigo",
       "codigo": "FA0310/2025",
@@ -2307,64 +2308,6 @@
       "priority_score": 510,
       "programa_code": "ALGARVE2030",
       "codigo_api": "FA0307/2025"
-    },
-    {
-      "id": "centros-especializados-em-qualificacao-de-adultos-e-processos-de-rvcc-",
-      "name": "Centros especializados em qualificação de adultos e processos de RVCC (Centros Qualifica)",
-      "codigo": "FA0224/2025",
-      "aviso_codigo": "FA0224/2025",
-      "source_id": "pessoas-2030",
-      "shard": "pt2030-pessoas",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-05-04",
-      "data_fim": "2026-12-31",
-      "deadline": "2026-12-31",
-      "budget_eur": 60000000.0,
-      "regulation_url": 252950,
-      "pdf_url": 252950,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "aberto",
-      "fail_count": 3,
-      "priority_score": 530,
-      "download_error": "No PDF found via API for codigo FA0224/2025",
-      "last_fail_date": "2026-05-12",
-      "fallback_tried": [
-        "api-fetch",
-        "api-fetch",
-        "2b-pdf"
-      ],
-      "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0224/2025"
-    },
-    {
-      "id": "formacao-avancada",
-      "name": "Formação Avançada",
-      "codigo": "FA0218/2025",
-      "aviso_codigo": "FA0218/2025",
-      "source_id": "pessoas-2030",
-      "shard": "pt2030-pessoas",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-09-01",
-      "data_fim": "2026-12-31",
-      "deadline": "2026-12-31",
-      "budget_eur": 400000003.0,
-      "regulation_url": 252942,
-      "pdf_url": 252942,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "previsto",
-      "fail_count": 3,
-      "priority_score": 530,
-      "download_error": "No PDF found via API for codigo FA0218/2025",
-      "last_fail_date": "2026-05-12",
-      "fallback_tried": [
-        "api-fetch",
-        "api-fetch",
-        "2b-pdf"
-      ],
-      "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0218/2025"
     },
     {
       "id": "apoio-tecnico-e-financeiro-a-organizacoes-da-sociedade-civil-que-atuam",
@@ -3511,10 +3454,15 @@
       "budget": "EUR 300.000.000",
       "regulation_url": "https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eic-accelerator/eic-step-scale-up-2026.txt",
       "priority_score": 50,
-      "status": "pending",
-      "notes": "Detetado via eic-accelerator (EIC). Equity-only EUR 10-30M por empresa. Foco: tecnologias estrategicas, quantica, semicondutores. Deadlines de submissao: 11.02.2026, 06.05.2026, 09.09.2026, 25.11.2026."
+      "status": "ready",
+      "notes": "Detetado via eic-accelerator (EIC). Equity-only EUR 10-30M por empresa. Foco: tecnologias estrategicas, quantica, semicondutores. Deadlines de submissao: 11.02.2026, 06.05.2026, 09.09.2026, 25.11.2026.",
+      "fail_count": 0,
+      "download_error": null,
+      "fallback_tried": [
+        "webfetch"
+      ]
     },
     {
       "id": "eea-grants-bilateral-fund-call-1-defesa-seguranca-politica-externa",
@@ -3531,121 +3479,13 @@
       "regulation_local": null,
       "priority_score": 20,
       "status": "pending",
-      "notes": "Detetado via eea-grants-portugal (Mecanismo Financeiro EEA 2021-2028). Primeiro aviso do Fundo Bilateral Nacional. Areas: ameacas hibridas, ciberseguranca, infraestruturas, seguranca maritima, cooperacao europeia de defesa. Beneficiarios: entidades publicas e privadas (incluindo OSC) com obrigatoriedade de parceiro da Noruega ou Islandia. Duracao 6-24 meses. Candidaturas via Balcao dos Fundos. Codigo construido (sem ID oficial publicado)."
-    },
-    {
-      "id": "combate-a-privacao-material-2-aviso",
-      "name": "Combate à privação material &#8211; 2º Aviso",
-      "source_id": "acores-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0202/2025",
-      "detected_date": "2026-05-12",
-      "deadline": "20260105",
-      "budget": null,
-      "regulation_url": "https://acores.portugal2030.pt/aviso-2024/combate-a-privacao-material-2o-aviso/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 540,
-      "status": "pending",
-      "fail_count": 0,
-      "data_inicio": "20260105",
-      "human_code": "FA0202/2025",
-      "programa_code": [
-        "AÇORES2030"
-      ],
-      "cross_portal_match": {
-        "original_codigo": "FA0202/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "acores-2030",
-        "matched_codigo": "FA0202/2025",
-        "title_similarity": 1.0,
-        "code_match": true
-      },
-      "notes": "Cross-portal match via PASSO 2.7. PAA original em portugal-2030 (FA0202/2025), aviso real publicado em acores-2030 sob mesmo codigo."
-    },
-    {
-      "id": "step-i-d-i-empresarial-digital-e-biotecnologia",
-      "name": "STEP &#8211; I&#038;D&#038;I Empresarial &#8211; Digital e Biotecnologia",
-      "source_id": "algarve-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0076/2025",
-      "detected_date": "2026-05-12",
-      "deadline": "30/09/2026",
-      "budget": null,
-      "regulation_url": "https://algarve.portugal2030.pt/aviso-2024/step-idi-empresarial-digital-e-biotecnologia/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 540,
-      "status": "pending",
-      "fail_count": 0,
-      "data_inicio": "30/01/2026",
-      "human_code": "FA0076/2025",
-      "programa_code": "",
-      "cross_portal_match": {
-        "original_codigo": "FA0076/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "algarve-2030",
-        "matched_codigo": "FA0076/2025",
-        "title_similarity": 1.0,
-        "code_match": true
-      },
-      "notes": "Cross-portal match via PASSO 2.7. PAA original em portugal-2030 (FA0076/2025), aviso real publicado em algarve-2030 sob mesmo codigo."
-    },
-    {
-      "id": "step-inovacao-produtiva-digital-e-biotecnologia",
-      "name": "STEP &#8211; Inovação Produtiva &#8211; Digital e Biotecnologia",
-      "source_id": "algarve-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0075/2025",
-      "detected_date": "2026-05-12",
-      "deadline": "30/09/2026",
-      "budget": null,
-      "regulation_url": "https://algarve.portugal2030.pt/aviso-2024/step-inovacao-produtiva-digital-e-biotecnologia/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 540,
-      "status": "pending",
-      "fail_count": 0,
-      "data_inicio": "30/01/2026",
-      "human_code": "FA0075/2025",
-      "programa_code": "",
-      "cross_portal_match": {
-        "original_codigo": "FA0075/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "algarve-2030",
-        "matched_codigo": "FA0075/2025",
-        "title_similarity": 1.0,
-        "code_match": true
-      },
-      "notes": "Cross-portal match via PASSO 2.7. PAA original em portugal-2030 (FA0075/2025), aviso real publicado em algarve-2030 sob mesmo codigo."
-    },
-    {
-      "id": "gestao-recursos-hidricos-acores2030",
-      "name": "Gestão de Recursos hídricos",
-      "source_id": "acores-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0583/2023",
-      "detected_date": "2026-05-12",
-      "deadline": "30/06/2026",
-      "budget": null,
-      "regulation_url": "https://acores.portugal2030.pt/aviso-2024/gestao-de-recursos-hidricos/",
-      "pdf_url": null,
-      "regulation_local": null,
-      "priority_score": 540,
-      "status": "pending",
-      "fail_count": 0,
-      "data_inicio": "20260201",
-      "human_code": "FA0583/2023",
-      "programa_code": "",
-      "cross_portal_match": {
-        "original_codigo": "FA0583/2023",
-        "original_portal": "portugal-2030",
-        "matched_portal": "acores-2030",
-        "matched_codigo": "FA0583/2023",
-        "title_similarity": 1.0,
-        "code_match": true
-      },
-      "notes": "Cross-portal match via PASSO 2.7. PAA original em portugal-2030 (FA0583/2023), aviso real publicado em acores-2030 sob mesmo codigo."
+      "notes": "Detetado via eea-grants-portugal (Mecanismo Financeiro EEA 2021-2028). Primeiro aviso do Fundo Bilateral Nacional. Areas: ameacas hibridas, ciberseguranca, infraestruturas, seguranca maritima, cooperacao europeia de defesa. Beneficiarios: entidades publicas e privadas (incluindo OSC) com obrigatoriedade de parceiro da Noruega ou Islandia. Duracao 6-24 meses. Candidaturas via Balcao dos Fundos. Codigo construido (sem ID oficial publicado).",
+      "fail_count": 1,
+      "download_error": "HTTP 403 em eeagrants.org - URL pode requerer autenticacao ou estar atras de Cloudflare (tentativa em 2026-05-12)",
+      "last_fail_date": "2026-05-12",
+      "fallback_tried": [
+        "webfetch"
+      ]
     }
   ],
   "items": [],
