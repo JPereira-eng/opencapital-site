@@ -304,6 +304,152 @@ Em 2026-05-12, primeira execução do v4.12 PASSO 2.7 promoveu 12 items para a q
 - regulation_url vazio
 Resultado: items voltariam ao ciclo no próximo downloader e seriam redirecionados para watchlist. Loop. As regras acima fecham essa brecha.
 
+---
+
+### Estratégia 4: WebSearch no portal central (v4.12.2, 2026-05-12)
+
+Após esgotar matching nos portais regionais (estratégias 1-3), aplicar a estratégia que o downloader usa em `PASSO 2b-portal-central`: procurar o regulamento real publicado em `portugal2030.pt/wp-content/uploads/sites/3/YYYY/MM/[CODIGO_HUMANO].pdf` via WebSearch.
+
+**Por que faz sentido no monitor (não duplica downloader):**
+
+- Items em watchlist NÃO são tocados pelo downloader (só itens em queue.json)
+- Items em watchlist são exatamente aqueles onde a tentativa anterior falhou
+- Mas o tempo passa: AGs podem ter publicado o regulamento entretanto
+- Esta estratégia dá uma re-tentativa periódica
+
+**Cooldown obrigatório (cap de custo):**
+
+Cada item tem campo `last_websearch_attempt: YYYY-MM-DD`. WebSearch para um item só corre se:
+- Campo está vazio (nunca tentado), OU
+- Passaram **>= 7 dias** desde `last_websearch_attempt`
+
+Isto evita repetir WebSearch para o mesmo item todos os dias.
+
+**Seleção dos 15 items/run:**
+
+Ordem de prioridade (parar quando 15 selecionados):
+1. Items sem `last_websearch_attempt` (nunca tentaram)
+2. Items com `last_websearch_attempt` mais antigo (>= 7 dias)
+3. Skip items com tentativa < 7 dias
+
+**Algoritmo da Estratégia 4:**
+
+```python
+from datetime import date, timedelta
+
+today = date.today()
+cooldown = timedelta(days=7)
+
+# Filtrar elegíveis
+eligible = []
+for item in watchlist:
+    if item.source_id not in FAMILIA_PT2030: continue
+    if item.id in DEPUBLISHED_SLUGS: continue
+    last_attempt = parse_date(item.get('last_websearch_attempt'))
+    if last_attempt and (today - last_attempt) < cooldown:
+        continue
+    eligible.append(item)
+
+# Ordenar: nunca tentado primeiro, depois mais antigo
+eligible.sort(key=lambda i: (
+    bool(i.get('last_websearch_attempt')),  # False (nunca) primeiro
+    i.get('last_websearch_attempt', '0000-01-01'),  # mais antigo primeiro
+))
+
+# Processar até 15
+for item in eligible[:15]:
+    titulo = item.get('name', '')[:60]
+    programa = item.get('programa_code', '')
+    if not programa:
+        # Skip se programa_code não definido
+        continue
+
+    # WebSearch refinada
+    query = f'site:portugal2030.pt "{titulo[:40]}" "{programa}" filetype:pdf'
+    results = WebSearch(query)
+
+    found = False
+    for url in results[:5]:
+        if not url.endswith('.pdf'): continue
+        # HEAD + GET + pdftotext
+        pdf_bytes = curl_download(url)
+        text = pdftotext(pdf_bytes)
+
+        # Validar não-PAA
+        if 'plano anual' in text.lower() or 'resumo de aviso' in text.lower():
+            continue
+        if len(text.split()) < 1500:
+            continue
+
+        # Extrair human_code do PDF
+        match = re.search(
+            r'(?i)C[oó]digo\s+do\s+aviso\s*:?\s*'
+            r'([A-Z][A-ZÇÊÁÍÓ]+2030-\d{4}-\d+|PACS-\d{4}-\d+)',
+            text
+        )
+        if match:
+            human_code = normalize_human(match.group(1))
+            # Validar similaridade titulo
+            if title_similarity(titulo, extract_pdf_title(text)) < 0.6:
+                continue
+
+            # PROMOÇÃO LEGÍTIMA - todas as 5 regras v4.12.1 respeitadas:
+            # 0. Não está em depublished
+            # 1. human_code formato canónico (passou regex)
+            # 2. regulation_url HTTP válida
+            # 3. matched_portal seria portugal-2030, MAS este é um caso especial:
+            #    estamos a usar central como FONTE do regulamento (não como portal de match)
+            #    Por isso a regra 3 não se aplica aqui — registar como match_method especial.
+            # 4. matched_portal != original_portal (sempre verdade aqui)
+
+            item.human_code = human_code
+            item.regulation_url = url
+            item.cross_portal_match = {
+                'original_codigo': item.codigo_api,
+                'original_portal': item.source_id,
+                'matched_portal': 'portugal-2030-central-uploads',  # SEMÂNTICA distinta
+                'matched_human_code': human_code,
+                'match_method': 'websearch_central_uploads',
+                'matched_at': today.isoformat(),
+            }
+            # Atualizar lookup
+            lookup.by_human_code[human_code] = item.id
+            # Mover para queue.json
+            queue.append(item)
+            watchlist.remove(item)
+            save(queue.json, watchlist.json, lookup.json)
+            found = True
+            break
+
+    # Marcar tentativa (independente de sucesso ou falha)
+    if not found:
+        item.last_websearch_attempt = today.isoformat()
+        # incrementar contador
+        item.websearch_attempts = (item.get('websearch_attempts', 0) or 0) + 1
+        save(watchlist.json)
+```
+
+**Nota sobre regra 3 (matched_portal != portugal-2030):**
+
+A regra v4.12.1 proibia `matched_portal == 'portugal-2030'` porque na 1ª execução o agente estava a fazer match no central API JSON (Tipo B, mesmo PAA do qual o item veio — redundante).
+
+A Estratégia 4 é diferente: usa o **portal central como FONTE de PDFs publicados** (não como portal de match JSON). Os PDFs em `portugal2030.pt/wp-content/uploads/sites/3/...` são **regulamentos reais**, não os PAAs da API JSON.
+
+Para distinguir semanticamente, usar `matched_portal: "portugal-2030-central-uploads"` (string distinta de `"portugal-2030"`). A regra 3 continua a proibir `"portugal-2030"` puro mas permite a variante uploads.
+
+**Reporting:**
+
+```
+PASSO 2.7 Estratégia 4 (WebSearch central uploads):
+  Items elegíveis (cooldown OK): N
+  Items processados (até 15): M
+  Sucessos (promoção legítima): K
+  Falhas (nenhum PDF válido encontrado): M - K
+  Items com 5+ websearch_attempts sem sucesso: lista para revisão manual
+```
+
+**Após 5 tentativas sem sucesso (35+ dias), recomendar revisão manual:** o aviso pode ter sido cancelado, ou ter código humano formato não-padronizado.
+
 ⚠️ **CRÍTICO (correção 2026-05-12):** o critério inicial v4.11 limitava-se a `source_id == "portugal-2030"`, o que excluía a maioria da watchlist (items já com source regional). Agora aceita TODA a família PT2030 — quando o portal original deu PAA, tenta encontrar correspondência nos OUTROS 10 portais regionais.
 
 **Algoritmo:**
