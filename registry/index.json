@@ -11,14 +11,14 @@
     "updated": "2026-05-12"
   },
   "totals": {
-    "published": 649,
-    "open": 403,
+    "published": 650,
+    "open": 404,
     "closed": 162,
     "planned": 83,
     "in_queue": 195,
     "in_watchlist": 128,
     "in_catalogo": 0,
-    "in_overflow": 290,
+    "in_overflow": 289,
     "in_plano_anual": 123
   },
   "shards": {
@@ -116,10 +116,11 @@
       "closed": 1
     },
     "pt2030-norte": {
-      "count": 6,
-      "open": 3,
-      "closed": 3,
-      "published": 6
+      "count": 8,
+      "open": 4,
+      "closed": 4,
+      "published": 8,
+      "updated": "2026-05-12"
     },
     "pt2030-other": {
       "count": 25,

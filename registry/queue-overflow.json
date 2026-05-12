@@ -4472,23 +4472,6 @@
       "notes": "EIT Climate-KIC open call for climate innovation talents and start-ups. InnoNext programme."
     },
     {
-      "id": "norte2030-2026-5-5g-healthcare",
-      "name": "5G in Healthcare - Northern Region (PT)",
-      "source_id": "norte-2030",
-      "shard": "pt2030-norte",
-      "aviso_codigo": "NORTE2030-2026-5",
-      "detected_date": "2026-04-17",
-      "deadline": "2026-07-31",
-      "budget": null,
-      "regulation_url": "https://www.norte2030.pt/concurso/apoio-para-a-implementacao-do-projeto-5g-in-healthcare-northern-region-pt-norte2030-2026-5/",
-      "pdf_url": "https://www.norte2030.pt/app/uploads/2027/04/Aviso_5G-for-Smart-Communities-Unidade-Local-de-Saude-de-Sao-Joao_10-04-2026.pdf",
-      "regulation_local": "regulamentos/norte-2030/norte2030-2026-5-5g-healthcare.txt",
-      "priority_score": 510,
-      "status": "ready",
-      "notes": "NORTE2030-2026-5. Convite a entidade unica: ULS Sao Joao EPE. Programa 5G for Smart Communities (CEF-DIG-2022-5GSMARTCOM). Norte Mais Social.",
-      "fail_count": 0
-    },
-    {
       "id": "innonext-call-eit-2026",
       "name": "InnoNext Call EIT 2026",
       "source_id": "eit",
@@ -4840,5 +4823,6 @@
       "status": "pending",
       "notes": "Codigo: LIFE-2026-SAP-CCA. LIFE Programme 2026 call. Detectado via CINEA. Fonte: life-programme. Pode estar Forthcoming no portal F&T (topic ainda não publicado, mas anunciado oficialmente pelo CINEA com deadline confirmado)."
     }
-  ]
+  ],
+  "updated": "2026-05-12"
 }
