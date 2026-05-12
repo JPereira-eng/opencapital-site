@@ -29854,6 +29854,33 @@
       "highlight2": "UE + paises associados Horizonte",
       "href": "instrumentos/horizon-cl5-2027-07/",
       "featured": false
+    },
+    {
+      "id": "horizon-neb-2027-01",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 01/12/2027",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "entidade-publica,ensino-investigacao,associacao,empresa",
+      "setores": [
+        "economia-criativa",
+        "saude-ciencias-vida"
+      ],
+      "necessidades": [
+        "impacto-social-inclusao",
+        "sustentabilidade-energia-clima",
+        "id-ciencia"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte NEB 2027-01: Bairros Intergeracionais New European Bauhaus",
+      "tagline": "Demonstrar solucoes de bairros e comunidades intergeracionais em pelo menos 3 contextos europeus (urbano, peri-urbano, rural), alinhadas com beleza, inclusao e sustentabilidade do NEB.",
+      "highlight0": "3 bairros, 3 paises, lump sum",
+      "highlight1": "Municipios, universidades, atelies, ONG, PME tech",
+      "highlight2": "UE + paises associados Horizonte",
+      "href": "instrumentos/horizon-neb-2027-01/",
+      "featured": false
     }
   ]
 }
