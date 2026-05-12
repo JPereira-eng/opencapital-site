@@ -1066,6 +1066,13 @@
       "source": "eit-climate",
       "state": "aberto",
       "last_check": "2026-05-10"
+    },
+    {
+      "id": "pppa-2026-born-digital",
+      "file": "instrumentos/pppa-2026-born-digital/index.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-05-12"
     }
   ],
   "instruments": [
@@ -2246,10 +2253,11 @@
       "last_check": "2026-05-09"
     }
   ],
-  "count": 146,
-  "published": 142,
-  "open": 107,
+  "count": 147,
+  "published": 143,
+  "open": 108,
   "closed": 32,
   "planned": 2,
-  "_meta": {}
+  "_meta": {},
+  "updated": "2026-05-12"
 }

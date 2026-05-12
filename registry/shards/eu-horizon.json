@@ -2389,6 +2389,20 @@
       "source": "eu-funding-tenders",
       "state": "aberto",
       "last_check": "2026-05-12"
+    },
+    {
+      "id": "horizon-widera-2027-01",
+      "file": "instrumentos/horizon-widera-2027-01/index.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-05-12"
+    },
+    {
+      "id": "horizon-msca-2026-dn-01",
+      "file": "instrumentos/horizon-msca-2026-dn-01/index.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-05-12"
     }
   ],
   "instruments": [
@@ -4717,10 +4731,10 @@
       "last_check": "2026-05-12"
     }
   ],
-  "count": 343,
-  "open": 176,
+  "count": 345,
+  "open": 178,
   "closed": 132,
   "planned": 35,
-  "published": 343,
+  "published": 345,
   "updated": "2026-05-12"
 }
