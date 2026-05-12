@@ -1079,8 +1079,8 @@
       "regional_portals": [
         "alentejo-2030"
       ],
-      "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1,
+      "plano_anual_last_check": "2026-05-13",
+      "plano_anual_checks": 2,
       "programa_code": "ALENTEJO2030",
       "codigo_api": "FA0268/2025",
       "data_status": "forecast"
@@ -1108,8 +1108,8 @@
       "regional_portals": [
         "madeira-2030"
       ],
-      "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1,
+      "plano_anual_last_check": "2026-05-13",
+      "plano_anual_checks": 2,
       "programa_code": "MADEIRA2030",
       "codigo_api": "FA0240/2025",
       "data_status": "forecast"
@@ -1139,8 +1139,8 @@
       ],
       "programa_code": "MADEIRA2030",
       "codigo_api": "FA0097/2025",
-      "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1,
+      "plano_anual_last_check": "2026-05-13",
+      "plano_anual_checks": 2,
       "data_status": "forecast"
     },
     {
@@ -1357,8 +1357,8 @@
       ],
       "programa_code": "ALGARVE2030",
       "codigo_api": "FA0310/2025",
-      "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1,
+      "plano_anual_last_check": "2026-05-13",
+      "plano_anual_checks": 2,
       "data_status": "forecast"
     },
     {
@@ -4120,7 +4120,163 @@
         "teste-a-paa"
       ],
       "plano_anual_checks": 1
+    },
+    {
+      "id": "contratacao-rh-qualificados-pme-outros-territorios-alentejo",
+      "name": "Contratação de Recursos Humanos Altamente Qualificados por PME – Outros Territórios",
+      "codigo": "FA0254/2025",
+      "aviso_codigo": "FA0254/2025",
+      "source_id": "alentejo-2030",
+      "shard": "pt2030-other",
+      "detected_date": "2026-05-11",
+      "data_inicio": "2026-05-05",
+      "data_fim": "2026-11-05",
+      "deadline": "2026-11-05",
+      "budget_eur": 1400000.0,
+      "regulation_url": 252830,
+      "pdf_url": 252830,
+      "regulation_local": null,
+      "status": "plano_anual",
+      "state": "aberto",
+      "fail_count": 1,
+      "priority_score": 510,
+      "programa_code": "ALENTEJO2030",
+      "codigo_api": "FA0254/2025",
+      "data_status": "forecast",
+      "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
+      "last_fail_date": "2026-05-13",
+      "fallback_tried": [
+        "2b-pdf",
+        "2b-pdf",
+        "2b-pdf"
+      ],
+      "fallback_field": "pdf",
+      "plano_anual_detected_date": "2026-05-13",
+      "plano_anual_checks": 1
+    },
+    {
+      "id": "modelo-apoio-vida-independente-mavi",
+      "name": "Modelo de Apoio à Vida Independente (MAVI)",
+      "codigo": "FA0311/2025",
+      "aviso_codigo": "FA0311/2025",
+      "source_id": "algarve-2030",
+      "shard": "pt2030-other",
+      "detected_date": "2026-05-11",
+      "data_inicio": "2026-11-30",
+      "data_fim": "2027-01-29",
+      "deadline": "2027-01-29",
+      "budget_eur": 2400000.0,
+      "regulation_url": 252914,
+      "pdf_url": 252914,
+      "regulation_local": null,
+      "status": "plano_anual",
+      "state": "previsto",
+      "fail_count": 1,
+      "priority_score": 510,
+      "programa_code": "ALGARVE2030",
+      "codigo_api": "FA0311/2025",
+      "data_status": "forecast",
+      "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
+      "last_fail_date": "2026-05-13",
+      "fallback_tried": [
+        "2b-pdf",
+        "2b-pdf",
+        "2b-pdf"
+      ],
+      "fallback_field": "pdf",
+      "plano_anual_detected_date": "2026-05-13",
+      "plano_anual_checks": 1
+    },
+    {
+      "id": "programa-escolhas-algarve",
+      "name": "Programa Escolhas",
+      "source_id": "pessoas-2030",
+      "shard": "pt2030-other",
+      "aviso_codigo": "FA0077/2025",
+      "detected_date": "2026-04-13",
+      "deadline": "2026-12-30",
+      "budget": 1200000,
+      "regulation_url": 25596,
+      "pdf_url": 25596,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "plano_anual",
+      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALGARVE2030. Natureza: Convite. Doc: L1:pdf.",
+      "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "codigo": "FA0077/2025",
+      "fail_count": 1,
+      "cross_portal_match": {
+        "original_codigo": "FA0308/2025",
+        "original_portal": "portugal-2030",
+        "matched_portal": "pessoas-2030",
+        "matched_codigo": "FA0077/2025",
+        "title_similarity": 1.0,
+        "matched_at": "2026-05-11"
+      },
+      "programa_code": "PESSOAS2030",
+      "codigo_api": "FA0077/2025",
+      "data_status": "forecast",
+      "last_fail_date": "2026-05-13",
+      "fallback_tried": [
+        "2b-pdf",
+        "2b-pdf"
+      ],
+      "fallback_field": "pdf",
+      "plano_anual_detected_date": "2026-05-13",
+      "plano_anual_checks": 1
+    },
+    {
+      "id": "infraestruturas-escolares-da-primeira-infancia-2-aviso",
+      "name": "Infraestruturas Escolares da Primeira Infância – 2º Aviso",
+      "source_id": "acores-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0305/2025",
+      "detected_date": "2026-04-13",
+      "deadline": "2026-12-31",
+      "budget": 10000000,
+      "regulation_url": 15522,
+      "pdf_url": 15522,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "plano_anual",
+      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
+      "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
+      "programa": [
+        "ACORES2030"
+      ],
+      "regional_portals": [
+        "acores-2030"
+      ],
+      "codigo": "FA0305/2025",
+      "fail_count": 1,
+      "cross_portal_match": {
+        "original_codigo": "FA0305/2025",
+        "original_portal": "portugal-2030",
+        "matched_portal": "acores-2030",
+        "matched_codigo": "FA0305/2025",
+        "title_similarity": 1.0,
+        "matched_at": "2026-05-11"
+      },
+      "programa_code": "ACORES2030",
+      "codigo_api": "FA0305/2025",
+      "data_status": "forecast",
+      "last_fail_date": "2026-05-13",
+      "fallback_tried": [
+        "2b-pdf",
+        "2b-pdf"
+      ],
+      "fallback_field": "pdf",
+      "plano_anual_detected_date": "2026-05-13",
+      "plano_anual_checks": 1
     }
   ],
-  "updated": "2026-05-12"
+  "updated": "2026-05-12",
+  "_updated": "2026-05-13"
 }
