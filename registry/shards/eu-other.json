@@ -1087,6 +1087,13 @@
       "source": "life-programme",
       "state": "fechado",
       "last_check": "2026-05-12"
+    },
+    {
+      "id": "life-2026-strat-env-sip-two-stage",
+      "file": "instrumentos/life-2026-strat-env-sip-two-stage/index.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-05-12"
     }
   ],
   "instruments": [
@@ -2267,9 +2274,9 @@
       "last_check": "2026-05-09"
     }
   ],
-  "count": 149,
-  "published": 149,
-  "open": 102,
+  "count": 150,
+  "published": 150,
+  "open": 103,
   "closed": 45,
   "planned": 2,
   "_meta": {},
