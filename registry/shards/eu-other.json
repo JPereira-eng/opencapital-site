@@ -1080,6 +1080,13 @@
       "source": "eu-funding-tenders",
       "state": "aberto",
       "last_check": "2026-05-12"
+    },
+    {
+      "id": "life-2026-ta-sips-clima",
+      "file": "instrumentos/life-2026-ta-sips-clima/index.html",
+      "source": "life-programme",
+      "state": "fechado",
+      "last_check": "2026-05-12"
     }
   ],
   "instruments": [
@@ -2260,10 +2267,10 @@
       "last_check": "2026-05-09"
     }
   ],
-  "count": 316,
-  "published": 316,
-  "open": 222,
-  "closed": 92,
+  "count": 149,
+  "published": 149,
+  "open": 102,
+  "closed": 45,
   "planned": 2,
   "_meta": {},
   "updated": "2026-05-12"
