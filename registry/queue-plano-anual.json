@@ -660,8 +660,8 @@
       "regional_portals": [
         "alentejo-2030"
       ],
-      "plano_anual_last_check": "2026-05-11",
-      "plano_anual_checks": 1,
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 2,
       "programa_code": "ALENTEJO2030",
       "codigo_api": "FA0830/2024",
       "data_status": "forecast"
@@ -752,8 +752,8 @@
       "regional_portals": [
         "sustentavel-2030"
       ],
-      "plano_anual_last_check": "2026-05-11",
-      "plano_anual_checks": 1,
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 2,
       "programa_code": "SUSTENTAVEL2030",
       "codigo_api": "FA0932/2024",
       "data_status": "forecast"
@@ -781,8 +781,8 @@
       "regional_portals": [
         "sustentavel-2030"
       ],
-      "plano_anual_last_check": "2026-05-11",
-      "plano_anual_checks": 1,
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 2,
       "programa_code": "SUSTENTAVEL2030",
       "codigo_api": "FA0577/2024",
       "data_status": "forecast"
@@ -906,7 +906,9 @@
       ],
       "programa_code": "SUSTENTAVEL2030",
       "codigo_api": "FA0282/2025",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-12"
     },
     {
       "id": "mobilidade-sustentavel-iti-alentejo",
@@ -932,7 +934,7 @@
         "alentejo-2030"
       ],
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1,
+      "plano_anual_checks": 2,
       "programa_code": "ALENTEJO2030",
       "codigo_api": "FA0274/2025",
       "data_status": "forecast"
@@ -960,8 +962,8 @@
       "regional_portals": [
         "mar-2030"
       ],
-      "plano_anual_last_check": "2026-05-11",
-      "plano_anual_checks": 1,
+      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_checks": 2,
       "programa_code": "MAR2030",
       "codigo_api": "FA0294/2023",
       "data_status": "forecast"
@@ -1049,7 +1051,7 @@
         "alentejo-2030"
       ],
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1,
+      "plano_anual_checks": 2,
       "programa_code": "ALENTEJO2030",
       "codigo_api": "FA0250/2025",
       "data_status": "forecast"
@@ -4031,6 +4033,93 @@
       "paa_status": "planejado",
       "notes": "Programa: ALGARVE2030,COMPETE2030. Natureza: Concurso. Beneficiario: Privada. Estado: aberto. (scan_destination=watchlist)",
       "data_status": "forecast"
+    },
+    {
+      "id": "ciclo-agua-alta-baixa-2-aviso-acores",
+      "name": "Ciclo da Água em alta e em baixa – 2º Aviso",
+      "codigo": "FA0304/2025",
+      "aviso_codigo": "FA0304/2025",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "detected_date": "2026-05-11",
+      "data_inicio": "2026-06-01",
+      "data_fim": "2026-12-31",
+      "deadline": "2026-12-31",
+      "budget_eur": 4000000.0,
+      "regulation_url": 252726,
+      "pdf_url": 252726,
+      "regulation_local": null,
+      "status": "plano_anual",
+      "state": "previsto",
+      "fail_count": 0,
+      "priority_score": 510,
+      "data_status": "forecast",
+      "download_error": "Plano Anual - PAA detectado no PDF",
+      "plano_anual_detected_date": "2026-05-12",
+      "fallback_tried": [
+        "2b-pdf",
+        "teste-a-paa"
+      ],
+      "plano_anual_checks": 1
+    },
+    {
+      "id": "adaptacao-as-alteracoes-climaticas-2-aviso",
+      "name": "Adaptação às alterações climáticas – 2º Aviso",
+      "codigo": "FA0207/2025",
+      "aviso_codigo": "FA0207/2025",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "detected_date": "2026-05-11",
+      "data_inicio": "2026-05-01",
+      "data_fim": "2026-11-30",
+      "deadline": "2026-11-30",
+      "budget_eur": 4000000.0,
+      "regulation_url": 252724,
+      "pdf_url": 252724,
+      "regulation_local": null,
+      "status": "plano_anual",
+      "state": "aberto",
+      "fail_count": 0,
+      "priority_score": 510,
+      "data_status": "forecast",
+      "download_error": "Plano Anual - PAA detectado no PDF",
+      "plano_anual_detected_date": "2026-05-12",
+      "fallback_tried": [
+        "2b-pdf",
+        "teste-a-paa"
+      ],
+      "plano_anual_checks": 1
+    },
+    {
+      "id": "cua-reutilizacao-resiliencia-modernizacao-alentejo",
+      "name": "CUA: Reutilização, resiliência, modernização e descarbonização",
+      "codigo": "FA0276/2025",
+      "aviso_codigo": "FA0276/2025",
+      "source_id": "alentejo-2030",
+      "shard": "pt2030-other",
+      "detected_date": "2026-05-11",
+      "data_inicio": "2026-02-20",
+      "data_fim": "2026-12-31",
+      "deadline": "2026-12-31",
+      "budget_eur": 8997000.0,
+      "regulation_url": 252722,
+      "pdf_url": 252722,
+      "regulation_local": null,
+      "status": "plano_anual",
+      "state": "aberto",
+      "fail_count": 0,
+      "priority_score": 510,
+      "programa_code": "ALENTEJO2030",
+      "codigo_api": "FA0276/2025",
+      "data_status": "forecast",
+      "download_error": "Plano Anual - PAA detectado no PDF",
+      "plano_anual_detected_date": "2026-05-12",
+      "fallback_tried": [
+        "2b-central-media",
+        "2b-pdf",
+        "teste-a-paa"
+      ],
+      "plano_anual_checks": 1
     }
   ],
   "updated": "2026-05-12"
