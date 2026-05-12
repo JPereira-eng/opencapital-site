@@ -86,10 +86,8 @@
     "gestao-recursos-hidricos-acores2030": true,
     "sice-qualificacao-das-pme-operacoes-individuais": true,
     "sistema-de-incentivos-de-base-territorial-iti-cim-regiao-do-oeste-indu": true,
-    "step-i-d-i-empresarial-digital-e-biotecnologia": true,
     "sistema-de-incentivos-de-base-territorial-ram-iii": true,
     "apoio-a-infraestruturas-de-base-tecnologica-regulamento-step": true,
-    "step-inovacao-produtiva-digital-e-biotecnologia": true,
     "saccct-equipamento-reequipamento-de-infraestruturas-cientificas-rniie": true,
     "sistema-de-incentivos-de-base-territorial-it-cim-terras-de-tras-os-mon": true,
     "sistema-de-incentivos-de-base-territorial-it-cim-ave": true,
@@ -1586,12 +1584,6 @@
     "innonext-eit-talents-startups-2026": true,
     "primary-eit-climate-2026": true,
     "sitce-descarbonizacao-eficiencia-energetica-mpr-2026-01": true,
-    "women2invest": true,
-    "eit-edtech-conference": true,
-    "iefp-cheque-formacao": true,
-    "iefp-cheque-formacao-digital": true,
-    "iefp-empreendedorismo": true,
-    "iefp-estagios": true,
     "life-2026-sap-ce-zp-env": true,
     "life-2026-sap-eg": true,
     "life-2026-sap-nb-n": true,
@@ -1638,7 +1630,12 @@
     "eea-grants-bilateral-fund-call-1-defesa-seguranca-politica-externa": true,
     "sistema-de-incentivos-de-base-territorial-iibt-do-pinhal-interior": true,
     "sistema-de-incentivos-de-base-territorial-it-cim-tamega-e-sousa": true,
-    "sistema-de-incentivos-de-base-territorial-it-amp": true
+    "sistema-de-incentivos-de-base-territorial-it-amp": true,
+    "step-i-d-i-empresarial-digital-e-biotecnologia": true,
+    "step-inovacao-produtiva-digital-e-biotecnologia": true,
+    "tratamento-em-estacoes-de-tratamento-de-aguas-residuais-etar-para-prod": true,
+    "acoes-para-mitigacao-da-situacao-de-escassez-hidrica-e-assegurar-a-res": true,
+    "linha-norte-estacao-do-oriente-terminal-tecnico": true
   },
   "by_aviso_codigo": {
     "HORIZON-CL2-2025-01-TRANSFO-06": true,
@@ -1689,10 +1686,8 @@
     "FA0583/2023": "gestao-recursos-hidricos-acores2030",
     "FA0315/2025": "sice-qualificacao-das-pme-operacoes-individuais",
     "FA0251/2025": "sistema-de-incentivos-de-base-territorial-iti-cim-regiao-do-oeste-indu",
-    "FA0076/2025": "step-i-d-i-empresarial-digital-e-biotecnologia",
     "FA0138/2025": "sistema-de-incentivos-de-base-territorial-ram-iii",
     "FA0244/2025": "apoio-a-infraestruturas-de-base-tecnologica-regulamento-step",
-    "FA0075/2025": "step-inovacao-produtiva-digital-e-biotecnologia",
     "FA0513/2023": "saccct-equipamento-reequipamento-de-infraestruturas-cientificas-rniie",
     "FA0884/2024": "sistema-de-incentivos-de-base-territorial-it-cim-tamega-e-sousa",
     "FA0882/2024": "sistema-de-incentivos-de-base-territorial-it-cim-terras-de-tras-os-mon",
@@ -3244,7 +3239,12 @@
     "HORIZON-MSCA-2026-DN-01": "horizon-msca-2026-dn-01",
     "HORIZON-WIDERA-2027-01": "horizon-widera-2027-01",
     "HORIZON-EIC-2026-STEP": "eic-step-scale-up-2026",
-    "EEA-BILATERAL-2026-01": "eea-grants-bilateral-fund-call-1-defesa-seguranca-politica-externa"
+    "EEA-BILATERAL-2026-01": "eea-grants-bilateral-fund-call-1-defesa-seguranca-politica-externa",
+    "FA0076/2025": "step-i-d-i-empresarial-digital-e-biotecnologia",
+    "FA0075/2025": "step-inovacao-produtiva-digital-e-biotecnologia",
+    "FA0248/2025": "sistema-de-incentivos-de-base-territorial-iibt-do-pinhal-interior",
+    "FA0238/2025": "infraestruturas-equipamentos-tecnologicos-ftj-alentejo",
+    "FA0081/2025": "qualificacao-de-pessoas-com-deficiencia-e-ou-incapacidade"
   },
   "plano_anual": {
     "acoes-inovadoras-desafio-demografico-parcerias-coesao-alentejo": {
@@ -3421,17 +3421,10 @@
     "CENTRO2030-2026-2": "sistema-de-incentivos-de-base-territorial-iti-cim-regiao-do-oeste-indu",
     "NORTE2030-2024-54": "sistema-de-incentivos-de-base-territorial-it-cim-terras-de-tras-os-mon",
     "NORTE2030-2024-48": "sistema-de-incentivos-de-base-territorial-it-cim-ave",
-    "NORTE2030-2024-53": "sistema-de-incentivos-de-base-territorial-it-cim-douro",
     "MADEIRA2030-2026-13": "sistema-de-incentivos-de-base-territorial-ram-ii",
-    "MAR2030-2026-13": "mar2030-2026-13-portos-pesca-lotas-abrigos",
-    "MAR2030-2025-25": "mar2030-2025-25-execucao-edl-comunidades-costeiras",
     "PACS-2026-10": "acoes-para-minimizar-a-situacao-de-escassez-hidrica-algarve-pacs-2026-10",
     "PACS-2026-9": "empreendimento-hidraulico-fins-multiplos-crato-barragem-pisao-pacs-2026-09",
-    "PACS-2026-11": "sustentavel-2030-pacs-2026-11",
     "NORTE2030-2026-4": "norte2030-2026-4-assistencia-tecnica-oi-sistema-incentivos",
-    "PACS-2026-14": "pacs-2026-14",
-    "PACS-2026-13": "pacs-2026-13",
-    "PACS-2026-12": "pacs-2026-12",
     "NORTE2030-2026-5": "norte2030-2026-5-5g-healthcare"
   }
 }
