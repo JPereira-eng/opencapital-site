@@ -259,17 +259,50 @@ Para cada item na watchlist (apenas items `paa_status == "planejado"` ou ausente
 - `data_inicio < hoje` (aviso teoricamente já abriu)
 - `plano_anual_checks >= 1` (PASSO 2.6 já tentou via fonte original pelo menos 1 vez sem sucesso)
 
-### Estratégia de matching (v4.12, 2026-05-12)
+### Estratégia de matching (v4.12.1, 2026-05-12 — REFORÇADO)
 
-**Ordem de tentativa (parar no primeiro sucesso):**
+⚠️ **REGRAS BLOQUEANTES (aplicar SEMPRE):**
 
-1. **Match por `human_code` (NOVO, mais fiável):**
-   - Se item tem `human_code` populado, procurar nos portais regionais por items cujo `acf.codigo` corresponda ao human_code OU cujo `title` contenha o human_code.
-   - Match exato no human_code = certeza editorial.
-2. **Match por `codigo_api` cross-portal:**
-   - Procurar item nos outros portais regionais com mesmo FA code (pode acontecer raramente).
-3. **Match por title similarity (FALLBACK, comportamento anterior):**
-   - >= 85% similarity via SequenceMatcher.
+0. **Verificar `registry/depublished.json`:** se `item.codigo_api` ou `item.id` está na lista de depublicados, **REMOVER da watchlist sem promoção**. Item foi despublicado editorialmente; não voltar a processar.
+
+1. **`human_code` tem formato canónico:** apenas valores que correspondam a regex `^([A-Z]+2030-\d{4}-\d+|PACS-\d{4}-\d+)$`. **NUNCA aceitar FA codes (`FAxxxx/YYYY`) como human_code** — são `codigo_api`, não humano.
+
+2. **Promoção EXIGE regulation_url válida:** se não houver URL HTTP descarregável NEM acesso a campo `aviso` da API regional Tipo A, **NÃO PROMOVER**. Item fica em watchlist.
+
+3. **`matched_portal` NUNCA pode ser `portugal-2030`:** o portal central é Tipo B (só serve PAAs). Match no central é redundante (mesmo PAA do qual o item veio). **Excluir explicitamente portugal-2030 dos candidatos a match.**
+
+4. **`matched_portal` NUNCA pode ser igual a `original_portal`:** procurar o aviso onde já falhou não traz informação nova.
+
+**Ordem de tentativa (parar no primeiro sucesso que respeite as regras acima):**
+
+1. **Match por `human_code` (preferencial):**
+   - Se item tem `human_code` populado e válido (formato canónico)
+   - Procurar APENAS nos portais REGIONAIS (excluir portugal-2030 central)
+   - Procurar items cujo `acf.codigo` corresponda ao human_code OU cujo título contenha o human_code
+   - Match exato no human_code = alta confiança editorial
+
+2. **Match por `aviso` field em sustentavel-2030 (Tipo A):**
+   - sustentavel-2030 expõe campo `aviso` com URL direta para regulamento real
+   - Procurar items em sustentavel-2030 com title similarity >= 85% ao item da watchlist
+   - Se hit: confirmar que `aviso` field está preenchido + descarregar para validar não-PAA
+
+3. **Match por title similarity nos REGIONAIS (FALLBACK):**
+   - >= 85% similarity via SequenceMatcher
+   - APENAS nos portais regionais Tipo B com PDF que passe TESTE A (não-PAA)
+   - Validar antes de promover: HEAD request no PDF, GET, pdftotext, TESTE A
+
+⚠️ **VALIDAÇÃO PRÉ-PROMOÇÃO (obrigatória antes de mover para queue):**
+- Item promovido DEVE ter `regulation_url` HTTP válida (não `'-'`, não ID numérico, não vazio)
+- Item promovido DEVE ter texto-fonte que **não dispare TESTE A** (não-PAA)
+- Item promovido DEVE ter `cross_portal_match.matched_portal != "portugal-2030"`
+- Se qualquer falha: **não promover**, deixar em watchlist com `plano_anual_last_check` atualizado
+
+**Razão das regras estritas (v4.12.1):**
+Em 2026-05-12, primeira execução do v4.12 PASSO 2.7 promoveu 12 items para a queue com:
+- human_code populado erradamente com FA codes
+- matched_portal = portugal-2030 (central, mesmo PAA do qual vieram)
+- regulation_url vazio
+Resultado: items voltariam ao ciclo no próximo downloader e seriam redirecionados para watchlist. Loop. As regras acima fecham essa brecha.
 
 ⚠️ **CRÍTICO (correção 2026-05-12):** o critério inicial v4.11 limitava-se a `source_id == "portugal-2030"`, o que excluía a maioria da watchlist (items já com source regional). Agora aceita TODA a família PT2030 — quando o portal original deu PAA, tenta encontrar correspondência nos OUTROS 10 portais regionais.
 

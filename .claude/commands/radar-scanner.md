@@ -60,6 +60,26 @@ Read $REPO/sources-scan.json
 
 ---
 
+## PASSO 0.4: LISTA DE DEPUBLICADOS (v4.12.1, 2026-05-12)
+
+**Antes do self-heal e do scan:** ler `registry/depublished.json`. Esta lista contém items que foram **explicitamente despublicados** (e.g., PAAs publicados por engano). Construir set de codigos e slugs proibidos.
+
+```python
+import json
+depublished = json.load(open('registry/depublished.json'))
+DEPUB_CODIGOS = {d['codigo'] for d in depublished['depublished']}
+DEPUB_SLUGS = {d['slug'] for d in depublished['depublished']}
+```
+
+**Regra:** durante PASSO 3 (deduplicação) e PASSO 4 (adicionar a queue):
+- Se `acf.codigo in DEPUB_CODIGOS`: skip silencioso. NÃO adicionar a queue nem a watchlist.
+- Se derived_slug in DEPUB_SLUGS: skip silencioso.
+- Reportar no relatório: "Skipped por depublished.json: N items".
+
+Isto impede re-introdução acidental de items que foram despublicados editorialmente.
+
+---
+
 ## PASSO 0.5: SELF-HEAL DE FANTASMAS (v4.11, OBRIGATÓRIO)
 
 **Antes de fazer qualquer scan novo**, validar que o `lookup.json` está coerente com o estado real do sistema. Items registados no lookup mas inexistentes em queue/overflow/watchlist/shards são **fantasmas** (produto de falhas passadas de escrita). Removê-los do lookup permite que o próximo scan os re-detete normalmente.

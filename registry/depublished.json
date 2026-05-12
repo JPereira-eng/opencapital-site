@@ -1,0 +1,76 @@
+{
+  "_meta": {
+    "description": "Lista de slugs/codigos que foram explicitamente despublicados do site. Scanner não deve re-adicionar à queue ativa. Monitor não deve promover de watchlist. Só re-introduzir com flag override manual.",
+    "version": "1.0",
+    "created": "2026-05-12",
+    "policy": "Items aqui ficam permanentemente fora do circuito ativo, a menos que sejam removidos manualmente desta lista."
+  },
+  "depublished": [
+    {
+      "codigo": "FA0036/2025",
+      "slug": "protecao-civil-e-gestao-integrada-de-riscos-prevencao-e-mitigacao-de-r",
+      "razão": "PAA central sem regulamento técnico real",
+      "data_depublicacao": "2026-05-12"
+    },
+    {
+      "codigo": "FA0287/2025",
+      "slug": "tratamento-em-estacoes-de-tratamento-de-aguas-residuais-etar-para-prod",
+      "razão": "PAA central sem regulamento técnico real",
+      "data_depublicacao": "2026-05-12"
+    },
+    {
+      "codigo": "FA0280/2025",
+      "slug": "acoes-para-mitigacao-da-situacao-de-escassez-hidrica-e-assegurar-a-res",
+      "razão": "PAA central sem regulamento técnico real",
+      "data_depublicacao": "2026-05-12"
+    },
+    {
+      "codigo": "FA0271/2025",
+      "slug": "aguas-residuais-em-alta",
+      "razão": "PAA central sem regulamento técnico real",
+      "data_depublicacao": "2026-05-12"
+    },
+    {
+      "codigo": "FA0156/2025",
+      "slug": "programa-de-seguranca-ferroviaria-supressao-de-pns",
+      "razão": "PAA central sem regulamento técnico real",
+      "data_depublicacao": "2026-05-12"
+    },
+    {
+      "codigo": "FA0269/2025",
+      "slug": "abastecimento-de-agua-em-alta",
+      "razão": "PAA central sem regulamento técnico real",
+      "data_depublicacao": "2026-05-12"
+    },
+    {
+      "codigo": "FA0682/2024",
+      "slug": "linha-norte-estacao-do-oriente-terminal-tecnico",
+      "razão": "PAA central sem regulamento técnico real",
+      "data_depublicacao": "2026-05-12"
+    },
+    {
+      "codigo": "FA0165/2025",
+      "slug": "ampliacao-e-modernizacao-do-aeroporto-das-lajes",
+      "razão": "PAA central sem regulamento técnico real",
+      "data_depublicacao": "2026-05-12"
+    },
+    {
+      "codigo": "FA0098/2025",
+      "slug": "cursos-profissionais-entidades-privadas",
+      "razão": "PAA central sem regulamento técnico real",
+      "data_depublicacao": "2026-05-12"
+    },
+    {
+      "codigo": "FA0099/2025",
+      "slug": "cursos-profissionais-entidades-publicas",
+      "razão": "PAA central sem regulamento técnico real",
+      "data_depublicacao": "2026-05-12"
+    },
+    {
+      "codigo": "FA0100/2025",
+      "slug": "cursos-tecnicos-superiores-profissionais-tesp",
+      "razão": "PAA central sem regulamento técnico real",
+      "data_depublicacao": "2026-05-12"
+    }
+  ]
+}
