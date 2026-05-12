@@ -111,7 +111,14 @@ Selecionar os primeiros 5 (ou menos) para este batch.
    - Item ainda não foi descarregado pelo downloader. **Skip + remover do batch.**
    - Não devolver à watchlist (não sabemos se é PAA). Apenas evitar escrita prematura.
    - Log: "[id] sem regulamento local; downloader ainda não processou. Skip."
-3. Se o ficheiro **existe**, ler conteúdo e procurar **case-insensitive** por qualquer keyword PAA:
+2.5. **NOVO (v4.11.3, 2026-05-12) — TAMANHO MÍNIMO DE REGULAMENTO:**
+   Se ficheiro existe MAS tem **< 500 palavras**:
+   - É candidato forte a PAA (resumos PAA típicos têm 200-600 palavras).
+   - **Não escrever artigo.** Mover para watchlist com `download_error: "Regulamento < 500 palavras (provável PAA, escrita bloqueada pelo writer)"`.
+   - Selecionar próximo item alternativo da queue para este slot.
+   - Esta regra fecha a brecha histórica que produziu os 11 PAAs publicados em 13-15 de abril (foram removidos retroativamente em 2026-05-12).
+
+3. Se o ficheiro **existe E tem >= 500 palavras**, ler conteúdo e procurar **case-insensitive** por qualquer keyword PAA:
    - `"Plano Anual de Avisos"`
    - `"Resumo de Aviso do Plano"`
    - `"Aviso a publicar em:"`
