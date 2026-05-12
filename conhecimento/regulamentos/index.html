@@ -228,7 +228,7 @@
     if (author) metaParts.push(author);
     const metaHTML = metaParts.join('<span class="doc-entry-meta-sep">·</span>');
     return ''
-      + '<a href="../../' + a.href + '" class="doc-entry">'
+      + '<a href="' + a.href + '" class="doc-entry">'
       + '<h3 class="doc-entry-title">' + title + '</h3>'
       + (metaHTML ? '<div class="doc-entry-meta">' + metaHTML + '</div>' : '')
       + (desc ? '<div class="doc-entry-desc">' + desc + '</div>' : '')

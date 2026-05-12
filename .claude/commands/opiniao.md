@@ -729,7 +729,7 @@ Adicionar entrada ao FINAL do array `articles` em `conhecimento-catalog.json`. E
   "autor": "[Nome]",
   "autor_foto": "[ficheiro png]",
   "data_publicacao": "AAAA-MM-DD",
-  "href": "conhecimento/[SLUG]/index.html",
+  "href": "/conhecimento/[SLUG]/",
   "meta_description": "[meta description SEO 150-160 chars]",
   "art_date": "[Mes AAAA, ex: Maio 2026]",
   "opinion_photo": "Retratos Equipa/[AUTOR_FOTO]",

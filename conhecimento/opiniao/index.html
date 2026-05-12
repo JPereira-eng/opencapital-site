@@ -226,12 +226,12 @@
 
   function buildOpinionCard(a) {
     const photo = a.opinion_photo
-      ? '../../' + a.opinion_photo
-      : (a.autor_foto ? '../Retratos Equipa/' + a.autor_foto : '');
+      ? '' + a.opinion_photo
+      : (a.autor_foto ? '/Retratos Equipa/' + a.autor_foto : '');
     const author = a.opinion_author_card || a.autor || '';
     const title = a.opinion_title || a.card_title || a.title || '';
     return ''
-      + '<article class="article-card type-opiniao reveal" data-category="opiniao" data-href="../../' + a.href + '">'
+      + '<article class="article-card type-opiniao reveal" data-category="opiniao" data-href="' + a.href + '">'
       + '<img src="' + photo + '" alt="' + author.replace(/"/g, '&quot;') + '" class="opiniao-card-photo">'
       + '<div class="opiniao-card-overlay">'
       + '<div class="opiniao-card-meta">'
@@ -246,8 +246,8 @@
 
   function buildFeature(a) {
     const photo = a.opinion_photo
-      ? '../../' + a.opinion_photo
-      : (a.autor_foto ? '../Retratos Equipa/' + a.autor_foto : '');
+      ? '' + a.opinion_photo
+      : (a.autor_foto ? '/Retratos Equipa/' + a.autor_foto : '');
     const author = a.opinion_author_card || a.autor || '';
     const title = a.opinion_title || a.card_title || a.title || '';
     const dateLabel = a.art_date || a.data_publicacao || '';
@@ -258,7 +258,7 @@
       + '<div class="editorial-author-name">' + author + '</div>'
       + '<h1 class="editorial-feature-title">' + title + '</h1>'
       + (dateLabel ? '<div class="editorial-feature-meta">' + dateLabel + '</div>' : '')
-      + '<a href="../../' + a.href + '" class="editorial-feature-link">Ler artigo &rarr;</a>'
+      + '<a href="' + a.href + '" class="editorial-feature-link">Ler artigo &rarr;</a>'
       + '</div>';
   }
 

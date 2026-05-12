@@ -213,7 +213,7 @@ Adicionar entrada ao FINAL do array `articles`:
   "autor": "[Nome]",
   "autor_foto": "[ficheiro png]",
   "data_publicacao": "AAAA-MM-DD",
-  "href": "conhecimento/[slug]/index.html",
+  "href": "/conhecimento/[slug]/",
   "meta_description": "[meta description SEO 150-160 chars]"
 }
 ```

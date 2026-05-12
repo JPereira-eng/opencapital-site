@@ -205,7 +205,7 @@
 
   function buildCard(a) {
     const imgHTML = a.imagem_src
-      ? '<img src="../../' + a.imagem_src + '" alt="' + (a.title || '').replace(/"/g, '&quot;') + '">'
+      ? '<img src="' + a.imagem_src + '" alt="' + (a.title || '').replace(/"/g, '&quot;') + '">'
       : PLACEHOLDER_SVG;
     const author = a.autor || '';
     const tempo = a.tempo_leitura || '';
@@ -215,7 +215,7 @@
     const title = a.card_title || a.title || '';
     const excerpt = a.excerpt || a.tagline || '';
     return ''
-      + '<article class="article-card reveal" data-category="' + (a.cat_legacy || 'mercados') + '" data-href="../../' + a.href + '">'
+      + '<article class="article-card reveal" data-category="' + (a.cat_legacy || 'mercados') + '" data-href="' + a.href + '">'
       + newBadge
       + '<div class="article-card-img">' + imgHTML + '</div>'
       + '<div class="article-card-body">'
@@ -227,7 +227,7 @@
       + '<p class="article-card-excerpt">' + excerpt + '</p>'
       + '<div class="article-card-footer">'
       + '<span class="art-date">' + dateLabel + '</span>'
-      + '<a href="../../' + a.href + '" class="art-link">Ler</a>'
+      + '<a href="' + a.href + '" class="art-link">Ler</a>'
       + '</div>'
       + '</div>'
       + '</article>';

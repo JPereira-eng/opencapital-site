@@ -147,7 +147,7 @@ Adicionar entrada ao FINAL de `instruments-catalog.json > instruments`:
   "highlight0": "[beneficio principal]",
   "highlight1": "[beneficiarios]",
   "highlight2": "[localizacoes]",
-  "href": "instrumentos/[slug]/index.html",
+  "href": "/instrumentos/[slug]/",
   "featured": false
 }
 ```

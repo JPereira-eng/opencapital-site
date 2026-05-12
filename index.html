@@ -1363,7 +1363,7 @@
     link.className = 'article-card';
     if (a.subseccao === 'opiniao') {
       link.classList.add('type-opiniao');
-      const photo = a.opinion_photo || (a.autor_foto ? 'Retratos Equipa/' + a.autor_foto : '');
+      const photo = a.opinion_photo || (a.autor_foto ? '/Retratos Equipa/' + a.autor_foto : '');
       const author = a.opinion_author_card || a.autor || '';
       const title = a.opinion_title || a.card_title || a.title || '';
       link.innerHTML = ''
