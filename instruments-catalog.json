@@ -29774,6 +29774,33 @@
       "highlight2": "UE e Paises Associados - exclui controlo chines",
       "href": "instrumentos/horizon-cl3-2027-01/",
       "featured": false
+    },
+    {
+      "id": "horizon-euratom-2027-02",
+      "category": "nr",
+      "category_label": "Nao Reembolsavel",
+      "estado": "aberto",
+      "status_text": "Aberto ate 04/11/2027",
+      "status_class": "status-open",
+      "fonte": "ue",
+      "beneficiario": "empresa,ensino-investigacao",
+      "setores": [
+        "energia-ambiente",
+        "tecnologia-digital",
+        "industria"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "investimento-produtivo"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Euratom 2027: Parceria Europeia de Energia de Fusão (2.a chamada)",
+      "tagline": "Inovação industrial em tecnologias-chave para centrais de fusão. TRL 6-8, lump sum, taxa 60% (100% para entidades sem fins lucrativos), com cooperação público-privada obrigatória.",
+      "highlight0": "TRL 6-8, lump sum, 60% / 100% non-profit",
+      "highlight1": "PME, industria, centros I&D, universidades",
+      "highlight2": "UE + Ucrania + Suica (Euratom)",
+      "href": "instrumentos/horizon-euratom-2027-02/",
+      "featured": false
     }
   ]
 }
