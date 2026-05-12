@@ -11,7 +11,8 @@
       "state": "aberto",
       "last_check": "2026-04-12",
       "status": "removido",
-      "notas": "artigo template apagado 2026-04-14"
+      "notas": "artigo template apagado 2026-04-14",
+      "data_status": "n/a"
     },
     {
       "id": "step-inovacao-produtiva-digital-biotecnologia",
@@ -23,7 +24,8 @@
       "last_check": "2026-05-12",
       "needs_review": true,
       "review_reason": "Prazo prolongado de 30/04/2026 para 30/09/2026 (confirmado em portugal2030.pt API). Dotacao parece ter aumentado de 301M para 401M EUR FEDER + 400M EUR COMPETE2030. Writer deve revisar conteudo do artigo (dotacao, fases, condicoes).",
-      "programa_code": "COMPETE2030"
+      "programa_code": "COMPETE2030",
+      "data_status": "verified"
     },
     {
       "id": "step-inovacao-produtiva-energia",
@@ -35,7 +37,8 @@
       "last_check": "2026-05-12",
       "needs_review": true,
       "review_reason": "Prazo prolongado de 30/04/2026 para 30/09/2026 (confirmado em portugal2030.pt API). Dotacao pode ter mudado. Writer deve revisar conteudo do artigo.",
-      "programa_code": "COMPETE2030"
+      "programa_code": "COMPETE2030",
+      "data_status": "verified"
     },
     {
       "id": "step-idi-empresarial-energia",
@@ -47,7 +50,8 @@
       "last_check": "2026-05-12",
       "needs_review": true,
       "review_reason": "Prazo prolongado de 30/04/2026 para 30/09/2026 (confirmado em portugal2030.pt API). Dotacao pode ter mudado. Writer deve revisar conteudo do artigo.",
-      "programa_code": "COMPETE2030"
+      "programa_code": "COMPETE2030",
+      "data_status": "verified"
     },
     {
       "id": "step-idi-empresarial-digital-biotecnologia",
@@ -59,7 +63,8 @@
       "last_check": "2026-05-12",
       "needs_review": true,
       "review_reason": "Prazo prolongado de 30/04/2026 para 30/09/2026 (confirmado em portugal2030.pt API). Dotacao pode ter mudado. Writer deve revisar conteudo do artigo.",
-      "programa_code": "COMPETE2030"
+      "programa_code": "COMPETE2030",
+      "data_status": "verified"
     },
     {
       "id": "siac-digitalizacao-transformacao-digital",
@@ -68,7 +73,8 @@
       "state": "aberto",
       "deadline": "2026-05-29",
       "last_check": "2026-05-08",
-      "programa_code": "COMPETE2030"
+      "programa_code": "COMPETE2030",
+      "data_status": "verified"
     },
     {
       "id": "sitce-descarbonizacao-eficiencia-energetica",
@@ -77,7 +83,8 @@
       "state": "aberto",
       "deadline": "2026-05-29",
       "last_check": "2026-05-08",
-      "programa_code": "COMPETE2030"
+      "programa_code": "COMPETE2030",
+      "data_status": "verified"
     },
     {
       "id": "siac-acoes-coletivas-internacionalizacao",
@@ -86,7 +93,8 @@
       "state": "aberto",
       "deadline": "2026-05-29",
       "last_check": "2026-05-08",
-      "programa_code": "COMPETE2030"
+      "programa_code": "COMPETE2030",
+      "data_status": "verified"
     },
     {
       "id": "sice-internacionalizacao-pme",
@@ -95,7 +103,8 @@
       "state": "aberto",
       "deadline": "2026-06-30",
       "last_check": "2026-05-08",
-      "programa_code": "COMPETE2030"
+      "programa_code": "COMPETE2030",
+      "data_status": "verified"
     },
     {
       "id": "sice-qualificacao-pme-operacoes-individuais",
@@ -104,7 +113,8 @@
       "aviso_codigo": "MPr-2024-4",
       "notas": "fechado em 2025-01-30 (fase 2). Confirmado compete2030.gov.pt 2026-04-16. Sem artigo publicado.",
       "last_check": "2026-04-25",
-      "programa_code": "COMPETE2030"
+      "programa_code": "COMPETE2030",
+      "data_status": "forecast"
     },
     {
       "id": "siqrh-formacao-empresarial-individual",
@@ -113,7 +123,8 @@
       "aviso_codigo": "COMPETE2030-2025-1",
       "notas": "fechado - prazo expirado em 2025-04-30. Confirmado compete2030.gov.pt 2026-04-16. Sem artigo publicado.",
       "last_check": "2026-04-25",
-      "programa_code": "COMPETE2030"
+      "programa_code": "COMPETE2030",
+      "data_status": "forecast"
     },
     {
       "id": "siqrh-formacao-empresarial-conjunto",
@@ -124,7 +135,8 @@
       "notes": "Verificacao 2026-05-12: FA0317/2025 nao retorna na API portugal2030. Aviso FA0105/2025 SIQRH Formacao Empresarial Operacoes em conjunto encontrado aberto (deadline 30/06/2026, dotacao 40M EUR). Possivel reconciliacao: PAA FA0317 abriu como FA0105. Scanner deve criar entrada nova; este item podera ser removido.",
       "needs_review": true,
       "review_reason": "Codigo FA0317/2025 desapareceu da API. Aviso equivalente publicado como FA0105/2025. Avaliar substituicao do item.",
-      "programa_code": "COMPETE2030"
+      "programa_code": "COMPETE2030",
+      "data_status": "forecast"
     },
     {
       "id": "formacao-executivos-compete",
@@ -134,7 +146,8 @@
       "aviso_codigo": "FA0065/2025",
       "regulation_local": "regulamentos/portugal-2030/formacao-executivos-compete.txt",
       "status": "removido",
-      "notas": "previsto apagado 2026-04-14"
+      "notas": "previsto apagado 2026-04-14",
+      "data_status": "forecast"
     },
     {
       "id": "rede-fornecedores-inovadores",
@@ -142,7 +155,8 @@
       "source": "portugal-2030",
       "state": "aberto",
       "deadline": "2027-12-30",
-      "last_check": "2026-04-25"
+      "last_check": "2026-04-25",
+      "data_status": "verified"
     },
     {
       "id": "step-i-d-i-empresarial-energia",
@@ -152,7 +166,8 @@
       "deadline": "2026-09-30",
       "aviso_codigo": "FA0107/2025",
       "last_check": "2026-05-12",
-      "notes": "Verificacao 2026-05-12 via API portugal2030: FA0107/2025 confirmado aberto, data_fim 30/09/2026, dotacao 115M EUR."
+      "notes": "Verificacao 2026-05-12 via API portugal2030: FA0107/2025 confirmado aberto, data_fim 30/09/2026, dotacao 115M EUR.",
+      "data_status": "verified"
     },
     {
       "id": "sitce-descarbonizacao-eficiencia-energetica-mpr-2026-01",
@@ -160,7 +175,8 @@
       "source": "compete-2030",
       "state": "aberto",
       "last_check": "2026-05-10",
-      "programa_code": "COMPETE2030"
+      "programa_code": "COMPETE2030",
+      "data_status": "verified"
     }
   ],
   "count": 15,

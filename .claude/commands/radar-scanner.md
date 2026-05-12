@@ -1280,6 +1280,54 @@ Catálogos e restantes: +10
 "by_human_code": { "ACORES2030-2026-12": "novo-slug" }  // SE human_code descoberto, v4.12
 ```
 
+## data_status: forecast vs verified (v4.13, 2026-05-12)
+
+⚠️ **MUDANÇA SEMÂNTICA CRÍTICA:** Items descobertos via API central PT2030 (`portugal-2030`) ou via APIs regionais Tipo B contêm dados de **PAA forecast** (previsão do Plano Anual de Avisos), não de avisos publicados. Datas (`data_inicio`, `data_fim`) e estado (`aberto`, `previsto`) são **planos**, não factos. Só viram factos quando o regulamento real é confirmado (via PDF que passa TESTE A).
+
+**Schema do item — novo campo `data_status`:**
+
+```json
+{
+  "id": "...",
+  "codigo_api": "FA0302/2025",
+  "human_code": null,
+  "programa_code": "ACORES2030",
+  "data_inicio": "20260109",       // pode ser forecast PAA
+  "data_fim": "31/03/2027",        // pode ser forecast PAA
+  "data_status": "forecast",       // ← NOVO. forecast | verified | n/a
+  "state": "aberto",               // estado nominal (forecast ou verified)
+  ...
+}
+```
+
+**Regras de atribuição no scanner:**
+
+1. **Item descoberto via API central `portugal-2030`:**
+   - `data_status: "forecast"` SEMPRE (central só expõe PAA)
+
+2. **Item descoberto via API regional Tipo B** (acores, alentejo, algarve, centro, lisboa, madeira, pat, pessoas):
+   - `data_status: "forecast"` (estes portais também retornam só PAA placeholder no campo `pdf`)
+
+3. **Item descoberto via API regional Tipo A** (sustentavel-2030):
+   - Se `acf.aviso` (URL direta para regulamento real) está preenchido: `data_status: "verified"`
+   - Se não está: `data_status: "forecast"`
+
+4. **Famílias NÃO-PT2030** (eu-horizon, ani, iapmei, etc.):
+   - `data_status: "n/a"` (conceito não se aplica)
+
+**Quando data_status muda de forecast → verified:**
+
+- Pelo **downloader**: quando TESTE A passa num PDF (confirmou ser regulamento real)
+- Pelo **monitor PASSO 2.7**: quando promoção via Estratégia 4 valida PDF real
+- Pela skill `/instrumento` manual: quando humano confirma regulamento
+
+**Quando data_status NUNCA muda:**
+
+- `verified` → `forecast` (não há razão para regredir)
+- `n/a` → outros (não-PT2030 não usa este campo)
+
+---
+
 ## human_code como etiqueta canónica PT2030 (v4.12, 2026-05-12)
 
 **Aplicável APENAS à família PT2030** (11 fontes: portugal-2030, compete-2030, norte-2030, centro-2030, lisboa-2030, alentejo-2030, algarve-2030, pessoas-2030, sustentavel-2030, madeira-2030, acores-2030, +pat-2030, +mar-2030). **NÃO aplicar a outras famílias** (eu-horizon, ani, iapmei, etc. mantêm comportamento existente).

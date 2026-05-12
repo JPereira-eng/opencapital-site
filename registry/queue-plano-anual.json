@@ -26,7 +26,8 @@
         "norte-2030"
       ],
       "programa_code": "NORTE2030",
-      "codigo_api": "FA0880/2024"
+      "codigo_api": "FA0880/2024",
+      "data_status": "forecast"
     },
     {
       "id": "sibt-cim-alto-minho-norte",
@@ -60,7 +61,8 @@
       "websearch_attempts": 1,
       "plano_anual_notes": [
         "2026-05-12: PASSO 2.7 E4. WebSearch \"CIM Alto Minho\" - so referencias PAA, sem PDF aviso separado."
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "execucao-da-edl-do-gal-costeiro-do-barlavento-do-algarve-destinado-a-v",
@@ -88,7 +90,8 @@
       ],
       "plano_anual_notes": [
         "2026-05-12: Confirmado PAA via portugal-2030 central API: FA0273/2025 PDF em /unnamed-file.pdf-101.octet-stream contem \"Resumo de Aviso do Plano Anual de Avisos\". Data_fim PAA 30/04/2026 ja passou - aviso devia ter aberto. Sem regulamento real publicado."
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "execucao-da-edl-do-gal-litoral-rural-aldeias-de-mar-litoral-rural-proj",
@@ -113,7 +116,8 @@
       ],
       "regional_portals": [
         "mar-2030"
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "execucao-da-edl-do-gal-litoral-rural-capacitacao-das-associacoes-de-pe",
@@ -138,7 +142,8 @@
       ],
       "regional_portals": [
         "mar-2030"
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "execucao-da-edl-do-gal-litoral-rural-sistema-de-apoio-ao-investimento-",
@@ -164,7 +169,8 @@
       "regional_portals": [
         "mar-2030"
       ],
-      "plano_anual_status": "url_removed"
+      "plano_anual_status": "url_removed",
+      "data_status": "forecast"
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-it-cim-tamega-e-sousa",
@@ -196,7 +202,8 @@
       "websearch_attempts": 1,
       "plano_anual_notes": [
         "2026-05-12: PASSO 2.7 E4. WebSearch \"Tamega e Sousa\" - candidato URL norte2030.pt/storage/.../Aviso_SI_Base_Territorial_IT_Vf_Tamega_e_Sousa.pdf retorna 403 (norte2030 bloqueia bots). PDF pode existir mas nao verificavel via curl. Reverificar quando access_method=chrome."
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "educacao-intercultural-em-contexto-escolar",
@@ -219,7 +226,8 @@
       "plano_anual_checks": 3,
       "plano_anual_last_check": "2026-05-12",
       "programa": [],
-      "regional_portals": []
+      "regional_portals": [],
+      "data_status": "forecast"
     },
     {
       "id": "criacao-de-redes-para-a-promocao-das-raparigas-e-mulheres-nas-areas-stem-e-tic",
@@ -243,7 +251,8 @@
       "plano_anual_checks": 2,
       "plano_anual_last_check": "2026-05-11",
       "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0949/2024"
+      "codigo_api": "FA0949/2024",
+      "data_status": "forecast"
     },
     {
       "id": "reforcar-a-capacidade-de-lideranca-de-mulheres-no-mercado-de-trabalho",
@@ -267,7 +276,8 @@
       "plano_anual_checks": 2,
       "programa_code": "PESSOAS2030",
       "codigo_api": "FA0437/2023",
-      "plano_anual_last_check": "2026-05-12"
+      "plano_anual_last_check": "2026-05-12",
+      "data_status": "forecast"
     },
     {
       "id": "acoes-coletivas-transferencia-conhecimento-alentejo",
@@ -302,7 +312,8 @@
         "alentejo-2030"
       ],
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0146/2025"
+      "codigo_api": "FA0146/2025",
+      "data_status": "forecast"
     },
     {
       "id": "sibt-inovacao-modernizacao-pme-algarve",
@@ -341,7 +352,8 @@
       "fail_count": 0,
       "plano_anual_detected_date": "2026-05-12",
       "programa_code": "ALGARVE2030",
-      "codigo_api": "FA0153/2025"
+      "codigo_api": "FA0153/2025",
+      "data_status": "forecast"
     },
     {
       "id": "sice-qualificacao-das-pme-operacoes-individuais",
@@ -374,7 +386,8 @@
       "programa_code": "COMPETE2030",
       "codigo_api": "FA0315/2025",
       "cross_portal_attempted": "2026-05-12",
-      "cross_portal_result": "no_destination_api"
+      "cross_portal_result": "no_destination_api",
+      "data_status": "forecast"
     },
     {
       "id": "apoio-a-infraestruturas-de-base-tecnologica-regulamento-step",
@@ -405,7 +418,8 @@
         "centro-2030"
       ],
       "programa_code": "CENTRO2030",
-      "codigo_api": "FA0244/2025"
+      "codigo_api": "FA0244/2025",
+      "data_status": "forecast"
     },
     {
       "id": "saccct-equipamento-reequipamento-de-infraestruturas-cientificas-rniie",
@@ -438,7 +452,8 @@
       "websearch_attempts": 1,
       "plano_anual_notes": [
         "2026-05-12: PASSO 2.7 E4. WebSearch SACCCT - so resultados PAA, sem PDF separado."
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "gestao-agua-recursos-hidricos-alentejo",
@@ -475,7 +490,8 @@
       "plano_anual_portal": "https://alentejo.portugal2030.pt",
       "fallback_tried": [
         "2b-acf-all"
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "passivos-ambientais-pedreiras-alentejo",
@@ -508,7 +524,8 @@
       "plano_anual_portal": "https://alentejo.portugal2030.pt",
       "fallback_tried": [
         "2b-acf-all"
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "eficiencia-energetica-habitacao-social-alentejo",
@@ -545,7 +562,8 @@
       "plano_anual_portal": "https://alentejo.portugal2030.pt",
       "fallback_tried": [
         "2b-acf-all"
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "medidas-adaptacao-climatica-gestao-riscos-alentejo",
@@ -577,7 +595,8 @@
       "news_post_date": "2026-02-19",
       "news_post_title": "Alentejo 2030 lança aviso para Gestão da Água para mitigar efeitos das cheias",
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0264/2025"
+      "codigo_api": "FA0264/2025",
+      "data_status": "forecast"
     },
     {
       "id": "funcionamento-2030-oc",
@@ -615,7 +634,8 @@
       "budget_eur": 15000000.0,
       "state": "previsto",
       "programa_code": "MADEIRA2030",
-      "codigo_api": "FA0135/2025"
+      "codigo_api": "FA0135/2025",
+      "data_status": "forecast"
     },
     {
       "id": "autoconsumo-comunidades-energia-renovavel-alentejo",
@@ -643,7 +663,8 @@
       "plano_anual_last_check": "2026-05-11",
       "plano_anual_checks": 1,
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0830/2024"
+      "codigo_api": "FA0830/2024",
+      "data_status": "forecast"
     },
     {
       "id": "reformulacao-da-estacao-de-transferencia-da-zona-leste-e-de-triagem-da",
@@ -671,7 +692,8 @@
       "plano_anual_last_check": "2026-05-11",
       "plano_anual_checks": 2,
       "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0283/2025"
+      "codigo_api": "FA0283/2025",
+      "data_status": "forecast"
     },
     {
       "id": "protecao-e-defesa-do-litoral-acoes-materiais",
@@ -704,7 +726,8 @@
       "programa_code": "SUSTENTAVEL2030",
       "codigo_api": "FA0261/2025",
       "cross_portal_attempted": "2026-05-12",
-      "cross_portal_result": "no_destination_api"
+      "cross_portal_result": "no_destination_api",
+      "data_status": "forecast"
     },
     {
       "id": "intervencoes-de-gestao-conservacao-reflorestacao-e-ordenamento-da-flor",
@@ -732,7 +755,8 @@
       "plano_anual_last_check": "2026-05-11",
       "plano_anual_checks": 1,
       "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0932/2024"
+      "codigo_api": "FA0932/2024",
+      "data_status": "forecast"
     },
     {
       "id": "gestao-de-residuos-urbanos-acoes-imateriais",
@@ -760,7 +784,8 @@
       "plano_anual_last_check": "2026-05-11",
       "plano_anual_checks": 1,
       "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0577/2024"
+      "codigo_api": "FA0577/2024",
+      "data_status": "forecast"
     },
     {
       "id": "sitce-economia-circular-algarve",
@@ -788,7 +813,8 @@
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_checks": 1,
       "programa_code": "ALGARVE2030",
-      "codigo_api": "FA0158/2025"
+      "codigo_api": "FA0158/2025",
+      "data_status": "forecast"
     },
     {
       "id": "passivos-ambientais-de-saneamento-de-aguas-residuais-em-alta",
@@ -819,7 +845,8 @@
         "sustentavel-2030"
       ],
       "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0263/2025"
+      "codigo_api": "FA0263/2025",
+      "data_status": "forecast"
     },
     {
       "id": "empreendimento-hidraulico-de-fins-multiplos-do-crato-barragem-do-pisao",
@@ -847,7 +874,8 @@
       "plano_anual_last_check": "2026-05-11",
       "plano_anual_checks": 2,
       "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0275/2025"
+      "codigo_api": "FA0275/2025",
+      "data_status": "forecast"
     },
     {
       "id": "estudos-mobilidade-urbana-sustentavel",
@@ -877,7 +905,8 @@
         "sustentavel-2030"
       ],
       "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0282/2025"
+      "codigo_api": "FA0282/2025",
+      "data_status": "forecast"
     },
     {
       "id": "mobilidade-sustentavel-iti-alentejo",
@@ -905,7 +934,8 @@
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_checks": 1,
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0274/2025"
+      "codigo_api": "FA0274/2025",
+      "data_status": "forecast"
     },
     {
       "id": "execucao-da-edl-do-gal-adrepes-costeiro-projeto-ancora-reativacao-de-u",
@@ -933,7 +963,8 @@
       "plano_anual_last_check": "2026-05-11",
       "plano_anual_checks": 1,
       "programa_code": "MAR2030",
-      "codigo_api": "FA0294/2023"
+      "codigo_api": "FA0294/2023",
+      "data_status": "forecast"
     },
     {
       "id": "acoes-mitigacao-escassez-hidrica-algarve",
@@ -961,7 +992,8 @@
       "plano_anual_last_check": "2026-05-11",
       "plano_anual_checks": 2,
       "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0280/2025"
+      "codigo_api": "FA0280/2025",
+      "data_status": "forecast"
     },
     {
       "id": "formacao-da-administracao-publica-regional-e-local-cimbal",
@@ -990,7 +1022,8 @@
       "plano_anual_checks": 2,
       "plano_anual_note": "Monitor 2026-05-08: API portugal-2030 retorna acf.pdf valido. Downloader deve correr TESTE A para confirmar/promover.",
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0252/2025"
+      "codigo_api": "FA0252/2025",
+      "data_status": "forecast"
     },
     {
       "id": "tesp-ciclo-formativo-2026-2028-alentejo",
@@ -1018,7 +1051,8 @@
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_checks": 1,
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0250/2025"
+      "codigo_api": "FA0250/2025",
+      "data_status": "forecast"
     },
     {
       "id": "equipamentos-hospitalares-hospital-central-alentejo",
@@ -1046,7 +1080,8 @@
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_checks": 1,
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0268/2025"
+      "codigo_api": "FA0268/2025",
+      "data_status": "forecast"
     },
     {
       "id": "formacao-empresarial-individual",
@@ -1074,7 +1109,8 @@
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_checks": 1,
       "programa_code": "MADEIRA2030",
-      "codigo_api": "FA0240/2025"
+      "codigo_api": "FA0240/2025",
+      "data_status": "forecast"
     },
     {
       "id": "formacoes-modulares-certificadas",
@@ -1102,7 +1138,8 @@
       "programa_code": "MADEIRA2030",
       "codigo_api": "FA0097/2025",
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 1,
+      "data_status": "forecast"
     },
     {
       "id": "siqrh-formacao-empresarial-operacoes-individuais",
@@ -1137,7 +1174,8 @@
       "websearch_attempts": 1,
       "plano_anual_notes": [
         "2026-05-12: PASSO 2.7 E4. WebSearch site:portugal2030.pt \"SIQRH\" - so PAA central, sem PDF separado."
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "inovcontacto",
@@ -1165,7 +1203,8 @@
       "programa_code": "COMPETE2030",
       "codigo_api": "FA0293/2025",
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 1,
+      "data_status": "forecast"
     },
     {
       "id": "siqrh-formacao-empresarial-operacoes-em-conjunto",
@@ -1195,7 +1234,8 @@
       "programa_code": "COMPETE2030",
       "codigo_api": "FA0105/2025",
       "cross_portal_attempted": "2026-05-12",
-      "cross_portal_result": "no_destination_api"
+      "cross_portal_result": "no_destination_api",
+      "data_status": "forecast"
     },
     {
       "id": "pepac-missoes",
@@ -1223,7 +1263,8 @@
       "programa_code": "COMPETE2030",
       "codigo_api": "FA0294/2025",
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 1,
+      "data_status": "forecast"
     },
     {
       "id": "programas-intermunicipais-de-promocao-do-sucesso-escolar-pipse-iti-cim",
@@ -1254,7 +1295,8 @@
         "centro-2030"
       ],
       "programa_code": "CENTRO2030",
-      "codigo_api": "FA0313/2025"
+      "codigo_api": "FA0313/2025",
+      "data_status": "forecast"
     },
     {
       "id": "balcao-da-inclusao-unidades-moveis-em-territorios-de-baixa-densidade",
@@ -1285,7 +1327,8 @@
         "centro-2030"
       ],
       "programa_code": "CENTRO2030",
-      "codigo_api": "FA0215/2025"
+      "codigo_api": "FA0215/2025",
+      "data_status": "forecast"
     },
     {
       "id": "apoio-sem-abrigo-algarve",
@@ -1313,7 +1356,8 @@
       "programa_code": "ALGARVE2030",
       "codigo_api": "FA0310/2025",
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 1,
+      "data_status": "forecast"
     },
     {
       "id": "formacao-de-formadores-docentes-e-tutores",
@@ -1341,7 +1385,8 @@
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_checks": 2,
       "programa_code": "MADEIRA2030",
-      "codigo_api": "FA0239/2025"
+      "codigo_api": "FA0239/2025",
+      "data_status": "forecast"
     },
     {
       "id": "servicos-de-psicologia-e-orientacao",
@@ -1369,7 +1414,8 @@
       "programa_code": "PESSOAS2030",
       "codigo_api": "FA0223/2025",
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 1,
+      "data_status": "forecast"
     },
     {
       "id": "formacao-avancada",
@@ -1400,7 +1446,8 @@
       "data_inicio_api": "2026-09-01",
       "data_fim_api": "2026-12-31",
       "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0218/2025"
+      "codigo_api": "FA0218/2025",
+      "data_status": "forecast"
     },
     {
       "id": "apoio-tecnico-e-financeiro-a-organizacoes-da-sociedade-civil-que-atuam",
@@ -1430,7 +1477,8 @@
         "pessoas-2030"
       ],
       "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0226/2025"
+      "codigo_api": "FA0226/2025",
+      "data_status": "forecast"
     },
     {
       "id": "formacao-publicos-estrategicos-xenofobia-discriminacao",
@@ -1459,7 +1507,8 @@
       "codigo_api": "FA0034/2025",
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_checks": 1,
-      "plano_anual_status": "not_found_in_api"
+      "plano_anual_status": "not_found_in_api",
+      "data_status": "forecast"
     },
     {
       "id": "cursos-cef-escolas-publicas-2026-2027",
@@ -1485,7 +1534,8 @@
         "pessoas-2030"
       ],
       "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0142/2025"
+      "codigo_api": "FA0142/2025",
+      "data_status": "forecast"
     },
     {
       "id": "cursos-cef-cefjam-escolas-privadas-2026-2027",
@@ -1515,7 +1565,8 @@
       "plano_anual_status": "slug_not_found",
       "plano_anual_note": "API empty - URL na watchlist aponta para escolas-publicas mas item id tem escolas-privadas; verificar slug",
       "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0141/2025"
+      "codigo_api": "FA0141/2025",
+      "data_status": "forecast"
     },
     {
       "id": "refuncionalizacao-espacos-coletivos-alentejo",
@@ -1541,7 +1592,8 @@
         "alentejo-2030"
       ],
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0183/2025"
+      "codigo_api": "FA0183/2025",
+      "data_status": "forecast"
     },
     {
       "id": "servicos-recursos-digitais-valorizacao-territorios-alentejo",
@@ -1567,7 +1619,8 @@
         "alentejo-2030"
       ],
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0189/2025"
+      "codigo_api": "FA0189/2025",
+      "data_status": "forecast"
     },
     {
       "id": "qualificacao-espaco-publico-parcerias-coesao-alentejo",
@@ -1593,7 +1646,8 @@
         "alentejo-2030"
       ],
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0180/2025"
+      "codigo_api": "FA0180/2025",
+      "data_status": "forecast"
     },
     {
       "id": "produtos-turisticos-subregionais-iti-alentejo",
@@ -1619,7 +1673,8 @@
         "alentejo-2030"
       ],
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0278/2025"
+      "codigo_api": "FA0278/2025",
+      "data_status": "forecast"
     },
     {
       "id": "participacao-individual-formacao-ftj-alentejo",
@@ -1645,7 +1700,8 @@
         "alentejo-2030"
       ],
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0233/2025"
+      "codigo_api": "FA0233/2025",
+      "data_status": "forecast"
     },
     {
       "id": "respostas-locais-desafios-territoriais-iti-agua-alentejo",
@@ -1675,7 +1731,8 @@
       "plano_anual_status": "slug_not_found",
       "plano_anual_note": "API empty response - slug pode ter sido alterado",
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0174/2025"
+      "codigo_api": "FA0174/2025",
+      "data_status": "forecast"
     },
     {
       "id": "funcionamento-de-cit-multifuncoes-e-espacos-equiparados",
@@ -1696,7 +1753,8 @@
       "programa": [],
       "regional_portals": [],
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1
+      "plano_anual_checks": 1,
+      "data_status": "forecast"
     },
     {
       "id": "assistencia-tecnica-organismo-intermedio-da-regiao-autonoma-da-madeira",
@@ -1725,7 +1783,8 @@
       "codigo_api": "FA0289/2025",
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_checks": 1,
-      "plano_anual_status": "not_found_in_api"
+      "plano_anual_status": "not_found_in_api",
+      "data_status": "forecast"
     },
     {
       "id": "estudos-e-avaliacoes-do-plano-global-de-avaliacao-do-portugal-2030-202",
@@ -1761,7 +1820,8 @@
       "plano_anual_portal": "https://portugal2030.pt",
       "fallback_tried": [
         "2b-acf-all"
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "assistencia-tecnica-2027-a-2029",
@@ -1792,7 +1852,8 @@
       "programa_code": "SUSTENTAVEL2030",
       "codigo_api": "FA0286/2025",
       "cross_portal_attempted": "2026-05-12",
-      "cross_portal_result": "no_destination_api"
+      "cross_portal_result": "no_destination_api",
+      "data_status": "forecast"
     },
     {
       "id": "digitalizacao-espacos-cidadao-iti-algarve",
@@ -1822,7 +1883,8 @@
         "algarve-2030"
       ],
       "programa_code": "ALGARVE2030",
-      "codigo_api": "FA0220/2025"
+      "codigo_api": "FA0220/2025",
+      "data_status": "forecast"
     },
     {
       "id": "incubadoras-base-nao-tecnologica-algarve",
@@ -1849,7 +1911,8 @@
       ],
       "paa_status": "planejado",
       "programa_code": "ALGARVE2030",
-      "codigo_api": "FA0159/2025"
+      "codigo_api": "FA0159/2025",
+      "data_status": "forecast"
     },
     {
       "id": "siid-empreendedorismo-qualificado-algarve",
@@ -1875,7 +1938,8 @@
         "algarve-2030"
       ],
       "programa_code": "ALGARVE2030",
-      "codigo_api": "FA0157/2025"
+      "codigo_api": "FA0157/2025",
+      "data_status": "forecast"
     },
     {
       "id": "gestao-agua-conservacao-hidricos-iti-alentejo",
@@ -1905,7 +1969,8 @@
       "news_post_date": "2026-02-19",
       "news_post_title": "Alentejo 2030 lança aviso para Gestão da Água para mitigar efeitos das cheias",
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0266/2025"
+      "codigo_api": "FA0266/2025",
+      "data_status": "forecast"
     },
     {
       "id": "conservacao-natureza-biodiversidade-alentejo",
@@ -1931,7 +1996,8 @@
         "alentejo-2030"
       ],
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0279/2025"
+      "codigo_api": "FA0279/2025",
+      "data_status": "forecast"
     },
     {
       "id": "inqueritos-de-mobilidade-nas-areas-metropolitana-de-lisboa-e-do-porto",
@@ -1957,7 +2023,8 @@
         "sustentavel-2030"
       ],
       "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0284/2025"
+      "codigo_api": "FA0284/2025",
+      "data_status": "forecast"
     },
     {
       "id": "execucao-da-edl-do-gal-pesca-sotavento-algarveinvestimentos-que-contri",
@@ -1983,7 +2050,8 @@
         "mar-2030"
       ],
       "programa_code": "MAR2030",
-      "codigo_api": "FA0144/2025"
+      "codigo_api": "FA0144/2025",
+      "data_status": "forecast"
     },
     {
       "id": "reabilitacao-da-aerogare-do-aerodromo-de-sao-jorge",
@@ -2009,7 +2077,8 @@
         "sustentavel-2030"
       ],
       "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0285/2025"
+      "codigo_api": "FA0285/2025",
+      "data_status": "forecast"
     },
     {
       "id": "centros-especializados-em-qualificacao-de-adultos-e-processos-de-recon",
@@ -2035,7 +2104,8 @@
         "madeira-2030"
       ],
       "programa_code": "MADEIRA2030",
-      "codigo_api": "FA0242/2025"
+      "codigo_api": "FA0242/2025",
+      "data_status": "forecast"
     },
     {
       "id": "bolsas-ensino-superior-alunos-carenciados",
@@ -2061,7 +2131,8 @@
         "algarve-2030"
       ],
       "programa_code": "ALGARVE2030",
-      "codigo_api": "FA0291/2025"
+      "codigo_api": "FA0291/2025",
+      "data_status": "forecast"
     },
     {
       "id": "cnaim-algarve",
@@ -2087,7 +2158,8 @@
         "algarve-2030"
       ],
       "programa_code": "ALGARVE2030",
-      "codigo_api": "FA0309/2025"
+      "codigo_api": "FA0309/2025",
+      "data_status": "forecast"
     },
     {
       "id": "rede-ferroviaria-das-areas-metropolitanas-mobilidade-urbana-sustentave",
@@ -2126,7 +2198,8 @@
       "budget_eur": 147930000.0,
       "state": "previsto",
       "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0578/2024"
+      "codigo_api": "FA0578/2024",
+      "data_status": "forecast"
     },
     {
       "id": "medidas-de-adaptacao-as-alteracoes-climaticas",
@@ -2161,7 +2234,8 @@
       "budget_eur": 33500000.0,
       "state": "previsto",
       "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0154/2025"
+      "codigo_api": "FA0154/2025",
+      "data_status": "forecast"
     },
     {
       "id": "equipamentos-infraestruturas-portuarias-raa-3aviso",
@@ -2191,7 +2265,8 @@
       "plano_anual_checks": 2,
       "plano_anual_last_check": "2026-05-11",
       "programa_code": "SUSTENTAVEL2030",
-      "codigo_api": "FA0288/2025"
+      "codigo_api": "FA0288/2025",
+      "data_status": "forecast"
     },
     {
       "id": "apoios-a-contratacao",
@@ -2221,7 +2296,8 @@
       "plano_anual_checks": 3,
       "plano_anual_last_check": "2026-05-12",
       "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0222/2025"
+      "codigo_api": "FA0222/2025",
+      "data_status": "forecast"
     },
     {
       "id": "cursos-profissionais-ano-letivo-2026-2027-escolas-publicas",
@@ -2251,7 +2327,8 @@
       "plano_anual_checks": 4,
       "plano_anual_last_check": "2026-05-12",
       "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0139/2025"
+      "codigo_api": "FA0139/2025",
+      "data_status": "forecast"
     },
     {
       "id": "vida-ativa-emprego-qualificado",
@@ -2281,7 +2358,8 @@
       "plano_anual_checks": 3,
       "plano_anual_last_check": "2026-05-12",
       "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0083/2025"
+      "codigo_api": "FA0083/2025",
+      "data_status": "forecast"
     },
     {
       "id": "infraestruturas-equipamentos-tecnologicos-iti-agua-alentejo",
@@ -2317,7 +2395,8 @@
       "fallback_tried": [
         "2b-acf-all",
         "2b-portal-central"
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "siid-id-empresarial-individuais-copromocao",
@@ -2343,7 +2422,8 @@
       "plano_anual_last_check": "2026-05-11",
       "plano_anual_checks": 1,
       "needs_review": true,
-      "review_reason": "Duplicado de \"siid-id-empresarial-operacoes-algarve\" (mesma aviso_codigo). Considerar remocao."
+      "review_reason": "Duplicado de \"siid-id-empresarial-operacoes-algarve\" (mesma aviso_codigo). Considerar remocao.",
+      "data_status": "forecast"
     },
     {
       "id": "formacoes-modulares-certificadas-nacional",
@@ -2369,7 +2449,8 @@
       "plano_anual_last_check": "2026-05-11",
       "plano_anual_checks": 1,
       "programa_code": "PESSOAS2030",
-      "codigo_api": "FA0298/2025"
+      "codigo_api": "FA0298/2025",
+      "data_status": "forecast"
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-it-amp",
@@ -2407,7 +2488,8 @@
       },
       "plano_anual_detected_date": "2026-05-11",
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0147/2025"
+      "codigo_api": "FA0147/2025",
+      "data_status": "forecast"
     },
     {
       "id": "sibt-alentejo-2026",
@@ -2433,7 +2515,8 @@
       "programa_code": "ALENTEJO2030",
       "codigo_api": "FA0147/2025",
       "needs_review": true,
-      "review_reason": "Duplicado de \"sistema-de-incentivos-de-base-territorial-it-amp\" (mesma aviso_codigo). Considerar remocao."
+      "review_reason": "Duplicado de \"sistema-de-incentivos-de-base-territorial-it-amp\" (mesma aviso_codigo). Considerar remocao.",
+      "data_status": "forecast"
     },
     {
       "id": "tratamento-em-estacoes-de-tratamento-de-aguas-residuais-etar-para-producao-de-ag",
@@ -2460,7 +2543,8 @@
       "paa_status": "planejado",
       "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: SUSTENTAVEL2030. Fundo: FC. Detetado via portugal-2030 (scan_destination=watchlist).",
       "needs_review": true,
-      "review_reason": "Duplicado de \"tratamento-em-estacoes-de-tratamento-de-aguas-residuais-etar-para-prod\" (mesma aviso_codigo). Considerar remocao."
+      "review_reason": "Duplicado de \"tratamento-em-estacoes-de-tratamento-de-aguas-residuais-etar-para-prod\" (mesma aviso_codigo). Considerar remocao.",
+      "data_status": "forecast"
     },
     {
       "id": "aguas-residuais-em-alta",
@@ -2485,7 +2569,8 @@
         "sustentavel-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: SUSTENTAVEL2030. Fundo: FC. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: SUSTENTAVEL2030. Fundo: FC. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "data_status": "forecast"
     },
     {
       "id": "abastecimento-de-agua-em-alta",
@@ -2510,7 +2595,8 @@
         "sustentavel-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: SUSTENTAVEL2030. Fundo: FC. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: SUSTENTAVEL2030. Fundo: FC. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "data_status": "forecast"
     },
     {
       "id": "infraestrutura-ferroviaria-rte-8211-programa-de-sinalizacao-e-implementacao-do-e",
@@ -2535,7 +2621,8 @@
         "sustentavel-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Convite. Beneficiarios: Pública. Programa: SUSTENTAVEL2030. Fundo: FC. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Convite. Beneficiarios: Pública. Programa: SUSTENTAVEL2030. Fundo: FC. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "data_status": "forecast"
     },
     {
       "id": "linha-norte-8211-estacao-do-oriente-terminal-tecnico",
@@ -2562,7 +2649,8 @@
       "paa_status": "planejado",
       "notes": "Natureza: Convite. Beneficiarios: Pública. Programa: SUSTENTAVEL2030. Fundo: FC. Detetado via portugal-2030 (scan_destination=watchlist).",
       "needs_review": true,
-      "review_reason": "Duplicado de \"linha-norte-estacao-do-oriente-terminal-tecnico\" (mesma aviso_codigo). Considerar remocao."
+      "review_reason": "Duplicado de \"linha-norte-estacao-do-oriente-terminal-tecnico\" (mesma aviso_codigo). Considerar remocao.",
+      "data_status": "forecast"
     },
     {
       "id": "infraestrutura-portuaria-rte-porto-de-lisboa-3-o-aviso-navegabilidade-do-estuari",
@@ -2587,7 +2675,8 @@
         "sustentavel-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Convite. Beneficiarios: Pública. Programa: SUSTENTAVEL2030. Fundo: FC. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Convite. Beneficiarios: Pública. Programa: SUSTENTAVEL2030. Fundo: FC. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "data_status": "forecast"
     },
     {
       "id": "ampliacao-e-modernizacao-do-aeroporto-das-lajes",
@@ -2612,7 +2701,8 @@
         "sustentavel-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Convite. Beneficiarios: Pública. Programa: SUSTENTAVEL2030. Fundo: FC. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Convite. Beneficiarios: Pública. Programa: SUSTENTAVEL2030. Fundo: FC. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "data_status": "forecast"
     },
     {
       "id": "cursos-profissionais-entidades-privadas",
@@ -2637,7 +2727,8 @@
         "madeira-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Concurso. Beneficiarios: Privada. Programa: MADEIRA2030. Fundo: FSE+. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Concurso. Beneficiarios: Privada. Programa: MADEIRA2030. Fundo: FSE+. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "data_status": "forecast"
     },
     {
       "id": "cursos-profissionais-entidades-publicas",
@@ -2662,7 +2753,8 @@
         "madeira-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FSE+. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FSE+. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "data_status": "forecast"
     },
     {
       "id": "cursos-tecnicos-superiores-profissionais-tesp",
@@ -2687,7 +2779,8 @@
         "madeira-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FSE+. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FSE+. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "data_status": "forecast"
     },
     {
       "id": "estagios-profissionais",
@@ -2712,7 +2805,8 @@
         "pessoas-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Convite. Beneficiarios: Pública. Programa: PESSOAS2030. Fundo: FSE+. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Convite. Beneficiarios: Pública. Programa: PESSOAS2030. Fundo: FSE+. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "data_status": "verified"
     },
     {
       "id": "insercao-socioprofissional-da-comunidade-cigana",
@@ -2737,7 +2831,8 @@
         "pessoas-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Concurso. Beneficiarios: Pública,Privada. Programa: PESSOAS2030. Fundo: FSE+. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Concurso. Beneficiarios: Pública,Privada. Programa: PESSOAS2030. Fundo: FSE+. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "data_status": "forecast"
     },
     {
       "id": "programa-escolhas",
@@ -2762,7 +2857,8 @@
         "pessoas-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Convite. Beneficiarios: Pública. Programa: PESSOAS2030. Fundo: FSE+. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Convite. Beneficiarios: Pública. Programa: PESSOAS2030. Fundo: FSE+. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "data_status": "forecast"
     },
     {
       "id": "acoes-no-ambito-do-plano-de-acao-para-o-envelhecimento-ativo-saudavel-e-longevid",
@@ -2787,7 +2883,8 @@
         "pessoas-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Concurso. Beneficiarios: Pública,Privada. Programa: PESSOAS2030. Fundo: FSE+. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Concurso. Beneficiarios: Pública,Privada. Programa: PESSOAS2030. Fundo: FSE+. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "data_status": "forecast"
     },
     {
       "id": "programa-mais-8211-medidas-de-ativacao-e-inclusao-social",
@@ -2812,7 +2909,8 @@
         "pessoas-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Convite. Beneficiarios: Pública. Programa: PESSOAS2030. Fundo: FSE+. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Convite. Beneficiarios: Pública. Programa: PESSOAS2030. Fundo: FSE+. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "data_status": "forecast"
     },
     {
       "id": "inovacao-2030-8211-3oaviso",
@@ -2837,7 +2935,8 @@
         "madeira-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FEDER. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FEDER. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "data_status": "forecast"
     },
     {
       "id": "investigacao-2030-8211-iii",
@@ -2862,7 +2961,8 @@
         "madeira-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FEDER. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FEDER. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "data_status": "forecast"
     },
     {
       "id": "funcionamento-2030-8211-t-4o-aviso",
@@ -2887,7 +2987,8 @@
         "madeira-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FEDER. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FEDER. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "data_status": "forecast"
     },
     {
       "id": "eficiencia-energetica-iv",
@@ -2912,7 +3013,8 @@
         "madeira-2030"
       ],
       "paa_status": "planejado",
-      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FEDER. Detetado via portugal-2030 (scan_destination=watchlist)."
+      "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FEDER. Detetado via portugal-2030 (scan_destination=watchlist).",
+      "data_status": "verified"
     },
     {
       "id": "apoio-a-infraestruturas-de-base-tecnologica-da-regiao-do-medio-tejo-ft",
@@ -2954,7 +3056,8 @@
       "websearch_attempts": 1,
       "plano_anual_notes": [
         "2026-05-12: PASSO 2.7 E4. WebSearch Medio Tejo FTJ - so resultados PAA aggregate, sem PDF aviso separado."
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "distribuicao-indireta-de-generos-alimentares-cartao-eletronico",
@@ -2996,7 +3099,8 @@
         "matched_at": "2026-05-11"
       },
       "programa_code": "MADEIRA2030",
-      "codigo_api": "FA0214/2025"
+      "codigo_api": "FA0214/2025",
+      "data_status": "forecast"
     },
     {
       "id": "formacao-e-emprego-jovens-ii",
@@ -3037,7 +3141,8 @@
         "matched_at": "2026-05-11"
       },
       "programa_code": "MADEIRA2030",
-      "codigo_api": "FA0122/2025"
+      "codigo_api": "FA0122/2025",
+      "data_status": "forecast"
     },
     {
       "id": "siid-id-empresarial-operacoes-algarve",
@@ -3079,7 +3184,8 @@
       },
       "plano_anual_detected_date": "2026-05-12",
       "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0069/2025"
+      "codigo_api": "FA0069/2025",
+      "data_status": "forecast"
     },
     {
       "id": "parcerias-inovacao-social-alentejo",
@@ -3106,7 +3212,8 @@
       "programa_code": "ALENTEJO2030",
       "codigo_api": "FA0306/2025",
       "needs_review": true,
-      "review_reason": "codigo MISMATCH: watchlist tem FA0290/2025 (pertence a ALGARVE2030); aviso ALENTEJO2030 real e FA0306/2025. Needs_review."
+      "review_reason": "codigo MISMATCH: watchlist tem FA0290/2025 (pertence a ALGARVE2030); aviso ALENTEJO2030 real e FA0306/2025. Needs_review.",
+      "data_status": "forecast"
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-ram-iii",
@@ -3132,7 +3239,8 @@
       "plano_anual_checks": 1,
       "plano_anual_last_check": "2026-05-12",
       "programa_code": "MADEIRA2030",
-      "codigo_api": "FA0138/2025"
+      "codigo_api": "FA0138/2025",
+      "data_status": "forecast"
     },
     {
       "id": "programas-de-insercao-profissional-publicos-mais-vulneraveis",
@@ -3174,7 +3282,8 @@
         "matched_at": "2026-05-11"
       },
       "programa_code": "MADEIRA2030",
-      "codigo_api": "FA0123/2025"
+      "codigo_api": "FA0123/2025",
+      "data_status": "forecast"
     },
     {
       "id": "formacao-e-emprego-desempregados",
@@ -3216,7 +3325,8 @@
         "matched_at": "2026-05-11"
       },
       "programa_code": "MADEIRA2030",
-      "codigo_api": "FA0120/2025"
+      "codigo_api": "FA0120/2025",
+      "data_status": "forecast"
     },
     {
       "id": "parcerias-inovacao-social-alentejo",
@@ -3260,7 +3370,8 @@
       "programa_code": "ALGARVE2030",
       "codigo_api": "FA0290/2025",
       "needs_review": true,
-      "review_reason": "codigo MISMATCH: watchlist tem FA0290/2025 (pertence a ALGARVE2030); aviso ALENTEJO2030 real e FA0306/2025. Needs_review."
+      "review_reason": "codigo MISMATCH: watchlist tem FA0290/2025 (pertence a ALGARVE2030); aviso ALENTEJO2030 real e FA0306/2025. Needs_review.",
+      "data_status": "forecast"
     },
     {
       "id": "formacoes-modulares-certificadas-pessoas2030",
@@ -3305,7 +3416,8 @@
       "programa_code": "MADEIRA2030",
       "codigo_api": "FA0097/2025",
       "needs_review": true,
-      "review_reason": "Duplicado de \"formacoes-modulares-certificadas\" (mesma aviso_codigo). Considerar remocao."
+      "review_reason": "Duplicado de \"formacoes-modulares-certificadas\" (mesma aviso_codigo). Considerar remocao.",
+      "data_status": "forecast"
     },
     {
       "id": "modelo-de-apoio-a-vida-independente-mavi",
@@ -3356,7 +3468,8 @@
         "2b-pdf",
         "2b-acf-all",
         "2b-portal-central"
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "centros-especializados-em-qualificacao-de-adultos-e-processos-de-rvcc-",
@@ -3397,7 +3510,8 @@
       "programa_code": "ALGARVE2030",
       "codigo_api": "FA0307/2025",
       "needs_review": true,
-      "review_reason": "Duplicado de centros-qualifica-algarve (mesma codigo FA0307/2025, ja promovido a queue)."
+      "review_reason": "Duplicado de centros-qualifica-algarve (mesma codigo FA0307/2025, ja promovido a queue).",
+      "data_status": "forecast"
     },
     {
       "id": "tratamento-em-estacoes-de-tratamento-de-aguas-residuais-etar-para-prod",
@@ -3410,7 +3524,8 @@
       "status": "plano_anual",
       "priority_score": 500,
       "plano_anual_checks": 0,
-      "notes": "Re-adicionado à watchlist em 2026-05-12 após depublicação por suspeita PAA (sem regulamento técnico real). Aguarda detecção de regulamento real pelo monitor (PASSO 2.6 ou 2.7)."
+      "notes": "Re-adicionado à watchlist em 2026-05-12 após depublicação por suspeita PAA (sem regulamento técnico real). Aguarda detecção de regulamento real pelo monitor (PASSO 2.6 ou 2.7).",
+      "data_status": "forecast"
     },
     {
       "id": "acoes-para-mitigacao-da-situacao-de-escassez-hidrica-e-assegurar-a-res",
@@ -3423,7 +3538,8 @@
       "status": "plano_anual",
       "priority_score": 500,
       "plano_anual_checks": 0,
-      "notes": "Re-adicionado à watchlist em 2026-05-12 após depublicação por suspeita PAA (sem regulamento técnico real). Aguarda detecção de regulamento real pelo monitor (PASSO 2.6 ou 2.7)."
+      "notes": "Re-adicionado à watchlist em 2026-05-12 após depublicação por suspeita PAA (sem regulamento técnico real). Aguarda detecção de regulamento real pelo monitor (PASSO 2.6 ou 2.7).",
+      "data_status": "forecast"
     },
     {
       "id": "linha-norte-estacao-do-oriente-terminal-tecnico",
@@ -3436,7 +3552,8 @@
       "status": "plano_anual",
       "priority_score": 500,
       "plano_anual_checks": 0,
-      "notes": "Re-adicionado à watchlist em 2026-05-12 após depublicação por suspeita PAA (sem regulamento técnico real). Aguarda detecção de regulamento real pelo monitor (PASSO 2.6 ou 2.7)."
+      "notes": "Re-adicionado à watchlist em 2026-05-12 após depublicação por suspeita PAA (sem regulamento técnico real). Aguarda detecção de regulamento real pelo monitor (PASSO 2.6 ou 2.7).",
+      "data_status": "forecast"
     },
     {
       "id": "acoes-promocao-destino-acores-3-aviso",
@@ -3464,7 +3581,8 @@
       "plano_anual_detected_date": "2026-05-12",
       "plano_anual_checks": 2,
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_status": "url_removed"
+      "plano_anual_status": "url_removed",
+      "data_status": "forecast"
     },
     {
       "id": "cursos-cet-2-aviso-acores",
@@ -3492,7 +3610,8 @@
       "plano_anual_detected_date": "2026-05-12",
       "plano_anual_checks": 2,
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_status": "url_removed"
+      "plano_anual_status": "url_removed",
+      "data_status": "forecast"
     },
     {
       "id": "valorizacao-economica-conhecimento-empresas-acores",
@@ -3522,7 +3641,8 @@
         "2b-acf-all"
       ],
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_status": "not_found_in_api"
+      "plano_anual_status": "not_found_in_api",
+      "data_status": "forecast"
     },
     {
       "id": "idt-economia-hipocarbonica-adaptacao-climatica-acores",
@@ -3552,7 +3672,8 @@
         "2b-acf-all"
       ],
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_status": "not_found_in_api"
+      "plano_anual_status": "not_found_in_api",
+      "data_status": "forecast"
     },
     {
       "id": "protecao-civil-gestao-riscos-2-aviso-acores",
@@ -3582,7 +3703,8 @@
         "2b-acf-all"
       ],
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_status": "not_found_in_api"
+      "plano_anual_status": "not_found_in_api",
+      "data_status": "forecast"
     },
     {
       "id": "ciclo-agua-reutilizacao-resiliencia-2-aviso-acores",
@@ -3612,7 +3734,8 @@
         "2b-acf-all"
       ],
       "plano_anual_last_check": "2026-05-12",
-      "plano_anual_status": "not_found_in_api"
+      "plano_anual_status": "not_found_in_api",
+      "data_status": "forecast"
     },
     {
       "id": "eficiencia-energetica-na-administracao-publica-central",
@@ -3629,7 +3752,8 @@
       "priority_score": 530,
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_checks": 0,
-      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real."
+      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real.",
+      "data_status": "forecast"
     },
     {
       "id": "infraestruturas-de-valorizacao-de-residuos-urbanos-em-alta-ru",
@@ -3646,7 +3770,8 @@
       "priority_score": 530,
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_checks": 0,
-      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real."
+      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real.",
+      "data_status": "forecast"
     },
     {
       "id": "bolsas-de-ensino-superior-para-alunos-carenciados-ano-letivo-2026-2027",
@@ -3663,7 +3788,8 @@
       "priority_score": 530,
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_checks": 0,
-      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real."
+      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real.",
+      "data_status": "forecast"
     },
     {
       "id": "desenvolver-sistemas-redes-e-formas-de-armazenamento-energeticos-intel",
@@ -3680,7 +3806,8 @@
       "priority_score": 530,
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_checks": 0,
-      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real."
+      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real.",
+      "data_status": "forecast"
     },
     {
       "id": "cursos-profissionais-ano-letivo-2026-2027-escolas-privadas-e-outras",
@@ -3697,7 +3824,8 @@
       "priority_score": 530,
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_checks": 0,
-      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real."
+      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real.",
+      "data_status": "forecast"
     },
     {
       "id": "protecao-civil-e-gestao-integrada-de-riscos-prevencao-e-mitigacao-de-r",
@@ -3717,7 +3845,8 @@
       "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real.",
       "plano_anual_notes": [
         "2026-05-12: Sustentavel-2030 API nao tem FA0036/2025 (usa codigos PACS-YYYY-NN). Item permanece PAA. Necessario cross-portal match por titulo."
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "programa-de-seguranca-ferroviaria-supressao-de-pns",
@@ -3737,7 +3866,8 @@
       "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real.",
       "plano_anual_notes": [
         "2026-05-12: Sustentavel-2030 API nao tem FA0156/2025 (usa codigos PACS-YYYY-NN). Item permanece PAA. Necessario cross-portal match por titulo."
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "parcerias-inovacao-social-algarve",
@@ -3759,7 +3889,8 @@
         "2026-05-12: Confirmado PAA via algarve-2030 API: FA0290/2025 PDF em /unnamed-file.pdf-165.octet-stream contem \"Resumo de Aviso do Plano Anual de Avisos\". DUPLICADO de parcerias-inovacao-social-alentejo (mesma aviso_codigo)."
       ],
       "needs_review": true,
-      "review_reason": "Duplicado de \"parcerias-inovacao-social-alentejo\" (mesma aviso_codigo). Considerar remocao."
+      "review_reason": "Duplicado de \"parcerias-inovacao-social-alentejo\" (mesma aviso_codigo). Considerar remocao.",
+      "data_status": "forecast"
     },
     {
       "id": "acoes-inovadoras-desafio-demografico-parcerias-coesao-alentejo",
@@ -3779,7 +3910,8 @@
       "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real.",
       "plano_anual_notes": [
         "2026-05-12: Confirmado PAA via alentejo-2030 API: FA0177/2025 PDF em /unnamed-file.pdf-204-1.octet-stream contem \"Resumo de Aviso do Plano Anual de Avisos\". Data_fim oficial 15/05/2026 - aviso teoricamente abre nos proximos 3 dias."
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "capacitacao-atores-redes-parcerias-coesao-nao-urbanas-alentejo",
@@ -3799,7 +3931,8 @@
       "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real.",
       "plano_anual_notes": [
         "2026-05-12: Confirmado PAA via alentejo-2030 API: FA0190/2025 PDF em /unnamed-file.pdf-205-1.octet-stream contem \"Resumo de Aviso do Plano Anual de Avisos\"."
-      ]
+      ],
+      "data_status": "forecast"
     },
     {
       "id": "medidas-de-adaptacao-as-alteracoes-climaticas-4-aviso",
@@ -3816,7 +3949,8 @@
       "priority_score": 530,
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_checks": 0,
-      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real."
+      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real.",
+      "data_status": "forecast"
     },
     {
       "id": "sibt-iti-iibt-ovt-centro",
@@ -3833,7 +3967,8 @@
       "priority_score": 520,
       "plano_anual_last_check": "2026-05-12",
       "plano_anual_checks": 0,
-      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real."
+      "notes": " | Revertido de promoção errónea em 2026-05-12: cross-portal match no central não constituía evidência de regulamento real.",
+      "data_status": "forecast"
     },
     {
       "id": "step-i-d-i-empresarial-digital-e-biotecnologia",
@@ -3863,7 +3998,8 @@
       "status": "pending",
       "estado": "aberto",
       "paa_status": "planejado",
-      "notes": "Programa: ALGARVE2030,COMPETE2030. Natureza: Concurso. Beneficiario: Pública, Privada. Estado: aberto. (scan_destination=watchlist)"
+      "notes": "Programa: ALGARVE2030,COMPETE2030. Natureza: Concurso. Beneficiario: Pública, Privada. Estado: aberto. (scan_destination=watchlist)",
+      "data_status": "forecast"
     },
     {
       "id": "step-inovacao-produtiva-digital-e-biotecnologia",
@@ -3893,7 +4029,8 @@
       "status": "pending",
       "estado": "aberto",
       "paa_status": "planejado",
-      "notes": "Programa: ALGARVE2030,COMPETE2030. Natureza: Concurso. Beneficiario: Privada. Estado: aberto. (scan_destination=watchlist)"
+      "notes": "Programa: ALGARVE2030,COMPETE2030. Natureza: Concurso. Beneficiario: Privada. Estado: aberto. (scan_destination=watchlist)",
+      "data_status": "forecast"
     }
   ],
   "updated": "2026-05-12"

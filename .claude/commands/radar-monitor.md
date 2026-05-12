@@ -59,17 +59,31 @@ O monitor atua de forma DIFERENTE consoante o regime da fonte do item:
 
 ---
 
-## PASSO 0.5: Auto-fecho por data expirada (fail-safe)
+## PASSO 0.5: Auto-fecho por data expirada (fail-safe) — v4.13 diferenciado
 
-**Antes** de qualquer verificação de fonte externa, executar passagem local de fail-safe sobre TODOS os shards de regime "aviso":
+**Antes** de qualquer verificação de fonte externa, executar passagem local de fail-safe sobre TODOS os shards de regime "aviso".
+
+⚠️ **MUDANÇA v4.13 (2026-05-12):** comportamento DIFERENTE consoante `data_status` do item:
+
+### Para items com `data_status: "verified"` (regulamento real confirmado)
 
 Para cada item com `estado: "aberto"` e `data_fim` definida:
-- Se `data_fim < hoje`: marcar como `estado: "fechado"`, atualizar `status_text` para "Fechado", `status_class` para "status-closed", e propagar a alteração ao `instruments-catalog.json`.
-- Adicionar campo `auto_closed: true` no item do shard (para distinguir de fechos confirmados pela fonte).
+- Se `data_fim < hoje`: marcar como `estado: "fechado"`, atualizar `status_text` para "Fechado", `status_class` para "status-closed", `auto_closed: true`, e propagar ao `instruments-catalog.json`.
+- Comportamento normal (regulamento real teve abertura → agora fechado).
 
-**Justificação:** o monitor depende da fonte para confirmar fechos, mas algumas fontes mantêm avisos visíveis como "abertos" durante dias após a deadline (inércia administrativa). O fail-safe garante que datas passadas nunca permanecem visíveis no catálogo como abertas.
+### Para items com `data_status: "forecast"` (apenas PAA forecast, nunca verificado)
 
-**Não substitui a verificação da fonte.** A regra "items fechado: verificar 1 por cada 5 abertos" continua aplicável e deteta prorrogações posteriores. Se a fonte confirmar que o aviso foi prorrogado, o item é reaberto na verificação seguinte (com novo `data_fim`).
+⚠️ **NÃO usar a label "fechado".** Estes items nunca abriram como aviso real — as datas vieram do PAA forecast da API central PT2030. Marcar como fechado seria mentira semântica (não houve nada para fechar).
+
+- Se `data_fim < hoje`: marcar como `estado: "expired_unrealized"`, `status_text: "PAA expirado sem publicação"`, `status_class: "status-unrealized"`.
+- Mover para `registry/queue-plano-anual-archived.json` (sai do circuito ativo, fica para auditoria).
+- Não retentar via PASSO 2.6, 2.7 (ineficaz: AG não publicou no calendário previsto).
+
+### Para items com `data_status: "n/a"` (famílias não-PT2030)
+
+Comportamento idêntico ao v4.12 anterior (estes itens não usam o conceito forecast/verified).
+
+**Justificação:** o monitor depende da fonte para confirmar fechos. Mas para items PT2030 forecast, "fechar" sem ter aberto é incoerente. `expired_unrealized` reflete a realidade: PAA previu calendário, AG não cumpriu, aviso real nunca apareceu.
 
 Esta passagem é rápida (leitura local, sem WebFetch) e não conta para o limite de 1-2 shards por run.
 
@@ -256,8 +270,31 @@ Para cada item na watchlist (apenas items `paa_status == "planejado"` ou ausente
 
 **Aplicável a:** items em `queue-plano-anual.json` onde:
 - `source_id` está na **FAMILIA_PT2030** (qualquer dos 11 portais: portugal-2030, compete-2030, norte-2030, centro-2030, lisboa-2030, alentejo-2030, algarve-2030, pessoas-2030, sustentavel-2030, madeira-2030, acores-2030)
-- `data_inicio < hoje` (aviso teoricamente já abriu)
+- `data_inicio < hoje` (aviso teoricamente já abriu segundo PAA forecast)
 - `plano_anual_checks >= 1` (PASSO 2.6 já tentou via fonte original pelo menos 1 vez sem sucesso)
+- `data_status != "expired_unrealized"` (não retentar items já dados como falhados)
+
+### Priorização inteligente (v4.13, 2026-05-12)
+
+Ordenar elegíveis para maximizar probabilidade de sucesso (cap=15/run):
+
+**Tier 1 (alta probabilidade):** items onde há SINAL real de publicação
+- Existe news post no portal regional mencionando o aviso (campo `news_post_url` populado)
+- Items previamente `verified` cujo regulamento se perdeu
+- Items com `last_websearch_attempt` mais antigo (>=7 dias) E poucos `websearch_attempts` (<3)
+
+**Tier 2 (média probabilidade):** items "típicos"
+- Items sem sinais especiais, com cooldown respeitado
+
+**Tier 3 (baixa probabilidade — não priorizar mas não excluir):**
+- Items com 3+ `websearch_attempts` sem sucesso (provável que regulamento real não exista)
+- Items com `data_fim` próxima de expirar (vão entrar em `expired_unrealized` em breve)
+
+**Exclusões obrigatórias:**
+- Items com `data_status: "expired_unrealized"` → não retentar
+- Items com `chrome_fail_count >= 3` (se aplicável)
+- Items em `registry/depublished.json` (regra 0 v4.12.1)
+- Items com cooldown ativo (`last_websearch_attempt` < 7 dias)
 
 ### Estratégia de matching (v4.12.1, 2026-05-12 — REFORÇADO)
 

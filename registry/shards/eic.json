@@ -11,14 +11,16 @@
       "state": "aberto",
       "last_check": "2026-05-12",
       "deadline": "2026-07-08",
-      "notas": "Cut-off Step 2 06/05/2026 atingido. Proximo cut-off Step 2: 08/07/2026 (cut-offs subsequentes: 02/09, 04/11/2026). Step 1 (short) continua continuo."
+      "notas": "Cut-off Step 2 06/05/2026 atingido. Proximo cut-off Step 2: 08/07/2026 (cut-offs subsequentes: 02/09, 04/11/2026). Step 1 (short) continua continuo.",
+      "data_status": "n/a"
     },
     {
       "id": "step-scale-up-eic",
       "file": "instrumentos/step-scale-up-eic.html",
       "source": "eic-accelerator",
       "state": "aberto",
-      "last_check": "2026-05-12"
+      "last_check": "2026-05-12",
+      "data_status": "n/a"
     },
     {
       "id": "eic-pathfinder-2026",
@@ -26,7 +28,8 @@
       "source": "eic-accelerator",
       "state": "aberto",
       "last_check": "2026-05-12",
-      "notas": "Pathfinder Open: deadline 12/05/2026. Pathfinder Challenges: deadline 28/10/2026. Verificado via eic.ec.europa.eu em 2026-05-12."
+      "notas": "Pathfinder Open: deadline 12/05/2026. Pathfinder Challenges: deadline 28/10/2026. Verificado via eic.ec.europa.eu em 2026-05-12.",
+      "data_status": "n/a"
     },
     {
       "id": "eic-transition-2026",
@@ -34,28 +37,32 @@
       "source": "eic-accelerator",
       "state": "aberto",
       "last_check": "2026-05-12",
-      "notas": "Transition 2026: deadline 16/09/2026 (single cut-off). Verificado via eic.ec.europa.eu em 2026-05-12."
+      "notas": "Transition 2026: deadline 16/09/2026 (single cut-off). Verificado via eic.ec.europa.eu em 2026-05-12.",
+      "data_status": "n/a"
     },
     {
       "id": "horizon-eic-2026-bas-02",
       "file": "instrumentos/horizon-eic-2026-bas-02.html",
       "source": "eu-funding-tenders",
       "state": "aberto",
-      "last_check": "2026-05-12"
+      "last_check": "2026-05-12",
+      "data_status": "n/a"
     },
     {
       "id": "horizon-eic-2026-accelerator-01",
       "file": "instrumentos/horizon-eic-2026-accelerator-01.html",
       "source": "eu-funding-tenders",
       "state": "aberto",
-      "last_check": "2026-05-12"
+      "last_check": "2026-05-12",
+      "data_status": "n/a"
     },
     {
       "id": "eic-step-scale-up-2026",
       "file": "instrumentos/eic-step-scale-up-2026/index.html",
       "source": "eic-accelerator",
       "state": "aberto",
-      "last_check": "2026-05-12"
+      "last_check": "2026-05-12",
+      "data_status": "n/a"
     }
   ],
   "count": 7,

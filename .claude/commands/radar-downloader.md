@@ -172,8 +172,12 @@ Se o item tem `wordpress_id` E regulamento ainda não obtido:
    **TESTE A - Texto de plano anual (BLOQUEANTE):**
    Se contem "Plano Anual de Avisos", "Resumo de Aviso do Plano", "PAA2026", "PAA202", "Aviso a publicar em:"
    → Apagar .txt e .pdf.
-   → **ANTES de mover para watchlist:** se item é PT2030 família, tentar PASSO 2b-portal-central (NOVO v4.12). Se obtiver regulamento real → SUCESSO, parar aqui.
-   → Caso contrário: MOVER item para `queue-plano-anual.json` (ver PASSO 3.5). PARAR item.
+   → **ANTES de mover para watchlist:** se item é PT2030 família, tentar PASSO 2b-portal-central (NOVO v4.12). Se obtiver regulamento real → SUCESSO, parar aqui (set `data_status: "verified"`).
+   → Caso contrário: MOVER item para `queue-plano-anual.json` (ver PASSO 3.5). PARAR item. **Manter `data_status: "forecast"`.**
+
+   **Se TESTE A passa (PDF NÃO é PAA):** transição de estado importante (v4.13):
+   → **Atualizar `data_status: "verified"`** no item (anteriormente "forecast")
+   → Este é o momento canónico de validação. A partir daqui o item conta como aviso REAL.
 
    **TESTE B - Conteudo insuficiente (BLOQUEANTE):**
    Se < 800 palavras E não contem "despesas elegíveis" E não contem "criterios de seleção"
