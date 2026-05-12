@@ -243,6 +243,13 @@
       "review_reason": "Datas alteradas na fonte (di=2026-09-01, df=2026-12-31). Provavel nova edicao do aviso. Revisar conteudo editorial.",
       "human_code": "PACS-2025-10",
       "programa_code": "SUSTENTAVEL2030"
+    },
+    {
+      "id": "mar2030-2026-6-reposicao-capacidade-produtiva-aquicola",
+      "file": "instrumentos/mar2030-2026-6-reposicao-capacidade-produtiva-aquicola/index.html",
+      "source": "mar-2030",
+      "state": "aberto",
+      "last_check": "2026-05-12"
     }
   ],
   "instruments": [
@@ -487,11 +494,12 @@
       "last_check": "2026-05-09"
     }
   ],
-  "count": 50,
-  "open": 30,
+  "count": 51,
+  "open": 31,
   "closed": 5,
   "planned": 15,
   "_meta": {
     "last_monitor_run": "2026-05-12"
-  }
+  },
+  "published": 1
 }
