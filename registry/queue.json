@@ -2008,13 +2008,14 @@
       "regulation_local": null,
       "status": "pending",
       "state": "previsto",
-      "fail_count": 2,
+      "fail_count": 3,
       "priority_score": 530,
-      "download_error": "API erro: HTTP 404 (id) e slug lookup falhou (200)",
+      "download_error": "codigo FA0288/2025 nao encontrado em sustentavel-2030 API (77 posts ativos)",
       "last_fail_date": "2026-05-12",
       "fallback_tried": [
         "api-fetch",
-        "api-fetch"
+        "api-fetch",
+        "api-by-codigo"
       ]
     },
     {
@@ -2424,32 +2425,6 @@
       "priority_score": 510
     },
     {
-      "id": "parcerias-inovacao-social-alentejo",
-      "name": "Parcerias para a Inovação Social",
-      "codigo": "FA0306/2025",
-      "aviso_codigo": "FA0306/2025",
-      "source_id": "alentejo-2030",
-      "shard": "pt2030-other",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-03-20",
-      "data_fim": "2026-05-20",
-      "deadline": "2026-05-20",
-      "budget_eur": 900000.0,
-      "regulation_url": 252926,
-      "pdf_url": 252926,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "aberto",
-      "fail_count": 2,
-      "priority_score": 530,
-      "download_error": "API erro: HTTP 404 (id) e slug lookup falhou (200)",
-      "last_fail_date": "2026-05-12",
-      "fallback_tried": [
-        "api-fetch",
-        "api-fetch"
-      ]
-    },
-    {
       "id": "contratos-impacto-social-alentejo-2026",
       "name": "Contratos de Impacto Social",
       "codigo": "FA0842/2024",
@@ -2540,26 +2515,6 @@
         "api-fetch",
         "api-fetch"
       ]
-    },
-    {
-      "id": "distribuicao-indireta-de-generos-alimentares-cartao-eletronico",
-      "name": "Distribuição indireta de géneros alimentares – cartão eletrónico",
-      "codigo": "FA0214/2025",
-      "aviso_codigo": "FA0214/2025",
-      "source_id": "madeira-2030",
-      "shard": "pt2030-other",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-08-21",
-      "data_fim": "2026-10-28",
-      "deadline": "2026-10-28",
-      "budget_eur": 1050000.0,
-      "regulation_url": 252940,
-      "pdf_url": 252940,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "previsto",
-      "fail_count": 0,
-      "priority_score": 510
     },
     {
       "id": "bolsas-de-ensino-superior-para-alunos-carenciados-ano-letivo-2026-2027",
@@ -2666,26 +2621,6 @@
       "state": "aberto",
       "fail_count": 0,
       "priority_score": 510
-    },
-    {
-      "id": "cursos-cef-cefjam-escolas-privadas-2026-2027",
-      "name": "Cursos de educação e formação de jovens (CEF, incluindo CEFJAM) – ano letivo 2026/2027 – Escolas Privadas e outras",
-      "codigo": "FA0141/2025",
-      "aviso_codigo": "FA0141/2025",
-      "source_id": "pessoas-2030",
-      "shard": "pt2030-pessoas",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-05-04",
-      "data_fim": "2026-08-31",
-      "deadline": "2026-08-31",
-      "budget_eur": 13000000.0,
-      "regulation_url": 252960,
-      "pdf_url": 252960,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 530
     },
     {
       "id": "capacitacao-atores-redes-iti-agua-alentejo",
@@ -2804,8 +2739,14 @@
       "regulation_local": null,
       "status": "pending",
       "state": "previsto",
-      "fail_count": 0,
-      "priority_score": 530
+      "fail_count": 1,
+      "priority_score": 530,
+      "last_fail_date": "2026-05-12",
+      "download_error": "codigo FA0229/2025 nao encontrado em pessoas-2030 API (28 posts ativos)",
+      "fallback_tried": [
+        "api-fetch",
+        "api-by-codigo"
+      ]
     },
     {
       "id": "centros-nacionais-de-apoio-a-integracao-de-migrantes-cnaim-mediacao-na",
@@ -2928,26 +2869,6 @@
       "priority_score": 510
     },
     {
-      "id": "centros-locais-de-apoio-a-integracao-de-migrantes-claim",
-      "name": "Centros Locais de Apoio à Integração de Migrantes (CLAIM)",
-      "codigo": "FA0321/2025",
-      "aviso_codigo": "FA0321/2025",
-      "source_id": "portugal-2030",
-      "shard": "pt2030-central",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-05-04",
-      "data_fim": "2026-08-31",
-      "deadline": "2026-08-31",
-      "budget_eur": 395062433.0,
-      "regulation_url": 253032,
-      "pdf_url": 253032,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 530
-    },
-    {
       "id": "assistencia-tecnica-organismo-intermedio-da-regiao-autonoma-da-madeira",
       "name": "Assistência Técnica – Organismo Intermédio da Região Autónoma da Madeira (2027 – 2029)",
       "codigo": "FA0289/2025",
@@ -2986,41 +2907,6 @@
       "state": "previsto",
       "fail_count": 0,
       "priority_score": 520
-    },
-    {
-      "id": "apoio-a-infraestruturas-de-base-tecnologica-da-regiao-do-medio-tejo-ft",
-      "name": "Apoio a Infraestruturas de Base Tecnológica da Região do Médio Tejo (FTJ)",
-      "source_id": "centro-2030",
-      "shard": "pt2030-centro",
-      "aviso_codigo": "FA0245/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-04-16",
-      "budget": "3 700 000 EUR",
-      "regulation_url": 17076,
-      "pdf_url": 17076,
-      "regulation_local": null,
-      "priority_score": 530,
-      "status": "pending",
-      "notes": "FA0245/2025. CENTRO2030. FTJ.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
-      "plano_anual_last_check": "2026-05-04",
-      "plano_anual_checks": 3,
-      "programa": [
-        "CENTRO2030"
-      ],
-      "regional_portals": [
-        "centro-2030"
-      ],
-      "codigo": "FA0245/2025",
-      "fail_count": 0,
-      "cross_portal_match": {
-        "original_codigo": "FA0245/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "centro-2030",
-        "matched_codigo": "FA0245/2025",
-        "title_similarity": 1.0,
-        "matched_at": "2026-05-11"
-      }
     },
     {
       "id": "sistema-de-incentivos-de-base-territorial-iibt-do-pinhal-interior",
@@ -3086,46 +2972,6 @@
         "original_portal": "portugal-2030",
         "matched_portal": "madeira-2030",
         "matched_codigo": "FA0214/2025",
-        "title_similarity": 1.0,
-        "matched_at": "2026-05-11"
-      }
-    },
-    {
-      "id": "formacao-e-emprego-jovens-ii",
-      "name": "Formação e Emprego – JOVENS II",
-      "source_id": "madeira-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0122/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-04-30",
-      "budget": "400 000 EUR",
-      "regulation_url": 16231,
-      "pdf_url": 16231,
-      "regulation_local": null,
-      "priority_score": 530,
-      "status": "pending",
-      "notes": "FA0122/2025. MADEIRA2030. FSE+.",
-      "fail_count": 0,
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
-      "plano_anual_detected_date": "2026-04-18",
-      "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-04-27",
-      "programa": [
-        "MADEIRA2030"
-      ],
-      "regional_portals": [
-        "madeira-2030"
-      ],
-      "paa_status": "published_externamente",
-      "news_post_url": "https://madeira.portugal2030.pt/2026/02/27/madeira-2030-lanca-aviso-convite-para-formacao-e-emprego-jovens-ii/",
-      "news_post_date": "2026-02-27",
-      "news_post_title": "Madeira 2030 lança aviso-convite para Formação e Emprego – JOVENS II",
-      "codigo": "FA0122/2025",
-      "cross_portal_match": {
-        "original_codigo": "FA0122/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "madeira-2030",
-        "matched_codigo": "FA0122/2025",
         "title_similarity": 1.0,
         "matched_at": "2026-05-11"
       }
@@ -3243,46 +3089,6 @@
         "original_portal": "portugal-2030",
         "matched_portal": "alentejo-2030",
         "matched_codigo": "FA0211/2025",
-        "title_similarity": 1.0,
-        "matched_at": "2026-05-11"
-      }
-    },
-    {
-      "id": "siid-id-empresarial-operacoes-algarve",
-      "name": "SIID – I&D Empresarial – Operações Individuais e em Copromoção",
-      "source_id": "alentejo-2030",
-      "shard": "pt2030-central",
-      "aviso_codigo": "FA0069/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-12-31",
-      "budget": 30000000,
-      "regulation_url": 19006,
-      "pdf_url": 19006,
-      "regulation_local": null,
-      "priority_score": 530,
-      "status": "pending",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030,ALGARVE2030,COMPETE2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "programa": [
-        "ALENTEJO2030",
-        "ALGARVE2030",
-        "COMPETE2030"
-      ],
-      "regional_portals": [
-        "alentejo-2030",
-        "algarve-2030",
-        "compete-2030"
-      ],
-      "plano_anual_last_check": "2026-05-08",
-      "plano_anual_checks": 1,
-      "plano_anual_note": "Monitor 2026-05-08: API portugal-2030 retorna acf.pdf valido. Downloader deve correr TESTE A para confirmar/promover.",
-      "codigo": "FA0069/2025",
-      "fail_count": 0,
-      "cross_portal_match": {
-        "original_codigo": "FA0069/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "alentejo-2030",
-        "matched_codigo": "FA0069/2025",
         "title_similarity": 1.0,
         "matched_at": "2026-05-11"
       }
