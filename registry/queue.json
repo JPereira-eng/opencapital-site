@@ -1196,26 +1196,6 @@
       "priority_score": 500
     },
     {
-      "id": "sibt-inovacao-modernizacao-pme-algarve",
-      "name": "Sistema de Incentivos de Base Territorial – Inovação e modernização para o aumento da produção e Criação de novas empresas e negócios",
-      "codigo": "FA0153/2025",
-      "aviso_codigo": "FA0153/2025",
-      "source_id": "algarve-2030",
-      "shard": "pt2030-other",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-04-30",
-      "data_fim": "2027-01-15",
-      "deadline": "2027-01-15",
-      "budget_eur": 5000000.0,
-      "regulation_url": 252624,
-      "pdf_url": 252624,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "aberto",
-      "fail_count": 0,
-      "priority_score": 510
-    },
-    {
       "id": "vales-id-acreditacao-prestadores-acores",
       "name": "Vales de I&D – Acreditação dos prestadores de serviços",
       "codigo": "FA0607/2023",
@@ -1414,26 +1394,6 @@
       "state": "previsto",
       "fail_count": 0,
       "priority_score": 500
-    },
-    {
-      "id": "sistema-de-incentivos-de-base-territorial-ram-iii",
-      "name": "Sistema de Incentivos de Base Territorial – RAM – III",
-      "codigo": "FA0138/2025",
-      "aviso_codigo": "FA0138/2025",
-      "source_id": "madeira-2030",
-      "shard": "pt2030-other",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-09-02",
-      "data_fim": "2026-10-30",
-      "deadline": "2026-10-30",
-      "budget_eur": 5000000.0,
-      "regulation_url": 252661,
-      "pdf_url": 252661,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "previsto",
-      "fail_count": 0,
-      "priority_score": 510
     },
     {
       "id": "gestao-agua-recursos-hidricos-alentejo",
@@ -2421,32 +2381,6 @@
       ]
     },
     {
-      "id": "bolsas-de-ensino-superior-para-alunos-carenciados-ano-letivo-2026-2027",
-      "name": "Bolsas de ensino superior para alunos carenciados – ano letivo 2026/2027",
-      "codigo": "FA0217/2025",
-      "aviso_codigo": "FA0217/2025",
-      "source_id": "pessoas-2030",
-      "shard": "pt2030-pessoas",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-05-04",
-      "data_fim": "2026-08-31",
-      "deadline": "2026-08-31",
-      "budget_eur": 110000000.0,
-      "regulation_url": 252974,
-      "pdf_url": 252974,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "aberto",
-      "fail_count": 2,
-      "priority_score": 530,
-      "download_error": "API erro: HTTP 404 (id) e slug lookup falhou (200)",
-      "last_fail_date": "2026-05-12",
-      "fallback_tried": [
-        "api-fetch",
-        "api-fetch"
-      ]
-    },
-    {
       "id": "apoio-tecnico-e-financeiro-a-organizacoes-da-sociedade-civil-que-atuam",
       "name": "Apoio técnico e financeiro a organizações da sociedade civil que atuam na área da igualdade e não discriminação",
       "codigo": "FA0226/2025",
@@ -2840,122 +2774,6 @@
         "original_portal": "portugal-2030",
         "matched_portal": "centro-2030",
         "matched_codigo": "FA0248/2025",
-        "title_similarity": 1.0,
-        "matched_at": "2026-05-11"
-      }
-    },
-    {
-      "id": "distribuicao-indireta-de-generos-alimentares-cartao-eletronico",
-      "name": "Distribuição indireta de géneros alimentares – cartão eletrónico",
-      "source_id": "madeira-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0214/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-04-24",
-      "budget": "1 050 000 EUR",
-      "regulation_url": 16245,
-      "pdf_url": 16245,
-      "regulation_local": null,
-      "priority_score": 530,
-      "status": "pending",
-      "notes": "FA0267/2025. MADEIRA2030. FSE+.",
-      "fail_count": 0,
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
-      "plano_anual_detected_date": "2026-04-18",
-      "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-04-27",
-      "programa": [
-        "MADEIRA2030"
-      ],
-      "regional_portals": [
-        "madeira-2030"
-      ],
-      "codigo": "FA0214/2025",
-      "cross_portal_match": {
-        "original_codigo": "FA0267/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "madeira-2030",
-        "matched_codigo": "FA0214/2025",
-        "title_similarity": 1.0,
-        "matched_at": "2026-05-11"
-      }
-    },
-    {
-      "id": "programas-de-insercao-profissional-publicos-mais-vulneraveis",
-      "name": "Programas de Inserção profissional – Públicos mais vulneráveis",
-      "source_id": "madeira-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0123/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-04-30",
-      "budget": "600 000 EUR",
-      "regulation_url": 16261,
-      "pdf_url": 16261,
-      "regulation_local": null,
-      "priority_score": 530,
-      "status": "pending",
-      "notes": "FA0123/2025. MADEIRA2030. FSE+.",
-      "fail_count": 0,
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
-      "plano_anual_detected_date": "2026-04-18",
-      "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-04-27",
-      "programa": [
-        "MADEIRA2030"
-      ],
-      "regional_portals": [
-        "madeira-2030"
-      ],
-      "paa_status": "published_externamente",
-      "news_post_url": "https://madeira.portugal2030.pt/2026/02/27/madeira-2030-lanca-aviso-convite-para-estagios-e-experiencias-profissionais-dirigidos-a-jovens/",
-      "news_post_date": "2026-02-27",
-      "news_post_title": "Madeira 2030 lança aviso-convite para Estágios e Experiências Profissionais dirigidos a jovens",
-      "codigo": "FA0123/2025",
-      "cross_portal_match": {
-        "original_codigo": "FA0123/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "madeira-2030",
-        "matched_codigo": "FA0123/2025",
-        "title_similarity": 1.0,
-        "matched_at": "2026-05-11"
-      }
-    },
-    {
-      "id": "formacao-e-emprego-desempregados",
-      "name": "Formação e Emprego – Desempregados",
-      "source_id": "madeira-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0120/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-04-30",
-      "budget": "510 000 EUR",
-      "regulation_url": 16233,
-      "pdf_url": 16233,
-      "regulation_local": null,
-      "priority_score": 530,
-      "status": "pending",
-      "notes": "FA0120/2025. MADEIRA2030. FSE+.",
-      "fail_count": 0,
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
-      "plano_anual_detected_date": "2026-04-18",
-      "plano_anual_checks": 2,
-      "plano_anual_last_check": "2026-04-27",
-      "programa": [
-        "MADEIRA2030"
-      ],
-      "regional_portals": [
-        "madeira-2030"
-      ],
-      "paa_status": "published_externamente",
-      "news_post_url": "https://madeira.portugal2030.pt/2026/02/27/madeira-2030-lanca-aviso-convite-para-formacao-e-emprego-jovens-ii/",
-      "news_post_date": "2026-02-27",
-      "news_post_title": "Madeira 2030 lança aviso-convite para Formação e Emprego – JOVENS II",
-      "codigo": "FA0120/2025",
-      "cross_portal_match": {
-        "original_codigo": "FA0120/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "madeira-2030",
-        "matched_codigo": "FA0120/2025",
         "title_similarity": 1.0,
         "matched_at": "2026-05-11"
       }
@@ -3413,45 +3231,6 @@
       }
     },
     {
-      "id": "parcerias-inovacao-social-alentejo",
-      "name": "Parcerias para a Inovação Social",
-      "source_id": "algarve-2030",
-      "shard": "pt2030-other",
-      "aviso_codigo": "FA0290/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-05-20",
-      "budget": 900000,
-      "regulation_url": 19306,
-      "pdf_url": 19306,
-      "regulation_local": null,
-      "priority_score": 530,
-      "status": "pending",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "plano_anual_last_check": "2026-05-05",
-      "plano_anual_checks": 1,
-      "plano_anual_notes": [
-        "2026-05-05: API metadata complete - API: pdf=252926, df=900000, data_fim=2026-05-20. Strong signals (pdf+df+data_fim+codigo). Recommend prioritizing for downloader TESTE A on next run."
-      ],
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
-      "programa": [
-        "ALENTEJO2030"
-      ],
-      "regional_portals": [
-        "alentejo-2030"
-      ],
-      "codigo": "FA0290/2025",
-      "fail_count": 0,
-      "cross_portal_match": {
-        "original_codigo": "FA0306/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "algarve-2030",
-        "matched_codigo": "FA0290/2025",
-        "title_similarity": 1.0,
-        "matched_at": "2026-05-11"
-      }
-    },
-    {
       "id": "contratos-impacto-social-alentejo-2026",
       "name": "Contratos de Impacto Social",
       "source_id": "centro-2030",
@@ -3481,85 +3260,6 @@
         "original_portal": "portugal-2030",
         "matched_portal": "centro-2030",
         "matched_codigo": "FA0864/2024",
-        "title_similarity": 1.0,
-        "matched_at": "2026-05-11"
-      }
-    },
-    {
-      "id": "formacoes-modulares-certificadas-pessoas2030",
-      "name": "Formações Modulares Certificadas",
-      "source_id": "madeira-2030",
-      "shard": "pt2030-pessoas",
-      "aviso_codigo": "FA0097/2025",
-      "detected_date": "2026-04-17",
-      "deadline": "2026-12-31",
-      "budget": 150000000,
-      "regulation_url": 16257,
-      "pdf_url": 16257,
-      "regulation_local": null,
-      "priority_score": 530,
-      "status": "pending",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
-      "programa": [
-        "PESSOAS2030"
-      ],
-      "regional_portals": [
-        "pessoas-2030"
-      ],
-      "plano_anual_last_check": "2026-05-10",
-      "plano_anual_checks": 1,
-      "plano_anual_status": "placeholder_1.5mb",
-      "data_inicio_api": "2026-09-01",
-      "data_fim_api": "2026-12-31",
-      "plano_anual_note": "PDF ja tem 1.5MB mas filename ainda e placeholder unnamed-file",
-      "codigo": "FA0097/2025",
-      "fail_count": 0,
-      "cross_portal_match": {
-        "original_codigo": "FA0298/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "madeira-2030",
-        "matched_codigo": "FA0097/2025",
-        "title_similarity": 1.0,
-        "matched_at": "2026-05-11"
-      }
-    },
-    {
-      "id": "modelo-de-apoio-a-vida-independente-mavi",
-      "name": "Modelo de Apoio à Vida Independente (MAVI)",
-      "source_id": "algarve-2030",
-      "shard": "pt2030-pessoas",
-      "aviso_codigo": "FA0311/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-12-31",
-      "budget": 27037300,
-      "regulation_url": 19310,
-      "pdf_url": 19310,
-      "regulation_local": null,
-      "priority_score": 530,
-      "status": "pending",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: PESSOAS2030. Natureza: Convite. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
-      "programa": [
-        "PESSOAS2030"
-      ],
-      "regional_portals": [
-        "pessoas-2030"
-      ],
-      "plano_anual_last_check": "2026-05-10",
-      "plano_anual_checks": 1,
-      "plano_anual_status": "placeholder",
-      "data_inicio_api": "2026-09-01",
-      "data_fim_api": "2026-12-31",
-      "codigo": "FA0311/2025",
-      "fail_count": 0,
-      "cross_portal_match": {
-        "original_codigo": "FA0229/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "algarve-2030",
-        "matched_codigo": "FA0311/2025",
         "title_similarity": 1.0,
         "matched_at": "2026-05-11"
       }
@@ -3868,43 +3568,6 @@
         "matched_portal": "acores-2030",
         "matched_codigo": "FA0203/2025",
         "title_similarity": 1.0,
-        "matched_at": "2026-05-11"
-      }
-    },
-    {
-      "id": "centros-especializados-em-qualificacao-de-adultos-e-processos-de-rvcc-",
-      "name": "Centros especializados de qualificação de adultos e processos RVCC (Centros Qualifica)",
-      "source_id": "algarve-2030",
-      "shard": "pt2030-pessoas",
-      "aviso_codigo": "FA0307/2025",
-      "detected_date": "2026-04-13",
-      "data_inicio": "2026-05-04",
-      "deadline": "2026-12-31",
-      "budget": "60000000 EUR",
-      "regulation_url": 19300,
-      "pdf_url": 19300,
-      "regulation_local": null,
-      "priority_score": 530,
-      "status": "pending",
-      "notes": "Detetado como PAA pelo downloader em 2026-05-11. Pagina contem 'previsao aproximada' e 'plano anual de avisos'.",
-      "fail_count": 0,
-      "programa": [
-        "PESSOAS2030"
-      ],
-      "regional_portals": [
-        "pessoas-2030"
-      ],
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
-      "plano_anual_detected_date": "2026-05-11",
-      "plano_anual_checks": 1,
-      "plano_anual_last_check": "2026-05-11",
-      "codigo": "FA0307/2025",
-      "cross_portal_match": {
-        "original_codigo": "FA0224/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "algarve-2030",
-        "matched_codigo": "FA0307/2025",
-        "title_similarity": 0.971,
         "matched_at": "2026-05-11"
       }
     },
