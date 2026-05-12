@@ -11,14 +11,14 @@
     "updated": "2026-05-12"
   },
   "totals": {
-    "published": 653,
-    "open": 407,
+    "published": 654,
+    "open": 408,
     "closed": 162,
     "planned": 83,
     "in_queue": 195,
     "in_watchlist": 128,
     "in_catalogo": 0,
-    "in_overflow": 286,
+    "in_overflow": 285,
     "in_plano_anual": 123
   },
   "shards": {
@@ -69,11 +69,12 @@
       "updated": "2026-05-12"
     },
     "eu-other": {
-      "count": 146,
-      "open": 100,
-      "closed": 44,
+      "count": 316,
+      "published": 316,
+      "open": 222,
+      "closed": 92,
       "planned": 2,
-      "published": 146
+      "updated": "2026-05-12"
     },
     "interreg": {
       "count": 8,

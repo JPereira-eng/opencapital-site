@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESC Quality Label Humanitarian Aid: Open Capital</title>
+  <meta name="description" content="Quality Label do European Solidarity Corps para voluntariado em ajuda humanitária: acreditação obrigatória para organizações que queiram participar em projetos de voluntariado humanitário 2021-2027. Submissão contínua até 22/09/2026 para call 2027.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:560px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-value.status-cont{color:#2E7D52;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-gold{color:var(--gold);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-fact-val.val-cont{color:#2E7D52;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo"><img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca.html" class="active">Biblioteca</a></li>
+    <li><a href="../../conhecimento.html">Conhecimento</a></li>
+    <li><a href="../../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos.html">Sobre Nós</a></li>
+    <li class="nav-dropdown"><a href="#">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros.html">Parceiros</a>
+        <a href="../../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca.html">Biblioteca</a>
+  <a href="../../conhecimento.html">Conhecimento</a>
+  <a href="../../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos.html">Sobre Nós</a>
+  <a href="../../parceiros.html">Parceiros</a>
+  <a href="../../carreiras.html">Carreiras</a>
+  <a href="https://calendly.com/opencapital" class="nav-mobile-cta">Contactar</a>
+</div>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca.html">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">ESC Quality Label Humanitarian Aid</span>
+    </nav>
+    <p class="hero-cat">Financiamento Público</p>
+    <h1 class="hero-title">ESC Quality Label: Voluntariado em Ajuda Humanitária</h1>
+    <p class="hero-tagline">Acreditação obrigatória do European Solidarity Corps para organizações que pretendam coordenar, apoiar ou acolher jovens voluntários em operações de ajuda humanitária em países terceiros.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Programa</span>
+        <span class="meta-value gold">European Solidarity Corps</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Validade</span>
+        <span class="meta-value">2021 a 2027</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Submissão</span>
+        <span class="meta-value">Contínua</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-open">Aberto até 22/09/2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca.html" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O que é este instrumento</div>
+      <h2 class="section-h2">Um carimbo de qualidade, não um financiamento direto</h2>
+      <p class="section-text">A Quality Label do European Solidarity Corps Humanitarian Aid Strand é uma acreditação europeia que certifica que uma organização tem capacidade para conduzir atividades de voluntariado em operações de ajuda humanitária com qualidade, segurança e em conformidade com os princípios humanitários: humanidade, neutralidade, imparcialidade e independência. Não é uma subvenção. É a porta de entrada para as candidaturas anuais ao European Voluntary Humanitarian Aid Corps, que enviam jovens entre 18 e 35 anos para operações humanitárias em países terceiros.</p>
+      <p class="section-text">Sem este Quality Label, nenhuma organização pode candidatar-se aos projetos de voluntariado humanitário do ESC. A acreditação é o filtro qualitativo aplicado upstream pela EACEA (Agência de Execução para a Educação, Cultura e Audiovisual) para garantir que apenas entidades com capacidade técnica, financeira e de gestão de segurança podem mobilizar jovens europeus para zonas de risco humanitário.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para que serve</div>
+      <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
+      <p class="section-text">A Quality Label não responde a uma necessidade financeira imediata, responde a uma necessidade de elegibilidade. É o pré-requisito sem o qual a participação nos calls de voluntariado humanitário é estruturalmente impossível. A sua função é garantir que os projetos financiados são executados por organizações com critérios de qualidade europeus.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Impacto social e inclusão:</strong> a Quality Label abre acesso ao envio e ao acolhimento de voluntários jovens em operações que apoiam populações vulneráveis ou afetadas por desastres em países terceiros. Reforça a capacidade institucional de ONGs portuguesas que querem internacionalizar o seu trabalho humanitário e contribui para um ecossistema europeu de solidariedade estruturada e regulada.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">As duas modalidades</div>
+      <h2 class="section-h2">Support role e Host role</h2>
+      <table class="art-table">
+        <thead><tr><th>Modalidade</th><th>Função</th><th>Localização do beneficiário</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Support role</strong></td><td>Apoia, prepara e treina voluntários antes da partida, faz mediação com o host, dá apoio pós-regresso, pode coordenar e submeter projetos</td><td>Estado-Membro UE ou país associado, ou organização internacional</td></tr>
+          <tr><td><strong>Host role</strong></td><td>Acolhe o voluntário no terreno, desenha o programa de atividades, dá supervisão e apoio durante toda a estadia</td><td>País terceiro onde decorrem operações humanitárias, sem conflito armado ativo</td></tr>
+        </tbody>
+      </table>
+      <p class="section-text">Uma organização com sucursais em vários países pode candidatar-se ao Support role no país de sede e simultaneamente ao Host role para as suas sucursais em países terceiros, desde que partilhem a mesma personalidade jurídica. A organização-mãe responde pela qualidade e segurança das atividades das sucursais.</p>
+      <div class="highlight-box">
+        <div class="highlight-box-title">Restrição operacional importante</div>
+        <div class="highlight-box-text">O voluntariado só pode ter lugar em países onde haja operações de ajuda humanitária ativas e onde não exista conflito armado internacional ou não internacional em curso. Ucrânia, Síria, Sudão e zonas com hostilidades ativas estão excluídas, mesmo que sejam destinos prioritários de outros instrumentos humanitários da UE.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Como funciona</div>
+      <h2 class="section-h2">Submissão contínua, avaliação em ciclos</h2>
+      <p class="section-text">A submissão da Quality Label é feita continuamente, sem janela fechada. As candidaturas são depois avaliadas em intervalos definidos por um calendário anual, alinhado com os calls de voluntariado. Para participar no call de 2026, as candidaturas tiveram de chegar até 23 de setembro de 2025. Para o call de 2027, a data-limite é 22 de setembro de 2026 às 17h00 (hora de Bruxelas). Após esse cutoff, a organização ainda pode submeter, mas perde a janela para o ciclo seguinte.</p>
+      <p class="section-text">A acreditação, uma vez atribuída, é válida por todo o período de programação 2021-2027, sujeita a monitorização e reavaliações periódicas pela EACEA. Após o fim do período, a Quality Label mantém-se válida até ao termo do último projeto em que a organização esteja envolvida. Para organizações coordenadoras, a validade prolonga-se até ao fim do último grant agreement assinado.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O que a EACEA avalia</div>
+      <h2 class="section-h2">Critérios de adjudicação</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Relevância:</strong> motivação clara e convincente para participar no ESC, alinhamento com os objetivos do programa, experiência demonstrada em ajuda humanitária e cooperação para o desenvolvimento, compromisso explícito com os princípios humanitários e do princípio "do no harm".</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Qualidade das medidas:</strong> atividades que respondem a necessidades humanitárias reais, garantia de segurança e saúde dos voluntários, mecanismos de mentoria e apoio personalizado, atenção especial a voluntários com menos oportunidades, evitar substituição de postos de trabalho remunerado, integrar práticas ambientalmente sustentáveis e ferramentas digitais.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Capacidade organizacional:</strong> recursos adequados, planos de continuidade em caso de alterações organizacionais, qualidade da abordagem ao trabalho com parceiros, medidas para sustentabilidade das atividades, gestão de projeto profissional, monitorização e avaliação rigorosa.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Standards de qualidade</div>
+      <h2 class="section-h2">Os princípios que a organização tem de respeitar</h2>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Igualdade de oportunidades e não-discriminação:</strong> seleção justa e transparente, sem requisitos prévios de qualificação ou línguas, participação gratuita para o voluntário, respeito pela Convenção das Nações Unidas sobre os Direitos das Pessoas com Deficiência.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Não substituição de postos de trabalho:</strong> as atividades de voluntariado não podem substituir estágios ou empregos remunerados, complementam o trabalho do staff pago, nunca o substituem.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Segurança como prioridade:</strong> planos de avaliação de risco, procedimentos de segurança, plano de evacuação, verificação de antecedentes para trabalho com grupos vulneráveis, sensibilidade a crises ambientais, conflitos e pandemias.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Atividade não lucrativa:</strong> os beneficiários não podem retirar lucro das atividades financiadas, e os voluntários cobrem despesas mas não recebem salário nem benefício económico.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Validação de aprendizagem:</strong> identificação e documentação dos outcomes de aprendizagem, preferencialmente através do Youthpass, com objetivos pedagógicos claros e tarefas bem definidas.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Tarefas operacionais</div>
+      <h2 class="section-h2">O que a organização compromete-se a fazer</h2>
+      <p class="section-text">Cada organização com Quality Label, no papel de support ou host, assume responsabilidades operacionais distintas ao longo do ciclo do voluntariado. Em síntese:</p>
+      <table class="art-table">
+        <thead><tr><th>Fase</th><th>Support role</th><th>Host role</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Antes</strong></td><td>Seleção transparente, preparação linguística, training pré-partida, exame médico, seguro obrigatório, vistos, agreement com o voluntário</td><td>Cooperar com o coordenador na preparação da atividade</td></tr>
+          <tr><td><strong>Durante</strong></td><td>Contacto designado, apoio à integração, mediação em caso de conflito, mid-term review</td><td>On-arrival training, mentoria, tarefas bem definidas, condições de habitação e trabalho, integração local, segurança e apoio psicológico</td></tr>
+          <tr><td><strong>Depois</strong></td><td>Exame médico e psicológico de regresso, reintegração comunitária, partilha de experiências, orientação para emprego ou formação</td><td>Avaliação final, debrief, contributo para disseminação e avaliação do projeto</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">A Quality Label não é um instrumento para empresas comerciais. É um instrumento para ONGs portuguesas com tradição de ajuda humanitária e cooperação para o desenvolvimento, em particular as que já operam ou querem operar em África lusófona, Timor-Leste, América Latina e países asiáticos sem conflito armado ativo. Organizações como Helpo, Médicos do Mundo Portugal, IMVF, AMI, CRIA e algumas missões católicas e protestantes são candidatos naturais. Universidades e politécnicos com programas de cooperação internacional também podem candidatar-se ao Support role, ancorando o voluntariado em currículos académicos.</p>
+      <p class="section-text">A análise estratégica é a seguinte. A Quality Label tem custo administrativo elevado, validade de 7 anos e exige sistemas internos sólidos de gestão de risco, formação e logística internacional. Não vale a pena candidatar para um único projeto pontual. Faz sentido quando a organização tem ambição estruturada de internacionalização através de voluntariado jovem, ou quando o voluntariado é peça central da sua teoria da mudança.</p>
+      <p class="section-text">A janela de 22 de setembro de 2026 é a última chance prática de entrar no programa antes do fim do ciclo 2021-2027. Após essa data, o próximo período (2028-2034) terá certamente regras diferentes, eventualmente com nova arquitetura de acreditação. Para organizações que ainda hesitam, recomendamos decisão de go/no-go até ao final de junho, com submissão da candidatura em julho ou agosto para evitar atropelos administrativos de última hora.</p>
+      <div class="highlight-box">
+        <div class="highlight-box-title">Sinal a observar</div>
+        <div class="highlight-box-text">Organizações portuguesas que obtenham a Quality Label posicionam-se para concorrer em pé de igualdade com pares europeus aos projetos anuais de voluntariado humanitário, e ganham visibilidade no diretório oficial publicado no portal European Solidarity Corps. É um ativo reputacional que pesa em outras candidaturas a programas europeus.</div>
+      </div>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Código</div>
+        <div class="sidebar-fact-val">ESC-HUMAID-2021-QUAL-LABEL-FP</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-open">Aberto até 22/09/2026</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tipo</div>
+        <div class="sidebar-fact-val">Acreditação (Quality Label)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Submissão</div>
+        <div class="sidebar-fact-val">Contínua, cutoff anual</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Validade</div>
+        <div class="sidebar-fact-val">Período 2021-2027 + projetos</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Modalidades</div>
+        <div class="sidebar-fact-val">Support, Host, ou ambas</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">European Solidarity Corps</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Entidade gestora</div>
+        <div class="sidebar-fact-val">EACEA</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Voluntários alvo</div>
+        <div class="sidebar-fact-val">Jovens 18 a 35 anos</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">A sua ONG quer estruturar uma candidatura à Quality Label antes do cutoff de setembro? Falamos consigo sobre a estratégia.</div>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../erasmus-ka2-cooperation/" class="related-link">
+        <span class="related-link-name">Erasmus+ KA2 Cooperation</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../cerv-2026-citizens-civ/" class="related-link">
+        <span class="related-link-name">CERV 2026 Civil Society</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-miss-2026-03-ocean-02/" class="related-link">
+        <span class="related-link-name">Horizonte MISS 2026 OCEAN-02</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-miss-2026-04-cit-01/" class="related-link">
+        <span class="related-link-name">Horizonte MISS 2026 CIT-01</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
