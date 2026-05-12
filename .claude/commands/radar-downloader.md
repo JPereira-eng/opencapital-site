@@ -171,13 +171,113 @@ Se o item tem `wordpress_id` E regulamento ainda não obtido:
 
    **TESTE A - Texto de plano anual (BLOQUEANTE):**
    Se contem "Plano Anual de Avisos", "Resumo de Aviso do Plano", "PAA2026", "PAA202", "Aviso a publicar em:"
-   → Apagar .txt e .pdf. MOVER item para `queue-plano-anual.json` (ver PASSO 3.5). PARAR item.
+   → Apagar .txt e .pdf.
+   → **ANTES de mover para watchlist:** se item é PT2030 família, tentar PASSO 2b-portal-central (NOVO v4.12). Se obtiver regulamento real → SUCESSO, parar aqui.
+   → Caso contrário: MOVER item para `queue-plano-anual.json` (ver PASSO 3.5). PARAR item.
 
    **TESTE B - Conteudo insuficiente (BLOQUEANTE):**
    Se < 800 palavras E não contem "despesas elegíveis" E não contem "criterios de seleção"
    → Apagar .txt e .pdf. Incrementar `fail_count`. Marcar `status: "pending"`, `download_error: "Resumo sem regulamento completo"`. PARAR item.
 
    **Se passou ambos:** continuar para Passo 2.5.
+
+#### 2b-portal-central: Procurar regulamento real no portal central PT2030 (v4.12, 2026-05-12)
+
+**Aplica-se APENAS:** item é família PT2030 E TESTE A do 2b-pdf detectou PAA E `human_code` ainda não está populado.
+
+**Contexto:** Os portais regionais PT2030 (acores, alentejo, algarve, centro, lisboa, madeira, pat) expõem na API só o PDF do Resumo PAA. Os regulamentos REAIS são publicados em `portugal2030.pt/wp-content/uploads/sites/3/YYYY/MM/[CODIGO_HUMANO].pdf` (sub-site central) e NÃO são linkados na API regional. Esta etapa procura-os via WebSearch.
+
+**Excepção:** sustentavel-2030 expõe `aviso` field directamente. Para esse, 2b-pdf já obtém regulamento real (skip 2b-portal-central).
+
+**Algoritmo:**
+
+```python
+if item.source_id in FAMILIA_PT2030 and item.programa_code and item.human_code is None:
+    programa = item.programa_code  # 'ACORES2030', 'CENTRO2030', etc.
+    titulo = item.name[:60]
+
+    # 1. WebSearch refinada (PT2030 family)
+    queries = [
+        f'site:portugal2030.pt "{titulo[:40]}" "{programa}" filetype:pdf',
+        f'site:portugal2030.pt {programa}-{year_now} {keywords_titulo} filetype:pdf',
+    ]
+
+    for query in queries:
+        results = WebSearch(query)
+        for url in results[:5]:
+            if not url.endswith('.pdf'):
+                continue
+            # 2. Descarregar candidato
+            curl -sL "[url]" -o /tmp/candidate.pdf
+            pdftotext /tmp/candidate.pdf /tmp/candidate.txt
+            text = read('/tmp/candidate.txt')
+
+            # 3. Validar (rejeitar PAA, exigir conteúdo)
+            if 'plano anual' in text.lower() or 'resumo de aviso' in text.lower():
+                continue  # ainda PAA, próximo candidato
+            if len(text.split()) < 1500:
+                continue  # demasiado curto
+
+            # 4. Extrair human_code do texto
+            import re
+            HUMAN_RE = re.compile(
+                r'(?i)C[oó]digo\s+do\s+aviso\s*:?\s*([A-Z][A-ZÇÊÁÍÓ]+2030-\d{4}-\d+|PACS-\d{4}-\d+)',
+            )
+            match = HUMAN_RE.search(text)
+            if not match:
+                # Fallback: tentar pelo nome do ficheiro (URL)
+                fname_match = re.search(r'/(AVISO-)?([A-Z]+2030-\d{4}-\d+)', url)
+                if fname_match: match = fname_match.group(2)
+
+            if match:
+                human_code = normalize_human(match.group(1) if hasattr(match,'group') else match)
+                # Normalizar: ACORES2030-2026-12, sem espaços, uppercase, hífen único
+
+                # 5. Validar similaridade de título
+                if title_similarity(titulo, extract_title_from_pdf(text)) < 0.6:
+                    continue  # PDF não corresponde ao item
+
+                # 6. SUCESSO - registar
+                item.human_code = human_code
+                item.regulation_url = url
+                item.regulation_local = save_to_regulamentos(pdf, item.source_id, item.id)
+                item.status = 'ready'
+                item.fail_count = 0
+                item.fallback_tried.append('2b-portal-central')
+
+                # Atualizar lookup
+                lookup.by_human_code[human_code] = item.id
+
+                return SUCCESS
+
+    # Nenhum candidato válido encontrado
+    return FAIL  # cai para fluxo normal (mover para watchlist se TESTE A falhou)
+```
+
+**Função helper `normalize_human`:**
+```python
+def normalize_human(code: str) -> str:
+    """ACORES2030-2026-12, AÇORES2030-2026-12, acores-2030-2026-12 → ACORES2030-2026-12"""
+    import unicodedata
+    code = unicodedata.normalize('NFKD', code).encode('ascii','ignore').decode()
+    code = code.upper().replace(' ', '').strip()
+    # Garantir formato PROGRAMA-YYYY-NN (sem hífen entre PROGRAMA e 2030)
+    code = re.sub(r'([A-Z]+)-?(2030)-?', r'\1\2-', code)
+    return code
+```
+
+**Salvaguardas:**
+- Máximo 5 candidatos por query (caps WebSearch).
+- HEAD request antes de descarregar PDF pesado.
+- Title similarity >= 60% (mais permissivo do que cross-portal porque já passou WebSearch filtragem).
+- Se múltiplos candidatos válidos, escolher o de maior tamanho (regulamento real > resumo).
+
+**Reportar no relatório final:**
+```
+2b-portal-central tentado: N items PT2030
+  Sucessos: M (human_code descoberto, regulamento real obtido)
+  Falhas: N-M (mantidos para watchlist via TESTE A)
+```
 
 #### 2b-acf-all: Re-fetch API e inspecionar TODOS os campos ACF (v4.11, 2026-05-11)
 

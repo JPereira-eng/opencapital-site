@@ -259,6 +259,18 @@ Para cada item na watchlist (apenas items `paa_status == "planejado"` ou ausente
 - `data_inicio < hoje` (aviso teoricamente já abriu)
 - `plano_anual_checks >= 1` (PASSO 2.6 já tentou via fonte original pelo menos 1 vez sem sucesso)
 
+### Estratégia de matching (v4.12, 2026-05-12)
+
+**Ordem de tentativa (parar no primeiro sucesso):**
+
+1. **Match por `human_code` (NOVO, mais fiável):**
+   - Se item tem `human_code` populado, procurar nos portais regionais por items cujo `acf.codigo` corresponda ao human_code OU cujo `title` contenha o human_code.
+   - Match exato no human_code = certeza editorial.
+2. **Match por `codigo_api` cross-portal:**
+   - Procurar item nos outros portais regionais com mesmo FA code (pode acontecer raramente).
+3. **Match por title similarity (FALLBACK, comportamento anterior):**
+   - >= 85% similarity via SequenceMatcher.
+
 ⚠️ **CRÍTICO (correção 2026-05-12):** o critério inicial v4.11 limitava-se a `source_id == "portugal-2030"`, o que excluía a maioria da watchlist (items já com source regional). Agora aceita TODA a família PT2030 — quando o portal original deu PAA, tenta encontrar correspondência nos OUTROS 10 portais regionais.
 
 **Algoritmo:**

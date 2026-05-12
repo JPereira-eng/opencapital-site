@@ -1256,8 +1256,81 @@ Catálogos e restantes: +10
 **Também adicionar ao lookup.json:**
 ```json
 "by_id": { "novo-slug": true },
-"by_aviso_codigo": { "FA####/YYYY": "novo-slug" }
+"by_aviso_codigo": { "FA####/YYYY": "novo-slug" },
+"by_human_code": { "ACORES2030-2026-12": "novo-slug" }  // SE human_code descoberto, v4.12
 ```
+
+## human_code como etiqueta canónica PT2030 (v4.12, 2026-05-12)
+
+**Aplicável APENAS à família PT2030** (11 fontes: portugal-2030, compete-2030, norte-2030, centro-2030, lisboa-2030, alentejo-2030, algarve-2030, pessoas-2030, sustentavel-2030, madeira-2030, acores-2030, +pat-2030, +mar-2030). **NÃO aplicar a outras famílias** (eu-horizon, ani, iapmei, etc. mantêm comportamento existente).
+
+### Schema do item (extensão)
+
+```json
+{
+  "id": "ciclo-agua-acores-2-aviso",      // slug interno (NUNCA muda)
+  "codigo_api": "FA0302/2025",             // o que a API retorna
+  "aviso_codigo": "FA0302/2025",           // ALIAS retrocompatível (= codigo_api)
+  "human_code": "ACORES2030-2026-12",      // canónico, populated quando descoberto
+  "programa_code": "ACORES2030",           // derivado de acf.programa[]
+  ...
+}
+```
+
+### Quando popular human_code no scanner
+
+1. **Se `acf.codigo` já está em formato humano** (regex match a `^[A-Z]+2030-\d{4}-\d+$` ou `^PACS-\d{4}-\d+$`):
+   - `human_code = acf.codigo` (caso de sustentavel-2030, PACS-2026-XX)
+2. **Caso contrário** (acf.codigo é "FA####/YYYY"):
+   - `human_code = null` por agora. Será populado pelo downloader quando descarregar regulamento real (PASSO 2b-portal-central).
+
+### Mapeamento programa_code
+
+```python
+PROGRAMA_FROM_ACF = {
+    'COMPETE2030':      'COMPETE2030',
+    'COMPETE':          'COMPETE2030',
+    'PESSOAS2030':      'PESSOAS2030',
+    'PESSOAS':          'PESSOAS2030',
+    'NORTE2030':        'NORTE2030',
+    'NORTE':            'NORTE2030',
+    'CENTRO2030':       'CENTRO2030',
+    'CENTRO':           'CENTRO2030',
+    'LISBOA2030':       'LISBOA2030',
+    'LISBOA':           'LISBOA2030',
+    'ALENTEJO':         'ALENTEJO2030',
+    'ALGARVE':          'ALGARVE2030',
+    'ACORES':           'ACORES2030',
+    'AÇORES':           'ACORES2030',
+    'MADEIRA':          'MADEIRA2030',
+    'MAR':              'MAR2030',
+    'SUSTENTAVEL':      'SUSTENTAVEL2030',
+    'PAT':              'PAT2030',
+}
+```
+
+Se `acf.programa[]` tem múltiplos: usar o mais específico ou o primeiro reconhecido. Se vazio: derivar do `source_id` (acores-2030 → ACORES2030).
+
+### Dedup com human_code
+
+Antes de adicionar novo item, verificar:
+```python
+if codigo_api in lookup.by_aviso_codigo:
+    skip (dedup existente)
+elif human_code and human_code in lookup.by_human_code:
+    skip (dedup novo)
+else:
+    adicionar
+```
+
+### Famílias NÃO-PT2030
+
+Para items de outras fontes (eu-horizon, eu-funding-tenders, ani, iapmei, banco-fomento, etc.):
+- NÃO popular `human_code`, `programa_code`, `codigo_api`
+- Manter schema antigo: `aviso_codigo` apenas
+- Comportamento idêntico ao anterior
+
+Esta separação garante que mudanças PT2030 não interferem com outras famílias.
 
 ⚠️ **ORDEM DE ESCRITA OBRIGATÓRIA (v4.11, 2026-05-11) — previne items fantasma:**
 

@@ -150,6 +150,24 @@ Read .claude/commands/instrumento-template.md
 
 Este ficheiro contem o template HTML completo, classes CSS, estrutura da navbar, hero, sidebar e footer. NUNCA escrever sem ter lido.
 
+### Apresentação de códigos no artigo (v4.12, 2026-05-12)
+
+**Para items da família PT2030** (source_id em portugal-2030, compete-2030, norte-2030, centro-2030, lisboa-2030, alentejo-2030, algarve-2030, pessoas-2030, sustentavel-2030, madeira-2030, acores-2030, pat-2030, mar-2030):
+
+1. **Se `human_code` está populado** (e.g., "ACORES2030-2026-12"):
+   - Mostrar `human_code` como **código principal** do aviso no header e sidebar.
+   - Mostrar `codigo_api` como referência secundária ("ref API: FA0302/2025") em caption pequena.
+   - Exemplo de HTML: `<div>Código: <strong>ACORES2030-2026-12</strong> <span class="ref-api">(ref API: FA0302/2025)</span></div>`
+
+2. **Se `human_code` está vazio**:
+   - Mostrar apenas `codigo_api` ou `aviso_codigo` como antes.
+
+**Para items de OUTRAS famílias** (EU Horizon, ANI, IAPMEI, etc.):
+- Mostrar o código tal como veio da API (`aviso_codigo` ou equivalente).
+- NÃO aplicar lógica human_code (não é relevante).
+
+**Slug interno (id) NUNCA muda** com base em human_code. Apenas o display do código no artigo.
+
 ---
 
 ## PASSO 3: Obter regulamento
