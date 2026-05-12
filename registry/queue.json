@@ -3227,27 +3227,6 @@
       "codigo_api": "FA0100/2025"
     },
     {
-      "id": "eic-step-scale-up-2026",
-      "name": "EIC STEP Scale Up 2026 - Equity para Tecnologias Estrategicas",
-      "source_id": "eic-accelerator",
-      "shard": "eic",
-      "aviso_codigo": "HORIZON-EIC-2026-STEP",
-      "detected_date": "2026-05-12",
-      "deadline": "2026-11-25",
-      "budget": "EUR 300.000.000",
-      "regulation_url": "https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/eic-accelerator/eic-step-scale-up-2026.txt",
-      "priority_score": 50,
-      "status": "ready",
-      "notes": "Detetado via eic-accelerator (EIC). Equity-only EUR 10-30M por empresa. Foco: tecnologias estrategicas, quantica, semicondutores. Deadlines de submissao: 11.02.2026, 06.05.2026, 09.09.2026, 25.11.2026.",
-      "fail_count": 0,
-      "download_error": null,
-      "fallback_tried": [
-        "webfetch"
-      ]
-    },
-    {
       "id": "eea-grants-bilateral-fund-call-1-defesa-seguranca-politica-externa",
       "name": "EEA Grants - Bilateral Fund Call 1: Defesa, Seguranca e Politica Externa",
       "source_id": "eea-grants-portugal",
