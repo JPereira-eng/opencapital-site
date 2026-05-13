@@ -98,7 +98,7 @@
       "catalog_type": "prize",
       "detected_date": "2026-04-13",
       "last_profile_update": "2026-05-13",
-      "status": "active",
+      "status": "ready",
       "regulation_url": "https://fundacaolacaixa.pt/pt/premios-bpi-fundacao-la-caixa",
       "priority_score": 10,
       "profile": {
@@ -120,7 +120,12 @@
         "elegibilidade": "Entidades sem fins lucrativos: associacoes, IPSS, fundacoes e ONGs portuguesas a desenvolver projetos de inclusao social."
       },
       "notes": "Edicao 2026 confirmada via WebSearch. Categoria Capacitar abre 19/05-18/06.",
-      "data_status": "verified"
+      "data_status": "verified",
+      "regulation_local": "regulamentos/premio-bpi-lacaixa/premio-bpi-lacaixa.txt",
+      "fail_count": 0,
+      "fallback_tried": [
+        "2c-cat"
+      ]
     }
   ],
   "updated": "2026-05-12",

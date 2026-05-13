@@ -2672,15 +2672,14 @@
       "budget": "EUR 10.000 a 50.000 por projeto (taxa de financiamento ate 90%)",
       "regulation_url": "https://eeagrants.org/pt/portugal/programmes/bilateral-fund/call-1-defesa-seguranca-e-politica-externa",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eea-grants-portugal/eea-grants-bilateral-fund-call-1-defesa-seguranca-politica-externa.txt",
       "priority_score": 20,
-      "status": "pending",
+      "status": "ready",
       "notes": "Detetado via eea-grants-portugal (Mecanismo Financeiro EEA 2021-2028). Primeiro aviso do Fundo Bilateral Nacional. Areas: ameacas hibridas, ciberseguranca, infraestruturas, seguranca maritima, cooperacao europeia de defesa. Beneficiarios: entidades publicas e privadas (incluindo OSC) com obrigatoriedade de parceiro da Noruega ou Islandia. Duracao 6-24 meses. Candidaturas via Balcao dos Fundos. Codigo construido (sem ID oficial publicado).",
-      "fail_count": 1,
-      "download_error": "HTTP 403 em eeagrants.org - URL pode requerer autenticacao ou estar atras de Cloudflare (tentativa em 2026-05-12)",
-      "last_fail_date": "2026-05-12",
+      "fail_count": 0,
       "fallback_tried": [
-        "webfetch"
+        "webfetch",
+        "2c"
       ],
       "data_status": "n/a"
     },
@@ -2727,11 +2726,15 @@
       "budget": "40.000.000 EUR",
       "regulation_url": "https://www.fundoambiental.pt/apoios-prr/c8-florestas/09c08-i01012026-criacao-de-novas-oigp-20.aspx",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/fundo-ambiental/fundo-ambiental-09-c08-i01-01-2026-oigp-2-0-tempestade-kristin.txt",
       "priority_score": 40,
-      "status": "pending",
+      "status": "ready",
       "notes": "Investimento PRR C08-i01 Transformacao da Paisagem. Aplica-se a municipios afetados pela Tempestade Kristin com AIGP 2.0 aprovado. Dotacao 40M EUR a 100% custos elegiveis. Prazo 30 dias apos disponibilizacao do formulario.",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 0,
+      "fallback_tried": [
+        "2b"
+      ]
     },
     {
       "id": "eit-climate-cross-cultural-conversations-2026",
@@ -2744,11 +2747,15 @@
       "budget": null,
       "regulation_url": "https://www.climate-kic.org/open-call/expression-of-interest-cross-cultural-conversations-on-climate-leadership/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eit-climate/eit-climate-cross-cultural-conversations-2026.txt",
       "priority_score": 30,
-      "status": "pending",
+      "status": "ready",
       "notes": "Expression of Interest. Beneficiarios: empreendedores/fundadores de start-ups/scale-ups/SMEs em Asia, Oceania ou Europa em climate innovation, economia circular ou sustentabilidade. Premio: travel grants para 2 participantes para AT ONE Impact Week 2026 (Singapore, 8-12 Setembro). Sem dotacao financeira direta.",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 0,
+      "fallback_tried": [
+        "2b"
+      ]
     },
     {
       "id": "assistencia-tecnica-2026-2029-organismos-intermedios-no-ambito-da-tipologia-form",
@@ -2766,16 +2773,20 @@
         "compete-2030"
       ],
       "detected_date": "2026-05-13",
-      "data_status": "forecast",
+      "data_status": "verified",
       "state": "aberto",
       "deadline": "2026-05-29",
       "budget": null,
       "regulation_url": "https://compete2030.gov.pt/avisos/assistencia-tecnica-2026-2029-organismos-intermedios-no-ambito-da-tipologia-formacao-empresarial-conjunta-e-formacao-acao/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/compete-2030/assistencia-tecnica-2026-2029-organismos-intermedios-no-ambito-da-tipologia-form.txt",
       "priority_score": 530,
-      "status": "pending",
-      "notes": "Codigo: COMPETE2030-2026-04; COMPETE 2030; detectado via WebFetch (chrome unavailable)"
+      "status": "ready",
+      "notes": "Codigo: COMPETE2030-2026-04; COMPETE 2030; detectado via WebFetch (chrome unavailable)",
+      "fail_count": 0,
+      "fallback_tried": [
+        "2b"
+      ]
     },
     {
       "id": "siac-digitalizacao-transformacao-digital-das-empresas",
@@ -2793,16 +2804,20 @@
         "compete-2030"
       ],
       "detected_date": "2026-05-13",
-      "data_status": "forecast",
+      "data_status": "verified",
       "state": "aberto",
       "deadline": "2026-05-29",
       "budget": null,
       "regulation_url": "https://compete2030.gov.pt/avisos/siac-digitalizacao-transformacao-digital-da-empresas_compete2030-2026-3/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/compete-2030/siac-digitalizacao-transformacao-digital-das-empresas.txt",
       "priority_score": 530,
-      "status": "pending",
-      "notes": "Codigo: COMPETE2030-2026-3; COMPETE 2030; detectado via WebFetch (chrome unavailable)"
+      "status": "ready",
+      "notes": "Codigo: COMPETE2030-2026-3; COMPETE 2030; detectado via WebFetch (chrome unavailable)",
+      "fail_count": 0,
+      "fallback_tried": [
+        "2b"
+      ]
     },
     {
       "id": "siid-internacionalizacao-de-i-d-operacoes-de-i-d-industrial-a-escala-europeia",
@@ -2820,16 +2835,20 @@
         "compete-2030"
       ],
       "detected_date": "2026-05-13",
-      "data_status": "forecast",
+      "data_status": "verified",
       "state": "aberto",
       "deadline": "2026-06-30",
       "budget": null,
       "regulation_url": "https://compete2030.gov.pt/avisos/siid-internacionalizacao-de-id-operacoes-de-id-industrial-a-escala-europeia/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/compete-2030/siid-internacionalizacao-de-i-d-operacoes-de-i-d-industrial-a-escala-europeia.txt",
       "priority_score": 520,
-      "status": "pending",
-      "notes": "Codigo: MPr-2026-04; COMPETE 2030; detectado via WebFetch (chrome unavailable)"
+      "status": "ready",
+      "notes": "Codigo: MPr-2026-04; COMPETE 2030; detectado via WebFetch (chrome unavailable)",
+      "fail_count": 0,
+      "fallback_tried": [
+        "2b"
+      ]
     },
     {
       "id": "registo-pedido-auxilio-inovacao-produtiva-outros-territorios",
@@ -2856,7 +2875,13 @@
       "regulation_local": null,
       "priority_score": 500,
       "status": "pending",
-      "notes": "Codigo: 05/RPA/2025; COMPETE 2030; detectado via WebFetch (chrome unavailable)"
+      "notes": "Codigo: 05/RPA/2025; COMPETE 2030; detectado via WebFetch (chrome unavailable)",
+      "fail_count": 1,
+      "download_error": "WebFetch conteudo insuficiente (<300 palavras de conteudo real) - pagina e curto registo de RPA, sem aviso publicado completo",
+      "last_fail_date": "2026-05-13",
+      "fallback_tried": [
+        "2b"
+      ]
     },
     {
       "id": "sice-internacionalizacao-das-pme-operacoes-em-conjunto",
@@ -2874,16 +2899,20 @@
         "compete-2030"
       ],
       "detected_date": "2026-05-13",
-      "data_status": "forecast",
+      "data_status": "verified",
       "state": "aberto",
       "deadline": "2026-06-30",
       "budget": null,
       "regulation_url": "https://compete2030.gov.pt/avisos/sice-internacionalizacao-das-pme-operacoes-em-conjunto-mpr-2025-14/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/compete-2030/sice-internacionalizacao-das-pme-operacoes-em-conjunto.txt",
       "priority_score": 520,
-      "status": "pending",
-      "notes": "Codigo: MPR-2025-14; COMPETE 2030; detectado via WebFetch (chrome unavailable)"
+      "status": "ready",
+      "notes": "Codigo: MPR-2025-14; COMPETE 2030; detectado via WebFetch (chrome unavailable)",
+      "fail_count": 0,
+      "fallback_tried": [
+        "2b"
+      ]
     }
   ],
   "items": [],
