@@ -2758,37 +2758,6 @@
       ]
     },
     {
-      "id": "assistencia-tecnica-2026-2029-organismos-intermedios-no-ambito-da-tipologia-form",
-      "name": "Assistência Técnica 2026/2029 – Organismos Intermédios no âmbito da tipologia \"Formação empresarial conjunta e Formação-Ação\"",
-      "source_id": "compete-2030",
-      "shard": "pt2030-compete",
-      "codigo_api": "COMPETE2030-2026-04",
-      "aviso_codigo": "COMPETE2030-2026-04",
-      "human_code": "COMPETE2030-2026-04",
-      "programa_code": "COMPETE2030",
-      "programa": [
-        "COMPETE2030"
-      ],
-      "regional_portals": [
-        "compete-2030"
-      ],
-      "detected_date": "2026-05-13",
-      "data_status": "verified",
-      "state": "aberto",
-      "deadline": "2026-05-29",
-      "budget": null,
-      "regulation_url": "https://compete2030.gov.pt/avisos/assistencia-tecnica-2026-2029-organismos-intermedios-no-ambito-da-tipologia-formacao-empresarial-conjunta-e-formacao-acao/",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/compete-2030/assistencia-tecnica-2026-2029-organismos-intermedios-no-ambito-da-tipologia-form.txt",
-      "priority_score": 530,
-      "status": "ready",
-      "notes": "Codigo: COMPETE2030-2026-04; COMPETE 2030; detectado via WebFetch (chrome unavailable)",
-      "fail_count": 0,
-      "fallback_tried": [
-        "2b"
-      ]
-    },
-    {
       "id": "siac-digitalizacao-transformacao-digital-das-empresas",
       "name": "SIAC – Digitalização – Transformação Digital das Empresas",
       "source_id": "compete-2030",
@@ -2916,6 +2885,6 @@
     }
   ],
   "items": [],
-  "updated": "2026-05-12",
+  "updated": "2026-05-13",
   "_updated": "2026-05-13"
 }
