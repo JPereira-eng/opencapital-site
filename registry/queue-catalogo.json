@@ -90,7 +90,39 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [],
+  "queue": [
+    {
+      "id": "premio-bpi-lacaixa",
+      "name": "Premios BPI Fundacao la Caixa",
+      "source_id": "premio-bpi-lacaixa",
+      "catalog_type": "prize",
+      "detected_date": "2026-04-13",
+      "last_profile_update": "2026-05-13",
+      "status": "active",
+      "regulation_url": "https://fundacaolacaixa.pt/pt/premios-bpi-fundacao-la-caixa",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://fundacaolacaixa.pt/pt/premios-bpi-fundacao-la-caixa",
+        "linkedin": null,
+        "pais_sede": "PT",
+        "descricao_curta": "Conjunto de premios anuais da Fundacao \"la Caixa\" em parceria com o BPI, dotacao global de 5 milhoes EUR distribuidos por 4 categorias.",
+        "como_candidatar": "Candidatura online via plataforma da Fundacao \"la Caixa\". Janelas especificas por categoria.",
+        "premio_total_eur": 5000000,
+        "categorias": [
+          "Infancia (1,4M)",
+          "Solidario (1,1M)",
+          "Seniores (1,4M)",
+          "Capacitar (1,1M)"
+        ],
+        "deadline_proxima": "2026-06-18",
+        "edicao_ano": "2026",
+        "juri_destaque": [],
+        "elegibilidade": "Entidades sem fins lucrativos: associacoes, IPSS, fundacoes e ONGs portuguesas a desenvolver projetos de inclusao social."
+      },
+      "notes": "Edicao 2026 confirmada via WebSearch. Categoria Capacitar abre 19/05-18/06.",
+      "data_status": "verified"
+    }
+  ],
   "updated": "2026-05-12",
   "_updated": "2026-05-13"
 }
