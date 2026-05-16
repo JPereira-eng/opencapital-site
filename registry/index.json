@@ -3,19 +3,19 @@
     "description": "Open Capital Radar v4.0 - Indice global",
     "version": "4.0",
     "migrated_from_v3": "2026-04-12",
-    "last_writer_run": "2026-05-13",
+    "last_writer_run": "2026-05-16",
     "last_scanner_run": "2026-05-13",
     "last_index_rebuild": "2026-05-09",
     "last_monitor_run": "2026-05-13",
     "last_pt2030_reconcile": "2026-05-11",
-    "updated": "2026-05-13"
+    "updated": "2026-05-16"
   },
   "totals": {
-    "published": 673,
+    "published": 674,
     "open": 418,
     "closed": 164,
-    "planned": 87,
-    "in_queue": 124,
+    "planned": 88,
+    "in_queue": 123,
     "in_watchlist": 144,
     "in_catalogo": 1,
     "in_overflow": 287,
@@ -102,12 +102,12 @@
       "planned": 0
     },
     "pt-other": {
-      "count": 41,
+      "count": 42,
       "open": 35,
       "closed": 6,
-      "published": 41,
-      "updated": "2026-05-12",
-      "planned": 0
+      "published": 42,
+      "updated": "2026-05-16",
+      "planned": 1
     },
     "pt2030-central": {
       "count": 0,

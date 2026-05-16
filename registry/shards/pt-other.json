@@ -349,11 +349,19 @@
       "state": "aberto",
       "last_check": "2026-05-09",
       "data_status": "n/a"
+    },
+    {
+      "id": "fundo-ambiental-09-c08-i01-01-2026-oigp-2-0-tempestade-kristin",
+      "file": "instrumentos/fundo-ambiental-09-c08-i01-01-2026-oigp-2-0-tempestade-kristin/index.html",
+      "source": "fundo-ambiental",
+      "state": "previsto",
+      "last_check": "2026-05-16",
+      "data_status": "verified"
     }
   ],
-  "count": 41,
+  "count": 42,
   "open": 35,
-  "published": 41,
+  "published": 42,
   "instruments": [
     {
       "id": "premio-maria-sousa-2026",
@@ -377,5 +385,6 @@
       "last_check": "2026-05-09"
     }
   ],
-  "updated": "2026-05-12"
+  "updated": "2026-05-16",
+  "planned": 1
 }
