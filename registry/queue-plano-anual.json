@@ -1795,8 +1795,8 @@
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
       "programa": [],
       "regional_portals": [],
-      "plano_anual_last_check": "2026-05-12",
-      "plano_anual_checks": 1,
+      "plano_anual_last_check": "2026-05-16",
+      "plano_anual_checks": 2,
       "data_status": "forecast"
     },
     {
@@ -4448,6 +4448,37 @@
       "download_error": "Plano Anual - não e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-16",
       "plano_anual_checks": 1
+    },
+    {
+      "id": "infraestruturas-equipamentos-tecnologicos-ftj-alentejo",
+      "name": "Infraestruturas e equipamentos tecnológicos (FTJ)",
+      "codigo": "FA0168/2025",
+      "aviso_codigo": "FA0168/2025",
+      "source_id": "alentejo-2030",
+      "shard": "pt2030-other",
+      "detected_date": "2026-05-11",
+      "data_inicio": "2026-05-25",
+      "data_fim": "2026-10-30",
+      "deadline": "2026-10-30",
+      "budget_eur": 4000000.0,
+      "regulation_url": 253010,
+      "pdf_url": 253010,
+      "regulation_local": null,
+      "status": "plano_anual",
+      "state": "previsto",
+      "fail_count": 0,
+      "priority_score": 510,
+      "programa_code": "ALENTEJO2030",
+      "codigo_api": "FA0168/2025",
+      "data_status": "forecast",
+      "download_error": "Plano Anual - resumo PAA detectado, não e aviso publicado",
+      "plano_anual_detected_date": "2026-05-16",
+      "plano_anual_checks": 1,
+      "fallback_tried": [
+        "2a",
+        "2b-pdf",
+        "2b-portal-central"
+      ]
     }
   ],
   "updated": "2026-05-16",
