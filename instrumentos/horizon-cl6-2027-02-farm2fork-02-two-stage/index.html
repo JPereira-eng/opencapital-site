@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizonte Europa CL6-2027-02 FARM2FORK-02: Nexo Agua-Nutrientes-Energia para Agricultura em Africa (FNSSA): Open Capital</title>
+  <meta name="description" content="Topico HORIZON-CL6-2027-02-FARM2FORK-02-two-stage: Research and Innovation Action lump sum para o nexo agua-nutrientes-energia na agricultura africana (FNSSA). 6 milhoes EUR por projeto, 1.a fase 08/04/2027.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:620px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-planned{color:var(--gold);font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-planned{color:var(--gold);font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" class="active">Biblioteca</a></li>
+    <li><a href="../../conhecimento/atualidade/">Conhecimento</a></li>
+    <li><a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca/">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">CL6-2027-02 FARM2FORK-02</span>
+    </nav>
+    <p class="hero-cat">Financiamento Público</p>
+    <h1 class="hero-title">Nexo Água-Nutrientes-Energia para Agricultura Sustentável em África</h1>
+    <p class="hero-tagline">Tópico FARM2FORK-02 do Cluster 6: Research and Innovation Action two-stage, em formato lump sum, para co-construir com investigadores e agricultores africanos sistemas integrados de gestão de recursos em explorações de pequena escala.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Programa</span>
+        <span class="meta-value gold">Horizonte Europa, Cluster 6</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Ticket</span>
+        <span class="meta-value">6 milhões EUR por projeto</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Tipo</span>
+        <span class="meta-value">RIA Lump Sum, two-stage</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-planned">Previsto, 1.ª fase 08/04/2027</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca/" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Contexto e Enquadramento</div>
+      <h2 class="section-h2">O que é o tópico FARM2FORK-02</h2>
+      <p class="section-text">O tópico HORIZON-CL6-2027-02-FARM2FORK-02-two-stage está enquadrado no programa de trabalho de 2026-2027 do Cluster 6 do Horizonte Europa, dedicado a alimentação, bioeconomia, recursos naturais, agricultura e ambiente. A premissa é estratégica e geopolítica antes de ser técnica. A União Europeia decidiu colocar a parceria com a União Africana no centro da sua agenda de investigação em sistemas alimentares, e este tópico é um dos veículos de execução dessa decisão.</p>
+      <p class="section-text">A noção central é a de nexo. Em explorações de pequena escala em África, os recursos críticos para a produção agrícola, água, nutrientes do solo e energia, raramente são geríveis em separado. Uma intervenção que melhore o uso da água pode aumentar a procura energética, uma estratégia de fertilização pode esgotar reservas hídricas localizadas e uma solução energética descentralizada pode reconfigurar o desenho da rega. Tratar estas dimensões como silos produz resultados pobres no terreno. Tratá-las em conjunto, como um sistema interligado, é o desafio que o tópico propõe.</p>
+      <p class="section-text">A Comissão Europeia espera financiar dois projetos de 6 milhões de euros cada, com um orçamento total para a linha de 12 milhões de euros. O instrumento é uma Research and Innovation Action em formato lump sum, com cofinanciamento a 100 por cento dos custos elegíveis. O processo é two-stage, com abertura prevista para 4 de fevereiro de 2027, primeira fase em formato resumido e blind evaluation até 8 de abril de 2027, e segunda fase até 14 de setembro do mesmo ano.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para que serve</div>
+      <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
+      <p class="section-text">Este tópico cruza três necessidades simultaneamente, e essa simultaneidade é precisamente a sua marca distintiva. Quem o lê apenas como instrumento de investigação académica está a perder o ponto. É um programa onde a investigação, a transição ambiental e o posicionamento internacional dos consórcios europeus convergem.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">I&amp;D e ciência:</strong> o tópico financia investigação aplicada em agronomia, ciência do solo, hidrologia, engenharia de irrigação, gestão integrada de nutrientes e modelação de balanços hídricos e energéticos. A componente de inovação está na transferência das soluções para contextos de pequena escala africana, onde as variáveis climáticas, edáficas e socioeconómicas obrigam a redesenho técnico das práticas, não apenas à sua exportação.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Sustentabilidade, energia e clima:</strong> a redução de pegada hídrica, a melhoria da fertilidade do solo com práticas circulares e a integração de energia descentralizada em explorações são contributos diretos para a transição verde dos sistemas agrícolas africanos. As propostas devem ligar-se explicitamente aos objetivos climáticos da União Africana e da União Europeia e às metas do Kunming-Montreal Global Biodiversity Framework.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Internacionalização:</strong> consórcios portugueses que queiram crescer em escala europeia não o fazem apenas via Bruxelas. Tópicos como este permitem construir parcerias estruturadas com institutos de investigação africanos, ONGs de desenvolvimento e organizações de produtores, ativos relacionais que valem para muitas chamadas futuras dentro e fora do Horizonte Europa.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Configuração do Consórcio</div>
+      <h2 class="section-h2">A regra das três entidades africanas é estrutural</h2>
+      <p class="section-text">A condição de elegibilidade que define o desenho do consórcio é específica e tem de ser lida com atenção. Para além do mínimo geral do Horizonte Europa, este tópico exige pelo menos três entidades jurídicas independentes estabelecidas em Estados-Membros da União Africana. A consequência prática é que projetos com participação africana simbólica, dois parceiros, um país, ficam fora da elegibilidade. Não é uma indicação programática, é um requisito formal.</p>
+      <p class="section-text">A Comissão alarga adicionalmente a elegibilidade para financiamento a entidades estabelecidas em qualquer Estado-Membro da União Africana, incluindo aqueles cuja participação esteja temporariamente suspensa, e a organizações internacionais com sede num Estado-Membro da UE ou país associado. Isto é uma janela importante para parceiros como o Banco Africano de Desenvolvimento, FAO em Roma, IFAD ou organizações da família CGIAR com sedes europeias.</p>
+      <div class="highlight-box">
+        <div class="highlight-box-title">Multi-actor approach obrigatório</div>
+        <div class="highlight-box-text">As propostas têm de implementar a abordagem multi-actor definida no programa de trabalho. Não basta agregar partes interessadas no anexo de comunicação. Os agricultores, organizações de produtores, serviços de extensão rural e autoridades públicas têm de participar no desenho da investigação, na execução e na interpretação dos resultados. Avaliadores penalizam estruturalmente propostas onde o multi-actor approach está reduzido a workshops de validação no final do projeto.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Estrutura do Financiamento</div>
+      <h2 class="section-h2">Modelo de subvenção e parâmetros</h2>
+      <table class="art-table">
+        <thead><tr><th>Parâmetro</th><th>Valor</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Programa</strong></td><td>Horizonte Europa, Cluster 6 (Food, Bioeconomy, Natural Resources, Agriculture and Environment)</td></tr>
+          <tr><td><strong>Call</strong></td><td>HORIZON-CL6-2027-02-two-stage</td></tr>
+          <tr><td><strong>Tópico</strong></td><td>FARM2FORK-02 (Nexo água-nutrientes-energia, agricultura em África)</td></tr>
+          <tr><td><strong>Tipo de ação</strong></td><td>HORIZON-RIA com Lump Sum Grant (HORIZON-AG-LS)</td></tr>
+          <tr><td><strong>Contribuição UE por projeto</strong></td><td>6 milhões EUR (mínimo igual a máximo)</td></tr>
+          <tr><td><strong>Projetos esperados</strong></td><td>2</td></tr>
+          <tr><td><strong>Orçamento total do tópico</strong></td><td>12 milhões EUR</td></tr>
+          <tr><td><strong>Cofinanciamento</strong></td><td>100 por cento dos custos elegíveis</td></tr>
+          <tr><td><strong>Procedimento</strong></td><td>Two-stage, blind evaluation na 1.ª fase</td></tr>
+          <tr><td><strong>Abertura</strong></td><td>4 de fevereiro de 2027</td></tr>
+          <tr><td><strong>Deadline 1.ª fase</strong></td><td>8 de abril de 2027</td></tr>
+          <tr><td><strong>Deadline 2.ª fase</strong></td><td>14 de setembro de 2027</td></tr>
+          <tr><td><strong>Mínimo participantes africanos</strong></td><td>3 entidades de Estados-Membros da União Africana</td></tr>
+          <tr><td><strong>FSTP permitido</strong></td><td>Sim, máx. 30% do orçamento, 60 000 EUR por terceiro</td></tr>
+        </tbody>
+      </table>
+      <p class="section-text">O formato lump sum tem implicações práticas. Não é necessário reportar custos reais durante a execução, mas a estrutura financeira tem de ser justificada com detalhe na fase de candidatura. O orçamento é decomposto por work package e a Comissão paga em parcelas associadas à conclusão de cada um. Isto reduz a sobrecarga administrativa após a assinatura do grant agreement, mas exige rigor superior na fase de proposta.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Âmbito Técnico</div>
+      <h2 class="section-h2">O que as propostas têm de demonstrar</h2>
+      <p class="section-text">A Comissão definiu quatro elementos que as propostas devem incorporar de forma articulada. A leitura sistemática destes elementos no documento da chamada esclarece o que se espera operacionalmente, e revela a profundidade exigida ao trabalho de campo africano.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Avaliação de necessidades e oportunidades:</strong> caracterização económica, ambiental e social das condições atuais nos territórios estudados. Não basta importar diagnósticos genéricos sobre África. Cada proposta tem de mostrar conhecimento detalhado dos sistemas agrícolas escolhidos, com dados de baseline credíveis em água, nutrientes e energia.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Conhecimento, práticas e ferramentas:</strong> desenvolvimento de soluções tangíveis para gestão de recursos ao nível da exploração. Práticas culturais, equipamentos adequados a pequena escala, ferramentas digitais de apoio à decisão acessíveis em condições de baixa conectividade. A inovação tem de ser apropriável pelos agricultores reais nos territórios cobertos, não pelos engenheiros que a desenharam.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Avaliação de impactos integrados:</strong> as propostas têm de quantificar balanços hídricos, energéticos e nutricionais das soluções, e estimar viabilidade económica, pegada ambiental e efeitos sociais. Aqui a Comissão sinaliza uma exigência crescente: rejeita-se a ideia de ganho ambiental sem teste económico, e ganho económico sem teste ambiental.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Cobertura agroecológica mínima:</strong> obrigatório trabalhar em pelo menos dois agroecossistemas africanos diferentes, com leitura comparada das soluções aplicadas em cada um. Isto força propostas a desenharem desde o início uma matriz de transferibilidade técnica, evitando soluções one-size-fits-all.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Posicionamento Português</div>
+      <h2 class="section-h2">Capacidades nacionais com aderência ao tópico</h2>
+      <p class="section-text">Portugal tem ativos científicos e institucionais com aderência elevada a este tópico, distribuídos por três áreas. Em ciência do solo e gestão de nutrientes, o LNEG, o INIAV, o ISA, o CEF e CEABN da Universidade de Lisboa, o Instituto Mediterrâneo para a Agricultura, Ambiente e Desenvolvimento (MED) da Universidade de Évora e o GREAT/CITAB da UTAD têm publicação continuada e capacidade analítica. Em hidrologia agrícola e gestão de água, o ISA, MED, o Instituto Politécnico de Beja e a Universidade do Algarve têm trabalho sólido em rega deficitária, eficiência hídrica e práticas adaptadas a clima mediterrânico, com transferibilidade direta para regiões semi-áridas africanas.</p>
+      <p class="section-text">Em energia descentralizada para agricultura, o LNEG, a Universidade de Évora, o INESC TEC e centros como o IST e a FCT da NOVA têm capacidade em solar fotovoltaico aplicado a sistemas agrícolas, biogás de pequena escala e desenho de microgrids. Em ciências sociais aplicadas a sistemas agrários, o ICS da Universidade de Lisboa, o ISCTE, o CIES e o CEAUL têm produção em estudos sociais sobre transições agrícolas e economias rurais. As empresas portuguesas em irrigação de precisão, sensorização agrícola e digital agriculture têm produto exportável com aderência ao tópico.</p>
+      <p class="section-text">A vantagem comparativa portuguesa repousa também numa rede histórica em África lusófona que poucos países europeus replicam com a mesma densidade. Universidades como Eduardo Mondlane em Moçambique, Agostinho Neto e José Eduardo dos Santos em Angola, Universidade Jean Piaget de Cabo Verde, ISCTEM e Politécnica de Maputo, com quem várias instituições portuguesas mantêm protocolos ativos, podem assegurar parte do requisito das três entidades africanas. A ligação ao Banco Africano de Desenvolvimento via Camões e ao IFAD via FAO Lisboa é canal adicional de validação institucional.</p>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">Este tópico tem características muito específicas, e ler a chamada como mais uma RIA de Cluster 6 é receita para reprovação. Quatro elementos costumam separar propostas competitivas das que ficam na primeira fase.</p>
+      <p class="section-text">Primeiro, a escolha dos agroecossistemas tem de ser justificada com profundidade. A Comissão exige cobertura de pelo menos dois agroecossistemas africanos diferentes. Propostas competitivas combinam, por exemplo, agricultura semi-árida do Sahel com agricultura altiplana da África Oriental, ou regadio do delta com agricultura de planalto tropical. A combinação tem de ter racional científico e operacional, não pode ser apenas geográfica.</p>
+      <p class="section-text">Segundo, o multi-actor approach tem de estar dimensionado financeiramente. Em propostas onde a participação dos agricultores e organizações de produtores não tem orçamento próprio, a Comissão lê-o como participação simbólica. O Financial Support to Third Parties está autorizado até 30 por cento do orçamento, com tetos de 60 000 euros por terceiro. Propostas competitivas usam este mecanismo para remunerar tempo de agricultores, organizações de extensão e cooperativas africanas, com regras claras de aplicação e prestação de contas.</p>
+      <p class="section-text">Terceiro, a articulação com iniciativas em curso é elemento de excellence e impact. A Comissão sinaliza expectativa explícita de cooperação com living labs financiados pelo Horizonte Europa em África, com as Regional Multi-Actor Research Networks on Agroecology (RMRN, com nós no CORAF em Dakar para a África Ocidental e no ICIPE para a África Oriental), com o Knowledge Centre on Global Food and Nutrition Security da Comissão, e com a PRIMA. Propostas que ignoram este ecossistema perdem pontos em ambos os critérios.</p>
+      <p class="section-text">Quarto, o formato lump sum exige uma decomposição financeira robusta logo na segunda fase. Não é possível ajustar custos durante a execução. Propostas competitivas trabalham a Detailed Budget Table com rigor analítico e estabelecem milestones com critérios objetivos de cumprimento por work package. Para instituições e empresas portuguesas com capacidade em ciência do solo, hidrologia, energia descentralizada ou digital agriculture aplicada, e com redes em África lusófona ou anglófona, este tópico é uma oportunidade material de posicionamento europeu. Sugerimos uma conversa preliminar focada em três pontos: avaliação dos agroecossistemas africanos defensáveis na proposta, mapeamento de parceiros africanos prioritários e desenho da narrativa de impact que articule o Cluster 6 com as agendas AU-EU.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">Horizonte Europa</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Cluster</div>
+        <div class="sidebar-fact-val">CL6 (Food, Bioeconomy, Natural Resources)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Call</div>
+        <div class="sidebar-fact-val">HORIZON-CL6-2027-02-two-stage</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tópico</div>
+        <div class="sidebar-fact-val">FARM2FORK-02 (FNSSA África)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tipo de ação</div>
+        <div class="sidebar-fact-val">HORIZON-RIA Lump Sum</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Ticket UE</div>
+        <div class="sidebar-fact-val">6 milhões EUR</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Projetos esperados</div>
+        <div class="sidebar-fact-val">2</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Orçamento total</div>
+        <div class="sidebar-fact-val">12 milhões EUR</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Cofinanciamento</div>
+        <div class="sidebar-fact-val">100% custos elegíveis</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Localização</div>
+        <div class="sidebar-fact-val">UE, Países Associados e Estados-Membros UA</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Mínimo africano</div>
+        <div class="sidebar-fact-val">3 entidades de Estados UA</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-planned">Previsto, 1.ª fase 08/04/2027</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Quer integrar ou coordenar um consórcio FNSSA em África com instituições portuguesas e africanas?</div>
+      <a href="https://calendly.com/opencapital" target="_blank" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../horizonte-europa/" class="related-link">
+        <span class="related-link-name">Horizonte Europa</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-miss-2027-05-soil-01-two-stage/" class="related-link">
+        <span class="related-link-name">Mission Soil SOIL-01 Living Labs</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-miss-2027-05-soil-03-two-stage/" class="related-link">
+        <span class="related-link-name">Mission Soil SOIL-03 Agrofloresta</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-miss-2027-05-soil-04-two-stage/" class="related-link">
+        <span class="related-link-name">Mission Soil SOIL-04 Saúde Comunitária</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
