@@ -1927,7 +1927,9 @@
       ],
       "programa_code": "ALGARVE2030",
       "codigo_api": "FA0220/2025",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "plano_anual_checks": 1,
+      "plano_anual_last_check": "2026-05-16"
     },
     {
       "id": "incubadoras-base-nao-tecnologica-algarve",
@@ -1958,7 +1960,9 @@
       "data_status": "forecast",
       "news_post_url": "https://algarve.portugal2030.pt/2026/04/22/candidate-o-seu-projeto-a-2-a-edicao-dos-premios-dos-fundos-europeus-ja-estao-abertas-as-candidaturas-a-2-a-edicao-dos-premios-dos-fundos-europeus-ate-17-de-julho-de-2026-de-visibilidade-ao-impacto/",
       "news_post_date": "2026-04-22",
-      "news_post_title": "Candidate o seu projeto à 2.ª edição dos Prémios dos Fundos Europeus!  Já estão abertas as candidaturas à 2.ª edição dos Prémios dos Fundos Europeus até 17 de julho de 2026. Dê visibilidade ao impacto do seu projeto e participe!"
+      "news_post_title": "Candidate o seu projeto à 2.ª edição dos Prémios dos Fundos Europeus!  Já estão abertas as candidaturas à 2.ª edição dos Prémios dos Fundos Europeus até 17 de julho de 2026. Dê visibilidade ao impacto do seu projeto e participe!",
+      "plano_anual_checks": 1,
+      "plano_anual_last_check": "2026-05-16"
     },
     {
       "id": "siid-empreendedorismo-qualificado-algarve",
@@ -4208,7 +4212,8 @@
         "2b-pdf",
         "teste-a-paa"
       ],
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-16"
     },
     {
       "id": "contratacao-rh-qualificados-pme-outros-territorios-alentejo",
@@ -7562,6 +7567,120 @@
       "plano_anual_detected_date": "2026-05-16",
       "plano_anual_checks": 1,
       "plano_anual_marker": "plano anual de avisos"
+    },
+    {
+      "id": "sistema-incentivos-base-territorial-alentejo",
+      "name": "Sistema de Incentivos de Base Territorial – RAM – II",
+      "source_id": "madeira-2030",
+      "shard": "pt2030-other",
+      "aviso_codigo": "FA0132/2025",
+      "detected_date": "2026-04-13",
+      "deadline": "2026-09-30",
+      "budget": 5000000,
+      "regulation_url": 16267,
+      "pdf_url": 16267,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "plano_anual",
+      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
+      "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
+      "paa_status": "published_externamente",
+      "news_post_url": "https://alentejo.portugal2030.pt/2026/03/27/aberto-novo-aviso-sibt-de-5-milhoes-de-euros-para-apoiar-micro-e-pequenas-empresas-no-alentejo/",
+      "news_post_date": "2026-03-27",
+      "news_post_title": "Aberto novo aviso SIBT de 5 milhões de euros para apoiar micro e pequenas empresas no Alentejo",
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "regional_portals": [
+        "alentejo-2030"
+      ],
+      "codigo": "FA0132/2025",
+      "fail_count": 2,
+      "cross_portal_match": {
+        "original_codigo": "FA0147/2025",
+        "original_portal": "portugal-2030",
+        "matched_portal": "madeira-2030",
+        "matched_codigo": "FA0132/2025",
+        "title_similarity": 0.921,
+        "matched_at": "2026-05-11"
+      },
+      "programa_code": "MADEIRA2030",
+      "codigo_api": "FA0132/2025",
+      "data_status": "forecast",
+      "fallback_tried": [
+        "2c",
+        "2b-pdf",
+        "2b-acf-all"
+      ],
+      "last_fail_date": "2026-05-16",
+      "plano_anual_detected_date": "2026-05-16",
+      "plano_anual_checks": 1,
+      "wordpress_id": 16611
+    },
+    {
+      "id": "centros-locais-de-apoio-a-integracao-de-migrantes-claim",
+      "name": "Centros Nacionais de Apoio à Integração de Migrantes (CNAIM)",
+      "source_id": "algarve-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0309/2025",
+      "detected_date": "2026-04-13",
+      "deadline": "2026-08-31",
+      "budget": 3950624.33,
+      "regulation_url": 19312,
+      "pdf_url": 19312,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "plano_anual",
+      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: FAMI2030. Natureza: Concurso. Doc: L1:pdf.",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
+      "programa": [],
+      "regional_portals": [],
+      "plano_anual_last_check": "2026-05-10",
+      "plano_anual_checks": 1,
+      "plano_anual_status": "placeholder",
+      "data_inicio_api": "2026-05-04",
+      "data_fim_api": "2026-08-31",
+      "codigo": "FA0309/2025",
+      "fail_count": 0,
+      "cross_portal_match": {
+        "original_codigo": "FA0321/2025",
+        "original_portal": "portugal-2030",
+        "matched_portal": "algarve-2030",
+        "matched_codigo": "FA0309/2025",
+        "title_similarity": 0.92,
+        "matched_at": "2026-05-11"
+      },
+      "programa_code": "ALGARVE2030",
+      "codigo_api": "FA0309/2025",
+      "data_status": "forecast",
+      "plano_anual_detected_date": "2026-05-16",
+      "wordpress_id": 19311
+    },
+    {
+      "id": "vales-id-acreditacao-prestadores-acores",
+      "name": "Vales de I&D – Acreditação dos prestadores de serviços",
+      "codigo": "FA0607/2023",
+      "aviso_codigo": "FA0607/2023",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "detected_date": "2026-05-11",
+      "data_inicio": "2026-07-01",
+      "data_fim": "2026-10-30",
+      "deadline": "2026-10-30",
+      "budget_eur": 0,
+      "regulation_url": 252613,
+      "pdf_url": 252613,
+      "regulation_local": null,
+      "status": "plano_anual",
+      "state": "previsto",
+      "fail_count": 0,
+      "priority_score": 500,
+      "data_status": "forecast",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
+      "plano_anual_detected_date": "2026-05-16",
+      "plano_anual_checks": 1,
+      "wordpress_id": 254226
     }
   ],
   "updated": "2026-05-16",
