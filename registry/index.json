@@ -11,13 +11,13 @@
     "updated": "2026-05-16"
   },
   "totals": {
-    "published": 676,
-    "open": 420,
+    "published": 677,
+    "open": 421,
     "closed": 164,
     "planned": 88,
     "in_queue": 121,
     "in_watchlist": 144,
-    "in_catalogo": 1,
+    "in_catalogo": 0,
     "in_overflow": 287,
     "in_plano_anual": 144
   },
@@ -51,11 +51,12 @@
       "planned": 0
     },
     "catalogo-premios": {
-      "count": 6,
-      "open": 3,
+      "count": 7,
+      "open": 4,
       "closed": 1,
-      "published": 6,
-      "planned": 0
+      "published": 7,
+      "planned": 0,
+      "updated": "2026-05-16"
     },
     "catalogo-vc": {
       "count": 30,
