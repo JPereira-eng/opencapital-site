@@ -31645,6 +31645,34 @@
       "href": "/instrumentos/horizon-hlth-2027-01-disease-06/",
       "featured": false,
       "data_status": "n/a"
+    },
+    {
+      "id": "horizon-hlth-2027-02-disease-01-two-stage",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "previsto",
+      "status_text": "Previsto, 1.ª fase 13/04/2027",
+      "status_class": "status-planned",
+      "fonte": "ue",
+      "beneficiario": "ensino-investigacao,empresa",
+      "setores": [
+        "saude-ciencias-vida",
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "digitalizacao-ia",
+        "arranque-validacao"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve,acores,madeira",
+      "title": "Horizonte Europa HLTH-2027-02 DISEASE-01: Intervenções Inovadoras em NCDs",
+      "tagline": "7-8M EUR por projeto, 8 RIA lump sum two-stage para ensaios clínicos precoces em cardiovasculares, diabetes, respiratórias crónicas e renais crónicas.",
+      "highlight0": "100% UE (RIA Lump Sum), 7-8M EUR por projeto",
+      "highlight1": "Hospitais, Centros de I&D, Biotech, MedTech, PME",
+      "highlight2": "Nacional (consórcio EU + EUA elegível)",
+      "href": "/instrumentos/horizon-hlth-2027-02-disease-01-two-stage/",
+      "featured": false,
+      "data_status": "n/a"
     }
   ]
 }

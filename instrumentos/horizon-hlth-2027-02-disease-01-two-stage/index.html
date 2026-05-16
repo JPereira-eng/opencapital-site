@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizonte Europa HLTH-2027-02 DISEASE-01: Intervencoes Inovadoras em Doencas Nao Transmissiveis: Open Capital</title>
+  <meta name="description" content="Topico HORIZON-HLTH-2027-02-DISEASE-01-two-stage: Research and Innovation Action lump sum two-stage para ensaios clinicos precoces em cardiovasculares, diabetes, respiratorias cronicas e renais cronicas. 7-8M EUR por projeto, 1.a fase 13/04/2027.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:620px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-planned{color:var(--gold);font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-planned{color:var(--gold);font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" class="active">Biblioteca</a></li>
+    <li><a href="../../conhecimento/atualidade/">Conhecimento</a></li>
+    <li><a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca/">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">HLTH-2027-02 DISEASE-01</span>
+    </nav>
+    <p class="hero-cat">Financiamento Público</p>
+    <h1 class="hero-title">Intervenções Inovadoras em Doenças Não Transmissíveis</h1>
+    <p class="hero-tagline">Tópico DISEASE-01 do Cluster Health: Research and Innovation Action lump sum two-stage para ensaios clínicos precoces em cardiovasculares, diabetes, respiratórias crónicas ou renais crónicas, com componente digital e Real-World Data.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Programa</span>
+        <span class="meta-value gold">Horizonte Europa, Cluster Health</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Ticket</span>
+        <span class="meta-value">7-8 milhões EUR por projeto</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Tipo</span>
+        <span class="meta-value">RIA Lump Sum, two-stage</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-planned">Previsto, 1.ª fase 13/04/2027</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca/" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Contexto e Enquadramento</div>
+      <h2 class="section-h2">O que é o tópico DISEASE-01</h2>
+      <p class="section-text">O tópico HORIZON-HLTH-2027-02-DISEASE-01-two-stage está inserido no programa de trabalho 2026-2027 do Cluster 4 do Horizonte Europa, dedicado à saúde. Aborda um problema sanitário e económico estrutural da Europa: as doenças não transmissíveis (NCD na sigla anglo-saxónica) representam mais de 80 por cento da carga total de doença no continente e são a principal causa de mortes prematuras evitáveis. A premissa da chamada é que a prevenção não funcionou em escala suficiente, e que urge investir em intervenções de tratamento e gestão clínica capazes de melhorar a qualidade de vida e prognóstico dos doentes que já vivem com estas patologias.</p>
+      <p class="section-text">O âmbito é deliberadamente fechado: cardiovasculares, diabetes (tipo 1 e tipo 2), respiratórias crónicas e renais crónicas. Quatro famílias de doença, todas com prevalência elevada, todas com infraestrutura clínica europeia bem estabelecida, todas com investigação de mercado significativa. Outras doenças, incluindo oncológicas (que têm a sua própria Missão UE), neurodegenerativas ou raras, estão expressamente fora deste tópico.</p>
+      <p class="section-text">A Comissão Europeia espera financiar oito projetos com contribuição UE entre 7 e 8 milhões de euros cada, com orçamento total para a linha de 63,8 milhões. É o tópico com maior alocação financeira da chamada HORIZON-HLTH-2027-02-two-stage. O instrumento é uma Research and Innovation Action em formato lump sum, com cofinanciamento de 100 por cento. O formato é two-stage, abertura prevista para 10 de fevereiro de 2027, primeira fase em blind evaluation até 13 de abril, segunda fase até 22 de setembro do mesmo ano.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para que serve</div>
+      <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
+      <p class="section-text">O tópico tem perfil duplo. É uma alavanca de investigação clínica para hospitais e centros académicos com infraestrutura de ensaios. É também canal de financiamento Phase 1-2 para empresas com candidato terapêutico, dispositivo médico ou plataforma digital orientada a NCDs.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">I&amp;D e ciência:</strong> a chamada financia ensaios clínicos early-stage (Phase 1 e/ou Phase 2 para intervenções farmacológicas, ou equivalentes para não-farmacológicas) que validem novas intervenções em NCDs. Inclui também o desenvolvimento de tecnologias digitais associadas (IA, wearables, monitorização ambulatória), análise de Real-World Data e estudos de avaliação económica em saúde.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Digitalização e IA:</strong> a Comissão é explícita ao pedir uso ou desenvolvimento de tecnologias digitais para implementação e monitorização da intervenção, incluindo IA generativa, wearables, gémeos humanos virtuais e tecnologias não intrusivas para monitorização ambulatória. Hardware e software devem ser interoperáveis com normas internacionais. As intervenções digitais não são opção, são exigência transversal.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Arranque e validação:</strong> a participação de startups, microempresas e PME é encorajada com explícito objetivo de reforçar a sua base científica e tecnológica, explorar o seu potencial de inovação e abrir caminho à exploração comercial. É tópico onde uma biotech ou medtech com candidato em fase pré-clínica avançada pode entrar num consórcio europeu de hospitais e investigadores que conduzem o ensaio clínico.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Pré-requisitos Clínicos</div>
+      <h2 class="section-h2">O que tem de estar pronto à entrada da proposta</h2>
+      <p class="section-text">A barra de entrada deste tópico é mais alta do que numa chamada RIA típica. A Comissão exige um conjunto preciso de evidências e materiais já preparados no momento da submissão. Equipas que entrem com um conceito promissor mas sem trabalho prévio realizado partem em desvantagem material.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Proof-of-concept completo:</strong> os ensaios clínicos propostos têm de estar suportados por proof-of-concept de segurança e eficácia clínica já completado. Não é admissível propor-se completar primeiro o proof-of-concept e depois conduzir os ensaios. A proposta entra com o proof-of-concept fechado.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Protocolo clínico em rascunho:</strong> tanto a investigação pré-clínica como o draft do protocolo do ensaio clínico devem estar completos à data da submissão. O Detailed Budget Table do formato lump sum tem de refletir um plano de execução já maduro, não um esboço.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Consultas preliminares com ética e reguladores:</strong> as propostas têm de apresentar evidência de consultas preliminares com autoridades regulatórias e comissões de ética. Em prática, isto significa pelo menos uma scientific advice junto da EMA ou agências nacionais, ou pareceres de início de ética de instituições parceiras, antes da submissão.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Plano de recrutamento credível:</strong> a feasibility assessment tem de incluir critérios apropriados de seleção de doentes e planos realistas de recrutamento, justificados por publicações ou resultados preliminares. Estudos com horizonte de recrutamento irrealista em mercados europeus saturados de ensaios concorrentes são lidos com cepticismo.</li>
+      </ul>
+      <div class="highlight-box">
+        <div class="highlight-box-title">Studies comparativos estão fora do âmbito</div>
+        <div class="highlight-box-text">A chamada exclui explicitamente estudos de comparative effectiveness research. O foco é validação de novas intervenções com benefício clínico próprio, não comparação head-to-head entre intervenções já existentes. Equipas com projetos de natureza comparativa têm de procurar outras linhas (CSA ou EU4Health).</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Estrutura do Financiamento</div>
+      <h2 class="section-h2">Modelo de subvenção e parâmetros</h2>
+      <table class="art-table">
+        <thead><tr><th>Parâmetro</th><th>Valor</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Programa</strong></td><td>Horizonte Europa, Cluster Health</td></tr>
+          <tr><td><strong>Call</strong></td><td>HORIZON-HLTH-2027-02-two-stage</td></tr>
+          <tr><td><strong>Tópico</strong></td><td>DISEASE-01 (NCDs healthcare interventions)</td></tr>
+          <tr><td><strong>Tipo de ação</strong></td><td>HORIZON-RIA Lump Sum (HORIZON-AG-LS)</td></tr>
+          <tr><td><strong>Contribuição UE por projeto</strong></td><td>7 a 8 milhões EUR</td></tr>
+          <tr><td><strong>Projetos esperados</strong></td><td>8</td></tr>
+          <tr><td><strong>Orçamento total do tópico</strong></td><td>63,8 milhões EUR</td></tr>
+          <tr><td><strong>Cofinanciamento</strong></td><td>100 por cento dos custos elegíveis</td></tr>
+          <tr><td><strong>Procedimento</strong></td><td>Two-stage, blind evaluation na 1.ª fase</td></tr>
+          <tr><td><strong>Abertura</strong></td><td>10 de fevereiro de 2027</td></tr>
+          <tr><td><strong>Deadline 1.ª fase</strong></td><td>13 de abril de 2027</td></tr>
+          <tr><td><strong>Deadline 2.ª fase</strong></td><td>22 de setembro de 2027</td></tr>
+          <tr><td><strong>Doenças elegíveis</strong></td><td>Cardiovasculares, diabetes, respiratórias crónicas, renais crónicas</td></tr>
+          <tr><td><strong>Países adicionais</strong></td><td>EUA elegíveis para financiamento UE</td></tr>
+        </tbody>
+      </table>
+      <p class="section-text">Com 8 projetos esperados e orçamento agregado de 63,8 milhões, este é tópico em que vários consórcios europeus serão selecionados em paralelo. A diversidade de NCDs cobertos permite especialização: um consórcio pode trabalhar apenas diabetes tipo 2, outro apenas insuficiência cardíaca, outro apenas DPOC. Não é necessário cobrir todas as quatro famílias de doença numa mesma proposta; é até desaconselhado.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Componentes Obrigatórias</div>
+      <h2 class="section-h2">O que cada proposta tem que articular</h2>
+      <p class="section-text">A Comissão definiu um conjunto de componentes que cada proposta tem que demonstrar, e a sua leitura conjunta revela a profundidade exigida. Os elementos não são opcionais nem podem ser tratados como secundários no work package de comunicação.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Estratificação multi-dimensional:</strong> sexo e género, idade, deficiência, origem étnica, estatuto socioeconómico, variações genéticas e epigenéticas. A medicina personalizada e a equidade em saúde estão no centro da avaliação. Propostas com população de estudo homogénea e não estratificada perdem materialmente em Excellence e Impact.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Aproveitamento de dados existentes:</strong> uso de health data infrastructures como BBMRI, ELIXIR, EU-OPENSCREEN, ECRIN, EATRIS, biobancos, registos e cohorts. Geração de novos dados em conformidade com princípios FAIR e contribuição para o European Health Data Space (EHDS). É elemento estrutural, não acessório.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Componente digital interoperável:</strong> uso ou desenvolvimento de tecnologias digitais (IA, wearables, gémeos humanos virtuais) com critérios obrigatórios de não-enviesamento, inclusividade e ética. A interoperabilidade tem de seguir normas internacionais. Segurança das comunicações deve considerar criptografia pós-quântica.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Avaliação económica em saúde:</strong> health-economic assessment robusto, análise de Real-World Data e estratégia de escalabilidade. Sem este componente, a Comissão lê a proposta como cientificamente competente mas estrategicamente ingénua.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Envolvimento de doentes e cuidadores:</strong> doentes, representantes de doentes e cuidadores têm de estar envolvidos no desenho da intervenção, não apenas como sujeitos do ensaio. Tópicos da Comissão em saúde ganharam exigência crescente neste eixo, e candidaturas que apresentam patient involvement como linha orçamental simbólica perdem em Impact.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Contributo SSH:</strong> a proposta tem de incluir contribuição efetiva de Ciências Sociais e Humanidades, com peritos, instituições e expertise especificamente integrados, não tratados como anexo de comunicação.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Capacidades Portuguesas</div>
+      <h2 class="section-h2">Ecossistema clínico nacional</h2>
+      <p class="section-text">Portugal tem ecossistema clínico e científico com aderência alta a este tópico em pelo menos três das quatro famílias de doença. Em cardiovasculares, o CHULN, CHUSJ, CHUC, IPC Lisboa, Hospital Pedro Hispano, Centro Hospitalar do Algarve e várias unidades de cardiologia em hospitais distritais têm capacidade de ensaio clínico. A SPC e os centros de investigação como o iMM, o IBMC, o CINTESIS e o CHRC têm produção académica relevante.</p>
+      <p class="section-text">Em diabetes, a Direção-Geral da Saúde mantém Observatório Nacional da Diabetes com dados longitudinais. O CEDOC, o CIBIM, o iMM, a Sociedade Portuguesa de Diabetologia e centros de investigação clínica em hospitais centrais têm capacidade integrada. Em doenças respiratórias crónicas, a SPP, o CINTESIS, o CICS-UBI, hospitais com referência em pneumologia e centros como o de São João têm capacidade. Em doenças renais crónicas, a SPN, a APIR e centros de nefrologia hospitalar têm casuística e dados clínicos significativos.</p>
+      <p class="section-text">Do lado empresarial, há startups e PME portuguesas em saúde digital aplicadas a NCDs (gestão de diabetes, telemonitorização cardíaca, IA para imagiologia, ferramentas de gestão de medicação), empresas em dispositivos médicos e algumas biotechs em fases iniciais com candidatos farmacológicos. A Hovione tem capacidade GMP relevante para componentes farmacológicos. A Bial mantém pipeline clínico em SNC e tem prática regulatória. A AIBILI em Coimbra é referência em condução de ensaios clínicos internacionais multicêntricos.</p>
+      <p class="section-text">A vantagem comparativa específica está em três pontos. Primeiro, o Sistema Nacional de Saúde tem registos populacionais consolidados em NCDs (diabetes, DPOC, doença renal crónica) que constituem activo de dados rico para Real-World Data. Segundo, a estrutura clínica é geograficamente concentrada o suficiente para permitir recrutamento eficiente em estudos multicêntricos. Terceiro, há massa crítica em saúde digital com perfil exportável, tipicamente em consórcios europeus de outras geografias.</p>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">Este tópico tem maior número de slots e ticket por projeto na linha de NCDs do Cluster Health. A concorrência será forte mas o universo de selecionados é também grande. Quatro elementos costumam separar propostas competitivas das que não passam.</p>
+      <p class="section-text">Primeiro, a escolha da doença específica dentro do âmbito é decisão estratégica. Submeter sobre cardiovasculares em geral é caminho para perda. Submeter sobre uma indicação específica (e.g., insuficiência cardíaca com fração de ejeção preservada, diabetes tipo 2 mal controlado com obesidade, DPOC moderado-grave em fumadores, doença renal crónica em estado 3-4 com diabetes) com unmet need claramente caracterizado é caminho competitivo. A precisão da indicação é prova de maturidade do consórcio.</p>
+      <p class="section-text">Segundo, o pre-work tem de ser visível na proposta. As consultas com ética e reguladores, o proof-of-concept concluído e o protocolo em draft devem ser apresentados com referências documentais concretas. Equipas que entram com promessas de pre-work são lidas como prematuras. A scientific advice da EMA ou de uma agência nacional, com data, é elemento de credibilidade material.</p>
+      <p class="section-text">Terceiro, a integração digital tem de ser desenhada como elemento clínico, não como tecnologia adicionada. Wearables, IA ou gémeos virtuais sem integração no protocolo do ensaio e sem reflexo nos endpoints clínicos são lidos como cosméticos. Propostas competitivas usam a tecnologia digital para gerar dados que melhoram a avaliação da eficácia ou para reduzir custo e tempo de recrutamento e seguimento.</p>
+      <p class="section-text">Quarto, a estratégia de Real-World Data e avaliação económica tem de ser elemento estrutural. A Comissão sinaliza com força que pretende intervenções com plano de sustentabilidade e escalabilidade. Em economia da saúde, isso significa modelação de custo-efetividade desenhada a partir dos endpoints clínicos do estudo, com pressupostos baseados em dados europeus e ajustamentos por contexto nacional. Para biotechs, medtechs, startups de saúde digital, hospitais centrais e centros de investigação clínica portugueses com candidato em diabetes, cardiovasculares, respiratórias ou renais, este tópico é janela competitiva clara. Sugerimos uma conversa preliminar focada em três pontos: avaliação da maturidade do dossier clínico e regulatório, mapeamento dos parceiros europeus prioritários e desenho da componente digital e de Real-World Data, na perspetiva de coordenação ou de integração em consórcio liderado.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_sofiacosta.png" alt="Sofia Costa" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Sofia Costa</div>
+          <div class="sidebar-author-role">Especialista I&amp;D e Inovação</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">Horizonte Europa</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Cluster</div>
+        <div class="sidebar-fact-val">Health (CL4)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Call</div>
+        <div class="sidebar-fact-val">HORIZON-HLTH-2027-02-two-stage</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tópico</div>
+        <div class="sidebar-fact-val">DISEASE-01 (NCDs)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tipo de ação</div>
+        <div class="sidebar-fact-val">HORIZON-RIA Lump Sum</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Ticket UE</div>
+        <div class="sidebar-fact-val">7-8 milhões EUR</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Projetos esperados</div>
+        <div class="sidebar-fact-val">8</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Orçamento total</div>
+        <div class="sidebar-fact-val">63,8 milhões EUR</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Doenças</div>
+        <div class="sidebar-fact-val">CV, diabetes, respiratórias, renais</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Localização</div>
+        <div class="sidebar-fact-val">UE, Países Associados, EUA</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-planned">Previsto, 1.ª fase 13/04/2027</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Tem proof-of-concept em NCD com necessidade de financiamento europeu para ensaios clínicos precoces?</div>
+      <a href="https://calendly.com/opencapital" target="_blank" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../horizonte-europa/" class="related-link">
+        <span class="related-link-name">Horizonte Europa</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-hlth-2027-01-disease-06/" class="related-link">
+        <span class="related-link-name">HLTH-2027-01 DISEASE-06 Flavivírus</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-miss-2026-02-cancer/" class="related-link">
+        <span class="related-link-name">Missão Cancro 2026</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../eic-accelerator/" class="related-link">
+        <span class="related-link-name">EIC Accelerator</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
