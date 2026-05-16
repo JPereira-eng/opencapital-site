@@ -1244,6 +1244,14 @@
       "state": "aberto",
       "last_check": "2026-05-12",
       "data_status": "n/a"
+    },
+    {
+      "id": "eit-climate-cross-cultural-conversations-2026",
+      "file": "instrumentos/eit-climate-cross-cultural-conversations-2026/index.html",
+      "source": "eit-climate",
+      "state": "aberto",
+      "last_check": "2026-05-16",
+      "data_status": "verified"
     }
   ],
   "instruments": [
@@ -2424,11 +2432,11 @@
       "last_check": "2026-05-09"
     }
   ],
-  "count": 150,
-  "published": 150,
-  "open": 103,
+  "count": 151,
+  "published": 151,
+  "open": 104,
   "closed": 45,
   "planned": 2,
   "_meta": {},
-  "updated": "2026-05-12"
+  "updated": "2026-05-16"
 }
