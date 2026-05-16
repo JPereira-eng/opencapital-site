@@ -90,7 +90,60 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [],
+  "queue": [
+    {
+      "id": "premio-gulbenkian",
+      "name": "Fundacao Calouste Gulbenkian",
+      "source_id": "premio-gulbenkian",
+      "catalog_type": "prize",
+      "detected_date": "2026-05-16",
+      "last_profile_update": "2026-05-16",
+      "status": "active",
+      "regulation_url": "https://gulbenkian.pt/apoios-e-parcerias/",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://gulbenkian.pt/apoios-e-parcerias/",
+        "linkedin": "https://www.linkedin.com/company/fundacao-calouste-gulbenkian",
+        "pais_sede": "PT",
+        "descricao_curta": "Fundacao filantropica portuguesa, com programa anual de bolsas e premios em areas como artes, educacao, ciencia e integracao social.",
+        "como_candidatar": "Formularios online por programa, prazos variaveis. Catalogo completo em gulbenkian.pt/apoios-e-parcerias.",
+        "premio_total_eur": null,
+        "categorias": [
+          "Criacao Artistica",
+          "Bolsas Formacao Artes Estrangeiro",
+          "Bolsas de Merito",
+          "Iniciativa Integracao"
+        ],
+        "deadline_proxima": "2026-04-30",
+        "edicao_ano": "2026",
+        "juri_destaque": [],
+        "elegibilidade": "Artistas, estudantes do ensino superior, instituicoes culturais. Varia por programa.",
+        "programas_2026": [
+          {
+            "nome": "Apoio a Criacao Artistica",
+            "deadline": "2026-03-06",
+            "estado": "encerrado"
+          },
+          {
+            "nome": "Bolsas Formacao em Artes no Estrangeiro",
+            "deadline": "2026-04-30",
+            "estado": "aviso recente"
+          },
+          {
+            "nome": "Bolsas de Merito (1.o ano ensino superior)",
+            "deadline": "2025-10-31",
+            "estado": "encerrado"
+          },
+          {
+            "nome": "Iniciativa Gulbenkian Integracao",
+            "deadline": null,
+            "estado": "ativo (consultar site)"
+          }
+        ]
+      },
+      "notes": "Fundacao com programa anual de bolsas e premios. Verificado 2026-05-16: 2 programas em janela aberta (Bolsas Formacao Artes Estrangeiro 30/04; Integracao continua); 2 encerrados aguardando nova edicao."
+    }
+  ],
   "updated": "2026-05-16",
   "_updated": "2026-05-16"
 }

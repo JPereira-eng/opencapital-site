@@ -1952,10 +1952,13 @@
       "regional_portals": [
         "algarve-2030"
       ],
-      "paa_status": "planejado",
+      "paa_status": "published_externamente",
       "programa_code": "ALGARVE2030",
       "codigo_api": "FA0159/2025",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "news_post_url": "https://algarve.portugal2030.pt/2026/04/22/candidate-o-seu-projeto-a-2-a-edicao-dos-premios-dos-fundos-europeus-ja-estao-abertas-as-candidaturas-a-2-a-edicao-dos-premios-dos-fundos-europeus-ate-17-de-julho-de-2026-de-visibilidade-ao-impacto/",
+      "news_post_date": "2026-04-22",
+      "news_post_title": "Candidate o seu projeto à 2.ª edição dos Prémios dos Fundos Europeus!  Já estão abertas as candidaturas à 2.ª edição dos Prémios dos Fundos Europeus até 17 de julho de 2026. Dê visibilidade ao impacto do seu projeto e participe!"
     },
     {
       "id": "siid-empreendedorismo-qualificado-algarve",
@@ -2779,9 +2782,12 @@
       "regional_portals": [
         "madeira-2030"
       ],
-      "paa_status": "planejado",
+      "paa_status": "published_externamente",
       "notes": "Natureza: Concurso. Beneficiarios: Privada. Programa: MADEIRA2030. Fundo: FSE+. Detetado via portugal-2030 (scan_destination=watchlist).",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "news_post_url": "https://madeira.portugal2030.pt/2026/02/27/madeira-2030-lanca-aviso-convite-para-estagios-e-experiencias-profissionais-dirigidos-a-jovens/",
+      "news_post_date": "2026-02-27",
+      "news_post_title": "Madeira 2030 lança aviso-convite para Estágios e Experiências Profissionais dirigidos a jovens"
     },
     {
       "id": "cursos-profissionais-entidades-publicas",
@@ -2987,14 +2993,17 @@
       "regional_portals": [
         "madeira-2030"
       ],
-      "paa_status": "planejado",
+      "paa_status": "published_externamente",
       "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FEDER. Detetado via portugal-2030 (scan_destination=watchlist).",
       "data_status": "forecast",
       "plano_anual_last_check": "2026-05-13",
       "plano_anual_checks": 1,
       "plano_anual_notes": [
         "2026-05-13: PASSO 2.6 - not-found-in-api."
-      ]
+      ],
+      "news_post_url": "https://madeira.portugal2030.pt/2026/04/14/madeira-2030-lanca-aviso-convite-para-zonas-de-visitacao-do-parque-ecologico-do-funchal/",
+      "news_post_date": "2026-04-14",
+      "news_post_title": "Madeira 2030 lança Aviso-Convite para zonas de visitação do Parque Ecológico do Funchal"
     },
     {
       "id": "investigacao-2030-8211-iii",
@@ -3018,9 +3027,12 @@
       "regional_portals": [
         "madeira-2030"
       ],
-      "paa_status": "planejado",
+      "paa_status": "published_externamente",
       "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FEDER. Detetado via portugal-2030 (scan_destination=watchlist).",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "news_post_url": "https://madeira.portugal2030.pt/2026/02/25/madeira-2030-lanca-aviso-de-concurso-m2030-2026-7-siide-2030/",
+      "news_post_date": "2026-02-25",
+      "news_post_title": "Madeira 2030 lança Aviso-Concurso para Investigação e Desenvolvimento Empresarial – SIIDE 2030"
     },
     {
       "id": "funcionamento-2030-8211-t-4o-aviso",
@@ -3044,9 +3056,12 @@
       "regional_portals": [
         "madeira-2030"
       ],
-      "paa_status": "planejado",
+      "paa_status": "published_externamente",
       "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FEDER. Detetado via portugal-2030 (scan_destination=watchlist).",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "news_post_url": "https://madeira.portugal2030.pt/2026/04/14/madeira-2030-lanca-aviso-convite-para-zonas-de-visitacao-do-parque-ecologico-do-funchal/",
+      "news_post_date": "2026-04-14",
+      "news_post_title": "Madeira 2030 lança Aviso-Convite para zonas de visitação do Parque Ecológico do Funchal"
     },
     {
       "id": "eficiencia-energetica-iv",
@@ -3070,9 +3085,12 @@
       "regional_portals": [
         "madeira-2030"
       ],
-      "paa_status": "planejado",
+      "paa_status": "published_externamente",
       "notes": "Natureza: Concurso. Beneficiarios: Pública. Programa: MADEIRA2030. Fundo: FEDER. Detetado via portugal-2030 (scan_destination=watchlist).",
-      "data_status": "verified"
+      "data_status": "verified",
+      "news_post_url": "https://madeira.portugal2030.pt/2026/04/30/candidate-o-seu-projeto-a-2-a-edicao-dos-premios-dos-fundos-europeus/",
+      "news_post_date": "2026-04-30",
+      "news_post_title": "Candidate o seu projeto à 2.ª edição dos Prémios dos Fundos Europeus!"
     },
     {
       "id": "apoio-a-infraestruturas-de-base-tecnologica-da-regiao-do-medio-tejo-ft",
@@ -4479,8 +4497,3072 @@
         "2b-pdf",
         "2b-portal-central"
       ]
+    },
+    {
+      "id": "siac-empreendedorismo-qualificado-associado-ao-conhecimento",
+      "name": "SIAC-Empreendedorismo Qualificado associado ao conhecimento",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0031/2026",
+      "codigo_api": "FA0031/2026",
+      "human_code": null,
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "programa_code": "ALGARVE2030",
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260915",
+      "data_fim": "20270115",
+      "deadline": null,
+      "budget": "1000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/siac-empreendedorismo-qualificado-associado-ao-conhecimento/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "siac-8211-transferencia-do-conhecimento-cientifico-e-tecnologico",
+      "name": "SIAC – Transferência do conhecimento científico e tecnológico",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0034/2026",
+      "codigo_api": "FA0034/2026",
+      "human_code": null,
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "programa_code": "ALGARVE2030",
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20261030",
+      "data_fim": "20270226",
+      "deadline": null,
+      "budget": "500000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/siac-transferencia-do-conhecimento-cientifico-e-tecnologico/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "siac-8211-qualificacao-convite-startup-portugal",
+      "name": "SIAC – Qualificação (Convite Startup Portugal)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0114/2026",
+      "codigo_api": "FA0114/2026",
+      "human_code": null,
+      "programa": [
+        "COMPETE2030"
+      ],
+      "programa_code": "COMPETE2030",
+      "regional_portals": [
+        "compete-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260529",
+      "data_fim": "20260630",
+      "deadline": null,
+      "budget": "2000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/siac-qualificacao-convite-startup-portugal/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "siac-8211-qualificacao",
+      "name": "SIAC – Qualificação",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0032/2026",
+      "codigo_api": "FA0032/2026",
+      "human_code": null,
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "programa_code": "ALGARVE2030",
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260930",
+      "data_fim": "20270129",
+      "deadline": null,
+      "budget": "500000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/siac-qualificacao/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "siac-8211-internacionalizacao",
+      "name": "SIAC – Internacionalização",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0027/2026",
+      "codigo_api": "FA0027/2026",
+      "human_code": null,
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "programa_code": "ALGARVE2030",
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260529",
+      "data_fim": "20260915",
+      "deadline": null,
+      "budget": "500000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/siac-internacionalizacao/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "redes-e-capacitacao-institucional-ris3",
+      "name": "Redes e capacitação institucional RIS3",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0101/2026",
+      "codigo_api": "FA0101/2026",
+      "human_code": null,
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "programa_code": "ALENTEJO2030",
+      "regional_portals": [
+        "alentejo-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260518",
+      "data_fim": "20260630",
+      "deadline": null,
+      "budget": "400000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/redes-e-capacitacao-institucional-ris3/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 520,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "investimento-empresarial-produtivo-si-8211-defesa",
+      "name": "Investimento Empresarial Produtivo (SI) – Defesa",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0028/2026",
+      "codigo_api": "FA0028/2026",
+      "human_code": null,
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "programa_code": "ALENTEJO2030",
+      "regional_portals": [
+        "alentejo-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260702",
+      "data_fim": "20261218",
+      "deadline": null,
+      "budget": "25000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/investimento-empresarial-produtivo-si-defesa/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "infraestruturas-de-acolhimento-empresarial-de-nova-geracao-8211-iti-cim",
+      "name": "Infraestruturas de acolhimento empresarial de nova geração – ITI CIM",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0017/2026",
+      "codigo_api": "FA0017/2026",
+      "human_code": null,
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "programa_code": "ALENTEJO2030",
+      "regional_portals": [
+        "alentejo-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260504",
+      "data_fim": "20261220",
+      "deadline": null,
+      "budget": "10000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/infraestruturas-de-acolhimento-empresarial-de-nova-geracao-iti-cim/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "excelencia-cientifica-na-raa-8211-aquisicao-de-equipamento-cientifico-para-os-nos-regionais-da-rniiie",
+      "name": "Excelência cientifica na RAA – Aquisição de equipamento científico para os nós regionais da RNIIIE",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0090/2026",
+      "codigo_api": "FA0090/2026",
+      "human_code": null,
+      "programa": [
+        "ACORES2030"
+      ],
+      "programa_code": "ACORES2030",
+      "regional_portals": [
+        "acores-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260502",
+      "data_fim": "20260730",
+      "deadline": null,
+      "budget": "779000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/excelencia-cientifica-na-raa-aquisicao-de-equipamento-cientifico-para-os-nos-regionais-da-rniiie/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "estrategias-de-i-038-d-para-cadeias-de-valor",
+      "name": "Estratégias de I&D para Cadeias de Valor",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0098/2026",
+      "codigo_api": "FA0098/2026",
+      "human_code": null,
+      "programa": [
+        "ACORES2030"
+      ],
+      "programa_code": "ACORES2030",
+      "regional_portals": [
+        "acores-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20270202",
+      "data_fim": "20270531",
+      "deadline": null,
+      "budget": "1360000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/estrategias-de-id-para-cadeias-de-valor/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "digitalizacao-para-a-eficiencia-de-servicos-aos-cidadaos-e-empresas-na-administracao-local-8211-iti-cim",
+      "name": "Digitalização para a eficiência de serviços aos cidadãos e empresas na Administração Local – ITI CIM",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0018/2026",
+      "codigo_api": "FA0018/2026",
+      "human_code": null,
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "programa_code": "ALENTEJO2030",
+      "regional_portals": [
+        "alentejo-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260514",
+      "data_fim": "20261221",
+      "deadline": null,
+      "budget": "1000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/digitalizacao-para-a-eficiencia-de-servicos-aos-cidadaos-e-empresas-na-administracao-local-iti-cim/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "areas-de-acolhimento-empresarial-de-base-nao-tecnologica",
+      "name": "Áreas de acolhimento empresarial  de base não tecnológica",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0029/2026",
+      "codigo_api": "FA0029/2026",
+      "human_code": null,
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "programa_code": "ALGARVE2030",
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260529",
+      "data_fim": "20270115",
+      "deadline": null,
+      "budget": "3000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/areas-de-acolhimento-empresarial-de-base-nao-tecnologica/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "apoio-a-incubadoras-de-base-tecnologica",
+      "name": "Apoio a Incubadoras de Base Tecnológica.",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0021/2026",
+      "codigo_api": "FA0021/2026",
+      "human_code": null,
+      "programa": [
+        "CENTRO2030"
+      ],
+      "programa_code": "CENTRO2030",
+      "regional_portals": [
+        "centro-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260515",
+      "data_fim": "20260731",
+      "deadline": null,
+      "budget": "6000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/apoio-a-incubadoras-de-base-tecnologica/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 520,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "sistema-de-incentivos-a-investigacao-desenvolvimento-e-inovacao-empresarial-i-038-d-038-i-empresarial-defesa",
+      "name": "Sistema de Incentivos à Investigação, Desenvolvimento e Inovação Empresarial\nI&D&I Empresarial –Defesa",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0053/2026",
+      "codigo_api": "FA0053/2026",
+      "human_code": null,
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "programa_code": "ALGARVE2030",
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260831",
+      "data_fim": "20270531",
+      "deadline": null,
+      "budget": "5000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-a-investigacao-desenvolvimento-e-inovacao-empresarialidi-empresarial-defesa/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "published_externamente",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: .",
+      "news_post_url": "https://algarve.portugal2030.pt/2026/02/27/sistema-de-incentivos-de-base-territorial-inovacao-e-modernizacao-para-o-aumento-da-producao-e-criacao-de-novas-empresas-d-negocios/",
+      "news_post_date": "2026-02-27",
+      "news_post_title": "Sistema de Incentivos de Base Territorial &#8211; Inovação E Modernização para o aumento da Produção e Criação de Novas Empresas d Negócios"
+    },
+    {
+      "id": "sistema-de-incentivos-a-investigacao-desenvolvimento-e-inovacao-empresarial-i-038-d-empresarial-defesa",
+      "name": "Sistema de Incentivos à Investigação, Desenvolvimento e Inovação Empresarial\nI&D Empresarial –Defesa",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0056/2026",
+      "codigo_api": "FA0056/2026",
+      "human_code": null,
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "programa_code": "ALGARVE2030",
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260831",
+      "data_fim": "20270531",
+      "deadline": null,
+      "budget": "2500000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-a-investigacao-desenvolvimento-e-inovacao-empresarialid-empresarial-defesa/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "published_externamente",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: .",
+      "news_post_url": "https://algarve.portugal2030.pt/2026/02/27/sistema-de-incentivos-de-base-territorial-inovacao-e-modernizacao-para-o-aumento-da-producao-e-criacao-de-novas-empresas-d-negocios/",
+      "news_post_date": "2026-02-27",
+      "news_post_title": "Sistema de Incentivos de Base Territorial &#8211; Inovação E Modernização para o aumento da Produção e Criação de Novas Empresas d Negócios"
+    },
+    {
+      "id": "siid-8211-i-038-d-empresarial-8211-operacoes-em-copromocao-rede-de-fornecedores-inovadores",
+      "name": "SIID – I&D Empresarial – Operações em Copromoção (Rede de Fornecedores Inovadores)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0073/2026",
+      "codigo_api": "FA0073/2026",
+      "human_code": null,
+      "programa": [
+        "COMPETE2030"
+      ],
+      "programa_code": "COMPETE2030",
+      "regional_portals": [
+        "compete-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260630",
+      "data_fim": "20260930",
+      "deadline": null,
+      "budget": "1800000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/siid-id-empresarial-operacoes-em-copromocao-rede-de-fornecedores-inovadores/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "sice-8211-investimento-empresarial-produtivo-sector-da-defesa",
+      "name": "SICE – Investimento Empresarial Produtivo (Sector da Defesa).",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0045/2026",
+      "codigo_api": "FA0045/2026",
+      "human_code": null,
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "programa_code": "ALGARVE2030",
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260731",
+      "data_fim": "20270531",
+      "deadline": null,
+      "budget": "8500000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/sice-investimento-empresarial-produtivo-sector-da-defesa-2/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "sice-8211-investimento-empresarial-produtivo-sector-da-defesa",
+      "name": "SICE – Investimento Empresarial Produtivo (Sector da Defesa).",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0024/2026",
+      "codigo_api": "FA0024/2026",
+      "human_code": null,
+      "programa": [
+        "CENTRO2030"
+      ],
+      "programa_code": "CENTRO2030",
+      "regional_portals": [
+        "centro-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260715",
+      "data_fim": "20261030",
+      "deadline": null,
+      "budget": "15000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/sice-investimento-empresarial-produtivo-sector-da-defesa/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "sice-8211-inovacao-produtiva-rede-de-fornecedores-inovadores",
+      "name": "SICE – Inovação Produtiva (Rede de Fornecedores Inovadores)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0075/2026",
+      "codigo_api": "FA0075/2026",
+      "human_code": null,
+      "programa": [
+        "COMPETE2030"
+      ],
+      "programa_code": "COMPETE2030",
+      "regional_portals": [
+        "compete-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260630",
+      "data_fim": "20260930",
+      "deadline": null,
+      "budget": "40000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/sice-inovacao-produtiva-rede-de-fornecedores-inovadores/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "step-8211-sistema-de-incentivos-a-investigacao-desenvolvimento-e-inovacao-empresarial-step-i-038-d-038-i-empresarial-tecnologias-limpas",
+      "name": "STEP – Sistema de Incentivos à Investigação, Desenvolvimento e Inovação Empresarial\nSTEP I&D&I Empresarial – tecnologias limpas",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0043/2026",
+      "codigo_api": "FA0043/2026",
+      "human_code": null,
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "programa_code": "ALGARVE2030",
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260930",
+      "data_fim": "20270531",
+      "deadline": null,
+      "budget": "1000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/step-sistema-de-incentivos-a-investigacao-desenvolvimento-e-inovacao-empresarialstep-idi-empresarial-tecnologias-limpas/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "step-inovacao-produtiva-tecnologias-limpas",
+      "name": "STEP – Inovação Produtiva – Tecnologias limpas",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0044/2026",
+      "codigo_api": "FA0044/2026",
+      "human_code": null,
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "programa_code": "ALGARVE2030",
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260930",
+      "data_fim": "20270531",
+      "deadline": null,
+      "budget": "1000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/step-inovacao-produtiva-tecnologias-limpas/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "step-8211-inovacao-produtiva-8211-digital-e-biotecnologia",
+      "name": "STEP – Inovação Produtiva – Digital e Biotecnologia",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0070/2026",
+      "codigo_api": "FA0070/2026",
+      "human_code": null,
+      "programa": [
+        "COMPETE2030"
+      ],
+      "programa_code": "COMPETE2030",
+      "regional_portals": [
+        "compete-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260831",
+      "data_fim": "20261130",
+      "deadline": null,
+      "budget": "107950000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/step-inovacao-produtiva-digital-e-biotecnologia/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "step-8211-i-038-d-038-i-empresarial-8211-digital-e-biotecnologia",
+      "name": "STEP – I&D&I Empresarial – Digital e Biotecnologia",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0072/2026",
+      "codigo_api": "FA0072/2026",
+      "human_code": null,
+      "programa": [
+        "COMPETE2030"
+      ],
+      "programa_code": "COMPETE2030",
+      "regional_portals": [
+        "compete-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260831",
+      "data_fim": "20261130",
+      "deadline": null,
+      "budget": "76000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/step-idi-empresarial-digital-e-biotecnologia/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "sistema-de-incentivos-de-base-territorial-eec-provere",
+      "name": "Sistema de Incentivos de Base Territorial – EEC PROVERE.",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0023/2026",
+      "codigo_api": "FA0023/2026",
+      "human_code": null,
+      "programa": [
+        "CENTRO2030"
+      ],
+      "programa_code": "CENTRO2030",
+      "regional_portals": [
+        "centro-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20270101",
+      "data_fim": "20270331",
+      "deadline": null,
+      "budget": "10000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-de-base-territorial-eec-provere/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "acoes-de-protecao-e-conservacao-da-natureza-e-da-biodiversidade-incluidas-em-planos-de-cogestao-de-areas-protegidas-8211-regiao-centro-8211-2-aviso",
+      "name": "Ações de “Proteção e conservação da natureza e da biodiversidade” incluídas em planos de cogestão de áreas protegidas – Região\nCentro – 2.º Aviso",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0001/2026",
+      "codigo_api": "FA0001/2026",
+      "human_code": null,
+      "programa": [
+        "CENTRO2030"
+      ],
+      "programa_code": "CENTRO2030",
+      "regional_portals": [
+        "centro-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260515",
+      "data_fim": "20260918",
+      "deadline": null,
+      "budget": "2100000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/acoes-de-protecao-e-conservacao-da-natureza-e-da-biodiversidade-incluidas-em-planos-de-cogestao-de-areas-protegidas-regiaocentro-2-o-aviso/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "energia-8211-protecao-de-infraestruturas-criticas-8211-2-aviso",
+      "name": "Energia – Proteção de Infraestruturas Críticas – 2.º Aviso",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0087/2026",
+      "codigo_api": "FA0087/2026",
+      "human_code": null,
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "programa_code": "MADEIRA2030",
+      "regional_portals": [
+        "madeira-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260921",
+      "data_fim": "20261026",
+      "deadline": null,
+      "budget": "500000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/energia-protecao-de-infraestruturas-criticas-2-o-aviso/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "energia-8211-protecao-de-infraestruturas-criticas-8211-1-aviso",
+      "name": "Energia – Proteção de Infraestruturas Críticas – 1º Aviso",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0086/2026",
+      "codigo_api": "FA0086/2026",
+      "human_code": null,
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "programa_code": "MADEIRA2030",
+      "regional_portals": [
+        "madeira-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260501",
+      "data_fim": "20260620",
+      "deadline": null,
+      "budget": "2500000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/energia-protecao-de-infraestruturas-criticas-1o-aviso/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "economia-circular-si",
+      "name": "Economia circular (SI)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0102/2026",
+      "codigo_api": "FA0102/2026",
+      "human_code": null,
+      "programa": [
+        "CENTRO2030"
+      ],
+      "programa_code": "CENTRO2030",
+      "regional_portals": [
+        "centro-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260601",
+      "data_fim": "20260930",
+      "deadline": null,
+      "budget": "10000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/economia-circular-si-2/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "economia-circular-si",
+      "name": "Economia circular (SI)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0019/2026",
+      "codigo_api": "FA0019/2026",
+      "human_code": null,
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "programa_code": "ALENTEJO2030",
+      "regional_portals": [
+        "alentejo-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260907",
+      "data_fim": "20270125",
+      "deadline": null,
+      "budget": "1000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/economia-circular-si/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "economia-circular",
+      "name": "Economia Circular",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0095/2026",
+      "codigo_api": "FA0095/2026",
+      "human_code": null,
+      "programa": [
+        "ACORES2030"
+      ],
+      "programa_code": "ACORES2030",
+      "regional_portals": [
+        "acores-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20261102",
+      "data_fim": "20270430",
+      "deadline": null,
+      "budget": "935000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/economia-circular/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "ciclo-urbano-da-agua-8211-redes-de-recolha-de-aguas-residuais",
+      "name": "Ciclo Urbano da Água – Redes de Recolha de Águas Residuais",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0081/2026",
+      "codigo_api": "FA0081/2026",
+      "human_code": null,
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "programa_code": "MADEIRA2030",
+      "regional_portals": [
+        "madeira-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260511",
+      "data_fim": "20260615",
+      "deadline": null,
+      "budget": "6000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/ciclo-urbano-da-agua-redes-de-recolha-de-aguas-residuais/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "ciclo-urbano-da-agua-8211-redes-de-abastecimento-de-agua-em-baixa",
+      "name": "Ciclo Urbano da Água – Redes de Abastecimento de Água em Baixa",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0080/2026",
+      "codigo_api": "FA0080/2026",
+      "human_code": null,
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "programa_code": "MADEIRA2030",
+      "regional_portals": [
+        "madeira-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260501",
+      "data_fim": "20260601",
+      "deadline": null,
+      "budget": "14000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/ciclo-urbano-da-agua-redes-de-abastecimento-de-agua-em-baixa/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 560,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "medidas-de-apoio-as-alteracoes-climaticas-e-prevencao-e-gestao-de-riscos-associados-ao-clima",
+      "name": "Medidas de apoio às alterações climáticas e prevenção e gestão de riscos associados ao clima.",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0071/2026",
+      "codigo_api": "FA0071/2026",
+      "human_code": null,
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "programa_code": "ALENTEJO2030",
+      "regional_portals": [
+        "alentejo-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260529",
+      "data_fim": "20270531",
+      "deadline": null,
+      "budget": "680000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/medidas-de-apoio-as-alteracoes-climaticas-e-prevencao-e-gestao-de-riscos-associados-ao-clima/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "sistema-de-incentivos-a-transicao-climatica-e-energetica-8211-operacoes-de-regime-simplificado",
+      "name": "Sistema de Incentivos à Transição Climática e Energética – Operações de regime simplificado",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0057/2026",
+      "codigo_api": "FA0057/2026",
+      "human_code": null,
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "programa_code": "ALGARVE2030",
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260531",
+      "data_fim": "20270531",
+      "deadline": null,
+      "budget": "1000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/sistema-de-incentivos-a-transicao-climatica-e-energetica-operacoes-de-regime-simplificado/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "siac-8211-descarbonizacao",
+      "name": "SIAC – Descarbonização",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0033/2026",
+      "codigo_api": "FA0033/2026",
+      "human_code": null,
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "programa_code": "ALGARVE2030",
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20261030",
+      "data_fim": "20270226",
+      "deadline": null,
+      "budget": "500000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/siac-descarbonizacao/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "reforco-do-sistema-hidroeletrico",
+      "name": "Reforço do Sistema Hidroelétrico",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0088/2026",
+      "codigo_api": "FA0088/2026",
+      "human_code": null,
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "programa_code": "MADEIRA2030",
+      "regional_portals": [
+        "madeira-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260928",
+      "data_fim": "20261028",
+      "deadline": null,
+      "budget": "5000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/reforco-do-sistema-hidroeletrico/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "protecao-e-defesa-do-litoral-8211-protecao-de-infraestruturas-publicas-afetadas-ou-identificadas-em-areas-de-risco",
+      "name": "Proteção e defesa do litoral – Proteção de infraestruturas públicas afetadas ou identificadas em áreas de risco",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0052/2026",
+      "codigo_api": "FA0052/2026",
+      "human_code": null,
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "programa_code": "SUSTENTAVEL2030",
+      "regional_portals": [
+        "sustentavel-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260901",
+      "data_fim": "20261130",
+      "deadline": null,
+      "budget": "2000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/protecao-e-defesa-do-litoral-protecao-de-infraestruturas-publicas-afetadas-ou-identificadas-em-areas-de-risco/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "protecao-civil-e-gestao-integrada-de-riscos-8211-3-aviso",
+      "name": "Proteção civil e gestão integrada de riscos – 3º Aviso",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0091/2026",
+      "codigo_api": "FA0091/2026",
+      "human_code": null,
+      "programa": [
+        "ACORES2030"
+      ],
+      "programa_code": "ACORES2030",
+      "regional_portals": [
+        "acores-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20270201",
+      "data_fim": "20270730",
+      "deadline": null,
+      "budget": "4525400",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/protecao-civil-e-gestao-integrada-de-riscos-3o-aviso/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "protecao-civil-e-gestao-integrada-de-riscos-prevencao-ou-mitigacao-dos-riscos-de-derrocada-de-taludes-3-aviso",
+      "name": "Proteção  Civil e gestão integrada de riscos -prevenção ou mitigação dos riscos de derrocada de taludes-3º aviso",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0060/2026",
+      "codigo_api": "FA0060/2026",
+      "human_code": null,
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "programa_code": "SUSTENTAVEL2030",
+      "regional_portals": [
+        "sustentavel-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20270104",
+      "data_fim": "20270430",
+      "deadline": null,
+      "budget": "15500000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/protecao-civil-e-gestao-integrada-de-riscos-prevencao-ou-mitigacao-dos-riscos-de-derrocada-de-taludes-3o-aviso/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "melhoria-das-condicoes-de-navegabilidade-do-porto-de-aveiro",
+      "name": "Melhoria das condições de navegabilidade do Porto de Aveiro",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0064/2026",
+      "codigo_api": "FA0064/2026",
+      "human_code": null,
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "programa_code": "SUSTENTAVEL2030",
+      "regional_portals": [
+        "sustentavel-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20270201",
+      "data_fim": "20270630",
+      "deadline": null,
+      "budget": "21358759",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/melhoria-das-condicoes-de-navegabilidade-do-porto-de-aveiro/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "infraestrutura-portuaria-rte-porto-de-sines-8211-implementacao-de-sistema-de-pre-gate-para-o-terminal-de-contentores",
+      "name": "Infraestrutura Portuária (RTE) – Porto de  Sines – Implementação de Sistema de Pré-Gate para o Terminal de Contentores",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0065/2026",
+      "codigo_api": "FA0065/2026",
+      "human_code": null,
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "programa_code": "SUSTENTAVEL2030",
+      "regional_portals": [
+        "sustentavel-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20270104",
+      "data_fim": "20270430",
+      "deadline": null,
+      "budget": "9350000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/infraestrutura-portuaria-rte-porto-de-sines-implementacao-de-sistema-de-pre-gate-para-o-terminal-de-contentores/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "empreitada-de-ampliacao-e-remodelacao-da-aerogare-e-sslci-do-aerodromo-do-corvo",
+      "name": "Empreitada de Ampliação e Remodelação da Aerogare e SSLCI do Aeródromo do Corvo",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0066/2026",
+      "codigo_api": "FA0066/2026",
+      "human_code": null,
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "programa_code": "SUSTENTAVEL2030",
+      "regional_portals": [
+        "sustentavel-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20270104",
+      "data_fim": "20270531",
+      "deadline": null,
+      "budget": "4400025",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/empreitada-de-ampliacao-e-remodelacao-da-aerogare-e-sslci-do-aerodromo-do-corvo/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "step-8211-inovacao-produtiva-8211-energia",
+      "name": "STEP – Inovação Produtiva – Energia",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0068/2026",
+      "codigo_api": "FA0068/2026",
+      "human_code": null,
+      "programa": [
+        "COMPETE2030"
+      ],
+      "programa_code": "COMPETE2030",
+      "regional_portals": [
+        "compete-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260831",
+      "data_fim": "20261130",
+      "deadline": null,
+      "budget": "100000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/step-inovacao-produtiva-energia/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "step-8211-i-038-d-038-i-empresarial-8211-energia",
+      "name": "STEP – I&D&I Empresarial – Energia",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0069/2026",
+      "codigo_api": "FA0069/2026",
+      "human_code": null,
+      "programa": [
+        "COMPETE2030"
+      ],
+      "programa_code": "COMPETE2030",
+      "regional_portals": [
+        "compete-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260831",
+      "data_fim": "20261130",
+      "deadline": null,
+      "budget": "75000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/step-idi-empresarial-energia/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "apoio-a-criacao-de-emprego-e-microempreendedorismo-it-comunidade-intermunicipal-do-cavado",
+      "name": "Apoio à criação de emprego e microempreendedorismo (IT) – Comunidade Intermunicipal do Cávado",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0062/2026",
+      "codigo_api": "FA0062/2026",
+      "human_code": null,
+      "programa": [
+        "NORTE2030"
+      ],
+      "programa_code": "NORTE2030",
+      "regional_portals": [
+        "norte-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260601",
+      "data_fim": "20260731",
+      "deadline": null,
+      "budget": "979401.77",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/apoio-a-criacao-de-emprego-e-microempreendedorismo-it-comunidade-intermunicipal-do-cavado/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "apoio-a-criacao-de-emprego-e-microempreendedorismo-it-comunidade-intermunicipal-do-ave",
+      "name": "Apoio à criação de emprego e microempreendedorismo (IT) – Comunidade Intermunicipal do Ave",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0067/2026",
+      "codigo_api": "FA0067/2026",
+      "human_code": null,
+      "programa": [
+        "NORTE2030"
+      ],
+      "programa_code": "NORTE2030",
+      "regional_portals": [
+        "norte-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260601",
+      "data_fim": "20260731",
+      "deadline": null,
+      "budget": "2000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/apoio-a-criacao-de-emprego-e-microempreendedorismo-it-comunidade-intermunicipal-do-ave/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 520,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "apoio-a-criacao-de-emprego-e-microempreendedorismo-it-comunidade-intermunicipal-das-terras-de-tras-os-montes",
+      "name": "Apoio à criação de emprego e microempreendedorismo (IT) – Comunidade Intermunicipal das Terras de Trás-os-Montes",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0063/2026",
+      "codigo_api": "FA0063/2026",
+      "human_code": null,
+      "programa": [
+        "NORTE2030"
+      ],
+      "programa_code": "NORTE2030",
+      "regional_portals": [
+        "norte-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260601",
+      "data_fim": "20260731",
+      "deadline": null,
+      "budget": "750521.89",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/apoio-a-criacao-de-emprego-e-microempreendedorismo-it-comunidade-intermunicipal-das-terras-de-tras-os-montes/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "alojamento-para-estudantes-do-ensino-superior",
+      "name": "Alojamento para estudantes do ensino superior",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0026/2026",
+      "codigo_api": "FA0026/2026",
+      "human_code": null,
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "programa_code": "ALGARVE2030",
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260629",
+      "data_fim": "20270331",
+      "deadline": null,
+      "budget": "6000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/alojamento-para-estudantes-do-ensino-superior/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "acoes-do-mercado-social-de-emprego",
+      "name": "Ações do Mercado Social de Emprego",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0599/2023",
+      "codigo_api": "FA0599/2023",
+      "human_code": null,
+      "programa": [
+        "ACORES2030"
+      ],
+      "programa_code": "ACORES2030",
+      "regional_portals": [
+        "acores-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20261001",
+      "data_fim": "20261130",
+      "deadline": null,
+      "budget": "2000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/acoes-do-mercado-social-de-emprego/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "casas-de-funcao",
+      "name": "Casas de Função",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0058/2026",
+      "codigo_api": "FA0058/2026",
+      "human_code": null,
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "programa_code": "ALGARVE2030",
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260624",
+      "data_fim": "20270629",
+      "deadline": null,
+      "budget": "6000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/casas-de-funcao/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "capacitacao-dos-parceiros-da-comissao-permanente-de-concertacao-social-cpcs",
+      "name": "Capacitação dos Parceiros da Comissão Permanente de Concertação Social (CPCS)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0012/2026",
+      "codigo_api": "FA0012/2026",
+      "human_code": null,
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "programa_code": "PESSOAS2030",
+      "regional_portals": [
+        "pessoas-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20270101",
+      "data_fim": "20270430",
+      "deadline": null,
+      "budget": "2594116",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/capacitacao-dos-parceiros-da-comissao-permanente-de-concertacao-social-cpcs/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "capacitacao-das-entidades-empregadoras-cuidadores-trabalhadores-e-assedio-no-trabalho",
+      "name": "Capacitação das entidades empregadoras – cuidadores trabalhadores e assédio no trabalho",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0113/2026",
+      "codigo_api": "FA0113/2026",
+      "human_code": null,
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "programa_code": "PESSOAS2030",
+      "regional_portals": [
+        "pessoas-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20270101",
+      "data_fim": "20270430",
+      "deadline": null,
+      "budget": "1800000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/capacitacao-das-entidades-empregadoras-cuidadores-trabalhadores-e-assedio-no-trabalho/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "apoio-ao-emprego-de-pessoas-com-deficiencia-e-ou-incapacidade",
+      "name": "Apoio ao emprego de pessoas com deficiência e ou incapacidade",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0014/2026",
+      "codigo_api": "FA0014/2026",
+      "human_code": null,
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "programa_code": "PESSOAS2030",
+      "regional_portals": [
+        "pessoas-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20270101",
+      "data_fim": "20270430",
+      "deadline": null,
+      "budget": "10735492",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/apoio-ao-emprego-de-pessoas-com-deficiencia-e-ou-incapacidade/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "contratacao-de-recursos-humanos-altamente-qualificados-por-pme-territorios-nao-classificados-como-de-baixa-densidade",
+      "name": "Contratação de Recursos Humanos Altamente Qualificados por PME – Territórios não classificados como de Baixa Densidade",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0010/2026",
+      "codigo_api": "FA0010/2026",
+      "human_code": null,
+      "programa": [
+        "CENTRO2030"
+      ],
+      "programa_code": "CENTRO2030",
+      "regional_portals": [
+        "centro-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260501",
+      "data_fim": "20270226",
+      "deadline": null,
+      "budget": "6000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/contratacao-de-recursos-humanos-altamente-qualificados-por-pme-territorios-nao-classificados-como-de-baixa-densidade/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "contratacao-de-recursos-humanos-altamente-qualificados-por-pme-territorios-de-baixa-densidade",
+      "name": "Contratação de Recursos Humanos Altamente Qualificados por PME – Territórios de Baixa Densidade",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0011/2026",
+      "codigo_api": "FA0011/2026",
+      "human_code": null,
+      "programa": [
+        "CENTRO2030"
+      ],
+      "programa_code": "CENTRO2030",
+      "regional_portals": [
+        "centro-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260501",
+      "data_fim": "20270226",
+      "deadline": null,
+      "budget": "4000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/contratacao-de-recursos-humanos-altamente-qualificados-por-pme-territorios-de-baixa-densidade/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "conciliacao-na-ap",
+      "name": "Conciliação na AP",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0106/2026",
+      "codigo_api": "FA0106/2026",
+      "human_code": null,
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "programa_code": "PESSOAS2030",
+      "regional_portals": [
+        "pessoas-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260901",
+      "data_fim": "20261231",
+      "deadline": null,
+      "budget": "4000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/conciliacao-na-ap/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "conciliacao-facil",
+      "name": "Conciliação Fácil",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0107/2026",
+      "codigo_api": "FA0107/2026",
+      "human_code": null,
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "programa_code": "PESSOAS2030",
+      "regional_portals": [
+        "pessoas-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260901",
+      "data_fim": "20261231",
+      "deadline": null,
+      "budget": "5000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/conciliacao-facil/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "conciliacao-entre-trabalho-e-vida-familiar-apoio-a-certificacao-np-4552",
+      "name": "Conciliação entre trabalho e vida familiar -Apoio à Certificação NP 4552",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0112/2026",
+      "codigo_api": "FA0112/2026",
+      "human_code": null,
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "programa_code": "PESSOAS2030",
+      "regional_portals": [
+        "pessoas-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20270101",
+      "data_fim": "20270430",
+      "deadline": null,
+      "budget": "2500000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/conciliacao-entre-trabalho-e-vida-familiar-apoio-a-certificacao-np-4552/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "combate-a-privacao-material",
+      "name": "Combate à privação material",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0093/2026",
+      "codigo_api": "FA0093/2026",
+      "human_code": null,
+      "programa": [
+        "ACORES2030"
+      ],
+      "programa_code": "ACORES2030",
+      "regional_portals": [
+        "acores-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260501",
+      "data_fim": "20260630",
+      "deadline": null,
+      "budget": "4500000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/combate-a-privacao-material/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "cursos-dual",
+      "name": "Cursos Dual",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0092/2026",
+      "codigo_api": "FA0092/2026",
+      "human_code": null,
+      "programa": [
+        "ACORES2030"
+      ],
+      "programa_code": "ACORES2030",
+      "regional_portals": [
+        "acores-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260701",
+      "data_fim": "20260831",
+      "deadline": null,
+      "budget": "3000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/cursos-dual/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "cursos-de-especializacao-tecnologica-cet",
+      "name": "Cursos de Especialização Tecnológica (CET)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0013/2026",
+      "codigo_api": "FA0013/2026",
+      "human_code": null,
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "programa_code": "PESSOAS2030",
+      "regional_portals": [
+        "pessoas-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20270101",
+      "data_fim": "20270430",
+      "deadline": null,
+      "budget": "26000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/cursos-de-especializacao-tecnologica-cet/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "cursos-tecnicos-superiores-profissionais-cursos-tesp-26-28-entidades-privadas",
+      "name": "Cursos Técnicos Superiores Profissionais (Cursos TeSP) 26-28 (entidades privadas)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0042/2026",
+      "codigo_api": "FA0042/2026",
+      "human_code": null,
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "programa_code": "ALGARVE2030",
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260907",
+      "data_fim": "20261030",
+      "deadline": null,
+      "budget": "217500",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/cursos-tecnicos-superiores-profissionais-cursos-tesp-26-28-entidades-privadas/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "cursos-tecnicos-superiores-profissionais-cursos-tesp-8211-entidades-publicas-ciclo-2026-2027",
+      "name": "Cursos Técnicos Superiores Profissionais (Cursos TeSP) – Entidades Públicas – Ciclo 2026/2027",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0059/2026",
+      "codigo_api": "FA0059/2026",
+      "human_code": null,
+      "programa": [
+        "NORTE2030"
+      ],
+      "programa_code": "NORTE2030",
+      "regional_portals": [
+        "norte-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260701",
+      "data_fim": "20260930",
+      "deadline": null,
+      "budget": "7500000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/cursos-tecnicos-superiores-profissionais-cursos-tesp-entidades-publicas-ciclo-2026-2027/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "gabinetes-de-insercao-profissional",
+      "name": "Gabinetes de Inserção Profissional",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0436/2023",
+      "codigo_api": "FA0436/2023",
+      "human_code": null,
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "programa_code": "PESSOAS2030",
+      "regional_portals": [
+        "pessoas-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260601",
+      "data_fim": "20260831",
+      "deadline": null,
+      "budget": "6375000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/gabinetes-de-insercao-profissional/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "formacao-modular-ativos-8211-2-aviso",
+      "name": "Formação Modular/Ativos – 2º Aviso",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0096/2026",
+      "codigo_api": "FA0096/2026",
+      "human_code": null,
+      "programa": [
+        "ACORES2030"
+      ],
+      "programa_code": "ACORES2030",
+      "regional_portals": [
+        "acores-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260901",
+      "data_fim": "20261030",
+      "deadline": null,
+      "budget": "5000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/formacao-modular-ativos-2o-aviso/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "estagios-internacionais-de-jovens-quadros-8211-inov-contacto-28-edicao",
+      "name": "Estágios internacionais de jovens quadros – Inov Contacto – 28ª Edição",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0111/2026",
+      "codigo_api": "FA0111/2026",
+      "human_code": null,
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "programa_code": "ALGARVE2030",
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260515",
+      "data_fim": "20260630",
+      "deadline": null,
+      "budget": "204000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/estagios-internacionais-de-jovens-quadros-inov-contacto-28a-edicao/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 520,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "habitacao-social-e-acessivel",
+      "name": "Habitação Social e Acessível",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0004/2026",
+      "codigo_api": "FA0004/2026",
+      "human_code": null,
+      "programa": [
+        "CENTRO2030"
+      ],
+      "programa_code": "CENTRO2030",
+      "regional_portals": [
+        "centro-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260601",
+      "data_fim": "20270430",
+      "deadline": null,
+      "budget": "38253079",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/habitacao-social-e-acessivel/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "habitacao-social-8211-2-aviso",
+      "name": "Habitação Social – 2.º Aviso",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0085/2026",
+      "codigo_api": "FA0085/2026",
+      "human_code": null,
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "programa_code": "MADEIRA2030",
+      "regional_portals": [
+        "madeira-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260916",
+      "data_fim": "20261016",
+      "deadline": null,
+      "budget": "5000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/habitacao-social-2-o-aviso/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "habitacao-social-8211-1-aviso",
+      "name": "Habitação Social – 1.º Aviso",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0083/2026",
+      "codigo_api": "FA0083/2026",
+      "human_code": null,
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "programa_code": "MADEIRA2030",
+      "regional_portals": [
+        "madeira-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260525",
+      "data_fim": "20260629",
+      "deadline": null,
+      "budget": "5000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/habitacao-social-1-o-aviso/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "habitacao-acessivel-8211-2-aviso",
+      "name": "Habitação Acessível – 2.º Aviso",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0084/2026",
+      "codigo_api": "FA0084/2026",
+      "human_code": null,
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "programa_code": "MADEIRA2030",
+      "regional_portals": [
+        "madeira-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260907",
+      "data_fim": "20261009",
+      "deadline": null,
+      "budget": "10000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/habitacao-acessivel-2-o-aviso/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "habitacao-acessivel-8211-1-aviso",
+      "name": "Habitação Acessível – 1º Aviso",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0082/2026",
+      "codigo_api": "FA0082/2026",
+      "human_code": null,
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "programa_code": "MADEIRA2030",
+      "regional_portals": [
+        "madeira-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260518",
+      "data_fim": "20260626",
+      "deadline": null,
+      "budget": "25000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/habitacao-acessivel-1o-aviso/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 550,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "habitacao-a-custos-acessiveis-habitacao-social",
+      "name": "Habitação a custos acessíveis , Habitação Social",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0030/2026",
+      "codigo_api": "FA0030/2026",
+      "human_code": null,
+      "programa": [
+        "ALGARVE2030"
+      ],
+      "programa_code": "ALGARVE2030",
+      "regional_portals": [
+        "algarve-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260624",
+      "data_fim": "20270629",
+      "deadline": null,
+      "budget": "48000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/habitacao-a-custos-acessiveis-habitacao-social/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "saude-8211-cuidados-saude-primarios-8211-2-aviso",
+      "name": "Saúde – cuidados saúde primários – 2º Aviso",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0097/2026",
+      "codigo_api": "FA0097/2026",
+      "human_code": null,
+      "programa": [
+        "ACORES2030"
+      ],
+      "programa_code": "ACORES2030",
+      "regional_portals": [
+        "acores-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20270201",
+      "data_fim": "20270730",
+      "deadline": null,
+      "budget": "37000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/saude-cuidados-saude-primarios-2o-aviso/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "residencias-universitarias",
+      "name": "Residências Universitárias",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0005/2026",
+      "codigo_api": "FA0005/2026",
+      "human_code": null,
+      "programa": [
+        "CENTRO2030"
+      ],
+      "programa_code": "CENTRO2030",
+      "regional_portals": [
+        "centro-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260601",
+      "data_fim": "20261231",
+      "deadline": null,
+      "budget": "15000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/residencias-universitarias/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "qualificacao-do-sistema-de-promocao-e-protecao-de-criancas-e-jovens-em-perigo-e-promocao-da-desinstitucionalizacao-sppcjp-8211-autonomizacao",
+      "name": "Qualificação do sistema de promoção e proteção de crianças e jovens em perigo e promoção da desinstitucionalização (SPPCJP) – autonomização",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0736/2024",
+      "codigo_api": "FA0736/2024",
+      "human_code": null,
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "programa_code": "PESSOAS2030",
+      "regional_portals": [
+        "pessoas-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260501",
+      "data_fim": "20260731",
+      "deadline": null,
+      "budget": "5875800",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/qualificacao-do-sistema-de-promocao-e-protecao-de-criancas-e-jovens-em-perigo-e-promocao-da-desinstitucionalizacao-sppcjp-autonomizacao/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 520,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "promocao-da-igualdade-remuneratoria-8211-certificacao-np-4588",
+      "name": "Promoção da igualdade remuneratória – Certificação NP 4588",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0104/2026",
+      "codigo_api": "FA0104/2026",
+      "human_code": null,
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "programa_code": "PESSOAS2030",
+      "regional_portals": [
+        "pessoas-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260901",
+      "data_fim": "20261231",
+      "deadline": null,
+      "budget": "3300000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/promocao-da-igualdade-remuneratoria-certificacao-np-4588/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "programa-de-insercao-socioprofissional-8211-3-aviso",
+      "name": "Programa de Inserção Socioprofissional – 3º Aviso",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0201/2025",
+      "codigo_api": "FA0201/2025",
+      "human_code": null,
+      "programa": [
+        "ACORES2030"
+      ],
+      "programa_code": "ACORES2030",
+      "regional_portals": [
+        "acores-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20261001",
+      "data_fim": "20261130",
+      "deadline": null,
+      "budget": "8500000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/programa-de-insercao-socioprofissional-3o-aviso/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "gal-litoral-rural-8211-produtos-de-qualidade-valorizacao-do-pescado-eficiencia-digitalizacao-e-promocao-dos-mercados-locais",
+      "name": "GAL Litoral Rural – Produtos de qualidade (valorização do pescado, eficiência, digitalização e promoção dos mercados locais)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0116/2026",
+      "codigo_api": "FA0116/2026",
+      "human_code": null,
+      "programa": [
+        "MAR2030"
+      ],
+      "programa_code": "MAR2030",
+      "regional_portals": [
+        "mar-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260504",
+      "data_fim": "20270104",
+      "deadline": null,
+      "budget": "300000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/gal-litoral-rural-produtos-de-qualidade-valorizacao-do-pescado-eficiencia-digitalizacao-e-promocao-dos-mercados-locais/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "transparencia-salarial-2-0",
+      "name": "Transparência Salarial 2.0",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0103/2026",
+      "codigo_api": "FA0103/2026",
+      "human_code": null,
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "programa_code": "PESSOAS2030",
+      "regional_portals": [
+        "pessoas-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260601",
+      "data_fim": "20261231",
+      "deadline": null,
+      "budget": "1200000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/transparencia-salarial-2-0/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "siqrh-8211-formacao-empresarial-8211-operacoes-individuais-step",
+      "name": "SIQRH – Formação Empresarial – Operações individuais (STEP)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0099/2026",
+      "codigo_api": "FA0099/2026",
+      "human_code": null,
+      "programa": [
+        "COMPETE2030"
+      ],
+      "programa_code": "COMPETE2030",
+      "regional_portals": [
+        "compete-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260630",
+      "data_fim": "20261030",
+      "deadline": null,
+      "budget": "20000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/siqrh-formacao-empresarial-operacoes-individuais-step/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "siqrh-8211-formacao-empresarial-8211-operacoes-em-conjunto-step",
+      "name": "SIQRH – Formação Empresarial – Operações em conjunto (STEP)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0100/2026",
+      "codigo_api": "FA0100/2026",
+      "human_code": null,
+      "programa": [
+        "COMPETE2030"
+      ],
+      "programa_code": "COMPETE2030",
+      "regional_portals": [
+        "compete-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260630",
+      "data_fim": "20261030",
+      "deadline": null,
+      "budget": "20000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/siqrh-formacao-empresarial-operacoes-em-conjunto-step/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "servicos-e-apoios-reforcados-a-conciliacao-entre-trabalho-e-vida-familiar-8211-igualdade-na-prestacao-de-cuidados",
+      "name": "Serviços e apoios reforçados à conciliação entre trabalho e vida familiar – Igualdade na prestação de cuidados",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0016/2026",
+      "codigo_api": "FA0016/2026",
+      "human_code": null,
+      "programa": [
+        "PESSOAS2030"
+      ],
+      "programa_code": "PESSOAS2030",
+      "regional_portals": [
+        "pessoas-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260701",
+      "data_fim": "20261231",
+      "deadline": null,
+      "budget": "700000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/servicos-e-apoios-reforcados-a-conciliacao-entre-trabalho-e-vida-familiar-igualdade-na-prestacao-de-cuidados/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "refuncionalizacao-de-equipamentos-coletivos-e-qualificacao-do-espacos-publicos-it",
+      "name": "Refuncionalização de equipamentos coletivos e qualificação do espaços públicos (IT)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0048/2026",
+      "codigo_api": "FA0048/2026",
+      "human_code": null,
+      "programa": [
+        "NORTE2030"
+      ],
+      "programa_code": "NORTE2030",
+      "regional_portals": [
+        "norte-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260504",
+      "data_fim": "20261231",
+      "deadline": null,
+      "budget": "5000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/refuncionalizacao-de-equipamentos-coletivos-e-qualificacao-do-espacos-publicos-it/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "reabilitacao-e-regeneracao-urbanas-iti",
+      "name": "Reabilitação e regeneração urbanas (ITI)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0074/2026",
+      "codigo_api": "FA0074/2026",
+      "human_code": null,
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "programa_code": "ALENTEJO2030",
+      "regional_portals": [
+        "alentejo-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260630",
+      "data_fim": "20270630",
+      "deadline": null,
+      "budget": "4500000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/reabilitacao-e-regeneracao-urbanas-iti/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "reabilitacao-e-regeneracao-urbanas-it",
+      "name": "Reabilitação e regeneração urbanas (IT)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0047/2026",
+      "codigo_api": "FA0047/2026",
+      "human_code": null,
+      "programa": [
+        "NORTE2030"
+      ],
+      "programa_code": "NORTE2030",
+      "regional_portals": [
+        "norte-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260504",
+      "data_fim": "20261231",
+      "deadline": null,
+      "budget": "5000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/reabilitacao-e-regeneracao-urbanas-it/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "produtos-turisticos-subregionais-e-locais-it",
+      "name": "Produtos turísticos subregionais e locais (IT)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0046/2026",
+      "codigo_api": "FA0046/2026",
+      "human_code": null,
+      "programa": [
+        "NORTE2030"
+      ],
+      "programa_code": "NORTE2030",
+      "regional_portals": [
+        "norte-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260504",
+      "data_fim": "20260630",
+      "deadline": null,
+      "budget": "5000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/produtos-turisticos-subregionais-e-locais-it/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "patrimonio-cultural-e-natural-it",
+      "name": "Património cultural e natural (IT)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0055/2026",
+      "codigo_api": "FA0055/2026",
+      "human_code": null,
+      "programa": [
+        "NORTE2030"
+      ],
+      "programa_code": "NORTE2030",
+      "regional_portals": [
+        "norte-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260504",
+      "data_fim": "20261231",
+      "deadline": null,
+      "budget": "5000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/patrimonio-cultural-e-natural-it/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "infraestruturas-do-ensino-basico-e-ou-secundario-it",
+      "name": "INFRAESTRUTURAS DO ENSINO BÁSICO E/OU SECUNDÁRIO (IT)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0051/2026",
+      "codigo_api": "FA0051/2026",
+      "human_code": null,
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "programa_code": "ALENTEJO2030",
+      "regional_portals": [
+        "alentejo-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260930",
+      "data_fim": "20270930",
+      "deadline": null,
+      "budget": "26930000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/infraestruturas-do-ensino-basico-e-ou-secundario-it/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "infraestruturas-de-cuidados-de-saude-primarios-it",
+      "name": "Infraestruturas de cuidados de saúde primários (IT)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0008/2026",
+      "codigo_api": "FA0008/2026",
+      "human_code": null,
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "programa_code": "ALENTEJO2030",
+      "regional_portals": [
+        "alentejo-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260930",
+      "data_fim": "20270930",
+      "deadline": null,
+      "budget": "652610.19",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/infraestruturas-de-cuidados-de-saude-primarios-it/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "habitacao-social-e-acessivel-it",
+      "name": "Habitação Social e Acessível (IT)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0006/2026",
+      "codigo_api": "FA0006/2026",
+      "human_code": null,
+      "programa": [
+        "CENTRO2030"
+      ],
+      "programa_code": "CENTRO2030",
+      "regional_portals": [
+        "centro-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260601",
+      "data_fim": "20271231",
+      "deadline": null,
+      "budget": "138584593",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/habitacao-social-e-acessivel-it/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "si-i-038-d-empresarial-para-uma-transicao-justa",
+      "name": "SI I&D Empresarial para uma Transição Justa",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0022/2026",
+      "codigo_api": "FA0022/2026",
+      "human_code": null,
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "programa_code": "ALENTEJO2030",
+      "regional_portals": [
+        "alentejo-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260504",
+      "data_fim": "20261220",
+      "deadline": null,
+      "budget": "5000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/si-id-empresarial-para-uma-transicao-justa/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Privada']. fundo: ."
+    },
+    {
+      "id": "equipamentos-para-apoio-a-formacao-de-reconversao-profissional-ftj",
+      "name": "Equipamentos para apoio à formação de reconversão profissional (FTJ)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0049/2026",
+      "codigo_api": "FA0049/2026",
+      "human_code": null,
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "programa_code": "ALENTEJO2030",
+      "regional_portals": [
+        "alentejo-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260622",
+      "data_fim": "20260807",
+      "deadline": null,
+      "budget": "1000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/equipamentos-para-apoio-a-formacao-de-reconversao-profissional-ftj/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "valorizacao-do-patrimonio-cultural-iti",
+      "name": "Valorização do património cultural (ITI)",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0009/2026",
+      "codigo_api": "FA0009/2026",
+      "human_code": null,
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "programa_code": "ALENTEJO2030",
+      "regional_portals": [
+        "alentejo-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260630",
+      "data_fim": "20270630",
+      "deadline": null,
+      "budget": "9000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/valorizacao-do-patrimonio-cultural-iti/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "assistencia-tecnica-norte2030-2026-2027-oi-empis",
+      "name": "Assistência Técnica NORTE2030 2026/2027 – OI-EMPIS",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0076/2026",
+      "codigo_api": "FA0076/2026",
+      "human_code": null,
+      "programa": [
+        "NORTE2030"
+      ],
+      "programa_code": "NORTE2030",
+      "regional_portals": [
+        "norte-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260504",
+      "data_fim": "20260630",
+      "deadline": null,
+      "budget": "270350",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/assistencia-tecnica-norte2030-2026-2027-oi-empis/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 520,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "assistencia-tecnica-norte2030-2024-2026-8211-oi-i-038-d",
+      "name": "Assistência Técnica NORTE2030 2024/2026 – OI I&D",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0079/2026",
+      "codigo_api": "FA0079/2026",
+      "human_code": null,
+      "programa": [
+        "NORTE2030"
+      ],
+      "programa_code": "NORTE2030",
+      "regional_portals": [
+        "norte-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260504",
+      "data_fim": "20260630",
+      "deadline": null,
+      "budget": "780000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/assistencia-tecnica-norte2030-2024-2026-oi-id/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 520,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "assistencia-tecnica-ftj-8211-alentejo",
+      "name": "Assistência Técnica FTJ – Alentejo",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0050/2026",
+      "codigo_api": "FA0050/2026",
+      "human_code": null,
+      "programa": [
+        "ALENTEJO2030"
+      ],
+      "programa_code": "ALENTEJO2030",
+      "regional_portals": [
+        "alentejo-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260601",
+      "data_fim": "20260710",
+      "deadline": null,
+      "budget": "2000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/assistencia-tecnica-ftj-alentejo/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "assistencia-tecnica-8211-selecao-de-organismos-intermedios-publicos",
+      "name": "Assistência Técnica – Seleção de Organismos Intermédios Públicos",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0115/2026",
+      "codigo_api": "FA0115/2026",
+      "human_code": null,
+      "programa": [
+        "COMPETE2030"
+      ],
+      "programa_code": "COMPETE2030",
+      "regional_portals": [
+        "compete-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260529",
+      "data_fim": "20260731",
+      "deadline": null,
+      "budget": "14000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/assistencia-tecnica-selecao-de-organismos-intermedios-publicos/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 540,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "assistencia-tecnica-8211-3-aviso",
+      "name": "Assistência Técnica – 3º Aviso",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0094/2026",
+      "codigo_api": "FA0094/2026",
+      "human_code": null,
+      "programa": [
+        "ACORES2030"
+      ],
+      "programa_code": "ACORES2030",
+      "regional_portals": [
+        "acores-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260701",
+      "data_fim": "20260930",
+      "deadline": null,
+      "budget": "3500000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/assistencia-tecnica-3o-aviso/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "reinstalacao-e-admissao-por-motivos-humanitarios-2023-2026",
+      "name": "Reinstalação e admissão por motivos humanitários 2023-2026",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0041/2026",
+      "codigo_api": "FA0041/2026",
+      "human_code": null,
+      "programa": [],
+      "programa_code": null,
+      "regional_portals": [],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260501",
+      "data_fim": "20260630",
+      "deadline": null,
+      "budget": "4662000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/reinstalacao-e-admissao-por-motivos-humanitarios-2023-2026/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "regressos-voluntarios-e-reintegracao-nos-paises-de-origem",
+      "name": "Regressos voluntários e reintegração nos países de origem",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0040/2026",
+      "codigo_api": "FA0040/2026",
+      "human_code": null,
+      "programa": [],
+      "programa_code": null,
+      "regional_portals": [],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260601",
+      "data_fim": "20260731",
+      "deadline": null,
+      "budget": "3044924.94",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/regressos-voluntarios-e-reintegracao-nos-paises-de-origem/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 520,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+    },
+    {
+      "id": "oficiais-de-ligacao-de-imigracao",
+      "name": "Oficiais de ligação de imigração",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0038/2026",
+      "codigo_api": "FA0038/2026",
+      "human_code": null,
+      "programa": [],
+      "programa_code": null,
+      "regional_portals": [],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20270101",
+      "data_fim": "20270430",
+      "deadline": null,
+      "budget": "717529.9",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/oficiais-de-ligacao-de-imigracao/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 500,
+      "status": "pending",
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: ."
+    },
+    {
+      "id": "sistema-de-incentivos-de-base-territorial-iibt-do-pinhal-interior",
+      "name": "Sistema de Incentivos de Base Territorial – IIBT do Pinhal Interior",
+      "source_id": "centro-2030",
+      "shard": "pt2030-centro",
+      "aviso_codigo": "FA0248/2025",
+      "detected_date": "2026-04-13",
+      "deadline": null,
+      "budget": "4 000 000 EUR",
+      "regulation_url": 17064,
+      "pdf_url": 17064,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "plano_anual",
+      "notes": "PAA - Plano Anual. Nao e aviso publicado.",
+      "programa": [
+        "CENTRO2030"
+      ],
+      "regional_portals": [
+        "centro-2030"
+      ],
+      "codigo": "FA0248/2025",
+      "fail_count": 0,
+      "cross_portal_match": {
+        "original_codigo": "FA0248/2025",
+        "original_portal": "portugal-2030",
+        "matched_portal": "centro-2030",
+        "matched_codigo": "FA0248/2025",
+        "title_similarity": 1.0,
+        "matched_at": "2026-05-11"
+      },
+      "programa_code": "CENTRO2030",
+      "codigo_api": "FA0248/2025",
+      "data_status": "forecast",
+      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
+      "plano_anual_detected_date": "2026-05-16",
+      "plano_anual_checks": 1,
+      "plano_anual_marker": "plano anual de avisos"
     }
   ],
   "updated": "2026-05-16",
-  "_updated": "2026-05-16"
+  "_updated": "2026-05-16",
+  "_meta_updated": "2026-05-16"
 }
