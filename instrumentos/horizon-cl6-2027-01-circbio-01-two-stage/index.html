@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizonte Europa CL6-2027-01 CIRCBIO-01 - Living Labs para Solucoes Circulares Sistemicas em Cidades e Regioes: Open Capital</title>
+  <meta name="description" content="Topico CIRCBIO-01 da Iniciativa Cidades e Regioes Circulares: Innovation Action em two-stage, 5 milhoes EUR por projeto para living labs que demonstrem solucoes circulares sistemicas a escala urbana e regional.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:54px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:620px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.gold{color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-value.status-planned{color:var(--gold);font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-body{}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-planned{color:var(--gold);font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:38px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" class="active">Biblioteca</a></li>
+    <li><a href="../../conhecimento/atualidade/">Conhecimento</a></li>
+    <li><a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca/">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">Horizonte Europa CL6-2027-01 CIRCBIO-01</span>
+    </nav>
+    <p class="hero-cat">Financiamento Público</p>
+    <h1 class="hero-title">Living Labs para Soluções Circulares Sistémicas em Cidades e Regiões</h1>
+    <p class="hero-tagline">Tópico CIRCBIO-01 do Cluster 6 do Horizonte Europa, dedicado ao deployment da Iniciativa Cidades e Regiões Circulares (CCRI) através de living labs que demonstrem soluções circulares sistémicas a escala urbana e regional.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Programa</span>
+        <span class="meta-value gold">Horizonte Europa, Cluster 6</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Ticket</span>
+        <span class="meta-value">5 milhões EUR por projeto</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Tipo</span>
+        <span class="meta-value">Innovation Action, two-stage</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-planned">Previsto, 1.ª fase 08/04/2027</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca/" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Contexto e Enquadramento</div>
+      <h2 class="section-h2">O que é o tópico CIRCBIO-01</h2>
+      <p class="section-text">A Iniciativa Cidades e Regiões Circulares, a CCRI na sigla em inglês, é o instrumento estruturado da Comissão Europeia para acelerar a transição da economia linear para a circular ao nível municipal e regional. Em vez de financiar tecnologias circulares isoladas, a CCRI desafia consórcios a desenhar soluções sistémicas: combinações de tecnologia, modelo de negócio, governação local e participação cidadã que cobrem várias fileiras de materiais e se inscrevem na infraestrutura urbana real. O tópico HORIZON-CL6-2027-01-CIRCBIO-01-two-stage é o veículo principal de financiamento desta lógica para 2027.</p>
+      <p class="section-text">Trata-se de uma Innovation Action no quadro do Cluster 6 do Horizonte Europa, dedicado a Alimentação, Bioeconomia, Recursos Naturais, Agricultura e Ambiente. O posicionamento dentro do Cluster 6 sinaliza que a leitura de circularidade não se limita a resíduos sólidos urbanos: cruza fluxos alimentares, biomateriais, água e nutrientes, em articulação com bioeconomia regional. A Comissão pretende cofinanciar dois projetos a 5 milhões de euros cada, com orçamento total de 10 milhões para esta linha.</p>
+      <p class="section-text">O formato é two-stage, com primeira fase em formato resumido submetida até 8 de abril de 2027 e segunda fase, reservada às propostas que passem a barra inicial, com submissão integral até 16 de setembro de 2027. A abertura é a 4 de fevereiro de 2027. O calendário deixa pouco mais de dois meses entre abertura e prazo de primeira fase, o que obriga a trabalho preparatório iniciado em 2026.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para que serve</div>
+      <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
+      <p class="section-text">O tópico cobre três necessidades empresariais e institucionais distintas que normalmente seriam tratadas em silos separados. A sua particularidade está na obrigação de as articular num único plano de trabalho com beneficiários partilhados.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">I&amp;D e ciência aplicada:</strong> o tópico financia investigação e demonstração em soluções de economia circular sistémica, incluindo simbioses industriais, gestão integrada de fluxos urbano-rurais, valorização de biorresíduos e novos modelos de circularidade municipal. Exige produção de conhecimento testável em ambiente real, com TRL alvo entre 6 e 8 ao final do projeto.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Sustentabilidade, energia e clima:</strong> a leitura impact da proposta passa pela quantificação de ganhos em descarbonização, eficiência de recursos e redução de pressões ambientais ao nível do território piloto. As soluções devem ser replicáveis e contribuir para os objetivos do European Green Deal e do Circular Economy Action Plan.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Investimento produtivo e digitalização:</strong> os living labs implementam infraestrutura física e digital nos territórios piloto. Há investimento em demonstradores tecnológicos, plataformas digitais de gestão de fluxos circulares e ferramentas de monitorização. Empresas integradas em consórcio são beneficiárias de financiamento direto para esta componente.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Lógica do CCRI</div>
+      <h2 class="section-h2">Living labs como instrumento de transformação territorial</h2>
+      <p class="section-text">A Iniciativa Cidades e Regiões Circulares parte de uma constatação prática: a circularidade não se decreta por regulamento. Acontece em territórios concretos, com atores locais que partilham fluxos físicos, governação e mercado. Living labs neste contexto não são pilotos de demonstração tecnológica autocontidos. São ecossistemas territoriais onde autarquias, empresas, organizações de I&amp;D e cidadãos co-produzem soluções, testam-nas em escala real e geram aprendizagem replicável.</p>
+      <p class="section-text">O tópico CIRCBIO-01 exige que cada projeto demonstre soluções circulares sistémicas em pelo menos dois territórios europeus distintos, com cobertura geográfica e socioeconómica diferenciada. A obrigação tem propósito: a Comissão quer aprendizagem comparada que permita transferir soluções entre contextos. Uma proposta com dois pilotos na mesma sub-região é estruturalmente mais fraca do que uma proposta que cubra contextos urbanos e periurbanos, ou um território de alta densidade industrial e outro rural com bioeconomia.</p>
+      <div class="highlight-box">
+        <div class="highlight-box-title">A diferença entre solução circular e solução sistémica</div>
+        <div class="highlight-box-text">Uma solução circular trata uma fileira ou um material específico, por exemplo reciclagem de têxteis, valorização de biorresíduos urbanos ou simbiose de águas residuais. Uma solução sistémica articula várias fileiras num desenho integrado: o calor residual da industria alimenta estufas urbanas, os biorresíduos vão para anaerobiose com produção de biometano que abastece transportes públicos, o composto resultante volta para agricultura periurbana que fornece a cantina escolar. Os avaliadores leem propostas com lente sistémica e penalizam as que só tratam uma fileira por mais bem trabalhada que esteja.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Estrutura do Financiamento</div>
+      <h2 class="section-h2">Modelo de subvenção e parâmetros</h2>
+      <p class="section-text">A Innovation Action é o instrumento de financiamento adequado para TRL alto. Ao contrário das Research and Innovation Actions (RIA), que financiam investigação em fases iniciais com cofinanciamento de 100 por cento dos custos elegíveis, as Innovation Actions cobrem 60 a 70 por cento dos custos para entidades com fim lucrativo e até 100 por cento para entidades sem fim lucrativo. Esta distinção tem implicações orçamentais relevantes para empresas integradas em consórcio.</p>
+      <table class="art-table">
+        <thead><tr><th>Parâmetro</th><th>Valor</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Programa</strong></td><td>Horizonte Europa, Pilar II, Cluster 6</td></tr>
+          <tr><td><strong>Call</strong></td><td>HORIZON-CL6-2027-01-two-stage</td></tr>
+          <tr><td><strong>Tópico</strong></td><td>CIRCBIO-01 (Living labs CCRI)</td></tr>
+          <tr><td><strong>Tipo de ação</strong></td><td>HORIZON-IA (Innovation Action)</td></tr>
+          <tr><td><strong>Contribuição UE por projeto</strong></td><td>5 milhões EUR</td></tr>
+          <tr><td><strong>Projetos esperados</strong></td><td>2</td></tr>
+          <tr><td><strong>Orçamento total do tópico</strong></td><td>10 milhões EUR</td></tr>
+          <tr><td><strong>Procedimento</strong></td><td>Two-stage, primeira fase resumida</td></tr>
+          <tr><td><strong>Abertura</strong></td><td>4 de fevereiro de 2027</td></tr>
+          <tr><td><strong>Deadline 1.ª fase</strong></td><td>8 de abril de 2027</td></tr>
+          <tr><td><strong>Deadline 2.ª fase</strong></td><td>16 de setembro de 2027</td></tr>
+        </tbody>
+      </table>
+      <p class="section-text">Com apenas dois projetos esperados e ticket fixo a 5 milhões, a competitividade é elevada. Cada consórcio competirá com pares de qualidade europeia, e a margem entre a proposta classificada em segundo lugar e a em terceiro pode ser pequena. A leitura prática é que propostas com excellence média e impact mediano não passam. A barra é alta em ambos os critérios.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Elegibilidade e Consórcio</div>
+      <h2 class="section-h2">Quem pode candidatar-se</h2>
+      <p class="section-text">Aplicam-se as regras gerais do Horizonte Europa. O consórcio mínimo é de três entidades legais independentes, sediadas em três Estados-Membros da UE ou Países Associados diferentes, sendo pelo menos uma de um Estado-Membro. Para um tópico CCRI competitivo, esta composição mínima é manifestamente insuficiente. As propostas vencedoras integram tipicamente entre dez e quinze parceiros, com configuração que cobre vários atores estruturais.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Autarquias e regiões piloto:</strong> municípios ou regiões com mandato político explícito para integrar a transição circular nos seus instrumentos de planeamento. A presença formal de autoridades públicas como beneficiárias é critério estrutural, não decorativo. Sem mandato político, o living lab não tem ancoragem institucional.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Centros de I&amp;D e universidades:</strong> com produção em economia circular sistémica, análise de fluxos de materiais, simbiose industrial, ciência dos sistemas urbanos ou bioeconomia regional. Espera-se análise quantitativa de impacto com metodologias robustas (LCA territorial, MFA, indicadores de circularidade).</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Empresas operadoras locais:</strong> empresas de gestão de resíduos, energia, água, alimentação, logística urbana, agroindústria periurbana, com posição efetiva nos territórios piloto. São responsáveis pela implementação operacional dos demonstradores.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Atores intermediários:</strong> agências de desenvolvimento regional, clusters, câmaras de comércio, fundações com mandato territorial. Asseguram replicação e ligação a outros territórios fora do consórcio.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Organizações da sociedade civil:</strong> obrigatórias para o multi-actor approach. Cooperativas, associações de cidadãos, fundações ambientais, organizações de produtores. A leitura impact distingue propostas que tratam estes atores como beneficiários efetivos das que os tratam como audiência.</li>
+      </ul>
+      <div class="highlight-box">
+        <div class="highlight-box-title">Articulação obrigatória com a comunidade CCRI</div>
+        <div class="highlight-box-text">As propostas têm de articular-se de forma operacional com a comunidade da Iniciativa Cidades e Regiões Circulares já constituída. Isto significa identificar projetos CCRI anteriores cujas aprendizagens vão ser capitalizadas, mapear os Project Officers e Pilots da iniciativa relevantes para o tema e prever tarefas dedicadas para participação em clustering activities, troca de experiências e contributo para o repositório agregado da CCRI. Propostas que apresentam o consórcio como ilha isolada são penalizadas.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Posicionamento Português</div>
+      <h2 class="section-h2">Oportunidade para municípios, empresas e centros de I&amp;D portugueses</h2>
+      <p class="section-text">Portugal tem trabalho de base relevante para integrar consórcios competitivos neste tópico. O Plano de Ação para a Economia Circular nacional, aprovado em 2017 e em revisão sob os instrumentos PT2030, criou agendas regionais com base territorial em CCDR Norte, CCDR Centro e CIM Algarve, entre outras. Vários municípios têm experiência piloto com simbiose industrial, valorização de biorresíduos urbanos, reabilitação circular de edificado e logística urbana sustentável.</p>
+      <p class="section-text">Do lado científico, a Universidade Nova de Lisboa (CENSE), o ISQ, o LNEG, a Universidade do Minho (CTAC), o ISCTE e a Universidade de Aveiro têm produção continuada em economia circular, análise de fluxos de materiais, simbiose industrial e LCA. Várias destas instituições já participaram em projetos CCRI ou H2020 Circular Economy de chamadas anteriores e mantêm ligações operacionais com a comunidade europeia.</p>
+      <p class="section-text">Do lado empresarial, operadores como EGF e Suma na gestão de resíduos, EDP nas redes urbanas de energia, parceiros do setor agroalimentar com plantas em zonas periurbanas, têxteis do cluster do Norte e empresas de logística urbana com presença em Lisboa, Porto e regiões intermédias são parceiros naturais. A oportunidade específica reside em três pontos. Primeiro, escala adequada: cidades médias portuguesas (entre 100 mil e 350 mil habitantes) são tamanho ideal para living labs CCRI, suficientemente complexas para gerar aprendizagem e suficientemente manejáveis para implementação. Segundo, governação multinível bem estabelecida entre municípios, CIM e CCDR, que facilita ancoragem institucional. Terceiro, fileiras agroalimentares e bioeconómicas com presença real no território, que permitem cruzar circularidade urbana com bioeconomia regional, dimensão que o tópico valoriza pelo seu posicionamento no Cluster 6.</p>
+    </div>
+
+    <div class="art-divider"></div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">Um tópico com apenas dois grants esperados e barra elevada em excellence e impact deixa pouca margem para propostas medianas. A diferença entre uma proposta selecionada e uma proposta rejeitada em fase final está em quatro elementos que costumam fazer diferença material.</p>
+      <p class="section-text">Primeiro, a primeira fase em formato resumido é decidida em poucas páginas. A tentação de condensar a Parte B integral nessa versão produz resumos pouco diferenciados que falham na barra inicial. As propostas competitivas tratam a primeira fase como peça autónoma, com foco em diferenciação científica e impacto sistémico, deixando o detalhe operacional para a segunda fase. Recomenda-se redação dedicada à primeira fase, com peer review interno antes de submeter.</p>
+      <p class="section-text">Segundo, a lógica sistémica não pode ser cosmética. Avaliadores percebem rapidamente quando o consórcio agrupa três pilotos paralelos por fileira (resíduos, energia, água) sem articulação operacional. Propostas vencedoras desenham os fluxos cruzados desde a fase de preparação, com indicadores transversais quantificáveis e work packages dedicados a integração metodológica.</p>
+      <p class="section-text">Terceiro, a participação efetiva de cidadãos e organizações da sociedade civil distingue propostas vencedoras. Multi-actor approach não é incluir uma ONG no consórcio como observadora. É desenhar tarefas onde cidadãos co-decidem prioridades, validam soluções e participam em mecanismos de governação dos demonstradores. Propostas que tratam este elemento como caixa a marcar perdem pontos em impact.</p>
+      <p class="section-text">Quarto, a estratégia de replicação tem de ser operacional. A Comissão pretende soluções que se transfiram para outros territórios além dos pilotos. Propostas competitivas identificam desde a candidatura entre cinco a oito territórios europeus interessados em adotar os resultados, com cartas de intenção formal e mecanismos de transferência desenhados como entregáveis. Para municípios, regiões, empresas e centros de I&amp;D portugueses interessados em coordenar ou integrar consórcios neste tópico, sugerimos uma conversa preliminar focada em três pontos: identificação do território piloto defensável com mandato político e dados disponíveis, mapeamento de parceiros europeus com expertise complementar e desenho de uma narrativa de impacto sistémico que articule o piloto português com a comunidade CCRI agregada.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autor</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">Horizonte Europa</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Cluster</div>
+        <div class="sidebar-fact-val">6 - Alimentação, Bioeconomia e Recursos</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Call</div>
+        <div class="sidebar-fact-val">HORIZON-CL6-2027-01-two-stage</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tópico</div>
+        <div class="sidebar-fact-val">CIRCBIO-01 (Living labs CCRI)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Tipo de ação</div>
+        <div class="sidebar-fact-val">HORIZON-IA</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Ticket UE</div>
+        <div class="sidebar-fact-val">5 milhões EUR</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Projetos esperados</div>
+        <div class="sidebar-fact-val">2</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Orçamento total</div>
+        <div class="sidebar-fact-val">10 milhões EUR</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Localização</div>
+        <div class="sidebar-fact-val">UE e Países Associados</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Mínimo territórios piloto</div>
+        <div class="sidebar-fact-val">2 territórios distintos</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-planned">Previsto, 1.ª fase 08/04/2027</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Quer estruturar um living lab CCRI com município português e parceiros europeus em circularidade sistémica?</div>
+      <a href="https://calendly.com/opencapital" target="_blank" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../horizonte-europa/" class="related-link">
+        <span class="related-link-name">Horizonte Europa</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-cl6-2027-01/" class="related-link">
+        <span class="related-link-name">Horizon CL6-2027-01 Bioeconomia</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-cl6-2026-01-circbio-02/" class="related-link">
+        <span class="related-link-name">Horizon CL6 CIRCBIO-02 2026</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../horizon-miss-2026-04-cit-neb-b4p-ccri-03/" class="related-link">
+        <span class="related-link-name">CCRI Bauhaus Cities 2026</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
