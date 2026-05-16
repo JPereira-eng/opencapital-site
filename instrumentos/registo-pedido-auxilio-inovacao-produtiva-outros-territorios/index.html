@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+  <title>Registo de Pedido de Auxílio: SICE Inovação Produtiva, Outros Territórios | Open Capital</title>
+  <meta name="description" content="O RPA do SICE Inovação Produtiva nos territórios sem baixa densidade permite às PME iniciar trabalhos antes do aviso de candidatura, garantindo o efeito de incentivo do RGIC.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0;}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);transition:var(--transition);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .nav-mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--navy);padding:24px 32px 32px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:199;}
+    .nav-mobile-menu.open{display:block;}
+    .nav-mobile-menu a{display:block;font-size:15px;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,0.06);transition:var(--transition);}
+    .nav-mobile-menu a:hover{color:var(--white);}
+    .nav-mobile-cta{display:inline-block!important;margin-top:22px;font-size:14px;font-weight:600;color:var(--white)!important;border:1px solid rgba(255,255,255,0.28);padding:12px 24px;}
+    .article-hero{background:var(--navy);padding:160px 80px 80px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-120px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:860px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:44px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat{font-size:13px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+    .hero-title{font-size:50px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:18px;}
+    .hero-tagline{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:620px;margin-bottom:36px;}
+    .hero-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-item{display:flex;flex-direction:column;gap:4px;}
+    .meta-label{font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.28);}
+    .meta-value{font-size:15px;font-weight:500;color:var(--white);}
+    .meta-value.status-open{color:#2E7D52;font-weight:600;}
+    .meta-value.status-closed{color:#A63228;font-weight:600;}
+    .meta-value.status-cont{color:#2E7D52;font-weight:600;}
+    .meta-sep{width:1px;height:36px;background:rgba(255,255,255,0.10);}
+    .back-bar{background:#FAFAFA;border-top:1px solid var(--grey-light);border-bottom:1px solid var(--grey-light);padding:16px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;padding:80px 80px 96px;align-items:start;}
+    .article-section{margin-bottom:56px;}
+    .article-section:last-child{margin-bottom:0;}
+    .section-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .section-h2{font-size:28px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+    .section-text{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:20px;}
+    .section-text:last-child{margin-bottom:0;}
+    .article-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;margin:20px 0;}
+    .article-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .article-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .highlight-box{background:#FAFAFA;border-left:3px solid var(--gold);padding:24px 28px;margin:28px 0;}
+    .highlight-box-title{font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .highlight-box-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stat-cell{background:var(--white);padding:24px 20px;}
+    .stat-num{font-size:30px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:14px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:48px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:28px;margin-bottom:20px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-card-label{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .sidebar-fact{display:flex;flex-direction:column;gap:3px;padding:12px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-fact:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-fact-key{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-fact-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-fact-val.val-open{color:#2E7D52;font-weight:600;}
+    .sidebar-fact-val.val-closed{color:#A63228;font-weight:600;}
+    .sidebar-fact-val.val-cont{color:#2E7D52;font-weight:600;}
+    .sidebar-cta{background:var(--navy);padding:28px;margin-bottom:20px;}
+    .sidebar-cta-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:10px;}
+    .sidebar-cta-text{font-size:15px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;margin-bottom:20px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:13px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:14px 20px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-title{font-size:11px;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .related-link{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-link:last-child{border-bottom:none;}
+    .related-link-name{font-size:15px;font-weight:500;color:var(--navy);transition:var(--transition);}
+    .related-link:hover .related-link-name{color:var(--gold);}
+    .related-link-arrow{font-size:14px;font-weight:300;color:var(--grey-mid);transition:var(--transition);}
+    .related-link:hover .related-link-arrow{color:var(--gold);transform:translateX(3px);}
+    .ref-api{font-size:11px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);letter-spacing:0.05em;}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:60px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 28px 60px;}.hero-title{font-size:36px;}.hero-tagline{font-size:17px;}.article-layout{padding:40px 24px 60px;gap:36px;}.stats-row{grid-template-columns:1fr 1fr!important;}.back-bar{padding:14px 24px;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca.html" class="active">Biblioteca</a></li>
+    <li><a href="../../conhecimento.html">Conhecimento</a></li>
+    <li><a href="../../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos.html">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Oportunidades</a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros.html">Parceiros</a>
+        <a href="../../carreiras.html">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca.html">Biblioteca</a>
+  <a href="../../conhecimento.html">Conhecimento</a>
+  <a href="../../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos.html">Sobre Nós</a>
+  <a href="../../parceiros.html">Parceiros</a>
+  <a href="../../carreiras.html">Carreiras</a>
+  <a href="https://calendly.com/opencapital" class="nav-mobile-cta">Contactar</a>
+</div>
+
+<section class="article-hero">
+  <div class="article-hero-inner">
+    <nav class="breadcrumb">
+      <a href="../../">Início</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../../biblioteca.html">Biblioteca</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">RPA SICE Inovação Produtiva</span>
+    </nav>
+    <p class="hero-cat">Financiamento Público</p>
+    <h1 class="hero-title">Registo de Pedido de Auxílio: SICE Inovação Produtiva, Outros Territórios</h1>
+    <p class="hero-tagline">Mecanismo prévio para que PME nos territórios sem baixa densidade possam iniciar projetos de inovação produtiva antes da abertura do aviso, garantindo o efeito de incentivo exigido pelo Regulamento Geral de Isenção por Categoria.</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="meta-label">Código</span>
+        <span class="meta-value">05/RPA/2025</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Programa</span>
+        <span class="meta-value">COMPETE 2030</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Enquadramento</span>
+        <span class="meta-value">RGIC art. 6.º</span>
+      </div>
+      <div class="meta-sep"></div>
+      <div class="meta-item">
+        <span class="meta-label">Estado</span>
+        <span class="meta-value status-cont">Submissão contínua</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="back-bar">
+  <a href="../../biblioteca.html" class="back-link">&larr; Voltar ao catálogo de instrumentos</a>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">O que é</div>
+      <h2 class="section-h2">Um registo prévio, não uma candidatura</h2>
+      <p class="section-text">O Registo de Pedido de Auxílio (RPA) é o mecanismo formal que permite às PME localizadas nos territórios sem classificação de baixa densidade dar início aos trabalhos de um projeto de Inovação Produtiva antes da abertura do respetivo aviso de candidatura ao Sistema de Incentivos à Competitividade Empresarial (SICE). Foi publicado pelo COMPETE 2030 a 30 de julho de 2025, sob o código 05/RPA/2025.</p>
+      <p class="section-text">Não é, portanto, uma candidatura a fundo perdido. É um pedido formal de auxílio submetido à autoridade de gestão que produz um único efeito jurídico essencial: fixa a data a partir da qual os trabalhos do projeto podem começar, sem que a empresa perca o direito a ser apoiada pelo aviso SICE que venha a ser publicado mais tarde.</p>
+      <p class="section-text">A racionalidade do instrumento decorre do artigo 6.º do Regulamento (UE) n.º 651/2014, conhecido como Regulamento Geral de Isenção por Categoria (RGIC). Esse artigo exige que qualquer auxílio com finalidade regional produza um efeito de incentivo real: o projeto não pode ter começado antes de existir um pedido de auxílio formalizado. O RPA é exatamente esse pedido. Sem ele, uma empresa que avance com o investimento antes da publicação do aviso fica impedida de candidatar essas mesmas despesas, mesmo que o projeto se enquadre tecnicamente.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Para que serve</div>
+      <h2 class="section-h2">Necessidades que este instrumento resolve</h2>
+      <p class="section-text">O RPA não financia diretamente o projeto. Resolve um problema estritamente regulatório e de timing, mas com consequências materiais relevantes para a viabilidade do investimento.</p>
+      <ul class="article-list">
+        <li><strong style="color:var(--navy);font-weight:600;">Investimento produtivo:</strong> o RPA é o gatilho regulatório que permite à PME iniciar trabalhos de inovação produtiva (compra de equipamento, contratos com fornecedores, obras) sem aguardar pelo aviso. Para empresas com janelas de mercado curtas, esta margem temporal pode determinar a viabilidade do projeto.</li>
+        <li><strong style="color:var(--navy);font-weight:600;">Tesouraria, crédito e garantias:</strong> dado que o aviso correspondente combinará subvenção com instrumento financeiro (linha de crédito europeia ainda em preparação), o RPA permite à empresa estruturar antecipadamente o calendário de tesouraria do projeto, sabendo que o cofinanciamento ficará protegido pela data do registo.</li>
+      </ul>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Contexto regulamentar</div>
+      <h2 class="section-h2">Porque existe este registo</h2>
+      <p class="section-text">A Deliberação n.º 45/2024/PL da Comissão Interministerial de Coordenação plenária do Portugal 2030 introduziu uma diferenciação positiva a favor dos territórios de baixa densidade na tipologia Inovação Produtiva, prevista no Regulamento Específico da Área Temática Inovação e Transição Digital (REITD), Portaria n.º 103-A/2023.</p>
+      <p class="section-text">Para esses territórios, foi publicado o aviso MPr-2025-9, com candidaturas abertas. Para os restantes territórios (Norte, Centro, Lisboa, Alentejo e Algarve, fora das zonas classificadas como baixa densidade), o instrumento que será mobilizado é híbrido: combina uma subvenção com um instrumento financeiro (linha de crédito financiada por fundos europeus), ainda em preparação técnica. A publicação do aviso de candidatura nesses territórios depende, portanto, da finalização desse instrumento financeiro.</p>
+      <p class="section-text">Entretanto, e enquanto o aviso não é publicado, as empresas que pretendam iniciar projetos nessa tipologia podem submeter o RPA. A submissão fixa a data legal de pedido de auxílio para efeitos do RGIC, e protege as despesas elegíveis que venham a ser executadas após essa data.</p>
+      <div class="highlight-box">
+        <div class="highlight-box-title">Acórdão Eesti Pagar AS</div>
+        <div class="highlight-box-text">O regulamento sublinha que o efeito de incentivo deve respeitar integralmente o Acórdão do Tribunal de Justiça da União Europeia no caso Eesti Pagar AS, de 5 de março de 2019. A jurisprudência fixou que o pedido de auxílio tem de ser efetivamente prévio ao início dos trabalhos, sem exceções, sob pena de o auxílio violar o direito da União e ter de ser recuperado. O RPA cumpre esta exigência.</div>
+      </div>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Conceito-chave</div>
+      <h2 class="section-h2">O que conta como início dos trabalhos</h2>
+      <p class="section-text">A definição operacional do que constitui "início dos trabalhos" é fundamental, porque qualquer ato que se enquadre nessa definição antes da submissão do RPA descalifica as despesas associadas. O n.º 23 do artigo 2.º do RGIC define dois marcos alternativos, prevalecendo o que ocorrer primeiro:</p>
+      <ul class="article-list">
+        <li>O <strong style="color:var(--navy);font-weight:600;">início dos trabalhos de construção</strong> diretamente relacionados com o investimento.</li>
+        <li>O <strong style="color:var(--navy);font-weight:600;">primeiro compromisso firme</strong> de encomenda ou qualquer outro ato que torne o investimento irreversível, incluindo contratos vinculativos com fornecedores, ordens de compra firmes ou pagamentos não restituíveis.</li>
+      </ul>
+      <p class="section-text">Em sentido inverso, há atos preparatórios que <strong style="color:var(--navy);font-weight:600;">não</strong> são considerados início dos trabalhos e podem ser realizados antes do RPA sem prejuízo da elegibilidade:</p>
+      <ul class="article-list">
+        <li>Compra de terrenos.</li>
+        <li>Obtenção de licenças e autorizações administrativas.</li>
+        <li>Realização de estudos de viabilidade, projetos de engenharia e trabalhos preparatórios.</li>
+      </ul>
+      <p class="section-text">Esta distinção é particularmente sensível em projetos industriais com componente de obra civil ou em encomendas de equipamentos com longos prazos de entrega. O critério prático é simples: qualquer compromisso vinculativo perante terceiros que comprometa a empresa ao investimento exige RPA submetido em data anterior.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Processo de submissão</div>
+      <h2 class="section-h2">Como se formaliza o registo</h2>
+      <p class="section-text">A submissão do RPA é eletrónica, através do formulário disponível na Plataforma de Acesso Simplificado do COMPETE 2030. A informação a prestar reproduz, em síntese, os elementos essenciais que constarão depois da candidatura formal ao aviso SICE.</p>
+      <table class="art-table">
+        <thead><tr><th>Elemento</th><th>Conteúdo a prestar</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Identificação</strong></td><td>Entidade beneficiária, setor de atividade (CAE), dimensão (PME)</td></tr>
+          <tr><td><strong>Operação</strong></td><td>Descrição, objetivos, datas de início e conclusão previstas</td></tr>
+          <tr><td><strong>Localização</strong></td><td>Local físico dos investimentos a realizar</td></tr>
+          <tr><td><strong>Investimento</strong></td><td>Lista detalhada dos custos da operação, quadro de investimentos</td></tr>
+          <tr><td><strong>Apoio</strong></td><td>Forma de apoio pretendida e montante de financiamento público necessário</td></tr>
+          <tr><td><strong>Anexos</strong></td><td>Documentação adicional nos termos do Anexo VII das Orientações OAR, Comunicação da Comissão C(2021) 2594</td></tr>
+        </tbody>
+      </table>
+      <p class="section-text">Após a submissão, a empresa recebe um comprovativo digital de receção do RPA. Este comprovativo é a prova jurídica de que o pedido de auxílio foi formalizado em data certa, mas não constitui qualquer vinculação à concessão futura de financiamento. A decisão de apoio só será tomada no âmbito da candidatura formal ao aviso, quando este for publicado, e sujeita a todos os critérios técnicos, mérito e dotação disponível.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Articulação com o aviso futuro</div>
+      <h2 class="section-h2">O que acontece depois do RPA</h2>
+      <p class="section-text">A submissão do RPA cria uma obrigação correspondente: a empresa deve apresentar candidatura ao primeiro aviso de Inovação Produtiva subsequente à data do registo, mantendo a configuração e o calendário apresentados, com possíveis ajustamentos aceites na decisão de financiamento. O RPA e a candidatura subsequente formam, assim, um par jurídico inseparável.</p>
+      <p class="section-text">Esta ligação tem duas implicações práticas. A primeira é que a empresa não pode usar o RPA como mero "guarda-lugar" e depois alterar substancialmente o projeto. A coerência entre o que foi registado e o que é candidatado é objeto de análise. A segunda é que, se a empresa decidir não avançar com a candidatura formal, o RPA caduca sem efeitos jurídicos materiais para a empresa, mas pode ter consequências reputacionais perante a autoridade de gestão em futuras candidaturas.</p>
+      <p class="section-text">O RPA é divulgado em paralelo nos sites do COMPETE 2030 e dos programas regionais Norte, Centro, Lisboa, Alentejo e Algarve, refletindo a abrangência territorial do mecanismo.</p>
+    </div>
+
+    <div class="article-section reveal">
+      <div class="section-eyebrow">Perspetiva Open Capital</div>
+      <h2 class="section-h2">O que recomendamos</h2>
+      <p class="section-text">O RPA não é um instrumento de financiamento no sentido convencional, mas é uma peça regulatória que pode salvar ou destruir o enquadramento de um projeto industrial. A nossa primeira recomendação é tratá-lo com o mesmo rigor com que se trata uma candidatura: o conteúdo submetido fixa expectativas e cria ónus de coerência para a candidatura futura. Submeter um RPA mal estruturado, com investimento subdimensionado ou cronograma irrealista, complica a posterior candidatura formal.</p>
+      <p class="section-text">A segunda recomendação é de timing. Para empresas com projetos de inovação produtiva nos territórios fora da baixa densidade que estejam a ponderar avançar com encomendas firmes a fornecedores ou início de obra nos próximos meses, o RPA não é opcional. É a única forma legal de garantir a elegibilidade dessas despesas ao futuro aviso SICE. Adiar a submissão para "quando o aviso sair" é decisão que invalida automaticamente todas as despesas comprometidas no entretanto.</p>
+      <p class="section-text">A terceira recomendação respeita à interação com os fornecedores. É frequente, em projetos industriais, que a negociação de equipamentos sofisticados (linhas de produção, sistemas robotizados, infraestruturas de processo) envolva cartas de intenção, reservas de capacidade ou contratos preliminares meses antes da encomenda final. A linha entre "ato preparatório não vinculativo" e "compromisso firme que torna o investimento irreversível" é tecnicamente fina e juridicamente sensível. Recomenda-se submeter o RPA antes de qualquer documento contratual com peso vinculativo, mesmo que negociado a montante.</p>
+      <p class="section-text">A quarta nota é sobre o aviso que se segue. O instrumento financeiro híbrido para os territórios fora da baixa densidade ainda está em preparação, o que significa que o aviso correspondente pode demorar vários meses a ser publicado. Empresas com projetos críticos em termos de janela de mercado têm de pesar dois cenários: avançar com o investimento próprio agora, sem apoio, ou submeter RPA, esperar pelo aviso e aceitar o atraso. A escolha depende de variáveis específicas (custo de capital, urgência competitiva, dimensão do investimento), e merece análise caso a caso.</p>
+      <p class="section-text">Finalmente, vale a pena lembrar que o aviso SICE Inovação Produtiva nos territórios de baixa densidade (MPr-2025-9) já se encontra aberto. Empresas localizadas em regiões classificadas como baixa densidade não devem usar este RPA, mas sim candidatar-se diretamente ao aviso existente. O RPA aplica-se exclusivamente a empresas localizadas em territórios fora da baixa densidade, que aguardam a publicação do aviso híbrido.</p>
+    </div>
+
+    <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+  </article>
+
+  <aside class="article-sidebar">
+    <div class="sidebar-author">
+      <div class="sidebar-author-label">Autora</div>
+      <div class="sidebar-author-inner">
+        <img src="../../Retratos Equipa/retrato_maraferreira.png" alt="Mara Ferreira" class="sidebar-author-photo">
+        <div>
+          <div class="sidebar-author-name">Mara Ferreira</div>
+          <div class="sidebar-author-role">Técnica de Candidaturas e Incentivos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-label">Factos Rápidos</div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Código</div>
+        <div class="sidebar-fact-val">05/RPA/2025</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Programa</div>
+        <div class="sidebar-fact-val">COMPETE 2030</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Publicação</div>
+        <div class="sidebar-fact-val">30 de julho de 2025</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Natureza</div>
+        <div class="sidebar-fact-val">Registo prévio (não candidatura)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Base legal</div>
+        <div class="sidebar-fact-val">Art. 6.º Reg. UE 651/2014 (RGIC)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Beneficiários</div>
+        <div class="sidebar-fact-val">PME, Inovação Produtiva</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Localização</div>
+        <div class="sidebar-fact-val">Norte, Centro, Lisboa, Alentejo, Algarve (territórios sem baixa densidade)</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Submissão</div>
+        <div class="sidebar-fact-val">Plataforma Acesso Simplificado COMPETE 2030</div>
+      </div>
+      <div class="sidebar-fact">
+        <div class="sidebar-fact-key">Estado</div>
+        <div class="sidebar-fact-val val-cont">Submissão contínua</div>
+      </div>
+    </div>
+
+    <div class="sidebar-cta">
+      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-text">Vai iniciar um projeto de Inovação Produtiva nos próximos meses? Ajudamos a estruturar o RPA para proteger a elegibilidade das despesas no futuro aviso SICE.</div>
+      <a href="https://calendly.com/opencapital" target="_blank" class="sidebar-cta-btn">Contactar</a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-related-title">Instrumentos relacionados</div>
+      <a href="../sice-inovacao-produtiva-outros-territorios/" class="related-link">
+        <span class="related-link-name">SICE Inovação Produtiva, Outros Territórios</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../step-inovacao-produtiva-digital-biotecnologia/" class="related-link">
+        <span class="related-link-name">STEP Inovação Produtiva: Digital e Biotecnologia</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../step-inovacao-produtiva-energia/" class="related-link">
+        <span class="related-link-name">STEP Inovação Produtiva: Energia</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../sice-internacionalizacao-pme/" class="related-link">
+        <span class="related-link-name">SICE Internacionalização das PME</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+      <a href="../../biblioteca.html" class="related-link">
+        <span class="related-link-name">Ver todos os instrumentos</span>
+        <span class="related-link-arrow">&rarr;</span>
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+  hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

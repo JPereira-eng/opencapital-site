@@ -2348,40 +2348,6 @@
       "promoted_date": "2026-05-12",
       "priority_score": 540,
       "data_status": "forecast"
-    },
-    {
-      "id": "registo-pedido-auxilio-inovacao-produtiva-outros-territorios",
-      "name": "Registo Pedido Auxílio - Inovação Produtiva – Outros Territórios",
-      "source_id": "compete-2030",
-      "shard": "pt2030-compete",
-      "codigo_api": "05/RPA/2025",
-      "aviso_codigo": "05/RPA/2025",
-      "human_code": null,
-      "programa_code": "COMPETE2030",
-      "programa": [
-        "COMPETE2030"
-      ],
-      "regional_portals": [
-        "compete-2030"
-      ],
-      "detected_date": "2026-05-13",
-      "data_status": "verified",
-      "state": "aberto",
-      "deadline": null,
-      "budget": null,
-      "regulation_url": "https://compete2030.gov.pt/avisos/registo-pedido-auxilio-inovacao-produtiva-outros-territorios_rpa-2025-5/",
-      "pdf_url": null,
-      "regulation_local": "regulamentos/compete-2030/registo-pedido-auxilio-inovacao-produtiva-outros-territorios.txt",
-      "priority_score": 500,
-      "status": "ready",
-      "notes": "Codigo: 05/RPA/2025; COMPETE 2030; detectado via WebFetch (chrome unavailable)",
-      "fail_count": 0,
-      "download_error": "WebFetch conteudo insuficiente (<300 palavras de conteudo real) - pagina e curto registo de RPA, sem aviso publicado completo",
-      "last_fail_date": "2026-05-13",
-      "fallback_tried": [
-        "2b",
-        "2b"
-      ]
     }
   ],
   "items": [],
