@@ -3710,13 +3710,13 @@
       "priority_score": 510,
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 2,
+      "plano_anual_checks": 3,
       "plano_anual_source_post": 15483,
       "plano_anual_portal": "https://acores.portugal2030.pt",
       "fallback_tried": [
         "2b-acf-all"
       ],
-      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_last_check": "2026-05-16",
       "plano_anual_status": "not_found_in_api",
       "data_status": "forecast"
     },
@@ -3741,13 +3741,13 @@
       "priority_score": 510,
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 2,
+      "plano_anual_checks": 3,
       "plano_anual_source_post": 15481,
       "plano_anual_portal": "https://acores.portugal2030.pt",
       "fallback_tried": [
         "2b-acf-all"
       ],
-      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_last_check": "2026-05-16",
       "plano_anual_status": "not_found_in_api",
       "data_status": "forecast"
     },
@@ -3772,13 +3772,13 @@
       "priority_score": 510,
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 2,
+      "plano_anual_checks": 3,
       "plano_anual_source_post": 15501,
       "plano_anual_portal": "https://acores.portugal2030.pt",
       "fallback_tried": [
         "2b-acf-all"
       ],
-      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_last_check": "2026-05-16",
       "plano_anual_status": "not_found_in_api",
       "data_status": "forecast"
     },
@@ -3803,13 +3803,13 @@
       "priority_score": 510,
       "download_error": "Plano Anual - nao e aviso publicado, apenas previsao",
       "plano_anual_detected_date": "2026-05-12",
-      "plano_anual_checks": 2,
+      "plano_anual_checks": 3,
       "plano_anual_source_post": 15509,
       "plano_anual_portal": "https://acores.portugal2030.pt",
       "fallback_tried": [
         "2b-acf-all"
       ],
-      "plano_anual_last_check": "2026-05-12",
+      "plano_anual_last_check": "2026-05-16",
       "plano_anual_status": "not_found_in_api",
       "data_status": "forecast"
     },
@@ -4147,7 +4147,8 @@
         "2b-pdf",
         "teste-a-paa"
       ],
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-16"
     },
     {
       "id": "adaptacao-as-alteracoes-climaticas-2-aviso",
@@ -4175,7 +4176,8 @@
         "2b-pdf",
         "teste-a-paa"
       ],
-      "plano_anual_checks": 1
+      "plano_anual_checks": 2,
+      "plano_anual_last_check": "2026-05-16"
     },
     {
       "id": "cua-reutilizacao-resiliencia-modernizacao-alentejo",

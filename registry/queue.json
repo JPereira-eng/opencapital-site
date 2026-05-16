@@ -1562,15 +1562,17 @@
       "regulation_local": null,
       "status": "pending",
       "state": "aberto",
-      "fail_count": 1,
+      "fail_count": 2,
       "priority_score": 510,
       "programa_code": "CENTRO2030",
       "codigo_api": "FA0237/2025",
       "data_status": "forecast",
       "fallback_tried": [
-        "2b-pdf"
+        "2c",
+        "2b-pdf",
+        "2b-acf-all"
       ],
-      "download_error": "ID 253006 nao resolveu em centro2030.pt",
+      "download_error": "Codigo apenas em PAA Deliberation, wp_id nao resolveu em portal central nem regional",
       "last_fail_date": "2026-05-16"
     },
     {
@@ -1590,15 +1592,17 @@
       "regulation_local": null,
       "status": "pending",
       "state": "previsto",
-      "fail_count": 1,
+      "fail_count": 2,
       "priority_score": 510,
       "programa_code": "SUSTENTAVEL2030",
       "codigo_api": "FA0289/2025",
       "data_status": "forecast",
       "fallback_tried": [
-        "2b-pdf"
+        "2c",
+        "2b-pdf",
+        "2b-acf-all"
       ],
-      "download_error": "ID 253028 nao resolveu em sustentavel2030.gov.pt",
+      "download_error": "Codigo apenas em PAA Deliberation, wp_id nao resolveu em portal central nem regional",
       "last_fail_date": "2026-05-16"
     },
     {
@@ -1616,7 +1620,7 @@
       "priority_score": 510,
       "status": "pending",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: ALENTEJO2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Portal madeira-2030 API inacessivel ou nao mapeado",
+      "download_error": "Codigo apenas em PAA Deliberation, wp_id nao resolveu em portal central nem regional",
       "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
       "paa_status": "published_externamente",
       "news_post_url": "https://alentejo.portugal2030.pt/2026/03/27/aberto-novo-aviso-sibt-de-5-milhoes-de-euros-para-apoiar-micro-e-pequenas-empresas-no-alentejo/",
@@ -1629,7 +1633,7 @@
         "alentejo-2030"
       ],
       "codigo": "FA0132/2025",
-      "fail_count": 1,
+      "fail_count": 2,
       "cross_portal_match": {
         "original_codigo": "FA0147/2025",
         "original_portal": "portugal-2030",
@@ -1642,91 +1646,9 @@
       "codigo_api": "FA0132/2025",
       "data_status": "forecast",
       "fallback_tried": [
-        "2b-pdf"
-      ],
-      "last_fail_date": "2026-05-16"
-    },
-    {
-      "id": "valorizacao-economica-conhecimento-empresas-acores",
-      "name": "Valorização economica do conhecimento nas empresas",
-      "source_id": "acores-2030",
-      "shard": "pt2030-central",
-      "aviso_codigo": "FA0612/2023",
-      "detected_date": "2026-04-13",
-      "deadline": "2027-07-30",
-      "budget": 5000000,
-      "regulation_url": 15484,
-      "pdf_url": 15484,
-      "regulation_local": null,
-      "priority_score": 510,
-      "status": "pending",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Portal acores-2030 API inacessivel ou nao mapeado",
-      "programa": [
-        "ACORES2030"
-      ],
-      "regional_portals": [
-        "acores-2030"
-      ],
-      "plano_anual_last_check": "2026-05-11",
-      "plano_anual_checks": 1,
-      "codigo": "FA0612/2023",
-      "fail_count": 1,
-      "cross_portal_match": {
-        "original_codigo": "FA0612/2023",
-        "original_portal": "portugal-2030",
-        "matched_portal": "acores-2030",
-        "matched_codigo": "FA0612/2023",
-        "title_similarity": 1.0,
-        "matched_at": "2026-05-11"
-      },
-      "programa_code": "ACORES2030",
-      "codigo_api": "FA0612/2023",
-      "data_status": "forecast",
-      "fallback_tried": [
-        "2b-pdf"
-      ],
-      "last_fail_date": "2026-05-16"
-    },
-    {
-      "id": "idt-economia-hipocarbonica-adaptacao-climatica-acores",
-      "name": "I&DT centrado na economia hipocarbónica, na resiliência e adaptação às alterações climáticas",
-      "source_id": "acores-2030",
-      "shard": "pt2030-central",
-      "aviso_codigo": "FA0613/2023",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-11-30",
-      "budget": 4500000,
-      "regulation_url": 15482,
-      "pdf_url": 15482,
-      "regulation_local": null,
-      "priority_score": 510,
-      "status": "pending",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Portal acores-2030 API inacessivel ou nao mapeado",
-      "programa": [
-        "ACORES2030"
-      ],
-      "regional_portals": [
-        "acores-2030"
-      ],
-      "plano_anual_last_check": "2026-05-11",
-      "plano_anual_checks": 1,
-      "codigo": "FA0613/2023",
-      "fail_count": 1,
-      "cross_portal_match": {
-        "original_codigo": "FA0613/2023",
-        "original_portal": "portugal-2030",
-        "matched_portal": "acores-2030",
-        "matched_codigo": "FA0613/2023",
-        "title_similarity": 1.0,
-        "matched_at": "2026-05-11"
-      },
-      "programa_code": "ACORES2030",
-      "codigo_api": "FA0613/2023",
-      "data_status": "forecast",
-      "fallback_tried": [
-        "2b-pdf"
+        "2c",
+        "2b-pdf",
+        "2b-acf-all"
       ],
       "last_fail_date": "2026-05-16"
     },
@@ -1745,7 +1667,7 @@
       "priority_score": 510,
       "status": "pending",
       "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: MADEIRA2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Portal alentejo-2030 API inacessivel ou nao mapeado",
+      "download_error": "Codigo apenas em PAA Deliberation, wp_id nao resolveu em portal central nem regional",
       "_source_id_fix": "2026-05-06: re-classified from portugal-2030 via Programa in notes",
       "programa": [
         "MADEIRA2030"
@@ -1758,7 +1680,7 @@
       "news_post_date": "2026-04-30",
       "news_post_title": "Candidate o seu projeto à 2.ª edição dos Prémios dos Fundos Europeus!",
       "codigo": "FA0147/2025",
-      "fail_count": 1,
+      "fail_count": 2,
       "cross_portal_match": {
         "original_codigo": "FA0138/2025",
         "original_portal": "portugal-2030",
@@ -1771,165 +1693,11 @@
       "codigo_api": "FA0147/2025",
       "data_status": "forecast",
       "fallback_tried": [
-        "2b-pdf"
+        "2c",
+        "2b-pdf",
+        "2b-acf-all"
       ],
       "last_fail_date": "2026-05-16"
-    },
-    {
-      "id": "protecao-civil-gestao-riscos-2-aviso-acores",
-      "name": "Proteção civil e gestão integrada de riscos – 2º Aviso",
-      "source_id": "acores-2030",
-      "shard": "pt2030-central",
-      "aviso_codigo": "FA0303/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2027-04-30",
-      "budget": 5000000,
-      "regulation_url": 15502,
-      "pdf_url": 15502,
-      "regulation_local": null,
-      "priority_score": 510,
-      "status": "pending",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Portal acores-2030 API inacessivel ou nao mapeado",
-      "programa": [
-        "ACORES2030"
-      ],
-      "regional_portals": [
-        "acores-2030"
-      ],
-      "codigo": "FA0303/2025",
-      "fail_count": 1,
-      "cross_portal_match": {
-        "original_codigo": "FA0303/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "acores-2030",
-        "matched_codigo": "FA0303/2025",
-        "title_similarity": 1.0,
-        "matched_at": "2026-05-11"
-      },
-      "programa_code": "ACORES2030",
-      "codigo_api": "FA0303/2025",
-      "data_status": "forecast",
-      "fallback_tried": [
-        "2b-pdf"
-      ],
-      "last_fail_date": "2026-05-16"
-    },
-    {
-      "id": "ciclo-agua-reutilizacao-resiliencia-2-aviso-acores",
-      "name": "Ciclo da Água: reutilização, resiliência, modernização e descarbonização – 2º Aviso",
-      "source_id": "acores-2030",
-      "shard": "pt2030-central",
-      "aviso_codigo": "FA0302/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2027-03-31",
-      "budget": 5000000,
-      "regulation_url": 15510,
-      "pdf_url": 15510,
-      "regulation_local": null,
-      "priority_score": 510,
-      "status": "pending",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Portal acores-2030 API inacessivel ou nao mapeado",
-      "programa": [
-        "ACORES2030"
-      ],
-      "regional_portals": [
-        "acores-2030"
-      ],
-      "codigo": "FA0302/2025",
-      "fail_count": 1,
-      "cross_portal_match": {
-        "original_codigo": "FA0302/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "acores-2030",
-        "matched_codigo": "FA0302/2025",
-        "title_similarity": 1.0,
-        "matched_at": "2026-05-11"
-      },
-      "programa_code": "ACORES2030",
-      "codigo_api": "FA0302/2025",
-      "data_status": "forecast",
-      "fallback_tried": [
-        "2b-pdf"
-      ],
-      "last_fail_date": "2026-05-16"
-    },
-    {
-      "id": "ciclo-agua-alta-baixa-2-aviso-acores",
-      "name": "Ciclo da Água em alta e em baixa – 2º Aviso",
-      "source_id": "acores-2030",
-      "shard": "pt2030-central",
-      "aviso_codigo": "FA0304/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-12-31",
-      "budget": 4000000,
-      "regulation_url": 15508,
-      "pdf_url": 15508,
-      "regulation_local": null,
-      "priority_score": 510,
-      "status": "pending",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Portal acores-2030 API inacessivel ou nao mapeado",
-      "programa": [
-        "ACORES2030"
-      ],
-      "regional_portals": [
-        "acores-2030"
-      ],
-      "codigo": "FA0304/2025",
-      "fail_count": 1,
-      "cross_portal_match": {
-        "original_codigo": "FA0304/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "acores-2030",
-        "matched_codigo": "FA0304/2025",
-        "title_similarity": 1.0,
-        "matched_at": "2026-05-11"
-      },
-      "programa_code": "ACORES2030",
-      "codigo_api": "FA0304/2025",
-      "data_status": "forecast",
-      "fallback_tried": [
-        "2b-pdf"
-      ],
-      "last_fail_date": "2026-05-16"
-    },
-    {
-      "id": "adaptacao-as-alteracoes-climaticas-2-aviso",
-      "name": "Adaptação às alterações climáticas – 2º Aviso",
-      "source_id": "acores-2030",
-      "shard": "pt2030-central",
-      "aviso_codigo": "FA0207/2025",
-      "detected_date": "2026-04-13",
-      "deadline": "2026-11-30",
-      "budget": 4000000,
-      "regulation_url": 15504,
-      "pdf_url": 15504,
-      "regulation_local": null,
-      "priority_score": 510,
-      "status": "pending",
-      "notes": "REVERTIDO de promocao falso-positiva em 2026-05-05 via portugal-2030. Programa: AÇORES2030. Natureza: Concurso. Doc: L1:pdf.",
-      "download_error": "Plano Anual - nao e aviso publicado, apenas previsao (revertido de falso-positivo v4.7 em 2026-05-05)",
-      "programa": [
-        "ACORES2030"
-      ],
-      "regional_portals": [
-        "acores-2030"
-      ],
-      "codigo": "FA0207/2025",
-      "fail_count": 0,
-      "cross_portal_match": {
-        "original_codigo": "FA0207/2025",
-        "original_portal": "portugal-2030",
-        "matched_portal": "acores-2030",
-        "matched_codigo": "FA0207/2025",
-        "title_similarity": 1.0,
-        "matched_at": "2026-05-11"
-      },
-      "programa_code": "ACORES2030",
-      "codigo_api": "FA0207/2025",
-      "data_status": "forecast"
     },
     {
       "id": "cua-reutilizacao-resiliencia-modernizacao-alentejo",
