@@ -276,6 +276,14 @@
       "state": "aberto",
       "last_check": "2026-05-12",
       "data_status": "verified"
+    },
+    {
+      "id": "gestao-recursos-hidricos-acores2030",
+      "file": "instrumentos/gestao-recursos-hidricos-acores2030/index.html",
+      "source": "acores-2030",
+      "state": "aberto",
+      "last_check": "2026-05-17",
+      "aviso_codigo": "FA0583/2023"
     }
   ],
   "instruments": [
@@ -520,12 +528,12 @@
       "last_check": "2026-05-09"
     }
   ],
-  "count": 51,
-  "open": 31,
+  "count": 52,
+  "open": 32,
   "closed": 5,
   "planned": 15,
   "_meta": {
     "last_monitor_run": "2026-05-12"
   },
-  "published": 1
+  "published": 2
 }
