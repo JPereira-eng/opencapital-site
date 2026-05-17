@@ -544,9 +544,9 @@ Cria o ficheiro `conhecimento/[slug]/index.html` com a estrutura completa abaixo
       </div>
 
       <div class="sidebar-cta">
-        <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
+        <div class="sidebar-cta-title">Entre em contacto connosco</div>
         <div class="sidebar-cta-text">[SIDEBAR_CTA_TEXT]</div>
-        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Falar com um especialista</a>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Entre em contacto</a>
       </div>
 
       <div class="sidebar-card">
