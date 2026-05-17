@@ -688,9 +688,9 @@ Não incluir secção "Perspetiva Open Capital". Não incluir h2 final. Não inc
         <div class="sidebar-info-row"><div class="sidebar-info-key">Leitura</div><div class="sidebar-info-val">[TEMPO_LEITURA]</div></div>
       </div>
       <div class="sidebar-cta">
-        <div class="sidebar-cta-title">Precisa de apoio nesta área?</div>
+        <div class="sidebar-cta-title">Entre em contacto connosco</div>
         <div class="sidebar-cta-text">[SIDEBAR_CTA_TEXT]</div>
-        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Falar com um especialista</a>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Entre em contacto</a>
       </div>
       <div class="sidebar-card">
         <div class="sidebar-related-label">Artigos relacionados</div>

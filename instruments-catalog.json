@@ -31831,6 +31831,136 @@
       "href": "/instrumentos/euaf-2026-ta/",
       "featured": false,
       "data_status": "n/a"
+    },
+    {
+      "id": "contratos-de-impacto-social",
+      "category": "nr",
+      "category_label": "NÃ£o ReembolsÃ¡vel",
+      "estado": "aberto",
+      "status_text": "Aberto atÃ© 21/12/2026",
+      "status_class": "status-open",
+      "fonte": "pt2030",
+      "fonte_source": "centro-2030",
+      "beneficiario": "associacao",
+      "setores": [
+        "todos"
+      ],
+      "necessidades": [
+        "impacto-social-inclusao"
+      ],
+      "regiao": "centro",
+      "title": "Centro 2030: Contratos de Impacto Social",
+      "tagline": "425 mil EUR FSE+ para projetos sociais com remuneraÃ§Ã£o indexada a resultados verificÃ¡veis na regiÃ£o Centro",
+      "highlight0": "425 mil EUR, remuneraÃ§Ã£o por resultados",
+      "highlight1": "IPSS, ONG, fundaÃ§Ãµes, cooperativas sociais",
+      "highlight2": "RegiÃ£o Centro",
+      "href": "/instrumentos/contratos-de-impacto-social/",
+      "featured": false,
+      "data_status": "n/a"
+    },
+    {
+      "id": "infraestruturas-de-valorizacao-de-residuos-urbanos-em-alta-pacs-2026-12",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "aberto",
+      "status_text": "Aberto até 20/08/2026",
+      "status_class": "status-open",
+      "fonte": "sustentavel",
+      "beneficiario": "entidade-pública",
+      "setores": [
+        "energia-ambiente"
+      ],
+      "necessidades": [
+        "sustentabilidade-energia-clima",
+        "investimento-produtivo"
+      ],
+      "regiao": "norte,centro,lisboa,alentejo,algarve",
+      "title": "Infraestruturas de Valorização de Resíduos Urbanos em Alta (PACS-2026-12)",
+      "tagline": "€60 milhões do Fundo de Coesão para infraestruturas de triagem, compostagem e tratamento de resíduos urbanos no continente.",
+      "highlight0": "Até 85% fundo não reembolsável (FC)",
+      "highlight1": "Entidades Gestoras de RU",
+      "highlight2": "Norte, Centro, Lisboa, Alentejo, Algarve",
+      "href": "/instrumentos/infraestruturas-de-valorizacao-de-residuos-urbanos-em-alta-pacs-2026-12/",
+      "featured": false
+    },
+    {
+      "id": "infraestruturas-equipamentos-tecnologicos-ftj-alentejo",
+      "category": "nr",
+      "category_label": "Não Reembolsável",
+      "estado": "fechado",
+      "status_text": "Fechado",
+      "status_class": "status-closed",
+      "fonte": "lisboa",
+      "beneficiario": "ensino-investigação,entidade-pública",
+      "setores": [
+        "tecnologia-digital"
+      ],
+      "necessidades": [
+        "id-ciencia",
+        "investimento-produtivo"
+      ],
+      "regiao": "lisboa",
+      "title": "Lisboa 2030: Equipamentos Tecnológicos (LISBOA2030-2025-10)",
+      "tagline": "Apoio a centros tecnológicos, parques de ciência e incubadoras de base tecnológica na Área Metropolitana de Lisboa via FEDER.",
+      "highlight0": "Até 40% fundo não reembolsável (FEDER)",
+      "highlight1": "Universidades, entidades I&D e incubadoras",
+      "highlight2": "Área Metropolitana de Lisboa",
+      "href": "/instrumentos/infraestruturas-equipamentos-tecnologicos-ftj-alentejo/",
+      "featured": false
+    },
+    {
+      "id": "gestao-agua-conservacao-hidricos-iti-alentejo",
+      "category": "nr",
+      "category_label": "NÃ£o ReembolsÃ¡vel",
+      "estado": "aberto",
+      "status_text": "Aberto atÃ© 31/12/2026",
+      "status_class": "status-open",
+      "fonte": "pt2030",
+      "fonte_source": "alentejo-2030",
+      "beneficiario": "entidade-publica",
+      "setores": [
+        "energia-ambiente"
+      ],
+      "necessidades": [
+        "sustentabilidade-energia-clima",
+        "investimento-produtivo"
+      ],
+      "regiao": "alentejo",
+      "title": "Alentejo 2030: GestÃ£o de Ã?gua e ConservaÃ§Ã£o de Recursos HÃ­dricos (ITI)",
+      "tagline": "1M EUR FEDER para conservaÃ§Ã£o e gestÃ£o sustentÃ¡vel dos recursos hÃ­dricos do Alentejo, em quadro ITI",
+      "highlight0": "1 milhÃ£o EUR FEDER (ITI)",
+      "highlight1": "AdministraÃ§Ã£o, municÃ­pios, entidades gestoras",
+      "highlight2": "Alentejo",
+      "href": "/instrumentos/gestao-agua-conservacao-hidricos-iti-alentejo/",
+      "featured": false,
+      "data_status": "n/a"
+    },
+    {
+      "id": "reabilitacao-da-aerogare-do-aerodromo-de-sao-jorge",
+      "category": "nr",
+      "category_label": "NÃ£o ReembolsÃ¡vel",
+      "estado": "aberto",
+      "status_text": "Aberto atÃ© 31/08/2026",
+      "status_class": "status-open",
+      "fonte": "pt2030",
+      "fonte_source": "sustentavel-2030",
+      "beneficiario": "entidade-publica",
+      "setores": [
+        "mobilidade-transportes"
+      ],
+      "necessidades": [
+        "investimento-produtivo",
+        "sustentabilidade-energia-clima"
+      ],
+      "regiao": "acores",
+      "title": "SustentÃ¡vel 2030: ReabilitaÃ§Ã£o da Aerogare do AerÃ³dromo de SÃ£o Jorge",
+      "tagline": "743 mil EUR FEDER para reabilitar a aerogare de SÃ£o Jorge nos AÃ§ores e modernizar a conectividade interilhas",
+      "highlight0": "743.750 EUR FEDER",
+      "highlight1": "Entidade pÃºblica gestora aerÃ³dromos",
+      "highlight2": "Ilha de SÃ£o Jorge, AÃ§ores",
+      "href": "/instrumentos/reabilitacao-da-aerogare-do-aerodromo-de-sao-jorge/",
+      "featured": false,
+      "data_status": "n/a"
     }
   ]
 }

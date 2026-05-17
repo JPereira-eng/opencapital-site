@@ -506,9 +506,9 @@ Criar o ficheiro `instrumentos/[slug]/index.html` com a estrutura abaixo. Os met
     </div>
 
     <div class="sidebar-cta">
-      <div class="sidebar-cta-title">Falar com um especialista</div>
+      <div class="sidebar-cta-title">Entre em contacto connosco</div>
       <div class="sidebar-cta-text">[SIDEBAR_CTA_TEXT]</div>
-      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Contactar</a>
+      <a href="https://calendly.com/opencapital" class="sidebar-cta-btn">Entre em contacto</a>
     </div>
 
     <div class="sidebar-card">

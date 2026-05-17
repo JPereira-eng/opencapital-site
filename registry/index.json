@@ -11,15 +11,15 @@
     "updated": "2026-05-17"
   },
   "totals": {
-    "published": 696,
-    "open": 429,
-    "closed": 165,
+    "published": 701,
+    "open": 433,
+    "closed": 166,
     "planned": 98,
-    "in_queue": 86,
-    "in_watchlist": 259,
+    "in_queue": 65,
+    "in_watchlist": 262,
     "in_catalogo": 0,
     "in_overflow": 287,
-    "in_plano_anual": 259
+    "in_plano_anual": 262
   },
   "shards": {
     "catalogo-aceleradores": {
@@ -149,11 +149,11 @@
       "planned": 0
     },
     "pt2030-other": {
-      "count": 26,
-      "open": 19,
-      "closed": 5,
+      "count": 28,
+      "open": 20,
+      "closed": 6,
       "planned": 2,
-      "published": 26
+      "published": 28
     },
     "pt2030-pessoas": {
       "count": 4,
@@ -169,12 +169,12 @@
   "source_last_checked": {
     "portugal-2030": "2026-05-17",
     "compete-2030": "2026-05-13",
-    "norte-2030": "2026-05-12",
+    "norte-2030": "2026-05-17",
     "centro-2030": "2026-05-17",
-    "lisboa-2030": "2026-05-12",
+    "lisboa-2030": "2026-05-17",
     "alentejo-2030": "2026-05-16",
     "algarve-2030": "2026-05-16",
-    "madeira-2030": "2026-05-12",
+    "madeira-2030": "2026-05-17",
     "acores-2030": "2026-05-16",
     "pessoas-2030": "2026-05-17",
     "sustentavel-2030": "2026-05-17",
@@ -212,7 +212,7 @@
     "edp-innovation": "2026-04-13",
     "premio-bpi-lacaixa": "2026-05-13",
     "startup-lisboa": "2026-04-13",
-    "beta-i": "2026-04-13",
+    "beta-i": "2026-05-17",
     "premio-gulbenkian": "2026-05-16",
     "bgi-accelerator": "2026-04-13",
     "f6s": "2026-04-13",
@@ -298,13 +298,13 @@
     "pessoas-2030": "2026-05-16",
     "sustentavel-2030": "2026-05-17",
     "algarve-2030": "2026-05-16",
-    "acores-2030": "2026-05-13",
+    "acores-2030": "2026-05-17",
     "centro-2030": "2026-05-13",
     "lisboa-2030": "2026-05-17",
     "mar-2030": "2026-05-13",
     "pat-2030": "2026-05-16",
     "madeira-2030": "2026-05-16",
-    "compete-2030": "2026-05-13",
+    "compete-2030": "2026-05-17",
     "norte-2030": "2026-05-13"
   },
   "totals_v413": {
