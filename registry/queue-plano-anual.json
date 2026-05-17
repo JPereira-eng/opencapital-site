@@ -7709,6 +7709,88 @@
       "plano_anual_checks": 0,
       "data_status": "forecast",
       "notes": "Re-adicionado em 2026-05-17 após depublicação por PAA (writer bypass)."
+    },
+    {
+      "id": "medidas-de-adaptacao-as-alteracoes-climaticas-sustentavel2030-fa0054",
+      "name": "Medidas de adaptacao as alteracoes climaticas (2o aviso)",
+      "source_id": "portugal-2030",
+      "aviso_codigo": "FA0054/2026",
+      "codigo_api": "FA0054/2026",
+      "human_code": null,
+      "programa_code": "SUSTENTAVEL2030",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ],
+      "detected_date": "2026-05-17",
+      "deadline": "2026-12-31",
+      "budget": "20.000.000 EUR",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/medidas-de-adaptacao-as-alteracoes-climaticas-2/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "state": "previsto",
+      "data_status": "forecast",
+      "paa_status": "planejado",
+      "natureza": "Convite",
+      "notes": "PAA previsto 2026-10-01 a 2026-12-31. 20M EUR. SUSTENTAVEL2030."
+    },
+    {
+      "id": "medidas-de-adaptacao-as-alteracoes-climaticas-sustentavel2030-fa0061",
+      "name": "Medidas de adaptacao as alteracoes climaticas (3o aviso)",
+      "source_id": "portugal-2030",
+      "aviso_codigo": "FA0061/2026",
+      "codigo_api": "FA0061/2026",
+      "human_code": null,
+      "programa_code": "SUSTENTAVEL2030",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ],
+      "detected_date": "2026-05-17",
+      "deadline": "2027-05-31",
+      "budget": "11.700.000 EUR",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/medidas-de-adaptacao-as-alteracoes-climaticas-3/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "state": "previsto",
+      "data_status": "forecast",
+      "paa_status": "planejado",
+      "natureza": "Convite",
+      "notes": "PAA previsto 2027-02-01 a 2027-05-31. 11.7M EUR. SUSTENTAVEL2030."
+    },
+    {
+      "id": "centros-locais-de-apoio-a-integracao-de-migrantes-claim-fa0039",
+      "name": "Centros Locais de Apoio a Integracao de Migrantes (CLAIM)",
+      "source_id": "portugal-2030",
+      "aviso_codigo": "FA0039/2026",
+      "codigo_api": "FA0039/2026",
+      "human_code": null,
+      "programa_code": "FAMI2030",
+      "programa": [
+        "FAMI2030"
+      ],
+      "regional_portals": [],
+      "detected_date": "2026-05-17",
+      "deadline": "2026-09-30",
+      "budget": "3.950.624 EUR",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/centros-locais-de-apoio-a-integracao-de-migrantes-claim/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 510,
+      "status": "pending",
+      "state": "previsto",
+      "data_status": "forecast",
+      "paa_status": "planejado",
+      "natureza": "Concurso",
+      "notes": "PAA previsto 2026-07-01 a 2026-09-30. FAMI2030. 3.95M EUR."
     }
   ],
   "updated": "2026-05-16",

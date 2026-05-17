@@ -4,22 +4,22 @@
     "version": "4.0",
     "migrated_from_v3": "2026-04-12",
     "last_writer_run": "2026-05-17",
-    "last_scanner_run": "2026-05-16",
+    "last_scanner_run": "2026-05-17",
     "last_index_rebuild": "2026-05-09",
     "last_monitor_run": "2026-05-13",
     "last_pt2030_reconcile": "2026-05-11",
-    "updated": "2026-05-16"
+    "updated": "2026-05-17"
   },
   "totals": {
     "published": 691,
     "open": 425,
     "closed": 164,
     "planned": 98,
-    "in_queue": 96,
-    "in_watchlist": 250,
+    "in_queue": 86,
+    "in_watchlist": 259,
     "in_catalogo": 0,
     "in_overflow": 287,
-    "in_plano_anual": 250
+    "in_plano_anual": 259
   },
   "shards": {
     "catalogo-aceleradores": {
@@ -167,20 +167,20 @@
   "last_full_cycle": "2026-04-12",
   "last_monitor_run": "2026-05-13",
   "source_last_checked": {
-    "portugal-2030": "2026-05-16",
+    "portugal-2030": "2026-05-17",
     "compete-2030": "2026-05-13",
     "norte-2030": "2026-05-12",
-    "centro-2030": "2026-05-12",
+    "centro-2030": "2026-05-17",
     "lisboa-2030": "2026-05-12",
     "alentejo-2030": "2026-05-16",
     "algarve-2030": "2026-05-16",
     "madeira-2030": "2026-05-12",
     "acores-2030": "2026-05-16",
-    "pessoas-2030": "2026-05-12",
-    "sustentavel-2030": "2026-05-12",
+    "pessoas-2030": "2026-05-17",
+    "sustentavel-2030": "2026-05-17",
     "mar-2030": "2026-05-13",
     "pat-2030": "2026-05-12",
-    "eu-funding-tenders": "2026-05-16",
+    "eu-funding-tenders": "2026-05-17",
     "ani": "2026-05-11",
     "iapmei": "2026-05-11",
     "prr": "2026-05-11",
@@ -291,16 +291,16 @@
     "k-fund": "2026-05-06",
     "kibo-ventures": "2026-05-06"
   },
-  "last_scanner_run": "2026-05-16",
+  "last_scanner_run": "2026-05-17",
   "last_writer_run": "2026-05-17",
   "source_last_news_check": {
     "alentejo-2030": "2026-05-16",
     "pessoas-2030": "2026-05-16",
-    "sustentavel-2030": "2026-05-12",
+    "sustentavel-2030": "2026-05-17",
     "algarve-2030": "2026-05-16",
     "acores-2030": "2026-05-13",
     "centro-2030": "2026-05-13",
-    "lisboa-2030": "2026-05-09",
+    "lisboa-2030": "2026-05-17",
     "mar-2030": "2026-05-13",
     "pat-2030": "2026-05-16",
     "madeira-2030": "2026-05-16",
@@ -314,5 +314,6 @@
     "verified_published_pt2030": 53,
     "verified_published_other": 0,
     "n_a_in_queue": 64
-  }
+  },
+  "updated": "2026-05-17"
 }
