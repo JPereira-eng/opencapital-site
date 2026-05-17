@@ -1,4 +1,9 @@
-﻿# Série 3.1 - Template Editorial de Instrumentos (regras + HTML)
+---
+name: instrumento-template
+model: claude-sonnet-4-7
+---
+
+# Série 3.1 - Template Editorial de Instrumentos (regras + HTML)
 
 > **Este ficheiro NAO e uma skill executavel diretamente.** E a fonte unica da verdade editorial e visual para artigos de instrumentos. E lido tanto pela skill `/instrumento` (caminho manual) como pela skill `/radar-writer` (caminho automatizado a partir da queue). Toda a orquestracao de publicacao (atualizacao de catalogo, shards, lookup, integrity, deploy) vive nessas skills, nao aqui.
 

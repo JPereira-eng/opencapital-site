@@ -1,3 +1,8 @@
+---
+name: instrumento
+model: claude-sonnet-4-7
+---
+
 # Série 3.1 - Publicar Instrumento (caminho manual)
 
 REGRA CRÍTICA: Nunca usar travessao (--) em nenhum texto gerado. Usar virgula, ponto, hifen (-) ou reescrever a frase.

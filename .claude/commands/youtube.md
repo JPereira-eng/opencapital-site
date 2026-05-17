@@ -1,4 +1,9 @@
-﻿# Série 2.2 - Artigo Informativo Baseado em Video do YouTube
+---
+name: youtube
+model: claude-sonnet-4-7
+---
+
+# Série 2.2 - Artigo Informativo Baseado em Video do YouTube
 
 REGRA CRÍTICA DE ORTOGRAFIA: Aplicar sempre o Acordo Ortográfico de 1990 (AO90) em PT-PT. Usar as grafias atualizadas: ação (não acção), setor/setorial (não sector/sectorial), ativo/atividade/atual (não activo/actividade/actual), objetivo/objeto (não objectivo/objecto), direto/diretamente (não directo/directamente), exato/exatamente (não exacto/exactamente), aspeto (não aspecto), exceção/exceto (não exceptao/excepto), receção (não recepcao), adoção (não adopcao), reação (não reaccao), corretor (não correcto/correctamente), eletrico (não electrico), otimo (não optimo), detetar (não detectar), afetar (não afectar), projeto (não projecto), arquiteto (não arquitecto). Manter "facto", "factual", "contacto", "convicção", "tacto" (PT-PT preserva estas). Nunca gerar artigos com ortografia pre-1990.
 

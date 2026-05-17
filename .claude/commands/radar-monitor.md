@@ -1,4 +1,9 @@
-﻿# Radar Monitor v4.2: Verificacao de Estados e Integridade
+---
+name: radar-monitor
+model: claude-sonnet-4-7
+---
+
+# Radar Monitor v4.2: Verificacao de Estados e Integridade
 
 REGRA CRÍTICA: Nunca usar travessão (—) em nenhum texto gerado. Usar vírgula, ponto, hífen (-) ou reescrever a frase.
 

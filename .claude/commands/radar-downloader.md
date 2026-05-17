@@ -1,4 +1,9 @@
-﻿# Radar Downloader v4.1: Descarregar Regulamentos
+---
+name: radar-downloader
+model: claude-sonnet-4-7
+---
+
+# Radar Downloader v4.1: Descarregar Regulamentos
 
 REGRA CRÍTICA: Nunca usar travessão (—) em nenhum texto gerado. Usar vírgula, ponto, hífen (-) ou reescrever a frase.
 

@@ -1,4 +1,9 @@
-﻿# Radar Scanner v4.9: Descoberta de Novos Instrumentos
+---
+name: radar-scanner
+model: claude-sonnet-4-7
+---
+
+# Radar Scanner v4.9: Descoberta de Novos Instrumentos
 
 REGRA CRÍTICA: Nunca usar travessão (—) em nenhum texto gerado. Usar vírgula, ponto, hífen (-) ou reescrever a frase.
 

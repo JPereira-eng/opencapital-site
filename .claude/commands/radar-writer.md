@@ -1,4 +1,9 @@
-﻿# Radar Writer v4.2: Criação de Artigos em Sprint
+---
+name: radar-writer
+model: claude-sonnet-4-7
+---
+
+# Radar Writer v4.2: Criação de Artigos em Sprint
 
 REGRA CRÍTICA: Nunca usar travessão (—) em nenhum texto gerado. Usar vírgula, ponto, hífen (-) ou reescrever a frase.
 

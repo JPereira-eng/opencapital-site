@@ -1,3 +1,8 @@
+---
+name: estrategia
+model: claude-sonnet-4-7
+---
+
 # Série 5.1 - Análise de Estratégia e Gestão para Website
 
 REGRA CRÍTICA DE ORTOGRAFIA: Aplicar sempre o Acordo Ortográfico de 1990 (AO90) em PT-PT. Usar as grafias atualizadas: ação (não acção), setor/setorial, ativo/atividade/atual, objetivo/objeto, direto/diretamente, exato/exatamente, aspeto, exceção/exceto, receção, adoção, reação, eletrico, otimo, detetar, afetar, projeto, arquiteto. Manter "facto", "factual", "contacto", "convicção", "tacto" (PT-PT preserva estas). Nunca gerar artigos com ortografia pre-1990.
