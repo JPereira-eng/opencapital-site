@@ -2859,6 +2859,13 @@
       "source": "eu-funding-tenders",
       "state": "previsto",
       "last_check": "2026-05-16"
+    },
+    {
+      "id": "erc-advanced-grant-2026",
+      "file": "instrumentos/erc-advanced-grant-2026/index.html",
+      "source": "erc",
+      "state": "aberto",
+      "last_check": "2026-05-17"
     }
   ],
   "instruments": [
@@ -5187,11 +5194,11 @@
       "last_check": "2026-05-12"
     }
   ],
-  "count": 686,
-  "open": 339,
+  "count": 687,
+  "open": 340,
   "closed": 226,
   "planned": 121,
-  "published": 686,
+  "published": 687,
   "updated": "2026-05-12",
   "_updated": "2026-05-16"
 }
