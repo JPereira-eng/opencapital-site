@@ -1367,8 +1367,8 @@
 
   /* ─── CARROSSEL EDITORIAL · MARQUEE CONTINUO ─── */
   /* Fetch dinamico de conhecimento-catalog.json (fonte unica desde 2026-05-09) */
-  /* Filtros: featured=true, subseccao != regulamentos (decisao editorial: regulamentos */
-  /*          e seccao de referencia, fora dos destaques editoriais da homepage) */
+  /* Filtro: featured=true (regra global desde 2026-05-17 - todas as skills de */
+  /*         conhecimento publicam featured=true por defeito, incluindo regulamentos) */
   /* Ordenacao: data_publicacao desc. Duplicado para loop infinito via CSS animation. */
   const PLACEHOLDER_SVG = '<svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" stroke="rgba(201,169,110,0.18)" stroke-width="1"/><polyline points="8,38 18,22 28,30 40,12" stroke="rgba(201,169,110,0.55)" stroke-width="1.2" fill="none"/><circle cx="18" cy="22" r="2" fill="rgba(201,169,110,0.4)"/><circle cx="40" cy="12" r="2" fill="rgba(201,169,110,0.4)"/></svg>';
 
@@ -1424,7 +1424,7 @@
       if (!track) return;
       const featured = (data.articles || [])
         .map((a, _idx) => ({ ...a, _idx }))
-        .filter(a => a.featured === true && a.subseccao !== 'regulamentos')
+        .filter(a => a.featured === true)
         .sort((a, b) => {
           const d = (b.data_publicacao || '').localeCompare(a.data_publicacao || '');
           return d !== 0 ? d : b._idx - a._idx;

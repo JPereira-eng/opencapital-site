@@ -611,21 +611,24 @@ Adicionar entrada ao FINAL do array `articles` em `conhecimento-catalog.json`:
   "autor_foto": "[ficheiro png]",
   "data_publicacao": "AAAA-MM-DD",
   "href": "/conhecimento/[SLUG]/",
-  "meta_description": "[meta description SEO 150-160 chars]"
+  "meta_description": "[meta description SEO 150-160 chars]",
+  "featured": true
 }
 ```
+
+**Nota:** `featured: true` é o default para todas as publicações novas (regra global desde 2026-05-17). Artigos novos entram automaticamente no carrossel da homepage, ordenados por data desc.
 
 **Validar:** o slug nao deve aparecer ja no JSON (evitar duplicados). Se aparecer, abortar e reportar.
 
 O hub `regulamentos.html` (criado na Fase 5) le este JSON em runtime e renderiza a listagem documental agrupada por subgrupo. **Nao ha card a injetar em HTML estatico.** A propria entrada no JSON faz a peca aparecer no hub.
 
-### Passo 5 - NAO atualizar destaques na homepage
+### Passo 5 - Destaques na homepage
 
-**Decisao editorial fixa (2026-05-09):** artigos de Regulamentos e Conceitos sao excluidos dos destaques editoriais da homepage. A homepage destaca apenas artigos de Atualidade, Opiniao e Estrategia.
+**Decisao editorial (revista a 2026-05-17):** artigos de Regulamentos e Conceitos passam a entrar no carrossel de destaques da homepage por defeito, como qualquer outra publicacao de conhecimento. O carrossel ordena por `data_publicacao` desc, pelo que as publicacoes mais recentes aparecem primeiro.
 
-Razao: a homepage e fachada e fala diretamente ao decisor. Regulamentos e Conceitos e seccao de referencia, nao de descoberta visual. O leitor que precisa do artigo vai la intencionalmente atraves do dropdown.
+**Acao concreta:** o JSON deve ter `"featured": true` (default). O carrossel da homepage le-o dinamicamente sem necessidade de tocar em `index.html`.
 
-**Acao concreta:** nao tocar em `index.html`. Nao adicionar `featured: true` no JSON.
+A decisao anterior (2026-05-09), que excluia Regulamentos, foi revertida porque a homepage passa a refletir o ritmo editorial completo, nao apenas a camada de descoberta visual.
 
 ### Passo 6 - Build do footer
 

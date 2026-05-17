@@ -221,9 +221,12 @@ Adicionar entrada ao FINAL do array `articles`:
   "autor_foto": "[ficheiro png]",
   "data_publicacao": "AAAA-MM-DD",
   "href": "/conhecimento/[slug]/",
-  "meta_description": "[meta description SEO 150-160 chars]"
+  "meta_description": "[meta description SEO 150-160 chars]",
+  "featured": true
 }
 ```
+
+**Nota:** `featured: true` é o default para todas as publicações novas (regra global desde 2026-05-17). Artigos novos entram automaticamente no carrossel da homepage, ordenados por data desc. Sem ação adicional necessária.
 
 ### 6. Injetar card no hub `conhecimento/estrategia/index.html`
 
