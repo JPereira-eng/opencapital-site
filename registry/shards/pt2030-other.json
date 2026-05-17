@@ -284,6 +284,14 @@
       "state": "aberto",
       "last_check": "2026-05-17",
       "aviso_codigo": "FA0583/2023"
+    },
+    {
+      "id": "combate-a-privacao-material-2-aviso",
+      "file": "instrumentos/combate-a-privacao-material-2-aviso/index.html",
+      "source": "acores-2030",
+      "state": "aberto",
+      "last_check": "2026-05-17",
+      "aviso_codigo": "FA0202/2025"
     }
   ],
   "instruments": [
@@ -528,12 +536,12 @@
       "last_check": "2026-05-09"
     }
   ],
-  "count": 52,
-  "open": 32,
+  "count": 53,
+  "open": 33,
   "closed": 5,
   "planned": 15,
   "_meta": {
     "last_monitor_run": "2026-05-12"
   },
-  "published": 2
+  "published": 3
 }

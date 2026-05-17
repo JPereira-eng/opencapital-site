@@ -1792,22 +1792,6 @@
       "programa_code": "MADEIRA2030",
       "codigo_api": "FA0100/2025",
       "data_status": "forecast"
-    },
-    {
-      "id": "combate-a-privacao-material-2-aviso",
-      "name": "Combate à privação material – 2º Aviso",
-      "aviso_codigo": "FA0202/2025",
-      "human_code": "FA0202/2025",
-      "source_id": "acores-2030",
-      "programa_code": "ACORES2030",
-      "data_fim": "2026-05-29",
-      "dotacao": 5000000,
-      "status": "pending",
-      "fail_count": 0,
-      "promoted_from_paa": true,
-      "promoted_date": "2026-05-12",
-      "priority_score": 540,
-      "data_status": "forecast"
     }
   ],
   "items": [],
