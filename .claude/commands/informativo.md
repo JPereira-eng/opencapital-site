@@ -132,6 +132,8 @@ O artigo deve:
 
 **Nunca usar travessão em nenhuma circunstancia.** Usar vírgula, ponto ou reescrever a frase.
 
+**Hífen entre espaços (" - ") como pausa retórica está PROIBIDO em todo o texto editorial.** Aplica-se ao corpo do artigo, standfirst, tagline, meta-description, excerpts, sidebars, células de tabela e items de lista. É uma assinatura visível de texto gerado por IA. Substituir por vírgula, ponto final, dois pontos ou parênteses, consoante o ritmo da frase. Exemplos: "compra-se tempo - e caro" -> "compra-se tempo, e caro"; "óbvia - se fosse" -> "óbvia. Se fosse"; "confiança da equipa - a empresa teve" -> "confiança da equipa: a empresa teve"; em listas, "Diagnóstico - perceber" -> "Diagnóstico: perceber". O hífen continua permitido em palavras compostas (colaborador-chave, sub-tema) e em labels de badge de categoria (Financiamento - Guia). Antes de fechar o artigo, varrer o corpo à procura de " - " e eliminar todas as ocorrências.
+
 **No hero, apenas o badge de categoria pode usar dourado. Titulo, subtitulo, breadcrumb e meta-bar devem ser brancos ou brancos transparentes.**
 
 **Na sidebar, evitar texto dourado exceto para titulos de secção (labels) e para estados de programa (ex: 'Aberto', 'Ativo'). Valores monetarios e outros dados usam navy.**
