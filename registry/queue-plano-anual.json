@@ -7681,6 +7681,34 @@
       "plano_anual_detected_date": "2026-05-16",
       "plano_anual_checks": 1,
       "wordpress_id": 254226
+    },
+    {
+      "id": "gestao-recursos-hidricos-acores2030",
+      "name": "Re-watch após despublicação 2026-05-13 (FA0583/2023)",
+      "codigo": "FA0583/2023",
+      "aviso_codigo": "FA0583/2023",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-other",
+      "detected_date": "2026-05-17",
+      "status": "plano_anual",
+      "priority_score": 500,
+      "plano_anual_checks": 0,
+      "data_status": "forecast",
+      "notes": "Re-adicionado em 2026-05-17 após depublicação por PAA (writer bypass)."
+    },
+    {
+      "id": "combate-a-privacao-material-2-aviso",
+      "name": "Re-watch após despublicação 2026-05-13 (FA0202/2025)",
+      "codigo": "FA0202/2025",
+      "aviso_codigo": "FA0202/2025",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-other",
+      "detected_date": "2026-05-17",
+      "status": "plano_anual",
+      "priority_score": 500,
+      "plano_anual_checks": 0,
+      "data_status": "forecast",
+      "notes": "Re-adicionado em 2026-05-17 após depublicação por PAA (writer bypass)."
     }
   ],
   "updated": "2026-05-16",

@@ -100,7 +100,94 @@ Selecionar os primeiros 5 (ou menos) para este batch.
 
 ---
 
-## PASSO 1.5: Defesa anti-PAA pre-flight (v4.7.1, 2026-05-05)
+## PASSO 1.5: Defesa anti-PAA pre-flight (v4.13.1, 2026-05-13 REFORÇADA)
+
+⚠️ **REGRA ABSOLUTAMENTE BLOQUEANTE — NUNCA CONTORNAR:**
+
+> **Um artigo NUNCA pode ser publicado sem um regulamento técnico .txt válido no disco.** Sem .txt → SKIP. Sem exceções. WebFetch ao portal não substitui o ficheiro local. Conhecimento contextual do tema não substitui o regulamento.
+
+### PRE-FLIGHT VALIDATION (NOVO v4.13.1)
+
+**Antes de escrever QUALQUER artigo do batch (ANTES de gastar tokens de geração):**
+
+Executar validação completa sobre os 5 items selecionados:
+
+```python
+def validate_batch(selected_items):
+    """Devolve (valid, rejected) tuples."""
+    valid, rejected = [], []
+    for item in selected_items:
+        # 1. regulation_local deve apontar para ficheiro existente
+        rl = item.get('regulation_local')
+        if not rl or not Path(rl).exists():
+            rejected.append((item, 'regulation_local missing or file not on disk'))
+            continue
+
+        # 2. .txt deve ter >= 500 palavras (mínimo para regulamento mesmo curto)
+        text = Path(rl).read_text(encoding='utf-8', errors='ignore')
+        word_count = len(text.split())
+        if word_count < 500:
+            rejected.append((item, f'regulamento too short ({word_count} words)'))
+            continue
+
+        # 3. .txt NÃO pode conter marcadores PAA
+        lower = text[:3000].lower()
+        paa_keywords = [
+            'plano anual de avisos', 'resumo de aviso do plano',
+            'paa2026', 'paa202', 'aviso a publicar em:',
+            'previsao aproximada', 'previsão aproximada',
+        ]
+        if any(k in lower for k in paa_keywords):
+            rejected.append((item, f'PAA keyword detected in .txt'))
+            continue
+
+        # 4. Para PT2030 família: data_status deve ser "verified"
+        if item.get('source_id') in FAMILIA_PT2030:
+            if item.get('data_status') != 'verified':
+                rejected.append((item, f'PT2030 sem data_status=verified ({item.get("data_status")})'))
+                continue
+
+        # 5. Item NÃO pode estar em registry/depublished.json
+        if item.get('id') in DEPUBLISHED_SLUGS or item.get('codigo') in DEPUBLISHED_CODES:
+            rejected.append((item, 'item em depublished.json'))
+            continue
+
+        valid.append(item)
+
+    return valid, rejected
+```
+
+**Comportamento:**
+
+1. **Pre-flight ANTES da escrita** — economiza tokens (não tentar gerar artigo para item que vai ser rejeitado depois).
+2. **Para cada item rejected:**
+   - Log estruturado: `[REJECTED] {item.id}: {reason}`
+   - **Não tentar substituir por WebFetch ao portal** — só vai gerar PAA artigo
+   - Se item PT2030 com `data_status: forecast` e regulamento PAA → mover para watchlist (status `plano_anual`)
+   - Se item sem .txt → manter na queue como `pending` (downloader vai retentar)
+3. **Substituir slots vazios:**
+   - Após pre-flight, se restam menos de 5 items válidos, **selecionar mais items da queue por prioridade desc** e re-aplicar pre-flight
+   - Continuar até ter 5 válidos ou esgotar elegíveis
+4. **Só após pre-flight passar 5 items é que começa a escrita.**
+
+### EXCLUSÕES ABSOLUTAS (qualquer das condições → NUNCA escrever)
+
+```
+NUNCA escrever artigo para item que:
+  ❌ Não tem regulation_local apontando para .txt existente
+  ❌ .txt tem < 500 palavras
+  ❌ .txt contém keywords PAA
+  ❌ É PT2030 família com data_status != "verified"
+  ❌ Está em registry/depublished.json
+  ❌ Slug ou codigo já existe noutro item publicado (duplicado)
+```
+
+### Histórico do bug (para contexto)
+
+- **2026-05-12:** 11 PAAs publicados em 13-15 abril foram detectados retroativamente. Despublicados.
+- **2026-05-13:** Agent do writer publicou 2 novos PAAs (gestao-recursos-hidricos-acores2030, combate-a-privacao-material-2-aviso). Despublicados. Esta regra v4.13.1 fecha definitivamente a brecha.
+
+### Detalhes operacionais antigos (continuam válidos)
 
 **Razão:** Em 2026-05-05, o radar-scanner v4.7 promoveu 114 items PAA por engano (acf.pdf populado mas com PAA placeholder, não com regulamento real). Embora o scanner v4.7.1 corrija isto via verificação 2-tier, o writer adiciona aqui defesa em profundidade. Catches: bugs futuros do scanner, items legados com status pendente herdado, qualquer anomalia onde regulamento local seja PAA.
 
