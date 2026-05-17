@@ -1260,6 +1260,13 @@
       "state": "aberto",
       "last_check": "2026-05-16",
       "data_status": "verified"
+    },
+    {
+      "id": "euaf-2026-ta",
+      "file": "instrumentos/euaf-2026-ta/index.html",
+      "source": "eu-funding-tenders",
+      "state": "fechado",
+      "last_check": "2026-05-17"
     }
   ],
   "instruments": [
@@ -2440,10 +2447,10 @@
       "last_check": "2026-05-09"
     }
   ],
-  "count": 152,
-  "published": 152,
+  "count": 153,
+  "published": 153,
   "open": 105,
-  "closed": 45,
+  "closed": 46,
   "planned": 2,
   "_meta": {},
   "updated": "2026-05-16"
