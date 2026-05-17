@@ -1,6 +1,6 @@
 ---
 name: opiniao
-model: claude-sonnet-4-7
+model: claude-sonnet-4-5
 ---
 
 # Série 6.2 - Artigo de Opinião Controversa para Website

@@ -1,6 +1,6 @@
 ---
 name: instrumento
-model: claude-sonnet-4-7
+model: claude-sonnet-4-5
 ---
 
 # Série 3.1 - Publicar Instrumento (caminho manual)

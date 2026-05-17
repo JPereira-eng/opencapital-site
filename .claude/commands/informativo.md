@@ -1,6 +1,6 @@
 ---
 name: informativo
-model: claude-sonnet-4-7
+model: claude-sonnet-4-5
 ---
 
 # Série 2.1 - Artigo Informativo para Website

@@ -1,6 +1,6 @@
 ---
 name: trend
-model: claude-sonnet-4-7
+model: claude-sonnet-4-5
 ---
 
 # Série 1.2 - Artigo Trend para Website

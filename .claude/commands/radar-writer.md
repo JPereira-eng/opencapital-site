@@ -1,6 +1,6 @@
 ---
 name: radar-writer
-model: claude-sonnet-4-7
+model: claude-sonnet-4-5
 ---
 
 # Radar Writer v4.2: Criação de Artigos em Sprint

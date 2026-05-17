@@ -1,6 +1,6 @@
 ---
 name: instrumento-template
-model: claude-sonnet-4-7
+model: claude-sonnet-4-5
 ---
 
 # Série 3.1 - Template Editorial de Instrumentos (regras + HTML)
