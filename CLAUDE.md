@@ -640,6 +640,17 @@ Estas figuras são fortes quando usadas com parcimónia, e tornam-se tique edito
 
 O objetivo é prosa premium e confiante, não prosa enfática ou panfletária.
 
+### Vírgula antes de "e" — proibida
+
+Em PT-PT a vírgula antes de "e" coordenativo é estilisticamente pesada e quase sempre desnecessária. Aplicar em todo o texto editorial (corpo, standfirst, tagline, meta-description, excerpts, sidebars).
+
+Exemplos a corrigir:
+- "tem lógica, e está errada" → "tem lógica e está errada"
+- "não é infinita, e não se substitui" → "não é infinita e não se substitui"
+- "alternativas disponíveis, e uma conversa direta" → "alternativas disponíveis e uma conversa direta"
+
+Antes de fechar qualquer artigo, varrer o texto à procura de `, e ` e eliminar todas as ocorrências. A exceção raríssima é quando o "e" inicia uma oração com sujeito diferente que pode confundir o leitor. Nesse caso reescrever a frase em vez de manter a vírgula.
+
 ---
 
 ## 🦶 FOOTER PARTIAL — SINGLE SOURCE OF TRUTH
