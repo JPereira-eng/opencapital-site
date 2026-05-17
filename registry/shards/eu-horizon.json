@@ -2866,6 +2866,13 @@
       "source": "erc",
       "state": "aberto",
       "last_check": "2026-05-17"
+    },
+    {
+      "id": "horizon-miss-2026-03-ocean-04",
+      "file": "instrumentos/horizon-miss-2026-03-ocean-04/index.html",
+      "source": "eu-funding-tenders",
+      "state": "aberto",
+      "last_check": "2026-05-17"
     }
   ],
   "instruments": [
@@ -5194,11 +5201,11 @@
       "last_check": "2026-05-12"
     }
   ],
-  "count": 687,
-  "open": 340,
+  "count": 688,
+  "open": 341,
   "closed": 226,
   "planned": 121,
-  "published": 687,
+  "published": 688,
   "updated": "2026-05-12",
   "_updated": "2026-05-16"
 }
