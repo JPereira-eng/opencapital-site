@@ -94,43 +94,45 @@ Se algum JSON estiver inválido (incomum), **abortar batch** e reportar para int
 
 ---
 
-## MODO SPRINT (v4.14, 2026-05-17 com BATCH COMMIT)
+## MODO SPRINT (v4.14.1, 2026-05-17 — commit por artigo + push único)
 
 O writer opera em **1 batch de 5 artigos por sessao**. Cada batch:
 
 1. **Selecionar** 5 items da queue (PASSO 1) + pre-flight validation (PASSO 1.5)
-2. **Criar** os 5 artigos sequencialmente (PASSO 2-4)
-   - **Cada artigo: `git add` (NÃO commit individual)**
-   - Atualizar catalog/shard/lookup conforme cada artigo é criado
-3. **Após todos os 5 (ou subset disponível):** UM ÚNICO commit + UM ÚNICO push:
+2. **Para cada artigo:**
+   - Criar HTML, atualizar catalog/shard/lookup
+   - `git add` + `git commit -m "instrumento: [nome]"` (COMMIT INDIVIDUAL)
+   - **NÃO push intermédio**
+3. **Após o batch completo (ou parcial):** UM ÚNICO push:
    ```bash
-   git add -A
-   git commit -m "writer batch: N artigos publicados (slugs: A, B, C, D, E)"
    git push origin main
    ```
 4. Terminar. Não iniciar novo batch.
 
-**Vantagens do batch commit (v4.14):**
-- **1 commit por sessão writer = 1 build no GitHub Pages** (vs 5 builds antes)
-- Reduz pressão sobre rate limit (10 builds/hora do GitHub Pages)
-- History continua granular (commit message lista os 5 slugs)
-- Push único = menos rede, mais robusto
+**Racional v4.14.1 (revisão de v4.14):**
+A v4.14 batchava commits para reduzir builds. Mas após análise (2026-05-17), confirmámos que:
+- Build failures atribuídos a rate limit eram na verdade submódulos fantasma (`.claude/worktrees/*`) — corrigido em commit 687149a8
+- Rate real de builds (17/dia, max 2-3/hora) está bem abaixo do limite GitHub Pages (10/hora)
+- Granularidade do histórico (1 commit por artigo) tem valor editorial:
+  - Atribuição clara de quando cada artigo foi publicado
+  - Revert preciso de um único artigo se necessário
+  - Mensagem de commit serve como "log de publicação"
+
+**Trade-off aceitável:** 5 commits por batch = 1 push = 1 build do GitHub Pages (porque GitHub Pages triggera 1 build por push, não por commit). Logo, batch ou não-batch ao nível de commit dá o mesmo número de builds desde que push seja único.
 
 **Limites por sessao:**
 - Max 5 artigos por batch
 - **1 batch por sessao = 5 artigos max**
-- Se queue < 5: criar todos os que houver, commit do que existir
-- Se queue vazia: terminar imediatamente sem criar artigos nem commit
+- Se queue < 5: criar todos os que houver
+- Se queue vazia: terminar imediatamente sem criar artigos
 
-**REGRA DE SEGURANCA: Stage incremental, commit único.**
-- Cada artigo criado é `git add`'ed (stage) imediatamente
-- Se sessão falhar entre artigo 3 e 4 (rate limit, exception, etc.):
-  - 3 artigos estão em stage mas não commited
-  - PASSO 0.5 da próxima sessão deteta via `git status --short`
-  - Faz `git add -A && git commit` → recupera trabalho
-  - Adiciona ao seu próprio batch novo
+**REGRA DE SEGURANCA: Commit por artigo (granular), push único (eficiente).**
+- Cada artigo é commitado individualmente após criação
+- Se sessão falhar entre artigos: artigos já feitos estão commited localmente
+- Se sessão falhar antes do push final: PASSO 0.5 da próxima sessão push
+- Se sessão falhar mid-artigo (ficheiro parcial sem commit): PASSO 0.5 recupera via `git status --short`
 
-**NUNCA push intermédio.** Mesmo se "rate limit próximo", manter trabalho local. Recuperação garante zero perda.
+**NUNCA push intermédio.** O push acontece UMA VEZ no final do batch. Isto garante 1 build por sessão writer (eficiência) sem perder granularidade do histórico.
 
 ---
 
@@ -582,37 +584,39 @@ Para cada artigo criado:
 
 ---
 
-## PASSO 7: Deploy (BATCH COMMIT — v4.14, 2026-05-17)
+## PASSO 7: Deploy (commit por artigo + push único — v4.14.1, 2026-05-17)
 
-### 7a. Stage por artigo (após cada artigo criado nos passos 4-6):
+### 7a. Commit por artigo (após cada artigo criado nos passos 4-6):
 
 ```bash
 git -C "$REPO" add instrumentos/[slug]/index.html instruments-catalog.json registry/
+git -C "$REPO" commit -m "instrumento: [nome do instrumento]"
 ```
 
-**Apenas `git add`. NÃO fazer `git commit` por artigo.** Acumula stage de todos os 5 artigos do batch.
+**Cada artigo tem o seu próprio commit.** History granular permite atribuição precisa e revert pontual.
 
-### 7b. UM ÚNICO commit + push após o batch completo:
+### 7b. UM ÚNICO push após batch completo (5 commits ou menos):
 
 ```bash
-# Após todos os artigos do batch criados e staged:
-git -C "$REPO" commit -m "writer batch: N artigos publicados (slugs: A, B, C, D, E)"
 git -C "$REPO" push origin main
 ```
 
 Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push origin main`
 
-**Razão da mudança (v4.14):** GitHub Pages limita 10 builds/hora. Antes (commit por artigo): 5 artigos = 5 commits = 5 builds. Agora: 5 artigos = 1 commit = 1 build. **80% menos pressão sobre rate limit.**
+**Eficiência:** 1 push = 1 trigger do GitHub Pages = 1 build (mesmo com 5 commits push'ados juntos). Granularidade do histórico **não custa** builds extras.
 
 ### 7c. Recovery garantido (Passo 0.5)
 
-Se o batch falhar entre artigos (rate limit, exception, etc.):
-- Ficheiros estão em stage mas sem commit
-- PASSO 0.5 da próxima sessão detecta via `git status --short`
-- Faz commit recovery + push
-- Novo batch arranca normalmente
+Cenários de falha cobertos pelo PASSO 0.5 da próxima sessão:
 
-**Não há perda possível.** Mesmo se sessão crashar a meio do passo 7a (entre artigos), os ficheiros do disco estão lá e a próxima sessão recupera.
+| Onde falhou | Estado | Como recupera |
+|---|---|---|
+| Mid-criação artigo 3 | Ficheiro parcial sem commit | V1: `git status --short` + commit "recovery: batch parcial" |
+| Após criar 3 commits, antes push | 3 commits locais | V2: `git push origin main` |
+| Rate limit/network durante push | Commits locais preservados | V2: retry push |
+| Pre-flight rejeita item | Sem commit | Pre-flight skip; substituir slot |
+
+**Não há perda possível.** Cada artigo está commited individualmente, push acontece UMA vez no fim.
 
 **Após push bem-sucedido:** Terminar sessao. O próximo writer agendado tratara dos restantes.
 
@@ -639,11 +643,11 @@ BATCH UNICO (1 vez por sessao):
   3. Selecionar até 5 items: PT2030 sempre primeiro (qualquer shard pt2030-*),
      depois resto. Dentro de cada tier: ready antes de pending, score desc.
   4. PRE-FLIGHT validation (PASSO 1.5): rejeitar items inválidos, substituir
-  5. Para cada item válido: ler regulamento, criar HTML, atualizar catálogo,
-     git add (NÃO commit)
-  6. Atualizar queue + shard + lookup + index (git add)
-  7. UM ÚNICO git commit + push após todos os artigos (v4.14 batch)
-  8. Terminar. Não iniciar segundo batch.
+  5. Para cada item válido:
+     a. Ler regulamento, criar HTML, atualizar catálogo/shard/lookup/index
+     b. git add + git commit "instrumento: [nome]"  (commit individual)
+  6. UM ÚNICO git push após todos os commits (v4.14.1)
+  7. Terminar. Não iniciar segundo batch.
 
 Reportar: "Writer: [N] artigos criados. Fila restante: [N]."
 ```
