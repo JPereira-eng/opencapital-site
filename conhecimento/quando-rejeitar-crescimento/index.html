@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+  <title>Quando rejeitar crescimento: a decisão de não aceitar mais volume | Open Capital</title>
+  <meta name="description" content="Tenho procura que não consigo servir bem. Aceito na mesma? Framework com cinco critérios para decidir quando crescer faz sentido e quando mais volume destrói qualidade, margem e clientes existentes.">
+  <link rel="stylesheet" href="/assets/fonts/montserrat.css">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .decision-flow{margin:32px 0;border:1px solid var(--grey-light);padding:28px 32px;}
+    .decision-flow-title{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:20px;}
+    .decision-step{display:flex;align-items:flex-start;gap:18px;padding:16px 0;border-bottom:1px solid var(--grey-light);}
+    .decision-step:last-child{border-bottom:none;padding-bottom:0;}
+    .decision-num{min-width:28px;height:28px;background:var(--navy);color:var(--white);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+    .decision-text{font-size:16px;font-weight:300;color:var(--grey-dark);line-height:1.7;}
+    .decision-text strong{font-weight:600;color:var(--navy);}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR:START -->
+<style>
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento" class="active">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../../">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Crescimento e mercados</span>
+      </nav>
+      <h1 class="article-title">Quando rejeitar crescimento: a decisão de não aceitar mais volume</h1>
+      <p class="article-standfirst">Tenho procura que não consigo servir bem. Aceito na mesma? A resposta não é sim nem não. É uma análise de cinco critérios que determinam se mais volume cria valor ou o destrói.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Estratégia e Gestão</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Maio 2026</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>9 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Johnson Semedo</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../../conhecimento/estrategia/" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">A pergunta certa</div>
+        <h2>Não é sobre procura. É sobre capacidade de servir.</h2>
+        <p>Um gestor de uma empresa de serviços de engenharia com 35 pessoas recebe em dois meses mais projetos do que a equipa consegue absorver com qualidade. Outro dirige uma pastelaria de referência regional e tem fila de espera permanente. Um terceiro gere uma consultora de 12 pessoas e acaba de fechar três contratos que exigem 40% mais horas do que tem disponíveis.</p>
+        <p>Todos fazem a mesma pergunta: aceito na mesma?</p>
+        <p>O impulso natural é dizer sim. Mais receita significa mais fôlego, mais equipa no futuro, mais estabilidade. Recusar parece contra-intuitivo, quase ingrato com o mercado. Mas a pergunta de fundo não é "posso aceitar mais volume?" - é "o que acontece à qualidade do que já faço, e ao que vou fazer, se aceitar?"</p>
+        <p>Esta distinção muda completamente o enquadramento da decisão. Aceitar mais volume quando não se tem capacidade para o servir bem não é crescimento. É a antecâmara da degradação.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">O erro recorrente</div>
+        <h2>Por que o instinto quase sempre diz sim</h2>
+        <p>Há três vieses cognitivos que tornam difícil recusar procura, mesmo quando a empresa não tem capacidade para a absorver.</p>
+        <p>O primeiro é o otimismo de execução. O gestor acredita que a equipa vai "dar um jeito", que as horas vão aparecer, que desta vez vai correr melhor do que na última vez em que se esticou a capacidade. Este otimismo é compreensível - quem chega a gerir uma empresa com procura superior à oferta é, em geral, alguém que aprendeu a resolver problemas. O problema é que resolver problemas operacionais dentro de margem é diferente de os resolver quando a margem já não existe.</p>
+        <p>O segundo é o medo de perder quota para a concorrência. A lógica é: se recuso este cliente, ele vai a outro fornecedor, fica satisfeito com o serviço que recebe e nunca mais volta. O raciocínio tem validade em mercados com alta elasticidade de substituição. Em mercados onde a relação ou a especialização são diferenciadoras, um "não posso agora, mas posso daqui a três semanas" tem uma taxa de retenção muito mais alta do que o gestor habitualmente assume.</p>
+        <p>O terceiro é a assimetria na contabilidade mental de perdas e ganhos. A receita que se perde ao recusar é imediatamente visível. O custo da qualidade degradada para os clientes existentes e novos é difuso, distribuído no tempo e raramente atribuído diretamente à decisão de aceitar demasiado. Quando um cliente não renova, raramente diz "foi porque no projeto X tiveram demasiado trabalho." Simplesmente não volta.</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">O custo invisível</div>
+          <div class="art-highlight-text">O custo de aceitar volume que não se consegue servir bem raramente aparece na margem do mês seguinte. Aparece seis meses depois, na taxa de renovação, no NPS, na reputação. É o custo mais real e o menos contabilizado.</div>
+        </div>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Os cinco critérios</div>
+        <h2>Como avaliar a decisão com método</h2>
+        <p>A questão "aceito na mesma?" não tem resposta direta sem primeiro passar por cinco critérios. Cada um pode inclinar a decisão. O conjunto define-a.</p>
+
+        <h3>1. A restrição é temporária ou estrutural?</h3>
+        <p>Uma restrição temporária é aquela que pode ser resolvida em semanas ou meses sem mudança estrutural na empresa: contratar uma pessoa, subcontratar uma parte do trabalho, ajustar prioridades internas, adiar um projeto menos urgente. Uma restrição estrutural é aquela que não tem solução rápida: falta de espaço físico, processos que não escalam sem redesenho, dependência de competências raras que levam meses a desenvolver.</p>
+        <p>Se a restrição é temporária, aceitar o volume com transparência sobre os prazos pode ser racional. Se é estrutural, aceitar é garantir que o problema se agrava durante meses enquanto se tenta resolver um nó que mais carga só aperta.</p>
+        <p>A pergunta a fazer: "Se aceitar agora, em quanto tempo tenho capacidade real para servir este cliente com a qualidade que pratico habitualmente?" Se a resposta for superior a oito semanas sem certeza, a restrição provavelmente não é temporária.</p>
+
+        <h3>2. Qual é o custo real da degradação de qualidade?</h3>
+        <p>Em alguns mercados, a variação de qualidade dentro de uma banda aceitável não tem consequências graves. Um fornecedor de commodities que atrasa dois dias numa entrega não perde o cliente. Uma empresa de serviços diferenciados ou de alta especialização que entrega um trabalho abaixo do seu padrão habitual pode perder a relação para sempre.</p>
+        <p>O critério não é abstrato. É: que tipo de consequência tem, no modelo de negócio específico desta empresa, entregar a 80% da qualidade habitual? Se a resposta for "baixa", aceitar com controlo rigoroso é viável. Se a resposta for "comprometemos a renovação do contrato" ou "comprometemos a referência para o próximo cliente", o cálculo muda.</p>
+
+        <h3>3. Quem fica exposto: novos clientes ou também os atuais?</h3>
+        <p>Este critério é frequentemente ignorado. A empresa foca-se em "consigo ou não consigo servir o novo cliente?" e esquece que aceitar mais volume tem efeito sobre a qualidade do serviço aos clientes que já existem.</p>
+        <p>Se a capacidade adicional é genuinamente isolável, o risco está contido nos novos clientes. Se a mesma equipa, os mesmos processos ou os mesmos recursos servem novos e atuais clientes, aceitar mais é transferir risco para quem já confia na empresa. Este é o critério de maior peso: degradar a qualidade para clientes existentes é o erro mais caro que existe em crescimento por volume.</p>
+
+        <h3>4. O volume adicional financia a solução ou agrava o problema?</h3>
+        <p>Há casos em que aceitar mais volume, mesmo com alguma tensão de qualidade, é racional porque a receita adicional financia a contratação ou o investimento que resolve a restrição em dois ou três meses. Nestes casos, a empresa aceita com um plano concreto de expansão de capacidade e um prazo definido.</p>
+        <p>Mas há casos em que aceitar mais volume não liberta capital suficiente para resolver o problema estrutural. Ou em que a equipa está tão ocupada a executar que não tem tempo para contratar, treinar ou redesenhar processos. Neste cenário, mais volume não financia a saída da restrição. Prolonga-a e instala-a como estado permanente.</p>
+        <p>A pergunta concreta: "Com a margem gerada por este volume adicional, consigo contratar ou investir na capacidade que preciso em menos de 90 dias?" Se não, o crescimento financia-se a si próprio mas não financia a solução.</p>
+
+        <h3>5. Existe uma terceira via?</h3>
+        <p>A decisão raramente é binária. Entre "aceito tudo" e "recuso tudo" existe um conjunto de alternativas que muitas vezes não são exploradas porque o gestor está em modo reativo.</p>
+
+        <ul class="art-list">
+          <li>Aceitar com prazo estendido, dando ao cliente visibilidade real sobre quando o trabalho começa com qualidade.</li>
+          <li>Aceitar apenas parte do âmbito, servindo bem uma componente e recusando o que está além da capacidade atual.</li>
+          <li>Aumentar o preço como mecanismo de seleção natural: quem aceita um preço 20 a 30% superior está a revelar que o valor percebido é suficientemente alto para justificar a espera.</li>
+          <li>Criar uma lista de espera com compromisso de data, mantendo o cliente no pipeline sem comprometer a qualidade dos que já estão a ser servidos.</li>
+          <li>Subcontratar componentes específicos a parceiros de confiança, retendo a relação com o cliente mas delegando execução onde a própria empresa não tem capacidade.</li>
+        </ul>
+
+        <p>Explorar a terceira via antes de decidir entre aceitar ou recusar é o critério que mais frequentemente muda o resultado da análise.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Como aplicar</div>
+        <h2>O que medir e o que perguntar</h2>
+        <p>A análise só tem valor se for concreta. Para cada critério, existe um conjunto de sinais e medidas que tornam a avaliação objetiva em vez de intuitiva.</p>
+
+        <table class="art-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th>O que observar</th>
+              <th>Sinal de alerta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Tipo de restrição</strong></td>
+              <td>Identificar o bottleneck específico. É tempo de uma pessoa-chave, espaço físico, software, processo?</td>
+              <td>Restrição presente há mais de 3 meses sem solução em curso</td>
+            </tr>
+            <tr>
+              <td><strong>Custo da degradação</strong></td>
+              <td>Taxa de renovação dos últimos 12 meses. NPS ou feedback informal. Reclamações e retrabalho.</td>
+              <td>Taxa de renovação em queda ou NPS abaixo do histórico</td>
+            </tr>
+            <tr>
+              <td><strong>Exposição dos atuais</strong></td>
+              <td>Mapa de recursos partilhados. Quem serve novos e atuais clientes com os mesmos recursos?</td>
+              <td>Mais de 60% dos recursos partilhados entre novos e atuais clientes</td>
+            </tr>
+            <tr>
+              <td><strong>Ciclo de financiamento</strong></td>
+              <td>Margem gerada pelo volume adicional vs. custo de contratação ou investimento necessário. Prazo de resolução.</td>
+              <td>Prazo de resolução superior a 90 dias sem plano concreto</td>
+            </tr>
+            <tr>
+              <td><strong>Terceiras vias</strong></td>
+              <td>Elasticidade do cliente ao preço e ao prazo. Parceiros disponíveis para subcontratação.</td>
+              <td>Nenhuma alternativa ao sim ou não foi sequer considerada</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Framework de decisão</div>
+        <h2>Como chegar a uma resposta</h2>
+        <p>Depois de avaliar os cinco critérios, a lógica de decisão segue uma sequência. Não é uma fórmula, mas é um caminho estruturado.</p>
+
+        <div class="decision-flow">
+          <div class="decision-flow-title">Sequência de avaliação</div>
+          <div class="decision-step">
+            <div class="decision-num">1</div>
+            <div class="decision-text"><strong>A restrição é estrutural?</strong> Se sim, a terceira via é obrigatória antes de aceitar. Aceitar diretamente com restrição estrutural é a decisão de maior risco.</div>
+          </div>
+          <div class="decision-step">
+            <div class="decision-num">2</div>
+            <div class="decision-text"><strong>Os clientes atuais ficam expostos?</strong> Se sim e se o custo da degradação é alto no modelo de negócio, recusar ou limitar o âmbito é a decisão defensável. Proteger quem já confia é prioridade sobre crescer com novos.</div>
+          </div>
+          <div class="decision-step">
+            <div class="decision-num">3</div>
+            <div class="decision-text"><strong>O volume financia a solução em menos de 90 dias?</strong> Se sim, aceitar com plano de expansão e prazo comprometido pode ser racional. Sem prazo definido, não é plano. É otimismo.</div>
+          </div>
+          <div class="decision-step">
+            <div class="decision-num">4</div>
+            <div class="decision-text"><strong>Existe uma terceira via viável?</strong> Explorar preço, prazo, âmbito parcial e subcontratação antes de fechar a decisão. A maioria dos casos tem pelo menos uma alternativa não explorada.</div>
+          </div>
+          <div class="decision-step">
+            <div class="decision-num">5</div>
+            <div class="decision-text"><strong>Depois de tudo isto:</strong> se a restrição é temporária, os atuais clientes estão protegidos, há plano de resolução e não existe terceira via melhor, aceitar com transparência sobre condicionantes é a decisão certa.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Quando o framework não decide sozinho</h2>
+        <p>Há situações em que a análise fica incompleta porque faltam dados que o próprio gestor não consegue ter sem conversar com o mercado.</p>
+        <p>O primeiro caso é quando não se sabe o que o cliente valoriza mais: prazo, preço ou qualidade. Em serviços profissionais, é frequente o gestor assumir que o cliente quer entrega rápida quando o cliente preferiria esperar seis semanas por um trabalho feito com atenção. A única forma de saber é perguntar. Uma conversa honesta sobre capacidade e alternativas é quase sempre melhor do que um compromisso aceite sob pressão.</p>
+        <p>O segundo caso é quando a empresa está numa fase de transição de posicionamento. Uma empresa que está a tentar subir de segmento, a passar de prestadora de serviços de volume para consultora de alto valor, pode ter incentivo estratégico em recusar algum volume mesmo quando tem capacidade técnica para o absorver. Crescimento seletivo como sinal de posicionamento é uma decisão válida que o framework de capacidade não captura sozinho.</p>
+        <p>O terceiro caso é o do cliente âncora. Quando o volume em causa vem de um cliente que, pela sua dimensão ou visibilidade, abre portas que outro não abre, o cálculo tem uma componente estratégica que vai além da capacidade imediata. Neste caso, a decisão é menos operacional e mais sobre o tipo de empresa que se quer ser no próximo ciclo.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>O que vemos acontecer na prática</h2>
+        <p>Quando trabalhamos com empresas em fase de crescimento acelerado, uma das situações mais recorrentes é a degradação silenciosa de margens e de qualidade que começa precisamente quando a empresa aceita mais volume do que deveria. O processo é previsível: a receita sobe no trimestre em que o volume é aceite, a qualidade desce nos dois trimestres seguintes, a taxa de renovação segue a qualidade com um desfasamento de seis a doze meses. Quando o gestor percebe o problema, já está no meio de um ciclo difícil de reverter.</p>
+        <p>O que diferencia as empresas que crescem com sustentabilidade das que crescem e depois recuam não é a quantidade de procura que capturam. É a disciplina com que gerem o que aceitam. Esta disciplina não é natural. Vai contra o instinto comercial. Mas é uma competência de gestão tão importante quanto saber fechar um contrato.</p>
+        <p>Há também um ângulo financeiro que raramente é discutido neste contexto. Empresas que gerem a capacidade com método têm margens mais estáveis, menor rotatividade de clientes e maior previsibilidade de receita. Para uma empresa que esteja a preparar-se para receber investimento ou para uma ronda de financiamento, estes indicadores têm impacto direto na valorização. Um histórico de crescimento controlado é mais valioso do que um histórico de crescimento volátil, mesmo que os números absolutos de receita sejam semelhantes.</p>
+        <p>Se está a enfrentar esta decisão agora, comece pelos cinco critérios acima. Se depois de os percorrer a resposta ainda não for clara, é sinal de que há informação que falta sobre o que o cliente valoriza, sobre a natureza da restrição ou sobre o posicionamento que a empresa quer construir. Nesses casos, a conversa com o mercado e com a equipa é o próximo passo, não a decisão precipitada.</p>
+      </div>
+
+      <p style="font-size:13px;color:var(--grey-mid);margin-top:48px;font-style:italic;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a></p>
+
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../../Retratos Equipa/retrato_Johnson Semedo.png" alt="Johnson Semedo" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Johnson Semedo</div>
+            <div class="sidebar-author-role">Gestor de Projetos</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Categoria</div><div class="sidebar-info-val">Estratégia e Gestão</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Subtema</div><div class="sidebar-info-val">Crescimento e mercados</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Publicado</div><div class="sidebar-info-val">Maio 2026</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Leitura</div><div class="sidebar-info-val">9 min</div></div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">A sua empresa enfrenta pressão de crescimento?</div>
+        <div class="sidebar-cta-text">Ajudamos a estruturar a decisão de capacidade com critério e sem perder oportunidades relevantes.</div>
+        <a href="https://calendly.com/opencapital" target="_blank" class="sidebar-cta-btn">Falar com a equipa</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="../../conhecimento/focar-ou-diversificar-quando-aprofundar-core-alargar/" class="related-item">
+          <span class="related-item-title">Focar ou diversificar: quando aprofundar o core</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="../../conhecimento/vender-empresa-ou-continuar-a-crescer/" class="related-item">
+          <span class="related-item-title">Vender a empresa ou continuar a crescer</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="../../conhecimento/anunciar-mudanca-estrategica-timing/" class="related-item">
+          <span class="related-item-title">Quando anunciar uma mudança estratégica</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+  <script src="../../assets/js/back-link.js" defer></script>
+</body>
+</html>
