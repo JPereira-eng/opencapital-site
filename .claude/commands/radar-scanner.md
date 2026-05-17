@@ -1,6 +1,6 @@
 ---
 name: radar-scanner
-model: claude-sonnet-4-5
+model: claude-sonnet-4-6
 ---
 
 # Radar Scanner v4.9: Descoberta de Novos Instrumentos

@@ -1,6 +1,6 @@
 ---
 name: radar-downloader
-model: claude-sonnet-4-5
+model: claude-sonnet-4-6
 ---
 
 # Radar Downloader v4.1: Descarregar Regulamentos

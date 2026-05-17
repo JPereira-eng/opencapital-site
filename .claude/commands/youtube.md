@@ -1,6 +1,6 @@
 ---
 name: youtube
-model: claude-sonnet-4-5
+model: claude-sonnet-4-6
 ---
 
 # Série 2.2 - Artigo Informativo Baseado em Video do YouTube

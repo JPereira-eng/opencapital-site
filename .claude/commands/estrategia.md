@@ -1,6 +1,6 @@
 ---
 name: estrategia
-model: claude-sonnet-4-5
+model: claude-sonnet-4-6
 ---
 
 # Série 5.1 - Análise de Estratégia e Gestão para Website
