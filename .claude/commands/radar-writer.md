@@ -43,9 +43,26 @@ fi
 
 ---
 
-## PASSO 0.5: RECUPERACAO DE TRABALHO PENDENTE
+## PASSO 0.5: RECUPERACAO DE TRABALHO PENDENTE (v4.14, 2026-05-17 REFORÇADA)
 
-**Antes de iniciar qualquer batch, verificar se ha commits locais não enviados:**
+**Antes de iniciar qualquer batch, executar 3 verificações de recuperação em sequência:**
+
+### Verificação 1: ficheiros não-commitados (mais crítico)
+
+Se a sessão anterior criou ficheiros (artigos HTML, updates a catalog/shards) mas falhou ANTES do commit final, esses ficheiros estão "soltos" no working tree.
+
+```bash
+UNCOMMITTED=$(git -C "$REPO" status --short | wc -l)
+if [ "$UNCOMMITTED" -gt "0" ]; then
+  echo "RECUPERACAO: $UNCOMMITTED ficheiros não-commitados detectados. A commitar como recovery..."
+  git -C "$REPO" add -A
+  git -C "$REPO" commit -m "writer recovery: batch parcial recuperado da sessão anterior"
+fi
+```
+
+### Verificação 2: commits locais não-pushed
+
+Após Verificação 1, podem existir commits locais que não foram enviados (rate limit do push, falha de rede, etc.).
 
 ```bash
 LOCAL_AHEAD=$(git -C "$REPO" rev-list --count origin/main..HEAD 2>/dev/null || echo "0")
@@ -55,27 +72,65 @@ if [ "$LOCAL_AHEAD" -gt "0" ]; then
 fi
 ```
 
-Se o push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push origin main`
+Se o push falhar (rejected por estar atrás do remote):
+```bash
+git -C "$REPO" pull --rebase origin main && git -C "$REPO" push origin main
+```
 
-**Isto garante que artigos criados numa sessao anterior (que foi bloqueada por rate limit antes do push) são publicados.**
+### Verificação 3: validação de coerência state files
+
+Após recovery, validar que os ficheiros de estado (queue.json, catalog, shards) estão coerentes:
+
+```bash
+# Validar JSON parse
+for f in registry/queue.json registry/queue-plano-anual.json instruments-catalog.json registry/lookup.json; do
+  python -c "import json; json.load(open('$REPO/$f'))" || echo "AVISO: $f tem JSON inválido"
+done
+```
+
+Se algum JSON estiver inválido (incomum), **abortar batch** e reportar para intervenção manual.
+
+**Garantia:** artigos criados em sessões anteriores que falharam (qualquer fase: pre-commit, pre-push, post-push) são recuperados na próxima sessão.
 
 ---
 
-## MODO SPRINT
+## MODO SPRINT (v4.14, 2026-05-17 com BATCH COMMIT)
 
 O writer opera em **1 batch de 5 artigos por sessao**. Cada batch:
-1. Seleciona 5 items da queue (ou menos se queue menor)
-2. Cria os artigos, **commit após cada artigo individual**
-3. Push após completar o batch (ou após cada artigo se rate limit próximo)
-4. Termina. Não inicia novo batch mesmo que a queue tenha mais items.
+
+1. **Selecionar** 5 items da queue (PASSO 1) + pre-flight validation (PASSO 1.5)
+2. **Criar** os 5 artigos sequencialmente (PASSO 2-4)
+   - **Cada artigo: `git add` (NÃO commit individual)**
+   - Atualizar catalog/shard/lookup conforme cada artigo é criado
+3. **Após todos os 5 (ou subset disponível):** UM ÚNICO commit + UM ÚNICO push:
+   ```bash
+   git add -A
+   git commit -m "writer batch: N artigos publicados (slugs: A, B, C, D, E)"
+   git push origin main
+   ```
+4. Terminar. Não iniciar novo batch.
+
+**Vantagens do batch commit (v4.14):**
+- **1 commit por sessão writer = 1 build no GitHub Pages** (vs 5 builds antes)
+- Reduz pressão sobre rate limit (10 builds/hora do GitHub Pages)
+- History continua granular (commit message lista os 5 slugs)
+- Push único = menos rede, mais robusto
 
 **Limites por sessao:**
 - Max 5 artigos por batch
 - **1 batch por sessao = 5 artigos max**
-- Se queue < 5: criar todos os que houver
-- Se queue vazia: terminar imediatamente sem criar artigos
+- Se queue < 5: criar todos os que houver, commit do que existir
+- Se queue vazia: terminar imediatamente sem criar artigos nem commit
 
-**REGRA DE SEGURANCA: Commit por artigo.** Cada artigo criado e imediatamente commitado (sem push). O push acontece ao final do batch. Se o agente for bloqueado por rate limit entre artigos, o trabalho já esta guardado localmente e será enviado na próxima sessao (Passo 0.5).
+**REGRA DE SEGURANCA: Stage incremental, commit único.**
+- Cada artigo criado é `git add`'ed (stage) imediatamente
+- Se sessão falhar entre artigo 3 e 4 (rate limit, exception, etc.):
+  - 3 artigos estão em stage mas não commited
+  - PASSO 0.5 da próxima sessão deteta via `git status --short`
+  - Faz `git add -A && git commit` → recupera trabalho
+  - Adiciona ao seu próprio batch novo
+
+**NUNCA push intermédio.** Mesmo se "rate limit próximo", manter trabalho local. Recuperação garante zero perda.
 
 ---
 
@@ -527,24 +582,37 @@ Para cada artigo criado:
 
 ---
 
-## PASSO 7: Deploy (commit por artigo, push por batch)
+## PASSO 7: Deploy (BATCH COMMIT — v4.14, 2026-05-17)
 
-### 7a. Commit por artigo (após cada artigo criado nos passos 4-6):
+### 7a. Stage por artigo (após cada artigo criado nos passos 4-6):
 
 ```bash
 git -C "$REPO" add instrumentos/[slug]/index.html instruments-catalog.json registry/
-git -C "$REPO" commit -m "instrumento: [nome do instrumento]"
 ```
 
-**Cada artigo tem o seu próprio commit.** Isto garante que se o agente for bloqueado por rate limit, os artigos já criados ficam guardados localmente.
+**Apenas `git add`. NÃO fazer `git commit` por artigo.** Acumula stage de todos os 5 artigos do batch.
 
-### 7b. Push por batch (após os 5 commits do batch):
+### 7b. UM ÚNICO commit + push após o batch completo:
 
 ```bash
+# Após todos os artigos do batch criados e staged:
+git -C "$REPO" commit -m "writer batch: N artigos publicados (slugs: A, B, C, D, E)"
 git -C "$REPO" push origin main
 ```
 
 Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push origin main`
+
+**Razão da mudança (v4.14):** GitHub Pages limita 10 builds/hora. Antes (commit por artigo): 5 artigos = 5 commits = 5 builds. Agora: 5 artigos = 1 commit = 1 build. **80% menos pressão sobre rate limit.**
+
+### 7c. Recovery garantido (Passo 0.5)
+
+Se o batch falhar entre artigos (rate limit, exception, etc.):
+- Ficheiros estão em stage mas sem commit
+- PASSO 0.5 da próxima sessão detecta via `git status --short`
+- Faz commit recovery + push
+- Novo batch arranca normalmente
+
+**Não há perda possível.** Mesmo se sessão crashar a meio do passo 7a (entre artigos), os ficheiros do disco estão lá e a próxima sessão recupera.
 
 **Após push bem-sucedido:** Terminar sessao. O próximo writer agendado tratara dos restantes.
 
@@ -565,14 +633,17 @@ Se push falhar: `git -C "$REPO" pull --rebase origin main && git -C "$REPO" push
 
 ```
 BATCH UNICO (1 vez por sessao):
+  0. PASSO 0.5: Recovery (uncommitted + unpushed)
   1. Ler queue.json + instrumento.md
   2. Se queue vazia: terminar imediatamente
   3. Selecionar até 5 items: PT2030 sempre primeiro (qualquer shard pt2030-*),
      depois resto. Dentro de cada tier: ready antes de pending, score desc.
-  4. Para cada: ler regulamento, criar HTML, atualizar catálogo
-  5. Atualizar queue + shard + lookup + index
-  6. git commit + push
-  7. Terminar. Não iniciar segundo batch.
+  4. PRE-FLIGHT validation (PASSO 1.5): rejeitar items inválidos, substituir
+  5. Para cada item válido: ler regulamento, criar HTML, atualizar catálogo,
+     git add (NÃO commit)
+  6. Atualizar queue + shard + lookup + index (git add)
+  7. UM ÚNICO git commit + push após todos os artigos (v4.14 batch)
+  8. Terminar. Não iniciar segundo batch.
 
 Reportar: "Writer: [N] artigos criados. Fila restante: [N]."
 ```
