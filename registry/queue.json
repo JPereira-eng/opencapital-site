@@ -927,34 +927,6 @@
       ]
     },
     {
-      "id": "gestao-agua-conservacao-hidricos-iti-alentejo",
-      "name": "Gestão de água e conservação de recursos hídricos",
-      "codigo": "FA0266/2025",
-      "aviso_codigo": "FA0266/2025",
-      "source_id": "alentejo-2030",
-      "shard": "pt2030-other",
-      "detected_date": "2026-05-11",
-      "data_inicio": "2026-04-24",
-      "data_fim": "2026-12-31",
-      "deadline": "2026-12-31",
-      "budget_eur": 1000000.0,
-      "regulation_url": 252712,
-      "pdf_url": 252712,
-      "regulation_local": null,
-      "status": "pending",
-      "state": "aberto",
-      "fail_count": 1,
-      "priority_score": 500,
-      "programa_code": "ALENTEJO2030",
-      "codigo_api": "FA0266/2025",
-      "data_status": "forecast",
-      "download_error": "central PT2030 media API 401; nao encontrado no portal alentejo",
-      "last_fail_date": "2026-05-17",
-      "fallback_tried": [
-        "2b-pdf"
-      ]
-    },
-    {
       "id": "inqueritos-de-mobilidade-nas-areas-metropolitana-de-lisboa-e-do-porto",
       "name": "Inquéritos de mobilidade nas Áreas Metropolitana de Lisboa e do Porto",
       "codigo": "FA0284/2025",

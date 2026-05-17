@@ -292,6 +292,14 @@
       "state": "fechado",
       "last_check": "2026-05-17",
       "data_status": "verified"
+    },
+    {
+      "id": "gestao-agua-conservacao-hidricos-iti-alentejo",
+      "file": "instrumentos/gestao-agua-conservacao-hidricos-iti-alentejo/index.html",
+      "source": "alentejo-2030",
+      "state": "aberto",
+      "last_check": "2026-05-17",
+      "aviso_codigo": "FA0266/2025"
     }
   ],
   "instruments": [
@@ -536,12 +544,12 @@
       "last_check": "2026-05-09"
     }
   ],
-  "count": 28,
-  "open": 34,
+  "count": 29,
+  "open": 35,
   "closed": 6,
   "planned": 15,
   "_meta": {
     "last_monitor_run": "2026-05-12"
   },
-  "published": 5
+  "published": 6
 }
