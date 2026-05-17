@@ -1,2 +1,12 @@
 # Claude Code local settings (paths específicos de cada computador)
 .claude/settings.local.json
+
+# Claude Code worktrees (locais, não devem ir para o repo)
+.claude/worktrees/
+
+# Node modules (não deveriam estar tracked)
+node_modules/
+
+# Output temporários de tasks
+*.tmp
+__pycache__/
