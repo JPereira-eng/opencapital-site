@@ -1428,7 +1428,8 @@
         .sort((a, b) => {
           const d = (b.data_publicacao || '').localeCompare(a.data_publicacao || '');
           return d !== 0 ? d : b._idx - a._idx;
-        });
+        })
+        .slice(0, 15);
       if (featured.length === 0) return;
       track.innerHTML = '';
       featured.forEach(art => track.appendChild(buildCarouselCard(art)));
