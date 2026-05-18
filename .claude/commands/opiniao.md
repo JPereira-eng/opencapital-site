@@ -328,12 +328,13 @@ A crónica e prosa continua. A pagina não e um manual com capitulos: e um texto
 - **André:** referência histórica, ano, episodio ("1974, outra vez", "Antes de Bruxelas")
 
 **Como organizar a crónica sem h2:**
-Art-divider, simples mudanca de parágrafo, parágrafo curto isolado. A tipografia da prosa, a respiracao entre parágrafos, o ritmo das frases: tudo isso da estrutura sem ser preciso titular blocos.
+Simples mudanca de parágrafo, parágrafo curto isolado. A tipografia da prosa, a respiracao entre parágrafos, o ritmo das frases: tudo isso da estrutura sem ser preciso titular blocos.
 
 **Alternativas tipograficas a h2:**
-- `<div class="art-divider"></div>` - linha fina, sem rotulo, marca pausa
 - Parágrafo de uma frase isolado - efeito retórico de pausa
 - `<div class="art-highlight">` - quase nunca usado em crónica; reservado para nota lateral muito justificada
+
+**`art-divider` - PROIBIDO.** A crónica é prosa contínua. Não há linhas horizontais a cortar o texto. Qualquer mudança de cena, salto temporal, contra-argumento ou viragem resolve-se com mudança de parágrafo, parágrafo curto isolado ou (no máximo) o único h2 admissível. Linha horizontal quebra a voz do cronista e aproxima a peça de artigo modular, contra o espírito da série. Não incluir `<div class="art-divider">` no corpo do artigo em circunstância nenhuma.
 
 **Pull-quote - regra restritiva:**
 Pull-quotes que destacam frases do próprio texto da crónica estao **proibidos**. São auto-citacao corporativa e quebram a voz do cronista.
@@ -455,7 +456,7 @@ Cria `conhecimento/[slug]/index.html`.
   </div>
 </div>
 
-<div class="art-divider"></div>
+<!-- NOTA: art-divider esta PROIBIDO em /opiniao. Ver Regras de Estrutura e Titulacao. -->
 
 <!-- Tabela -->
 <table class="art-table">
