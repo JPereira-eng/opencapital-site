@@ -558,7 +558,8 @@ Isto aplica-se a TODOS os CTAs com texto tipo:
 - No filled icons, colour gradients, or rounded playful icon styles
 - No uppercase nav links
 - No `hero-gold-line` element in any page or article
-- No em dashes (—) in any text output, ever — use a comma, period, or rewrite the sentence
+- No em dashes (—) in any text output, ever. Use a comma, period, or rewrite the sentence.
+- No regular hyphens (-) used as pause markers in editorial text. The pattern " - " (espaço-hífen-espaço) está proibido em todo o conteúdo editorial (artigos, taglines, standfirsts, meta-descriptions, excerpts, sidebars, listas de bullets, células de tabela). Substituir por vírgula, ponto final, dois pontos ou parênteses, consoante o ritmo da frase. Antes de fechar qualquer artigo, varrer o texto à procura de " - " e eliminar todas as ocorrências. O hífen só é permitido em palavras compostas (ex: colaborador-chave, sub-tema). Esta regra existe porque pausas com hífen são uma assinatura visível de texto gerado por IA e quebram o tom premium da Open Capital.
 
 ---
 
@@ -650,6 +651,27 @@ Exemplos a corrigir:
 - "alternativas disponíveis, e uma conversa direta" → "alternativas disponíveis e uma conversa direta"
 
 Antes de fechar qualquer artigo, varrer o texto à procura de `, e ` e eliminar todas as ocorrências. A exceção raríssima é quando o "e" inicia uma oração com sujeito diferente que pode confundir o leitor. Nesse caso reescrever a frase em vez de manter a vírgula.
+
+### Hífen como pausa, proibido
+
+O hífen entre espaços (` - `) usado como pausa retórica é uma assinatura visível de texto gerado por IA. Em qualquer texto editorial, está proibido. Aplica-se ao corpo do artigo, standfirsts, taglines, meta-descriptions, excerpts, sidebars, células de tabela, items de lista e steps numerados.
+
+Exemplos a corrigir:
+- "compra-se tempo - e tempo caro, porque..." → "compra-se tempo, e tempo caro, porque..."
+- "a empresa tem capacidade real de agir - não apenas promessas" → "a empresa tem capacidade real de agir, não apenas promessas"
+- "a dependência crítica raramente é óbvia - se fosse, já teria sido gerida" → "a dependência crítica raramente é óbvia. Se fosse, já teria sido gerida."
+- "uma saída bem gerida pode reforçar a confiança da equipa - a empresa teve uma situação difícil" → "uma saída bem gerida pode reforçar a confiança da equipa: a empresa teve uma situação difícil"
+- Em listas: "Diagnóstico da causa real - perceber porque sai" → "Diagnóstico da causa real: perceber porque sai"
+
+Substitutos possíveis, escolher pelo ritmo da frase:
+- Vírgula (continuação no mesmo fôlego)
+- Ponto final + nova frase (quando a segunda ideia merece autonomia)
+- Dois pontos (quando o que segue é explicação ou enumeração)
+- Parênteses (quando é aposto secundário)
+
+O hífen continua permitido em palavras compostas (colaborador-chave, sub-tema, fim-de-semana, mútuo acordo). A regra incide exclusivamente sobre o padrão ` - ` (espaço-hífen-espaço) usado como pausa.
+
+Antes de fechar qualquer artigo, varrer o texto à procura de ` - ` e eliminar todas as ocorrências. Não há exceções em texto editorial.
 
 ---
 

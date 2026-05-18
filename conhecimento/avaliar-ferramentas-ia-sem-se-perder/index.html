@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+  <title>Como avaliar ferramentas de IA sem se perder na oferta disponível | Open Capital</title>
+  <meta name="description" content="Há centenas de ferramentas de IA no mercado. Um framework para decidir quais valem o tempo: cinco critérios práticos para gestores que querem escolher com método.">
+  <link rel="stylesheet" href="/assets/fonts/montserrat.css">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    /* Criteria blocks */
+    .criteria-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .criteria-cell{background:var(--white);padding:24px 22px;}
+    .criteria-num{font-size:28px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:10px;opacity:0.45;}
+    .criteria-title{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:8px;line-height:1.3;}
+    .criteria-body{font-size:14px;font-weight:300;color:var(--grey-mid);line-height:1.7;}
+    @media(max-width:640px){.criteria-grid{grid-template-columns:1fr;}}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+  <!-- NAVBAR:START -->
+<style>
+  .nav-caret{display:inline-block;width:10px;height:6px;margin-left:7px;vertical-align:middle;color:rgba(255,255,255,0.7);transition:transform .25s ease, color .25s ease;}
+  .navbar.scrolled .nav-caret{color:rgba(26,58,92,0.7);}
+  .nav-dropdown:hover .nav-caret{transform:rotate(180deg);color:#C9A96E;}
+  .nav-links{padding-left:48px;}
+  @media(max-width:1100px){.nav-links{padding-left:24px;gap:18px;}}
+  .navbar .nav-badge, .nav-mobile-menu .nav-badge{
+    font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:none;
+    color:#C9A96E;border:none;padding:0;margin-left:3px;
+    vertical-align:super;line-height:1;
+  }
+</style>
+<nav class="navbar" id="navbar">
+  <a href="../../" class="nav-logo">
+    <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../biblioteca/" data-nav="biblioteca">Biblioteca</a></li>
+    <li class="nav-dropdown">
+      <a href="../../conhecimento/atualidade/" data-nav="conhecimento" class="active">Conhecimento <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../conhecimento/atualidade/">Atualidade</a>
+        <a href="../../conhecimento/opiniao/">Opinião</a>
+        <a href="../../conhecimento/estrategia/">Estratégia e Gestão</a>
+        <a href="../../conhecimento/regulamentos/">Regulamentos e Conceitos</a>
+      </div>
+    </li>
+    <li><a href="../../capital-simulator/" data-nav="capital-simulator">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../tech2business/" data-nav="tech2business">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+    <li><a href="../../sobre-nos/" data-nav="sobre-nos">Sobre Nós</a></li>
+    <li class="nav-dropdown">
+      <a href="#" data-nav="oportunidades">Oportunidades <svg class="nav-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="../../parceiros/">Parceiros</a>
+        <a href="../../carreiras/">Carreiras</a>
+      </div>
+    </li>
+  </ul>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-cta">Contactar</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="../../biblioteca/">Biblioteca</a>
+  <a href="../../conhecimento/atualidade/">Conhecimento</a>
+  <a href="../../conhecimento/atualidade/" style="padding-left:28px; font-size:13px; opacity:0.85;">Atualidade</a>
+  <a href="../../conhecimento/opiniao/" style="padding-left:28px; font-size:13px; opacity:0.85;">Opinião</a>
+  <a href="../../conhecimento/estrategia/" style="padding-left:28px; font-size:13px; opacity:0.85;">Estratégia e Gestão</a>
+  <a href="../../conhecimento/regulamentos/" style="padding-left:28px; font-size:13px; opacity:0.85;">Regulamentos e Conceitos</a>
+  <a href="../../capital-simulator/">Capital Simulator<sup class="nav-badge">em breve</sup></a>
+  <a href="../../tech2business/">Tech2Business<sup class="nav-badge">em breve</sup></a>
+  <a href="../../sobre-nos/">Sobre Nós</a>
+  <a href="../../parceiros/">Parceiros</a>
+  <a href="../../carreiras/">Carreiras</a>
+  <a href="https://calendly.com/opencapital" target="_blank" class="nav-mobile-cta">Contactar</a>
+</div>
+<!-- NAVBAR:END -->
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../../">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../estrategia/">Estratégia e Gestão</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Ferramentas de IA</span>
+      </nav>
+      <h1 class="article-title">Como avaliar ferramentas de IA sem se perder na oferta disponível</h1>
+      <p class="article-standfirst">Há centenas de ferramentas de IA no mercado. O problema não é encontrá-las: é saber quais justificam o tempo, o dinheiro e a atenção que consomem.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Estratégia e Gestão</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Maio 2026</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>9 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Jorge Pereira</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../estrategia/" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+      <img src="../../assets/articles/estrategia_IA.png" alt="Como avaliar ferramentas de IA sem se perder na oferta disponível" class="article-cover-img">
+
+      <div class="article-section reveal">
+        <p>Todos os meses, um decisor empresarial pergunta qualquer coisa parecida com isto: "Há centenas de ferramentas de IA. Como escolho as que valem o tempo?" A pergunta parece prática. Na realidade, está mal formulada, e é precisamente por isso que a resposta raramente satisfaz.</p>
+        <p>A pergunta pressupõe que o problema está na seleção de ferramentas. Mas a maioria das empresas que adota ferramentas de IA sem resultados não falhou na escolha da ferramenta: falhou antes, na definição do problema que a ferramenta deveria resolver. Escolheram uma resposta antes de terem a pergunta.</p>
+        <p>A pergunta certa é mais estreita e mais exigente: "Que tarefas específicas da minha operação consomem tempo desproporcionado, têm padrão suficiente para serem delegáveis e valeriam a pena investir em resolver?" A resposta a esta pergunta é que determina que tipo de ferramenta faz sentido, se alguma, e em que sequência. Sem ela, qualquer ferramenta parece interessante e nenhuma se torna indispensável.</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">O ponto de partida</div>
+          <div class="art-highlight-text">Uma empresa não avalia ferramentas de IA. Avalia problemas. Depois verifica se existe uma ferramenta adequada para os resolver. A ordem importa: a maioria das empresas inverte-a.</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">O erro comum</div>
+        <h2>Por que a abordagem intuitiva falha</h2>
+        <p>O mercado de ferramentas de IA está organizado para alimentar a urgência de adoção, não para facilitar a decisão criteriosa. Os fornecedores publicam benchmarks de produtividade, casos de sucesso selecionados e comparações que enfatizam o que as suas ferramentas fazem, não o que pressupõem da empresa que as usa. O contexto de adoção, as condições que tornam a ferramenta eficaz, raramente é o centro da comunicação.</p>
+        <p>O resultado é previsível. Um gestor lê que uma empresa semelhante à sua triplicou a velocidade de produção de conteúdos com uma ferramenta de IA generativa. Adota a ferramenta. Seis meses depois, o resultado é medíocre, não porque a ferramenta seja má, mas porque a empresa não tinha o fluxo de revisão, os critérios de qualidade nem a pessoa responsável por integrar a ferramenta no processo existente. O caso de sucesso descrito dependia de condições que não foram comunicadas porque nunca foram o foco da mensagem.</p>
+        <p>A isto junta-se um segundo erro: a adoção por contágio social. Uma ferramenta que circula nos grupos de WhatsApp do setor, que aparece nas conferências do nicho, que "toda a gente está a usar" ganha legitimidade que não tem necessariamente fundamento operacional. Adota-se por pressão de contexto, não por análise de problema.</p>
+        <p>Não é um fenómeno novo. Já aconteceu com ERP nos anos 90, com CRM nos anos 2000 e com analytics nos anos 2010. A IA não é diferente no mecanismo: é apenas mais rápida, mais barata de experimentar e mais fácil de abandonar sem assumir publicamente que não resultou.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Os critérios</div>
+        <h2>Cinco filtros para decidir com método</h2>
+        <p>Uma decisão de adoção de ferramenta de IA não é diferente, na sua estrutura, de qualquer outra decisão de investimento tecnológico. Tem um problema, um custo, um benefício esperado e um risco. O que muda é a velocidade com que novas opções aparecem e a facilidade com que se iniciam trials que nunca se convertem em uso real. Os cinco critérios abaixo funcionam como filtros sequenciais: uma ferramenta que não passe no primeiro critério não chega ao segundo.</p>
+
+        <div class="criteria-grid reveal">
+          <div class="criteria-cell">
+            <div class="criteria-num">01</div>
+            <div class="criteria-title">O problema precede a ferramenta</div>
+            <div class="criteria-body">Existe um problema específico, com nome e impacto mensurável, antes de se falar em ferramenta? Se a resposta for não, parar aqui.</div>
+          </div>
+          <div class="criteria-cell">
+            <div class="criteria-num">02</div>
+            <div class="criteria-title">Impacto num passo concreto</div>
+            <div class="criteria-body">A ferramenta melhora um passo delimitado do processo, não "a operação em geral"? Ganhos difusos são promessas, não critérios.</div>
+          </div>
+          <div class="criteria-cell">
+            <div class="criteria-num">03</div>
+            <div class="criteria-title">Custo total de adoção</div>
+            <div class="criteria-body">A licença é só o começo. Integração, formação, manutenção, gestão de exceções e risco de lock-in compõem o custo real.</div>
+          </div>
+          <div class="criteria-cell">
+            <div class="criteria-num">04</div>
+            <div class="criteria-title">Reversibilidade</div>
+            <div class="criteria-body">Qual é o custo de sair se a ferramenta deixar de fazer sentido? Dados migráveis, contratos curtos e alternativas disponíveis reduzem o risco.</div>
+          </div>
+          <div class="criteria-cell">
+            <div class="criteria-num">05</div>
+            <div class="criteria-title">Quem usa e quem mantém</div>
+            <div class="criteria-body">Existe uma pessoa concreta responsável por integrar a ferramenta e por medir se está a funcionar? Ferramentas sem dono tornam-se despesa oculta.</div>
+          </div>
+          <div class="criteria-cell" style="background:#FAFAFA;">
+            <div class="criteria-num" style="opacity:0.2;">+</div>
+            <div class="criteria-title" style="color:var(--grey-mid);">Avaliação combinada</div>
+            <div class="criteria-body">Se passar em todos os critérios, a decisão é investir. Se falhar em dois ou mais, a resposta é não, por agora.</div>
+          </div>
+        </div>
+
+        <h3>1. O problema precede a ferramenta</h3>
+        <p>O primeiro filtro é o mais eliminador. Uma ferramenta de IA só faz sentido quando existe um problema identificado com clareza suficiente para ser medido antes e depois da intervenção. "Quero ser mais produtivo" ou "quero usar IA no marketing" não são problemas. São aspirações. Um problema é: "A equipa de três pessoas que gere pedidos de suporte passa em média seis horas por semana a classificar tickets antes de os encaminhar, e a latência daí resultante afeta o NPS." Este problema tem causa, dimensão e efeito. É avaliável. Uma ferramenta de triagem e classificação automática pode ou não resolvê-lo, mas pelo menos há um critério de sucesso.</p>
+        <p>A maioria das empresas que experimenta ferramentas de IA sem resultado não consegue articular o problema que a ferramenta deveria resolver. Quando questionadas seis meses depois, a resposta típica é "ficámos a perceber melhor o que a ferramenta faz" ou "não foi o momento certo para implementar". Nenhuma das duas é uma avaliação. São racionalizações de uma decisão que não teve fundamento desde o início.</p>
+
+        <h3>2. Impacto num passo concreto</h3>
+        <p>Ferramentas que prometem transformar "toda a operação" raramente transformam qualquer coisa de forma verificável. O valor de uma ferramenta de IA é mais fácil de demonstrar quando está delimitado a um passo concreto de um processo: gerar primeiros rascunhos de resposta a emails de clientes, classificar documentos por tipo, transcrever e resumir reuniões, sugerir alocação de stock com base em histórico. Cada um destes passos tem input, output e uma forma de medir se melhorou.</p>
+        <p>Ganhos declarados como "aumentar a eficiência da equipa em 40%" são sinais de alerta, não de oportunidade. Significam que o fornecedor não consegue localizar onde o valor é criado, ou que prefere não o fazer para não criar expectativas específicas que possam não ser cumpridas. A questão correta a fazer a qualquer fornecedor é: "Em que passo exato do meu processo a ferramenta intervém e como se mede o impacto?"</p>
+
+        <h3>3. Custo total de adoção</h3>
+        <p>O custo de uma ferramenta de IA raramente é o preço da licença. O custo relevante inclui o tempo de integração técnica com sistemas existentes, a formação das pessoas que vão usar a ferramenta, a gestão das exceções que a ferramenta não consegue tratar (e que alguém tem de tratar manualmente), o custo de oportunidade do tempo que a equipa dedica à implementação e a dependência que se cria em relação a um fornecedor específico.</p>
+        <p>Um exercício útil: estimar quanto tempo a empresa vai dedicar nos primeiros três meses a integrar, testar e ajustar a ferramenta. Esse tempo tem custo. Depois comparar esse custo com o benefício esperado no mesmo período. Se o retorno esperado no primeiro ano não cobrir claramente o custo de adoção, a decisão económica é não adotar, independentemente do que a ferramenta promete no longo prazo. O longo prazo é uma narrativa; o custo de adoção é real.</p>
+
+        <h3>4. Reversibilidade</h3>
+        <p>A facilidade de entrar numa ferramenta de IA é hoje muito maior do que era há cinco anos. A facilidade de sair, nem sempre. Ferramentas que acumulam dados de negócio, histórico de interações ou modelos treinados com dados proprietários criam dependências que aumentam com o tempo. Quando a ferramenta muda de preços, é adquirida por um concorrente ou simplesmente deixa de funcionar como esperado, o custo de saída pode ser significativo.</p>
+        <p>Perguntas práticas a fazer antes de adotar: os dados ficam acessíveis se a subscrição terminar? É possível migrar para uma alternativa sem perder informação crítica? O contrato tem cláusulas de lock-in implícitas, como preços progressivos que tornam a saída economicamente penalizadora após um certo ponto? Uma ferramenta com resposta favorável a estas três perguntas representa um risco de dependência muito mais gerível do que uma que não as consegue responder com clareza.</p>
+
+        <h3>5. Quem usa e quem mantém</h3>
+        <p>O critério mais subestimado. Uma ferramenta de IA sem uma pessoa responsável por a integrar no fluxo diário da equipa torna-se, rapidamente, uma despesa de SaaS que ninguém usa mas ninguém cancela. A adoção de tecnologia dentro de equipas requer alguém que defina como a ferramenta se encaixa no processo, que meça se está a funcionar, que reporte à gestão e que decida quando ajustar ou abandonar.</p>
+        <p>Em empresas com menos de 20 pessoas, esta responsabilidade pode recair sobre o fundador ou sobre o responsável da área mais diretamente impactada. Em empresas maiores, pode ser o COO, o responsável de operações ou alguém designado especificamente. O que não pode acontecer é a adoção por consenso difuso, onde toda a gente aprova a ferramenta mas ninguém é responsável pelo resultado.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Como aplicar</div>
+        <h2>O que observar e medir em cada critério</h2>
+        <p>Os cinco critérios são mais úteis quando traduzidos em perguntas concretas que o decisor pode responder antes de qualquer demonstração de produto. A tabela abaixo serve como guia de aplicação prático.</p>
+
+        <table class="art-table">
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th>Pergunta de diagnóstico</th>
+              <th>Sinal de viabilidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Problema definido</strong></td>
+              <td>Consigo descrever o problema em duas frases com causa, impacto e dimensão?</td>
+              <td>Sim, e posso medir o estado atual antes de qualquer ferramenta</td>
+            </tr>
+            <tr>
+              <td><strong>Passo concreto</strong></td>
+              <td>Qual é o passo específico do processo onde a ferramenta intervém?</td>
+              <td>Existe um input claro, um output esperado e uma forma de medir a diferença</td>
+            </tr>
+            <tr>
+              <td><strong>Custo total</strong></td>
+              <td>Se incluir integração, formação e gestão de exceções, o custo no primeiro ano excede o benefício esperado?</td>
+              <td>O benefício esperado no primeiro ano cobre o custo com margem</td>
+            </tr>
+            <tr>
+              <td><strong>Reversibilidade</strong></td>
+              <td>Se quiser sair daqui a 12 meses, o que perco?</td>
+              <td>Dados exportáveis, contrato de curta duração e alternativas existentes no mercado</td>
+            </tr>
+            <tr>
+              <td><strong>Responsabilidade</strong></td>
+              <td>Quem, pelo nome, é responsável por integrar e medir esta ferramenta?</td>
+              <td>Existe uma pessoa concreta com tempo alocado e critério de sucesso definido</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>A utilidade da tabela não está na resposta individual a cada pergunta, mas no padrão. Uma ferramenta que passa em quatro critérios mas falha no de responsabilidade tem um problema de implementação, não de produto: pode fazer sentido adotar quando a empresa tiver capacidade de a gerir. Uma ferramenta que falha nos dois primeiros critérios não é uma ferramenta para esta empresa neste momento, independentemente do que promete.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Limites do framework</div>
+        <h2>Quando os cinco critérios não chegam</h2>
+        <p>O framework é útil para decisões de adoção operacional, onde o problema existe, é mensurável e a ferramenta tem de demonstrar valor num horizonte razoável. Há contextos onde esta lógica se aplica com menos rigor.</p>
+        <p>O primeiro é a exploração estratégica. Uma empresa que está a investigar como a IA pode transformar o seu modelo de negócio a três ou cinco anos não precisa de passar todos os critérios para justificar uma experiência. Aqui, o critério relevante é diferente: não "esta ferramenta resolve um problema operacional específico?" mas "esta experiência vai dar-nos informação estratégica que não temos de outra forma?" São decisões de aprendizagem, não de eficiência.</p>
+        <p>O segundo é o contexto de I&D. Empresas com projetos formais de investigação e desenvolvimento usam ferramentas de IA em fases iniciais de trabalho exploratório onde o problema não está totalmente definido porque a definição do problema é parte do projeto. Nestes casos, o rigor do critério 1 é incompatível com a natureza do trabalho.</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">Nota de honestidade analítica</div>
+          <div class="art-highlight-text">Este framework é uma ferramenta para reduzir decisões mal fundamentadas, não para eliminar a incerteza. Há ferramentas que passam todos os critérios e não entregam valor, e há ferramentas que parecem frágeis no papel e transformam operações inteiras. O framework aumenta a probabilidade de uma boa decisão. Não a garante.</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>Como a equipa pensa esta decisão</h2>
+        <p>Quando trabalhamos com clientes que estão a considerar ferramentas de IA, a primeira conversa raramente é sobre ferramentas. É sobre processos. Pedimos que descrevam as cinco tarefas que mais consomem tempo na operação, que quantifiquem esse tempo quando possível e que identifiquem quais dessas tarefas têm padrão suficiente para serem delegáveis a um sistema. Na maioria dos casos, esta conversa já clarifica muito do que vale a pena explorar.</p>
+        <p>O segundo passo é separar o que é urgente do que é transformador. Há ferramentas de IA que resolvem problemas imediatos com custo de adoção baixo e reversibilidade alta. Estas são as primeiras a considerar: o risco é gerível, o aprendizado é rápido e o impacto pode ser demonstrado em semanas. Há outras que prometem transformação estrutural mas exigem meses de integração, dependências críticas e uma aposta significativa em capacidade interna. Estas merecem análise mais profunda, não necessariamente mais entusiasmo.</p>
+        <p>O terceiro passo é calibrar expectativas relativamente ao que "usar IA" significa na prática. Não é substituir a equipa. Não é eliminar julgamento humano em decisões relevantes. É, tipicamente, reduzir o tempo dedicado a tarefas de baixo valor para que as pessoas possam dedicar mais tempo às tarefas onde o julgamento humano é insubstituível. Esta calibração, por si só, já muda a conversa sobre que ferramentas fazem sentido.</p>
+        <p>Por último, a velocidade do mercado é real mas não deve tornar-se ansiedade. Novas ferramentas aparecem todos os meses. A maioria não vai existir daqui a dois anos, porque o mercado ainda está a consolidar-se. Adotar tarde uma ferramenta que sobreviveu ao mercado é frequentemente melhor do que adotar cedo uma ferramenta que desaparece. A pressão de ser early adopter em IA aplicada a operações de negócio tem poucos fundamentos empíricos para a maioria das PME portuguesas.</p>
+      </div>
+
+      <p style="font-size:13px;color:var(--grey-mid);margin-top:48px;font-style:italic;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt">geral@opencapital.pt</a></p>
+
+    </article>
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../../Retratos Equipa/retrato_jorgepereira.png" alt="Jorge Pereira" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Jorge Pereira</div>
+            <div class="sidebar-author-role">COO, Líder Tech2Business</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Categoria</div><div class="sidebar-info-val">Estratégia e Gestão</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Publicado</div><div class="sidebar-info-val">Maio 2026</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Leitura</div><div class="sidebar-info-val">9 min</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Subtema</div><div class="sidebar-info-val">Inovação e Tecnologia</div></div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Falar com um especialista</div>
+        <div class="sidebar-cta-text">Quer perceber que ferramentas de IA fazem sentido para a sua operação específica?</div>
+        <a href="https://calendly.com/opencapital" target="_blank" class="sidebar-cta-btn">Agendar conversa</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="../automacao-vs-digitalizacao/" class="related-item">
+          <span class="related-item-title">Automação e digitalização: o que separa os dois conceitos</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="../tipos-de-inovacao/" class="related-item">
+          <span class="related-item-title">Tipos de inovação: o mapa para decidir onde investir</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="../medir-antes-automatizar-operacao/" class="related-item">
+          <span class="related-item-title">O que deve ser medido antes de automatizar uma operação</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+  <script src="../../assets/js/back-link.js" defer></script>
+</body>
+</html>
