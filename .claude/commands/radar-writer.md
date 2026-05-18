@@ -588,6 +588,15 @@ Para cada artigo criado:
 
 ### 7a. Commit por artigo (após cada artigo criado nos passos 4-6):
 
+Antes do commit, preencher os marcadores de footer e navbar (o template emite `<!-- NAVBAR:START/END -->` e `<!-- FOOTER:START/END -->` — nunca embeber HTML manualmente):
+
+```bash
+python build_footer.py "instrumentos/[slug]/index.html"
+python build_navbar.py "instrumentos/[slug]/index.html"
+```
+
+Depois commit:
+
 ```bash
 git -C "$REPO" add instrumentos/[slug]/index.html instruments-catalog.json registry/
 git -C "$REPO" commit -m "instrumento: [nome do instrumento]"

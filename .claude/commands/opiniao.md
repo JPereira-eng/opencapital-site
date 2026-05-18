@@ -617,27 +617,9 @@ Não incluir secção "Perspetiva Open Capital". Não incluir h2 final. Não inc
   </style>
 </head>
 <body>
-  <nav class="navbar" id="navbar">
-    <a href="../../" class="nav-logo">
-      <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
-    </a>
-    <ul class="nav-links">
-      <li><a href="../../biblioteca.html">Biblioteca</a></li>
-      <li><a href="../../conhecimento.html" class="active">Conhecimento</a></li>
-      <li><a href="../../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
-      <li><a href="../../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
-      <li><a href="../../sobre-nos.html">Sobre Nós</a></li>
-      <li class="nav-dropdown">
-        <a href="#">Oportunidades</a>
-        <div class="nav-dropdown-menu">
-          <a href="../../parceiros.html">Parceiros</a>
-          <a href="../../carreiras.html">Carreiras</a>
-        </div>
-      </li>
-    </ul>
-    <a href="https://calendly.com/opencapital" class="nav-cta">Contactar</a>
-    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
-  </nav>
+  <!-- NAVBAR:START -->
+  <!-- preenchido por build_navbar.py — nao editar manualmente, nao embeber navbar aqui -->
+  <!-- NAVBAR:END -->
 
   <section class="article-hero">
     <div class="article-hero-inner">
@@ -765,11 +747,14 @@ Apos os passos 1-4, validar localmente:
 4. Os 3 campos especificos (`opinion_photo`, `opinion_author_card`, `opinion_title`) estao todos preenchidos?
 5. Total de artigos com `featured: true` <= 12? Se nao: ajustar.
 
-### Passo 6 - Build do footer
+### Passo 6 - Build do footer e navbar
 
 ```bash
 python build_footer.py "conhecimento/[SLUG]/index.html"
+python build_navbar.py "conhecimento/[SLUG]/index.html"
 ```
+
+Preenche os marcadores `<!-- FOOTER:START --> ... <!-- FOOTER:END -->` e `<!-- NAVBAR:START --> ... <!-- NAVBAR:END -->` no novo ficheiro. Nao embeber navbar nem footer manualmente.
 
 ### Passo 7 - Deploy
 

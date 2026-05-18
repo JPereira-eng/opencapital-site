@@ -223,13 +223,14 @@ Esta verificacao deteta o tipo de regressao que originou os 13 orfaos detectados
 
 ---
 
-## PASSO 8: Build do footer
+## PASSO 8: Build do footer e navbar
 
 ```bash
 python build_footer.py instrumentos/[slug]/index.html
+python build_navbar.py instrumentos/[slug]/index.html
 ```
 
-Preenche os marcadores `<!-- FOOTER:START --> ... <!-- FOOTER:END -->` no novo ficheiro.
+Preenche os marcadores `<!-- FOOTER:START --> ... <!-- FOOTER:END -->` e `<!-- NAVBAR:START --> ... <!-- NAVBAR:END -->` no novo ficheiro. Nao embeber navbar nem footer manualmente.
 
 ---
 
@@ -274,7 +275,7 @@ Input manual ($ARGUMENTS)
 5. Adicionar entrada a instruments-catalog.json
 6a-d. Atualizar shard + lookup + integrity + index
 7. Auto-validacao de paridade
-8. build_footer.py
+8. build_footer.py + build_navbar.py
 9. git add + commit + push
     |
     v
