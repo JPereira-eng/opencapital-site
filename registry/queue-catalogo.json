@@ -98,7 +98,7 @@
       "catalog_type": "accelerator",
       "detected_date": "2026-05-18",
       "last_profile_update": "2026-05-18",
-      "status": "active",
+      "status": "ready",
       "regulation_url": "https://www.bgi.pt/bgi-accelerator",
       "priority_score": 10,
       "profile": {
@@ -131,7 +131,10 @@
         ],
         "mentorias": []
       },
-      "notes": "BGI é spin-out do MIT Portugal Entrepreneurship Initiative. 15+ anos de experiência, 335 startups, $660M levantados. Batch proximo e deadline não publicados no site (2026-05-18)."
+      "notes": "BGI é spin-out do MIT Portugal Entrepreneurship Initiative. 15+ anos de experiência, 335 startups, $660M levantados. Batch proximo e deadline não publicados no site (2026-05-18).",
+      "regulation_local": "regulamentos/bgi-accelerator/bgi-accelerator.txt",
+      "fail_count": 0,
+      "download_error": null
     },
     {
       "id": "startup-lisboa",
@@ -140,7 +143,7 @@
       "catalog_type": "incubator",
       "detected_date": "2026-05-18",
       "last_profile_update": "2026-05-18",
-      "status": "active",
+      "status": "ready",
       "regulation_url": "https://www.startuplisboa.com/",
       "priority_score": 10,
       "profile": {
@@ -179,7 +182,11 @@
         ],
         "nota": "Informacao parcial - site inacessivel via WebFetch. Dados obtidos via Lisboa.pt."
       },
-      "notes": "Incubadora municipal de Lisboa desde 2012. Fundo de emprestimos ate 45000 EUR. Localizacoes multiplas."
+      "notes": "Incubadora municipal de Lisboa desde 2012. Fundo de emprestimos ate 45000 EUR. Localizacoes multiplas.",
+      "regulation_local": "regulamentos/startup-lisboa/startup-lisboa.txt",
+      "fail_count": 0,
+      "download_note": "website startuplisboa.com inacessivel (404); dados obtidos via lisboa.pt e websearch",
+      "download_error": null
     }
   ],
   "updated": "2026-05-16",
