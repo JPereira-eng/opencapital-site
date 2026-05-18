@@ -611,14 +611,14 @@ Adicionar entrada ao FINAL do array `articles` em `conhecimento-catalog.json`:
   "subgrupo": "[regulamentos-leis | programas-instrumentos | conceitos-metricas | procedimentos-boas-praticas]",
   "autor": "[Nome]",
   "autor_foto": "[ficheiro png]",
-  "data_publicacao": "AAAA-MM-DD",
+  "data_publicacao": "AAAA-MM",
   "href": "/conhecimento/[SLUG]/",
   "meta_description": "[meta description SEO 150-160 chars]",
   "featured": true
 }
 ```
 
-**Nota:** `featured: true` é o default para todas as publicações novas (regra global desde 2026-05-17). Artigos novos entram automaticamente no carrossel da homepage, ordenados por data desc.
+**Nota:** `featured: true` é o default para todas as publicações novas (regra global desde 2026-05-17). Contudo, artigos da subsecção "regulamentos" são automaticamente excluídos do carrossel da homepage por filtro no JS — apenas aparecem no hub "Regulamentos e Conceitos".
 
 **Validar:** o slug nao deve aparecer ja no JSON (evitar duplicados). Se aparecer, abortar e reportar.
 
@@ -626,11 +626,9 @@ O hub `regulamentos.html` (criado na Fase 5) le este JSON em runtime e renderiza
 
 ### Passo 5 - Destaques na homepage
 
-**Decisao editorial (revista a 2026-05-17):** artigos de Regulamentos e Conceitos passam a entrar no carrossel de destaques da homepage por defeito, como qualquer outra publicacao de conhecimento. O carrossel ordena por `data_publicacao` desc, pelo que as publicacoes mais recentes aparecem primeiro.
+**Decisao editorial (revista a 2026-05-18):** artigos de Regulamentos e Conceitos **NÃO** entram no carrossel de destaques da homepage. São automaticamente filtrados pelo JS (filtro `subseccao !== 'regulamentos'`). Aparecem apenas no hub específico "Regulamentos e Conceitos" em `conhecimento/regulamentos/`.
 
-**Acao concreta:** o JSON deve ter `"featured": true` (default). O carrossel da homepage le-o dinamicamente sem necessidade de tocar em `index.html`.
-
-A decisao anterior (2026-05-09), que excluia Regulamentos, foi revertida porque a homepage passa a refletir o ritmo editorial completo, nao apenas a camada de descoberta visual.
+**Acao concreta:** o JSON pode ter `"featured": true` (default), mas o carrossel da homepage ignora sistematicamente qualquer artigo com `subseccao === 'regulamentos'`.
 
 ### Passo 6 - Build do footer
 
