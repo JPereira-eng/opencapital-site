@@ -721,6 +721,7 @@ Todas as publicações de conhecimento **excepto regulamentos** entram automatic
 - A entrada no JSON deve incluir `"featured": true` por defeito.
 - Não tocar em `index.html` para destacar artigos. O carrossel é dinâmico.
 - **Regulamentos nunca aparecem no carrossel** — apenas no hub "Regulamentos" em Conhecimento.
+- **Regulamentos e conceitos:** datas com formato `AAAA-MM` (sem dia). Exemplo: `"data_publicacao": "2026-04"`. Outras subsecções usam `AAAA-MM-DD`.
 
 **Skills excluídas:**
 - `/instrumento` e `radar-writer` publicam para `biblioteca.html`, não para `conhecimento`. Mantêm `featured: false` (a biblioteca tem o seu próprio modelo de destaque).
