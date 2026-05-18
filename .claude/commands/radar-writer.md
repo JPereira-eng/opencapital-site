@@ -539,6 +539,31 @@ Adicionar entrada ao FINAL de `instruments-catalog.json > instruments`:
 
 **REGRA CRÍTICA:** Nunca editar `biblioteca.html`. Catálogo e 100% dinâmico via JSON.
 
+### 5a. Encoding — REGRAS OBRIGATÓRIAS (v4.15, 2026-05-18)
+
+Causa de incidente 2026-05-17: 2 entradas committed com mojibake (`Ã£`, `Ã§`) e bytes perdidos (`Ã?gua` em vez de `Água`) porque update foi feito via shell inline em Windows com codepage cp1252.
+
+**1. Usar SEMPRE o tool Edit para acrescentar a entrada ao catálogo.** Nunca usar `python -c "..."` inline nem pipes PowerShell/cmd para escrever no JSON.
+
+**2. Se uma operação Python for inevitável** (ex: rewrite atómico de muitos campos), usar exatamente este template, sem exceções:
+```python
+import json
+with open('instruments-catalog.json', 'r', encoding='utf-8') as f:
+    data = json.load(f)
+# ... mutar data ...
+with open('instruments-catalog.json', 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+```
+Proibido `open()` sem `encoding='utf-8'`. Proibido `json.dump()` sem `ensure_ascii=False`.
+
+**3. Pós-validação obrigatória antes do commit** (PASSO 7a). Correr:
+```bash
+python -c "import json; json.load(open('instruments-catalog.json', encoding='utf-8'))" \
+  && ! grep -qE 'Ã[£§¡©³ºí]|Â€|\xef\xbf\xbd' instruments-catalog.json \
+  || { echo "ABORTAR: encoding partido no instruments-catalog.json"; exit 1; }
+```
+Se o check falhar: **não fazer commit**. Reverter a alteração à entrada (Edit tool) e reescrever o snippet manualmente em UTF-8 limpo. Reportar a falha ao final do batch.
+
 ---
 
 ## PASSO 6: Atualizar estado
