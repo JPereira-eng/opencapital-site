@@ -2,7 +2,7 @@
   "_meta": {
     "description": "Catalogo central de artigos da seccao Conhecimento. Lido pelos hubs (atualidade, opiniao, estrategia, regulamentos) para renderizar listagens.",
     "version": "1.0",
-    "last_update": "2026-05-09",
+    "last_update": "2026-05-18",
     "subseccoes": [
       "atualidade",
       "opiniao",
@@ -1125,6 +1125,19 @@
       "excerpt": "IVA na construção desce para 6%. IRS sobre rendas moderadas até 2.300 euros é aliviado. O que muda para construtores, promotores e empresas com trabalhadores nos grandes centros.",
       "art_date": "Maio 2026",
       "cat_legacy": "fiscalidade",
+      "featured": true
+    },
+    {
+      "slug": "csrd-diretiva-relato-sustentabilidade",
+      "title": "CSRD: a nova obrigação de relato de sustentabilidade explicada para empresas",
+      "tagline": "A Diretiva de Relato de Sustentabilidade Corporativa define o que as empresas têm de reportar sobre fatores ESG. Guia completo sobre âmbito, calendário, normas ESRS e dupla materialidade.",
+      "subseccao": "regulamentos",
+      "subgrupo": "regulamentos-leis",
+      "autor": "João Silva",
+      "autor_foto": "retrato_joaosilva.png",
+      "data_publicacao": "2026-05-18",
+      "href": "/conhecimento/csrd-diretiva-relato-sustentabilidade/",
+      "meta_description": "A CSRD expande de 11.700 para 50.000 empresas o universo de reporte ESG na UE. Guia completo: âmbito, calendário, normas ESRS, dupla materialidade e o que muda na prática.",
       "featured": true
     }
   ]

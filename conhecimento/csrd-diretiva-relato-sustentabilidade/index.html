@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSRD: a nova obrigação de relato de sustentabilidade explicada para empresas | Open Capital</title>
+  <meta name="description" content="A CSRD expande de 11.700 para 50.000 empresas o universo de reporte ESG na UE. Guia completo: âmbito, calendário, normas ESRS, dupla materialidade e o que muda na prática.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <a href="../../" class="nav-logo">
+      <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../../biblioteca.html">Biblioteca</a></li>
+      <li><a href="../../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades</a>
+        <div class="nav-dropdown-menu">
+          <a href="../../parceiros.html">Parceiros</a>
+          <a href="../../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/opencapital" class="nav-cta" target="_blank">Contactar</a>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../../">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../../conhecimento.html">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Regulamentos e Leis</span>
+      </nav>
+      <div class="hero-cat-badge">Regulação - Guia</div>
+      <h1 class="article-title">CSRD: a nova obrigação de relato de sustentabilidade explicada para empresas</h1>
+      <p class="article-standfirst">A Diretiva de Relato de Sustentabilidade Corporativa define o que as empresas têm de reportar sobre fatores ambientais, sociais e de governação. Este guia explica o que a norma exige, a quem se aplica e o que isso implica na prática.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Estratégia</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Maio 2026</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>12 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>João Silva</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+
+      <div class="article-section reveal">
+        <p>A Diretiva de Relato de Sustentabilidade Corporativa (CSRD, na sigla inglesa) entrou em vigor em janeiro de 2023. Não é uma diretiva de ambiente nem de recursos humanos. É uma diretiva de informação: estabelece o que as empresas têm de reportar, de que forma e com que detalhe sobre os impactos, riscos e oportunidades relacionados com fatores ambientais, sociais e de governação. Para quem estava familiarizado com o anterior regime da Diretiva de Relato Não Financeiro (NFRD), a mudança é de escala: de cerca de 11.700 empresas abrangidas na UE, passou-se para um universo estimado de 50.000. Em Portugal, o impacto direto abrange perto de 2.000 empresas.</p>
+        <p>A questão central para qualquer gestor ou CFO não é perceber se a CSRD é uma boa política pública. É perceber o que a empresa tem de fazer, quando e com que profundidade.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Contexto normativo</div>
+        <h2>O que a Diretiva estabelece</h2>
+        <p>A CSRD foi publicada no Jornal Oficial da UE em dezembro de 2022 (Diretiva 2022/2464/UE) e transposta para o direito português pelo Decreto-Lei n.º 89/2024, publicado em dezembro de 2024. Revoga a anterior NFRD (Diretiva 2014/95/UE) e expande de forma significativa o âmbito de aplicação, o nível de detalhe exigido e os requisitos de verificação independente.</p>
+        <p>O que a CSRD impõe concretamente: as empresas abrangidas têm de incluir uma secção de relato de sustentabilidade no relatório de gestão, elaborada de acordo com as Normas Europeias de Relato de Sustentabilidade (ESRS). O relato cobre matérias ambientais, sociais e de governação. Deve ser sujeito a verificação independente por um revisor oficial de contas ou organismo de certificação acreditado. E tem de estar disponível em formato digital legível por máquina, em XBRL com etiquetagem segundo a taxonomia europeia, para permitir comparabilidade automática entre empresas e setores.</p>
+        <p>Este último ponto passa com frequência despercebido na fase de preparação, mas tem implicações diretas para os sistemas de informação internos. A capacidade de etiquetar dados em XBRL pressupõe que esses dados existam em formato estruturado e que os sistemas de reporte os consigam exportar nesse standard. Para a maioria das empresas fora do universo cotado, este é um investimento de infraestrutura que ainda não foi feito.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <h2>Para quem e quando</h2>
+        <p>A CSRD aplica-se em vagas sucessivas, organizadas por dimensão e tipo de empresa. O calendário foi desenhado para dar tempo às empresas de menor dimensão, mas a progressão é firme.</p>
+
+        <table class="art-table">
+          <thead>
+            <tr>
+              <th>Vaga</th>
+              <th>Quem abrange</th>
+              <th>Primeiro exercício</th>
+              <th>Primeiro relatório</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1.ª vaga</strong></td>
+              <td>Grandes entidades de interesse público com mais de 500 trabalhadores (bancos, seguradoras, cotadas com PIE)</td>
+              <td>2024</td>
+              <td>2025</td>
+            </tr>
+            <tr>
+              <td><strong>2.ª vaga</strong></td>
+              <td>Grandes empresas com pelo menos 2 de 3 critérios: >250 trabalhadores, >€40M de volume de negócios, >€20M de balanço total</td>
+              <td>2025</td>
+              <td>2026</td>
+            </tr>
+            <tr>
+              <td><strong>3.ª vaga</strong></td>
+              <td>PME cotadas em mercados regulamentados da UE (podem usar normas simplificadas)</td>
+              <td>2026</td>
+              <td>2027</td>
+            </tr>
+            <tr>
+              <td><strong>4.ª vaga</strong></td>
+              <td>Empresas de países terceiros com filiais ou sucursais na UE com faturação superior a €150M no mercado europeu</td>
+              <td>2028</td>
+              <td>2029</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Para Portugal, o maior impacto concentra-se na segunda vaga. Qualquer empresa que cumpra dois dos três critérios acima está abrangida para o exercício de 2025, com o relatório a apresentar em 2026. Muitas destas empresas nunca tiveram qualquer obrigação de relato não financeiro e vão deparar-se com o processo pela primeira vez.</p>
+
+        <p>Um detalhe relevante sobre os critérios: aplicam-se à empresa individualmente, não ao grupo. Uma subsidiária portuguesa de um grupo internacional pode estar abrangida pelos seus próprios indicadores, independentemente da dimensão do grupo. Ou, inversamente, pode beneficiar de isenção se o grupo publicar um relatório de sustentabilidade consolidado que inclua a subsidiária, desde que cumpra os requisitos de equivalência.</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">PME não cotadas</div>
+          <div class="art-highlight-text">As PME fora dos mercados regulamentados não têm obrigação direta de relato ao abrigo da CSRD. Mas a pressão indireta é real: grandes clientes e financiadores institucionais têm de reportar dados sobre a sua cadeia de valor, o que os leva a solicitar informação ESG aos seus fornecedores. A PME que não estiver preparada para fornecer esses dados está em desvantagem competitiva, mesmo sem ter obrigação formal.</div>
+        </div>
+      </div>
+
+      <div class="stats-row cols-3 reveal">
+        <div class="stat-cell">
+          <div class="stat-num">50.000<sup>+</sup></div>
+          <div class="stat-label">Empresas abrangidas na UE</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">2.000<sup>+</sup></div>
+          <div class="stat-label">Empresas em Portugal</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">12</div>
+          <div class="stat-label">Normas ESRS aprovadas</div>
+        </div>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>Dupla materialidade: o conceito que reorganiza o exercício</h2>
+        <p>A diferença mais profunda entre a CSRD e o anterior regime não está no volume de informação pedida. Está no critério que determina o que tem de ser reportado.</p>
+        <p>Sob a NFRD, a materialidade era essencialmente financeira: uma empresa reportava matérias de sustentabilidade quando afetavam o seu desempenho económico ou a sua posição financeira. A CSRD introduz o conceito de dupla materialidade, que obriga as empresas a avaliarem dois eixos em simultâneo.</p>
+        <p>O primeiro eixo é a materialidade de impacto: como é que a empresa afeta o ambiente e as pessoas, positiva ou negativamente, nos seus processos diretos ou ao longo da cadeia de valor. Uma empresa de produção alimentar tem de considerar o uso de água agrícola pelos seus fornecedores, as condições laborais nas explorações subcontratadas e o impacto nas comunidades onde opera. Estes impactos são reportáveis independentemente de terem consequências financeiras mensuráveis no curto prazo.</p>
+        <p>O segundo eixo é a materialidade financeira: como é que os fatores de sustentabilidade criam riscos ou oportunidades para a empresa. A seca em regiões fornecedoras, a regulação progressiva de emissões ou a mudança nas preferências de consumo são exemplos de matérias com impacto financeiro potencial que a empresa tem de avaliar e documentar.</p>
+        <p>O exercício de avaliação de dupla materialidade é um processo estruturado. Envolve identificar as partes interessadas relevantes, mapear os impactos e riscos potenciais, classificá-los por gravidade e probabilidade, e documentar como as decisões foram tomadas. Não é um exercício que se conclui numa tarde. E o revisor vai verificar o processo, não apenas o resultado declarado.</p>
+      </div>
+
+      <div class="pull-quote reveal">
+        <div class="pull-quote-text">"O exercício de dupla materialidade define o perímetro de todo o relatório. Se o processo for frágil, as divulgações subsequentes ficam sem fundamento e o relatório fica vulnerável à verificação do revisor."</div>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>As normas ESRS em detalhe</h2>
+        <p>As Normas Europeias de Relato de Sustentabilidade foram adotadas pela Comissão Europeia em julho de 2023 e são de aplicação obrigatória para as empresas abrangidas. São 12 normas organizadas em três grupos: normas transversais, normas temáticas ambientais, normas temáticas sociais e normas de governação.</p>
+
+        <p>As normas transversais (ESRS 1 e ESRS 2) definem a arquitetura conceptual do relato. A ESRS 1 estabelece os princípios gerais, incluindo a obrigação de aplicar dupla materialidade, as regras de apresentação e a forma de articular as normas entre si. A ESRS 2 define os requisitos de divulgação mínimos obrigatórios para todas as empresas, independentemente do resultado da avaliação de materialidade: estratégia, modelo de negócio, governação, gestão de impactos e riscos e métricas base. Esta distinção é importante: a ESRS 2 não é opcional.</p>
+
+        <p>As normas ambientais cobrem cinco domínios:</p>
+
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">E1 Mudanças climáticas:</strong> emissões de gases com efeito de estufa (âmbitos 1, 2 e 3), metas de redução, alinhamento com trajetórias de 1,5ºC e análise de cenários climáticos. É a norma com mais exigência de dados quantitativos e a que gera mais dificuldades práticas, em particular nas emissões de âmbito 3.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">E2 Poluição:</strong> emissões para o ar, água e solo, substâncias de elevada preocupação e impacto em ecossistemas.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">E3 Recursos hídricos e marinhos:</strong> consumo de água, stress hídrico nas zonas de operação e impactos em ecossistemas aquáticos.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">E4 Biodiversidade e ecossistemas:</strong> impactos diretos e indiretos em espécies e habitats, alinhamento com a Estratégia da UE para a Biodiversidade 2030.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">E5 Utilização de recursos e economia circular:</strong> entradas de materiais, gestão de resíduos, circularidade e dependência de recursos finitos.</li>
+        </ul>
+
+        <p>As normas sociais cobrem quatro grupos de partes interessadas:</p>
+
+        <ul class="art-list">
+          <li><strong style="color:var(--navy);font-weight:600;">S1 Força de trabalho própria:</strong> remuneração (incluindo análise de género), horas de formação, saúde e segurança, conciliação trabalho-família e representação sindical.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">S2 Trabalhadores na cadeia de valor:</strong> condições laborais e de direitos humanos em fornecedores e subcontratados, com atenção especial a zonas de risco.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">S3 Comunidades afetadas:</strong> impactos socioeconómicos das operações nas comunidades locais, incluindo acesso a recursos e direitos das populações.</li>
+          <li><strong style="color:var(--navy);font-weight:600;">S4 Consumidores e utilizadores finais:</strong> privacidade de dados, segurança dos produtos e práticas de marketing responsável.</li>
+        </ul>
+
+        <p>A norma de governação (G1) cobre a conduta empresarial: gestão de relações com fornecedores, prevenção da corrupção, proteção de denunciantes e transparência sobre lobbying e contribuições políticas.</p>
+
+        <p>Um ponto que simplifica o processo: com exceção dos requisitos mínimos da ESRS 2, as restantes divulgações são condicionadas ao resultado da avaliação de materialidade. Se uma empresa concluir, de forma documentada e fundamentada, que a biodiversidade não é materialmente relevante para o seu negócio, pode omitir as divulgações da E4. O que não pode é omitir a avaliação.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <h2>O que muda na operação</h2>
+        <p>A CSRD não é um exercício de comunicação que se trata externamente. Exige infraestrutura interna que a maioria das empresas ainda não tem. Há três dimensões que merecem atenção específica por qualquer gestor ou CFO que esteja a preparar a empresa para a segunda vaga.</p>
+
+        <h3>Dados: o maior gap</h3>
+        <p>Os requisitos das normas ESRS são granulares e exigem consistência ao longo do exercício. Medir emissões de âmbito 1 e 2 é exigente para a maioria das empresas industriais. Medir emissões de âmbito 3, que cobrem toda a cadeia de valor a montante e a jusante, é consideravelmente mais complexo e depende de informação fornecida por terceiros. Para as normas sociais, dados como remuneração desagregada por género e categoria, horas de formação por trabalhador, taxa de rotatividade ou frequência de acidentes têm de ser recolhidos de forma sistemática ao longo do ano. Para muitas PME, estes dados existem de forma dispersa em sistemas de RH, folhas de cálculo e registos manuais que não foram concebidos para este tipo de extração.</p>
+        <p>A conclusão prática: antes de contratar consultores para ajudar a elaborar o relatório, o primeiro passo é um diagnóstico de dados. Perceber quais existem, em que formato, com que fiabilidade e onde há lacunas. Algumas lacunas fecham-se rapidamente com ajustes nos sistemas existentes. Outras requerem meses de adaptação. Para o exercício de 2025, a janela para fazer ajustes está a fechar.</p>
+
+        <h3>Governação: a responsabilidade sobe na hierarquia</h3>
+        <p>A CSRD exige que o conselho de administração aprove o relatório de sustentabilidade e que os órgãos de gestão tenham supervisão sobre a estratégia de sustentabilidade da empresa. O que é novo não é a exigência formal de aprovação, mas a substância que ela pressupõe: o conselho tem de perceber o que está a aprovar.</p>
+        <p>Na prática, isto significa que o processo de preparação do relatório de sustentabilidade tem de envolver a administração com muito mais antecedência do que o habitual nos relatórios financeiros. E que as decisões sobre o que é material, quais os objetivos de redução de emissões ou como responder aos riscos climáticos identificados não podem ser delegadas integralmente a um departamento de sustentabilidade ou a um consultor externo.</p>
+
+        <h3>Verificação: o que o revisor vai analisar</h3>
+        <p>Na fase atual, a CSRD exige assurance com nível limitado, equivalente a uma revisão, não a uma auditoria completa. O revisor verifica se há motivos para crer que as informações contêm distorções materiais, mas não realiza testes de procedimentos substantivos ao nível da auditoria financeira. A intenção regulatória é evoluir para assurance razoável, equiparado à auditoria, mas esse calendário ainda não está fixado.</p>
+        <p>O que importa perceber agora é o seguinte: mesmo o assurance limitado pressupõe que o processo que gerou as informações está documentado. O revisor vai pedir evidência do exercício de materialidade, das fontes dos dados, dos controlos internos sobre informação não financeira e das metodologias de cálculo aplicadas. Se estes elementos não existirem, a empresa não está apenas em incumprimento regulatório: está numa posição vulnerável perante o revisor, os investidores e os financiadores.</p>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <h2>A cadeia de valor e as PME fornecedoras</h2>
+        <p>As normas S2 (trabalhadores na cadeia de valor) e E1 (emissões de âmbito 3) têm uma consequência que afeta diretamente as PME que não estão formalmente abrangidas pela CSRD: as grandes empresas precisam de dados sobre os seus fornecedores para cumprir as suas próprias obrigações de relato.</p>
+        <p>Uma empresa de manufatura com 600 trabalhadores e €80M de faturação está na segunda vaga da CSRD. Para calcular as suas emissões de âmbito 3, precisa de dados de emissões dos seus fornecedores diretos. Para reportar sobre a S2, precisa de informação sobre práticas laborais e de segurança na sua cadeia de fornecimento. Estes dados só existem se os fornecedores os tiverem e os conseguirem partilhar.</p>
+        <p>O resultado prático é que as PME fornecedoras de grandes grupos estão a começar a receber questionários ESG dos seus clientes. Em alguns setores, a capacidade de responder a estes questionários está a tornar-se um critério de qualificação de fornecedor. A PME que não tiver esta informação organizada não é penalizada legalmente, mas pode perder posição na cadeia de fornecimento em favor de concorrentes que a tenham.</p>
+        <p>Antecipar este diálogo com os clientes e começar a medir os próprios indicadores, mesmo sem obrigação formal, é mais eficiente do que tentar recolher dados retroativamente quando a pressão comercial já existe.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>O enquadramento mais amplo</h2>
+        <p>A CSRD não existe isolada. Faz parte de um conjunto de regulamentos europeus que se articulam entre si e que, tomados em conjunto, representam uma reconfiguração do ambiente regulatório em que as empresas operam.</p>
+        <p>A Taxonomia Verde da UE (Regulamento 2020/852) define o que pode ser classificado como atividade economicamente sustentável. As empresas abrangidas pela CSRD têm de reportar a percentagem do seu volume de negócios, capex e opex que é elegível e alinhada com a Taxonomia. Sem dominar a Taxonomia, o relatório de sustentabilidade fica incompleto.</p>
+        <p>A Diretiva de Due Diligence de Sustentabilidade Corporativa (CSDDD), adotada em 2024, vai mais longe do que o relato: impõe às grandes empresas a obrigação de identificar e mitigar impactos negativos nos direitos humanos e no ambiente ao longo de toda a cadeia de valor. O âmbito é diferente do da CSRD, mas os processos de mapeamento da cadeia de valor que a CSRD exige são uma boa base de preparação para a CSDDD.</p>
+        <p>Para as empresas com exposição ao setor financeiro, há ainda o Regulamento de Divulgação de Finanças Sustentáveis (SFDR), que define obrigações de relato sobre sustentabilidade para gestores de ativos e instituições financeiras. As empresas que recebem financiamento de fundos sujeitos ao SFDR vão encontrar exigências crescentes de informação ESG por parte dos seus financiadores, independentemente de estarem ou não na esfera de aplicação direta da CSRD.</p>
+        <p>Uma empresa que comece o processo de preparação para a CSRD com esta visão de conjunto evita ter de refazer trabalho quando os outros regulamentos chegarem ao seu perímetro de aplicação.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>Como preparar a empresa para o que está a chegar</h2>
+        <p>A tendência mais comum que encontramos ao trabalhar com empresas em fase de preparação para a CSRD é subestimar o tempo necessário para o exercício de dupla materialidade. Esta avaliação é o ponto de partida de todo o processo de relato: define o perímetro do relatório, orienta a recolha de dados e fundamenta as divulgações. Quando é feita com insuficiente rigor ou demasiado perto da data de reporte, as divulgações ficam sem sustentação e o relatório fica vulnerável, tanto ao revisor como a qualquer stakeholder que queira questionar a sua consistência.</p>
+        <p>Para empresas na segunda vaga que ainda têm margem de preparação, a prioridade imediata é o diagnóstico de dados: perceber o que existe internamente, onde há lacunas e quanto tempo leva a fechá-las. Alguns ajustes são simples, como configurar o sistema de RH para exportar determinados indicadores de forma consolidada. Outros exigem meses, como implementar um processo de recolha de dados de emissões de âmbito 3 junto da cadeia de fornecimento.</p>
+        <p>A componente de cadeia de valor é provavelmente o maior ponto cego para as empresas portuguesas neste exercício. As normas S2 e as emissões de âmbito 3 dependem de informação de terceiros. Antecipar o diálogo com fornecedores estratégicos e perceber que dados eles conseguem ou não fornecer é uma conversa que tem de acontecer antes de fechar o exercício, não depois.</p>
+        <p>Por fim, a governação do processo: o conselho tem de aprovar o relatório, o que pressupõe que percebe o que está a aprovar. As empresas que integrarem a sustentabilidade na agenda de governance cedo terão menos fricção quando o relatório chegar à fase de aprovação. As que deixarem para o final, e pedirem ao conselho para aprovar um documento de 60 páginas em três semanas, vão descobrir que o calendário não é compatível.</p>
+      </div>
+
+      <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../../Retratos Equipa/retrato_joaosilva.png" alt="João Silva" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">João Silva</div>
+            <div class="sidebar-author-role">Consultor Junior</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Categoria</div><div class="sidebar-info-val">Estratégia</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Publicado</div><div class="sidebar-info-val">Maio 2026</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Leitura</div><div class="sidebar-info-val">12 min</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Diretiva</div><div class="sidebar-info-val">2022/2464/UE</div></div>
+        <div class="sidebar-info-row"><div class="sidebar-info-key">Transposição PT</div><div class="sidebar-info-val">DL n.º 89/2024</div></div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Está a preparar-se para a CSRD?</div>
+        <div class="sidebar-cta-text">Precisa de perceber como a diretiva se aplica à sua empresa e por onde começar a preparar-se para o primeiro exercício obrigatório?</div>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn" target="_blank">Entre em contacto</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="../../conhecimento/esg-o-que-importa-para-pme/index.html" class="related-item">
+          <span class="related-item-title">ESG: o que importa para as PME</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="../../conhecimento/ai-act-o-que-muda-para-empresas/index.html" class="related-item">
+          <span class="related-item-title">AI Act: o que muda para as empresas</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="../../conhecimento/rgpd-o-que-as-empresas-precisam-saber/index.html" class="related-item">
+          <span class="related-item-title">RGPD: o que as empresas precisam saber</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+  <script src="../../assets/js/back-link.js" defer></script>
+</body>
+</html>
