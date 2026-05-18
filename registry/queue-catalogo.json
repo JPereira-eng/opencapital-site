@@ -132,6 +132,54 @@
         "mentorias": []
       },
       "notes": "BGI é spin-out do MIT Portugal Entrepreneurship Initiative. 15+ anos de experiência, 335 startups, $660M levantados. Batch proximo e deadline não publicados no site (2026-05-18)."
+    },
+    {
+      "id": "startup-lisboa",
+      "name": "Startup Lisboa",
+      "source_id": "startup-lisboa",
+      "catalog_type": "incubator",
+      "detected_date": "2026-05-18",
+      "last_profile_update": "2026-05-18",
+      "status": "active",
+      "regulation_url": "https://www.startuplisboa.com/",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://www.startuplisboa.com/",
+        "linkedin": null,
+        "pais_sede": "PT",
+        "descricao_curta": "Incubadora do Municipio de Lisboa fundada em 2012. Cobre tecnologia, comercio, servicos e turismo. Oferece espaco, mentoria e financiamento.",
+        "como_candidatar": "Via website oficial. Candidaturas abertas por chamadas periodicas.",
+        "modelo": "equity-free",
+        "formato": "residencia",
+        "duracao_meses": null,
+        "batches_ano": null,
+        "batch_proximo": null,
+        "deadline_proxima": null,
+        "estipendio_eur": null,
+        "equity_pct": 0,
+        "mentorias": [],
+        "setores_foco": [
+          "tecnologia",
+          "comercio",
+          "servicos",
+          "turismo"
+        ],
+        "alumni_destaques": [],
+        "loan_fund_eur": 45000,
+        "localizacoes": [
+          "Startup Lisboa Tech",
+          "Startup Lisboa Commerce",
+          "Casa da Startup Lisboa"
+        ],
+        "parceiros": [
+          "CML",
+          "Invest Lisboa",
+          "Montepio",
+          "IAPMEI"
+        ],
+        "nota": "Informacao parcial - site inacessivel via WebFetch. Dados obtidos via Lisboa.pt."
+      },
+      "notes": "Incubadora municipal de Lisboa desde 2012. Fundo de emprestimos ate 45000 EUR. Localizacoes multiplas."
     }
   ],
   "updated": "2026-05-16",
