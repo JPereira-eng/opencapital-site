@@ -2,131 +2,9 @@
   "_meta": "Shard de instrumentos publicados do regime catalogo - aceleradores, incubadoras e programas de startup. Inclui BGI Accelerator, Startup Lisboa, Beta-i, F6S, EU Startups, Startup Portugal.",
   "shard_id": "catalogo-aceleradores",
   "regime": "catalogo",
-  "items": [
-    {
-      "id": "uptec-porto",
-      "file": "instrumentos/uptec-porto.html",
-      "source": "uptec-porto",
-      "state": "aberto",
-      "last_check": "2026-04-18",
-      "data_status": "n/a"
-    },
-    {
-      "id": "techstars-lisbon",
-      "file": "instrumentos/techstars-lisbon.html",
-      "source": "techstars-lisbon",
-      "state": "aberto",
-      "last_check": "2026-04-19",
-      "data_status": "n/a"
-    },
-    {
-      "id": "plug-and-play-portugal",
-      "file": "instrumentos/plug-and-play-portugal.html",
-      "source": "plug-and-play-portugal",
-      "state": "aberto",
-      "last_check": "2026-04-25",
-      "data_status": "n/a"
-    },
-    {
-      "id": "nova-sbe-venture-lab",
-      "file": "instrumentos/nova-sbe-venture-lab.html",
-      "source": "nova-sbe-venture-lab",
-      "state": "aberto",
-      "last_check": "2026-04-26",
-      "data_status": "n/a"
-    },
-    {
-      "id": "brisa-ahead-start-2026",
-      "file": "instrumentos/brisa-ahead-start-2026.html",
-      "source": "brisa-innovation",
-      "state": "aberto",
-      "last_check": "2026-04-27",
-      "data_status": "n/a"
-    },
-    {
-      "id": "startup-visa-portugal",
-      "file": "instrumentos/startup-visa-portugal.html",
-      "source": "startup-visa-portugal",
-      "state": "aberto",
-      "last_check": "2026-04-28",
-      "data_status": "n/a"
-    },
-    {
-      "id": "instituto-pedro-nunes",
-      "file": "instrumentos/instituto-pedro-nunes.html",
-      "source": "instituto-pedro-nunes",
-      "state": "aberto",
-      "last_check": "2026-04-29",
-      "data_status": "n/a"
-    },
-    {
-      "id": "founder-institute-lisbon",
-      "file": "instrumentos/founder-institute-lisbon.html",
-      "source": "founder-institute-lisbon",
-      "state": "aberto",
-      "last_check": "2026-04-29",
-      "data_status": "n/a"
-    },
-    {
-      "id": "eit-health",
-      "file": "instrumentos/eit-health.html",
-      "source": "eit-health",
-      "state": "aberto",
-      "last_check": "2026-04-30",
-      "data_status": "n/a"
-    },
-    {
-      "id": "fabrica-startups",
-      "file": "instrumentos/fabrica-startups.html",
-      "source": "fabrica-startups",
-      "state": "aberto",
-      "last_check": "2026-05-02",
-      "data_status": "n/a"
-    },
-    {
-      "id": "mastercard-fintechs-2026",
-      "file": "instrumentos/mastercard-fintechs-2026.html",
-      "source": "mastercard-fintechs",
-      "state": "aberto",
-      "last_check": "2026-05-08",
-      "data_status": "n/a"
-    },
-    {
-      "id": "abanca-innova-vc-2026",
-      "file": "instrumentos/abanca-innova-vc-2026.html",
-      "source": "abanca-innova",
-      "state": "aberto",
-      "last_check": "2026-05-08",
-      "data_status": "n/a"
-    },
-    {
-      "id": "tasmu-accelerator-2026",
-      "file": "instrumentos/tasmu-accelerator-2026.html",
-      "source": "tasmu-qatar",
-      "state": "aberto",
-      "last_check": "2026-05-08",
-      "data_status": "n/a"
-    },
-    {
-      "id": "ctt-1520-startup-program",
-      "file": "instrumentos/ctt-1520-startup-program.html",
-      "source": "ctt-1520",
-      "state": "aberto",
-      "last_check": "2026-05-09",
-      "data_status": "n/a"
-    },
-    {
-      "id": "produtech-dih-factor",
-      "file": "instrumentos/produtech-dih-factor.html",
-      "source": "produtech-dih",
-      "state": "aberto",
-      "last_check": "2026-05-10",
-      "data_status": "n/a"
-    }
-  ],
-  "count": 14,
-  "open": 13,
-  "published": 13,
+  "count": 15,
+  "open": 14,
+  "published": 14,
   "instruments": [
     {
       "id": "mentor-me-28digital-2026",
@@ -148,6 +26,13 @@
       "source": "aws-startup-loft",
       "state": "aberto",
       "last_check": "2026-05-09"
+    },
+    {
+      "id": "bgi-accelerator",
+      "file": "instrumentos/bgi-accelerator/index.html",
+      "source": "bgi-accelerator",
+      "state": "aberto",
+      "last_check": "2026-05-18"
     }
   ]
 }

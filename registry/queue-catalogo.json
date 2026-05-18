@@ -92,51 +92,6 @@
   },
   "queue": [
     {
-      "id": "bgi-accelerator",
-      "name": "BGI - Sustainable Ventures (Building Global Innovators)",
-      "source_id": "bgi-accelerator",
-      "catalog_type": "accelerator",
-      "detected_date": "2026-05-18",
-      "last_profile_update": "2026-05-18",
-      "status": "ready",
-      "regulation_url": "https://www.bgi.pt/bgi-accelerator",
-      "priority_score": 10,
-      "profile": {
-        "website": "https://www.bgi.pt",
-        "linkedin": "https://www.linkedin.com/company/building-global-innovators",
-        "pais_sede": "PT",
-        "descricao_curta": "Aceleradora portuguesa de deep tech e impacto global, spin-out do MIT Portugal, com 15+ anos de experiência e 335 startups aceleradas.",
-        "como_candidatar": "Formulário via website ou contacto por email geral@bgi.pt",
-        "modelo": "equity-free (detalhes não confirmados publicamente)",
-        "formato": "hibrido",
-        "duracao_meses": 5,
-        "batches_ano": null,
-        "batch_proximo": null,
-        "deadline_proxima": null,
-        "estipendio_eur": null,
-        "equity_pct": null,
-        "setores_foco": [
-          "Agrifood",
-          "Urban Mobility",
-          "Digital",
-          "Health",
-          "Climate",
-          "Raw Materials",
-          "Manufacturing"
-        ],
-        "alumni_destaques": [
-          "335 startups aceleradas",
-          "$660M capital raised",
-          "70% survival rate"
-        ],
-        "mentorias": []
-      },
-      "notes": "BGI é spin-out do MIT Portugal Entrepreneurship Initiative. 15+ anos de experiência, 335 startups, $660M levantados. Batch proximo e deadline não publicados no site (2026-05-18).",
-      "regulation_local": "regulamentos/bgi-accelerator/bgi-accelerator.txt",
-      "fail_count": 0,
-      "download_error": null
-    },
-    {
       "id": "startup-lisboa",
       "name": "Startup Lisboa",
       "source_id": "startup-lisboa",
