@@ -119,6 +119,38 @@ Esta série produz **ensaios analíticos com framework de decisão**. Não parte
 
 ---
 
+## REGRAS DE ESTRUTURA E TITULACAO
+
+**Frequencia de h2** (artigo de 1500-2500 palavras): 3 a 5 h2s. Tipicamente um para a abertura (a pergunta), um por critério principal do framework, eventualmente um para a perspetiva Open Capital final quando se justifica. Nunca mais de 1 h2 por cada 500-600 palavras.
+
+**Eyebrows: zero.** Sem exceção. Esta série não usa rótulos dourados sobre os h2 — nem na abertura, nem na secção final. A categoria já aparece no badge do hero e na meta-bar; o eyebrow seria ruído.
+
+**Voz dos h2 - proibicoes:**
+- Proibido o padrão "X que Y": "A empresa que construiu...", "O critério que decide...". Soa a manchete, não a ensaio analítico.
+- Proibido o padrão listicle: "Três critérios para decidir...", "Cinco perguntas que...". Soa a content marketing e mina o registo de framework sério.
+- Proibido h2 demasiado descritivo: "As consequências práticas dos critérios de decisão para PMEs". Encurtar.
+- Proibido h2 que apenas anuncia o que vem a seguir: "Vamos ver os critérios".
+
+**Voz dos h2 - preferencias (registo analítico):**
+- **Substantivo-conceito**, breve e nomeado: "A pergunta certa", "O trade-off", "Os critérios", "A medida", "O limite do framework"
+- **Pergunta de gestor** (curta e direta, não retórica): "Onde para o automatismo?", "Quando é cedo?"
+- **Afirmação técnica sóbria**: "O critério não é o crescimento", "A liquidez decide primeiro"
+- **Marcador de passo do raciocínio**: "Antes do framework", "Quando o framework não chega"
+
+Variar entre estes registos ao longo do artigo. Evitar repetir o mesmo formato em h2s consecutivas.
+
+**Secção final "Perspetiva Open Capital":** opcional. Quando incluida, sem eyebrow, com h2 ao gosto do tema (ex: "Como pensamos esta decisão", "A leitura Open Capital"). Quando o artigo já fecha bem sem secção autónoma, dispensa-se. Não forçar.
+
+**Como quebrar o fluxo sem h2:**
+- `<div class="art-divider"></div>` para pausa visual entre critérios sem mudar de bloco
+- `<div class="art-highlight">` para regra ou observação isolada (usar com moderação - esta série é texto corrido, não infografia)
+- Tabela ou lista com bullet diamond quando o framework tem critérios genuinamente enumeráveis (não disfarçar prosa em lista)
+- Simples mudança de parágrafo dentro da mesma h2
+
+**Regra geral:** h2 é pausa de raciocínio, não etiqueta de organização. Se o leitor passa do critério N para o critério N+1 sem perder o fio, basta um art-divider. Em dúvida sobre se há h2 a mais: há.
+
+---
+
 ## SUBTEMA - ESCOLHA OBRIGATÓRIA
 
 Cada artigo da Série 5.1 é classificado num dos 7 subtemas. Aplicar o fluxograma na primeira que encaixar:
