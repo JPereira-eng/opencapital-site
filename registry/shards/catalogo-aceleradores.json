@@ -2,9 +2,9 @@
   "_meta": "Shard de instrumentos publicados do regime catalogo - aceleradores, incubadoras e programas de startup. Inclui BGI Accelerator, Startup Lisboa, Beta-i, F6S, EU Startups, Startup Portugal.",
   "shard_id": "catalogo-aceleradores",
   "regime": "catalogo",
-  "count": 15,
-  "open": 14,
-  "published": 14,
+  "count": 16,
+  "open": 15,
+  "published": 15,
   "instruments": [
     {
       "id": "mentor-me-28digital-2026",
@@ -31,6 +31,13 @@
       "id": "bgi-accelerator",
       "file": "instrumentos/bgi-accelerator/index.html",
       "source": "bgi-accelerator",
+      "state": "aberto",
+      "last_check": "2026-05-18"
+    },
+    {
+      "id": "startup-lisboa",
+      "file": "instrumentos/startup-lisboa/index.html",
+      "source": "startup-lisboa",
       "state": "aberto",
       "last_check": "2026-05-18"
     }
