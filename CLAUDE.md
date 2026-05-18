@@ -715,11 +715,12 @@ If a push fails (e.g. conflict), inform the user and attempt to resolve.
 
 ## 🌟 DESTAQUES DA HOMEPAGE — REGRA GLOBAL
 
-Todas as publicações de conhecimento entram automaticamente no carrossel de destaques da homepage. O carrossel lê `conhecimento-catalog.json`, filtra por `featured === true` e ordena por `data_publicacao` desc. As publicações mais recentes aparecem primeiro.
+Todas as publicações de conhecimento **excepto regulamentos** entram automaticamente no carrossel de destaques da homepage. O carrossel lê `conhecimento-catalog.json`, filtra por `featured === true`, exclui subsecção "regulamentos" e ordena por `data_publicacao` desc. As publicações mais recentes aparecem primeiro.
 
 **Regra para skills de conhecimento (`/trend`, `/opiniao`, `/estrategia`, `/informativo`, `/youtube` e futuras):**
 - A entrada no JSON deve incluir `"featured": true` por defeito.
 - Não tocar em `index.html` para destacar artigos. O carrossel é dinâmico.
+- **Regulamentos nunca aparecem no carrossel** — apenas no hub "Regulamentos" em Conhecimento.
 
 **Skills excluídas:**
 - `/instrumento` e `radar-writer` publicam para `biblioteca.html`, não para `conhecimento`. Mantêm `featured: false` (a biblioteca tem o seu próprio modelo de destaque).
@@ -737,3 +738,4 @@ Se o carrossel ficar denso de mais com o tempo, a opção é prunar manualmente 
 | v1.3 | 2026-03-22 | +25% typography scale (non-titles) · Nav sentence case · Logo 57px · "Em breve" as superscript · Nav right-aligned · Sobre Nós + Carreiras merged into dropdown |
 | v1.4 | 2026-05-06 | Footer centralizado em `_partials/footer.html` + `build_footer.py`. Skills emitem marcadores em vez de footer HTML. Drift inter-página eliminado. |
 | v1.5 | 2026-05-17 | Carrossel da homepage passa a incluir Regulamentos. `featured: true` é default em todas as skills de conhecimento. Filtro `subseccao !== 'regulamentos'` removido do JS. |
+| v1.6 | 2026-05-18 | Carrossel da homepage exclui novamente Regulamentos. Filtro `subseccao !== 'regulamentos'` reintroduzido no JS. |

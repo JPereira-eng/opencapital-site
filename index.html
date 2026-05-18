@@ -1425,6 +1425,7 @@
       const featured = (data.articles || [])
         .map((a, _idx) => ({ ...a, _idx }))
         .filter(a => a.featured === true)
+        .filter(a => a.subseccao !== 'regulamentos')
         .sort((a, b) => {
           const d = (b.data_publicacao || '').localeCompare(a.data_publicacao || '');
           return d !== 0 ? d : b._idx - a._idx;
