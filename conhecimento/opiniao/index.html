@@ -224,10 +224,15 @@
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
   }, { threshold: 0.08 });
 
+  function resolvePhoto(a) {
+    if (a.opinion_photo) {
+      return a.opinion_photo.startsWith('/') ? a.opinion_photo : '/' + a.opinion_photo;
+    }
+    return a.autor_foto ? '/Retratos Equipa/' + a.autor_foto : '';
+  }
+
   function buildOpinionCard(a) {
-    const photo = a.opinion_photo
-      ? '' + a.opinion_photo
-      : (a.autor_foto ? '/Retratos Equipa/' + a.autor_foto : '');
+    const photo = resolvePhoto(a);
     const author = a.opinion_author_card || a.autor || '';
     const title = a.opinion_title || a.card_title || a.title || '';
     return ''
@@ -245,9 +250,7 @@
   }
 
   function buildFeature(a) {
-    const photo = a.opinion_photo
-      ? '' + a.opinion_photo
-      : (a.autor_foto ? '/Retratos Equipa/' + a.autor_foto : '');
+    const photo = resolvePhoto(a);
     const author = a.opinion_author_card || a.autor || '';
     const title = a.opinion_title || a.card_title || a.title || '';
     const dateLabel = a.art_date || a.data_publicacao || '';
