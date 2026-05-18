@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacote fiscal para a habitação: o que mudou e o que significa para as empresas | Open Capital</title>
+  <meta name="description" content="O parlamento aprovou a descida do IVA na construção para 6% e o alívio do IRS sobre rendas até 2.300 euros. Análise estratégica do impacto para construtores, promotores e empregadores.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#1A3A5C;--navy-deep:#0D1F33;--gold:#C9A96E;--white:#FFFFFF;--grey-light:#E5E5E5;--grey-mid:#7A7A7A;--grey-dark:#2A2A2A;--font:'Montserrat',sans-serif;--transition:all 0.32s cubic-bezier(0.25,0.46,0.45,0.94);--shadow:0 8px 40px rgba(26,58,92,0.10);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font);background:var(--white);color:var(--grey-dark);-webkit-font-smoothing:antialiased;}
+    .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:74px;position:fixed;top:0;left:0;right:0;z-index:200;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);transition:var(--transition);}
+    .navbar.scrolled{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--grey-light);}
+    .nav-logo-img{height:57px;width:auto;display:block;filter:brightness(0) invert(1);transition:var(--transition);}
+    .navbar.scrolled .nav-logo-img{filter:none;}
+    .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto;}
+    .nav-links a{font-size:15px;font-weight:500;letter-spacing:0.08em;text-transform:none;color:rgba(255,255,255,0.68);text-decoration:none;transition:var(--transition);position:relative;padding-bottom:3px;white-space:nowrap;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--gold);transition:width 0.3s ease;}
+    .nav-links a:hover,.nav-links a.active{color:var(--white);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .navbar.scrolled .nav-links a{color:var(--grey-dark);}
+    .navbar.scrolled .nav-links a:hover,.navbar.scrolled .nav-links a.active{color:var(--navy);}
+    .nav-badge{font-size:10px;font-weight:600;text-transform:none;color:var(--gold);border:1px solid var(--gold);padding:1px 4px;margin-left:3px;vertical-align:super;line-height:1;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--white);border:1px solid var(--grey-light);min-width:160px;box-shadow:var(--shadow);display:none;z-index:100;}
+    .nav-dropdown:hover .nav-dropdown-menu{display:block;}
+    .nav-dropdown-menu a{display:block;font-size:13px;font-weight:500;color:var(--grey-dark);padding:11px 18px;text-decoration:none;transition:var(--transition);border-bottom:1px solid var(--grey-light);}
+    .nav-dropdown-menu a:last-child{border-bottom:none;}
+    .nav-dropdown-menu a:hover{color:var(--navy);background:#FAFAFA;}
+    .nav-dropdown-menu a::after{display:none!important;}
+    .nav-cta{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:none;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.28);padding:9px 18px;margin-left:28px;transition:var(--transition);white-space:nowrap;}
+    .nav-cta:hover{border-color:var(--white);background:rgba(255,255,255,0.08);}
+    .navbar.scrolled .nav-cta{color:var(--navy);border-color:var(--navy);}
+    .navbar.scrolled .nav-cta:hover{background:var(--navy);color:var(--white);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+    .nav-hamburger span{display:block;width:22px;height:1px;background:var(--white);}
+    .navbar.scrolled .nav-hamburger span{background:var(--navy);}
+    .article-hero{background:var(--navy);padding:160px 80px 72px;position:relative;overflow:hidden;}
+    .article-hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.07) 0%,transparent 70%);pointer-events:none;}
+    .article-hero-inner{position:relative;z-index:1;max-width:900px;}
+    .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+    .breadcrumb a{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.32);text-decoration:none;transition:var(--transition);}
+    .breadcrumb a:hover{color:rgba(255,255,255,0.7);}
+    .breadcrumb-sep{font-size:13px;color:rgba(255,255,255,0.16);}
+    .breadcrumb-current{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    .hero-cat-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.20em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:4px 12px;margin-bottom:20px;}
+    .article-title{font-size:48px;font-weight:700;color:var(--white);line-height:1.06;letter-spacing:-0.015em;margin-bottom:20px;max-width:820px;}
+    .article-standfirst{font-size:20px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.7;max-width:640px;margin-bottom:36px;}
+    .article-meta-bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);}
+    .meta-tag{font-size:12px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.36);}
+    .meta-tag span{color:rgba(255,255,255,0.7);}
+    .meta-dot{width:3px;height:3px;background:rgba(255,255,255,0.2);border-radius:50%;}
+    .back-bar{background:#FAFAFA;border-bottom:1px solid var(--grey-light);padding:14px 80px;}
+    .back-link{font-size:13px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:var(--transition);}
+    .back-link:hover{color:var(--navy);}
+    .article-layout{display:grid;grid-template-columns:1fr 280px;gap:56px;padding:72px 80px 96px;align-items:start;}
+    .article-body .section-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+    .article-body h2{font-size:26px;font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:18px;letter-spacing:-0.01em;}
+    .article-body h3{font-size:19px;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:12px;margin-top:28px;}
+    .article-body p{font-size:18px;font-weight:300;color:var(--grey-dark);line-height:1.9;margin-bottom:22px;}
+    .article-body p:last-child{margin-bottom:0;}
+    .article-section{margin-bottom:52px;}
+    .art-list{list-style:none;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+    .art-list li{position:relative;padding-left:20px;font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.75;}
+    .art-list li::before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border:1px solid var(--gold);transform:rotate(45deg);}
+    .art-highlight{background:#FAFAFA;border-left:3px solid var(--gold);padding:22px 26px;margin:24px 0;}
+    .art-highlight-label{font-size:11px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .art-highlight-text{font-size:17px;font-weight:300;color:var(--grey-dark);line-height:1.8;}
+    .pull-quote{border-left:3px solid var(--gold);padding:24px 28px;margin:36px 0;}
+    .pull-quote-text{font-size:22px;font-weight:300;color:var(--navy);line-height:1.5;letter-spacing:-0.01em;font-style:italic;}
+    .stats-row{display:grid;gap:1px;background:var(--grey-light);border:1px solid var(--grey-light);margin:28px 0;}
+    .stats-row.cols-2{grid-template-columns:repeat(2,1fr);}
+    .stats-row.cols-3{grid-template-columns:repeat(3,1fr);}
+    .stats-row.cols-4{grid-template-columns:repeat(4,1fr);}
+    .stat-cell{background:var(--white);padding:22px 20px;}
+    .stat-num{font-size:28px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px;}
+    .stat-num sup{color:var(--gold);font-size:13px;font-weight:300;}
+    .stat-label{font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey-mid);}
+    .art-divider{height:1px;background:var(--grey-light);margin:44px 0;}
+    .art-table{width:100%;border-collapse:collapse;margin:28px 0;font-size:15px;}
+    .art-table thead{border-bottom:2px solid var(--navy);}
+    .art-table th{font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);padding:12px 16px;text-align:left;}
+    .art-table td{padding:14px 16px;border-bottom:1px solid var(--grey-light);font-weight:300;color:var(--grey-dark);line-height:1.6;}
+    .art-table tr:last-child td{border-bottom:none;}
+    .art-table td strong{font-weight:600;color:var(--navy);}
+    .article-cover-img{width:100%;height:360px;object-fit:cover;display:block;margin-bottom:40px;}
+    .article-sidebar{position:sticky;top:100px;}
+    .sidebar-author{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-author::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-author-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:14px;}
+    .sidebar-author-inner{display:flex;align-items:center;gap:14px;}
+    .sidebar-author-photo{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .sidebar-author-name{font-size:15px;font-weight:600;color:var(--navy);line-height:1.3;}
+    .sidebar-author-role{font-size:12px;font-weight:400;color:var(--grey-mid);letter-spacing:0.04em;margin-top:2px;}
+    .sidebar-card{border:1px solid var(--grey-light);padding:24px;margin-bottom:16px;position:relative;overflow:hidden;}
+    .sidebar-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);}
+    .sidebar-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .sidebar-info-row{display:flex;flex-direction:column;gap:3px;padding:10px 0;border-bottom:1px solid var(--grey-light);}
+    .sidebar-info-row:last-child{border-bottom:none;padding-bottom:0;}
+    .sidebar-info-key{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--grey-mid);}
+    .sidebar-info-val{font-size:15px;font-weight:600;color:var(--navy);}
+    .sidebar-cta{background:var(--navy);padding:24px;margin-bottom:16px;}
+    .sidebar-cta-title{font-size:17px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:8px;}
+    .sidebar-cta-text{font-size:14px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.65;margin-bottom:18px;}
+    .sidebar-cta-btn{display:block;text-align:center;font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--white);background:var(--gold);text-decoration:none;padding:13px 16px;transition:var(--transition);}
+    .sidebar-cta-btn:hover{background:#B8945A;}
+    .sidebar-related-label{font-size:11px;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:var(--grey-mid);margin-bottom:12px;}
+    .related-item{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--grey-light);text-decoration:none;transition:var(--transition);}
+    .related-item:last-child{border-bottom:none;}
+    .related-item-title{font-size:14px;font-weight:500;color:var(--navy);line-height:1.3;transition:var(--transition);max-width:200px;}
+    .related-item:hover .related-item-title{color:var(--gold);}
+    .related-item-arrow{font-size:14px;color:var(--grey-mid);flex-shrink:0;transition:var(--transition);}
+    .related-item:hover .related-item-arrow{color:var(--gold);}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+    .footer{background:var(--navy-deep);padding:56px 80px 34px;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .f-logo-row{display:flex;align-items:center;}
+    .f-logo-img{height:72px;width:auto;filter:brightness(0) invert(1);opacity:0.75;}
+    .f-tagline{font-size:16px;font-weight:100;letter-spacing:0.14em;color:var(--gold);margin-top:12px;}
+    .f-col-label{font-size:11px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.24);margin-bottom:16px;}
+    .f-links{list-style:none;}
+    .f-links li{margin-bottom:10px;}
+    .f-links a{font-size:15px;font-weight:300;color:rgba(255,255,255,0.48);text-decoration:none;transition:var(--transition);}
+    .f-links a:hover{color:var(--white);}
+    .f-badge{font-size:9px;font-weight:600;color:var(--gold);border:1px solid rgba(201,169,110,0.45);padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .f-copy{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);}
+    .f-legal{display:flex;gap:20px;}
+    .f-legal a{font-size:14px;font-weight:300;color:rgba(255,255,255,0.18);text-decoration:none;transition:var(--transition);}
+    .f-legal a:hover{color:rgba(255,255,255,0.45);}
+    @media(max-width:1024px){.article-layout{grid-template-columns:1fr;padding:52px 48px 80px;}.article-sidebar{position:static;}}
+    @media(max-width:768px){.navbar{padding:0 24px;}.nav-links,.nav-cta{display:none;}.nav-hamburger{display:flex;}.article-hero{padding:120px 24px 56px;}.article-title{font-size:34px;}.article-standfirst{font-size:17px;}.article-layout{padding:36px 24px 60px;gap:36px;}.back-bar{padding:12px 24px;}.article-cover-img{height:220px;}.stats-row.cols-3,.stats-row.cols-4{grid-template-columns:1fr 1fr;}.footer{padding:40px 24px 28px;}.footer-grid{grid-template-columns:1fr;gap:32px;}}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <a href="../../" class="nav-logo">
+      <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="nav-logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../../biblioteca.html">Biblioteca</a></li>
+      <li><a href="../../conhecimento.html" class="active">Conhecimento</a></li>
+      <li><a href="../../capital-simulator.html">Capital Simulator<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../../tech2business.html">Tech2Business<sup class="nav-badge">em breve</sup></a></li>
+      <li><a href="../../sobre-nos.html">Sobre Nós</a></li>
+      <li class="nav-dropdown">
+        <a href="#">Oportunidades</a>
+        <div class="nav-dropdown-menu">
+          <a href="../../parceiros.html">Parceiros</a>
+          <a href="../../carreiras.html">Carreiras</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://calendly.com/opencapital" class="nav-cta" target="_blank">Contactar</a>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <nav class="breadcrumb">
+        <a href="../../">Início</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../../conhecimento.html">Conhecimento</a>
+        <span class="breadcrumb-sep">/</span>
+        <span class="breadcrumb-current">Fiscalidade</span>
+      </nav>
+      <div class="hero-cat-badge">Fiscalidade - Análise</div>
+      <h1 class="article-title">Pacote fiscal para a habitação: o que mudou e o que significa para as empresas</h1>
+      <p class="article-standfirst">O parlamento aprovou a descida do IVA na construção para 6% e o alívio do IRS sobre rendas até 2.300 euros mensais. Dois instrumentos com lógicas diferentes, que tocam na oferta e no retorno, e que chegam com anos de atraso.</p>
+      <div class="article-meta-bar">
+        <span class="meta-tag">Categoria <span>Fiscalidade</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Data <span>Maio 2026</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Leitura <span>9 min</span></span>
+        <span class="meta-dot"></span>
+        <span class="meta-tag">Autor <span>Luís Gomes</span></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-bar">
+    <a href="../../conhecimento.html" class="back-link">&larr; Voltar ao Conhecimento</a>
+  </div>
+
+  <div class="article-layout">
+    <article class="article-body">
+
+      <img src="../../assets/articles/trend_parlamento.png" alt="Pacote fiscal para a habitação: o que mudou e o que significa para as empresas" class="article-cover-img">
+
+      <div class="article-section reveal">
+        <p>O parlamento aprovou o pacote fiscal para a habitação. As duas medidas centrais são claras: o IVA aplicado à construção de imóveis desce de 23% para 6%, e a taxa de IRS sobre rendas praticadas até 2.300 euros mensais é reduzida. Legislação que chegou depois de um período longo de debate, pressão do setor e diagnóstico repetido sobre o custo fiscal como obstáculo à oferta de habitação.</p>
+        <p>O contexto justifica a urgência. Os preços de habitação em Portugal cresceram a uma velocidade sem paralelo na última década, com Lisboa e Porto a liderarem os aumentos em termos absolutos. A oferta de arrendamento de longa duração contraiu. A construção nova nunca recuperou o volume necessário para equilibrar uma procura que, entretanto, subiu por razões que vão muito para além do crescimento demográfico: aumento do rendimento disponível, imigração qualificada, turismo residencial e liquidez financeira à procura de ativos tangíveis.</p>
+        <p>O pacote agora aprovado toca em dois pontos de estrangulamento distintos. Um fiscal do lado da oferta, através do IVA na construção. Outro fiscal do lado do retorno, através do IRS sobre rendas. São mecanismos com impactos e timings diferentes, e perceber a distinção é essencial para saber o que esperar.</p>
+      </div>
+
+      <div class="stats-row cols-3 reveal">
+        <div class="stat-cell">
+          <div class="stat-num">6<sup>%</sup></div>
+          <div class="stat-label">Nova taxa de IVA na construção</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">23<sup>%</sup></div>
+          <div class="stat-label">Taxa anterior aplicada à construção</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num">2.300<sup>€</sup></div>
+          <div class="stat-label">Teto mensal de renda para benefício de IRS</div>
+        </div>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <h2>A lógica da descida do IVA</h2>
+        <p>Portugal tributava a construção de habitação nova à taxa máxima de IVA, 23%, enquanto a maioria dos países europeus com problemas semelhantes de oferta havia há muito optado por taxas reduzidas. Em Espanha, a habitação nova tributa a 10%. Em França, a construção social e económica beneficia de 5,5%. Em Irlanda, aplicam-se taxas de 9% a habitação nova. Portugal estava, neste ponto, fora da norma europeia e com um impacto visível: o IVA a 23% entrava diretamente na estrutura de custos de qualquer projeto de construção e comprimia a margem dos promotores que tentassem praticar preços acessíveis.</p>
+        <p>A matemática é simples. Num projeto em que o custo de construção de um apartamento ronda os 200.000 euros, a diferença entre uma taxa de 23% e uma de 6% representa uma poupança de IVA na ordem dos 20.000 a 34.000 euros, dependendo da proporção de materiais e mão de obra. Para promotores que operam em segmentos de preço médio, onde a margem é estreita e a viabilidade financeira depende de cada linha do orçamento, essa diferença determina se o projeto avança ou fica em carteira.</p>
+        <p>O argumento que o setor repetia há anos era precisamente este: não há problema de procura. Há um problema de oferta condicionado pelo custo fiscal de produzir. A descida para 6% corrige uma distorção que tornava a equação económica desfavorável em contextos onde os preços de venda tinham de se manter dentro de um limite para chegar ao comprador.</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">Atenção</div>
+          <div class="art-highlight-text">O benefício fiscal aplica-se à construção de habitação, mas as condições de elegibilidade específicas e o âmbito exato da medida devem ser confirmados com assessoria fiscal antes de incorporar nos modelos financeiros de qualquer projeto. A descida do IVA não é automática em todos os tipologias de intervenção imobiliária.</div>
+        </div>
+
+        <p>O efeito sobre os preços finais de venda não será uniforme. Em mercados de alta pressão de procura, como Lisboa e Porto, parte da poupança de IVA tende a ser absorvida em margem de promoção, sem repercussão proporcional no preço de venda ao consumidor. É o comportamento esperado quando a procura é inelástica. Em mercados com maior equilíbrio entre oferta e procura, onde o promotor compete por comprador, o benefício tem mais probabilidade de se refletir nos preços. A descida do IVA não é garantia de habitação mais barata. É uma condição necessária para que mais habitação seja economicamente viável de construir.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>O que acontece às rendas</h2>
+        <p>A segunda medida funciona por uma lógica diferente. Não reduz o custo de produção de habitação nova: reduz o custo fiscal de quem pratica arrendamento de longa duração abaixo de 2.300 euros por mês. O objetivo implícito é tornar o arrendamento tradicional mais atrativo face às alternativas que, nos últimos anos, retiraram imóveis do mercado residencial.</p>
+        <p>O encolhimento do stock de arrendamento de longa duração em Portugal tem duas causas que se reforçam mutuamente. A primeira é o alojamento local, que em zonas de alta pressão turística consegue rendimentos significativamente superiores ao arrendamento residencial, com maior flexibilidade e liquidez para o proprietário. A segunda é a perceção de risco: processos de despejo prolongados, inflação nos custos de manutenção e incerteza regulatória criaram, em muitos proprietários, a decisão de não arrendar ou de manter o imóvel devoluto.</p>
+        <p>O alívio do IRS sobre rendas moderadas tenta compensar parte deste diferencial. Se o retorno líquido do arrendamento de longa duração se aproximar do retorno do alojamento local, alguma propriedade voltará para o mercado residencial. A questão é saber em que medida o diferencial é suficientemente reduzido pelo benefício fiscal.</p>
+
+        <div class="pull-quote reveal">
+          <div class="pull-quote-text">"O teto de 2.300 euros é simultaneamente uma fronteira de elegibilidade e um sinal de política pública: o Estado reconhece que os segmentos acima desse valor têm dinâmica própria e não precisam de incentivo."</div>
+        </div>
+
+        <p>Em Lisboa, um apartamento de dois quartos em zona central pode gerar entre 1.800 e 2.300 euros por mês em arrendamento de longa duração, ou um valor substancialmente superior em alojamento local com boa taxa de ocupação. O diferencial, mesmo depois do benefício fiscal, continuará a favorecer o alojamento local nas zonas de maior pressão turística. Nas zonas periféricas e nos mercados secundários, onde o turismo tem menos expressão, a medida pode ter impacto mais direto, atraindo proprietários que tinham o imóvel parado por falta de retorno aceitável.</p>
+        <p>O teto de 2.300 euros por mês é relevante por outra razão: sinaliza onde está o problema real. O mercado de arrendamento de valores mais altos funciona com dinâmica própria e tem procura cativa. O problema de acesso concentra-se no segmento intermédio, de famílias com rendimentos médios que não se qualificam para habitação social mas que não conseguem suportar os preços de mercado nos grandes centros. É este segmento que a medida visa proteger.</p>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>O mapa do impacto por setor</h2>
+
+        <table class="art-table">
+          <thead>
+            <tr>
+              <th>Setor / Perfil</th>
+              <th>Impacto direto</th>
+              <th>Horizonte temporal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Promoção imobiliária</strong></td>
+              <td>Alto. Custo de produção cai em projetos novos; viabilidade melhora em segmentos de preço médio</td>
+              <td>Imediato nos projetos em fase de arranque</td>
+            </tr>
+            <tr>
+              <td><strong>Construção civil</strong></td>
+              <td>Médio. Mais obras podem avançar, atividade geral tende a subir</td>
+              <td>6 a 18 meses (desfasamento de licenciamento)</td>
+            </tr>
+            <tr>
+              <td><strong>Proprietários com rendas &le;2.300€</strong></td>
+              <td>Alto. IRS reduzido; retorno líquido melhora</td>
+              <td>Imediato no exercício fiscal corrente</td>
+            </tr>
+            <tr>
+              <td><strong>Alojamento local</strong></td>
+              <td>Negativo relativo. Diferencial face ao arrendamento estreita</td>
+              <td>Gradual; impacto limitado nas zonas de alta pressão turística</td>
+            </tr>
+            <tr>
+              <td><strong>Empresas com trabalhadores em Lisboa e Porto</strong></td>
+              <td>Indireto. Se a oferta de habitação crescer, pressão de custo de vida abranda</td>
+              <td>Médio prazo: 2 a 4 anos</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="article-section reveal">
+        <h2>O que o pacote não resolve</h2>
+        <p>A descida do IVA e o alívio do IRS são passos na direção certa. Não são a solução para a crise de habitação. Há componentes estruturais do problema que a via fiscal não toca.</p>
+        <p>O licenciamento é o mais visível. A maioria dos projetos de construção em Portugal demora entre 18 e 36 meses a obter licença, num contexto em que a escassez de técnicos nas câmaras municipais e a sobreposição de pareceres sectoriais tornam o processo imprevisível. Um promotor que beneficia do IVA a 6% mas demora três anos a licenciar continua com um projeto caro, porque o custo do tempo e do capital mobilizado durante a fase de licenciamento corrói parte da poupança fiscal.</p>
+        <p>A mão de obra é a segunda pressão. O setor da construção enfrenta escassez estrutural de trabalhadores qualificados, com salários a subir e capacidade instalada que não acompanha o crescimento da procura. Mais projetos viáveis do ponto de vista financeiro não se traduzem automaticamente em mais construção se não houver capacidade para os executar. A descida do IVA pode gerar um aumento de pipeline, mas a entrega efetiva de habitação nova depende de variáveis que a medida fiscal não controla.</p>
+        <p>Depois, há o financiamento. O acesso a crédito para promotores de escala pequena e média continua limitado, com banca a exigir capitais próprios elevados e garantias que excluem muitos projetos de gama média. O Estado poderia complementar o benefício fiscal com linhas de financiamento específicas para habitação acessível, à semelhança do que existe em outros países. Essa peça, por enquanto, não está na equação.</p>
+
+        <div class="art-highlight">
+          <div class="art-highlight-label">Contexto</div>
+          <div class="art-highlight-text">Portugal lançou em 2023 o programa "Mais Habitação", que incluiu medidas de arrendamento acessível e apoio ao primeiro acesso à habitação. O pacote fiscal agora aprovado é um instrumento adicional, não um substituto do programa anterior, e os dois regimes têm condições e elegibilidades que exigem confirmação caso a caso.</div>
+        </div>
+      </div>
+
+      <div class="art-divider"></div>
+
+      <div class="article-section reveal">
+        <div class="section-eyebrow">Perspetiva Open Capital</div>
+        <h2>O que isto significa para a sua empresa</h2>
+        <p>A habitação não é uma variável isolada da economia empresarial. É um fator de competitividade que os gestores que operam em grandes centros urbanos conhecem bem: dificuldade em atrair talento de fora, rotatividade de candidatos que não conseguem suportar o custo de vida, pressão para compensação salarial que ultrapassa a produtividade que o mercado permite. Quando a habitação é cara em relação aos salários locais, o problema torna-se estrutural.</p>
+        <p>O pacote fiscal não vai resolver isso de forma imediata. Mas cria condições para que a oferta de habitação nova e de arrendamento de longa duração aumente ao longo dos próximos dois a quatro anos. Se esse aumento se concretizar, a pressão de custo de vida nos grandes centros abranda, e com ela parte da pressão salarial que as empresas vinham a absorver.</p>
+        <p>Para empresas da construção e da promoção imobiliária, a leitura é mais direta. A descida do IVA para 6% melhora a viabilidade de projetos que estavam em análise, especialmente nos segmentos de preço médio onde a margem era mais estreita. O momento para rever modelos financeiros de projetos suspensos é agora. Projetos que não fechavam a equação com 23% de IVA podem fechar com 6%.</p>
+        <p>Para proprietários com imóveis arrendados ou em análise de arrendamento, o alívio do IRS é relevante se a renda praticada ou planeada ficar abaixo dos 2.300 euros mensais. A diferença de retorno líquido pode, nalguns casos, ser suficiente para tornar o arrendamento de longa duração preferível ao alojamento local, em particular fora dos grandes centros turísticos.</p>
+        <p>A recomendação prática é simples: não antecipar benefícios antes de confirmar elegibilidade com assessoria fiscal especializada. As condições de aplicação da descida do IVA e do benefício de IRS têm especificidades regulamentares que determinam quem beneficia e em que circunstâncias. Agir sobre o princípio geral sem verificar as condições específicas pode gerar situações de incumprimento que anulam o benefício e criam passivos adicionais.</p>
+      </div>
+
+      <p style="font-size:12px;color:var(--grey-mid);margin-top:40px;text-align:right;">Comentários, correções ou contrapontos são bem-vindos: <a href="mailto:geral@opencapital.pt" style="color:inherit;text-decoration:underline;">geral@opencapital.pt</a></p>
+
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-author">
+        <div class="sidebar-author-label">Autor</div>
+        <div class="sidebar-author-inner">
+          <img src="../../Retratos Equipa/retrato_luísgomes.png" alt="Luís Gomes" class="sidebar-author-photo">
+          <div>
+            <div class="sidebar-author-name">Luís Gomes</div>
+            <div class="sidebar-author-role">Analista Financeiro</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-label">Sobre este artigo</div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Categoria</div>
+          <div class="sidebar-info-val">Fiscalidade</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Publicado</div>
+          <div class="sidebar-info-val">Maio 2026</div>
+        </div>
+        <div class="sidebar-info-row">
+          <div class="sidebar-info-key">Leitura</div>
+          <div class="sidebar-info-val">9 min</div>
+        </div>
+      </div>
+
+      <div class="sidebar-cta">
+        <div class="sidebar-cta-title">Precisa de clareza sobre o impacto fiscal na sua empresa?</div>
+        <div class="sidebar-cta-text">A Open Capital analisa como as medidas fiscais aprovadas se aplicam à sua situação concreta e ao seu setor.</div>
+        <a href="https://calendly.com/opencapital" class="sidebar-cta-btn" target="_blank">Entre em contacto</a>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-related-label">Artigos relacionados</div>
+        <a href="../habitacao-travao-economico/index.html" class="related-item">
+          <span class="related-item-title">Habitação como travão económico</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="../carga-fiscal-pais-rico-estado-pais-pobre/index.html" class="related-item">
+          <span class="related-item-title">Carga fiscal de país rico. Estado de país pobre.</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+        <a href="../construcao-escassez-mao-de-obra/index.html" class="related-item">
+          <span class="related-item-title">A construção está a mudar</span>
+          <span class="related-item-arrow">&rarr;</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- FOOTER:START -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo-row">
+        <img src="../../logo_opencapital_azul_semfundo.png" alt="Open Capital" class="f-logo-img" onerror="this.style.display='none'">
+      </div>
+      <p class="f-tagline">O capital de que a sua empresa precisa.</p>
+    </div>
+    <div>
+      <p class="f-col-label">Biblioteca</p>
+      <ul class="f-links">
+        <li><a href="../../biblioteca/">Portugal 2030</a></li>
+        <li><a href="../../biblioteca/">Fundos de Investimento</a></li>
+        <li><a href="../../biblioteca/">Benefícios Fiscais</a></li>
+        <li><a href="../../biblioteca/">Prémios de Inovação</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Plataforma</p>
+      <ul class="f-links">
+        <li><a href="../../capital-simulator/">Capital Simulator <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../tech2business/">Tech2Business <span class="f-badge">Em breve</span></a></li>
+        <li><a href="../../conhecimento/">Conhecimento</a></li>
+        <li><a href="../../parceiros/">Parceiros</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="f-col-label">Empresa</p>
+      <ul class="f-links">
+        <li><a href="../../sobre-nos/">Sobre Nós</a></li>
+        <li><a href="../../sobre-nos/">Equipa</a></li>
+        <li><a href="../../carreiras/">Carreiras</a></li>
+        <li><a href="https://calendly.com/opencapital" target="_blank">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">&copy; 2009 Open Capital Advisory &amp; Consultancy</span>
+    <div class="f-legal">
+      <a href="../../privacidade/">Privacidade</a>
+      <a href="../../termos/">Termos</a>
+      <a href="https://www.livroreclamacoes.pt/inicio" target="_blank" rel="noopener">Livro de Reclamações</a>
+    </div>
+  </div>
+</footer>
+<!-- FOOTER:END -->
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, {passive:true});
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }); }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+  <script src="../../assets/js/back-link.js" defer></script>
+</body>
+</html>

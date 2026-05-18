@@ -114,7 +114,7 @@
       "opinion_photo": "Retratos Equipa/retrato_marianacosta.png",
       "opinion_author_card": "Mariana Costa",
       "opinion_title": "As PME portuguesas têm crédito a mais e capital a menos",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "europa-eua-fim-otan",
@@ -133,7 +133,7 @@
       "excerpt": "A guerra no Médio Oriente expôs a fratura entre Europa e EUA. A Europa não está pronta para se defender sozinha.",
       "art_date": "Maio 2026",
       "cat_legacy": "estrategia",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "china-taiwan-fratura-cadeias-valor",
@@ -152,7 +152,7 @@
       "excerpt": "A tensão no estreito de Taiwan aproxima-se de um ponto de viragem. O que está em jogo para empresas europeias dependentes de semicondutores e logística asiática.",
       "art_date": "Maio 2026",
       "cat_legacy": "mercados",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "zona-euro-contracao-abril-impacto-medio-oriente",
@@ -265,7 +265,7 @@
       "opinion_photo": "Retratos Equipa/retrato_marianacosta.png",
       "opinion_author_card": "Mariana Costa",
       "opinion_title": "O elo mais fraco da produtividade portuguesa não é o trabalhador",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "portugal-gnl-russo-renovaveis-pressao-bruxelas",
@@ -360,7 +360,7 @@
       "opinion_photo": "Retratos Equipa/retrato_ritaferreira.png",
       "opinion_author_card": "Rita Ferreira",
       "opinion_title": "Estar sempre disponível já não é virtude",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "contratos-publicos-tribunal-contas-ninguem-despedido",
@@ -976,7 +976,7 @@
       "opinion_photo": "Retratos Equipa/retrato_miguelsantos.png",
       "opinion_author_card": "Miguel Santos",
       "opinion_title": "Na era da inteligência artificial, o risco não é errar. É ficar parado.",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "empresas-humanas-mais-exigentes",
@@ -1009,7 +1009,7 @@
       "opinion_photo": "Retratos Equipa/retrato_andrecarvalho.png",
       "opinion_author_card": "André Carvalho",
       "opinion_title": "Portugal não é a periferia da Europa. É a plataforma que se esqueceu de ser.",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "ecossistema-portugues-parou-serie-a",
@@ -1106,6 +1106,25 @@
       "excerpt": "Cinco critérios para não reagir por instinto: diagnóstico da causa, decisão de retenção, dependência crítica, janela de transição e sinal para a equipa.",
       "art_date": "Maio 2026",
       "cat_legacy": "estrategia",
+      "featured": true
+    },
+    {
+      "slug": "pacote-fiscal-habitacao",
+      "title": "Pacote fiscal para a habitação: o que mudou e o que significa para as empresas",
+      "tagline": "O parlamento aprovou a descida do IVA na construção para 6% e o alívio do IRS sobre rendas até 2.300 euros mensais. Dois instrumentos com lógicas diferentes, que tocam na oferta e no retorno.",
+      "subseccao": "atualidade",
+      "autor": "Luís Gomes",
+      "autor_foto": "retrato_luísgomes.png",
+      "data_publicacao": "2026-05-18",
+      "href": "/conhecimento/pacote-fiscal-habitacao/",
+      "meta_description": "O parlamento aprovou a descida do IVA na construção para 6% e o alívio do IRS sobre rendas até 2.300 euros. Análise estratégica do impacto para construtores, promotores e empregadores.",
+      "cat_class": "cat-fiscalidade",
+      "cat_label": "Fiscalidade",
+      "tempo_leitura": "9min",
+      "imagem_src": "/assets/articles/trend_parlamento.png",
+      "excerpt": "IVA na construção desce para 6%. IRS sobre rendas moderadas até 2.300 euros é aliviado. O que muda para construtores, promotores e empresas com trabalhadores nos grandes centros.",
+      "art_date": "Maio 2026",
+      "cat_legacy": "fiscalidade",
       "featured": true
     }
   ]
