@@ -6,7 +6,7 @@
     "last_writer_run": "2026-05-17",
     "last_scanner_run": "2026-05-17",
     "last_index_rebuild": "2026-05-09",
-    "last_monitor_run": "2026-05-13",
+    "last_monitor_run": "2026-05-18",
     "last_pt2030_reconcile": "2026-05-11",
     "updated": "2026-05-17"
   },
@@ -15,11 +15,11 @@
     "open": 433,
     "closed": 166,
     "planned": 98,
-    "in_queue": 65,
-    "in_watchlist": 262,
+    "in_queue": 63,
+    "in_watchlist": 264,
     "in_catalogo": 0,
     "in_overflow": 287,
-    "in_plano_anual": 262
+    "in_plano_anual": 264
   },
   "shards": {
     "catalogo-aceleradores": {
@@ -131,7 +131,7 @@
       "closed": 2,
       "planned": 2,
       "published": 21,
-      "updated": "2026-05-13"
+      "updated": "2026-05-18"
     },
     "pt2030-lisboa": {
       "count": 4,
@@ -150,10 +150,11 @@
     },
     "pt2030-other": {
       "count": 28,
-      "open": 20,
-      "closed": 6,
+      "open": 32,
+      "closed": 8,
       "planned": 2,
-      "published": 28
+      "published": 28,
+      "updated": "2026-05-18"
     },
     "pt2030-pessoas": {
       "count": 4,
@@ -165,20 +166,20 @@
     }
   },
   "last_full_cycle": "2026-04-12",
-  "last_monitor_run": "2026-05-13",
+  "last_monitor_run": "2026-05-18",
   "source_last_checked": {
     "portugal-2030": "2026-05-17",
-    "compete-2030": "2026-05-13",
+    "compete-2030": "2026-05-18",
     "norte-2030": "2026-05-17",
     "centro-2030": "2026-05-17",
     "lisboa-2030": "2026-05-17",
-    "alentejo-2030": "2026-05-16",
+    "alentejo-2030": "2026-05-18",
     "algarve-2030": "2026-05-16",
-    "madeira-2030": "2026-05-17",
-    "acores-2030": "2026-05-16",
+    "madeira-2030": "2026-05-18",
+    "acores-2030": "2026-05-18",
     "pessoas-2030": "2026-05-17",
-    "sustentavel-2030": "2026-05-17",
-    "mar-2030": "2026-05-13",
+    "sustentavel-2030": "2026-05-18",
+    "mar-2030": "2026-05-18",
     "pat-2030": "2026-05-12",
     "eu-funding-tenders": "2026-05-17",
     "ani": "2026-05-11",
@@ -315,5 +316,5 @@
     "verified_published_other": 0,
     "n_a_in_queue": 64
   },
-  "updated": "2026-05-17"
+  "updated": "2026-05-18"
 }

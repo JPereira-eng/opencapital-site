@@ -16,7 +16,7 @@
       "file": "instrumentos/sustentavel-2030-pacs-2026-04.html",
       "source": "sustentavel-2030",
       "state": "fechado",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "human_code": "PACS-2026-4",
       "programa_code": "SUSTENTAVEL2030",
       "data_status": "verified"
@@ -26,7 +26,7 @@
       "file": "instrumentos/sustentavel-2030-pacs-2026-03.html",
       "source": "sustentavel-2030",
       "state": "fechado",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "human_code": "PACS-2026-3",
       "programa_code": "SUSTENTAVEL2030",
       "data_status": "verified"
@@ -36,7 +36,7 @@
       "file": "instrumentos/sustentavel-2030-pacs-2025-16.html",
       "source": "sustentavel-2030",
       "state": "fechado",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "estado": "fechado",
       "data_fim": "2026-04-20",
       "data_inicio": "2025-12-05",
@@ -49,7 +49,7 @@
       "file": "instrumentos/sustentavel-2030-pacs-2025-15.html",
       "source": "sustentavel-2030",
       "state": "fechado",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "estado": "fechado",
       "data_fim": "2026-04-20",
       "data_inicio": "2025-12-05",
@@ -62,7 +62,7 @@
       "file": "instrumentos/madeira2030-2026-13-internacionalizacao-pme.html",
       "source": "madeira-2030",
       "state": "aberto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "programa_code": "MADEIRA2030",
       "data_status": "verified"
     },
@@ -71,7 +71,7 @@
       "file": "instrumentos/mar2030-2026-10-madeira-custos-suplementares.html",
       "source": "mar-2030",
       "state": "aberto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "human_code": "MAR2030-2026-10",
       "programa_code": "MAR2030",
       "data_status": "verified"
@@ -80,48 +80,54 @@
       "id": "sustentavel-2030-pacs-2026-06",
       "file": "instrumentos/sustentavel-2030-pacs-2026-06.html",
       "source": "sustentavel-2030",
-      "state": "aberto",
-      "last_check": "2026-05-12",
+      "state": "fechado",
+      "last_check": "2026-05-18",
       "human_code": "PACS-2026-06",
       "programa_code": "SUSTENTAVEL2030",
-      "data_status": "verified"
+      "data_status": "verified",
+      "auto_closed": true,
+      "notas": "Portal e API retornam 404/vazio a 2026-05-18 (antes do prazo previsto 20 Mai 2026). Aviso removido pela AG."
     },
     {
       "id": "sustentavel-2030-pacs-2026-05",
       "file": "instrumentos/sustentavel-2030-pacs-2026-05.html",
       "source": "sustentavel-2030",
-      "state": "aberto",
-      "last_check": "2026-05-12",
+      "state": "fechado",
+      "last_check": "2026-05-18",
       "human_code": "PACS-2026-5",
       "programa_code": "SUSTENTAVEL2030",
-      "data_status": "verified"
+      "data_status": "verified",
+      "auto_closed": true,
+      "notas": "Portal e API retornam 404/vazio a 2026-05-18 (antes do prazo previsto 20 Mai 2026). Aviso removido pela AG."
     },
     {
       "id": "sustentavel-2030-pacs-2025-10",
       "file": "instrumentos/sustentavel-2030-pacs-2025-10.html",
       "source": "sustentavel-2030",
       "state": "aberto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "human_code": "PACS-2025-10",
       "programa_code": "SUSTENTAVEL2030",
-      "data_status": "verified"
+      "data_status": "verified",
+      "data_fim": "2026-05-20"
     },
     {
       "id": "sustentavel-2030-pacs-2026-02",
       "file": "instrumentos/sustentavel-2030-pacs-2026-02.html",
       "source": "sustentavel-2030",
       "state": "aberto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "human_code": "PACS-2026-2",
       "programa_code": "SUSTENTAVEL2030",
-      "data_status": "verified"
+      "data_status": "verified",
+      "data_fim": "2026-05-20"
     },
     {
       "id": "sustentavel-2030-pacs-2026-07",
       "file": "instrumentos/sustentavel-2030-pacs-2026-07.html",
       "source": "sustentavel-2030",
       "state": "aberto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "human_code": "PACS-2026-7",
       "programa_code": "SUSTENTAVEL2030",
       "data_status": "verified"
@@ -131,7 +137,7 @@
       "file": "instrumentos/sustentavel-2030-pacs-2026-8.html",
       "source": "sustentavel-2030",
       "state": "aberto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "human_code": "PACS-2026-8",
       "programa_code": "SUSTENTAVEL2030",
       "data_status": "verified"
@@ -141,7 +147,7 @@
       "file": "instrumentos/alentejo2030-ciclo-urbano-agua-2026.html",
       "source": "alentejo-2030",
       "state": "aberto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "programa_code": "ALENTEJO2030",
       "data_status": "verified"
     },
@@ -150,10 +156,11 @@
       "file": "instrumentos/sustentavel-2030-pacs-2025-14.html",
       "source": "sustentavel-2030",
       "state": "aberto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "human_code": "PACS-2025-14",
       "programa_code": "SUSTENTAVEL2030",
-      "data_status": "verified"
+      "data_status": "verified",
+      "data_fim": "2026-10-20"
     },
     {
       "id": "contratacao-rh-qualificados-pme-baixa-densidade-alentejo",
@@ -170,7 +177,7 @@
       "file": "instrumentos/inclusao-pela-cultura-juntas-freguesia-alentejo.html",
       "source": "alentejo-2030",
       "state": "aberto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "programa_code": "ALENTEJO2030",
       "data_status": "verified"
     },
@@ -179,7 +186,7 @@
       "file": "instrumentos/apoio-capacitacao-entidades-emprego-alentejo.html",
       "source": "alentejo-2030",
       "state": "aberto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "programa_code": "ALENTEJO2030",
       "data_status": "verified"
     },
@@ -188,7 +195,7 @@
       "file": "instrumentos/respostas-sociais-proximidade-2-aviso-acores.html",
       "source": "acores-2030",
       "state": "aberto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "programa_code": "ACORES2030",
       "data_status": "verified"
     },
@@ -197,7 +204,7 @@
       "file": "instrumentos/cursos-profissionais-2-aviso-acores.html",
       "source": "acores-2030",
       "state": "aberto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "programa_code": "ACORES2030",
       "data_status": "verified"
     },
@@ -207,7 +214,7 @@
       "source": "acores-2030",
       "state": "fechado",
       "auto_closed": true,
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "programa_code": "ACORES2030",
       "data_status": "verified"
     },
@@ -216,7 +223,7 @@
       "file": "instrumentos/apoio-compensacao-custos-suplementares-pesca-aquicultura-ram-2025.html",
       "source": "portugal-2030",
       "state": "aberto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "human_code": "MAR2030-2026-10",
       "programa_code": "MAR2030",
       "data_status": "verified"
@@ -226,7 +233,7 @@
       "file": "instrumentos/sistema-de-incentivos-de-base-territorial-ram-ii.html",
       "source": "portugal-2030",
       "state": "aberto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "estado": "aberto",
       "data_fim": "2026-05-31",
       "data_inicio": "2026-04-23",
@@ -239,7 +246,7 @@
       "file": "instrumentos/acoes-para-minimizar-a-situacao-de-escassez-hidrica-algarve-pacs-2026-10.html",
       "source": "sustentavel-2030",
       "state": "aberto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "human_code": "PACS-2026-10",
       "programa_code": "SUSTENTAVEL2030",
       "data_status": "verified"
@@ -249,7 +256,7 @@
       "file": "instrumentos/empreendimento-hidraulico-fins-multiplos-crato-barragem-pisao-pacs-2026-09.html",
       "source": "sustentavel-2030",
       "state": "aberto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "human_code": "PACS-2026-9",
       "programa_code": "SUSTENTAVEL2030",
       "data_status": "verified"
@@ -259,7 +266,7 @@
       "file": "instrumentos/infraestrutura-portuaria-rte-porto-de-leixoes-4-aviso.html",
       "source": "portugal-2030",
       "state": "previsto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "estado": "previsto",
       "data_fim": "2026-12-31",
       "data_inicio": "2026-09-01",
@@ -274,7 +281,7 @@
       "file": "instrumentos/mar2030-2026-6-reposicao-capacidade-produtiva-aquicola/index.html",
       "source": "mar-2030",
       "state": "aberto",
-      "last_check": "2026-05-12",
+      "last_check": "2026-05-18",
       "data_status": "verified"
     },
     {
@@ -282,7 +289,7 @@
       "file": "instrumentos/infraestruturas-de-valorizacao-de-residuos-urbanos-em-alta-pacs-2026-12/index.html",
       "source": "sustentavel-2030",
       "state": "aberto",
-      "last_check": "2026-05-17",
+      "last_check": "2026-05-18",
       "data_status": "verified"
     },
     {
@@ -290,7 +297,7 @@
       "file": "instrumentos/infraestruturas-equipamentos-tecnologicos-ftj-alentejo/index.html",
       "source": "lisboa-2030",
       "state": "fechado",
-      "last_check": "2026-05-17",
+      "last_check": "2026-05-18",
       "data_status": "verified"
     },
     {
@@ -553,11 +560,11 @@
     }
   ],
   "count": 30,
-  "open": 36,
-  "closed": 6,
+  "open": 32,
+  "closed": 8,
   "planned": 15,
   "_meta": {
-    "last_monitor_run": "2026-05-12"
+    "last_monitor_run": "2026-05-18"
   },
   "published": 7
 }

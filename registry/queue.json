@@ -1178,6 +1178,72 @@
       "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback - FA0289/2025 nao encontrado em sustentavel2030.gov.pt nem em buscas alternativas",
       "last_fail_date": "2026-05-16",
       "abandoned_date": "2026-05-17"
+    },
+    {
+      "id": "ciclo-urbano-da-agua-8211-redes-de-abastecimento-de-agua-em-baixa",
+      "name": "Ciclo Urbano da Água – Redes de Abastecimento de Água em Baixa",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0080/2026",
+      "codigo_api": "FA0080/2026",
+      "human_code": null,
+      "programa": [
+        "MADEIRA2030"
+      ],
+      "programa_code": "MADEIRA2030",
+      "regional_portals": [
+        "madeira-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "aberto",
+      "data_inicio": "20260501",
+      "data_fim": "20260601",
+      "deadline": null,
+      "budget": "14000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/ciclo-urbano-da-agua-redes-de-abastecimento-de-agua-em-baixa/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 560,
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública']. fundo: .",
+      "fail_count": 0,
+      "status": "pending",
+      "promoted_from_paa": "2026-05-18",
+      "promoted_reason": "API portugal-2030 confirmou aviso publicado com PDF"
+    },
+    {
+      "id": "assistencia-tecnica-8211-selecao-de-organismos-intermedios-publicos",
+      "name": "Assistência Técnica – Seleção de Organismos Intermédios Públicos",
+      "source_id": "portugal-2030",
+      "shard": "pt2030-central",
+      "aviso_codigo": "FA0115/2026",
+      "codigo_api": "FA0115/2026",
+      "human_code": null,
+      "programa": [
+        "COMPETE2030"
+      ],
+      "programa_code": "COMPETE2030",
+      "regional_portals": [
+        "compete-2030"
+      ],
+      "detected_date": "2026-05-16",
+      "data_status": "forecast",
+      "state": "previsto",
+      "data_inicio": "20260529",
+      "data_fim": "20260731",
+      "deadline": null,
+      "budget": "14000000",
+      "regulation_url": "https://portugal2030.pt/aviso-2024/assistencia-tecnica-selecao-de-organismos-intermedios-publicos/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 540,
+      "paa_status": "planejado",
+      "notes": "Detectado via API central portugal-2030. natureza: Convite. beneficiario: ['Pública']. fundo: .",
+      "fail_count": 0,
+      "status": "pending",
+      "promoted_from_paa": "2026-05-18",
+      "promoted_reason": "API portugal-2030 confirmou aviso publicado com PDF"
     }
   ],
   "items": [],
