@@ -942,7 +942,7 @@
       "opinion_photo": "Retratos Equipa/retrato_jorgepereira.png",
       "opinion_author_card": "Jorge Pereira",
       "opinion_title": "A habitação deixou de ser problema social. Já é travão económico.",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "bruxelas-redescobre-industria-lisboa-distribui",
@@ -1174,6 +1174,26 @@
       "art_date": "Maio 2026",
       "card_title": "Um quarto do PRR foi para despesa corrente dos Estados",
       "cat_legacy": "financiamento",
+      "featured": true
+    },
+    {
+      "slug": "concentracao-riqueza-portugal-tributacao",
+      "title": "Portugal: 60% da riqueza concentrada em 10% da população",
+      "tagline": "Um dos maiores aumentos de concentração patrimonial da UE. A Comissão Europeia pressiona por maior tributação de fortunas e heranças.",
+      "subseccao": "atualidade",
+      "autor": "Luís Gomes",
+      "autor_foto": "retrato_luísgomes.png",
+      "data_publicacao": "2026-05-18",
+      "href": "/conhecimento/concentracao-riqueza-portugal-tributacao/",
+      "meta_description": "Os 10% mais ricos detêm 60,2% da riqueza nacional. Portugal está entre os países da UE com maior concentração patrimonial e Bruxelas quer mudar as regras do jogo fiscal.",
+      "cat_class": "cat-mercados",
+      "cat_label": "Mercados",
+      "tempo_leitura": "9min",
+      "imagem_src": "assets/articles/trend_ricos.png",
+      "excerpt": "Portugal está entre os países da UE com maior concentração de riqueza. A Comissão Europeia quer mudar isso, com implicações fiscais relevantes para empresas e investidores.",
+      "art_date": "Maio 2026",
+      "card_title": "Portugal: 60% da riqueza concentrada em 10% da população",
+      "cat_legacy": "mercados",
       "featured": true
     }
   ]
