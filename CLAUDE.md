@@ -695,13 +695,38 @@ O CSS do footer (`.footer`, `.f-legal`, `.footer-grid`, etc.) continua dentro do
 
 ---
 
+## 🧭 NAVBAR PARTIAL — SINGLE SOURCE OF TRUTH
+
+A navbar vive num único ficheiro: `_partials/navbar.html`. Páginas HTML usam marcadores:
+
+```html
+<!-- NAVBAR:START -->
+<!-- NAVBAR:END -->
+```
+
+O conteúdo entre os marcadores é gerado pelo script `build_navbar.py`, que substitui `[[PREFIX]]` no partial pelo caminho relativo adequado à profundidade do ficheiro (raiz = `""`, `instrumentos/X.html` = `"../"`, `conhecimento/slug/index.html` = `"../../"`).
+
+O partial inclui o `<nav class="navbar">` e o `<div class="nav-mobile-menu">` que vem logo a seguir, mais um pequeno `<style>` com regras específicas da navbar (chevron do dropdown, padding dos `.nav-links`, `.nav-badge`).
+
+**Regras para skills e agentes que criam páginas HTML:**
+1. **Nunca embeber `<nav class="navbar">...</nav>` nem `<div class="nav-mobile-menu">...</div>` em templates de skills.** Emitir apenas os dois marcadores no sítio onde a navbar entraria (tipicamente logo a seguir à abertura do `<body>`).
+2. **Após criar o ficheiro, correr:** `python build_navbar.py [path/ficheiro.html]` (preenche a navbar naquele ficheiro específico).
+3. **Para alterações à navbar (link novo, mudar label, mexer no dropdown, atualizar badge "em breve"):** editar `_partials/navbar.html` e correr `python build_navbar.py` (sem args, processa todo o repo).
+4. **Migração automática:** ficheiros legados sem marcadores são detetados pelo script na primeira corrida — substitui o bloco `<nav class="navbar">` antigo (e o `nav-mobile-menu` adjacente) pelos marcadores. Não é preciso fazer isto à mão.
+
+O CSS estrutural da navbar (`.navbar`, `.nav-links`, `.nav-dropdown-menu`, `.nav-cta`, `.nav-mobile-menu`, hamburger, scroll behaviour, etc.) continua dentro do `<style>` de cada página/skill, tal como o footer, só o markup é centralizado. O JS de scroll/hamburger também fica em cada página.
+
+**Active state:** o partial não marca o link ativo da página atual. Cada link tem `data-nav="<key>"` (ex: `data-nav="conhecimento"`). Se uma página quiser destacar o seu item, aplicar o estilo via JS ou CSS local com base no `data-nav` correspondente.
+
+---
+
 ## 🚀 AUTO-DEPLOY RULE
 
 **Every skill/command that creates or modifies site files MUST auto-deploy at the end.**
 
 After completing any skill (e.g. `/trend`, `/instrumento`, or any future command), follow these steps automatically without asking the user:
 
-1. Se a skill criou um ficheiro HTML novo: `python build_footer.py [path]` (preenche o footer)
+1. Se a skill criou um ficheiro HTML novo: `python build_footer.py [path]` e `python build_navbar.py [path]` (preenchem footer e navbar)
 2. `git add` the specific files created or modified by the skill
 3. `git commit` with a descriptive message (in Portuguese, lowercase, following the repo's commit style)
 4. If on `main`: `git push origin main`
@@ -738,5 +763,6 @@ Se o carrossel ficar denso de mais com o tempo, a opção é prunar manualmente 
 | v1.2 | — | Hero illustration, navbar logo image, carousel, site structure |
 | v1.3 | 2026-03-22 | +25% typography scale (non-titles) · Nav sentence case · Logo 57px · "Em breve" as superscript · Nav right-aligned · Sobre Nós + Carreiras merged into dropdown |
 | v1.4 | 2026-05-06 | Footer centralizado em `_partials/footer.html` + `build_footer.py`. Skills emitem marcadores em vez de footer HTML. Drift inter-página eliminado. |
+| v1.4.1 | — | Navbar centralizada em `_partials/navbar.html` + `build_navbar.py`. Mesmo modelo do footer: marcadores `<!-- NAVBAR:START/END -->`, `[[PREFIX]]` resolvido por profundidade. |
 | v1.5 | 2026-05-17 | Carrossel da homepage passa a incluir Regulamentos. `featured: true` é default em todas as skills de conhecimento. Filtro `subseccao !== 'regulamentos'` removido do JS. |
 | v1.6 | 2026-05-18 | Carrossel da homepage exclui novamente Regulamentos. Filtro `subseccao !== 'regulamentos'` reintroduzido no JS. |
