@@ -1783,7 +1783,11 @@
       "plano_anual_note": "API empty response - slug pode ter sido alterado",
       "programa_code": "ALENTEJO2030",
       "codigo_api": "FA0174/2025",
-      "data_status": "forecast"
+      "data_status": "forecast",
+      "paa_status": "published_externamente",
+      "news_post_url": "https://alentejo.portugal2030.pt/2026/05/19/alentejo-2030-abre-concurso-de-2-milhoes-de-euros-para-projetos-ligados-a-agua-paisagem-turismo-e-empreendedorismo-rural/",
+      "news_post_date": "2026-05-19",
+      "news_post_title": "Alentejo 2030 abre concurso de 2 milhões de euros para projetos ligados à água, paisagem, turismo e empreendedorismo rural"
     },
     {
       "id": "funcionamento-de-cit-multifuncoes-e-espacos-equiparados",
@@ -6302,8 +6306,11 @@
       "regulation_local": null,
       "priority_score": 510,
       "status": "pending",
-      "paa_status": "planejado",
-      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: ."
+      "paa_status": "published_externamente",
+      "notes": "Detectado via API central portugal-2030. natureza: Concurso. beneficiario: ['Pública | Privada']. fundo: .",
+      "news_post_url": "https://acores.portugal2030.pt/2026/05/19/acores-2030-lanca-aviso-para-reforco-da-excelencia-cientifica-na-regiao/",
+      "news_post_date": "2026-05-19",
+      "news_post_title": "Açores 2030 lança aviso para reforço da excelência científica na Região"
     },
     {
       "id": "cursos-de-especializacao-tecnologica-cet",

@@ -90,7 +90,52 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [],
+  "queue": [
+    {
+      "id": "uptec-porto",
+      "name": "UPTEC (Parque de Ciência e Tecnologia da UP)",
+      "source_id": "uptec-porto",
+      "catalog_type": "incubator",
+      "detected_date": "2026-05-19",
+      "last_profile_update": "2026-05-19",
+      "status": "active",
+      "regulation_url": "https://uptec.up.pt",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://uptec.up.pt",
+        "linkedin": "https://www.linkedin.com/company/uptecporto/",
+        "pais_sede": "PT",
+        "descricao_curta": "Parque de ciência e tecnologia da Universidade do Porto, incubadora de referência no norte de Portugal.",
+        "como_candidatar": "Via formulário em uptec.up.pt/join-the-uptec-community/",
+        "modelo": "equity-free",
+        "formato": "hibrido",
+        "duracao_meses": null,
+        "batches_ano": null,
+        "batch_proximo": null,
+        "deadline_proxima": null,
+        "estipendio_eur": null,
+        "equity_pct": null,
+        "mentorias": [],
+        "setores_foco": [
+          "nanotecnologia",
+          "novos materiais",
+          "energia",
+          "saúde",
+          "biotech",
+          "ICT",
+          "media digital",
+          "arquitetura",
+          "marketing interativo"
+        ],
+        "alumni_destaques": [
+          "PeoplePulse Analytix",
+          "Savearth",
+          "Blue Shuttle"
+        ]
+      },
+      "notes": "Incubadora/parque tecnológico UP Porto. Perfil extraído 2026-05-19. Quota de campos úteis: ~50% (modelo/duracao/batches não publicados explicitamente)."
+    }
+  ],
   "updated": "2026-05-16",
   "_updated": "2026-05-16"
 }
