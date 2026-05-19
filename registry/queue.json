@@ -100,11 +100,15 @@
       "budget": "{\"budgetYearsColumns\":[\"2027\"],\"budgetTopicActionMap\":{\"113075\":[{\"action\":\"HORIZON-CL6-2027-02-CLIMATE-01-two-stage - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":2,\"minContribution\":5500000,\"maxContribution\":5500000,\"budgetYearMap\":{\"2027\":\"11000000\"},\"plannedOpeningDate\":\"2027-02-04\",\"deadlineModel\":\"two-stage\",\"deadlineDates\":[\"2027-04-08\",\"2027-09-14\"]}],\"113074\":[{\"action\":\"HORIZON-CL6-2027-02-FARM2FORK-02-two-stage - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":2,\"minContribution\":6000000,\"maxContribution\":6000000,\"budgetYearMap\":{\"2027\":\"12000000\"},\"plannedOpeningDate\":\"2027-02-04\",\"deadlineModel\":\"two-stage\",\"deadlineDates\":[\"2027-04-08\",\"2027-09-14\"]}],\"113076\":[{\"action\":\"HORIZON-CL6-2027-02-FARM2FORK-01-two-stage - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":2,\"minContribution\":6000000,\"maxContribution\":6000000,\"budgetYearMap\":{\"2027\":\"12000000\"},\"plannedOpeningDate\":\"2027-02-04\",\"deadlineModel\":\"two-stage\",\"deadlineDates\":[\"2027-04-08\",\"2027-09-14\"]}]}}",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL6-2027-02-FARM2FORK-01-two-stage",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl6-2027-02-farm2fork-01-two-stage.txt",
       "priority_score": 20,
-      "status": "aberto",
+      "status": "ready",
       "notes": "topic: HORIZON-CL6-2027-02-FARM2FORK-01-two-stage; call: HORIZON-CL6-2027-02-two-stage; framework: 43108390; SEDIA p2",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 0,
+      "fallback_tried": [
+        "2b-horizon"
+      ]
     },
     {
       "id": "horizon-miss-2027-05-soil-05-two-stage",
@@ -118,11 +122,15 @@
       "budget": "{\"budgetYearsColumns\":[\"2027\"],\"budgetTopicActionMap\":{\"113089\":[{\"action\":\"HORIZON-MISS-2027-05-SOIL-02-two-stage - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":2,\"minContribution\":12000000,\"maxContribution\":12000000,\"budgetYearMap\":{\"2027\":\"24000000\"},\"plannedOpeningDate\":\"2027-02-04\",\"deadlineModel\":\"two-stage\",\"deadlineDates\":[\"2027-04-08\",\"2027-09-14\"]}],\"113088\":[{\"action\":\"HORIZON-MISS-2027-05-SOIL-06-two-stage - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":1,\"minContribution\":7000000,\"maxContribution\":7000000,\"budgetYearMap\":{\"2027\":\"7000000\"},\"plannedOpeningDate\":\"2027-02-04\",\"deadlineModel\":\"two-stage\",\"deadlineDates\":[\"2027-04-08\",\"2027-09-14\"]}],\"113085\":[{\"action\":\"HORIZON-MISS-2027-05-SOIL-05-two-stage - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":2,\"minContribution\":6400000,\"maxContribution\":6400000,\"budgetYearMap\":{\"2027\":\"12800000\"},\"plannedOpeningDate\":\"2027-02-04\",\"deadlineModel\":\"two-stage\",\"deadlineDates\":[\"2027-04-08\",\"2027-09-14\"]}],\"113084\":[{\"action\":\"HORIZON-MISS-2027-05-SOIL-01-two-stage - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":2,\"minContribution\":12000000,\"maxContribution\":12000000,\"budgetYearMap\":{\"2027\":\"24000000\"},\"plannedOpeningDate\":\"2027-02-04\",\"deadlineModel\":\"two-stage\",\"deadlineDates\":[\"2027-04-08\",\"2027-09-14\"]}],\"113087\":[{\"action\":\"HORIZON-MISS-2027-05-SOIL-04-two-stage - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":2,\"minContribution\":5500000,\"maxContribution\":5500000,\"budgetYearMap\":{\"2027\":\"11000000\"},\"plannedOpeningDate\":\"2027-02-04\",\"deadlineModel\":\"two-stage\",\"deadlineDates\":[\"2027-04-08\",\"2027-09-14\"]}],\"113086\":[{\"action\":\"HORIZON-MISS-2027-05-SOIL-03-two-stage - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":2,\"minContribution\":8000000,\"maxContribution\":8000000,\"budgetYearMap\":{\"2027\":\"16000000\"},\"plannedOpeningDate\":\"2027-02-04\",\"deadlineModel\":\"two-stage\",\"deadlineDates\":[\"2027-04-08\",\"2027-09-14\"]}]}}",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2027-05-SOIL-05-two-stage",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-miss-2027-05-soil-05-two-stage.txt",
       "priority_score": 20,
-      "status": "aberto",
+      "status": "ready",
       "notes": "topic: HORIZON-MISS-2027-05-SOIL-05-two-stage; call: HORIZON-MISS-2027-05-two-stage; framework: 43108390; SEDIA p2",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 0,
+      "fallback_tried": [
+        "2b-horizon"
+      ]
     },
     {
       "id": "horizon-hlth-2027-01-stayhlth-01",
@@ -136,11 +144,15 @@
       "budget": "{\"budgetYearsColumns\":[\"2027\"],\"budgetTopicActionMap\":{\"113107\":[{\"action\":\"HORIZON-HLTH-2027-01-ENVHLTH-MISSCLIMA-03 - HORIZON-PCP HORIZON Pre-commercial Procurement\",\"expectedGrants\":4,\"minContribution\":4000000,\"maxContribution\":5000000,\"budgetYearMap\":{\"2027\":\"20000000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113106\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-08 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":5,\"minContribution\":8000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"44200000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113109\":[{\"action\":\"HORIZON-HLTH-2027-01-CARE-02 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":8000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"38000000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113108\":[{\"action\":\"HORIZON-HLTH-2027-01-ENVHLTH-02 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":10000000,\"maxContribution\":11000000,\"budgetYearMap\":{\"2027\":\"45000000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113111\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-05 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":5,\"minContribution\":9000000,\"maxContribution\":11000000,\"budgetYearMap\":{\"2027\":\"44200000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113110\":[{\"action\":\"HORIZON-HLTH-2027-01-STAYHLTH-01 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":5,\"minContribution\":6000000,\"maxContribution\":8000000,\"budgetYearMap\":{\"2027\":\"39300000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113113\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-06 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":9000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"37300000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113112\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-07 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":9000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"37300000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113115\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-10 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":3,\"minContribution\":3000000,\"maxContribution\":4000000,\"budgetYearMap\":{\"2027\":\"11800000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113114\":[{\"action\":\"HORIZON-HLTH-2027-01-IND-01 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":6000000,\"maxContribution\":8000000,\"budgetYearMap\":{\"2027\":\"24500000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}]}}",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-01-STAYHLTH-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-hlth-2027-01-stayhlth-01.txt",
       "priority_score": 20,
-      "status": "aberto",
+      "status": "ready",
       "notes": "topic: HORIZON-HLTH-2027-01-STAYHLTH-01; call: HORIZON-HLTH-2027-01; framework: 43108390; SEDIA p2",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 0,
+      "fallback_tried": [
+        "2b-horizon"
+      ]
     },
     {
       "id": "horizon-hlth-2027-01-disease-08",
@@ -154,11 +166,15 @@
       "budget": "{\"budgetYearsColumns\":[\"2027\"],\"budgetTopicActionMap\":{\"113107\":[{\"action\":\"HORIZON-HLTH-2027-01-ENVHLTH-MISSCLIMA-03 - HORIZON-PCP HORIZON Pre-commercial Procurement\",\"expectedGrants\":4,\"minContribution\":4000000,\"maxContribution\":5000000,\"budgetYearMap\":{\"2027\":\"20000000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113106\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-08 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":5,\"minContribution\":8000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"44200000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113109\":[{\"action\":\"HORIZON-HLTH-2027-01-CARE-02 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":8000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"38000000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113108\":[{\"action\":\"HORIZON-HLTH-2027-01-ENVHLTH-02 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":10000000,\"maxContribution\":11000000,\"budgetYearMap\":{\"2027\":\"45000000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113111\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-05 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":5,\"minContribution\":9000000,\"maxContribution\":11000000,\"budgetYearMap\":{\"2027\":\"44200000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113110\":[{\"action\":\"HORIZON-HLTH-2027-01-STAYHLTH-01 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":5,\"minContribution\":6000000,\"maxContribution\":8000000,\"budgetYearMap\":{\"2027\":\"39300000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113113\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-06 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":9000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"37300000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113112\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-07 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":9000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"37300000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113115\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-10 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":3,\"minContribution\":3000000,\"maxContribution\":4000000,\"budgetYearMap\":{\"2027\":\"11800000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113114\":[{\"action\":\"HORIZON-HLTH-2027-01-IND-01 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":6000000,\"maxContribution\":8000000,\"budgetYearMap\":{\"2027\":\"24500000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}]}}",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-01-DISEASE-08",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-hlth-2027-01-disease-08.txt",
       "priority_score": 20,
-      "status": "aberto",
+      "status": "ready",
       "notes": "topic: HORIZON-HLTH-2027-01-DISEASE-08; call: HORIZON-HLTH-2027-01; framework: 43108390; SEDIA p2",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 0,
+      "fallback_tried": [
+        "2b-horizon"
+      ]
     },
     {
       "id": "horizon-hlth-2027-01-envhlth-missclima-03",
@@ -172,11 +188,15 @@
       "budget": "{\"budgetYearsColumns\":[\"2027\"],\"budgetTopicActionMap\":{\"113107\":[{\"action\":\"HORIZON-HLTH-2027-01-ENVHLTH-MISSCLIMA-03 - HORIZON-PCP HORIZON Pre-commercial Procurement\",\"expectedGrants\":4,\"minContribution\":4000000,\"maxContribution\":5000000,\"budgetYearMap\":{\"2027\":\"20000000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113106\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-08 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":5,\"minContribution\":8000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"44200000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113109\":[{\"action\":\"HORIZON-HLTH-2027-01-CARE-02 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":8000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"38000000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113108\":[{\"action\":\"HORIZON-HLTH-2027-01-ENVHLTH-02 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":10000000,\"maxContribution\":11000000,\"budgetYearMap\":{\"2027\":\"45000000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113111\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-05 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":5,\"minContribution\":9000000,\"maxContribution\":11000000,\"budgetYearMap\":{\"2027\":\"44200000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113110\":[{\"action\":\"HORIZON-HLTH-2027-01-STAYHLTH-01 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":5,\"minContribution\":6000000,\"maxContribution\":8000000,\"budgetYearMap\":{\"2027\":\"39300000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113113\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-06 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":9000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"37300000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113112\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-07 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":9000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"37300000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113115\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-10 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":3,\"minContribution\":3000000,\"maxContribution\":4000000,\"budgetYearMap\":{\"2027\":\"11800000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113114\":[{\"action\":\"HORIZON-HLTH-2027-01-IND-01 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":6000000,\"maxContribution\":8000000,\"budgetYearMap\":{\"2027\":\"24500000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}]}}",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-01-ENVHLTH-MISSCLIMA-03",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-hlth-2027-01-envhlth-missclima-03.txt",
       "priority_score": 20,
-      "status": "aberto",
+      "status": "ready",
       "notes": "topic: HORIZON-HLTH-2027-01-ENVHLTH-MISSCLIMA-03; call: HORIZON-HLTH-2027-01; framework: 43108390; SEDIA p2",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 0,
+      "fallback_tried": [
+        "2b-horizon"
+      ]
     },
     {
       "id": "horizon-hlth-2027-01-disease-10",
@@ -190,11 +210,15 @@
       "budget": "{\"budgetYearsColumns\":[\"2027\"],\"budgetTopicActionMap\":{\"113107\":[{\"action\":\"HORIZON-HLTH-2027-01-ENVHLTH-MISSCLIMA-03 - HORIZON-PCP HORIZON Pre-commercial Procurement\",\"expectedGrants\":4,\"minContribution\":4000000,\"maxContribution\":5000000,\"budgetYearMap\":{\"2027\":\"20000000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113106\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-08 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":5,\"minContribution\":8000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"44200000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113109\":[{\"action\":\"HORIZON-HLTH-2027-01-CARE-02 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":8000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"38000000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113108\":[{\"action\":\"HORIZON-HLTH-2027-01-ENVHLTH-02 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":10000000,\"maxContribution\":11000000,\"budgetYearMap\":{\"2027\":\"45000000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113111\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-05 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":5,\"minContribution\":9000000,\"maxContribution\":11000000,\"budgetYearMap\":{\"2027\":\"44200000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113110\":[{\"action\":\"HORIZON-HLTH-2027-01-STAYHLTH-01 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":5,\"minContribution\":6000000,\"maxContribution\":8000000,\"budgetYearMap\":{\"2027\":\"39300000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113113\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-06 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":9000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"37300000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113112\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-07 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":9000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"37300000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113115\":[{\"action\":\"HORIZON-HLTH-2027-01-DISEASE-10 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":3,\"minContribution\":3000000,\"maxContribution\":4000000,\"budgetYearMap\":{\"2027\":\"11800000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}],\"113114\":[{\"action\":\"HORIZON-HLTH-2027-01-IND-01 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":6000000,\"maxContribution\":8000000,\"budgetYearMap\":{\"2027\":\"24500000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-13\"]}]}}",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-01-DISEASE-10",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-hlth-2027-01-disease-10.txt",
       "priority_score": 20,
-      "status": "aberto",
+      "status": "ready",
       "notes": "topic: HORIZON-HLTH-2027-01-DISEASE-10; call: HORIZON-HLTH-2027-01; framework: 43108390; SEDIA p2",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 0,
+      "fallback_tried": [
+        "2b-horizon"
+      ]
     },
     {
       "id": "horizon-hlth-2027-02-ind-02-two-stage",
@@ -208,11 +232,15 @@
       "budget": "{\"budgetYearsColumns\":[\"2027\"],\"budgetTopicActionMap\":{\"113117\":[{\"action\":\"HORIZON-HLTH-2027-02-DISEASE-14-two-stage - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":4,\"minContribution\":10000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"39300000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"two-stage\",\"deadlineDates\":[\"2027-04-13\",\"2027-09-22\"]}],\"113116\":[{\"action\":\"HORIZON-HLTH-2027-02-TOOL-01-two-stage - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":6,\"minContribution\":6000000,\"maxContribution\":8000000,\"budgetYearMap\":{\"2027\":\"44200000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"two-stage\",\"deadlineDates\":[\"2027-04-13\",\"2027-09-22\"]}],\"113119\":[{\"action\":\"HORIZON-HLTH-2027-02-DISEASE-01-two-stage - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":8,\"minContribution\":7000000,\"maxContribution\":8000000,\"budgetYearMap\":{\"2027\":\"63800000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"two-stage\",\"deadlineDates\":[\"2027-04-13\",\"2027-09-22\"]}],\"113118\":[{\"action\":\"HORIZON-HLTH-2027-02-IND-02-two-stage - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":6,\"minContribution\":5000000,\"maxContribution\":7000000,\"budgetYearMap\":{\"2027\":\"39300000\"},\"plannedOpeningDate\":\"2027-02-10\",\"deadlineModel\":\"two-stage\",\"deadlineDates\":[\"2027-04-13\",\"2027-09-22\"]}]}}",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-02-IND-02-two-stage",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-hlth-2027-02-ind-02-two-stage.txt",
       "priority_score": 20,
-      "status": "aberto",
+      "status": "ready",
       "notes": "topic: HORIZON-HLTH-2027-02-IND-02-two-stage; call: HORIZON-HLTH-2027-02-two-stage; framework: 43108390; SEDIA p2",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 0,
+      "fallback_tried": [
+        "2b-horizon"
+      ]
     },
     {
       "id": "horizon-hlth-2027-01-disease-05",
@@ -821,17 +849,18 @@
       "regulation_url": 252768,
       "pdf_url": 252768,
       "regulation_local": null,
-      "status": "pending",
+      "status": "abandoned",
       "state": "previsto",
       "fail_count": 3,
       "priority_score": 500,
       "programa_code": "SUSTENTAVEL2030",
       "codigo_api": "FA0284/2025",
       "data_status": "forecast",
-      "download_error": "sustentavel2030.gov.pt aviso FA0284/2025 nao publicado (previsto); API 404; pagina avisos mostra apenas PACS; fail_count=3",
-      "last_fail_date": "2026-05-18",
+      "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback - aviso previsto nao publicado",
+      "last_fail_date": "2026-05-19",
       "fallback_tried": [
-        "2b-pdf"
+        "2b-pdf",
+        "1.6-websearch"
       ]
     },
     {
@@ -910,17 +939,18 @@
       "regulation_url": 252876,
       "pdf_url": 252876,
       "regulation_local": null,
-      "status": "pending",
+      "status": "abandoned",
       "state": "previsto",
       "fail_count": 3,
       "priority_score": 500,
       "programa_code": "MADEIRA2030",
       "codigo_api": "FA0241/2025",
       "data_status": "forecast",
-      "download_error": "madeira.portugal2030.pt aviso FA0241/2025 nao publicado (previsto); API 404; Pessoas2030 tem aviso nacional diferente (PESSOAS-2025-28); fail_count=3",
-      "last_fail_date": "2026-05-18",
+      "download_error": "URL inacessivel apos 3+ tentativas e WebSearch fallback - aviso previsto nao publicado",
+      "last_fail_date": "2026-05-19",
       "fallback_tried": [
-        "2b-pdf"
+        "2b-pdf",
+        "1.6-websearch"
       ]
     },
     {
@@ -940,15 +970,17 @@
       "regulation_local": null,
       "status": "pending",
       "state": "previsto",
-      "fail_count": 2,
+      "fail_count": 3,
       "priority_score": 500,
       "programa_code": "ALENTEJO2030",
       "codigo_api": "FA0278/2025",
       "data_status": "forecast",
-      "download_error": "alentejo.portugal2030.pt aviso FA0278/2025 nao publicado (previsto); portal page 404; aviso-2024 page 404",
-      "last_fail_date": "2026-05-18",
+      "download_error": "alentejo.portugal2030.pt aviso FA0278/2025 nao publicado (previsto); portal page 404; aviso-2024 page 404; wp-api 404; data_inicio=2026-07-17",
+      "last_fail_date": "2026-05-19",
       "fallback_tried": [
-        "2b-pdf"
+        "2b-pdf",
+        "2b-acf-all",
+        "2b-heur"
       ]
     },
     {
