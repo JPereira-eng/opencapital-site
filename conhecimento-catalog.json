@@ -2,7 +2,7 @@
   "_meta": {
     "description": "Catalogo central de artigos da seccao Conhecimento. Lido pelos hubs (atualidade, opiniao, estrategia, regulamentos) para renderizar listagens.",
     "version": "1.0",
-    "last_update": "2026-05-18",
+    "last_update": "2026-05-19",
     "subseccoes": [
       "atualidade",
       "opiniao",
@@ -79,7 +79,7 @@
       "excerpt": "Aproveitar oportunidades adjacentes ou aprofundar o core? Quatro critérios para decidir com método antes de comprometer capital e atenção.",
       "art_date": "Maio 2026",
       "cat_legacy": "estrategia",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "portugal-trabalha-mais-ganha-menos-paradoxo-laboral",
@@ -1225,6 +1225,26 @@
       "opinion_photo": "Retratos Equipa/retrato_ritaferreira.png",
       "opinion_author_card": "Rita Ferreira",
       "opinion_title": "O custo do que nunca se diz",
+      "featured": true
+    },
+    {
+      "slug": "banco-portugal-taxa-esforco-credito-habitacao",
+      "title": "Banco de Portugal reduz taxa de esforço: o que muda e para quem",
+      "tagline": "O Banco de Portugal vai baixar a taxa de esforço máxima no crédito à habitação de 50% para 40-45%. O que muda para compradores, bancos e empresas.",
+      "subseccao": "atualidade",
+      "autor": "Luís Gomes",
+      "autor_foto": "retrato_luísgomes.png",
+      "data_publicacao": "2026-05-19",
+      "href": "/conhecimento/banco-portugal-taxa-esforco-credito-habitacao/",
+      "meta_description": "O Banco de Portugal vai baixar a taxa de esforço máxima no crédito à habitação de 50% para 40-45%. O que muda para compradores, bancos e empresas.",
+      "cat_class": "cat-mercados",
+      "cat_label": "Mercados",
+      "tempo_leitura": "8min",
+      "imagem_src": "assets/articles/trend_casas.png",
+      "excerpt": "A concessão de crédito à habitação aproxima-se dos recordes de 2006-2007. O regulador reduz a taxa de esforço máxima antes do verão.",
+      "art_date": "Maio 2026",
+      "card_title": "Banco de Portugal reduz taxa de esforço: o que muda e para quem",
+      "cat_legacy": "mercados",
       "featured": true
     }
   ]
