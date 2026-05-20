@@ -15,11 +15,11 @@
     "open": 440,
     "closed": 166,
     "planned": 100,
-    "in_queue": 0,
+    "in_queue": 59,
     "in_watchlist": 264,
-    "in_catalogo": 1,
+    "in_catalogo": 2,
     "in_overflow": 287,
-    "in_plano_anual": 271
+    "in_plano_anual": 255
   },
   "shards": {
     "catalogo-aceleradores": {
@@ -168,7 +168,7 @@
   "last_full_cycle": "2026-04-12",
   "last_monitor_run": "2026-05-18",
   "source_last_checked": {
-    "portugal-2030": "2026-05-19",
+    "portugal-2030": "2026-05-20",
     "compete-2030": "2026-05-18",
     "norte-2030": "2026-05-17",
     "centro-2030": "2026-05-17",
@@ -181,12 +181,12 @@
     "sustentavel-2030": "2026-05-18",
     "mar-2030": "2026-05-18",
     "pat-2030": "2026-05-12",
-    "eu-funding-tenders": "2026-05-19",
+    "eu-funding-tenders": "2026-05-20",
     "ani": "2026-05-19",
     "iapmei": "2026-05-19",
     "prr": "2026-05-11",
     "interreg-poctep": "2026-05-12",
-    "fct": "2026-05-11",
+    "fct": "2026-05-20",
     "aicep": "2026-05-12",
     "iefp": "2026-05-19",
     "interreg-atlantic": "2026-05-11",
@@ -219,8 +219,8 @@
     "f6s": "2026-04-13",
     "interreg-interact": "2026-05-10",
     "eu-startups": "2026-04-13",
-    "esa-bic": "2026-05-10",
-    "eit-digital": "2026-05-10",
+    "esa-bic": "2026-05-20",
+    "eit-digital": "2026-05-20",
     "eit-climate": "2026-05-12",
     "shilling-vc": "2026-04-14",
     "portugal-ventures": "2026-04-14",
@@ -292,12 +292,12 @@
     "k-fund": "2026-05-06",
     "kibo-ventures": "2026-05-06"
   },
-  "last_scanner_run": "2026-05-19",
+  "last_scanner_run": "2026-05-20",
   "last_writer_run": "2026-05-17",
   "source_last_news_check": {
     "alentejo-2030": "2026-05-19",
     "pessoas-2030": "2026-05-18",
-    "sustentavel-2030": "2026-05-17",
+    "sustentavel-2030": "2026-05-20",
     "algarve-2030": "2026-05-19",
     "acores-2030": "2026-05-19",
     "centro-2030": "2026-05-19",
@@ -305,7 +305,7 @@
     "mar-2030": "2026-05-18",
     "pat-2030": "2026-05-18",
     "madeira-2030": "2026-05-19",
-    "compete-2030": "2026-05-17",
+    "compete-2030": "2026-05-20",
     "norte-2030": "2026-05-18"
   },
   "totals_v413": {
@@ -316,5 +316,5 @@
     "verified_published_other": 0,
     "n_a_in_queue": 64
   },
-  "updated": "2026-05-19"
+  "updated": "2026-05-20"
 }

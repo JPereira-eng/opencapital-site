@@ -1086,6 +1086,98 @@
       "fallback_tried": [
         "2b"
       ]
+    },
+    {
+      "id": "concurso-de-projetos-de-computacao-avancada-6-ed-a0-a1-lote-e",
+      "name": "Concurso de Projetos de Computação Avançada (6.ª ed) - A0 | A1 (lote E)",
+      "source_id": "fct",
+      "shard": "pt-other",
+      "aviso_codigo": "FCT-HPC-A0A1-LOTE-E-2026",
+      "detected_date": "2026-05-20",
+      "deadline": "2026-09-15",
+      "budget": null,
+      "regulation_url": "https://www.fct.pt/financiamento/concursos/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 25,
+      "status": "pending",
+      "data_status": "n/a",
+      "notes": "FCT Computacao Avancada 6a edicao Lote E (tipologias A0 experimental e A1 desenvolvimento). Deadline 15/09/2026."
+    },
+    {
+      "id": "concurso-de-projetos-de-computacao-avancada-6-ed-a2-a3-lote-e-via-rapida",
+      "name": "Concurso de Projetos de Computação Avançada (6.ª ed) - A2 | A3 (lote E - Via Rápida)",
+      "source_id": "fct",
+      "shard": "pt-other",
+      "aviso_codigo": "FCT-HPC-A2A3-LOTE-E-VR-2026",
+      "detected_date": "2026-05-20",
+      "deadline": "2026-09-15",
+      "budget": null,
+      "regulation_url": "https://www.fct.pt/financiamento/concursos/",
+      "pdf_url": null,
+      "regulation_local": null,
+      "priority_score": 25,
+      "status": "pending",
+      "data_status": "n/a",
+      "notes": "FCT Computacao Avancada 6a edicao Lote E Via Rapida (tipologias A2 e A3). Deadline 15/09/2026."
+    },
+    {
+      "id": "abastecimento-de-agua-em-alta-pacs-2026-13",
+      "name": "Abastecimento de Água em alta",
+      "source_id": "sustentavel-2030",
+      "shard": "pt2030-other",
+      "aviso_codigo": "PACS-2026-13",
+      "codigo_api": "PACS-2026-13",
+      "human_code": "PACS-2026-13",
+      "programa_code": "SUSTENTAVEL2030",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ],
+      "detected_date": "2026-05-20",
+      "deadline": "2027-02-22",
+      "budget": "30000000",
+      "regulation_url": "https://sustentavel2030.gov.pt/aviso/pacs-2026-13/",
+      "pdf_url": "https://sustentavel2030.gov.pt/wp-content/uploads/2026/05/Aviso-PACS-2026-13.pdf",
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": null,
+      "data_status": "verified",
+      "state": "aberto",
+      "natureza": "Convite",
+      "notes": "PACS-2026-13 Sustentavel 2030. 30M EUR. Confirmado via PDF no portal. Slug alternativo (evita colisao com FA0269/2025 depublished)."
+    },
+    {
+      "id": "aguas-residuais-em-alta-pacs-2026-14",
+      "name": "Águas Residuais em alta",
+      "source_id": "sustentavel-2030",
+      "shard": "pt2030-other",
+      "aviso_codigo": "PACS-2026-14",
+      "codigo_api": "PACS-2026-14",
+      "human_code": "PACS-2026-14",
+      "programa_code": "SUSTENTAVEL2030",
+      "programa": [
+        "SUSTENTAVEL2030"
+      ],
+      "regional_portals": [
+        "sustentavel-2030"
+      ],
+      "detected_date": "2026-05-20",
+      "deadline": "2027-01-20",
+      "budget": "40000000",
+      "regulation_url": "https://sustentavel2030.gov.pt/aviso/pacs-2026-14/",
+      "pdf_url": "https://sustentavel2030.gov.pt/wp-content/uploads/2026/05/Aviso-PACS-2026-14.pdf",
+      "regulation_local": null,
+      "priority_score": 530,
+      "status": "pending",
+      "paa_status": null,
+      "data_status": "verified",
+      "state": "aberto",
+      "natureza": "Convite",
+      "notes": "PACS-2026-14 Sustentavel 2030. 40M EUR. Confirmado via PDF no portal. Slug alternativo (evita colisao com FA0271/2025 depublished)."
     }
   ],
   "items": [],

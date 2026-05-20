@@ -134,6 +134,30 @@
         ]
       },
       "notes": "Incubadora/parque tecnológico UP Porto. Perfil extraído 2026-05-19. Quota de campos úteis: ~50% (modelo/duracao/batches não publicados explicitamente)."
+    },
+    {
+      "id": "seedrs-pt",
+      "name": "Republic Europe (ex-Seedrs)",
+      "source_id": "seedrs-pt",
+      "catalog_type": "crowdfunding",
+      "detected_date": "2026-05-20",
+      "last_profile_update": "2026-05-20",
+      "status": "active",
+      "regulation_url": "https://europe.republic.com/",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://europe.republic.com/",
+        "linkedin": null,
+        "pais_sede": "UK",
+        "descricao_curta": "Seedrs rebranded para Republic Europe em julho 2024. Plataforma de equity crowdfunding regulada pela FCA (UK), com acesso a startups europeias.",
+        "como_candidatar": "Processo de aplicacao online via website (europe.republic.com). Requer pitch deck e metricas financeiras basicas.",
+        "modelo": "equity",
+        "ticket_min_investidor_eur": 20,
+        "comissao": "Aprox. 7.5% sobre total angariado + taxas de pagamento; investidor paga 1.5% retorno por transacao",
+        "regulamentacao": "FCA (UK) + ECSPR (UE)",
+        "campanhas_ativas_url": "https://europe.republic.com/invest",
+        "rebrand_note": "Rebranded de Seedrs para Republic Europe em 10 julho 2024. URL original www.seedrs.com redireciona para europe.republic.com"
+      }
     }
   ],
   "updated": "2026-05-16",
