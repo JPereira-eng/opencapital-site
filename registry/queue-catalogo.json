@@ -90,7 +90,33 @@
       "notes": "Exemplo ilustrativo do schema v4.5 para catalog_type=accelerator."
     }
   },
-  "queue": [],
+  "queue": [
+    {
+      "id": "seedrs-pt",
+      "name": "Republic Europe (ex-Seedrs)",
+      "source_id": "seedrs-pt",
+      "catalog_type": "crowdfunding",
+      "detected_date": "2026-05-20",
+      "last_profile_update": "2026-05-20",
+      "status": "active",
+      "regulation_url": "https://europe.republic.com",
+      "priority_score": 10,
+      "profile": {
+        "website": "https://europe.republic.com",
+        "linkedin": "https://www.linkedin.com/company/republic-europe",
+        "pais_sede": "UK",
+        "descricao_curta": "Plataforma equity crowdfunding europeia (ex-Seedrs, adquirida pela Republic em 2022). Operacao em Portugal e outros mercados europeus.",
+        "como_candidatar": "Submeter proposta via website europe.republic.com (secção \"Raise\"). Processo de due diligence e aprovacao pela plataforma.",
+        "modelo": "equity",
+        "ticket_min_investidor_eur": 10,
+        "comissao": "Aproximadamente 6-7.5% do montante levantado (variaveis por campanha)",
+        "regulamentacao": "FCA (UK) + ECSPR (EU)",
+        "campanhas_ativas_url": "https://europe.republic.com/invest",
+        "nota": "Rebrand de Seedrs para Republic Europe em 2023. Mantém operacao em Portugal. Minimo de investimento desde 10 EUR."
+      },
+      "notes": "Ex-Seedrs, rebrand para Republic Europe (Republic Inc.). Operacao EU/PT activa. URL principal: europe.republic.com. Actualizado em 2026-05-20."
+    }
+  ],
   "updated": "2026-05-16",
   "_updated": "2026-05-16"
 }
