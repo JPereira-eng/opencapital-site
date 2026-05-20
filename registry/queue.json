@@ -392,11 +392,12 @@
       "budget": "{\"budgetYearsColumns\":[\"2027\"],\"budgetTopicActionMap\":{\"112963\":[{\"action\":\"HORIZON-CL5-2027-03-D5-17 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":2,\"minContribution\":7000000,\"maxContribution\":7000000,\"budgetYearMap\":{\"2027\":\"14000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112965\":[{\"action\":\"HORIZON-CL5-2027-03-D5-06 - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":1,\"minContribution\":8000000,\"maxContribution\":8000000,\"budgetYearMap\":{\"2027\":\"8000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112964\":[{\"action\":\"HORIZON-CL5-2027-03-D5-05 - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":2,\"minContribution\":8000000,\"maxContribution\":8000000,\"budgetYearMap\":{\"2027\":\"16000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112967\":[{\"action\":\"HORIZON-CL5-2027-03-D5-04 - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":1,\"minContribution\":13500000,\"maxContribution\":13500000,\"budgetYearMap\":{\"2027\":\"13500000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112966\":[{\"action\":\"HORIZON-CL5-2027-03-D5-03 - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":4,\"minContribution\":5000000,\"maxContribution\":7000000,\"budgetYearMap\":{\"2027\":\"24000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112969\":[{\"action\":\"HORIZON-CL5-2027-03-D5-15 - HORIZON-CSA HORIZON Coordination and Support Actions\",\"expectedGrants\":1,\"minContribution\":2000000,\"maxContribution\":2000000,\"budgetYearMap\":{\"2027\":\"2000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112968\":[{\"action\":\"HORIZON-CL5-2027-03-D5-08 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":2,\"minContribution\":2500000,\"maxContribution\":2500000,\"budgetYearMap\":{\"2027\":\"5000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112971\":[{\"action\":\"HORIZON-CL5-2027-03-D5-18 - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":2,\"minContribution\":10000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"20000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112970\":[{\"action\":\"HORIZON-CL5-2027-03-D5-20 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":2,\"minContribution\":3500000,\"maxContribution\":3500000,\"budgetYearMap\":{\"2027\":\"7000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112973\":[{\"action\":\"HORIZON-CL5-2027-03-D5-14 - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":1,\"minContribution\":6500000,\"maxContribution\":6500000,\"budgetYearMap\":{\"2027\":\"6500000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112972\":[{\"action\":\"HORIZON-CL5-2027-03-D5-16 - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":2,\"minContribution\":7500000,\"maxContribution\":7500000,\"budgetYearMap\":{\"2027\":\"15000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}]}}",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-03-D5-15",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2027-03-d5-15.txt",
       "priority_score": 20,
-      "status": "aberto",
+      "status": "ready",
       "notes": "topic: HORIZON-CL5-2027-03-D5-15; call: HORIZON-CL5-2027-03; framework: 43108390; SEDIA p2",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 0
     },
     {
       "id": "horizon-cl5-2027-03-d5-04",
@@ -410,11 +411,12 @@
       "budget": "{\"budgetYearsColumns\":[\"2027\"],\"budgetTopicActionMap\":{\"112963\":[{\"action\":\"HORIZON-CL5-2027-03-D5-17 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":2,\"minContribution\":7000000,\"maxContribution\":7000000,\"budgetYearMap\":{\"2027\":\"14000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112965\":[{\"action\":\"HORIZON-CL5-2027-03-D5-06 - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":1,\"minContribution\":8000000,\"maxContribution\":8000000,\"budgetYearMap\":{\"2027\":\"8000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112964\":[{\"action\":\"HORIZON-CL5-2027-03-D5-05 - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":2,\"minContribution\":8000000,\"maxContribution\":8000000,\"budgetYearMap\":{\"2027\":\"16000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112967\":[{\"action\":\"HORIZON-CL5-2027-03-D5-04 - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":1,\"minContribution\":13500000,\"maxContribution\":13500000,\"budgetYearMap\":{\"2027\":\"13500000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112966\":[{\"action\":\"HORIZON-CL5-2027-03-D5-03 - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":4,\"minContribution\":5000000,\"maxContribution\":7000000,\"budgetYearMap\":{\"2027\":\"24000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112969\":[{\"action\":\"HORIZON-CL5-2027-03-D5-15 - HORIZON-CSA HORIZON Coordination and Support Actions\",\"expectedGrants\":1,\"minContribution\":2000000,\"maxContribution\":2000000,\"budgetYearMap\":{\"2027\":\"2000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112968\":[{\"action\":\"HORIZON-CL5-2027-03-D5-08 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":2,\"minContribution\":2500000,\"maxContribution\":2500000,\"budgetYearMap\":{\"2027\":\"5000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112971\":[{\"action\":\"HORIZON-CL5-2027-03-D5-18 - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":2,\"minContribution\":10000000,\"maxContribution\":10000000,\"budgetYearMap\":{\"2027\":\"20000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112970\":[{\"action\":\"HORIZON-CL5-2027-03-D5-20 - HORIZON-RIA HORIZON  Research and Innovation Actions\",\"expectedGrants\":2,\"minContribution\":3500000,\"maxContribution\":3500000,\"budgetYearMap\":{\"2027\":\"7000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112973\":[{\"action\":\"HORIZON-CL5-2027-03-D5-14 - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":1,\"minContribution\":6500000,\"maxContribution\":6500000,\"budgetYearMap\":{\"2027\":\"6500000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}],\"112972\":[{\"action\":\"HORIZON-CL5-2027-03-D5-16 - HORIZON-IA HORIZON Innovation Actions\",\"expectedGrants\":2,\"minContribution\":7500000,\"maxContribution\":7500000,\"budgetYearMap\":{\"2027\":\"15000000\"},\"plannedOpeningDate\":\"2026-12-15\",\"deadlineModel\":\"single-stage\",\"deadlineDates\":[\"2027-04-14\"]}]}}",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-03-D5-04",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-cl5-2027-03-d5-04.txt",
       "priority_score": 20,
-      "status": "aberto",
+      "status": "ready",
       "notes": "topic: HORIZON-CL5-2027-03-D5-04; call: HORIZON-CL5-2027-03; framework: 43108390; SEDIA p2",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 0
     },
     {
       "id": "horizon-ju-gh-edctp3-2026-03-serp-01",
@@ -428,11 +430,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-JU-GH-EDCTP3-2026-03-SERP-01",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/horizon-ju-gh-edctp3-2026-03-serp-01.txt",
       "priority_score": 20,
-      "status": "aberto",
+      "status": "ready",
       "notes": "Call: HORIZON-JU-GH-EDCTP3-2026-03-SERP (descoberto via SEDIA prefixo DIGITAL-2026)",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 0
     },
     {
       "id": "life-2026-plp-ener-compliance",
@@ -446,11 +449,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2026-PLP-ENER-COMPLIANCE",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/life-2026-plp-ener-compliance.txt",
       "priority_score": 20,
-      "status": "aberto",
+      "status": "ready",
       "notes": "Call: LIFE-2026-PLP-ENER (descoberto via SEDIA prefixo LIFE-2026)",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 0
     },
     {
       "id": "life-2026-plp-ener-gov",
@@ -464,11 +468,12 @@
       "budget": null,
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/LIFE-2026-PLP-ENER-GOV",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/eu-funding-tenders/life-2026-plp-ener-gov.txt",
       "priority_score": 20,
-      "status": "aberto",
+      "status": "ready",
       "notes": "Call: LIFE-2026-PLP-ENER (descoberto via SEDIA prefixo LIFE-2026)",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 0
     },
     {
       "id": "ec-grow-2025-op-0091-pin",
@@ -476,7 +481,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "previsto",
+      "status": "pending",
       "aviso_codigo": "EC-GROW/2025/OP/0091-PIN",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-GROW/2025/OP/0091-PIN",
       "deadline": null,
@@ -484,7 +489,14 @@
       "detected_date": "2026-04-25",
       "priority_score": 20,
       "notes": "SEDIA text=2026 p24",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 1,
+      "download_error": "API 404 - URL not found in EU F&T portal, topic may be tender not grant - tentativa em 2026-05-20",
+      "last_fail_date": "2026-05-20",
+      "fallback_tried": [
+        "2b-horizon",
+        "2c"
+      ]
     },
     {
       "id": "ec-env-2024-op-0021-pin",
@@ -1098,11 +1110,12 @@
       "budget": null,
       "regulation_url": "https://www.fct.pt/financiamento/concursos/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/fct/concurso-de-projetos-de-computacao-avancada-6-ed-a0-a1-lote-e.txt",
       "priority_score": 25,
-      "status": "pending",
+      "status": "ready",
       "data_status": "n/a",
-      "notes": "FCT Computacao Avancada 6a edicao Lote E (tipologias A0 experimental e A1 desenvolvimento). Deadline 15/09/2026."
+      "notes": "FCT Computacao Avancada 6a edicao Lote E (tipologias A0 experimental e A1 desenvolvimento). Deadline 15/09/2026.",
+      "fail_count": 0
     },
     {
       "id": "concurso-de-projetos-de-computacao-avancada-6-ed-a2-a3-lote-e-via-rapida",
@@ -1115,11 +1128,12 @@
       "budget": null,
       "regulation_url": "https://www.fct.pt/financiamento/concursos/",
       "pdf_url": null,
-      "regulation_local": null,
+      "regulation_local": "regulamentos/fct/concurso-de-projetos-de-computacao-avancada-6-ed-a2-a3-lote-e-via-rapida.txt",
       "priority_score": 25,
-      "status": "pending",
+      "status": "ready",
       "data_status": "n/a",
-      "notes": "FCT Computacao Avancada 6a edicao Lote E Via Rapida (tipologias A2 e A3). Deadline 15/09/2026."
+      "notes": "FCT Computacao Avancada 6a edicao Lote E Via Rapida (tipologias A2 e A3). Deadline 15/09/2026.",
+      "fail_count": 0
     },
     {
       "id": "abastecimento-de-agua-em-alta-pacs-2026-13",
@@ -1141,14 +1155,15 @@
       "budget": "30000000",
       "regulation_url": "https://sustentavel2030.gov.pt/aviso/pacs-2026-13/",
       "pdf_url": "https://sustentavel2030.gov.pt/wp-content/uploads/2026/05/Aviso-PACS-2026-13.pdf",
-      "regulation_local": null,
+      "regulation_local": "regulamentos/sustentavel-2030/abastecimento-de-agua-em-alta-pacs-2026-13.txt",
       "priority_score": 530,
-      "status": "pending",
+      "status": "ready",
       "paa_status": null,
       "data_status": "verified",
       "state": "aberto",
       "natureza": "Convite",
-      "notes": "PACS-2026-13 Sustentavel 2030. 30M EUR. Confirmado via PDF no portal. Slug alternativo (evita colisao com FA0269/2025 depublished)."
+      "notes": "PACS-2026-13 Sustentavel 2030. 30M EUR. Confirmado via PDF no portal. Slug alternativo (evita colisao com FA0269/2025 depublished).",
+      "fail_count": 0
     },
     {
       "id": "aguas-residuais-em-alta-pacs-2026-14",
@@ -1170,14 +1185,15 @@
       "budget": "40000000",
       "regulation_url": "https://sustentavel2030.gov.pt/aviso/pacs-2026-14/",
       "pdf_url": "https://sustentavel2030.gov.pt/wp-content/uploads/2026/05/Aviso-PACS-2026-14.pdf",
-      "regulation_local": null,
+      "regulation_local": "regulamentos/sustentavel-2030/aguas-residuais-em-alta-pacs-2026-14.txt",
       "priority_score": 530,
-      "status": "pending",
+      "status": "ready",
       "paa_status": null,
       "data_status": "verified",
       "state": "aberto",
       "natureza": "Convite",
-      "notes": "PACS-2026-14 Sustentavel 2030. 40M EUR. Confirmado via PDF no portal. Slug alternativo (evita colisao com FA0271/2025 depublished)."
+      "notes": "PACS-2026-14 Sustentavel 2030. 40M EUR. Confirmado via PDF no portal. Slug alternativo (evita colisao com FA0271/2025 depublished).",
+      "fail_count": 0
     }
   ],
   "items": [],
