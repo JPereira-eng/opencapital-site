@@ -490,12 +490,13 @@
       "priority_score": 20,
       "notes": "SEDIA text=2026 p24",
       "data_status": "n/a",
-      "fail_count": 1,
-      "download_error": "API 404 - URL not found in EU F&T portal, topic may be tender not grant - tentativa em 2026-05-20",
+      "fail_count": 2,
+      "download_error": "Aviso de pré-informação de adjudicação (PIN/OP) - sem regulamento de subvenção acessível - tentativa em 2026-05-20",
       "last_fail_date": "2026-05-20",
       "fallback_tried": [
         "2b-horizon",
-        "2c"
+        "2c",
+        "2b-eu-pdf"
       ]
     },
     {
@@ -504,7 +505,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "previsto",
+      "status": "pending",
       "aviso_codigo": "EC-ENV/2024/OP/0021-PIN",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-ENV/2024/OP/0021-PIN",
       "deadline": null,
@@ -512,7 +513,14 @@
       "detected_date": "2026-04-25",
       "priority_score": 20,
       "notes": "SEDIA text=2026 p25",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 1,
+      "download_error": "Aviso de pré-informação de adjudicação (PIN/OP) - sem regulamento de subvenção acessível - tentativa em 2026-05-20",
+      "last_fail_date": "2026-05-20",
+      "fallback_tried": [
+        "2b-horizon",
+        "2c"
+      ]
     },
     {
       "id": "cerv-2024-og-sga",
@@ -520,7 +528,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "previsto",
+      "status": "ready",
       "aviso_codigo": "CERV-2024-OG-SGA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/CERV-2024-OG-SGA",
       "deadline": null,
@@ -528,7 +536,9 @@
       "detected_date": "2026-04-25",
       "priority_score": 20,
       "notes": "SEDIA text=2026 p25",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "regulation_local": "regulamentos/eu-funding-tenders/cerv-2024-og-sga.txt",
+      "fail_count": 0
     },
     {
       "id": "ec-comm-bud-2025-mvp-0382-exa",
@@ -536,7 +546,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "previsto",
+      "status": "pending",
       "aviso_codigo": "EC-COMM/BUD/2025/MVP/0382-EXA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-COMM/BUD/2025/MVP/0382-EXA",
       "deadline": null,
@@ -544,7 +554,14 @@
       "detected_date": "2026-04-25",
       "priority_score": 20,
       "notes": "SEDIA text=2026 p25",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 1,
+      "download_error": "Expressão de interesse para serviços (EXA/MVP) - conteúdo não indexado publicamente - tentativa em 2026-05-20",
+      "last_fail_date": "2026-05-20",
+      "fallback_tried": [
+        "2b-horizon",
+        "2c"
+      ]
     },
     {
       "id": "eu4h-2024-og-fpa",
@@ -552,7 +569,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "previsto",
+      "status": "ready",
       "aviso_codigo": "EU4H-2024-OG-FPA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EU4H-2024-OG-FPA",
       "deadline": null,
@@ -560,7 +577,9 @@
       "detected_date": "2026-04-25",
       "priority_score": 20,
       "notes": "SEDIA text=2026 p25",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "regulation_local": "regulamentos/eu-funding-tenders/eu4h-2024-og-fpa.txt",
+      "fail_count": 0
     },
     {
       "id": "ed-2025-austria-fpa",
@@ -568,7 +587,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "previsto",
+      "status": "ready",
       "aviso_codigo": "ED-2025-AUSTRIA-FPA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ED-2025-AUSTRIA-FPA",
       "deadline": null,
@@ -576,7 +595,9 @@
       "detected_date": "2026-04-25",
       "priority_score": 20,
       "notes": "SEDIA text=2026 p26",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "regulation_local": "regulamentos/eu-funding-tenders/ed-2025-austria-fpa.txt",
+      "fail_count": 0
     },
     {
       "id": "ed-2025-luxembourg-2-fpa",
@@ -584,7 +605,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "previsto",
+      "status": "ready",
       "aviso_codigo": "ED-2025-LUXEMBOURG-2-FPA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ED-2025-LUXEMBOURG-2-FPA",
       "deadline": null,
@@ -592,7 +613,9 @@
       "detected_date": "2026-04-25",
       "priority_score": 20,
       "notes": "SEDIA text=2026 p26",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "regulation_local": "regulamentos/eu-funding-tenders/ed-2025-luxembourg-2-fpa.txt",
+      "fail_count": 0
     },
     {
       "id": "ec-comm-bud-2024-mvp-0593-exa",
@@ -600,7 +623,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "previsto",
+      "status": "pending",
       "aviso_codigo": "EC-COMM/BUD/2024/MVP/0593-EXA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-COMM/BUD/2024/MVP/0593-EXA",
       "deadline": null,
@@ -608,7 +631,14 @@
       "detected_date": "2026-04-25",
       "priority_score": 20,
       "notes": "SEDIA text=2026 p26",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 1,
+      "download_error": "Expressão de interesse para serviços (EXA/MVP) - conteúdo não indexado publicamente - tentativa em 2026-05-20",
+      "last_fail_date": "2026-05-20",
+      "fallback_tried": [
+        "2b-horizon",
+        "2c"
+      ]
     },
     {
       "id": "ec-comm-bud-2025-mvp-0485-exa",
@@ -616,7 +646,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "previsto",
+      "status": "pending",
       "aviso_codigo": "EC-COMM/BUD/2025/MVP/0485-EXA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-COMM/BUD/2025/MVP/0485-EXA",
       "deadline": null,
@@ -624,7 +654,14 @@
       "detected_date": "2026-04-25",
       "priority_score": 20,
       "notes": "SEDIA text=2026 p26",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 1,
+      "download_error": "Expressão de interesse para serviços (EXA/MVP) - conteúdo não indexado publicamente - tentativa em 2026-05-20",
+      "last_fail_date": "2026-05-20",
+      "fallback_tried": [
+        "2b-horizon",
+        "2c"
+      ]
     },
     {
       "id": "ec-comm-sof-2026-mvp-0028-exa",
@@ -632,7 +669,7 @@
       "source_id": "eu-funding-tenders",
       "shard": "eu-other",
       "regime": "aviso",
-      "status": "previsto",
+      "status": "pending",
       "aviso_codigo": "EC-COMM/SOF/2026/MVP/0028-EXA",
       "regulation_url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/EC-COMM/SOF/2026/MVP/0028-EXA",
       "deadline": null,
@@ -640,7 +677,14 @@
       "detected_date": "2026-04-25",
       "priority_score": 20,
       "notes": "SEDIA text=2026 p27",
-      "data_status": "n/a"
+      "data_status": "n/a",
+      "fail_count": 1,
+      "download_error": "Expressão de interesse para serviços (EXA/MVP) - conteúdo não indexado publicamente - tentativa em 2026-05-20",
+      "last_fail_date": "2026-05-20",
+      "fallback_tried": [
+        "2b-horizon",
+        "2c"
+      ]
     },
     {
       "id": "ec-dgt-2026-mvp-0028-exa",
